@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizNature2-de",
-	"title": "2. Nature",
+	"title": "Nature",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,218 +13,6 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "umweltfreundlich",
-					"summary": "Adjektiv: gut für die Umwelt",
-					"explain": {
-						"entryId": "umweltfreundlich",
-						"headword": "umweltfreundlich",
-						"pronunciation": {
-							"display": "OOM-velt-froynt-likh",
-							"ipaUK": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/",
-							"ipaUS": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "umweltfreundlich",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "gut für die Umwelt; ökologisch",
-										"examples": [
-											"Dieses Auto ist besonders umweltfreundlich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Dieses Auto ist besonders umweltfreundlich.",
-							"ok": true
-						},
-						{
-							"answer": "Dieses Auto ist besonders umweltfreundliche.",
-							"ok": false
-						},
-						{
-							"answer": "Dieses Auto besonders umweltfreundlich ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Treibhauseffekt",
-					"summary": "Erwärmung durch Gase in der Atmosphäre",
-					"explain": {
-						"entryId": "Treibhauseffekt",
-						"headword": "Treibhauseffekt",
-						"pronunciation": {
-							"display": "TRIPE-house-e-fekt",
-							"ipaUK": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/",
-							"ipaUS": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Treibhauseffekt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Erwärmung durch Gase in der Atmosphäre",
-										"examples": [
-											"Der Treibhauseffekt erwärmt die Erde."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Treibhauseffekt erwärmt die Erde.",
-							"ok": true
-						},
-						{
-							"answer": "Die Treibhauseffekt erwärmt die Erde.",
-							"ok": false
-						},
-						{
-							"answer": "Der Treibhauseffekt die Erde erwärmt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Lebensraum",
-					"summary": "natürlicher Ort, an dem ein Tier lebt",
-					"explain": {
-						"entryId": "Lebensraum",
-						"headword": "Lebensraum",
-						"pronunciation": {
-							"display": "LAY-bns-rowm",
-							"ipaUK": "/ˈleːbn̩sˌʁaʊ̯m/",
-							"ipaUS": "/ˈleːbn̩sˌʁaʊ̯m/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Lebensraum",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der natürliche Ort, an dem ein Tier lebt",
-										"examples": [
-											"Der Wald bietet vielen Tieren einen Lebensraum."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Wald bietet vielen Tieren einen Lebensraum.",
-							"ok": true
-						},
-						{
-							"answer": "Der Wald bietet vielen Tieren ein Lebensraum.",
-							"ok": false
-						},
-						{
-							"answer": "Der Wald vielen Tieren einen Lebensraum bietet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Zuhause",
-					"summary": "Ort, an dem man wohnt",
-					"explain": {
-						"entryId": "Zuhause",
-						"headword": "Zuhause",
-						"pronunciation": {
-							"display": "tsoo-HOW-zuh",
-							"ipaUK": "/tsuˈhaʊ̯zə/",
-							"ipaUS": "/tsuˈhaʊ̯zə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Zuhause",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Ort, an dem man wohnt und sich wohlfühlt",
-										"examples": [
-											"Nach der Reise freue ich mich auf mein Zuhause."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nach der Reise freue ich mich auf mein Zuhause.",
-							"ok": true
-						},
-						{
-							"answer": "Nach der Reise freue ich mich auf meinen Zuhause.",
-							"ok": false
-						},
-						{
-							"answer": "Nach der Reise ich freue mich auf mein Zuhause.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
 					"question": "Natur",
 					"summary": "alles ohne den Menschen",
 					"explain": {
@@ -249,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "alles, was nicht vom Menschen gemacht ist",
+										"definition": "die Natur: alles, was nicht vom Menschen gemacht ist",
 										"examples": [
 											"In der Natur finde ich Ruhe."
 										]
@@ -277,7 +65,166 @@
 				},
 				{
 					"title": "",
-					"page": 6,
+					"page": 2,
+					"question": "Umgebung",
+					"summary": "alles, was um einen herum liegt",
+					"explain": {
+						"entryId": "Umgebung",
+						"headword": "Umgebung",
+						"pronunciation": {
+							"display": "oom-GAY-boong",
+							"ipaUK": "/ʊmˈɡeːbʊŋ/",
+							"ipaUS": "/ʊmˈɡeːbʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umgebung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Umgebung: alles, was um einen herum liegt",
+										"examples": [
+											"Die Umgebung des Sees ist sehr ruhig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Umgebung des Sees ist sehr ruhig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Umgebung des Sees ist sehr ruhig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Umgebung des Sees sehr ruhig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Zuhause",
+					"summary": "Ort, an dem man wohnt",
+					"explain": {
+						"entryId": "Zuhause",
+						"headword": "Zuhause",
+						"pronunciation": {
+							"display": "tsoo-HOW-zuh",
+							"ipaUK": "/tsuˈhaʊ̯zə/",
+							"ipaUS": "/tsuˈhaʊ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zuhause",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Zuhause: der Ort, an dem man wohnt und sich wohlfühlt",
+										"examples": [
+											"Nach der Reise freue ich mich auf mein Zuhause."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach der Reise freue ich mich auf mein Zuhause.",
+							"ok": true
+						},
+						{
+							"answer": "Nach der Reise freue ich mich auf meinen Zuhause.",
+							"ok": false
+						},
+						{
+							"answer": "Nach der Reise ich freue mich auf mein Zuhause.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Unterschlupf",
+					"summary": "geschützter Ort",
+					"explain": {
+						"entryId": "Unterschlupf",
+						"headword": "Unterschlupf",
+						"pronunciation": {
+							"display": "OON-tuh-shloopf",
+							"ipaUK": "/ˈʊntɐˌʃlʊpf/",
+							"ipaUS": "/ˈʊntɐˌʃlʊpf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterschlupf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Unterschlupf: ein geschützter Ort zum Unterkommen",
+										"examples": [
+											"Die Katze suchte einen trockenen Unterschlupf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Katze suchte einen trockenen Unterschlupf.",
+							"ok": true
+						},
+						{
+							"answer": "Die Katze suchte ein trockenes Unterschlupf.",
+							"ok": false
+						},
+						{
+							"answer": "Die Katze einen trockenen Unterschlupf suchte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
 					"question": "Umweltverschmutzung",
 					"summary": "Schmutzigmachen der Umwelt",
 					"explain": {
@@ -302,7 +249,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Schmutzigmachen der Umwelt",
+										"definition": "die Umweltverschmutzung: das Schmutzigmachen der Umwelt",
 										"examples": [
 											"Die Umweltverschmutzung schadet der Gesundheit."
 										]
@@ -330,16 +277,16 @@
 				},
 				{
 					"title": "",
-					"page": 7,
-					"question": "Erhaltung",
-					"summary": "Bewahren für die Zukunft",
+					"page": 6,
+					"question": "Verschmutzung",
+					"summary": "Verunreinigen von Wasser/Luft/Boden",
 					"explain": {
-						"entryId": "Erhaltung",
-						"headword": "Erhaltung",
+						"entryId": "Verschmutzung",
+						"headword": "Verschmutzung",
 						"pronunciation": {
-							"display": "er-HAL-toong",
-							"ipaUK": "/ɛɐ̯ˈhaltʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈhaltʊŋ/"
+							"display": "fer-SHMOOT-soong",
+							"ipaUK": "/fɛɐ̯ˈʃmʊtsʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈʃmʊtsʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -349,15 +296,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Erhaltung",
+								"headwordLine": "Verschmutzung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Bewahren von etwas für die Zukunft",
+										"definition": "die Verschmutzung: das Verunreinigen von Wasser, Luft oder Boden",
 										"examples": [
-											"Die Erhaltung der Wälder ist wichtig."
+											"Die Verschmutzung der Flüsse nimmt zu."
 										]
 									}
 								]
@@ -368,15 +315,68 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Erhaltung der Wälder ist wichtig.",
+							"answer": "Die Verschmutzung der Flüsse nimmt zu.",
 							"ok": true
 						},
 						{
-							"answer": "Der Erhaltung der Wälder ist wichtig.",
+							"answer": "Der Verschmutzung der Flüsse nimmt zu.",
 							"ok": false
 						},
 						{
-							"answer": "Die Erhaltung der Wälder wichtig ist.",
+							"answer": "Die Verschmutzung der Flüsse zunimmt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Abfall",
+					"summary": "Dinge, die man wegwirft",
+					"explain": {
+						"entryId": "Abfall",
+						"headword": "Abfall",
+						"pronunciation": {
+							"display": "AP-fal",
+							"ipaUK": "/ˈapfal/",
+							"ipaUS": "/ˈapfal/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abfall",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Abfall: Dinge, die man wegwirft; Müll",
+										"examples": [
+											"Der Abfall wird jeden Montag abgeholt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Abfall wird jeden Montag abgeholt.",
+							"ok": true
+						},
+						{
+							"answer": "Die Abfall wird jeden Montag abgeholt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Abfall jeden Montag abgeholt wird.",
 							"ok": false
 						}
 					]
@@ -384,59 +384,6 @@
 				{
 					"title": "",
 					"page": 8,
-					"question": "Schutz",
-					"summary": "Bewahren vor Gefahr/Schaden",
-					"explain": {
-						"entryId": "Schutz",
-						"headword": "Schutz",
-						"pronunciation": {
-							"display": "shoots",
-							"ipaUK": "/ʃʊts/",
-							"ipaUS": "/ʃʊts/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Schutz",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Bewahren vor Gefahr oder Schaden",
-										"examples": [
-											"Der Schutz der Tiere hat Priorität."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Schutz der Tiere hat Priorität.",
-							"ok": true
-						},
-						{
-							"answer": "Die Schutz der Tiere hat Priorität.",
-							"ok": false
-						},
-						{
-							"answer": "Der Schutz der Tiere Priorität hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
 					"question": "Recycling",
 					"summary": "Wiederverwerten von Abfall",
 					"explain": {
@@ -457,13 +404,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Recycling",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Wiederverwertung"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Wiederverwerten von Abfall",
+										"definition": "das Recycling: das Wiederverwerten von Abfall",
 										"examples": [
 											"Durch Recycling sparen wir Rohstoffe."
 										]
@@ -485,6 +430,59 @@
 						},
 						{
 							"answer": "Durch Recycling wir sparen Rohstoffe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "wiederverwenden",
+					"summary": "etwas noch einmal benutzen",
+					"explain": {
+						"entryId": "wiederverwenden",
+						"headword": "wiederverwenden",
+						"pronunciation": {
+							"display": "VEE-duh-fer-ven-dn",
+							"ipaUK": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/",
+							"ipaUS": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "wiederverwenden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wiederverwenden: etwas noch einmal benutzen",
+										"examples": [
+											"Man kann alte Gläser gut wiederverwenden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Man kann alte Gläser gut wiederverwenden.",
+							"ok": true
+						},
+						{
+							"answer": "Man kann alte Gläser gut wiederverwendet.",
+							"ok": false
+						},
+						{
+							"answer": "Man alte Gläser gut wiederverwenden kann.",
 							"ok": false
 						}
 					]
@@ -516,7 +514,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "weniger machen; verringern",
+										"definition": "reduzieren: weniger machen; verringern",
 										"examples": [
 											"Wir sollten den Müll reduzieren."
 										]

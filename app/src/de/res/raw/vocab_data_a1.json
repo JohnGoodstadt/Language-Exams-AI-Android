@@ -20,10 +20,10 @@
     {
       "sortOrder": 10,
       "tabNumber": 1,
-      "title": "Begrüßungen & Vorstellungen",
+      "title": "Hallo",
       "words": [
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 1,
           "word": "Hallo",
           "partOfSpeech": "",
@@ -42,7 +42,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 2,
           "word": "Guten Morgen",
           "partOfSpeech": "",
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 3,
           "word": "Guten Tag",
           "partOfSpeech": "",
@@ -80,7 +80,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 4,
           "word": "Guten Abend",
           "partOfSpeech": "",
@@ -99,7 +99,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 5,
           "word": "Gute Nacht",
           "partOfSpeech": "",
@@ -118,7 +118,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 6,
           "word": "Tschüss",
           "partOfSpeech": "",
@@ -137,7 +137,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 7,
           "word": "Auf Wiedersehen",
           "partOfSpeech": "",
@@ -156,7 +156,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 8,
           "word": "Wie heißt du?",
           "partOfSpeech": "",
@@ -175,7 +175,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 9,
           "word": "Ich heiße",
           "partOfSpeech": "",
@@ -194,7 +194,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 10,
           "word": "Wie geht es dir?",
           "partOfSpeech": "",
@@ -213,7 +213,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 11,
           "word": "Mir geht es gut",
           "partOfSpeech": "",
@@ -232,7 +232,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 12,
           "word": "Freut mich",
           "partOfSpeech": "",
@@ -251,7 +251,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 13,
           "word": "Willkommen",
           "partOfSpeech": "",
@@ -270,7 +270,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 14,
           "word": "Bis bald",
           "partOfSpeech": "",
@@ -289,7 +289,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 15,
           "word": "Bis morgen",
           "partOfSpeech": "",
@@ -2522,10 +2522,10 @@
     {
       "sortOrder": 10,
       "tabNumber": 3,
-      "title": "Häufige Verben (im Infinitiv)",
+      "title": "Häufige Verben",
       "words": [
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 1,
           "word": "sein",
           "partOfSpeech": "",
@@ -2544,7 +2544,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 2,
           "word": "haben",
           "partOfSpeech": "",
@@ -2563,7 +2563,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 3,
           "word": "gehen",
           "partOfSpeech": "",
@@ -2582,7 +2582,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 4,
           "word": "kommen",
           "partOfSpeech": "",
@@ -2601,7 +2601,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 5,
           "word": "machen",
           "partOfSpeech": "",
@@ -2620,7 +2620,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 6,
           "word": "essen",
           "partOfSpeech": "",
@@ -2639,7 +2639,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 7,
           "word": "trinken",
           "partOfSpeech": "",
@@ -2658,7 +2658,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 8,
           "word": "sprechen",
           "partOfSpeech": "",
@@ -2677,7 +2677,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 9,
           "word": "wohnen",
           "partOfSpeech": "",
@@ -2696,7 +2696,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 10,
           "word": "arbeiten",
           "partOfSpeech": "",
@@ -2715,7 +2715,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 11,
           "word": "lernen",
           "partOfSpeech": "",
@@ -2734,7 +2734,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 12,
           "word": "spielen",
           "partOfSpeech": "",
@@ -2753,7 +2753,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 13,
           "word": "lesen",
           "partOfSpeech": "",
@@ -2772,7 +2772,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 14,
           "word": "schreiben",
           "partOfSpeech": "",
@@ -2791,7 +2791,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 15,
           "word": "kaufen",
           "partOfSpeech": "",
@@ -2810,7 +2810,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 16,
           "word": "fahren",
           "partOfSpeech": "",
@@ -2829,7 +2829,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 17,
           "word": "sehen",
           "partOfSpeech": "",
@@ -2848,7 +2848,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 18,
           "word": "schlafen",
           "partOfSpeech": "",

@@ -1,0 +1,970 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs1-de",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "können",
+					"summary": "etwas tun können",
+					"explain": {
+						"entryId": "können",
+						"headword": "können",
+						"pronunciation": {
+							"display": "KÖ-nn",
+							"ipaUK": "/ˈkœnən/",
+							"ipaUS": "/ˈkœnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Modalverb",
+								"grammarType": "Modalverb",
+								"headwordLine": "können",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Fähigkeit haben, etwas zu tun",
+										"examples": [
+											"Ich kann sehr gut schwimmen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich kann sehr gut schwimmen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich kann sehr gut schwimmt.",
+							"ok": false
+						},
+						{
+							"answer": "Ich kann schwimmen sehr gut.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "müssen",
+					"summary": "etwas ist nötig",
+					"explain": {
+						"entryId": "müssen",
+						"headword": "müssen",
+						"pronunciation": {
+							"display": "MÜ-sn",
+							"ipaUK": "/ˈmʏsn̩/",
+							"ipaUS": "/ˈmʏsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Modalverb",
+								"grammarType": "Modalverb",
+								"headwordLine": "müssen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas ist nötig oder Pflicht",
+										"examples": [
+											"Wir müssen jetzt nach Hause gehen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir müssen jetzt nach Hause gehen.",
+							"ok": true
+						},
+						{
+							"answer": "Wir müssen jetzt nach Hause geht.",
+							"ok": false
+						},
+						{
+							"answer": "Wir müssen gehen jetzt nach Hause.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "dürfen",
+					"summary": "etwas tun dürfen (Erlaubnis)",
+					"explain": {
+						"entryId": "dürfen",
+						"headword": "dürfen",
+						"pronunciation": {
+							"display": "DÜR-fn",
+							"ipaUK": "/ˈdʏʁfn̩/",
+							"ipaUS": "/ˈdʏʁfn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Modalverb",
+								"grammarType": "Modalverb",
+								"headwordLine": "dürfen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erlaubnis haben, etwas zu tun",
+										"examples": [
+											"Hier darf man nicht rauchen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Hier darf man nicht rauchen.",
+							"ok": true
+						},
+						{
+							"answer": "Hier darf man nicht raucht.",
+							"ok": false
+						},
+						{
+							"answer": "Hier man darf nicht rauchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "wollen",
+					"summary": "etwas tun wollen",
+					"explain": {
+						"entryId": "wollen",
+						"headword": "wollen",
+						"pronunciation": {
+							"display": "VO-ln",
+							"ipaUK": "/ˈvɔlən/",
+							"ipaUS": "/ˈvɔlən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Modalverb",
+								"grammarType": "Modalverb",
+								"headwordLine": "wollen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "den Wunsch haben, etwas zu tun",
+										"examples": [
+											"Ich will heute früh schlafen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich will heute früh schlafen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich will heute früh schläft.",
+							"ok": false
+						},
+						{
+							"answer": "Ich will schlafen heute früh.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "sollen",
+					"summary": "etwas tun sollen (Rat/Auftrag)",
+					"explain": {
+						"entryId": "sollen",
+						"headword": "sollen",
+						"pronunciation": {
+							"display": "ZO-ln",
+							"ipaUK": "/ˈzɔlən/",
+							"ipaUS": "/ˈzɔlən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Modalverb",
+								"grammarType": "Modalverb",
+								"headwordLine": "sollen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "einen Rat oder Auftrag bekommen",
+										"examples": [
+											"Du sollst mehr Wasser trinken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Du sollst mehr Wasser trinken.",
+							"ok": true
+						},
+						{
+							"answer": "Du sollst mehr Wasser trinkst.",
+							"ok": false
+						},
+						{
+							"answer": "Du sollst trinken mehr Wasser.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "mögen",
+					"summary": "etwas gern haben",
+					"explain": {
+						"entryId": "mögen",
+						"headword": "mögen",
+						"pronunciation": {
+							"display": "MÖ-gn",
+							"ipaUK": "/ˈmøːɡn̩/",
+							"ipaUS": "/ˈmøːɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Modalverb",
+								"grammarType": "Modalverb",
+								"headwordLine": "mögen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas gern haben",
+										"examples": [
+											"Ich mag keinen Kaffee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich mag keinen Kaffee.",
+							"ok": true
+						},
+						{
+							"answer": "Ich möge keinen Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Ich keinen Kaffee mag.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "brauchen",
+					"summary": "etwas nötig haben",
+					"explain": {
+						"entryId": "brauchen",
+						"headword": "brauchen",
+						"pronunciation": {
+							"display": "BROW-khn",
+							"ipaUK": "/ˈbʁaʊ̯xn̩/",
+							"ipaUS": "/ˈbʁaʊ̯xn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "brauchen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas nötig haben",
+										"examples": [
+											"Ich brauche noch etwas Zeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich brauche noch etwas Zeit.",
+							"ok": true
+						},
+						{
+							"answer": "Ich braucht noch etwas Zeit.",
+							"ok": false
+						},
+						{
+							"answer": "Ich noch etwas Zeit brauche.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "verstehen",
+					"summary": "den Sinn erkennen",
+					"explain": {
+						"entryId": "verstehen",
+						"headword": "verstehen",
+						"pronunciation": {
+							"display": "fer-SHTAY-uhn",
+							"ipaUK": "/fɛɐ̯ˈʃteːən/",
+							"ipaUS": "/fɛɐ̯ˈʃteːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "verstehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "den Sinn von etwas erkennen",
+										"examples": [
+											"Ich verstehe die Frage nicht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich verstehe die Frage nicht.",
+							"ok": true
+						},
+						{
+							"answer": "Ich versteht die Frage nicht.",
+							"ok": false
+						},
+						{
+							"answer": "Ich die Frage nicht verstehe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "wissen",
+					"summary": "etwas im Kopf haben",
+					"explain": {
+						"entryId": "wissen",
+						"headword": "wissen",
+						"pronunciation": {
+							"display": "VIS-sn",
+							"ipaUK": "/ˈvɪsn̩/",
+							"ipaUS": "/ˈvɪsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "wissen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Informationen im Kopf haben",
+										"examples": [
+											"Ich weiß die Antwort nicht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich weiß die Antwort nicht.",
+							"ok": true
+						},
+						{
+							"answer": "Ich weiße die Antwort nicht.",
+							"ok": false
+						},
+						{
+							"answer": "Ich die Antwort nicht weiß.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "kennen",
+					"summary": "mit etwas vertraut sein",
+					"explain": {
+						"entryId": "kennen",
+						"headword": "kennen",
+						"pronunciation": {
+							"display": "KEN-nn",
+							"ipaUK": "/ˈkɛnən/",
+							"ipaUS": "/ˈkɛnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "kennen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit einer Person oder Sache vertraut sein",
+										"examples": [
+											"Ich kenne diese Stadt gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich kenne diese Stadt gut.",
+							"ok": true
+						},
+						{
+							"answer": "Ich kennt diese Stadt gut.",
+							"ok": false
+						},
+						{
+							"answer": "Ich diese Stadt gut kenne.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "anrufen",
+					"summary": "telefonieren",
+					"explain": {
+						"entryId": "anrufen",
+						"headword": "anrufen",
+						"pronunciation": {
+							"display": "AN-roo-fn",
+							"ipaUK": "/ˈanˌʁuːfn̩/",
+							"ipaUS": "/ˈanˌʁuːfn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "anrufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit dem Telefon sprechen",
+										"examples": [
+											"Ich rufe dich später an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich rufe dich später an.",
+							"ok": true
+						},
+						{
+							"answer": "Ich rufe dich später auf.",
+							"ok": false
+						},
+						{
+							"answer": "Ich anrufe dich später.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "aufräumen",
+					"summary": "Ordnung machen",
+					"explain": {
+						"entryId": "aufräumen",
+						"headword": "aufräumen",
+						"pronunciation": {
+							"display": "OWF-roy-mn",
+							"ipaUK": "/ˈaʊ̯fˌʁɔɪ̯mən/",
+							"ipaUS": "/ˈaʊ̯fˌʁɔɪ̯mən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "aufräumen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Ordnung machen; Dinge wegräumen",
+										"examples": [
+											"Am Samstag räume ich mein Zimmer auf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Samstag räume ich mein Zimmer auf.",
+							"ok": true
+						},
+						{
+							"answer": "Am Samstag räume ich mein Zimmer ab.",
+							"ok": false
+						},
+						{
+							"answer": "Am Samstag ich räume mein Zimmer auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "sich freuen",
+					"summary": "glücklich sein über etwas",
+					"explain": {
+						"entryId": "sich freuen",
+						"headword": "sich freuen",
+						"pronunciation": {
+							"display": "zikh FROY-uhn",
+							"ipaUK": "/zɪç ˈfʁɔɪ̯ən/",
+							"ipaUS": "/zɪç ˈfʁɔɪ̯ən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (reflexiv)",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "sich freuen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "glücklich sein über etwas",
+										"examples": [
+											"Ich freue mich auf das Wochenende."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich freue mich auf das Wochenende.",
+							"ok": true
+						},
+						{
+							"answer": "Ich freue mir auf das Wochenende.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mich freue auf das Wochenende.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "sich interessieren",
+					"summary": "etwas spannend finden",
+					"explain": {
+						"entryId": "sich interessieren",
+						"headword": "sich interessieren",
+						"pronunciation": {
+							"display": "zikh in-te-re-SEE-run",
+							"ipaUK": "/zɪç ɪntəʁɛˈsiːʁən/",
+							"ipaUS": "/zɪç ɪntəʁɛˈsiːʁən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (reflexiv)",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "sich interessieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas spannend finden",
+										"examples": [
+											"Ich interessiere mich für Musik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich interessiere mich für Musik.",
+							"ok": true
+						},
+						{
+							"answer": "Ich interessiere mir für Musik.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mich interessiere für Musik.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "reisen",
+					"summary": "an einen anderen Ort fahren",
+					"explain": {
+						"entryId": "reisen",
+						"headword": "reisen",
+						"pronunciation": {
+							"display": "RY-zn",
+							"ipaUK": "/ˈʁaɪ̯zn̩/",
+							"ipaUS": "/ˈʁaɪ̯zn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "reisen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an einen anderen Ort fahren",
+										"examples": [
+											"Im Sommer reisen wir nach Italien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer reisen wir nach Italien.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer reist wir nach Italien.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir reisen nach Italien.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"question": "bleiben",
+					"summary": "nicht weggehen",
+					"explain": {
+						"entryId": "bleiben",
+						"headword": "bleiben",
+						"pronunciation": {
+							"display": "BLY-bn",
+							"ipaUK": "/ˈblaɪ̯bn̩/",
+							"ipaUS": "/ˈblaɪ̯bn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "bleiben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an einem Ort sein und nicht weggehen",
+										"examples": [
+											"Heute bleibe ich zu Hause."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute bleibe ich zu Hause.",
+							"ok": true
+						},
+						{
+							"answer": "Heute bleibt ich zu Hause.",
+							"ok": false
+						},
+						{
+							"answer": "Heute ich bleibe zu Hause.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 17,
+					"question": "vergessen",
+					"summary": "sich nicht erinnern",
+					"explain": {
+						"entryId": "vergessen",
+						"headword": "vergessen",
+						"pronunciation": {
+							"display": "fer-GES-sn",
+							"ipaUK": "/fɛɐ̯ˈɡɛsn̩/",
+							"ipaUS": "/fɛɐ̯ˈɡɛsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "vergessen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sich nicht mehr erinnern",
+										"examples": [
+											"Ich habe meinen Schlüssel vergessen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe meinen Schlüssel vergessen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe meinen Schlüssel vergisst.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meinen Schlüssel vergessen habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 18,
+					"question": "helfen",
+					"summary": "jemanden unterstützen",
+					"explain": {
+						"entryId": "helfen",
+						"headword": "helfen",
+						"pronunciation": {
+							"display": "HEL-fn",
+							"ipaUK": "/ˈhɛlfn̩/",
+							"ipaUS": "/ˈhɛlfn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (+ Dativ)",
+								"grammarType": "Verb (+ Dativ)",
+								"headwordLine": "helfen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden bei etwas unterstützen",
+										"examples": [
+											"Kannst du mir bitte helfen?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Kannst du mir bitte helfen?",
+							"ok": true
+						},
+						{
+							"answer": "Kannst du mich bitte helfen?",
+							"ok": false
+						},
+						{
+							"answer": "Kannst du mir bitte helfe?",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

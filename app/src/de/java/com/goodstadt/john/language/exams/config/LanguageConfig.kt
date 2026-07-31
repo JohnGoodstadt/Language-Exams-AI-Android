@@ -36,16 +36,58 @@ object LanguageConfig {
     }
     fun getConjugationFirestoreSheetName(title: String): String {
         val jsonFileName = when (title) {
-            "To Have" -> "EnglishConjugationsToHave"
-            "To Be" -> "EnglishConjugationsToBe"
-            "To Do" -> "EnglishConjugationsToDo"
-            "To Get" -> "EnglishConjugationsToGet"
-            else -> "EnglishConjugationsToHave" // Default option
+            "To Have" -> "GermanConjugationsToHave"
+            "To Be" -> "GermanConjugationsToBe"
+            "To Do" -> "GermanConjugationsToDo"
+            "To Get" -> "GermanConjugationsToGet"
+            else -> "GermanConjugationsToHave" // Default option
         }
         return jsonFileName
     }
-    val prepositionsBundleFileName: String = "prepositions_en"
-    val prepositionsFirestoreName: String = "prepositions"
+    /**
+     * ✅ ADDED: This is the "Anti-Corruption Layer".
+     * It ensures that any legacy resource names are immediately converted to the
+     * canonical logical name used throughout the new system.
+     */
+    fun normalizeToLogicalName(resourceName: String): String {
+        return when (resourceName) {
+            "vocab_data_a1" -> "GermanA1Vocab"
+            "vocab_data_a2" -> "GermanA2Vocab"
+            "vocab_data_b1" -> "GermanB1Vocab"
+            "vocab_data_b2" -> "GermanB2Vocab"
+            "conjugations_to_be" -> "GermanConjugationsToBe"
+            "conjugations_to_have" -> "GermanConjugationsToHave"
+            "conjugations_to_do" -> "GermanConjugationsToDo"
+            "conjugations_to_get" -> "GermanConjugationsToGet"
+            "prepositions_de" -> "GermanPrepositions"
+
+
+            // Add any other legacy mappings here
+
+            // If the name is already in the correct format, just return it.
+            else -> resourceName
+        }
+    }
+    /**
+     * Maps the logical Firestore name to the Android-specific resource name.
+     */
+    fun mapLogicalToResourceName(sheet_name: String): String {
+        return when (sheet_name) {
+            "GermanA1Vocab" -> "vocab_data_a1"
+            "GermanA2Vocab" -> "vocab_data_a2"
+            "GermanB1Vocab" -> "vocab_data_b1"
+            "GermanB2Vocab" -> "vocab_data_b2"
+            "GermanConjugationsToBe" -> "conjugations_to_be"
+            "GermanConjugationsToHave" -> "conjugations_to_have"
+            "GermanConjugationsToDo" -> "conjugations_to_do"
+            "GermanConjugationsToGet" -> "conjugations_to_get"
+            "GermanConjugationsToGet" -> "prepositions_de"
+            // Add other mappings here as needed
+            else -> sheet_name // Fallback for other files
+        }
+    }
+    val prepositionsBundleFileName: String = "prepositions_de"
+//    val prepositionsFirestoreName: String = "prepositions"
     val LLMSystemText: String =
         "I am learning American English and I need to learn new words in a sentence. You are a teacher of American in America, and want to help me. I will give you a few words in American in America, and you will construct simple sentences using these words in any order. Don't put any words in angled brackets. Do not give any extra words than the text you send back. Put the English response in square brackets []. give me a paragraph of text that includes the list of words at the level of <skilllevel>. try to make the paragraph sensible. Fill between these words with verbs, adjectives, prepositions, other nouns etc at the level of <skilllevel>."
 }

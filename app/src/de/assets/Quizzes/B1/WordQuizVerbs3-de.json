@@ -6,22 +6,22 @@
 	"updatedDate": 0,
 	"data": [
 		{
-			"title": "Choose the sentence that uses the verb correctly.",
+			"title": "Choose the sentence that uses the word correctly.",
 			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
 			"sortorder": 1,
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "interagieren",
-					"summary": "in Kontakt treten",
+					"question": "verbessern",
+					"summary": "etwas besser machen",
 					"explain": {
-						"entryId": "interagieren",
-						"headword": "interagieren",
+						"entryId": "verbessern",
+						"headword": "verbessern",
 						"pronunciation": {
-							"display": "in-tuh-ra-GEE-run",
-							"ipaUK": "/ɪntɐʔaˈɡiːʁən/",
-							"ipaUS": "/ɪntɐʔaˈɡiːʁən/"
+							"display": "fer-BES-suhn",
+							"ipaUK": "/fɛɐ̯ˈbɛsɐn/",
+							"ipaUS": "/fɛɐ̯ˈbɛsɐn/"
 						},
 						"labels": [
 							"B1"
@@ -31,15 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Verb",
 								"grammarType": "Verb",
-								"headwordLine": "interagieren",
+								"headwordLine": "verbessern",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "miteinander in Kontakt treten",
+										"definition": "verbessern: etwas besser machen",
 										"examples": [
-											"Die Kinder interagieren gern miteinander."
+											"Übung verbessert deine Aussprache."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Kinder interagieren gern miteinander.",
+							"answer": "Übung verbessert deine Aussprache.",
 							"ok": true
 						},
 						{
-							"answer": "Die Kinder interagiert gern miteinander.",
+							"answer": "Übung verbessern deine Aussprache.",
 							"ok": false
 						},
 						{
-							"answer": "Die Kinder gern miteinander interagieren.",
+							"answer": "Übung deine Aussprache verbessert.",
 							"ok": false
 						}
 					]
@@ -66,15 +66,121 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "einbinden",
-					"summary": "jemanden mit einbeziehen",
+					"question": "steigern",
+					"summary": "größer/besser machen",
 					"explain": {
-						"entryId": "einbinden",
-						"headword": "einbinden",
+						"entryId": "steigern",
+						"headword": "steigern",
 						"pronunciation": {
-							"display": "INE-bin-dn",
-							"ipaUK": "/ˈaɪ̯nˌbɪndn̩/",
-							"ipaUS": "/ˈaɪ̯nˌbɪndn̩/"
+							"display": "SHTY-guhn",
+							"ipaUK": "/ˈʃtaɪ̯ɡɐn/",
+							"ipaUS": "/ˈʃtaɪ̯ɡɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "steigern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "steigern: größer oder besser machen; erhöhen",
+										"examples": [
+											"Sport steigert das Wohlbefinden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sport steigert das Wohlbefinden.",
+							"ok": true
+						},
+						{
+							"answer": "Sport steigern das Wohlbefinden.",
+							"ok": false
+						},
+						{
+							"answer": "Sport das Wohlbefinden steigert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "entwickeln",
+					"summary": "nach und nach schaffen",
+					"explain": {
+						"entryId": "entwickeln",
+						"headword": "entwickeln",
+						"pronunciation": {
+							"display": "ent-VIK-ln",
+							"ipaUK": "/ɛntˈvɪkl̩n/",
+							"ipaUS": "/ɛntˈvɪkl̩n/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "entwickeln",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "entwickeln: etwas nach und nach schaffen oder verbessern",
+										"examples": [
+											"Die Firma entwickelt eine neue App."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma entwickelt eine neue App.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma entwickeln eine neue App.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma eine neue App entwickelt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "einbeziehen",
+					"summary": "jemanden teilhaben lassen",
+					"explain": {
+						"entryId": "einbeziehen",
+						"headword": "einbeziehen",
+						"pronunciation": {
+							"display": "INE-buh-tsee-uhn",
+							"ipaUK": "/ˈaɪ̯nbəˌtsiːən/",
+							"ipaUS": "/ˈaɪ̯nbəˌtsiːən/"
 						},
 						"labels": [
 							"B1"
@@ -84,15 +190,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Verb (trennbar)",
 								"grammarType": "Verb (trennbar)",
-								"headwordLine": "einbinden",
+								"headwordLine": "einbeziehen",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "jemanden in etwas mit einbeziehen",
+										"definition": "einbeziehen: jemanden an etwas teilhaben lassen",
 										"examples": [
-											"Wir binden alle Kollegen in das Projekt ein."
+											"Der Chef bezieht das Team in die Planung ein."
 										]
 									}
 								]
@@ -103,31 +209,31 @@
 					},
 					"answers": [
 						{
-							"answer": "Wir binden alle Kollegen in das Projekt ein.",
+							"answer": "Der Chef bezieht das Team in die Planung ein.",
 							"ok": true
 						},
 						{
-							"answer": "Wir binden alle Kollegen in das Projekt aus.",
+							"answer": "Der Chef bezieht das Team in die Planung aus.",
 							"ok": false
 						},
 						{
-							"answer": "Wir alle Kollegen in das Projekt einbinden.",
+							"answer": "Der Chef das Team in die Planung einbezieht.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "überreden",
-					"summary": "durch Reden zu etwas bringen",
+					"page": 5,
+					"question": "beteiligen",
+					"summary": "sich aktiv beteiligen",
 					"explain": {
-						"entryId": "überreden",
-						"headword": "überreden",
+						"entryId": "beteiligen",
+						"headword": "beteiligen",
 						"pronunciation": {
-							"display": "Ü-buh-ray-dn",
-							"ipaUK": "/ˈyːbɐˌʁeːdn̩/",
-							"ipaUS": "/ˈyːbɐˌʁeːdn̩/"
+							"display": "buh-TY-li-gn",
+							"ipaUK": "/bəˈtaɪ̯lɪɡn̩/",
+							"ipaUS": "/bəˈtaɪ̯lɪɡn̩/"
 						},
 						"labels": [
 							"B1"
@@ -135,17 +241,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "überreden",
+								"pos": "Verb (reflexiv)",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "beteiligen",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "jemanden durch Reden zu etwas bringen",
+										"definition": "sich beteiligen: sich an etwas aktiv beteiligen",
 										"examples": [
-											"Sie überredet ihn zu einem Ausflug."
+											"Viele Bürger beteiligen sich an der Wahl."
 										]
 									}
 								]
@@ -156,22 +262,75 @@
 					},
 					"answers": [
 						{
-							"answer": "Sie überredet ihn zu einem Ausflug.",
+							"answer": "Viele Bürger beteiligen sich an der Wahl.",
 							"ok": true
 						},
 						{
-							"answer": "Sie überreden ihn zu einem Ausflug.",
+							"answer": "Viele Bürger beteiligt sich an der Wahl.",
 							"ok": false
 						},
 						{
-							"answer": "Sie ihn zu einem Ausflug überredet.",
+							"answer": "Viele Bürger sich an der Wahl beteiligen.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 4,
+					"page": 6,
+					"question": "einschließen",
+					"summary": "etwas mit dazunehmen",
+					"explain": {
+						"entryId": "einschließen",
+						"headword": "einschließen",
+						"pronunciation": {
+							"display": "INE-shlee-sn",
+							"ipaUK": "/ˈaɪ̯nˌʃliːsn̩/",
+							"ipaUS": "/ˈaɪ̯nˌʃliːsn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "einschließen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "einschließen: etwas mit dazunehmen",
+										"examples": [
+											"Der Preis schließt das Frühstück ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Preis schließt das Frühstück ein.",
+							"ok": true
+						},
+						{
+							"answer": "Der Preis schließt das Frühstück aus.",
+							"ok": false
+						},
+						{
+							"answer": "Der Preis das Frühstück einschließt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
 					"question": "empfehlen",
 					"summary": "jemandem etwas raten",
 					"explain": {
@@ -196,7 +355,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "jemandem etwas raten oder vorschlagen",
+										"definition": "empfehlen: jemandem etwas raten oder vorschlagen",
 										"examples": [
 											"Ich empfehle dir dieses Buch."
 										]
@@ -224,115 +383,7 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "sich verlassen",
-					"summary": "sich auf jemanden verlassen",
-					"explain": {
-						"entryId": "sich verlassen",
-						"headword": "sich verlassen",
-						"pronunciation": {
-							"display": "fer-LAS-sn",
-							"ipaUK": "/fɛɐ̯ˈlasn̩/",
-							"ipaUS": "/fɛɐ̯ˈlasn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (reflexiv)",
-								"grammarType": "Verb (reflexiv)",
-								"headwordLine": "sich verlassen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sich auf jemanden fest verlassen",
-										"examples": [
-											"Auf ihn kann man sich immer verlassen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Auf ihn kann man sich immer verlassen.",
-							"ok": true
-						},
-						{
-							"answer": "Auf ihn kann man sich immer verlässt.",
-							"ok": false
-						},
-						{
-							"answer": "Auf ihn man kann sich immer verlassen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "respektieren",
-					"summary": "jemanden achten",
-					"explain": {
-						"entryId": "respektieren",
-						"headword": "respektieren",
-						"pronunciation": {
-							"display": "res-pek-TEE-run",
-							"ipaUK": "/ʁɛspɛkˈtiːʁən/",
-							"ipaUS": "/ʁɛspɛkˈtiːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "respektieren",
-								"inflectionsLine": null,
-								"synonyms": [
-									"achten"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "jemanden achten und ernst nehmen",
-										"examples": [
-											"Wir sollten die Regeln respektieren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir sollten die Regeln respektieren.",
-							"ok": true
-						},
-						{
-							"answer": "Wir sollten die Regeln respektiert.",
-							"ok": false
-						},
-						{
-							"answer": "Wir die Regeln respektieren sollten.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
+					"page": 8,
 					"question": "vorschlagen",
 					"summary": "eine Idee nennen",
 					"explain": {
@@ -357,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Idee nennen",
+										"definition": "vorschlagen: eine Idee nennen",
 										"examples": [
 											"Ich schlage einen anderen Termin vor."
 										]
@@ -385,16 +436,16 @@
 				},
 				{
 					"title": "",
-					"page": 8,
-					"question": "vertrauen",
-					"summary": "an die Zuverlässigkeit glauben",
+					"page": 9,
+					"question": "raten",
+					"summary": "jemandem einen Rat geben",
 					"explain": {
-						"entryId": "vertrauen",
-						"headword": "vertrauen",
+						"entryId": "raten",
+						"headword": "raten",
 						"pronunciation": {
-							"display": "fer-TROW-en",
-							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
-							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+							"display": "RAH-tn",
+							"ipaUK": "/ˈʁaːtn̩/",
+							"ipaUS": "/ˈʁaːtn̩/"
 						},
 						"labels": [
 							"B1"
@@ -404,15 +455,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Verb",
 								"grammarType": "Verb",
-								"headwordLine": "vertrauen",
+								"headwordLine": "raten",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "an die Zuverlässigkeit von jemandem glauben",
+										"definition": "raten: jemandem sagen, was er tun soll",
 										"examples": [
-											"Ich vertraue meinen Freunden völlig."
+											"Ich rate dir, mehr zu schlafen."
 										]
 									}
 								]
@@ -423,68 +474,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Ich vertraue meinen Freunden völlig.",
+							"answer": "Ich rate dir, mehr zu schlafen.",
 							"ok": true
 						},
 						{
-							"answer": "Ich vertraut meinen Freunden völlig.",
+							"answer": "Ich rate dich, mehr zu schlafen.",
 							"ok": false
 						},
 						{
-							"answer": "Ich meinen Freunden völlig vertraue.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "aufdecken",
-					"summary": "Verborgenes ans Licht bringen",
-					"explain": {
-						"entryId": "aufdecken",
-						"headword": "aufdecken",
-						"pronunciation": {
-							"display": "OWF-dek-kn",
-							"ipaUK": "/ˈaʊ̯fˌdɛkn̩/",
-							"ipaUS": "/ˈaʊ̯fˌdɛkn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "aufdecken",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas Verborgenes ans Licht bringen",
-										"examples": [
-											"Die Zeitung deckt den Skandal auf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Zeitung deckt den Skandal auf.",
-							"ok": true
-						},
-						{
-							"answer": "Die Zeitung deckt den Skandal ab.",
-							"ok": false
-						},
-						{
-							"answer": "Die Zeitung den Skandal aufdeckt.",
+							"answer": "Ich dir rate, mehr zu schlafen.",
 							"ok": false
 						}
 					]

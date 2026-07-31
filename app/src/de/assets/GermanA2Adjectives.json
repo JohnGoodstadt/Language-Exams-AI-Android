@@ -1,0 +1,281 @@
+{
+	"romanized": false,
+	"native": "",
+	"name": "English Adjectives A2",
+	"sheetname": "EnglishAdjectivesA2",
+	"id": "en-adj-a2",
+	"location": 0,
+	"googlevoiceprefix": "",
+	"uploaddate": 1766060001.0,
+	"voicename": "",
+	"nativename": "",
+	"updatedDate": 978307200,
+	"fileformat": 1,
+	"tabtitles": ["Adjectives A2"],
+	"categories": [
+		{
+			"sortOrder": 1, "tabNumber": 1, "title": "interesting",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 1, "word": "interesting", "definition": "makes you want to know more; not boring", "partOfSpeech": "Adjective", "id": 1,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "This movie is more interesting than the last one.", "translation": "" },
+					{ "sentence": "The museum is interesting for children.", "translation": "" },
+					{ "sentence": "Do you find this topic interesting?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 2, "tabNumber": 1, "title": "boring",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 2, "word": "boring", "definition": "not interesting; makes you feel tired of it", "partOfSpeech": "Adjective", "id": 2,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The lesson was boring yesterday.", "translation": "" },
+					{ "sentence": "Waiting at the airport can be boring.", "translation": "" },
+					{ "sentence": "Is this book boring for you?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 3, "tabNumber": 1, "title": "beautiful",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 3, "word": "beautiful", "definition": "very pretty", "partOfSpeech": "Adjective", "id": 3,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The city has beautiful old buildings.", "translation": "" },
+					{ "sentence": "She bought a beautiful dress for the party.", "translation": "" },
+					{ "sentence": "Isn’t this view beautiful?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 4, "tabNumber": 1, "title": "ugly",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 4, "word": "ugly", "definition": "not pretty; not nice to look at", "partOfSpeech": "Adjective", "id": 4,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "These shoes look ugly but they are comfortable.", "translation": "" },
+					{ "sentence": "The building is ugly on the outside.", "translation": "" },
+					{ "sentence": "Do you think this colour is ugly?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 5, "tabNumber": 1, "title": "cheap",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 5, "word": "cheap", "definition": "costing little money", "partOfSpeech": "Adjective", "id": 5,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "We found a cheap hotel near the station.", "translation": "" },
+					{ "sentence": "The tickets were cheap because of the sale.", "translation": "" },
+					{ "sentence": "Is this brand really cheap?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 6, "tabNumber": 1, "title": "expensive",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 6, "word": "expensive", "definition": "costing a lot of money", "partOfSpeech": "Adjective", "id": 6,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "Eating out is expensive in that area.", "translation": "" },
+					{ "sentence": "This coat is more expensive than the blue one.", "translation": "" },
+					{ "sentence": "Is it expensive to live here?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 7, "tabNumber": 1, "title": "comfortable",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 7, "word": "comfortable", "definition": "giving a good, relaxed feeling", "partOfSpeech": "Adjective", "id": 7,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "These shoes are comfortable for long walks.", "translation": "" },
+					{ "sentence": "The sofa is comfortable to sit on.", "translation": "" },
+					{ "sentence": "Is this chair comfortable enough?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 8, "tabNumber": 1, "title": "difficult",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 8, "word": "difficult", "definition": "not easy; needing much effort", "partOfSpeech": "Adjective", "id": 8,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The instructions are difficult to follow.", "translation": "" },
+					{ "sentence": "Driving in the rain can be difficult.", "translation": "" },
+					{ "sentence": "Is this exercise difficult for you?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 9, "tabNumber": 1, "title": "simple",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 9, "word": "simple", "definition": "easy to do or understand", "partOfSpeech": "Adjective", "id": 9,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "This app has a simple design.", "translation": "" },
+					{ "sentence": "Keep the rules simple and clear.", "translation": "" },
+					{ "sentence": "Is the process simple to learn?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 10, "tabNumber": 1, "title": "useful",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 10, "word": "useful", "definition": "helpful for doing something", "partOfSpeech": "Adjective", "id": 10,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The map is useful when you travel.", "translation": "" },
+					{ "sentence": "This video is useful for beginners.", "translation": "" },
+					{ "sentence": "Is a diary useful for you?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 11, "tabNumber": 1, "title": "ready",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 11, "word": "ready", "definition": "prepared to start or do something", "partOfSpeech": "Adjective", "id": 11,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "Dinner is ready now.", "translation": "" },
+					{ "sentence": "Call me when you are ready.", "translation": "" },
+					{ "sentence": "Are you ready to start?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 12, "tabNumber": 1, "title": "healthy",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 12, "word": "healthy", "definition": "good for your body; not ill", "partOfSpeech": "Adjective", "id": 12,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "A healthy lunch includes fruit and vegetables.", "translation": "" },
+					{ "sentence": "She chooses healthy snacks at work.", "translation": "" },
+					{ "sentence": "Is this breakfast healthy enough?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 13, "tabNumber": 1, "title": "ill",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 13, "word": "ill", "definition": "sick; not well", "partOfSpeech": "Adjective", "id": 13,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "He felt ill after the journey.", "translation": "" },
+					{ "sentence": "The child is ill and stays at home.", "translation": "" },
+					{ "sentence": "Are you still ill today?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 14, "tabNumber": 1, "title": "careful",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 14, "word": "careful", "definition": "doing things slowly and thinking, so nothing bad happens", "partOfSpeech": "Adjective", "id": 14,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "Be careful when you cross the road.", "translation": "" },
+					{ "sentence": "We need a careful plan for the move.", "translation": "" },
+					{ "sentence": "Can you be careful with this glass?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 15, "tabNumber": 1, "title": "friendly",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 15, "word": "friendly", "definition": "kind and nice to people; easy to talk to", "partOfSpeech": "Adjective", "id": 15,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The staff are friendly and helpful.", "translation": "" },
+					{ "sentence": "Our neighbours are very friendly.", "translation": "" },
+					{ "sentence": "Is your teacher friendly?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 16, "tabNumber": 1, "title": "unfriendly",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 16, "word": "unfriendly", "definition": "not kind or warm to people", "partOfSpeech": "Adjective", "id": 16,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The man at the desk was unfriendly.", "translation": "" },
+					{ "sentence": "An unfriendly tone can cause problems.", "translation": "" },
+					{ "sentence": "Was the email unfriendly?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 17, "tabNumber": 1, "title": "noisy",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 17, "word": "noisy", "definition": "with a lot of loud sounds", "partOfSpeech": "Adjective", "id": 17,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The café is noisy at lunchtime.", "translation": "" },
+					{ "sentence": "Our old fan is noisy at night.", "translation": "" },
+					{ "sentence": "Is your street noisy?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 18, "tabNumber": 1, "title": "quiet",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 18, "word": "quiet", "definition": "with little or no sound", "partOfSpeech": "Adjective", "id": 18,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "The library is quiet and warm.", "translation": "" },
+					{ "sentence": "We found a quiet place to study.", "translation": "" },
+					{ "sentence": "Is this room quiet enough?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 19, "tabNumber": 1, "title": "dangerous",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 19, "word": "dangerous", "definition": "not safe; may cause harm", "partOfSpeech": "Adjective", "id": 19,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "That road is dangerous in winter.", "translation": "" },
+					{ "sentence": "It is dangerous to swim here after dark.", "translation": "" },
+					{ "sentence": "Is it dangerous to cycle there?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 20, "tabNumber": 1, "title": "safe",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 20, "word": "safe", "definition": "not in danger; protected", "partOfSpeech": "Adjective", "id": 20,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "This area is safe for children.", "translation": "" },
+					{ "sentence": "Wear a helmet to stay safe.", "translation": "" },
+					{ "sentence": "Is the neighbourhood safe at night?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 21, "tabNumber": 1, "title": "modern",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 21, "word": "modern", "definition": "new in style or ideas; from recent times", "partOfSpeech": "Adjective", "id": 21,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "They live in a modern flat near the river.", "translation": "" },
+					{ "sentence": "We use modern tools at work.", "translation": "" },
+					{ "sentence": "Is the design modern enough?", "translation": "" }
+				]
+			}]
+		},
+		{
+			"sortOrder": 22, "tabNumber": 1, "title": "traditional",
+			"words": [{
+				"group": "Adjectives", "sortOrder": 22, "word": "traditional", "definition": "old style; done as people did before", "partOfSpeech": "Adjective", "id": 22,
+				"romanisation": "", "translation": "",
+				"sentences": [
+					{ "sentence": "We enjoy traditional music at the festival.", "translation": "" },
+					{ "sentence": "This restaurant serves traditional dishes.", "translation": "" },
+					{ "sentence": "Is this a traditional recipe?", "translation": "" }
+				]
+			}]
+		}
+	]
+}

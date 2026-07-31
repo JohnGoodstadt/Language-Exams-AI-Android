@@ -2,26 +2,26 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizVerbs2-de",
-	"title": "2. Verbs",
+	"title": "Verbs",
 	"updatedDate": 0,
 	"data": [
 		{
-			"title": "Choose the sentence that uses the verb correctly.",
+			"title": "Choose the sentence that uses the word correctly.",
 			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
 			"sortorder": 1,
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "überzeugen",
-					"summary": "durch Argumente umstimmen",
+					"question": "überreden",
+					"summary": "durch Reden zu etwas bringen",
 					"explain": {
-						"entryId": "überzeugen",
-						"headword": "überzeugen",
+						"entryId": "überreden",
+						"headword": "überreden",
 						"pronunciation": {
-							"display": "Ü-buh-tsoy-gn",
-							"ipaUK": "/ˈyːbɐˌtsɔɪ̯ɡn̩/",
-							"ipaUS": "/ˈyːbɐˌtsɔɪ̯ɡn̩/"
+							"display": "Ü-buh-ray-dn",
+							"ipaUK": "/ˈyːbɐˌʁeːdn̩/",
+							"ipaUS": "/ˈyːbɐˌʁeːdn̩/"
 						},
 						"labels": [
 							"B1"
@@ -31,15 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Verb",
 								"grammarType": "Verb",
-								"headwordLine": "überzeugen",
+								"headwordLine": "überreden",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "jemanden durch Argumente umstimmen",
+										"definition": "überreden: jemanden durch Reden zu etwas bringen",
 										"examples": [
-											"Seine Argumente überzeugen mich."
+											"Sie überredet ihn zu einem Ausflug."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Seine Argumente überzeugen mich.",
+							"answer": "Sie überredet ihn zu einem Ausflug.",
 							"ok": true
 						},
 						{
-							"answer": "Seine Argumente überzeugt mich.",
+							"answer": "Sie überreden ihn zu einem Ausflug.",
 							"ok": false
 						},
 						{
-							"answer": "Seine Argumente mich überzeugen.",
+							"answer": "Sie ihn zu einem Ausflug überredet.",
 							"ok": false
 						}
 					]
@@ -66,6 +66,59 @@
 				{
 					"title": "",
 					"page": 2,
+					"question": "versichern",
+					"summary": "etwas fest zusagen",
+					"explain": {
+						"entryId": "versichern",
+						"headword": "versichern",
+						"pronunciation": {
+							"display": "fer-ZIKH-uhn",
+							"ipaUK": "/fɛɐ̯ˈzɪçɐn/",
+							"ipaUS": "/fɛɐ̯ˈzɪçɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "versichern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "versichern: jemandem etwas fest zusagen",
+										"examples": [
+											"Ich versichere dir, dass alles klappt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich versichere dir, dass alles klappt.",
+							"ok": true
+						},
+						{
+							"answer": "Ich versichert dir, dass alles klappt.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir versichere, dass alles klappt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
 					"question": "abhängen",
 					"summary": "von etwas bestimmt werden",
 					"explain": {
@@ -90,7 +143,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "von etwas bestimmt werden; auf etwas angewiesen sein",
+										"definition": "abhängen: von etwas bestimmt werden",
 										"examples": [
 											"Der Erfolg hängt von deinem Fleiß ab."
 										]
@@ -118,16 +171,16 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "entwickeln",
-					"summary": "etwas nach und nach schaffen",
+					"page": 4,
+					"question": "sich verlassen",
+					"summary": "sich auf jemanden verlassen",
 					"explain": {
-						"entryId": "entwickeln",
-						"headword": "entwickeln",
+						"entryId": "sich verlassen",
+						"headword": "sich verlassen",
 						"pronunciation": {
-							"display": "ent-VIK-ln",
-							"ipaUK": "/ɛntˈvɪkl̩n/",
-							"ipaUS": "/ɛntˈvɪkl̩n/"
+							"display": "fer-LAS-sn",
+							"ipaUK": "/fɛɐ̯ˈlasn̩/",
+							"ipaUS": "/fɛɐ̯ˈlasn̩/"
 						},
 						"labels": [
 							"B1"
@@ -135,17 +188,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "entwickeln",
+								"pos": "Verb (reflexiv)",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "sich verlassen",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas nach und nach schaffen oder verbessern",
+										"definition": "sich verlassen: sich auf jemanden fest verlassen",
 										"examples": [
-											"Die Firma entwickelt eine neue App."
+											"Auf ihn kann man sich immer verlassen."
 										]
 									}
 								]
@@ -156,22 +209,75 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Firma entwickelt eine neue App.",
+							"answer": "Auf ihn kann man sich immer verlassen.",
 							"ok": true
 						},
 						{
-							"answer": "Die Firma entwickeln eine neue App.",
+							"answer": "Auf ihn kann man sich immer verlässt.",
 							"ok": false
 						},
 						{
-							"answer": "Die Firma eine neue App entwickelt.",
+							"answer": "Auf ihn man kann sich immer verlassen.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 4,
+					"page": 5,
+					"question": "vertrauen",
+					"summary": "an die Zuverlässigkeit glauben",
+					"explain": {
+						"entryId": "vertrauen",
+						"headword": "vertrauen",
+						"pronunciation": {
+							"display": "fer-TROW-en",
+							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
+							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "vertrauen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "vertrauen: an die Zuverlässigkeit von jemandem glauben",
+										"examples": [
+											"Ich vertraue meinen Freunden völlig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich vertraue meinen Freunden völlig.",
+							"ok": true
+						},
+						{
+							"answer": "Ich vertraut meinen Freunden völlig.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meinen Freunden völlig vertraue.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
 					"question": "entdecken",
 					"summary": "etwas Neues finden",
 					"explain": {
@@ -196,7 +302,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas Neues finden",
+										"definition": "entdecken: etwas Neues finden",
 										"examples": [
 											"Forscher entdecken oft neue Arten."
 										]
@@ -224,166 +330,7 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "beteiligen",
-					"summary": "sich aktiv beteiligen",
-					"explain": {
-						"entryId": "beteiligen",
-						"headword": "beteiligen",
-						"pronunciation": {
-							"display": "buh-TY-li-gn",
-							"ipaUK": "/bəˈtaɪ̯lɪɡn̩/",
-							"ipaUS": "/bəˈtaɪ̯lɪɡn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (reflexiv)",
-								"grammarType": "Verb (reflexiv)",
-								"headwordLine": "beteiligen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sich an etwas aktiv beteiligen",
-										"examples": [
-											"Viele Bürger beteiligen sich an der Wahl."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Viele Bürger beteiligen sich an der Wahl.",
-							"ok": true
-						},
-						{
-							"answer": "Viele Bürger beteiligt sich an der Wahl.",
-							"ok": false
-						},
-						{
-							"answer": "Viele Bürger sich an der Wahl beteiligen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "verbessern",
-					"summary": "etwas besser machen",
-					"explain": {
-						"entryId": "verbessern",
-						"headword": "verbessern",
-						"pronunciation": {
-							"display": "fer-BES-suhn",
-							"ipaUK": "/fɛɐ̯ˈbɛsɐn/",
-							"ipaUS": "/fɛɐ̯ˈbɛsɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "verbessern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas besser machen",
-										"examples": [
-											"Übung verbessert deine Aussprache."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Übung verbessert deine Aussprache.",
-							"ok": true
-						},
-						{
-							"answer": "Übung verbessern deine Aussprache.",
-							"ok": false
-						},
-						{
-							"answer": "Übung deine Aussprache verbessert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 7,
-					"question": "äußern",
-					"summary": "eine Meinung sagen",
-					"explain": {
-						"entryId": "äußern",
-						"headword": "äußern",
-						"pronunciation": {
-							"display": "OY-suhn",
-							"ipaUK": "/ˈɔɪ̯sɐn/",
-							"ipaUS": "/ˈɔɪ̯sɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "äußern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Meinung oder ein Gefühl sagen",
-										"examples": [
-											"Er äußert seine Meinung sehr offen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er äußert seine Meinung sehr offen.",
-							"ok": true
-						},
-						{
-							"answer": "Er äußern seine Meinung sehr offen.",
-							"ok": false
-						},
-						{
-							"answer": "Er seine Meinung sehr offen äußert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "finden",
 					"summary": "etwas Gesuchtes entdecken",
 					"explain": {
@@ -408,7 +355,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas Gesuchtes entdecken",
+										"definition": "finden: etwas Gesuchtes entdecken",
 										"examples": [
 											"Ich finde meinen Schlüssel nicht."
 										]
@@ -436,69 +383,16 @@
 				},
 				{
 					"title": "",
-					"page": 9,
-					"question": "steigern",
-					"summary": "größer/besser machen",
+					"page": 8,
+					"question": "aufdecken",
+					"summary": "Verborgenes ans Licht bringen",
 					"explain": {
-						"entryId": "steigern",
-						"headword": "steigern",
+						"entryId": "aufdecken",
+						"headword": "aufdecken",
 						"pronunciation": {
-							"display": "SHTY-guhn",
-							"ipaUK": "/ˈʃtaɪ̯ɡɐn/",
-							"ipaUS": "/ˈʃtaɪ̯ɡɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "steigern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "größer oder besser machen; erhöhen",
-										"examples": [
-											"Sport steigert das Wohlbefinden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sport steigert das Wohlbefinden.",
-							"ok": true
-						},
-						{
-							"answer": "Sport steigern das Wohlbefinden.",
-							"ok": false
-						},
-						{
-							"answer": "Sport das Wohlbefinden steigert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "einbeziehen",
-					"summary": "etwas mit dazunehmen",
-					"explain": {
-						"entryId": "einbeziehen",
-						"headword": "einbeziehen",
-						"pronunciation": {
-							"display": "INE-buh-tsee-uhn",
-							"ipaUK": "/ˈaɪ̯nbəˌtsiːən/",
-							"ipaUS": "/ˈaɪ̯nbəˌtsiːən/"
+							"display": "OWF-dek-kn",
+							"ipaUK": "/ˈaʊ̯fˌdɛkn̩/",
+							"ipaUS": "/ˈaʊ̯fˌdɛkn̩/"
 						},
 						"labels": [
 							"B1"
@@ -508,17 +402,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Verb (trennbar)",
 								"grammarType": "Verb (trennbar)",
-								"headwordLine": "einbeziehen",
+								"headwordLine": "aufdecken",
 								"inflectionsLine": null,
-								"synonyms": [
-									"einschließen"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas mit dazunehmen",
+										"definition": "aufdecken: etwas Verborgenes ans Licht bringen",
 										"examples": [
-											"Der Chef bezieht das Team in die Planung ein."
+											"Die Zeitung deckt den Skandal auf."
 										]
 									}
 								]
@@ -529,15 +421,121 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Chef bezieht das Team in die Planung ein.",
+							"answer": "Die Zeitung deckt den Skandal auf.",
 							"ok": true
 						},
 						{
-							"answer": "Der Chef bezieht das Team in die Planung aus.",
+							"answer": "Die Zeitung deckt den Skandal ab.",
 							"ok": false
 						},
 						{
-							"answer": "Der Chef das Team in die Planung einbezieht.",
+							"answer": "Die Zeitung den Skandal aufdeckt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "ausdrücken",
+					"summary": "Gedanken in Worte fassen",
+					"explain": {
+						"entryId": "ausdrücken",
+						"headword": "ausdrücken",
+						"pronunciation": {
+							"display": "OWS-drük-kn",
+							"ipaUK": "/ˈaʊ̯sˌdʁʏkn̩/",
+							"ipaUS": "/ˈaʊ̯sˌdʁʏkn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "ausdrücken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ausdrücken: Gedanken in Worte fassen",
+										"examples": [
+											"Sie kann ihre Gefühle gut ausdrücken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie kann ihre Gefühle gut ausdrücken.",
+							"ok": true
+						},
+						{
+							"answer": "Sie kann ihre Gefühle gut ausdrückt.",
+							"ok": false
+						},
+						{
+							"answer": "Sie kann ihre Gefühle gut ausdrucken.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "formulieren",
+					"summary": "klar in Worte fassen",
+					"explain": {
+						"entryId": "formulieren",
+						"headword": "formulieren",
+						"pronunciation": {
+							"display": "for-moo-LEE-run",
+							"ipaUK": "/fɔʁmuˈliːʁən/",
+							"ipaUS": "/fɔʁmuˈliːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "formulieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "formulieren: etwas klar in Worte fassen",
+										"examples": [
+											"Er formuliert seine Kritik sehr höflich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er formuliert seine Kritik sehr höflich.",
+							"ok": true
+						},
+						{
+							"answer": "Er formulieren seine Kritik sehr höflich.",
+							"ok": false
+						},
+						{
+							"answer": "Er seine Kritik sehr höflich formuliert.",
 							"ok": false
 						}
 					]

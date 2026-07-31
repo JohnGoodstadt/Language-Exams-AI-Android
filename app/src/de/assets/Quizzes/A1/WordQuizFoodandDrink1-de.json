@@ -1,0 +1,864 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFoodandDrink1-de",
+	"title": "FoodandDrink",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Brot",
+					"summary": "Essen aus Mehl",
+					"explain": {
+						"entryId": "Brot",
+						"headword": "Brot",
+						"pronunciation": {
+							"display": "broht",
+							"ipaUK": "/bʁoːt/",
+							"ipaUS": "/bʁoːt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Brot",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Grundnahrungsmittel aus Mehl",
+										"examples": [
+											"Ich esse gern frisches Brot."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich esse gern frisches Brot.",
+							"ok": true
+						},
+						{
+							"answer": "Ich esse gern frischen Brot.",
+							"ok": false
+						},
+						{
+							"answer": "Ich gern frisches Brot esse.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Wasser",
+					"summary": "klare Flüssigkeit zum Trinken",
+					"explain": {
+						"entryId": "Wasser",
+						"headword": "Wasser",
+						"pronunciation": {
+							"display": "VA-suh",
+							"ipaUK": "/ˈvasɐ/",
+							"ipaUS": "/ˈvasɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wasser",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine klare Flüssigkeit zum Trinken",
+										"examples": [
+											"Das Wasser ist kalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Wasser ist kalt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Wasser ist kalt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Wasser kalt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Kaffee",
+					"summary": "warmes Getränk",
+					"explain": {
+						"entryId": "Kaffee",
+						"headword": "Kaffee",
+						"pronunciation": {
+							"display": "KA-fay",
+							"ipaUK": "/ˈkafe/",
+							"ipaUS": "/ˈkafe/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kaffee",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein warmes Getränk, das wach macht",
+										"examples": [
+											"Am Morgen trinke ich einen Kaffee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Morgen trinke ich einen Kaffee.",
+							"ok": true
+						},
+						{
+							"answer": "Am Morgen trinke ich eine Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Am Morgen ich trinke einen Kaffee.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Tee",
+					"summary": "warmes Getränk aus Blättern",
+					"explain": {
+						"entryId": "Tee",
+						"headword": "Tee",
+						"pronunciation": {
+							"display": "tay",
+							"ipaUK": "/teː/",
+							"ipaUS": "/teː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tee",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein warmes Getränk aus Blättern",
+										"examples": [
+											"Der Tee ist noch heiß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Tee ist noch heiß.",
+							"ok": true
+						},
+						{
+							"answer": "Die Tee ist noch heiß.",
+							"ok": false
+						},
+						{
+							"answer": "Der Tee noch heiß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Milch",
+					"summary": "weißes Getränk von der Kuh",
+					"explain": {
+						"entryId": "Milch",
+						"headword": "Milch",
+						"pronunciation": {
+							"display": "milkh",
+							"ipaUK": "/mɪlç/",
+							"ipaUS": "/mɪlç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Milch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein weißes Getränk von der Kuh",
+										"examples": [
+											"Die Milch steht im Kühlschrank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Milch steht im Kühlschrank.",
+							"ok": true
+						},
+						{
+							"answer": "Der Milch steht im Kühlschrank.",
+							"ok": false
+						},
+						{
+							"answer": "Die Milch im Kühlschrank steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Apfel",
+					"summary": "eine runde Frucht",
+					"explain": {
+						"entryId": "Apfel",
+						"headword": "Apfel",
+						"pronunciation": {
+							"display": "AP-fl",
+							"ipaUK": "/ˈap͡fl̩/",
+							"ipaUS": "/ˈap͡fl̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Apfel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine runde Frucht",
+										"examples": [
+											"Der Apfel ist rot und süß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Apfel ist rot und süß.",
+							"ok": true
+						},
+						{
+							"answer": "Die Apfel ist rot und süß.",
+							"ok": false
+						},
+						{
+							"answer": "Der Apfel rot und süß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Banane",
+					"summary": "lange gelbe Frucht",
+					"explain": {
+						"entryId": "Banane",
+						"headword": "Banane",
+						"pronunciation": {
+							"display": "ba-NAH-nuh",
+							"ipaUK": "/baˈnaːnə/",
+							"ipaUS": "/baˈnaːnə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Banane",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine lange gelbe Frucht",
+										"examples": [
+											"Die Banane ist gelb."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Banane ist gelb.",
+							"ok": true
+						},
+						{
+							"answer": "Der Banane ist gelb.",
+							"ok": false
+						},
+						{
+							"answer": "Die Banane gelb ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Ei",
+					"summary": "kommt vom Huhn",
+					"explain": {
+						"entryId": "Ei",
+						"headword": "Ei",
+						"pronunciation": {
+							"display": "eye",
+							"ipaUK": "/aɪ̯/",
+							"ipaUS": "/aɪ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ei",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "kommt vom Huhn; man kann es essen",
+										"examples": [
+											"Zum Frühstück esse ich ein Ei."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Frühstück esse ich ein Ei.",
+							"ok": true
+						},
+						{
+							"answer": "Zum Frühstück esse ich einen Ei.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Frühstück ich esse ein Ei.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Käse",
+					"summary": "Essen aus Milch",
+					"explain": {
+						"entryId": "Käse",
+						"headword": "Käse",
+						"pronunciation": {
+							"display": "KAY-zuh",
+							"ipaUK": "/ˈkɛːzə/",
+							"ipaUS": "/ˈkɛːzə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Käse",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Essen aus Milch",
+										"examples": [
+											"Der Käse schmeckt sehr gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Käse schmeckt sehr gut.",
+							"ok": true
+						},
+						{
+							"answer": "Die Käse schmeckt sehr gut.",
+							"ok": false
+						},
+						{
+							"answer": "Der Käse sehr gut schmeckt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Fleisch",
+					"summary": "Essen vom Tier",
+					"explain": {
+						"entryId": "Fleisch",
+						"headword": "Fleisch",
+						"pronunciation": {
+							"display": "flysh",
+							"ipaUK": "/flaɪ̯ʃ/",
+							"ipaUS": "/flaɪ̯ʃ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fleisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Essen vom Tier",
+										"examples": [
+											"Ich esse kein Fleisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich esse kein Fleisch.",
+							"ok": true
+						},
+						{
+							"answer": "Ich esse keinen Fleisch.",
+							"ok": false
+						},
+						{
+							"answer": "Ich kein Fleisch esse.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Fisch",
+					"summary": "Tier aus dem Wasser",
+					"explain": {
+						"entryId": "Fisch",
+						"headword": "Fisch",
+						"pronunciation": {
+							"display": "fish",
+							"ipaUK": "/fɪʃ/",
+							"ipaUS": "/fɪʃ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Tier aus dem Wasser",
+										"examples": [
+											"Der Fisch ist sehr frisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Fisch ist sehr frisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Fisch ist sehr frisch.",
+							"ok": false
+						},
+						{
+							"answer": "Der Fisch sehr frisch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "Gemüse",
+					"summary": "Pflanzen zum Essen",
+					"explain": {
+						"entryId": "Gemüse",
+						"headword": "Gemüse",
+						"pronunciation": {
+							"display": "guh-MÜ-zuh",
+							"ipaUK": "/ɡəˈmyːzə/",
+							"ipaUS": "/ɡəˈmyːzə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gemüse",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Pflanzen zum Essen (z. B. Karotten)",
+										"examples": [
+											"Das Gemüse ist frisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Gemüse ist frisch.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gemüse ist frisch.",
+							"ok": false
+						},
+						{
+							"answer": "Das Gemüse frisch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "Obst",
+					"summary": "Früchte zum Essen",
+					"explain": {
+						"entryId": "Obst",
+						"headword": "Obst",
+						"pronunciation": {
+							"display": "ohpst",
+							"ipaUK": "/oːpst/",
+							"ipaUS": "/oːpst/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Obst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Früchte zum Essen (z. B. Äpfel)",
+										"examples": [
+											"Das Obst ist reif."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Obst ist reif.",
+							"ok": true
+						},
+						{
+							"answer": "Der Obst ist reif.",
+							"ok": false
+						},
+						{
+							"answer": "Das Obst reif ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "Saft",
+					"summary": "Getränk aus Früchten",
+					"explain": {
+						"entryId": "Saft",
+						"headword": "Saft",
+						"pronunciation": {
+							"display": "zaft",
+							"ipaUK": "/zaft/",
+							"ipaUS": "/zaft/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Saft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Getränk aus Früchten",
+										"examples": [
+											"Der Saft ist kalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Saft ist kalt.",
+							"ok": true
+						},
+						{
+							"answer": "Die Saft ist kalt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Saft kalt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "Zucker",
+					"summary": "etwas Süßes",
+					"explain": {
+						"entryId": "Zucker",
+						"headword": "Zucker",
+						"pronunciation": {
+							"display": "TSOO-kuh",
+							"ipaUK": "/ˈtsʊkɐ/",
+							"ipaUS": "/ˈtsʊkɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zucker",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas Süßes für Kaffee oder Tee",
+										"examples": [
+											"Der Zucker ist süß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Zucker ist süß.",
+							"ok": true
+						},
+						{
+							"answer": "Die Zucker ist süß.",
+							"ok": false
+						},
+						{
+							"answer": "Der Zucker süß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"question": "Suppe",
+					"summary": "warmes Essen zum Löffeln",
+					"explain": {
+						"entryId": "Suppe",
+						"headword": "Suppe",
+						"pronunciation": {
+							"display": "ZOO-puh",
+							"ipaUK": "/ˈzʊpə/",
+							"ipaUS": "/ˈzʊpə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Suppe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein warmes Essen, das man löffelt",
+										"examples": [
+											"Die Suppe ist noch heiß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Suppe ist noch heiß.",
+							"ok": true
+						},
+						{
+							"answer": "Der Suppe ist noch heiß.",
+							"ok": false
+						},
+						{
+							"answer": "Die Suppe noch heiß ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

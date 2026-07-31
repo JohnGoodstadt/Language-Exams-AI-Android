@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data
 
+import android.content.Context
 import android.content.SharedPreferences
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.AppUIManifest
@@ -11,6 +12,7 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.tasks.await
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -33,7 +35,8 @@ sealed class UpdateState {
 class AppConfigRepository @Inject constructor(
     private val remoteConfig: FirebaseRemoteConfig,
     private val prefs: SharedPreferences,
-    private val jsonParser: Json
+    private val jsonParser: Json,
+    @ApplicationContext private val context: Context // 2. Add this parameter
 ) {
 
     //A key for storing our local versions map
@@ -376,8 +379,11 @@ class AppConfigRepository @Inject constructor(
             parseDefaultManifest()
         }
     }
-    fun getAppUiManifest(): AppUIManifest {
+
+    fun getAppUiManifestObsolete(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
+
+
 
         // 1. Determine which JSON string to use
         val manifestJsonString = if (BuildConfig.DEBUG) {
@@ -564,6 +570,49 @@ class AppConfigRepository @Inject constructor(
             crashlytics.recordException(error)
             Timber.w("Remote 'app_ui_manifest' is blank. Falling back to default.")
             parseDefaultManifest()
+        }
+    }
+
+    fun getAppUiManifest(): AppUIManifest {
+        val crashlytics = FirebaseCrashlytics.getInstance()
+
+
+
+        // 1. Determine which JSON string to use
+        val manifestJsonString = if (BuildConfig.DEBUG) {
+            Timber.w("⚠️ DEV MODE: Using Local Manifest Override")
+
+            getLocalDebugManifest()
+
+        } else {
+            // PRODUCTION: Fetch from Remote Config
+            remoteConfig.getString("app_ui_manifest")
+        }
+
+        // 2. Proceed with Parsing (The rest of your code stays exactly the same)
+        return if (manifestJsonString.isNotBlank()) {
+            try {
+                // Attempt to parse the JSON string from the server (or our debug string)
+                jsonParser.decodeFromString<AppUIManifest>(manifestJsonString)
+            } catch (e: Exception) {
+                // If parsing fails, log it and fall back to the bundled default.
+                Timber.e(e, "CRITICAL: Failed to parse 'app_ui_manifest'. Falling back to default.")
+                crashlytics.recordException(e)
+                parseDefaultManifest()
+            }
+        } else {
+            val error = Exception("Data load failed completely for app_ui_manifest")
+            crashlytics.recordException(error)
+            Timber.w("Remote 'app_ui_manifest' is blank. Falling back to default.")
+            parseDefaultManifest()
+        }
+    }
+    private fun getLocalDebugManifest(): String {
+        return try {
+            context.assets.open("debug_manifest.json").bufferedReader().use { it.readText() }
+        } catch (e: Exception) {
+            Timber.e("Could not find local debug manifest asset")
+            ""
         }
     }
     /**

@@ -2,11 +2,11 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizVerbs1-de",
-	"title": "1. Verbs",
+	"title": "Verbs",
 	"updatedDate": 0,
 	"data": [
 		{
-			"title": "Choose the sentence that uses the verb correctly.",
+			"title": "Choose the sentence that uses the word correctly.",
 			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
 			"sortorder": 1,
 			"sections": [
@@ -33,13 +33,11 @@
 								"grammarType": "Verb",
 								"headwordLine": "erreichen",
 								"inflectionsLine": null,
-								"synonyms": [
-									"schaffen"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Ziel schaffen; vollenden",
+										"definition": "erreichen: ein Ziel schaffen; vollenden",
 										"examples": [
 											"Mit Fleiß kannst du viel erreichen."
 										]
@@ -68,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "erzielen",
-					"summary": "ein Ergebnis erreichen",
+					"question": "schaffen",
+					"summary": "etwas erfolgreich vollenden",
 					"explain": {
-						"entryId": "erzielen",
-						"headword": "erzielen",
+						"entryId": "schaffen",
+						"headword": "schaffen",
 						"pronunciation": {
-							"display": "er-TSEE-lun",
-							"ipaUK": "/ɛɐ̯ˈtsiːlən/",
-							"ipaUS": "/ɛɐ̯ˈtsiːlən/"
+							"display": "SHAF-fn",
+							"ipaUK": "/ˈʃafn̩/",
+							"ipaUS": "/ˈʃafn̩/"
 						},
 						"labels": [
 							"B1"
@@ -86,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Verb",
 								"grammarType": "Verb",
-								"headwordLine": "erzielen",
+								"headwordLine": "schaffen",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "durch Mühe ein Ergebnis erreichen",
+										"definition": "schaffen: etwas erfolgreich zu Ende bringen",
 										"examples": [
-											"Die Firma erzielt einen hohen Gewinn."
+											"Das Team schafft die Aufgabe rechtzeitig."
 										]
 									}
 								]
@@ -105,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Firma erzielt einen hohen Gewinn.",
+							"answer": "Das Team schafft die Aufgabe rechtzeitig.",
 							"ok": true
 						},
 						{
-							"answer": "Die Firma erzielen einen hohen Gewinn.",
+							"answer": "Das Team schaffen die Aufgabe rechtzeitig.",
 							"ok": false
 						},
 						{
-							"answer": "Die Firma einen hohen Gewinn erzielt.",
+							"answer": "Das Team die Aufgabe rechtzeitig schafft.",
 							"ok": false
 						}
 					]
@@ -121,271 +119,6 @@
 				{
 					"title": "",
 					"page": 3,
-					"question": "bewundern",
-					"summary": "jemanden sehr schätzen",
-					"explain": {
-						"entryId": "bewundern",
-						"headword": "bewundern",
-						"pronunciation": {
-							"display": "buh-VOON-duhn",
-							"ipaUK": "/bəˈvʊndɐn/",
-							"ipaUS": "/bəˈvʊndɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "bewundern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "jemanden oder etwas sehr schätzen",
-										"examples": [
-											"Ich bewundere ihren Mut sehr."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich bewundere ihren Mut sehr.",
-							"ok": true
-						},
-						{
-							"answer": "Ich bewundert ihren Mut sehr.",
-							"ok": false
-						},
-						{
-							"answer": "Ich ihren Mut sehr bewundere.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "beraten",
-					"summary": "einen Rat geben",
-					"explain": {
-						"entryId": "beraten",
-						"headword": "beraten",
-						"pronunciation": {
-							"display": "buh-RAH-tn",
-							"ipaUK": "/bəˈʁaːtn̩/",
-							"ipaUS": "/bəˈʁaːtn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "beraten",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "jemandem einen Rat geben",
-										"examples": [
-											"Der Verkäufer berät die Kunden gut."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Verkäufer berät die Kunden gut.",
-							"ok": true
-						},
-						{
-							"answer": "Der Verkäufer beraten die Kunden gut.",
-							"ok": false
-						},
-						{
-							"answer": "Der Verkäufer die Kunden gut berät.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "schätzen",
-					"summary": "den Wert erkennen",
-					"explain": {
-						"entryId": "schätzen",
-						"headword": "schätzen",
-						"pronunciation": {
-							"display": "SHET-sn",
-							"ipaUK": "/ˈʃɛtsn̩/",
-							"ipaUS": "/ˈʃɛtsn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "schätzen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "den Wert von etwas erkennen; wertschätzen",
-										"examples": [
-											"Ich schätze deine ehrliche Meinung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich schätze deine ehrliche Meinung.",
-							"ok": true
-						},
-						{
-							"answer": "Ich schätzt deine ehrliche Meinung.",
-							"ok": false
-						},
-						{
-							"answer": "Ich deine ehrliche Meinung schätze.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "ausdrücken",
-					"summary": "Gedanken in Worte fassen",
-					"explain": {
-						"entryId": "ausdrücken",
-						"headword": "ausdrücken",
-						"pronunciation": {
-							"display": "OWS-drük-kn",
-							"ipaUK": "/ˈaʊ̯sˌdʁʏkn̩/",
-							"ipaUS": "/ˈaʊ̯sˌdʁʏkn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "ausdrücken",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Gedanken in Worte fassen",
-										"examples": [
-											"Sie kann ihre Gefühle gut ausdrücken."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie kann ihre Gefühle gut ausdrücken.",
-							"ok": true
-						},
-						{
-							"answer": "Sie kann ihre Gefühle gut ausdrückt.",
-							"ok": false
-						},
-						{
-							"answer": "Sie kann ihre Gefühle gut ausdrucken.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "versichern",
-					"summary": "etwas fest zusagen",
-					"explain": {
-						"entryId": "versichern",
-						"headword": "versichern",
-						"pronunciation": {
-							"display": "fer-ZIKH-uhn",
-							"ipaUK": "/fɛɐ̯ˈzɪçɐn/",
-							"ipaUS": "/fɛɐ̯ˈzɪçɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "versichern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "jemandem etwas fest zusagen",
-										"examples": [
-											"Ich versichere dir, dass alles klappt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich versichere dir, dass alles klappt.",
-							"ok": true
-						},
-						{
-							"answer": "Ich versichert dir, dass alles klappt.",
-							"ok": false
-						},
-						{
-							"answer": "Ich dir versichere, dass alles klappt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "erlangen",
 					"summary": "etwas durch Mühe bekommen",
 					"explain": {
@@ -406,13 +139,11 @@
 								"grammarType": "Verb",
 								"headwordLine": "erlangen",
 								"inflectionsLine": null,
-								"synonyms": [
-									"erreichen"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas durch Anstrengung bekommen",
+										"definition": "erlangen: etwas durch Anstrengung bekommen",
 										"examples": [
 											"Durch Übung erlangt man Sicherheit."
 										]
@@ -440,7 +171,166 @@
 				},
 				{
 					"title": "",
-					"page": 9,
+					"page": 4,
+					"question": "bewundern",
+					"summary": "jemanden sehr schätzen",
+					"explain": {
+						"entryId": "bewundern",
+						"headword": "bewundern",
+						"pronunciation": {
+							"display": "buh-VOON-duhn",
+							"ipaUK": "/bəˈvʊndɐn/",
+							"ipaUS": "/bəˈvʊndɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "bewundern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "bewundern: jemanden oder etwas sehr schätzen",
+										"examples": [
+											"Ich bewundere ihren Mut sehr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bewundere ihren Mut sehr.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bewundert ihren Mut sehr.",
+							"ok": false
+						},
+						{
+							"answer": "Ich ihren Mut sehr bewundere.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "respektieren",
+					"summary": "jemanden achten",
+					"explain": {
+						"entryId": "respektieren",
+						"headword": "respektieren",
+						"pronunciation": {
+							"display": "res-pek-TEE-run",
+							"ipaUK": "/ʁɛspɛkˈtiːʁən/",
+							"ipaUS": "/ʁɛspɛkˈtiːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "respektieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "respektieren: jemanden achten und ernst nehmen",
+										"examples": [
+											"Wir sollten die Regeln respektieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir sollten die Regeln respektieren.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sollten die Regeln respektiert.",
+							"ok": false
+						},
+						{
+							"answer": "Wir die Regeln respektieren sollten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "schätzen",
+					"summary": "den Wert erkennen",
+					"explain": {
+						"entryId": "schätzen",
+						"headword": "schätzen",
+						"pronunciation": {
+							"display": "SHET-sn",
+							"ipaUK": "/ˈʃɛtsn̩/",
+							"ipaUS": "/ˈʃɛtsn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "schätzen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "schätzen: den Wert von etwas erkennen",
+										"examples": [
+											"Ich schätze deine ehrliche Meinung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schätze deine ehrliche Meinung.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schätzt deine ehrliche Meinung.",
+							"ok": false
+						},
+						{
+							"answer": "Ich deine ehrliche Meinung schätze.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
 					"question": "kommunizieren",
 					"summary": "Informationen austauschen",
 					"explain": {
@@ -465,7 +355,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Informationen austauschen",
+										"definition": "kommunizieren: Informationen austauschen",
 										"examples": [
 											"Wir kommunizieren meistens per E-Mail."
 										]
@@ -493,7 +383,7 @@
 				},
 				{
 					"title": "",
-					"page": 10,
+					"page": 8,
 					"question": "vermitteln",
 					"summary": "etwas weitergeben",
 					"explain": {
@@ -518,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas weitergeben oder übermitteln",
+										"definition": "vermitteln: etwas weitergeben oder übermitteln",
 										"examples": [
 											"Der Lehrer vermittelt das Wissen anschaulich."
 										]
@@ -540,6 +430,112 @@
 						},
 						{
 							"answer": "Der Lehrer das Wissen anschaulich vermittelt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "interagieren",
+					"summary": "in Kontakt treten",
+					"explain": {
+						"entryId": "interagieren",
+						"headword": "interagieren",
+						"pronunciation": {
+							"display": "in-tuh-ra-GEE-run",
+							"ipaUK": "/ɪntɐʔaˈɡiːʁən/",
+							"ipaUS": "/ɪntɐʔaˈɡiːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "interagieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "interagieren: miteinander in Kontakt treten",
+										"examples": [
+											"Die Kinder interagieren gern miteinander."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder interagieren gern miteinander.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder interagiert gern miteinander.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder gern miteinander interagieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "überzeugen",
+					"summary": "durch Argumente umstimmen",
+					"explain": {
+						"entryId": "überzeugen",
+						"headword": "überzeugen",
+						"pronunciation": {
+							"display": "Ü-buh-tsoy-gn",
+							"ipaUK": "/ˈyːbɐˌtsɔɪ̯ɡn̩/",
+							"ipaUS": "/ˈyːbɐˌtsɔɪ̯ɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "überzeugen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "überzeugen: jemanden durch Argumente umstimmen",
+										"examples": [
+											"Seine Argumente überzeugen mich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Seine Argumente überzeugen mich.",
+							"ok": true
+						},
+						{
+							"answer": "Seine Argumente überzeugt mich.",
+							"ok": false
+						},
+						{
+							"answer": "Seine Argumente mich überzeugen.",
 							"ok": false
 						}
 					]

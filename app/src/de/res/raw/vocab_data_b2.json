@@ -20,10 +20,10 @@
     {
       "sortOrder": 10,
       "tabNumber": 1,
-      "title": "Begrüßungen & Vorstellungen",
+      "title": "Hallo",
       "words": [
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 1,
           "word": "Gestatten Sie, dass ich mich vorstelle",
           "partOfSpeech": "",
@@ -42,7 +42,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 2,
           "word": "Ich freue mich, die Gelegenheit zu haben",
           "partOfSpeech": "",
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 3,
           "word": "Wir wurden einander noch nicht vorgestellt",
           "partOfSpeech": "",
@@ -80,7 +80,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 4,
           "word": "Es ist mir eine Ehre",
           "partOfSpeech": "",
@@ -99,7 +99,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 5,
           "word": "Ich schätze Ihre Anwesenheit",
           "partOfSpeech": "",
@@ -118,7 +118,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 6,
           "word": "Man hat mir viel von Ihnen erzählt",
           "partOfSpeech": "",
@@ -137,7 +137,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 7,
           "word": "Womit kann ich Ihnen behilflich sein?",
           "partOfSpeech": "",
@@ -156,7 +156,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 8,
           "word": "Ich möchte mich verabschieden",
           "partOfSpeech": "",
@@ -175,7 +175,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 9,
           "word": "Es war mir ein Vergnügen",
           "partOfSpeech": "",
@@ -194,7 +194,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 10,
           "word": "Ich hoffe, wir bleiben in Kontakt",
           "partOfSpeech": "",
@@ -213,7 +213,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 11,
           "word": "Richten Sie bitte meine Grüße aus",
           "partOfSpeech": "",
@@ -232,7 +232,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 12,
           "word": "Lassen Sie es sich gut gehen",
           "partOfSpeech": "",
@@ -251,7 +251,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 13,
           "word": "Es hat mich sehr gefreut",
           "partOfSpeech": "",
@@ -270,7 +270,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 14,
           "word": "Ich verbleibe mit freundlichen Grüßen",
           "partOfSpeech": "",
@@ -289,7 +289,7 @@
           ]
         },
         {
-          "group": "Begrüßungen & Vorstellungen",
+          "group": "Hallo",
           "sortOrder": 15,
           "word": "Sofern Sie einverstanden sind",
           "partOfSpeech": "",
@@ -2617,10 +2617,10 @@
     {
       "sortOrder": 10,
       "tabNumber": 3,
-      "title": "Häufige Verben (im Infinitiv)",
+      "title": "Häufige Verben",
       "words": [
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 1,
           "word": "in Betracht ziehen",
           "partOfSpeech": "",
@@ -2639,7 +2639,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 2,
           "word": "zur Verfügung stellen",
           "partOfSpeech": "",
@@ -2658,7 +2658,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 3,
           "word": "in Frage stellen",
           "partOfSpeech": "",
@@ -2677,7 +2677,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 4,
           "word": "sich auseinandersetzen mit",
           "partOfSpeech": "",
@@ -2696,7 +2696,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 5,
           "word": "voraussetzen",
           "partOfSpeech": "",
@@ -2715,7 +2715,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 6,
           "word": "berücksichtigen",
           "partOfSpeech": "",
@@ -2734,7 +2734,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 7,
           "word": "sich beziehen auf",
           "partOfSpeech": "",
@@ -2753,7 +2753,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 8,
           "word": "gewährleisten",
           "partOfSpeech": "",
@@ -2772,7 +2772,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 9,
           "word": "beeinträchtigen",
           "partOfSpeech": "",
@@ -2791,7 +2791,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 10,
           "word": "in Anspruch nehmen",
           "partOfSpeech": "",
@@ -2810,7 +2810,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 11,
           "word": "sich durchsetzen",
           "partOfSpeech": "",
@@ -2829,7 +2829,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 12,
           "word": "hervorheben",
           "partOfSpeech": "",
@@ -2848,7 +2848,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 13,
           "word": "in Kauf nehmen",
           "partOfSpeech": "",
@@ -2867,7 +2867,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 14,
           "word": "abwägen",
           "partOfSpeech": "",
@@ -2886,7 +2886,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 15,
           "word": "beitragen zu",
           "partOfSpeech": "",
@@ -2905,7 +2905,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 16,
           "word": "sich herausstellen",
           "partOfSpeech": "",
@@ -2924,7 +2924,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 17,
           "word": "in Erwägung ziehen",
           "partOfSpeech": "",
@@ -2943,7 +2943,7 @@
           ]
         },
         {
-          "group": "Häufige Verben (im Infinitiv)",
+          "group": "Häufige Verben",
           "sortOrder": 18,
           "word": "bewältigen",
           "partOfSpeech": "",

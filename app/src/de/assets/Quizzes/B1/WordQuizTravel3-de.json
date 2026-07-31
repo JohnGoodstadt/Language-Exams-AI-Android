@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizTravel3-de",
-	"title": "3. Travel",
+	"title": "Travel",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "Reservierung",
-					"summary": "festes Vorbestellen",
+					"question": "Flugsteig",
+					"summary": "Ausgang zum Flugzeug",
 					"explain": {
-						"entryId": "Reservierung",
-						"headword": "Reservierung",
+						"entryId": "Flugsteig",
+						"headword": "Flugsteig",
 						"pronunciation": {
-							"display": "re-zer-VEE-roong",
-							"ipaUK": "/ʁezɛʁˈviːʁʊŋ/",
-							"ipaUS": "/ʁezɛʁˈviːʁʊŋ/"
+							"display": "FLOOK-shtike",
+							"ipaUK": "/ˈfluːkˌʃtaɪ̯k/",
+							"ipaUS": "/ˈfluːkˌʃtaɪ̯k/"
 						},
 						"labels": [
 							"B1"
@@ -31,15 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Reservierung",
+								"headwordLine": "Flugsteig",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das feste Vorbestellen (Tisch, Zimmer)",
+										"definition": "der Flugsteig: der Ausgang zum Flugzeug am Flughafen",
 										"examples": [
-											"Ich habe eine Reservierung für zwei Personen."
+											"Der Flugsteig befindet sich im ersten Stock."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Ich habe eine Reservierung für zwei Personen.",
+							"answer": "Der Flugsteig befindet sich im ersten Stock.",
 							"ok": true
 						},
 						{
-							"answer": "Ich habe einen Reservierung für zwei Personen.",
+							"answer": "Die Flugsteig befindet sich im ersten Stock.",
 							"ok": false
 						},
 						{
-							"answer": "Ich eine Reservierung für zwei Personen habe.",
+							"answer": "Der Flugsteig sich im ersten Stock befindet.",
 							"ok": false
 						}
 					]
@@ -66,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Fahrplan",
-					"summary": "Liste der Abfahrtszeiten",
+					"question": "Reiseziel",
+					"summary": "Ort, zu dem man reist",
 					"explain": {
-						"entryId": "Fahrplan",
-						"headword": "Fahrplan",
+						"entryId": "Reiseziel",
+						"headword": "Reiseziel",
 						"pronunciation": {
-							"display": "FAR-plahn",
-							"ipaUK": "/ˈfaːɐ̯ˌplaːn/",
-							"ipaUS": "/ˈfaːɐ̯ˌplaːn/"
+							"display": "RY-zuh-tseel",
+							"ipaUK": "/ˈʁaɪ̯zəˌtsiːl/",
+							"ipaUS": "/ˈʁaɪ̯zəˌtsiːl/"
 						},
 						"labels": [
 							"B1"
@@ -84,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Fahrplan",
+								"headwordLine": "Reiseziel",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Liste der Abfahrtszeiten von Bus oder Bahn",
+										"definition": "das Reiseziel: der Ort, zu dem man reist",
 										"examples": [
-											"Der Fahrplan hängt am Bahnsteig."
+											"Unser Reiseziel ist dieses Jahr Italien."
 										]
 									}
 								]
@@ -103,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Fahrplan hängt am Bahnsteig.",
+							"answer": "Unser Reiseziel ist dieses Jahr Italien.",
 							"ok": true
 						},
 						{
-							"answer": "Die Fahrplan hängt am Bahnsteig.",
+							"answer": "Unsere Reiseziel ist dieses Jahr Italien.",
 							"ok": false
 						},
 						{
-							"answer": "Der Fahrplan am Bahnsteig hängt.",
+							"answer": "Unser Reiseziel dieses Jahr Italien ist.",
 							"ok": false
 						}
 					]
@@ -119,15 +119,15 @@
 				{
 					"title": "",
 					"page": 3,
-					"question": "Schiff",
-					"summary": "großes Fahrzeug für das Wasser",
+					"question": "Reise",
+					"summary": "Fahrt an einen anderen Ort",
 					"explain": {
-						"entryId": "Schiff",
-						"headword": "Schiff",
+						"entryId": "Reise",
+						"headword": "Reise",
 						"pronunciation": {
-							"display": "shif",
-							"ipaUK": "/ʃɪf/",
-							"ipaUS": "/ʃɪf/"
+							"display": "RY-zuh",
+							"ipaUK": "/ˈʁaɪ̯zə/",
+							"ipaUS": "/ˈʁaɪ̯zə/"
 						},
 						"labels": [
 							"B1"
@@ -137,15 +137,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Schiff",
+								"headwordLine": "Reise",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein großes Fahrzeug für das Wasser",
+										"definition": "die Reise: eine Fahrt von einem Ort zum anderen",
 										"examples": [
-											"Das Schiff legt am Morgen ab."
+											"Die lange Reise war sehr anstrengend."
 										]
 									}
 								]
@@ -156,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Das Schiff legt am Morgen ab.",
+							"answer": "Die lange Reise war sehr anstrengend.",
 							"ok": true
 						},
 						{
-							"answer": "Der Schiff legt am Morgen ab.",
+							"answer": "Der lange Reise war sehr anstrengend.",
 							"ok": false
 						},
 						{
-							"answer": "Das Schiff am Morgen ablegt.",
+							"answer": "Die lange Reise sehr anstrengend war.",
 							"ok": false
 						}
 					]
@@ -172,6 +172,165 @@
 				{
 					"title": "",
 					"page": 4,
+					"question": "Reiseplan",
+					"summary": "genauer Plan einer Reise",
+					"explain": {
+						"entryId": "Reiseplan",
+						"headword": "Reiseplan",
+						"pronunciation": {
+							"display": "RY-zuh-plahn",
+							"ipaUK": "/ˈʁaɪ̯zəˌplaːn/",
+							"ipaUS": "/ˈʁaɪ̯zəˌplaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reiseplan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Reiseplan: der genaue Plan einer Reise mit Orten und Zeiten",
+										"examples": [
+											"Unser Reiseplan ist gut durchdacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unser Reiseplan ist gut durchdacht.",
+							"ok": true
+						},
+						{
+							"answer": "Unsere Reiseplan ist gut durchdacht.",
+							"ok": false
+						},
+						{
+							"answer": "Unser Reiseplan gut durchdacht ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Zeitplan",
+					"summary": "Plan, wann was passiert",
+					"explain": {
+						"entryId": "Zeitplan",
+						"headword": "Zeitplan",
+						"pronunciation": {
+							"display": "TSITE-plahn",
+							"ipaUK": "/ˈtsaɪ̯tˌplaːn/",
+							"ipaUS": "/ˈtsaɪ̯tˌplaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zeitplan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zeitplan: ein Plan, wann etwas passiert",
+										"examples": [
+											"Der Zeitplan für die Tour ist eng."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Zeitplan für die Tour ist eng.",
+							"ok": true
+						},
+						{
+							"answer": "Die Zeitplan für die Tour ist eng.",
+							"ok": false
+						},
+						{
+							"answer": "Der Zeitplan für die Tour eng ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "planen",
+					"summary": "im Voraus überlegen",
+					"explain": {
+						"entryId": "planen",
+						"headword": "planen",
+						"pronunciation": {
+							"display": "PLAH-nn",
+							"ipaUK": "/ˈplaːnən/",
+							"ipaUS": "/ˈplaːnən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "planen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "planen: im Voraus überlegen, was man tun wird",
+										"examples": [
+											"Wir planen unsere Reise sehr genau."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir planen unsere Reise sehr genau.",
+							"ok": true
+						},
+						{
+							"answer": "Wir plant unsere Reise sehr genau.",
+							"ok": false
+						},
+						{
+							"answer": "Wir unsere Reise sehr genau planen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
 					"question": "Besichtigung",
 					"summary": "Ansehen von Sehenswürdigkeiten",
 					"explain": {
@@ -196,9 +355,9 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Ansehen von Sehenswürdigkeiten",
+										"definition": "die Besichtigung: das Ansehen von Sehenswürdigkeiten",
 										"examples": [
-											"Die Besichtigung der Altstadt dauert zwei Stunden."
+											"Die Besichtigung der Altstadt war schön."
 										]
 									}
 								]
@@ -209,177 +368,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Besichtigung der Altstadt dauert zwei Stunden.",
+							"answer": "Die Besichtigung der Altstadt war schön.",
 							"ok": true
 						},
 						{
-							"answer": "Der Besichtigung der Altstadt dauert zwei Stunden.",
+							"answer": "Der Besichtigung der Altstadt war schön.",
 							"ok": false
 						},
 						{
-							"answer": "Die Besichtigung der Altstadt zwei Stunden dauert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Reisetasche",
-					"summary": "weiche Tasche für die Reise",
-					"explain": {
-						"entryId": "Reisetasche",
-						"headword": "Reisetasche",
-						"pronunciation": {
-							"display": "RY-zuh-tash-uh",
-							"ipaUK": "/ˈʁaɪ̯zəˌtaʃə/",
-							"ipaUS": "/ˈʁaɪ̯zəˌtaʃə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Reisetasche",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine weiche Tasche für die Reise",
-										"examples": [
-											"Ich packe meine Reisetasche am Abend."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich packe meine Reisetasche am Abend.",
-							"ok": true
-						},
-						{
-							"answer": "Ich packe meinen Reisetasche am Abend.",
-							"ok": false
-						},
-						{
-							"answer": "Ich meine Reisetasche am Abend packe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Abflug",
-					"summary": "Starten des Flugzeugs",
-					"explain": {
-						"entryId": "Abflug",
-						"headword": "Abflug",
-						"pronunciation": {
-							"display": "AP-flook",
-							"ipaUK": "/ˈapˌfluːk/",
-							"ipaUS": "/ˈapˌfluːk/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Abflug",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Starten des Flugzeugs in die Luft",
-										"examples": [
-											"Der Abflug verzögert sich um eine Stunde."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Abflug verzögert sich um eine Stunde.",
-							"ok": true
-						},
-						{
-							"answer": "Die Abflug verzögert sich um eine Stunde.",
-							"ok": false
-						},
-						{
-							"answer": "Der Abflug sich um eine Stunde verzögert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Ticket",
-					"summary": "Karte für Fahrt oder Flug",
-					"explain": {
-						"entryId": "Ticket",
-						"headword": "Ticket",
-						"pronunciation": {
-							"display": "TI-ket",
-							"ipaUK": "/ˈtɪkɛt/",
-							"ipaUS": "/ˈtɪkɛt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ticket",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Fahrkarte",
-									"Flugticket"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Karte für eine Fahrt oder einen Flug",
-										"examples": [
-											"Ich habe mein Ticket online gekauft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich habe mein Ticket online gekauft.",
-							"ok": true
-						},
-						{
-							"answer": "Ich habe meinen Ticket online gekauft.",
-							"ok": false
-						},
-						{
-							"answer": "Ich mein Ticket online gekauft habe.",
+							"answer": "Die Besichtigung der Altstadt schön war.",
 							"ok": false
 						}
 					]
@@ -411,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Reise mit mehreren Stationen",
+										"definition": "die Rundreise: eine Reise mit mehreren Stationen",
 										"examples": [
 											"Die Rundreise führt durch fünf Länder."
 										]
@@ -440,15 +437,15 @@
 				{
 					"title": "",
 					"page": 9,
-					"question": "Seereise",
-					"summary": "lange Reise über das Meer",
+					"question": "Sehenswürdigkeit",
+					"summary": "Ort für Touristen",
 					"explain": {
-						"entryId": "Seereise",
-						"headword": "Seereise",
+						"entryId": "Sehenswürdigkeit",
+						"headword": "Sehenswürdigkeit",
 						"pronunciation": {
-							"display": "ZAY-ry-zuh",
-							"ipaUK": "/ˈzeːˌʁaɪ̯zə/",
-							"ipaUS": "/ˈzeːˌʁaɪ̯zə/"
+							"display": "ZAY-uhns-vür-dikh-kite",
+							"ipaUK": "/ˈzeːənsvʏʁdɪçkaɪ̯t/",
+							"ipaUS": "/ˈzeːənsvʏʁdɪçkaɪ̯t/"
 						},
 						"labels": [
 							"B1"
@@ -458,15 +455,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Seereise",
+								"headwordLine": "Sehenswürdigkeit",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine lange Reise über das Meer",
+										"definition": "die Sehenswürdigkeit: ein Ort, den Touristen gern besuchen",
 										"examples": [
-											"Die Seereise nach Amerika dauerte Wochen."
+											"Der Turm ist eine bekannte Sehenswürdigkeit."
 										]
 									}
 								]
@@ -477,15 +474,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Seereise nach Amerika dauerte Wochen.",
+							"answer": "Der Turm ist eine bekannte Sehenswürdigkeit.",
 							"ok": true
 						},
 						{
-							"answer": "Der Seereise nach Amerika dauerte Wochen.",
+							"answer": "Der Turm ist einen bekannten Sehenswürdigkeit.",
 							"ok": false
 						},
 						{
-							"answer": "Die Seereise nach Amerika Wochen dauerte.",
+							"answer": "Der Turm eine bekannte Sehenswürdigkeit ist.",
 							"ok": false
 						}
 					]

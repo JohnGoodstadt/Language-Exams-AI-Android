@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizEmotions3-de",
-	"title": "3. Emotions",
+	"title": "Emotions",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "Meinung",
-					"summary": "was jemand über etwas denkt",
+					"question": "Sichtweise",
+					"summary": "wie man etwas sieht",
 					"explain": {
-						"entryId": "Meinung",
-						"headword": "Meinung",
+						"entryId": "Sichtweise",
+						"headword": "Sichtweise",
 						"pronunciation": {
-							"display": "MY-noong",
-							"ipaUK": "/ˈmaɪ̯nʊŋ/",
-							"ipaUS": "/ˈmaɪ̯nʊŋ/"
+							"display": "ZIKHT-vy-zuh",
+							"ipaUK": "/ˈzɪçtˌvaɪ̯zə/",
+							"ipaUS": "/ˈzɪçtˌvaɪ̯zə/"
 						},
 						"labels": [
 							"B1"
@@ -31,15 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Meinung",
+								"headwordLine": "Sichtweise",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das, was jemand über etwas denkt",
+										"definition": "die Sichtweise: die Art, wie man etwas sieht",
 										"examples": [
-											"Jeder darf seine Meinung frei sagen."
+											"Seine Sichtweise hat sich völlig geändert."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Jeder darf seine Meinung frei sagen.",
+							"answer": "Seine Sichtweise hat sich völlig geändert.",
 							"ok": true
 						},
 						{
-							"answer": "Jeder darf seinen Meinung frei sagen.",
+							"answer": "Seinen Sichtweise hat sich völlig geändert.",
 							"ok": false
 						},
 						{
-							"answer": "Jeder seine Meinung frei sagen darf.",
+							"answer": "Seine Sichtweise sich völlig geändert hat.",
 							"ok": false
 						}
 					]
@@ -90,7 +90,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "der ganze Charakter eines Menschen",
+										"definition": "die Persönlichkeit: der ganze Charakter eines Menschen",
 										"examples": [
 											"Sie hat eine starke Persönlichkeit."
 										]
@@ -119,15 +119,15 @@
 				{
 					"title": "",
 					"page": 3,
-					"question": "Sichtweise",
-					"summary": "wie man etwas sieht",
+					"question": "Charakter",
+					"summary": "typische Eigenschaften",
 					"explain": {
-						"entryId": "Sichtweise",
-						"headword": "Sichtweise",
+						"entryId": "Charakter",
+						"headword": "Charakter",
 						"pronunciation": {
-							"display": "ZIKHT-vy-zuh",
-							"ipaUK": "/ˈzɪçtˌvaɪ̯zə/",
-							"ipaUS": "/ˈzɪçtˌvaɪ̯zə/"
+							"display": "ka-RAK-tuh",
+							"ipaUK": "/kaˈʁaktɐ/",
+							"ipaUS": "/kaˈʁaktɐ/"
 						},
 						"labels": [
 							"B1"
@@ -137,17 +137,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Sichtweise",
+								"headwordLine": "Charakter",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Blickwinkel"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Art, wie man etwas sieht",
+										"definition": "der Charakter: die typischen Eigenschaften eines Menschen",
 										"examples": [
-											"Seine Sichtweise hat sich völlig geändert."
+											"Sie hat einen starken Charakter."
 										]
 									}
 								]
@@ -158,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Seine Sichtweise hat sich völlig geändert.",
+							"answer": "Sie hat einen starken Charakter.",
 							"ok": true
 						},
 						{
-							"answer": "Seinen Sichtweise hat sich völlig geändert.",
+							"answer": "Sie hat einen starke Charakter.",
 							"ok": false
 						},
 						{
-							"answer": "Seine Sichtweise sich völlig geändert hat.",
+							"answer": "Sie einen starken Charakter hat.",
 							"ok": false
 						}
 					]
@@ -174,218 +172,6 @@
 				{
 					"title": "",
 					"page": 4,
-					"question": "Selbstwertgefühl",
-					"summary": "Gefühl vom eigenen Wert",
-					"explain": {
-						"entryId": "Selbstwertgefühl",
-						"headword": "Selbstwertgefühl",
-						"pronunciation": {
-							"display": "ZELPST-vairt-guh-fül",
-							"ipaUK": "/ˈzɛlpstveːɐ̯tɡəˌfyːl/",
-							"ipaUS": "/ˈzɛlpstveːɐ̯tɡəˌfyːl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Selbstwertgefühl",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Gefühl vom eigenen Wert",
-										"examples": [
-											"Lob stärkt das Selbstwertgefühl."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Lob stärkt das Selbstwertgefühl.",
-							"ok": true
-						},
-						{
-							"answer": "Lob stärkt der Selbstwertgefühl.",
-							"ok": false
-						},
-						{
-							"answer": "Lob das Selbstwertgefühl stärkt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Empfindung",
-					"summary": "inneres Gefühl, Regung",
-					"explain": {
-						"entryId": "Empfindung",
-						"headword": "Empfindung",
-						"pronunciation": {
-							"display": "emp-FIN-doong",
-							"ipaUK": "/ɛmˈpfɪndʊŋ/",
-							"ipaUS": "/ɛmˈpfɪndʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Empfindung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein inneres Gefühl; eine Regung",
-										"examples": [
-											"Wärme ist eine angenehme Empfindung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wärme ist eine angenehme Empfindung.",
-							"ok": true
-						},
-						{
-							"answer": "Wärme ist einen angenehmen Empfindung.",
-							"ok": false
-						},
-						{
-							"answer": "Wärme eine angenehme Empfindung ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Fertigkeit",
-					"summary": "gelernte praktische Fähigkeit",
-					"explain": {
-						"entryId": "Fertigkeit",
-						"headword": "Fertigkeit",
-						"pronunciation": {
-							"display": "FER-tikh-kite",
-							"ipaUK": "/ˈfɛʁtɪçkaɪ̯t/",
-							"ipaUS": "/ˈfɛʁtɪçkaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Fertigkeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine gelernte praktische Fähigkeit",
-										"examples": [
-											"Kochen ist eine nützliche Fertigkeit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Kochen ist eine nützliche Fertigkeit.",
-							"ok": true
-						},
-						{
-							"answer": "Kochen ist einen nützlichen Fertigkeit.",
-							"ok": false
-						},
-						{
-							"answer": "Kochen eine nützliche Fertigkeit ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Talent",
-					"summary": "natürliche Begabung",
-					"explain": {
-						"entryId": "Talent",
-						"headword": "Talent",
-						"pronunciation": {
-							"display": "ta-LENT",
-							"ipaUK": "/taˈlɛnt/",
-							"ipaUS": "/taˈlɛnt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Talent",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine natürliche Begabung",
-										"examples": [
-											"Das Kind hat ein großes Talent zum Malen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Kind hat ein großes Talent zum Malen.",
-							"ok": true
-						},
-						{
-							"answer": "Das Kind hat einen großen Talent zum Malen.",
-							"ok": false
-						},
-						{
-							"answer": "Das Kind ein großes Talent zum Malen hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Eigenschaften",
 					"summary": "Merkmale des Charakters (Plural)",
 					"explain": {
@@ -402,15 +188,15 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
 								"headwordLine": "Eigenschaften",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Merkmale des Charakters (Plural)",
+										"definition": "die Eigenschaften: die Merkmale des Charakters (Plural)",
 										"examples": [
 											"Ehrlichkeit ist eine ihrer besten Eigenschaften."
 										]
@@ -438,16 +224,16 @@
 				},
 				{
 					"title": "",
-					"page": 9,
-					"question": "Ansicht",
-					"summary": "Meinung zu einem Thema",
+					"page": 5,
+					"question": "Talent",
+					"summary": "natürliche Begabung",
 					"explain": {
-						"entryId": "Ansicht",
-						"headword": "Ansicht",
+						"entryId": "Talent",
+						"headword": "Talent",
 						"pronunciation": {
-							"display": "AN-zikht",
-							"ipaUK": "/ˈanzɪçt/",
-							"ipaUS": "/ˈanzɪçt/"
+							"display": "ta-LENT",
+							"ipaUK": "/taˈlɛnt/",
+							"ipaUS": "/taˈlɛnt/"
 						},
 						"labels": [
 							"B1"
@@ -457,17 +243,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Ansicht",
+								"headwordLine": "Talent",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Meinung"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Meinung zu einem Thema",
+										"definition": "das Talent: eine natürliche Begabung",
 										"examples": [
-											"Nach meiner Ansicht sollten wir warten."
+											"Das Kind hat ein großes Talent zum Malen."
 										]
 									}
 								]
@@ -478,22 +262,128 @@
 					},
 					"answers": [
 						{
-							"answer": "Nach meiner Ansicht sollten wir warten.",
+							"answer": "Das Kind hat ein großes Talent zum Malen.",
 							"ok": true
 						},
 						{
-							"answer": "Nach meinem Ansicht sollten wir warten.",
+							"answer": "Das Kind hat einen großen Talent zum Malen.",
 							"ok": false
 						},
 						{
-							"answer": "Nach meiner Ansicht wir sollten warten.",
+							"answer": "Das Kind ein großes Talent zum Malen hat.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 10,
+					"page": 6,
+					"question": "Fähigkeit",
+					"summary": "etwas, das man kann",
+					"explain": {
+						"entryId": "Fähigkeit",
+						"headword": "Fähigkeit",
+						"pronunciation": {
+							"display": "FAY-ikh-kite",
+							"ipaUK": "/ˈfɛːɪçkaɪ̯t/",
+							"ipaUS": "/ˈfɛːɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fähigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Fähigkeit: etwas, das man kann",
+										"examples": [
+											"Sie hat die Fähigkeit, andere zu motivieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat die Fähigkeit, andere zu motivieren.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat der Fähigkeit, andere zu motivieren.",
+							"ok": false
+						},
+						{
+							"answer": "Sie die Fähigkeit hat, andere zu motivieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Begabung",
+					"summary": "besonderes Talent",
+					"explain": {
+						"entryId": "Begabung",
+						"headword": "Begabung",
+						"pronunciation": {
+							"display": "buh-GAH-boong",
+							"ipaUK": "/bəˈɡaːbʊŋ/",
+							"ipaUS": "/bəˈɡaːbʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Begabung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Begabung: ein besonderes, angeborenes Talent",
+										"examples": [
+											"Sie hat eine besondere Begabung für Musik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat eine besondere Begabung für Musik.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat einen besonderen Begabung für Musik.",
+							"ok": false
+						},
+						{
+							"answer": "Sie eine besondere Begabung für Musik hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
 					"question": "Weisheit",
 					"summary": "kluges Wissen aus Erfahrung",
 					"explain": {
@@ -518,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "kluges Wissen aus viel Erfahrung",
+										"definition": "die Weisheit: kluges Wissen aus viel Erfahrung",
 										"examples": [
 											"Mit dem Alter kommt oft die Weisheit."
 										]
@@ -540,6 +430,112 @@
 						},
 						{
 							"answer": "Mit dem Alter oft die Weisheit kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Wissen",
+					"summary": "alles, was man gelernt hat",
+					"explain": {
+						"entryId": "Wissen",
+						"headword": "Wissen",
+						"pronunciation": {
+							"display": "VIS-sn",
+							"ipaUK": "/ˈvɪsn̩/",
+							"ipaUS": "/ˈvɪsn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wissen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Wissen: alles, was man gelernt hat und kennt",
+										"examples": [
+											"Sein Wissen über Physik ist enorm."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sein Wissen über Physik ist enorm.",
+							"ok": true
+						},
+						{
+							"answer": "Seine Wissen über Physik ist enorm.",
+							"ok": false
+						},
+						{
+							"answer": "Sein Wissen über Physik enorm ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Einsicht",
+					"summary": "tieferes Verständnis",
+					"explain": {
+						"entryId": "Einsicht",
+						"headword": "Einsicht",
+						"pronunciation": {
+							"display": "INE-zikht",
+							"ipaUK": "/ˈaɪ̯nzɪçt/",
+							"ipaUS": "/ˈaɪ̯nzɪçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einsicht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Einsicht: ein tieferes Verständnis von etwas",
+										"examples": [
+											"Am Ende kam er zu einer wichtigen Einsicht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Ende kam er zu einer wichtigen Einsicht.",
+							"ok": true
+						},
+						{
+							"answer": "Am Ende kam er zu einem wichtigen Einsicht.",
+							"ok": false
+						},
+						{
+							"answer": "Am Ende er kam zu einer wichtigen Einsicht.",
 							"ok": false
 						}
 					]

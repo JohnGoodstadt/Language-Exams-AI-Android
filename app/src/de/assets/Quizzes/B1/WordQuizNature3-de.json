@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizNature3-de",
-	"title": "3. Nature",
+	"title": "Nature",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -14,7 +14,7 @@
 					"title": "",
 					"page": 1,
 					"question": "erneuerbar",
-					"summary": "Adjektiv: immer wieder nutzbar",
+					"summary": "immer wieder nutzbar",
 					"explain": {
 						"entryId": "erneuerbar",
 						"headword": "erneuerbar",
@@ -37,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "immer wieder neu nutzbar (z. B. Energie)",
+										"definition": "erneuerbar: immer wieder neu nutzbar (z. B. Energie)",
 										"examples": [
 											"Sonnenenergie ist erneuerbar."
 										]
@@ -66,169 +66,8 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "wiederverwenden",
-					"summary": "etwas noch einmal benutzen",
-					"explain": {
-						"entryId": "wiederverwenden",
-						"headword": "wiederverwenden",
-						"pronunciation": {
-							"display": "VEE-duh-fer-ven-dn",
-							"ipaUK": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/",
-							"ipaUS": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "wiederverwenden",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas noch einmal benutzen",
-										"examples": [
-											"Man kann alte Gläser gut wiederverwenden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Man kann alte Gläser gut wiederverwenden.",
-							"ok": true
-						},
-						{
-							"answer": "Man kann alte Gläser gut wiederverwendet.",
-							"ok": false
-						},
-						{
-							"answer": "Man alte Gläser gut wiederverwenden kann.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Unterschlupf",
-					"summary": "geschützter Ort zum Unterkommen",
-					"explain": {
-						"entryId": "Unterschlupf",
-						"headword": "Unterschlupf",
-						"pronunciation": {
-							"display": "OON-tuh-shloopf",
-							"ipaUK": "/ˈʊntɐˌʃlʊpf/",
-							"ipaUS": "/ˈʊntɐˌʃlʊpf/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Unterschlupf",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Zuflucht"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein geschützter Ort zum Unterkommen",
-										"examples": [
-											"Die Katze suchte einen trockenen Unterschlupf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Katze suchte einen trockenen Unterschlupf.",
-							"ok": true
-						},
-						{
-							"answer": "Die Katze suchte ein trockenes Unterschlupf.",
-							"ok": false
-						},
-						{
-							"answer": "Die Katze einen trockenen Unterschlupf suchte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Umgebung",
-					"summary": "alles, was um einen herum liegt",
-					"explain": {
-						"entryId": "Umgebung",
-						"headword": "Umgebung",
-						"pronunciation": {
-							"display": "oom-GAY-boong",
-							"ipaUK": "/ʊmˈɡeːbʊŋ/",
-							"ipaUS": "/ʊmˈɡeːbʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Umgebung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "alles, was um einen herum liegt",
-										"examples": [
-											"Die Umgebung des Sees ist sehr ruhig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Umgebung des Sees ist sehr ruhig.",
-							"ok": true
-						},
-						{
-							"answer": "Der Umgebung des Sees ist sehr ruhig.",
-							"ok": false
-						},
-						{
-							"answer": "Die Umgebung des Sees sehr ruhig ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
 					"question": "nachhaltig",
-					"summary": "Adjektiv: Ressourcen bleiben erhalten",
+					"summary": "Ressourcen bleiben erhalten",
 					"explain": {
 						"entryId": "nachhaltig",
 						"headword": "nachhaltig",
@@ -251,7 +90,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "so, dass Ressourcen für die Zukunft bleiben",
+										"definition": "nachhaltig: so, dass Ressourcen für die Zukunft bleiben",
 										"examples": [
 											"Diese Firma produziert sehr nachhaltig."
 										]
@@ -279,16 +118,16 @@
 				},
 				{
 					"title": "",
-					"page": 6,
-					"question": "Temperatur",
-					"summary": "wie warm oder kalt es ist",
+					"page": 3,
+					"question": "umweltfreundlich",
+					"summary": "gut für die Umwelt",
 					"explain": {
-						"entryId": "Temperatur",
-						"headword": "Temperatur",
+						"entryId": "umweltfreundlich",
+						"headword": "umweltfreundlich",
 						"pronunciation": {
-							"display": "tem-pe-ra-TOOR",
-							"ipaUK": "/tɛmpəʁaˈtuːɐ̯/",
-							"ipaUS": "/tɛmpəʁaˈtuːɐ̯/"
+							"display": "OOM-velt-froynt-likh",
+							"ipaUK": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/",
+							"ipaUS": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/"
 						},
 						"labels": [
 							"B1"
@@ -296,17 +135,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Temperatur",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "umweltfreundlich",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "wie warm oder kalt es ist",
+										"definition": "umweltfreundlich: gut für die Umwelt; ökologisch",
 										"examples": [
-											"Die Temperatur steigt im Sommer stark."
+											"Dieses Auto ist besonders umweltfreundlich."
 										]
 									}
 								]
@@ -317,130 +156,22 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Temperatur steigt im Sommer stark.",
+							"answer": "Dieses Auto ist besonders umweltfreundlich.",
 							"ok": true
 						},
 						{
-							"answer": "Der Temperatur steigt im Sommer stark.",
+							"answer": "Dieses Auto ist besonders umweltfreundliche.",
 							"ok": false
 						},
 						{
-							"answer": "Die Temperatur im Sommer stark steigt.",
+							"answer": "Dieses Auto besonders umweltfreundlich ist.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 7,
-					"question": "Abfall",
-					"summary": "Dinge, die man wegwirft",
-					"explain": {
-						"entryId": "Abfall",
-						"headword": "Abfall",
-						"pronunciation": {
-							"display": "AP-fal",
-							"ipaUK": "/ˈapfal/",
-							"ipaUS": "/ˈapfal/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Abfall",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Müll"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Dinge, die man wegwirft; Müll",
-										"examples": [
-											"Der Abfall wird jeden Montag abgeholt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Abfall wird jeden Montag abgeholt.",
-							"ok": true
-						},
-						{
-							"answer": "Die Abfall wird jeden Montag abgeholt.",
-							"ok": false
-						},
-						{
-							"answer": "Der Abfall jeden Montag abgeholt wird.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Wetter",
-					"summary": "Zustand der Luft (Regen, Sonne)",
-					"explain": {
-						"entryId": "Wetter",
-						"headword": "Wetter",
-						"pronunciation": {
-							"display": "VET-tuh",
-							"ipaUK": "/ˈvɛtɐ/",
-							"ipaUS": "/ˈvɛtɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Wetter",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Zustand der Luft (Regen, Sonne …)",
-										"examples": [
-											"Das Wetter ist heute sehr wechselhaft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Wetter ist heute sehr wechselhaft.",
-							"ok": true
-						},
-						{
-							"answer": "Der Wetter ist heute sehr wechselhaft.",
-							"ok": false
-						},
-						{
-							"answer": "Das Wetter heute sehr wechselhaft ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
+					"page": 4,
 					"question": "Wildtiere",
 					"summary": "frei lebende Tiere (Plural)",
 					"explain": {
@@ -457,15 +188,15 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
 								"headwordLine": "Wildtiere",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die frei lebenden Tiere in der Natur",
+										"definition": "die Wildtiere: die frei lebenden Tiere in der Natur",
 										"examples": [
 											"Im Nationalpark leben viele Wildtiere."
 										]
@@ -487,6 +218,271 @@
 						},
 						{
 							"answer": "Im Nationalpark viele Wildtiere leben.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Tierwelt",
+					"summary": "alle Tiere eines Gebiets",
+					"explain": {
+						"entryId": "Tierwelt",
+						"headword": "Tierwelt",
+						"pronunciation": {
+							"display": "TEER-velt",
+							"ipaUK": "/ˈtiːɐ̯ˌvɛlt/",
+							"ipaUS": "/ˈtiːɐ̯ˌvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tierwelt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Tierwelt: alle Tiere eines Gebiets",
+										"examples": [
+											"Die Tierwelt Afrikas ist beeindruckend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Tierwelt Afrikas ist beeindruckend.",
+							"ok": true
+						},
+						{
+							"answer": "Der Tierwelt Afrikas ist beeindruckend.",
+							"ok": false
+						},
+						{
+							"answer": "Die Tierwelt Afrikas beeindruckend ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Pflanzenwelt",
+					"summary": "alle Pflanzen eines Gebiets",
+					"explain": {
+						"entryId": "Pflanzenwelt",
+						"headword": "Pflanzenwelt",
+						"pronunciation": {
+							"display": "PFLAN-tsn-velt",
+							"ipaUK": "/ˈpflantsn̩ˌvɛlt/",
+							"ipaUS": "/ˈpflantsn̩ˌvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Pflanzenwelt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Pflanzenwelt: alle Pflanzen eines Gebiets",
+										"examples": [
+											"Die Pflanzenwelt der Alpen ist vielfältig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Pflanzenwelt der Alpen ist vielfältig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Pflanzenwelt der Alpen ist vielfältig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Pflanzenwelt der Alpen vielfältig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Erderwärmung",
+					"summary": "Erwärmung der ganzen Erde",
+					"explain": {
+						"entryId": "Erderwärmung",
+						"headword": "Erderwärmung",
+						"pronunciation": {
+							"display": "AIRT-er-ver-moong",
+							"ipaUK": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/",
+							"ipaUS": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erderwärmung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erderwärmung: die Erwärmung der ganzen Erde",
+										"examples": [
+											"Die Erderwärmung lässt das Eis schmelzen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Erderwärmung lässt das Eis schmelzen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erderwärmung lässt das Eis schmelzen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Erderwärmung das Eis schmelzen lässt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Klimawandel",
+					"summary": "langfristige Veränderung des Klimas",
+					"explain": {
+						"entryId": "Klimawandel",
+						"headword": "Klimawandel",
+						"pronunciation": {
+							"display": "KLEE-ma-van-dl",
+							"ipaUK": "/ˈkliːmaˌvandl̩/",
+							"ipaUS": "/ˈkliːmaˌvandl̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klimawandel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Klimawandel: die langfristige Veränderung des Klimas",
+										"examples": [
+											"Der Klimawandel bedroht viele Arten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Klimawandel bedroht viele Arten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Klimawandel bedroht viele Arten.",
+							"ok": false
+						},
+						{
+							"answer": "Der Klimawandel viele Arten bedroht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Treibhauseffekt",
+					"summary": "Erwärmung durch Gase",
+					"explain": {
+						"entryId": "Treibhauseffekt",
+						"headword": "Treibhauseffekt",
+						"pronunciation": {
+							"display": "TRIPE-house-e-fekt",
+							"ipaUK": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/",
+							"ipaUS": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Treibhauseffekt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Treibhauseffekt: die Erwärmung durch Gase in der Atmosphäre",
+										"examples": [
+											"Der Treibhauseffekt erwärmt die Erde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Treibhauseffekt erwärmt die Erde.",
+							"ok": true
+						},
+						{
+							"answer": "Die Treibhauseffekt erwärmt die Erde.",
+							"ok": false
+						},
+						{
+							"answer": "Der Treibhauseffekt die Erde erwärmt.",
 							"ok": false
 						}
 					]

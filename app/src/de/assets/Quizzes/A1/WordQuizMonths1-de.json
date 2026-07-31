@@ -1,0 +1,652 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizMonths1-de",
+	"title": "Months",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Januar",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "Januar",
+						"headword": "Januar",
+						"pronunciation": {
+							"display": "YA-noo-ar",
+							"ipaUK": "/ˈjanuaːɐ̯/",
+							"ipaUS": "/ˈjanuaːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "Januar",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der erste Monat des Jahres",
+										"examples": [
+											"Im Januar ist es oft kalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Januar ist es oft kalt.",
+							"ok": true
+						},
+						{
+							"answer": "In Januar ist es oft kalt.",
+							"ok": false
+						},
+						{
+							"answer": "Im Januar es ist oft kalt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Februar",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "Februar",
+						"headword": "Februar",
+						"pronunciation": {
+							"display": "FAY-broo-ar",
+							"ipaUK": "/ˈfeːbʁuaːɐ̯/",
+							"ipaUS": "/ˈfeːbʁuaːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "Februar",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der zweite Monat des Jahres",
+										"examples": [
+											"Im Februar gibt es Karneval."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Februar gibt es Karneval.",
+							"ok": true
+						},
+						{
+							"answer": "In Februar gibt es Karneval.",
+							"ok": false
+						},
+						{
+							"answer": "Im Februar es gibt Karneval.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "März",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "März",
+						"headword": "März",
+						"pronunciation": {
+							"display": "merts",
+							"ipaUK": "/mɛʁts/",
+							"ipaUS": "/mɛʁts/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "März",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der dritte Monat des Jahres",
+										"examples": [
+											"Im März beginnt der Frühling."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im März beginnt der Frühling.",
+							"ok": true
+						},
+						{
+							"answer": "In März beginnt der Frühling.",
+							"ok": false
+						},
+						{
+							"answer": "Im März der Frühling beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "April",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "April",
+						"headword": "April",
+						"pronunciation": {
+							"display": "a-PRIL",
+							"ipaUK": "/aˈpʁɪl/",
+							"ipaUS": "/aˈpʁɪl/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "April",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der vierte Monat des Jahres",
+										"examples": [
+											"Im April regnet es oft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im April regnet es oft.",
+							"ok": true
+						},
+						{
+							"answer": "In April regnet es oft.",
+							"ok": false
+						},
+						{
+							"answer": "Im April es regnet oft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Mai",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "Mai",
+						"headword": "Mai",
+						"pronunciation": {
+							"display": "my",
+							"ipaUK": "/maɪ̯/",
+							"ipaUS": "/maɪ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "Mai",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der fünfte Monat des Jahres",
+										"examples": [
+											"Im Mai blühen die Blumen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Mai blühen die Blumen.",
+							"ok": true
+						},
+						{
+							"answer": "In Mai blühen die Blumen.",
+							"ok": false
+						},
+						{
+							"answer": "Im Mai die Blumen blühen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Juni",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "Juni",
+						"headword": "Juni",
+						"pronunciation": {
+							"display": "YOO-ni",
+							"ipaUK": "/ˈjuːni/",
+							"ipaUS": "/ˈjuːni/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "Juni",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der sechste Monat des Jahres",
+										"examples": [
+											"Im Juni wird es warm."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Juni wird es warm.",
+							"ok": true
+						},
+						{
+							"answer": "In Juni wird es warm.",
+							"ok": false
+						},
+						{
+							"answer": "Im Juni es wird warm.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Juli",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "Juli",
+						"headword": "Juli",
+						"pronunciation": {
+							"display": "YOO-li",
+							"ipaUK": "/ˈjuːli/",
+							"ipaUS": "/ˈjuːli/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "Juli",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der siebte Monat des Jahres",
+										"examples": [
+											"Im Juli fahren wir in den Urlaub."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Juli fahren wir in den Urlaub.",
+							"ok": true
+						},
+						{
+							"answer": "In Juli fahren wir in den Urlaub.",
+							"ok": false
+						},
+						{
+							"answer": "Im Juli wir fahren in den Urlaub.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "August",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "August",
+						"headword": "August",
+						"pronunciation": {
+							"display": "ow-GOOST",
+							"ipaUK": "/aʊ̯ˈɡʊst/",
+							"ipaUS": "/aʊ̯ˈɡʊst/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "August",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der achte Monat des Jahres",
+										"examples": [
+											"Im August ist es sehr heiß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im August ist es sehr heiß.",
+							"ok": true
+						},
+						{
+							"answer": "In August ist es sehr heiß.",
+							"ok": false
+						},
+						{
+							"answer": "Im August es ist sehr heiß.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "September",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "September",
+						"headword": "September",
+						"pronunciation": {
+							"display": "zep-TEM-buh",
+							"ipaUK": "/zɛpˈtɛmbɐ/",
+							"ipaUS": "/zɛpˈtɛmbɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "September",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der neunte Monat des Jahres",
+										"examples": [
+											"Im September beginnt die Schule."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im September beginnt die Schule.",
+							"ok": true
+						},
+						{
+							"answer": "In September beginnt die Schule.",
+							"ok": false
+						},
+						{
+							"answer": "Im September die Schule beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Oktober",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "Oktober",
+						"headword": "Oktober",
+						"pronunciation": {
+							"display": "ok-TOH-buh",
+							"ipaUK": "/ɔkˈtoːbɐ/",
+							"ipaUS": "/ɔkˈtoːbɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "Oktober",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der zehnte Monat des Jahres",
+										"examples": [
+											"Im Oktober werden die Blätter bunt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Oktober werden die Blätter bunt.",
+							"ok": true
+						},
+						{
+							"answer": "In Oktober werden die Blätter bunt.",
+							"ok": false
+						},
+						{
+							"answer": "Im Oktober die Blätter bunt werden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "November",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "November",
+						"headword": "November",
+						"pronunciation": {
+							"display": "no-VEM-buh",
+							"ipaUK": "/noˈvɛmbɐ/",
+							"ipaUS": "/noˈvɛmbɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "November",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der elfte Monat des Jahres",
+										"examples": [
+											"Im November ist es oft neblig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im November ist es oft neblig.",
+							"ok": true
+						},
+						{
+							"answer": "In November ist es oft neblig.",
+							"ok": false
+						},
+						{
+							"answer": "Im November es ist oft neblig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "Dezember",
+					"summary": "ein Monat des Jahres",
+					"explain": {
+						"entryId": "Dezember",
+						"headword": "Dezember",
+						"pronunciation": {
+							"display": "de-TSEM-buh",
+							"ipaUK": "/deˈtsɛmbɐ/",
+							"ipaUS": "/deˈtsɛmbɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Monatsname",
+								"headwordLine": "Dezember",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der zwölfte Monat des Jahres",
+										"examples": [
+											"Im Dezember feiern wir Weihnachten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Dezember feiern wir Weihnachten.",
+							"ok": true
+						},
+						{
+							"answer": "In Dezember feiern wir Weihnachten.",
+							"ok": false
+						},
+						{
+							"answer": "Im Dezember wir feiern Weihnachten.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

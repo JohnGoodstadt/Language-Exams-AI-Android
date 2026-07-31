@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizAdjectives2-de",
-	"title": "2. Adjectives",
+	"title": "Adjectives",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "eifrig",
-					"summary": "Adjektiv: voller Eifer",
+					"question": "beschämt",
+					"summary": "voller Scham",
 					"explain": {
-						"entryId": "eifrig",
-						"headword": "eifrig",
+						"entryId": "beschämt",
+						"headword": "beschämt",
 						"pronunciation": {
-							"display": "EYE-frikh",
-							"ipaUK": "/ˈaɪ̯fʁɪç/",
-							"ipaUS": "/ˈaɪ̯fʁɪç/"
+							"display": "buh-SHAYMT",
+							"ipaUK": "/bəˈʃɛːmt/",
+							"ipaUS": "/bəˈʃɛːmt/"
 						},
 						"labels": [
 							"B1"
@@ -31,15 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Adjektiv",
 								"grammarType": "Adjektiv",
-								"headwordLine": "eifrig",
+								"headwordLine": "beschämt",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "voller Eifer; sehr motiviert",
+										"definition": "beschämt: voller Scham",
 										"examples": [
-											"Der Student war beim Lernen sehr eifrig."
+											"Nach dem Fehler war sie zutiefst beschämt."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Student war beim Lernen sehr eifrig.",
+							"answer": "Nach dem Fehler war sie zutiefst beschämt.",
 							"ok": true
 						},
 						{
-							"answer": "Der Student war beim Lernen sehr eifrige.",
+							"answer": "Nach dem Fehler war sie zutiefst beschämte.",
 							"ok": false
 						},
 						{
-							"answer": "Der Student beim Lernen sehr eifrig war.",
+							"answer": "Nach dem Fehler sie war zutiefst beschämt.",
 							"ok": false
 						}
 					]
@@ -66,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "verlegen",
-					"summary": "Adjektiv: unsicher, beschämt",
+					"question": "gedemütigt",
+					"summary": "in der Würde verletzt",
 					"explain": {
-						"entryId": "verlegen",
-						"headword": "verlegen",
+						"entryId": "gedemütigt",
+						"headword": "gedemütigt",
 						"pronunciation": {
-							"display": "fer-LAY-gn",
-							"ipaUK": "/fɛɐ̯ˈleːɡn̩/",
-							"ipaUS": "/fɛɐ̯ˈleːɡn̩/"
+							"display": "guh-DAY-mü-tikht",
+							"ipaUK": "/ɡəˈdeːmyːtɪçt/",
+							"ipaUS": "/ɡəˈdeːmyːtɪçt/"
 						},
 						"labels": [
 							"B1"
@@ -84,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Adjektiv",
 								"grammarType": "Adjektiv",
-								"headwordLine": "verlegen",
+								"headwordLine": "gedemütigt",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "unsicher und ein bisschen beschämt",
+										"definition": "gedemütigt: in der Würde verletzt",
 										"examples": [
-											"Bei dem Kompliment wurde sie ganz verlegen."
+											"Nach der Kritik fühlte er sich gedemütigt."
 										]
 									}
 								]
@@ -103,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Bei dem Kompliment wurde sie ganz verlegen.",
+							"answer": "Nach der Kritik fühlte er sich gedemütigt.",
 							"ok": true
 						},
 						{
-							"answer": "Bei dem Kompliment wurde sie ganz verlegene.",
+							"answer": "Nach der Kritik fühlte er sich gedemütigte.",
 							"ok": false
 						},
 						{
-							"answer": "Bei dem Kompliment sie wurde ganz verlegen.",
+							"answer": "Nach der Kritik er fühlte sich gedemütigt.",
 							"ok": false
 						}
 					]
@@ -120,7 +120,7 @@
 					"title": "",
 					"page": 3,
 					"question": "begeistert",
-					"summary": "Adjektiv: voller Begeisterung",
+					"summary": "voller Begeisterung",
 					"explain": {
 						"entryId": "begeistert",
 						"headword": "begeistert",
@@ -143,7 +143,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "voller Begeisterung",
+										"definition": "begeistert: voller Begeisterung",
 										"examples": [
 											"Vom neuen Projekt waren alle begeistert."
 										]
@@ -164,7 +164,7 @@
 							"ok": false
 						},
 						{
-							"answer": "Vom neuen Projekt alle waren begeistert.",
+							"answer": "Vom neuen Projekt alle begeistert waren.",
 							"ok": false
 						}
 					]
@@ -172,61 +172,8 @@
 				{
 					"title": "",
 					"page": 4,
-					"question": "neidisch",
-					"summary": "Adjektiv: voller Neid",
-					"explain": {
-						"entryId": "neidisch",
-						"headword": "neidisch",
-						"pronunciation": {
-							"display": "NY-dish",
-							"ipaUK": "/ˈnaɪ̯dɪʃ/",
-							"ipaUS": "/ˈnaɪ̯dɪʃ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "neidisch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "voller Neid auf andere",
-										"examples": [
-											"Auf ihren Erfolg war er neidisch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Auf ihren Erfolg war er neidisch.",
-							"ok": true
-						},
-						{
-							"answer": "Auf ihren Erfolg war er neidische.",
-							"ok": false
-						},
-						{
-							"answer": "Auf ihren Erfolg er war neidisch.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
 					"question": "aufgeregt",
-					"summary": "Adjektiv: voller Aufregung",
+					"summary": "voller Aufregung",
 					"explain": {
 						"entryId": "aufgeregt",
 						"headword": "aufgeregt",
@@ -249,7 +196,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "voller Aufregung; nervös-freudig",
+										"definition": "aufgeregt: voller Aufregung; nervös-freudig",
 										"examples": [
 											"Vor dem Konzert waren wir total aufgeregt."
 										]
@@ -277,9 +224,62 @@
 				},
 				{
 					"title": "",
+					"page": 5,
+					"question": "eifrig",
+					"summary": "voller Eifer",
+					"explain": {
+						"entryId": "eifrig",
+						"headword": "eifrig",
+						"pronunciation": {
+							"display": "EYE-frikh",
+							"ipaUK": "/ˈaɪ̯fʁɪç/",
+							"ipaUS": "/ˈaɪ̯fʁɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "eifrig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eifrig: voller Eifer; sehr motiviert",
+										"examples": [
+											"Der Student war beim Lernen sehr eifrig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Student war beim Lernen sehr eifrig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Student war beim Lernen sehr eifrige.",
+							"ok": false
+						},
+						{
+							"answer": "Der Student beim Lernen sehr eifrig war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
 					"page": 6,
 					"question": "dankbar",
-					"summary": "Adjektiv: voller Dank",
+					"summary": "voller Dank",
 					"explain": {
 						"entryId": "dankbar",
 						"headword": "dankbar",
@@ -302,7 +302,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "voller Dank",
+										"definition": "dankbar: voller Dank",
 										"examples": [
 											"Für die Hilfe bin ich sehr dankbar."
 										]
@@ -331,15 +331,15 @@
 				{
 					"title": "",
 					"page": 7,
-					"question": "gedemütigt",
-					"summary": "Adjektiv: in der Würde verletzt",
+					"question": "erkenntlich",
+					"summary": "dankbar, dankend",
 					"explain": {
-						"entryId": "gedemütigt",
-						"headword": "gedemütigt",
+						"entryId": "erkenntlich",
+						"headword": "erkenntlich",
 						"pronunciation": {
-							"display": "guh-DAY-mü-tikht",
-							"ipaUK": "/ɡəˈdeːmyːtɪçt/",
-							"ipaUS": "/ɡəˈdeːmyːtɪçt/"
+							"display": "er-KENT-likh",
+							"ipaUK": "/ɛɐ̯ˈkɛntlɪç/",
+							"ipaUS": "/ɛɐ̯ˈkɛntlɪç/"
 						},
 						"labels": [
 							"B1"
@@ -349,15 +349,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Adjektiv",
 								"grammarType": "Adjektiv",
-								"headwordLine": "gedemütigt",
+								"headwordLine": "erkenntlich",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "in der Würde verletzt",
+										"definition": "erkenntlich: dankbar; man zeigt seinen Dank",
 										"examples": [
-											"Nach der Kritik fühlte er sich gedemütigt."
+											"Für die Unterstützung war er sehr erkenntlich."
 										]
 									}
 								]
@@ -368,15 +368,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Nach der Kritik fühlte er sich gedemütigt.",
+							"answer": "Für die Unterstützung war er sehr erkenntlich.",
 							"ok": true
 						},
 						{
-							"answer": "Nach der Kritik fühlte er sich gedemütigte.",
+							"answer": "Für die Unterstützung war er sehr erkenntliche.",
 							"ok": false
 						},
 						{
-							"answer": "Nach der Kritik er fühlte sich gedemütigt.",
+							"answer": "Für die Unterstützung er war sehr erkenntlich.",
 							"ok": false
 						}
 					]
@@ -384,15 +384,15 @@
 				{
 					"title": "",
 					"page": 8,
-					"question": "wissbegierig",
-					"summary": "Adjektiv: voller Wissensdurst",
+					"question": "anerkennend",
+					"summary": "Wertschätzung zeigend",
 					"explain": {
-						"entryId": "wissbegierig",
-						"headword": "wissbegierig",
+						"entryId": "anerkennend",
+						"headword": "anerkennend",
 						"pronunciation": {
-							"display": "VISS-buh-gee-rikh",
-							"ipaUK": "/ˈvɪsbəˌɡiːʁɪç/",
-							"ipaUS": "/ˈvɪsbəˌɡiːʁɪç/"
+							"display": "AN-er-ken-nent",
+							"ipaUK": "/ˈanʔɛɐ̯ˌkɛnənt/",
+							"ipaUS": "/ˈanʔɛɐ̯ˌkɛnənt/"
 						},
 						"labels": [
 							"B1"
@@ -402,15 +402,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Adjektiv",
 								"grammarType": "Adjektiv",
-								"headwordLine": "wissbegierig",
+								"headwordLine": "anerkennend",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "voller Wissensdurst",
+										"definition": "anerkennend: Wertschätzung zeigend; lobend",
 										"examples": [
-											"Das Kind ist außergewöhnlich wissbegierig."
+											"Ihre Worte waren sehr anerkennend."
 										]
 									}
 								]
@@ -421,15 +421,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Das Kind ist außergewöhnlich wissbegierig.",
+							"answer": "Ihre Worte waren sehr anerkennend.",
 							"ok": true
 						},
 						{
-							"answer": "Das Kind ist außergewöhnlich wissbegierige.",
+							"answer": "Ihre Worte waren sehr anerkennende.",
 							"ok": false
 						},
 						{
-							"answer": "Das Kind außergewöhnlich wissbegierig ist.",
+							"answer": "Ihre Worte sehr anerkennend waren.",
 							"ok": false
 						}
 					]
@@ -437,61 +437,8 @@
 				{
 					"title": "",
 					"page": 9,
-					"question": "interessiert",
-					"summary": "Adjektiv: voller Interesse",
-					"explain": {
-						"entryId": "interessiert",
-						"headword": "interessiert",
-						"pronunciation": {
-							"display": "in-te-re-SEERT",
-							"ipaUK": "/ɪntəʁɛˈsiːɐ̯t/",
-							"ipaUS": "/ɪntəʁɛˈsiːɐ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "interessiert",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "voller Interesse",
-										"examples": [
-											"An Geschichte bin ich sehr interessiert."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An Geschichte bin ich sehr interessiert.",
-							"ok": true
-						},
-						{
-							"answer": "An Geschichte bin ich sehr interessierte.",
-							"ok": false
-						},
-						{
-							"answer": "An Geschichte ich bin sehr interessiert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
 					"question": "eifersüchtig",
-					"summary": "Adjektiv: voller Eifersucht",
+					"summary": "voller Eifersucht",
 					"explain": {
 						"entryId": "eifersüchtig",
 						"headword": "eifersüchtig",
@@ -514,7 +461,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "voller Angst, den Partner zu verlieren",
+										"definition": "eifersüchtig: voller Angst, den Partner zu verlieren",
 										"examples": [
 											"Auf den neuen Freund war sie eifersüchtig."
 										]
@@ -536,6 +483,59 @@
 						},
 						{
 							"answer": "Auf den neuen Freund sie war eifersüchtig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "neidisch",
+					"summary": "voller Neid",
+					"explain": {
+						"entryId": "neidisch",
+						"headword": "neidisch",
+						"pronunciation": {
+							"display": "NY-dish",
+							"ipaUK": "/ˈnaɪ̯dɪʃ/",
+							"ipaUS": "/ˈnaɪ̯dɪʃ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "neidisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "neidisch: voller Neid auf andere",
+										"examples": [
+											"Auf ihren Erfolg war er neidisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf ihren Erfolg war er neidisch.",
+							"ok": true
+						},
+						{
+							"answer": "Auf ihren Erfolg war er neidische.",
+							"ok": false
+						},
+						{
+							"answer": "Auf ihren Erfolg er war neidisch.",
 							"ok": false
 						}
 					]

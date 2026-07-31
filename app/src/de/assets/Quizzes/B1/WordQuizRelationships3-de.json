@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizRelationships3-de",
-	"title": "3. Relationships",
+	"title": "Relationships",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "Beziehung",
-					"summary": "Verbindung zwischen zwei Menschen",
+					"question": "Unterstützung",
+					"summary": "Hilfe, die man gibt",
 					"explain": {
-						"entryId": "Beziehung",
-						"headword": "Beziehung",
+						"entryId": "Unterstützung",
+						"headword": "Unterstützung",
 						"pronunciation": {
-							"display": "buh-TSEE-oong",
-							"ipaUK": "/bəˈtsiːʊŋ/",
-							"ipaUS": "/bəˈtsiːʊŋ/"
+							"display": "oon-tuh-SHTÜT-soong",
+							"ipaUK": "/ʊntɐˈʃtʏtsʊŋ/",
+							"ipaUS": "/ʊntɐˈʃtʏtsʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -31,15 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Beziehung",
+								"headwordLine": "Unterstützung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Verbindung zwischen zwei Menschen (z. B. Partner)",
+										"definition": "die Unterstützung: die Hilfe, die man jemandem gibt",
 										"examples": [
-											"Die beiden führen eine glückliche Beziehung."
+											"Ich danke dir für deine Unterstützung."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die beiden führen eine glückliche Beziehung.",
+							"answer": "Ich danke dir für deine Unterstützung.",
 							"ok": true
 						},
 						{
-							"answer": "Die beiden führen einen glücklichen Beziehung.",
+							"answer": "Ich danke dir für deinen Unterstützung.",
 							"ok": false
 						},
 						{
-							"answer": "Die beiden eine glückliche Beziehung führen.",
+							"answer": "Ich dir für deine Unterstützung danke.",
 							"ok": false
 						}
 					]
@@ -66,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Romanze",
-					"summary": "romantische Liebesbeziehung",
+					"question": "Beistand",
+					"summary": "Hilfe in schwieriger Lage",
 					"explain": {
-						"entryId": "Romanze",
-						"headword": "Romanze",
+						"entryId": "Beistand",
+						"headword": "Beistand",
 						"pronunciation": {
-							"display": "ro-MAN-tsuh",
-							"ipaUK": "/ʁoˈmantsə/",
-							"ipaUS": "/ʁoˈmantsə/"
+							"display": "BY-shtant",
+							"ipaUK": "/ˈbaɪ̯ˌʃtant/",
+							"ipaUS": "/ˈbaɪ̯ˌʃtant/"
 						},
 						"labels": [
 							"B1"
@@ -84,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Romanze",
+								"headwordLine": "Beistand",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine romantische Liebesbeziehung",
+										"definition": "der Beistand: die Hilfe in einer schwierigen Lage",
 										"examples": [
-											"Im Urlaub begann eine kurze Romanze."
+											"In der Not war sein Beistand eine große Hilfe."
 										]
 									}
 								]
@@ -103,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Im Urlaub begann eine kurze Romanze.",
+							"answer": "In der Not war sein Beistand eine große Hilfe.",
 							"ok": true
 						},
 						{
-							"answer": "Im Urlaub begann einen kurzen Romanze.",
+							"answer": "In der Not war seine Beistand eine große Hilfe.",
 							"ok": false
 						},
 						{
-							"answer": "Im Urlaub eine kurze Romanze begann.",
+							"answer": "In der Not sein Beistand eine große Hilfe war.",
 							"ok": false
 						}
 					]
@@ -119,15 +119,15 @@
 				{
 					"title": "",
 					"page": 3,
-					"question": "soziale Medien",
-					"summary": "Plattformen wie Instagram",
+					"question": "Hilfe",
+					"summary": "Unterstützen bei einem Problem",
 					"explain": {
-						"entryId": "soziale Medien",
-						"headword": "soziale Medien",
+						"entryId": "Hilfe",
+						"headword": "Hilfe",
 						"pronunciation": {
-							"display": "zo-tsi-AH-luh MAY-di-en",
-							"ipaUK": "/zoˈtsi̯aːlə ˈmeːdi̯ən/",
-							"ipaUS": "/zoˈtsi̯aːlə ˈmeːdi̯ən/"
+							"display": "HIL-fuh",
+							"ipaUK": "/ˈhɪlfə/",
+							"ipaUS": "/ˈhɪlfə/"
 						},
 						"labels": [
 							"B1"
@@ -135,17 +135,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Nomen (Plural)",
-								"grammarType": "Nomen (Plural)",
-								"headwordLine": "soziale Medien",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hilfe",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Plattformen im Internet zum Teilen und Chatten",
+										"definition": "die Hilfe: das Unterstützen bei einem Problem",
 										"examples": [
-											"Viele Jugendliche nutzen soziale Medien."
+											"Ohne deine Hilfe hätte ich es nicht geschafft."
 										]
 									}
 								]
@@ -156,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Viele Jugendliche nutzen soziale Medien.",
+							"answer": "Ohne deine Hilfe hätte ich es nicht geschafft.",
 							"ok": true
 						},
 						{
-							"answer": "Viele Jugendliche nutzen sozialen Medien.",
+							"answer": "Ohne deiner Hilfe hätte ich es nicht geschafft.",
 							"ok": false
 						},
 						{
-							"answer": "Viele Jugendliche soziale Medien nutzen.",
+							"answer": "Ohne deine Hilfe ich hätte es nicht geschafft.",
 							"ok": false
 						}
 					]
@@ -172,112 +172,6 @@
 				{
 					"title": "",
 					"page": 4,
-					"question": "Rückhalt",
-					"summary": "emotionale Unterstützung",
-					"explain": {
-						"entryId": "Rückhalt",
-						"headword": "Rückhalt",
-						"pronunciation": {
-							"display": "RÜK-halt",
-							"ipaUK": "/ˈʁʏkˌhalt/",
-							"ipaUS": "/ˈʁʏkˌhalt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Rückhalt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die emotionale Unterstützung durch andere",
-										"examples": [
-											"In der Familie findet sie großen Rückhalt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In der Familie findet sie großen Rückhalt.",
-							"ok": true
-						},
-						{
-							"answer": "In der Familie findet sie großes Rückhalt.",
-							"ok": false
-						},
-						{
-							"answer": "In der Familie sie findet großen Rückhalt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Band",
-					"summary": "enge gefühlsmäßige Verbindung",
-					"explain": {
-						"entryId": "Band",
-						"headword": "Band",
-						"pronunciation": {
-							"display": "bant",
-							"ipaUK": "/bant/",
-							"ipaUS": "/bant/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Band",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine enge, gefühlsmäßige Verbindung",
-										"examples": [
-											"Ein starkes Band verbindet die Geschwister."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ein starkes Band verbindet die Geschwister.",
-							"ok": true
-						},
-						{
-							"answer": "Ein starker Band verbindet die Geschwister.",
-							"ok": false
-						},
-						{
-							"answer": "Ein starkes Band die Geschwister verbindet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
 					"question": "Vertrauen",
 					"summary": "Glaube an die Zuverlässigkeit",
 					"explain": {
@@ -302,9 +196,9 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "der feste Glaube an die Zuverlässigkeit von jemandem",
+										"definition": "das Vertrauen: der feste Glaube an die Zuverlässigkeit von jemandem",
 										"examples": [
-											"Vertrauen muss man sich erst verdienen."
+											"Ohne Vertrauen funktioniert keine Freundschaft."
 										]
 									}
 								]
@@ -315,15 +209,121 @@
 					},
 					"answers": [
 						{
-							"answer": "Vertrauen muss man sich erst verdienen.",
+							"answer": "Ohne Vertrauen funktioniert keine Freundschaft.",
 							"ok": true
 						},
 						{
-							"answer": "Vertrauens muss man sich erst verdienen.",
+							"answer": "Ohne Vertrauens funktioniert keine Freundschaft.",
 							"ok": false
 						},
 						{
-							"answer": "Vertrauen man muss sich erst verdienen.",
+							"answer": "Ohne Vertrauen keine Freundschaft funktioniert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Glaube",
+					"summary": "fester Glaube/Vertrauen",
+					"explain": {
+						"entryId": "Glaube",
+						"headword": "Glaube",
+						"pronunciation": {
+							"display": "GLOW-buh",
+							"ipaUK": "/ˈɡlaʊ̯bə/",
+							"ipaUS": "/ˈɡlaʊ̯bə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Glaube",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Glaube: der feste Glaube oder das tiefe Vertrauen",
+										"examples": [
+											"Ihr Glaube an ihn war unerschütterlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihr Glaube an ihn war unerschütterlich.",
+							"ok": true
+						},
+						{
+							"answer": "Ihre Glaube an ihn war unerschütterlich.",
+							"ok": false
+						},
+						{
+							"answer": "Ihr Glaube an ihn unerschütterlich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Zuversicht",
+					"summary": "Vertrauen in die Zukunft",
+					"explain": {
+						"entryId": "Zuversicht",
+						"headword": "Zuversicht",
+						"pronunciation": {
+							"display": "TSOO-fer-zikht",
+							"ipaUK": "/ˈtsuːfɛɐ̯ˌzɪçt/",
+							"ipaUS": "/ˈtsuːfɛɐ̯ˌzɪçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zuversicht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zuversicht: das feste Vertrauen, dass etwas gut wird",
+										"examples": [
+											"Mit Zuversicht blickt sie in die Zukunft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit Zuversicht blickt sie in die Zukunft.",
+							"ok": true
+						},
+						{
+							"answer": "Mit Zuversicht blickt sie in der Zukunft.",
+							"ok": false
+						},
+						{
+							"answer": "Mit Zuversicht sie blickt in die Zukunft.",
 							"ok": false
 						}
 					]

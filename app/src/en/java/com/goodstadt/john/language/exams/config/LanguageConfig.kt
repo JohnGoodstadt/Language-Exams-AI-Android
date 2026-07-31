@@ -48,6 +48,48 @@ object LanguageConfig {
         }
         return jsonFileName
     }
+    /**
+     * ✅ ADDED: This is the "Anti-Corruption Layer".
+     * It ensures that any legacy resource names are immediately converted to the
+     * canonical logical name used throughout the new system.
+     */
+    fun normalizeToLogicalName(resourceName: String): String {
+        return when (resourceName) {
+            "vocab_data_a1" -> "EnglishA1Vocab"
+            "vocab_data_a2" -> "EnglishA2Vocab"
+            "vocab_data_b1" -> "EnglishB1Vocab"
+            "vocab_data_b2" -> "EnglishB2Vocab"
+            "conjugations_to_be" -> "EnglishConjugationsToBe"
+            "conjugations_to_have" -> "EnglishConjugationsToHave"
+            "conjugations_to_do" -> "EnglishConjugationsToDo"
+            "conjugations_to_get" -> "EnglishConjugationsToGet"
+            "prepositions_en" -> "EnglishPrepositions"
+
+
+            // Add any other legacy mappings here
+
+            // If the name is already in the correct format, just return it.
+            else -> resourceName
+        }
+    }
+    /**
+     * Maps the logical Firestore name to the Android-specific resource name.
+     */
+    fun mapLogicalToResourceName(sheet_name: String): String {
+        return when (sheet_name) {
+            "EnglishA1Vocab" -> "vocab_data_a1"
+            "EnglishA2Vocab" -> "vocab_data_a2"
+            "EnglishB1Vocab" -> "vocab_data_b1"
+            "EnglishB2Vocab" -> "vocab_data_b2"
+            "EnglishConjugationsToBe" -> "conjugations_to_be"
+            "EnglishConjugationsToHave" -> "conjugations_to_have"
+            "EnglishConjugationsToDo" -> "conjugations_to_do"
+            "EnglishConjugationsToGet" -> "conjugations_to_get"
+            "EnglishPrepositions" -> "prepositions_en"
+            // Add other mappings here as needed
+            else -> sheet_name // Fallback for other files
+        }
+    }
     val prepositionsBundleFileName: String = "prepositions_en"
     val prepositionsFirestoreName: String = "prepositions"
     val LLMSystemText: String =

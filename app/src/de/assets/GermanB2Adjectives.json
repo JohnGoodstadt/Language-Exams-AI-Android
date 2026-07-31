@@ -1,0 +1,257 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "English Adjectives B2",
+  "sheetname": "EnglishAdjectivesB2",
+  "id": "en-adj-b2",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1766060003.0,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": ["Adjectives B2"],
+  "categories": [
+	{
+	  "sortOrder": 1, "tabNumber": 1, "title": "ambitious",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 1, "word": "ambitious", "definition": "having a strong wish to succeed or achieve more", "partOfSpeech": "Adjective", "id": 1,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "She’s an ambitious student who wants to study medicine abroad.", "translation": "" },
+		  { "sentence": "His ambitious plan impressed the company directors.", "translation": "" },
+		  { "sentence": "Is this goal too ambitious for our timeline?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 2, "tabNumber": 1, "title": "efficient",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 2, "word": "efficient", "definition": "working well without wasting time or energy", "partOfSpeech": "Adjective", "id": 2,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "The new system is far more efficient than the old one.", "translation": "" },
+		  { "sentence": "She’s an efficient worker who finishes tasks on time.", "translation": "" },
+		  { "sentence": "Is this the most efficient way to share files?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 3, "tabNumber": 1, "title": "frustrated",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 3, "word": "frustrated", "definition": "upset because you cannot do or change something", "partOfSpeech": "Adjective", "id": 3,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "He felt frustrated because his efforts weren’t recognised.", "translation": "" },
+		  { "sentence": "I get frustrated when people don’t listen carefully.", "translation": "" },
+		  { "sentence": "Are you frustrated with the slow progress?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 4, "tabNumber": 1, "title": "optimistic",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 4, "word": "optimistic", "definition": "believing that good things will happen", "partOfSpeech": "Adjective", "id": 4,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "He remains optimistic about finding a new job soon.", "translation": "" },
+		  { "sentence": "The doctor was optimistic that she would recover quickly.", "translation": "" },
+		  { "sentence": "Are you optimistic about the outcome?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 5, "tabNumber": 1, "title": "pessimistic",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 5, "word": "pessimistic", "definition": "believing that bad things will happen", "partOfSpeech": "Adjective", "id": 5,
+	  "romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "He is too pessimistic and always expects the worst outcome.", "translation": "" },
+		  { "sentence": "Her pessimistic attitude made the whole team lose motivation.", "translation": "" },
+		  { "sentence": "Why are you so pessimistic about the plan?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 6, "tabNumber": 1, "title": "independent",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 6, "word": "independent", "definition": "able to do things by yourself; not needing help", "partOfSpeech": "Adjective", "id": 6,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "She became independent after moving to another city.", "translation": "" },
+		  { "sentence": "The company remains independent despite several offers.", "translation": "" },
+		  { "sentence": "Are you independent enough to work alone?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 7, "tabNumber": 1, "title": "anxious",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 7, "word": "anxious", "definition": "worried and nervous about something that may happen", "partOfSpeech": "Adjective", "id": 7,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "She felt anxious before speaking in front of a large audience.", "translation": "" },
+		  { "sentence": "He became anxious waiting for her reply.", "translation": "" },
+		  { "sentence": "Are you anxious about the interview?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 8, "tabNumber": 1, "title": "grateful",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 8, "word": "grateful", "definition": "feeling thanks for help or kindness", "partOfSpeech": "Adjective", "id": 8,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "I’m very grateful for your help during the move.", "translation": "" },
+		  { "sentence": "We’re grateful that nobody was injured in the accident.", "translation": "" },
+		  { "sentence": "Aren’t you grateful for the support?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 9, "tabNumber": 1, "title": "enthusiastic",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 9, "word": "enthusiastic", "definition": "showing strong interest and excitement", "partOfSpeech": "Adjective", "id": 9,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "The students were enthusiastic about the new project.", "translation": "" },
+		  { "sentence": "Her enthusiastic response encouraged the whole team.", "translation": "" },
+		  { "sentence": "Are they enthusiastic about joining?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 10, "tabNumber": 1, "title": "flexible",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 10, "word": "flexible", "definition": "able to change or be changed easily", "partOfSpeech": "Adjective", "id": 10,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "Our schedule is flexible, so we can change the time if needed.", "translation": "" },
+		  { "sentence": "She has a flexible approach to solving problems.", "translation": "" },
+		  { "sentence": "Is this arrangement flexible enough for you?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 11, "tabNumber": 1, "title": "determined",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 11, "word": "determined", "definition": "having a strong decision to do something and not giving up", "partOfSpeech": "Adjective", "id": 11,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "He is determined to pass the exam this time.", "translation": "" },
+		  { "sentence": "They were determined to finish before the deadline.", "translation": "" },
+		  { "sentence": "Are you determined to change careers?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 12, "tabNumber": 1, "title": "awkward",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 12, "word": "awkward", "definition": "making you feel uncomfortable; difficult to deal with", "partOfSpeech": "Adjective", "id": 12,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "It was an awkward moment when nobody answered.", "translation": "" },
+		  { "sentence": "There was an awkward silence after his comment.", "translation": "" },
+		  { "sentence": "Does this conversation feel awkward to you?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 13, "tabNumber": 1, "title": "embarrassed",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 13, "word": "embarrassed", "definition": "feeling shy and uncomfortable because of a mistake", "partOfSpeech": "Adjective", "id": 13,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "He felt embarrassed when he forgot her name.", "translation": "" },
+		  { "sentence": "She looked embarrassed after making a mistake in class.", "translation": "" },
+		  { "sentence": "Are you embarrassed to ask for help?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 14, "tabNumber": 1, "title": "reasonable",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 14, "word": "reasonable", "definition": "fair and sensible", "partOfSpeech": "Adjective", "id": 14,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "That’s a reasonable price for such a high-quality product.", "translation": "" },
+		  { "sentence": "It seems reasonable to take a break after two hours.", "translation": "" },
+		  { "sentence": "Is this timeline reasonable for the team?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 15, "tabNumber": 1, "title": "impressive",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 15, "word": "impressive", "definition": "causing admiration because it is very good or large", "partOfSpeech": "Adjective", "id": 15,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "The presentation was impressive, even though it was short.", "translation": "" },
+		  { "sentence": "His knowledge of the subject is really impressive.", "translation": "" },
+		  { "sentence": "Wasn’t her performance impressive?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 16, "tabNumber": 1, "title": "reliable",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 16, "word": "reliable", "definition": "can be trusted to work well or to do what is promised", "partOfSpeech": "Adjective", "id": 16,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "He’s a reliable colleague who always meets deadlines.", "translation": "" },
+		  { "sentence": "The data seems reliable because it comes from official sources.", "translation": "" },
+		  { "sentence": "Is this source reliable?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 17, "tabNumber": 1, "title": "sophisticated",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 17, "word": "sophisticated", "definition": "complex and advanced; well designed", "partOfSpeech": "Adjective", "id": 17,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "The software uses a sophisticated algorithm to analyse data.", "translation": "" },
+		  { "sentence": "It’s a sophisticated device that requires careful handling.", "translation": "" },
+		  { "sentence": "Is this solution too sophisticated for beginners?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 18, "tabNumber": 1, "title": "sceptical",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 18, "word": "sceptical", "definition": "not easily believing; doubting something is true", "partOfSpeech": "Adjective", "id": 18,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "I’m sceptical about the results until I see the evidence.", "translation": "" },
+		  { "sentence": "He was sceptical of the company’s promises.", "translation": "" },
+		  { "sentence": "Are you sceptical about these claims?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 19, "tabNumber": 1, "title": "incredible",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 19, "word": "incredible", "definition": "very surprising and hard to believe; amazing", "partOfSpeech": "Adjective", "id": 19,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "The view from the mountain was absolutely incredible.", "translation": "" },
+		  { "sentence": "It’s incredible how quickly technology changes.", "translation": "" },
+		  { "sentence": "Wasn’t that concert incredible?", "translation": "" }
+		]
+	  }]
+	},
+	{
+	  "sortOrder": 20, "tabNumber": 1, "title": "crucial",
+	  "words": [{
+		"group": "Adjectives", "sortOrder": 20, "word": "crucial", "definition": "very important and necessary", "partOfSpeech": "Adjective", "id": 20,
+		"romanisation": "", "translation": "",
+		"sentences": [
+		  { "sentence": "It’s crucial to check your work before submitting it.", "translation": "" },
+		  { "sentence": "Good communication is crucial for a strong relationship.", "translation": "" },
+		  { "sentence": "Is funding the most crucial issue now?", "translation": "" }
+		]
+	  }]
+	}
+  ]
+}

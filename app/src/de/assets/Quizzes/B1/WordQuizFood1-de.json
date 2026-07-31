@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizFood1-de",
-	"title": "1. ood",
+	"title": "Food",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -37,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein kleines Gericht vor dem Hauptgang",
+										"definition": "die Vorspeise: ein kleines Gericht vor dem Hauptgang",
 										"examples": [
 											"Als Vorspeise gab es eine leichte Suppe."
 										]
@@ -66,6 +66,112 @@
 				{
 					"title": "",
 					"page": 2,
+					"question": "erster Gang",
+					"summary": "das erste Gericht",
+					"explain": {
+						"entryId": "erster Gang",
+						"headword": "erster Gang",
+						"pronunciation": {
+							"display": "ER-stuh gang",
+							"ipaUK": "/ˈeːɐ̯stɐ ɡaŋ/",
+							"ipaUS": "/ˈeːɐ̯stɐ ɡaŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "erster Gang",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der erste Gang: das erste Gericht einer Mahlzeit",
+										"examples": [
+											"Als erster Gang wird ein Salat serviert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Als erster Gang wird ein Salat serviert.",
+							"ok": true
+						},
+						{
+							"answer": "Als erste Gang wird ein Salat serviert.",
+							"ok": false
+						},
+						{
+							"answer": "Als erster Gang ein Salat serviert wird.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Häppchen",
+					"summary": "kleiner Snack als Vorspeise",
+					"explain": {
+						"entryId": "Häppchen",
+						"headword": "Häppchen",
+						"pronunciation": {
+							"display": "HEP-khn",
+							"ipaUK": "/ˈhɛpçən/",
+							"ipaUS": "/ˈhɛpçən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Häppchen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Häppchen: ein kleiner Snack als Vorspeise",
+										"examples": [
+											"Auf der Party gab es kleine Häppchen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf der Party gab es kleine Häppchen.",
+							"ok": true
+						},
+						{
+							"answer": "Auf der Party gab es kleiner Häppchen.",
+							"ok": false
+						},
+						{
+							"answer": "Auf der Party es gab kleine Häppchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
 					"question": "Getränk",
 					"summary": "etwas, das man trinkt",
 					"explain": {
@@ -90,7 +196,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas, das man trinkt",
+										"definition": "das Getränk: etwas, das man trinkt",
 										"examples": [
 											"Zum Essen bestelle ich ein kaltes Getränk."
 										]
@@ -118,16 +224,16 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "Bestandteil",
-					"summary": "ein Teil von etwas Größerem",
+					"page": 5,
+					"question": "Drink",
+					"summary": "ein (alkoholisches) Getränk",
 					"explain": {
-						"entryId": "Bestandteil",
-						"headword": "Bestandteil",
+						"entryId": "Drink",
+						"headword": "Drink",
 						"pronunciation": {
-							"display": "buh-SHTANT-tile",
-							"ipaUK": "/bəˈʃtantˌtaɪ̯l/",
-							"ipaUS": "/bəˈʃtantˌtaɪ̯l/"
+							"display": "drink",
+							"ipaUK": "/dʁɪŋk/",
+							"ipaUS": "/dʁɪŋk/"
 						},
 						"labels": [
 							"B1"
@@ -137,15 +243,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Bestandteil",
+								"headwordLine": "Drink",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Teil von etwas Größerem",
+										"definition": "der Drink: ein Getränk, oft mit Alkohol",
 										"examples": [
-											"Salz ist ein wichtiger Bestandteil des Gerichts."
+											"An der Bar bestellt er einen Drink."
 										]
 									}
 								]
@@ -156,22 +262,75 @@
 					},
 					"answers": [
 						{
-							"answer": "Salz ist ein wichtiger Bestandteil des Gerichts.",
+							"answer": "An der Bar bestellt er einen Drink.",
 							"ok": true
 						},
 						{
-							"answer": "Salz ist ein wichtiges Bestandteil des Gerichts.",
+							"answer": "An der Bar bestellt er ein Drink.",
 							"ok": false
 						},
 						{
-							"answer": "Salz ein wichtiger Bestandteil des Gerichts ist.",
+							"answer": "An der Bar er bestellt einen Drink.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 4,
+					"page": 6,
+					"question": "Erfrischung",
+					"summary": "Getränk/Snack, der erfrischt",
+					"explain": {
+						"entryId": "Erfrischung",
+						"headword": "Erfrischung",
+						"pronunciation": {
+							"display": "er-FRISH-oong",
+							"ipaUK": "/ɛɐ̯ˈfʁɪʃʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈfʁɪʃʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erfrischung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erfrischung: ein Getränk oder Snack, der erfrischt",
+										"examples": [
+											"Im Sommer ist Eis eine willkommene Erfrischung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer ist Eis eine willkommene Erfrischung.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer ist Eis ein willkommener Erfrischung.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer Eis eine willkommene Erfrischung ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
 					"question": "Küche",
 					"summary": "typische Kochart eines Landes",
 					"explain": {
@@ -196,7 +355,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die typische Art zu kochen eines Landes",
+										"definition": "die Küche: die typische Art zu kochen eines Landes",
 										"examples": [
 											"Ich liebe die italienische Küche."
 										]
@@ -224,221 +383,7 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "Nachtisch",
-					"summary": "süße Speise am Ende",
-					"explain": {
-						"entryId": "Nachtisch",
-						"headword": "Nachtisch",
-						"pronunciation": {
-							"display": "NAHKH-tish",
-							"ipaUK": "/ˈnaːxˌtɪʃ/",
-							"ipaUS": "/ˈnaːxˌtɪʃ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Nachtisch",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Dessert"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die süße Speise am Ende des Essens",
-										"examples": [
-											"Zum Nachtisch gibt es Eis."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Zum Nachtisch gibt es Eis.",
-							"ok": true
-						},
-						{
-							"answer": "Zur Nachtisch gibt es Eis.",
-							"ok": false
-						},
-						{
-							"answer": "Zum Nachtisch es gibt Eis.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "essen gehen",
-					"summary": "auswärts essen",
-					"explain": {
-						"entryId": "essen gehen",
-						"headword": "essen gehen",
-						"pronunciation": {
-							"display": "ES-sn GAY-uhn",
-							"ipaUK": "/ˈɛsn̩ ˈɡeːən/",
-							"ipaUS": "/ˈɛsn̩ ˈɡeːən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verbphrase",
-								"grammarType": "Verbphrase",
-								"headwordLine": "essen gehen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "auswärts / im Restaurant essen",
-										"examples": [
-											"Am Samstag gehen wir essen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Samstag gehen wir essen.",
-							"ok": true
-						},
-						{
-							"answer": "Am Samstag gehen wir essen gegangen.",
-							"ok": false
-						},
-						{
-							"answer": "Am Samstag wir gehen essen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Speisen",
-					"summary": "das Essen (nominalisiert)",
-					"explain": {
-						"entryId": "Speisen",
-						"headword": "Speisen",
-						"pronunciation": {
-							"display": "SHPY-zn",
-							"ipaUK": "/ˈʃpaɪ̯zn̩/",
-							"ipaUS": "/ˈʃpaɪ̯zn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen (nominalisiert)",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Speisen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Essen im feierlichen Rahmen (nominalisiert)",
-										"examples": [
-											"Das gemeinsame Speisen macht Freude."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das gemeinsame Speisen macht Freude.",
-							"ok": true
-						},
-						{
-							"answer": "Das gemeinsame speisen macht Freude.",
-							"ok": false
-						},
-						{
-							"answer": "Das gemeinsame Speisen Freude macht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 8,
-					"question": "Abendessen",
-					"summary": "Mahlzeit am Abend",
-					"explain": {
-						"entryId": "Abendessen",
-						"headword": "Abendessen",
-						"pronunciation": {
-							"display": "AH-bnt-es-sn",
-							"ipaUK": "/ˈaːbn̩tˌʔɛsn̩/",
-							"ipaUS": "/ˈaːbn̩tˌʔɛsn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Abendessen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Mahlzeit am Abend",
-										"examples": [
-											"Zum Abendessen gibt es einen Salat."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Zum Abendessen gibt es einen Salat.",
-							"ok": true
-						},
-						{
-							"answer": "Zur Abendessen gibt es einen Salat.",
-							"ok": false
-						},
-						{
-							"answer": "Zum Abendessen es gibt einen Salat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
 					"question": "Gericht",
 					"summary": "eine zubereitete Speise",
 					"explain": {
@@ -463,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine zubereitete Speise",
+										"definition": "das Gericht: eine zubereitete Speise",
 										"examples": [
 											"Dieses Gericht schmeckt hervorragend."
 										]
@@ -491,16 +436,16 @@
 				},
 				{
 					"title": "",
-					"page": 10,
-					"question": "trinken",
-					"summary": "Flüssigkeit zu sich nehmen",
+					"page": 9,
+					"question": "Spezialität",
+					"summary": "typisches, besonderes Gericht",
 					"explain": {
-						"entryId": "trinken",
-						"headword": "trinken",
+						"entryId": "Spezialität",
+						"headword": "Spezialität",
 						"pronunciation": {
-							"display": "TRIN-kn",
-							"ipaUK": "/ˈtʁɪŋkn̩/",
-							"ipaUS": "/ˈtʁɪŋkn̩/"
+							"display": "shpe-tsi-a-li-TAYT",
+							"ipaUK": "/ʃpetsi̯aliˈtɛːt/",
+							"ipaUS": "/ʃpetsi̯aliˈtɛːt/"
 						},
 						"labels": [
 							"B1"
@@ -508,17 +453,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "trinken",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Spezialität",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Flüssigkeit zu sich nehmen",
+										"definition": "die Spezialität: ein typisches, besonderes Gericht",
 										"examples": [
-											"Zum Essen trinken wir Wasser."
+											"Die Spezialität des Hauses ist Fisch."
 										]
 									}
 								]
@@ -529,15 +474,68 @@
 					},
 					"answers": [
 						{
-							"answer": "Zum Essen trinken wir Wasser.",
+							"answer": "Die Spezialität des Hauses ist Fisch.",
 							"ok": true
 						},
 						{
-							"answer": "Zum Essen trinkt wir Wasser.",
+							"answer": "Der Spezialität des Hauses ist Fisch.",
 							"ok": false
 						},
 						{
-							"answer": "Zum Essen wir trinken Wasser.",
+							"answer": "Die Spezialität des Hauses Fisch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Nachtisch",
+					"summary": "süße Speise am Ende",
+					"explain": {
+						"entryId": "Nachtisch",
+						"headword": "Nachtisch",
+						"pronunciation": {
+							"display": "NAHKH-tish",
+							"ipaUK": "/ˈnaːxˌtɪʃ/",
+							"ipaUS": "/ˈnaːxˌtɪʃ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachtisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Nachtisch: die süße Speise am Ende des Essens",
+										"examples": [
+											"Zum Nachtisch gibt es Eis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Nachtisch gibt es Eis.",
+							"ok": true
+						},
+						{
+							"answer": "Zur Nachtisch gibt es Eis.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Nachtisch es gibt Eis.",
 							"ok": false
 						}
 					]

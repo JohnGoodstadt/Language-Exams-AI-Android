@@ -1,0 +1,158 @@
+{
+	"sheetRegistry": {
+		"quiz": {
+			"title": "Quiz zur Verwendung",
+			"sheetDataType": "fixed",
+			"screenType": "FixedScreen"
+		},
+		"vocab_dashboard": {
+			"title": "Vokabelquiz",
+			"sheetDataType": "fixed",
+			"screenType": "VocabDashboard"
+		},
+		"conjugations": {
+			"title": "Konjugationen",
+			"sheetDataType": "fixed",
+			"screenType": "FixedScreen"
+		},
+		"EnglishPrepositions": {
+			"title": "Präpositionen",
+			"sheetDataType": "VocabFile",
+			"screenType": "VocabScreen",
+			"firestoreDocumentId": "GermanPrepositions"
+		},
+		"AdjectivesGroup": {
+			"title": "Adjektive",
+			"screenType": "GroupedVocabScreen",
+			"sheetDataType": "VocabFile",
+			"subTabs": [
+				{
+					"title": "Basic",
+					"firestoreDocumentId": "GermanA1Adjectives",
+					"sheetDataType": "VocabFile"
+				},
+				{
+					"title": "Intermediate",
+					"firestoreDocumentId": "GermanA2Adjectives",
+					"sheetDataType": "VocabFile"
+				},
+				{
+					"title": "Upper",
+					"firestoreDocumentId": "GermanB1Adjectives",
+					"sheetDataType": "VocabFile"
+				},
+				{
+					"title": "Advanced",
+					"firestoreDocumentId": "GermanB2Adjectives",
+					"sheetDataType": "VocabFile"
+				}
+			]
+		},
+		"EnglishDefinitionsFormat1": {
+			"title": "Sounds the Same",
+			"sheetDataType": "Format1",
+			"screenType": "Format1Screen",
+			"firestoreDocumentId": "GermanDefinitionsFormat1"
+		},
+		"PairsGroup": {
+			"title": "Pairs",
+			"screenType": "GroupedFormat2Screen",
+			"sheetDataType": "Format2",
+			"subTabs": [
+				{
+					"title": "Good vs Well",
+					"firestoreDocumentId": "GermanGoodVsWell",
+					"sheetDataType": "Format2",
+					"screenType": "Format2Screen"
+				},
+				{
+					"title": "Say vs Tell",
+					"firestoreDocumentId": "GermanSayVsTell",
+					"sheetDataType": "Format2",
+					"screenType": "Format2Screen"
+				},
+				{
+					"title": "Speak vs Talk",
+					"firestoreDocumentId": "GermanSpeakVsTalk",
+					"sheetDataType": "Format2",
+					"screenType": "Format2Screen"
+				},
+				{
+					"title": "Hear vs Listen",
+					"firestoreDocumentId": "GermanHearVsListen",
+					"sheetDataType": "Format2",
+					"screenType": "Format2Screen"
+				},
+				{
+					"title": "Borrow vs Lend",
+					"firestoreDocumentId": "GermanBorrowVsLend",
+					"sheetDataType": "Format2",
+					"screenType": "Format2Screen"
+				},
+				{
+					"title": "Bring Vs Take",
+					"firestoreDocumentId": "GermanBringVsTake",
+					"sheetDataType": "Format2",
+					"screenType": "Format2Screen"
+				},
+				{
+					"title": "Look vs See",
+					"firestoreDocumentId": "GermanLookVsSee",
+					"sheetDataType": "Format2",
+					"screenType": "Format2Screen"
+				}
+			]
+		},
+		"SpanishLanguage": {
+			"title": "Spanish",
+			"screenType": "GroupedFormat3Screen",
+			"sheetDataType": "Format3",
+			"requiredLocale": "es",
+			"subTabs": [
+				{
+					"title": "Vowels",
+					"firestoreDocumentId": "SpanishReferenceSheet1",
+					"sheetDataType": "Format3"
+				},
+				{
+					"title": "Word Stress",
+					"firestoreDocumentId": "SpanishReferenceSheet2",
+					"sheetDataType": "Format3"
+				},
+				{
+					"title": "Schwa",
+					"firestoreDocumentId": "SpanishReferenceSheet3",
+					"sheetDataType": "Format3"
+				},
+				{
+					"title": "Final",
+					"firestoreDocumentId": "SpanishReferenceSheet4",
+					"sheetDataType": "Format3"
+				}
+			]
+		}
+	},
+	"layouts": {
+		"referenceTab": {
+			"order": [
+				"quiz",
+				"vocab_dashboard",
+				"conjugations",
+				"GermanPrepositions",
+				"SpanishLanguage",
+				"AdjectivesGroup",
+				"GermanDefinitionsFormat1",
+				"PairsGroup"
+			]
+		},
+		"meTab": {
+			"order": [
+				"focusing",
+				"settings",
+				"vocabulary",
+				"progress",
+				"paragraph"
+			]
+		}
+	}
+}

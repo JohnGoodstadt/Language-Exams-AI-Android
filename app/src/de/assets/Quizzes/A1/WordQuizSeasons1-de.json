@@ -1,0 +1,228 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSeasons1-de",
+	"title": "Seasons",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Frühling",
+					"summary": "Jahreszeit nach dem Winter",
+					"explain": {
+						"entryId": "Frühling",
+						"headword": "Frühling",
+						"pronunciation": {
+							"display": "FRÜ-ling",
+							"ipaUK": "/ˈfʁyːlɪŋ/",
+							"ipaUS": "/ˈfʁyːlɪŋ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Frühling",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Jahreszeit nach dem Winter",
+										"examples": [
+											"Im Frühling blühen die Blumen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Frühling blühen die Blumen.",
+							"ok": true
+						},
+						{
+							"answer": "In Frühling blühen die Blumen.",
+							"ok": false
+						},
+						{
+							"answer": "Im Frühling die Blumen blühen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Sommer",
+					"summary": "die warme Jahreszeit",
+					"explain": {
+						"entryId": "Sommer",
+						"headword": "Sommer",
+						"pronunciation": {
+							"display": "ZOM-uh",
+							"ipaUK": "/ˈzɔmɐ/",
+							"ipaUS": "/ˈzɔmɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sommer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die warme Jahreszeit",
+										"examples": [
+											"Im Sommer ist es warm."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer ist es warm.",
+							"ok": true
+						},
+						{
+							"answer": "In Sommer ist es warm.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer es ist warm.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Herbst",
+					"summary": "Jahreszeit vor dem Winter",
+					"explain": {
+						"entryId": "Herbst",
+						"headword": "Herbst",
+						"pronunciation": {
+							"display": "herpst",
+							"ipaUK": "/hɛʁpst/",
+							"ipaUS": "/hɛʁpst/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Herbst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Jahreszeit vor dem Winter",
+										"examples": [
+											"Im Herbst fallen die Blätter."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Herbst fallen die Blätter.",
+							"ok": true
+						},
+						{
+							"answer": "In Herbst fallen die Blätter.",
+							"ok": false
+						},
+						{
+							"answer": "Im Herbst die Blätter fallen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Winter",
+					"summary": "die kalte Jahreszeit",
+					"explain": {
+						"entryId": "Winter",
+						"headword": "Winter",
+						"pronunciation": {
+							"display": "VIN-tuh",
+							"ipaUK": "/ˈvɪntɐ/",
+							"ipaUS": "/ˈvɪntɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Winter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die kalte Jahreszeit",
+										"examples": [
+											"Im Winter schneit es oft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Winter schneit es oft.",
+							"ok": true
+						},
+						{
+							"answer": "In Winter schneit es oft.",
+							"ok": false
+						},
+						{
+							"answer": "Im Winter es schneit oft.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

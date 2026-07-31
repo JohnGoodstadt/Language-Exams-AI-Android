@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizTravel1-de",
-	"title": "1. Travel",
+	"title": "Travel",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -37,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Ort zum Übernachten (Hotel, Wohnung)",
+										"definition": "die Unterkunft: ein Ort zum Übernachten",
 										"examples": [
 											"Wir suchen eine günstige Unterkunft."
 										]
@@ -66,8 +66,114 @@
 				{
 					"title": "",
 					"page": 2,
+					"question": "Hotel",
+					"summary": "Haus zum Übernachten",
+					"explain": {
+						"entryId": "Hotel",
+						"headword": "Hotel",
+						"pronunciation": {
+							"display": "ho-TEL",
+							"ipaUK": "/hoˈtɛl/",
+							"ipaUS": "/hoˈtɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hotel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Hotel: ein Haus, in dem man gegen Geld übernachtet",
+										"examples": [
+											"Das Hotel liegt direkt am Strand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Hotel liegt direkt am Strand.",
+							"ok": true
+						},
+						{
+							"answer": "Der Hotel liegt direkt am Strand.",
+							"ok": false
+						},
+						{
+							"answer": "Das Hotel direkt am Strand liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Jugendherberge",
+					"summary": "einfache, günstige Unterkunft",
+					"explain": {
+						"entryId": "Jugendherberge",
+						"headword": "Jugendherberge",
+						"pronunciation": {
+							"display": "YOO-gnt-her-ber-guh",
+							"ipaUK": "/ˈjuːɡn̩thɛʁˌbɛʁɡə/",
+							"ipaUS": "/ˈjuːɡn̩thɛʁˌbɛʁɡə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Jugendherberge",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Jugendherberge: eine einfache, günstige Unterkunft für Reisende",
+										"examples": [
+											"In der Jugendherberge ist es sehr günstig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Jugendherberge ist es sehr günstig.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Jugendherberge ist es sehr günstig.",
+							"ok": false
+						},
+						{
+							"answer": "In der Jugendherberge es ist sehr günstig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
 					"question": "Ankunft",
-					"summary": "das Ankommen an einem Ort",
+					"summary": "das Ankommen",
 					"explain": {
 						"entryId": "Ankunft",
 						"headword": "Ankunft",
@@ -90,7 +196,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Ankommen an einem Ort",
+										"definition": "die Ankunft: das Ankommen an einem Ort",
 										"examples": [
 											"Die Ankunft des Zuges verzögert sich."
 										]
@@ -118,166 +224,7 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "Sehenswürdigkeit",
-					"summary": "Ort für Touristen",
-					"explain": {
-						"entryId": "Sehenswürdigkeit",
-						"headword": "Sehenswürdigkeit",
-						"pronunciation": {
-							"display": "ZAY-uhns-vür-dikh-kite",
-							"ipaUK": "/ˈzeːənsvʏʁdɪçkaɪ̯t/",
-							"ipaUS": "/ˈzeːənsvʏʁdɪçkaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Sehenswürdigkeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Ort, den Touristen gern besuchen",
-										"examples": [
-											"Der Turm ist eine bekannte Sehenswürdigkeit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Turm ist eine bekannte Sehenswürdigkeit.",
-							"ok": true
-						},
-						{
-							"answer": "Der Turm ist einen bekannten Sehenswürdigkeit.",
-							"ok": false
-						},
-						{
-							"answer": "Der Turm eine bekannte Sehenswürdigkeit ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Gepäck",
-					"summary": "Taschen und Koffer auf Reisen",
-					"explain": {
-						"entryId": "Gepäck",
-						"headword": "Gepäck",
-						"pronunciation": {
-							"display": "guh-PEK",
-							"ipaUK": "/ɡəˈpɛk/",
-							"ipaUS": "/ɡəˈpɛk/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gepäck",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Taschen und Koffer auf einer Reise",
-										"examples": [
-											"Mein Gepäck ist ziemlich schwer."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Gepäck ist ziemlich schwer.",
-							"ok": true
-						},
-						{
-							"answer": "Meinen Gepäck ist ziemlich schwer.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Gepäck ziemlich schwer ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 5,
-					"question": "Buchung",
-					"summary": "das Reservieren",
-					"explain": {
-						"entryId": "Buchung",
-						"headword": "Buchung",
-						"pronunciation": {
-							"display": "BOO-khoong",
-							"ipaUK": "/ˈbuːxʊŋ/",
-							"ipaUS": "/ˈbuːxʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Buchung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Reservieren von etwas (Reise, Zimmer)",
-										"examples": [
-											"Die Buchung des Fluges war einfach."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Buchung des Fluges war einfach.",
-							"ok": true
-						},
-						{
-							"answer": "Der Buchung des Fluges war einfach.",
-							"ok": false
-						},
-						{
-							"answer": "Die Buchung des Fluges einfach war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
 					"question": "Check-in",
 					"summary": "Anmelden am Flughafen/Hotel",
 					"explain": {
@@ -302,7 +249,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Anmelden am Flughafen oder Hotel",
+										"definition": "der Check-in: das Anmelden am Flughafen oder im Hotel",
 										"examples": [
 											"Der Check-in beginnt zwei Stunden vorher."
 										]
@@ -330,16 +277,16 @@
 				},
 				{
 					"title": "",
-					"page": 7,
-					"question": "Kreuzfahrt",
-					"summary": "Urlaubsreise mit dem Schiff",
+					"page": 6,
+					"question": "Landung",
+					"summary": "Aufsetzen des Flugzeugs",
 					"explain": {
-						"entryId": "Kreuzfahrt",
-						"headword": "Kreuzfahrt",
+						"entryId": "Landung",
+						"headword": "Landung",
 						"pronunciation": {
-							"display": "KROYTS-fart",
-							"ipaUK": "/ˈkʁɔɪ̯tsˌfaːɐ̯t/",
-							"ipaUS": "/ˈkʁɔɪ̯tsˌfaːɐ̯t/"
+							"display": "LAN-doong",
+							"ipaUK": "/ˈlandʊŋ/",
+							"ipaUS": "/ˈlandʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -349,15 +296,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Kreuzfahrt",
+								"headwordLine": "Landung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Urlaubsreise mit einem großen Schiff",
+										"definition": "die Landung: das Aufsetzen des Flugzeugs auf dem Boden",
 										"examples": [
-											"Im Sommer machen wir eine Kreuzfahrt."
+											"Die Landung war sehr sanft."
 										]
 									}
 								]
@@ -368,15 +315,68 @@
 					},
 					"answers": [
 						{
-							"answer": "Im Sommer machen wir eine Kreuzfahrt.",
+							"answer": "Die Landung war sehr sanft.",
 							"ok": true
 						},
 						{
-							"answer": "Im Sommer machen wir einen Kreuzfahrt.",
+							"answer": "Der Landung war sehr sanft.",
 							"ok": false
 						},
 						{
-							"answer": "Im Sommer wir machen eine Kreuzfahrt.",
+							"answer": "Die Landung sehr sanft war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Gepäck",
+					"summary": "Taschen und Koffer",
+					"explain": {
+						"entryId": "Gepäck",
+						"headword": "Gepäck",
+						"pronunciation": {
+							"display": "guh-PEK",
+							"ipaUK": "/ɡəˈpɛk/",
+							"ipaUS": "/ɡəˈpɛk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gepäck",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Gepäck: die Taschen und Koffer, die man mitnimmt",
+										"examples": [
+											"Mein Gepäck ist ziemlich schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Gepäck ist ziemlich schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Gepäck ist ziemlich schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Gepäck ziemlich schwer ist.",
 							"ok": false
 						}
 					]
@@ -384,15 +384,15 @@
 				{
 					"title": "",
 					"page": 8,
-					"question": "Zoll",
-					"summary": "Kontrolle von Waren an der Grenze",
+					"question": "Koffer",
+					"summary": "große Reisetasche",
 					"explain": {
-						"entryId": "Zoll",
-						"headword": "Zoll",
+						"entryId": "Koffer",
+						"headword": "Koffer",
 						"pronunciation": {
-							"display": "tsol",
-							"ipaUK": "/tsɔl/",
-							"ipaUS": "/tsɔl/"
+							"display": "KOF-fuh",
+							"ipaUK": "/ˈkɔfɐ/",
+							"ipaUS": "/ˈkɔfɐ/"
 						},
 						"labels": [
 							"B1"
@@ -402,15 +402,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Zoll",
+								"headwordLine": "Koffer",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Kontrolle von Waren an der Grenze",
+										"definition": "der Koffer: eine große Tasche für Kleidung auf Reisen",
 										"examples": [
-											"Am Zoll muss man das Gepäck zeigen."
+											"Mein Koffer ist leider zu schwer."
 										]
 									}
 								]
@@ -421,15 +421,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Am Zoll muss man das Gepäck zeigen.",
+							"answer": "Mein Koffer ist leider zu schwer.",
 							"ok": true
 						},
 						{
-							"answer": "An dem Zoll muss man das Gepäck zeigen.",
+							"answer": "Meine Koffer ist leider zu schwer.",
 							"ok": false
 						},
 						{
-							"answer": "Am Zoll man muss das Gepäck zeigen.",
+							"answer": "Mein Koffer leider zu schwer ist.",
 							"ok": false
 						}
 					]
@@ -437,15 +437,15 @@
 				{
 					"title": "",
 					"page": 9,
-					"question": "Abfahrt",
-					"summary": "das Losfahren",
+					"question": "Reisetasche",
+					"summary": "weiche Tasche für die Reise",
 					"explain": {
-						"entryId": "Abfahrt",
-						"headword": "Abfahrt",
+						"entryId": "Reisetasche",
+						"headword": "Reisetasche",
 						"pronunciation": {
-							"display": "AP-fart",
-							"ipaUK": "/ˈapˌfaːɐ̯t/",
-							"ipaUS": "/ˈapˌfaːɐ̯t/"
+							"display": "RY-zuh-tash-uh",
+							"ipaUK": "/ˈʁaɪ̯zəˌtaʃə/",
+							"ipaUS": "/ˈʁaɪ̯zəˌtaʃə/"
 						},
 						"labels": [
 							"B1"
@@ -455,17 +455,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Abfahrt",
+								"headwordLine": "Reisetasche",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Abflug"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Losfahren von einem Ort",
+										"definition": "die Reisetasche: eine weiche Tasche für die Reise",
 										"examples": [
-											"Die Abfahrt des Busses ist um acht."
+											"Ich packe meine Reisetasche am Abend."
 										]
 									}
 								]
@@ -476,15 +474,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Abfahrt des Busses ist um acht.",
+							"answer": "Ich packe meine Reisetasche am Abend.",
 							"ok": true
 						},
 						{
-							"answer": "Der Abfahrt des Busses ist um acht.",
+							"answer": "Ich packe meinen Reisetasche am Abend.",
 							"ok": false
 						},
 						{
-							"answer": "Die Abfahrt des Busses um acht ist.",
+							"answer": "Ich meine Reisetasche am Abend packe.",
 							"ok": false
 						}
 					]
@@ -492,15 +490,15 @@
 				{
 					"title": "",
 					"page": 10,
-					"question": "Reiseziel",
-					"summary": "Ort, zu dem man reist",
+					"question": "Buchung",
+					"summary": "das Reservieren",
 					"explain": {
-						"entryId": "Reiseziel",
-						"headword": "Reiseziel",
+						"entryId": "Buchung",
+						"headword": "Buchung",
 						"pronunciation": {
-							"display": "RY-zuh-tseel",
-							"ipaUK": "/ˈʁaɪ̯zəˌtsiːl/",
-							"ipaUS": "/ˈʁaɪ̯zəˌtsiːl/"
+							"display": "BOO-khoong",
+							"ipaUK": "/ˈbuːxʊŋ/",
+							"ipaUS": "/ˈbuːxʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -510,15 +508,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Reiseziel",
+								"headwordLine": "Buchung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "der Ort, zu dem man reist",
+										"definition": "die Buchung: das Reservieren einer Reise oder eines Zimmers",
 										"examples": [
-											"Unser Reiseziel ist dieses Jahr Italien."
+											"Die Buchung des Fluges war einfach."
 										]
 									}
 								]
@@ -529,15 +527,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Unser Reiseziel ist dieses Jahr Italien.",
+							"answer": "Die Buchung des Fluges war einfach.",
 							"ok": true
 						},
 						{
-							"answer": "Unsere Reiseziel ist dieses Jahr Italien.",
+							"answer": "Der Buchung des Fluges war einfach.",
 							"ok": false
 						},
 						{
-							"answer": "Unser Reiseziel dieses Jahr Italien ist.",
+							"answer": "Die Buchung des Fluges einfach war.",
 							"ok": false
 						}
 					]

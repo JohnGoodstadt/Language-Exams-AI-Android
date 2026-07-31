@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizShopping3-de",
-	"title": "3. Shopping",
+	"title": "Shopping",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,6 +13,59 @@
 				{
 					"title": "",
 					"page": 1,
+					"question": "Rechnung",
+					"summary": "Papier über den zu zahlenden Betrag",
+					"explain": {
+						"entryId": "Rechnung",
+						"headword": "Rechnung",
+						"pronunciation": {
+							"display": "REKH-noong",
+							"ipaUK": "/ˈʁɛçnʊŋ/",
+							"ipaUS": "/ˈʁɛçnʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rechnung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Rechnung: ein Papier, das zeigt, was man zahlen muss",
+										"examples": [
+											"Der Kellner bringt uns die Rechnung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kellner bringt uns die Rechnung.",
+							"ok": true
+						},
+						{
+							"answer": "Der Kellner bringt uns den Rechnung.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kellner uns die Rechnung bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
 					"question": "Rückerstattung",
 					"summary": "Zurückzahlen von Geld",
 					"explain": {
@@ -37,7 +90,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Zurückzahlen von Geld",
+										"definition": "die Rückerstattung: das Zurückzahlen von Geld",
 										"examples": [
 											"Ich bitte um eine volle Rückerstattung."
 										]
@@ -65,7 +118,7 @@
 				},
 				{
 					"title": "",
-					"page": 2,
+					"page": 3,
 					"question": "Erstattung",
 					"summary": "Rückzahlung von Geld",
 					"explain": {
@@ -90,7 +143,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Rückzahlung von ausgegebenem Geld",
+										"definition": "die Erstattung: die Rückzahlung von ausgegebenem Geld",
 										"examples": [
 											"Die Erstattung der Kosten dauert zwei Wochen."
 										]
@@ -118,69 +171,16 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "Rückgabe",
-					"summary": "Zurückbringen einer Ware",
-					"explain": {
-						"entryId": "Rückgabe",
-						"headword": "Rückgabe",
-						"pronunciation": {
-							"display": "RÜK-gah-buh",
-							"ipaUK": "/ˈʁʏkˌɡaːbə/",
-							"ipaUS": "/ˈʁʏkˌɡaːbə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Rückgabe",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Zurückbringen einer gekauften Ware",
-										"examples": [
-											"Die Rückgabe ist innerhalb von 14 Tagen möglich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Rückgabe ist innerhalb von 14 Tagen möglich.",
-							"ok": true
-						},
-						{
-							"answer": "Der Rückgabe ist innerhalb von 14 Tagen möglich.",
-							"ok": false
-						},
-						{
-							"answer": "Die Rückgabe innerhalb von 14 Tagen möglich ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 4,
-					"question": "Schlussverkauf",
-					"summary": "Verkauf am Saisonende, billig",
+					"question": "Entschädigung",
+					"summary": "Geld als Ausgleich für Schaden",
 					"explain": {
-						"entryId": "Schlussverkauf",
-						"headword": "Schlussverkauf",
+						"entryId": "Entschädigung",
+						"headword": "Entschädigung",
 						"pronunciation": {
-							"display": "SHLOOS-fer-kowf",
-							"ipaUK": "/ˈʃlʊsfɛɐ̯ˌkaʊ̯f/",
-							"ipaUS": "/ˈʃlʊsfɛɐ̯ˌkaʊ̯f/"
+							"display": "ent-SHAY-di-goong",
+							"ipaUK": "/ɛntˈʃɛːdɪɡʊŋ/",
+							"ipaUS": "/ɛntˈʃɛːdɪɡʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -190,15 +190,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Schlussverkauf",
+								"headwordLine": "Entschädigung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "der Verkauf am Saisonende zu niedrigen Preisen",
+										"definition": "die Entschädigung: Geld als Ausgleich für einen Schaden",
 										"examples": [
-											"Im Schlussverkauf kaufte sie einen günstigen Mantel."
+											"Die Firma zahlt ihm eine Entschädigung."
 										]
 									}
 								]
@@ -209,15 +209,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Im Schlussverkauf kaufte sie einen günstigen Mantel.",
+							"answer": "Die Firma zahlt ihm eine Entschädigung.",
 							"ok": true
 						},
 						{
-							"answer": "In der Schlussverkauf kaufte sie einen günstigen Mantel.",
+							"answer": "Die Firma zahlt ihm einen Entschädigung.",
 							"ok": false
 						},
 						{
-							"answer": "Im Schlussverkauf sie kaufte einen günstigen Mantel.",
+							"answer": "Die Firma ihm eine Entschädigung zahlt.",
 							"ok": false
 						}
 					]
@@ -225,15 +225,15 @@
 				{
 					"title": "",
 					"page": 5,
-					"question": "Versand",
-					"summary": "Verschicken von Waren",
+					"question": "Ausverkauf",
+					"summary": "Verkauf zu niedrigen Preisen",
 					"explain": {
-						"entryId": "Versand",
-						"headword": "Versand",
+						"entryId": "Ausverkauf",
+						"headword": "Ausverkauf",
 						"pronunciation": {
-							"display": "fer-ZANT",
-							"ipaUK": "/fɛɐ̯ˈzant/",
-							"ipaUS": "/fɛɐ̯ˈzant/"
+							"display": "OWS-fer-kowf",
+							"ipaUK": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/",
+							"ipaUS": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/"
 						},
 						"labels": [
 							"B1"
@@ -243,15 +243,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Versand",
+								"headwordLine": "Ausverkauf",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Verschicken von Waren",
+										"definition": "der Ausverkauf: der Verkauf von Waren zu niedrigen Preisen",
 										"examples": [
-											"Der Versand ins Ausland ist teuer."
+											"Im Ausverkauf sind alle Jacken reduziert."
 										]
 									}
 								]
@@ -262,15 +262,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Versand ins Ausland ist teuer.",
+							"answer": "Im Ausverkauf sind alle Jacken reduziert.",
 							"ok": true
 						},
 						{
-							"answer": "Die Versand ins Ausland ist teuer.",
+							"answer": "In der Ausverkauf sind alle Jacken reduziert.",
 							"ok": false
 						},
 						{
-							"answer": "Der Versand ins Ausland teuer ist.",
+							"answer": "Im Ausverkauf alle Jacken reduziert sind.",
 							"ok": false
 						}
 					]
@@ -278,15 +278,15 @@
 				{
 					"title": "",
 					"page": 6,
-					"question": "Einkäufer",
-					"summary": "Person, die einkauft",
+					"question": "Räumungsverkauf",
+					"summary": "Verkauf, um das Lager zu leeren",
 					"explain": {
-						"entryId": "Einkäufer",
-						"headword": "Einkäufer",
+						"entryId": "Räumungsverkauf",
+						"headword": "Räumungsverkauf",
 						"pronunciation": {
-							"display": "INE-koy-fuh",
-							"ipaUK": "/ˈaɪ̯nˌkɔɪ̯fɐ/",
-							"ipaUS": "/ˈaɪ̯nˌkɔɪ̯fɐ/"
+							"display": "ROY-moongs-fer-kowf",
+							"ipaUK": "/ˈʁɔɪ̯mʊŋsfɛɐ̯ˌkaʊ̯f/",
+							"ipaUS": "/ˈʁɔɪ̯mʊŋsfɛɐ̯ˌkaʊ̯f/"
 						},
 						"labels": [
 							"B1"
@@ -296,17 +296,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Einkäufer",
+								"headwordLine": "Räumungsverkauf",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Einkäuferin"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person, die einkaufen geht",
+										"definition": "der Räumungsverkauf: ein Verkauf, um das Lager zu leeren",
 										"examples": [
-											"Der Einkäufer sucht die besten Produkte aus."
+											"Der Räumungsverkauf lockt viele Kunden."
 										]
 									}
 								]
@@ -317,15 +315,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Einkäufer sucht die besten Produkte aus.",
+							"answer": "Der Räumungsverkauf lockt viele Kunden.",
 							"ok": true
 						},
 						{
-							"answer": "Die Einkäufer sucht die besten Produkte aus.",
+							"answer": "Die Räumungsverkauf lockt viele Kunden.",
 							"ok": false
 						},
 						{
-							"answer": "Der Einkäufer die besten Produkte aussucht.",
+							"answer": "Der Räumungsverkauf viele Kunden lockt.",
 							"ok": false
 						}
 					]
@@ -333,6 +331,59 @@
 				{
 					"title": "",
 					"page": 7,
+					"question": "Einkaufszentrum",
+					"summary": "Gebäude mit vielen Geschäften",
+					"explain": {
+						"entryId": "Einkaufszentrum",
+						"headword": "Einkaufszentrum",
+						"pronunciation": {
+							"display": "INE-kowfs-tsen-troom",
+							"ipaUK": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/",
+							"ipaUS": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einkaufszentrum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Einkaufszentrum: ein großes Gebäude mit vielen Geschäften",
+										"examples": [
+											"Im Einkaufszentrum gibt es hundert Läden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Einkaufszentrum gibt es hundert Läden.",
+							"ok": true
+						},
+						{
+							"answer": "In die Einkaufszentrum gibt es hundert Läden.",
+							"ok": false
+						},
+						{
+							"answer": "Im Einkaufszentrum hundert Läden gibt es.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
 					"question": "Shoppingcenter",
 					"summary": "Zentrum mit vielen Läden",
 					"explain": {
@@ -357,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Zentrum mit vielen Läden",
+										"definition": "das Shoppingcenter: ein Zentrum mit vielen Läden",
 										"examples": [
 											"Das Shoppingcenter hat sonntags geschlossen."
 										]
@@ -385,16 +436,16 @@
 				},
 				{
 					"title": "",
-					"page": 8,
-					"question": "Einkaufszentrum",
-					"summary": "großes überdachtes Zentrum",
+					"page": 9,
+					"question": "Einkaufspassage",
+					"summary": "überdachte Ladenstraße",
 					"explain": {
-						"entryId": "Einkaufszentrum",
-						"headword": "Einkaufszentrum",
+						"entryId": "Einkaufspassage",
+						"headword": "Einkaufspassage",
 						"pronunciation": {
-							"display": "INE-kowfs-tsen-troom",
-							"ipaUK": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/",
-							"ipaUS": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/"
+							"display": "INE-kowfs-pa-sah-zhuh",
+							"ipaUK": "/ˈaɪ̯nkaʊ̯fspaˌsaːʒə/",
+							"ipaUS": "/ˈaɪ̯nkaʊ̯fspaˌsaːʒə/"
 						},
 						"labels": [
 							"B1"
@@ -404,15 +455,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Einkaufszentrum",
+								"headwordLine": "Einkaufspassage",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein großes überdachtes Einkaufszentrum",
+										"definition": "die Einkaufspassage: eine überdachte Straße mit vielen Läden",
 										"examples": [
-											"Am Rand der Stadt entsteht ein neues Einkaufszentrum."
+											"Die Einkaufspassage verbindet zwei Straßen."
 										]
 									}
 								]
@@ -423,68 +474,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Am Rand der Stadt entsteht ein neues Einkaufszentrum.",
+							"answer": "Die Einkaufspassage verbindet zwei Straßen.",
 							"ok": true
 						},
 						{
-							"answer": "Am Rand der Stadt entsteht ein neuer Einkaufszentrum.",
+							"answer": "Der Einkaufspassage verbindet zwei Straßen.",
 							"ok": false
 						},
 						{
-							"answer": "Am Rand der Stadt ein neues Einkaufszentrum entsteht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "tauschen",
-					"summary": "eine Sache gegen eine andere geben",
-					"explain": {
-						"entryId": "tauschen",
-						"headword": "tauschen",
-						"pronunciation": {
-							"display": "TOW-shn",
-							"ipaUK": "/ˈtaʊ̯ʃn̩/",
-							"ipaUS": "/ˈtaʊ̯ʃn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "tauschen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Sache gegen eine andere geben",
-										"examples": [
-											"Wir tauschen die Bücher untereinander."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir tauschen die Bücher untereinander.",
-							"ok": true
-						},
-						{
-							"answer": "Wir tauscht die Bücher untereinander.",
-							"ok": false
-						},
-						{
-							"answer": "Wir die Bücher untereinander tauschen.",
+							"answer": "Die Einkaufspassage zwei Straßen verbindet.",
 							"ok": false
 						}
 					]

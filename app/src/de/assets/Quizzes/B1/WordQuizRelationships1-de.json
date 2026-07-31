@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizRelationships1-de",
-	"title": "1. Relationships",
+	"title": "Relationships",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -37,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person, die man kennt, aber kein enger Freund",
+										"definition": "die Bekanntschaft: eine Person, die man kennt, aber kein enger Freund",
 										"examples": [
 											"Auf der Reise machte ich eine nette Bekanntschaft."
 										]
@@ -66,114 +66,6 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Unterstützung",
-					"summary": "Hilfe, die man gibt",
-					"explain": {
-						"entryId": "Unterstützung",
-						"headword": "Unterstützung",
-						"pronunciation": {
-							"display": "oon-tuh-SHTÜT-soong",
-							"ipaUK": "/ʊntɐˈʃtʏtsʊŋ/",
-							"ipaUS": "/ʊntɐˈʃtʏtsʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Unterstützung",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Hilfe"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Hilfe, die man jemandem gibt",
-										"examples": [
-											"Ich danke dir für deine Unterstützung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich danke dir für deine Unterstützung.",
-							"ok": true
-						},
-						{
-							"answer": "Ich danke dir für deinen Unterstützung.",
-							"ok": false
-						},
-						{
-							"answer": "Ich dir für deine Unterstützung danke.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Bindung",
-					"summary": "enge Verbindung zwischen Menschen",
-					"explain": {
-						"entryId": "Bindung",
-						"headword": "Bindung",
-						"pronunciation": {
-							"display": "BIN-doong",
-							"ipaUK": "/ˈbɪndʊŋ/",
-							"ipaUS": "/ˈbɪndʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Bindung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine enge Verbindung zwischen Menschen",
-										"examples": [
-											"Zwischen ihnen besteht eine enge Bindung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Zwischen ihnen besteht eine enge Bindung.",
-							"ok": true
-						},
-						{
-							"answer": "Zwischen ihnen besteht einen engen Bindung.",
-							"ok": false
-						},
-						{
-							"answer": "Zwischen ihnen eine enge Bindung besteht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
 					"question": "Kollege",
 					"summary": "Person, mit der man arbeitet",
 					"explain": {
@@ -194,13 +86,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Kollege",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Kollegin"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person, mit der man zusammenarbeitet",
+										"definition": "der Kollege: eine Person, mit der man zusammenarbeitet",
 										"examples": [
 											"Mein Kollege hilft mir bei der Arbeit."
 										]
@@ -228,166 +118,113 @@
 				},
 				{
 					"title": "",
+					"page": 3,
+					"question": "Nachbar",
+					"summary": "Person, die nebenan wohnt",
+					"explain": {
+						"entryId": "Nachbar",
+						"headword": "Nachbar",
+						"pronunciation": {
+							"display": "NAKH-bar",
+							"ipaUK": "/ˈnaxbaːɐ̯/",
+							"ipaUS": "/ˈnaxbaːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachbar",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Nachbar: eine Person, die nebenan wohnt",
+										"examples": [
+											"Mein Nachbar gießt meine Blumen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Nachbar gießt meine Blumen.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Nachbar gießt meine Blumen.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Nachbar meine Blumen gießt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Bindung",
+					"summary": "enge Verbindung zwischen Menschen",
+					"explain": {
+						"entryId": "Bindung",
+						"headword": "Bindung",
+						"pronunciation": {
+							"display": "BIN-doong",
+							"ipaUK": "/ˈbɪndʊŋ/",
+							"ipaUS": "/ˈbɪndʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bindung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Bindung: eine enge Verbindung zwischen Menschen",
+										"examples": [
+											"Zwischen ihnen besteht eine enge Bindung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zwischen ihnen besteht eine enge Bindung.",
+							"ok": true
+						},
+						{
+							"answer": "Zwischen ihnen besteht einen engen Bindung.",
+							"ok": false
+						},
+						{
+							"answer": "Zwischen ihnen eine enge Bindung besteht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
 					"page": 5,
-					"question": "Kommunikation",
-					"summary": "Austausch von Informationen",
-					"explain": {
-						"entryId": "Kommunikation",
-						"headword": "Kommunikation",
-						"pronunciation": {
-							"display": "ko-moo-ni-ka-TSYOHN",
-							"ipaUK": "/kɔmunikaˈtsi̯oːn/",
-							"ipaUS": "/kɔmunikaˈtsi̯oːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kommunikation",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Austausch von Informationen",
-										"examples": [
-											"Gute Kommunikation ist in jeder Beziehung wichtig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Gute Kommunikation ist in jeder Beziehung wichtig.",
-							"ok": true
-						},
-						{
-							"answer": "Guter Kommunikation ist in jeder Beziehung wichtig.",
-							"ok": false
-						},
-						{
-							"answer": "Gute Kommunikation in jeder Beziehung wichtig ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Gesellschaft",
-					"summary": "Zusammensein mit anderen",
-					"explain": {
-						"entryId": "Gesellschaft",
-						"headword": "Gesellschaft",
-						"pronunciation": {
-							"display": "guh-ZEL-shaft",
-							"ipaUK": "/ɡəˈzɛlʃaft/",
-							"ipaUS": "/ɡəˈzɛlʃaft/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gesellschaft",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Zusammensein mit anderen",
-										"examples": [
-											"Ich genieße die Gesellschaft meiner Freunde."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich genieße die Gesellschaft meiner Freunde.",
-							"ok": true
-						},
-						{
-							"answer": "Ich genieße den Gesellschaft meiner Freunde.",
-							"ok": false
-						},
-						{
-							"answer": "Ich die Gesellschaft meiner Freunde genieße.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Vertrauen",
-					"summary": "fester Glaube an jemanden",
-					"explain": {
-						"entryId": "Vertrauen",
-						"headword": "Vertrauen",
-						"pronunciation": {
-							"display": "fer-TROW-en",
-							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
-							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vertrauen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der feste Glaube an jemanden",
-										"examples": [
-											"Ohne Vertrauen funktioniert keine Freundschaft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ohne Vertrauen funktioniert keine Freundschaft.",
-							"ok": true
-						},
-						{
-							"answer": "Ohne Vertrauens funktioniert keine Freundschaft.",
-							"ok": false
-						},
-						{
-							"answer": "Ohne Vertrauen keine Freundschaft funktioniert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Verbindung",
 					"summary": "Beziehung zwischen zwei Dingen/Menschen",
 					"explain": {
@@ -412,7 +249,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Beziehung zwischen zwei Dingen oder Menschen",
+										"definition": "die Verbindung: eine Beziehung zwischen zwei Menschen oder Dingen",
 										"examples": [
 											"Die beiden haben eine besondere Verbindung."
 										]
@@ -440,7 +277,113 @@
 				},
 				{
 					"title": "",
-					"page": 9,
+					"page": 6,
+					"question": "Band",
+					"summary": "enge gefühlsmäßige Verbindung",
+					"explain": {
+						"entryId": "Band",
+						"headword": "Band",
+						"pronunciation": {
+							"display": "bant",
+							"ipaUK": "/bant/",
+							"ipaUS": "/bant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Band",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Band: eine enge, gefühlsmäßige Verbindung",
+										"examples": [
+											"Ein starkes Band verbindet die Geschwister."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein starkes Band verbindet die Geschwister.",
+							"ok": true
+						},
+						{
+							"answer": "Ein starker Band verbindet die Geschwister.",
+							"ok": false
+						},
+						{
+							"answer": "Ein starkes Band die Geschwister verbindet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Kommunikation",
+					"summary": "Austausch von Informationen",
+					"explain": {
+						"entryId": "Kommunikation",
+						"headword": "Kommunikation",
+						"pronunciation": {
+							"display": "ko-moo-ni-ka-TSYOHN",
+							"ipaUK": "/kɔmunikaˈtsi̯oːn/",
+							"ipaUS": "/kɔmunikaˈtsi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kommunikation",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Kommunikation: der Austausch von Informationen",
+										"examples": [
+											"Gute Kommunikation ist in jeder Beziehung wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gute Kommunikation ist in jeder Beziehung wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Guter Kommunikation ist in jeder Beziehung wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Gute Kommunikation in jeder Beziehung wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
 					"question": "Gespräch",
 					"summary": "Austausch von Worten",
 					"explain": {
@@ -465,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Austausch von Worten; eine Unterhaltung",
+										"definition": "das Gespräch: ein Austausch von Worten; eine Unterhaltung",
 										"examples": [
 											"Wir hatten ein langes, offenes Gespräch."
 										]
@@ -493,16 +436,16 @@
 				},
 				{
 					"title": "",
-					"page": 10,
-					"question": "Werben",
-					"summary": "Umwerben eines Partners",
+					"page": 9,
+					"question": "Interaktion",
+					"summary": "gegenseitiges Reagieren",
 					"explain": {
-						"entryId": "Werben",
-						"headword": "Werben",
+						"entryId": "Interaktion",
+						"headword": "Interaktion",
 						"pronunciation": {
-							"display": "VER-bn",
-							"ipaUK": "/ˈvɛʁbn̩/",
-							"ipaUS": "/ˈvɛʁbn̩/"
+							"display": "in-tuh-rak-TSYOHN",
+							"ipaUK": "/ɪntɐʔakˈtsi̯oːn/",
+							"ipaUS": "/ɪntɐʔakˈtsi̯oːn/"
 						},
 						"labels": [
 							"B1"
@@ -510,17 +453,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Nomen (nominalisiert)",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Werben",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Interaktion",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Umwerben eines möglichen Partners (nominalisiert)",
+										"definition": "die Interaktion: das gegenseitige Aufeinander-Reagieren",
 										"examples": [
-											"Das Werben um sie dauerte viele Monate."
+											"Die Interaktion mit Kunden macht ihr Spaß."
 										]
 									}
 								]
@@ -531,15 +474,68 @@
 					},
 					"answers": [
 						{
-							"answer": "Das Werben um sie dauerte viele Monate.",
+							"answer": "Die Interaktion mit Kunden macht ihr Spaß.",
 							"ok": true
 						},
 						{
-							"answer": "Das werben um sie dauerte viele Monate.",
+							"answer": "Der Interaktion mit Kunden macht ihr Spaß.",
 							"ok": false
 						},
 						{
-							"answer": "Das Werben um sie viele Monate dauerte.",
+							"answer": "Die Interaktion mit Kunden ihr Spaß macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Verknüpfung",
+					"summary": "Verbindung zwischen zwei Dingen",
+					"explain": {
+						"entryId": "Verknüpfung",
+						"headword": "Verknüpfung",
+						"pronunciation": {
+							"display": "fer-KNÜP-foong",
+							"ipaUK": "/fɛɐ̯ˈknʏpfʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈknʏpfʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verknüpfung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Verknüpfung: eine Verbindung zwischen zwei Dingen",
+										"examples": [
+											"Es gibt eine klare Verknüpfung der Ideen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es gibt eine klare Verknüpfung der Ideen.",
+							"ok": true
+						},
+						{
+							"answer": "Es gibt einen klaren Verknüpfung der Ideen.",
+							"ok": false
+						},
+						{
+							"answer": "Es eine klare Verknüpfung der Ideen gibt.",
 							"ok": false
 						}
 					]

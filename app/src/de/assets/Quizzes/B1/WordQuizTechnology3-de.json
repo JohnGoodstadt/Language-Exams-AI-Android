@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizTechnology3-de",
-	"title": "3. Technology",
+	"title": "Technology",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "Programm",
-					"summary": "Software für den Computer",
+					"question": "online",
+					"summary": "mit dem Internet verbunden",
 					"explain": {
-						"entryId": "Programm",
-						"headword": "Programm",
+						"entryId": "online",
+						"headword": "online",
 						"pronunciation": {
-							"display": "pro-GRAM",
-							"ipaUK": "/pʁoˈɡʁam/",
-							"ipaUS": "/pʁoˈɡʁam/"
+							"display": "ON-line",
+							"ipaUK": "/ˈɔnlaɪ̯n/",
+							"ipaUS": "/ˈɔnlaɪ̯n/"
 						},
 						"labels": [
 							"B1"
@@ -29,17 +29,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Programm",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "online",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Software für den Computer",
+										"definition": "online: mit dem Internet verbunden",
 										"examples": [
-											"Dieses Programm läuft nur auf neuen Geräten."
+											"Ich bin den ganzen Tag online."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Dieses Programm läuft nur auf neuen Geräten.",
+							"answer": "Ich bin den ganzen Tag online.",
 							"ok": true
 						},
 						{
-							"answer": "Diese Programm läuft nur auf neuen Geräten.",
+							"answer": "Ich bin den ganzen Tag onlines.",
 							"ok": false
 						},
 						{
-							"answer": "Dieses Programm nur auf neuen Geräten läuft.",
+							"answer": "Ich den ganzen Tag bin online.",
 							"ok": false
 						}
 					]
@@ -66,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Suchmaschine",
-					"summary": "Dienst zum Suchen im Internet",
+					"question": "Netzwerk",
+					"summary": "verbundene Computer/Menschen",
 					"explain": {
-						"entryId": "Suchmaschine",
-						"headword": "Suchmaschine",
+						"entryId": "Netzwerk",
+						"headword": "Netzwerk",
 						"pronunciation": {
-							"display": "ZOOKH-ma-shee-nuh",
-							"ipaUK": "/ˈzuːxmaˌʃiːnə/",
-							"ipaUS": "/ˈzuːxmaˌʃiːnə/"
+							"display": "NETS-verk",
+							"ipaUK": "/ˈnɛtsvɛʁk/",
+							"ipaUS": "/ˈnɛtsvɛʁk/"
 						},
 						"labels": [
 							"B1"
@@ -84,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Suchmaschine",
+								"headwordLine": "Netzwerk",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Dienst zum Suchen im Internet (z. B. Google)",
+										"definition": "das Netzwerk: mehrere verbundene Computer oder Menschen",
 										"examples": [
-											"Die Suchmaschine findet Tausende Ergebnisse."
+											"Das Netzwerk verbindet alle Computer im Büro."
 										]
 									}
 								]
@@ -103,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Suchmaschine findet Tausende Ergebnisse.",
+							"answer": "Das Netzwerk verbindet alle Computer im Büro.",
 							"ok": true
 						},
 						{
-							"answer": "Der Suchmaschine findet Tausende Ergebnisse.",
+							"answer": "Der Netzwerk verbindet alle Computer im Büro.",
 							"ok": false
 						},
 						{
-							"answer": "Die Suchmaschine Tausende Ergebnisse findet.",
+							"answer": "Das Netzwerk alle Computer im Büro verbindet.",
 							"ok": false
 						}
 					]
@@ -119,15 +119,15 @@
 				{
 					"title": "",
 					"page": 3,
-					"question": "Smartphone",
-					"summary": "modernes Handy mit Internet",
+					"question": "Verbindung",
+					"summary": "Verbindung zum Internet",
 					"explain": {
-						"entryId": "Smartphone",
-						"headword": "Smartphone",
+						"entryId": "Verbindung",
+						"headword": "Verbindung",
 						"pronunciation": {
-							"display": "SMART-fohn",
-							"ipaUK": "/ˈsmaːʁtfoːn/",
-							"ipaUS": "/ˈsmaːʁtfoːn/"
+							"display": "fer-BIN-doong",
+							"ipaUK": "/fɛɐ̯ˈbɪndʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈbɪndʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -137,17 +137,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Smartphone",
+								"headwordLine": "Verbindung",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Handy"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein modernes Handy mit Internet",
+										"definition": "die Verbindung: die Verbindung zum Internet oder Netzwerk",
 										"examples": [
-											"Mein Smartphone hat einen leeren Akku."
+											"Die Verbindung zum Internet ist langsam."
 										]
 									}
 								]
@@ -158,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Mein Smartphone hat einen leeren Akku.",
+							"answer": "Die Verbindung zum Internet ist langsam.",
 							"ok": true
 						},
 						{
-							"answer": "Meinen Smartphone hat einen leeren Akku.",
+							"answer": "Der Verbindung zum Internet ist langsam.",
 							"ok": false
 						},
 						{
-							"answer": "Mein Smartphone einen leeren Akku hat.",
+							"answer": "Die Verbindung zum Internet langsam ist.",
 							"ok": false
 						}
 					]
@@ -174,6 +172,59 @@
 				{
 					"title": "",
 					"page": 4,
+					"question": "WLAN",
+					"summary": "drahtloses Internet",
+					"explain": {
+						"entryId": "WLAN",
+						"headword": "WLAN",
+						"pronunciation": {
+							"display": "VAY-lahn",
+							"ipaUK": "/ˈveːlaːn/",
+							"ipaUS": "/ˈveːlaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "WLAN",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das WLAN: das drahtlose Internet zu Hause",
+										"examples": [
+											"Das WLAN im Hotel ist kostenlos."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das WLAN im Hotel ist kostenlos.",
+							"ok": true
+						},
+						{
+							"answer": "Der WLAN im Hotel ist kostenlos.",
+							"ok": false
+						},
+						{
+							"answer": "Das WLAN im Hotel kostenlos ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
 					"question": "Software",
 					"summary": "die Programme eines Computers",
 					"explain": {
@@ -198,7 +249,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Programme auf einem Computer",
+										"definition": "die Software: die Programme auf einem Computer",
 										"examples": [
 											"Diese Software muss man aktualisieren."
 										]
@@ -226,170 +277,7 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "Registerkarte",
-					"summary": "Reiter im Browser",
-					"explain": {
-						"entryId": "Registerkarte",
-						"headword": "Registerkarte",
-						"pronunciation": {
-							"display": "re-GIS-tuh-kar-tuh",
-							"ipaUK": "/ʁeˈɡɪstɐˌkaʁtə/",
-							"ipaUS": "/ʁeˈɡɪstɐˌkaʁtə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Registerkarte",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Tab"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Reiter im Browser für eine Seite",
-										"examples": [
-											"Ich öffne den Link in einer neuen Registerkarte."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich öffne den Link in einer neuen Registerkarte.",
-							"ok": true
-						},
-						{
-							"answer": "Ich öffne den Link in einem neuen Registerkarte.",
-							"ok": false
-						},
-						{
-							"answer": "Ich den Link in einer neuen Registerkarte öffne.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 6,
-					"question": "virtuell",
-					"summary": "Adjektiv: nur im Computer",
-					"explain": {
-						"entryId": "virtuell",
-						"headword": "virtuell",
-						"pronunciation": {
-							"display": "vir-too-EL",
-							"ipaUK": "/vɪʁtuˈɛl/",
-							"ipaUS": "/vɪʁtuˈɛl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "virtuell",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nur im Computer vorhanden; nicht echt",
-										"examples": [
-											"Das Meeting findet virtuell statt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Meeting findet virtuell statt.",
-							"ok": true
-						},
-						{
-							"answer": "Das Meeting findet virtuelle statt.",
-							"ok": false
-						},
-						{
-							"answer": "Das Meeting virtuell stattfindet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Netz",
-					"summary": "das Web; das Internet",
-					"explain": {
-						"entryId": "Netz",
-						"headword": "Netz",
-						"pronunciation": {
-							"display": "nets",
-							"ipaUK": "/nɛts/",
-							"ipaUS": "/nɛts/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Netz",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Web"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das World Wide Web; das Internet",
-										"examples": [
-											"Im ganzen Haus gibt es schnelles Netz."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im ganzen Haus gibt es schnelles Netz.",
-							"ok": true
-						},
-						{
-							"answer": "Im ganzen Haus gibt es schneller Netz.",
-							"ok": false
-						},
-						{
-							"answer": "Im ganzen Haus schnelles Netz gibt es.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Webseite",
 					"summary": "eine Seite im Internet",
 					"explain": {
@@ -410,13 +298,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Webseite",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Website"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Seite im Internet",
+										"definition": "die Webseite: eine Seite im Internet",
 										"examples": [
 											"Die Webseite lädt sehr schnell."
 										]
@@ -438,6 +324,112 @@
 						},
 						{
 							"answer": "Die Webseite sehr schnell lädt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Startseite",
+					"summary": "erste Seite einer Webseite",
+					"explain": {
+						"entryId": "Startseite",
+						"headword": "Startseite",
+						"pronunciation": {
+							"display": "SHTART-zy-tuh",
+							"ipaUK": "/ˈʃtaʁtˌzaɪ̯tə/",
+							"ipaUS": "/ˈʃtaʁtˌzaɪ̯tə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Startseite",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Startseite: die erste Seite einer Webseite",
+										"examples": [
+											"Auf der Startseite findest du das Menü."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf der Startseite findest du das Menü.",
+							"ok": true
+						},
+						{
+							"answer": "Auf dem Startseite findest du das Menü.",
+							"ok": false
+						},
+						{
+							"answer": "Auf der Startseite du findest das Menü.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "URL",
+					"summary": "Adresse einer Webseite",
+					"explain": {
+						"entryId": "URL",
+						"headword": "URL",
+						"pronunciation": {
+							"display": "OO-er-el",
+							"ipaUK": "/uː ɛʁ ɛl/",
+							"ipaUS": "/uː ɛʁ ɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "URL",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die URL: die Adresse einer Webseite im Internet",
+										"examples": [
+											"Die URL der Seite ist sehr lang."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die URL der Seite ist sehr lang.",
+							"ok": true
+						},
+						{
+							"answer": "Der URL der Seite ist sehr lang.",
+							"ok": false
+						},
+						{
+							"answer": "Die URL der Seite sehr lang ist.",
 							"ok": false
 						}
 					]

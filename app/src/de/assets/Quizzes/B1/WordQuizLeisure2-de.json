@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizLeisure2-de",
-	"title": "2. Leisure",
+	"title": "Leisure",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "Ausstellung",
-					"summary": "Schau von Kunst/Objekten",
+					"question": "Sammlung",
+					"summary": "viele gesammelte Dinge",
 					"explain": {
-						"entryId": "Ausstellung",
-						"headword": "Ausstellung",
+						"entryId": "Sammlung",
+						"headword": "Sammlung",
 						"pronunciation": {
-							"display": "OWS-shtel-oong",
-							"ipaUK": "/ˈaʊ̯sˌʃtɛlʊŋ/",
-							"ipaUS": "/ˈaʊ̯sˌʃtɛlʊŋ/"
+							"display": "ZAM-loong",
+							"ipaUK": "/ˈzamlʊŋ/",
+							"ipaUS": "/ˈzamlʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -31,15 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Ausstellung",
+								"headwordLine": "Sammlung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Schau von Kunst oder Objekten",
+										"definition": "die Sammlung: viele gesammelte Dinge zu einem Thema",
 										"examples": [
-											"Die Ausstellung zeigt moderne Bilder."
+											"Seine Sammlung alter Münzen ist wertvoll."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Ausstellung zeigt moderne Bilder.",
+							"answer": "Seine Sammlung alter Münzen ist wertvoll.",
 							"ok": true
 						},
 						{
-							"answer": "Der Ausstellung zeigt moderne Bilder.",
+							"answer": "Seinen Sammlung alter Münzen ist wertvoll.",
 							"ok": false
 						},
 						{
-							"answer": "Die Ausstellung moderne Bilder zeigt.",
+							"answer": "Seine Sammlung alter Münzen wertvoll ist.",
 							"ok": false
 						}
 					]
@@ -66,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Film",
-					"summary": "Werk, das man im Kino sieht",
+					"question": "Handwerk",
+					"summary": "kreative Handarbeit",
 					"explain": {
-						"entryId": "Film",
-						"headword": "Film",
+						"entryId": "Handwerk",
+						"headword": "Handwerk",
 						"pronunciation": {
-							"display": "film",
-							"ipaUK": "/fɪlm/",
-							"ipaUS": "/fɪlm/"
+							"display": "HANT-verk",
+							"ipaUK": "/ˈhantˌvɛʁk/",
+							"ipaUS": "/ˈhantˌvɛʁk/"
 						},
 						"labels": [
 							"B1"
@@ -84,17 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Film",
+								"headwordLine": "Handwerk",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Kinofilm"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Werk, das man im Kino sieht",
+										"definition": "das Handwerk: eine Tätigkeit, bei der man mit den Händen etwas herstellt",
 										"examples": [
-											"Gestern habe ich einen guten Film gesehen."
+											"Töpfern ist ein altes Handwerk."
 										]
 									}
 								]
@@ -105,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Gestern habe ich einen guten Film gesehen.",
+							"answer": "Töpfern ist ein altes Handwerk.",
 							"ok": true
 						},
 						{
-							"answer": "Gestern habe ich ein gutes Film gesehen.",
+							"answer": "Töpfern ist ein alter Handwerk.",
 							"ok": false
 						},
 						{
-							"answer": "Gestern ich habe einen guten Film gesehen.",
+							"answer": "Töpfern ein altes Handwerk ist.",
 							"ok": false
 						}
 					]
@@ -145,7 +143,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Zeit ohne Arbeit oder Pflichten",
+										"definition": "die Freizeit: die Zeit ohne Arbeit oder Pflichten",
 										"examples": [
 											"In meiner Freizeit spiele ich Gitarre."
 										]
@@ -174,15 +172,15 @@
 				{
 					"title": "",
 					"page": 4,
-					"question": "Galerie",
-					"summary": "Raum, in dem Kunst gezeigt wird",
+					"question": "Entspannung",
+					"summary": "Ausruhen, ruhig werden",
 					"explain": {
-						"entryId": "Galerie",
-						"headword": "Galerie",
+						"entryId": "Entspannung",
+						"headword": "Entspannung",
 						"pronunciation": {
-							"display": "ga-luh-REE",
-							"ipaUK": "/ɡaləˈʁiː/",
-							"ipaUS": "/ɡaləˈʁiː/"
+							"display": "ent-SHPAN-oong",
+							"ipaUK": "/ɛntˈʃpanʊŋ/",
+							"ipaUS": "/ɛntˈʃpanʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -192,15 +190,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Galerie",
+								"headwordLine": "Entspannung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Raum, in dem Kunst gezeigt wird",
+										"definition": "die Entspannung: das Ausruhen und Ruhigwerden",
 										"examples": [
-											"In der Galerie hängen teure Gemälde."
+											"Musik sorgt bei mir für Entspannung."
 										]
 									}
 								]
@@ -211,15 +209,15 @@
 					},
 					"answers": [
 						{
-							"answer": "In der Galerie hängen teure Gemälde.",
+							"answer": "Musik sorgt bei mir für Entspannung.",
 							"ok": true
 						},
 						{
-							"answer": "In dem Galerie hängen teure Gemälde.",
+							"answer": "Musik sorgt bei mir für Entspannungen.",
 							"ok": false
 						},
 						{
-							"answer": "In der Galerie teure Gemälde hängen.",
+							"answer": "Musik bei mir für Entspannung sorgt.",
 							"ok": false
 						}
 					]
@@ -227,15 +225,15 @@
 				{
 					"title": "",
 					"page": 5,
-					"question": "Spiel",
-					"summary": "Tätigkeit zum Spaß mit Regeln",
+					"question": "freie Zeit",
+					"summary": "Zeit ohne Arbeit/Schule",
 					"explain": {
-						"entryId": "Spiel",
-						"headword": "Spiel",
+						"entryId": "freie Zeit",
+						"headword": "freie Zeit",
 						"pronunciation": {
-							"display": "shpeel",
-							"ipaUK": "/ʃpiːl/",
-							"ipaUS": "/ʃpiːl/"
+							"display": "FRY-uh tsite",
+							"ipaUK": "/ˈfʁaɪ̯ə tsaɪ̯t/",
+							"ipaUS": "/ˈfʁaɪ̯ə tsaɪ̯t/"
 						},
 						"labels": [
 							"B1"
@@ -245,15 +243,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Spiel",
+								"headwordLine": "freie Zeit",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Tätigkeit zum Spaß mit Regeln",
+										"definition": "die freie Zeit: die Zeit, in der man nicht arbeitet oder lernt",
 										"examples": [
-											"Das Spiel hat allen Spaß gemacht."
+											"In meiner freien Zeit lese ich viel."
 										]
 									}
 								]
@@ -264,15 +262,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Das Spiel hat allen Spaß gemacht.",
+							"answer": "In meiner freien Zeit lese ich viel.",
 							"ok": true
 						},
 						{
-							"answer": "Der Spiel hat allen Spaß gemacht.",
+							"answer": "In meiner freie Zeit lese ich viel.",
 							"ok": false
 						},
 						{
-							"answer": "Das Spiel allen Spaß gemacht hat.",
+							"answer": "In meiner freien Zeit ich lese viel.",
 							"ok": false
 						}
 					]
@@ -280,112 +278,6 @@
 				{
 					"title": "",
 					"page": 6,
-					"question": "Hobby",
-					"summary": "Lieblingsbeschäftigung in der Freizeit",
-					"explain": {
-						"entryId": "Hobby",
-						"headword": "Hobby",
-						"pronunciation": {
-							"display": "HO-bi",
-							"ipaUK": "/ˈhɔbi/",
-							"ipaUS": "/ˈhɔbi/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Hobby",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Lieblingsbeschäftigung in der Freizeit",
-										"examples": [
-											"Fotografieren ist mein liebstes Hobby."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Fotografieren ist mein liebstes Hobby.",
-							"ok": true
-						},
-						{
-							"answer": "Fotografieren ist mein liebster Hobby.",
-							"ok": false
-						},
-						{
-							"answer": "Fotografieren mein liebstes Hobby ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Erholung",
-					"summary": "Ruhe und Entspannung",
-					"explain": {
-						"entryId": "Erholung",
-						"headword": "Erholung",
-						"pronunciation": {
-							"display": "er-HOH-loong",
-							"ipaUK": "/ɛɐ̯ˈhoːlʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈhoːlʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Erholung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Ruhe und Entspannung nach der Arbeit",
-										"examples": [
-											"Nach dem Stress brauche ich Erholung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nach dem Stress brauche ich Erholung.",
-							"ok": true
-						},
-						{
-							"answer": "Nach dem Stress brauche ich Erholungen.",
-							"ok": false
-						},
-						{
-							"answer": "Nach dem Stress ich brauche Erholung.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Museum",
 					"summary": "Ort mit Kunst und Geschichte",
 					"explain": {
@@ -410,7 +302,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Ort, an dem man Kunst und Geschichte sieht",
+										"definition": "das Museum: ein Ort mit Kunst und Geschichte",
 										"examples": [
 											"Am Sonntag besuchen wir ein Museum."
 										]
@@ -438,6 +330,112 @@
 				},
 				{
 					"title": "",
+					"page": 7,
+					"question": "Ausstellung",
+					"summary": "Schau von Kunst/Objekten",
+					"explain": {
+						"entryId": "Ausstellung",
+						"headword": "Ausstellung",
+						"pronunciation": {
+							"display": "OWS-shtel-oong",
+							"ipaUK": "/ˈaʊ̯sˌʃtɛlʊŋ/",
+							"ipaUS": "/ˈaʊ̯sˌʃtɛlʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ausstellung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Ausstellung: eine Schau von Kunst oder Objekten",
+										"examples": [
+											"Die Ausstellung zeigt moderne Bilder."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Ausstellung zeigt moderne Bilder.",
+							"ok": true
+						},
+						{
+							"answer": "Der Ausstellung zeigt moderne Bilder.",
+							"ok": false
+						},
+						{
+							"answer": "Die Ausstellung moderne Bilder zeigt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Galerie",
+					"summary": "Raum, in dem Kunst gezeigt wird",
+					"explain": {
+						"entryId": "Galerie",
+						"headword": "Galerie",
+						"pronunciation": {
+							"display": "ga-luh-REE",
+							"ipaUK": "/ɡaləˈʁiː/",
+							"ipaUS": "/ɡaləˈʁiː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Galerie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Galerie: ein Raum, in dem Kunst gezeigt wird",
+										"examples": [
+											"In der Galerie hängen teure Gemälde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Galerie hängen teure Gemälde.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Galerie hängen teure Gemälde.",
+							"ok": false
+						},
+						{
+							"answer": "In der Galerie teure Gemälde hängen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
 					"page": 9,
 					"question": "Aufführung",
 					"summary": "Vorstellung auf einer Bühne",
@@ -459,13 +457,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Aufführung",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Vorstellung"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Vorstellung auf einer Bühne",
+										"definition": "die Aufführung: eine Vorstellung auf einer Bühne",
 										"examples": [
 											"Die Aufführung dauerte zwei Stunden."
 										]
@@ -494,15 +490,15 @@
 				{
 					"title": "",
 					"page": 10,
-					"question": "Theaterstück",
-					"summary": "Stück, das im Theater gespielt wird",
+					"question": "Schauspieler",
+					"summary": "spielt in Film/Theater",
 					"explain": {
-						"entryId": "Theaterstück",
-						"headword": "Theaterstück",
+						"entryId": "Schauspieler",
+						"headword": "Schauspieler",
 						"pronunciation": {
-							"display": "te-AH-tuh-shtük",
-							"ipaUK": "/teˈaːtɐˌʃtʏk/",
-							"ipaUS": "/teˈaːtɐˌʃtʏk/"
+							"display": "SHOW-shpee-luh",
+							"ipaUK": "/ˈʃaʊ̯ˌʃpiːlɐ/",
+							"ipaUS": "/ˈʃaʊ̯ˌʃpiːlɐ/"
 						},
 						"labels": [
 							"B1"
@@ -512,15 +508,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Theaterstück",
+								"headwordLine": "Schauspieler",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Stück, das im Theater gespielt wird",
+										"definition": "der Schauspieler: eine Person, die in Filmen oder im Theater spielt",
 										"examples": [
-											"Das Theaterstück hat mich sehr berührt."
+											"Der Schauspieler bekam viel Applaus."
 										]
 									}
 								]
@@ -531,15 +527,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Das Theaterstück hat mich sehr berührt.",
+							"answer": "Der Schauspieler bekam viel Applaus.",
 							"ok": true
 						},
 						{
-							"answer": "Der Theaterstück hat mich sehr berührt.",
+							"answer": "Die Schauspieler bekam viel Applaus.",
 							"ok": false
 						},
 						{
-							"answer": "Das Theaterstück mich sehr berührt hat.",
+							"answer": "Der Schauspieler viel Applaus bekam.",
 							"ok": false
 						}
 					]

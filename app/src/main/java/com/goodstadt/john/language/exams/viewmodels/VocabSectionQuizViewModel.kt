@@ -40,6 +40,7 @@ import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
+import com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
 import com.goodstadt.john.language.exams.screens.UsageQuiz.QuizState
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
@@ -337,13 +338,21 @@ class VocabSectionQuizViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true
 
-            // 1. Sanitize Title
-            val noB1Title = categoryTitle.replace(" (B1)", "").replace(" (B2)", "").replace(" (A2)", "").replace(" (A1)", "")
-            val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
-            currentSectionTitle = cleanTitle
-            val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
-            currentSectionBaseName = baseFilenamePrefix
             currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+            // 1. Resolve the language-independent quiz key via the per-flavour resolver.
+            //    Each flavour ships its own SectionQuizKeyMap (title -> key, keyed by level);
+            //    a null result means this category has no quiz at this level, so show nothing.
+            //    currentSectionTitle uses the key so stats land in the same bucket in any language.
+            val quizKey = SectionQuizKeyMap.keyFor(currentSkillLevel, categoryTitle)
+            if (quizKey.isNullOrBlank()) {
+                _questions.value = emptyList()
+                _availableSectionIndices.value = emptyList()
+                return@launch
+            }
+            currentSectionTitle = quizKey
+            val baseFilenamePrefix = "WordQuiz$quizKey" // e.g. "WordQuizFood"
+            currentSectionBaseName = baseFilenamePrefix
 
             // 2. Load ALL JSON files into a single combined list
             val allQuestions = mutableListOf<WordQuizQuestion>()
@@ -353,15 +362,14 @@ class VocabSectionQuizViewModel @Inject constructor(
                 val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
 
                 for (i in 1..10) {
-                    val targetFile = "${baseFilenamePrefix}${i}-en.json"
-                    if (filesInFolder.contains(targetFile)) {
-                        val filename = "${baseFilenamePrefix}${i}-en"
-                        val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
-                        if (testData != null) {
-                            allQuestions.addAll(generateQuestionsFromData(testData))
-                        }
-                    } else {
-                        break
+                    // Match whichever language suffix this flavour actually ships (-en / -de …)
+                    val match = filesInFolder.firstOrNull {
+                        it.startsWith("$baseFilenamePrefix$i-") && it.endsWith(".json")
+                    } ?: break
+                    val filename = match.removeSuffix(".json")
+                    val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
+                    if (testData != null) {
+                        allQuestions.addAll(generateQuestionsFromData(testData))
                     }
                 }
             } catch (e: Exception) {

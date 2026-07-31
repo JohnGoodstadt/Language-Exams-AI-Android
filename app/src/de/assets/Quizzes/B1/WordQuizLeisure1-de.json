@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizLeisure1-de",
-	"title": "1. Leisure",
+	"title": "Leisure",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -37,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas, das man in der Freizeit tut",
+										"definition": "die Aktivität: etwas, das man in der Freizeit tut",
 										"examples": [
 											"Wandern ist eine beliebte Aktivität."
 										]
@@ -66,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Schauspieler",
-					"summary": "spielt in Film oder Theater",
+					"question": "Spiel",
+					"summary": "Tätigkeit zum Spaß mit Regeln",
 					"explain": {
-						"entryId": "Schauspieler",
-						"headword": "Schauspieler",
+						"entryId": "Spiel",
+						"headword": "Spiel",
 						"pronunciation": {
-							"display": "SHOW-shpee-luh",
-							"ipaUK": "/ˈʃaʊ̯ˌʃpiːlɐ/",
-							"ipaUS": "/ˈʃaʊ̯ˌʃpiːlɐ/"
+							"display": "shpeel",
+							"ipaUK": "/ʃpiːl/",
+							"ipaUS": "/ʃpiːl/"
 						},
 						"labels": [
 							"B1"
@@ -84,17 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Schauspieler",
+								"headwordLine": "Spiel",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Schauspielerin"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person, die in Filmen oder im Theater spielt",
+										"definition": "das Spiel: eine Tätigkeit zum Spaß mit Regeln",
 										"examples": [
-											"Der Schauspieler bekam viel Applaus."
+											"Das Spiel hat allen Spaß gemacht."
 										]
 									}
 								]
@@ -105,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Schauspieler bekam viel Applaus.",
+							"answer": "Das Spiel hat allen Spaß gemacht.",
 							"ok": true
 						},
 						{
-							"answer": "Die Schauspieler bekam viel Applaus.",
+							"answer": "Der Spiel hat allen Spaß gemacht.",
 							"ok": false
 						},
 						{
-							"answer": "Der Schauspieler viel Applaus bekam.",
+							"answer": "Das Spiel allen Spaß gemacht hat.",
 							"ok": false
 						}
 					]
@@ -121,15 +119,15 @@
 				{
 					"title": "",
 					"page": 3,
-					"question": "Publikum",
-					"summary": "die Zuschauer",
+					"question": "Veranstaltung",
+					"summary": "geplantes öffentliches Ereignis",
 					"explain": {
-						"entryId": "Publikum",
-						"headword": "Publikum",
+						"entryId": "Veranstaltung",
+						"headword": "Veranstaltung",
 						"pronunciation": {
-							"display": "POO-bli-koom",
-							"ipaUK": "/ˈpuːblikʊm/",
-							"ipaUS": "/ˈpuːblikʊm/"
+							"display": "fer-AN-shtal-toong",
+							"ipaUK": "/fɛɐ̯ˈʔanʃtaltʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈʔanʃtaltʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -139,15 +137,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Publikum",
+								"headwordLine": "Veranstaltung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Zuschauer bei einer Vorstellung",
+										"definition": "die Veranstaltung: ein geplantes öffentliches Ereignis",
 										"examples": [
-											"Das Publikum klatschte begeistert."
+											"Die Veranstaltung war gut besucht."
 										]
 									}
 								]
@@ -158,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Das Publikum klatschte begeistert.",
+							"answer": "Die Veranstaltung war gut besucht.",
 							"ok": true
 						},
 						{
-							"answer": "Der Publikum klatschte begeistert.",
+							"answer": "Der Veranstaltung war gut besucht.",
 							"ok": false
 						},
 						{
-							"answer": "Das Publikum begeistert klatschte.",
+							"answer": "Die Veranstaltung gut besucht war.",
 							"ok": false
 						}
 					]
@@ -174,114 +172,6 @@
 				{
 					"title": "",
 					"page": 4,
-					"question": "Band",
-					"summary": "Gruppe von Musikern",
-					"explain": {
-						"entryId": "Band",
-						"headword": "Band",
-						"pronunciation": {
-							"display": "bent",
-							"ipaUK": "/bɛnt/",
-							"ipaUS": "/bɛnt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Band",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Musikgruppe"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Gruppe von Musikern",
-										"examples": [
-											"Die Band spielt heute im Park."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Band spielt heute im Park.",
-							"ok": true
-						},
-						{
-							"answer": "Der Band spielt heute im Park.",
-							"ok": false
-						},
-						{
-							"answer": "Die Band heute im Park spielt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Sammlung",
-					"summary": "viele gesammelte Dinge",
-					"explain": {
-						"entryId": "Sammlung",
-						"headword": "Sammlung",
-						"pronunciation": {
-							"display": "ZAM-loong",
-							"ipaUK": "/ˈzamlʊŋ/",
-							"ipaUS": "/ˈzamlʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Sammlung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "viele gesammelte Dinge zu einem Thema",
-										"examples": [
-											"Seine Sammlung alter Münzen ist wertvoll."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Seine Sammlung alter Münzen ist wertvoll.",
-							"ok": true
-						},
-						{
-							"answer": "Seinen Sammlung alter Münzen ist wertvoll.",
-							"ok": false
-						},
-						{
-							"answer": "Seine Sammlung alter Münzen wertvoll ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
 					"question": "Konzert",
 					"summary": "Musikveranstaltung",
 					"explain": {
@@ -306,7 +196,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Musikveranstaltung",
+										"definition": "das Konzert: eine Musikveranstaltung",
 										"examples": [
 											"Das Konzert beginnt um acht Uhr."
 										]
@@ -334,113 +224,113 @@
 				},
 				{
 					"title": "",
+					"page": 5,
+					"question": "Band",
+					"summary": "Gruppe von Musikern",
+					"explain": {
+						"entryId": "Band",
+						"headword": "Band",
+						"pronunciation": {
+							"display": "bent",
+							"ipaUK": "/bɛnt/",
+							"ipaUS": "/bɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Band",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Band: eine Gruppe von Musikern",
+										"examples": [
+											"Die Band spielt heute im Park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Band spielt heute im Park.",
+							"ok": true
+						},
+						{
+							"answer": "Der Band spielt heute im Park.",
+							"ok": false
+						},
+						{
+							"answer": "Die Band heute im Park spielt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Publikum",
+					"summary": "die Zuschauer",
+					"explain": {
+						"entryId": "Publikum",
+						"headword": "Publikum",
+						"pronunciation": {
+							"display": "POO-bli-koom",
+							"ipaUK": "/ˈpuːblikʊm/",
+							"ipaUS": "/ˈpuːblikʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Publikum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Publikum: die Zuschauer bei einer Vorstellung",
+										"examples": [
+											"Das Publikum klatschte begeistert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Publikum klatschte begeistert.",
+							"ok": true
+						},
+						{
+							"answer": "Der Publikum klatschte begeistert.",
+							"ok": false
+						},
+						{
+							"answer": "Das Publikum begeistert klatschte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
 					"page": 7,
-					"question": "Handwerk",
-					"summary": "handwerkliche/kreative Tätigkeit",
-					"explain": {
-						"entryId": "Handwerk",
-						"headword": "Handwerk",
-						"pronunciation": {
-							"display": "HANT-verk",
-							"ipaUK": "/ˈhantˌvɛʁk/",
-							"ipaUS": "/ˈhantˌvɛʁk/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Handwerk",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine handwerkliche/kreative Tätigkeit",
-										"examples": [
-											"Töpfern ist ein altes Handwerk."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Töpfern ist ein altes Handwerk.",
-							"ok": true
-						},
-						{
-							"answer": "Töpfern ist ein alter Handwerk.",
-							"ok": false
-						},
-						{
-							"answer": "Töpfern ein altes Handwerk ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Drama",
-					"summary": "ernstes Theaterstück / Filmart",
-					"explain": {
-						"entryId": "Drama",
-						"headword": "Drama",
-						"pronunciation": {
-							"display": "DRAH-ma",
-							"ipaUK": "/ˈdʁaːma/",
-							"ipaUS": "/ˈdʁaːma/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Drama",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein ernstes Theaterstück oder eine Filmart",
-										"examples": [
-											"Der Film ist ein bewegendes Drama."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Film ist ein bewegendes Drama.",
-							"ok": true
-						},
-						{
-							"answer": "Der Film ist ein bewegender Drama.",
-							"ok": false
-						},
-						{
-							"answer": "Der Film ein bewegendes Drama ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
 					"question": "Unterhaltung",
 					"summary": "etwas, das Spaß bringt",
 					"explain": {
@@ -465,7 +355,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas, das Freude und Spaß bringt",
+										"definition": "die Unterhaltung: etwas, das Freude und Spaß bringt",
 										"examples": [
 											"Der Abend bot beste Unterhaltung."
 										]
@@ -493,16 +383,16 @@
 				},
 				{
 					"title": "",
-					"page": 10,
-					"question": "Veranstaltung",
-					"summary": "geplantes öffentliches Ereignis",
+					"page": 8,
+					"question": "Show",
+					"summary": "unterhaltsame Vorstellung",
 					"explain": {
-						"entryId": "Veranstaltung",
-						"headword": "Veranstaltung",
+						"entryId": "Show",
+						"headword": "Show",
 						"pronunciation": {
-							"display": "fer-AN-shtal-toong",
-							"ipaUK": "/fɛɐ̯ˈʔanʃtaltʊŋ/",
-							"ipaUS": "/fɛɐ̯ˈʔanʃtaltʊŋ/"
+							"display": "show",
+							"ipaUK": "/ʃoː/",
+							"ipaUS": "/ʃoː/"
 						},
 						"labels": [
 							"B1"
@@ -512,17 +402,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Veranstaltung",
+								"headwordLine": "Show",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Ereignis"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein geplantes öffentliches Ereignis",
+										"definition": "die Show: eine unterhaltsame Vorstellung",
 										"examples": [
-											"Die Veranstaltung war gut besucht."
+											"Die Show im Fernsehen war lustig."
 										]
 									}
 								]
@@ -533,15 +421,121 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Veranstaltung war gut besucht.",
+							"answer": "Die Show im Fernsehen war lustig.",
 							"ok": true
 						},
 						{
-							"answer": "Der Veranstaltung war gut besucht.",
+							"answer": "Der Show im Fernsehen war lustig.",
 							"ok": false
 						},
 						{
-							"answer": "Die Veranstaltung gut besucht war.",
+							"answer": "Die Show im Fernsehen lustig war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Film",
+					"summary": "Werk, das man im Kino sieht",
+					"explain": {
+						"entryId": "Film",
+						"headword": "Film",
+						"pronunciation": {
+							"display": "film",
+							"ipaUK": "/fɪlm/",
+							"ipaUS": "/fɪlm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Film",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Film: ein Werk, das man im Kino sieht",
+										"examples": [
+											"Gestern habe ich einen guten Film gesehen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gestern habe ich einen guten Film gesehen.",
+							"ok": true
+						},
+						{
+							"answer": "Gestern habe ich ein gutes Film gesehen.",
+							"ok": false
+						},
+						{
+							"answer": "Gestern ich habe einen guten Film gesehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Hobby",
+					"summary": "Lieblingsbeschäftigung",
+					"explain": {
+						"entryId": "Hobby",
+						"headword": "Hobby",
+						"pronunciation": {
+							"display": "HO-bi",
+							"ipaUK": "/ˈhɔbi/",
+							"ipaUS": "/ˈhɔbi/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hobby",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Hobby: eine Lieblingsbeschäftigung in der Freizeit",
+										"examples": [
+											"Fotografieren ist mein liebstes Hobby."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Fotografieren ist mein liebstes Hobby.",
+							"ok": true
+						},
+						{
+							"answer": "Fotografieren ist mein liebster Hobby.",
+							"ok": false
+						},
+						{
+							"answer": "Fotografieren mein liebstes Hobby ist.",
 							"ok": false
 						}
 					]

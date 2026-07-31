@@ -1,0 +1,811 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizExpressions1-de",
+	"title": "Expressions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Meiner Meinung nach",
+					"summary": "die eigene Meinung nennen",
+					"explain": {
+						"entryId": "Meiner Meinung nach",
+						"headword": "Meiner Meinung nach",
+						"pronunciation": {
+							"display": "MY-nuh MY-noong nakh",
+							"ipaUK": "/ˈmaɪ̯nɐ ˈmaɪ̯nʊŋ naːx/",
+							"ipaUS": "/ˈmaɪ̯nɐ ˈmaɪ̯nʊŋ naːx/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Meiner Meinung nach",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, um die eigene Meinung zu nennen",
+										"examples": [
+											"Meiner Meinung nach ist das Buch sehr gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meiner Meinung nach ist das Buch sehr gut.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Meinung nach ist das Buch sehr gut.",
+							"ok": false
+						},
+						{
+							"answer": "Meiner Meinung nach das Buch ist sehr gut.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Ich bin der Meinung, dass",
+					"summary": "eigene Meinung einleiten",
+					"explain": {
+						"entryId": "Ich bin der Meinung, dass",
+						"headword": "Ich bin der Meinung, dass",
+						"pronunciation": {
+							"display": "ikh bin dair MY-noong das",
+							"ipaUK": "/ɪç bɪn deːɐ̯ ˈmaɪ̯nʊŋ das/",
+							"ipaUS": "/ɪç bɪn deːɐ̯ ˈmaɪ̯nʊŋ das/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Ich bin der Meinung, dass",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "leitet die eigene Meinung ein",
+										"examples": [
+											"Ich bin der Meinung, dass wir mehr üben sollten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin der Meinung, dass wir mehr üben sollten.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin der Meinung, dass wir sollten mehr üben.",
+							"ok": false
+						},
+						{
+							"answer": "Ich bin die Meinung, dass wir mehr üben sollten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Das kommt darauf an",
+					"summary": "es hängt von etwas ab",
+					"explain": {
+						"entryId": "Das kommt darauf an",
+						"headword": "Das kommt darauf an",
+						"pronunciation": {
+							"display": "das komt da-ROWF an",
+							"ipaUK": "/das kɔmt daˈʁaʊ̯f an/",
+							"ipaUS": "/das kɔmt daˈʁaʊ̯f an/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Das kommt darauf an",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn die Antwort von etwas abhängt",
+										"examples": [
+											"Das kommt darauf an, wie viel Zeit ich habe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das kommt darauf an, wie viel Zeit ich habe.",
+							"ok": true
+						},
+						{
+							"answer": "Das kommt darauf an, wie viel Zeit habe ich.",
+							"ok": false
+						},
+						{
+							"answer": "Das darauf ankommt, wie viel Zeit ich habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Es tut mir leid",
+					"summary": "etwas bedauern",
+					"explain": {
+						"entryId": "Es tut mir leid",
+						"headword": "Es tut mir leid",
+						"pronunciation": {
+							"display": "es toot meer lite",
+							"ipaUK": "/ɛs tuːt miːɐ̯ laɪ̯t/",
+							"ipaUS": "/ɛs tuːt miːɐ̯ laɪ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Es tut mir leid",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn man etwas bedauert",
+										"examples": [
+											"Es tut mir leid, dass ich zu spät bin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es tut mir leid, dass ich zu spät bin.",
+							"ok": true
+						},
+						{
+							"answer": "Es tut mich leid, dass ich zu spät bin.",
+							"ok": false
+						},
+						{
+							"answer": "Es mir tut leid, dass ich zu spät bin.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Kein Problem",
+					"summary": "etwas ist okay",
+					"explain": {
+						"entryId": "Kein Problem",
+						"headword": "Kein Problem",
+						"pronunciation": {
+							"display": "kine pro-BLAYM",
+							"ipaUK": "/kaɪ̯n pʁoˈbleːm/",
+							"ipaUS": "/kaɪ̯n pʁoˈbleːm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Kein Problem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn etwas okay ist",
+										"examples": [
+											"Kein Problem, ich helfe dir gern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Kein Problem, ich helfe dir gern.",
+							"ok": true
+						},
+						{
+							"answer": "Keine Problem, ich helfe dir gern.",
+							"ok": false
+						},
+						{
+							"answer": "Kein Problem, ich dir helfe gern.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Viel Spaß",
+					"summary": "gute Wünsche vor etwas",
+					"explain": {
+						"entryId": "Viel Spaß",
+						"headword": "Viel Spaß",
+						"pronunciation": {
+							"display": "feel shpahs",
+							"ipaUK": "/fiːl ʃpaːs/",
+							"ipaUS": "/fiːl ʃpaːs/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Viel Spaß",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wünscht man vor etwas Schönem",
+										"examples": [
+											"Ich wünsche dir viel Spaß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich wünsche dir viel Spaß.",
+							"ok": true
+						},
+						{
+							"answer": "Ich wünsche dich viel Spaß.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir viel Spaß wünsche.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Das ist mir egal",
+					"summary": "es spielt keine Rolle",
+					"explain": {
+						"entryId": "Das ist mir egal",
+						"headword": "Das ist mir egal",
+						"pronunciation": {
+							"display": "das ist meer e-GAHL",
+							"ipaUK": "/das ɪst miːɐ̯ eˈɡaːl/",
+							"ipaUS": "/das ɪst miːɐ̯ eˈɡaːl/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Das ist mir egal",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn etwas keine Rolle spielt",
+										"examples": [
+											"Das ist mir wirklich egal."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das ist mir wirklich egal.",
+							"ok": true
+						},
+						{
+							"answer": "Das ist mich wirklich egal.",
+							"ok": false
+						},
+						{
+							"answer": "Das mir wirklich egal ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Ich habe keine Ahnung",
+					"summary": "etwas gar nicht wissen",
+					"explain": {
+						"entryId": "Ich habe keine Ahnung",
+						"headword": "Ich habe keine Ahnung",
+						"pronunciation": {
+							"display": "ikh HAH-buh KY-nuh AH-noong",
+							"ipaUK": "/ɪç ˈhaːbə ˈkaɪ̯nə ˈaːnʊŋ/",
+							"ipaUS": "/ɪç ˈhaːbə ˈkaɪ̯nə ˈaːnʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Ich habe keine Ahnung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn man etwas gar nicht weiß",
+										"examples": [
+											"Ich habe keine Ahnung, wo er ist."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe keine Ahnung, wo er ist.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe keine Ahnung, wo ist er.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe kein Ahnung, wo er ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "auf jeden Fall",
+					"summary": "ganz sicher",
+					"explain": {
+						"entryId": "auf jeden Fall",
+						"headword": "auf jeden Fall",
+						"pronunciation": {
+							"display": "owf YAY-dn fal",
+							"ipaUK": "/aʊ̯f ˈjeːdn̩ fal/",
+							"ipaUS": "/aʊ̯f ˈjeːdn̩ fal/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "auf jeden Fall",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ganz sicher; bestimmt",
+										"examples": [
+											"Ich komme auf jeden Fall zu deiner Party."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich komme auf jeden Fall zu deiner Party.",
+							"ok": true
+						},
+						{
+							"answer": "Ich komme auf jedem Fall zu deiner Party.",
+							"ok": false
+						},
+						{
+							"answer": "Ich auf jeden Fall komme zu deiner Party.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Genau",
+					"summary": "Zustimmung: richtig",
+					"explain": {
+						"entryId": "Genau",
+						"headword": "Genau",
+						"pronunciation": {
+							"display": "guh-NOW",
+							"ipaUK": "/ɡəˈnaʊ̯/",
+							"ipaUS": "/ɡəˈnaʊ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "Genau",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, um zuzustimmen; richtig",
+										"examples": [
+											"Genau, das sehe ich auch so."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Genau, das sehe ich auch so.",
+							"ok": true
+						},
+						{
+							"answer": "Genaue, das sehe ich auch so.",
+							"ok": false
+						},
+						{
+							"answer": "Genau, das ich auch so sehe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Schade",
+					"summary": "leichtes Bedauern",
+					"explain": {
+						"entryId": "Schade",
+						"headword": "Schade",
+						"pronunciation": {
+							"display": "SHAH-duh",
+							"ipaUK": "/ˈʃaːdə/",
+							"ipaUS": "/ˈʃaːdə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Interjektion",
+								"grammarType": "Interjektion",
+								"headwordLine": "Schade",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn man etwas bedauert (leichter als 'leider')",
+										"examples": [
+											"Schade, dass du nicht kommen kannst."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Schade, dass du nicht kommen kannst.",
+							"ok": true
+						},
+						{
+							"answer": "Schade, dass du nicht kommen kann.",
+							"ok": false
+						},
+						{
+							"answer": "Schade, dass du nicht kannst kommen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "Stimmt",
+					"summary": "Zustimmung: das ist richtig",
+					"explain": {
+						"entryId": "Stimmt",
+						"headword": "Stimmt",
+						"pronunciation": {
+							"display": "shtimt",
+							"ipaUK": "/ʃtɪmt/",
+							"ipaUS": "/ʃtɪmt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Interjektion",
+								"grammarType": "Interjektion",
+								"headwordLine": "Stimmt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man zur Zustimmung; das ist richtig",
+										"examples": [
+											"Stimmt, da hast du recht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Stimmt, da hast du recht.",
+							"ok": true
+						},
+						{
+							"answer": "Stimmt, da du hast recht.",
+							"ok": false
+						},
+						{
+							"answer": "Stimmt, da recht hast du.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "Was ist los?",
+					"summary": "fragt nach einem Problem",
+					"explain": {
+						"entryId": "Was ist los?",
+						"headword": "Was ist los?",
+						"pronunciation": {
+							"display": "vas ist lohs",
+							"ipaUK": "/vas ɪst loːs/",
+							"ipaUS": "/vas ɪst loːs/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Was ist los?",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "fragt man, wenn etwas nicht stimmt",
+										"examples": [
+											"Was ist los? Du siehst traurig aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Was ist los? Du siehst traurig aus.",
+							"ok": true
+						},
+						{
+							"answer": "Was los ist? Du siehst traurig aus.",
+							"ok": false
+						},
+						{
+							"answer": "Was ist los? Du traurig aussiehst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "Mach dir keine Sorgen",
+					"summary": "jemanden beruhigen",
+					"explain": {
+						"entryId": "Mach dir keine Sorgen",
+						"headword": "Mach dir keine Sorgen",
+						"pronunciation": {
+							"display": "makh deer KY-nuh ZOR-gn",
+							"ipaUK": "/max diːɐ̯ ˈkaɪ̯nə ˈzɔʁɡn̩/",
+							"ipaUS": "/max diːɐ̯ ˈkaɪ̯nə ˈzɔʁɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Mach dir keine Sorgen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, um jemanden zu beruhigen",
+										"examples": [
+											"Mach dir keine Sorgen, alles wird gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mach dir keine Sorgen, alles wird gut.",
+							"ok": true
+						},
+						{
+							"answer": "Mach dich keine Sorgen, alles wird gut.",
+							"ok": false
+						},
+						{
+							"answer": "Mach dir keinen Sorgen, alles wird gut.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "Viel Glück",
+					"summary": "gute Wünsche vor etwas Schwierigem",
+					"explain": {
+						"entryId": "Viel Glück",
+						"headword": "Viel Glück",
+						"pronunciation": {
+							"display": "feel glük",
+							"ipaUK": "/fiːl ɡlʏk/",
+							"ipaUS": "/fiːl ɡlʏk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Viel Glück",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wünscht man vor etwas Schwierigem",
+										"examples": [
+											"Ich wünsche dir viel Glück bei der Prüfung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich wünsche dir viel Glück bei der Prüfung.",
+							"ok": true
+						},
+						{
+							"answer": "Ich wünsche dich viel Glück bei der Prüfung.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir viel Glück bei der Prüfung wünsche.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

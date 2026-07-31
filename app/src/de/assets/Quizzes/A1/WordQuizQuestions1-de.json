@@ -1,0 +1,599 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizQuestions1-de",
+	"title": "Questions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "wer",
+					"summary": "fragt nach einer Person (Subjekt)",
+					"explain": {
+						"entryId": "wer",
+						"headword": "wer",
+						"pronunciation": {
+							"display": "vair",
+							"ipaUK": "/veːɐ̯/",
+							"ipaUS": "/veːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativpronomen",
+								"headwordLine": "wer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach einer Person im Nominativ (Subjekt)",
+										"examples": [
+											"Wer kommt heute zu Besuch?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wer kommt heute zu Besuch?",
+							"ok": true
+						},
+						{
+							"answer": "Wer heute zu Besuch kommt?",
+							"ok": false
+						},
+						{
+							"answer": "Wer kommen heute zu Besuch?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "was",
+					"summary": "fragt nach einer Sache",
+					"explain": {
+						"entryId": "was",
+						"headword": "was",
+						"pronunciation": {
+							"display": "vas",
+							"ipaUK": "/vas/",
+							"ipaUS": "/vas/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativpronomen",
+								"headwordLine": "was",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach einer Sache oder Tätigkeit",
+										"examples": [
+											"Was machst du am Wochenende?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Was machst du am Wochenende?",
+							"ok": true
+						},
+						{
+							"answer": "Was du am Wochenende machst?",
+							"ok": false
+						},
+						{
+							"answer": "Was macht du am Wochenende?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "wo",
+					"summary": "fragt nach einem Ort (wo?)",
+					"explain": {
+						"entryId": "wo",
+						"headword": "wo",
+						"pronunciation": {
+							"display": "voh",
+							"ipaUK": "/voː/",
+							"ipaUS": "/voː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativadverb",
+								"headwordLine": "wo",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach dem Ort (Position, nicht Richtung)",
+										"examples": [
+											"Wo ist der Bahnhof?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wo ist der Bahnhof?",
+							"ok": true
+						},
+						{
+							"answer": "Wo der Bahnhof ist?",
+							"ok": false
+						},
+						{
+							"answer": "Wo sind der Bahnhof?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "wann",
+					"summary": "fragt nach der Zeit",
+					"explain": {
+						"entryId": "wann",
+						"headword": "wann",
+						"pronunciation": {
+							"display": "van",
+							"ipaUK": "/van/",
+							"ipaUS": "/van/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativadverb",
+								"headwordLine": "wann",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach einem Zeitpunkt",
+										"examples": [
+											"Wann beginnt der Film?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wann beginnt der Film?",
+							"ok": true
+						},
+						{
+							"answer": "Wann der Film beginnt?",
+							"ok": false
+						},
+						{
+							"answer": "Wann beginnen der Film?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "wie",
+					"summary": "fragt nach der Art und Weise",
+					"explain": {
+						"entryId": "wie",
+						"headword": "wie",
+						"pronunciation": {
+							"display": "vee",
+							"ipaUK": "/viː/",
+							"ipaUS": "/viː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativadverb",
+								"headwordLine": "wie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach der Art und Weise oder dem Zustand",
+										"examples": [
+											"Wie heißt du?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wie heißt du?",
+							"ok": true
+						},
+						{
+							"answer": "Wie du heißt?",
+							"ok": false
+						},
+						{
+							"answer": "Wie heißen du?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "warum",
+					"summary": "fragt nach dem Grund",
+					"explain": {
+						"entryId": "warum",
+						"headword": "warum",
+						"pronunciation": {
+							"display": "va-ROOM",
+							"ipaUK": "/vaˈʁʊm/",
+							"ipaUS": "/vaˈʁʊm/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativadverb",
+								"headwordLine": "warum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach dem Grund",
+										"examples": [
+											"Warum lernst du Deutsch?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Warum lernst du Deutsch?",
+							"ok": true
+						},
+						{
+							"answer": "Warum du Deutsch lernst?",
+							"ok": false
+						},
+						{
+							"answer": "Warum lernt du Deutsch?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "woher",
+					"summary": "fragt nach der Herkunft",
+					"explain": {
+						"entryId": "woher",
+						"headword": "woher",
+						"pronunciation": {
+							"display": "vo-HAIR",
+							"ipaUK": "/voˈheːɐ̯/",
+							"ipaUS": "/voˈheːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativadverb",
+								"headwordLine": "woher",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach der Herkunft (woher?)",
+										"examples": [
+											"Woher kommst du?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Woher kommst du?",
+							"ok": true
+						},
+						{
+							"answer": "Woher du kommst?",
+							"ok": false
+						},
+						{
+							"answer": "Woher kommen du?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "wohin",
+					"summary": "fragt nach der Richtung",
+					"explain": {
+						"entryId": "wohin",
+						"headword": "wohin",
+						"pronunciation": {
+							"display": "vo-HIN",
+							"ipaUK": "/voˈhɪn/",
+							"ipaUS": "/voˈhɪn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativadverb",
+								"headwordLine": "wohin",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach der Richtung (wohin?)",
+										"examples": [
+											"Wohin gehst du?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wohin gehst du?",
+							"ok": true
+						},
+						{
+							"answer": "Wohin du gehst?",
+							"ok": false
+						},
+						{
+							"answer": "Wohin gehen du?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "wie viel",
+					"summary": "fragt nach einer Menge (nicht zählbar)",
+					"explain": {
+						"entryId": "wie viel",
+						"headword": "wie viel",
+						"pronunciation": {
+							"display": "vee FEEL",
+							"ipaUK": "/viː ˈfiːl/",
+							"ipaUS": "/viː ˈfiːl/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Frageausdruck",
+								"headwordLine": "wie viel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach einer nicht zählbaren Menge",
+										"examples": [
+											"Wie viel Geld hast du?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wie viel Geld hast du?",
+							"ok": true
+						},
+						{
+							"answer": "Wie viel Geld du hast?",
+							"ok": false
+						},
+						{
+							"answer": "Wie viele Geld hast du?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "wie viele",
+					"summary": "fragt nach einer Anzahl (zählbar)",
+					"explain": {
+						"entryId": "wie viele",
+						"headword": "wie viele",
+						"pronunciation": {
+							"display": "vee FEE-luh",
+							"ipaUK": "/viː ˈfiːlə/",
+							"ipaUS": "/viː ˈfiːlə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Frageausdruck",
+								"headwordLine": "wie viele",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach einer zählbaren Anzahl",
+										"examples": [
+											"Wie viele Kinder hast du?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wie viele Kinder hast du?",
+							"ok": true
+						},
+						{
+							"answer": "Wie viele Kinder du hast?",
+							"ok": false
+						},
+						{
+							"answer": "Wie viel Kinder hast du?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "welche",
+					"summary": "fragt nach einer Auswahl (welche/welcher/welches)",
+					"explain": {
+						"entryId": "welche",
+						"headword": "welche",
+						"pronunciation": {
+							"display": "VEL-khuh",
+							"ipaUK": "/ˈvɛlçə/",
+							"ipaUS": "/ˈvɛlçə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Interrogativartikel",
+								"headwordLine": "welche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Frageartikel nach einer bestimmten Auswahl",
+										"examples": [
+											"Welche Farbe magst du?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Welche Farbe magst du?",
+							"ok": true
+						},
+						{
+							"answer": "Welche du Farbe magst?",
+							"ok": false
+						},
+						{
+							"answer": "Welcher Farbe magst du?",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

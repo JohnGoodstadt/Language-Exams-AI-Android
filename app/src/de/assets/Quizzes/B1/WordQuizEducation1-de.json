@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizEducation1-de",
-	"title": "1. Education",
+	"title": "Education",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,59 +13,6 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "Ausbildung",
-					"summary": "praktische Berufsausbildung",
-					"explain": {
-						"entryId": "Ausbildung",
-						"headword": "Ausbildung",
-						"pronunciation": {
-							"display": "OWS-bil-doong",
-							"ipaUK": "/ˈaʊ̯sˌbɪldʊŋ/",
-							"ipaUS": "/ˈaʊ̯sˌbɪldʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ausbildung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "praktische Berufsausbildung in einer Firma",
-										"examples": [
-											"Nach der Schule beginnt sie eine Ausbildung als Köchin."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nach der Schule beginnt sie eine Ausbildung als Köchin.",
-							"ok": true
-						},
-						{
-							"answer": "Nach der Schule beginnt sie einen Ausbildung als Köchin.",
-							"ok": false
-						},
-						{
-							"answer": "Nach der Schule sie beginnt eine Ausbildung als Köchin.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
 					"question": "Aufgabe",
 					"summary": "eine zu erledigende Arbeit",
 					"explain": {
@@ -90,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Arbeit, die man erledigen muss",
+										"definition": "die Aufgabe: eine Arbeit, die man erledigen muss",
 										"examples": [
 											"Der Lehrer gibt uns eine schwierige Aufgabe."
 										]
@@ -118,16 +65,16 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "Chef",
-					"summary": "leitet Firma/Team",
+					"page": 2,
+					"question": "Hausaufgabe",
+					"summary": "Aufgaben für zu Hause",
 					"explain": {
-						"entryId": "Chef",
-						"headword": "Chef",
+						"entryId": "Hausaufgabe",
+						"headword": "Hausaufgabe",
 						"pronunciation": {
-							"display": "shef",
-							"ipaUK": "/ʃɛf/",
-							"ipaUS": "/ʃɛf/"
+							"display": "HOWS-owf-gah-buh",
+							"ipaUK": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/",
+							"ipaUS": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/"
 						},
 						"labels": [
 							"B1"
@@ -137,17 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Chef",
+								"headwordLine": "Hausaufgabe",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Vorgesetzter"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Person, die eine Firma oder ein Team leitet",
+										"definition": "die Hausaufgabe: Aufgaben, die man zu Hause für die Schule macht",
 										"examples": [
-											"Mein Chef hat das Projekt genehmigt."
+											"Die Hausaufgabe für morgen ist sehr lang."
 										]
 									}
 								]
@@ -158,15 +103,68 @@
 					},
 					"answers": [
 						{
-							"answer": "Mein Chef hat das Projekt genehmigt.",
+							"answer": "Die Hausaufgabe für morgen ist sehr lang.",
 							"ok": true
 						},
 						{
-							"answer": "Meine Chef hat das Projekt genehmigt.",
+							"answer": "Der Hausaufgabe für morgen ist sehr lang.",
 							"ok": false
 						},
 						{
-							"answer": "Mein Chef das Projekt genehmigt hat.",
+							"answer": "Die Hausaufgabe für morgen sehr lang ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Projekt",
+					"summary": "geplante Arbeit mit Ziel",
+					"explain": {
+						"entryId": "Projekt",
+						"headword": "Projekt",
+						"pronunciation": {
+							"display": "pro-YEKT",
+							"ipaUK": "/pʁoˈjɛkt/",
+							"ipaUS": "/pʁoˈjɛkt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Projekt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Projekt: eine geplante Arbeit mit einem Ziel",
+										"examples": [
+											"Wir arbeiten an einem spannenden Projekt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir arbeiten an einem spannenden Projekt.",
+							"ok": true
+						},
+						{
+							"answer": "Wir arbeiten an einer spannenden Projekt.",
+							"ok": false
+						},
+						{
+							"answer": "Wir an einem spannenden Projekt arbeiten.",
 							"ok": false
 						}
 					]
@@ -174,220 +172,6 @@
 				{
 					"title": "",
 					"page": 4,
-					"question": "Karriere",
-					"summary": "berufliche Laufbahn",
-					"explain": {
-						"entryId": "Karriere",
-						"headword": "Karriere",
-						"pronunciation": {
-							"display": "ka-ri-AY-ruh",
-							"ipaUK": "/kaˈʁi̯eːʁə/",
-							"ipaUS": "/kaˈʁi̯eːʁə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Karriere",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Laufbahn"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die berufliche Laufbahn",
-										"examples": [
-											"Sie hat eine beeindruckende Karriere gemacht."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie hat eine beeindruckende Karriere gemacht.",
-							"ok": true
-						},
-						{
-							"answer": "Sie hat einen beeindruckenden Karriere gemacht.",
-							"ok": false
-						},
-						{
-							"answer": "Sie eine beeindruckende Karriere gemacht hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Zeugnis",
-					"summary": "Dokument über Noten",
-					"explain": {
-						"entryId": "Zeugnis",
-						"headword": "Zeugnis",
-						"pronunciation": {
-							"display": "TSOYK-nis",
-							"ipaUK": "/ˈtsɔɪ̯knɪs/",
-							"ipaUS": "/ˈtsɔɪ̯knɪs/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Zeugnis",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Dokument über Leistungen oder Noten",
-										"examples": [
-											"Am Ende des Jahres bekommt jeder Schüler ein Zeugnis."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Ende des Jahres bekommt jeder Schüler ein Zeugnis.",
-							"ok": true
-						},
-						{
-							"answer": "Am Ende des Jahres bekommt jeder Schüler einen Zeugnis.",
-							"ok": false
-						},
-						{
-							"answer": "Am Ende des Jahres jeder Schüler bekommt ein Zeugnis.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Klasse",
-					"summary": "Schülergruppe/Unterrichtsstunde",
-					"explain": {
-						"entryId": "Klasse",
-						"headword": "Klasse",
-						"pronunciation": {
-							"display": "KLAS-suh",
-							"ipaUK": "/ˈklasə/",
-							"ipaUS": "/ˈklasə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Klasse",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Gruppe von Schülern; eine Unterrichtsstunde",
-										"examples": [
-											"In meiner Klasse sind dreißig Schüler."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In meiner Klasse sind dreißig Schüler.",
-							"ok": true
-						},
-						{
-							"answer": "In meinem Klasse sind dreißig Schüler.",
-							"ok": false
-						},
-						{
-							"answer": "In meiner Klasse dreißig Schüler sind.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Konferenz",
-					"summary": "großes Treffen zu einem Thema",
-					"explain": {
-						"entryId": "Konferenz",
-						"headword": "Konferenz",
-						"pronunciation": {
-							"display": "kon-fe-RENTS",
-							"ipaUK": "/kɔnfeˈʁɛnts/",
-							"ipaUS": "/kɔnfeˈʁɛnts/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Konferenz",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein großes Treffen zu einem Thema",
-										"examples": [
-											"Nächste Woche findet eine wichtige Konferenz statt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nächste Woche findet eine wichtige Konferenz statt.",
-							"ok": true
-						},
-						{
-							"answer": "Nächste Woche findet einen wichtigen Konferenz statt.",
-							"ok": false
-						},
-						{
-							"answer": "Nächste Woche eine wichtige Konferenz findet statt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Kurs",
 					"summary": "Reihe von Unterrichtsstunden",
 					"explain": {
@@ -412,7 +196,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Reihe von Unterrichtsstunden zu einem Thema",
+										"definition": "der Kurs: eine Reihe von Unterrichtsstunden zu einem Thema",
 										"examples": [
 											"Ich besuche einen Kurs für Spanisch."
 										]
@@ -440,9 +224,221 @@
 				},
 				{
 					"title": "",
+					"page": 5,
+					"question": "Klasse",
+					"summary": "Schülergruppe / Unterrichtsstunde",
+					"explain": {
+						"entryId": "Klasse",
+						"headword": "Klasse",
+						"pronunciation": {
+							"display": "KLAS-suh",
+							"ipaUK": "/ˈklasə/",
+							"ipaUS": "/ˈklasə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klasse",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Klasse: eine Gruppe von Schülern; auch: eine Unterrichtsstunde",
+										"examples": [
+											"In meiner Klasse sind dreißig Schüler."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In meiner Klasse sind dreißig Schüler.",
+							"ok": true
+						},
+						{
+							"answer": "In meinem Klasse sind dreißig Schüler.",
+							"ok": false
+						},
+						{
+							"answer": "In meiner Klasse dreißig Schüler sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Vorlesung",
+					"summary": "Vortrag an der Universität",
+					"explain": {
+						"entryId": "Vorlesung",
+						"headword": "Vorlesung",
+						"pronunciation": {
+							"display": "FOR-lay-zoong",
+							"ipaUK": "/ˈfoːɐ̯ˌleːzʊŋ/",
+							"ipaUS": "/ˈfoːɐ̯ˌleːzʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorlesung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Vorlesung: ein Vortrag an der Universität",
+										"examples": [
+											"Die Vorlesung beginnt um neun Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Vorlesung beginnt um neun Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Vorlesung beginnt um neun Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Die Vorlesung um neun Uhr beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Diplom",
+					"summary": "Dokument über einen Abschluss",
+					"explain": {
+						"entryId": "Diplom",
+						"headword": "Diplom",
+						"pronunciation": {
+							"display": "di-PLOHM",
+							"ipaUK": "/diˈploːm/",
+							"ipaUS": "/diˈploːm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Diplom",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Diplom: ein Dokument über einen Studienabschluss",
+										"examples": [
+											"Er hat sein Diplom mit Auszeichnung gemacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat sein Diplom mit Auszeichnung gemacht.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat seinen Diplom mit Auszeichnung gemacht.",
+							"ok": false
+						},
+						{
+							"answer": "Er sein Diplom mit Auszeichnung gemacht hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Zeugnis",
+					"summary": "Papier über Noten/Leistungen",
+					"explain": {
+						"entryId": "Zeugnis",
+						"headword": "Zeugnis",
+						"pronunciation": {
+							"display": "TSOYK-nis",
+							"ipaUK": "/ˈtsɔɪ̯knɪs/",
+							"ipaUS": "/ˈtsɔɪ̯knɪs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zeugnis",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Zeugnis: ein amtliches Papier über Leistungen oder Noten",
+										"examples": [
+											"Am Ende des Jahres bekommt jeder Schüler ein Zeugnis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Ende des Jahres bekommt jeder Schüler ein Zeugnis.",
+							"ok": true
+						},
+						{
+							"answer": "Am Ende des Jahres bekommt jeder Schüler einen Zeugnis.",
+							"ok": false
+						},
+						{
+							"answer": "Am Ende des Jahres jeder Schüler bekommt ein Zeugnis.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
 					"page": 9,
 					"question": "Abschluss",
-					"summary": "Uni-Grad; Ende des Studiums",
+					"summary": "Universitätsgrad",
 					"explain": {
 						"entryId": "Abschluss",
 						"headword": "Abschluss",
@@ -465,7 +461,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Universitätsgrad; das Ende eines Studiums",
+										"definition": "der Abschluss: ein Universitätsgrad am Ende des Studiums",
 										"examples": [
 											"Nach dem Studium hat sie ihren Abschluss gemacht."
 										]
@@ -494,15 +490,15 @@
 				{
 					"title": "",
 					"page": 10,
-					"question": "Diplom",
-					"summary": "Hochschulabschluss",
+					"question": "Mitarbeiter",
+					"summary": "eine angestellte Person",
 					"explain": {
-						"entryId": "Diplom",
-						"headword": "Diplom",
+						"entryId": "Mitarbeiter",
+						"headword": "Mitarbeiter",
 						"pronunciation": {
-							"display": "di-PLOHM",
-							"ipaUK": "/diˈploːm/",
-							"ipaUS": "/diˈploːm/"
+							"display": "MIT-ar-by-tuh",
+							"ipaUK": "/ˈmɪtˌʔaʁbaɪ̯tɐ/",
+							"ipaUS": "/ˈmɪtˌʔaʁbaɪ̯tɐ/"
 						},
 						"labels": [
 							"B1"
@@ -512,15 +508,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Diplom",
+								"headwordLine": "Mitarbeiter",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Hochschulabschluss oder das Dokument darüber",
+										"definition": "der Mitarbeiter: eine Person, die in einer Firma angestellt ist",
 										"examples": [
-											"Er hat sein Diplom mit Auszeichnung erhalten."
+											"Die Firma sucht einen neuen Mitarbeiter."
 										]
 									}
 								]
@@ -531,15 +527,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Er hat sein Diplom mit Auszeichnung erhalten.",
+							"answer": "Die Firma sucht einen neuen Mitarbeiter.",
 							"ok": true
 						},
 						{
-							"answer": "Er hat seinen Diplom mit Auszeichnung erhalten.",
+							"answer": "Die Firma sucht ein neues Mitarbeiter.",
 							"ok": false
 						},
 						{
-							"answer": "Er sein Diplom mit Auszeichnung erhalten hat.",
+							"answer": "Die Firma einen neuen Mitarbeiter sucht.",
 							"ok": false
 						}
 					]

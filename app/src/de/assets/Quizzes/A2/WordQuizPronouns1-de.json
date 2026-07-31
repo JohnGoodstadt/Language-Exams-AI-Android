@@ -1,0 +1,917 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPronouns1-de",
+	"title": "Pronouns",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "ich",
+					"summary": "die sprechende Person",
+					"explain": {
+						"entryId": "ich",
+						"headword": "ich",
+						"pronunciation": {
+							"display": "ikh",
+							"ipaUK": "/ɪç/",
+							"ipaUS": "/ɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Personalpronomen",
+								"grammarType": "Personalpronomen",
+								"headwordLine": "ich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die sprechende Person (1. Person)",
+										"examples": [
+											"Ich gehe heute ins Kino."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich gehe heute ins Kino.",
+							"ok": true
+						},
+						{
+							"answer": "Ich geht heute ins Kino.",
+							"ok": false
+						},
+						{
+							"answer": "Ich heute ins Kino gehe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "du",
+					"summary": "die angesprochene Person",
+					"explain": {
+						"entryId": "du",
+						"headword": "du",
+						"pronunciation": {
+							"display": "doo",
+							"ipaUK": "/duː/",
+							"ipaUS": "/duː/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Personalpronomen",
+								"grammarType": "Personalpronomen",
+								"headwordLine": "du",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Person, mit der man spricht (informell)",
+										"examples": [
+											"Du hast eine schöne Wohnung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Du hast eine schöne Wohnung.",
+							"ok": true
+						},
+						{
+							"answer": "Du hat eine schöne Wohnung.",
+							"ok": false
+						},
+						{
+							"answer": "Du eine schöne Wohnung hast.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "er",
+					"summary": "eine männliche Person",
+					"explain": {
+						"entryId": "er",
+						"headword": "er",
+						"pronunciation": {
+							"display": "air",
+							"ipaUK": "/eːɐ̯/",
+							"ipaUS": "/eːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Personalpronomen",
+								"grammarType": "Personalpronomen",
+								"headwordLine": "er",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine männliche Person (3. Person)",
+										"examples": [
+											"Er kommt aus Frankreich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er kommt aus Frankreich.",
+							"ok": true
+						},
+						{
+							"answer": "Er komme aus Frankreich.",
+							"ok": false
+						},
+						{
+							"answer": "Er aus Frankreich kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "sie",
+					"summary": "eine weibliche Person / Plural",
+					"explain": {
+						"entryId": "sie",
+						"headword": "sie",
+						"pronunciation": {
+							"display": "zee",
+							"ipaUK": "/ziː/",
+							"ipaUS": "/ziː/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Personalpronomen",
+								"grammarType": "Personalpronomen",
+								"headwordLine": "sie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine weibliche Person; auch: mehrere Personen",
+										"examples": [
+											"Sie ist meine beste Freundin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie ist meine beste Freundin.",
+							"ok": true
+						},
+						{
+							"answer": "Sie sind meine beste Freundin.",
+							"ok": false
+						},
+						{
+							"answer": "Sie meine beste Freundin ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "wir",
+					"summary": "ich und andere",
+					"explain": {
+						"entryId": "wir",
+						"headword": "wir",
+						"pronunciation": {
+							"display": "veer",
+							"ipaUK": "/viːɐ̯/",
+							"ipaUS": "/viːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Personalpronomen",
+								"grammarType": "Personalpronomen",
+								"headwordLine": "wir",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die sprechende Person und andere",
+										"examples": [
+											"Wir gehen zusammen einkaufen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir gehen zusammen einkaufen.",
+							"ok": true
+						},
+						{
+							"answer": "Wir geht zusammen einkaufen.",
+							"ok": false
+						},
+						{
+							"answer": "Wir zusammen einkaufen gehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "ihr",
+					"summary": "mehrere Angesprochene",
+					"explain": {
+						"entryId": "ihr",
+						"headword": "ihr",
+						"pronunciation": {
+							"display": "eer",
+							"ipaUK": "/iːɐ̯/",
+							"ipaUS": "/iːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Personalpronomen",
+								"grammarType": "Personalpronomen",
+								"headwordLine": "ihr",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mehrere Personen, die man anspricht",
+										"examples": [
+											"Ihr seid heute sehr früh."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihr seid heute sehr früh.",
+							"ok": true
+						},
+						{
+							"answer": "Ihr seit heute sehr früh.",
+							"ok": false
+						},
+						{
+							"answer": "Ihr heute sehr früh seid.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "mein",
+					"summary": "gehört mir",
+					"explain": {
+						"entryId": "mein",
+						"headword": "mein",
+						"pronunciation": {
+							"display": "mine",
+							"ipaUK": "/maɪ̯n/",
+							"ipaUS": "/maɪ̯n/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Possessivartikel",
+								"grammarType": "Possessivartikel",
+								"headwordLine": "mein",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zeigt: es gehört mir",
+										"examples": [
+											"Das ist mein neues Auto."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das ist mein neues Auto.",
+							"ok": true
+						},
+						{
+							"answer": "Das ist meine neues Auto.",
+							"ok": false
+						},
+						{
+							"answer": "Das mein neues Auto ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "dein",
+					"summary": "gehört dir",
+					"explain": {
+						"entryId": "dein",
+						"headword": "dein",
+						"pronunciation": {
+							"display": "dine",
+							"ipaUK": "/daɪ̯n/",
+							"ipaUS": "/daɪ̯n/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Possessivartikel",
+								"grammarType": "Possessivartikel",
+								"headwordLine": "dein",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zeigt: es gehört dir",
+										"examples": [
+											"Ist das dein Fahrrad?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ist das dein Fahrrad?",
+							"ok": true
+						},
+						{
+							"answer": "Ist das deine Fahrrad?",
+							"ok": false
+						},
+						{
+							"answer": "Ist das dein Fahrrad.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "sein",
+					"summary": "gehört ihm",
+					"explain": {
+						"entryId": "sein",
+						"headword": "sein",
+						"pronunciation": {
+							"display": "zine",
+							"ipaUK": "/zaɪ̯n/",
+							"ipaUS": "/zaɪ̯n/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Possessivartikel",
+								"grammarType": "Possessivartikel",
+								"headwordLine": "sein",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zeigt: es gehört ihm",
+										"examples": [
+											"Er sucht seinen Schlüssel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er sucht seinen Schlüssel.",
+							"ok": true
+						},
+						{
+							"answer": "Er sucht seine Schlüssel.",
+							"ok": false
+						},
+						{
+							"answer": "Er seinen Schlüssel sucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "unser",
+					"summary": "gehört uns",
+					"explain": {
+						"entryId": "unser",
+						"headword": "unser",
+						"pronunciation": {
+							"display": "OON-zuh",
+							"ipaUK": "/ˈʊnzɐ/",
+							"ipaUS": "/ˈʊnzɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Possessivartikel",
+								"grammarType": "Possessivartikel",
+								"headwordLine": "unser",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zeigt: es gehört uns",
+										"examples": [
+											"Das ist unser gemeinsames Projekt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das ist unser gemeinsames Projekt.",
+							"ok": true
+						},
+						{
+							"answer": "Das ist unsere gemeinsames Projekt.",
+							"ok": false
+						},
+						{
+							"answer": "Das unser gemeinsames Projekt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "dieser",
+					"summary": "zeigt auf etwas Bestimmtes",
+					"explain": {
+						"entryId": "dieser",
+						"headword": "dieser",
+						"pronunciation": {
+							"display": "DEE-zuh",
+							"ipaUK": "/ˈdiːzɐ/",
+							"ipaUS": "/ˈdiːzɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Demonstrativpronomen",
+								"grammarType": "Demonstrativpronomen",
+								"headwordLine": "dieser",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zeigt auf etwas Bestimmtes (dieser/diese/dieses)",
+										"examples": [
+											"Dieser Mann ist mein Nachbar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Dieser Mann ist mein Nachbar.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Mann ist mein Nachbar.",
+							"ok": false
+						},
+						{
+							"answer": "Dieser Mann mein Nachbar ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "jeder",
+					"summary": "alle einzeln",
+					"explain": {
+						"entryId": "jeder",
+						"headword": "jeder",
+						"pronunciation": {
+							"display": "YAY-duh",
+							"ipaUK": "/ˈjeːdɐ/",
+							"ipaUS": "/ˈjeːdɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Indefinitpronomen",
+								"grammarType": "Indefinitpronomen",
+								"headwordLine": "jeder",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "alle einzeln; jede Person oder Sache",
+										"examples": [
+											"Jeder Schüler bekommt ein Buch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Jeder Schüler bekommt ein Buch.",
+							"ok": true
+						},
+						{
+							"answer": "Jede Schüler bekommt ein Buch.",
+							"ok": false
+						},
+						{
+							"answer": "Jeder Schüler ein Buch bekommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "man",
+					"summary": "die Leute allgemein",
+					"explain": {
+						"entryId": "man",
+						"headword": "man",
+						"pronunciation": {
+							"display": "man",
+							"ipaUK": "/man/",
+							"ipaUS": "/man/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Indefinitpronomen",
+								"grammarType": "Indefinitpronomen",
+								"headwordLine": "man",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "irgendeine Person; die Leute allgemein",
+										"examples": [
+											"In Deutschland spricht man Deutsch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In Deutschland spricht man Deutsch.",
+							"ok": true
+						},
+						{
+							"answer": "In Deutschland sprechen man Deutsch.",
+							"ok": false
+						},
+						{
+							"answer": "In Deutschland man spricht Deutsch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "etwas",
+					"summary": "eine unbestimmte Sache",
+					"explain": {
+						"entryId": "etwas",
+						"headword": "etwas",
+						"pronunciation": {
+							"display": "ET-vas",
+							"ipaUK": "/ˈɛtvas/",
+							"ipaUS": "/ˈɛtvas/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Indefinitpronomen",
+								"grammarType": "Indefinitpronomen",
+								"headwordLine": "etwas",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine unbestimmte Sache",
+										"examples": [
+											"Ich möchte etwas trinken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich möchte etwas trinken.",
+							"ok": true
+						},
+						{
+							"answer": "Ich möchte etwas trinke.",
+							"ok": false
+						},
+						{
+							"answer": "Ich etwas trinken möchte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "nichts",
+					"summary": "kein Ding",
+					"explain": {
+						"entryId": "nichts",
+						"headword": "nichts",
+						"pronunciation": {
+							"display": "nikhts",
+							"ipaUK": "/nɪçts/",
+							"ipaUS": "/nɪçts/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Indefinitpronomen",
+								"grammarType": "Indefinitpronomen",
+								"headwordLine": "nichts",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "kein Ding; gar nichts",
+										"examples": [
+											"Er hat mir nichts gesagt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat mir nichts gesagt.",
+							"ok": true
+						},
+						{
+							"answer": "Er mir nichts gesagt hat.",
+							"ok": false
+						},
+						{
+							"answer": "Er hat nichts mir gesagt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"question": "jemand",
+					"summary": "eine unbekannte Person",
+					"explain": {
+						"entryId": "jemand",
+						"headword": "jemand",
+						"pronunciation": {
+							"display": "YAY-mant",
+							"ipaUK": "/ˈjeːmant/",
+							"ipaUS": "/ˈjeːmant/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Indefinitpronomen",
+								"grammarType": "Indefinitpronomen",
+								"headwordLine": "jemand",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine unbekannte Person",
+										"examples": [
+											"Jemand hat an die Tür geklopft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Jemand hat an die Tür geklopft.",
+							"ok": true
+						},
+						{
+							"answer": "Jemand haben an die Tür geklopft.",
+							"ok": false
+						},
+						{
+							"answer": "Jemand an die Tür geklopft hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 17,
+					"question": "niemand",
+					"summary": "keine Person",
+					"explain": {
+						"entryId": "niemand",
+						"headword": "niemand",
+						"pronunciation": {
+							"display": "NEE-mant",
+							"ipaUK": "/ˈniːmant/",
+							"ipaUS": "/ˈniːmant/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Indefinitpronomen",
+								"grammarType": "Indefinitpronomen",
+								"headwordLine": "niemand",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "keine einzige Person",
+										"examples": [
+											"Niemand kennt die Antwort."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Niemand kennt die Antwort.",
+							"ok": true
+						},
+						{
+							"answer": "Niemand kennen die Antwort.",
+							"ok": false
+						},
+						{
+							"answer": "Niemand die Antwort kennt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

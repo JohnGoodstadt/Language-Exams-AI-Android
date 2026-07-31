@@ -1,0 +1,864 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFamily1-de",
+	"title": "Family",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Familie",
+					"summary": "Eltern, Kinder, Verwandte",
+					"explain": {
+						"entryId": "Familie",
+						"headword": "Familie",
+						"pronunciation": {
+							"display": "fa-MEE-li-uh",
+							"ipaUK": "/faˈmiːli̯ə/",
+							"ipaUS": "/faˈmiːli̯ə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Familie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Eltern, Kinder und Verwandte zusammen",
+										"examples": [
+											"Meine Familie ist ziemlich groß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Familie ist ziemlich groß.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Familie ist ziemlich groß.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Familie ziemlich groß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Eltern",
+					"summary": "Mutter und Vater (Plural)",
+					"explain": {
+						"entryId": "Eltern",
+						"headword": "Eltern",
+						"pronunciation": {
+							"display": "EL-tuhn",
+							"ipaUK": "/ˈɛltɐn/",
+							"ipaUS": "/ˈɛltɐn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Eltern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Mutter und Vater (Plural)",
+										"examples": [
+											"Meine Eltern wohnen in Berlin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Eltern wohnen in Berlin.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Eltern wohnen in Berlin.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Eltern in Berlin wohnen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Großeltern",
+					"summary": "Oma und Opa",
+					"explain": {
+						"entryId": "Großeltern",
+						"headword": "Großeltern",
+						"pronunciation": {
+							"display": "GROHS-el-tuhn",
+							"ipaUK": "/ˈɡʁoːsˌʔɛltɐn/",
+							"ipaUS": "/ˈɡʁoːsˌʔɛltɐn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Großeltern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Eltern der Eltern (Oma und Opa)",
+										"examples": [
+											"Am Sonntag besuchen wir unsere Großeltern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Sonntag besuchen wir unsere Großeltern.",
+							"ok": true
+						},
+						{
+							"answer": "Am Sonntag besuchen wir unseren Großeltern.",
+							"ok": false
+						},
+						{
+							"answer": "Am Sonntag wir besuchen unsere Großeltern.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Verwandten",
+					"summary": "andere Familienmitglieder",
+					"explain": {
+						"entryId": "Verwandten",
+						"headword": "Verwandten",
+						"pronunciation": {
+							"display": "fer-VAN-tn",
+							"ipaUK": "/fɛɐ̯ˈvantn̩/",
+							"ipaUS": "/fɛɐ̯ˈvantn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verwandten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "andere Personen in der Familie (Onkel, Tante …)",
+										"examples": [
+											"Zu Weihnachten treffen wir alle Verwandten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zu Weihnachten treffen wir alle Verwandten.",
+							"ok": true
+						},
+						{
+							"answer": "Zu Weihnachten treffen wir alle Verwandte.",
+							"ok": false
+						},
+						{
+							"answer": "Zu Weihnachten wir treffen alle Verwandten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Ehemann",
+					"summary": "der Mann in einer Ehe",
+					"explain": {
+						"entryId": "Ehemann",
+						"headword": "Ehemann",
+						"pronunciation": {
+							"display": "AY-uh-man",
+							"ipaUK": "/ˈeːəˌman/",
+							"ipaUS": "/ˈeːəˌman/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ehemann",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Mann in einer Ehe",
+										"examples": [
+											"Ihr Ehemann arbeitet als Lehrer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihr Ehemann arbeitet als Lehrer.",
+							"ok": true
+						},
+						{
+							"answer": "Ihre Ehemann arbeitet als Lehrer.",
+							"ok": false
+						},
+						{
+							"answer": "Ihr Ehemann als Lehrer arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Ehefrau",
+					"summary": "die Frau in einer Ehe",
+					"explain": {
+						"entryId": "Ehefrau",
+						"headword": "Ehefrau",
+						"pronunciation": {
+							"display": "AY-uh-frow",
+							"ipaUK": "/ˈeːəˌfʁaʊ̯/",
+							"ipaUS": "/ˈeːəˌfʁaʊ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ehefrau",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Frau in einer Ehe",
+										"examples": [
+											"Seine Ehefrau kommt aus Spanien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Seine Ehefrau kommt aus Spanien.",
+							"ok": true
+						},
+						{
+							"answer": "Sein Ehefrau kommt aus Spanien.",
+							"ok": false
+						},
+						{
+							"answer": "Seine Ehefrau aus Spanien kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Partner",
+					"summary": "Person, mit der man zusammenlebt",
+					"explain": {
+						"entryId": "Partner",
+						"headword": "Partner",
+						"pronunciation": {
+							"display": "PART-nuh",
+							"ipaUK": "/ˈpaʁtnɐ/",
+							"ipaUS": "/ˈpaʁtnɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Partner",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Person, mit der man zusammenlebt",
+										"examples": [
+											"Mein Partner und ich reisen gern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Partner und ich reisen gern.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Partner und ich reisen gern.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Partner und ich gern reisen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Enkel",
+					"summary": "der Sohn des Kindes",
+					"explain": {
+						"entryId": "Enkel",
+						"headword": "Enkel",
+						"pronunciation": {
+							"display": "ENG-kl",
+							"ipaUK": "/ˈɛŋkl̩/",
+							"ipaUS": "/ˈɛŋkl̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Enkel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Sohn des eigenen Kindes",
+										"examples": [
+											"Die Oma spielt mit ihrem Enkel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Oma spielt mit ihrem Enkel.",
+							"ok": true
+						},
+						{
+							"answer": "Die Oma spielt mit ihrer Enkel.",
+							"ok": false
+						},
+						{
+							"answer": "Die Oma mit ihrem Enkel spielt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Enkelin",
+					"summary": "die Tochter des Kindes",
+					"explain": {
+						"entryId": "Enkelin",
+						"headword": "Enkelin",
+						"pronunciation": {
+							"display": "ENG-kuh-lin",
+							"ipaUK": "/ˈɛŋkəlɪn/",
+							"ipaUS": "/ˈɛŋkəlɪn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Enkelin",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Tochter des eigenen Kindes",
+										"examples": [
+											"Der Opa liest seiner Enkelin vor."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Opa liest seiner Enkelin vor.",
+							"ok": true
+						},
+						{
+							"answer": "Der Opa liest seinem Enkelin vor.",
+							"ok": false
+						},
+						{
+							"answer": "Der Opa seiner Enkelin vorliest.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Onkel",
+					"summary": "Bruder von Mutter/Vater",
+					"explain": {
+						"entryId": "Onkel",
+						"headword": "Onkel",
+						"pronunciation": {
+							"display": "ONG-kl",
+							"ipaUK": "/ˈɔŋkl̩/",
+							"ipaUS": "/ˈɔŋkl̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Onkel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Bruder der Mutter oder des Vaters",
+										"examples": [
+											"Mein Onkel wohnt in Hamburg."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Onkel wohnt in Hamburg.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Onkel wohnt in Hamburg.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Onkel in Hamburg wohnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Tante",
+					"summary": "Schwester von Mutter/Vater",
+					"explain": {
+						"entryId": "Tante",
+						"headword": "Tante",
+						"pronunciation": {
+							"display": "TAN-tuh",
+							"ipaUK": "/ˈtantə/",
+							"ipaUS": "/ˈtantə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tante",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Schwester der Mutter oder des Vaters",
+										"examples": [
+											"Meine Tante backt sehr gute Kuchen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Tante backt sehr gute Kuchen.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Tante backt sehr gute Kuchen.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Tante sehr gute Kuchen backt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "Cousin",
+					"summary": "Sohn von Onkel/Tante",
+					"explain": {
+						"entryId": "Cousin",
+						"headword": "Cousin",
+						"pronunciation": {
+							"display": "koo-ZÄNG",
+							"ipaUK": "/kuˈzɛ̃ː/",
+							"ipaUS": "/kuˈzɛ̃ː/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Cousin",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Sohn von Onkel oder Tante",
+										"examples": [
+											"Mein Cousin studiert in München."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Cousin studiert in München.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Cousin studiert in München.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Cousin in München studiert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "Cousine",
+					"summary": "Tochter von Onkel/Tante",
+					"explain": {
+						"entryId": "Cousine",
+						"headword": "Cousine",
+						"pronunciation": {
+							"display": "koo-ZEE-nuh",
+							"ipaUK": "/kuˈziːnə/",
+							"ipaUS": "/kuˈziːnə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Cousine",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Tochter von Onkel oder Tante",
+										"examples": [
+											"Meine Cousine spielt gern Tennis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Cousine spielt gern Tennis.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Cousine spielt gern Tennis.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Cousine gern Tennis spielt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "Nachbar",
+					"summary": "Person, die nebenan wohnt",
+					"explain": {
+						"entryId": "Nachbar",
+						"headword": "Nachbar",
+						"pronunciation": {
+							"display": "NAKH-bar",
+							"ipaUK": "/ˈnaxbaːɐ̯/",
+							"ipaUS": "/ˈnaxbaːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachbar",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Person, die nebenan wohnt",
+										"examples": [
+											"Unser Nachbar ist sehr freundlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unser Nachbar ist sehr freundlich.",
+							"ok": true
+						},
+						{
+							"answer": "Unsere Nachbar ist sehr freundlich.",
+							"ok": false
+						},
+						{
+							"answer": "Unser Nachbar sehr freundlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "heiraten",
+					"summary": "ein Ehepaar werden",
+					"explain": {
+						"entryId": "heiraten",
+						"headword": "heiraten",
+						"pronunciation": {
+							"display": "HY-rah-tn",
+							"ipaUK": "/ˈhaɪ̯ʁaːtn̩/",
+							"ipaUS": "/ˈhaɪ̯ʁaːtn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "heiraten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Mann und Frau werden ein Ehepaar",
+										"examples": [
+											"Im Sommer heiraten die beiden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer heiraten die beiden.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer heiratet die beiden.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer die beiden heiraten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"question": "sich kümmern um",
+					"summary": "für jemanden sorgen",
+					"explain": {
+						"entryId": "sich kümmern um",
+						"headword": "sich kümmern um",
+						"pronunciation": {
+							"display": "zikh KÜM-uhn oom",
+							"ipaUK": "/zɪç ˈkʏmɐn ʊm/",
+							"ipaUS": "/zɪç ˈkʏmɐn ʊm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (reflexiv)",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "sich kümmern um",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "für jemanden sorgen; auf jemanden aufpassen",
+										"examples": [
+											"Ich kümmere mich um meine kleine Schwester."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich kümmere mich um meine kleine Schwester.",
+							"ok": true
+						},
+						{
+							"answer": "Ich kümmere mir um meine kleine Schwester.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mich kümmere um meine kleine Schwester.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

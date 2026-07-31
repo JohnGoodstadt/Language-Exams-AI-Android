@@ -1,0 +1,811 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizGreetings1-de",
+	"title": "Greetings",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Guten Tag",
+					"summary": "höfliche Begrüßung",
+					"explain": {
+						"entryId": "Guten Tag",
+						"headword": "Guten Tag",
+						"pronunciation": {
+							"display": "GOO-tn tahk",
+							"ipaUK": "/ˈɡuːtn̩ taːk/",
+							"ipaUS": "/ˈɡuːtn̩ taːk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Guten Tag",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine höfliche Begrüßung am Tag",
+										"examples": [
+											"Guten Tag, wie kann ich Ihnen helfen?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Guten Tag, wie kann ich Ihnen helfen?",
+							"ok": true
+						},
+						{
+							"answer": "Guter Tag, wie kann ich Ihnen helfen?",
+							"ok": false
+						},
+						{
+							"answer": "Guten Tag, wie kann ich Ihnen helfe?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Grüß dich",
+					"summary": "informelle Begrüßung",
+					"explain": {
+						"entryId": "Grüß dich",
+						"headword": "Grüß dich",
+						"pronunciation": {
+							"display": "grüs dikh",
+							"ipaUK": "/ɡʁyːs dɪç/",
+							"ipaUS": "/ɡʁyːs dɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Grüß dich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine informelle Begrüßung unter Freunden",
+										"examples": [
+											"Grüß dich, schön dich zu sehen!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Grüß dich, schön dich zu sehen!",
+							"ok": true
+						},
+						{
+							"answer": "Grüß dir, schön dich zu sehen!",
+							"ok": false
+						},
+						{
+							"answer": "Dich grüß, schön dich zu sehen!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Herzlich willkommen",
+					"summary": "Gruß an einen Gast",
+					"explain": {
+						"entryId": "Herzlich willkommen",
+						"headword": "Herzlich willkommen",
+						"pronunciation": {
+							"display": "HERTS-likh vil-KOM-mn",
+							"ipaUK": "/ˈhɛʁtslɪç vɪlˈkɔmən/",
+							"ipaUS": "/ˈhɛʁtslɪç vɪlˈkɔmən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Herzlich willkommen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn ein Gast ankommt",
+										"examples": [
+											"Herzlich willkommen in unserem Haus!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Herzlich willkommen in unserem Haus!",
+							"ok": true
+						},
+						{
+							"answer": "Herzliche willkommen in unserem Haus!",
+							"ok": false
+						},
+						{
+							"answer": "Willkommen herzlich in unserem Haus!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Wie geht es Ihnen?",
+					"summary": "höfliche Frage nach dem Befinden",
+					"explain": {
+						"entryId": "Wie geht es Ihnen?",
+						"headword": "Wie geht es Ihnen?",
+						"pronunciation": {
+							"display": "vee gayt es EE-nn",
+							"ipaUK": "/viː ɡeːt ɛs ˈiːnən/",
+							"ipaUS": "/viː ɡeːt ɛs ˈiːnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Wie geht es Ihnen?",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "fragt höflich nach dem Befinden (formell)",
+										"examples": [
+											"Guten Tag, wie geht es Ihnen?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Guten Tag, wie geht es Ihnen?",
+							"ok": true
+						},
+						{
+							"answer": "Guten Tag, wie geht es Sie?",
+							"ok": false
+						},
+						{
+							"answer": "Guten Tag, wie es Ihnen geht?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Schön, Sie kennenzulernen",
+					"summary": "beim ersten Treffen",
+					"explain": {
+						"entryId": "Schön, Sie kennenzulernen",
+						"headword": "Schön, Sie kennenzulernen",
+						"pronunciation": {
+							"display": "shön zee KEN-nn-tsoo-ler-nn",
+							"ipaUK": "/ʃøːn ziː ˈkɛnəntsuˌlɛʁnən/",
+							"ipaUS": "/ʃøːn ziː ˈkɛnəntsuˌlɛʁnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Schön, Sie kennenzulernen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man bei einem ersten Treffen (formell)",
+										"examples": [
+											"Schön, Sie kennenzulernen!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Schön, Sie kennenzulernen!",
+							"ok": true
+						},
+						{
+							"answer": "Schön, Sie kennzulernen!",
+							"ok": false
+						},
+						{
+							"answer": "Schön, Sie kennenlernen zu!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Auf Wiedersehen",
+					"summary": "höflicher Abschied",
+					"explain": {
+						"entryId": "Auf Wiedersehen",
+						"headword": "Auf Wiedersehen",
+						"pronunciation": {
+							"display": "owf VEE-duh-zay-uhn",
+							"ipaUK": "/aʊ̯f ˈviːdɐˌzeːən/",
+							"ipaUS": "/aʊ̯f ˈviːdɐˌzeːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Auf Wiedersehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine höfliche Verabschiedung",
+										"examples": [
+											"Auf Wiedersehen und einen schönen Tag!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf Wiedersehen und einen schönen Tag!",
+							"ok": true
+						},
+						{
+							"answer": "Auf Wiedersehen und ein schöner Tag!",
+							"ok": false
+						},
+						{
+							"answer": "Wiedersehen auf und einen schönen Tag!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Bis später",
+					"summary": "Abschied für kurze Zeit",
+					"explain": {
+						"entryId": "Bis später",
+						"headword": "Bis später",
+						"pronunciation": {
+							"display": "bis SHPAY-tuh",
+							"ipaUK": "/bɪs ˈʃpɛːtɐ/",
+							"ipaUS": "/bɪs ˈʃpɛːtɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Bis später",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn man sich bald wiedersieht",
+										"examples": [
+											"Tschüss, bis später!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Tschüss, bis später!",
+							"ok": true
+						},
+						{
+							"answer": "Tschüss, bis speter!",
+							"ok": false
+						},
+						{
+							"answer": "Tschüss, später bis!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Bis bald",
+					"summary": "bis zum nächsten Mal (bald)",
+					"explain": {
+						"entryId": "Bis bald",
+						"headword": "Bis bald",
+						"pronunciation": {
+							"display": "bis balt",
+							"ipaUK": "/bɪs balt/",
+							"ipaUS": "/bɪs balt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Bis bald",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn man sich bald wiedersieht",
+										"examples": [
+											"Mach's gut, bis bald!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mach's gut, bis bald!",
+							"ok": true
+						},
+						{
+							"answer": "Mach's gut, bis balde!",
+							"ok": false
+						},
+						{
+							"answer": "Mach's gut, bald bis!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Mach's gut",
+					"summary": "informeller Abschied",
+					"explain": {
+						"entryId": "Mach's gut",
+						"headword": "Mach's gut",
+						"pronunciation": {
+							"display": "makhs goot",
+							"ipaUK": "/maxs ɡuːt/",
+							"ipaUS": "/maxs ɡuːt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Mach's gut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine informelle Verabschiedung",
+										"examples": [
+											"Mach's gut und pass auf dich auf!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mach's gut und pass auf dich auf!",
+							"ok": true
+						},
+						{
+							"answer": "Mach's gut und passt auf dich auf!",
+							"ok": false
+						},
+						{
+							"answer": "Mach's gut und pass auf dich aus!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Schönen Tag noch",
+					"summary": "guter Wunsch beim Abschied",
+					"explain": {
+						"entryId": "Schönen Tag noch",
+						"headword": "Schönen Tag noch",
+						"pronunciation": {
+							"display": "SHÖ-nn tahk nokh",
+							"ipaUK": "/ˈʃøːnən taːk nɔx/",
+							"ipaUS": "/ˈʃøːnən taːk nɔx/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Schönen Tag noch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "guter Wunsch beim Abschied",
+										"examples": [
+											"Danke, schönen Tag noch!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Danke, schönen Tag noch!",
+							"ok": true
+						},
+						{
+							"answer": "Danke, schöner Tag noch!",
+							"ok": false
+						},
+						{
+							"answer": "Danke, noch schönen Tag!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Gute Reise",
+					"summary": "Wunsch vor einer Reise",
+					"explain": {
+						"entryId": "Gute Reise",
+						"headword": "Gute Reise",
+						"pronunciation": {
+							"display": "GOO-tuh RY-zuh",
+							"ipaUK": "/ˈɡuːtə ˈʁaɪ̯zə/",
+							"ipaUS": "/ˈɡuːtə ˈʁaɪ̯zə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Gute Reise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wünscht man vor einer Reise",
+										"examples": [
+											"Gute Reise und komm gesund zurück!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gute Reise und komm gesund zurück!",
+							"ok": true
+						},
+						{
+							"answer": "Guter Reise und komm gesund zurück!",
+							"ok": false
+						},
+						{
+							"answer": "Reise gute und komm gesund zurück!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "Viel Erfolg",
+					"summary": "Wunsch vor einer Aufgabe",
+					"explain": {
+						"entryId": "Viel Erfolg",
+						"headword": "Viel Erfolg",
+						"pronunciation": {
+							"display": "feel er-FOLK",
+							"ipaUK": "/fiːl ɛɐ̯ˈfɔlk/",
+							"ipaUS": "/fiːl ɛɐ̯ˈfɔlk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Viel Erfolg",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wünscht man vor einer Aufgabe",
+										"examples": [
+											"Viel Erfolg bei deiner Prüfung!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viel Erfolg bei deiner Prüfung!",
+							"ok": true
+						},
+						{
+							"answer": "Viele Erfolg bei deiner Prüfung!",
+							"ok": false
+						},
+						{
+							"answer": "Viel Erfolg bei deine Prüfung!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "Gute Besserung",
+					"summary": "Wunsch für Kranke",
+					"explain": {
+						"entryId": "Gute Besserung",
+						"headword": "Gute Besserung",
+						"pronunciation": {
+							"display": "GOO-tuh BES-uh-roong",
+							"ipaUK": "/ˈɡuːtə ˈbɛsəʁʊŋ/",
+							"ipaUS": "/ˈɡuːtə ˈbɛsəʁʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Gute Besserung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wünscht man einem kranken Menschen",
+										"examples": [
+											"Gute Besserung, werd schnell wieder gesund!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gute Besserung, werd schnell wieder gesund!",
+							"ok": true
+						},
+						{
+							"answer": "Guter Besserung, werd schnell wieder gesund!",
+							"ok": false
+						},
+						{
+							"answer": "Besserung gute, werd schnell wieder gesund!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "Willkommen zurück",
+					"summary": "Gruß bei Rückkehr",
+					"explain": {
+						"entryId": "Willkommen zurück",
+						"headword": "Willkommen zurück",
+						"pronunciation": {
+							"display": "vil-KOM-mn tsoo-RÜK",
+							"ipaUK": "/vɪlˈkɔmən tsuˈʁʏk/",
+							"ipaUS": "/vɪlˈkɔmən tsuˈʁʏk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Willkommen zurück",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagt man, wenn jemand zurückkommt",
+										"examples": [
+											"Willkommen zurück, wir haben dich vermisst!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Willkommen zurück, wir haben dich vermisst!",
+							"ok": true
+						},
+						{
+							"answer": "Willkommen zurück, wir haben dich vermissen!",
+							"ok": false
+						},
+						{
+							"answer": "Zurück willkommen, wir haben dich vermisst!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "Alles Gute",
+					"summary": "allgemeiner guter Wunsch",
+					"explain": {
+						"entryId": "Alles Gute",
+						"headword": "Alles Gute",
+						"pronunciation": {
+							"display": "AL-les GOO-tuh",
+							"ipaUK": "/ˈaləs ˈɡuːtə/",
+							"ipaUS": "/ˈaləs ˈɡuːtə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Redewendung",
+								"grammarType": "Redewendung",
+								"headwordLine": "Alles Gute",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "guter Wunsch, z. B. zum Geburtstag",
+										"examples": [
+											"Alles Gute zum Geburtstag!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Alles Gute zum Geburtstag!",
+							"ok": true
+						},
+						{
+							"answer": "Alle Gute zum Geburtstag!",
+							"ok": false
+						},
+						{
+							"answer": "Alles Gute zu Geburtstag!",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

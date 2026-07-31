@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizHealth3-de",
-	"title": "3. Health",
+	"title": "Health",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -33,13 +33,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Genesung",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Erholung"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Wiedergesundwerden nach Krankheit",
+										"definition": "die Genesung: das Gesundwerden nach einer Krankheit",
 										"examples": [
 											"Wir wünschen dir eine schnelle Genesung."
 										]
@@ -68,15 +66,15 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Routine",
-					"summary": "feste, regelmäßige Gewohnheit",
+					"question": "Versicherung",
+					"summary": "Vertrag, der bei Schäden zahlt",
 					"explain": {
-						"entryId": "Routine",
-						"headword": "Routine",
+						"entryId": "Versicherung",
+						"headword": "Versicherung",
 						"pronunciation": {
-							"display": "roo-TEE-nuh",
-							"ipaUK": "/ʁuˈtiːnə/",
-							"ipaUS": "/ʁuˈtiːnə/"
+							"display": "fer-ZIKH-uh-roong",
+							"ipaUK": "/fɛɐ̯ˈzɪçəʁʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈzɪçəʁʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -86,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Routine",
+								"headwordLine": "Versicherung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine feste, regelmäßige Gewohnheit",
+										"definition": "die Versicherung: ein Vertrag, der bei Schäden zahlt",
 										"examples": [
-											"Sport gehört zu meiner täglichen Routine."
+											"Ohne Versicherung zahlt man alles selbst."
 										]
 									}
 								]
@@ -105,15 +103,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Sport gehört zu meiner täglichen Routine.",
+							"answer": "Ohne Versicherung zahlt man alles selbst.",
 							"ok": true
 						},
 						{
-							"answer": "Sport gehört zu meinem täglichen Routine.",
+							"answer": "Ohne Versicherungen zahlt man alles selbst.",
 							"ok": false
 						},
 						{
-							"answer": "Sport zu meiner täglichen Routine gehört.",
+							"answer": "Ohne Versicherung man zahlt alles selbst.",
 							"ok": false
 						}
 					]
@@ -121,15 +119,15 @@
 				{
 					"title": "",
 					"page": 3,
-					"question": "Zeitplan",
-					"summary": "Plan, wann was passiert",
+					"question": "Police",
+					"summary": "Vertrag einer Versicherung",
 					"explain": {
-						"entryId": "Zeitplan",
-						"headword": "Zeitplan",
+						"entryId": "Police",
+						"headword": "Police",
 						"pronunciation": {
-							"display": "TSITE-plahn",
-							"ipaUK": "/ˈtsaɪ̯tˌplaːn/",
-							"ipaUS": "/ˈtsaɪ̯tˌplaːn/"
+							"display": "po-LEE-suh",
+							"ipaUK": "/poˈliːsə/",
+							"ipaUS": "/poˈliːsə/"
 						},
 						"labels": [
 							"B1"
@@ -139,15 +137,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Zeitplan",
+								"headwordLine": "Police",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Plan, wann was passiert",
+										"definition": "die Police: der Vertrag einer Versicherung",
 										"examples": [
-											"Der Arzt hat einen vollen Zeitplan."
+											"Die Police deckt auch Zahnbehandlungen."
 										]
 									}
 								]
@@ -158,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Arzt hat einen vollen Zeitplan.",
+							"answer": "Die Police deckt auch Zahnbehandlungen.",
 							"ok": true
 						},
 						{
-							"answer": "Der Arzt hat ein volles Zeitplan.",
+							"answer": "Der Police deckt auch Zahnbehandlungen.",
 							"ok": false
 						},
 						{
-							"answer": "Der Arzt einen vollen Zeitplan hat.",
+							"answer": "Die Police auch Zahnbehandlungen deckt.",
 							"ok": false
 						}
 					]
@@ -174,15 +172,15 @@
 				{
 					"title": "",
 					"page": 4,
-					"question": "Symptome",
-					"summary": "Zeichen einer Krankheit (Plural)",
+					"question": "Versicherungsschutz",
+					"summary": "Schutz durch eine Versicherung",
 					"explain": {
-						"entryId": "Symptome",
-						"headword": "Symptome",
+						"entryId": "Versicherungsschutz",
+						"headword": "Versicherungsschutz",
 						"pronunciation": {
-							"display": "zümp-TOH-muh",
-							"ipaUK": "/zʏmpˈtoːmə/",
-							"ipaUS": "/zʏmpˈtoːmə/"
+							"display": "fer-ZIKH-uh-roongs-shoots",
+							"ipaUK": "/fɛɐ̯ˈzɪçəʁʊŋsˌʃʊts/",
+							"ipaUS": "/fɛɐ̯ˈzɪçəʁʊŋsˌʃʊts/"
 						},
 						"labels": [
 							"B1"
@@ -192,15 +190,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Symptome",
+								"headwordLine": "Versicherungsschutz",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Zeichen einer Krankheit (Plural)",
+										"definition": "der Versicherungsschutz: der Schutz durch eine Versicherung",
 										"examples": [
-											"Die Symptome verschwinden nach zwei Tagen."
+											"Der Versicherungsschutz gilt auch im Ausland."
 										]
 									}
 								]
@@ -211,15 +209,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Symptome verschwinden nach zwei Tagen.",
+							"answer": "Der Versicherungsschutz gilt auch im Ausland.",
 							"ok": true
 						},
 						{
-							"answer": "Die Symptom verschwinden nach zwei Tagen.",
+							"answer": "Die Versicherungsschutz gilt auch im Ausland.",
 							"ok": false
 						},
 						{
-							"answer": "Die Symptome nach zwei Tagen verschwinden.",
+							"answer": "Der Versicherungsschutz auch im Ausland gilt.",
 							"ok": false
 						}
 					]
@@ -227,15 +225,15 @@
 				{
 					"title": "",
 					"page": 5,
-					"question": "Therapie",
-					"summary": "Behandlung, um gesund zu werden",
+					"question": "Medikament",
+					"summary": "Mittel gegen Krankheit",
 					"explain": {
-						"entryId": "Therapie",
-						"headword": "Therapie",
+						"entryId": "Medikament",
+						"headword": "Medikament",
 						"pronunciation": {
-							"display": "te-ra-PEE",
-							"ipaUK": "/teʁaˈpiː/",
-							"ipaUS": "/teʁaˈpiː/"
+							"display": "me-di-ka-MENT",
+							"ipaUK": "/medikaˈmɛnt/",
+							"ipaUS": "/medikaˈmɛnt/"
 						},
 						"labels": [
 							"B1"
@@ -245,15 +243,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Therapie",
+								"headwordLine": "Medikament",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Behandlung, um gesund zu werden",
+										"definition": "das Medikament: ein Mittel gegen eine Krankheit",
 										"examples": [
-											"Die Therapie hilft ihm sehr."
+											"Das Medikament wirkt schnell."
 										]
 									}
 								]
@@ -264,15 +262,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Therapie hilft ihm sehr.",
+							"answer": "Das Medikament wirkt schnell.",
 							"ok": true
 						},
 						{
-							"answer": "Der Therapie hilft ihm sehr.",
+							"answer": "Der Medikament wirkt schnell.",
 							"ok": false
 						},
 						{
-							"answer": "Die Therapie ihm sehr hilft.",
+							"answer": "Das Medikament schnell wirkt.",
 							"ok": false
 						}
 					]
@@ -280,6 +278,112 @@
 				{
 					"title": "",
 					"page": 6,
+					"question": "Rezept",
+					"summary": "Zettel vom Arzt für ein Medikament",
+					"explain": {
+						"entryId": "Rezept",
+						"headword": "Rezept",
+						"pronunciation": {
+							"display": "re-TSEPT",
+							"ipaUK": "/ʁeˈtsɛpt/",
+							"ipaUS": "/ʁeˈtsɛpt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rezept",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Rezept: ein Zettel vom Arzt für ein Medikament",
+										"examples": [
+											"Für dieses Medikament braucht man ein Rezept."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für dieses Medikament braucht man ein Rezept.",
+							"ok": true
+						},
+						{
+							"answer": "Für dieses Medikament braucht man einen Rezept.",
+							"ok": false
+						},
+						{
+							"answer": "Für dieses Medikament man braucht ein Rezept.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Dosis",
+					"summary": "Menge eines Medikaments",
+					"explain": {
+						"entryId": "Dosis",
+						"headword": "Dosis",
+						"pronunciation": {
+							"display": "DOH-zis",
+							"ipaUK": "/ˈdoːzɪs/",
+							"ipaUS": "/ˈdoːzɪs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dosis",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Dosis: die Menge eines Medikaments, die man nimmt",
+										"examples": [
+											"Der Arzt empfiehlt eine kleine Dosis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arzt empfiehlt eine kleine Dosis.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arzt empfiehlt einen kleinen Dosis.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arzt eine kleine Dosis empfiehlt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
 					"question": "Behandlung",
 					"summary": "ärztliche Hilfe bei Krankheit",
 					"explain": {
@@ -304,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die ärztliche Hilfe bei Krankheit",
+										"definition": "die Behandlung: die ärztliche Hilfe bei einer Krankheit",
 										"examples": [
 											"Die Behandlung war leider teuer."
 										]
@@ -332,122 +436,16 @@
 				},
 				{
 					"title": "",
-					"page": 7,
-					"question": "dringend",
-					"summary": "Adjektiv: sehr eilig",
-					"explain": {
-						"entryId": "dringend",
-						"headword": "dringend",
-						"pronunciation": {
-							"display": "DRING-ent",
-							"ipaUK": "/ˈdʁɪŋənt/",
-							"ipaUS": "/ˈdʁɪŋənt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "dringend",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sehr eilig; muss sofort passieren",
-										"examples": [
-											"Der Fall ist wirklich dringend."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Fall ist wirklich dringend.",
-							"ok": true
-						},
-						{
-							"answer": "Der Fall ist wirklich dringende.",
-							"ok": false
-						},
-						{
-							"answer": "Der Fall wirklich dringend ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Wohlbefinden",
-					"summary": "Gefühl, dass es einem gut geht",
-					"explain": {
-						"entryId": "Wohlbefinden",
-						"headword": "Wohlbefinden",
-						"pronunciation": {
-							"display": "VOHL-buh-fin-dn",
-							"ipaUK": "/ˈvoːlbəˌfɪndn̩/",
-							"ipaUS": "/ˈvoːlbəˌfɪndn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Wohlbefinden",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Gefühl, dass es einem gut geht",
-										"examples": [
-											"Ausreichend Schlaf steigert das Wohlbefinden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ausreichend Schlaf steigert das Wohlbefinden.",
-							"ok": true
-						},
-						{
-							"answer": "Ausreichend Schlaf steigert der Wohlbefinden.",
-							"ok": false
-						},
-						{
-							"answer": "Ausreichend Schlaf das Wohlbefinden steigert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 9,
-					"question": "Training",
-					"summary": "Übungen zum Fitwerden",
+					"question": "Therapie",
+					"summary": "Behandlung, um gesund zu werden",
 					"explain": {
-						"entryId": "Training",
-						"headword": "Training",
+						"entryId": "Therapie",
+						"headword": "Therapie",
 						"pronunciation": {
-							"display": "TRAY-ning",
-							"ipaUK": "/ˈtʁɛːnɪŋ/",
-							"ipaUS": "/ˈtʁɛːnɪŋ/"
+							"display": "te-ra-PEE",
+							"ipaUK": "/teʁaˈpiː/",
+							"ipaUS": "/teʁaˈpiː/"
 						},
 						"labels": [
 							"B1"
@@ -457,15 +455,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Training",
+								"headwordLine": "Therapie",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "körperliche Übungen zum Fitwerden",
+										"definition": "die Therapie: eine Behandlung, um gesund zu werden",
 										"examples": [
-											"Ein hartes Training macht stark."
+											"Die Therapie hilft ihm sehr."
 										]
 									}
 								]
@@ -476,15 +474,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Ein hartes Training macht stark.",
+							"answer": "Die Therapie hilft ihm sehr.",
 							"ok": true
 						},
 						{
-							"answer": "Ein harter Training macht stark.",
+							"answer": "Der Therapie hilft ihm sehr.",
 							"ok": false
 						},
 						{
-							"answer": "Ein hartes Training stark macht.",
+							"answer": "Die Therapie ihm sehr hilft.",
 							"ok": false
 						}
 					]
@@ -492,15 +490,15 @@
 				{
 					"title": "",
 					"page": 10,
-					"question": "Wunde",
-					"summary": "Verletzung der Haut",
+					"question": "Heilung",
+					"summary": "das Gesundwerden",
 					"explain": {
-						"entryId": "Wunde",
-						"headword": "Wunde",
+						"entryId": "Heilung",
+						"headword": "Heilung",
 						"pronunciation": {
-							"display": "VOON-duh",
-							"ipaUK": "/ˈvʊndə/",
-							"ipaUS": "/ˈvʊndə/"
+							"display": "HY-loong",
+							"ipaUK": "/ˈhaɪ̯lʊŋ/",
+							"ipaUS": "/ˈhaɪ̯lʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -510,15 +508,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Wunde",
+								"headwordLine": "Heilung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Verletzung der Haut",
+										"definition": "die Heilung: das Verschwinden einer Krankheit",
 										"examples": [
-											"Die Wunde muss sauber bleiben."
+											"Für diese Krankheit gibt es noch keine Heilung."
 										]
 									}
 								]
@@ -529,15 +527,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Wunde muss sauber bleiben.",
+							"answer": "Für diese Krankheit gibt es noch keine Heilung.",
 							"ok": true
 						},
 						{
-							"answer": "Der Wunde muss sauber bleiben.",
+							"answer": "Für diese Krankheit gibt es noch keinen Heilung.",
 							"ok": false
 						},
 						{
-							"answer": "Die Wunde sauber bleiben muss.",
+							"answer": "Für diese Krankheit noch keine Heilung gibt es.",
 							"ok": false
 						}
 					]

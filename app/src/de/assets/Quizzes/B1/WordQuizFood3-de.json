@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizFood3-de",
-	"title": "3. Food",
+	"title": "Food",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,6 +13,59 @@
 				{
 					"title": "",
 					"page": 1,
+					"question": "Liste",
+					"summary": "geordnete Aufzählung",
+					"explain": {
+						"entryId": "Liste",
+						"headword": "Liste",
+						"pronunciation": {
+							"display": "LIS-tuh",
+							"ipaUK": "/ˈlɪstə/",
+							"ipaUS": "/ˈlɪstə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Liste",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Liste: eine geordnete Aufzählung",
+										"examples": [
+											"Ich schreibe eine Liste für den Einkauf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe eine Liste für den Einkauf.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe einen Liste für den Einkauf.",
+							"ok": false
+						},
+						{
+							"answer": "Ich eine Liste für den Einkauf schreibe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
 					"question": "Rezept",
 					"summary": "Anleitung zum Kochen",
 					"explain": {
@@ -37,7 +90,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Anleitung zum Kochen eines Gerichts",
+										"definition": "das Rezept: eine Anleitung zum Kochen eines Gerichts",
 										"examples": [
 											"Ich probiere heute ein neues Rezept aus."
 										]
@@ -65,69 +118,16 @@
 				},
 				{
 					"title": "",
-					"page": 2,
-					"question": "Erfrischung",
-					"summary": "Getränk/Snack, der erfrischt",
-					"explain": {
-						"entryId": "Erfrischung",
-						"headword": "Erfrischung",
-						"pronunciation": {
-							"display": "er-FRISH-oong",
-							"ipaUK": "/ɛɐ̯ˈfʁɪʃʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈfʁɪʃʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Erfrischung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Getränk oder Snack, der erfrischt",
-										"examples": [
-											"Im Sommer ist Eis eine willkommene Erfrischung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im Sommer ist Eis eine willkommene Erfrischung.",
-							"ok": true
-						},
-						{
-							"answer": "Im Sommer ist Eis ein willkommener Erfrischung.",
-							"ok": false
-						},
-						{
-							"answer": "Im Sommer Eis eine willkommene Erfrischung ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 3,
-					"question": "Auswahl",
-					"summary": "Menge zum Auswählen",
+					"question": "Anleitung",
+					"summary": "Erklärung, wie man etwas macht",
 					"explain": {
-						"entryId": "Auswahl",
-						"headword": "Auswahl",
+						"entryId": "Anleitung",
+						"headword": "Anleitung",
 						"pronunciation": {
-							"display": "OWS-vahl",
-							"ipaUK": "/ˈaʊ̯sˌvaːl/",
-							"ipaUS": "/ˈaʊ̯sˌvaːl/"
+							"display": "AN-ly-toong",
+							"ipaUK": "/ˈanˌlaɪ̯tʊŋ/",
+							"ipaUS": "/ˈanˌlaɪ̯tʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -137,15 +137,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Auswahl",
+								"headwordLine": "Anleitung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Menge Dinge, aus denen man wählen kann",
+										"definition": "die Anleitung: eine Erklärung, wie man etwas macht",
 										"examples": [
-											"Das Restaurant bietet eine große Auswahl."
+											"Die Anleitung erklärt jeden Schritt genau."
 										]
 									}
 								]
@@ -156,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Das Restaurant bietet eine große Auswahl.",
+							"answer": "Die Anleitung erklärt jeden Schritt genau.",
 							"ok": true
 						},
 						{
-							"answer": "Das Restaurant bietet einen großen Auswahl.",
+							"answer": "Der Anleitung erklärt jeden Schritt genau.",
 							"ok": false
 						},
 						{
-							"answer": "Das Restaurant eine große Auswahl bietet.",
+							"answer": "Die Anleitung jeden Schritt genau erklärt.",
 							"ok": false
 						}
 					]
@@ -172,6 +172,59 @@
 				{
 					"title": "",
 					"page": 4,
+					"question": "Methode",
+					"summary": "bestimmte Art, etwas zu tun",
+					"explain": {
+						"entryId": "Methode",
+						"headword": "Methode",
+						"pronunciation": {
+							"display": "me-TOH-duh",
+							"ipaUK": "/meˈtoːdə/",
+							"ipaUS": "/meˈtoːdə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Methode",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Methode: eine bestimmte Art, etwas zu tun",
+										"examples": [
+											"Er kennt eine bessere Methode zum Backen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er kennt eine bessere Methode zum Backen.",
+							"ok": true
+						},
+						{
+							"answer": "Er kennt einen besseren Methode zum Backen.",
+							"ok": false
+						},
+						{
+							"answer": "Er eine bessere Methode zum Backen kennt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
 					"question": "Snack",
 					"summary": "kleine Mahlzeit zwischendurch",
 					"explain": {
@@ -192,13 +245,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Snack",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Imbiss"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine kleine Mahlzeit zwischendurch",
+										"definition": "der Snack: eine kleine Mahlzeit zwischendurch",
 										"examples": [
 											"Am Nachmittag esse ich einen kleinen Snack."
 										]
@@ -226,166 +277,7 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "Spezialität",
-					"summary": "typisches, besonderes Gericht",
-					"explain": {
-						"entryId": "Spezialität",
-						"headword": "Spezialität",
-						"pronunciation": {
-							"display": "shpe-tsi-a-li-TAYT",
-							"ipaUK": "/ʃpetsi̯aliˈtɛːt/",
-							"ipaUS": "/ʃpetsi̯aliˈtɛːt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Spezialität",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein typisches, besonderes Gericht",
-										"examples": [
-											"Die Spezialität des Hauses ist Fisch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Spezialität des Hauses ist Fisch.",
-							"ok": true
-						},
-						{
-							"answer": "Der Spezialität des Hauses ist Fisch.",
-							"ok": false
-						},
-						{
-							"answer": "Die Spezialität des Hauses Fisch ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 6,
-					"question": "Vorspeise",
-					"summary": "erstes Gericht (Starter)",
-					"explain": {
-						"entryId": "Vorspeise",
-						"headword": "Vorspeise",
-						"pronunciation": {
-							"display": "FOR-shpy-zuh",
-							"ipaUK": "/ˈfoːɐ̯ˌʃpaɪ̯zə/",
-							"ipaUS": "/ˈfoːɐ̯ˌʃpaɪ̯zə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vorspeise",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das erste Gericht einer Mahlzeit (Starter)",
-										"examples": [
-											"Als Vorspeise wähle ich den Salat."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Als Vorspeise wähle ich den Salat.",
-							"ok": true
-						},
-						{
-							"answer": "Als Vorspeise wähle ich das Salat.",
-							"ok": false
-						},
-						{
-							"answer": "Als Vorspeise ich wähle den Salat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Süßigkeit",
-					"summary": "etwas Süßes (Bonbon, Schokolade)",
-					"explain": {
-						"entryId": "Süßigkeit",
-						"headword": "Süßigkeit",
-						"pronunciation": {
-							"display": "ZÜ-sikh-kite",
-							"ipaUK": "/ˈzyːsɪçkaɪ̯t/",
-							"ipaUS": "/ˈzyːsɪçkaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Süßigkeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas Süßes wie Bonbons oder Schokolade",
-										"examples": [
-											"Kinder essen gern eine Süßigkeit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Kinder essen gern eine Süßigkeit.",
-							"ok": true
-						},
-						{
-							"answer": "Kinder essen gern einen Süßigkeit.",
-							"ok": false
-						},
-						{
-							"answer": "Kinder gern eine Süßigkeit essen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Leckerei",
 					"summary": "besondere Leckerei",
 					"explain": {
@@ -406,13 +298,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Leckerei",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Leckerbissen"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine besondere Leckerei zum Genießen",
+										"definition": "die Leckerei: etwas Besonderes zum Genießen",
 										"examples": [
 											"Zum Kaffee gab es eine kleine Leckerei."
 										]
@@ -440,9 +330,115 @@
 				},
 				{
 					"title": "",
+					"page": 7,
+					"question": "knabbern",
+					"summary": "in kleinen Bissen essen",
+					"explain": {
+						"entryId": "knabbern",
+						"headword": "knabbern",
+						"pronunciation": {
+							"display": "KNAB-buhn",
+							"ipaUK": "/ˈknabɐn/",
+							"ipaUS": "/ˈknabɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "knabbern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "knabbern: in kleinen Bissen essen",
+										"examples": [
+											"Vor dem Fernseher knabbern wir Nüsse."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor dem Fernseher knabbern wir Nüsse.",
+							"ok": true
+						},
+						{
+							"answer": "Vor dem Fernseher knabbert wir Nüsse.",
+							"ok": false
+						},
+						{
+							"answer": "Vor dem Fernseher wir knabbern Nüsse.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Vegetarier",
+					"summary": "isst kein Fleisch",
+					"explain": {
+						"entryId": "Vegetarier",
+						"headword": "Vegetarier",
+						"pronunciation": {
+							"display": "ve-ge-TAH-ri-uh",
+							"ipaUK": "/veɡeˈtaːʁi̯ɐ/",
+							"ipaUS": "/veɡeˈtaːʁi̯ɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vegetarier",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Vegetarier: eine Person, die kein Fleisch isst",
+										"examples": [
+											"Als Vegetarier isst er kein Fleisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Als Vegetarier isst er kein Fleisch.",
+							"ok": true
+						},
+						{
+							"answer": "Als Vegetarier isst er keinen Fleisch.",
+							"ok": false
+						},
+						{
+							"answer": "Als Vegetarier er isst kein Fleisch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
 					"page": 9,
 					"question": "vegan",
-					"summary": "Adjektiv: ohne Tierprodukte",
+					"summary": "ohne Tierprodukte",
 					"explain": {
 						"entryId": "vegan",
 						"headword": "vegan",
@@ -465,7 +461,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ohne Produkte von Tieren",
+										"definition": "vegan: ohne Produkte von Tieren",
 										"examples": [
 											"Sie kocht immer vegan."
 										]
@@ -494,15 +490,15 @@
 				{
 					"title": "",
 					"page": 10,
-					"question": "vegetarisch",
-					"summary": "Adjektiv: ohne Fleisch und Fisch",
+					"question": "fleischlos",
+					"summary": "ohne Fleisch",
 					"explain": {
-						"entryId": "vegetarisch",
-						"headword": "vegetarisch",
+						"entryId": "fleischlos",
+						"headword": "fleischlos",
 						"pronunciation": {
-							"display": "ve-ge-TAH-rish",
-							"ipaUK": "/veɡeˈtaːʁɪʃ/",
-							"ipaUS": "/veɡeˈtaːʁɪʃ/"
+							"display": "FLYSH-lohs",
+							"ipaUK": "/ˈflaɪ̯ʃloːs/",
+							"ipaUS": "/ˈflaɪ̯ʃloːs/"
 						},
 						"labels": [
 							"B1"
@@ -512,15 +508,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Adjektiv",
 								"grammarType": "Adjektiv",
-								"headwordLine": "vegetarisch",
+								"headwordLine": "fleischlos",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ohne Fleisch und Fisch",
+										"definition": "fleischlos: ohne Fleisch",
 										"examples": [
-											"Im Restaurant gibt es viele vegetarische Gerichte."
+											"Wir kochen heute ein fleischloses Gericht."
 										]
 									}
 								]
@@ -531,15 +527,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Im Restaurant gibt es viele vegetarische Gerichte.",
+							"answer": "Wir kochen heute ein fleischloses Gericht.",
 							"ok": true
 						},
 						{
-							"answer": "Im Restaurant gibt es viele vegetarischen Gerichte.",
+							"answer": "Wir kochen heute ein fleischlosen Gericht.",
 							"ok": false
 						},
 						{
-							"answer": "Im Restaurant es gibt viele vegetarische Gerichte.",
+							"answer": "Wir kochen heute fleischloses ein Gericht.",
 							"ok": false
 						}
 					]

@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizTechnology1-de",
-	"title": "1. Technology",
+	"title": "Technology",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,169 +13,6 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "URL",
-					"summary": "Adresse einer Webseite",
-					"explain": {
-						"entryId": "URL",
-						"headword": "URL",
-						"pronunciation": {
-							"display": "OO-er-el",
-							"ipaUK": "/uː ɛʁ ɛl/",
-							"ipaUS": "/uː ɛʁ ɛl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "URL",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Webadresse"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Adresse einer Webseite im Internet",
-										"examples": [
-											"Die URL der Seite ist sehr lang."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die URL der Seite ist sehr lang.",
-							"ok": true
-						},
-						{
-							"answer": "Der URL der Seite ist sehr lang.",
-							"ok": false
-						},
-						{
-							"answer": "Die URL der Seite sehr lang ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "WLAN",
-					"summary": "drahtloses Internet",
-					"explain": {
-						"entryId": "WLAN",
-						"headword": "WLAN",
-						"pronunciation": {
-							"display": "VAY-lahn",
-							"ipaUK": "/ˈveːlaːn/",
-							"ipaUS": "/ˈveːlaːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "WLAN",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Wi-Fi"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das drahtlose Internet zu Hause",
-										"examples": [
-											"Das WLAN im Hotel ist kostenlos."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das WLAN im Hotel ist kostenlos.",
-							"ok": true
-						},
-						{
-							"answer": "Der WLAN im Hotel ist kostenlos.",
-							"ok": false
-						},
-						{
-							"answer": "Das WLAN im Hotel kostenlos ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "App",
-					"summary": "kleines Programm auf dem Smartphone",
-					"explain": {
-						"entryId": "App",
-						"headword": "App",
-						"pronunciation": {
-							"display": "ep",
-							"ipaUK": "/ɛp/",
-							"ipaUS": "/ɛp/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "App",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein kleines Programm auf dem Smartphone",
-										"examples": [
-											"Diese App hilft beim Deutschlernen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Diese App hilft beim Deutschlernen.",
-							"ok": true
-						},
-						{
-							"answer": "Dieser App hilft beim Deutschlernen.",
-							"ok": false
-						},
-						{
-							"answer": "Diese App beim Deutschlernen hilft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
 					"question": "Anwendung",
 					"summary": "Programm für eine Aufgabe",
 					"explain": {
@@ -196,13 +33,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Anwendung",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Programm"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Programm für eine bestimmte Aufgabe",
+										"definition": "die Anwendung: ein Programm für eine bestimmte Aufgabe",
 										"examples": [
 											"Die Anwendung stürzt leider oft ab."
 										]
@@ -230,16 +65,16 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "Anhang",
-					"summary": "Datei an einer E-Mail",
+					"page": 2,
+					"question": "App",
+					"summary": "kleines Programm auf dem Handy",
 					"explain": {
-						"entryId": "Anhang",
-						"headword": "Anhang",
+						"entryId": "App",
+						"headword": "App",
 						"pronunciation": {
-							"display": "AN-hang",
-							"ipaUK": "/ˈanˌhaŋ/",
-							"ipaUS": "/ˈanˌhaŋ/"
+							"display": "ep",
+							"ipaUK": "/ɛp/",
+							"ipaUS": "/ɛp/"
 						},
 						"labels": [
 							"B1"
@@ -249,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Anhang",
+								"headwordLine": "App",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Datei, die man an eine E-Mail hängt",
+										"definition": "die App: ein kleines Programm auf dem Smartphone",
 										"examples": [
-											"Ich sende dir das Foto im Anhang."
+											"Diese App hilft beim Deutschlernen."
 										]
 									}
 								]
@@ -268,22 +103,75 @@
 					},
 					"answers": [
 						{
-							"answer": "Ich sende dir das Foto im Anhang.",
+							"answer": "Diese App hilft beim Deutschlernen.",
 							"ok": true
 						},
 						{
-							"answer": "Ich sende dir das Foto in der Anhang.",
+							"answer": "Dieser App hilft beim Deutschlernen.",
 							"ok": false
 						},
 						{
-							"answer": "Ich dir das Foto im Anhang sende.",
+							"answer": "Diese App beim Deutschlernen hilft.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 6,
+					"page": 3,
+					"question": "Programm",
+					"summary": "Software für den Computer",
+					"explain": {
+						"entryId": "Programm",
+						"headword": "Programm",
+						"pronunciation": {
+							"display": "pro-GRAM",
+							"ipaUK": "/pʁoˈɡʁam/",
+							"ipaUS": "/pʁoˈɡʁam/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Programm",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Programm: eine Software für den Computer",
+										"examples": [
+											"Dieses Programm läuft nur auf neuen Geräten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Dieses Programm läuft nur auf neuen Geräten.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Programm läuft nur auf neuen Geräten.",
+							"ok": false
+						},
+						{
+							"answer": "Dieses Programm nur auf neuen Geräten läuft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
 					"question": "Browser",
 					"summary": "Programm zum Surfen",
 					"explain": {
@@ -308,7 +196,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Programm zum Surfen im Internet",
+										"definition": "der Browser: ein Programm zum Surfen im Internet",
 										"examples": [
 											"Der Browser öffnet die Seite sofort."
 										]
@@ -336,16 +224,16 @@
 				},
 				{
 					"title": "",
-					"page": 7,
-					"question": "Verbindung",
-					"summary": "Verbindung zum Internet/Netzwerk",
+					"page": 5,
+					"question": "Suchmaschine",
+					"summary": "Dienst zum Suchen im Internet",
 					"explain": {
-						"entryId": "Verbindung",
-						"headword": "Verbindung",
+						"entryId": "Suchmaschine",
+						"headword": "Suchmaschine",
 						"pronunciation": {
-							"display": "fer-BIN-doong",
-							"ipaUK": "/fɛɐ̯ˈbɪndʊŋ/",
-							"ipaUS": "/fɛɐ̯ˈbɪndʊŋ/"
+							"display": "ZOOKH-ma-shee-nuh",
+							"ipaUK": "/ˈzuːxmaˌʃiːnə/",
+							"ipaUS": "/ˈzuːxmaˌʃiːnə/"
 						},
 						"labels": [
 							"B1"
@@ -355,15 +243,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Verbindung",
+								"headwordLine": "Suchmaschine",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Verbindung zum Internet oder Netzwerk",
+										"definition": "die Suchmaschine: ein Dienst zum Suchen im Internet",
 										"examples": [
-											"Die Verbindung zum Internet ist langsam."
+											"Die Suchmaschine findet Tausende Ergebnisse."
 										]
 									}
 								]
@@ -374,22 +262,75 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Verbindung zum Internet ist langsam.",
+							"answer": "Die Suchmaschine findet Tausende Ergebnisse.",
 							"ok": true
 						},
 						{
-							"answer": "Der Verbindung zum Internet ist langsam.",
+							"answer": "Der Suchmaschine findet Tausende Ergebnisse.",
 							"ok": false
 						},
 						{
-							"answer": "Die Verbindung zum Internet langsam ist.",
+							"answer": "Die Suchmaschine Tausende Ergebnisse findet.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 8,
+					"page": 6,
+					"question": "Registerkarte",
+					"summary": "Reiter im Browser",
+					"explain": {
+						"entryId": "Registerkarte",
+						"headword": "Registerkarte",
+						"pronunciation": {
+							"display": "re-GIS-tuh-kar-tuh",
+							"ipaUK": "/ʁeˈɡɪstɐˌkaʁtə/",
+							"ipaUS": "/ʁeˈɡɪstɐˌkaʁtə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Registerkarte",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Registerkarte: ein Reiter im Browser für eine Seite",
+										"examples": [
+											"Ich öffne den Link in einer neuen Registerkarte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich öffne den Link in einer neuen Registerkarte.",
+							"ok": true
+						},
+						{
+							"answer": "Ich öffne den Link in einem neuen Registerkarte.",
+							"ok": false
+						},
+						{
+							"answer": "Ich den Link in einer neuen Registerkarte öffne.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
 					"question": "Gerät",
 					"summary": "technischer Apparat",
 					"explain": {
@@ -414,7 +355,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein technischer Apparat wie Handy oder Laptop",
+										"definition": "das Gerät: ein technischer Apparat wie Handy oder Laptop",
 										"examples": [
 											"Dieses Gerät verbraucht wenig Strom."
 										]
@@ -442,9 +383,115 @@
 				},
 				{
 					"title": "",
+					"page": 8,
+					"question": "Gadget",
+					"summary": "kleines technisches Gerät",
+					"explain": {
+						"entryId": "Gadget",
+						"headword": "Gadget",
+						"pronunciation": {
+							"display": "GED-zhet",
+							"ipaUK": "/ˈɡɛdʒɛt/",
+							"ipaUS": "/ˈɡɛdʒɛt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gadget",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Gadget: ein kleines, praktisches technisches Gerät",
+										"examples": [
+											"Er kauft sich jedes neue Gadget."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er kauft sich jedes neue Gadget.",
+							"ok": true
+						},
+						{
+							"answer": "Er kauft sich jeder neue Gadget.",
+							"ok": false
+						},
+						{
+							"answer": "Er sich jedes neue Gadget kauft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
 					"page": 9,
+					"question": "Smartphone",
+					"summary": "modernes Handy mit Internet",
+					"explain": {
+						"entryId": "Smartphone",
+						"headword": "Smartphone",
+						"pronunciation": {
+							"display": "SMART-fohn",
+							"ipaUK": "/ˈsmaːʁtfoːn/",
+							"ipaUS": "/ˈsmaːʁtfoːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Smartphone",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Smartphone: ein modernes Handy mit Internet",
+										"examples": [
+											"Mein Smartphone hat einen leeren Akku."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Smartphone hat einen leeren Akku.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Smartphone hat einen leeren Akku.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Smartphone einen leeren Akku hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
 					"question": "digital",
-					"summary": "Adjektiv: elektronisch, nicht analog",
+					"summary": "elektronisch, nicht analog",
 					"explain": {
 						"entryId": "digital",
 						"headword": "digital",
@@ -467,7 +514,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "in elektronischer Form; nicht analog",
+										"definition": "digital: in elektronischer Form; nicht analog",
 										"examples": [
 											"Heute ist fast alles digital."
 										]
@@ -489,59 +536,6 @@
 						},
 						{
 							"answer": "Heute fast alles ist digital.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Dokument",
-					"summary": "Datei mit Text",
-					"explain": {
-						"entryId": "Dokument",
-						"headword": "Dokument",
-						"pronunciation": {
-							"display": "do-koo-MENT",
-							"ipaUK": "/dokuˈmɛnt/",
-							"ipaUS": "/dokuˈmɛnt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Dokument",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Datei mit Text am Computer",
-										"examples": [
-											"Ich speichere das Dokument auf dem Computer."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich speichere das Dokument auf dem Computer.",
-							"ok": true
-						},
-						{
-							"answer": "Ich speichere den Dokument auf dem Computer.",
-							"ok": false
-						},
-						{
-							"answer": "Ich das Dokument auf dem Computer speichere.",
 							"ok": false
 						}
 					]

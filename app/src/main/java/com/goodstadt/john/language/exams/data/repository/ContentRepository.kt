@@ -1,26 +1,22 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
+import com.goodstadt.john.language.exams.config.LanguageConfig.mapLogicalToResourceName
+import com.goodstadt.john.language.exams.config.LanguageConfig.normalizeToLogicalName
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.currentGoogleVoiceName
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSFailureCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSSuccessCount
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
-import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format3File
+import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
+import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
-import com.google.firebase.crashlytics.BuildConfig
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -30,7 +26,6 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import timber.log.Timber
@@ -942,47 +937,6 @@ class ContentRepository @Inject constructor(
         )
     }
     // --- HELPER FUNCTIONS ---
-    /**
-     * ✅ ADDED: This is the "Anti-Corruption Layer".
-     * It ensures that any legacy resource names are immediately converted to the
-     * canonical logical name used throughout the new system.
-     */
-    private fun normalizeToLogicalName(resourceName: String): String {
-        return when (resourceName) {
-            "vocab_data_a1" -> "EnglishA1Vocab"
-            "vocab_data_a2" -> "EnglishA2Vocab"
-            "vocab_data_b1" -> "EnglishB1Vocab"
-            "vocab_data_b2" -> "EnglishB2Vocab"
-            "conjugations_to_be" -> "EnglishConjugationsToBe"
-            "conjugations_to_have" -> "EnglishConjugationsToHave"
-            "conjugations_to_do" -> "EnglishConjugationsToDo"
-            "conjugations_to_get" -> "EnglishConjugationsToGet"
-            "prepositions_en" -> "EnglishPrepositions"
 
-
-            // Add any other legacy mappings here
-
-            // If the name is already in the correct format, just return it.
-            else -> resourceName
-        }
-    }
-    /**
-     * Maps the logical Firestore name to the Android-specific resource name.
-     */
-    private fun mapLogicalToResourceName(sheet_name: String): String {
-        return when (sheet_name) {
-            "EnglishA1Vocab" -> "vocab_data_a1"
-            "EnglishA2Vocab" -> "vocab_data_a2"
-            "EnglishB1Vocab" -> "vocab_data_b1"
-            "EnglishB2Vocab" -> "vocab_data_b2"
-            "EnglishConjugationsToBe" -> "conjugations_to_be"
-            "EnglishConjugationsToHave" -> "conjugations_to_have"
-            "EnglishConjugationsToDo" -> "conjugations_to_do"
-            "EnglishConjugationsToGet" -> "conjugations_to_get"
-            "EnglishPrepositions" -> "prepositions_en"
-            // Add other mappings here as needed
-            else -> sheet_name // Fallback for other files
-        }
-    }
 
 }

@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizPersonal3-de",
-	"title": "3. Personal",
+	"title": "Personal",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "unterschreiben",
-					"summary": "seinen Namen unter etwas schreiben",
+					"question": "Meinungsumfrage",
+					"summary": "kurze Meinungsbefragung",
 					"explain": {
-						"entryId": "unterschreiben",
-						"headword": "unterschreiben",
+						"entryId": "Meinungsumfrage",
+						"headword": "Meinungsumfrage",
 						"pronunciation": {
-							"display": "oon-tuh-SHRY-bn",
-							"ipaUK": "/ʊntɐˈʃʁaɪ̯bn̩/",
-							"ipaUS": "/ʊntɐˈʃʁaɪ̯bn̩/"
+							"display": "MY-noongs-oom-frah-guh",
+							"ipaUK": "/ˈmaɪ̯nʊŋsˌʔʊmfʁaːɡə/",
+							"ipaUS": "/ˈmaɪ̯nʊŋsˌʔʊmfʁaːɡə/"
 						},
 						"labels": [
 							"B1"
@@ -29,17 +29,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "unterschreiben",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Meinungsumfrage",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "seinen Namen unter etwas schreiben",
+										"definition": "die Meinungsumfrage: eine kurze Befragung zur Meinung vieler Menschen",
 										"examples": [
-											"Bitte unterschreiben Sie hier unten."
+											"Die Meinungsumfrage sieht die Partei vorn."
 										]
 									}
 								]
@@ -50,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Bitte unterschreiben Sie hier unten.",
+							"answer": "Die Meinungsumfrage sieht die Partei vorn.",
 							"ok": true
 						},
 						{
-							"answer": "Bitte unterschreibt Sie hier unten.",
+							"answer": "Der Meinungsumfrage sieht die Partei vorn.",
 							"ok": false
 						},
 						{
-							"answer": "Bitte Sie unterschreiben hier unten.",
+							"answer": "Die Meinungsumfrage die Partei vorn sieht.",
 							"ok": false
 						}
 					]
@@ -66,116 +66,8 @@
 				{
 					"title": "",
 					"page": 2,
-					"question": "Unterschrift",
-					"summary": "der selbst geschriebene Name",
-					"explain": {
-						"entryId": "Unterschrift",
-						"headword": "Unterschrift",
-						"pronunciation": {
-							"display": "OON-tuh-shrift",
-							"ipaUK": "/ˈʊntɐˌʃʁɪft/",
-							"ipaUS": "/ˈʊntɐˌʃʁɪft/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Unterschrift",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der eigene Name, den man selbst schreibt",
-										"examples": [
-											"Auf dem Vertrag fehlt noch Ihre Unterschrift."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Auf dem Vertrag fehlt noch Ihre Unterschrift.",
-							"ok": true
-						},
-						{
-							"answer": "Auf dem Vertrag fehlt noch Ihr Unterschrift.",
-							"ok": false
-						},
-						{
-							"answer": "Auf dem Vertrag noch Ihre Unterschrift fehlt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Erhebung",
-					"summary": "systematische Sammlung von Daten",
-					"explain": {
-						"entryId": "Erhebung",
-						"headword": "Erhebung",
-						"pronunciation": {
-							"display": "er-HAY-boong",
-							"ipaUK": "/ɛɐ̯ˈheːbʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈheːbʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Erhebung",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Studie"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine systematische Sammlung von Daten",
-										"examples": [
-											"Die Erhebung der Daten dauerte drei Monate."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Erhebung der Daten dauerte drei Monate.",
-							"ok": true
-						},
-						{
-							"answer": "Der Erhebung der Daten dauerte drei Monate.",
-							"ok": false
-						},
-						{
-							"answer": "Die Erhebung der Daten drei Monate dauerte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
 					"question": "Titel",
-					"summary": "Name eines Buches/Films/Amtes",
+					"summary": "Wort für Beruf/Rang",
 					"explain": {
 						"entryId": "Titel",
 						"headword": "Titel",
@@ -198,9 +90,9 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "der Name eines Buches, Films oder Amtes",
+										"definition": "der Titel: ein Wort für den Beruf oder Rang einer Person",
 										"examples": [
-											"Der Titel des Buches gefällt mir."
+											"Sein offizieller Titel ist Direktor."
 										]
 									}
 								]
@@ -211,15 +103,121 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Titel des Buches gefällt mir.",
+							"answer": "Sein offizieller Titel ist Direktor.",
 							"ok": true
 						},
 						{
-							"answer": "Die Titel des Buches gefällt mir.",
+							"answer": "Seine offizielle Titel ist Direktor.",
 							"ok": false
 						},
 						{
-							"answer": "Der Titel des Buches mir gefällt.",
+							"answer": "Sein offizieller Titel Direktor ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Position",
+					"summary": "Stelle in einer Firma",
+					"explain": {
+						"entryId": "Position",
+						"headword": "Position",
+						"pronunciation": {
+							"display": "po-zi-TSYOHN",
+							"ipaUK": "/poziˈtsi̯oːn/",
+							"ipaUS": "/poziˈtsi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Position",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Position: eine bestimmte Stelle in einer Firma",
+										"examples": [
+											"Sie hat eine hohe Position in der Firma."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat eine hohe Position in der Firma.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat einen hohen Position in der Firma.",
+							"ok": false
+						},
+						{
+							"answer": "Sie eine hohe Position in der Firma hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Rang",
+					"summary": "Stufe in einer Organisation",
+					"explain": {
+						"entryId": "Rang",
+						"headword": "Rang",
+						"pronunciation": {
+							"display": "rang",
+							"ipaUK": "/ʁaŋ/",
+							"ipaUS": "/ʁaŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rang",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Rang: die Stufe, die jemand in einer Organisation hat",
+										"examples": [
+											"Er erreichte einen hohen Rang beim Militär."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er erreichte einen hohen Rang beim Militär.",
+							"ok": true
+						},
+						{
+							"answer": "Er erreichte ein hohes Rang beim Militär.",
+							"ok": false
+						},
+						{
+							"answer": "Er einen hohen Rang beim Militär erreichte.",
 							"ok": false
 						}
 					]

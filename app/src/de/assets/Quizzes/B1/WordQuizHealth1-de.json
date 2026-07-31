@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizHealth1-de",
-	"title": "1. Health",
+	"title": "Health",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -37,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Überreaktion des Körpers auf einen Stoff",
+										"definition": "die Allergie: eine Überreaktion des Körpers auf einen Stoff",
 										"examples": [
 											"Er hat eine starke Allergie gegen Pollen."
 										]
@@ -66,6 +66,112 @@
 				{
 					"title": "",
 					"page": 2,
+					"question": "Reaktion",
+					"summary": "Antwort des Körpers auf etwas",
+					"explain": {
+						"entryId": "Reaktion",
+						"headword": "Reaktion",
+						"pronunciation": {
+							"display": "re-ak-TSYOHN",
+							"ipaUK": "/ʁeakˈtsi̯oːn/",
+							"ipaUS": "/ʁeakˈtsi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reaktion",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Reaktion: eine Veränderung im Körper nach Kontakt mit etwas",
+										"examples": [
+											"Seine Reaktion auf das Mittel war stark."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Seine Reaktion auf das Mittel war stark.",
+							"ok": true
+						},
+						{
+							"answer": "Seinen Reaktion auf das Mittel war stark.",
+							"ok": false
+						},
+						{
+							"answer": "Seine Reaktion auf das Mittel stark war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Symptome",
+					"summary": "Zeichen einer Krankheit (Plural)",
+					"explain": {
+						"entryId": "Symptome",
+						"headword": "Symptome",
+						"pronunciation": {
+							"display": "zümp-TOH-muh",
+							"ipaUK": "/zʏmpˈtoːmə/",
+							"ipaUS": "/zʏmpˈtoːmə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "Symptome",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Symptome: die körperlichen Zeichen einer Krankheit (Plural)",
+										"examples": [
+											"Die Symptome verschwinden nach zwei Tagen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Symptome verschwinden nach zwei Tagen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Symptom verschwinden nach zwei Tagen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Symptome nach zwei Tagen verschwinden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
 					"question": "Termin",
 					"summary": "feste Verabredung (z. B. beim Arzt)",
 					"explain": {
@@ -90,7 +196,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine feste Verabredung, z. B. beim Arzt",
+										"definition": "der Termin: eine feste Verabredung zu einer bestimmten Zeit",
 										"examples": [
 											"Ich habe morgen einen Termin beim Arzt."
 										]
@@ -118,113 +224,60 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "ausgewogen",
-					"summary": "Adjektiv: im Gleichgewicht",
-					"explain": {
-						"entryId": "ausgewogen",
-						"headword": "ausgewogen",
-						"pronunciation": {
-							"display": "OWS-guh-voh-gn",
-							"ipaUK": "/ˈaʊ̯sɡəˌvoːɡn̩/",
-							"ipaUS": "/ˈaʊ̯sɡəˌvoːɡn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "ausgewogen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "im richtigen Gleichgewicht (z. B. Ernährung)",
-										"examples": [
-											"Eine ausgewogene Ernährung ist wichtig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Eine ausgewogene Ernährung ist wichtig.",
-							"ok": true
-						},
-						{
-							"answer": "Eine ausgewogenen Ernährung ist wichtig.",
-							"ok": false
-						},
-						{
-							"answer": "Eine ausgewogene Ernährung wichtig ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Untersuchung",
-					"summary": "ärztliche Kontrolle",
-					"explain": {
-						"entryId": "Untersuchung",
-						"headword": "Untersuchung",
-						"pronunciation": {
-							"display": "oon-tuh-ZOO-khoong",
-							"ipaUK": "/ʊntɐˈzuːxʊŋ/",
-							"ipaUS": "/ʊntɐˈzuːxʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Untersuchung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine ärztliche Kontrolle der Gesundheit",
-										"examples": [
-											"Beim Arzt gab es eine gründliche Untersuchung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Beim Arzt gab es eine gründliche Untersuchung.",
-							"ok": true
-						},
-						{
-							"answer": "Beim Arzt gab es einen gründlichen Untersuchung.",
-							"ok": false
-						},
-						{
-							"answer": "Beim Arzt es gab eine gründliche Untersuchung.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 5,
+					"question": "vereinbaren",
+					"summary": "eine Zeit festlegen",
+					"explain": {
+						"entryId": "vereinbaren",
+						"headword": "vereinbaren",
+						"pronunciation": {
+							"display": "fer-INE-bah-run",
+							"ipaUK": "/fɛɐ̯ˈʔaɪ̯nˌbaːʁən/",
+							"ipaUS": "/fɛɐ̯ˈʔaɪ̯nˌbaːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "vereinbaren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "vereinbaren: eine Zeit für etwas festlegen",
+										"examples": [
+											"Wir vereinbaren einen Termin für nächste Woche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir vereinbaren einen Termin für nächste Woche.",
+							"ok": true
+						},
+						{
+							"answer": "Wir vereinbart einen Termin für nächste Woche.",
+							"ok": false
+						},
+						{
+							"answer": "Wir einen Termin für nächste Woche vereinbaren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
 					"question": "Beratung",
 					"summary": "Gespräch, in dem man Rat bekommt",
 					"explain": {
@@ -249,9 +302,9 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Gespräch, in dem man Rat bekommt",
+										"definition": "die Beratung: ein Gespräch mit einem Fachmann, um Rat zu bekommen",
 										"examples": [
-											"Die Beratung in der Apotheke war sehr hilfreich."
+											"Die Beratung beim Arzt war sehr hilfreich."
 										]
 									}
 								]
@@ -262,68 +315,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Beratung in der Apotheke war sehr hilfreich.",
+							"answer": "Die Beratung beim Arzt war sehr hilfreich.",
 							"ok": true
 						},
 						{
-							"answer": "Der Beratung in der Apotheke war sehr hilfreich.",
+							"answer": "Der Beratung beim Arzt war sehr hilfreich.",
 							"ok": false
 						},
 						{
-							"answer": "Die Beratung in der Apotheke sehr hilfreich war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Versicherungsschutz",
-					"summary": "Schutz durch eine Versicherung",
-					"explain": {
-						"entryId": "Versicherungsschutz",
-						"headword": "Versicherungsschutz",
-						"pronunciation": {
-							"display": "fer-ZIKH-uh-roongs-shoots",
-							"ipaUK": "/fɛɐ̯ˈzɪçəʁʊŋsˌʃʊts/",
-							"ipaUS": "/fɛɐ̯ˈzɪçəʁʊŋsˌʃʊts/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Versicherungsschutz",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Schutz durch eine Versicherung",
-										"examples": [
-											"Der Versicherungsschutz gilt auch im Ausland."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Versicherungsschutz gilt auch im Ausland.",
-							"ok": true
-						},
-						{
-							"answer": "Die Versicherungsschutz gilt auch im Ausland.",
-							"ok": false
-						},
-						{
-							"answer": "Der Versicherungsschutz auch im Ausland gilt.",
+							"answer": "Die Beratung beim Arzt sehr hilfreich war.",
 							"ok": false
 						}
 					]
@@ -331,59 +331,6 @@
 				{
 					"title": "",
 					"page": 7,
-					"question": "Heilung",
-					"summary": "das Gesundwerden",
-					"explain": {
-						"entryId": "Heilung",
-						"headword": "Heilung",
-						"pronunciation": {
-							"display": "HY-loong",
-							"ipaUK": "/ˈhaɪ̯lʊŋ/",
-							"ipaUS": "/ˈhaɪ̯lʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Heilung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Gesundwerden von einer Krankheit",
-										"examples": [
-											"Die Heilung dauert einige Wochen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Heilung dauert einige Wochen.",
-							"ok": true
-						},
-						{
-							"answer": "Der Heilung dauert einige Wochen.",
-							"ok": false
-						},
-						{
-							"answer": "Die Heilung einige Wochen dauert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Ernährung",
 					"summary": "die Art, wie man sich ernährt",
 					"explain": {
@@ -408,7 +355,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Art, wie man sich ernährt",
+										"definition": "die Ernährung: das Essen und Trinken, das man normalerweise zu sich nimmt",
 										"examples": [
 											"Eine gesunde Ernährung hält fit."
 										]
@@ -436,16 +383,16 @@
 				},
 				{
 					"title": "",
-					"page": 9,
-					"question": "Dosis",
-					"summary": "Menge eines Medikaments",
+					"page": 8,
+					"question": "Nahrung",
+					"summary": "das Essen als Nährstoff",
 					"explain": {
-						"entryId": "Dosis",
-						"headword": "Dosis",
+						"entryId": "Nahrung",
+						"headword": "Nahrung",
 						"pronunciation": {
-							"display": "DOH-zis",
-							"ipaUK": "/ˈdoːzɪs/",
-							"ipaUS": "/ˈdoːzɪs/"
+							"display": "NAH-roong",
+							"ipaUK": "/ˈnaːʁʊŋ/",
+							"ipaUS": "/ˈnaːʁʊŋ/"
 						},
 						"labels": [
 							"B1"
@@ -455,15 +402,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Dosis",
+								"headwordLine": "Nahrung",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Menge eines Medikaments, die man nimmt",
+										"definition": "die Nahrung: alles, was der Körper zum Leben braucht",
 										"examples": [
-											"Der Arzt empfiehlt eine kleine Dosis."
+											"Der Körper braucht gesunde Nahrung."
 										]
 									}
 								]
@@ -474,15 +421,68 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Arzt empfiehlt eine kleine Dosis.",
+							"answer": "Der Körper braucht gesunde Nahrung.",
 							"ok": true
 						},
 						{
-							"answer": "Der Arzt empfiehlt einen kleinen Dosis.",
+							"answer": "Der Körper braucht gesunden Nahrung.",
 							"ok": false
 						},
 						{
-							"answer": "Der Arzt eine kleine Dosis empfiehlt.",
+							"answer": "Der Körper gesunde Nahrung braucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "ausgewogen",
+					"summary": "im Gleichgewicht",
+					"explain": {
+						"entryId": "ausgewogen",
+						"headword": "ausgewogen",
+						"pronunciation": {
+							"display": "OWS-guh-voh-gn",
+							"ipaUK": "/ˈaʊ̯sɡəˌvoːɡn̩/",
+							"ipaUS": "/ˈaʊ̯sɡəˌvoːɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "ausgewogen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ausgewogen: im richtigen Gleichgewicht (z. B. Ernährung)",
+										"examples": [
+											"Eine ausgewogene Ernährung ist wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine ausgewogene Ernährung ist wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Eine ausgewogenen Ernährung ist wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Eine ausgewogene Ernährung wichtig ist.",
 							"ok": false
 						}
 					]
@@ -514,7 +514,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine plötzliche, gefährliche Situation",
+										"definition": "der Notfall: eine plötzliche, gefährliche Situation",
 										"examples": [
 											"Im Notfall ruft man die 112."
 										]

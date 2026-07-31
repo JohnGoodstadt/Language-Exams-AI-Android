@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizShopping1-de",
-	"title": "1. Shopping",
+	"title": "Shopping",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,61 +13,6 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "erwerben",
-					"summary": "kaufen/bekommen",
-					"explain": {
-						"entryId": "erwerben",
-						"headword": "erwerben",
-						"pronunciation": {
-							"display": "er-VER-bn",
-							"ipaUK": "/ɛɐ̯ˈvɛʁbn̩/",
-							"ipaUS": "/ɛɐ̯ˈvɛʁbn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "erwerben",
-								"inflectionsLine": null,
-								"synonyms": [
-									"kaufen"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas kaufen oder bekommen",
-										"examples": [
-											"Er möchte ein neues Grundstück erwerben."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er möchte ein neues Grundstück erwerben.",
-							"ok": true
-						},
-						{
-							"answer": "Er möchte ein neues Grundstück erwirbt.",
-							"ok": false
-						},
-						{
-							"answer": "Er ein neues Grundstück erwerben möchte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
 					"question": "Schnäppchen",
 					"summary": "günstige Ware; guter Kauf",
 					"explain": {
@@ -92,7 +37,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine günstige Ware; ein guter Kauf",
+										"definition": "das Schnäppchen: eine günstige Ware; ein guter Kauf",
 										"examples": [
 											"Im Ausverkauf machte ich ein echtes Schnäppchen."
 										]
@@ -120,16 +65,16 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "Rechnung",
-					"summary": "Papier über den zu zahlenden Betrag",
+					"page": 2,
+					"question": "Rabatt",
+					"summary": "Preisnachlass",
 					"explain": {
-						"entryId": "Rechnung",
-						"headword": "Rechnung",
+						"entryId": "Rabatt",
+						"headword": "Rabatt",
 						"pronunciation": {
-							"display": "REKH-noong",
-							"ipaUK": "/ˈʁɛçnʊŋ/",
-							"ipaUS": "/ˈʁɛçnʊŋ/"
+							"display": "ra-BAT",
+							"ipaUK": "/ʁaˈbat/",
+							"ipaUS": "/ʁaˈbat/"
 						},
 						"labels": [
 							"B1"
@@ -139,15 +84,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Rechnung",
+								"headwordLine": "Rabatt",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Papier, das zeigt, was man zahlen muss",
+										"definition": "der Rabatt: ein Preisnachlass; man zahlt weniger",
 										"examples": [
-											"Der Kellner bringt uns die Rechnung."
+											"Der Rabatt gilt nur heute."
 										]
 									}
 								]
@@ -158,31 +103,31 @@
 					},
 					"answers": [
 						{
-							"answer": "Der Kellner bringt uns die Rechnung.",
+							"answer": "Der Rabatt gilt nur heute.",
 							"ok": true
 						},
 						{
-							"answer": "Der Kellner bringt uns den Rechnung.",
+							"answer": "Das Rabatt gilt nur heute.",
 							"ok": false
 						},
 						{
-							"answer": "Der Kellner uns die Rechnung bringt.",
+							"answer": "Der Rabatt nur heute gilt.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 4,
-					"question": "kaufen",
-					"summary": "etwas für Geld bekommen",
+					"page": 3,
+					"question": "Angebot",
+					"summary": "Ware zu günstigem Preis",
 					"explain": {
-						"entryId": "kaufen",
-						"headword": "kaufen",
+						"entryId": "Angebot",
+						"headword": "Angebot",
 						"pronunciation": {
-							"display": "KOW-fn",
-							"ipaUK": "/ˈkaʊ̯fn̩/",
-							"ipaUS": "/ˈkaʊ̯fn̩/"
+							"display": "AN-guh-boht",
+							"ipaUK": "/ˈanɡəˌboːt/",
+							"ipaUS": "/ˈanɡəˌboːt/"
 						},
 						"labels": [
 							"B1"
@@ -190,17 +135,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "kaufen",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Angebot",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "etwas für Geld bekommen",
+										"definition": "das Angebot: eine Ware zu einem günstigen Preis",
 										"examples": [
-											"Ich möchte mir ein neues Fahrrad kaufen."
+											"Diese Woche gibt es ein tolles Angebot."
 										]
 									}
 								]
@@ -211,22 +156,22 @@
 					},
 					"answers": [
 						{
-							"answer": "Ich möchte mir ein neues Fahrrad kaufen.",
+							"answer": "Diese Woche gibt es ein tolles Angebot.",
 							"ok": true
 						},
 						{
-							"answer": "Ich möchte mir ein neues Fahrrad kauft.",
+							"answer": "Diese Woche gibt es einen tollen Angebot.",
 							"ok": false
 						},
 						{
-							"answer": "Ich mir ein neues Fahrrad kaufen möchte.",
+							"answer": "Diese Woche es gibt ein tolles Angebot.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 5,
+					"page": 4,
 					"question": "Kassierer",
 					"summary": "Person an der Kasse",
 					"explain": {
@@ -247,13 +192,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Kassierer",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Kassiererin"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Person an der Kasse",
+										"definition": "der Kassierer: die Person an der Kasse im Geschäft",
 										"examples": [
 											"Der Kassierer gibt mir das Wechselgeld."
 										]
@@ -275,6 +218,59 @@
 						},
 						{
 							"answer": "Der Kassierer mir das Wechselgeld gibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Verkäufer",
+					"summary": "verkauft im Geschäft",
+					"explain": {
+						"entryId": "Verkäufer",
+						"headword": "Verkäufer",
+						"pronunciation": {
+							"display": "fer-KOY-fuh",
+							"ipaUK": "/fɛɐ̯ˈkɔɪ̯fɐ/",
+							"ipaUS": "/fɛɐ̯ˈkɔɪ̯fɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verkäufer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Verkäufer: eine Person, die im Geschäft verkauft und berät",
+										"examples": [
+											"Der Verkäufer berät mich sehr freundlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Verkäufer berät mich sehr freundlich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Verkäufer berät mich sehr freundlich.",
+							"ok": false
+						},
+						{
+							"answer": "Der Verkäufer mich sehr freundlich berät.",
 							"ok": false
 						}
 					]
@@ -306,7 +302,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "der Ort im Geschäft, wo man bezahlt",
+										"definition": "die Kasse: der Ort im Geschäft, wo man bezahlt",
 										"examples": [
 											"An der Kasse bildet sich eine lange Schlange."
 										]
@@ -335,116 +331,8 @@
 				{
 					"title": "",
 					"page": 7,
-					"question": "Ausverkauf",
-					"summary": "Verkauf von Restwaren, billig",
-					"explain": {
-						"entryId": "Ausverkauf",
-						"headword": "Ausverkauf",
-						"pronunciation": {
-							"display": "OWS-fer-kowf",
-							"ipaUK": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/",
-							"ipaUS": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ausverkauf",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Verkauf von Restwaren zu niedrigen Preisen",
-										"examples": [
-											"Im Ausverkauf sind alle Jacken reduziert."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im Ausverkauf sind alle Jacken reduziert.",
-							"ok": true
-						},
-						{
-							"answer": "In der Ausverkauf sind alle Jacken reduziert.",
-							"ok": false
-						},
-						{
-							"answer": "Im Ausverkauf alle Jacken reduziert sind.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Verkäufer",
-					"summary": "verkauft im Geschäft",
-					"explain": {
-						"entryId": "Verkäufer",
-						"headword": "Verkäufer",
-						"pronunciation": {
-							"display": "fer-KOY-fuh",
-							"ipaUK": "/fɛɐ̯ˈkɔɪ̯fɐ/",
-							"ipaUS": "/fɛɐ̯ˈkɔɪ̯fɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Verkäufer",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Verkäuferin"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Person, die im Geschäft verkauft",
-										"examples": [
-											"Der Verkäufer berät mich sehr freundlich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Verkäufer berät mich sehr freundlich.",
-							"ok": true
-						},
-						{
-							"answer": "Die Verkäufer berät mich sehr freundlich.",
-							"ok": false
-						},
-						{
-							"answer": "Der Verkäufer mich sehr freundlich berät.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
 					"question": "Kunde",
-					"summary": "Person, die kauft/nutzt",
+					"summary": "Person, die etwas kauft",
 					"explain": {
 						"entryId": "Kunde",
 						"headword": "Kunde",
@@ -463,13 +351,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Kunde",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Kundin"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person, die etwas kauft oder nutzt",
+										"definition": "der Kunde: eine Person, die etwas kauft",
 										"examples": [
 											"Der Kunde beschwert sich über die Ware."
 										]
@@ -497,16 +383,16 @@
 				},
 				{
 					"title": "",
-					"page": 10,
-					"question": "Entschädigung",
-					"summary": "Geld als Ausgleich für Schaden",
+					"page": 8,
+					"question": "Klient",
+					"summary": "Kunde eines Dienstleisters",
 					"explain": {
-						"entryId": "Entschädigung",
-						"headword": "Entschädigung",
+						"entryId": "Klient",
+						"headword": "Klient",
 						"pronunciation": {
-							"display": "ent-SHAY-di-goong",
-							"ipaUK": "/ɛntˈʃɛːdɪɡʊŋ/",
-							"ipaUS": "/ɛntˈʃɛːdɪɡʊŋ/"
+							"display": "kli-ENT",
+							"ipaUK": "/kliˈɛnt/",
+							"ipaUS": "/kliˈɛnt/"
 						},
 						"labels": [
 							"B1"
@@ -516,15 +402,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Entschädigung",
+								"headwordLine": "Klient",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Geld als Ausgleich für einen Schaden",
+										"definition": "der Klient: eine Person, die einen Dienst nutzt (z. B. beim Anwalt)",
 										"examples": [
-											"Die Firma zahlt ihm eine Entschädigung."
+											"Der Anwalt trifft seinen Klienten um zehn."
 										]
 									}
 								]
@@ -535,15 +421,121 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Firma zahlt ihm eine Entschädigung.",
+							"answer": "Der Anwalt trifft seinen Klienten um zehn.",
 							"ok": true
 						},
 						{
-							"answer": "Die Firma zahlt ihm einen Entschädigung.",
+							"answer": "Der Anwalt trifft sein Klienten um zehn.",
 							"ok": false
 						},
 						{
-							"answer": "Die Firma ihm eine Entschädigung zahlt.",
+							"answer": "Der Anwalt seinen Klienten um zehn trifft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Käufer",
+					"summary": "Person, die etwas kauft",
+					"explain": {
+						"entryId": "Käufer",
+						"headword": "Käufer",
+						"pronunciation": {
+							"display": "KOY-fuh",
+							"ipaUK": "/ˈkɔɪ̯fɐ/",
+							"ipaUS": "/ˈkɔɪ̯fɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Käufer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Käufer: eine Person, die gerade etwas kauft",
+										"examples": [
+											"Der Käufer prüft die Ware genau."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Käufer prüft die Ware genau.",
+							"ok": true
+						},
+						{
+							"answer": "Die Käufer prüft die Ware genau.",
+							"ok": false
+						},
+						{
+							"answer": "Der Käufer die Ware genau prüft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Lieferung",
+					"summary": "Bringen einer bestellten Ware",
+					"explain": {
+						"entryId": "Lieferung",
+						"headword": "Lieferung",
+						"pronunciation": {
+							"display": "LEE-fuh-roong",
+							"ipaUK": "/ˈliːfəʁʊŋ/",
+							"ipaUS": "/ˈliːfəʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lieferung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Lieferung: das Bringen einer bestellten Ware",
+										"examples": [
+											"Die Lieferung kommt am Dienstag an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lieferung kommt am Dienstag an.",
+							"ok": true
+						},
+						{
+							"answer": "Der Lieferung kommt am Dienstag an.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lieferung am Dienstag ankommt.",
 							"ok": false
 						}
 					]

@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizEducation2-de",
-	"title": "2. Education",
+	"title": "Education",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,15 +13,15 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "Mitarbeiter",
-					"summary": "Person, die in einer Firma arbeitet",
+					"question": "Personal",
+					"summary": "alle Mitarbeiter zusammen",
 					"explain": {
-						"entryId": "Mitarbeiter",
-						"headword": "Mitarbeiter",
+						"entryId": "Personal",
+						"headword": "Personal",
 						"pronunciation": {
-							"display": "MIT-ar-by-tuh",
-							"ipaUK": "/ˈmɪtˌʔaʁbaɪ̯tɐ/",
-							"ipaUS": "/ˈmɪtˌʔaʁbaɪ̯tɐ/"
+							"display": "per-zo-NAHL",
+							"ipaUK": "/pɛʁzoˈnaːl/",
+							"ipaUS": "/pɛʁzoˈnaːl/"
 						},
 						"labels": [
 							"B1"
@@ -31,17 +31,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Mitarbeiter",
+								"headwordLine": "Personal",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Angestellter"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person, die in einer Firma arbeitet",
+										"definition": "das Personal: alle Mitarbeiter einer Firma zusammen",
 										"examples": [
-											"Die Firma sucht einen neuen Mitarbeiter."
+											"Das Personal im Hotel ist sehr freundlich."
 										]
 									}
 								]
@@ -52,15 +50,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Firma sucht einen neuen Mitarbeiter.",
+							"answer": "Das Personal im Hotel ist sehr freundlich.",
 							"ok": true
 						},
 						{
-							"answer": "Die Firma sucht ein neues Mitarbeiter.",
+							"answer": "Der Personal im Hotel ist sehr freundlich.",
 							"ok": false
 						},
 						{
-							"answer": "Die Firma einen neuen Mitarbeiter sucht.",
+							"answer": "Das Personal im Hotel sehr freundlich ist.",
 							"ok": false
 						}
 					]
@@ -68,8 +66,61 @@
 				{
 					"title": "",
 					"page": 2,
+					"question": "Arbeiter",
+					"summary": "arbeitet körperlich",
+					"explain": {
+						"entryId": "Arbeiter",
+						"headword": "Arbeiter",
+						"pronunciation": {
+							"display": "AR-by-tuh",
+							"ipaUK": "/ˈaʁbaɪ̯tɐ/",
+							"ipaUS": "/ˈaʁbaɪ̯tɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Arbeiter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Arbeiter: eine Person, die körperlich arbeitet",
+										"examples": [
+											"Der Arbeiter repariert die Maschine."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arbeiter repariert die Maschine.",
+							"ok": true
+						},
+						{
+							"answer": "Die Arbeiter repariert die Maschine.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arbeiter die Maschine repariert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
 					"question": "Arbeitgeber",
-					"summary": "beschäftigt andere Menschen",
+					"summary": "beschäftigt andere",
 					"explain": {
 						"entryId": "Arbeitgeber",
 						"headword": "Arbeitgeber",
@@ -92,7 +143,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person oder Firma, die andere beschäftigt",
+										"definition": "der Arbeitgeber: eine Person oder Firma, die andere beschäftigt",
 										"examples": [
 											"Mein Arbeitgeber zahlt ein gutes Gehalt."
 										]
@@ -120,69 +171,16 @@
 				},
 				{
 					"title": "",
-					"page": 3,
-					"question": "Erfahrung",
-					"summary": "Wissen aus der Praxis",
-					"explain": {
-						"entryId": "Erfahrung",
-						"headword": "Erfahrung",
-						"pronunciation": {
-							"display": "er-FAH-roong",
-							"ipaUK": "/ɛɐ̯ˈfaːʁʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈfaːʁʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Erfahrung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Wissen und Können aus der Praxis",
-										"examples": [
-											"Für die Stelle braucht man viel Erfahrung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Für die Stelle braucht man viel Erfahrung.",
-							"ok": true
-						},
-						{
-							"answer": "Für die Stelle braucht man viel Erfahrungen.",
-							"ok": false
-						},
-						{
-							"answer": "Für die Stelle man braucht viel Erfahrung.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 4,
-					"question": "Hausaufgabe",
-					"summary": "Aufgabe für zu Hause",
+					"question": "Chef",
+					"summary": "der Leiter im Betrieb",
 					"explain": {
-						"entryId": "Hausaufgabe",
-						"headword": "Hausaufgabe",
+						"entryId": "Chef",
+						"headword": "Chef",
 						"pronunciation": {
-							"display": "HOWS-owf-gah-buh",
-							"ipaUK": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/",
-							"ipaUS": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/"
+							"display": "shef",
+							"ipaUK": "/ʃɛf/",
+							"ipaUS": "/ʃɛf/"
 						},
 						"labels": [
 							"B1"
@@ -192,15 +190,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Hausaufgabe",
+								"headwordLine": "Chef",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Aufgaben für zu Hause (Schule)",
+										"definition": "der Chef: die Person, die im Betrieb das Sagen hat",
 										"examples": [
-											"Die Hausaufgabe für morgen ist sehr lang."
+											"Mein Chef ist heute nicht im Büro."
 										]
 									}
 								]
@@ -211,15 +209,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Hausaufgabe für morgen ist sehr lang.",
+							"answer": "Mein Chef ist heute nicht im Büro.",
 							"ok": true
 						},
 						{
-							"answer": "Der Hausaufgabe für morgen ist sehr lang.",
+							"answer": "Meine Chef ist heute nicht im Büro.",
 							"ok": false
 						},
 						{
-							"answer": "Die Hausaufgabe für morgen sehr lang ist.",
+							"answer": "Mein Chef heute nicht im Büro ist.",
 							"ok": false
 						}
 					]
@@ -227,169 +225,8 @@
 				{
 					"title": "",
 					"page": 5,
-					"question": "Praktikum",
-					"summary": "Beruf praktisch lernen",
-					"explain": {
-						"entryId": "Praktikum",
-						"headword": "Praktikum",
-						"pronunciation": {
-							"display": "PRAK-ti-koom",
-							"ipaUK": "/ˈpʁaktikʊm/",
-							"ipaUS": "/ˈpʁaktikʊm/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Praktikum",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Zeit, in der man einen Beruf praktisch lernt",
-										"examples": [
-											"Im Sommer mache ich ein Praktikum bei einer Bank."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im Sommer mache ich ein Praktikum bei einer Bank.",
-							"ok": true
-						},
-						{
-							"answer": "Im Sommer mache ich einen Praktikum bei einer Bank.",
-							"ok": false
-						},
-						{
-							"answer": "Im Sommer ich mache ein Praktikum bei einer Bank.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Vorlesung",
-					"summary": "Vortrag an der Universität",
-					"explain": {
-						"entryId": "Vorlesung",
-						"headword": "Vorlesung",
-						"pronunciation": {
-							"display": "FOR-lay-zoong",
-							"ipaUK": "/ˈfoːɐ̯ˌleːzʊŋ/",
-							"ipaUS": "/ˈfoːɐ̯ˌleːzʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vorlesung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Vortrag an der Universität",
-										"examples": [
-											"Die Vorlesung beginnt um neun Uhr."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Vorlesung beginnt um neun Uhr.",
-							"ok": true
-						},
-						{
-							"answer": "Der Vorlesung beginnt um neun Uhr.",
-							"ok": false
-						},
-						{
-							"answer": "Die Vorlesung um neun Uhr beginnt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Dozent",
-					"summary": "unterrichtet an der Uni",
-					"explain": {
-						"entryId": "Dozent",
-						"headword": "Dozent",
-						"pronunciation": {
-							"display": "do-TSENT",
-							"ipaUK": "/doˈtsɛnt/",
-							"ipaUS": "/doˈtsɛnt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Dozent",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Dozentin"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Person, die an der Uni unterrichtet",
-										"examples": [
-											"Der Dozent erklärt das Thema sehr klar."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Dozent erklärt das Thema sehr klar.",
-							"ok": true
-						},
-						{
-							"answer": "Die Dozent erklärt das Thema sehr klar.",
-							"ok": false
-						},
-						{
-							"answer": "Der Dozent das Thema sehr klar erklärt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
 					"question": "Manager",
-					"summary": "Führungskraft im Unternehmen",
+					"summary": "leitet ein Team/eine Abteilung",
 					"explain": {
 						"entryId": "Manager",
 						"headword": "Manager",
@@ -408,13 +245,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Manager",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Managerin"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Führungskraft in einem Unternehmen",
+										"definition": "der Manager: eine Führungskraft, die ein Team oder eine Abteilung leitet",
 										"examples": [
 											"Der Manager leitet ein großes Team."
 										]
@@ -442,16 +277,16 @@
 				},
 				{
 					"title": "",
-					"page": 9,
-					"question": "Tätigkeit",
-					"summary": "die ausgeübte Arbeit",
+					"page": 6,
+					"question": "Praktikum",
+					"summary": "Beruf praktisch lernen",
 					"explain": {
-						"entryId": "Tätigkeit",
-						"headword": "Tätigkeit",
+						"entryId": "Praktikum",
+						"headword": "Praktikum",
 						"pronunciation": {
-							"display": "TAY-tikh-kite",
-							"ipaUK": "/ˈtɛːtɪçkaɪ̯t/",
-							"ipaUS": "/ˈtɛːtɪçkaɪ̯t/"
+							"display": "PRAK-ti-koom",
+							"ipaUK": "/ˈpʁaktikʊm/",
+							"ipaUS": "/ˈpʁaktikʊm/"
 						},
 						"labels": [
 							"B1"
@@ -461,15 +296,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Tätigkeit",
+								"headwordLine": "Praktikum",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Arbeit, die man ausübt",
+										"definition": "das Praktikum: eine Zeit, in der man einen Beruf praktisch lernt",
 										"examples": [
-											"Diese Tätigkeit macht mir großen Spaß."
+											"Im Sommer mache ich ein Praktikum bei einer Bank."
 										]
 									}
 								]
@@ -480,15 +315,174 @@
 					},
 					"answers": [
 						{
-							"answer": "Diese Tätigkeit macht mir großen Spaß.",
+							"answer": "Im Sommer mache ich ein Praktikum bei einer Bank.",
 							"ok": true
 						},
 						{
-							"answer": "Dieser Tätigkeit macht mir großen Spaß.",
+							"answer": "Im Sommer mache ich einen Praktikum bei einer Bank.",
 							"ok": false
 						},
 						{
-							"answer": "Diese Tätigkeit mir großen Spaß macht.",
+							"answer": "Im Sommer ich mache ein Praktikum bei einer Bank.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Lehrling",
+					"summary": "Person in der Ausbildung",
+					"explain": {
+						"entryId": "Lehrling",
+						"headword": "Lehrling",
+						"pronunciation": {
+							"display": "LAYR-ling",
+							"ipaUK": "/ˈleːɐ̯lɪŋ/",
+							"ipaUS": "/ˈleːɐ̯lɪŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lehrling",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Lehrling: eine Person in der Berufsausbildung",
+										"examples": [
+											"Der Lehrling lernt den Beruf des Bäckers."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Lehrling lernt den Beruf des Bäckers.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lehrling lernt den Beruf des Bäckers.",
+							"ok": false
+						},
+						{
+							"answer": "Der Lehrling den Beruf des Bäckers lernt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Ausbildung",
+					"summary": "das Lernen eines Berufs",
+					"explain": {
+						"entryId": "Ausbildung",
+						"headword": "Ausbildung",
+						"pronunciation": {
+							"display": "OWS-bil-doong",
+							"ipaUK": "/ˈaʊ̯sˌbɪldʊŋ/",
+							"ipaUS": "/ˈaʊ̯sˌbɪldʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ausbildung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Ausbildung: das Lernen eines Berufs in Betrieb und Schule",
+										"examples": [
+											"Nach der Schule beginnt sie eine Ausbildung als Köchin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach der Schule beginnt sie eine Ausbildung als Köchin.",
+							"ok": true
+						},
+						{
+							"answer": "Nach der Schule beginnt sie einen Ausbildung als Köchin.",
+							"ok": false
+						},
+						{
+							"answer": "Nach der Schule sie beginnt eine Ausbildung als Köchin.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Dozent",
+					"summary": "unterrichtet an der Uni",
+					"explain": {
+						"entryId": "Dozent",
+						"headword": "Dozent",
+						"pronunciation": {
+							"display": "do-TSENT",
+							"ipaUK": "/doˈtsɛnt/",
+							"ipaUS": "/doˈtsɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dozent",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Dozent: eine Person, die an der Universität unterrichtet",
+										"examples": [
+											"Der Dozent erklärt das Thema sehr klar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Dozent erklärt das Thema sehr klar.",
+							"ok": true
+						},
+						{
+							"answer": "Die Dozent erklärt das Thema sehr klar.",
+							"ok": false
+						},
+						{
+							"answer": "Der Dozent das Thema sehr klar erklärt.",
 							"ok": false
 						}
 					]
@@ -496,15 +490,15 @@
 				{
 					"title": "",
 					"page": 10,
-					"question": "Beruf",
-					"summary": "die gelernte Arbeit",
+					"question": "Professor",
+					"summary": "höchster Uni-Lehrer",
 					"explain": {
-						"entryId": "Beruf",
-						"headword": "Beruf",
+						"entryId": "Professor",
+						"headword": "Professor",
 						"pronunciation": {
-							"display": "buh-ROOF",
-							"ipaUK": "/bəˈʁuːf/",
-							"ipaUS": "/bəˈʁuːf/"
+							"display": "pro-FES-sor",
+							"ipaUK": "/pʁoˈfɛsoːɐ̯/",
+							"ipaUS": "/pʁoˈfɛsoːɐ̯/"
 						},
 						"labels": [
 							"B1"
@@ -514,15 +508,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Beruf",
+								"headwordLine": "Professor",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die Arbeit, die man gelernt hat",
+										"definition": "der Professor: der höchste Lehrer an einer Universität",
 										"examples": [
-											"Sie übt einen interessanten Beruf aus."
+											"Der Professor hält heute einen Vortrag."
 										]
 									}
 								]
@@ -533,15 +527,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Sie übt einen interessanten Beruf aus.",
+							"answer": "Der Professor hält heute einen Vortrag.",
 							"ok": true
 						},
 						{
-							"answer": "Sie übt ein interessantes Beruf aus.",
+							"answer": "Die Professor hält heute einen Vortrag.",
 							"ok": false
 						},
 						{
-							"answer": "Sie einen interessanten Beruf ausübt.",
+							"answer": "Der Professor heute einen Vortrag hält.",
 							"ok": false
 						}
 					]

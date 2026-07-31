@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizComplexSentences1-de",
-	"title": "1. Complex Sentences",
+	"title": "ComplexSentences",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,114 +13,8 @@
 				{
 					"title": "",
 					"page": 1,
-					"question": "nachdem",
-					"summary": "Zeit: nachdem … (Verb am Ende)",
-					"explain": {
-						"entryId": "nachdem",
-						"headword": "nachdem",
-						"pronunciation": {
-							"display": "nakh-DAYM",
-							"ipaUK": "/naːxˈdeːm/",
-							"ipaUS": "/naːxˈdeːm/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion",
-								"grammarType": "Konjunktion",
-								"headwordLine": "nachdem",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Konjunktion (Zeit): erst A, dann B; Verb am Ende",
-										"examples": [
-											"Nachdem wir gegessen hatten, gingen wir ins Kino."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nachdem wir gegessen hatten, gingen wir ins Kino.",
-							"ok": true
-						},
-						{
-							"answer": "Nachdem wir hatten gegessen, gingen wir ins Kino.",
-							"ok": false
-						},
-						{
-							"answer": "Nachdem wir gegessen hatten, wir gingen ins Kino.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "obwohl",
-					"summary": "Gegensatz: obwohl … (Verb am Ende)",
-					"explain": {
-						"entryId": "obwohl",
-						"headword": "obwohl",
-						"pronunciation": {
-							"display": "op-VOHL",
-							"ipaUK": "/ɔpˈvoːl/",
-							"ipaUS": "/ɔpˈvoːl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion",
-								"grammarType": "Konjunktion",
-								"headwordLine": "obwohl",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Konjunktion (Gegensatz); Verb am Ende",
-										"examples": [
-											"Obwohl er krank war, ging er zur Arbeit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Obwohl er krank war, ging er zur Arbeit.",
-							"ok": true
-						},
-						{
-							"answer": "Obwohl er war krank, ging er zur Arbeit.",
-							"ok": false
-						},
-						{
-							"answer": "Obwohl er krank war, er ging zur Arbeit.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
 					"question": "weil",
-					"summary": "Grund: weil … (Verb am Ende)",
+					"summary": "Grund (Verb am Ende)",
 					"explain": {
 						"entryId": "weil",
 						"headword": "weil",
@@ -143,9 +37,9 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Konjunktion (Grund); Verb am Ende",
+										"definition": "weil: Konjunktion für einen Grund (Verb am Ende)",
 										"examples": [
-											"Sie freut sich, weil sie bestanden hat."
+											"Ich bleibe zu Hause, weil ich krank bin."
 										]
 									}
 								]
@@ -156,15 +50,121 @@
 					},
 					"answers": [
 						{
-							"answer": "Sie freut sich, weil sie bestanden hat.",
+							"answer": "Ich bleibe zu Hause, weil ich krank bin.",
 							"ok": true
 						},
 						{
-							"answer": "Sie freut sich, weil sie hat bestanden.",
+							"answer": "Ich bleibe zu Hause, weil ich bin krank.",
 							"ok": false
 						},
 						{
-							"answer": "Sie freut sich, weil hat sie bestanden.",
+							"answer": "Ich bleibe zu Hause, weil bin ich krank.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "obwohl",
+					"summary": "Gegensatz (Verb am Ende)",
+					"explain": {
+						"entryId": "obwohl",
+						"headword": "obwohl",
+						"pronunciation": {
+							"display": "op-VOHL",
+							"ipaUK": "/ɔpˈvoːl/",
+							"ipaUS": "/ɔpˈvoːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "obwohl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "obwohl: Konjunktion für einen Gegensatz (Verb am Ende)",
+										"examples": [
+											"Obwohl es regnet, gehen wir spazieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Obwohl es regnet, gehen wir spazieren.",
+							"ok": true
+						},
+						{
+							"answer": "Obwohl es regnet, wir gehen spazieren.",
+							"ok": false
+						},
+						{
+							"answer": "Obwohl regnet es, gehen wir spazieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "da",
+					"summary": "Grund: da … (Verb am Ende)",
+					"explain": {
+						"entryId": "da",
+						"headword": "da",
+						"pronunciation": {
+							"display": "dah",
+							"ipaUK": "/daː/",
+							"ipaUS": "/daː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "da",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "da: Konjunktion für einen bekannten Grund (Verb am Ende)",
+										"examples": [
+											"Da es schon spät war, gingen wir nach Hause."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Da es schon spät war, gingen wir nach Hause.",
+							"ok": true
+						},
+						{
+							"answer": "Da es schon spät war, wir gingen nach Hause.",
+							"ok": false
+						},
+						{
+							"answer": "Da es war schon spät, gingen wir nach Hause.",
 							"ok": false
 						}
 					]
@@ -172,8 +172,220 @@
 				{
 					"title": "",
 					"page": 4,
+					"question": "wenn",
+					"summary": "Bedingung (Verb am Ende)",
+					"explain": {
+						"entryId": "wenn",
+						"headword": "wenn",
+						"pronunciation": {
+							"display": "ven",
+							"ipaUK": "/vɛn/",
+							"ipaUS": "/vɛn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "wenn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wenn: Konjunktion für eine Bedingung (Verb am Ende)",
+										"examples": [
+											"Wenn es regnet, bleiben wir zu Hause."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wenn es regnet, bleiben wir zu Hause.",
+							"ok": true
+						},
+						{
+							"answer": "Wenn es regnet, wir bleiben zu Hause.",
+							"ok": false
+						},
+						{
+							"answer": "Wenn regnet es, bleiben wir zu Hause.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "es sei denn",
+					"summary": "außer wenn (Ausnahme)",
+					"explain": {
+						"entryId": "es sei denn",
+						"headword": "es sei denn",
+						"pronunciation": {
+							"display": "es zy den",
+							"ipaUK": "/ɛs zaɪ̯ dɛn/",
+							"ipaUS": "/ɛs zaɪ̯ dɛn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "es sei denn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "es sei denn: außer wenn; nur bei einer Ausnahme",
+										"examples": [
+											"Wir gehen spazieren, es sei denn, es regnet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir gehen spazieren, es sei denn, es regnet.",
+							"ok": true
+						},
+						{
+							"answer": "Wir gehen spazieren, es sei denn, regnet es.",
+							"ok": false
+						},
+						{
+							"answer": "Wir gehen spazieren, es denn sei, es regnet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "während",
+					"summary": "gleichzeitig (Verb am Ende)",
+					"explain": {
+						"entryId": "während",
+						"headword": "während",
+						"pronunciation": {
+							"display": "VAY-rent",
+							"ipaUK": "/ˈvɛːʁənt/",
+							"ipaUS": "/ˈvɛːʁənt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "während",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "während: Konjunktion für Gleichzeitigkeit (Verb am Ende)",
+										"examples": [
+											"Während ich koche, deckt er den Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Während ich koche, deckt er den Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Während ich koche, er deckt den Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Während koche ich, deckt er den Tisch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "nachdem",
+					"summary": "Zeit danach (Verb am Ende)",
+					"explain": {
+						"entryId": "nachdem",
+						"headword": "nachdem",
+						"pronunciation": {
+							"display": "nakh-DAYM",
+							"ipaUK": "/naːxˈdeːm/",
+							"ipaUS": "/naːxˈdeːm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "nachdem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nachdem: Konjunktion für die Zeit danach (Verb am Ende)",
+										"examples": [
+											"Nachdem wir gegessen hatten, gingen wir spazieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nachdem wir gegessen hatten, gingen wir spazieren.",
+							"ok": true
+						},
+						{
+							"answer": "Nachdem wir hatten gegessen, gingen wir spazieren.",
+							"ok": false
+						},
+						{
+							"answer": "Nachdem wir gegessen hatten, wir gingen spazieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
 					"question": "bevor",
-					"summary": "Zeit: bevor … (Verb am Ende)",
+					"summary": "Zeit davor (Verb am Ende)",
 					"explain": {
 						"entryId": "bevor",
 						"headword": "bevor",
@@ -196,7 +408,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Konjunktion (Zeit): A vor B; Verb am Ende",
+										"definition": "bevor: Konjunktion für die Zeit davor (Verb am Ende)",
 										"examples": [
 											"Bevor ich einkaufe, schreibe ich eine Liste."
 										]
@@ -224,16 +436,16 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "auch wenn",
-					"summary": "auch wenn … (Verb am Ende)",
+					"page": 9,
+					"question": "obgleich",
+					"summary": "Gegensatz (Verb am Ende)",
 					"explain": {
-						"entryId": "auch wenn",
-						"headword": "auch wenn",
+						"entryId": "obgleich",
+						"headword": "obgleich",
 						"pronunciation": {
-							"display": "owkh ven",
-							"ipaUK": "/aʊ̯x vɛn/",
-							"ipaUS": "/aʊ̯x vɛn/"
+							"display": "op-GLYKH",
+							"ipaUK": "/ɔpˈɡlaɪ̯ç/",
+							"ipaUS": "/ɔpˈɡlaɪ̯ç/"
 						},
 						"labels": [
 							"B1"
@@ -243,17 +455,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Konjunktion",
 								"grammarType": "Konjunktion",
-								"headwordLine": "auch wenn",
+								"headwordLine": "obgleich",
 								"inflectionsLine": null,
-								"synonyms": [
-									"obwohl"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Konjunktion (Gegensatz/Bedingung); Verb am Ende",
+										"definition": "obgleich: Konjunktion für einen Gegensatz (gehoben; Verb am Ende)",
 										"examples": [
-											"Auch wenn es teuer ist, kaufe ich es."
+											"Obgleich es schwer war, gab er nicht auf."
 										]
 									}
 								]
@@ -264,31 +474,31 @@
 					},
 					"answers": [
 						{
-							"answer": "Auch wenn es teuer ist, kaufe ich es.",
+							"answer": "Obgleich es schwer war, gab er nicht auf.",
 							"ok": true
 						},
 						{
-							"answer": "Auch wenn es teuer ist, ich kaufe es.",
+							"answer": "Obgleich es schwer war, er gab nicht auf.",
 							"ok": false
 						},
 						{
-							"answer": "Auch wenn es ist teuer, kaufe ich es.",
+							"answer": "Obgleich es war schwer, gab er nicht auf.",
 							"ok": false
 						}
 					]
 				},
 				{
 					"title": "",
-					"page": 6,
-					"question": "wenn",
-					"summary": "Bedingung: wenn … (Verb am Ende)",
+					"page": 10,
+					"question": "damit",
+					"summary": "Zweck (Verb am Ende)",
 					"explain": {
-						"entryId": "wenn",
-						"headword": "wenn",
+						"entryId": "damit",
+						"headword": "damit",
 						"pronunciation": {
-							"display": "ven",
-							"ipaUK": "/vɛn/",
-							"ipaUS": "/vɛn/"
+							"display": "da-MIT",
+							"ipaUK": "/daˈmɪt/",
+							"ipaUS": "/daˈmɪt/"
 						},
 						"labels": [
 							"B1"
@@ -298,15 +508,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Konjunktion",
 								"grammarType": "Konjunktion",
-								"headwordLine": "wenn",
+								"headwordLine": "damit",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "Konjunktion (Bedingung); Verb am Ende",
+										"definition": "damit: Konjunktion für einen Zweck (Verb am Ende)",
 										"examples": [
-											"Wenn es regnet, bleiben wir zu Hause."
+											"Ich spare Geld, damit ich reisen kann."
 										]
 									}
 								]
@@ -317,15 +527,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Wenn es regnet, bleiben wir zu Hause.",
+							"answer": "Ich spare Geld, damit ich reisen kann.",
 							"ok": true
 						},
 						{
-							"answer": "Wenn es regnet, wir bleiben zu Hause.",
+							"answer": "Ich spare Geld, damit ich kann reisen.",
 							"ok": false
 						},
 						{
-							"answer": "Wenn regnet es, bleiben wir zu Hause.",
+							"answer": "Ich spare Geld, damit kann ich reisen.",
 							"ok": false
 						}
 					]

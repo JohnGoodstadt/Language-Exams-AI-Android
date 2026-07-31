@@ -2,7 +2,7 @@
 	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuizRelationships2-de",
-	"title": "2. Relationships",
+	"title": "Relationships",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -13,6 +13,59 @@
 				{
 					"title": "",
 					"page": 1,
+					"question": "Beziehung",
+					"summary": "Verbindung zwischen zwei Menschen",
+					"explain": {
+						"entryId": "Beziehung",
+						"headword": "Beziehung",
+						"pronunciation": {
+							"display": "buh-TSEE-oong",
+							"ipaUK": "/bəˈtsiːʊŋ/",
+							"ipaUS": "/bəˈtsiːʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beziehung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Beziehung: die Verbindung zwischen zwei Menschen (z. B. Partner)",
+										"examples": [
+											"Die beiden führen eine glückliche Beziehung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die beiden führen eine glückliche Beziehung.",
+							"ok": true
+						},
+						{
+							"answer": "Die beiden führen einen glücklichen Beziehung.",
+							"ok": false
+						},
+						{
+							"answer": "Die beiden eine glückliche Beziehung führen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
 					"question": "Verabredung",
 					"summary": "Treffen mit einem Partner",
 					"explain": {
@@ -33,13 +86,11 @@
 								"grammarType": "Nomen",
 								"headwordLine": "Verabredung",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Date"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Treffen mit einem möglichen Partner",
+										"definition": "die Verabredung: ein Treffen mit einem möglichen Partner",
 										"examples": [
 											"Am Freitag habe ich eine Verabredung."
 										]
@@ -67,69 +118,16 @@
 				},
 				{
 					"title": "",
-					"page": 2,
-					"question": "Glaube",
-					"summary": "fester Glaube/Vertrauen",
-					"explain": {
-						"entryId": "Glaube",
-						"headword": "Glaube",
-						"pronunciation": {
-							"display": "GLOW-buh",
-							"ipaUK": "/ˈɡlaʊ̯bə/",
-							"ipaUS": "/ˈɡlaʊ̯bə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Glaube",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der feste Glaube oder das Vertrauen",
-										"examples": [
-											"Ihr Glaube an ihn war unerschütterlich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ihr Glaube an ihn war unerschütterlich.",
-							"ok": true
-						},
-						{
-							"answer": "Ihre Glaube an ihn war unerschütterlich.",
-							"ok": false
-						},
-						{
-							"answer": "Ihr Glaube an ihn unerschütterlich war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 3,
-					"question": "Gemeinschaft",
-					"summary": "Gruppe mit Zusammengehörigkeit",
+					"question": "Romanze",
+					"summary": "romantische Liebesbeziehung",
 					"explain": {
-						"entryId": "Gemeinschaft",
-						"headword": "Gemeinschaft",
+						"entryId": "Romanze",
+						"headword": "Romanze",
 						"pronunciation": {
-							"display": "guh-MINE-shaft",
-							"ipaUK": "/ɡəˈmaɪ̯nʃaft/",
-							"ipaUS": "/ɡəˈmaɪ̯nʃaft/"
+							"display": "ro-MAN-tsuh",
+							"ipaUK": "/ʁoˈmantsə/",
+							"ipaUS": "/ʁoˈmantsə/"
 						},
 						"labels": [
 							"B1"
@@ -139,15 +137,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Gemeinschaft",
+								"headwordLine": "Romanze",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Gruppe mit Gefühl der Zusammengehörigkeit",
+										"definition": "die Romanze: eine romantische Liebesbeziehung",
 										"examples": [
-											"In der Gemeinschaft fühlt er sich wohl."
+											"Im Urlaub begann eine kurze Romanze."
 										]
 									}
 								]
@@ -158,15 +156,15 @@
 					},
 					"answers": [
 						{
-							"answer": "In der Gemeinschaft fühlt er sich wohl.",
+							"answer": "Im Urlaub begann eine kurze Romanze.",
 							"ok": true
 						},
 						{
-							"answer": "In dem Gemeinschaft fühlt er sich wohl.",
+							"answer": "Im Urlaub begann einen kurzen Romanze.",
 							"ok": false
 						},
 						{
-							"answer": "In der Gemeinschaft er fühlt sich wohl.",
+							"answer": "Im Urlaub eine kurze Romanze begann.",
 							"ok": false
 						}
 					]
@@ -174,6 +172,59 @@
 				{
 					"title": "",
 					"page": 4,
+					"question": "Werben",
+					"summary": "Umwerben eines Partners",
+					"explain": {
+						"entryId": "Werben",
+						"headword": "Werben",
+						"pronunciation": {
+							"display": "VER-bn",
+							"ipaUK": "/ˈvɛʁbn̩/",
+							"ipaUS": "/ˈvɛʁbn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (nominalisiert)",
+								"grammarType": "Nomen (nominalisiert)",
+								"headwordLine": "Werben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Werben: das Umwerben eines möglichen Partners (nominalisiert)",
+										"examples": [
+											"Das Werben um sie dauerte viele Monate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Werben um sie dauerte viele Monate.",
+							"ok": true
+						},
+						{
+							"answer": "Das werben um sie dauerte viele Monate.",
+							"ok": false
+						},
+						{
+							"answer": "Das Werben um sie viele Monate dauerte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
 					"question": "Freundschaft",
 					"summary": "enge Beziehung zwischen Freunden",
 					"explain": {
@@ -198,7 +249,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "die enge Beziehung zwischen Freunden",
+										"definition": "die Freundschaft: die enge Beziehung zwischen Freunden",
 										"examples": [
 											"Unsere Freundschaft hält schon zwanzig Jahre."
 										]
@@ -226,69 +277,16 @@
 				},
 				{
 					"title": "",
-					"page": 5,
-					"question": "Hilfe",
-					"summary": "Unterstützen bei einem Problem",
-					"explain": {
-						"entryId": "Hilfe",
-						"headword": "Hilfe",
-						"pronunciation": {
-							"display": "HIL-fuh",
-							"ipaUK": "/ˈhɪlfə/",
-							"ipaUS": "/ˈhɪlfə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Hilfe",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Unterstützen bei einem Problem",
-										"examples": [
-											"Ohne deine Hilfe hätte ich es nicht geschafft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ohne deine Hilfe hätte ich es nicht geschafft.",
-							"ok": true
-						},
-						{
-							"answer": "Ohne deiner Hilfe hätte ich es nicht geschafft.",
-							"ok": false
-						},
-						{
-							"answer": "Ohne deine Hilfe ich hätte es nicht geschafft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
 					"page": 6,
-					"question": "Interaktion",
-					"summary": "gegenseitiges Reagieren",
+					"question": "Gesellschaft",
+					"summary": "Zusammensein mit anderen",
 					"explain": {
-						"entryId": "Interaktion",
-						"headword": "Interaktion",
+						"entryId": "Gesellschaft",
+						"headword": "Gesellschaft",
 						"pronunciation": {
-							"display": "in-tuh-rak-TSYOHN",
-							"ipaUK": "/ɪntɐʔakˈtsi̯oːn/",
-							"ipaUS": "/ɪntɐʔakˈtsi̯oːn/"
+							"display": "guh-ZEL-shaft",
+							"ipaUK": "/ɡəˈzɛlʃaft/",
+							"ipaUS": "/ɡəˈzɛlʃaft/"
 						},
 						"labels": [
 							"B1"
@@ -298,15 +296,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Interaktion",
+								"headwordLine": "Gesellschaft",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das gegenseitige Aufeinander-Reagieren",
+										"definition": "die Gesellschaft: das angenehme Zusammensein mit anderen",
 										"examples": [
-											"Die Interaktion mit Kunden macht ihr Spaß."
+											"Ich genieße die Gesellschaft meiner Freunde."
 										]
 									}
 								]
@@ -317,15 +315,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Die Interaktion mit Kunden macht ihr Spaß.",
+							"answer": "Ich genieße die Gesellschaft meiner Freunde.",
 							"ok": true
 						},
 						{
-							"answer": "Der Interaktion mit Kunden macht ihr Spaß.",
+							"answer": "Ich genieße den Gesellschaft meiner Freunde.",
 							"ok": false
 						},
 						{
-							"answer": "Die Interaktion mit Kunden ihr Spaß macht.",
+							"answer": "Ich die Gesellschaft meiner Freunde genieße.",
 							"ok": false
 						}
 					]
@@ -333,15 +331,15 @@
 				{
 					"title": "",
 					"page": 7,
-					"question": "Verknüpfung",
-					"summary": "Verbindung zwischen zwei Dingen",
+					"question": "Gemeinschaft",
+					"summary": "Gruppe mit Zusammengehörigkeit",
 					"explain": {
-						"entryId": "Verknüpfung",
-						"headword": "Verknüpfung",
+						"entryId": "Gemeinschaft",
+						"headword": "Gemeinschaft",
 						"pronunciation": {
-							"display": "fer-KNÜP-foong",
-							"ipaUK": "/fɛɐ̯ˈknʏpfʊŋ/",
-							"ipaUS": "/fɛɐ̯ˈknʏpfʊŋ/"
+							"display": "guh-MINE-shaft",
+							"ipaUK": "/ɡəˈmaɪ̯nʃaft/",
+							"ipaUS": "/ɡəˈmaɪ̯nʃaft/"
 						},
 						"labels": [
 							"B1"
@@ -351,15 +349,15 @@
 								"ordinal": "1 of 1",
 								"pos": "Nomen",
 								"grammarType": "Nomen",
-								"headwordLine": "Verknüpfung",
+								"headwordLine": "Gemeinschaft",
 								"inflectionsLine": null,
 								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Verbindung zwischen zwei Dingen",
+										"definition": "die Gemeinschaft: eine Gruppe mit Gefühl der Zusammengehörigkeit",
 										"examples": [
-											"Es gibt eine klare Verknüpfung der Ideen."
+											"In der Gemeinschaft fühlt er sich geborgen."
 										]
 									}
 								]
@@ -370,15 +368,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Es gibt eine klare Verknüpfung der Ideen.",
+							"answer": "In der Gemeinschaft fühlt er sich geborgen.",
 							"ok": true
 						},
 						{
-							"answer": "Es gibt einen klaren Verknüpfung der Ideen.",
+							"answer": "In dem Gemeinschaft fühlt er sich geborgen.",
 							"ok": false
 						},
 						{
-							"answer": "Es eine klare Verknüpfung der Ideen gibt.",
+							"answer": "In der Gemeinschaft er fühlt sich geborgen.",
 							"ok": false
 						}
 					]
@@ -386,15 +384,15 @@
 				{
 					"title": "",
 					"page": 8,
-					"question": "Nachbar",
-					"summary": "Person, die nebenan wohnt",
+					"question": "soziale Medien",
+					"summary": "Plattformen wie Instagram",
 					"explain": {
-						"entryId": "Nachbar",
-						"headword": "Nachbar",
+						"entryId": "soziale Medien",
+						"headword": "soziale Medien",
 						"pronunciation": {
-							"display": "NAKH-bar",
-							"ipaUK": "/ˈnaxbaːɐ̯/",
-							"ipaUS": "/ˈnaxbaːɐ̯/"
+							"display": "zo-tsi-AH-luh MAY-di-en",
+							"ipaUK": "/zoˈtsi̯aːlə ˈmeːdi̯ən/",
+							"ipaUS": "/zoˈtsi̯aːlə ˈmeːdi̯ən/"
 						},
 						"labels": [
 							"B1"
@@ -402,19 +400,17 @@
 						"partsOfSpeech": [
 							{
 								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Nachbar",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "soziale Medien",
 								"inflectionsLine": null,
-								"synonyms": [
-									"Nachbarin"
-								],
+								"synonyms": [],
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "eine Person, die nebenan wohnt",
+										"definition": "die sozialen Medien: Plattformen im Internet zum Teilen und Chatten",
 										"examples": [
-											"Mein Nachbar gießt meine Blumen."
+											"Viele Jugendliche nutzen soziale Medien."
 										]
 									}
 								]
@@ -425,15 +421,15 @@
 					},
 					"answers": [
 						{
-							"answer": "Mein Nachbar gießt meine Blumen.",
+							"answer": "Viele Jugendliche nutzen soziale Medien.",
 							"ok": true
 						},
 						{
-							"answer": "Meine Nachbar gießt meine Blumen.",
+							"answer": "Viele Jugendliche nutzen sozialen Medien.",
 							"ok": false
 						},
 						{
-							"answer": "Mein Nachbar meine Blumen gießt.",
+							"answer": "Viele Jugendliche soziale Medien nutzen.",
 							"ok": false
 						}
 					]
@@ -465,7 +461,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "das Knüpfen von nützlichen Kontakten",
+										"definition": "die Vernetzung: das Knüpfen von nützlichen Kontakten",
 										"examples": [
 											"Die Vernetzung mit Kollegen ist nützlich."
 										]
@@ -518,7 +514,7 @@
 								"senses": [
 									{
 										"senseNumber": 1,
-										"definition": "ein Dienst im Internet zum Austausch",
+										"definition": "die Plattform: ein Dienst im Internet zum Austausch",
 										"examples": [
 											"Diese Plattform verbindet Millionen von Menschen."
 										]
