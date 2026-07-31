@@ -1,0 +1,115 @@
+{
+  "fileformat": 1,
+  "location": "bundle",
+  "sheetname": "GermanSoundsTheSame",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Gleich klingende Wörter",
+      "description": "Manche Wörter werden gleich ausgesprochen, aber unterschiedlich geschrieben und haben verschiedene Bedeutungen.",
+      "sortorder": 4,
+      "wordsAndSentences": [
+        {
+          "word": "Rad, Rat",
+          "sentence": "Auf den Rat meines Vaters reparierte ich das Rad.",
+          "definition": "RAD: ein rundes Teil an einem Fahrzeug. RAT: eine Empfehlung oder ein hilfreicher Vorschlag."
+        },
+        {
+          "word": "Saite, Seite",
+          "sentence": "Auf dieser Seite steht, wie man eine Saite wechselt.",
+          "definition": "SAITE: ein dünner Teil eines Musikinstruments, der einen Ton erzeugt. SEITE: eine Fläche eines Blattes oder eine bestimmte Richtung."
+        },
+        {
+          "word": "Meer, mehr",
+          "sentence": "Am Meer möchte ich mehr Zeit verbringen.",
+          "definition": "MEER: eine große Fläche mit Salzwasser. MEHR: eine größere Menge oder Anzahl."
+        },
+        {
+          "word": "Leere, Lehre",
+          "sentence": "Nach dem Ende seiner Lehre fühlte er eine große Leere.",
+          "definition": "LEERE: ein Zustand, in dem nichts vorhanden ist. LEHRE: eine Ausbildung für einen Beruf."
+        },
+        {
+          "word": "Laib, Leib",
+          "sentence": "Ein Laib Brot gibt dem Leib neue Energie.",
+          "definition": "LAIB: ein ganzes, meist rundes Brot. LEIB: der Körper eines Menschen oder Tieres."
+        },
+        {
+          "word": "Lid, Lied",
+          "sentence": "Sie schloss das Lid und hörte ein ruhiges Lied.",
+          "definition": "LID: die bewegliche Haut über einem Auge. LIED: ein Musikstück, das gesungen wird."
+        },
+        {
+          "word": "Miene, Mine",
+          "sentence": "Mit ernster Miene ging der Arbeiter in die Mine.",
+          "definition": "MIENE: der sichtbare Ausdruck im Gesicht. MINE: ein Ort unter der Erde, an dem Rohstoffe gewonnen werden."
+        },
+        {
+          "word": "Stadt, statt",
+          "sentence": "Wir besuchen heute die Stadt statt das Dorf.",
+          "definition": "STADT: ein größerer Ort mit vielen Einwohnern und Gebäuden. STATT: anstelle von etwas oder jemandem."
+        },
+        {
+          "word": "Wahl, Wal",
+          "sentence": "Der Schutz der Meere und des Wals war ein wichtiges Thema bei der Wahl.",
+          "definition": "WAHL: eine Entscheidung zwischen mehreren Möglichkeiten oder Personen. WAL: ein sehr großes Tier, das im Meer lebt."
+        },
+        {
+          "word": "wahr, war",
+          "sentence": "Es ist wahr, dass er gestern hier war.",
+          "definition": "WAHR: entspricht der Wirklichkeit und ist nicht falsch. WAR: die Vergangenheitsform von „sein“."
+        },
+        {
+          "word": "Waise, Weise",
+          "sentence": "Die Waise löste das Problem auf eine kluge Weise.",
+          "definition": "WAISE: ein Kind, dessen Eltern gestorben sind. WEISE: die Art, wie etwas gemacht wird."
+        },
+        {
+          "word": "wieder, wider",
+          "sentence": "Wider Erwarten kam der Zug wieder pünktlich.",
+          "definition": "WIEDER: noch einmal oder erneut. WIDER: gegen etwas oder entgegen einer Erwartung."
+        },
+        {
+          "word": "Lärche, Lerche",
+          "sentence": "Auf der hohen Lärche sitzt eine Lerche.",
+          "definition": "LÄRCHE: ein Nadelbaum, der im Herbst seine Nadeln verliert. LERCHE: ein kleiner Vogel, der für seinen Gesang bekannt ist."
+        },
+        {
+          "word": "Stil, Stiel",
+          "sentence": "Der lange Stiel der Lampe passt zu ihrem modernen Stil.",
+          "definition": "STIL: eine besondere Art der Gestaltung oder des Verhaltens. STIEL: der schmale Griff eines Werkzeugs oder der Teil einer Pflanze."
+        },
+        {
+          "word": "Tod, tot",
+          "sentence": "Der Arzt bestätigte den Tod: Das Tier war tot.",
+          "definition": "TOD: das Ende des Lebens. TOT: nicht mehr lebendig."
+        },
+        {
+          "word": "Bund, bunt",
+          "sentence": "Der Bund der Künstler ist bunt und international.",
+          "definition": "BUND: eine Verbindung oder Vereinigung von Menschen oder Organisationen. BUNT: mit vielen verschiedenen Farben."
+        },
+        {
+          "word": "das, dass",
+          "sentence": "Ich weiß, dass das Fenster offen ist.",
+          "definition": "DAS: ein Artikel oder Pronomen. DASS: ein Bindewort, das einen Nebensatz einleitet."
+        },
+        {
+          "word": "seit, seid",
+          "sentence": "Seit wann seid ihr in Berlin?",
+          "definition": "SEIT: bezeichnet den Beginn oder die Dauer einer Zeit. SEID: die Form von „sein“, die zu „ihr“ gehört."
+        },
+        {
+          "word": "fiel, viel",
+          "sentence": "Beim Umzug fiel viel Geschirr auf den Boden.",
+          "definition": "FIEL: die Vergangenheitsform von „fallen“. VIEL: eine große Menge oder Anzahl."
+        },
+        {
+          "word": "Ferse, Verse",
+          "sentence": "Beim Lesen der Verse rieb sie ihre wunde Ferse.",
+          "definition": "FERSE: der hintere Teil des Fußes. VERSE: mehrere Zeilen eines Gedichts."
+        }
+      ]
+    }
+  ]
+}

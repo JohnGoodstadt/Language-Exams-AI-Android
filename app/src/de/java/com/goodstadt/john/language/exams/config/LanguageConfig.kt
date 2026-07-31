@@ -84,7 +84,7 @@ object LanguageConfig {
             "GermanConjugationsToHave" -> "conjugations_to_have"
             "GermanConjugationsToDo" -> "conjugations_to_do"
             "GermanConjugationsToGet" -> "conjugations_to_get"
-            "GermanConjugationsToGet" -> "prepositions_de"
+//            "GermanConjugationsToGet" -> "prepositions_de"
             "GermanA1Adjectives" -> "german_a1_adjectives"
             "GermanA2Adjectives" -> "german_a2_adjectives"
             "GermanB1Adjectives" -> "german_b1_adjectives"
@@ -93,6 +93,8 @@ object LanguageConfig {
             "GermanBringenHolen" -> "german_bringen_holen"
             "GermanHoerenZuhoeren"-> "german_hoeren_zuhoeren"
             "GermanFragenBitten" -> "german_fragen_bitten"
+            "GermanSoundsTheSame" -> "german_sounds_the_same"
+            "GermanPrepositions" -> "german_prepositions"
 
             else -> sheet_name // Fallback for other files
         }

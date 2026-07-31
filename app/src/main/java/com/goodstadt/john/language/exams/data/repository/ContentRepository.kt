@@ -278,14 +278,65 @@ class ContentRepository @Inject constructor(
                 if (forceRefresh) {
                     appConfigRepository.updateLocalVersion(logicalName,remoteVersion)
                 }
+                return@withContext result
+            } else{
+                // --- 4. Bundle Fallback ---
+                Timber.w(
+                    result.exceptionOrNull(),
+                    "VocabRepo: ExamSheetRepository failed. Falling back to bundle for '$logicalName'."
+                )
+                val resourceName = mapLogicalToResourceName(logicalName)
+                val bundleResult = loadBundledFormat1Data(resourceName)
+
+                // ✅ CENTRALIZED CACHING: Also cache the result from the bundle.
+                bundleResult.getOrNull()?.let { format1Cache[logicalName] = it }
+
+                return@withContext bundleResult
             }
-            return@withContext result
+
         } catch (e: Exception) {
             Timber.e(e, "VocabRepo: CRITICAL error in getFormat1Data for '$logicalName'.")
             FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat1Data() Data load failed for $name"))
             return@withContext Result.failure(e) // We don't have a bundle fallback for this type
         }
     }
+
+    fun loadBundledFormat1Data(resourceName: String): Result<HeaderWordsSentencesListRoot> {
+        // 1. Check the in-memory cache first.
+        format1Cache[resourceName]?.let { cachedFile ->
+            Timber.d("Format 2: Returning '$resourceName' from MEMORY CACHE. Yippee!")
+            return Result.success(cachedFile)
+        }
+
+        // 2. If not in cache, call the private loader.
+        val result = _loadFromBundleFormat1(resourceName)
+
+        // 3. On success, save the result to the in-memory cache for next time.
+        result.getOrNull()?.let {
+            format1Cache[resourceName] = it
+            Timber.d("Format 2: Warmed up memory cache for bundled file '$resourceName'.")
+        }
+
+        return result
+    }
+    private fun _loadFromBundleFormat1(resourceName: String): Result<HeaderWordsSentencesListRoot> {
+        return try {
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(Exception("Resource file not found in bundle: $resourceName.json"))
+            }
+            Timber.v("Format 2: Loading '$resourceName' from res/raw.")
+            val inputStream = context.resources.openRawResource(resourceId)
+            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            val format1File = jsonParser.decodeFromString<HeaderWordsSentencesListRoot>(jsonString)
+            Result.success(format1File)
+        } catch (e: Exception) {
+            Timber.e(e, "Format 2: Failed to load from bundle: $resourceName")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundle() Data load failed for $resourceName"))
+            Result.failure(e)
+        }
+    }
+
     suspend fun getFormat2Data(name: String): Result<Format2File> = withContext(Dispatchers.IO) {
         val logicalName = normalizeToLogicalName(name)
         try {
@@ -374,8 +425,8 @@ class ContentRepository @Inject constructor(
             Timber.v("Format 2: Loading '$resourceName' from res/raw.")
             val inputStream = context.resources.openRawResource(resourceId)
             val jsonString = inputStream.bufferedReader().use { it.readText() }
-            val format3File = jsonParser.decodeFromString<Format2File>(jsonString)
-            Result.success(format3File)
+            val format2File = jsonParser.decodeFromString<Format2File>(jsonString)
+            Result.success(format2File)
         } catch (e: Exception) {
             Timber.e(e, "Format 2: Failed to load from bundle: $resourceName")
             FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundle() Data load failed for $resourceName"))

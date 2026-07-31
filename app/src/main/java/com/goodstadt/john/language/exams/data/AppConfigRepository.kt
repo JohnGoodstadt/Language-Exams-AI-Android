@@ -441,10 +441,10 @@ class AppConfigRepository @Inject constructor(
              ]
            },
            "EnglishDefinitionsFormat1": {
-             "title": "Sounds the Same",
+             "title": "Gleich klingende Wörter",
              "sheetDataType": "Format1",
              "screenType": "Format1Screen",
-             "firestoreDocumentId": "EnglishDefinitionsFormat1"
+             "firestoreDocumentId": "GermanSoundsTheSame"
            },
            "PairsGroup": {
              "title": "Pairs",

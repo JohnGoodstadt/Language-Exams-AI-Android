@@ -30,7 +30,7 @@
 					"sentences": [
 						{
 							"translation": "I'm going to the train station.",
-							"sentence": "Ich gehe zum (zu dem) Bahnhof."
+							"sentence": "Ich gehe zum Bahnhof."
 						},
 						{
 							"translation": "See you at Christmas!",
@@ -53,7 +53,7 @@
 					"sentences": [
 						{
 							"translation": "Let's go to the party!",
-							"sentence": "Lasst uns zur (zu der) Party gehen!"
+							"sentence": "Lasst uns zur Party gehen!"
 						},
 						{
 							"translation": "I'm going to my grandmother's house.",
@@ -80,11 +80,11 @@
 						},
 						{
 							"translation": "He is home for dinner.",
-							"sentence": "Er ist zum (zu dem) Abendessen zu Hause."
+							"sentence": "Er ist zum Abendessen zu Hause."
 						},
 						{
 							"translation": "I wish you good luck for your exam.",
-							"sentence": "Ich wünsche dir viel Glück zur (zu der) Prüfung."
+							"sentence": "Ich wünsche dir viel Glück zur Prüfung."
 						}
 					]
 				}
@@ -209,7 +209,7 @@
 						},
 						{
 							"translation": "We're leaving for Munich tomorrow.",
-							"sentence": "Wir fahren morgen nach München. (Note: 'nach' for cities, but 'für' can be used with a purpose like 'for vacation')"
+							"sentence": "Wir fahren morgen nach München."
 						},
 						{
 							"translation": "He fought for his country.",
@@ -266,7 +266,7 @@
 						},
 						{
 							"translation": "We are at the lake. (No motion, Dativ)",
-							"sentence": "Wir sind am (an dem) See."
+							"sentence": "Wir sind am See."
 						}
 					]
 				},
@@ -304,11 +304,11 @@
 					"sentences": [
 						{
 							"translation": "The meeting is on Monday. (Time, Dativ)",
-							"sentence": "Das Treffen ist am (an dem) Montag."
+							"sentence": "Das Treffen ist am Montag."
 						},
 						{
 							"translation": "He is sitting at the window. (No motion, Dativ)",
-							"sentence": "Er sitzt am (an dem) Fenster."
+							"sentence": "Er sitzt am Fenster."
 						},
 						{
 							"translation": "She knocked on the door. (Motion implied, Akkusativ)",
@@ -437,11 +437,11 @@
 						},
 						{
 							"translation": "We are going into the cinema. (Motion, Akkusativ)",
-							"sentence": "Wir gehen ins (in das) Kino."
+							"sentence": "Wir gehen ins Kino."
 						},
 						{
 							"translation": "In summer, it is warm. (Time, Dativ)",
-							"sentence": "Im (in dem) Sommer ist es warm."
+							"sentence": "Im Sommer ist es warm."
 						}
 					]
 				},
@@ -456,7 +456,7 @@
 					"sentences": [
 						{
 							"translation": "He is sitting in the car. (No motion, Dativ)",
-							"sentence": "Er sitzt im (in dem) Auto."
+							"sentence": "Er sitzt im Auto."
 						},
 						{
 							"translation": "She poured water into the glass. (Motion, Akkusativ)",
@@ -513,7 +513,7 @@
 						},
 						{
 							"translation": "He is speaking of the weather.",
-							"sentence": "Er spricht vom (von dem) Wetter."
+							"sentence": "Er spricht vom Wetter."
 						},
 						{
 							"translation": "The decision depends on him.",
@@ -665,11 +665,11 @@
 						},
 						{
 							"translation": "The restaurant is near the station.",
-							"sentence": "Das Restaurant ist beim (bei dem) Bahnhof."
+							"sentence": "Das Restaurant ist beim Bahnhof."
 						},
 						{
 							"translation": "I noticed it during the conversation.",
-							"sentence": "Es ist mir beim (bei dem) Gespräch aufgefallen."
+							"sentence": "Es ist mir beim Gespräch aufgefallen."
 						}
 					]
 				},
@@ -692,7 +692,7 @@
 						},
 						{
 							"translation": "During sports, I like to listen to music.",
-							"sentence": "Beim (bei dem) Sport höre ich gerne Musik."
+							"sentence": "Beim Sport höre ich gerne Musik."
 						}
 					]
 				}
