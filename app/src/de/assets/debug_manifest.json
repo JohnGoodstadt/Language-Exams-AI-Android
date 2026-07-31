@@ -55,49 +55,31 @@
 			"firestoreDocumentId": "GermanDefinitionsFormat1"
 		},
 		"PairsGroup": {
-			"title": "Pairs",
+			"title": "Wortpaare",
 			"screenType": "GroupedFormat2Screen",
 			"sheetDataType": "Format2",
 			"subTabs": [
 				{
-					"title": "Good vs Well",
-					"firestoreDocumentId": "GermanGoodVsWell",
+					"title": "Kennen vs Wissen",
+					"firestoreDocumentId": "GermanKennenWissen",
 					"sheetDataType": "Format2",
 					"screenType": "Format2Screen"
 				},
 				{
-					"title": "Say vs Tell",
-					"firestoreDocumentId": "GermanSayVsTell",
+					"title": "Fragen vs Bitten",
+					"firestoreDocumentId": "GermanFragenBitten",
 					"sheetDataType": "Format2",
 					"screenType": "Format2Screen"
 				},
 				{
-					"title": "Speak vs Talk",
-					"firestoreDocumentId": "GermanSpeakVsTalk",
+					"title": "Bringen vs Holen",
+					"firestoreDocumentId": "GermanBringenHolen",
 					"sheetDataType": "Format2",
 					"screenType": "Format2Screen"
 				},
 				{
-					"title": "Hear vs Listen",
-					"firestoreDocumentId": "GermanHearVsListen",
-					"sheetDataType": "Format2",
-					"screenType": "Format2Screen"
-				},
-				{
-					"title": "Borrow vs Lend",
-					"firestoreDocumentId": "GermanBorrowVsLend",
-					"sheetDataType": "Format2",
-					"screenType": "Format2Screen"
-				},
-				{
-					"title": "Bring Vs Take",
-					"firestoreDocumentId": "GermanBringVsTake",
-					"sheetDataType": "Format2",
-					"screenType": "Format2Screen"
-				},
-				{
-					"title": "Look vs See",
-					"firestoreDocumentId": "GermanLookVsSee",
+					"title": "Hoeren vs Zuhoeren",
+					"firestoreDocumentId": "GermanHoerenZuhoeren",
 					"sheetDataType": "Format2",
 					"screenType": "Format2Screen"
 				}

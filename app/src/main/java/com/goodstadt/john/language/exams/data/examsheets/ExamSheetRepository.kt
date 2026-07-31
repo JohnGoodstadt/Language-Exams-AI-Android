@@ -1,18 +1,10 @@
 package com.goodstadt.john.language.exams.data.examsheets
 
 import android.content.Context
-import com.goodstadt.john.language.exams.data.FirestoreRepository
+import com.goodstadt.john.language.exams.data.FirestoreRepository.fb
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultDownloadSheet
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.toObject
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.HeaderWordAndSentence
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
-import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Format2Entry
@@ -21,9 +13,16 @@ import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.models.Format2Sentence
 import com.goodstadt.john.language.exams.models.Format2WordAndSentenceDTO
 import com.goodstadt.john.language.exams.models.Format3File
+import com.goodstadt.john.language.exams.models.HeaderWordAndSentence
+import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
+import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
+import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
+import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
 import com.goodstadt.john.language.exams.models.WordAndSentenceForFirestore
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.toObject
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -36,7 +35,6 @@ import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
-import com.goodstadt.john.language.exams.data.FirestoreRepository.fb
 
 /**
  * **ExamSheetRepository**
@@ -447,14 +445,16 @@ class ExamSheetRepository @Inject constructor(
 
 
         } catch (e: Exception) {
-            Timber.e(e, "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.")
-            TimberFault.f(
-                message = "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.",
-                localizedMessage = e.localizedMessage ?: "null localizedMessage",
-                secondaryText = "android",
-                area = "ExamSheetRepository.getFormat2Sheet()"
-            )
-            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
+
+            //we now have bundle file
+//            Timber.e(e, "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.")
+//            TimberFault.f(
+//                message = "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.",
+//                localizedMessage = e.localizedMessage ?: "null localizedMessage",
+//                secondaryText = "android",
+//                area = "ExamSheetRepository.getFormat2Sheet()"
+//            )
+//            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
             return Result.failure(e)
         }
     }

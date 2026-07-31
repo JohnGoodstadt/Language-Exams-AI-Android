@@ -322,13 +322,64 @@ class ContentRepository @Inject constructor(
                 if (forceRefresh) {
                     appConfigRepository.updateLocalVersion(logicalName,remoteVersion)
                 }
+                return@withContext result
+            } else {
+                // --- 4. Bundle Fallback ---
+                Timber.w(
+                    result.exceptionOrNull(),
+                    "VocabRepo: ExamSheetRepository failed. Falling back to bundle for '$logicalName'."
+                )
+                val resourceName = mapLogicalToResourceName(logicalName)
+                val bundleResult = loadBundledFormat2Data(resourceName)
+
+                // ✅ CENTRALIZED CACHING: Also cache the result from the bundle.
+                bundleResult.getOrNull()?.let { format2Cache[logicalName] = it }
+
+                return@withContext bundleResult
+
             }
-            return@withContext result
+
 
         } catch (e: Exception) {
             Timber.e(e, "ContentRepo: CRITICAL error in getFormat2Data for '$logicalName'.")
             FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat2Data() failed for $name", e))
             return@withContext Result.failure(e) // Format2 does not have a bundle fallback
+        }
+    }
+
+    fun loadBundledFormat2Data(resourceName: String): Result<Format2File> {
+        // 1. Check the in-memory cache first.
+        format2Cache[resourceName]?.let { cachedFile ->
+            Timber.d("Format 2: Returning '$resourceName' from MEMORY CACHE. Yippee!")
+            return Result.success(cachedFile)
+        }
+
+        // 2. If not in cache, call the private loader.
+        val result = _loadFromBundleFormat2(resourceName)
+
+        // 3. On success, save the result to the in-memory cache for next time.
+        result.getOrNull()?.let {
+            format2Cache[resourceName] = it
+            Timber.d("Format 2: Warmed up memory cache for bundled file '$resourceName'.")
+        }
+
+        return result
+    }
+    private fun _loadFromBundleFormat2(resourceName: String): Result<Format2File> {
+        return try {
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(Exception("Resource file not found in bundle: $resourceName.json"))
+            }
+            Timber.v("Format 2: Loading '$resourceName' from res/raw.")
+            val inputStream = context.resources.openRawResource(resourceId)
+            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            val format3File = jsonParser.decodeFromString<Format2File>(jsonString)
+            Result.success(format3File)
+        } catch (e: Exception) {
+            Timber.e(e, "Format 2: Failed to load from bundle: $resourceName")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundle() Data load failed for $resourceName"))
+            Result.failure(e)
         }
     }
     suspend fun getFormat3Data(name: String): Result<Format3File> = withContext(Dispatchers.IO) {
@@ -373,8 +424,23 @@ class ContentRepository @Inject constructor(
                 if (forceRefresh) {
                     appConfigRepository.updateLocalVersion(logicalName,remoteVersion)
                 }
+                return@withContext result
+            } else{
+
+                // --- 4. Bundle Fallback ---
+                Timber.w(
+                    result.exceptionOrNull(),
+                    "VocabRepo: ExamSheetRepository failed. Falling back to bundle for '$logicalName'."
+                )
+                val resourceName = mapLogicalToResourceName(logicalName)
+                val bundleResult = loadBundledFormat3Data(resourceName)
+
+                // ✅ CENTRALIZED CACHING: Also cache the result from the bundle.
+                bundleResult.getOrNull()?.let { format3Cache[logicalName] = it }
+
+                return@withContext bundleResult
             }
-            return@withContext result
+
 
         } catch (e: Exception) {
             Timber.e(e, "ContentRepo: CRITICAL error in getFormat2Data for '$logicalName'.")
@@ -395,7 +461,7 @@ class ContentRepository @Inject constructor(
         }
 
         // 2. If not in cache, call the private loader.
-        val result = _loadFromBundle(resourceName)
+        val result = _loadFromBundleFormat0(resourceName)
 
         // 3. On success, save the result to the in-memory cache for next time.
         result.getOrNull()?.let {
@@ -412,7 +478,7 @@ class ContentRepository @Inject constructor(
      * ✅ RENAMED: This is now the private, "dumb" implementation.
      * Its only job is to read and parse a file from res/raw. It does no caching.
      */
-    private fun _loadFromBundle(resourceName: String): Result<Format0File> {
+    private fun _loadFromBundleFormat0(resourceName: String): Result<Format0File> {
         return try {
             val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
             if (resourceId == 0) {
@@ -430,6 +496,48 @@ class ContentRepository @Inject constructor(
         }
     }
 
+    fun loadBundledFormat3Data(resourceName: String): Result<Format3File> {
+        // 1. Check the in-memory cache first.
+        format3Cache[resourceName]?.let { cachedFile ->
+            Timber.d("Format 3: Returning '$resourceName' from MEMORY CACHE. Yippee!")
+            return Result.success(cachedFile)
+        }
+
+        // 2. If not in cache, call the private loader.
+        val result = _loadFromBundleFormat3(resourceName)
+
+        // 3. On success, save the result to the in-memory cache for next time.
+        result.getOrNull()?.let {
+            format3Cache[resourceName] = it
+            Timber.d("VocabRepo: Warmed up memory cache for bundled file '$resourceName'.")
+        }
+
+        return result
+    }
+
+    // --- PRIVATE IMPLEMENTATION & HELPERS ---
+
+    /**
+     * ✅ RENAMED: This is now the private, "dumb" implementation.
+     * Its only job is to read and parse a file from res/raw. It does no caching.
+     */
+    private fun _loadFromBundleFormat3(resourceName: String): Result<Format3File> {
+        return try {
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(Exception("Resource file not found in bundle: $resourceName.json"))
+            }
+            Timber.v("VocabRepo: Loading '$resourceName' from res/raw.")
+            val inputStream = context.resources.openRawResource(resourceId)
+            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            val format3File = jsonParser.decodeFromString<Format3File>(jsonString)
+            Result.success(format3File)
+        } catch (e: Exception) {
+            Timber.e(e, "VocabRepo: Failed to load from bundle: $resourceName")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundle() Data load failed for $resourceName"))
+            Result.failure(e)
+        }
+    }
 
     suspend fun debugDecodeFormat0Data(fileName: String): Result<Format0File> = withContext(Dispatchers.IO) {
 

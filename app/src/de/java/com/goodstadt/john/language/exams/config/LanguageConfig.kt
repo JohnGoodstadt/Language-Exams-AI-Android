@@ -89,6 +89,11 @@ object LanguageConfig {
             "GermanA2Adjectives" -> "german_a2_adjectives"
             "GermanB1Adjectives" -> "german_b1_adjectives"
             "GermanB2Adjectives" -> "german_b2_adjectives"
+            "GermanKennenWissen" -> "german_kennen_wissen"
+            "GermanBringenHolen" -> "german_bringen_holen"
+            "GermanHoerenZuhoeren"-> "german_hoeren_zuhoeren"
+            "GermanFragenBitten" -> "german_fragen_bitten"
+
             else -> sheet_name // Fallback for other files
         }
     }

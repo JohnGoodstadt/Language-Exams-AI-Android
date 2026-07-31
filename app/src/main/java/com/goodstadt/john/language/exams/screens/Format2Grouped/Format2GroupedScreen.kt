@@ -49,8 +49,8 @@ import com.goodstadt.john.language.exams.screens.Format2.Format2Row
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
-import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
@@ -232,10 +232,10 @@ fun Format2GroupedScreen(
 // Helper (Copy from GroupedSheetScreen if not shared)
 private fun getShortTabTitle(original: String): String {
     return when (original) {
-        "Good vs Well" -> "Good/Well"
-        "Say vs Tell" -> "Say/Tell"
-        "Speak vs Talk" -> "Speak/Talk"
-        "Hear vs Listen" -> "Hear/Listen"
+        "Kennen vs Wissen" -> "Kennen/Wissen"
+        "Fragen vs Bitten" -> "Fragen/Bitten"
+        "Bringen vs Holen" -> "Bringen/Holen"
+        "Hoeren vs Zuhoeren" -> "Hoeren/Zuhoeren"
 
         else -> original
     }

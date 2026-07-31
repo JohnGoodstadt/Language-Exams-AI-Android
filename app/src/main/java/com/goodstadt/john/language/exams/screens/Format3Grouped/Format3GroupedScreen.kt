@@ -1,9 +1,22 @@
 package com.goodstadt.john.language.exams.screens.Format3Grouped
 
 import androidx.activity.ComponentActivity
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -14,16 +27,16 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.screens.CategoryTab.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.Format3.Format3SheetView
-import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
-import com.goodstadt.john.language.exams.uti.buildSideQuestData
-import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
-import dagger.hilt.android.EntryPointAccessors
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
-import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
+import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import dagger.hilt.android.EntryPointAccessors
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -192,11 +205,10 @@ fun Format3GroupedScreen(
 // Helper (Copy from GroupedSheetScreen if not shared)
 private fun getShortTabTitle(original: String): String {
     return when (original) {
-        "Good vs Well" -> "Good/Well"
-        "Say vs Tell" -> "Say/Tell"
-        "Speak vs Talk" -> "Speak/Talk"
-        "Hear vs Listen" -> "Hear/Listen"
-
+        "Kennen vs Wissen" -> "Kennen/Wissen"
+        "Fragen vs Bitten" -> "Fragen/Bitten"
+        "Bringen vs Holen" -> "Bringen/Holen"
+        "Hoeren vs Zuhoeren" -> "Hoeren/Zuhoeren"
         else -> original
     }
 }
