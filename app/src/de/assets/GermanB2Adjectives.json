@@ -1,257 +1,639 @@
 {
   "romanized": false,
   "native": "",
-  "name": "English Adjectives B2",
-  "sheetname": "EnglishAdjectivesB2",
-  "id": "en-adj-b2",
+  "name": "Deutsche Adjektive B2",
+  "sheetname": "GermanAdjectivesB2",
+  "id": "de-adj-b2",
   "location": 0,
   "googlevoiceprefix": "",
-  "uploaddate": 1766060003.0,
+  "uploaddate": 1766060003,
   "voicename": "",
   "nativename": "",
   "updatedDate": 978307200,
   "fileformat": 1,
-  "tabtitles": ["Adjectives B2"],
+  "tabtitles": [
+    "Adjektive B2"
+  ],
   "categories": [
-	{
-	  "sortOrder": 1, "tabNumber": 1, "title": "ambitious",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 1, "word": "ambitious", "definition": "having a strong wish to succeed or achieve more", "partOfSpeech": "Adjective", "id": 1,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "She’s an ambitious student who wants to study medicine abroad.", "translation": "" },
-		  { "sentence": "His ambitious plan impressed the company directors.", "translation": "" },
-		  { "sentence": "Is this goal too ambitious for our timeline?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 2, "tabNumber": 1, "title": "efficient",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 2, "word": "efficient", "definition": "working well without wasting time or energy", "partOfSpeech": "Adjective", "id": 2,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "The new system is far more efficient than the old one.", "translation": "" },
-		  { "sentence": "She’s an efficient worker who finishes tasks on time.", "translation": "" },
-		  { "sentence": "Is this the most efficient way to share files?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 3, "tabNumber": 1, "title": "frustrated",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 3, "word": "frustrated", "definition": "upset because you cannot do or change something", "partOfSpeech": "Adjective", "id": 3,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He felt frustrated because his efforts weren’t recognised.", "translation": "" },
-		  { "sentence": "I get frustrated when people don’t listen carefully.", "translation": "" },
-		  { "sentence": "Are you frustrated with the slow progress?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 4, "tabNumber": 1, "title": "optimistic",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 4, "word": "optimistic", "definition": "believing that good things will happen", "partOfSpeech": "Adjective", "id": 4,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He remains optimistic about finding a new job soon.", "translation": "" },
-		  { "sentence": "The doctor was optimistic that she would recover quickly.", "translation": "" },
-		  { "sentence": "Are you optimistic about the outcome?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 5, "tabNumber": 1, "title": "pessimistic",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 5, "word": "pessimistic", "definition": "believing that bad things will happen", "partOfSpeech": "Adjective", "id": 5,
-	  "romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He is too pessimistic and always expects the worst outcome.", "translation": "" },
-		  { "sentence": "Her pessimistic attitude made the whole team lose motivation.", "translation": "" },
-		  { "sentence": "Why are you so pessimistic about the plan?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 6, "tabNumber": 1, "title": "independent",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 6, "word": "independent", "definition": "able to do things by yourself; not needing help", "partOfSpeech": "Adjective", "id": 6,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "She became independent after moving to another city.", "translation": "" },
-		  { "sentence": "The company remains independent despite several offers.", "translation": "" },
-		  { "sentence": "Are you independent enough to work alone?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 7, "tabNumber": 1, "title": "anxious",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 7, "word": "anxious", "definition": "worried and nervous about something that may happen", "partOfSpeech": "Adjective", "id": 7,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "She felt anxious before speaking in front of a large audience.", "translation": "" },
-		  { "sentence": "He became anxious waiting for her reply.", "translation": "" },
-		  { "sentence": "Are you anxious about the interview?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 8, "tabNumber": 1, "title": "grateful",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 8, "word": "grateful", "definition": "feeling thanks for help or kindness", "partOfSpeech": "Adjective", "id": 8,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "I’m very grateful for your help during the move.", "translation": "" },
-		  { "sentence": "We’re grateful that nobody was injured in the accident.", "translation": "" },
-		  { "sentence": "Aren’t you grateful for the support?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 9, "tabNumber": 1, "title": "enthusiastic",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 9, "word": "enthusiastic", "definition": "showing strong interest and excitement", "partOfSpeech": "Adjective", "id": 9,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "The students were enthusiastic about the new project.", "translation": "" },
-		  { "sentence": "Her enthusiastic response encouraged the whole team.", "translation": "" },
-		  { "sentence": "Are they enthusiastic about joining?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 10, "tabNumber": 1, "title": "flexible",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 10, "word": "flexible", "definition": "able to change or be changed easily", "partOfSpeech": "Adjective", "id": 10,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "Our schedule is flexible, so we can change the time if needed.", "translation": "" },
-		  { "sentence": "She has a flexible approach to solving problems.", "translation": "" },
-		  { "sentence": "Is this arrangement flexible enough for you?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 11, "tabNumber": 1, "title": "determined",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 11, "word": "determined", "definition": "having a strong decision to do something and not giving up", "partOfSpeech": "Adjective", "id": 11,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He is determined to pass the exam this time.", "translation": "" },
-		  { "sentence": "They were determined to finish before the deadline.", "translation": "" },
-		  { "sentence": "Are you determined to change careers?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 12, "tabNumber": 1, "title": "awkward",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 12, "word": "awkward", "definition": "making you feel uncomfortable; difficult to deal with", "partOfSpeech": "Adjective", "id": 12,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It was an awkward moment when nobody answered.", "translation": "" },
-		  { "sentence": "There was an awkward silence after his comment.", "translation": "" },
-		  { "sentence": "Does this conversation feel awkward to you?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 13, "tabNumber": 1, "title": "embarrassed",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 13, "word": "embarrassed", "definition": "feeling shy and uncomfortable because of a mistake", "partOfSpeech": "Adjective", "id": 13,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He felt embarrassed when he forgot her name.", "translation": "" },
-		  { "sentence": "She looked embarrassed after making a mistake in class.", "translation": "" },
-		  { "sentence": "Are you embarrassed to ask for help?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 14, "tabNumber": 1, "title": "reasonable",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 14, "word": "reasonable", "definition": "fair and sensible", "partOfSpeech": "Adjective", "id": 14,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "That’s a reasonable price for such a high-quality product.", "translation": "" },
-		  { "sentence": "It seems reasonable to take a break after two hours.", "translation": "" },
-		  { "sentence": "Is this timeline reasonable for the team?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 15, "tabNumber": 1, "title": "impressive",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 15, "word": "impressive", "definition": "causing admiration because it is very good or large", "partOfSpeech": "Adjective", "id": 15,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "The presentation was impressive, even though it was short.", "translation": "" },
-		  { "sentence": "His knowledge of the subject is really impressive.", "translation": "" },
-		  { "sentence": "Wasn’t her performance impressive?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 16, "tabNumber": 1, "title": "reliable",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 16, "word": "reliable", "definition": "can be trusted to work well or to do what is promised", "partOfSpeech": "Adjective", "id": 16,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He’s a reliable colleague who always meets deadlines.", "translation": "" },
-		  { "sentence": "The data seems reliable because it comes from official sources.", "translation": "" },
-		  { "sentence": "Is this source reliable?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 17, "tabNumber": 1, "title": "sophisticated",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 17, "word": "sophisticated", "definition": "complex and advanced; well designed", "partOfSpeech": "Adjective", "id": 17,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "The software uses a sophisticated algorithm to analyse data.", "translation": "" },
-		  { "sentence": "It’s a sophisticated device that requires careful handling.", "translation": "" },
-		  { "sentence": "Is this solution too sophisticated for beginners?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 18, "tabNumber": 1, "title": "sceptical",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 18, "word": "sceptical", "definition": "not easily believing; doubting something is true", "partOfSpeech": "Adjective", "id": 18,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "I’m sceptical about the results until I see the evidence.", "translation": "" },
-		  { "sentence": "He was sceptical of the company’s promises.", "translation": "" },
-		  { "sentence": "Are you sceptical about these claims?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 19, "tabNumber": 1, "title": "incredible",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 19, "word": "incredible", "definition": "very surprising and hard to believe; amazing", "partOfSpeech": "Adjective", "id": 19,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "The view from the mountain was absolutely incredible.", "translation": "" },
-		  { "sentence": "It’s incredible how quickly technology changes.", "translation": "" },
-		  { "sentence": "Wasn’t that concert incredible?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 20, "tabNumber": 1, "title": "crucial",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 20, "word": "crucial", "definition": "very important and necessary", "partOfSpeech": "Adjective", "id": 20,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It’s crucial to check your work before submitting it.", "translation": "" },
-		  { "sentence": "Good communication is crucial for a strong relationship.", "translation": "" },
-		  { "sentence": "Is funding the most crucial issue now?", "translation": "" }
-		]
-	  }]
-	}
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "ehrgeizig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 1,
+          "word": "ehrgeizig",
+          "definition": "verfolgt anspruchsvolle Ziele mit großem Einsatz",
+          "partOfSpeech": "Adjektiv",
+          "id": 1,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die ehrgeizige Forscherin möchte ihr Projekt noch dieses Jahr abschließen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Obwohl sein Ziel ehrgeizig war, ließ er sich von Rückschlägen nicht entmutigen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wann kann ein ehrgeiziges Ziel zum Problem werden?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "effizient",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 2,
+          "word": "effizient",
+          "definition": "erzielt mit möglichst wenig Aufwand ein gutes Ergebnis",
+          "partOfSpeech": "Adjektiv",
+          "id": 2,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Durch die neue Software arbeitet die Verwaltung deutlich effizienter.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ein effizient organisiertes Team vermeidet unnötige Besprechungen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie ließe sich dieser Prozess effizienter gestalten?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "frustriert",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 3,
+          "word": "frustriert",
+          "definition": "enttäuscht und verärgert wegen fehlenden Erfolgs",
+          "partOfSpeech": "Adjektiv",
+          "id": 3,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Nach mehreren erfolglosen Bewerbungen fühlte sie sich zunehmend frustriert.",
+              "translation": ""
+            },
+            {
+              "sentence": "Die frustrierten Fahrgäste kritisierten die wiederholten Verspätungen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Was hilft dir, wenn du von einer Aufgabe frustriert bist?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabNumber": 1,
+      "title": "optimistisch",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 4,
+          "word": "optimistisch",
+          "definition": "erwartet eine positive Entwicklung",
+          "partOfSpeech": "Adjektiv",
+          "id": 4,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Trotz der aktuellen Schwierigkeiten bleibt die Geschäftsführung optimistisch.",
+              "translation": ""
+            },
+            {
+              "sentence": "Die Expertin äußerte sich vorsichtig optimistisch über die wirtschaftliche Lage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ist diese optimistische Einschätzung durch Fakten begründet?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 5,
+      "tabNumber": 1,
+      "title": "pessimistisch",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 5,
+          "word": "pessimistisch",
+          "definition": "erwartet eher eine negative Entwicklung",
+          "partOfSpeech": "Adjektiv",
+          "id": 5,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Viele Beschäftigte sind hinsichtlich der geplanten Änderungen pessimistisch.",
+              "translation": ""
+            },
+            {
+              "sentence": "Seine pessimistische Haltung beeinflusst inzwischen das gesamte Team.",
+              "translation": ""
+            },
+            {
+              "sentence": "Warum beurteilst du die Zukunft so pessimistisch?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 6,
+      "tabNumber": 1,
+      "title": "unabhängig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 6,
+          "word": "unabhängig",
+          "definition": "nicht von anderen Personen oder Einflüssen abhängig",
+          "partOfSpeech": "Adjektiv",
+          "id": 6,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die Organisation finanziert sich unabhängig von staatlicher Unterstützung.",
+              "translation": ""
+            },
+            {
+              "sentence": "Unabhängige Medien spielen in einer Demokratie eine wesentliche Rolle.",
+              "translation": ""
+            },
+            {
+              "sentence": "Kann eine solche Untersuchung wirklich unabhängig bleiben?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 7,
+      "tabNumber": 1,
+      "title": "ängstlich",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 7,
+          "word": "ängstlich",
+          "definition": "leicht von Angst oder Unsicherheit geprägt",
+          "partOfSpeech": "Adjektiv",
+          "id": 7,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Der sonst ruhige Hund reagierte in der fremden Umgebung ängstlich.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ein ängstlicher Blick genügte, um ihre Unsicherheit zu erkennen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Weshalb verhält er sich gegenüber Veränderungen so ängstlich?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 8,
+      "tabNumber": 1,
+      "title": "dankbar",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 8,
+          "word": "dankbar",
+          "definition": "empfindet Anerkennung für erhaltene Hilfe oder etwas Gutes",
+          "partOfSpeech": "Adjektiv",
+          "id": 8,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich bin allen dankbar, die mich während dieser schwierigen Zeit unterstützt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Mit einem dankbaren Lächeln nahm sie die unerwartete Hilfe an.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wofür bist du im Rückblick besonders dankbar?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 9,
+      "tabNumber": 1,
+      "title": "begeistert",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 9,
+          "word": "begeistert",
+          "definition": "voller Freude und starkem Interesse",
+          "partOfSpeech": "Adjektiv",
+          "id": 9,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Das Publikum war von der ungewöhnlichen Inszenierung begeistert.",
+              "translation": ""
+            },
+            {
+              "sentence": "Begeistert berichtete er von den Fortschritten des internationalen Projekts.",
+              "translation": ""
+            },
+            {
+              "sentence": "Was hat dich an diesem Vorschlag so begeistert?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 10,
+      "tabNumber": 1,
+      "title": "flexibel",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 10,
+          "word": "flexibel",
+          "definition": "kann sich schnell an veränderte Bedingungen anpassen",
+          "partOfSpeech": "Adjektiv",
+          "id": 10,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Flexible Arbeitszeiten erleichtern vielen Beschäftigten den Alltag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Das Unternehmen reagierte flexibel auf die unerwartete Nachfrage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie flexibel können wir den Zeitplan noch verändern?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 11,
+      "tabNumber": 1,
+      "title": "entschlossen",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 11,
+          "word": "entschlossen",
+          "definition": "fest zu einer Entscheidung bereit und nicht zögernd",
+          "partOfSpeech": "Adjektiv",
+          "id": 11,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die Regierung ist entschlossen, gegen die steigenden Kosten vorzugehen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Mit entschlossener Stimme forderte sie eine sofortige Untersuchung.",
+              "translation": ""
+            },
+            {
+              "sentence": "Bist du entschlossen, den eingeschlagenen Weg fortzusetzen?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 12,
+      "tabNumber": 1,
+      "title": "peinlich",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 12,
+          "word": "peinlich",
+          "definition": "verursacht Scham oder ein unangenehmes Gefühl",
+          "partOfSpeech": "Adjektiv",
+          "id": 12,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Seine unpassende Bemerkung führte zu einem peinlichen Schweigen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Mir war es peinlich, dass ich ihren Namen vergessen hatte.",
+              "translation": ""
+            },
+            {
+              "sentence": "Welche Situation wäre dir besonders peinlich?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 13,
+      "tabNumber": 1,
+      "title": "angemessen",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 13,
+          "word": "angemessen",
+          "definition": "für eine Situation passend und vernünftig",
+          "partOfSpeech": "Adjektiv",
+          "id": 13,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die vorgeschlagene Entschädigung erscheint den Betroffenen nicht angemessen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Bei offiziellen Anlässen wird angemessene Kleidung erwartet.",
+              "translation": ""
+            },
+            {
+              "sentence": "Hältst du diese Reaktion für angemessen?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 14,
+      "tabNumber": 1,
+      "title": "beeindruckend",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 14,
+          "word": "beeindruckend",
+          "definition": "wirkt außergewöhnlich stark oder positiv",
+          "partOfSpeech": "Adjektiv",
+          "id": 14,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die Ausstellung vermittelt einen beeindruckenden Überblick über die Epoche.",
+              "translation": ""
+            },
+            {
+              "sentence": "Trotz knapper Vorbereitung erzielte das Team ein beeindruckendes Ergebnis.",
+              "translation": ""
+            },
+            {
+              "sentence": "Was fandest du an der Präsentation besonders beeindruckend?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 15,
+      "tabNumber": 1,
+      "title": "anspruchsvoll",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 15,
+          "word": "anspruchsvoll",
+          "definition": "stellt hohe Anforderungen an Wissen oder Können",
+          "partOfSpeech": "Adjektiv",
+          "id": 15,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die neue Position ist anspruchsvoll, bietet jedoch gute Entwicklungsmöglichkeiten.",
+              "translation": ""
+            },
+            {
+              "sentence": "Für den anspruchsvollen Kurs sind solide Vorkenntnisse erforderlich.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ist die Aufgabe anspruchsvoll oder lediglich zeitaufwendig?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 16,
+      "tabNumber": 1,
+      "title": "skeptisch",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 16,
+          "word": "skeptisch",
+          "definition": "zweifelt daran, dass etwas richtig oder erfolgreich ist",
+          "partOfSpeech": "Adjektiv",
+          "id": 16,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Fachleute stehen den veröffentlichten Ergebnissen weiterhin skeptisch gegenüber.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie reagierte skeptisch auf das Versprechen einer schnellen Lösung.",
+              "translation": ""
+            },
+            {
+              "sentence": "Warum bist du gegenüber dieser Methode so skeptisch?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 17,
+      "tabNumber": 1,
+      "title": "glaubwürdig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 17,
+          "word": "glaubwürdig",
+          "definition": "wirkt ehrlich, überzeugend und vertrauenswürdig",
+          "partOfSpeech": "Adjektiv",
+          "id": 17,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Seine Erklärung war detailliert, aber nicht vollständig glaubwürdig.",
+              "translation": ""
+            },
+            {
+              "sentence": "Für eine glaubwürdige Kampagne müssen Worten konkrete Maßnahmen folgen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Welche Quellen hältst du in dieser Debatte für glaubwürdig?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 18,
+      "tabNumber": 1,
+      "title": "entscheidend",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 18,
+          "word": "entscheidend",
+          "definition": "für das Ergebnis von größter Bedeutung",
+          "partOfSpeech": "Adjektiv",
+          "id": 18,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die letzten Verhandlungen waren für den Erfolg des Abkommens entscheidend.",
+              "translation": ""
+            },
+            {
+              "sentence": "Entscheidend ist nicht nur der Preis, sondern auch die langfristige Qualität.",
+              "translation": ""
+            },
+            {
+              "sentence": "Welcher Faktor könnte bei der Abstimmung entscheidend sein?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 19,
+      "tabNumber": 1,
+      "title": "nachhaltig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 19,
+          "word": "nachhaltig",
+          "definition": "wirkt langfristig und schont natürliche Ressourcen",
+          "partOfSpeech": "Adjektiv",
+          "id": 19,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die Stadt investiert in ein nachhaltiges Verkehrskonzept.",
+              "translation": ""
+            },
+            {
+              "sentence": "Nur dauerhaft veränderte Gewohnheiten können den Verbrauch nachhaltig senken.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie lässt sich unsere Produktion nachhaltiger gestalten?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 20,
+      "tabNumber": 1,
+      "title": "widersprüchlich",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 20,
+          "word": "widersprüchlich",
+          "definition": "enthält Aussagen oder Aspekte, die nicht zusammenpassen",
+          "partOfSpeech": "Adjektiv",
+          "id": 20,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die Zeugenaussagen waren in mehreren wichtigen Punkten widersprüchlich.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sein widersprüchliches Verhalten machte eine klare Einschätzung schwierig.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sind die veröffentlichten Zahlen tatsächlich widersprüchlich?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

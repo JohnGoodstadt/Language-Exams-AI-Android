@@ -1,257 +1,639 @@
 {
   "romanized": false,
   "native": "",
-  "name": "English Adjectives B1",
-  "sheetname": "EnglishAdjectivesB1",
-  "id": "en-adj-b1",
+  "name": "Deutsche Adjektive B1",
+  "sheetname": "GermanAdjectivesB1",
+  "id": "de-adj-b1",
   "location": 0,
   "googlevoiceprefix": "",
-  "uploaddate": 1766060002.0,
+  "uploaddate": 1766060002,
   "voicename": "",
   "nativename": "",
   "updatedDate": 978307200,
   "fileformat": 1,
-  "tabtitles": ["Adjectives B1"],
+  "tabtitles": [
+    "Adjektive B1"
+  ],
   "categories": [
-	{
-	  "sortOrder": 1, "tabNumber": 1, "title": "confident",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 1, "word": "confident", "definition": "sure about your ability; not afraid", "partOfSpeech": "Adjective", "id": 1,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "She feels confident about her English exam.", "translation": "" },
-		  { "sentence": "He spoke in a confident voice during the meeting.", "translation": "" },
-		  { "sentence": "Do you feel confident about your presentation?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 2, "tabNumber": 1, "title": "nervous",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 2, "word": "nervous", "definition": "worried and a little afraid about something", "partOfSpeech": "Adjective", "id": 2,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He was nervous before his job interview.", "translation": "" },
-		  { "sentence": "I always feel nervous when I speak in public.", "translation": "" },
-		  { "sentence": "Are you still nervous about flying?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 3, "tabNumber": 1, "title": "reliable",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 3, "word": "reliable", "definition": "you can trust this person or thing to work well", "partOfSpeech": "Adjective", "id": 3,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "Tom is a reliable friend who always helps me.", "translation": "" },
-		  { "sentence": "We need a reliable internet connection for work.", "translation": "" },
-		  { "sentence": "Is your laptop reliable enough for travel?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 4, "tabNumber": 1, "title": "lazy",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 4, "word": "lazy", "definition": "not wanting to work or move much", "partOfSpeech": "Adjective", "id": 4,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "I was too lazy to cook, so we ordered pizza.", "translation": "" },
-		  { "sentence": "He is not lazy, he just needs motivation.", "translation": "" },
-		  { "sentence": "Are you being lazy today?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 5, "tabNumber": 1, "title": "polite",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 5, "word": "polite", "definition": "speaking and acting in a kind and respectful way", "partOfSpeech": "Adjective", "id": 5,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It’s polite to say thank you after receiving help.", "translation": "" },
-		  { "sentence": "The waiter was very polite and professional.", "translation": "" },
-		  { "sentence": "Is it polite to call so late?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 6, "tabNumber": 1, "title": "rude",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 6, "word": "rude", "definition": "not polite; likely to upset people", "partOfSpeech": "Adjective", "id": 6,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It was rude to interrupt while she was speaking.", "translation": "" },
-		  { "sentence": "He made a rude comment about my accent.", "translation": "" },
-		  { "sentence": "Was it rude to leave early?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 7, "tabNumber": 1, "title": "brave",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 7, "word": "brave", "definition": "able to do something even when it is scary", "partOfSpeech": "Adjective", "id": 7,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "She was very brave when she moved to another country alone.", "translation": "" },
-		  { "sentence": "Firefighters are brave people.", "translation": "" },
-		  { "sentence": "Was it brave to speak about the mistake?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 8, "tabNumber": 1, "title": "shy",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 8, "word": "shy", "definition": "not comfortable with new people; quiet in groups", "partOfSpeech": "Adjective", "id": 8,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He is too shy to ask questions in class.", "translation": "" },
-		  { "sentence": "She used to be shy, but now she’s more confident.", "translation": "" },
-		  { "sentence": "Are you shy with new people?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 9, "tabNumber": 1, "title": "jealous",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 9, "word": "jealous", "definition": "unhappy because someone has something you want", "partOfSpeech": "Adjective", "id": 9,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "She felt jealous when her friend got the job.", "translation": "" },
-		  { "sentence": "He’s jealous of people who travel often.", "translation": "" },
-		  { "sentence": "Do you get jealous easily?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 10, "tabNumber": 1, "title": "proud",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 10, "word": "proud", "definition": "happy because of your or someone’s good work", "partOfSpeech": "Adjective", "id": 10,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "I’m proud of what we achieved together.", "translation": "" },
-		  { "sentence": "Her parents are proud because she won a prize.", "translation": "" },
-		  { "sentence": "Are you proud of your work?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 11, "tabNumber": 1, "title": "disappointed",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 11, "word": "disappointed", "definition": "sad because something was not as good as you hoped", "partOfSpeech": "Adjective", "id": 11,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "I was disappointed when the concert was cancelled.", "translation": "" },
-		  { "sentence": "She looked disappointed after the exam.", "translation": "" },
-		  { "sentence": "Were you disappointed with the result?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 12, "tabNumber": 1, "title": "surprised",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 12, "word": "surprised", "definition": "feeling something is not expected", "partOfSpeech": "Adjective", "id": 12,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He was surprised to hear from his old teacher.", "translation": "" },
-		  { "sentence": "I’m surprised that you finished the project so quickly.", "translation": "" },
-		  { "sentence": "Were they surprised by the news?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 13, "tabNumber": 1, "title": "angry",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 13, "word": "angry", "definition": "feeling strong dislike because something is wrong", "partOfSpeech": "Adjective", "id": 13,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He was angry because nobody listened to him.", "translation": "" },
-		  { "sentence": "Try not to get angry when things go wrong.", "translation": "" },
-		  { "sentence": "Are you angry with me?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 14, "tabNumber": 1, "title": "worried",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 14, "word": "worried", "definition": "thinking about problems and feeling not calm", "partOfSpeech": "Adjective", "id": 14,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "I’m worried about my presentation tomorrow.", "translation": "" },
-		  { "sentence": "She looked worried when she read the email.", "translation": "" },
-		  { "sentence": "Are you worried about the deadline?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 15, "tabNumber": 1, "title": "honest",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 15, "word": "honest", "definition": "telling the truth; not lying or cheating", "partOfSpeech": "Adjective", "id": 15,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It’s important to be honest with your friends.", "translation": "" },
-		  { "sentence": "He gave an honest answer even though it was difficult.", "translation": "" },
-		  { "sentence": "Are you being honest with yourself?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 16, "tabNumber": 1, "title": "creative",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 16, "word": "creative", "definition": "good at making new and interesting ideas", "partOfSpeech": "Adjective", "id": 16,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He’s a creative designer who always has new ideas.", "translation": "" },
-		  { "sentence": "You need to be creative when solving this problem.", "translation": "" },
-		  { "sentence": "Do you feel creative in the mornings?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 17, "tabNumber": 1, "title": "sensible",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 17, "word": "sensible", "definition": "showing good judgment; practical", "partOfSpeech": "Adjective", "id": 17,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It’s sensible to bring a jacket in case it rains.", "translation": "" },
-		  { "sentence": "She made a sensible decision to save money.", "translation": "" },
-		  { "sentence": "Is that a sensible plan?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 18, "tabNumber": 1, "title": "selfish",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 18, "word": "selfish", "definition": "caring only about yourself, not others", "partOfSpeech": "Adjective", "id": 18,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It was selfish of her to take all the credit.", "translation": "" },
-		  { "sentence": "He can be selfish sometimes but he means well.", "translation": "" },
-		  { "sentence": "Am I being selfish?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 19, "tabNumber": 1, "title": "generous",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 19, "word": "generous", "definition": "happy to give time or things to others", "partOfSpeech": "Adjective", "id": 19,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "It was generous of you to donate money.", "translation": "" },
-		  { "sentence": "He’s always generous with his time.", "translation": "" },
-		  { "sentence": "Wasn’t that a generous offer?", "translation": "" }
-		]
-	  }]
-	},
-	{
-	  "sortOrder": 20, "tabNumber": 1, "title": "responsible",
-	  "words": [{
-		"group": "Adjectives", "sortOrder": 20, "word": "responsible", "definition": "doing what you should do and taking care of things", "partOfSpeech": "Adjective", "id": 20,
-		"romanisation": "", "translation": "",
-		"sentences": [
-		  { "sentence": "He’s responsible for opening the shop every morning.", "translation": "" },
-		  { "sentence": "Being responsible means you do what you promise.", "translation": "" },
-		  { "sentence": "Are you responsible for this task?", "translation": "" }
-		]
-	  }]
-	}
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "selbstbewusst",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 1,
+          "word": "selbstbewusst",
+          "definition": "von den eigenen Fähigkeiten überzeugt",
+          "partOfSpeech": "Adjektiv",
+          "id": 1,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Seit dem Sprachkurs tritt sie viel selbstbewusster auf.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ein selbstbewusster Bewerber kann seine Stärken klar erklären.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie kann man in einem Gespräch selbstbewusst wirken?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "nervös",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 2,
+          "word": "nervös",
+          "definition": "unruhig oder angespannt",
+          "partOfSpeech": "Adjektiv",
+          "id": 2,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Vor der mündlichen Prüfung war ich sehr nervös.",
+              "translation": ""
+            },
+            {
+              "sentence": "Obwohl er nervös war, hielt er einen guten Vortrag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wirst du vor wichtigen Terminen auch nervös?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "zuverlässig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 3,
+          "word": "zuverlässig",
+          "definition": "hält Absprachen ein und ist vertrauenswürdig",
+          "partOfSpeech": "Adjektiv",
+          "id": 3,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Meine Kollegin ist zuverlässig und erledigt ihre Aufgaben pünktlich.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir brauchen einen zuverlässigen Babysitter für das Wochenende.",
+              "translation": ""
+            },
+            {
+              "sentence": "Woran erkennt man einen zuverlässigen Menschen?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabNumber": 1,
+      "title": "höflich",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 4,
+          "word": "höflich",
+          "definition": "zeigt Respekt und gute Umgangsformen",
+          "partOfSpeech": "Adjektiv",
+          "id": 4,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Der Mitarbeiter antwortete höflich auf meine Beschwerde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es ist höflich, ältere Menschen zuerst einsteigen zu lassen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie bittet man auf Deutsch höflich um Hilfe?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 5,
+      "tabNumber": 1,
+      "title": "unhöflich",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 5,
+          "word": "unhöflich",
+          "definition": "zeigt wenig Respekt oder schlechte Umgangsformen",
+          "partOfSpeech": "Adjektiv",
+          "id": 5,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wirkt unhöflich, während eines Gesprächs aufs Handy zu schauen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Seine unhöfliche Antwort hat mich überrascht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Findest du es unhöflich, nicht zu grüßen?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 6,
+      "tabNumber": 1,
+      "title": "mutig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 6,
+          "word": "mutig",
+          "definition": "hat trotz Gefahr oder Angst keine Furcht",
+          "partOfSpeech": "Adjektiv",
+          "id": 6,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die mutige Nachbarin rettete den Hund aus dem Fluss.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es war mutig von ihm, offen über seinen Fehler zu sprechen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Würdest du dich in dieser Situation mutig fühlen?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 7,
+      "tabNumber": 1,
+      "title": "schüchtern",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 7,
+          "word": "schüchtern",
+          "definition": "zurückhaltend im Kontakt mit anderen Menschen",
+          "partOfSpeech": "Adjektiv",
+          "id": 7,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Als Kind war sie schüchtern und sprach wenig.",
+              "translation": ""
+            },
+            {
+              "sentence": "Der schüchterne Schüler meldet sich selten im Unterricht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Was hilft dir, wenn du dich schüchtern fühlst?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 8,
+      "tabNumber": 1,
+      "title": "eifersüchtig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 8,
+          "word": "eifersüchtig",
+          "definition": "hat Angst, die Zuneigung einer Person zu verlieren",
+          "partOfSpeech": "Adjektiv",
+          "id": 8,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wurde eifersüchtig, als sie lange mit ihrem Kollegen sprach.",
+              "translation": ""
+            },
+            {
+              "sentence": "Eifersüchtiges Verhalten kann eine Beziehung belasten.",
+              "translation": ""
+            },
+            {
+              "sentence": "Warum sind manche Menschen schnell eifersüchtig?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 9,
+      "tabNumber": 1,
+      "title": "stolz",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 9,
+          "word": "stolz",
+          "definition": "sehr zufrieden mit einer Leistung oder Person",
+          "partOfSpeech": "Adjektiv",
+          "id": 9,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie ist stolz darauf, die Prüfung bestanden zu haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Die Eltern waren auf ihre Tochter besonders stolz.",
+              "translation": ""
+            },
+            {
+              "sentence": "Auf welche Leistung bist du stolz?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 10,
+      "tabNumber": 1,
+      "title": "enttäuscht",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 10,
+          "word": "enttäuscht",
+          "definition": "traurig, weil eine Erwartung nicht erfüllt wurde",
+          "partOfSpeech": "Adjektiv",
+          "id": 10,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich war enttäuscht, weil das Konzert abgesagt wurde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Die enttäuschten Gäste verlangten ihr Geld zurück.",
+              "translation": ""
+            },
+            {
+              "sentence": "Warst du vom Ende des Films enttäuscht?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 11,
+      "tabNumber": 1,
+      "title": "überrascht",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 11,
+          "word": "überrascht",
+          "definition": "reagiert auf etwas Unerwartetes",
+          "partOfSpeech": "Adjektiv",
+          "id": 11,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir waren von der schnellen Antwort überrascht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Überrascht öffnete sie das unerwartete Geschenk.",
+              "translation": ""
+            },
+            {
+              "sentence": "Bist du über seine Entscheidung überrascht?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 12,
+      "tabNumber": 1,
+      "title": "wütend",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 12,
+          "word": "wütend",
+          "definition": "sehr ärgerlich",
+          "partOfSpeech": "Adjektiv",
+          "id": 12,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Der Kunde wurde wütend, als niemand ihm helfen konnte.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie verließ wütend den Raum, ohne etwas zu sagen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Was machst du, wenn du wütend bist?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 13,
+      "tabNumber": 1,
+      "title": "besorgt",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 13,
+          "word": "besorgt",
+          "definition": "macht sich Sorgen um jemanden oder etwas",
+          "partOfSpeech": "Adjektiv",
+          "id": 13,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Seine Eltern sind besorgt, weil er sich nicht gemeldet hat.",
+              "translation": ""
+            },
+            {
+              "sentence": "Die Ärztin sah mich mit besorgtem Blick an.",
+              "translation": ""
+            },
+            {
+              "sentence": "Warum bist du wegen der Reise so besorgt?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 14,
+      "tabNumber": 1,
+      "title": "ehrlich",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 14,
+          "word": "ehrlich",
+          "definition": "sagt die Wahrheit und täuscht andere nicht",
+          "partOfSpeech": "Adjektiv",
+          "id": 14,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Bitte sei ehrlich und erzähl mir, was passiert ist.",
+              "translation": ""
+            },
+            {
+              "sentence": "Für eine gute Freundschaft ist eine ehrliche Antwort wichtig.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sollte man immer völlig ehrlich sein?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 15,
+      "tabNumber": 1,
+      "title": "kreativ",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 15,
+          "word": "kreativ",
+          "definition": "entwickelt neue und originelle Ideen",
+          "partOfSpeech": "Adjektiv",
+          "id": 15,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Das Team fand eine kreative Lösung für das Problem.",
+              "translation": ""
+            },
+            {
+              "sentence": "In ihrer Freizeit arbeitet sie an kreativen Projekten.",
+              "translation": ""
+            },
+            {
+              "sentence": "Bei welcher Tätigkeit bist du besonders kreativ?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 16,
+      "tabNumber": 1,
+      "title": "vernünftig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 16,
+          "word": "vernünftig",
+          "definition": "denkt praktisch und entscheidet sinnvoll",
+          "partOfSpeech": "Adjektiv",
+          "id": 16,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wäre vernünftig, vor der Reise Geld zu sparen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Nach einem ruhigen Gespräch fanden beide eine vernünftige Lösung.",
+              "translation": ""
+            },
+            {
+              "sentence": "Hältst du diesen Plan für vernünftig?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 17,
+      "tabNumber": 1,
+      "title": "egoistisch",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 17,
+          "word": "egoistisch",
+          "definition": "denkt hauptsächlich an den eigenen Vorteil",
+          "partOfSpeech": "Adjektiv",
+          "id": 17,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es war egoistisch von ihm, das Essen nicht zu teilen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Egoistisches Verhalten führt oft zu Streit.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wann wirkt eine Entscheidung auf andere egoistisch?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 18,
+      "tabNumber": 1,
+      "title": "großzügig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 18,
+          "word": "großzügig",
+          "definition": "gibt anderen gern mehr als nötig",
+          "partOfSpeech": "Adjektiv",
+          "id": 18,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Unsere Nachbarn machten uns ein großzügiges Angebot.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie ist großzügig und unterstützt regelmäßig soziale Projekte.",
+              "translation": ""
+            },
+            {
+              "sentence": "Würdest du eine so großzügige Hilfe annehmen?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 19,
+      "tabNumber": 1,
+      "title": "verantwortlich",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 19,
+          "word": "verantwortlich",
+          "definition": "trägt die Pflicht für eine Aufgabe oder Folge",
+          "partOfSpeech": "Adjektiv",
+          "id": 19,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Die Abteilungsleiterin ist für das Projekt verantwortlich.",
+              "translation": ""
+            },
+            {
+              "sentence": "Eltern sind dafür verantwortlich, ihre Kinder zu schützen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wer ist für diesen Fehler verantwortlich?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 20,
+      "tabNumber": 1,
+      "title": "geduldig",
+      "words": [
+        {
+          "group": "Adjektive",
+          "sortOrder": 20,
+          "word": "geduldig",
+          "definition": "kann ruhig warten und gibt nicht schnell auf",
+          "partOfSpeech": "Adjektiv",
+          "id": 20,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Unser Lehrer erklärt schwierige Themen sehr geduldig.",
+              "translation": ""
+            },
+            {
+              "sentence": "Mit kleinen Kindern muss man besonders geduldig sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Kannst du auch bei langen Wartezeiten geduldig bleiben?",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
