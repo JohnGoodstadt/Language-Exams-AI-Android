@@ -1,0 +1,721 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "QuizSheetWordPairs-de",
+  "title": "Quiz zu ähnlichen deutschen Wörtern",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Fragen oder bitten",
+      "description": "Unterscheide „fragen“ für Informationen von „bitten“ für Wünsche, Hilfe und Handlungen.",
+      "sortorder": 1,
+      "sortbypage": true,
+      "sections": [
+        {
+          "title": "Fragen oder bitten",
+          "page": 1,
+          "sentence": "Fragen oder bitten",
+          "summary": "FRAGEN benutzen wir, wenn wir eine Information erhalten möchten.",
+          "explain": "Vor einem indirekten Fragesatz mit „wann“ passt „fragen“. „Bitten“ braucht dagegen einen Wunsch oder eine gewünschte Handlung.",
+          "words": [
+            {
+              "word": "Die Touristin fragt den Mitarbeiter, wann der Zug abfährt.",
+              "ok": true
+            },
+            {
+              "word": "Die Touristin bittet den Mitarbeiter, wann der Zug abfährt.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 2,
+          "sentence": "Fragen oder bitten",
+          "summary": "BITTEN steht häufig mit „um“ und einem gewünschten Gegenstand oder einer Hilfe.",
+          "explain": "Richtig ist „jemanden um Hilfe bitten“. „Fragen“ kann nicht auf diese Weise eine gewünschte Handlung mit einem Infinitiv ausdrücken.",
+          "words": [
+            {
+              "word": "Sie fragt ihren Nachbarn, ihr zu helfen.",
+              "ok": false
+            },
+            {
+              "word": "Sie bittet ihren Nachbarn um Hilfe.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 3,
+          "sentence": "Fragen oder bitten",
+          "summary": "Mit „nach“ FRAGEN wir nach einer Information.",
+          "explain": "Die feste Verbindung lautet „jemanden nach seinem Namen fragen“.",
+          "words": [
+            {
+              "word": "Darf ich Sie nach Ihrem Namen fragen?",
+              "ok": true
+            },
+            {
+              "word": "Darf ich Sie nach Ihrem Namen bitten?",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 4,
+          "sentence": "Fragen oder bitten",
+          "summary": "BITTEN kann mit einem Infinitivsatz ausdrücken, was jemand tun soll.",
+          "explain": "„Jemanden bitten, etwas zu tun“ beschreibt einen Wunsch. „Fragen“ passt nicht vor diesen Infinitivsatz.",
+          "words": [
+            {
+              "word": "Der Lehrer fragt die Schüler, leise zu sein.",
+              "ok": false
+            },
+            {
+              "word": "Der Lehrer bittet die Schüler, leise zu sein.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 5,
+          "sentence": "Fragen oder bitten",
+          "summary": "FRAGEN kann direkt ein Frageobjekt haben: jemanden etwas fragen.",
+          "explain": "„Kann ich dich etwas fragen?“ bedeutet, dass eine Information gesucht wird. „Jemanden etwas bitten“ ist nicht korrekt.",
+          "words": [
+            {
+              "word": "Kann ich dich etwas fragen?",
+              "ok": true
+            },
+            {
+              "word": "Kann ich dich etwas bitten?",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 6,
+          "sentence": "Fragen oder bitten",
+          "summary": "Wer etwas bekommen möchte, BITTET darum.",
+          "explain": "Im Restaurant heißt es „den Kellner um die Rechnung bitten“.",
+          "words": [
+            {
+              "word": "Wir fragen den Kellner, uns die Rechnung zu bringen.",
+              "ok": false
+            },
+            {
+              "word": "Wir bitten den Kellner um die Rechnung.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 7,
+          "sentence": "Fragen oder bitten",
+          "summary": "FRAGEN kann einen indirekten Fragesatz mit „ob“ einleiten.",
+          "explain": "Mit „fragen, ob …“ möchte Paul eine Information erhalten. „Bitten, ob …“ ist nicht korrekt.",
+          "words": [
+            {
+              "word": "Paul fragt, ob das Museum heute geöffnet ist.",
+              "ok": true
+            },
+            {
+              "word": "Paul bittet, ob das Museum heute geöffnet ist.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 8,
+          "sentence": "Fragen oder bitten",
+          "summary": "BITTEN beschreibt eine gewünschte Handlung.",
+          "explain": "Die Konstruktion lautet „jemanden bitten, etwas zu tun“: Hier soll die Person das Formular schicken.",
+          "words": [
+            {
+              "word": "Ich frage Sie, mir das Formular zu schicken.",
+              "ok": false
+            },
+            {
+              "word": "Ich bitte Sie, mir das Formular zu schicken.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 9,
+          "sentence": "Fragen oder bitten",
+          "summary": "FRAGEN nach + Dativ sucht eine Auskunft.",
+          "explain": "Am Bahnhof braucht die Person eine Information und fragt deshalb „nach dem richtigen Gleis“.",
+          "words": [
+            {
+              "word": "Am Bahnhof fragt sie nach dem richtigen Gleis.",
+              "ok": true
+            },
+            {
+              "word": "Am Bahnhof bittet sie nach dem richtigen Gleis.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Fragen oder bitten",
+          "page": 10,
+          "sentence": "Fragen oder bitten",
+          "summary": "BITTEN um + Akkusativ drückt einen Wunsch aus.",
+          "explain": "Der Arzt möchte, dass der Patient geduldig wartet. Deshalb bittet er ihn „um etwas Geduld“.",
+          "words": [
+            {
+              "word": "Der Arzt fragt den Patienten, etwas Geduld zu haben.",
+              "ok": false
+            },
+            {
+              "word": "Der Arzt bittet den Patienten um etwas Geduld.",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bringen oder holen",
+      "description": "Unterscheide „bringen“ für die Bewegung zu einem Ziel von „holen“ für das Abholen an einer Quelle.",
+      "sortorder": 2,
+      "sortbypage": true,
+      "sections": [
+        {
+          "title": "Bringen oder holen",
+          "page": 11,
+          "sentence": "Bringen oder holen",
+          "summary": "BRINGEN beschreibt die Bewegung einer Person zu einem Ziel.",
+          "explain": "Die Mutter bewegt das Kind zur Schule, wo es anschließend bleibt. Deshalb benutzt man „bringen“.",
+          "words": [
+            {
+              "word": "Die Mutter bringt das Kind morgens zur Schule, wo es bleibt.",
+              "ok": true
+            },
+            {
+              "word": "Die Mutter holt das Kind morgens zur Schule, wo es bleibt.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 12,
+          "sentence": "Bringen oder holen",
+          "summary": "HOLEN beschreibt den Weg zu einer Person und die Rückkehr mit ihr.",
+          "explain": "Der Vater fährt zur Schule, nimmt das Kind mit und fährt nach Hause. Deshalb heißt es „abholen“.",
+          "words": [
+            {
+              "word": "Der Vater bringt das Kind von der Schule ab, dann fahren beide nach Hause.",
+              "ok": false
+            },
+            {
+              "word": "Der Vater holt das Kind von der Schule ab, dann fahren beide nach Hause.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 13,
+          "sentence": "Bringen oder holen",
+          "summary": "BRINGEN bewegt eine Sache zu ihrem Ziel.",
+          "explain": "Der Brief wird zur Post gebracht und bleibt dort. Das Ziel steht im Mittelpunkt.",
+          "words": [
+            {
+              "word": "Ich bringe den Brief zur Post und lasse ihn dort.",
+              "ok": true
+            },
+            {
+              "word": "Ich hole den Brief zur Post und lasse ihn dort.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 14,
+          "sentence": "Bringen oder holen",
+          "summary": "HOLEN bedeutet, etwas an einer Quelle abzuholen und mitzunehmen.",
+          "explain": "Sie fährt zur Post, nimmt das Paket dort an sich und kehrt damit zurück.",
+          "words": [
+            {
+              "word": "Sie bringt das Paket bei der Post ab und nimmt es mit nach Hause.",
+              "ok": false
+            },
+            {
+              "word": "Sie holt das Paket bei der Post ab und nimmt es mit nach Hause.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 15,
+          "sentence": "Bringen oder holen",
+          "summary": "BRINGEN beschreibt die Zustellung zu einem Empfänger.",
+          "explain": "Der Kurier transportiert das Paket zum Kunden und übergibt es dort.",
+          "words": [
+            {
+              "word": "Der Kurier bringt das Paket zum Kunden und übergibt es ihm.",
+              "ok": true
+            },
+            {
+              "word": "Der Kurier holt das Paket zum Kunden und übergibt es ihm.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 16,
+          "sentence": "Bringen oder holen",
+          "summary": "HOLEN passt, wenn etwas bei einer Person abgeholt wird.",
+          "explain": "Der Kurier fährt zum Kunden, nimmt die Rücksendung mit und transportiert sie weg.",
+          "words": [
+            {
+              "word": "Der Kurier bringt die Rücksendung beim Kunden ab und nimmt sie mit.",
+              "ok": false
+            },
+            {
+              "word": "Der Kurier holt die Rücksendung beim Kunden ab und nimmt sie mit.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 17,
+          "sentence": "Bringen oder holen",
+          "summary": "BRINGEN passt bei einer Rückgabe an den ursprünglichen Ort.",
+          "explain": "„Etwas zurückbringen“ bedeutet, es wieder an sein Ziel oder zu seinem Besitzer zu transportieren.",
+          "words": [
+            {
+              "word": "Bitte bring die ausgeliehenen Bücher morgen in die Bibliothek zurück.",
+              "ok": true
+            },
+            {
+              "word": "Bitte hol die ausgeliehenen Bücher morgen in die Bibliothek zurück.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 18,
+          "sentence": "Bringen oder holen",
+          "summary": "HOLEN passt, wenn eine Person an einem Ort abgeholt wird.",
+          "explain": "Die sprechende Person fährt zum Bahnhof und kommt anschließend mit der anderen Person zurück.",
+          "words": [
+            {
+              "word": "Ich bringe dich um acht Uhr vom Bahnhof ab.",
+              "ok": false
+            },
+            {
+              "word": "Ich hole dich um acht Uhr vom Bahnhof ab.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 19,
+          "sentence": "Bringen oder holen",
+          "summary": "HOLEN beschreibt hier den Beginn der gemeinsamen Fahrt.",
+          "explain": "Der Fahrer fährt zuerst zum Hotel, nimmt die Gäste dort auf und fährt dann mit ihnen weiter.",
+          "words": [
+            {
+              "word": "Der Fahrer holt die Gäste am Hotel ab und fährt mit ihnen zum Bahnhof.",
+              "ok": true
+            },
+            {
+              "word": "Der Fahrer bringt die Gäste am Hotel ab und fährt mit ihnen zum Bahnhof.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Bringen oder holen",
+          "page": 20,
+          "sentence": "Bringen oder holen",
+          "summary": "BRINGEN beschreibt die Bewegung der Gäste zum Ziel.",
+          "explain": "Der Bahnhof ist das Ziel der Fahrt. Dort verabschiedet sich der Fahrer von den Gästen.",
+          "words": [
+            {
+              "word": "Der Fahrer holt die Gäste zum Bahnhof und verabschiedet sich dort.",
+              "ok": false
+            },
+            {
+              "word": "Der Fahrer bringt die Gäste zum Bahnhof und verabschiedet sich dort.",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hören oder zuhören",
+      "description": "Unterscheide „hören“ für wahrgenommene Geräusche und Informationen von „zuhören“ für bewusste Aufmerksamkeit.",
+      "sortorder": 3,
+      "sortbypage": true,
+      "sections": [
+        {
+          "title": "Hören oder zuhören",
+          "page": 21,
+          "sentence": "Hören oder zuhören",
+          "summary": "HÖREN beschreibt das Wahrnehmen eines unerwarteten Geräusches.",
+          "explain": "Das Geräusch wird mit dem Akkusativ direkt nach „hören“ genannt. Bewusstes Zuhören ist hier nicht gemeint.",
+          "words": [
+            {
+              "word": "Plötzlich höre ich ein lautes Geräusch.",
+              "ok": true
+            },
+            {
+              "word": "Plötzlich höre ich ein lautes Geräusch zu.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 22,
+          "sentence": "Hören oder zuhören",
+          "summary": "HÖREN kann ein Geräusch zusammen mit einem Infinitiv beschreiben.",
+          "explain": "Man hört „das Telefon klingeln“. Das Telefon spricht nicht zu uns, deshalb passt „zuhören“ nicht.",
+          "words": [
+            {
+              "word": "Hörst du das Telefon klingeln zu?",
+              "ok": false
+            },
+            {
+              "word": "Hörst du das Telefon klingeln?",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 23,
+          "sentence": "Hören oder zuhören",
+          "summary": "Mit HÖREN können wir ausdrücken, dass wir eine Information erhalten haben.",
+          "explain": "Vor einem „dass“-Satz benutzt man hier „gehört“. „Zugehört, dass …“ ist nicht korrekt.",
+          "words": [
+            {
+              "word": "Ich habe gehört, dass der Kurs morgen ausfällt.",
+              "ok": true
+            },
+            {
+              "word": "Ich habe zugehört, dass der Kurs morgen ausfällt.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 24,
+          "sentence": "Hören oder zuhören",
+          "summary": "HÖREN beschreibt das Wahrnehmen von Schritten.",
+          "explain": "„Schnelle Schritte“ sind ein Geräusch und stehen als Akkusativobjekt nach „hören“.",
+          "words": [
+            {
+              "word": "Sie hört hinter sich schnelle Schritte zu.",
+              "ok": false
+            },
+            {
+              "word": "Sie hört hinter sich schnelle Schritte.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 25,
+          "sentence": "Hören oder zuhören",
+          "summary": "HÖREN benutzen wir für ein Signal wie eine Türklingel.",
+          "explain": "Die Türklingel wird akustisch wahrgenommen. Sie ist keine sprechende Person, der man zuhört.",
+          "words": [
+            {
+              "word": "Trotz der Musik hörte er die Türklingel.",
+              "ok": true
+            },
+            {
+              "word": "Trotz der Musik hörte er die Türklingel zu.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 26,
+          "sentence": "Hören oder zuhören",
+          "summary": "ZUHÖREN bedeutet, einer sprechenden Person bewusst Aufmerksamkeit zu geben.",
+          "explain": "Die Person nach „zuhören“ steht im Dativ: „mir“. Das Verb wird getrennt: „hör … zu“.",
+          "words": [
+            {
+              "word": "Wenn ich dir etwas erkläre, hör mich bitte aufmerksam zu.",
+              "ok": false
+            },
+            {
+              "word": "Wenn ich dir etwas erkläre, hör mir bitte aufmerksam zu.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 27,
+          "sentence": "Hören oder zuhören",
+          "summary": "Nach ZUHÖREN steht die Person im Dativ.",
+          "explain": "Richtig ist „der Lehrerin zuhören“. Das Akkusativobjekt „die Lehrerin“ passt nicht zu „zuhören“.",
+          "words": [
+            {
+              "word": "Im Unterricht hören die Kinder der Lehrerin aufmerksam zu.",
+              "ok": true
+            },
+            {
+              "word": "Im Unterricht hören die Kinder die Lehrerin aufmerksam zu.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 28,
+          "sentence": "Hören oder zuhören",
+          "summary": "ZUHÖREN ist trennbar und verlangt den Dativ.",
+          "explain": "„Der Arzt“ wird nach „zuhören“ zu „dem Arzt“; „zu“ steht am Satzende.",
+          "words": [
+            {
+              "word": "Der Patient hört den Arzt ruhig zu.",
+              "ok": false
+            },
+            {
+              "word": "Der Patient hört dem Arzt ruhig zu.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 29,
+          "sentence": "Hören oder zuhören",
+          "summary": "Wer einer Person ZUHÖRT, verwendet den Dativ.",
+          "explain": "„Die Kinder“ wird im Dativ Plural zu „den Kindern“.",
+          "words": [
+            {
+              "word": "Die Eltern hören ihren Kindern zu, wenn sie ein Problem haben.",
+              "ok": true
+            },
+            {
+              "word": "Die Eltern hören ihre Kinder zu, wenn sie ein Problem haben.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Hören oder zuhören",
+          "page": 30,
+          "sentence": "Hören oder zuhören",
+          "summary": "ZUHÖREN beschreibt bewusste Aufmerksamkeit in einem Gespräch.",
+          "explain": "„Deine Kollegin“ steht nach „zuhören“ im Dativ: „deiner Kollegin“.",
+          "words": [
+            {
+              "word": "Warum hörst du deine Kollegin nicht zu?",
+              "ok": false
+            },
+            {
+              "word": "Warum hörst du deiner Kollegin nicht zu?",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Kennen oder wissen",
+      "description": "Unterscheide „kennen“ für Vertrautheit mit Personen, Orten und Dingen von „wissen“ für Fakten und Informationen.",
+      "sortorder": 4,
+      "sortbypage": true,
+      "sections": [
+        {
+          "title": "Kennen oder wissen",
+          "page": 31,
+          "sentence": "Kennen oder wissen",
+          "summary": "KENNEN benutzen wir für eine Person, mit der wir vertraut sind.",
+          "explain": "„Maria“ ist eine Person. Deshalb heißt es „Ich kenne Maria“, nicht „Ich weiß Maria“.",
+          "words": [
+            {
+              "word": "Ich kenne Maria persönlich.",
+              "ok": true
+            },
+            {
+              "word": "Ich weiß Maria persönlich.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 32,
+          "sentence": "Kennen oder wissen",
+          "summary": "KENNEN beschreibt Vertrautheit mit einem Ort.",
+          "explain": "Wer bereits Erfahrung mit einer Stadt hat, kennt sie.",
+          "words": [
+            {
+              "word": "Wir wissen diese Stadt sehr gut.",
+              "ok": false
+            },
+            {
+              "word": "Wir kennen diese Stadt sehr gut.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 33,
+          "sentence": "Kennen oder wissen",
+          "summary": "KENNEN benutzen wir für ein Buch oder eine andere Sache.",
+          "explain": "Das Buch ist ein Akkusativobjekt nach „kennen“. „Wissen“ wird nicht auf diese Weise mit einer Sache verwendet.",
+          "words": [
+            {
+              "word": "Kennst du dieses Buch schon?",
+              "ok": true
+            },
+            {
+              "word": "Weißt du dieses Buch schon?",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 34,
+          "sentence": "Kennen oder wissen",
+          "summary": "KENNEN beschreibt eine länger bestehende Bekanntschaft.",
+          "explain": "Mit einer Person ist man vertraut: Man „kennt“ sie.",
+          "words": [
+            {
+              "word": "Er weiß meinen Bruder seit vielen Jahren.",
+              "ok": false
+            },
+            {
+              "word": "Er kennt meinen Bruder seit vielen Jahren.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 35,
+          "sentence": "Kennen oder wissen",
+          "summary": "KENNEN kann eine vertraute oder bereits erfahrene Sache bezeichnen.",
+          "explain": "Wer ein Restaurant empfehlen kann, ist mit diesem Ort vertraut und „kennt“ ihn.",
+          "words": [
+            {
+              "word": "Sie kennt ein gutes Restaurant in der Nähe.",
+              "ok": true
+            },
+            {
+              "word": "Sie weiß ein gutes Restaurant in der Nähe.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 36,
+          "sentence": "Kennen oder wissen",
+          "summary": "WISSEN benutzen wir für eine Information mit „wo“.",
+          "explain": "Der Nebensatz „wo der Bahnhof ist“ enthält eine Information. Deshalb passt „wissen“.",
+          "words": [
+            {
+              "word": "Ich kenne, wo der Bahnhof ist.",
+              "ok": false
+            },
+            {
+              "word": "Ich weiß, wo der Bahnhof ist.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 37,
+          "sentence": "Kennen oder wissen",
+          "summary": "WISSEN benutzen wir für eine Information mit „wann“.",
+          "explain": "Die Ankunftszeit ist eine Tatsache. Deshalb heißt es „Weißt du, wann …?“.",
+          "words": [
+            {
+              "word": "Weißt du, wann der nächste Zug kommt?",
+              "ok": true
+            },
+            {
+              "word": "Kennst du, wann der nächste Zug kommt?",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 38,
+          "sentence": "Kennen oder wissen",
+          "summary": "WISSEN kann vor einem „dass“-Satz stehen.",
+          "explain": "Der „dass“-Satz nennt eine bekannte Tatsache. „Kennen, dass …“ ist nicht korrekt.",
+          "words": [
+            {
+              "word": "Wir kennen, dass der Laden heute geschlossen ist.",
+              "ok": false
+            },
+            {
+              "word": "Wir wissen, dass der Laden heute geschlossen ist.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 39,
+          "sentence": "Kennen oder wissen",
+          "summary": "WISSEN benutzen wir für einen unbekannten Grund.",
+          "explain": "„Warum er gegangen ist“ ist eine Information. Deshalb passt „wissen“.",
+          "words": [
+            {
+              "word": "Niemand weiß, warum er so früh gegangen ist.",
+              "ok": true
+            },
+            {
+              "word": "Niemand kennt, warum er so früh gegangen ist.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "Kennen oder wissen",
+          "page": 40,
+          "sentence": "Kennen oder wissen",
+          "summary": "WISSEN benutzen wir für eine Information mit „wie“.",
+          "explain": "Der Nebensatz erklärt eine Funktionsweise und ist damit eine Information, keine vertraute Person oder Sache.",
+          "words": [
+            {
+              "word": "Sie kennt, wie der neue Computer funktioniert.",
+              "ok": false
+            },
+            {
+              "word": "Sie weiß, wie der neue Computer funktioniert.",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
