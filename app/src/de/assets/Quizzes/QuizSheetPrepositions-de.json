@@ -1,0 +1,668 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "QuizSheetPrepositions-de",
+  "title": "Quiz zu deutschen Präpositionen",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Deutsche Präpositionen",
+      "description": "Wähle für jede Präposition den grammatisch richtigen Satz. Die Aufgaben behandeln häufige Präpositionen bis zum Niveau B1.",
+      "sortorder": 1,
+      "sortbypage": true,
+      "sections": [
+        {
+          "title": "bis",
+          "page": 1,
+          "sentence": "bis",
+          "summary": "„bis“ bezeichnet einen Endpunkt in der Zeit.",
+          "explain": "Ohne Artikel steht nach „bis“ hier die Akkusativform „nächsten Freitag“.",
+          "words": [
+            {
+              "word": "Ich bleibe bis nächsten Freitag in Berlin.",
+              "ok": true
+            },
+            {
+              "word": "Ich bleibe bis nächstem Freitag in Berlin.",
+              "ok": false
+            },
+            {
+              "word": "Ich bleibe bis der nächste Freitag in Berlin.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "durch",
+          "page": 2,
+          "sentence": "durch",
+          "summary": "„durch“ verlangt den Akkusativ.",
+          "explain": "„Der Wald“ wird nach „durch“ zu „durch den Wald“.",
+          "words": [
+            {
+              "word": "Wir gehen durch den dunklen Wald.",
+              "ok": true
+            },
+            {
+              "word": "Wir gehen durch dem dunklen Wald.",
+              "ok": false
+            },
+            {
+              "word": "Wir gehen durch der dunkle Wald.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "entlang",
+          "page": 3,
+          "sentence": "entlang",
+          "summary": "Nachgestelltes „entlang“ steht normalerweise mit Akkusativ.",
+          "explain": "Richtig ist „den Fluss entlang“: Das Nomen steht vor „entlang“ im Akkusativ.",
+          "words": [
+            {
+              "word": "Wir fahren den Fluss entlang.",
+              "ok": true
+            },
+            {
+              "word": "Wir fahren der Fluss entlang.",
+              "ok": false
+            },
+            {
+              "word": "Wir fahren den Flusses entlang.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "für",
+          "page": 4,
+          "sentence": "für",
+          "summary": "„für“ verlangt den Akkusativ.",
+          "explain": "„Mein Bruder“ wird nach „für“ zu „für meinen Bruder“.",
+          "words": [
+            {
+              "word": "Dieses Geschenk ist für meinen Bruder.",
+              "ok": true
+            },
+            {
+              "word": "Dieses Geschenk ist für meinem Bruder.",
+              "ok": false
+            },
+            {
+              "word": "Dieses Geschenk ist für mein Bruder.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "gegen",
+          "page": 5,
+          "sentence": "gegen",
+          "summary": "„gegen“ verlangt den Akkusativ.",
+          "explain": "Bei einer Bewegung zur Wand heißt es „gegen die Wand“.",
+          "words": [
+            {
+              "word": "Der Ball fliegt gegen die Wand.",
+              "ok": true
+            },
+            {
+              "word": "Der Ball fliegt gegen der Wand.",
+              "ok": false
+            },
+            {
+              "word": "Der Ball fliegt gegen die Wande.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "ohne",
+          "page": 6,
+          "sentence": "ohne",
+          "summary": "„ohne“ verlangt den Akkusativ.",
+          "explain": "„Ein Regenschirm“ wird nach „ohne“ zu „ohne einen Regenschirm“.",
+          "words": [
+            {
+              "word": "Ohne einen Regenschirm werde ich nass.",
+              "ok": true
+            },
+            {
+              "word": "Ohne einem Regenschirm werde ich nass.",
+              "ok": false
+            },
+            {
+              "word": "Ohne ein Regenschirm werde ich nass.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "um",
+          "page": 7,
+          "sentence": "um",
+          "summary": "Bei einer Bewegung rund um etwas verlangt „um“ den Akkusativ.",
+          "explain": "„Der See“ wird nach „um“ zu „um den See“.",
+          "words": [
+            {
+              "word": "Wir laufen einmal um den See.",
+              "ok": true
+            },
+            {
+              "word": "Wir laufen einmal um dem See.",
+              "ok": false
+            },
+            {
+              "word": "Wir laufen einmal um der See.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "aus",
+          "page": 8,
+          "sentence": "aus",
+          "summary": "„aus“ verlangt den Dativ.",
+          "explain": "„Die Tasche“ wird nach „aus“ zu „aus der Tasche“.",
+          "words": [
+            {
+              "word": "Er nimmt das Handy aus der Tasche.",
+              "ok": true
+            },
+            {
+              "word": "Er nimmt das Handy aus die Tasche.",
+              "ok": false
+            },
+            {
+              "word": "Er nimmt das Handy aus den Tasche.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "außer",
+          "page": 9,
+          "sentence": "außer",
+          "summary": "„außer“ steht normalerweise mit Dativ.",
+          "explain": "„Mein Bruder“ wird nach „außer“ zu „außer meinem Bruder“.",
+          "words": [
+            {
+              "word": "Außer meinem Bruder waren alle Gäste da.",
+              "ok": true
+            },
+            {
+              "word": "Außer meinen Bruder waren alle Gäste da.",
+              "ok": false
+            },
+            {
+              "word": "Außer mein Bruder waren alle Gäste da.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "bei",
+          "page": 10,
+          "sentence": "bei",
+          "summary": "„bei“ verlangt den Dativ.",
+          "explain": "Für den Aufenthalt bei einer Person heißt es „bei meiner Schwester“.",
+          "words": [
+            {
+              "word": "Heute übernachte ich bei meiner Schwester.",
+              "ok": true
+            },
+            {
+              "word": "Heute übernachte ich bei meine Schwester.",
+              "ok": false
+            },
+            {
+              "word": "Heute übernachte ich bei meinen Schwester.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "gegenüber",
+          "page": 11,
+          "sentence": "gegenüber",
+          "summary": "„gegenüber“ verlangt den Dativ.",
+          "explain": "Bei einem maskulinen Nomen heißt es „gegenüber dem Bahnhof“.",
+          "words": [
+            {
+              "word": "Die Apotheke liegt gegenüber dem Bahnhof.",
+              "ok": true
+            },
+            {
+              "word": "Die Apotheke liegt gegenüber den Bahnhof.",
+              "ok": false
+            },
+            {
+              "word": "Die Apotheke liegt gegenüber der Bahnhof.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "mit",
+          "page": 12,
+          "sentence": "mit",
+          "summary": "„mit“ verlangt immer den Dativ.",
+          "explain": "Bei einem Verkehrsmittel heißt es „mit dem Bus“.",
+          "words": [
+            {
+              "word": "Fährst du jeden Morgen mit dem Bus?",
+              "ok": true
+            },
+            {
+              "word": "Fährst du jeden Morgen mit den Bus?",
+              "ok": false
+            },
+            {
+              "word": "Fährst du jeden Morgen mit der Bus?",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "nach",
+          "page": 13,
+          "sentence": "nach",
+          "summary": "Bei der Bedeutung „später als“ verlangt „nach“ den Dativ.",
+          "explain": "„Das Essen“ wird nach „nach“ zu „nach dem Essen“.",
+          "words": [
+            {
+              "word": "Nach dem Essen trinken wir Kaffee.",
+              "ok": true
+            },
+            {
+              "word": "Nach den Essen trinken wir Kaffee.",
+              "ok": false
+            },
+            {
+              "word": "Nach das Essen trinken wir Kaffee.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "seit",
+          "page": 14,
+          "sentence": "seit",
+          "summary": "„seit“ verlangt den Dativ.",
+          "explain": "Für einen Zeitraum heißt es „seit einem Jahr“.",
+          "words": [
+            {
+              "word": "Ich lerne seit einem Jahr Deutsch.",
+              "ok": true
+            },
+            {
+              "word": "Ich lerne seit einen Jahr Deutsch.",
+              "ok": false
+            },
+            {
+              "word": "Ich lerne seit ein Jahr Deutsch.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "von",
+          "page": 15,
+          "sentence": "von",
+          "summary": "„von“ verlangt den Dativ.",
+          "explain": "„Meine Ärztin“ wird nach „von“ zu „von meiner Ärztin“.",
+          "words": [
+            {
+              "word": "Ich habe eine Nachricht von meiner Ärztin bekommen.",
+              "ok": true
+            },
+            {
+              "word": "Ich habe eine Nachricht von meine Ärztin bekommen.",
+              "ok": false
+            },
+            {
+              "word": "Ich habe eine Nachricht von meinen Ärztin bekommen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "zu",
+          "page": 16,
+          "sentence": "zu",
+          "summary": "„zu“ verlangt den Dativ.",
+          "explain": "Bei einer Bewegung zu einer Person heißt es „zu meinem Bruder“.",
+          "words": [
+            {
+              "word": "Am Wochenende fahre ich zu meinem Bruder.",
+              "ok": true
+            },
+            {
+              "word": "Am Wochenende fahre ich zu meinen Bruder.",
+              "ok": false
+            },
+            {
+              "word": "Am Wochenende fahre ich zu mein Bruder.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "an",
+          "page": 17,
+          "sentence": "an",
+          "summary": "Bei einer festen Position steht „an“ mit Dativ.",
+          "explain": "Das Bild bewegt sich nicht. Deshalb heißt es „an der Wand“, nicht „an die Wand“.",
+          "words": [
+            {
+              "word": "Das Bild hängt an der Wand.",
+              "ok": true
+            },
+            {
+              "word": "Das Bild hängt an die Wand.",
+              "ok": false
+            },
+            {
+              "word": "Das Bild hängt an den Wand.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "auf",
+          "page": 18,
+          "sentence": "auf",
+          "summary": "Bei einer festen Position steht „auf“ mit Dativ.",
+          "explain": "Die Schlüssel bewegen sich nicht. Deshalb heißt es „auf dem Tisch“.",
+          "words": [
+            {
+              "word": "Die Schlüssel liegen auf dem Tisch.",
+              "ok": true
+            },
+            {
+              "word": "Die Schlüssel liegen auf den Tisch.",
+              "ok": false
+            },
+            {
+              "word": "Die Schlüssel liegen auf der Tisch.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "hinter",
+          "page": 19,
+          "sentence": "hinter",
+          "summary": "Bei einer festen Position steht „hinter“ mit Dativ.",
+          "explain": "Der Garten hat eine feste Lage. Deshalb heißt es „hinter dem Haus“.",
+          "words": [
+            {
+              "word": "Der Garten liegt hinter dem Haus.",
+              "ok": true
+            },
+            {
+              "word": "Der Garten liegt hinter das Haus.",
+              "ok": false
+            },
+            {
+              "word": "Der Garten liegt hinter den Haus.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "in",
+          "page": 20,
+          "sentence": "in",
+          "summary": "Bei einem Ort ohne Richtungswechsel steht „in“ mit Dativ.",
+          "explain": "Die Besprechung findet an einem festen Ort statt. Deshalb heißt es „in einem Raum“.",
+          "words": [
+            {
+              "word": "Die Besprechung findet in einem großen Raum statt.",
+              "ok": true
+            },
+            {
+              "word": "Die Besprechung findet in einen großen Raum statt.",
+              "ok": false
+            },
+            {
+              "word": "Die Besprechung findet in ein großer Raum statt.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "neben",
+          "page": 21,
+          "sentence": "neben",
+          "summary": "Bei einer festen Position steht „neben“ mit Dativ.",
+          "explain": "Die Bank hat eine feste Lage. Deshalb heißt es „neben der Post“.",
+          "words": [
+            {
+              "word": "Die Bank liegt direkt neben der Post.",
+              "ok": true
+            },
+            {
+              "word": "Die Bank liegt direkt neben die Post.",
+              "ok": false
+            },
+            {
+              "word": "Die Bank liegt direkt neben den Post.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "über",
+          "page": 22,
+          "sentence": "über",
+          "summary": "Bei einer festen Position steht „über“ mit Dativ.",
+          "explain": "Die Lampe hat eine feste Position. Deshalb heißt es „über dem Tisch“.",
+          "words": [
+            {
+              "word": "Die Lampe befindet sich über dem Tisch.",
+              "ok": true
+            },
+            {
+              "word": "Die Lampe befindet sich über den Tisch.",
+              "ok": false
+            },
+            {
+              "word": "Die Lampe befindet sich über der Tisch.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "unter",
+          "page": 23,
+          "sentence": "unter",
+          "summary": "Bei einer festen Position steht „unter“ mit Dativ.",
+          "explain": "Die Katze bewegt sich nicht zu einem Ziel. Deshalb heißt es „unter dem Sofa“.",
+          "words": [
+            {
+              "word": "Die Katze schläft unter dem Sofa.",
+              "ok": true
+            },
+            {
+              "word": "Die Katze schläft unter das Sofa.",
+              "ok": false
+            },
+            {
+              "word": "Die Katze schläft unter den Sofa.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "vor",
+          "page": 24,
+          "sentence": "vor",
+          "summary": "Bei einer festen Position steht „vor“ mit Dativ.",
+          "explain": "Das Taxi wartet an einem festen Ort. Deshalb heißt es „vor dem Gebäude“.",
+          "words": [
+            {
+              "word": "Ein Taxi wartet vor dem Gebäude.",
+              "ok": true
+            },
+            {
+              "word": "Ein Taxi wartet vor das Gebäude.",
+              "ok": false
+            },
+            {
+              "word": "Ein Taxi wartet vor den Gebäude.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "zwischen",
+          "page": 25,
+          "sentence": "zwischen",
+          "summary": "Bei einer festen Position steht „zwischen“ mit Dativ.",
+          "explain": "Der Stuhl steht an einem festen Ort zwischen zwei Dingen. Beide Nomen stehen im Dativ.",
+          "words": [
+            {
+              "word": "Der Stuhl steht zwischen dem Tisch und dem Fenster.",
+              "ok": true
+            },
+            {
+              "word": "Der Stuhl steht zwischen den Tisch und das Fenster.",
+              "ok": false
+            },
+            {
+              "word": "Der Stuhl steht zwischen der Tisch und den Fenster.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "außerhalb",
+          "page": 26,
+          "sentence": "außerhalb",
+          "summary": "„außerhalb“ steht in der Standardsprache mit Genitiv.",
+          "explain": "„Die Stadt“ wird nach „außerhalb“ zu „außerhalb der Stadt“.",
+          "words": [
+            {
+              "word": "Das Hotel liegt außerhalb der Stadt.",
+              "ok": true
+            },
+            {
+              "word": "Das Hotel liegt außerhalb die Stadt.",
+              "ok": false
+            },
+            {
+              "word": "Das Hotel liegt außerhalb den Stadt.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "innerhalb",
+          "page": 27,
+          "sentence": "innerhalb",
+          "summary": "„innerhalb“ steht mit Genitiv.",
+          "explain": "Für eine Frist heißt es „innerhalb einer Woche“.",
+          "words": [
+            {
+              "word": "Bitte antworten Sie innerhalb einer Woche.",
+              "ok": true
+            },
+            {
+              "word": "Bitte antworten Sie innerhalb eine Woche.",
+              "ok": false
+            },
+            {
+              "word": "Bitte antworten Sie innerhalb einem Woche.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "statt",
+          "page": 28,
+          "sentence": "statt",
+          "summary": "„statt“ steht in der Standardsprache mit Genitiv.",
+          "explain": "„Das Auto“ wird nach „statt“ zu „statt des Autos“.",
+          "words": [
+            {
+              "word": "Statt des Autos nehme ich heute den Bus.",
+              "ok": true
+            },
+            {
+              "word": "Statt des Auto nehme ich heute den Bus.",
+              "ok": false
+            },
+            {
+              "word": "Statt dem Autos nehme ich heute den Bus.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "trotz",
+          "page": 29,
+          "sentence": "trotz",
+          "summary": "„trotz“ steht in der Standardsprache mit Genitiv.",
+          "explain": "Richtig ist „trotz des starken Regens“: Artikel, Adjektiv und Nomen zeigen den Genitiv.",
+          "words": [
+            {
+              "word": "Trotz des starken Regens gehen wir spazieren.",
+              "ok": true
+            },
+            {
+              "word": "Trotz den starken Regen gehen wir spazieren.",
+              "ok": false
+            },
+            {
+              "word": "Trotz der starken Regens gehen wir spazieren.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "während",
+          "page": 30,
+          "sentence": "während",
+          "summary": "Als Präposition steht „während“ mit Genitiv.",
+          "explain": "„Der Unterricht“ wird nach „während“ zu „während des Unterrichts“.",
+          "words": [
+            {
+              "word": "Während des Unterrichts bleiben die Handys aus.",
+              "ok": true
+            },
+            {
+              "word": "Während den Unterricht bleiben die Handys aus.",
+              "ok": false
+            },
+            {
+              "word": "Während der Unterricht bleiben die Handys aus.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "wegen",
+          "page": 31,
+          "sentence": "wegen",
+          "summary": "„wegen“ steht in der Standardsprache mit Genitiv.",
+          "explain": "Richtig ist „wegen des schlechten Wetters“: Artikel, Adjektiv und Nomen stehen im Genitiv.",
+          "words": [
+            {
+              "word": "Wegen des schlechten Wetters fällt das Spiel aus.",
+              "ok": true
+            },
+            {
+              "word": "Wegen den schlechtem Wetter fällt das Spiel aus.",
+              "ok": false
+            },
+            {
+              "word": "Wegen der schlechte Wetter fällt das Spiel aus.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

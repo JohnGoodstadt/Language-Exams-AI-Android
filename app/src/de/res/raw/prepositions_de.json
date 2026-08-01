@@ -1,703 +1,918 @@
 {
-	"romanized" : false,
-	"native" : "",
-	"name" : "",
-	"sheetname" : "GermanConjugations",
-	"id" : "",
-	"location" : 0,
-	"googlevoiceprefix" : "",
-	"uploaddate" : 1747213019.492379,
-	"voicename" : "",
-	"nativename" : "",
-	"updatedDate" : 978307200,
-	"fileformat" : 1,
-	"tabtitles" : ["Personal","Time","More"],
-	"categories" :
-	[
-		{
-			"sortOrder": 1,
-			"tabnumber": 1,
-			"title": "Zu (To, At, For)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 1,
-					"word": "zu",
-					"partOfSpeech": "Präposition",
-					"id": 1,
-					"romanisation": "",
-					"translation": "to, at, for",
-					"sentences": [
-						{
-							"translation": "I'm going to the train station.",
-							"sentence": "Ich gehe zum Bahnhof."
-						},
-						{
-							"translation": "See you at Christmas!",
-							"sentence": "Bis bald zu Weihnachten!"
-						},
-						{
-							"translation": "She invited me for her birthday.",
-							"sentence": "Sie hat mich zu ihrem Geburtstag eingeladen."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 2,
-					"word": "zu",
-					"partOfSpeech": "Präposition",
-					"id": 2,
-					"romanisation": "",
-					"translation": "to, at, for",
-					"sentences": [
-						{
-							"translation": "Let's go to the party!",
-							"sentence": "Lasst uns zur Party gehen!"
-						},
-						{
-							"translation": "I'm going to my grandmother's house.",
-							"sentence": "Ich gehe zu meiner Großmutter."
-						},
-						{
-							"translation": "He said yes to my proposal.",
-							"sentence": "Er hat zu meinem Vorschlag Ja gesagt."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 3,
-					"word": "zu",
-					"partOfSpeech": "Präposition",
-					"id": 3,
-					"romanisation": "",
-					"translation": "to, at, for",
-					"sentences": [
-						{
-							"translation": "The door is closed.",
-							"sentence": "Die Tür ist zu."
-						},
-						{
-							"translation": "He is home for dinner.",
-							"sentence": "Er ist zum Abendessen zu Hause."
-						},
-						{
-							"translation": "I wish you good luck for your exam.",
-							"sentence": "Ich wünsche dir viel Glück zur Prüfung."
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 4,
-			"tabnumber": 2,
-			"title": "Mit (With, By)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 4,
-					"word": "mit",
-					"partOfSpeech": "Präposition",
-					"id": 4,
-					"romanisation": "",
-					"translation": "with, by",
-					"sentences": [
-						{
-							"translation": "I am traveling with my friends.",
-							"sentence": "Ich reise mit meinen Freunden."
-						},
-						{
-							"translation": "I go to work by bus.",
-							"sentence": "Ich fahre mit dem Bus zur Arbeit."
-						},
-						{
-							"translation": "She writes with a pen.",
-							"sentence": "Sie schreibt mit einem Stift."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 5,
-					"word": "mit",
-					"partOfSpeech": "Präposition",
-					"id": 5,
-					"romanisation": "",
-					"translation": "with, by",
-					"sentences": [
-						{
-							"translation": "He drinks coffee with milk.",
-							"sentence": "Er trinkt Kaffee mit Milch."
-						},
-						{
-							"translation": "We are walking with the dog.",
-							"sentence": "Wir gehen mit dem Hund spazieren."
-						},
-						{
-							"translation": "The package arrived by post.",
-							"sentence": "Das Paket kam mit der Post an."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 6,
-					"word": "mit",
-					"partOfSpeech": "Präposition",
-					"id": 6,
-					"romanisation": "",
-					"translation": "with, by",
-					"sentences": [
-						{
-							"translation": "She plays with her children.",
-							"sentence": "Sie spielt mit ihren Kindern."
-						},
-						{
-							"translation": "I paid with my credit card.",
-							"sentence": "Ich habe mit meiner Kreditkarte bezahlt."
-						},
-						{
-							"translation": "The house was built with great effort.",
-							"sentence": "Das Haus wurde mit großer Mühe gebaut."
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 7,
-			"tabnumber": 3,
-			"title": "Für (For)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 7,
-					"word": "für",
-					"partOfSpeech": "Präposition",
-					"id": 7,
-					"romanisation": "",
-					"translation": "for",
-					"sentences": [
-						{
-							"translation": "This gift is for you.",
-							"sentence": "Dieses Geschenk ist für dich."
-						},
-						{
-							"translation": "I am grateful for your help.",
-							"sentence": "Ich bin dankbar für deine Hilfe."
-						},
-						{
-							"translation": "He works for a big company.",
-							"sentence": "Er arbeitet für eine große Firma."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 8,
-					"word": "für",
-					"partOfSpeech": "Präposition",
-					"id": 8,
-					"romanisation": "",
-					"translation": "for",
-					"sentences": [
-						{
-							"translation": "It is good for your health.",
-							"sentence": "Es ist gut für deine Gesundheit."
-						},
-						{
-							"translation": "We're leaving for Munich tomorrow.",
-							"sentence": "Wir fahren morgen nach München."
-						},
-						{
-							"translation": "He fought for his country.",
-							"sentence": "Er kämpfte für sein Land."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 9,
-					"word": "für",
-					"partOfSpeech": "Präposition",
-					"id": 9,
-					"romanisation": "",
-					"translation": "for",
-					"sentences": [
-						{
-							"translation": "I have no time for that.",
-							"sentence": "Ich habe keine Zeit dafür."
-						},
-						{
-							"translation": "What can I do for you?",
-							"sentence": "Was kann ich für Sie tun?"
-						},
-						{
-							"translation": "She prepared dinner for us.",
-							"sentence": "Sie hat das Abendessen für uns zubereitet."
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 10,
-			"tabnumber": 4,
-			"title": "An (At, On, To - Two-way)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 10,
-					"word": "für",
-					"partOfSpeech": "Präposition",
-					"id": 10,
-					"romanisation": "",
-					"translation": "at, on, to (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "The picture is hanging on the wall. (No motion, Dativ)",
-							"sentence": "Das Bild hängt an der Wand."
-						},
-						{
-							"translation": "I'm hanging the picture on the wall. (Motion, Akkusativ)",
-							"sentence": "Ich hänge das Bild an die Wand."
-						},
-						{
-							"translation": "We are at the lake. (No motion, Dativ)",
-							"sentence": "Wir sind am See."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 11,
-					"word": "für",
-					"partOfSpeech": "Präposition",
-					"id": 11,
-					"romanisation": "",
-					"translation": "at, on, to (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "He lives close to the border. (No motion, Dativ)",
-							"sentence": "Er wohnt an der Grenze."
-						},
-						{
-							"translation": "Please stick the note on the door. (Motion, Akkusativ)",
-							"sentence": "Klebe den Zettel bitte an die Tür."
-						},
-						{
-							"translation": "I am thinking of you. (Fixed expression, Akkusativ)",
-							"sentence": "Ich denke an dich."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 12,
-					"word": "für",
-					"partOfSpeech": "Präposition",
-					"id": 12,
-					"romanisation": "",
-					"translation": "at, on, to (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "The meeting is on Monday. (Time, Dativ)",
-							"sentence": "Das Treffen ist am Montag."
-						},
-						{
-							"translation": "He is sitting at the window. (No motion, Dativ)",
-							"sentence": "Er sitzt am Fenster."
-						},
-						{
-							"translation": "She knocked on the door. (Motion implied, Akkusativ)",
-							"sentence": "Sie klopfte an die Tür."
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 13,
-			"tabnumber": 5,
-			"title": "Auf (On, On top of - Two-way)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 13,
-					"word": "auf",
-					"partOfSpeech": "Präposition",
-					"id": 13,
-					"romanisation": "",
-					"translation": "on, on top of (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "The book is on the table. (No motion, Dativ)",
-							"sentence": "Das Buch liegt auf dem Tisch."
-						},
-						{
-							"translation": "I put the book on the table. (Motion, Akkusativ)",
-							"sentence": "Ich lege das Buch auf den Tisch."
-						},
-						{
-							"translation": "She is waiting for you at the station. (Figurative 'on', Akkusativ)",
-							"sentence": "Sie wartet auf dich am Bahnhof."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 14,
-					"word": "auf",
-					"partOfSpeech": "Präposition",
-					"id": 14,
-					"romanisation": "",
-					"translation": "on, on top of (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "The cat is sleeping on the sofa. (No motion, Dativ)",
-							"sentence": "Die Katze schläft auf dem Sofa."
-						},
-						{
-							"translation": "He climbed onto the roof. (Motion, Akkusativ)",
-							"sentence": "Er kletterte auf das Dach."
-						},
-						{
-							"translation": "She is happy about the gift. (Fixed expression, Akkusativ)",
-							"sentence": "Sie freut sich auf das Geschenk."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 15,
-					"word": "auf",
-					"partOfSpeech": "Präposition",
-					"id": 15,
-					"romanisation": "",
-					"translation": "on, on top of (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "The children are playing on the street. (No motion, Dativ)",
-							"sentence": "Die Kinder spielen auf der Straße."
-						},
-						{
-							"translation": "I wrote it on a piece of paper. (Motion, Akkusativ)",
-							"sentence": "Ich habe es auf ein Blatt Papier geschrieben."
-						},
-						{
-							"translation": "Look at the picture! (Fixed expression, Akkusativ)",
-							"sentence": "Schau auf das Bild!"
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 16,
-			"tabnumber": 6,
-			"title": "In (In, Into - Two-way)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 16,
-					"word": "in",
-					"partOfSpeech": "Präposition",
-					"id": 16,
-					"romanisation": "",
-					"translation": "in, into (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "The keys are in the bag. (No motion, Dativ)",
-							"sentence": "Die Schlüssel sind in der Tasche."
-						},
-						{
-							"translation": "I put the keys into the bag. (Motion, Akkusativ)",
-							"sentence": "Ich stecke die Schlüssel in die Tasche."
-						},
-						{
-							"translation": "We live in Germany.",
-							"sentence": "Wir leben in Deutschland."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 17,
-					"word": "in",
-					"partOfSpeech": "Präposition",
-					"id": 17,
-					"romanisation": "",
-					"translation": "in, into (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "I am in the city center. (No motion, Dativ)",
-							"sentence": "Ich bin in der Innenstadt."
-						},
-						{
-							"translation": "We are going into the cinema. (Motion, Akkusativ)",
-							"sentence": "Wir gehen ins Kino."
-						},
-						{
-							"translation": "In summer, it is warm. (Time, Dativ)",
-							"sentence": "Im Sommer ist es warm."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 18,
-					"word": "in",
-					"partOfSpeech": "Präposition",
-					"id": 18,
-					"romanisation": "",
-					"translation": "in, into (two-way preposition)",
-					"sentences": [
-						{
-							"translation": "He is sitting in the car. (No motion, Dativ)",
-							"sentence": "Er sitzt im Auto."
-						},
-						{
-							"translation": "She poured water into the glass. (Motion, Akkusativ)",
-							"sentence": "Sie goss Wasser in das Glas."
-						},
-						{
-							"translation": "In an hour, I'll be there. (Time, Dativ)",
-							"sentence": "In einer Stunde bin ich da."
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 19,
-			"tabnumber": 7,
-			"title": "Von (From, Of, By)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 19,
-					"word": "von",
-					"partOfSpeech": "Präposition",
-					"id": 19,
-					"romanisation": "",
-					"translation": "from, of, by",
-					"sentences": [
-						{
-							"translation": "I come from Germany. (Note: 'aus' is also 'from' for origin from inside, 'von' often for direction/source)",
-							"sentence": "Ich komme aus Deutschland. (But also: Ich komme von der Arbeit.)"
-						},
-						{
-							"translation": "This is a book by Goethe.",
-							"sentence": "Das ist ein Buch von Goethe."
-						},
-						{
-							"translation": "The picture was painted by her.",
-							"sentence": "Das Bild wurde von ihr gemalt."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 20,
-					"word": "von",
-					"partOfSpeech": "Präposition",
-					"id": 20,
-					"romanisation": "",
-					"translation": "from, of, by",
-					"sentences": [
-						{
-							"translation": "The train departs from platform 5.",
-							"sentence": "Der Zug fährt von Gleis 5 ab."
-						},
-						{
-							"translation": "He is speaking of the weather.",
-							"sentence": "Er spricht vom Wetter."
-						},
-						{
-							"translation": "The decision depends on him.",
-							"sentence": "Die Entscheidung hängt von ihm ab."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 21,
-					"word": "von",
-					"partOfSpeech": "Präposition",
-					"id": 21,
-					"romanisation": "",
-					"translation": "from, of, by",
-					"sentences": [
-						{
-							"translation": "This is a piece of art by a famous painter.",
-							"sentence": "Das ist ein Kunstwerk von einem berühmten Maler."
-						},
-						{
-							"translation": "He received a letter from his aunt.",
-							"sentence": "Er bekam einen Brief von seiner Tante."
-						},
-						{
-							"translation": "From now on, I will study more.",
-							"sentence": "Von nun an werde ich mehr lernen."
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 22,
-			"tabnumber": 8,
-			"title": "Nach (To, After)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 22,
-					"word": "nach",
-					"partOfSpeech": "Präposition",
-					"id": 22,
-					"romanisation": "",
-					"translation": "to (cities/countries), after",
-					"sentences": [
-						{
-							"translation": "I'm flying to Berlin.",
-							"sentence": "Ich fliege nach Berlin."
-						},
-						{
-							"translation": "After work, I go home.",
-							"sentence": "Nach der Arbeit gehe ich nach Hause."
-						},
-						{
-							"translation": "It's quarter past three. (After three)",
-							"sentence": "Es ist Viertel nach drei."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 23,
-					"word": "nach",
-					"partOfSpeech": "Präposition",
-					"id": 23,
-					"romanisation": "",
-					"translation": "to (cities/countries), after",
-					"sentences": [
-						{
-							"translation": "We travel to France every year.",
-							"sentence": "Wir reisen jedes Jahr nach Frankreich."
-						},
-						{
-							"translation": "He always asks about the way.",
-							"sentence": "Er fragt immer nach dem Weg."
-						},
-						{
-							"translation": "According to my opinion, it's not good.",
-							"sentence": "Meiner Meinung nach ist es nicht gut."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 24,
-					"word": "nach",
-					"partOfSpeech": "Präposition",
-					"id": 24,
-					"romanisation": "",
-					"translation": "to (cities/countries), after",
-					"sentences": [
-						{
-							"translation": "The dog is running after the ball.",
-							"sentence": "Der Hund läuft nach dem Ball."
-						},
-						{
-							"translation": "She searched for the keys.",
-							"sentence": "Sie suchte nach den Schlüsseln."
-						},
-						{
-							"translation": "After the concert, we went for a drink.",
-							"sentence": "Nach dem Konzert sind wir noch etwas trinken gegangen."
-						}
-					]
-				}
-			]
-		},
-		{
-			"sortOrder": 25,
-			"tabnumber": 9,
-			"title": "Bei (At, With, Near)",
-			"words": [
-				{
-					"group": "Präpositionen",
-					"sortOrder": 25,
-					"word": "bei",
-					"partOfSpeech": "Präposition",
-					"id": 25,
-					"romanisation": "",
-					"translation": "at, with, near (a person's place/company)",
-					"sentences": [
-						{
-							"translation": "I live with my parents.",
-							"sentence": "Ich wohne bei meinen Eltern."
-						},
-						{
-							"translation": "She works at Siemens.",
-							"sentence": "Sie arbeitet bei Siemens."
-						},
-						{
-							"translation": "I have my phone with me.",
-							"sentence": "Ich habe mein Handy bei mir."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 26,
-					"word": "bei",
-					"partOfSpeech": "Präposition",
-					"id": 26,
-					"romanisation": "",
-					"translation": "at, with, near (a person's place/company)",
-					"sentences": [
-						{
-							"translation": "He's visiting his aunt.",
-							"sentence": "Er ist bei seiner Tante zu Besuch."
-						},
-						{
-							"translation": "The restaurant is near the station.",
-							"sentence": "Das Restaurant ist beim Bahnhof."
-						},
-						{
-							"translation": "I noticed it during the conversation.",
-							"sentence": "Es ist mir beim Gespräch aufgefallen."
-						}
-					]
-				},
-				{
-					"group": "Präpositionen",
-					"sortOrder": 27,
-					"word": "bei",
-					"partOfSpeech": "Präposition",
-					"id": 27,
-					"romanisation": "",
-					"translation": "at, with, near (a person's place/company)",
-					"sentences": [
-						{
-							"translation": "She always has money with her.",
-							"sentence": "Sie hat immer Geld bei sich."
-						},
-						{
-							"translation": "He is currently with his family.",
-							"sentence": "Er ist gerade bei seiner Familie."
-						},
-						{
-							"translation": "During sports, I like to listen to music.",
-							"sentence": "Beim Sport höre ich gerne Musik."
-						}
-					]
-				}
-			]
-		}
-	]
-	
+  "fileformat": 1,
+  "location": 0,
+  "sheetname": "GermanPrepositions",
+  "updatedDate": 978307200,
+  "uploaddate": 1747213019.492379,
+  "id": "de-prepositions-b1",
+  "native": "",
+  "name": "Deutsche Präpositionen bis B1",
+  "romanized": false,
+  "nativename": "Deutsche Präpositionen bis B1",
+  "googlevoiceprefix": "",
+  "voicename": "",
+  "tabtitles": [
+    "Akkusativ",
+    "Dativ",
+    "Wechselpräpositionen",
+    "Genitiv"
+  ],
+  "categories": [
+    {
+      "title": "Akkusativ",
+      "tabNumber": 1,
+      "sortOrder": 1,
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "translation": "until, up to, as far as",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "bis",
+          "definition": "„bis“ nennt einen Endpunkt in der Zeit oder an einem Ort. Vor einem Nomen mit Artikel steht oft eine zweite Präposition wie „zu“.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Akkusativ",
+          "sentences": [
+            {
+              "sentence": "Ich arbeite heute bis sechs Uhr.",
+              "translation": "I am working until six o'clock today."
+            },
+            {
+              "sentence": "Der Bus fährt bis zum Bahnhof.",
+              "translation": "The bus goes as far as the train station."
+            },
+            {
+              "sentence": "Bis nächsten Montag muss der Bericht fertig sein.",
+              "translation": "The report must be ready by next Monday."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 2,
+          "sortOrder": 2,
+          "translation": "through, by means of",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "durch",
+          "definition": "„durch“ steht mit Akkusativ. Es beschreibt einen Weg durch etwas oder nennt eine Ursache oder ein Mittel.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Akkusativ",
+          "sentences": [
+            {
+              "sentence": "Wir gehen durch den Park.",
+              "translation": "We are walking through the park."
+            },
+            {
+              "sentence": "Licht kommt durch das Fenster.",
+              "translation": "Light comes through the window."
+            },
+            {
+              "sentence": "Durch regelmäßiges Üben wird ihr Deutsch besser.",
+              "translation": "Her German improves through regular practice."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 3,
+          "sortOrder": 3,
+          "translation": "along",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "entlang",
+          "definition": "„entlang“ beschreibt einen Weg an etwas entlang. Nach dem Nomen steht es meistens mit Akkusativ.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Akkusativ",
+          "sentences": [
+            {
+              "sentence": "Wir gehen den Fluss entlang.",
+              "translation": "We are walking along the river."
+            },
+            {
+              "sentence": "Sie fährt die Küste entlang.",
+              "translation": "She is driving along the coast."
+            },
+            {
+              "sentence": "Die Kinder laufen den Weg entlang.",
+              "translation": "The children are running along the path."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 4,
+          "sortOrder": 4,
+          "translation": "for",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "für",
+          "definition": "„für“ steht mit Akkusativ. Es nennt einen Empfänger, einen Zweck, eine Dauer oder eine Meinung.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Akkusativ",
+          "sentences": [
+            {
+              "sentence": "Dieses Geschenk ist für meinen Bruder.",
+              "translation": "This present is for my brother."
+            },
+            {
+              "sentence": "Wir bleiben für eine Woche in Berlin.",
+              "translation": "We are staying in Berlin for a week."
+            },
+            {
+              "sentence": "Für mich ist Gesundheit sehr wichtig.",
+              "translation": "For me, health is very important."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 5,
+          "sortOrder": 5,
+          "translation": "against, around",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "gegen",
+          "definition": "„gegen“ steht mit Akkusativ. Es kann Widerstand, eine Richtung oder eine ungefähre Uhrzeit ausdrücken.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Akkusativ",
+          "sentences": [
+            {
+              "sentence": "Der Ball fliegt gegen die Wand.",
+              "translation": "The ball flies against the wall."
+            },
+            {
+              "sentence": "Viele Menschen sind gegen den Plan.",
+              "translation": "Many people are against the plan."
+            },
+            {
+              "sentence": "Wir kommen gegen acht Uhr an.",
+              "translation": "We will arrive at around eight o'clock."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 6,
+          "sortOrder": 6,
+          "translation": "without",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "ohne",
+          "definition": "„ohne“ steht mit Akkusativ und zeigt, dass jemand oder etwas nicht dabei ist.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Akkusativ",
+          "sentences": [
+            {
+              "sentence": "Ohne meinen Regenschirm werde ich nass.",
+              "translation": "Without my umbrella, I will get wet."
+            },
+            {
+              "sentence": "Sie trinkt ihren Kaffee ohne Zucker.",
+              "translation": "She drinks her coffee without sugar."
+            },
+            {
+              "sentence": "Er ging, ohne ein Wort zu sagen.",
+              "translation": "He left without saying a word."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 7,
+          "sortOrder": 7,
+          "translation": "around, at, for",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "um",
+          "definition": "„um“ steht mit Akkusativ. Es wird für Uhrzeiten, Bewegungen um etwas herum und in festen Verbindungen benutzt.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Akkusativ",
+          "sentences": [
+            {
+              "sentence": "Der Kurs beginnt um neun Uhr.",
+              "translation": "The course starts at nine o'clock."
+            },
+            {
+              "sentence": "Wir sitzen um den Tisch.",
+              "translation": "We are sitting around the table."
+            },
+            {
+              "sentence": "Sie bittet ihren Nachbarn um Hilfe.",
+              "translation": "She asks her neighbour for help."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        }
+      ]
+    },
+    {
+      "title": "Dativ",
+      "tabNumber": 2,
+      "sortOrder": 2,
+      "words": [
+        {
+          "id": 8,
+          "sortOrder": 8,
+          "translation": "from, out of, made of",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "aus",
+          "definition": "„aus“ steht mit Dativ. Es nennt eine Herkunft, eine Bewegung von innen nach außen oder ein Material.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Mina kommt aus der Türkei.",
+              "translation": "Mina comes from Turkey."
+            },
+            {
+              "sentence": "Er nimmt das Buch aus der Tasche.",
+              "translation": "He takes the book out of the bag."
+            },
+            {
+              "sentence": "Der Tisch ist aus Holz.",
+              "translation": "The table is made of wood."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 9,
+          "sortOrder": 9,
+          "translation": "except, besides",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "außer",
+          "definition": "„außer“ steht meistens mit Dativ. Es bedeutet, dass jemand oder etwas nicht eingeschlossen ist.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Außer meinem Bruder waren alle da.",
+              "translation": "Everyone was there except my brother."
+            },
+            {
+              "sentence": "Wir haben außer dem Salat auch Suppe bestellt.",
+              "translation": "Besides the salad, we also ordered soup."
+            },
+            {
+              "sentence": "Außer dir kennt niemand die Antwort.",
+              "translation": "No one except you knows the answer."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 10,
+          "sortOrder": 10,
+          "translation": "at, near, with, during",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "bei",
+          "definition": "„bei“ steht mit Dativ. Es bezeichnet einen Ort bei einer Person oder Firma, Nähe oder eine Situation.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Heute esse ich bei meinen Eltern.",
+              "translation": "Today I am eating at my parents' house."
+            },
+            {
+              "sentence": "Sie arbeitet bei einer großen Firma.",
+              "translation": "She works for a large company."
+            },
+            {
+              "sentence": "Bei starkem Regen bleiben wir zu Hause.",
+              "translation": "We stay at home when it rains heavily."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 11,
+          "sortOrder": 11,
+          "translation": "opposite, towards",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "gegenüber",
+          "definition": "„gegenüber“ steht mit Dativ und kann vor oder nach dem Nomen stehen. Es bezeichnet eine Position oder eine Haltung.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Die Apotheke liegt gegenüber dem Bahnhof.",
+              "translation": "The pharmacy is opposite the train station."
+            },
+            {
+              "sentence": "Meinem Chef gegenüber bin ich immer höflich.",
+              "translation": "I am always polite towards my boss."
+            },
+            {
+              "sentence": "Gegenüber früher hat sich viel verändert.",
+              "translation": "A lot has changed compared with the past."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 12,
+          "sortOrder": 12,
+          "translation": "with, by",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "mit",
+          "definition": "„mit“ steht mit Dativ. Es nennt eine Begleitung, ein Werkzeug oder ein Verkehrsmittel.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Ich gehe mit meiner Freundin ins Kino.",
+              "translation": "I am going to the cinema with my friend."
+            },
+            {
+              "sentence": "Er schneidet das Brot mit einem Messer.",
+              "translation": "He cuts the bread with a knife."
+            },
+            {
+              "sentence": "Fährst du mit dem Bus zur Arbeit?",
+              "translation": "Do you travel to work by bus?"
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 13,
+          "sortOrder": 13,
+          "translation": "after, to, according to",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "nach",
+          "definition": "„nach“ steht mit Dativ. Es wird für eine Zeitfolge, für Ziele ohne Artikel und für „laut“ oder „gemäß“ benutzt.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Nach dem Essen trinken wir Kaffee.",
+              "translation": "We drink coffee after the meal."
+            },
+            {
+              "sentence": "Nächste Woche fliegt sie nach Spanien.",
+              "translation": "She is flying to Spain next week."
+            },
+            {
+              "sentence": "Meiner Meinung nach ist der Film zu lang.",
+              "translation": "In my opinion, the film is too long."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 14,
+          "sortOrder": 14,
+          "translation": "since, for",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "seit",
+          "definition": "„seit“ steht mit Dativ. Es beschreibt einen Zeitraum, der in der Vergangenheit begonnen hat und noch dauert.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Ich lerne seit einem Jahr Deutsch.",
+              "translation": "I have been learning German for a year."
+            },
+            {
+              "sentence": "Seit Montag ist er krank.",
+              "translation": "He has been ill since Monday."
+            },
+            {
+              "sentence": "Wohnst du schon seit deiner Kindheit hier?",
+              "translation": "Have you lived here since childhood?"
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 15,
+          "sortOrder": 15,
+          "translation": "from, of, by",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "von",
+          "definition": "„von“ steht mit Dativ. Es nennt einen Ausgangspunkt, Besitz oder Herkunft und den Urheber im Passiv.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Ich habe eine Nachricht von meiner Ärztin bekommen.",
+              "translation": "I received a message from my doctor."
+            },
+            {
+              "sentence": "Das ist das Fahrrad von meinem Nachbarn.",
+              "translation": "That is my neighbour's bicycle."
+            },
+            {
+              "sentence": "Das Buch wurde von einer jungen Autorin geschrieben.",
+              "translation": "The book was written by a young author."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 16,
+          "sortOrder": 16,
+          "translation": "to, at, for",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "zu",
+          "definition": "„zu“ steht mit Dativ. Es bezeichnet ein Ziel bei Personen oder Orten und erscheint in vielen festen Verbindungen.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Dativ",
+          "sentences": [
+            {
+              "sentence": "Ich gehe morgen zum Zahnarzt.",
+              "translation": "I am going to the dentist tomorrow."
+            },
+            {
+              "sentence": "Am Wochenende fahren wir zu unseren Freunden.",
+              "translation": "At the weekend we are going to our friends."
+            },
+            {
+              "sentence": "Sie hat mich zu ihrer Hochzeit eingeladen.",
+              "translation": "She invited me to her wedding."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        }
+      ]
+    },
+    {
+      "title": "Wechselpräpositionen",
+      "tabNumber": 3,
+      "sortOrder": 3,
+      "words": [
+        {
+          "id": 17,
+          "sortOrder": 17,
+          "translation": "at, on, to",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "an",
+          "definition": "„an“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ. Es bezeichnet oft Kontakt mit einer senkrechten Fläche oder die Nähe zu Wasser.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Das Bild hängt an der Wand.",
+              "translation": "The picture is hanging on the wall."
+            },
+            {
+              "sentence": "Ich hänge das Bild an die Wand.",
+              "translation": "I am hanging the picture on the wall."
+            },
+            {
+              "sentence": "Im Sommer fahren wir an den See.",
+              "translation": "In summer we go to the lake."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 18,
+          "sortOrder": 18,
+          "translation": "on, onto, at",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "auf",
+          "definition": "„auf“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ. Es bezeichnet oft eine waagerechte Fläche oder einen öffentlichen Ort.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Die Schlüssel liegen auf dem Tisch.",
+              "translation": "The keys are lying on the table."
+            },
+            {
+              "sentence": "Leg bitte die Schlüssel auf den Tisch.",
+              "translation": "Please put the keys on the table."
+            },
+            {
+              "sentence": "Am Samstag gehen wir auf den Markt.",
+              "translation": "On Saturday we are going to the market."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 19,
+          "sortOrder": 19,
+          "translation": "behind",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "hinter",
+          "definition": "„hinter“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Der Garten liegt hinter dem Haus.",
+              "translation": "The garden is behind the house."
+            },
+            {
+              "sentence": "Das Kind läuft hinter das Haus.",
+              "translation": "The child runs behind the house."
+            },
+            {
+              "sentence": "Wer steht hinter dir?",
+              "translation": "Who is standing behind you?"
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 20,
+          "sortOrder": 20,
+          "translation": "in, into, to",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "in",
+          "definition": "„in“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ. Es bezeichnet Räume, Gebiete und Zeiträume.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Meine Jacke hängt im Schrank.",
+              "translation": "My jacket is hanging in the wardrobe."
+            },
+            {
+              "sentence": "Ich hänge meine Jacke in den Schrank.",
+              "translation": "I am hanging my jacket in the wardrobe."
+            },
+            {
+              "sentence": "In zwei Wochen beginnt der Urlaub.",
+              "translation": "The holiday begins in two weeks."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 21,
+          "sortOrder": 21,
+          "translation": "next to, beside",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "neben",
+          "definition": "„neben“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Die Bank ist neben der Post.",
+              "translation": "The bank is next to the post office."
+            },
+            {
+              "sentence": "Setz dich bitte neben mich.",
+              "translation": "Please sit down next to me."
+            },
+            {
+              "sentence": "Neben dem Hotel gibt es ein kleines Café.",
+              "translation": "There is a small café next to the hotel."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 22,
+          "sortOrder": 22,
+          "translation": "above, over, across, about",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "über",
+          "definition": "„über“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ. Es kann auch „mehr als“ oder „zum Thema“ bedeuten.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Die Lampe hängt über dem Tisch.",
+              "translation": "The lamp is hanging above the table."
+            },
+            {
+              "sentence": "Das Flugzeug fliegt über die Stadt.",
+              "translation": "The aeroplane flies over the city."
+            },
+            {
+              "sentence": "Wir sprechen über unsere Reise.",
+              "translation": "We are talking about our trip."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 23,
+          "sortOrder": 23,
+          "translation": "under, below, among",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "unter",
+          "definition": "„unter“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ. Es kann auch eine Gruppe oder eine Bedingung bezeichnen.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Die Katze schläft unter dem Sofa.",
+              "translation": "The cat is sleeping under the sofa."
+            },
+            {
+              "sentence": "Der Ball rollt unter das Sofa.",
+              "translation": "The ball rolls under the sofa."
+            },
+            {
+              "sentence": "Unter diesen Bedingungen kann ich nicht arbeiten.",
+              "translation": "I cannot work under these conditions."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 24,
+          "sortOrder": 24,
+          "translation": "in front of, before, ago",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "vor",
+          "definition": "„vor“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ. Mit Dativ bezeichnet es auch einen Zeitpunkt oder eine vergangene Zeit.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Vor dem Gebäude wartet ein Taxi.",
+              "translation": "A taxi is waiting in front of the building."
+            },
+            {
+              "sentence": "Der Fahrer stellt das Taxi vor das Gebäude.",
+              "translation": "The driver parks the taxi in front of the building."
+            },
+            {
+              "sentence": "Vor drei Jahren bin ich nach Berlin gezogen.",
+              "translation": "I moved to Berlin three years ago."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 25,
+          "sortOrder": 25,
+          "translation": "between",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "zwischen",
+          "definition": "„zwischen“ steht bei einem Ort mit Dativ und bei einer Richtung mit Akkusativ.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Wechselpräpositionen",
+          "sentences": [
+            {
+              "sentence": "Der Stuhl steht zwischen dem Tisch und dem Fenster.",
+              "translation": "The chair is between the table and the window."
+            },
+            {
+              "sentence": "Stell den Stuhl zwischen den Tisch und das Fenster.",
+              "translation": "Put the chair between the table and the window."
+            },
+            {
+              "sentence": "Zwischen den beiden Städten fährt jede Stunde ein Zug.",
+              "translation": "A train runs every hour between the two cities."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        }
+      ]
+    },
+    {
+      "title": "Genitiv",
+      "tabNumber": 4,
+      "sortOrder": 4,
+      "words": [
+        {
+          "id": 26,
+          "sortOrder": 26,
+          "translation": "outside",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "außerhalb",
+          "definition": "„außerhalb“ steht mit Genitiv und bezeichnet einen Ort oder eine Zeit außerhalb einer Grenze.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Genitiv",
+          "sentences": [
+            {
+              "sentence": "Das Hotel liegt außerhalb der Stadt.",
+              "translation": "The hotel is outside the city."
+            },
+            {
+              "sentence": "Außerhalb der Öffnungszeiten ist die Tür geschlossen.",
+              "translation": "The door is closed outside opening hours."
+            },
+            {
+              "sentence": "Wir wohnen außerhalb des Zentrums.",
+              "translation": "We live outside the city centre."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 27,
+          "sortOrder": 27,
+          "translation": "within, inside",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "innerhalb",
+          "definition": "„innerhalb“ steht mit Genitiv und bezeichnet einen Ort innerhalb einer Grenze oder eine Frist.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Genitiv",
+          "sentences": [
+            {
+              "sentence": "Innerhalb des Gebäudes darf man nicht rauchen.",
+              "translation": "Smoking is not allowed inside the building."
+            },
+            {
+              "sentence": "Bitte antworten Sie innerhalb einer Woche.",
+              "translation": "Please reply within one week."
+            },
+            {
+              "sentence": "Innerhalb der Gruppe gibt es verschiedene Meinungen.",
+              "translation": "There are different opinions within the group."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 28,
+          "sortOrder": 28,
+          "translation": "instead of",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "statt",
+          "definition": "„statt“ steht in der Standardsprache mit Genitiv und nennt eine Alternative.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Genitiv",
+          "sentences": [
+            {
+              "sentence": "Statt des Autos nehme ich heute den Bus.",
+              "translation": "Instead of the car, I am taking the bus today."
+            },
+            {
+              "sentence": "Wir trinken Tee statt des Kaffees.",
+              "translation": "We are drinking tea instead of coffee."
+            },
+            {
+              "sentence": "Statt einer Antwort stellte er eine neue Frage.",
+              "translation": "Instead of an answer, he asked a new question."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 29,
+          "sortOrder": 29,
+          "translation": "despite, in spite of",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "trotz",
+          "definition": "„trotz“ steht in der Standardsprache mit Genitiv und beschreibt einen Gegensatz zu einer Schwierigkeit oder Erwartung.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Genitiv",
+          "sentences": [
+            {
+              "sentence": "Trotz des Regens gehen wir spazieren.",
+              "translation": "Despite the rain, we are going for a walk."
+            },
+            {
+              "sentence": "Sie kam trotz ihrer Erkältung zur Arbeit.",
+              "translation": "She came to work despite her cold."
+            },
+            {
+              "sentence": "Trotz der hohen Preise war das Restaurant voll.",
+              "translation": "Despite the high prices, the restaurant was full."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 30,
+          "sortOrder": 30,
+          "translation": "during",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "während",
+          "definition": "„während“ steht als Präposition mit Genitiv und bezeichnet zwei Ereignisse, die zur gleichen Zeit stattfinden.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Genitiv",
+          "sentences": [
+            {
+              "sentence": "Während des Unterrichts bleiben die Handys aus.",
+              "translation": "Mobile phones remain switched off during the lesson."
+            },
+            {
+              "sentence": "Während der Reise haben wir viele Fotos gemacht.",
+              "translation": "We took many photos during the trip."
+            },
+            {
+              "sentence": "Was hast du während deines Urlaubs gemacht?",
+              "translation": "What did you do during your holiday?"
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        },
+        {
+          "id": 31,
+          "sortOrder": 31,
+          "translation": "because of",
+          "romanisation": "",
+          "partOfSpeech": "Präposition",
+          "word": "wegen",
+          "definition": "„wegen“ steht in der Standardsprache mit Genitiv und nennt einen Grund.",
+          "IPA": "",
+          "pronounce": "",
+          "group": "Genitiv",
+          "sentences": [
+            {
+              "sentence": "Wegen des schlechten Wetters fällt das Spiel aus.",
+              "translation": "The match is cancelled because of the bad weather."
+            },
+            {
+              "sentence": "Der Zug hatte wegen einer Störung Verspätung.",
+              "translation": "The train was delayed because of a fault."
+            },
+            {
+              "sentence": "Wegen seiner Arbeit zieht er nach Hamburg.",
+              "translation": "He is moving to Hamburg because of his job."
+            }
+          ],
+          "lockedClause": "",
+          "weakenedClause": ""
+        }
+      ]
+    }
+  ]
 }
