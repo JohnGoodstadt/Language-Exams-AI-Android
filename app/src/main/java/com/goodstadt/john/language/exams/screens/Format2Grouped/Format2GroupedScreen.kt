@@ -43,6 +43,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.goodstadt.john.language.exams.config.LanguageConfig.quizSheetWordPairsFilename
 import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.screens.CategoryTab.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.Format2.Format2Row
@@ -196,7 +197,7 @@ fun Format2GroupedScreen(
     if (showQuizSheet) {
         val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-        val questions = QuizDataConverter.readWordPairsJSONForQuiz( context,"QuizSheetWordPairs-en.json" )
+        val questions = QuizDataConverter.readWordPairsJSONForQuiz( context,quizSheetWordPairsFilename)
         viewModel.incQuizSheetStat()
 
         val pageTitle = "Word Pairs"

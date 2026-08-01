@@ -32,6 +32,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.goodstadt.john.language.exams.config.LanguageConfig.quizSheetWordPairsFilename
 import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
@@ -277,7 +278,7 @@ fun Format2Screen(
     if (showQuizSheet) {
         val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-        val questions = QuizDataConverter.readWordPairsJSONForQuiz( context,"QuizSheetWordPairs-en.json" )
+        val questions = QuizDataConverter.readWordPairsJSONForQuiz( context,quizSheetWordPairsFilename)
         viewModel.incQuizSheetStat()
 
         val pageTitle = "10 Questions"
