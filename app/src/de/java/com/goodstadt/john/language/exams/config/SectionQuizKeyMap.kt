@@ -28,6 +28,7 @@ object SectionQuizKeyMap {
         // Shipped A1 quiz keys: Adjectives, Colors, Dates, Everyday, Family, Hello,
         //                       Numbers, Occupations, Places, Verbs, upinonatby
         "A1" to mapOf(
+          //  "PerHallo" to "Hello",
             "Hallo" to "Hello",//
             "Familie" to "Family",//
             "Zahlen" to "Numbers",//
@@ -38,7 +39,7 @@ object SectionQuizKeyMap {
             "Präpositionen" to "upinonatby", //
             "Fragewörter" to "Questions",//
              "Persönliche Informationen" to "Personal",//
-             "Wochentage" to "Dates",//
+             "Wochentage" to "WeekDays",//
              "Monate" to "Months",//
              "Jahreszeiten" to "Seasons",
              "Zeit" to "Time",//

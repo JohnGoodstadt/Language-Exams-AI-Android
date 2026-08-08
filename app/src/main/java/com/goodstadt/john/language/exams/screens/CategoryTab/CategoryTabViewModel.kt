@@ -244,7 +244,11 @@ class CategoryTabViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = CategoryTabUiState.Loading
 
-//            val examName = userPreferencesRepository.selectedExamNameFlow.first()
+            // Read the persisted exam name directly from DataStore. Do NOT use
+            // currentExamName.value here: that stateIn flow uses WhileSubscribed(5s) and
+            // resets to its "vocab_data_b1" initialValue when the tab is left for >5s, which
+            // would transiently load the B1 word list even when the user picked A1/A2/B2.
+            val examName = userPreferencesRepository.selectedExamNameFlow.first()
             val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
 
             // Cache the level for isHeard calls later
@@ -253,7 +257,7 @@ class CategoryTabViewModel @Inject constructor(
             val levelsWithQuizzes = listOf("B1","B2","A1","A2") //if we add A1 quiz then add here
             val isQuizEnabled = levelsWithQuizzes.contains(currentLoadedLevel)
 
-            val result = contentRepository.getFormat0Data(currentExamName.value)
+            val result = contentRepository.getFormat0Data(examName)
 
             result.onSuccess { vocabFile ->
                 val tabCategories = vocabFile.categories.filter { it.tabNumber == tabNumber }

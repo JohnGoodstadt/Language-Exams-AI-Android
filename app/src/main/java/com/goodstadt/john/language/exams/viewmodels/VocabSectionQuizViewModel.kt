@@ -158,6 +158,8 @@ sealed interface VocabQuizUiState {
     object NotAvailable : VocabQuizUiState // For flavors like 'zh'
 }
 
+private const val QUIZ_PATH = "Quizzes/SectionQuiz"
+
 @HiltViewModel
 class VocabSectionQuizViewModel @Inject constructor(
     private val application: Application,
@@ -358,7 +360,8 @@ class VocabSectionQuizViewModel @Inject constructor(
             val allQuestions = mutableListOf<WordQuizQuestion>()
 
             try {
-                val assetFolder = "Quizzes/$currentSkillLevel"
+
+                val assetFolder = "${QUIZ_PATH}/$currentSkillLevel"
                 val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
 
                 for (i in 1..10) {
@@ -1003,7 +1006,8 @@ class VocabSectionQuizViewModel @Inject constructor(
         // 1. Sanitize input: Remove folder prefix if passed, handle extension
         val cleanName = File(fileName).name // Removes "Quizzes/" if passed accidentally
         val finalName = if (cleanName.endsWith(".json")) cleanName else "$cleanName.json"
-        val fullPath = "Quizzes/$level/$finalName" //e.g. Quizzes/B1/WordQuizPersonal1-en.json
+        //val fullPathOld = "Quizzes/$level/$finalName"
+        val fullPath = "${QUIZ_PATH}/$level/$finalName"  //e.g. Quizzes/SectionQuiz/B1/WordQuizPersonal1-en.json
 
         return try {
             // 2. Read
