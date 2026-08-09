@@ -1,7 +1,7 @@
 // <project-root>/app/build.gradle.kts
 
-import java.util.Properties
 import java.io.FileInputStream
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
@@ -21,7 +21,7 @@ if (secretsFile.exists()) {
 }
 
 val VERSION_CODE = 116   //for remote config versioning.  localised quizzes
-val VERSION_NAME = "3.8.116" //go live now matches iOS 3.7
+val VERSION_NAME = "3.8.116" //go live
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
