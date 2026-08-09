@@ -72,8 +72,8 @@ import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntr
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.screens.me.PremiumUpgradeSheet
-import com.goodstadt.john.language.exams.screens.me.SignInBottomSheet
+import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
+import com.goodstadt.john.language.exams.packages.me.SignInBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow

@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.me
+package com.goodstadt.john.language.exams.packages.me
 
 import android.app.Activity
 import androidx.compose.foundation.layout.Arrangement

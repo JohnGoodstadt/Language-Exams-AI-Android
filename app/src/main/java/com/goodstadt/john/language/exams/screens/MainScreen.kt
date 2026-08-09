@@ -69,7 +69,7 @@ import com.goodstadt.john.language.exams.packages.MeTabContainer.MeTabContainerS
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.ReferenceTabContainer.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
-import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
+import com.goodstadt.john.language.exams.packages.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary

@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.me
+package com.goodstadt.john.language.exams.packages.me
 
 
 import androidx.compose.foundation.layout.Column

@@ -43,7 +43,7 @@ import com.goodstadt.john.language.exams.packages.MyProgress.MyProgressScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.packages.Settings.SettingsScreen
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
-import com.goodstadt.john.language.exams.screens.me.SearchScreen
+import com.goodstadt.john.language.exams.packages.me.SearchScreen
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
