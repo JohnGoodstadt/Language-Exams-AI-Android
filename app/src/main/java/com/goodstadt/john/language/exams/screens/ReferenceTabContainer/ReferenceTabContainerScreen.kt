@@ -37,7 +37,7 @@ import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
 import com.goodstadt.john.language.exams.navigation.RefScreen
-import com.goodstadt.john.language.exams.screens.Conjugations.ConjugationsScreen
+import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsScreen
 import com.goodstadt.john.language.exams.screens.Format1.Format1Screen
 import com.goodstadt.john.language.exams.screens.Format1.Format1UiState
 import com.goodstadt.john.language.exams.screens.Format1.Format1ViewModel
@@ -47,12 +47,12 @@ import com.goodstadt.john.language.exams.screens.Format2.Format2ViewModel
 import com.goodstadt.john.language.exams.screens.Format2Grouped.Format2GroupedScreen
 import com.goodstadt.john.language.exams.screens.Format3Grouped.Format3GroupedScreen
 import com.goodstadt.john.language.exams.screens.GroupedSheet.GroupedSheetScreen
-import com.goodstadt.john.language.exams.screens.ReferenceGeneric.ReferenceGenericScreen
-import com.goodstadt.john.language.exams.screens.VocabQuiz.CategoryDetailScreen
-import com.goodstadt.john.language.exams.screens.VocabQuiz.QuizSet
-import com.goodstadt.john.language.exams.screens.VocabQuiz.VocabDashboardScreen
-import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
-import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizScreen
+import com.goodstadt.john.language.exams.packages.ReferenceGeneric.ReferenceGenericScreen
+import com.goodstadt.john.language.exams.packages.VocabQuiz.CategoryDetailScreen
+import com.goodstadt.john.language.exams.packages.VocabQuiz.QuizSet
+import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabDashboardScreen
+import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
+import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi

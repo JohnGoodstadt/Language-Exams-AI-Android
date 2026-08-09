@@ -14,7 +14,7 @@ import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.navigation.Screen
-import com.goodstadt.john.language.exams.screens.ReadinessAudit.ReadinessAuditLevels
+import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.utils.AppLifecycleObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay

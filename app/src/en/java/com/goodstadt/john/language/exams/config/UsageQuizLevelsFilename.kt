@@ -1,6 +1,6 @@
 package com.goodstadt.john.language.exams.screens.UsageQuiz
 
-import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
+import com.goodstadt.john.language.exams.packages.reference.shared.QuizDetail
 
 enum class UsageQuizLevelsFilename(val quizzes: List<QuizDetail>) {
     ELEMENTARY(
