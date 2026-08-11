@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.ReferenceTabContainer
+package com.goodstadt.john.language.exams.packages.ReferenceTabContainer
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -46,7 +46,7 @@ data class ReferenceUiState(
 )
 
 @HiltViewModel
-class ReferenceViewModel @Inject constructor(
+class ReferenceTabContainerViewModel @Inject constructor(
     // Inject your existing repository
     private val appConfigRepository: AppConfigRepository,
     private val userPreferencesRepository: UserPreferencesRepository,

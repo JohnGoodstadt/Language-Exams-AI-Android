@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens
+package com.goodstadt.john.language.exams.packages.MainScreen
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -67,7 +67,7 @@ import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabScreen
 import com.goodstadt.john.language.exams.packages.MeTabContainer.MeTabContainerScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
-import com.goodstadt.john.language.exams.screens.ReferenceTabContainer.ReferenceTabContainerScreen
+import com.goodstadt.john.language.exams.packages.ReferenceTabContainer.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
@@ -75,8 +75,6 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNa
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.findActivity
-import com.goodstadt.john.language.exams.viewmodels.AuthUiState
-import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
 

@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.ReferenceTabContainer
+package com.goodstadt.john.language.exams.packages.ReferenceTabContainer
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -66,7 +66,7 @@ import timber.log.Timber
 
 @OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel()) {
+fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hiltViewModel()) {
 
     val refTabNavController = rememberNavController()
     val uiState by viewModel.uiState.collectAsState()

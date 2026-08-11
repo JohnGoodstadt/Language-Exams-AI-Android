@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.viewmodels
+package com.goodstadt.john.language.exams.packages.MainScreen
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModel
