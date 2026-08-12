@@ -32,10 +32,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.goodstadt.john.language.exams.ui.theme.blueBright2
-import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.AuditStats
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
+import com.goodstadt.john.language.exams.ui.theme.blueBright2
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
 
 
 @Composable
@@ -69,7 +69,7 @@ fun AuditDashboardHeader(
             verticalAlignment = Alignment.CenterVertically
         ) {
             AuditCircularGauge(
-                label = "Calibration",
+                label = "Confidence",
                 value = stats.confidence,
                 color = blueBright2,
                 description = "Data Certainty"
