@@ -26,7 +26,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -130,7 +129,6 @@ fun ReadinessAuditScreen(
     val stats by viewModel.auditStats.collectAsState()
 
     val lockedAnswers by viewModel.lockedAnswers.collectAsState()
-    val isQuizLockedForToday by viewModel.isQuizLockedForToday.collectAsState()
     val unlockedLevels by viewModel.unlockedLevels.collectAsState()
     val isCurrentQuestionLocked = lockedAnswers.containsKey(currentQuestionIndex)
 
@@ -450,74 +448,6 @@ fun ReadinessAuditScreen(
                     Spacer(modifier = Modifier.width(8.dp)) // Add spacing between dots
                 }
             }
-            if (false && isQuizLockedForToday) {
-                Text(
-                    text = "You've completed this test today. You can review your answers below - come back tomorrow to retake it.",
-                    style = MaterialTheme.typography.labelMedium,
-                    color = orangeLight,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 12.dp)
-                )
-                // Determine if a "Next" tab exists
-                val currentIndex = ReadinessAuditLevels.entries.indexOf(selectedLevel)
-                val hasNextTab = currentIndex in 0 until (ReadinessAuditLevels.entries.size - 1)
-
-                // The level verdict summary now lives in the base MyProgress view
-                // (AuditDashboardHeader). On a fresh completion the sheet auto-closes
-                // via UiEvent.QuizCompleted; this block only shows when reopening an
-                // already-completed quiz to review, so keep just the review controls.
-                if (hasNextTab) {
-                    Column(
-                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
-                    ) {
-                        // The existing "Next 10 Questions" button
-                        Button(
-                            onClick = {
-                                val nextLevel = ReadinessAuditLevels.entries[currentIndex + 1]
-                                viewModel.onLevelSelected(nextLevel)
-                                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-                            },
-                            modifier = Modifier.fillMaxWidth().height(36.dp),
-                            colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
-                        ) {
-                            Text("Next 10 Questions", color = Color.Black, fontSize = 12.sp)
-                        }
-                    }
-                }
-
-//                if (hasNextTab) {
-//                    Text(
-//                        text = "Please do the next 10 questions. We will more accurately know your level.",
-//                        style = MaterialTheme.typography.labelMedium,
-//                        color = orangeLight,
-//                        textAlign = TextAlign.Center,
-//                        modifier = Modifier
-//                            .fillMaxWidth()
-//                            .padding(bottom = 12.dp)
-//                    )
-//                    Button(
-//                        onClick = {
-//                            if (hasNextTab) {
-//                                val nextLevel = ReadinessAuditLevels.entries[currentIndex + 1]
-//                                viewModel.onLevelSelected(nextLevel)
-//
-//                                // Update infoDisabled state just like in the picker callback
-//                                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-//                            }
-//                        },
-//                        enabled = hasNextTab,
-//                        modifier = Modifier
-//                            .padding(top = 8.dp)
-//                            .height(32.dp),
-//                        contentPadding = PaddingValues(horizontal = 12.dp)
-//                    ) {
-//                        Text("Go to next 10 questions")
-//                    }
-//                }
-            }
-
             // Filtered-empty state
             //hide if compact height class
             if ( currentQuestionIndex == 0 || (heightClass != HeightClass.COMPACT  && questions.isNotEmpty())) {

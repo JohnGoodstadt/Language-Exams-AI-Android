@@ -144,9 +144,8 @@ fun AuditDashboardHeader(
     }
 }
 
-// Extracted from the inline summary in ReadinessAuditScreen (the block gated on
-// isQuizLockedForToday). Shows the audit's level verdict + an optional action to
-// switch level. Placed in the base dashboard so it survives dismissing the sheet.
+// The audit's level verdict + an optional action to switch level. Lives in the base
+// dashboard (not the audit sheet) so it survives dismissing the sheet.
 @Composable
 private fun AuditSummaryCard(
     currentLevel: String,

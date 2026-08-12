@@ -269,10 +269,6 @@ class ReadinessAuditViewModel @Inject constructor(
     private val _lockedAnswers = MutableStateFlow<Map<Int, String>>(emptyMap())
     val lockedAnswers: StateFlow<Map<Int, String>> = _lockedAnswers.asStateFlow()
 
-    // True once the current quiz has been fully completed today - locked (read-only) until tomorrow.
-    private val _isQuizLockedForToday = MutableStateFlow(false)
-    val isQuizLockedForToday: StateFlow<Boolean> = _isQuizLockedForToday.asStateFlow()
-
     // Levels the user is currently allowed to attempt. Levels must be cleared in order:
     // BASELINE -> INTER -> UPPER -> ADVANCED.
     private val _unlockedLevels = MutableStateFlow<Set<ReadinessAuditLevels>>(setOf(
@@ -583,7 +579,6 @@ class ReadinessAuditViewModel @Inject constructor(
         }
 
         _lockedAnswers.value = state.answers
-        _isQuizLockedForToday.value = state.completedAt != null
 
         val questionsList = _questions.value
         val rebuiltAnswers = mutableMapOf<Int, Boolean>()
@@ -632,7 +627,6 @@ class ReadinessAuditViewModel @Inject constructor(
             userPreferencesRepository.setHasSeenReadinessAuditIntro(false)
 
             _lockedAnswers.value = emptyMap()
-            _isQuizLockedForToday.value = false
             quizStatistics.value = quizStatistics.value.copy(
                 state = QuizState.NOT_STARTED,
                 answered = 0,
@@ -811,7 +805,6 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                     // This marks the part as "Done", jumping confidence to the cap (e.g. 40%)
                     auditRepository.saveScore(partIndex, finalScore)
                     auditRepository.markQuizCompleted(key)
-                    _isQuizLockedForToday.value = true
 
                     // Baseline is banded (A2/B1/B2 questions) - place the learner by how
                     // they did per band, not by raw count, and persist it for the summary.
