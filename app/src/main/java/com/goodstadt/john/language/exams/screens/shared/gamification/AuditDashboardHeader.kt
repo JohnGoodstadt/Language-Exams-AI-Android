@@ -43,6 +43,7 @@ fun AuditDashboardHeader(
     stats: AuditStats,
     currentLevel: String,
     unlockedLevels: Set<ReadinessAuditLevels>,
+    placementLevel: String?,
     onNavigateToAudit: () -> Unit,
     onAdjustLevel: () -> Unit,
     onNewAudit: () -> Unit
@@ -81,6 +82,22 @@ fun AuditDashboardHeader(
                 description = "Exam Score"
             )
         }
+
+        Spacer(Modifier.height(24.dp))
+
+        // --- 1b. THE SUMMARY (moved out of the inline audit view) ---
+        AuditSummaryCard(
+            currentLevel = currentLevel,
+            // Band-based placement from the baseline audit ("A2"/"B1"/"B2"), or null
+            // until a baseline quiz has been completed under the banded-scoring build.
+            placementLevel = placementLevel,
+            // Only show a level verdict once the baseline is actually complete. Logic
+            // (INTER) unlocks only after every baseline quiz has a completed attempt,
+            // so it's true only when all 10 baseline questions have been attempted -
+            // not on a fresh install or an immediately-cancelled audit.
+            baselineComplete = unlockedLevels.contains(ReadinessAuditLevels.INTER),
+            onSwitchLevel = { onAdjustLevel() }
+        )
 
         Spacer(Modifier.height(24.dp))
 
@@ -123,6 +140,77 @@ fun AuditDashboardHeader(
                 icon = Icons.Default.Refresh,
                 onClick = onNewAudit
             )
+        }
+    }
+}
+
+// Extracted from the inline summary in ReadinessAuditScreen (the block gated on
+// isQuizLockedForToday). Shows the audit's level verdict + an optional action to
+// switch level. Placed in the base dashboard so it survives dismissing the sheet.
+@Composable
+private fun AuditSummaryCard(
+    currentLevel: String,
+    placementLevel: String?,
+    baselineComplete: Boolean,
+    onSwitchLevel: (String) -> Unit
+) {
+    // Three states:
+    //  - Baseline not done yet          -> prompt them to take the audit.
+    //  - Baseline done, no placement    -> legacy completion (pre-banding build); acknowledge
+    //                                      it without a (now unknowable) level verdict.
+    //  - Baseline done, placement known -> compare the placed band to their chosen level.
+    val hasVerdict = baselineComplete && placementLevel != null
+    val isOverEstimated = hasVerdict && placementLevel!! < currentLevel
+    val isUnderEstimated = hasVerdict && placementLevel!! > currentLevel
+    val isMatch = hasVerdict && placementLevel == currentLevel
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        // The Advice Box
+        Card(
+            colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(Modifier.padding(16.dp)) {
+                Text(
+                    text = when {
+                        !baselineComplete -> "📋 Let's get you set up"
+                        !hasVerdict -> "✅ Baseline Complete"
+                        isOverEstimated -> "⚠️ Level Mismatch Detected"
+                        isUnderEstimated -> "🚀 Higher Potential Detected"
+                        else -> "✅ Level Verified"
+                    },
+                    color = if (!hasVerdict || isMatch) Color.Green else orangeLight,
+                    fontWeight = FontWeight.Bold
+                )
+
+                Spacer(Modifier.height(8.dp))
+
+                Text(
+                    text = when {
+                        !baselineComplete -> "Please take the audit so we can configure the app to match your level."
+                        !hasVerdict -> "Your baseline is complete. Take a fresh audit to fine-tune your recommended level."
+                        isOverEstimated -> "You selected $currentLevel, but the audit places you at $placementLevel. Starting with easier content will help you build the foundation needed to pass."
+                        isUnderEstimated -> "Great news! You are currently studying $currentLevel, but the audit places you at $placementLevel. We suggest moving up to save time."
+                        else -> "Your skills are perfectly aligned with the $currentLevel requirements. Focus on maintaining this level through daily practice."
+                    },
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color.LightGray
+                )
+            }
+        }
+
+        // Action button - only when we have a verdict and it disagrees with their level.
+        if (hasVerdict && !isMatch) {
+            Button(
+                onClick = { onSwitchLevel(placementLevel!!) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+            ) {
+                Text("Switch to $placementLevel Mastery", color = Color.Black)
+            }
         }
     }
 }

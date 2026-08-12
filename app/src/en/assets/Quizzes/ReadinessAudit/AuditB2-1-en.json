@@ -1,0 +1,236 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB2-1-en",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B2 Level Check",
+      "description": "A mixed grammar and usage check to estimate whether the learner is working securely at CEFR B2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence using the third conditional.",
+          "summary": "Third Conditional.",
+          "level": "B2",
+          "explain": "Use 'if' + past perfect and 'would have' + past participle to describe an unreal past situation.",
+          "words": [
+            {
+              "word": "If I had known about the meeting, I would have attended.",
+              "ok": true
+            },
+            {
+              "word": "If I knew about the meeting, I would have attended.",
+              "ok": false
+            },
+            {
+              "word": "If I had known about the meeting, I would attend.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Identify the correct mixed conditional sentence.",
+          "summary": "Mixed Conditionals.",
+          "level": "B2",
+          "explain": "A past condition can have a present result. Use past perfect in the if-clause and 'would' + base verb for the present result.",
+          "words": [
+            {
+              "word": "If I had taken that job, I would be living in London now.",
+              "ok": true
+            },
+            {
+              "word": "If I took that job, I would have been living in London now.",
+              "ok": false
+            },
+            {
+              "word": "If I had taken that job, I would have lived in London now.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct passive reporting structure.",
+          "summary": "Passive Reporting Verbs.",
+          "level": "B2",
+          "explain": "Formal English often uses 'is believed to' or similar passive reporting structures.",
+          "words": [
+            {
+              "word": "The company is believed to be considering a merger.",
+              "ok": true
+            },
+            {
+              "word": "The company is believed that it is considering a merger.",
+              "ok": false
+            },
+            {
+              "word": "The company believes to be considering a merger.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Identify the correct past modal for deduction.",
+          "summary": "Modal Deduction in the Past.",
+          "level": "B2",
+          "explain": "Use 'must have' + past participle for a strong deduction about a past event.",
+          "words": [
+            {
+              "word": "She must have forgotten about the appointment.",
+              "ok": true
+            },
+            {
+              "word": "She must forgot about the appointment.",
+              "ok": false
+            },
+            {
+              "word": "She must have forget about the appointment.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct sentence using inversion.",
+          "summary": "Negative Inversion.",
+          "level": "B2",
+          "explain": "After a negative adverbial such as 'rarely' at the beginning of a sentence, use auxiliary-verb inversion.",
+          "words": [
+            {
+              "word": "Rarely have I seen such an impressive performance.",
+              "ok": true
+            },
+            {
+              "word": "Rarely I have seen such an impressive performance.",
+              "ok": false
+            },
+            {
+              "word": "Rarely have seen I such an impressive performance.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Identify the correct reduced relative clause.",
+          "summary": "Reduced Relative Clauses.",
+          "level": "B2",
+          "explain": "A passive relative clause can often be reduced by removing the relative pronoun and the verb 'be'.",
+          "words": [
+            {
+              "word": "The documents submitted yesterday are being reviewed.",
+              "ok": true
+            },
+            {
+              "word": "The documents were submitted yesterday are being reviewed.",
+              "ok": false
+            },
+            {
+              "word": "The documents submitting yesterday are being reviewed.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct structure after 'despite'.",
+          "summary": "Concession: Despite.",
+          "level": "B2",
+          "explain": "'Despite' is followed by a noun, pronoun or -ing form, not a full clause beginning directly with subject and verb.",
+          "words": [
+            {
+              "word": "Despite feeling tired, she continued working.",
+              "ok": true
+            },
+            {
+              "word": "Despite she felt tired, she continued working.",
+              "ok": false
+            },
+            {
+              "word": "Despite of feeling tired, she continued working.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Identify the correct sentence using 'wish'.",
+          "summary": "Wish about the Past.",
+          "level": "B2",
+          "explain": "Use 'wish' + past perfect to express regret about a past situation.",
+          "words": [
+            {
+              "word": "I wish I had listened to your advice.",
+              "ok": true
+            },
+            {
+              "word": "I wish I listened to your advice.",
+              "ok": false
+            },
+            {
+              "word": "I wish I would have listened to your advice.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct future perfect sentence.",
+          "summary": "Future Perfect.",
+          "level": "B2",
+          "explain": "Use 'will have' + past participle for something expected to be completed before a future point.",
+          "words": [
+            {
+              "word": "By next June, I will have worked here for ten years.",
+              "ok": true
+            },
+            {
+              "word": "By next June, I will work here for ten years.",
+              "ok": false
+            },
+            {
+              "word": "By next June, I will have work here for ten years.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Identify the correct emphatic structure.",
+          "summary": "Cleft Sentences.",
+          "level": "B2",
+          "explain": "A cleft sentence such as 'What I need is...' is used to emphasise a particular part of the message.",
+          "words": [
+            {
+              "word": "What I need most is a few days off.",
+              "ok": true
+            },
+            {
+              "word": "What I need most are to have a few days off.",
+              "ok": false
+            },
+            {
+              "word": "That I need most is a few days off.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

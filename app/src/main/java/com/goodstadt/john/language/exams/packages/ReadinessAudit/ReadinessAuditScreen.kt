@@ -1,7 +1,4 @@
 package com.goodstadt.john.language.exams.packages.ReadinessAudit
-import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
-import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
-import com.goodstadt.john.language.exams.packages.reference.UsageDashboardScreen
 
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
@@ -72,9 +69,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
+import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
+import com.goodstadt.john.language.exams.packages.reference.UsageDashboardScreen
+import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
@@ -159,25 +159,13 @@ fun ReadinessAuditScreen(
         HeightClass.EXPANDED -> 32.dp
     }
 
-    // Logic to handle the "Adjust Level" button in the summary
-    val handleAdjustLevel: (String) -> Unit = { newLevelLabel ->
-        // Map "A2", "B1", "B2" back to your Enum
-        val newLevel = when(newLevelLabel) {
-            "A2" -> ReadinessAuditLevels.INTER
-            "B1" -> ReadinessAuditLevels.UPPER
-            "B2" -> ReadinessAuditLevels.ADVANCED
-            else -> ReadinessAuditLevels.ELEMENTARY
-        }
-        viewModel.onLevelSelected(newLevel)
-        onFinished() // Exit to dashboard after adjusting
-    }
-
-
-
     LaunchedEffect(Unit) {
         viewModel.uiEvent.collect { event ->
             when (event) {
                 is UiEvent.ShowToast -> Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
+                // Quiz just finished - close the sheet so the base view (with the
+                // relocated summary) becomes visible.
+                is UiEvent.QuizCompleted -> onFinished()
             }
         }
     }
@@ -291,7 +279,7 @@ fun ReadinessAuditScreen(
                             // Gate on Baseline actually being complete (Logic unlocked), not just
                             // confidence > 0, since confidence now also rises from partial progress
                             // within Baseline itself.
-                            text = if (unlockedLevels.contains(ReadinessAuditLevels.ELEMENTARY)) {
+                            text = if (unlockedLevels.contains(ReadinessAuditLevels.BASELINE)) {
                                 if (heightClass == HeightClass.COMPACT) {
                                     //"Let's start with a quick check of your current skills. Completing at least the Baseline gives us an indication of how to adjust the screens."
                                     "Let's start with a quick check of your current skills."
@@ -462,7 +450,7 @@ fun ReadinessAuditScreen(
                     Spacer(modifier = Modifier.width(8.dp)) // Add spacing between dots
                 }
             }
-            if (isQuizLockedForToday) {
+            if (false && isQuizLockedForToday) {
                 Text(
                     text = "You've completed this test today. You can review your answers below - come back tomorrow to retake it.",
                     style = MaterialTheme.typography.labelMedium,
@@ -476,76 +464,15 @@ fun ReadinessAuditScreen(
                 val currentIndex = ReadinessAuditLevels.entries.indexOf(selectedLevel)
                 val hasNextTab = currentIndex in 0 until (ReadinessAuditLevels.entries.size - 1)
 
-                // Inline audit summary (previously reached via the "View Summary"
-                // button, which opened AuditSummaryView). Only the advice Card and
-                // its two action buttons are shown here - the readiness/confidence
-                // figures already appear in the status Card above.
-                val currentSelectedLevel = selectedLevel.description
-                val readinessScore = stats.readiness
-                val calculatedLevel = when (readinessScore) {
-                    in 0..35 -> "A2"
-                    in 36..70 -> "B1"
-                    else -> "B2"
-                }
-                val isOverEstimated = calculatedLevel < currentSelectedLevel
-                val isUnderEstimated = calculatedLevel > currentSelectedLevel
-                val isMatch = calculatedLevel == currentSelectedLevel
-
-                Column(
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    // The Advice Box
-                    Card(
-                        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
-                        modifier = Modifier.fillMaxWidth()
+                // The level verdict summary now lives in the base MyProgress view
+                // (AuditDashboardHeader). On a fresh completion the sheet auto-closes
+                // via UiEvent.QuizCompleted; this block only shows when reopening an
+                // already-completed quiz to review, so keep just the review controls.
+                if (hasNextTab) {
+                    Column(
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
                     ) {
-                        Column(Modifier.padding(16.dp)) {
-                            Text(
-                                text = when {
-                                    isOverEstimated -> "⚠️ Level Mismatch Detected"
-                                    isUnderEstimated -> "🚀 Higher Potential Detected"
-                                    else -> "✅ Level Verified"
-                                },
-                                color = if (isMatch) Color.Green else orangeLight,
-                                fontWeight = FontWeight.Bold
-                            )
-
-                            Spacer(Modifier.height(8.dp))
-
-                            Text(
-                                text = when {
-                                    isOverEstimated -> "You selected $currentSelectedLevel, but the audit suggests $calculatedLevel. Starting with easier content will help you build the foundation needed to pass."
-                                    isUnderEstimated -> "Great news! You are currently studying $currentSelectedLevel, but your logic is already at $calculatedLevel. We suggest moving up to save time."
-                                    else -> "Your skills are perfectly aligned with the $currentSelectedLevel requirements. Focus on maintaining this level through daily practice."
-                                },
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = Color.LightGray
-                            )
-                        }
-                    }
-
-                    // Action buttons
-                    if (!isMatch) {
-                        Button(
-                            onClick = { handleAdjustLevel(calculatedLevel) },
-                            modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
-                        ) {
-                            Text("Switch to $calculatedLevel Mastery", color = Color.Black)
-                        }
-                    }
-
-//                    Button(
-//                        onClick = onFinished,
-//                        modifier = Modifier.fillMaxWidth(),
-//                        colors = ButtonDefaults.buttonColors(containerColor = if (isMatch) orangeLight else Color.DarkGray)
-//                    ) {
-//                        Text(if (isMatch) "Go to My Dashboard" else "Keep $currentSelectedLevel for now")
-//                    }
-
-                    // The existing "Next 10 Questions" button
-                    if (hasNextTab) {
+                        // The existing "Next 10 Questions" button
                         Button(
                             onClick = {
                                 val nextLevel = ReadinessAuditLevels.entries[currentIndex + 1]

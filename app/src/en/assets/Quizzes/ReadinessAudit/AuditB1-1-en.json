@@ -1,0 +1,236 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB1-1-en",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B1 Level Check",
+      "description": "A mixed grammar check to estimate whether the learner is working securely at CEFR B1 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence using the present perfect.",
+          "summary": "Present Perfect vs Past Simple.",
+          "level": "B1",
+          "explain": "Use the present perfect for an unfinished time period or experience connected to the present. The correct form is 'have seen'.",
+          "words": [
+            {
+              "word": "I have seen that film three times.",
+              "ok": true
+            },
+            {
+              "word": "I saw that film three times already.",
+              "ok": false
+            },
+            {
+              "word": "I have saw that film three times.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Identify the correct first conditional sentence.",
+          "summary": "First Conditional.",
+          "level": "B1",
+          "explain": "In the first conditional, use the present simple after 'if' and 'will' in the main clause.",
+          "words": [
+            {
+              "word": "If it rains tomorrow, we will stay at home.",
+              "ok": true
+            },
+            {
+              "word": "If it will rain tomorrow, we will stay at home.",
+              "ok": false
+            },
+            {
+              "word": "If it rains tomorrow, we stay at home.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct second conditional sentence.",
+          "summary": "Second Conditional.",
+          "level": "B1",
+          "explain": "For an unreal or unlikely present situation, use 'if' + past simple and 'would' + base verb.",
+          "words": [
+            {
+              "word": "If I had more time, I would learn another language.",
+              "ok": true
+            },
+            {
+              "word": "If I would have more time, I learned another language.",
+              "ok": false
+            },
+            {
+              "word": "If I have more time, I would learn another language.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Identify the correct reported speech sentence.",
+          "summary": "Reported Speech.",
+          "level": "B1",
+          "explain": "When reporting a past statement, the verb often moves back one tense. 'I am tired' becomes 'she was tired'.",
+          "words": [
+            {
+              "word": "She said that she was tired.",
+              "ok": true
+            },
+            {
+              "word": "She said that she is tired yesterday.",
+              "ok": false
+            },
+            {
+              "word": "She told that she was tired.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct relative clause.",
+          "summary": "Relative Clauses.",
+          "level": "B1",
+          "explain": "Use 'who' to introduce a relative clause describing a person.",
+          "words": [
+            {
+              "word": "The woman who lives next door is a doctor.",
+              "ok": true
+            },
+            {
+              "word": "The woman which lives next door is a doctor.",
+              "ok": false
+            },
+            {
+              "word": "The woman who she lives next door is a doctor.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Identify the correct passive sentence.",
+          "summary": "Passive Voice.",
+          "level": "B1",
+          "explain": "The passive is formed with 'be' + past participle. The correct form is 'was built'.",
+          "words": [
+            {
+              "word": "The bridge was built more than fifty years ago.",
+              "ok": true
+            },
+            {
+              "word": "The bridge built more than fifty years ago.",
+              "ok": false
+            },
+            {
+              "word": "The bridge was build more than fifty years ago.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct modal verb for obligation.",
+          "summary": "Modal Verbs (Obligation).",
+          "level": "B1",
+          "explain": "'Have to' is used for an obligation or requirement. After 'have to', use the base form of the verb.",
+          "words": [
+            {
+              "word": "I have to finish this report before Friday.",
+              "ok": true
+            },
+            {
+              "word": "I have finish this report before Friday.",
+              "ok": false
+            },
+            {
+              "word": "I have to finishing this report before Friday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Identify the correct verb pattern.",
+          "summary": "Gerund after Preposition.",
+          "level": "B1",
+          "explain": "After a preposition such as 'in', use the -ing form. The correct structure is 'interested in learning'.",
+          "words": [
+            {
+              "word": "She is interested in learning more about photography.",
+              "ok": true
+            },
+            {
+              "word": "She is interested in learn more about photography.",
+              "ok": false
+            },
+            {
+              "word": "She is interested to learning more about photography.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct past continuous and past simple combination.",
+          "summary": "Past Continuous and Past Simple.",
+          "level": "B1",
+          "explain": "Use the past continuous for an action in progress and the past simple for the shorter action that interrupted it.",
+          "words": [
+            {
+              "word": "I was driving home when I saw the accident.",
+              "ok": true
+            },
+            {
+              "word": "I drove home when I was seeing the accident.",
+              "ok": false
+            },
+            {
+              "word": "I was driving home when I was seeing the accident.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Identify the correct present perfect sentence using 'for'.",
+          "summary": "Present Perfect Continuous Time.",
+          "level": "B1",
+          "explain": "For a situation that started in the past and continues now, use the present perfect with 'for' plus a period of time.",
+          "words": [
+            {
+              "word": "They have lived in this town for eight years.",
+              "ok": true
+            },
+            {
+              "word": "They live in this town since eight years.",
+              "ok": false
+            },
+            {
+              "word": "They lived in this town for eight years and still live here.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditA2-1-en",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "A2 Level Check",
+      "description": "A mixed grammar check to estimate whether the learner is working securely at CEFR A2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Identify the correct present simple sentence.",
+          "summary": "Present Simple (Third Person).",
+          "level": "A2",
+          "explain": "With 'he', 'she' or 'it' in the present simple, the verb normally ends in -s. The correct form is 'works'.",
+          "words": [
+            {
+              "word": "She works in a hospital.",
+              "ok": true
+            },
+            {
+              "word": "She work in a hospital.",
+              "ok": false
+            },
+            {
+              "word": "She working in a hospital.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct sentence for an action happening now.",
+          "summary": "Present Continuous.",
+          "level": "A2",
+          "explain": "For an action happening now, use 'am/is/are' + verb-ing. The correct form is 'is talking'.",
+          "words": [
+            {
+              "word": "He is talking on the phone now.",
+              "ok": true
+            },
+            {
+              "word": "He talks on the phone now.",
+              "ok": false
+            },
+            {
+              "word": "He is talk on the phone now.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Identify the correct past simple sentence.",
+          "summary": "Past Simple (Irregular Verb).",
+          "level": "A2",
+          "explain": "The past simple of 'go' is 'went'.",
+          "words": [
+            {
+              "word": "We went to London last weekend.",
+              "ok": true
+            },
+            {
+              "word": "We goed to London last weekend.",
+              "ok": false
+            },
+            {
+              "word": "We have gone to London last weekend.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct question in the past simple.",
+          "summary": "Past Simple Questions.",
+          "level": "A2",
+          "explain": "Past simple questions use 'did' + the base form of the verb. The correct form is 'Did you see...?'.",
+          "words": [
+            {
+              "word": "Did you see the film yesterday?",
+              "ok": true
+            },
+            {
+              "word": "Did you saw the film yesterday?",
+              "ok": false
+            },
+            {
+              "word": "Saw you the film yesterday?",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Identify the correct comparative form.",
+          "summary": "Comparatives.",
+          "level": "A2",
+          "explain": "The comparative form of 'expensive' is 'more expensive'.",
+          "words": [
+            {
+              "word": "This hotel is more expensive than the other one.",
+              "ok": true
+            },
+            {
+              "word": "This hotel is expensiver than the other one.",
+              "ok": false
+            },
+            {
+              "word": "This hotel is more expensive that the other one.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct expression for a future plan.",
+          "summary": "Going To (Future Plans).",
+          "level": "A2",
+          "explain": "Use 'am/is/are going to' + base verb to talk about a future plan. The correct form is 'are going to visit'.",
+          "words": [
+            {
+              "word": "We are going to visit my parents tomorrow.",
+              "ok": true
+            },
+            {
+              "word": "We going to visit my parents tomorrow.",
+              "ok": false
+            },
+            {
+              "word": "We are going visit my parents tomorrow.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Identify the correct modal verb structure.",
+          "summary": "Modal Verbs (Should).",
+          "level": "A2",
+          "explain": "After a modal verb such as 'should', use the base form of the verb without 'to'. The correct form is 'should drink'.",
+          "words": [
+            {
+              "word": "You should drink more water.",
+              "ok": true
+            },
+            {
+              "word": "You should to drink more water.",
+              "ok": false
+            },
+            {
+              "word": "You should drinking more water.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct quantity expression.",
+          "summary": "Countable and Uncountable Nouns.",
+          "level": "A2",
+          "explain": "'Advice' is an uncountable noun, so we say 'some advice', not 'an advice' or 'many advices'.",
+          "words": [
+            {
+              "word": "She gave me some useful advice.",
+              "ok": true
+            },
+            {
+              "word": "She gave me an useful advice.",
+              "ok": false
+            },
+            {
+              "word": "She gave me many useful advices.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Identify the correct present perfect sentence.",
+          "summary": "Present Perfect (Experience).",
+          "level": "A2",
+          "explain": "Use 'have/has' + past participle to talk about life experience when no finished past time is given. The correct form is 'have visited'.",
+          "words": [
+            {
+              "word": "I have visited Spain three times.",
+              "ok": true
+            },
+            {
+              "word": "I have visit Spain three times.",
+              "ok": false
+            },
+            {
+              "word": "I am visited Spain three times.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence using 'since' and 'for'.",
+          "summary": "Present Perfect (Since and For).",
+          "level": "A2",
+          "explain": "Use 'for' with a period of time and the present perfect for a situation that started in the past and continues now. The correct form is 'have lived here for three years'.",
+          "words": [
+            {
+              "word": "I have lived here for three years.",
+              "ok": true
+            },
+            {
+              "word": "I live here since three years.",
+              "ok": false
+            },
+            {
+              "word": "I have lived here since three years.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

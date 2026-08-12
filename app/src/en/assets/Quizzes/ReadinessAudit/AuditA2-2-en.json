@@ -1,0 +1,236 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditA2-2-en",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "A2 Progress Check",
+      "description": "A second mixed grammar check to measure progress and confirm whether the learner is working securely at CEFR A2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Identify the correct sentence using an adverb of frequency.",
+          "summary": "Adverbs of Frequency.",
+          "level": "A2",
+          "explain": "Adverbs such as 'usually' normally come before the main verb. The correct form is 'usually walks'.",
+          "words": [
+            {
+              "word": "He usually walks to work.",
+              "ok": true
+            },
+            {
+              "word": "He walks usually to work.",
+              "ok": false
+            },
+            {
+              "word": "He usually walk to work.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct sentence describing an action happening now.",
+          "summary": "Present Continuous.",
+          "level": "A2",
+          "explain": "For something happening now, use 'am/is/are' + verb-ing. The correct form is 'are waiting'.",
+          "words": [
+            {
+              "word": "They are waiting for the bus.",
+              "ok": true
+            },
+            {
+              "word": "They waiting for the bus.",
+              "ok": false
+            },
+            {
+              "word": "They are wait for the bus.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Identify the correct negative sentence in the past simple.",
+          "summary": "Past Simple Negative.",
+          "level": "A2",
+          "explain": "Past simple negatives use 'did not' or 'didn't' followed by the base form of the verb. The correct form is 'didn't buy'.",
+          "words": [
+            {
+              "word": "I didn't buy anything at the shop.",
+              "ok": true
+            },
+            {
+              "word": "I didn't bought anything at the shop.",
+              "ok": false
+            },
+            {
+              "word": "I don't bought anything at the shop.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct superlative form.",
+          "summary": "Superlatives.",
+          "level": "A2",
+          "explain": "The superlative of 'good' is 'best'. We normally use 'the' before a superlative.",
+          "words": [
+            {
+              "word": "This is the best restaurant in town.",
+              "ok": true
+            },
+            {
+              "word": "This is the better restaurant in town.",
+              "ok": false
+            },
+            {
+              "word": "This is the most good restaurant in town.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Identify the correct expression of quantity.",
+          "summary": "Much and Many.",
+          "level": "A2",
+          "explain": "Use 'many' with countable plural nouns such as 'people'.",
+          "words": [
+            {
+              "word": "There weren't many people at the party.",
+              "ok": true
+            },
+            {
+              "word": "There weren't much people at the party.",
+              "ok": false
+            },
+            {
+              "word": "There wasn't many people at the party.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct modal verb structure.",
+          "summary": "Modal Verbs (Can).",
+          "level": "A2",
+          "explain": "After 'can', use the base form of the verb without 'to'. The correct form is 'can speak'.",
+          "words": [
+            {
+              "word": "My sister can speak three languages.",
+              "ok": true
+            },
+            {
+              "word": "My sister can speaks three languages.",
+              "ok": false
+            },
+            {
+              "word": "My sister can to speak three languages.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Identify the correct verb pattern.",
+          "summary": "Want + Infinitive.",
+          "level": "A2",
+          "explain": "The verb 'want' is followed by 'to' + the base form of the verb. The correct form is 'want to learn'.",
+          "words": [
+            {
+              "word": "I want to learn how to drive.",
+              "ok": true
+            },
+            {
+              "word": "I want learning how to drive.",
+              "ok": false
+            },
+            {
+              "word": "I want learn how to drive.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct future prediction.",
+          "summary": "Future with Will.",
+          "level": "A2",
+          "explain": "Use 'will' + the base form of the verb for a simple future prediction. The correct form is 'will be'.",
+          "words": [
+            {
+              "word": "I think the weather will be better tomorrow.",
+              "ok": true
+            },
+            {
+              "word": "I think the weather will is better tomorrow.",
+              "ok": false
+            },
+            {
+              "word": "I think the weather will to be better tomorrow.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Identify the correct present perfect form.",
+          "summary": "Present Perfect (Already).",
+          "level": "A2",
+          "explain": "Use 'have/has' + past participle with 'already'. The past participle of 'eat' is 'eaten'.",
+          "words": [
+            {
+              "word": "She has already eaten lunch.",
+              "ok": true
+            },
+            {
+              "word": "She has already ate lunch.",
+              "ok": false
+            },
+            {
+              "word": "She already has eat lunch.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence comparing a past event with the present.",
+          "summary": "Present Perfect vs Past Simple.",
+          "level": "A2",
+          "explain": "Use the past simple with a finished past time such as 'last year'. The correct form is 'visited ... last year'.",
+          "words": [
+            {
+              "word": "We visited France last year.",
+              "ok": true
+            },
+            {
+              "word": "We have visited France last year.",
+              "ok": false
+            },
+            {
+              "word": "We have visit France last year.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -65,9 +65,18 @@ class MyProgressViewModel @Inject constructor (
             initialValue = AuditStats(0, 0)
         )
 
+    // CEFR band the baseline audit placed the learner into ("A2"/"B1"/"B2"), or null until a
+    // baseline quiz is completed. Drives the summary verdict in the dashboard header.
+    val baselinePlacementLevel: StateFlow<String?> = auditRepository.baselineLevel
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = null
+        )
+
     val unlockedAuditLevels: StateFlow<Set<ReadinessAuditLevels>> = auditRepository.auditScores
         .map { scores ->
-            val unlocked = mutableSetOf(ReadinessAuditLevels.ELEMENTARY) // Part 1 always open
+            val unlocked = mutableSetOf(ReadinessAuditLevels.BASELINE) // Part 1 always open
 
             // If Part 1 is finished, unlock Part 2
             if (scores.containsKey(1)) unlocked.add(ReadinessAuditLevels.INTER)
@@ -83,7 +92,7 @@ class MyProgressViewModel @Inject constructor (
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5000),
-            initialValue = setOf(ReadinessAuditLevels.ELEMENTARY)
+            initialValue = setOf(ReadinessAuditLevels.BASELINE)
         )
 
 

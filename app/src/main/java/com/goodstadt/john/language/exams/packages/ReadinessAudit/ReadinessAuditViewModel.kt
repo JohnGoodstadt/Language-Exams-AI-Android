@@ -1,10 +1,4 @@
 package com.goodstadt.john.language.exams.packages.ReadinessAudit
-import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizUiState
-import com.goodstadt.john.language.exams.viewmodels.PlaybackState
-import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizUiState
-import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
-import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizStatistics
-import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
 
 //import android.graphics.Color
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
@@ -50,8 +44,14 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.models.UsageMastery
+import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
+import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
+import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizStatistics
+import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizUiState
+import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizUiState
 import com.goodstadt.john.language.exams.packages.reference.shared.ReadinessAuditDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
+import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -73,16 +73,16 @@ data class AuditStats(
 )
 
 enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
-    ELEMENTARY(
+    BASELINE(
         quizzes = listOf(
             ReadinessAuditDetail(
                 id = 1,
-                baseName = "BaselineAudit-en",
+                baseName = "BaselineAuditA2-1-en",
                 title = "Sentence Structure"
             ),
             ReadinessAuditDetail(
                 id = 1,
-                baseName = "BaselineAudit2-en",
+                baseName = "BaselineAuditA2-2-en",
                 title = "Another Title"
             ),
         )
@@ -91,7 +91,12 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
         quizzes = listOf(
             ReadinessAuditDetail(
                 id = 2,
-                baseName = "LogicAudit-en",
+                baseName = "AuditA2-1-en",
+                title = "Present Simple"
+            ),
+            ReadinessAuditDetail(
+                id = 2,
+                baseName = "AuditA2-2-en",
                 title = "Present Simple"
             ),
         )
@@ -100,7 +105,12 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
         quizzes = listOf(
             ReadinessAuditDetail(
                 id = 3,
-                baseName = "LexisAudit-en",
+                baseName = "AuditB1-1-en",
+                title = "Past Simple"
+            ),
+            ReadinessAuditDetail(
+                id = 3,
+                baseName = "AuditB1-2-en",
                 title = "Past Simple"
             ),
         )
@@ -109,7 +119,12 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
         quizzes = listOf(
             ReadinessAuditDetail(
                 id = 4,
-                baseName = "CoreAudit-en",
+                baseName = "AuditB2-1-en",
+                title = "Questions & Short Answers"
+            ),
+            ReadinessAuditDetail(
+                id = 4,
+                baseName = "AuditB2-2-en",
                 title = "Questions & Short Answers"
             )
         )
@@ -118,7 +133,7 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
 
     val description: String
         get() = when(this) {
-            ELEMENTARY -> "Baseline"
+            BASELINE -> "Baseline"
             INTER -> "Logic"
             UPPER -> "Lexis"
             ADVANCED -> "Core"
@@ -126,14 +141,14 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
     /** Compact label for tight horizontal pickers on small screens */
     val shortLabel: String
         get() = when(this) {
-            ELEMENTARY -> "Base."
+            BASELINE -> "Base."
             INTER -> "Logic"
             UPPER -> "Lex."
             ADVANCED -> "Core"
         }
     val ESOL: String
         get() = when(this) {
-            ELEMENTARY -> "A1"
+            BASELINE -> "A1"
             INTER -> "A2"
             UPPER -> "B1"
             ADVANCED -> "B2"
@@ -209,9 +224,9 @@ class ReadinessAuditViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(skillLevel = ReadinessAuditLevels.ELEMENTARY.description, quizNumber = 1, title = "Quiz 1")
+        QuizStatistics(skillLevel = ReadinessAuditLevels.BASELINE.description, quizNumber = 1, title = "Quiz 1")
     )
-    val selectedLevel = mutableStateOf(ReadinessAuditLevels.ELEMENTARY)
+    val selectedLevel = mutableStateOf(ReadinessAuditLevels.BASELINE)
     val selectedQuiz = mutableStateOf<ReadinessAuditDetail?>(null)
 
     val selectedQuizNumber = mutableStateOf(1)
@@ -231,10 +246,10 @@ class ReadinessAuditViewModel @Inject constructor(
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
     private val _availableQuizzes = MutableStateFlow<List<ReadinessAuditDetail>>(
-        ReadinessAuditLevels.ELEMENTARY.quizzes)
+        ReadinessAuditLevels.BASELINE.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
-    // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized ReadinessAuditDetails
+    // 1. The Cache: Maps a Level (e.g. BASELINE) to its list of localized ReadinessAuditDetails
     private val quizTitleCache = mutableMapOf<ReadinessAuditLevels, List<ReadinessAuditDetail>>()
     private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question
 
@@ -259,9 +274,9 @@ class ReadinessAuditViewModel @Inject constructor(
     val isQuizLockedForToday: StateFlow<Boolean> = _isQuizLockedForToday.asStateFlow()
 
     // Levels the user is currently allowed to attempt. Levels must be cleared in order:
-    // ELEMENTARY -> INTER -> UPPER -> ADVANCED.
+    // BASELINE -> INTER -> UPPER -> ADVANCED.
     private val _unlockedLevels = MutableStateFlow<Set<ReadinessAuditLevels>>(setOf(
-        ReadinessAuditLevels.ELEMENTARY
+        ReadinessAuditLevels.BASELINE
     ))
     val unlockedLevels: StateFlow<Set<ReadinessAuditLevels>> = _unlockedLevels.asStateFlow()
 
@@ -501,7 +516,8 @@ class ReadinessAuditViewModel @Inject constructor(
                 val explain = quizSection.explain
                 val title = quizSection.title
                 val page = quizSection.page
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page)
+                val level = quizSection.level
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level)
             }
         }
     }
@@ -796,6 +812,15 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                     auditRepository.saveScore(partIndex, finalScore)
                     auditRepository.markQuizCompleted(key)
                     _isQuizLockedForToday.value = true
+
+                    // Baseline is banded (A2/B1/B2 questions) - place the learner by how
+                    // they did per band, not by raw count, and persist it for the summary.
+                    if (level == ReadinessAuditLevels.BASELINE) {
+                        val bandResults = _questions.value.mapIndexed { i, question ->
+                            question.level to (userAnswers.value[i] == true)
+                        }
+                        auditRepository.saveBaselineLevel(AuditEngine.placeBaselineLevel(bandResults))
+                    }
                 }
 
                 // 3. Refresh stats (this will now see progress for Q1-9 and Score for Q10)
@@ -807,6 +832,9 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED, title = quizStatistics.value.title)
 
             onQuizFinished()
+
+            // Signal the UI to close the audit sheet so the base view's summary shows.
+            viewModelScope.launch { _uiEvent.emit(UiEvent.QuizCompleted) }
         }
 
         val page = quizStatistics.value.page
@@ -1098,30 +1126,35 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         // 2. Only attempt swap if the filename follows the "-en" pattern
         if (baseName.endsWith("-en")) {
-            // Construct the candidate (e.g., "UsageQuiz1A1-in")
-            val versionSuffix = if (_currentVersion.value == 1) "" else "2"
-            val candidateName = baseName.replace("-en", "$versionSuffix-$regionCode")
+            // The enum declares the version-1 files, which end in "-1-en"
+            // (e.g. "AuditA2-1-en", "BaselineAuditA2-1-en"). Version 2 is the same file
+            // with a "-2-en" suffix. This is the only thing that differs between the two tests.
+            val candidateName = if (_currentVersion.value == 1) {
+                baseName
+            } else {
+                baseName.replace("-1-en", "-2-en")
+            }
 
             // 3. Check if the file "candidateName.json" actually exists in Assets
-            // Adjust the path to match your specific folder structure
-            //val assetPath = "Quizzes/ReadinessAudit/${candidateName}$versionSuffix.json"
             val assetPath = "Quizzes/ReadinessAudit/$candidateName.json"
 
             return if (assetExists(assetPath)) {
-                candidateName // Found tailored region file!
+                candidateName // Found the requested version
             } else {
-                baseName // Fallback to standard English
+                baseName // Fallback to the version-1 file
             }
         }
 
         return baseName
     }
     // 2. Update the filename resolver logic
+    // NOTE: unused - the active resolver is resolveLocalizedBaseName() above, which swaps
+    // "-1-en" for "-2-en" for version 2. Kept only for reference.
     private fun resolveLocalizedBaseName99(baseName: String): String {
         val regionCode = "en" // Or your Locale logic
         val versionSuffix = if (_currentVersion.value == 1) "" else "2"
 
-        // Logic: "BaselineAudit" + "2" + "-" + "en" = "BaselineAudit2-en"
+        // Legacy logic (old naming): "BaselineAudit" + "2" + "-" + "en" = "BaselineAudit2-en"
         val finalBaseName = "$baseName$versionSuffix-$regionCode"
 
         // Check for localization (your existing logic)

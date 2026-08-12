@@ -31,6 +31,9 @@ data class TestMyselfSections(
     val sentence: String,
     val explain: String,
     val summary: String,
+    // CEFR band for this question ("A2", "B1", "B2"). Only the baseline audit uses it,
+    // to place the learner by band performance; null/absent for all other content.
+    val level: String? = null,
     var words: List<TestMyselfWordsState>
 )
 @Serializable

@@ -55,6 +55,21 @@ class ReadinessAuditRepository @Inject constructor(
     private val KEY_CURRENT_PART_INDEX = intPreferencesKey("current_part_index")
     private val KEY_CURRENT_PART_PROGRESS = floatPreferencesKey("current_part_progress")
 
+    // CEFR band the learner was placed into by their banded baseline answers ("A2"/"B1"/"B2").
+    // Set when a baseline quiz completes; drives the summary verdict in the base view. Null until
+    // a baseline quiz is completed under the banded-scoring build.
+    private val KEY_BASELINE_LEVEL = stringPreferencesKey("audit_baseline_level")
+
+    val baselineLevel: Flow<String?> = context.auditDataStore.data.map { prefs ->
+        prefs[KEY_BASELINE_LEVEL]
+    }
+
+    suspend fun saveBaselineLevel(level: String) {
+        context.auditDataStore.edit { prefs ->
+            prefs[KEY_BASELINE_LEVEL] = level
+        }
+    }
+
     // 🟢 THE SOURCE OF TRUTH: One flow that returns both scores and live progress
     data class AuditData(val scores: Map<Int, Int>, val activeProgress: Map<Int, Float>)
 
@@ -126,7 +141,7 @@ class ReadinessAuditRepository @Inject constructor(
     /**
      * Returns the persisted attempt (locked-in answers + completion time + question count) for
      * a given quiz.
-     * @param quizKey Unique key per level+quiz, e.g. "ELEMENTARY_1".
+     * @param quizKey Unique key per level+quiz, e.g. "BASELINE_1".
      */
     suspend fun getQuizAttemptState(quizKey: String): ReadinessQuizAttemptState {
         val prefs = context.auditDataStore.data.first()

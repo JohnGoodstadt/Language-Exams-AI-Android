@@ -1,0 +1,236 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB1-2-en",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B1 Progress Check",
+      "description": "A second mixed grammar check to measure progress and confirm whether the learner is working securely at CEFR B1 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence using the present perfect.",
+          "summary": "Present Perfect with Yet.",
+          "level": "B1",
+          "explain": "Use 'have/has' + past participle with 'yet' in negative sentences and questions. The correct form is 'hasn't finished yet'.",
+          "words": [
+            {
+              "word": "She hasn't finished her homework yet.",
+              "ok": true
+            },
+            {
+              "word": "She didn't finish her homework yet.",
+              "ok": false
+            },
+            {
+              "word": "She hasn't finish her homework yet.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Identify the correct first conditional sentence.",
+          "summary": "First Conditional.",
+          "level": "B1",
+          "explain": "Use the present simple after 'if' and 'will' + base verb in the main clause for a real future possibility.",
+          "words": [
+            {
+              "word": "If you leave now, you will catch the train.",
+              "ok": true
+            },
+            {
+              "word": "If you will leave now, you will catch the train.",
+              "ok": false
+            },
+            {
+              "word": "If you leave now, you will caught the train.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence for an unreal present situation.",
+          "summary": "Second Conditional.",
+          "level": "B1",
+          "explain": "Use 'if' + past simple and 'would' + base verb for an unreal or unlikely present situation.",
+          "words": [
+            {
+              "word": "If I were you, I would speak to the manager.",
+              "ok": true
+            },
+            {
+              "word": "If I would be you, I spoke to the manager.",
+              "ok": false
+            },
+            {
+              "word": "If I am you, I would speak to the manager.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Identify the correct reported question.",
+          "summary": "Reported Questions.",
+          "level": "B1",
+          "explain": "In reported questions, use statement word order and do not use 'do' or 'did'. The correct form is 'asked me where I lived'.",
+          "words": [
+            {
+              "word": "He asked me where I lived.",
+              "ok": true
+            },
+            {
+              "word": "He asked me where did I live.",
+              "ok": false
+            },
+            {
+              "word": "He asked me where I did live.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct defining relative clause.",
+          "summary": "Relative Clauses.",
+          "level": "B1",
+          "explain": "Use 'that' or 'which' to introduce a defining relative clause about a thing. Do not repeat the object pronoun.",
+          "words": [
+            {
+              "word": "This is the book that I told you about.",
+              "ok": true
+            },
+            {
+              "word": "This is the book that I told you about it.",
+              "ok": false
+            },
+            {
+              "word": "This is the book who I told you about.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Identify the correct passive sentence.",
+          "summary": "Present Passive.",
+          "level": "B1",
+          "explain": "The present simple passive is formed with 'am/is/are' + past participle. The correct form is 'is spoken'.",
+          "words": [
+            {
+              "word": "English is spoken in many countries.",
+              "ok": true
+            },
+            {
+              "word": "English speaks in many countries.",
+              "ok": false
+            },
+            {
+              "word": "English is speak in many countries.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct modal expression of possibility.",
+          "summary": "Modal Verbs (Might).",
+          "level": "B1",
+          "explain": "Use 'might' + base verb to express possibility. The correct form is 'might arrive'.",
+          "words": [
+            {
+              "word": "They might arrive later this evening.",
+              "ok": true
+            },
+            {
+              "word": "They might to arrive later this evening.",
+              "ok": false
+            },
+            {
+              "word": "They might arriving later this evening.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Identify the correct verb pattern after 'enjoy'.",
+          "summary": "Gerund after Enjoy.",
+          "level": "B1",
+          "explain": "The verb 'enjoy' is followed by the -ing form. The correct structure is 'enjoy reading'.",
+          "words": [
+            {
+              "word": "I really enjoy reading historical novels.",
+              "ok": true
+            },
+            {
+              "word": "I really enjoy to read historical novels.",
+              "ok": false
+            },
+            {
+              "word": "I really enjoy read historical novels.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence using the past perfect.",
+          "summary": "Past Perfect.",
+          "level": "B1",
+          "explain": "Use the past perfect for an action completed before another past action. The correct form is 'had left'.",
+          "words": [
+            {
+              "word": "By the time we arrived, the train had left.",
+              "ok": true
+            },
+            {
+              "word": "By the time we arrived, the train has left.",
+              "ok": false
+            },
+            {
+              "word": "By the time we arrived, the train left already.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Identify the correct sentence showing a past habit.",
+          "summary": "Used To.",
+          "level": "B1",
+          "explain": "Use 'used to' + base verb for a past habit or state that is no longer true.",
+          "words": [
+            {
+              "word": "I used to play tennis every weekend.",
+              "ok": true
+            },
+            {
+              "word": "I use to play tennis every weekend.",
+              "ok": false
+            },
+            {
+              "word": "I used to playing tennis every weekend.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

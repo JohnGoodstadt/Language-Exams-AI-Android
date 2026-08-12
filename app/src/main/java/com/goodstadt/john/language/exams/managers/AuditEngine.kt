@@ -79,6 +79,36 @@ object AuditEngine {
         }
     }
 
+    // Ordering of the CEFR bands the baseline audit places into, lowest to highest.
+    private val BASELINE_BANDS = listOf("A2", "B1", "B2")
+    // A band is "passed" once at least this fraction of its questions are correct.
+    // With 3/4/3 questions per band this means A2 & B2 need 2 of 3, B1 needs 3 of 4.
+    private const val BAND_PASS_RATIO = 0.6f
+
+    /**
+     * Places a learner from their banded baseline answers.
+     *
+     * The baseline quiz mixes CEFR bands (e.g. 3x A2, 4x B1, 3x B2). Rather than a flat
+     * correct-count, we look at each band in isolation: a band is "passed" when the learner
+     * gets [BAND_PASS_RATIO] of its questions right. The placement is the highest band they
+     * pass (so failing every B2 but passing B1 lands them at B1; passing 2 of 3 B2s keeps
+     * them at B2). Questions whose level is null/blank are ignored.
+     *
+     * @param results one (level, isCorrect) pair per answered baseline question.
+     * @return "A2" / "B1" / "B2" - defaults to the lowest band when nothing is passed.
+     */
+    fun placeBaselineLevel(results: List<Pair<String?, Boolean>>): String {
+        var placement = BASELINE_BANDS.first()
+        for (band in BASELINE_BANDS) {
+            val inBand = results.filter { it.first?.trim()?.uppercase() == band }
+            if (inBand.isEmpty()) continue
+            val correct = inBand.count { it.second }
+            val passed = correct.toFloat() / inBand.size >= BAND_PASS_RATIO
+            if (passed) placement = band
+        }
+        return placement
+    }
+
     /** Verdict tier shown under Exam Readiness. */
     fun getReadinessVerdict(readiness: Int): String {
         return when (readiness) {

@@ -148,7 +148,7 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
      * Used to decide whether dismissing the first-launch intro sheet needs a confirmation.
      */
     fun isReadinessAuditBaselineComplete(): Boolean {
-        val level = ReadinessAuditLevels.ELEMENTARY
+        val level = ReadinessAuditLevels.BASELINE
         val quiz = level.quizzes.firstOrNull() ?: return false
         return quizHistoryManager.getLastAttempt(level.description, quiz.id) != null
     }

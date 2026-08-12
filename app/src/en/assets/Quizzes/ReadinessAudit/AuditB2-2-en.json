@@ -1,0 +1,236 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB2-2-en",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B2 Progress Check",
+      "description": "A second mixed grammar and usage check to measure progress and confirm whether the learner is working securely at CEFR B2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence using a modal in the past.",
+          "summary": "Should Have + Past Participle.",
+          "level": "B2",
+          "explain": "Use 'should have' + past participle to describe something that would have been better to do in the past.",
+          "words": [
+            {
+              "word": "You should have told me about the problem earlier.",
+              "ok": true
+            },
+            {
+              "word": "You should told me about the problem earlier.",
+              "ok": false
+            },
+            {
+              "word": "You should have tell me about the problem earlier.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Identify the correct sentence using the causative.",
+          "summary": "Have Something Done.",
+          "level": "B2",
+          "explain": "Use 'have' + object + past participle when someone else performs a service for you.",
+          "words": [
+            {
+              "word": "I had my car repaired last week.",
+              "ok": true
+            },
+            {
+              "word": "I repaired my car by a mechanic last week.",
+              "ok": false
+            },
+            {
+              "word": "I had repaired my car last week by a mechanic.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence using an unreal past condition.",
+          "summary": "Third Conditional.",
+          "level": "B2",
+          "explain": "For an unreal past condition, use past perfect after 'if' and 'would have' + past participle in the result clause.",
+          "words": [
+            {
+              "word": "If they had left earlier, they wouldn't have missed the flight.",
+              "ok": true
+            },
+            {
+              "word": "If they left earlier, they wouldn't have missed the flight.",
+              "ok": false
+            },
+            {
+              "word": "If they had left earlier, they wouldn't miss the flight.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Identify the correct reported speech structure.",
+          "summary": "Reported Speech with Past Perfect.",
+          "level": "B2",
+          "explain": "When reporting a completed past action, the past simple often shifts to the past perfect.",
+          "words": [
+            {
+              "word": "He said that he had finished the report the day before.",
+              "ok": true
+            },
+            {
+              "word": "He said that he has finished the report the day before.",
+              "ok": false
+            },
+            {
+              "word": "He told that he had finished the report the day before.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct formal conditional structure.",
+          "summary": "Conditional Inversion.",
+          "level": "B2",
+          "explain": "'Had I known...' is a formal alternative to 'If I had known...'.",
+          "words": [
+            {
+              "word": "Had I known about the delay, I would have taken a different train.",
+              "ok": true
+            },
+            {
+              "word": "Had I knew about the delay, I would have taken a different train.",
+              "ok": false
+            },
+            {
+              "word": "Had I known about the delay, I had taken a different train.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Identify the correct non-defining relative clause.",
+          "summary": "Non-Defining Relative Clauses.",
+          "level": "B2",
+          "explain": "Non-defining relative clauses use commas and usually 'who' or 'which', not 'that'.",
+          "words": [
+            {
+              "word": "My brother, who lives in Canada, is coming to visit.",
+              "ok": true
+            },
+            {
+              "word": "My brother, that lives in Canada, is coming to visit.",
+              "ok": false
+            },
+            {
+              "word": "My brother who he lives in Canada, is coming to visit.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence with a linking expression.",
+          "summary": "Contrast: Although and Despite.",
+          "level": "B2",
+          "explain": "'Although' is followed by a clause, while 'despite' is followed by a noun or -ing form.",
+          "words": [
+            {
+              "word": "Although the journey was long, we enjoyed it.",
+              "ok": true
+            },
+            {
+              "word": "Despite the journey was long, we enjoyed it.",
+              "ok": false
+            },
+            {
+              "word": "Although of the long journey, we enjoyed it.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Identify the correct verb pattern showing a change in meaning.",
+          "summary": "Remember + Gerund or Infinitive.",
+          "level": "B2",
+          "explain": "'Remember to do' means not to forget a future action. 'Remember doing' refers to a memory of a past action.",
+          "words": [
+            {
+              "word": "Remember to lock the door before you leave.",
+              "ok": true
+            },
+            {
+              "word": "Remember locking the door before you leave.",
+              "ok": false
+            },
+            {
+              "word": "Remember lock the door before you leave.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence using the future continuous.",
+          "summary": "Future Continuous.",
+          "level": "B2",
+          "explain": "Use 'will be' + verb-ing for an action that will be in progress at a particular future time.",
+          "words": [
+            {
+              "word": "This time tomorrow, I'll be flying to Madrid.",
+              "ok": true
+            },
+            {
+              "word": "This time tomorrow, I'll fly to Madrid.",
+              "ok": false
+            },
+            {
+              "word": "This time tomorrow, I'll be fly to Madrid.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Identify the correct advanced comparison structure.",
+          "summary": "The More... The More....",
+          "level": "B2",
+          "explain": "Use 'the + comparative, the + comparative' to show that two changes are connected.",
+          "words": [
+            {
+              "word": "The more you practise, the more confident you become.",
+              "ok": true
+            },
+            {
+              "word": "The more you practise, more confident you become.",
+              "ok": false
+            },
+            {
+              "word": "More you practise, the more confident you become.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

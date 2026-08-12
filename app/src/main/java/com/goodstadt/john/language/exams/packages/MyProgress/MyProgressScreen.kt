@@ -1,8 +1,5 @@
 package com.goodstadt.john.language.exams.packages.MyProgress
-import com.goodstadt.john.language.exams.packages.me.ChooseEnglishExamLevelSheet
 
-
-//import com.goodstadt.john.language.exams.ui.gamification.*
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -51,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.packages.me.ChooseEnglishExamLevelSheet
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
 import com.goodstadt.john.language.exams.screens.shared.gamification.AIWriterCard
 import com.goodstadt.john.language.exams.screens.shared.gamification.AuditDashboardHeader
@@ -81,6 +79,7 @@ fun MyProgressScreen(
     val auditStats by viewModel.auditStats.collectAsState()
     val currentSkillLevel by viewModel.currentSkillLevel.collectAsState(initial = "B1")
     val unlockedLevels by viewModel.unlockedAuditLevels.collectAsState()
+    val baselinePlacementLevel by viewModel.baselinePlacementLevel.collectAsState()
     var showLocalAuditSheet by remember { mutableStateOf(false) }
     val localSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showLanguageExamSheet by remember { mutableStateOf(false) }
@@ -118,6 +117,7 @@ fun MyProgressScreen(
                     stats = auditStats,
                     currentLevel = currentSkillLevel,
                     unlockedLevels = unlockedLevels,
+                    placementLevel = baselinePlacementLevel,
                     onNavigateToAudit = {
                         auditVersionToLaunch = 1 // Standard/Resume
                         showLocalAuditSheet = true
