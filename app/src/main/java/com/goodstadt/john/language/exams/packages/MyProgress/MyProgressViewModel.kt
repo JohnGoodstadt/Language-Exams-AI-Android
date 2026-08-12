@@ -74,17 +74,28 @@ class MyProgressViewModel @Inject constructor (
             initialValue = null
         )
 
-    val unlockedAuditLevels: StateFlow<Set<ReadinessAuditLevels>> = auditRepository.auditScores
-        .map { scores ->
+    // True once the baseline quiz has been completed (part 1 score on record), regardless of
+    // how well it went. Distinct from "A2 mastered" - drives the header's take-vs-retake copy.
+    val baselineComplete: StateFlow<Boolean> = auditRepository.auditScores
+        .map { it.containsKey(1) }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = false
+        )
+
+    val unlockedAuditLevels: StateFlow<Set<ReadinessAuditLevels>> =
+        combine(auditRepository.auditScores, auditRepository.baselineUnlockCeiling) { scores, ceiling ->
             val unlocked = mutableSetOf(ReadinessAuditLevels.BASELINE) // Part 1 always open
 
-            // If Part 1 is finished, unlock Part 2
-            if (scores.containsKey(1)) unlocked.add(ReadinessAuditLevels.INTER)
+            // Baseline band mastery unlocks the level tests up to the ceiling part index
+            // (A2 mastered -> A2 test, A2+B1 -> A2 & B1 tests, clean sweep -> all).
+            ReadinessAuditLevels.entries.forEach { level ->
+                if (level.ordinal + 1 <= ceiling) unlocked.add(level)
+            }
 
-            // If Part 2 is finished, unlock Part 3
+            // Completing a level test unlocks the next level (progression).
             if (scores.containsKey(2)) unlocked.add(ReadinessAuditLevels.UPPER)
-
-            // If Part 3 is finished, unlock Part 4
             if (scores.containsKey(3)) unlocked.add(ReadinessAuditLevels.ADVANCED)
 
             unlocked

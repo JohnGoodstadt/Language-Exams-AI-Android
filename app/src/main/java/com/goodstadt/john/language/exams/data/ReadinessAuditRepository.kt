@@ -70,6 +70,21 @@ class ReadinessAuditRepository @Inject constructor(
         }
     }
 
+    // How far the baseline result unlocks the level tests, as a part index:
+    // 1 = baseline only (A2 not mastered), 2 = +A2 test, 3 = +B1 test, 4 = +B2 test.
+    // Defaults to 1 (no level tests unlocked) until a baseline quiz is completed.
+    private val KEY_BASELINE_UNLOCK_CEILING = intPreferencesKey("audit_baseline_unlock_ceiling")
+
+    val baselineUnlockCeiling: Flow<Int> = context.auditDataStore.data.map { prefs ->
+        prefs[KEY_BASELINE_UNLOCK_CEILING] ?: 1
+    }
+
+    suspend fun saveBaselineUnlockCeiling(ceiling: Int) {
+        context.auditDataStore.edit { prefs ->
+            prefs[KEY_BASELINE_UNLOCK_CEILING] = ceiling
+        }
+    }
+
     // 🟢 THE SOURCE OF TRUTH: One flow that returns both scores and live progress
     data class AuditData(val scores: Map<Int, Int>, val activeProgress: Map<Int, Float>)
 

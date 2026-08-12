@@ -276,6 +276,10 @@ class ReadinessAuditViewModel @Inject constructor(
     ))
     val unlockedLevels: StateFlow<Set<ReadinessAuditLevels>> = _unlockedLevels.asStateFlow()
 
+    // Highest level-test part index unlocked by baseline band mastery (1 = none). Cached from
+    // the repository so refreshUnlockedLevels() can fold it into the unlocked set synchronously.
+    private var baselineCeiling = 1
+
     private val _currentVersion = MutableStateFlow(1)
     val currentVersion = _currentVersion.asStateFlow()
 
@@ -296,6 +300,12 @@ class ReadinessAuditViewModel @Inject constructor(
         }
         viewModelScope.launch {
             quizHistoryManager.historyUpdates.collect {
+                refreshUnlockedLevels()
+            }
+        }
+        viewModelScope.launch {
+            auditRepository.baselineUnlockCeiling.collect { ceiling ->
+                baselineCeiling = ceiling
                 refreshUnlockedLevels()
             }
         }
@@ -461,20 +471,29 @@ class ReadinessAuditViewModel @Inject constructor(
     fun isLevelUnlocked(level: ReadinessAuditLevels): Boolean = _unlockedLevels.value.contains(level)
 
     /**
-     * Recomputes which levels are unlocked. A level unlocks once every quiz in the previous
-     * level has at least one completed attempt on record.
+     * Recomputes which levels are unlocked.
+     *
+     * The baseline no longer auto-unlocks the next level just by being finished - instead the
+     * learner's per-band mastery ([baselineCeiling]) decides how far the level tests open
+     * (A2 mastered -> A2 test, A2+B1 -> A2 & B1 tests, clean sweep -> all). On top of that,
+     * completing a level test unlocks the next level so the learner can keep progressing.
      */
     private fun refreshUnlockedLevels() {
         val levels = ReadinessAuditLevels.entries
-        val unlocked = mutableSetOf(levels.first())
+        val unlocked = mutableSetOf(levels.first()) // BASELINE always open
 
-        for (i in 1 until levels.size) {
-            val previousLevel = levels[i - 1]
-            val previousCompleted = previousLevel.quizzes.all { quiz ->
-                quizHistoryManager.getLastAttempt(previousLevel.description, quiz.id) != null
+        // 1. Baseline band mastery unlocks level tests up to the ceiling part index.
+        levels.forEach { level ->
+            if (level.ordinal + 1 <= baselineCeiling) unlocked.add(level)
+        }
+
+        // 2. Completing an unlocked level test unlocks the next level (manual progression).
+        for (i in 1 until levels.size - 1) {
+            val level = levels[i]
+            val completed = level.quizzes.all { quiz ->
+                quizHistoryManager.getLastAttempt(level.description, quiz.id) != null
             }
-            if (!previousCompleted) break // levels must be completed in order
-            unlocked.add(levels[i])
+            if (unlocked.contains(level) && completed) unlocked.add(levels[i + 1])
         }
 
         _unlockedLevels.value = unlocked
@@ -813,6 +832,8 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                             question.level to (userAnswers.value[i] == true)
                         }
                         auditRepository.saveBaselineLevel(AuditEngine.placeBaselineLevel(bandResults))
+                        // Strict per-band mastery decides how far the level tests unlock.
+                        auditRepository.saveBaselineUnlockCeiling(AuditEngine.baselineUnlockCeiling(bandResults))
                     }
                 }
 
@@ -1222,6 +1243,20 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     // Helper for the UI text we added in the previous step
     fun getAuditorVerdictText(): String {
         return AuditEngine.getReadinessVerdict(_auditStats.value.readiness)
+    }
+
+    /**
+     * Short completion status of the current quiz for the status card - the full level
+     * verdict/summary now lives in the base MyProgress view, so here we only report progress.
+     */
+    fun getQuizStatusLabel(): String {
+        val stats = quizStatistics.value
+        val total = _questions.value.size
+        return when (stats.state) {
+            QuizState.COMPLETED -> "Completed"
+            QuizState.IN_PROGRESS -> "In progress (${stats.answered}/$total)"
+            else -> "Not started"
+        }
     }
 
     //State Machine for ending Audit readiness

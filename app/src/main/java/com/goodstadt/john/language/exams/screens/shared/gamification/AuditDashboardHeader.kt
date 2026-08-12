@@ -44,10 +44,17 @@ fun AuditDashboardHeader(
     currentLevel: String,
     unlockedLevels: Set<ReadinessAuditLevels>,
     placementLevel: String?,
+    baselineComplete: Boolean,
     onNavigateToAudit: () -> Unit,
     onAdjustLevel: () -> Unit,
-    onNewAudit: () -> Unit
+    onNewAudit: () -> Unit,
+    onGoToTest: (ReadinessAuditLevels) -> Unit
 ) {
+    // The recommended test to send the learner to = the highest level test their baseline
+    // mastery (or subsequent progress) has unlocked. Null when only the baseline is open.
+    val recommendedTest = unlockedLevels
+        .filter { it != ReadinessAuditLevels.BASELINE }
+        .maxByOrNull { it.ordinal }
     // Logic to determine the "Next Step" text
     val nextPartName = when {
         stats.confidence == 0 -> "Part 1: Baseline"
@@ -91,12 +98,12 @@ fun AuditDashboardHeader(
             // Band-based placement from the baseline audit ("A2"/"B1"/"B2"), or null
             // until a baseline quiz has been completed under the banded-scoring build.
             placementLevel = placementLevel,
-            // Only show a level verdict once the baseline is actually complete. Logic
-            // (INTER) unlocks only after every baseline quiz has a completed attempt,
-            // so it's true only when all 10 baseline questions have been attempted -
-            // not on a fresh install or an immediately-cancelled audit.
-            baselineComplete = unlockedLevels.contains(ReadinessAuditLevels.INTER),
-            onSwitchLevel = { onAdjustLevel() }
+            // True once the baseline quiz is finished (however well) - drives take-vs-retake copy.
+            baselineComplete = baselineComplete,
+            // The unlocked test to point them at, or null if their baseline didn't master A2.
+            recommendedTest = recommendedTest,
+            onSwitchLevel = { onAdjustLevel() },
+            onGoToTest = onGoToTest
         )
 
         Spacer(Modifier.height(24.dp))
@@ -104,15 +111,25 @@ fun AuditDashboardHeader(
         // --- 2. THE DYNAMIC PRIMARY ACTION ---
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Button(
-                onClick = onNavigateToAudit,
+                // Once a test is recommended (baseline placed the learner), the primary action
+                // is to go take that test; otherwise it resumes/starts the baseline audit.
+                onClick = { if (recommendedTest != null) onGoToTest(recommendedTest) else onNavigateToAudit() },
                 modifier = Modifier.fillMaxWidth().height(56.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
             ) {
-                Text("Verify $nextPartName", color = Color.Black, fontWeight = FontWeight.Bold)
+                Text(
+                    text = if (recommendedTest != null) {
+                        "Do the ${recommendedTest.testDisplayName()} quiz to increse our confidence"
+                    } else {
+                        "Verify $nextPartName"
+                    },
+                    color = Color.Black,
+                    fontWeight = FontWeight.Bold
+                )
             }
             Text(
-                text = "Continue the audit to increase calibration to 98%",
+                text = "Continue the audit to increase our confidence to 98%",
                 style = MaterialTheme.typography.labelSmall,
                 color = Color.Gray,
                 modifier = Modifier.padding(top = 4.dp)
@@ -151,17 +168,21 @@ private fun AuditSummaryCard(
     currentLevel: String,
     placementLevel: String?,
     baselineComplete: Boolean,
-    onSwitchLevel: (String) -> Unit
+    recommendedTest: ReadinessAuditLevels?,
+    onSwitchLevel: (String) -> Unit,
+    onGoToTest: (ReadinessAuditLevels) -> Unit
 ) {
-    // Three states:
-    //  - Baseline not done yet          -> prompt them to take the audit.
-    //  - Baseline done, no placement    -> legacy completion (pre-banding build); acknowledge
-    //                                      it without a (now unknowable) level verdict.
-    //  - Baseline done, placement known -> compare the placed band to their chosen level.
+    // States:
+    //  - Baseline not done yet             -> prompt them to take the audit.
+    //  - Baseline done, no A2 mastery      -> no test unlocked; prompt a baseline retake.
+    //  - Baseline done, placement known    -> compare the placed band to their chosen level,
+    //                                         and point them at their highest unlocked test.
     val hasVerdict = baselineComplete && placementLevel != null
     val isOverEstimated = hasVerdict && placementLevel!! < currentLevel
     val isUnderEstimated = hasVerdict && placementLevel!! > currentLevel
     val isMatch = hasVerdict && placementLevel == currentLevel
+    // Baseline finished but not even A2 was fully mastered, so nothing unlocked.
+    val needsRetake = baselineComplete && recommendedTest == null
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -176,6 +197,7 @@ private fun AuditSummaryCard(
                 Text(
                     text = when {
                         !baselineComplete -> "📋 Let's get you set up"
+                        needsRetake -> "🔁 Let's nail the basics"
                         !hasVerdict -> "✅ Baseline Complete"
                         isOverEstimated -> "⚠️ Level Mismatch Detected"
                         isUnderEstimated -> "🚀 Higher Potential Detected"
@@ -190,6 +212,7 @@ private fun AuditSummaryCard(
                 Text(
                     text = when {
                         !baselineComplete -> "Please take the audit so we can configure the app to match your level."
+                        needsRetake -> "You missed some A2 questions in the baseline. Retake it and get every A2 question right to unlock your first test."
                         !hasVerdict -> "Your baseline is complete. Take a fresh audit to fine-tune your recommended level."
                         isOverEstimated -> "You selected $currentLevel, but the audit places you at $placementLevel. Starting with easier content will help you build the foundation needed to pass."
                         isUnderEstimated -> "Great news! You are currently studying $currentLevel, but the audit places you at $placementLevel. We suggest moving up to save time."
@@ -201,17 +224,37 @@ private fun AuditSummaryCard(
             }
         }
 
-        // Action button - only when we have a verdict and it disagrees with their level.
+        // Primary next step: send them to their highest unlocked test.
+        if (recommendedTest != null) {
+            Button(
+                onClick = { onGoToTest(recommendedTest) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+            ) {
+                Text("Go to your ${recommendedTest.ESOL} test", color = Color.Black, fontWeight = FontWeight.Bold)
+            }
+        }
+
+        // Secondary: nudge them to realign their study level with the audit's placement.
         if (hasVerdict && !isMatch) {
             Button(
                 onClick = { onSwitchLevel(placementLevel!!) },
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2C2C2E))
             ) {
-                Text("Switch to $placementLevel Mastery", color = Color.Black)
+                Text("Switch to $placementLevel Mastery", color = Color.White)
             }
         }
     }
+}
+
+// User-facing name of a level test for the "Verify ... level" primary button.
+// WIP naming - the levels themselves are Baseline / A2 / B1 / B2 under the hood.
+private fun ReadinessAuditLevels.testDisplayName(): String = when (this) {
+    ReadinessAuditLevels.BASELINE -> "Baseline"
+    ReadinessAuditLevels.INTER -> "Basic"        // A2 test
+    ReadinessAuditLevels.UPPER -> "Intermediate" // B1 test
+    ReadinessAuditLevels.ADVANCED -> "Advanced"  // B2 test
 }
 
 @Composable

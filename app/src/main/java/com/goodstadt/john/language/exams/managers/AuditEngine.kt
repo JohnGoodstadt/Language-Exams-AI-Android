@@ -28,37 +28,43 @@ object AuditEngine {
      *   answered so far, used for Confidence (coverage). A part with no entry counts as 0.
      */
     fun calculate(testScores: Map<Int, Int>, partProgress: Map<Int, Float>): AuditReport {
+        // Downward credit: the parts are ordered easiest-to-hardest (1 Baseline .. 4 B2), so
+        // passing a harder test implies competence on the easier ones. Any lower part the learner
+        // never took is credited with the score of the HIGHEST part they did complete - which is
+        // self-limiting (a weak hardest score credits the easier parts weakly too, not with full
+        // marks). A part's own real score always wins over the credited one.
+        val effectiveScores = creditLowerParts(testScores)
+
         var totalConfidence = 0f
 
-        // 1. Add confidence for parts that are fully finished (using the caps)
-        testScores.keys.forEach { part ->
+        // 1. Add confidence for parts that are finished OR credited as finished (using the caps)
+        effectiveScores.keys.forEach { part ->
             totalConfidence += confidenceCap[part] ?: 0f
         }
 
-        // 2. Add confidence for the part currently being played
+        // 2. Add confidence for the part currently being played (above the credited range)
         partProgress.forEach { (part, progress) ->
-            if (!testScores.containsKey(part)) {
+            if (!effectiveScores.containsKey(part)) {
                 val cap = confidenceCap[part] ?: 0f
                 totalConfidence += (cap * progress)
             }
         }
 
-        // ✅ FIX: Use 'totalConfidence' directly.
-        // Do NOT recalculate 'confidence' using totalProgress/TOTAL_PARTS here.
         val finalConfidence = totalConfidence.roundToInt().coerceIn(0, 98)
 
-        // 3. Calculate Readiness (Weighted Accuracy)
+        // 3. Calculate Readiness (Weighted Accuracy) over the effective (credited) scores.
         var totalEarnedWeighted = 0f
         var totalPossibleWeighted = 0f
         for (partIndex in 1..TOTAL_PARTS) {
             val weight = weights[partIndex] ?: 1.0f
-            val score = testScores[partIndex]?.coerceIn(0, 10) ?: 0
+            val score = effectiveScores[partIndex]?.coerceIn(0, 10) ?: 0
             totalEarnedWeighted += score * weight
             totalPossibleWeighted += 10 * weight
         }
 
         var readinessRaw = if (totalPossibleWeighted > 0) (totalEarnedWeighted / totalPossibleWeighted) * 100 else 0f
 
+        // Penalty is for an actual weak B2 attempt only - never for a merely-credited part.
         if (testScores[4] != null && testScores[4]!! < 6) {
             readinessRaw -= 5f
         }
@@ -67,6 +73,18 @@ object AuditEngine {
             confidence = finalConfidence,
             readiness = readinessRaw.roundToInt().coerceIn(0, 98)
         )
+    }
+
+    /**
+     * Fills in parts below the highest completed part with that part's score, so completing a
+     * harder test carries the easier (untaken) parts with it. Parts with a real score keep it;
+     * parts above the highest completed part are left absent. Returns the original map unchanged
+     * when nothing has been completed.
+     */
+    private fun creditLowerParts(testScores: Map<Int, Int>): Map<Int, Int> {
+        val maxScoredPart = testScores.keys.maxOrNull() ?: return testScores
+        val assumedScore = testScores[maxScoredPart] ?: 0
+        return (1..maxScoredPart).associateWith { part -> testScores[part] ?: assumedScore }
     }
 
     /** Descriptive sub-label shown under the Confidence percentage. */
@@ -81,32 +99,63 @@ object AuditEngine {
 
     // Ordering of the CEFR bands the baseline audit places into, lowest to highest.
     private val BASELINE_BANDS = listOf("A2", "B1", "B2")
-    // A band is "passed" once at least this fraction of its questions are correct.
+    // A band is "cleared" once at least this fraction of its questions are correct.
     // With 3/4/3 questions per band this means A2 & B2 need 2 of 3, B1 needs 3 of 4.
     private const val BAND_PASS_RATIO = 0.6f
+
+    /** True when the learner cleared [band]'s pass ratio. Empty/absent bands are not cleared. */
+    private fun bandCleared(results: List<Pair<String?, Boolean>>, band: String): Boolean {
+        val inBand = results.filter { it.first?.trim()?.uppercase() == band }
+        if (inBand.isEmpty()) return false
+        return inBand.count { it.second }.toFloat() / inBand.size >= BAND_PASS_RATIO
+    }
 
     /**
      * Places a learner from their banded baseline answers.
      *
      * The baseline quiz mixes CEFR bands (e.g. 3x A2, 4x B1, 3x B2). Rather than a flat
-     * correct-count, we look at each band in isolation: a band is "passed" when the learner
+     * correct-count, we look at each band in isolation: a band is "cleared" when the learner
      * gets [BAND_PASS_RATIO] of its questions right. The placement is the highest band they
-     * pass (so failing every B2 but passing B1 lands them at B1; passing 2 of 3 B2s keeps
+     * clear (so failing every B2 but clearing B1 lands them at B1; clearing 2 of 3 B2s keeps
      * them at B2). Questions whose level is null/blank are ignored.
      *
      * @param results one (level, isCorrect) pair per answered baseline question.
-     * @return "A2" / "B1" / "B2" - defaults to the lowest band when nothing is passed.
+     * @return "A2" / "B1" / "B2" - defaults to the lowest band when nothing is cleared.
      */
     fun placeBaselineLevel(results: List<Pair<String?, Boolean>>): String {
         var placement = BASELINE_BANDS.first()
         for (band in BASELINE_BANDS) {
-            val inBand = results.filter { it.first?.trim()?.uppercase() == band }
-            if (inBand.isEmpty()) continue
-            val correct = inBand.count { it.second }
-            val passed = correct.toFloat() / inBand.size >= BAND_PASS_RATIO
-            if (passed) placement = band
+            if (bandCleared(results, band)) placement = band
         }
         return placement
+    }
+
+    // Maps each baseline band onto the audit "part index" of the level test it gates open.
+    // Clearing the A2 baseline band opens the A2 test (part 2), etc.
+    private val BAND_UNLOCKS_PART = mapOf("A2" to 2, "B1" to 3, "B2" to 4)
+
+    /**
+     * Decides how far the baseline result unlocks the level tests, using the same per-band
+     * pass bar as placement ([BAND_PASS_RATIO]). Bands must be cleared in order from the
+     * bottom: clearing A2 unlocks the A2 test; clearing A2+B1 unlocks the A2 and B1 tests; a
+     * clean sweep unlocks everything. The first band the learner does NOT clear stops the
+     * unlock there - so this agrees with [placeBaselineLevel] whenever the cleared bands are
+     * contiguous from A2 (the normal case), and only lags it if a lower band is skipped.
+     *
+     * @param results one (level, isCorrect) pair per answered baseline question.
+     * @return the highest unlocked part index: 1 = baseline only (A2 not cleared),
+     *   2 = +A2 test, 3 = +B1 test, 4 = +B2 test.
+     */
+    fun baselineUnlockCeiling(results: List<Pair<String?, Boolean>>): Int {
+        var ceiling = 1 // baseline only
+        for (band in BASELINE_BANDS) {
+            if (bandCleared(results, band)) {
+                ceiling = BAND_UNLOCKS_PART[band] ?: ceiling
+            } else {
+                break
+            }
+        }
+        return ceiling
     }
 
     /** Verdict tier shown under Exam Readiness. */

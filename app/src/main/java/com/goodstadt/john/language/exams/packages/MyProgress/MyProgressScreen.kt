@@ -47,6 +47,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishExamLevelSheet
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
@@ -80,11 +81,14 @@ fun MyProgressScreen(
     val currentSkillLevel by viewModel.currentSkillLevel.collectAsState(initial = "B1")
     val unlockedLevels by viewModel.unlockedAuditLevels.collectAsState()
     val baselinePlacementLevel by viewModel.baselinePlacementLevel.collectAsState()
+    val baselineComplete by viewModel.baselineComplete.collectAsState()
     var showLocalAuditSheet by remember { mutableStateOf(false) }
     val localSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showLanguageExamSheet by remember { mutableStateOf(false) }
     val languageExamSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var auditVersionToLaunch by remember { mutableStateOf(1) }
+    // When set, the audit sheet opens straight onto this level's test (from "Go to your X test").
+    var auditTargetLevel by remember { mutableStateOf<ReadinessAuditLevels?>(null) }
 
     Scaffold(
         topBar = {
@@ -118,7 +122,9 @@ fun MyProgressScreen(
                     currentLevel = currentSkillLevel,
                     unlockedLevels = unlockedLevels,
                     placementLevel = baselinePlacementLevel,
+                    baselineComplete = baselineComplete,
                     onNavigateToAudit = {
+                        auditTargetLevel = null
                         auditVersionToLaunch = 1 // Standard/Resume
                         showLocalAuditSheet = true
                     },
@@ -126,9 +132,15 @@ fun MyProgressScreen(
                         showLanguageExamSheet = true
                     },
                     onNewAudit = {
+                        auditTargetLevel = null
                         auditVersionToLaunch = 2
                         showLocalAuditSheet = true
 
+                    },
+                    onGoToTest = { level ->
+                        auditTargetLevel = level
+                        auditVersionToLaunch = 1
+                        showLocalAuditSheet = true
                     }
                 )
 
@@ -271,6 +283,7 @@ fun MyProgressScreen(
                         // Call your audit screen
                         ReadinessAuditScreen(
                             initialVersion = auditVersionToLaunch,
+                            initialLevel = auditTargetLevel,
                             onFinished = {
                                 // 🟢 Close the sheet when they hit "View Summary" -> "Continue"
                                 showLocalAuditSheet = false

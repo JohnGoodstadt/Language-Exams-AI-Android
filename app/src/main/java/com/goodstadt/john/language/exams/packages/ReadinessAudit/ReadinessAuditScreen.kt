@@ -90,6 +90,7 @@ import timber.log.Timber
 fun ReadinessAuditScreen(
     viewModel: ReadinessAuditViewModel = hiltViewModel(),
     initialVersion: Int = 1,
+    initialLevel: ReadinessAuditLevels? = null, // Open straight onto this level's test, if unlocked
     onFinished: () -> Unit // Existing callback to exit the screen
 ) {
     val context = LocalContext.current
@@ -171,6 +172,13 @@ fun ReadinessAuditScreen(
     LaunchedEffect(Unit) {
         if (initialVersion == 2) {
             viewModel.startNewAuditVersion()
+        }
+    }
+    // When launched from "Go to your X test", jump to that level once it's actually unlocked
+    // (the unlock ceiling loads asynchronously, so wait for it rather than firing a "locked" toast).
+    LaunchedEffect(initialLevel, unlockedLevels, selectedLevel) {
+        if (initialLevel != null && initialLevel != selectedLevel && unlockedLevels.contains(initialLevel)) {
+            viewModel.onLevelSelected(initialLevel)
         }
     }
     LaunchedEffect(currentQuestionIndex, questions, lockedAnswers) {
@@ -341,16 +349,18 @@ fun ReadinessAuditScreen(
                                 HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
                                 Spacer(modifier = Modifier.height(4.dp))
 
-                                //if (currentQuestionIndex == questions.lastIndex && viewModel.isQuizComplete()) {
-                                if (viewModel.isQuizComplete()) {
-                                    Text(
-                                        text = viewModel.getAuditorVerdictText(),
-                                        style = MaterialTheme.typography.titleMedium,
-                                        color = Color(0xFFFF9500),
-                                        fontWeight = FontWeight.Normal,
-                                        modifier = Modifier.padding(top = 4.dp)
-                                    )
-                                }
+                                // Full level verdict now lives in the base MyProgress view;
+                                // here we just show the quiz's completion status.
+                                Text(
+                                    text = viewModel.getQuizStatusLabel(),
+                                    style = MaterialTheme.typography.titleMedium,
+                                    color = Color(0xFFFF9500),
+                                    fontWeight = FontWeight.Normal,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(top = 4.dp)
+                                )
                             }
                         }
                     }
