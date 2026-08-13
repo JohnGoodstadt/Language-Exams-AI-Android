@@ -235,6 +235,43 @@ class AuditEngineBaselineTest {
 
     // endregion
 
+    // region Live Readiness - climbs while a test is in progress
+
+    @Test
+    fun `readiness climbs with each correct answer during the B2 test`() {
+        // Baseline done (10), part-way through B2: correct-so-far drives Readiness up live.
+        val after2of3 = AuditEngine.calculate(
+            testScores = mapOf(1 to 10), partProgress = mapOf(4 to 0.3f), liveScores = mapOf(4 to 2)
+        )
+        val after5of5 = AuditEngine.calculate(
+            testScores = mapOf(1 to 10), partProgress = mapOf(4 to 0.5f), liveScores = mapOf(4 to 5)
+        )
+        assertEquals(36, after2of3.readiness)   // credited (10 + 2*1.2 + 2*1.4 + 2*1.4)/50*100
+        assertEquals(60, after5of5.readiness)   // credited (10 + 5*1.2 + 5*1.4 + 5*1.4)/50*100
+    }
+
+    @Test
+    fun `live readiness converges to the completed value with no jump`() {
+        val live = AuditEngine.calculate(
+            testScores = mapOf(1 to 10), partProgress = mapOf(4 to 1.0f), liveScores = mapOf(4 to 9)
+        )
+        val completed = AuditEngine.calculate(testScores = mapOf(1 to 10, 4 to 9), partProgress = emptyMap())
+        assertEquals(92, live.readiness)
+        assertEquals(completed.readiness, live.readiness)
+    }
+
+    @Test
+    fun `live score lifts readiness but not confidence's full cap`() {
+        // No progress fraction yet, but 9 correct-so-far: readiness reflects it, confidence does not.
+        val s = AuditEngine.calculate(
+            testScores = mapOf(1 to 10), partProgress = emptyMap(), liveScores = mapOf(4 to 9)
+        )
+        assertEquals(40, s.confidence)  // only the completed baseline's cap - B2 not yet finished
+        assertEquals(92, s.readiness)   // but readiness already reflects the strong live B2
+    }
+
+    // endregion
+
     // region Onboarding path reference (Confidence / Readiness the device should show)
 
     private fun stats(vararg parts: Pair<Int, Int>) =

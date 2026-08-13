@@ -1226,10 +1226,21 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             // We use .first() to get a one-time snapshot for the current calculation
             val auditData = auditRepository.auditDataFlow.first()
 
+            // 1b. Fold in the correct-so-far of the part being played, so Readiness climbs live
+            // with each answer (like Confidence). Skipped once the part is completed (its saved
+            // score in auditData.scores takes over) or before any answer is given.
+            val activePart = partIndexFor(selectedLevel.value)
+            val liveScores = if (!auditData.scores.containsKey(activePart) && userAnswers.value.isNotEmpty()) {
+                mapOf(activePart to userAnswers.value.count { it.value })
+            } else {
+                emptyMap()
+            }
+
             // 2. Use the corrected Engine
             val report = AuditEngine.calculate(
                 testScores = auditData.scores,
-                partProgress = auditData.activeProgress
+                partProgress = auditData.activeProgress,
+                liveScores = liveScores
             )
 
             // 3. Update the UI StateFlow

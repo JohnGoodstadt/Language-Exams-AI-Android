@@ -27,24 +27,43 @@ object AuditEngine {
      * @param partProgress Map of PartIndex (1-4) to fraction (0f-1f) of that part's questions
      *   answered so far, used for Confidence (coverage). A part with no entry counts as 0.
      */
-    fun calculate(testScores: Map<Int, Int>, partProgress: Map<Int, Float>): AuditReport {
+    /**
+     * @param testScores completed part scores (0-10), keyed by part index 1-4.
+     * @param partProgress fraction (0f-1f) of the in-progress part answered so far - drives the
+     *   live Confidence rise.
+     * @param liveScores correct-so-far for the in-progress part (0-10), keyed by part index. Lets
+     *   Readiness climb live as questions are answered, the way Confidence already does. It counts
+     *   toward Readiness (accuracy) but NOT toward Confidence's full cap - the in-progress part
+     *   still earns Confidence gradually through [partProgress].
+     */
+    fun calculate(
+        testScores: Map<Int, Int>,
+        partProgress: Map<Int, Float>,
+        liveScores: Map<Int, Int> = emptyMap()
+    ): AuditReport {
         // Downward credit: the parts are ordered easiest-to-hardest (1 Baseline .. 4 B2), so
-        // passing a harder test implies competence on the easier ones. Any lower part the learner
-        // never took is credited with the score of the HIGHEST part they did complete - which is
-        // self-limiting (a weak hardest score credits the easier parts weakly too, not with full
-        // marks). A part's own real score always wins over the credited one.
-        val effectiveScores = creditLowerParts(testScores)
+        // demonstrating a harder part implies competence on the easier ones. Any lower part the
+        // learner has no score for is credited with the score of the HIGHEST demonstrated part -
+        // self-limiting (a weak hardest score credits the easier parts weakly too). A part's own
+        // real score always wins over the credited one.
+        //
+        // Confidence (coverage) credits only COMPLETED parts; the in-progress part earns its
+        // Confidence gradually via partProgress below. Readiness (accuracy) also folds in the
+        // in-progress part's live score so it moves with every answer and converges smoothly to
+        // the final value on completion.
+        val confidenceScores = creditLowerParts(testScores)
+        val readinessScores = creditLowerParts(testScores + liveScores)
 
         var totalConfidence = 0f
 
         // 1. Add confidence for parts that are finished OR credited as finished (using the caps)
-        effectiveScores.keys.forEach { part ->
+        confidenceScores.keys.forEach { part ->
             totalConfidence += confidenceCap[part] ?: 0f
         }
 
         // 2. Add confidence for the part currently being played (above the credited range)
         partProgress.forEach { (part, progress) ->
-            if (!effectiveScores.containsKey(part)) {
+            if (!confidenceScores.containsKey(part)) {
                 val cap = confidenceCap[part] ?: 0f
                 totalConfidence += (cap * progress)
             }
@@ -52,19 +71,19 @@ object AuditEngine {
 
         val finalConfidence = totalConfidence.roundToInt().coerceIn(0, 98)
 
-        // 3. Calculate Readiness (Weighted Accuracy) over the effective (credited) scores.
+        // 3. Calculate Readiness (Weighted Accuracy) over the effective (credited + live) scores.
         var totalEarnedWeighted = 0f
         var totalPossibleWeighted = 0f
         for (partIndex in 1..TOTAL_PARTS) {
             val weight = weights[partIndex] ?: 1.0f
-            val score = effectiveScores[partIndex]?.coerceIn(0, 10) ?: 0
+            val score = readinessScores[partIndex]?.coerceIn(0, 10) ?: 0
             totalEarnedWeighted += score * weight
             totalPossibleWeighted += 10 * weight
         }
 
         var readinessRaw = if (totalPossibleWeighted > 0) (totalEarnedWeighted / totalPossibleWeighted) * 100 else 0f
 
-        // Penalty is for an actual weak B2 attempt only - never for a merely-credited part.
+        // Penalty is for an actual COMPLETED weak B2 attempt only - never a credited or in-progress one.
         if (testScores[4] != null && testScores[4]!! < 6) {
             readinessRaw -= 5f
         }

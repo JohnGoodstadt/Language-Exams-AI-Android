@@ -93,7 +93,7 @@ fun MyProgressScreen(
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("My Profile", fontWeight = FontWeight.Bold) }
+                title = { Text("Profile", fontWeight = FontWeight.Bold) }
             )
         }
     ) { innerPadding ->
