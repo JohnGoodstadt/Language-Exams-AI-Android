@@ -231,7 +231,7 @@ private fun AuditSummaryCard(
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
             ) {
-                Text("Switch app vocab to $placementLevel Mastery", color = Color.Black, fontWeight = FontWeight.Bold)
+                Text("Switch App Vocab to $placementLevel Mastery", color = Color.Black, fontWeight = FontWeight.Bold)
             }
         }
     }

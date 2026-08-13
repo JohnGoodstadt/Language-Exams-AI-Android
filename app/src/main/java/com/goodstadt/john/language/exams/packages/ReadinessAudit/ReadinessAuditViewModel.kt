@@ -134,17 +134,17 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
     val description: String
         get() = when(this) {
             BASELINE -> "Baseline"
-            INTER -> "Logic"
-            UPPER -> "Lexis"
-            ADVANCED -> "Core"
+            INTER -> "Verify A2"
+            UPPER -> "Verify B1"
+            ADVANCED -> "Verify B2"
         }
     /** Compact label for tight horizontal pickers on small screens */
     val shortLabel: String
         get() = when(this) {
             BASELINE -> "Base."
-            INTER -> "Logic"
-            UPPER -> "Lex."
-            ADVANCED -> "Core"
+            INTER -> "A2"
+            UPPER -> "B1"
+            ADVANCED -> "B2"
         }
     val ESOL: String
         get() = when(this) {
