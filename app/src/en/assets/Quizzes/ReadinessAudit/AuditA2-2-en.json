@@ -16,6 +16,7 @@
           "sentence": "Identify the correct sentence using an adverb of frequency.",
           "summary": "Adverbs of Frequency.",
           "level": "A2",
+          "category": "Present Tenses",
           "explain": "Adverbs such as 'usually' normally come before the main verb. The correct form is 'usually walks'.",
           "words": [
             {
@@ -38,6 +39,7 @@
           "sentence": "Choose the correct sentence describing an action happening now.",
           "summary": "Present Continuous.",
           "level": "A2",
+          "category": "Present Tenses",
           "explain": "For something happening now, use 'am/is/are' + verb-ing. The correct form is 'are waiting'.",
           "words": [
             {
@@ -60,6 +62,7 @@
           "sentence": "Identify the correct negative sentence in the past simple.",
           "summary": "Past Simple Negative.",
           "level": "A2",
+          "category": "Past Tenses",
           "explain": "Past simple negatives use 'did not' or 'didn't' followed by the base form of the verb. The correct form is 'didn't buy'.",
           "words": [
             {
@@ -82,6 +85,7 @@
           "sentence": "Choose the correct superlative form.",
           "summary": "Superlatives.",
           "level": "A2",
+          "category": "Comparatives & Superlatives",
           "explain": "The superlative of 'good' is 'best'. We normally use 'the' before a superlative.",
           "words": [
             {
@@ -104,6 +108,7 @@
           "sentence": "Identify the correct expression of quantity.",
           "summary": "Much and Many.",
           "level": "A2",
+          "category": "Quantifiers & Determiners",
           "explain": "Use 'many' with countable plural nouns such as 'people'.",
           "words": [
             {
@@ -126,6 +131,7 @@
           "sentence": "Choose the correct modal verb structure.",
           "summary": "Modal Verbs (Can).",
           "level": "A2",
+          "category": "Modal Verbs",
           "explain": "After 'can', use the base form of the verb without 'to'. The correct form is 'can speak'.",
           "words": [
             {
@@ -148,6 +154,7 @@
           "sentence": "Identify the correct verb pattern.",
           "summary": "Want + Infinitive.",
           "level": "A2",
+          "category": "Verb Patterns",
           "explain": "The verb 'want' is followed by 'to' + the base form of the verb. The correct form is 'want to learn'.",
           "words": [
             {
@@ -170,6 +177,7 @@
           "sentence": "Choose the correct future prediction.",
           "summary": "Future with Will.",
           "level": "A2",
+          "category": "Future Forms",
           "explain": "Use 'will' + the base form of the verb for a simple future prediction. The correct form is 'will be'.",
           "words": [
             {
@@ -192,6 +200,7 @@
           "sentence": "Identify the correct present perfect form.",
           "summary": "Present Perfect (Already).",
           "level": "A2",
+          "category": "Present Perfect",
           "explain": "Use 'have/has' + past participle with 'already'. The past participle of 'eat' is 'eaten'.",
           "words": [
             {
@@ -214,6 +223,7 @@
           "sentence": "Choose the correct sentence comparing a past event with the present.",
           "summary": "Present Perfect vs Past Simple.",
           "level": "A2",
+          "category": "Present Perfect",
           "explain": "Use the past simple with a finished past time such as 'last year'. The correct form is 'visited ... last year'.",
           "words": [
             {

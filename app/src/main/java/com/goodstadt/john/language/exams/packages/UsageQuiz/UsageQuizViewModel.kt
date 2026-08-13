@@ -229,7 +229,9 @@ data class QuizQuestion(
     val title: String,
     val page:Int,
     // CEFR band ("A2"/"B1"/"B2") for baseline-audit placement; null for other quizzes.
-    val level: String? = null
+    val level: String? = null,
+    // Grammar area this question tests (e.g. "Present Perfect"); null for non-audit quizzes.
+    val category: String? = null
 )
 
 //TODO: Do I need this?

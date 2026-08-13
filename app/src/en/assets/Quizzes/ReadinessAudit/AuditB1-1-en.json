@@ -16,6 +16,7 @@
           "sentence": "Choose the correct sentence using the present perfect.",
           "summary": "Present Perfect vs Past Simple.",
           "level": "B1",
+          "category": "Present Perfect",
           "explain": "Use the present perfect for an unfinished time period or experience connected to the present. The correct form is 'have seen'.",
           "words": [
             {
@@ -38,6 +39,7 @@
           "sentence": "Identify the correct first conditional sentence.",
           "summary": "First Conditional.",
           "level": "B1",
+          "category": "Conditionals",
           "explain": "In the first conditional, use the present simple after 'if' and 'will' in the main clause.",
           "words": [
             {
@@ -60,6 +62,7 @@
           "sentence": "Choose the correct second conditional sentence.",
           "summary": "Second Conditional.",
           "level": "B1",
+          "category": "Conditionals",
           "explain": "For an unreal or unlikely present situation, use 'if' + past simple and 'would' + base verb.",
           "words": [
             {
@@ -82,6 +85,7 @@
           "sentence": "Identify the correct reported speech sentence.",
           "summary": "Reported Speech.",
           "level": "B1",
+          "category": "Reported Speech",
           "explain": "When reporting a past statement, the verb often moves back one tense. 'I am tired' becomes 'she was tired'.",
           "words": [
             {
@@ -104,6 +108,7 @@
           "sentence": "Choose the correct relative clause.",
           "summary": "Relative Clauses.",
           "level": "B1",
+          "category": "Relative Clauses",
           "explain": "Use 'who' to introduce a relative clause describing a person.",
           "words": [
             {
@@ -126,6 +131,7 @@
           "sentence": "Identify the correct passive sentence.",
           "summary": "Passive Voice.",
           "level": "B1",
+          "category": "Passive Voice",
           "explain": "The passive is formed with 'be' + past participle. The correct form is 'was built'.",
           "words": [
             {
@@ -148,6 +154,7 @@
           "sentence": "Choose the correct modal verb for obligation.",
           "summary": "Modal Verbs (Obligation).",
           "level": "B1",
+          "category": "Modal Verbs",
           "explain": "'Have to' is used for an obligation or requirement. After 'have to', use the base form of the verb.",
           "words": [
             {
@@ -170,6 +177,7 @@
           "sentence": "Identify the correct verb pattern.",
           "summary": "Gerund after Preposition.",
           "level": "B1",
+          "category": "Verb Patterns",
           "explain": "After a preposition such as 'in', use the -ing form. The correct structure is 'interested in learning'.",
           "words": [
             {
@@ -192,6 +200,7 @@
           "sentence": "Choose the correct past continuous and past simple combination.",
           "summary": "Past Continuous and Past Simple.",
           "level": "B1",
+          "category": "Past Tenses",
           "explain": "Use the past continuous for an action in progress and the past simple for the shorter action that interrupted it.",
           "words": [
             {
@@ -214,6 +223,7 @@
           "sentence": "Identify the correct present perfect sentence using 'for'.",
           "summary": "Present Perfect Continuous Time.",
           "level": "B1",
+          "category": "Present Perfect",
           "explain": "For a situation that started in the past and continues now, use the present perfect with 'for' plus a period of time.",
           "words": [
             {

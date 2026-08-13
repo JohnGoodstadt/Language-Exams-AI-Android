@@ -16,6 +16,7 @@
           "sentence": "Choose the correct sentence using the third conditional.",
           "summary": "Third Conditional.",
           "level": "B2",
+          "category": "Conditionals",
           "explain": "Use 'if' + past perfect and 'would have' + past participle to describe an unreal past situation.",
           "words": [
             {
@@ -38,6 +39,7 @@
           "sentence": "Identify the correct mixed conditional sentence.",
           "summary": "Mixed Conditionals.",
           "level": "B2",
+          "category": "Conditionals",
           "explain": "A past condition can have a present result. Use past perfect in the if-clause and 'would' + base verb for the present result.",
           "words": [
             {
@@ -60,6 +62,7 @@
           "sentence": "Choose the correct passive reporting structure.",
           "summary": "Passive Reporting Verbs.",
           "level": "B2",
+          "category": "Passive Voice",
           "explain": "Formal English often uses 'is believed to' or similar passive reporting structures.",
           "words": [
             {
@@ -82,6 +85,7 @@
           "sentence": "Identify the correct past modal for deduction.",
           "summary": "Modal Deduction in the Past.",
           "level": "B2",
+          "category": "Modal Verbs",
           "explain": "Use 'must have' + past participle for a strong deduction about a past event.",
           "words": [
             {
@@ -104,6 +108,7 @@
           "sentence": "Choose the correct sentence using inversion.",
           "summary": "Negative Inversion.",
           "level": "B2",
+          "category": "Emphasis & Inversion",
           "explain": "After a negative adverbial such as 'rarely' at the beginning of a sentence, use auxiliary-verb inversion.",
           "words": [
             {
@@ -126,6 +131,7 @@
           "sentence": "Identify the correct reduced relative clause.",
           "summary": "Reduced Relative Clauses.",
           "level": "B2",
+          "category": "Relative Clauses",
           "explain": "A passive relative clause can often be reduced by removing the relative pronoun and the verb 'be'.",
           "words": [
             {
@@ -148,6 +154,7 @@
           "sentence": "Choose the correct structure after 'despite'.",
           "summary": "Concession: Despite.",
           "level": "B2",
+          "category": "Connectors & Contrast",
           "explain": "'Despite' is followed by a noun, pronoun or -ing form, not a full clause beginning directly with subject and verb.",
           "words": [
             {
@@ -170,6 +177,7 @@
           "sentence": "Identify the correct sentence using 'wish'.",
           "summary": "Wish about the Past.",
           "level": "B2",
+          "category": "Conditionals",
           "explain": "Use 'wish' + past perfect to express regret about a past situation.",
           "words": [
             {
@@ -192,6 +200,7 @@
           "sentence": "Choose the correct future perfect sentence.",
           "summary": "Future Perfect.",
           "level": "B2",
+          "category": "Future Forms",
           "explain": "Use 'will have' + past participle for something expected to be completed before a future point.",
           "words": [
             {
@@ -214,6 +223,7 @@
           "sentence": "Identify the correct emphatic structure.",
           "summary": "Cleft Sentences.",
           "level": "B2",
+          "category": "Emphasis & Inversion",
           "explain": "A cleft sentence such as 'What I need is...' is used to emphasise a particular part of the message.",
           "words": [
             {

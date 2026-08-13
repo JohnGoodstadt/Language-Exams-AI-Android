@@ -16,6 +16,7 @@
           "sentence": "Choose the correct past action.",
           "summary": "A2: Irregular Verbs.",
           "level": "A2",
+          "category": "Past Tenses",
           "explain": "The past simple of 'go' is 'went'. 'Gone' is the past participle.",
           "words": [
             {
@@ -38,6 +39,7 @@
           "sentence": "Identify the correct possessive.",
           "summary": "A2: Possessive Adjectives.",
           "level": "A2",
+          "category": "Quantifiers & Determiners",
           "explain": "'Their' is used for possession. 'There' is a place; 'They're' is 'they are'.",
           "words": [
             {
@@ -60,6 +62,7 @@
           "sentence": "Choose the correct daily habit.",
           "summary": "A2: Present Simple.",
           "level": "A2",
+          "category": "Present Tenses",
           "explain": "Third-person singular (he/she/it) requires an 's' on the verb.",
           "words": [
             {
@@ -82,6 +85,7 @@
           "sentence": "Select the correct duration.",
           "summary": "B1: Present Perfect + For.",
           "level": "B1",
+          "category": "Present Perfect",
           "explain": "Use 'for' for a period of time (duration) and 'since' for a point in time.",
           "words": [
             {
@@ -104,6 +108,7 @@
           "sentence": "Choose the correct ability modal.",
           "summary": "B1: Modals of Ability.",
           "level": "B1",
+          "category": "Modal Verbs",
           "explain": "'Managed to' describes succeeding in a specific, difficult past task.",
           "words": [
             {
@@ -126,6 +131,7 @@
           "sentence": "Identify the correct comparison.",
           "summary": "B1: Comparatives.",
           "level": "B1",
+          "category": "Comparatives & Superlatives",
           "explain": "Long adjectives (3+ syllables) use 'more' + adjective + 'than'.",
           "words": [
             {
@@ -148,6 +154,7 @@
           "sentence": "Choose the correct connector.",
           "summary": "B1: Contrast Connectors.",
           "level": "B1",
+          "category": "Connectors & Contrast",
           "explain": "'Although' connects two contrasting clauses within one sentence.",
           "words": [
             {
@@ -170,6 +177,7 @@
           "sentence": "Identify the correct hypothetical.",
           "summary": "B2: Second Conditional.",
           "level": "B2",
+          "category": "Conditionals",
           "explain": "For hypothetical 'unreal' states, use 'were' for all subjects (I/He/She).",
           "words": [
             {
@@ -192,6 +200,7 @@
           "sentence": "Choose the correct formal structure.",
           "summary": "B2: Passive Reporting.",
           "level": "B2",
+          "category": "Passive Voice",
           "explain": "Structure: Subject + is said + to have + past participle.",
           "words": [
             {
@@ -214,6 +223,7 @@
           "sentence": "Identify the correct formal emphasis.",
           "summary": "B2: Inversion.",
           "level": "B2",
+          "category": "Emphasis & Inversion",
           "explain": "Limiting adverbs (Never/Rarely) at the start require auxiliary inversion.",
           "words": [
             {

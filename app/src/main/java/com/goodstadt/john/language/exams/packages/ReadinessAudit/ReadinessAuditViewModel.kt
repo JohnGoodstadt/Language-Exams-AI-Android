@@ -530,7 +530,8 @@ class ReadinessAuditViewModel @Inject constructor(
                 val title = quizSection.title
                 val page = quizSection.page
                 val level = quizSection.level
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level)
+                val category = quizSection.category
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category)
             }
         }
     }
@@ -787,6 +788,23 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         if (isQuestionLocked(index)) return // one attempt per question - already locked in
 
         userAnswers.value[index] = isCorrect
+
+        // --- Strengths/weaknesses tally: count this answer against its grammar category + CEFR
+        // level. Persists and accumulates across versions. DEBUG log only - not shown to the user. ---
+        _questions.value.getOrNull(index)?.let { q ->
+            val cat = q.category
+            val lvl = q.level
+            if (!cat.isNullOrBlank() && !lvl.isNullOrBlank()) {
+                viewModelScope.launch {
+                    val score = auditRepository.recordCategoryResult(cat, lvl, isCorrect)
+                    Timber.d(
+                        "AUDIT-CAT category=\"$cat\" level=\"$lvl\" " +
+                            "correct=${score.correct} incorrect=${score.incorrect}  " +
+                            "(this answer: ${if (isCorrect) "CORRECT" else "INCORRECT"})"
+                    )
+                }
+            }
+        }
 
         val currentTries = quizStatistics.value.tries + 1
         quizStatistics.value = quizStatistics.value.copy(

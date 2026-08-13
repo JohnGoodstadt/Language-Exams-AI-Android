@@ -34,6 +34,9 @@ data class TestMyselfSections(
     // CEFR band for this question ("A2", "B1", "B2"). Only the baseline audit uses it,
     // to place the learner by band performance; null/absent for all other content.
     val level: String? = null,
+    // Grammar area this question tests (e.g. "Present Perfect", "Conditionals"). Used to tally
+    // strengths/weaknesses across the audit tests; null/absent for non-audit content.
+    val category: String? = null,
     var words: List<TestMyselfWordsState>
 )
 @Serializable

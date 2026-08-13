@@ -16,6 +16,7 @@
           "sentence": "Choose the correct sentence using a modal in the past.",
           "summary": "Should Have + Past Participle.",
           "level": "B2",
+          "category": "Relative Clauses",
           "explain": "Use 'should have' + past participle to describe something that would have been better to do in the past.",
           "words": [
             {
@@ -38,6 +39,7 @@
           "sentence": "Identify the correct sentence using the causative.",
           "summary": "Have Something Done.",
           "level": "B2",
+          "category": "Passive Voice",
           "explain": "Use 'have' + object + past participle when someone else performs a service for you.",
           "words": [
             {
@@ -60,6 +62,7 @@
           "sentence": "Choose the correct sentence using an unreal past condition.",
           "summary": "Third Conditional.",
           "level": "B2",
+          "category": "Conditionals",
           "explain": "For an unreal past condition, use past perfect after 'if' and 'would have' + past participle in the result clause.",
           "words": [
             {
@@ -82,6 +85,7 @@
           "sentence": "Identify the correct reported speech structure.",
           "summary": "Reported Speech with Past Perfect.",
           "level": "B2",
+          "category": "Reported Speech",
           "explain": "When reporting a completed past action, the past simple often shifts to the past perfect.",
           "words": [
             {
@@ -104,6 +108,7 @@
           "sentence": "Choose the correct formal conditional structure.",
           "summary": "Conditional Inversion.",
           "level": "B2",
+          "category": "Conditionals",
           "explain": "'Had I known...' is a formal alternative to 'If I had known...'.",
           "words": [
             {
@@ -126,6 +131,7 @@
           "sentence": "Identify the correct non-defining relative clause.",
           "summary": "Non-Defining Relative Clauses.",
           "level": "B2",
+          "category": "Relative Clauses",
           "explain": "Non-defining relative clauses use commas and usually 'who' or 'which', not 'that'.",
           "words": [
             {
@@ -148,6 +154,7 @@
           "sentence": "Choose the correct sentence with a linking expression.",
           "summary": "Contrast: Although and Despite.",
           "level": "B2",
+          "category": "Connectors & Contrast",
           "explain": "'Although' is followed by a clause, while 'despite' is followed by a noun or -ing form.",
           "words": [
             {
@@ -170,6 +177,7 @@
           "sentence": "Identify the correct verb pattern showing a change in meaning.",
           "summary": "Remember + Gerund or Infinitive.",
           "level": "B2",
+          "category": "Verb Patterns",
           "explain": "'Remember to do' means not to forget a future action. 'Remember doing' refers to a memory of a past action.",
           "words": [
             {
@@ -192,6 +200,7 @@
           "sentence": "Choose the correct sentence using the future continuous.",
           "summary": "Future Continuous.",
           "level": "B2",
+          "category": "Future Forms",
           "explain": "Use 'will be' + verb-ing for an action that will be in progress at a particular future time.",
           "words": [
             {
@@ -214,6 +223,7 @@
           "sentence": "Identify the correct advanced comparison structure.",
           "summary": "The More... The More....",
           "level": "B2",
+          "category": "Comparatives & Superlatives",
           "explain": "Use 'the + comparative, the + comparative' to show that two changes are connected.",
           "words": [
             {

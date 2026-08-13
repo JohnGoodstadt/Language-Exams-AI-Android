@@ -16,6 +16,7 @@
           "sentence": "Choose the correct action in progress.",
           "summary": "A2: Past Continuous.",
           "level": "A2",
+          "category": "Past Tenses",
           "explain": "Use the past continuous for an action that was already in progress when another past action happened.",
           "words": [
             {
@@ -38,6 +39,7 @@
           "sentence": "Choose the correct quantity expression.",
           "summary": "A2: Countable and Uncountable Nouns.",
           "level": "A2",
+          "category": "Quantifiers & Determiners",
           "explain": "'Much' is normally used with uncountable nouns such as 'time'.",
           "words": [
             {
@@ -60,6 +62,7 @@
           "sentence": "Choose the correct future arrangement.",
           "summary": "A2: Present Continuous for Future Plans.",
           "level": "A2",
+          "category": "Future Forms",
           "explain": "The present continuous can describe a fixed future arrangement.",
           "words": [
             {
@@ -82,6 +85,7 @@
           "sentence": "Choose the correct tense for a finished time.",
           "summary": "B1: Past Simple and Present Perfect.",
           "level": "B1",
+          "category": "Present Perfect",
           "explain": "Use the past simple with a finished time expression such as 'last year'.",
           "words": [
             {
@@ -104,6 +108,7 @@
           "sentence": "Select the correct relative clause.",
           "summary": "B1: Defining Relative Clauses.",
           "level": "B1",
+          "category": "Relative Clauses",
           "explain": "'Who' introduces a defining relative clause about a person.",
           "words": [
             {
@@ -126,6 +131,7 @@
           "sentence": "Choose the sentence with the correct condition.",
           "summary": "B1: Unless.",
           "level": "B1",
+          "category": "Conditionals",
           "explain": "'Unless' means 'if not', so it is followed by an affirmative verb form.",
           "words": [
             {
@@ -148,6 +154,7 @@
           "sentence": "Choose the best deduction about the past.",
           "summary": "B2: Modal Perfects.",
           "level": "B2",
+          "category": "Modal Verbs",
           "explain": "'Must have' expresses a strong logical deduction about a completed past event.",
           "words": [
             {
@@ -170,6 +177,7 @@
           "sentence": "Choose the correct mixed conditional.",
           "summary": "B2: Mixed Conditionals.",
           "level": "B2",
+          "category": "Conditionals",
           "explain": "A past condition can have a present result: 'If + past perfect' followed by 'would + base verb'.",
           "words": [
             {
@@ -192,6 +200,7 @@
           "sentence": "Choose the correctly reduced clause.",
           "summary": "B2: Participle Clauses.",
           "level": "B2",
+          "category": "Relative Clauses",
           "explain": "A past participle clause can replace a passive relative clause when both clauses have the same subject.",
           "words": [
             {
@@ -214,6 +223,7 @@
           "sentence": "Identify the correct inverted structure.",
           "summary": "B2: Inversion after 'Not until'.",
           "level": "B2",
+          "category": "Emphasis & Inversion",
           "explain": "When 'Not until' begins the sentence, the main clause requires auxiliary inversion.",
           "words": [
             {

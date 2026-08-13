@@ -16,6 +16,7 @@
           "sentence": "Identify the correct present simple sentence.",
           "summary": "Present Simple (Third Person).",
           "level": "A2",
+          "category": "Present Tenses",
           "explain": "With 'he', 'she' or 'it' in the present simple, the verb normally ends in -s. The correct form is 'works'.",
           "words": [
             {
@@ -38,6 +39,7 @@
           "sentence": "Choose the correct sentence for an action happening now.",
           "summary": "Present Continuous.",
           "level": "A2",
+          "category": "Present Tenses",
           "explain": "For an action happening now, use 'am/is/are' + verb-ing. The correct form is 'is talking'.",
           "words": [
             {
@@ -60,6 +62,7 @@
           "sentence": "Identify the correct past simple sentence.",
           "summary": "Past Simple (Irregular Verb).",
           "level": "A2",
+          "category": "Past Tenses",
           "explain": "The past simple of 'go' is 'went'.",
           "words": [
             {
@@ -82,6 +85,7 @@
           "sentence": "Choose the correct question in the past simple.",
           "summary": "Past Simple Questions.",
           "level": "A2",
+          "category": "Past Tenses",
           "explain": "Past simple questions use 'did' + the base form of the verb. The correct form is 'Did you see...?'.",
           "words": [
             {
@@ -104,6 +108,7 @@
           "sentence": "Identify the correct comparative form.",
           "summary": "Comparatives.",
           "level": "A2",
+          "category": "Comparatives & Superlatives",
           "explain": "The comparative form of 'expensive' is 'more expensive'.",
           "words": [
             {
@@ -126,6 +131,7 @@
           "sentence": "Choose the correct expression for a future plan.",
           "summary": "Going To (Future Plans).",
           "level": "A2",
+          "category": "Future Forms",
           "explain": "Use 'am/is/are going to' + base verb to talk about a future plan. The correct form is 'are going to visit'.",
           "words": [
             {
@@ -148,6 +154,7 @@
           "sentence": "Identify the correct modal verb structure.",
           "summary": "Modal Verbs (Should).",
           "level": "A2",
+          "category": "Modal Verbs",
           "explain": "After a modal verb such as 'should', use the base form of the verb without 'to'. The correct form is 'should drink'.",
           "words": [
             {
@@ -170,6 +177,7 @@
           "sentence": "Choose the correct quantity expression.",
           "summary": "Countable and Uncountable Nouns.",
           "level": "A2",
+          "category": "Quantifiers & Determiners",
           "explain": "'Advice' is an uncountable noun, so we say 'some advice', not 'an advice' or 'many advices'.",
           "words": [
             {
@@ -192,6 +200,7 @@
           "sentence": "Identify the correct present perfect sentence.",
           "summary": "Present Perfect (Experience).",
           "level": "A2",
+          "category": "Present Perfect",
           "explain": "Use 'have/has' + past participle to talk about life experience when no finished past time is given. The correct form is 'have visited'.",
           "words": [
             {
@@ -214,6 +223,7 @@
           "sentence": "Choose the correct sentence using 'since' and 'for'.",
           "summary": "Present Perfect (Since and For).",
           "level": "A2",
+          "category": "Present Perfect",
           "explain": "Use 'for' with a period of time and the present perfect for a situation that started in the past and continues now. The correct form is 'have lived here for three years'.",
           "words": [
             {

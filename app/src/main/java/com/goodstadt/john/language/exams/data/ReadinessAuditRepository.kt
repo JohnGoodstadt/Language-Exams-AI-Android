@@ -12,6 +12,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.util.Calendar
@@ -19,6 +20,10 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 private val Context.auditDataStore by preferencesDataStore(name = "readiness_audit_prefs")
+
+/** Running tally of correct/incorrect answers for one grammar category at one CEFR level. */
+@Serializable
+data class CategoryScore(val correct: Int = 0, val incorrect: Int = 0)
 
 /**
  * Persisted state for a single quiz attempt.
@@ -72,6 +77,38 @@ class ReadinessAuditRepository @Inject constructor(
             prefs[KEY_REDONE_PARTS] = (prefs[KEY_REDONE_PARTS] ?: 0) + 1
         }
     }
+
+    // Per-(category, level) correct/incorrect tally, accumulated across every audit answer and
+    // every version. Stored as one JSON blob keyed "Category|Level". Feeds the future Priority page.
+    private val KEY_CATEGORY_SCORES = stringPreferencesKey("audit_category_scores")
+
+    private fun categoryScoreKey(category: String, level: String) = "$category|$level"
+
+    val categoryScores: Flow<Map<String, CategoryScore>> = context.auditDataStore.data.map { prefs ->
+        decodeCategoryScores(prefs[KEY_CATEGORY_SCORES])
+    }
+
+    /**
+     * Adds one answer to the tally for [category] at [level] and returns the updated score.
+     * Accumulates forever (a v2 retake adds fresh data), so ratios shift as the learner improves.
+     */
+    suspend fun recordCategoryResult(category: String, level: String, correct: Boolean): CategoryScore {
+        val key = categoryScoreKey(category, level)
+        var updated = CategoryScore()
+        context.auditDataStore.edit { prefs ->
+            val map = decodeCategoryScores(prefs[KEY_CATEGORY_SCORES]).toMutableMap()
+            val current = map[key] ?: CategoryScore()
+            updated = if (correct) current.copy(correct = current.correct + 1)
+                      else current.copy(incorrect = current.incorrect + 1)
+            map[key] = updated
+            prefs[KEY_CATEGORY_SCORES] = json.encodeToString(map)
+        }
+        return updated
+    }
+
+    private fun decodeCategoryScores(raw: String?): Map<String, CategoryScore> =
+        if (raw.isNullOrBlank()) emptyMap()
+        else try { json.decodeFromString<Map<String, CategoryScore>>(raw) } catch (e: Exception) { emptyMap() }
 
     companion object {
         // Highest audit version whose question files exist. New Audit is disabled once reached.
