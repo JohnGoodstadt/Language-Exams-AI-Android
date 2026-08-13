@@ -26,6 +26,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -45,6 +46,7 @@ fun AuditDashboardHeader(
     unlockedLevels: Set<ReadinessAuditLevels>,
     placementLevel: String?,
     baselineComplete: Boolean,
+    newAuditEnabled: Boolean,
     onNavigateToAudit: () -> Unit,
     onAdjustLevel: () -> Unit,
     onNewAudit: () -> Unit,
@@ -147,13 +149,18 @@ fun AuditDashboardHeader(
                 onClick = onAdjustLevel
             )
 
-            // New Test / Reset
+            // New Test - locked until the baseline is done, and again once no fresh version is left.
             AuditActionButton(
                 modifier = Modifier.weight(1f),
                 title = "New Audit",
-                subtitle = "Fresh Questions",
+                subtitle = when {
+                    !baselineComplete -> "Finish baseline first"
+                    !newAuditEnabled -> "No more audits yet"
+                    else -> "Fresh Questions"
+                },
                 icon = Icons.Default.Refresh,
-                onClick = onNewAudit
+                onClick = onNewAudit,
+                enabled = newAuditEnabled
             )
         }
     }
@@ -225,6 +232,8 @@ private fun AuditSummaryCard(
         // below this card, so it isn't duplicated here.
 
         // Secondary: nudge them to realign their study level with the audit's placement.
+
+
         if (hasVerdict && !isMatch) {
             Button(
                 onClick = { onSwitchLevel(placementLevel!!) },
@@ -272,14 +281,19 @@ private fun AuditActionButton(
     title: String,
     subtitle: String,
     icon: ImageVector,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    enabled: Boolean = true
 ) {
     Card(
-        modifier = modifier.clickable { onClick() },
+        modifier = modifier.clickable(enabled = enabled) { onClick() },
         colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
         shape = RoundedCornerShape(8.dp)
     ) {
-        Row(modifier = Modifier.padding(8.dp), verticalAlignment = Alignment.CenterVertically) {
+        // Dim the whole tile when disabled so it reads as greyed-out.
+        Row(
+            modifier = Modifier.padding(8.dp).alpha(if (enabled) 1f else 0.4f),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             Icon(icon, null, tint = orangeLight, modifier = Modifier.size(20.dp))
             Spacer(Modifier.width(8.dp))
             Column {

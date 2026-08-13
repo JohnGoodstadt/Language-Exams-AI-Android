@@ -272,6 +272,32 @@ class AuditEngineBaselineTest {
 
     // endregion
 
+    // region Confidence bonus for redone (v>=2) audits
+
+    @Test
+    fun `redone-audit bonus nudges confidence up but not readiness`() {
+        // Baseline done; a full v2 redo (4 parts) earns +8 confidence (2 per part).
+        val base = AuditEngine.calculate(testScores = mapOf(1 to 10), partProgress = emptyMap())
+        val withBonus = AuditEngine.calculate(
+            testScores = mapOf(1 to 10), partProgress = emptyMap(), confidenceBonus = 8
+        )
+        assertEquals(40, base.confidence)
+        assertEquals(48, withBonus.confidence)     // 40 + 8
+        assertEquals(base.readiness, withBonus.readiness) // readiness untouched by the bonus
+    }
+
+    @Test
+    fun `confidence bonus never pushes confidence past the 98 cap`() {
+        val s = AuditEngine.calculate(
+            testScores = mapOf(1 to 10, 2 to 10, 3 to 10, 4 to 10),
+            partProgress = emptyMap(),
+            confidenceBonus = 8
+        )
+        assertEquals(98, s.confidence)
+    }
+
+    // endregion
+
     // region Onboarding path reference (Confidence / Readiness the device should show)
 
     private fun stats(vararg parts: Pair<Int, Int>) =

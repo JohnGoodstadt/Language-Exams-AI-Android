@@ -1,5 +1,7 @@
 // <project-root>/app/build.gradle.kts
 
+// 1. You MUST add this import at the very TOP of your build.gradle.kts file (above the plugins block)
+import org.gradle.api.tasks.testing.logging.TestLogEvent
 import java.io.FileInputStream
 import java.util.Properties
 
@@ -199,6 +201,7 @@ Fix: Use a relative path or an environment variable: storeFile = file(System.get
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
 }
 
 dependencies {
@@ -306,5 +309,26 @@ dependencies {
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
 
+
 }
 
+
+
+// ... (existing plugins and android blocks) ...
+
+// 2. Add this block at the very BOTTOM of the file
+tasks.withType<Test> {
+    // This explicitly tells Kotlin we are configuring a Test Task
+    val cores = Runtime.getRuntime().availableProcessors()
+    maxParallelForks = (cores / 2).coerceAtLeast(1)
+
+    testLogging {
+        // Use setOf to define which events to log in the terminal/console
+        events = setOf(
+            TestLogEvent.PASSED,
+            TestLogEvent.SKIPPED,
+            TestLogEvent.FAILED
+        )
+        showStandardStreams = true // Useful for seeing your Timber/println outputs in tests
+    }
+}

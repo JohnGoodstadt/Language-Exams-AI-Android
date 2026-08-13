@@ -43,6 +43,43 @@ class ReadinessAuditRepository @Inject constructor(
     private val KEY_PART_3 = intPreferencesKey("audit_score_3")
     private val KEY_PART_4 = intPreferencesKey("audit_score_4")
 
+    private fun partKey(partIndex: Int) = when (partIndex) {
+        1 -> KEY_PART_1; 2 -> KEY_PART_2; 3 -> KEY_PART_3; 4 -> KEY_PART_4; else -> null
+    }
+
+    // Which audit version the learner is on (1 = first set, 2 = "New Audit" fresh set, ...).
+    // Advanced by the New Audit button; gates whether that button is still enabled.
+    private val KEY_AUDIT_VERSION = intPreferencesKey("audit_version")
+
+    val auditVersion: Flow<Int> = context.auditDataStore.data.map { prefs ->
+        prefs[KEY_AUDIT_VERSION] ?: 1
+    }
+
+    suspend fun saveAuditVersion(version: Int) {
+        context.auditDataStore.edit { prefs -> prefs[KEY_AUDIT_VERSION] = version }
+    }
+
+    // Number of parts the learner has completed in a version >= 2. Each one is "extra data" that
+    // nudges Confidence up a touch. Exposed pre-multiplied as the Confidence bonus (points).
+    private val KEY_REDONE_PARTS = intPreferencesKey("audit_redone_parts")
+
+    val confidenceBonus: Flow<Int> = context.auditDataStore.data.map { prefs ->
+        (prefs[KEY_REDONE_PARTS] ?: 0) * CONFIDENCE_BONUS_PER_REDONE_PART
+    }
+
+    suspend fun incrementRedoneParts() {
+        context.auditDataStore.edit { prefs ->
+            prefs[KEY_REDONE_PARTS] = (prefs[KEY_REDONE_PARTS] ?: 0) + 1
+        }
+    }
+
+    companion object {
+        // Highest audit version whose question files exist. New Audit is disabled once reached.
+        const val MAX_AUDIT_VERSION = 2
+        // Confidence points added per part completed in a fresh (v>=2) audit.
+        const val CONFIDENCE_BONUS_PER_REDONE_PART = 2
+    }
+
     val auditScores: Flow<Map<Int, Int>> = context.auditDataStore.data.map { prefs ->
         val scores = mutableMapOf<Int, Int>()
         prefs[KEY_PART_1]?.let { scores[1] = it }
@@ -121,14 +158,14 @@ class ReadinessAuditRepository @Inject constructor(
     /**
      * Saves the score for a specific part (1-4).
      */
+    /**
+     * Records a part's score, keeping only the BEST ever achieved (ratchet). A weaker retake in a
+     * later audit version can never lower a part - Readiness only ever holds or improves.
+     */
     suspend fun saveScore(partIndex: Int, score: Int) {
+        val key = partKey(partIndex) ?: return
         context.auditDataStore.edit { prefs ->
-            when (partIndex) {
-                1 -> prefs[KEY_PART_1] = score
-                2 -> prefs[KEY_PART_2] = score
-                3 -> prefs[KEY_PART_3] = score
-                4 -> prefs[KEY_PART_4] = score
-            }
+            prefs[key] = maxOf(prefs[key] ?: 0, score)
         }
     }
 

@@ -82,6 +82,8 @@ fun MyProgressScreen(
     val unlockedLevels by viewModel.unlockedAuditLevels.collectAsState()
     val baselinePlacementLevel by viewModel.baselinePlacementLevel.collectAsState()
     val baselineComplete by viewModel.baselineComplete.collectAsState()
+    val newAuditEnabled by viewModel.newAuditEnabled.collectAsState()
+    val auditVersion by viewModel.auditVersion.collectAsState()
     var showLocalAuditSheet by remember { mutableStateOf(false) }
     val localSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showLanguageExamSheet by remember { mutableStateOf(false) }
@@ -123,23 +125,25 @@ fun MyProgressScreen(
                     unlockedLevels = unlockedLevels,
                     placementLevel = baselinePlacementLevel,
                     baselineComplete = baselineComplete,
+                    newAuditEnabled = newAuditEnabled,
                     onNavigateToAudit = {
                         auditTargetLevel = null
-                        auditVersionToLaunch = 1 // Standard/Resume
+                        auditVersionToLaunch = auditVersion // resume the current version
                         showLocalAuditSheet = true
                     },
                     onAdjustLevel = {
                         showLanguageExamSheet = true
                     },
                     onNewAudit = {
+                        // Advance to the next version (persisted, ratcheted - no score reset).
                         auditTargetLevel = null
-                        auditVersionToLaunch = 2
+                        viewModel.advanceAuditVersion()
+                        auditVersionToLaunch = auditVersion + 1
                         showLocalAuditSheet = true
-
                     },
                     onGoToTest = { level ->
                         auditTargetLevel = level
-                        auditVersionToLaunch = 1
+                        auditVersionToLaunch = auditVersion // stay on the current version
                         showLocalAuditSheet = true
                     }
                 )

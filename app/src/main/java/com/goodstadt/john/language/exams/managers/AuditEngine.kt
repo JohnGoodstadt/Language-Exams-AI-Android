@@ -39,7 +39,8 @@ object AuditEngine {
     fun calculate(
         testScores: Map<Int, Int>,
         partProgress: Map<Int, Float>,
-        liveScores: Map<Int, Int> = emptyMap()
+        liveScores: Map<Int, Int> = emptyMap(),
+        confidenceBonus: Int = 0
     ): AuditReport {
         // Downward credit: the parts are ordered easiest-to-hardest (1 Baseline .. 4 B2), so
         // demonstrating a harder part implies competence on the easier ones. Any lower part the
@@ -69,7 +70,8 @@ object AuditEngine {
             }
         }
 
-        val finalConfidence = totalConfidence.roundToInt().coerceIn(0, 98)
+        // Extra data from redone (v>=2) audits nudges Confidence up a little, still capped at 98.
+        val finalConfidence = (totalConfidence.roundToInt() + confidenceBonus).coerceIn(0, 98)
 
         // 3. Calculate Readiness (Weighted Accuracy) over the effective (credited + live) scores.
         var totalEarnedWeighted = 0f

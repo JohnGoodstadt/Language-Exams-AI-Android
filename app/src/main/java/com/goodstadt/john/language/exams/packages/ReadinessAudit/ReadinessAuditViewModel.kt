@@ -323,20 +323,18 @@ class ReadinessAuditViewModel @Inject constructor(
     fun hideRateOKLimitSheet() {
         _showRateLimitSheet.value = false
     }
-    fun startNewAuditVersion() {
+    /**
+     * Loads the audit at [version] (1 = original set, 2 = New Audit fresh set, ...). Does NOT
+     * wipe scores - saveScore ratchets the best per part, so a fresh version can only hold or
+     * improve Readiness. A brand-new version has no saved attempt, so it loads fresh; a version
+     * already in progress restores where the learner left off (via the version-aware attempt key).
+     */
+    fun startAtVersion(version: Int) {
+        if (_currentVersion.value == version) return
         viewModelScope.launch {
-            // Switch to version 2
-            _currentVersion.value = 2
-
-            // Reset the local UI state for a fresh start
-            resetQuiz()
-
-            // Load the new files
-            loadQuestions()
-
-            // Note: You might want to reset the AuditRepository scores
-            // if a "New Audit" should clear the old 40%/65% stats.
-            auditRepository.resetAll()
+            _currentVersion.value = version
+            resetQuiz()      // clear in-memory UI before loading the new version's questions
+            loadQuestions()  // restores this version's attempt if one exists, else starts fresh
         }
     }
 
@@ -571,8 +569,10 @@ class ReadinessAuditViewModel @Inject constructor(
     }
     // MARK: - Answer locking (order enforcement / once-per-day / one-shot answers)
 
+    // Includes the audit version so each version is a fresh, independent attempt. Without this
+    // both baseline quizzes share id=1, so v2 would restore v1's completed answers.
     private fun quizAttemptKey(level: ReadinessAuditLevels, quiz: ReadinessAuditDetail): String =
-        "${level.name}_${quiz.id}"
+        "${level.name}_${quiz.id}_v${_currentVersion.value}"
 
     // Maps a level onto the 1-4 "part index" the AuditEngine/ReadinessAuditRepository score by.
     private fun partIndexFor(level: ReadinessAuditLevels): Int = level.ordinal + 1
@@ -824,6 +824,11 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                     // This marks the part as "Done", jumping confidence to the cap (e.g. 40%)
                     auditRepository.saveScore(partIndex, finalScore)
                     auditRepository.markQuizCompleted(key)
+
+                    // Completing a part in a fresh (v>=2) audit is "extra data" -> small Confidence bump.
+                    if (_currentVersion.value >= 2) {
+                        auditRepository.incrementRedoneParts()
+                    }
 
                     // Baseline is banded (A2/B1/B2 questions) - place the learner by how
                     // they did per band, not by raw count, and persist it for the summary.
@@ -1236,11 +1241,12 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                 emptyMap()
             }
 
-            // 2. Use the corrected Engine
+            // 2. Use the corrected Engine (with the "more data" Confidence bonus from redone audits)
             val report = AuditEngine.calculate(
                 testScores = auditData.scores,
                 partProgress = auditData.activeProgress,
-                liveScores = liveScores
+                liveScores = liveScores,
+                confidenceBonus = auditRepository.confidenceBonus.first()
             )
 
             // 3. Update the UI StateFlow

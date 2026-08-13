@@ -47,12 +47,14 @@ class MyProgressViewModel @Inject constructor (
     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow
 
     // This is the "Live Connection" between the Bottom Sheet and the Base Screen
-    val auditStats: StateFlow<AuditStats> = auditRepository.auditDataFlow
-        .map { data ->
-            // The engine now sees the live 2/10 questions progress (e.g., 0.2f)
+    val auditStats: StateFlow<AuditStats> =
+        combine(auditRepository.auditDataFlow, auditRepository.confidenceBonus) { data, bonus ->
+            // The engine now sees the live 2/10 questions progress (e.g., 0.2f), plus the
+            // "more data" Confidence bonus earned from any redone (v>=2) audits.
             val report = AuditEngine.calculate(
                 testScores = data.scores,
-                partProgress = data.activeProgress
+                partProgress = data.activeProgress,
+                confidenceBonus = bonus
             )
             AuditStats(
                 confidence = report.confidence,
@@ -64,6 +66,27 @@ class MyProgressViewModel @Inject constructor (
             started = SharingStarted.WhileSubscribed(5000),
             initialValue = AuditStats(0, 0)
         )
+
+    // Which audit version the learner is on, and whether the New Audit button should be live.
+    // Enabled only once the baseline is done AND a higher version's questions still exist.
+    val auditVersion: StateFlow<Int> = auditRepository.auditVersion
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 1)
+
+    val newAuditEnabled: StateFlow<Boolean> =
+        combine(
+            auditRepository.auditScores.map { it.containsKey(1) }, // baseline complete
+            auditRepository.auditVersion
+        ) { baselineDone, version ->
+            baselineDone && version < ReadinessAuditRepository.MAX_AUDIT_VERSION
+        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
+    /** New Audit: advance to the next version (persisted so the button re-locks). No score reset. */
+    fun advanceAuditVersion() {
+        viewModelScope.launch {
+            val next = (auditVersion.value + 1).coerceAtMost(ReadinessAuditRepository.MAX_AUDIT_VERSION)
+            auditRepository.saveAuditVersion(next)
+        }
+    }
 
     // CEFR band the baseline audit placed the learner into ("A2"/"B1"/"B2"), or null until a
     // baseline quiz is completed. Drives the summary verdict in the dashboard header.

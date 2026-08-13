@@ -169,10 +169,9 @@ fun ReadinessAuditScreen(
         }
     }
 
-    LaunchedEffect(Unit) {
-        if (initialVersion == 2) {
-            viewModel.startNewAuditVersion()
-        }
+    // Load whichever audit version we were opened for (1 = original, 2 = New Audit fresh set).
+    LaunchedEffect(initialVersion) {
+        viewModel.startAtVersion(initialVersion)
     }
     // When launched from "Go to your X test", jump to that level once it's actually unlocked
     // (the unlock ceiling loads asynchronously, so wait for it rather than firing a "locked" toast).
