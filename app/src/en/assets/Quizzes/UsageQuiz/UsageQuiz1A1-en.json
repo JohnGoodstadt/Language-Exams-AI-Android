@@ -1,234 +1,254 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz1A1-en",
-	"title": "Sentence Structure",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Basic sentence structure",
-			"sortorder": 1,
-			"learningTitle": "Mastering Basic Sentence Order",
-			"learningPoints": [
-				"Practises basic English word order (Subject → Verb → Object).",
-				"Builds accuracy with articles and simple noun phrases.",
-				"Trains you to spot common A1 errors quickly (missing verb, wrong order).",
-				"Improves sentence confidence for speaking and writing.",
-				"ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Basic word order in simple present sentences (Subject + Verb + Place).",
-					"explain": "English basic structure: Subject + Verb + Place. 'I eat at home.' follows correct order.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "I eat at home."
-						},
-						{
-							"ok": false,
-							"word": "Eat I at home."
-						},
-						{
-							"ok": false,
-							"word": "I at home eat."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Using the verb 'to be' with a job (Subject + be + article + noun).",
-					"explain": "Structure: Subject + am/is/are + a/an + job noun. 'She is a doctor.' is correct.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She is a doctor."
-						},
-						{
-							"ok": false,
-							"word": "She doctor is a."
-						},
-						{
-							"ok": false,
-							"word": "She is doctor."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Present simple with plural subject (Subject + base verb).",
-					"explain": "'They' uses the base verb form. 'They walk to school.' is correct.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "They walk to school."
-						},
-						{
-							"ok": false,
-							"word": "They walks to school."
-						},
-						{
-							"ok": false,
-							"word": "Walk they to school."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Prepositions of place with 'be' (Subject + be + place phrase).",
-					"explain": "Structure: Subject + is + preposition + object. 'The book is on the table.' is correct.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "The book is on the table."
-						},
-						{
-							"ok": false,
-							"word": "The book on the table is."
-						},
-						{
-							"ok": false,
-							"word": "The book is the table on."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Adjective position before a noun.",
-					"explain": "Adjective + noun order: 'small house', not 'house small'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "It is a small house."
-						},
-						{
-							"ok": false,
-							"word": "It is a house small."
-						},
-						{
-							"ok": false,
-							"word": "It small is a house."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Verb patterns with common verbs (listen + to).",
-					"explain": "'Listen' requires the preposition 'to'. Correct structure: 'We listen to music.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "We listen to music."
-						},
-						{
-							"ok": false,
-							"word": "We listen music."
-						},
-						{
-							"ok": false,
-							"word": "We listen at music."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Prepositions of place (under, on, in).",
-					"explain": "Correct structure: Subject + is + under + object. 'The bag is under the chair.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "The bag is under the chair."
-						},
-						{
-							"ok": false,
-							"word": "The bag under the chair is."
-						},
-						{
-							"ok": false,
-							"word": "The bag is the chair under."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Third person singular in present simple (verb + s).",
-					"explain": "'He' requires verb + s in present simple. 'He runs in the park.' is correct.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "He runs in the park."
-						},
-						{
-							"ok": false,
-							"word": "He run in the park."
-						},
-						{
-							"ok": false,
-							"word": "He running in the park."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Preposition 'in' for enclosed spaces.",
-					"explain": "Correct structure: Subject + is + in + object. 'The mobile is in the bag.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "The mobile is in the bag."
-						},
-						{
-							"ok": false,
-							"word": "The mobile is at the bag."
-						},
-						{
-							"ok": false,
-							"word": "The mobile in the bag is."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Subject pronoun + verb agreement.",
-					"explain": "'We' uses the base verb form. 'We walk to school.' is correct.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "We walk to school."
-						},
-						{
-							"ok": false,
-							"word": "We walks to school."
-						},
-						{
-							"ok": false,
-							"word": "Walk we to school."
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz1A1-en",
+  "title": "Sentence Structure",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Basic sentence structure",
+      "sortorder": 1,
+      "learningTitle": "Mastering Basic Sentence Order",
+      "learningPoints": [
+        "Practises basic English word order (Subject → Verb → Object).",
+        "Builds accuracy with articles and simple noun phrases.",
+        "Trains you to spot common A1 errors quickly (missing verb, wrong order).",
+        "Improves sentence confidence for speaking and writing.",
+        "ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Basic word order in simple present sentences (Subject + Verb + Place).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "English basic structure: Subject + Verb + Place. 'I eat at home.' follows correct order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I eat at home."
+            },
+            {
+              "ok": false,
+              "word": "Eat I at home."
+            },
+            {
+              "ok": false,
+              "word": "I at home eat."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using the verb 'to be' with a job (Subject + be + article + noun).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "Structure: Subject + am/is/are + a/an + job noun. 'She is a doctor.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is a doctor."
+            },
+            {
+              "ok": false,
+              "word": "She doctor is a."
+            },
+            {
+              "ok": false,
+              "word": "She is doctor."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Present simple with plural subject (Subject + base verb).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "'They' uses the base verb form. 'They walk to school.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They walk to school."
+            },
+            {
+              "ok": false,
+              "word": "They walks to school."
+            },
+            {
+              "ok": false,
+              "word": "Walk they to school."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Prepositions of place with 'be' (Subject + be + place phrase).",
+          "level": "A1",
+          "category": "Prepositions",
+          "explain": "Structure: Subject + is + preposition + object. 'The book is on the table.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The book is on the table."
+            },
+            {
+              "ok": false,
+              "word": "The book on the table is."
+            },
+            {
+              "ok": false,
+              "word": "The book is the table on."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Adjective position before a noun.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "Adjective + noun order: 'small house', not 'house small'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It is a small house."
+            },
+            {
+              "ok": false,
+              "word": "It is a house small."
+            },
+            {
+              "ok": false,
+              "word": "It small is a house."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Verb patterns with common verbs (listen + to).",
+          "level": "A1",
+          "category": "Verb Patterns",
+          "explain": "'Listen' requires the preposition 'to'. Correct structure: 'We listen to music.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We listen to music."
+            },
+            {
+              "ok": false,
+              "word": "We listen music."
+            },
+            {
+              "ok": false,
+              "word": "We listen at music."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Prepositions of place (under, on, in).",
+          "level": "A1",
+          "category": "Prepositions",
+          "explain": "Correct structure: Subject + is + under + object. 'The bag is under the chair.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The bag is under the chair."
+            },
+            {
+              "ok": false,
+              "word": "The bag under the chair is."
+            },
+            {
+              "ok": false,
+              "word": "The bag is the chair under."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Third person singular in present simple (verb + s).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "'He' requires verb + s in present simple. 'He runs in the park.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He runs in the park."
+            },
+            {
+              "ok": false,
+              "word": "He run in the park."
+            },
+            {
+              "ok": false,
+              "word": "He running in the park."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Preposition 'in' for enclosed spaces.",
+          "level": "A1",
+          "category": "Prepositions",
+          "explain": "Correct structure: Subject + is + in + object. 'The mobile is in the bag.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The mobile is in the bag."
+            },
+            {
+              "ok": false,
+              "word": "The mobile is at the bag."
+            },
+            {
+              "ok": false,
+              "word": "The mobile in the bag is."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Subject pronoun + verb agreement.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "'We' uses the base verb form. 'We walk to school.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We walk to school."
+            },
+            {
+              "ok": false,
+              "word": "We walks to school."
+            },
+            {
+              "ok": false,
+              "word": "Walk we to school."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

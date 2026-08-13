@@ -9,19 +9,21 @@
       "title": "Choose the correct answer for each question.",
       "description": "Prepositions of place, time and movement",
       "sortorder": 1,
-		"learningTitle": "Using English Naturally in Context",
-		"learningPoints": [
-			"Practises core prepositions of place (in, on, under, between, next to).",
-			"Practises time prepositions (at 9:00, on Monday, in July).",
-			"Builds movement accuracy (to, from, into).",
-			"Targets the most common A1 errors with simple, high-frequency patterns.",
-          "ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
-		],
+      "learningTitle": "Using English Naturally in Context",
+      "learningPoints": [
+        "Practises core prepositions of place (in, on, under, between, next to).",
+        "Practises time prepositions (at 9:00, on Monday, in July).",
+        "Builds movement accuracy (to, from, into).",
+        "Targets the most common A1 errors with simple, high-frequency patterns.",
+        "ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
           "summary": "Prepositions of place: 'on' for surfaces.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'On' is used for something touching a surface. Correct: 'The book is on the table.'",
           "sentence": "The book is ___ the table.",
           "words": [
@@ -43,6 +45,8 @@
           "title": "",
           "page": 2,
           "summary": "Prepositions of place: 'under' for lower position.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'Under' means below something. Correct: 'The bag is under the chair.'",
           "sentence": "The bag is ___ the chair.",
           "words": [
@@ -64,6 +68,8 @@
           "title": "",
           "page": 3,
           "summary": "Prepositions of place: 'in' for buildings and enclosed spaces.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'In' is used for enclosed spaces like buildings. Correct: 'She is in the hospital.'",
           "sentence": "She is ___ the hospital.",
           "words": [
@@ -85,6 +91,8 @@
           "title": "",
           "page": 4,
           "summary": "Prepositions of place: 'between' for two things.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'Between' is used for something in the middle of two objects.",
           "sentence": "The chair is ___ the table and the bed.",
           "words": [
@@ -106,6 +114,8 @@
           "title": "",
           "page": 5,
           "summary": "Prepositions of time: 'on' for days.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'On' is used with days of the week. Correct: 'on Monday.'",
           "sentence": "We have English ___ Monday.",
           "words": [
@@ -127,6 +137,8 @@
           "title": "",
           "page": 6,
           "summary": "Prepositions of time: 'in' for months.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'In' is used for months. Correct: 'in July.'",
           "sentence": "My birthday is ___ July.",
           "words": [
@@ -148,6 +160,8 @@
           "title": "",
           "page": 7,
           "summary": "Prepositions of time: 'at' for clock time.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'At' is used for specific clock times. Correct: 'at 9:00.'",
           "sentence": "The class starts ___ 9:00.",
           "words": [
@@ -169,6 +183,8 @@
           "title": "",
           "page": 8,
           "summary": "Prepositions of movement: 'into' for movement inside.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'Into' shows movement from outside to inside.",
           "sentence": "He walked ___ the room.",
           "words": [
@@ -190,6 +206,8 @@
           "title": "",
           "page": 9,
           "summary": "Prepositions of origin: 'from'.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'From' is used to show origin. Correct: 'She comes from Spain.'",
           "sentence": "She comes ___ Spain.",
           "words": [
@@ -211,6 +229,8 @@
           "title": "",
           "page": 10,
           "summary": "Prepositions of movement: 'to' for direction.",
+          "level": "A1",
+          "category": "Prepositions",
           "explain": "'To' shows direction or destination. Correct: 'They walked to the park.'",
           "sentence": "They walked ___ the park.",
           "words": [

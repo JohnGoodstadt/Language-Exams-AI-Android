@@ -1,234 +1,254 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz1A2-en",
-	"title": "Present Continuous",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Present continuous and present simple contrast",
-			"sortorder": 1,
-			"learningTitle": "Strengthening for B1 Success",
-			"learningPoints": [
-				"Practises 'going to' for plans and intentions.",
-				"Builds control of 'will' for decisions and promises.",
-				"Strengthens future time expressions.",
-				"Prepares you for practical test scenarios about plans and predictions.",
-				"ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Present continuous for actions happening now.",
-					"explain": "Present continuous uses am/is/are + verb + ing for actions happening now.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She is cooking dinner now."
-						},
-						{
-							"ok": false,
-							"word": "She cooks dinner now."
-						},
-						{
-							"ok": false,
-							"word": "She cooking dinner now."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Present simple for daily routines.",
-					"explain": "Present simple is used for habits and routines. 'He goes to work every day.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "He goes to work every day."
-						},
-						{
-							"ok": false,
-							"word": "He is going to work every day."
-						},
-						{
-							"ok": false,
-							"word": "He go to work every day."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Present continuous with time marker 'now'.",
-					"explain": "'Now' signals present continuous: 'They are studying now.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "They are studying now."
-						},
-						{
-							"ok": false,
-							"word": "They study now."
-						},
-						{
-							"ok": false,
-							"word": "They studying now."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Present simple with frequency adverbs.",
-					"explain": "Frequency words like 'always' are used with present simple.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She always drinks coffee."
-						},
-						{
-							"ok": false,
-							"word": "She is always drinking coffee every day."
-						},
-						{
-							"ok": false,
-							"word": "She always drink coffee."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Present continuous for temporary actions.",
-					"explain": "Temporary actions happening today use present continuous.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "I am working at home today."
-						},
-						{
-							"ok": false,
-							"word": "I work at home today."
-						},
-						{
-							"ok": false,
-							"word": "I am work at home today."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Present simple for general facts.",
-					"explain": "General facts use present simple.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Water boils at 100 degrees."
-						},
-						{
-							"ok": false,
-							"word": "Water is boiling at 100 degrees."
-						},
-						{
-							"ok": false,
-							"word": "Water boil at 100 degrees."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Present continuous negative form.",
-					"explain": "Negative present continuous: am/is/are + not + verb + ing.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She is not watching television."
-						},
-						{
-							"ok": false,
-							"word": "She not watching television."
-						},
-						{
-							"ok": false,
-							"word": "She does not watching television."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Present simple negative form.",
-					"explain": "Present simple negative uses don't/doesn't + base verb.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "He doesn't drive to work."
-						},
-						{
-							"ok": false,
-							"word": "He isn't drive to work."
-						},
-						{
-							"ok": false,
-							"word": "He doesn't drives to work."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Present continuous question form.",
-					"explain": "Questions invert be verb: 'Are they studying?'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Are they studying?"
-						},
-						{
-							"ok": false,
-							"word": "Do they studying?"
-						},
-						{
-							"ok": false,
-							"word": "They are studying?"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Contrast between routine and action happening now.",
-					"explain": "Use present simple for routine and present continuous for current action.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She works in an office, but today she is working at home."
-						},
-						{
-							"ok": false,
-							"word": "She is working in an office every day."
-						},
-						{
-							"ok": false,
-							"word": "She works at home now every day."
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz1A2-en",
+  "title": "Present Continuous",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Present continuous and present simple contrast",
+      "sortorder": 1,
+      "learningTitle": "Strengthening for B1 Success",
+      "learningPoints": [
+        "Practises 'going to' for plans and intentions.",
+        "Builds control of 'will' for decisions and promises.",
+        "Strengthens future time expressions.",
+        "Prepares you for practical test scenarios about plans and predictions.",
+        "ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Present continuous for actions happening now.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Present continuous uses am/is/are + verb + ing for actions happening now.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is cooking dinner now."
+            },
+            {
+              "ok": false,
+              "word": "She cooks dinner now."
+            },
+            {
+              "ok": false,
+              "word": "She cooking dinner now."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Present simple for daily routines.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Present simple is used for habits and routines. 'He goes to work every day.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He goes to work every day."
+            },
+            {
+              "ok": false,
+              "word": "He is going to work every day."
+            },
+            {
+              "ok": false,
+              "word": "He go to work every day."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Present continuous with time marker 'now'.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "'Now' signals present continuous: 'They are studying now.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They are studying now."
+            },
+            {
+              "ok": false,
+              "word": "They study now."
+            },
+            {
+              "ok": false,
+              "word": "They studying now."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Present simple with frequency adverbs.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Frequency words like 'always' are used with present simple.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She always drinks coffee."
+            },
+            {
+              "ok": false,
+              "word": "She is always drinking coffee every day."
+            },
+            {
+              "ok": false,
+              "word": "She always drink coffee."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Present continuous for temporary actions.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Temporary actions happening today use present continuous.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I am working at home today."
+            },
+            {
+              "ok": false,
+              "word": "I work at home today."
+            },
+            {
+              "ok": false,
+              "word": "I am work at home today."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Present simple for general facts.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "General facts use present simple.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Water boils at 100 degrees."
+            },
+            {
+              "ok": false,
+              "word": "Water is boiling at 100 degrees."
+            },
+            {
+              "ok": false,
+              "word": "Water boil at 100 degrees."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Present continuous negative form.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Negative present continuous: am/is/are + not + verb + ing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is not watching television."
+            },
+            {
+              "ok": false,
+              "word": "She not watching television."
+            },
+            {
+              "ok": false,
+              "word": "She does not watching television."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Present simple negative form.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Present simple negative uses don't/doesn't + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He doesn't drive to work."
+            },
+            {
+              "ok": false,
+              "word": "He isn't drive to work."
+            },
+            {
+              "ok": false,
+              "word": "He doesn't drives to work."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Present continuous question form.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Questions invert be verb: 'Are they studying?'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Are they studying?"
+            },
+            {
+              "ok": false,
+              "word": "Do they studying?"
+            },
+            {
+              "ok": false,
+              "word": "They are studying?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Contrast between routine and action happening now.",
+          "level": "A2",
+          "category": "Present Tenses",
+          "explain": "Use present simple for routine and present continuous for current action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She works in an office, but today she is working at home."
+            },
+            {
+              "ok": false,
+              "word": "She is working in an office every day."
+            },
+            {
+              "ok": false,
+              "word": "She works at home now every day."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

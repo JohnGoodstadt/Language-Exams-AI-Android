@@ -1,235 +1,255 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz5B2-en",
-	"title": "Argument Development",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Advanced discourse markers and inversion structures",
-			"sortorder": 1,
-			"learningTitle": "Constructing Sophisticated Arguments",
-			"learningPoints": [
-				"Strengthens advanced discourse markers and logical cohesion.",
-				"Develops inversion structures for rhetorical emphasis.",
-				"Improves contrast and argument balance in formal writing.",
-				"Builds precision in academic comparison and evaluation.",
-				"Enhances persuasive and analytical writing skills.",
-				"ESOL C1 and roughly aligns with IELTS 7.0–8.0 and TOEFL iBT 95–110 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Use 'Not only... but also' with inversion.",
-					"explain": "When 'Not only' begins a sentence, inversion is required.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Not only did the policy reduce costs, but it also improved efficiency."
-						},
-						{
-							"ok": false,
-							"word": "Not only the policy reduced costs, but it also improved efficiency."
-						},
-						{
-							"ok": false,
-							"word": "Not only did the policy reduce costs, but also it improved efficiency."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Inversion after negative adverbials (Rarely).",
-					"explain": "After negative adverbs like 'Rarely', auxiliary inversion is required.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Rarely have researchers encountered such clear evidence."
-						},
-						{
-							"ok": false,
-							"word": "Rarely researchers have encountered such clear evidence."
-						},
-						{
-							"ok": false,
-							"word": "Rarely did researchers have encountered such clear evidence."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Correct use of 'whereas' for contrast.",
-					"explain": "'Whereas' connects two contrasting clauses in formal comparison.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Urban areas expanded rapidly, whereas rural populations declined."
-						},
-						{
-							"ok": false,
-							"word": "Urban areas expanded rapidly whereas but rural populations declined."
-						},
-						{
-							"ok": false,
-							"word": "Whereas urban areas expanded rapidly, rural populations."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Use 'nevertheless' as a sentence connector.",
-					"explain": "'Nevertheless' contrasts with the previous statement and requires correct punctuation.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "The proposal was risky. Nevertheless, it was approved."
-						},
-						{
-							"ok": false,
-							"word": "The proposal was risky nevertheless it was approved."
-						},
-						{
-							"ok": false,
-							"word": "Nevertheless the proposal was risky, it was approved."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Inversion with 'On no account'.",
-					"explain": "Negative expressions at the beginning require inversion.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "On no account should confidential data be shared."
-						},
-						{
-							"ok": false,
-							"word": "On no account confidential data should be shared."
-						},
-						{
-							"ok": false,
-							"word": "On no account should be shared confidential data."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Use 'in contrast' correctly.",
-					"explain": "'In contrast' introduces a contrasting statement.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Sales increased in Europe. In contrast, they declined in Asia."
-						},
-						{
-							"ok": false,
-							"word": "Sales increased in Europe in contrast they declined in Asia."
-						},
-						{
-							"ok": false,
-							"word": "In contrast sales increased in Europe they declined in Asia."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Use 'Hardly... when' with inversion.",
-					"explain": "'Hardly' at the beginning requires inversion and is followed by 'when'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Hardly had the meeting begun when the alarm sounded."
-						},
-						{
-							"ok": false,
-							"word": "Hardly the meeting had begun when the alarm sounded."
-						},
-						{
-							"ok": false,
-							"word": "Hardly had the meeting begun than the alarm sounded."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Use 'No sooner... than' with inversion.",
-					"explain": "'No sooner' requires inversion and is followed by 'than'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "No sooner had the company launched the product than demand surged."
-						},
-						{
-							"ok": false,
-							"word": "No sooner the company had launched the product than demand surged."
-						},
-						{
-							"ok": false,
-							"word": "No sooner had the company launched the product when demand surged."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Correct use of 'while' for contrast.",
-					"explain": "'While' can introduce contrast between two clauses.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "While some experts support the reform, others strongly oppose it."
-						},
-						{
-							"ok": false,
-							"word": "While some experts support the reform but others strongly oppose it."
-						},
-						{
-							"ok": false,
-							"word": "While support the reform some experts, others strongly oppose it."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Complex argument structure with contrast and result.",
-					"explain": "Advanced academic writing often combines contrast and consequence logically.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Although the initial results were promising, further analysis revealed significant limitations."
-						},
-						{
-							"ok": false,
-							"word": "Although the initial results were promising but further analysis revealed significant limitations."
-						},
-						{
-							"ok": false,
-							"word": "Although the initial results were promising, nevertheless further analysis revealed significant limitations."
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz5B2-en",
+  "title": "Argument Development",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Advanced discourse markers and inversion structures",
+      "sortorder": 1,
+      "learningTitle": "Constructing Sophisticated Arguments",
+      "learningPoints": [
+        "Strengthens advanced discourse markers and logical cohesion.",
+        "Develops inversion structures for rhetorical emphasis.",
+        "Improves contrast and argument balance in formal writing.",
+        "Builds precision in academic comparison and evaluation.",
+        "Enhances persuasive and analytical writing skills.",
+        "ESOL C1 and roughly aligns with IELTS 7.0–8.0 and TOEFL iBT 95–110 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Use 'Not only... but also' with inversion.",
+          "level": "B2",
+          "category": "Emphasis & Inversion",
+          "explain": "When 'Not only' begins a sentence, inversion is required.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Not only did the policy reduce costs, but it also improved efficiency."
+            },
+            {
+              "ok": false,
+              "word": "Not only the policy reduced costs, but it also improved efficiency."
+            },
+            {
+              "ok": false,
+              "word": "Not only did the policy reduce costs, but also it improved efficiency."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Inversion after negative adverbials (Rarely).",
+          "level": "B2",
+          "category": "Emphasis & Inversion",
+          "explain": "After negative adverbs like 'Rarely', auxiliary inversion is required.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Rarely have researchers encountered such clear evidence."
+            },
+            {
+              "ok": false,
+              "word": "Rarely researchers have encountered such clear evidence."
+            },
+            {
+              "ok": false,
+              "word": "Rarely did researchers have encountered such clear evidence."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Correct use of 'whereas' for contrast.",
+          "level": "B2",
+          "category": "Connectors & Contrast",
+          "explain": "'Whereas' connects two contrasting clauses in formal comparison.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Urban areas expanded rapidly, whereas rural populations declined."
+            },
+            {
+              "ok": false,
+              "word": "Urban areas expanded rapidly whereas but rural populations declined."
+            },
+            {
+              "ok": false,
+              "word": "Whereas urban areas expanded rapidly, rural populations."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Use 'nevertheless' as a sentence connector.",
+          "level": "B2",
+          "category": "Connectors & Contrast",
+          "explain": "'Nevertheless' contrasts with the previous statement and requires correct punctuation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The proposal was risky. Nevertheless, it was approved."
+            },
+            {
+              "ok": false,
+              "word": "The proposal was risky nevertheless it was approved."
+            },
+            {
+              "ok": false,
+              "word": "Nevertheless the proposal was risky, it was approved."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Inversion with 'On no account'.",
+          "level": "B2",
+          "category": "Emphasis & Inversion",
+          "explain": "Negative expressions at the beginning require inversion.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "On no account should confidential data be shared."
+            },
+            {
+              "ok": false,
+              "word": "On no account confidential data should be shared."
+            },
+            {
+              "ok": false,
+              "word": "On no account should be shared confidential data."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Use 'in contrast' correctly.",
+          "level": "B2",
+          "category": "Connectors & Contrast",
+          "explain": "'In contrast' introduces a contrasting statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sales increased in Europe. In contrast, they declined in Asia."
+            },
+            {
+              "ok": false,
+              "word": "Sales increased in Europe in contrast they declined in Asia."
+            },
+            {
+              "ok": false,
+              "word": "In contrast sales increased in Europe they declined in Asia."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Use 'Hardly... when' with inversion.",
+          "level": "B2",
+          "category": "Emphasis & Inversion",
+          "explain": "'Hardly' at the beginning requires inversion and is followed by 'when'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Hardly had the meeting begun when the alarm sounded."
+            },
+            {
+              "ok": false,
+              "word": "Hardly the meeting had begun when the alarm sounded."
+            },
+            {
+              "ok": false,
+              "word": "Hardly had the meeting begun than the alarm sounded."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Use 'No sooner... than' with inversion.",
+          "level": "B2",
+          "category": "Emphasis & Inversion",
+          "explain": "'No sooner' requires inversion and is followed by 'than'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "No sooner had the company launched the product than demand surged."
+            },
+            {
+              "ok": false,
+              "word": "No sooner the company had launched the product than demand surged."
+            },
+            {
+              "ok": false,
+              "word": "No sooner had the company launched the product when demand surged."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Correct use of 'while' for contrast.",
+          "level": "B2",
+          "category": "Connectors & Contrast",
+          "explain": "'While' can introduce contrast between two clauses.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "While some experts support the reform, others strongly oppose it."
+            },
+            {
+              "ok": false,
+              "word": "While some experts support the reform but others strongly oppose it."
+            },
+            {
+              "ok": false,
+              "word": "While support the reform some experts, others strongly oppose it."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Complex argument structure with contrast and result.",
+          "level": "B2",
+          "category": "Connectors & Contrast",
+          "explain": "Advanced academic writing often combines contrast and consequence logically.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Although the initial results were promising, further analysis revealed significant limitations."
+            },
+            {
+              "ok": false,
+              "word": "Although the initial results were promising but further analysis revealed significant limitations."
+            },
+            {
+              "ok": false,
+              "word": "Although the initial results were promising, nevertheless further analysis revealed significant limitations."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

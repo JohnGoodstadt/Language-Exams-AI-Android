@@ -1,144 +1,254 @@
 {
-	"fileformat": 7,
-	"location": 0,
-	"sheetname": "UsageQuiz5A2-en",
-	"title": "Verb Patterns",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct word to complete the sentence.",
-			"description": "Verb + to / Verb + -ing",
-			"sortorder": 1,
-			"learningTitle": "Building Toward B1 Confidence",
-			"learningPoints": [
-				"Builds accuracy with verb + to and verb + -ing patterns.",
-				"Strengthens common structures like want to, need to, enjoy + -ing.",
-				"Prepares learners for more complex verb structures at B1.",
-				"Reduces common intermediate grammar mistakes.",
-				"ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"sentence": "She wants ___ a new job.",
-					"summary": "Use 'to + base verb' after 'want'.",
-					"explain": "'Want' is followed by 'to' + base verb.",
-					"words": [
-						{ "word": "to find", "ok": true },
-						{ "word": "finding", "ok": false },
-						{ "word": "finds", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"sentence": "They decided ___ to Spain in summer.",
-					"summary": "Use 'to + base verb' after 'decide'.",
-					"explain": "'Decide' is followed by 'to' + base verb.",
-					"words": [
-						{ "word": "to travel", "ok": true },
-						{ "word": "traveling", "ok": false },
-						{ "word": "travel", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"sentence": "I enjoy ___ in the forest.",
-					"summary": "Use '-ing' after 'enjoy'.",
-					"explain": "'Enjoy' is followed by a verb in -ing form.",
-					"words": [
-						{ "word": "hiking", "ok": true },
-						{ "word": "to hike", "ok": false },
-						{ "word": "hike", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"sentence": "She needs ___ her homework tonight.",
-					"summary": "Use 'to + base verb' after 'need'.",
-					"explain": "'Need' is followed by 'to' + base verb.",
-					"words": [
-						{ "word": "to finish", "ok": true },
-						{ "word": "finishing", "ok": false },
-						{ "word": "finishs", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"sentence": "He suggested ___ earlier.",
-					"summary": "Use '-ing' after 'suggest'.",
-					"explain": "'Suggest' is followed by a verb in -ing form.",
-					"words": [
-						{ "word": "leaving", "ok": true },
-						{ "word": "to leave", "ok": false },
-						{ "word": "leave", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"sentence": "We hope ___ a new apartment soon.",
-					"summary": "Use 'to + base verb' after 'hope'.",
-					"explain": "'Hope' is followed by 'to' + base verb.",
-					"words": [
-						{ "word": "to buy", "ok": true },
-						{ "word": "buying", "ok": false },
-						{ "word": "buy", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"sentence": "She likes ___ music in the evening.",
-					"summary": "Use '-ing' after 'like' (general enjoyment).",
-					"explain": "'Like' is commonly followed by the -ing form.",
-					"words": [
-						{ "word": "listening to", "ok": true },
-						{ "word": "to listen", "ok": false },
-						{ "word": "listen", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"sentence": "They plan ___ a meeting tomorrow.",
-					"summary": "Use 'to + base verb' after 'plan'.",
-					"explain": "'Plan' is followed by 'to' + base verb.",
-					"words": [
-						{ "word": "to have", "ok": true },
-						{ "word": "having", "ok": false },
-						{ "word": "have", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"sentence": "He started ___ English last year.",
-					"summary": "Use '-ing' after 'start' (A2 level exposure).",
-					"explain": "'Start' can be followed by -ing or to + verb; -ing is correct here.",
-					"words": [
-						{ "word": "studying", "ok": true },
-						{ "word": "to studied", "ok": false },
-						{ "word": "study", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"sentence": "She avoids ___ junk food.",
-					"summary": "Use '-ing' after 'avoid'.",
-					"explain": "'Avoid' is followed by the -ing form.",
-					"words": [
-						{ "word": "eating", "ok": true },
-						{ "word": "to eat", "ok": false },
-						{ "word": "eat", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "UsageQuiz5A2-en",
+  "title": "Verb Patterns",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct word to complete the sentence.",
+      "description": "Verb + to / Verb + -ing",
+      "sortorder": 1,
+      "learningTitle": "Building Toward B1 Confidence",
+      "learningPoints": [
+        "Builds accuracy with verb + to and verb + -ing patterns.",
+        "Strengthens common structures like want to, need to, enjoy + -ing.",
+        "Prepares learners for more complex verb structures at B1.",
+        "Reduces common intermediate grammar mistakes.",
+        "ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "She wants ___ a new job.",
+          "summary": "Use 'to + base verb' after 'want'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Want' is followed by 'to' + base verb.",
+          "words": [
+            {
+              "word": "to find",
+              "ok": true
+            },
+            {
+              "word": "finding",
+              "ok": false
+            },
+            {
+              "word": "finds",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "They decided ___ to Spain in summer.",
+          "summary": "Use 'to + base verb' after 'decide'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Decide' is followed by 'to' + base verb.",
+          "words": [
+            {
+              "word": "to travel",
+              "ok": true
+            },
+            {
+              "word": "traveling",
+              "ok": false
+            },
+            {
+              "word": "travel",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "I enjoy ___ in the forest.",
+          "summary": "Use '-ing' after 'enjoy'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Enjoy' is followed by a verb in -ing form.",
+          "words": [
+            {
+              "word": "hiking",
+              "ok": true
+            },
+            {
+              "word": "to hike",
+              "ok": false
+            },
+            {
+              "word": "hike",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "She needs ___ her homework tonight.",
+          "summary": "Use 'to + base verb' after 'need'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Need' is followed by 'to' + base verb.",
+          "words": [
+            {
+              "word": "to finish",
+              "ok": true
+            },
+            {
+              "word": "finishing",
+              "ok": false
+            },
+            {
+              "word": "finishs",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "He suggested ___ earlier.",
+          "summary": "Use '-ing' after 'suggest'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Suggest' is followed by a verb in -ing form.",
+          "words": [
+            {
+              "word": "leaving",
+              "ok": true
+            },
+            {
+              "word": "to leave",
+              "ok": false
+            },
+            {
+              "word": "leave",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "We hope ___ a new apartment soon.",
+          "summary": "Use 'to + base verb' after 'hope'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Hope' is followed by 'to' + base verb.",
+          "words": [
+            {
+              "word": "to buy",
+              "ok": true
+            },
+            {
+              "word": "buying",
+              "ok": false
+            },
+            {
+              "word": "buy",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "She likes ___ music in the evening.",
+          "summary": "Use '-ing' after 'like' (general enjoyment).",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Like' is commonly followed by the -ing form.",
+          "words": [
+            {
+              "word": "listening to",
+              "ok": true
+            },
+            {
+              "word": "to listen",
+              "ok": false
+            },
+            {
+              "word": "listen",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "They plan ___ a meeting tomorrow.",
+          "summary": "Use 'to + base verb' after 'plan'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Plan' is followed by 'to' + base verb.",
+          "words": [
+            {
+              "word": "to have",
+              "ok": true
+            },
+            {
+              "word": "having",
+              "ok": false
+            },
+            {
+              "word": "have",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "He started ___ English last year.",
+          "summary": "Use '-ing' after 'start' (A2 level exposure).",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Start' can be followed by -ing or to + verb; -ing is correct here.",
+          "words": [
+            {
+              "word": "studying",
+              "ok": true
+            },
+            {
+              "word": "to studied",
+              "ok": false
+            },
+            {
+              "word": "study",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "She avoids ___ junk food.",
+          "summary": "Use '-ing' after 'avoid'.",
+          "level": "A2",
+          "category": "Verb Patterns",
+          "explain": "'Avoid' is followed by the -ing form.",
+          "words": [
+            {
+              "word": "eating",
+              "ok": true
+            },
+            {
+              "word": "to eat",
+              "ok": false
+            },
+            {
+              "word": "eat",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

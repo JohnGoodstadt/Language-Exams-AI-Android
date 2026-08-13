@@ -1,235 +1,255 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz1B2-en",
-	"title": "Aspect & Time Control",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Advanced tense and aspect distinctions",
-			"sortorder": 1,
-			"learningTitle": "Why this quiz matters academically",
-			"learningPoints": [
-				"Develops advanced control of tense and aspect distinctions.",
-				"Builds precision in expressing duration, completion, and sequence.",
-				"Strengthens formal narrative accuracy in academic writing.",
-				"Improves clarity when describing research, trends, and developments.",
-				"Targets subtle tense errors common at upper-intermediate level.",
-				"ESOL B2/C1 and roughly aligns with IELTS 7.0–8.0 and TOEFL iBT 95–110 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Present perfect continuous for ongoing duration.",
-					"explain": "Use present perfect continuous to emphasise duration of an ongoing action.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She has been working on the project for three months."
-						},
-						{
-							"ok": false,
-							"word": "She has worked on the project for three months (emphasis on completion)."
-						},
-						{
-							"ok": false,
-							"word": "She is working on the project for three months."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Present perfect for completed results with present relevance.",
-					"explain": "Use present perfect to focus on the result rather than duration.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She has completed the report, so we can submit it now."
-						},
-						{
-							"ok": false,
-							"word": "She has been completing the report, so we can submit it now."
-						},
-						{
-							"ok": false,
-							"word": "She completed the report, so we can submit it now."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Past perfect for earlier past actions.",
-					"explain": "Past perfect is used to show that one past action happened before another.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "By the time the meeting started, she had already left."
-						},
-						{
-							"ok": false,
-							"word": "By the time the meeting started, she already left."
-						},
-						{
-							"ok": false,
-							"word": "By the time the meeting started, she has already left."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Future perfect for completed action before a future time.",
-					"explain": "Future perfect expresses completion before a specified future point.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "By next year, the company will have expanded internationally."
-						},
-						{
-							"ok": false,
-							"word": "By next year, the company will expand internationally."
-						},
-						{
-							"ok": false,
-							"word": "By next year, the company will have expand internationally."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Present perfect continuous for temporary repeated activity.",
-					"explain": "Use present perfect continuous to highlight ongoing repeated effort.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Researchers have been studying climate change for decades."
-						},
-						{
-							"ok": false,
-							"word": "Researchers have studied climate change for decades (less emphasis on process)."
-						},
-						{
-							"ok": false,
-							"word": "Researchers are studying climate change for decades."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Past perfect vs past simple sequence.",
-					"explain": "Past perfect marks the earlier of two past events.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She realised she had made a mistake."
-						},
-						{
-							"ok": false,
-							"word": "She realised she made a mistake."
-						},
-						{
-							"ok": false,
-							"word": "She had realised she made a mistake."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Present perfect for changes over time.",
-					"explain": "Present perfect describes changes that continue into the present.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Living standards have improved significantly over the past decade."
-						},
-						{
-							"ok": false,
-							"word": "Living standards improved significantly over the past decade (finished time)."
-						},
-						{
-							"ok": false,
-							"word": "Living standards have been improved significantly over the past decade."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Future perfect continuous for duration before future time.",
-					"explain": "Future perfect continuous emphasises duration up to a future point.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "By 2026, she will have been working here for ten years."
-						},
-						{
-							"ok": false,
-							"word": "By 2026, she will be working here for ten years."
-						},
-						{
-							"ok": false,
-							"word": "By 2026, she will have worked here for ten years (no duration emphasis)."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Present perfect vs past simple with unfinished time period.",
-					"explain": "Use present perfect when the time period includes the present.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "The company has increased its profits this year."
-						},
-						{
-							"ok": false,
-							"word": "The company increased its profits this year (if year not finished)."
-						},
-						{
-							"ok": false,
-							"word": "The company has been increased its profits this year."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Past continuous + past simple for interruption.",
-					"explain": "Past continuous describes background action interrupted by past simple.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She was presenting when the system failed."
-						},
-						{
-							"ok": false,
-							"word": "She presented when the system was failing."
-						},
-						{
-							"ok": false,
-							"word": "She was present when the system failed."
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz1B2-en",
+  "title": "Aspect & Time Control",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Advanced tense and aspect distinctions",
+      "sortorder": 1,
+      "learningTitle": "Why this quiz matters academically",
+      "learningPoints": [
+        "Develops advanced control of tense and aspect distinctions.",
+        "Builds precision in expressing duration, completion, and sequence.",
+        "Strengthens formal narrative accuracy in academic writing.",
+        "Improves clarity when describing research, trends, and developments.",
+        "Targets subtle tense errors common at upper-intermediate level.",
+        "ESOL B2/C1 and roughly aligns with IELTS 7.0–8.0 and TOEFL iBT 95–110 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Present perfect continuous for ongoing duration.",
+          "level": "B2",
+          "category": "Present Perfect",
+          "explain": "Use present perfect continuous to emphasise duration of an ongoing action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She has been working on the project for three months."
+            },
+            {
+              "ok": false,
+              "word": "She has worked on the project for three months (emphasis on completion)."
+            },
+            {
+              "ok": false,
+              "word": "She is working on the project for three months."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Present perfect for completed results with present relevance.",
+          "level": "B2",
+          "category": "Present Perfect",
+          "explain": "Use present perfect to focus on the result rather than duration.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She has completed the report, so we can submit it now."
+            },
+            {
+              "ok": false,
+              "word": "She has been completing the report, so we can submit it now."
+            },
+            {
+              "ok": false,
+              "word": "She completed the report, so we can submit it now."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Past perfect for earlier past actions.",
+          "level": "B2",
+          "category": "Past Tenses",
+          "explain": "Past perfect is used to show that one past action happened before another.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By the time the meeting started, she had already left."
+            },
+            {
+              "ok": false,
+              "word": "By the time the meeting started, she already left."
+            },
+            {
+              "ok": false,
+              "word": "By the time the meeting started, she has already left."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Future perfect for completed action before a future time.",
+          "level": "B2",
+          "category": "Future Forms",
+          "explain": "Future perfect expresses completion before a specified future point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By next year, the company will have expanded internationally."
+            },
+            {
+              "ok": false,
+              "word": "By next year, the company will expand internationally."
+            },
+            {
+              "ok": false,
+              "word": "By next year, the company will have expand internationally."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Present perfect continuous for temporary repeated activity.",
+          "level": "B2",
+          "category": "Present Perfect",
+          "explain": "Use present perfect continuous to highlight ongoing repeated effort.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Researchers have been studying climate change for decades."
+            },
+            {
+              "ok": false,
+              "word": "Researchers have studied climate change for decades (less emphasis on process)."
+            },
+            {
+              "ok": false,
+              "word": "Researchers are studying climate change for decades."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Past perfect vs past simple sequence.",
+          "level": "B2",
+          "category": "Past Tenses",
+          "explain": "Past perfect marks the earlier of two past events.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She realised she had made a mistake."
+            },
+            {
+              "ok": false,
+              "word": "She realised she made a mistake."
+            },
+            {
+              "ok": false,
+              "word": "She had realised she made a mistake."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Present perfect for changes over time.",
+          "level": "B2",
+          "category": "Present Perfect",
+          "explain": "Present perfect describes changes that continue into the present.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Living standards have improved significantly over the past decade."
+            },
+            {
+              "ok": false,
+              "word": "Living standards improved significantly over the past decade (finished time)."
+            },
+            {
+              "ok": false,
+              "word": "Living standards have been improved significantly over the past decade."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Future perfect continuous for duration before future time.",
+          "level": "B2",
+          "category": "Future Forms",
+          "explain": "Future perfect continuous emphasises duration up to a future point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By 2026, she will have been working here for ten years."
+            },
+            {
+              "ok": false,
+              "word": "By 2026, she will be working here for ten years."
+            },
+            {
+              "ok": false,
+              "word": "By 2026, she will have worked here for ten years (no duration emphasis)."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Present perfect vs past simple with unfinished time period.",
+          "level": "B2",
+          "category": "Present Perfect",
+          "explain": "Use present perfect when the time period includes the present.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The company has increased its profits this year."
+            },
+            {
+              "ok": false,
+              "word": "The company increased its profits this year (if year not finished)."
+            },
+            {
+              "ok": false,
+              "word": "The company has been increased its profits this year."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Past continuous + past simple for interruption.",
+          "level": "B2",
+          "category": "Past Tenses",
+          "explain": "Past continuous describes background action interrupted by past simple.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She was presenting when the system failed."
+            },
+            {
+              "ok": false,
+              "word": "She presented when the system was failing."
+            },
+            {
+              "ok": false,
+              "word": "She was present when the system failed."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

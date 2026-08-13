@@ -1,234 +1,254 @@
 {
-	"fileformat": 7,
-	"location": 0,
-	"sheetname": "UsageQuiz6A1-en",
-	"title": "Connectors",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Basic connectors (and, but, because, so, when)",
-			"sortorder": 1,
-			"learningTitle": "Connecting Ideas with Confidence",
-			"learningPoints": [
-				"Practises basic linking words for clear sentences (and, but, because, so).",
-				"Builds cause-and-result thinking (because/so).",
-				"Introduces simple time links (when, before, after).",
-				"Helps you combine short sentences into more natural speech.",
-				"ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Using 'and' to add information.",
-					"explain": "'And' connects two similar ideas. Correct: 'I have a brother and a sister.'",
-					"sentence": "I have a brother ___ a sister.",
-					"words": [
-						{
-							"ok": true,
-							"word": "and"
-						},
-						{
-							"ok": false,
-							"word": "but"
-						},
-						{
-							"ok": false,
-							"word": "because"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Using 'but' to show contrast.",
-					"explain": "'But' connects opposite or contrasting ideas.",
-					"sentence": "She is small ___ she is strong.",
-					"words": [
-						{
-							"ok": true,
-							"word": "but"
-						},
-						{
-							"ok": false,
-							"word": "and"
-						},
-						{
-							"ok": false,
-							"word": "so"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Using 'because' to give a reason.",
-					"explain": "'Because' explains why something happens.",
-					"sentence": "I stayed home ___ I was tired.",
-					"words": [
-						{
-							"ok": true,
-							"word": "because"
-						},
-						{
-							"ok": false,
-							"word": "so"
-						},
-						{
-							"ok": false,
-							"word": "but"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Using 'so' to show a result.",
-					"explain": "'So' shows the result of something.",
-					"sentence": "It was raining, ___ we stayed inside.",
-					"words": [
-						{
-							"ok": true,
-							"word": "so"
-						},
-						{
-							"ok": false,
-							"word": "because"
-						},
-						{
-							"ok": false,
-							"word": "and"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Using 'when' to show time.",
-					"explain": "'When' connects actions happening at the same time or in sequence.",
-					"sentence": "Call me ___ you arrive.",
-					"words": [
-						{
-							"ok": true,
-							"word": "when"
-						},
-						{
-							"ok": false,
-							"word": "because"
-						},
-						{
-							"ok": false,
-							"word": "but"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Using 'before' to show sequence.",
-					"explain": "'Before' shows that one action happens earlier.",
-					"sentence": "She washed her hands ___ dinner.",
-					"words": [
-						{
-							"ok": true,
-							"word": "before"
-						},
-						{
-							"ok": false,
-							"word": "after"
-						},
-						{
-							"ok": false,
-							"word": "so"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Using 'after' to show sequence.",
-					"explain": "'After' shows that one action happens later.",
-					"sentence": "He went to bed ___ he finished his homework.",
-					"words": [
-						{
-							"ok": true,
-							"word": "after"
-						},
-						{
-							"ok": false,
-							"word": "before"
-						},
-						{
-							"ok": false,
-							"word": "because"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Using 'but' to contrast two ideas.",
-					"explain": "'But' connects two opposite ideas.",
-					"sentence": "I like coffee ___ I don't like tea.",
-					"words": [
-						{
-							"ok": true,
-							"word": "but"
-						},
-						{
-							"ok": false,
-							"word": "and"
-						},
-						{
-							"ok": false,
-							"word": "so"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Using 'so' to show a result.",
-					"explain": "'So' introduces the result of the first clause.",
-					"sentence": "She studied hard, ___ she passed the test.",
-					"words": [
-						{
-							"ok": true,
-							"word": "so"
-						},
-						{
-							"ok": false,
-							"word": "because"
-						},
-						{
-							"ok": false,
-							"word": "but"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Using 'and' to connect two actions.",
-					"explain": "'And' connects two actions that both happened.",
-					"sentence": "We went to the park ___ we played football.",
-					"words": [
-						{
-							"ok": true,
-							"word": "and"
-						},
-						{
-							"ok": false,
-							"word": "because"
-						},
-						{
-							"ok": false,
-							"word": "when"
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "UsageQuiz6A1-en",
+  "title": "Connectors",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Basic connectors (and, but, because, so, when)",
+      "sortorder": 1,
+      "learningTitle": "Connecting Ideas with Confidence",
+      "learningPoints": [
+        "Practises basic linking words for clear sentences (and, but, because, so).",
+        "Builds cause-and-result thinking (because/so).",
+        "Introduces simple time links (when, before, after).",
+        "Helps you combine short sentences into more natural speech.",
+        "ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Using 'and' to add information.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'And' connects two similar ideas. Correct: 'I have a brother and a sister.'",
+          "sentence": "I have a brother ___ a sister.",
+          "words": [
+            {
+              "ok": true,
+              "word": "and"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'but' to show contrast.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'But' connects opposite or contrasting ideas.",
+          "sentence": "She is small ___ she is strong.",
+          "words": [
+            {
+              "ok": true,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "and"
+            },
+            {
+              "ok": false,
+              "word": "so"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'because' to give a reason.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'Because' explains why something happens.",
+          "sentence": "I stayed home ___ I was tired.",
+          "words": [
+            {
+              "ok": true,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "so"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'so' to show a result.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'So' shows the result of something.",
+          "sentence": "It was raining, ___ we stayed inside.",
+          "words": [
+            {
+              "ok": true,
+              "word": "so"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "and"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'when' to show time.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'When' connects actions happening at the same time or in sequence.",
+          "sentence": "Call me ___ you arrive.",
+          "words": [
+            {
+              "ok": true,
+              "word": "when"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'before' to show sequence.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'Before' shows that one action happens earlier.",
+          "sentence": "She washed her hands ___ dinner.",
+          "words": [
+            {
+              "ok": true,
+              "word": "before"
+            },
+            {
+              "ok": false,
+              "word": "after"
+            },
+            {
+              "ok": false,
+              "word": "so"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'after' to show sequence.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'After' shows that one action happens later.",
+          "sentence": "He went to bed ___ he finished his homework.",
+          "words": [
+            {
+              "ok": true,
+              "word": "after"
+            },
+            {
+              "ok": false,
+              "word": "before"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'but' to contrast two ideas.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'But' connects two opposite ideas.",
+          "sentence": "I like coffee ___ I don't like tea.",
+          "words": [
+            {
+              "ok": true,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "and"
+            },
+            {
+              "ok": false,
+              "word": "so"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'so' to show a result.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'So' introduces the result of the first clause.",
+          "sentence": "She studied hard, ___ she passed the test.",
+          "words": [
+            {
+              "ok": true,
+              "word": "so"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'and' to connect two actions.",
+          "level": "A1",
+          "category": "Connectors & Contrast",
+          "explain": "'And' connects two actions that both happened.",
+          "sentence": "We went to the park ___ we played football.",
+          "words": [
+            {
+              "ok": true,
+              "word": "and"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "when"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

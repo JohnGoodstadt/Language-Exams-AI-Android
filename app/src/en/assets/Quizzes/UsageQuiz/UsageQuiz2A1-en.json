@@ -1,234 +1,254 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz2A1-en",
-	"title": "Present Simple",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Present simple tense",
-			"sortorder": 1,
-			"learningTitle": "Building Everyday English Confidence",
-			"learningPoints": [
-				"Practises present simple for routines and facts.",
-				"Focuses on correct verb forms (I work / he works).",
-				"Includes negatives and questions (don’t/doesn’t, Do/Does).",
-				"Builds everyday speaking accuracy (daily life, habits).",
-				"ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Present simple with third person singular (verb + s).",
-					"explain": "'She' requires verb + s in the present simple. Correct form: 'She works in a hospital.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She works in a hospital."
-						},
-						{
-							"ok": false,
-							"word": "She work in a hospital."
-						},
-						{
-							"ok": false,
-							"word": "She working in a hospital."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Present simple with plural subject (base verb).",
-					"explain": "'They' uses the base verb form. 'They live in the city.' is correct.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "They live in the city."
-						},
-						{
-							"ok": false,
-							"word": "They lives in the city."
-						},
-						{
-							"ok": false,
-							"word": "They living in the city."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Do/Does in present simple questions.",
-					"explain": "With 'she', we use 'Does' + base verb. Correct form: 'Does she work on Monday?'",
-					"sentence": "Choose the correct question.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Does she work on Monday?"
-						},
-						{
-							"ok": false,
-							"word": "Does she works on Monday?"
-						},
-						{
-							"ok": false,
-							"word": "Do she work on Monday?"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Present simple negative with don't.",
-					"explain": "After 'don't', we use the base verb. Correct: 'I don't eat meat.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "I don't eat meat."
-						},
-						{
-							"ok": false,
-							"word": "I don't eats meat."
-						},
-						{
-							"ok": false,
-							"word": "I not eat meat."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Present simple negative with doesn't.",
-					"explain": "After 'doesn't', we use the base verb. Correct: 'He doesn't play football.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "He doesn't play football."
-						},
-						{
-							"ok": false,
-							"word": "He doesn't plays football."
-						},
-						{
-							"ok": false,
-							"word": "He don't play football."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Using frequency adverbs in present simple.",
-					"explain": "Adverbs like 'always' usually come before the main verb. 'She always drinks coffee.' is correct.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She always drinks coffee."
-						},
-						{
-							"ok": false,
-							"word": "She drinks always coffee."
-						},
-						{
-							"ok": false,
-							"word": "She always drink coffee."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Present simple for daily routines.",
-					"explain": "Correct structure: Subject + verb + time phrase. 'We walk to school every day.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "We walk to school every day."
-						},
-						{
-							"ok": false,
-							"word": "We walks to school every day."
-						},
-						{
-							"ok": false,
-							"word": "We are walk to school every day."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Present simple yes/no questions with 'do'.",
-					"explain": "With 'you', use 'Do' + base verb. Correct: 'Do you work in an office?'",
-					"sentence": "Choose the correct question.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Do you work in an office?"
-						},
-						{
-							"ok": false,
-							"word": "Do you works in an office?"
-						},
-						{
-							"ok": false,
-							"word": "Are you work in an office?"
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Present simple with time expressions (on Monday).",
-					"explain": "We use present simple for schedules and routines. 'She studies on Monday.'",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She studies on Monday."
-						},
-						{
-							"ok": false,
-							"word": "She study on Monday."
-						},
-						{
-							"ok": false,
-							"word": "She studying on Monday."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Present simple for general facts.",
-					"explain": "Use present simple for facts. 'The sun rises in the morning.' follows subject + verb + place/time.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "The sun rises in the morning."
-						},
-						{
-							"ok": false,
-							"word": "The sun rise in the morning."
-						},
-						{
-							"ok": false,
-							"word": "The sun is rise in the morning."
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz2A1-en",
+  "title": "Present Simple",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Present simple tense",
+      "sortorder": 1,
+      "learningTitle": "Building Everyday English Confidence",
+      "learningPoints": [
+        "Practises present simple for routines and facts.",
+        "Focuses on correct verb forms (I work / he works).",
+        "Includes negatives and questions (don’t/doesn’t, Do/Does).",
+        "Builds everyday speaking accuracy (daily life, habits).",
+        "ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Present simple with third person singular (verb + s).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "'She' requires verb + s in the present simple. Correct form: 'She works in a hospital.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She works in a hospital."
+            },
+            {
+              "ok": false,
+              "word": "She work in a hospital."
+            },
+            {
+              "ok": false,
+              "word": "She working in a hospital."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Present simple with plural subject (base verb).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "'They' uses the base verb form. 'They live in the city.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They live in the city."
+            },
+            {
+              "ok": false,
+              "word": "They lives in the city."
+            },
+            {
+              "ok": false,
+              "word": "They living in the city."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Do/Does in present simple questions.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "With 'she', we use 'Does' + base verb. Correct form: 'Does she work on Monday?'",
+          "sentence": "Choose the correct question.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Does she work on Monday?"
+            },
+            {
+              "ok": false,
+              "word": "Does she works on Monday?"
+            },
+            {
+              "ok": false,
+              "word": "Do she work on Monday?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Present simple negative with don't.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "After 'don't', we use the base verb. Correct: 'I don't eat meat.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I don't eat meat."
+            },
+            {
+              "ok": false,
+              "word": "I don't eats meat."
+            },
+            {
+              "ok": false,
+              "word": "I not eat meat."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Present simple negative with doesn't.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "After 'doesn't', we use the base verb. Correct: 'He doesn't play football.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He doesn't play football."
+            },
+            {
+              "ok": false,
+              "word": "He doesn't plays football."
+            },
+            {
+              "ok": false,
+              "word": "He don't play football."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using frequency adverbs in present simple.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "Adverbs like 'always' usually come before the main verb. 'She always drinks coffee.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She always drinks coffee."
+            },
+            {
+              "ok": false,
+              "word": "She drinks always coffee."
+            },
+            {
+              "ok": false,
+              "word": "She always drink coffee."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Present simple for daily routines.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "Correct structure: Subject + verb + time phrase. 'We walk to school every day.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We walk to school every day."
+            },
+            {
+              "ok": false,
+              "word": "We walks to school every day."
+            },
+            {
+              "ok": false,
+              "word": "We are walk to school every day."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Present simple yes/no questions with 'do'.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "With 'you', use 'Do' + base verb. Correct: 'Do you work in an office?'",
+          "sentence": "Choose the correct question.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Do you work in an office?"
+            },
+            {
+              "ok": false,
+              "word": "Do you works in an office?"
+            },
+            {
+              "ok": false,
+              "word": "Are you work in an office?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Present simple with time expressions (on Monday).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "We use present simple for schedules and routines. 'She studies on Monday.'",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She studies on Monday."
+            },
+            {
+              "ok": false,
+              "word": "She study on Monday."
+            },
+            {
+              "ok": false,
+              "word": "She studying on Monday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Present simple for general facts.",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "Use present simple for facts. 'The sun rises in the morning.' follows subject + verb + place/time.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The sun rises in the morning."
+            },
+            {
+              "ok": false,
+              "word": "The sun rise in the morning."
+            },
+            {
+              "ok": false,
+              "word": "The sun is rise in the morning."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

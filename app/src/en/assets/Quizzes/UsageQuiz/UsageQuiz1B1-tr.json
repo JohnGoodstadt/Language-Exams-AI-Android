@@ -1,145 +1,255 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz1B1-tr",
-	"title": "Common Usage Corrections",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Common grammar patterns for Turkish learners",
-			"sortorder": 1,
-			"learningTitle": "Refining Global English Usage",
-			"learningPoints": [
-				"Focuses on grammar patterns commonly influenced by Turkish sentence structure.",
-				"Improves control of prepositions and auxiliary verbs.",
-				"Builds accuracy with articles, verb forms, and natural phrasing.",
-				"Strengthens sentence structure for international communication.",
-				"Helps avoid frequent mistakes in professional and academic English.",
-				"ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Use the correct preposition after 'married'.",
-					"explain": "In English we say 'married to someone', not 'married with someone'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "He is married to her." },
-						{ "ok": false, "word": "He is married with her." },
-						{ "ok": false, "word": "He married with her." }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Use articles with singular nouns.",
-					"explain": "English requires an article before singular countable nouns.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I bought a new car yesterday." },
-						{ "ok": false, "word": "I bought new car yesterday." },
-						{ "ok": false, "word": "I bought the new car yesterday one." }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Avoid unnecessary prepositions.",
-					"explain": "The verb 'discuss' does not require the word 'about'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "We discussed the problem yesterday." },
-						{ "ok": false, "word": "We discussed about the problem yesterday." },
-						{ "ok": false, "word": "We discussed on the problem yesterday." }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Use auxiliary verbs in questions.",
-					"explain": "Questions in English require 'do/does/did'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Do you understand the instructions?" },
-						{ "ok": false, "word": "You understand the instructions?" },
-						{ "ok": false, "word": "Understand you the instructions?" }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Use present simple for general habits.",
-					"explain": "Present continuous should not be used for general habits.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She drinks coffee every morning." },
-						{ "ok": false, "word": "She is drinking coffee every morning." },
-						{ "ok": false, "word": "She drink coffee every morning." }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Use correct verb forms after 'want to'.",
-					"explain": "After 'to', the base form of the verb is required.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I want to learn English." },
-						{ "ok": false, "word": "I want learn English." },
-						{ "ok": false, "word": "I want to learning English." }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Use correct expressions for lights.",
-					"explain": "In English we say 'turn on' or 'turn off' the light.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Please turn on the light." },
-						{ "ok": false, "word": "Please open the light." },
-						{ "ok": false, "word": "Please make open the light." }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Use correct plural forms.",
-					"explain": "Plural nouns require '-s'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Many people work in this company." },
-						{ "ok": false, "word": "Many person work in this company." },
-						{ "ok": false, "word": "Many peoples work in this company." }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Use correct past tense forms.",
-					"explain": "Past actions require past tense verbs.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She went to the meeting yesterday." },
-						{ "ok": false, "word": "She go to the meeting yesterday." },
-						{ "ok": false, "word": "She gone to the meeting yesterday." }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Use natural English word order.",
-					"explain": "English word order is Subject–Verb–Object.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I finished the report yesterday." },
-						{ "ok": false, "word": "Yesterday finished I the report." },
-						{ "ok": false, "word": "I yesterday the report finished." }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz1B1-tr",
+  "title": "Common Usage Corrections",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Common grammar patterns for Turkish learners",
+      "sortorder": 1,
+      "learningTitle": "Refining Global English Usage",
+      "learningPoints": [
+        "Focuses on grammar patterns commonly influenced by Turkish sentence structure.",
+        "Improves control of prepositions and auxiliary verbs.",
+        "Builds accuracy with articles, verb forms, and natural phrasing.",
+        "Strengthens sentence structure for international communication.",
+        "Helps avoid frequent mistakes in professional and academic English.",
+        "ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Use the correct preposition after 'married'.",
+          "level": "B1",
+          "category": "",
+          "explain": "In English we say 'married to someone', not 'married with someone'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He is married to her."
+            },
+            {
+              "ok": false,
+              "word": "He is married with her."
+            },
+            {
+              "ok": false,
+              "word": "He married with her."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Use articles with singular nouns.",
+          "level": "B1",
+          "category": "",
+          "explain": "English requires an article before singular countable nouns.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I bought a new car yesterday."
+            },
+            {
+              "ok": false,
+              "word": "I bought new car yesterday."
+            },
+            {
+              "ok": false,
+              "word": "I bought the new car yesterday one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Avoid unnecessary prepositions.",
+          "level": "B1",
+          "category": "",
+          "explain": "The verb 'discuss' does not require the word 'about'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We discussed the problem yesterday."
+            },
+            {
+              "ok": false,
+              "word": "We discussed about the problem yesterday."
+            },
+            {
+              "ok": false,
+              "word": "We discussed on the problem yesterday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Use auxiliary verbs in questions.",
+          "level": "B1",
+          "category": "",
+          "explain": "Questions in English require 'do/does/did'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Do you understand the instructions?"
+            },
+            {
+              "ok": false,
+              "word": "You understand the instructions?"
+            },
+            {
+              "ok": false,
+              "word": "Understand you the instructions?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Use present simple for general habits.",
+          "level": "B1",
+          "category": "",
+          "explain": "Present continuous should not be used for general habits.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She drinks coffee every morning."
+            },
+            {
+              "ok": false,
+              "word": "She is drinking coffee every morning."
+            },
+            {
+              "ok": false,
+              "word": "She drink coffee every morning."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Use correct verb forms after 'want to'.",
+          "level": "B1",
+          "category": "",
+          "explain": "After 'to', the base form of the verb is required.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I want to learn English."
+            },
+            {
+              "ok": false,
+              "word": "I want learn English."
+            },
+            {
+              "ok": false,
+              "word": "I want to learning English."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Use correct expressions for lights.",
+          "level": "B1",
+          "category": "",
+          "explain": "In English we say 'turn on' or 'turn off' the light.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Please turn on the light."
+            },
+            {
+              "ok": false,
+              "word": "Please open the light."
+            },
+            {
+              "ok": false,
+              "word": "Please make open the light."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Use correct plural forms.",
+          "level": "B1",
+          "category": "",
+          "explain": "Plural nouns require '-s'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Many people work in this company."
+            },
+            {
+              "ok": false,
+              "word": "Many person work in this company."
+            },
+            {
+              "ok": false,
+              "word": "Many peoples work in this company."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Use correct past tense forms.",
+          "level": "B1",
+          "category": "",
+          "explain": "Past actions require past tense verbs.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She went to the meeting yesterday."
+            },
+            {
+              "ok": false,
+              "word": "She go to the meeting yesterday."
+            },
+            {
+              "ok": false,
+              "word": "She gone to the meeting yesterday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Use natural English word order.",
+          "level": "B1",
+          "category": "",
+          "explain": "English word order is Subject–Verb–Object.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I finished the report yesterday."
+            },
+            {
+              "ok": false,
+              "word": "Yesterday finished I the report."
+            },
+            {
+              "ok": false,
+              "word": "I yesterday the report finished."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,144 +1,254 @@
 {
-	"fileformat": 7,
-	"location": 0,
-	"sheetname": "UsageQuiz4A2-en",
-	"title": "Modal Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct word to complete the sentence.",
-			"description": "Can, must, have to, should",
-			"sortorder": 1,
-			"learningTitle": "Moving Beyond Basic Sentences",
-			"learningPoints": [
-				"Practises ability, obligation, and advice using modal verbs.",
-				"Builds understanding of must, have to, should, and can.",
-				"Improves real-world communication in formal and informal situations.",
-				"Prepares you for workplace and interview-style questions.",
-				"ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"sentence": "She ___ drive a car.",
-					"summary": "Use 'can' to express ability.",
-					"explain": "'Can' is used for ability and is followed by the base verb.",
-					"words": [
-						{ "word": "can", "ok": true },
-						{ "word": "must", "ok": false },
-						{ "word": "should", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"sentence": "You ___ bring your passport to the airport.",
-					"summary": "Use 'must' for strong obligation.",
-					"explain": "'Must' shows strong necessity or rules.",
-					"words": [
-						{ "word": "must", "ok": true },
-						{ "word": "can", "ok": false },
-						{ "word": "should", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"sentence": "I ___ go to work tomorrow because I have a meeting.",
-					"summary": "Use 'have to' for external obligation.",
-					"explain": "'Have to' is used when something is required by circumstances.",
-					"words": [
-						{ "word": "have to", "ok": true },
-						{ "word": "can", "ok": false },
-						{ "word": "should", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"sentence": "You ___ study more if you want to pass the exam.",
-					"summary": "Use 'should' to give advice.",
-					"explain": "'Should' expresses advice and is followed by the base verb.",
-					"words": [
-						{ "word": "should", "ok": true },
-						{ "word": "must", "ok": false },
-						{ "word": "can", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"sentence": "She ___ attend the meeting because she is sick.",
-					"summary": "Use 'can't' to express inability.",
-					"explain": "'Can't' shows inability and is followed by the base verb.",
-					"words": [
-						{ "word": "can't", "ok": true },
-						{ "word": "must", "ok": false },
-						{ "word": "have to", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"sentence": "You ___ smoke in the hospital.",
-					"summary": "Use 'mustn't' for prohibition.",
-					"explain": "'Mustn't' expresses that something is not allowed.",
-					"words": [
-						{ "word": "mustn't", "ok": true },
-						{ "word": "don't have to", "ok": false },
-						{ "word": "can", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"sentence": "You ___ buy a ticket online if you prefer.",
-					"summary": "Use 'can' for permission or possibility.",
-					"explain": "'Can' can express permission or possibility.",
-					"words": [
-						{ "word": "can", "ok": true },
-						{ "word": "must", "ok": false },
-						{ "word": "have to", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"sentence": "We ___ wake up early tomorrow for our journey.",
-					"summary": "Use 'have to' for required future plans.",
-					"explain": "'Have to' expresses obligation due to plans or rules.",
-					"words": [
-						{ "word": "have to", "ok": true },
-						{ "word": "can", "ok": false },
-						{ "word": "should", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"sentence": "You ___ bring food; we already have dinner ready.",
-					"summary": "Use 'don't have to' for no obligation.",
-					"explain": "'Don't have to' means something is not necessary.",
-					"words": [
-						{ "word": "don't have to", "ok": true },
-						{ "word": "mustn't", "ok": false },
-						{ "word": "shouldn't", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"sentence": "She ___ apologize because it was not her mistake.",
-					"summary": "Use 'doesn't have to' for no obligation (third person).",
-					"explain": "With 'she', use 'doesn't have to' to show no obligation.",
-					"words": [
-						{ "word": "doesn't have to", "ok": true },
-						{ "word": "mustn't", "ok": false },
-						{ "word": "can't", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "UsageQuiz4A2-en",
+  "title": "Modal Verbs",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct word to complete the sentence.",
+      "description": "Can, must, have to, should",
+      "sortorder": 1,
+      "learningTitle": "Moving Beyond Basic Sentences",
+      "learningPoints": [
+        "Practises ability, obligation, and advice using modal verbs.",
+        "Builds understanding of must, have to, should, and can.",
+        "Improves real-world communication in formal and informal situations.",
+        "Prepares you for workplace and interview-style questions.",
+        "ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "She ___ drive a car.",
+          "summary": "Use 'can' to express ability.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Can' is used for ability and is followed by the base verb.",
+          "words": [
+            {
+              "word": "can",
+              "ok": true
+            },
+            {
+              "word": "must",
+              "ok": false
+            },
+            {
+              "word": "should",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "You ___ bring your passport to the airport.",
+          "summary": "Use 'must' for strong obligation.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Must' shows strong necessity or rules.",
+          "words": [
+            {
+              "word": "must",
+              "ok": true
+            },
+            {
+              "word": "can",
+              "ok": false
+            },
+            {
+              "word": "should",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "I ___ go to work tomorrow because I have a meeting.",
+          "summary": "Use 'have to' for external obligation.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Have to' is used when something is required by circumstances.",
+          "words": [
+            {
+              "word": "have to",
+              "ok": true
+            },
+            {
+              "word": "can",
+              "ok": false
+            },
+            {
+              "word": "should",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "You ___ study more if you want to pass the exam.",
+          "summary": "Use 'should' to give advice.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Should' expresses advice and is followed by the base verb.",
+          "words": [
+            {
+              "word": "should",
+              "ok": true
+            },
+            {
+              "word": "must",
+              "ok": false
+            },
+            {
+              "word": "can",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "She ___ attend the meeting because she is sick.",
+          "summary": "Use 'can't' to express inability.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Can't' shows inability and is followed by the base verb.",
+          "words": [
+            {
+              "word": "can't",
+              "ok": true
+            },
+            {
+              "word": "must",
+              "ok": false
+            },
+            {
+              "word": "have to",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "You ___ smoke in the hospital.",
+          "summary": "Use 'mustn't' for prohibition.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Mustn't' expresses that something is not allowed.",
+          "words": [
+            {
+              "word": "mustn't",
+              "ok": true
+            },
+            {
+              "word": "don't have to",
+              "ok": false
+            },
+            {
+              "word": "can",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "You ___ buy a ticket online if you prefer.",
+          "summary": "Use 'can' for permission or possibility.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Can' can express permission or possibility.",
+          "words": [
+            {
+              "word": "can",
+              "ok": true
+            },
+            {
+              "word": "must",
+              "ok": false
+            },
+            {
+              "word": "have to",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "We ___ wake up early tomorrow for our journey.",
+          "summary": "Use 'have to' for required future plans.",
+          "level": "A2",
+          "category": "Future Forms",
+          "explain": "'Have to' expresses obligation due to plans or rules.",
+          "words": [
+            {
+              "word": "have to",
+              "ok": true
+            },
+            {
+              "word": "can",
+              "ok": false
+            },
+            {
+              "word": "should",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "You ___ bring food; we already have dinner ready.",
+          "summary": "Use 'don't have to' for no obligation.",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "'Don't have to' means something is not necessary.",
+          "words": [
+            {
+              "word": "don't have to",
+              "ok": true
+            },
+            {
+              "word": "mustn't",
+              "ok": false
+            },
+            {
+              "word": "shouldn't",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "She ___ apologize because it was not her mistake.",
+          "summary": "Use 'doesn't have to' for no obligation (third person).",
+          "level": "A2",
+          "category": "Modal Verbs",
+          "explain": "With 'she', use 'doesn't have to' to show no obligation.",
+          "words": [
+            {
+              "word": "doesn't have to",
+              "ok": true
+            },
+            {
+              "word": "mustn't",
+              "ok": false
+            },
+            {
+              "word": "can't",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

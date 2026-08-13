@@ -1,145 +1,255 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz1B1-vn",
-	"title": "Common Usage Corrections",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Common grammar patterns for Vietnamese learners",
-			"sortorder": 1,
-			"learningTitle": "Refining Global English Usage",
-			"learningPoints": [
-				"Focuses on grammar patterns commonly influenced by Vietnamese language structure.",
-				"Improves control of adjective forms such as interested vs interesting.",
-				"Builds accuracy with articles, plurals, and prepositions.",
-				"Strengthens sentence structure for professional and academic communication.",
-				"Helps avoid common mistakes in international English contexts.",
-				"ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Use '-ed' adjectives to describe feelings.",
-					"explain": "Adjectives ending in '-ed' describe how a person feels.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I am very interested in music." },
-						{ "ok": false, "word": "I am very interesting in music." },
-						{ "ok": false, "word": "I very interested in music." }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Use articles with singular countable nouns.",
-					"explain": "Singular countable nouns require an article such as 'a' or 'the'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She bought a new laptop yesterday." },
-						{ "ok": false, "word": "She bought new laptop yesterday." },
-						{ "ok": false, "word": "She bought the new laptop yesterday one." }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Use plural forms for countable nouns.",
-					"explain": "Plural nouns require the '-s' ending when referring to more than one.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Many students study English here." },
-						{ "ok": false, "word": "Many student study English here." },
-						{ "ok": false, "word": "Many students studies English here." }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Use correct verb form after 'to'.",
-					"explain": "After 'to', the base form of the verb should be used.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I want to improve my English skills." },
-						{ "ok": false, "word": "I want improve my English skills." },
-						{ "ok": false, "word": "I want to improving my English skills." }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Use correct prepositions with common verbs.",
-					"explain": "The verb 'listen' is followed by the preposition 'to'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She listens to music every day." },
-						{ "ok": false, "word": "She listens music every day." },
-						{ "ok": false, "word": "She listen to music every day." }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Use 'there is/there are' for existence.",
-					"explain": "'There are' is used when referring to plural objects.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "There are many restaurants in this area." },
-						{ "ok": false, "word": "Have many restaurants in this area." },
-						{ "ok": false, "word": "There have many restaurants in this area." }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Use correct past tense forms.",
-					"explain": "Past actions require past tense verbs such as 'went'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "We went to the beach last weekend." },
-						{ "ok": false, "word": "We go to the beach last weekend." },
-						{ "ok": false, "word": "We gone to the beach last weekend." }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Use 'be' verbs in sentences.",
-					"explain": "English sentences usually require a form of the verb 'to be'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She is very happy today." },
-						{ "ok": false, "word": "She very happy today." },
-						{ "ok": false, "word": "She be very happy today." }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Use correct word order in questions.",
-					"explain": "Questions require auxiliary verbs such as 'do' or 'does'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Do you like Vietnamese food?" },
-						{ "ok": false, "word": "You like Vietnamese food?" },
-						{ "ok": false, "word": "Like you Vietnamese food?" }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Use natural English expressions instead of translated structures.",
-					"explain": "English commonly uses 'make a decision' rather than 'do a decision'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She made an important decision yesterday." },
-						{ "ok": false, "word": "She did an important decision yesterday." },
-						{ "ok": false, "word": "She make an important decision yesterday." }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz1B1-vn",
+  "title": "Common Usage Corrections",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Common grammar patterns for Vietnamese learners",
+      "sortorder": 1,
+      "learningTitle": "Refining Global English Usage",
+      "learningPoints": [
+        "Focuses on grammar patterns commonly influenced by Vietnamese language structure.",
+        "Improves control of adjective forms such as interested vs interesting.",
+        "Builds accuracy with articles, plurals, and prepositions.",
+        "Strengthens sentence structure for professional and academic communication.",
+        "Helps avoid common mistakes in international English contexts.",
+        "ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Use '-ed' adjectives to describe feelings.",
+          "level": "B1",
+          "category": "",
+          "explain": "Adjectives ending in '-ed' describe how a person feels.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I am very interested in music."
+            },
+            {
+              "ok": false,
+              "word": "I am very interesting in music."
+            },
+            {
+              "ok": false,
+              "word": "I very interested in music."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Use articles with singular countable nouns.",
+          "level": "B1",
+          "category": "",
+          "explain": "Singular countable nouns require an article such as 'a' or 'the'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She bought a new laptop yesterday."
+            },
+            {
+              "ok": false,
+              "word": "She bought new laptop yesterday."
+            },
+            {
+              "ok": false,
+              "word": "She bought the new laptop yesterday one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Use plural forms for countable nouns.",
+          "level": "B1",
+          "category": "",
+          "explain": "Plural nouns require the '-s' ending when referring to more than one.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Many students study English here."
+            },
+            {
+              "ok": false,
+              "word": "Many student study English here."
+            },
+            {
+              "ok": false,
+              "word": "Many students studies English here."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Use correct verb form after 'to'.",
+          "level": "B1",
+          "category": "",
+          "explain": "After 'to', the base form of the verb should be used.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I want to improve my English skills."
+            },
+            {
+              "ok": false,
+              "word": "I want improve my English skills."
+            },
+            {
+              "ok": false,
+              "word": "I want to improving my English skills."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Use correct prepositions with common verbs.",
+          "level": "B1",
+          "category": "",
+          "explain": "The verb 'listen' is followed by the preposition 'to'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She listens to music every day."
+            },
+            {
+              "ok": false,
+              "word": "She listens music every day."
+            },
+            {
+              "ok": false,
+              "word": "She listen to music every day."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Use 'there is/there are' for existence.",
+          "level": "B1",
+          "category": "",
+          "explain": "'There are' is used when referring to plural objects.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "There are many restaurants in this area."
+            },
+            {
+              "ok": false,
+              "word": "Have many restaurants in this area."
+            },
+            {
+              "ok": false,
+              "word": "There have many restaurants in this area."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Use correct past tense forms.",
+          "level": "B1",
+          "category": "",
+          "explain": "Past actions require past tense verbs such as 'went'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We went to the beach last weekend."
+            },
+            {
+              "ok": false,
+              "word": "We go to the beach last weekend."
+            },
+            {
+              "ok": false,
+              "word": "We gone to the beach last weekend."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Use 'be' verbs in sentences.",
+          "level": "B1",
+          "category": "",
+          "explain": "English sentences usually require a form of the verb 'to be'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is very happy today."
+            },
+            {
+              "ok": false,
+              "word": "She very happy today."
+            },
+            {
+              "ok": false,
+              "word": "She be very happy today."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Use correct word order in questions.",
+          "level": "B1",
+          "category": "",
+          "explain": "Questions require auxiliary verbs such as 'do' or 'does'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Do you like Vietnamese food?"
+            },
+            {
+              "ok": false,
+              "word": "You like Vietnamese food?"
+            },
+            {
+              "ok": false,
+              "word": "Like you Vietnamese food?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Use natural English expressions instead of translated structures.",
+          "level": "B1",
+          "category": "",
+          "explain": "English commonly uses 'make a decision' rather than 'do a decision'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She made an important decision yesterday."
+            },
+            {
+              "ok": false,
+              "word": "She did an important decision yesterday."
+            },
+            {
+              "ok": false,
+              "word": "She make an important decision yesterday."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,234 +1,254 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz6A2-en",
-	"title": "Linking Words & If Clauses",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Because, so, although, if, when, before, after",
-			"sortorder": 1,
-			"learningTitle": "Advancing Toward Structured Communication",
-			"learningPoints": [
-				"Builds cause and result structures (because, so).",
-				"Introduces first conditional for real future situations.",
-				"Practises contrast with although and though.",
-				"Develops multi-clause sentence control before B1.",
-				"ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Use 'because' to give a reason.",
-					"explain": "'Because' introduces the reason clause.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She stayed home because she was sick."
-						},
-						{
-							"ok": false,
-							"word": "She stayed home so she was sick."
-						},
-						{
-							"ok": false,
-							"word": "She because was sick stayed home."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Use 'so' to show a result.",
-					"explain": "'So' connects cause and result.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "It was raining, so we stayed inside."
-						},
-						{
-							"ok": false,
-							"word": "It was raining because we stayed inside."
-						},
-						{
-							"ok": false,
-							"word": "So it was raining we stayed inside."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Use 'although' to show contrast.",
-					"explain": "'Although' introduces a contrast clause.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Although it was cold, they went to the beach."
-						},
-						{
-							"ok": false,
-							"word": "Although it was cold but they went to the beach."
-						},
-						{
-							"ok": false,
-							"word": "Although was cold they went to the beach."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "First conditional: If + present, will + base verb.",
-					"explain": "Structure: If + present simple, will + base verb.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "If you study, you will pass the exam."
-						},
-						{
-							"ok": false,
-							"word": "If you will study, you pass the exam."
-						},
-						{
-							"ok": false,
-							"word": "If you studied, you will pass the exam."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Use 'when' for future time clauses (present form).",
-					"explain": "After 'when', use present simple for future meaning.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "When I arrive, I will call you."
-						},
-						{
-							"ok": false,
-							"word": "When I will arrive, I call you."
-						},
-						{
-							"ok": false,
-							"word": "When I arrived, I will call you."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Use 'before' to show earlier action.",
-					"explain": "'Before' introduces the earlier action.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "She washed her hands before she ate dinner."
-						},
-						{
-							"ok": false,
-							"word": "She washed her hands before she will eat dinner."
-						},
-						{
-							"ok": false,
-							"word": "Before she washed her hands she ate dinner."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Use 'after' to show later action.",
-					"explain": "'After' introduces the later action in sequence.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "He went home after he finished work."
-						},
-						{
-							"ok": false,
-							"word": "He went home after he will finish work."
-						},
-						{
-							"ok": false,
-							"word": "After he went home he finished work."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Use 'if' for real future conditions.",
-					"explain": "First conditional uses present simple after 'if'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "If it is sunny, we will travel to the beach."
-						},
-						{
-							"ok": false,
-							"word": "If it will be sunny, we travel to the beach."
-						},
-						{
-							"ok": false,
-							"word": "If it was sunny, we will travel to the beach."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Use 'though' to show contrast (similar to although).",
-					"explain": "'Though' expresses contrast and does not need 'but'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "Though he was tired, he continued working."
-						},
-						{
-							"ok": false,
-							"word": "Though he was tired but he continued working."
-						},
-						{
-							"ok": false,
-							"word": "Though was tired he continued working."
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Correct clause order in first conditional.",
-					"explain": "Main clause can come first, followed by if-clause.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{
-							"ok": true,
-							"word": "We will miss the train if we leave late."
-						},
-						{
-							"ok": false,
-							"word": "We will miss the train if we will leave late."
-						},
-						{
-							"ok": false,
-							"word": "We will miss the train if we left late."
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz6A2-en",
+  "title": "Linking Words & If Clauses",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Because, so, although, if, when, before, after",
+      "sortorder": 1,
+      "learningTitle": "Advancing Toward Structured Communication",
+      "learningPoints": [
+        "Builds cause and result structures (because, so).",
+        "Introduces first conditional for real future situations.",
+        "Practises contrast with although and though.",
+        "Develops multi-clause sentence control before B1.",
+        "ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Use 'because' to give a reason.",
+          "level": "A2",
+          "category": "Connectors & Contrast",
+          "explain": "'Because' introduces the reason clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She stayed home because she was sick."
+            },
+            {
+              "ok": false,
+              "word": "She stayed home so she was sick."
+            },
+            {
+              "ok": false,
+              "word": "She because was sick stayed home."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Use 'so' to show a result.",
+          "level": "A2",
+          "category": "Connectors & Contrast",
+          "explain": "'So' connects cause and result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was raining, so we stayed inside."
+            },
+            {
+              "ok": false,
+              "word": "It was raining because we stayed inside."
+            },
+            {
+              "ok": false,
+              "word": "So it was raining we stayed inside."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Use 'although' to show contrast.",
+          "level": "A2",
+          "category": "Connectors & Contrast",
+          "explain": "'Although' introduces a contrast clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Although it was cold, they went to the beach."
+            },
+            {
+              "ok": false,
+              "word": "Although it was cold but they went to the beach."
+            },
+            {
+              "ok": false,
+              "word": "Although was cold they went to the beach."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "First conditional: If + present, will + base verb.",
+          "level": "A2",
+          "category": "Conditionals",
+          "explain": "Structure: If + present simple, will + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If you study, you will pass the exam."
+            },
+            {
+              "ok": false,
+              "word": "If you will study, you pass the exam."
+            },
+            {
+              "ok": false,
+              "word": "If you studied, you will pass the exam."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Use 'when' for future time clauses (present form).",
+          "level": "A2",
+          "category": "Future Forms",
+          "explain": "After 'when', use present simple for future meaning.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "When I arrive, I will call you."
+            },
+            {
+              "ok": false,
+              "word": "When I will arrive, I call you."
+            },
+            {
+              "ok": false,
+              "word": "When I arrived, I will call you."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Use 'before' to show earlier action.",
+          "level": "A2",
+          "category": "Connectors & Contrast",
+          "explain": "'Before' introduces the earlier action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She washed her hands before she ate dinner."
+            },
+            {
+              "ok": false,
+              "word": "She washed her hands before she will eat dinner."
+            },
+            {
+              "ok": false,
+              "word": "Before she washed her hands she ate dinner."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Use 'after' to show later action.",
+          "level": "A2",
+          "category": "Connectors & Contrast",
+          "explain": "'After' introduces the later action in sequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He went home after he finished work."
+            },
+            {
+              "ok": false,
+              "word": "He went home after he will finish work."
+            },
+            {
+              "ok": false,
+              "word": "After he went home he finished work."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Use 'if' for real future conditions.",
+          "level": "A2",
+          "category": "Conditionals",
+          "explain": "First conditional uses present simple after 'if'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If it is sunny, we will travel to the beach."
+            },
+            {
+              "ok": false,
+              "word": "If it will be sunny, we travel to the beach."
+            },
+            {
+              "ok": false,
+              "word": "If it was sunny, we will travel to the beach."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Use 'though' to show contrast (similar to although).",
+          "level": "A2",
+          "category": "Connectors & Contrast",
+          "explain": "'Though' expresses contrast and does not need 'but'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Though he was tired, he continued working."
+            },
+            {
+              "ok": false,
+              "word": "Though he was tired but he continued working."
+            },
+            {
+              "ok": false,
+              "word": "Though was tired he continued working."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Correct clause order in first conditional.",
+          "level": "A2",
+          "category": "Conditionals",
+          "explain": "Main clause can come first, followed by if-clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We will miss the train if we leave late."
+            },
+            {
+              "ok": false,
+              "word": "We will miss the train if we will leave late."
+            },
+            {
+              "ok": false,
+              "word": "We will miss the train if we left late."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

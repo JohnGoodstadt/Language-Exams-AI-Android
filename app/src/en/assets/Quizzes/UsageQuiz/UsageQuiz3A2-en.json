@@ -1,144 +1,254 @@
 {
-	"fileformat": 7,
-	"location": 0,
-	"sheetname": "UsageQuiz3A2-en",
-	"title": "Comparatives & Superlatives",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct word to complete the sentence.",
-			"description": "Comparatives and superlatives",
-			"sortorder": 1,
-			"learningTitle": "Developing Multi-Clause Skills",
-			"learningPoints": [
-				"Builds accuracy with comparative and superlative forms.",
-				"Practises short and long adjective patterns.",
-				"Improves descriptive ability in speaking and writing.",
-				"Develops structured comparison skills needed for B1.",
-				"ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"sentence": "This apartment is ___ than my old one.",
-					"summary": "Use comparative form (-er) for short adjectives.",
-					"explain": "Short adjectives form the comparative with -er. 'Bigger than' is correct.",
-					"words": [
-						{ "word": "bigger", "ok": true },
-						{ "word": "biggest", "ok": false },
-						{ "word": "more big", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"sentence": "Today is ___ than yesterday.",
-					"summary": "Comparative form of short adjectives.",
-					"explain": "Short adjectives add -er. 'Colder than' is correct.",
-					"words": [
-						{ "word": "colder", "ok": true },
-						{ "word": "coldest", "ok": false },
-						{ "word": "more cold", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"sentence": "This is the ___ restaurant in the city.",
-					"summary": "Superlative form (-est) with 'the'.",
-					"explain": "Superlatives use 'the' + adjective + -est.",
-					"words": [
-						{ "word": "best", "ok": true },
-						{ "word": "better", "ok": false },
-						{ "word": "gooder", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"sentence": "My new job is ___ than my old job.",
-					"summary": "Irregular comparative (good → better).",
-					"explain": "'Good' becomes 'better' in the comparative.",
-					"words": [
-						{ "word": "better", "ok": true },
-						{ "word": "more good", "ok": false },
-						{ "word": "best", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"sentence": "This exam is ___ than the last one.",
-					"summary": "Use 'more' with longer adjectives.",
-					"explain": "Long adjectives use 'more' for the comparative.",
-					"words": [
-						{ "word": "more difficult", "ok": true },
-						{ "word": "difficulter", "ok": false },
-						{ "word": "most difficult", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"sentence": "Summer is the ___ season for travel.",
-					"summary": "Superlative form for short adjectives.",
-					"explain": "Use 'the' + adjective + -est for superlatives.",
-					"words": [
-						{ "word": "hottest", "ok": true },
-						{ "word": "hotter", "ok": false },
-						{ "word": "more hot", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"sentence": "This smartphone is ___ than my old one.",
-					"summary": "Comparative with 'more' for longer adjectives.",
-					"explain": "Long adjectives use 'more' + adjective.",
-					"words": [
-						{ "word": "more modern", "ok": true },
-						{ "word": "modernest", "ok": false },
-						{ "word": "most modern", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"sentence": "She is the ___ student in the class.",
-					"summary": "Superlative of irregular adjective (good → best).",
-					"explain": "'Good' becomes 'best' in the superlative.",
-					"words": [
-						{ "word": "best", "ok": true },
-						{ "word": "better", "ok": false },
-						{ "word": "goodest", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"sentence": "This river is ___ than the one near my house.",
-					"summary": "Comparative with -er.",
-					"explain": "Short adjectives add -er in the comparative form.",
-					"words": [
-						{ "word": "longer", "ok": true },
-						{ "word": "longest", "ok": false },
-						{ "word": "more long", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"sentence": "This is the ___ mountain in the region.",
-					"summary": "Superlative form (-est) with 'the'.",
-					"explain": "Use 'the' + adjective + -est for the highest degree.",
-					"words": [
-						{ "word": "highest", "ok": true },
-						{ "word": "higher", "ok": false },
-						{ "word": "more high", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "UsageQuiz3A2-en",
+  "title": "Comparatives & Superlatives",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct word to complete the sentence.",
+      "description": "Comparatives and superlatives",
+      "sortorder": 1,
+      "learningTitle": "Developing Multi-Clause Skills",
+      "learningPoints": [
+        "Builds accuracy with comparative and superlative forms.",
+        "Practises short and long adjective patterns.",
+        "Improves descriptive ability in speaking and writing.",
+        "Develops structured comparison skills needed for B1.",
+        "ESOL B1 and aligns with IELTS 4.5–5.5 and TOEFL iBT 42–71 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "This apartment is ___ than my old one.",
+          "summary": "Use comparative form (-er) for short adjectives.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Short adjectives form the comparative with -er. 'Bigger than' is correct.",
+          "words": [
+            {
+              "word": "bigger",
+              "ok": true
+            },
+            {
+              "word": "biggest",
+              "ok": false
+            },
+            {
+              "word": "more big",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Today is ___ than yesterday.",
+          "summary": "Comparative form of short adjectives.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Short adjectives add -er. 'Colder than' is correct.",
+          "words": [
+            {
+              "word": "colder",
+              "ok": true
+            },
+            {
+              "word": "coldest",
+              "ok": false
+            },
+            {
+              "word": "more cold",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "This is the ___ restaurant in the city.",
+          "summary": "Superlative form (-est) with 'the'.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Superlatives use 'the' + adjective + -est.",
+          "words": [
+            {
+              "word": "best",
+              "ok": true
+            },
+            {
+              "word": "better",
+              "ok": false
+            },
+            {
+              "word": "gooder",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "My new job is ___ than my old job.",
+          "summary": "Irregular comparative (good → better).",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "'Good' becomes 'better' in the comparative.",
+          "words": [
+            {
+              "word": "better",
+              "ok": true
+            },
+            {
+              "word": "more good",
+              "ok": false
+            },
+            {
+              "word": "best",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "This exam is ___ than the last one.",
+          "summary": "Use 'more' with longer adjectives.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Long adjectives use 'more' for the comparative.",
+          "words": [
+            {
+              "word": "more difficult",
+              "ok": true
+            },
+            {
+              "word": "difficulter",
+              "ok": false
+            },
+            {
+              "word": "most difficult",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Summer is the ___ season for travel.",
+          "summary": "Superlative form for short adjectives.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Use 'the' + adjective + -est for superlatives.",
+          "words": [
+            {
+              "word": "hottest",
+              "ok": true
+            },
+            {
+              "word": "hotter",
+              "ok": false
+            },
+            {
+              "word": "more hot",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "This smartphone is ___ than my old one.",
+          "summary": "Comparative with 'more' for longer adjectives.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Long adjectives use 'more' + adjective.",
+          "words": [
+            {
+              "word": "more modern",
+              "ok": true
+            },
+            {
+              "word": "modernest",
+              "ok": false
+            },
+            {
+              "word": "most modern",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "She is the ___ student in the class.",
+          "summary": "Superlative of irregular adjective (good → best).",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "'Good' becomes 'best' in the superlative.",
+          "words": [
+            {
+              "word": "best",
+              "ok": true
+            },
+            {
+              "word": "better",
+              "ok": false
+            },
+            {
+              "word": "goodest",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "This river is ___ than the one near my house.",
+          "summary": "Comparative with -er.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Short adjectives add -er in the comparative form.",
+          "words": [
+            {
+              "word": "longer",
+              "ok": true
+            },
+            {
+              "word": "longest",
+              "ok": false
+            },
+            {
+              "word": "more long",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "This is the ___ mountain in the region.",
+          "summary": "Superlative form (-est) with 'the'.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Use 'the' + adjective + -est for the highest degree.",
+          "words": [
+            {
+              "word": "highest",
+              "ok": true
+            },
+            {
+              "word": "higher",
+              "ok": false
+            },
+            {
+              "word": "more high",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

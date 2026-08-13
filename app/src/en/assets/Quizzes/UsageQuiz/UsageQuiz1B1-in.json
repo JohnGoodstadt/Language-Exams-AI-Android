@@ -1,145 +1,255 @@
 {
-	"fileformat": 10,
-	"location": 0,
-	"sheetname": "UsageQuiz1B1-in",
-	"title": "Common Usage Corrections",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Common usage corrections for advanced learners",
-			"sortorder": 1,
-			"learningTitle": "Refining Global English Usage",
-			"learningPoints": [
-				"Focuses on grammar patterns commonly influenced by regional English varieties.",
-				"Improves control of tense, prepositions, and natural sentence structure.",
-				"Builds awareness of global standard English usage.",
-				"Strengthens clarity for professional and academic communication.",
-				"Helps avoid frequent mistakes in international contexts.",
-				"ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
-			],
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"summary": "Avoid using present continuous for permanent situations.",
-					"explain": "Present simple is used for general facts and permanent states.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I have a large family." },
-						{ "ok": false, "word": "I am having a large family." },
-						{ "ok": false, "word": "I am having large family." }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"summary": "Avoid redundant expressions like 'return back'.",
-					"explain": "The verb 'return' already implies going back.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She returned home late at night." },
-						{ "ok": false, "word": "She returned back home late at night." },
-						{ "ok": false, "word": "She came back returned home late." }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"summary": "Avoid adding unnecessary prepositions after certain verbs.",
-					"explain": "The verb 'discuss' does not require the preposition 'about'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "We discussed the proposal in detail." },
-						{ "ok": false, "word": "We discussed about the proposal in detail." },
-						{ "ok": false, "word": "We discussed on the proposal." }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"summary": "Place 'only' carefully to avoid ambiguity.",
-					"explain": "Misplaced 'only' can change the meaning of a sentence.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I only asked him for advice." },
-						{ "ok": false, "word": "Only I asked him for advice." },
-						{ "ok": false, "word": "I asked only him advice." }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"summary": "Avoid redundant expressions like 'revert back'.",
-					"explain": "'Revert' already implies returning to a previous state.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Please revert to me by tomorrow." },
-						{ "ok": false, "word": "Please revert back to me by tomorrow." },
-						{ "ok": false, "word": "Please revert me back tomorrow." }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"summary": "Use standard expressions for time references.",
-					"explain": "In standard English we say 'this morning' rather than 'today morning'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "I met him this morning." },
-						{ "ok": false, "word": "I met him today morning." },
-						{ "ok": false, "word": "I met him in today morning." }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"summary": "Use standard introductions in formal English.",
-					"explain": "'Myself Rahul' is a direct translation pattern; standard English uses 'My name is...'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "My name is Rahul." },
-						{ "ok": false, "word": "Myself Rahul." },
-						{ "ok": false, "word": "Myself is Rahul." }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"summary": "Use standard verbs for graduation.",
-					"explain": "'Pass out' means faint in international English; 'graduate' is used for education.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "She graduated from university last year." },
-						{ "ok": false, "word": "She passed out from university last year." },
-						{ "ok": false, "word": "She was pass out from university last year." }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"summary": "Avoid unnecessary auxiliary verbs.",
-					"explain": "Standard English uses 'did you understand?' not 'did you understood?'.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Did you understand the instructions?" },
-						{ "ok": false, "word": "Did you understood the instructions?" },
-						{ "ok": false, "word": "Did you understanding the instructions?" }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"summary": "Use natural phrasing instead of translated structures.",
-					"explain": "'Do one thing' is a literal translation pattern not common in standard English.",
-					"sentence": "Choose the correct sentence.",
-					"words": [
-						{ "ok": true, "word": "Please send me the document later." },
-						{ "ok": false, "word": "You do one thing, send me the document later." },
-						{ "ok": false, "word": "Do one thing, you send me document later." }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz1B1-in",
+  "title": "Common Usage Corrections",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Common usage corrections for advanced learners",
+      "sortorder": 1,
+      "learningTitle": "Refining Global English Usage",
+      "learningPoints": [
+        "Focuses on grammar patterns commonly influenced by regional English varieties.",
+        "Improves control of tense, prepositions, and natural sentence structure.",
+        "Builds awareness of global standard English usage.",
+        "Strengthens clarity for professional and academic communication.",
+        "Helps avoid frequent mistakes in international contexts.",
+        "ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Avoid using present continuous for permanent situations.",
+          "level": "B1",
+          "category": "",
+          "explain": "Present simple is used for general facts and permanent states.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I have a large family."
+            },
+            {
+              "ok": false,
+              "word": "I am having a large family."
+            },
+            {
+              "ok": false,
+              "word": "I am having large family."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Avoid redundant expressions like 'return back'.",
+          "level": "B1",
+          "category": "",
+          "explain": "The verb 'return' already implies going back.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She returned home late at night."
+            },
+            {
+              "ok": false,
+              "word": "She returned back home late at night."
+            },
+            {
+              "ok": false,
+              "word": "She came back returned home late."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Avoid adding unnecessary prepositions after certain verbs.",
+          "level": "B1",
+          "category": "",
+          "explain": "The verb 'discuss' does not require the preposition 'about'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We discussed the proposal in detail."
+            },
+            {
+              "ok": false,
+              "word": "We discussed about the proposal in detail."
+            },
+            {
+              "ok": false,
+              "word": "We discussed on the proposal."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Place 'only' carefully to avoid ambiguity.",
+          "level": "B1",
+          "category": "",
+          "explain": "Misplaced 'only' can change the meaning of a sentence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I only asked him for advice."
+            },
+            {
+              "ok": false,
+              "word": "Only I asked him for advice."
+            },
+            {
+              "ok": false,
+              "word": "I asked only him advice."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Avoid redundant expressions like 'revert back'.",
+          "level": "B1",
+          "category": "",
+          "explain": "'Revert' already implies returning to a previous state.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Please revert to me by tomorrow."
+            },
+            {
+              "ok": false,
+              "word": "Please revert back to me by tomorrow."
+            },
+            {
+              "ok": false,
+              "word": "Please revert me back tomorrow."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Use standard expressions for time references.",
+          "level": "B1",
+          "category": "",
+          "explain": "In standard English we say 'this morning' rather than 'today morning'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I met him this morning."
+            },
+            {
+              "ok": false,
+              "word": "I met him today morning."
+            },
+            {
+              "ok": false,
+              "word": "I met him in today morning."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Use standard introductions in formal English.",
+          "level": "B1",
+          "category": "",
+          "explain": "'Myself Rahul' is a direct translation pattern; standard English uses 'My name is...'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "My name is Rahul."
+            },
+            {
+              "ok": false,
+              "word": "Myself Rahul."
+            },
+            {
+              "ok": false,
+              "word": "Myself is Rahul."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Use standard verbs for graduation.",
+          "level": "B1",
+          "category": "",
+          "explain": "'Pass out' means faint in international English; 'graduate' is used for education.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She graduated from university last year."
+            },
+            {
+              "ok": false,
+              "word": "She passed out from university last year."
+            },
+            {
+              "ok": false,
+              "word": "She was pass out from university last year."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Avoid unnecessary auxiliary verbs.",
+          "level": "B1",
+          "category": "",
+          "explain": "Standard English uses 'did you understand?' not 'did you understood?'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Did you understand the instructions?"
+            },
+            {
+              "ok": false,
+              "word": "Did you understood the instructions?"
+            },
+            {
+              "ok": false,
+              "word": "Did you understanding the instructions?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Use natural phrasing instead of translated structures.",
+          "level": "B1",
+          "category": "",
+          "explain": "'Do one thing' is a literal translation pattern not common in standard English.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Please send me the document later."
+            },
+            {
+              "ok": false,
+              "word": "You do one thing, send me the document later."
+            },
+            {
+              "ok": false,
+              "word": "Do one thing, you send me document later."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
