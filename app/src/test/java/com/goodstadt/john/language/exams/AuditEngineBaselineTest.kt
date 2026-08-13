@@ -234,4 +234,51 @@ class AuditEngineBaselineTest {
     }
 
     // endregion
+
+    // region Onboarding path reference (Confidence / Readiness the device should show)
+
+    private fun stats(vararg parts: Pair<Int, Int>) =
+        AuditEngine.calculate(testScores = parts.toMap(), partProgress = emptyMap())
+
+    @Test fun `path - baseline only, perfect`() {
+        val s = stats(1 to 10); assertEquals(40, s.confidence); assertEquals(20, s.readiness)
+    }
+
+    @Test fun `path - baseline then A2, perfect`() {
+        val s = stats(1 to 10, 2 to 10); assertEquals(65, s.confidence); assertEquals(44, s.readiness)
+    }
+
+    @Test fun `path - baseline then A2 then B1, perfect`() {
+        val s = stats(1 to 10, 2 to 10, 3 to 10); assertEquals(85, s.confidence); assertEquals(72, s.readiness)
+    }
+
+    @Test fun `path - baseline then A2 B1 B2 all perfect`() {
+        val s = stats(1 to 10, 2 to 10, 3 to 10, 4 to 10); assertEquals(98, s.confidence); assertEquals(98, s.readiness)
+    }
+
+    @Test fun `path - baseline straight to B2, perfect (A2 and B1 credited)`() {
+        val s = stats(1 to 10, 4 to 10); assertEquals(98, s.confidence); assertEquals(98, s.readiness)
+    }
+
+    @Test fun `path - baseline straight to B1, perfect (A2 credited)`() {
+        val s = stats(1 to 10, 3 to 10); assertEquals(85, s.confidence); assertEquals(72, s.readiness)
+    }
+
+    @Test fun `path - baseline straight to B2, one B2 wrong`() {
+        val s = stats(1 to 10, 4 to 9); assertEquals(98, s.confidence); assertEquals(92, s.readiness)
+    }
+
+    @Test fun `path - all four done, one B2 wrong (no credit needed)`() {
+        val s = stats(1 to 10, 2 to 10, 3 to 10, 4 to 9); assertEquals(98, s.confidence); assertEquals(97, s.readiness)
+    }
+
+    @Test fun `path - baseline straight to B1, one B1 wrong`() {
+        val s = stats(1 to 10, 3 to 9); assertEquals(85, s.confidence); assertEquals(67, s.readiness)
+    }
+
+    @Test fun `path - baseline straight to a weak B2 (penalty applies)`() {
+        val s = stats(1 to 10, 4 to 5); assertEquals(98, s.confidence); assertEquals(55, s.readiness)
+    }
+
+    // endregion
 }

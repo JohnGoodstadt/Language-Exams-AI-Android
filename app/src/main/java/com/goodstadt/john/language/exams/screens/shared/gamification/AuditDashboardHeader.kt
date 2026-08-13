@@ -102,8 +102,7 @@ fun AuditDashboardHeader(
             baselineComplete = baselineComplete,
             // The unlocked test to point them at, or null if their baseline didn't master A2.
             recommendedTest = recommendedTest,
-            onSwitchLevel = { onAdjustLevel() },
-            onGoToTest = onGoToTest
+            onSwitchLevel = { onAdjustLevel() }
         )
 
         Spacer(Modifier.height(24.dp))
@@ -114,13 +113,12 @@ fun AuditDashboardHeader(
                 // Once a test is recommended (baseline placed the learner), the primary action
                 // is to go take that test; otherwise it resumes/starts the baseline audit.
                 onClick = { if (recommendedTest != null) onGoToTest(recommendedTest) else onNavigateToAudit() },
-                modifier = Modifier.fillMaxWidth().height(56.dp),
-                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
             ) {
                 Text(
                     text = if (recommendedTest != null) {
-                        "Do the ${recommendedTest.testDisplayName()} quiz to increse our confidence"
+                        "Do the ${recommendedTest.testDisplayName()} quiz"
                     } else {
                         "Verify $nextPartName"
                     },
@@ -130,9 +128,9 @@ fun AuditDashboardHeader(
             }
             Text(
                 text = "Continue the audit to increase our confidence to 98%",
-                style = MaterialTheme.typography.labelSmall,
-                color = Color.Gray,
-                modifier = Modifier.padding(top = 4.dp)
+                style = MaterialTheme.typography.bodyMedium,
+                color = Color.White,
+                modifier = Modifier.padding(top = 0.dp)
             )
         }
 
@@ -169,8 +167,7 @@ private fun AuditSummaryCard(
     placementLevel: String?,
     baselineComplete: Boolean,
     recommendedTest: ReadinessAuditLevels?,
-    onSwitchLevel: (String) -> Unit,
-    onGoToTest: (ReadinessAuditLevels) -> Unit
+    onSwitchLevel: (String) -> Unit
 ) {
     // States:
     //  - Baseline not done yet             -> prompt them to take the audit.
@@ -224,25 +221,17 @@ private fun AuditSummaryCard(
             }
         }
 
-        // Primary next step: send them to their highest unlocked test.
-        if (recommendedTest != null) {
-            Button(
-                onClick = { onGoToTest(recommendedTest) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
-            ) {
-                Text("Go to your ${recommendedTest.ESOL} test", color = Color.Black, fontWeight = FontWeight.Bold)
-            }
-        }
+        // The "go to your recommended test" action lives in the dashboard's primary button
+        // below this card, so it isn't duplicated here.
 
         // Secondary: nudge them to realign their study level with the audit's placement.
         if (hasVerdict && !isMatch) {
             Button(
                 onClick = { onSwitchLevel(placementLevel!!) },
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2C2C2E))
+                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
             ) {
-                Text("Switch to $placementLevel Mastery", color = Color.White)
+                Text("Switch app vocab to $placementLevel Mastery", color = Color.Black, fontWeight = FontWeight.Bold)
             }
         }
     }
