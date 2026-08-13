@@ -37,6 +37,7 @@ import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabScreen
 import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabViewModel
 import com.goodstadt.john.language.exams.packages.CategoryTab.StatsSheetEntryPoint
+import com.goodstadt.john.language.exams.packages.Focus.FocusScreen
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.packages.MyProgress.MyProgressScreen
@@ -143,7 +144,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                 }
             }
             // All the screen destinations remain the same
-            //composable(MeScreen.Focusing.route) { RecallScreen() }
+            composable(MeScreen.Focus.route) { FocusScreen() }
             composable(MeScreen.Settings.route) { SettingsScreen(navController = meTabNavController) }
             composable(MeScreen.Search.route) { SearchScreen() }
             composable(MeScreen.Progress.route) {

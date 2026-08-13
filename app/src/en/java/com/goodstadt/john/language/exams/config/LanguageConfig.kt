@@ -16,6 +16,7 @@ object LanguageConfig {
     val meTabMenuItems = listOf( //NOTE:  this drives the screen -- not RemoteConfig Yet -- July 2026
         "Progress",
         "Settings",
+        "Focus",
         "Vocab",
         "Word of the Day",
         "Paragraph",
