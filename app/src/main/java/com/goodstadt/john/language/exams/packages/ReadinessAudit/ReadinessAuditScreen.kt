@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.packages.ReadinessAudit
 
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,6 +27,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -34,6 +36,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Text
@@ -130,6 +133,7 @@ fun ReadinessAuditScreen(
     val stats by viewModel.auditStats.collectAsState()
 
     val lockedAnswers by viewModel.lockedAnswers.collectAsState()
+    val dontKnowIndices by viewModel.dontKnowIndices.collectAsState()
     val unlockedLevels by viewModel.unlockedLevels.collectAsState()
     val isCurrentQuestionLocked = lockedAnswers.containsKey(currentQuestionIndex)
 
@@ -448,10 +452,11 @@ fun ReadinessAuditScreen(
                             .size(10.dp) // Set size of the dot
                             .clip(CircleShape) // Make it a circle
                             .background(
-                                if (index == currentQuestionIndex) blueBright2 else dotColor(
-                                    index,
-                                    userAnswers
-                                )
+                                when {
+                                    index == currentQuestionIndex -> blueBright2       // current
+                                    dontKnowIndices.contains(index) -> orangeLight      // Don't Know
+                                    else -> dotColor(index, userAnswers)               // green/red/grey
+                                }
                             ) // Set color based on current page
                     )
                     Spacer(modifier = Modifier.width(8.dp)) // Add spacing between dots
@@ -683,17 +688,38 @@ fun ReadinessAuditScreen(
                     // 🔹 Expanding space left
                     Spacer(modifier = Modifier.weight(1f))
 
-                    if (BuildConfig.DEBUG) {
-                        Button(
-                            onClick = { viewModel.resetAuditForDebug() },
-                            modifier = Modifier
-                                .padding(top = 8.dp)
-                                .height(24.dp),
-                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
-                        ) {
-                            Text("Reset Audit (D)")
+                    // Middle controls: always a "Don't Know" button; in debug builds the
+                    // "Reset Audit (D)" button sits beside it.
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        if (BuildConfig.DEBUG) {
+                            Button(
+                                onClick = { viewModel.resetAuditForDebug() },
+                                modifier = Modifier.height(28.dp),
+                                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                            ) {
+                                Text("Reset Audit (D)")
+                            }
                         }
-//
+                        OutlinedButton(
+                            onClick = {
+                                viewModel.markDontKnow()
+                                // Skip forward like the Next arrow (last question completes the quiz).
+                                if (currentQuestionIndex < questions.lastIndex) {
+                                    viewModel.currentQuestionIndex.value += 1
+                                    infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+                                    viewModel.resetInfoButtonTapped()
+                                }
+                            },
+                            enabled = !isCurrentQuestionLocked,
+                            modifier = Modifier.height(48.dp),
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = orangeLight),
+                            border = BorderStroke(1.dp, Color.Gray.copy(alpha = 0.5f))
+                        ) {
+                            Text("Don't Know", style = MaterialTheme.typography.bodyMedium)
+                        }
                     }
                     // 🔹 Expanding space right
                     Spacer(modifier = Modifier.weight(1f))

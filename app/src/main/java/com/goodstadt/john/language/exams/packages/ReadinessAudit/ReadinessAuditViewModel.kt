@@ -19,6 +19,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
@@ -232,6 +233,17 @@ class ReadinessAuditViewModel @Inject constructor(
     val selectedQuizNumber = mutableStateOf(1)
     val currentQuestionIndex = mutableStateOf(0)
     val userAnswers = mutableStateOf(mutableMapOf<Int, Boolean>())
+
+    // Questions the learner answered "Don't Know". A Don't Know is a real, locked answer (counts
+    // as not-correct in the score), but its dot is shown ORANGE rather than red - hence tracked
+    // separately from userAnswers. Persisted per question via [dontKnowMarker] so a resumed quiz
+    // still shows orange. Membership also stops a re-press from double-counting.
+    private val _dontKnowIndices = MutableStateFlow<Set<Int>>(emptySet())
+    val dontKnowIndices: StateFlow<Set<Int>> = _dontKnowIndices.asStateFlow()
+
+    // Sentinel stored as the "chosen option" for a Don't Know, so it can never equal a real
+    // option (and never the correct one -> scores as not-correct on restore).
+    private val dontKnowMarker = "__DONT_KNOW__"
 
     //Constants
     val quizFillInTheBlanks = 7 //in iOS these are ENUMs
@@ -561,6 +573,7 @@ class ReadinessAuditViewModel @Inject constructor(
 
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
+        _dontKnowIndices.value = emptySet()
         _activeFilters.value = emptySet()
 
     }
@@ -602,12 +615,16 @@ class ReadinessAuditViewModel @Inject constructor(
 
         val questionsList = _questions.value
         val rebuiltAnswers = mutableMapOf<Int, Boolean>()
+        val restoredDontKnow = mutableSetOf<Int>()
         state.answers.forEach { (index, option) ->
             questionsList.getOrNull(index)?.let { question ->
+                // A Don't Know is stored as the marker: not correct, and its dot stays orange.
+                if (option == dontKnowMarker) restoredDontKnow.add(index)
                 rebuiltAnswers[index] = (option == question.correctOption)
             }
         }
         userAnswers.value = rebuiltAnswers
+        _dontKnowIndices.value = restoredDontKnow
 
         val answeredCount = rebuiltAnswers.size
         val quizState = when {
@@ -655,6 +672,7 @@ class ReadinessAuditViewModel @Inject constructor(
             )
             currentQuestionIndex.value = 0
             userAnswers.value.clear()
+            _dontKnowIndices.value = emptySet()
 
             loadCurrentAuditStats()
         }
@@ -783,25 +801,47 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
     }
 
-    fun updateAnswer(selectedOption: String, isCorrect: Boolean) {
+    /**
+     * "Don't Know" for the current question: a real, LOCKED answer that counts toward completion
+     * and scores as not-correct, tallied under its category as a don't-know. Its dot shows ORANGE
+     * (tracked in [_dontKnowIndices]) instead of red. Goes through updateAnswer so it locks and can
+     * complete the quiz just like a normal answer; the lock stops it double-counting.
+     */
+    fun markDontKnow() {
+        val index = currentQuestionIndex.value
+        if (isQuestionLocked(index)) return
+
+        _dontKnowIndices.value = _dontKnowIndices.value + index
+        updateAnswer(selectedOption = dontKnowMarker, isCorrect = false, outcome = AnswerOutcome.DONT_KNOW)
+        incQuizStat(success = false)
+    }
+
+    fun updateAnswer(
+        selectedOption: String,
+        isCorrect: Boolean,
+        outcome: AnswerOutcome = if (isCorrect) AnswerOutcome.CORRECT else AnswerOutcome.INCORRECT
+    ) {
         val index = currentQuestionIndex.value
         if (isQuestionLocked(index)) return // one attempt per question - already locked in
 
         userAnswers.value[index] = isCorrect
 
         // --- Strengths/weaknesses tally: count this answer against its grammar category + CEFR
-        // level. Persists and accumulates across versions. DEBUG log only - not shown to the user. ---
+        // level, in the shared store. Persists/accumulates across versions. Logs each answer, and
+        // dumps a category summary when the quiz's last question is answered. DEBUG only. ---
         _questions.value.getOrNull(index)?.let { q ->
             val cat = q.category
             val lvl = q.level
             if (!cat.isNullOrBlank() && !lvl.isNullOrBlank()) {
+                val lastQuestion = (index + 1) >= _questions.value.size
                 viewModelScope.launch {
-                    val score = auditRepository.recordCategoryResult(cat, lvl, isCorrect)
+                    val score = auditRepository.recordCategoryResult(cat, lvl, outcome)
                     Timber.d(
                         "AUDIT-CAT category=\"$cat\" level=\"$lvl\" " +
-                            "correct=${score.correct} incorrect=${score.incorrect}  " +
-                            "(this answer: ${if (isCorrect) "CORRECT" else "INCORRECT"})"
+                            "correct=${score.correct} incorrect=${score.incorrect} dontknow=${score.dontKnow}  " +
+                            "(this answer: $outcome)"
                     )
+                    if (lastQuestion) auditRepository.logCategorySummary("AUDIT ${selectedLevel.value.name}")
                 }
             }
         }

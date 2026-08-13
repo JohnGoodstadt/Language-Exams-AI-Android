@@ -15,15 +15,23 @@ import kotlinx.coroutines.flow.map
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 import java.util.Calendar
 import javax.inject.Inject
 import javax.inject.Singleton
 
 private val Context.auditDataStore by preferencesDataStore(name = "readiness_audit_prefs")
 
-/** Running tally of correct/incorrect answers for one grammar category at one CEFR level. */
+/** How a single question was answered, for the category tally. */
+enum class AnswerOutcome { CORRECT, INCORRECT, DONT_KNOW }
+
+/** Running tally of answers for one grammar category at one CEFR level. */
 @Serializable
-data class CategoryScore(val correct: Int = 0, val incorrect: Int = 0)
+data class CategoryScore(
+    val correct: Int = 0,
+    val incorrect: Int = 0,
+    val dontKnow: Int = 0
+)
 
 /**
  * Persisted state for a single quiz attempt.
@@ -92,14 +100,17 @@ class ReadinessAuditRepository @Inject constructor(
      * Adds one answer to the tally for [category] at [level] and returns the updated score.
      * Accumulates forever (a v2 retake adds fresh data), so ratios shift as the learner improves.
      */
-    suspend fun recordCategoryResult(category: String, level: String, correct: Boolean): CategoryScore {
+    suspend fun recordCategoryResult(category: String, level: String, outcome: AnswerOutcome): CategoryScore {
         val key = categoryScoreKey(category, level)
         var updated = CategoryScore()
         context.auditDataStore.edit { prefs ->
             val map = decodeCategoryScores(prefs[KEY_CATEGORY_SCORES]).toMutableMap()
             val current = map[key] ?: CategoryScore()
-            updated = if (correct) current.copy(correct = current.correct + 1)
-                      else current.copy(incorrect = current.incorrect + 1)
+            updated = when (outcome) {
+                AnswerOutcome.CORRECT -> current.copy(correct = current.correct + 1)
+                AnswerOutcome.INCORRECT -> current.copy(incorrect = current.incorrect + 1)
+                AnswerOutcome.DONT_KNOW -> current.copy(dontKnow = current.dontKnow + 1)
+            }
             map[key] = updated
             prefs[KEY_CATEGORY_SCORES] = json.encodeToString(map)
         }
@@ -109,6 +120,22 @@ class ReadinessAuditRepository @Inject constructor(
     private fun decodeCategoryScores(raw: String?): Map<String, CategoryScore> =
         if (raw.isNullOrBlank()) emptyMap()
         else try { json.decodeFromString<Map<String, CategoryScore>>(raw) } catch (e: Exception) { emptyMap() }
+
+    /**
+     * DEBUG: dumps the whole accumulated category tally (across Audit + Usage + future quizzes),
+     * weakest first. Called at the end of any 10-question quiz. Not shown to the user.
+     */
+    suspend fun logCategorySummary(source: String) {
+        val scores = categoryScores.first()
+        Timber.d("AUDIT-CAT-SUMMARY [$source] ---- ${scores.size} (category|level) entries, weakest first ----")
+        scores.entries
+            // Weakness = things they got wrong OR admitted not knowing.
+            .sortedByDescending { it.value.incorrect + it.value.dontKnow }
+            .forEach { (key, s) ->
+                val total = s.correct + s.incorrect + s.dontKnow
+                Timber.d("AUDIT-CAT-SUMMARY   $key -> correct=${s.correct} incorrect=${s.incorrect} dontknow=${s.dontKnow} (of $total)")
+            }
+    }
 
     companion object {
         // Highest audit version whose question files exist. New Audit is disabled once reached.

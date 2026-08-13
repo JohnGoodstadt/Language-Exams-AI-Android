@@ -19,8 +19,10 @@ import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
+import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
@@ -263,10 +265,15 @@ class UsageQuizViewModel @Inject constructor(
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val usageQuizRepository:UsageQuizRepository,
     private val bannerManager: BannerManager,
+    private val auditRepository: ReadinessAuditRepository,
 
     ) : ViewModel() {
 
     private val appContext: Context = application.applicationContext
+
+    // Question indices already counted toward the shared category tally this attempt - stops a
+    // re-tap on the same question from double-counting (UsageQuiz has no answer lock).
+    private val categoryRecordedIndices = mutableSetOf<Int>()
 
     //Real uiState
     private val _uiState = MutableStateFlow(UsageQuizUiState())
@@ -522,7 +529,9 @@ class UsageQuizViewModel @Inject constructor(
                 val explain = quizSection.explain
                 val title = quizSection.title
                 val page = quizSection.page
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page)
+                val level = quizSection.level
+                val category = quizSection.category
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category)
             }
         }
     }
@@ -552,6 +561,7 @@ class UsageQuizViewModel @Inject constructor(
 
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
+        categoryRecordedIndices.clear()
         _activeFilters.value = emptySet()
 
     }
@@ -680,7 +690,31 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
 
     fun updateAnswer(isCorrect: Boolean) {
-        userAnswers.value[currentQuestionIndex.value] = isCorrect
+        val index = currentQuestionIndex.value
+        userAnswers.value[index] = isCorrect
+
+        // --- Unified strengths/weaknesses tally: same shared store as the audit, keyed by
+        // (category, level). Counted once per question; logs each answer and dumps a category
+        // summary on the last question. DEBUG only - not shown to the user. ---
+        if (categoryRecordedIndices.add(index)) {
+            _questions.value.getOrNull(index)?.let { q ->
+                val cat = q.category
+                val lvl = q.level
+                if (!cat.isNullOrBlank() && !lvl.isNullOrBlank()) {
+                    val lastQuestion = (index + 1) >= _questions.value.size
+                    val outcome = if (isCorrect) AnswerOutcome.CORRECT else AnswerOutcome.INCORRECT
+                    viewModelScope.launch {
+                        val score = auditRepository.recordCategoryResult(cat, lvl, outcome)
+                        Timber.d(
+                            "USAGE-CAT category=\"$cat\" level=\"$lvl\" " +
+                                "correct=${score.correct} incorrect=${score.incorrect} dontknow=${score.dontKnow}  " +
+                                "(this answer: $outcome)"
+                        )
+                        if (lastQuestion) auditRepository.logCategorySummary("USAGE ${quizStatistics.value.filename}")
+                    }
+                }
+            }
+        }
 
         val currentTries = quizStatistics.value.tries + 1
         quizStatistics.value = quizStatistics.value.copy(
