@@ -22,9 +22,28 @@ data class FocusRow(
     val level: String,
     val score: CategoryScore
 ) {
-    // "Needs work" weight = things gotten wrong or admitted not knowing.
+    // True if it's a weakness at all: any wrong OR any admitted "don't know" (correct count ignored).
     val weakness: Int get() = score.incorrect + score.dontKnow
     val total: Int get() = score.correct + score.incorrect + score.dontKnow
+
+    // Priority = don't-knows (explicit "I don't know", weighted heavier) + incorrects (possible slip).
+    // Correct answers never lower this. Higher = nearer the top of the list.
+    val priorityScore: Int get() = score.dontKnow * DONT_KNOW_WEIGHT + score.incorrect * INCORRECT_WEIGHT
+
+    companion object {
+        const val DONT_KNOW_WEIGHT = 3
+        const val INCORRECT_WEIGHT = 1
+    }
+}
+
+/** What the Focus screen should show. */
+sealed interface FocusUiState {
+    /** Not assessed yet (baseline not done) -> nudge them to take the audit. */
+    data object NotEnoughData : FocusUiState
+    /** Assessed, but nothing weak at/below their level. */
+    data object AllCaughtUp : FocusUiState
+    /** The prioritised weak areas (already capped and sorted). */
+    data class Priorities(val rows: List<FocusRow>) : FocusUiState
 }
 
 /**
@@ -48,13 +67,24 @@ class FocusViewModel @Inject constructor(
         .map { toRows(it) }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
-    val focusRows: StateFlow<List<FocusRow>> =
-        combine(auditRepository.categoryScores, currentLevel) { scores, level ->
+    val focusState: StateFlow<FocusUiState> =
+        combine(
+            auditRepository.categoryScores,
+            currentLevel,
+            auditRepository.auditScores // to know if the baseline (part 1) has been completed
+        ) { scores, level, partScores ->
             val ceiling = levelRank(level)
-            toRows(scores).filter { row ->
-                row.weakness > 0 && levelRank(row.level).let { it in 1..ceiling }
+            val prioritised = toRows(scores)
+                .filter { it.weakness > 0 && levelRank(it.level) in 1..ceiling }
+                .sortedWith(compareByDescending<FocusRow> { it.priorityScore }.thenBy { it.category })
+                .take(MAX_FOCUS_ROWS)
+
+            when {
+                prioritised.isNotEmpty() -> FocusUiState.Priorities(prioritised)
+                partScores.containsKey(1) -> FocusUiState.AllCaughtUp   // baseline done, nothing weak
+                else -> FocusUiState.NotEnoughData                      // not assessed yet
             }
-        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), FocusUiState.NotEnoughData)
 
     val auditStats: StateFlow<AuditStats> =
         combine(auditRepository.auditDataFlow, auditRepository.confidenceBonus) { data, bonus ->
@@ -78,6 +108,9 @@ class FocusViewModel @Inject constructor(
             .sortedWith(compareByDescending<FocusRow> { it.weakness }.thenByDescending { it.total })
 
     companion object {
+        /** Never show more than this many priority areas - keep it focused. */
+        const val MAX_FOCUS_ROWS = 5
+
         /** CEFR ordering A1 < A2 < B1 < B2. Unknown levels rank high so they're excluded from focus. */
         fun levelRank(level: String): Int = when (level.trim().uppercase()) {
             "A1" -> 1

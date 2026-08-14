@@ -45,7 +45,7 @@ import com.goodstadt.john.language.exams.ui.theme.orangeLight
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
-    val focusRows by viewModel.focusRows.collectAsState()
+    val focusState by viewModel.focusState.collectAsState()
     val allRows by viewModel.allRows.collectAsState()
     val currentLevel by viewModel.currentLevel.collectAsState()
     val stats by viewModel.auditStats.collectAsState()
@@ -64,17 +64,22 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
 
         Spacer(Modifier.height(12.dp))
 
-        if (focusRows.isEmpty()) {
-            // Not enough data (or nothing weak at/below their level) -> nudge them to the audit.
-            NotEnoughDataCard(confidence = stats.confidence, onTakeAudit = { showAuditSheet = true })
-        } else {
-            Text(
-                "Areas to improve at or below your level ($currentLevel):",
-                style = MaterialTheme.typography.bodyMedium,
-                color = Color.LightGray
-            )
-            Spacer(Modifier.height(8.dp))
-            FocusTable(focusRows)
+        when (val state = focusState) {
+            is FocusUiState.NotEnoughData ->
+                NotEnoughDataCard(confidence = stats.confidence, onTakeAudit = { showAuditSheet = true })
+
+            is FocusUiState.AllCaughtUp ->
+                AllCaughtUpCard(currentLevel = currentLevel)
+
+            is FocusUiState.Priorities -> {
+                Text(
+                    "Your top priorities at or below $currentLevel:",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color.LightGray
+                )
+                Spacer(Modifier.height(8.dp))
+                FocusTable(state.rows)
+            }
         }
 
         // --- Debug section: the whole tally, unfiltered ---
@@ -153,6 +158,26 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
             style = MaterialTheme.typography.bodyMedium,
             color = Color.White
         )
+    }
+}
+
+/** Shown once the learner has been assessed and has no weak areas at/below their level. */
+@Composable
+private fun AllCaughtUpCard(currentLevel: String) {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        shape = RoundedCornerShape(12.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(Modifier.padding(16.dp)) {
+            Text("🎉 You're all caught up", color = Color(0xFF4CAF50), fontWeight = FontWeight.Bold)
+            Spacer(Modifier.height(8.dp))
+            Text(
+                "No weak areas at or below your level ($currentLevel). Keep practising to stay sharp — new gaps will show up here.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = Color.LightGray
+            )
+        }
     }
 }
 
