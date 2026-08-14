@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.packages.Focus
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.CategoryQuizRepository
 import com.goodstadt.john.language.exams.data.CategoryScore
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -14,6 +15,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 /** One line for the Focus screen: a grammar category at a CEFR level, with its tally. */
@@ -57,8 +60,25 @@ sealed interface FocusUiState {
 @HiltViewModel
 class FocusViewModel @Inject constructor(
     private val auditRepository: ReadinessAuditRepository,
-    private val userPreferencesRepository: UserPreferencesRepository
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val categoryQuizRepository: CategoryQuizRepository
 ) : ViewModel() {
+
+    /**
+     * Practice a weak category. Not wired to a quiz screen yet - for now it just builds the pooled
+     * quiz and logs what's available, proving the category bank works end to end. Later this will
+     * launch the appropriate format screen (fileformat 7 = fill-blank, 10 = choose-the-answer).
+     */
+    fun practiceCategory(row: FocusRow) {
+        viewModelScope.launch {
+            val questions = categoryQuizRepository.quizForCategory(row.category, row.level)
+            val formats = questions.map { it.fileFormat }.toSet()
+            Timber.d(
+                "FOCUS-PRACTICE category=\"${row.category}\" level=\"${row.level}\" -> " +
+                    "${questions.size} questions ready (formats=$formats). Not wired to a screen yet."
+            )
+        }
+    }
 
     val currentLevel: StateFlow<String> = userPreferencesRepository.selectedSkillLevelFlow
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), LanguageConfig.defaulSkillLevel)

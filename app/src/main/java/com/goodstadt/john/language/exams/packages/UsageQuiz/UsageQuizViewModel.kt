@@ -233,7 +233,10 @@ data class QuizQuestion(
     // CEFR band ("A2"/"B1"/"B2") for baseline-audit placement; null for other quizzes.
     val level: String? = null,
     // Grammar area this question tests (e.g. "Present Perfect"); null for non-audit quizzes.
-    val category: String? = null
+    val category: String? = null,
+    // Copied from the source file's "fileformat" (7 = fill-in-the-blank, 10 = choose-the-answer),
+    // so pooled category questions still know how to render even when mixed across files.
+    val fileFormat: Int = 0
 )
 
 //TODO: Do I need this?
@@ -531,7 +534,7 @@ class UsageQuizViewModel @Inject constructor(
                 val page = quizSection.page
                 val level = quizSection.level
                 val category = quizSection.category
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category)
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category,testData.fileFormat)
             }
         }
     }

@@ -158,6 +158,7 @@ sealed interface VocabQuizUiState {
     object NotAvailable : VocabQuizUiState // For flavors like 'zh'
 }
 
+// All flavours now nest per-level WordQuiz files under Quizzes/SectionQuiz/<level>.
 private const val QUIZ_PATH = "Quizzes/SectionQuiz"
 
 @HiltViewModel

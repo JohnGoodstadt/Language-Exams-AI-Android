@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -20,6 +22,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -78,7 +82,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
                     color = Color.LightGray
                 )
                 Spacer(Modifier.height(8.dp))
-                FocusTable(state.rows)
+                FocusTable(state.rows, onPractice = { viewModel.practiceCategory(it) })
             }
         }
 
@@ -182,28 +186,34 @@ private fun AllCaughtUpCard(currentLevel: String) {
 }
 
 @Composable
-private fun FocusTable(rows: List<FocusRow>) {
+private fun FocusTable(rows: List<FocusRow>, onPractice: ((FocusRow) -> Unit)? = null) {
     Column(Modifier.fillMaxWidth()) {
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             HeaderCell("Area", Modifier.weight(1f), TextAlign.Start)
-            HeaderCell("Lvl", Modifier.width(40.dp))
-            HeaderCell("✓", Modifier.width(40.dp))
-            HeaderCell("✗", Modifier.width(40.dp))
-            HeaderCell("?", Modifier.width(40.dp))
+            HeaderCell("Lvl", Modifier.width(36.dp))
+            HeaderCell("✓", Modifier.width(32.dp))
+            HeaderCell("✗", Modifier.width(32.dp))
+            HeaderCell("?", Modifier.width(32.dp))
+            if (onPractice != null) Spacer(Modifier.width(40.dp)) // column for the Practice button
         }
         HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
         rows.forEach { row ->
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 8.dp),
+                    .padding(vertical = 4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(row.category, Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
-                DataCell(row.level, Modifier.width(40.dp))
-                DataCell("${row.score.correct}", Modifier.width(40.dp), Color(0xFF4CAF50))
-                DataCell("${row.score.incorrect}", Modifier.width(40.dp), Color(0xFFE53935))
-                DataCell("${row.score.dontKnow}", Modifier.width(40.dp), orangeLight)
+                DataCell(row.level, Modifier.width(36.dp))
+                DataCell("${row.score.correct}", Modifier.width(32.dp), Color(0xFF4CAF50))
+                DataCell("${row.score.incorrect}", Modifier.width(32.dp), Color(0xFFE53935))
+                DataCell("${row.score.dontKnow}", Modifier.width(32.dp), orangeLight)
+                if (onPractice != null) {
+                    IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
+                        Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
+                    }
+                }
             }
             HorizontalDivider(color = Color.DarkGray.copy(alpha = 0.3f), thickness = 0.5.dp)
         }

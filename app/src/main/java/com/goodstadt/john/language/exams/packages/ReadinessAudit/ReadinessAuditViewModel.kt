@@ -543,7 +543,7 @@ class ReadinessAuditViewModel @Inject constructor(
                 val page = quizSection.page
                 val level = quizSection.level
                 val category = quizSection.category
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category)
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category,testData.fileFormat)
             }
         }
     }
