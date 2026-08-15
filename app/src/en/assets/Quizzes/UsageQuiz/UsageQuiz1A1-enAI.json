@@ -1,0 +1,71 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "UsageQuiz1A1-en",
+  "title": "Sentence Structure",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Basic sentence structure",
+      "sortorder": 1,
+      "learningTitle": "Mastering Basic Sentence Order",
+      "learningPoints": [
+        "Practises basic English word order (Subject → Verb → Object).",
+        "Builds accuracy with articles and simple noun phrases.",
+        "Trains you to spot common A1 errors quickly (missing verb, wrong order).",
+        "Improves sentence confidence for speaking and writing.",
+        "ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Basic word order in simple present sentences (Subject + Verb + Place).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "English basic structure: Subject + Verb + Place. 'I eat at home.' follows correct order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I eat at home."
+            },
+            {
+              "ok": false,
+              "word": "Eat I at home."
+            },
+            {
+              "ok": false,
+              "word": "I at home eat."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using the verb 'to be' with a job (Subject + be + article + noun).",
+          "level": "A1",
+          "category": "Present Tenses",
+          "explain": "Structure: Subject + am/is/are + a/an + job noun. 'She is a doctor.' is correct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is a doctor."
+            },
+            {
+              "ok": false,
+              "word": "She doctor is a."
+            },
+            {
+              "ok": false,
+              "word": "She is doctor."
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
