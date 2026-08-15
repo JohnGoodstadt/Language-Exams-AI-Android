@@ -102,5 +102,8 @@ object SectionQuizKeyMap {
     )
 
     /** @return the WordQuiz base key for [title] at [level], or null if none is mapped. */
-    fun keyFor(level: String, title: String): String? = byLevel[level]?.get(title.trim())
+    // German titles are real translations (e.g. "Essen & Trinken" -> "FoodandDrink"), so they're
+    // looked up explicitly; anything not listed falls back to the derived key.
+    fun keyFor(level: String, title: String): String =
+        byLevel[level]?.get(title.trim()) ?: deriveSectionQuizKey(title)
 }
