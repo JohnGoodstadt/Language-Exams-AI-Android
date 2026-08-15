@@ -188,12 +188,17 @@ private fun AllCaughtUpCard(currentLevel: String) {
 @Composable
 private fun FocusTable(rows: List<FocusRow>, onPractice: ((FocusRow) -> Unit)? = null) {
     Column(Modifier.fillMaxWidth()) {
+        // The priority list (onPractice != null) is a clean to-do list: category + level + Play.
+        // The count columns live only in the debug table below, so they stay off here.
+        val showCounts = onPractice == null
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             HeaderCell("Area", Modifier.weight(1f), TextAlign.Start)
             HeaderCell("Lvl", Modifier.width(36.dp))
-            HeaderCell("✓", Modifier.width(32.dp))
-            HeaderCell("✗", Modifier.width(32.dp))
-            HeaderCell("?", Modifier.width(32.dp))
+            if (showCounts) {
+                HeaderCell("✓", Modifier.width(32.dp))
+                HeaderCell("✗", Modifier.width(32.dp))
+                HeaderCell("?", Modifier.width(32.dp))
+            }
             if (onPractice != null) Spacer(Modifier.width(40.dp)) // column for the Practice button
         }
         HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
@@ -206,9 +211,11 @@ private fun FocusTable(rows: List<FocusRow>, onPractice: ((FocusRow) -> Unit)? =
             ) {
                 Text(row.category, Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
                 DataCell(row.level, Modifier.width(36.dp))
-                DataCell("${row.score.correct}", Modifier.width(32.dp), Color(0xFF4CAF50))
-                DataCell("${row.score.incorrect}", Modifier.width(32.dp), Color(0xFFE53935))
-                DataCell("${row.score.dontKnow}", Modifier.width(32.dp), orangeLight)
+                if (showCounts) {
+                    DataCell("${row.score.correct}", Modifier.width(32.dp), Color(0xFF4CAF50))
+                    DataCell("${row.score.incorrect}", Modifier.width(32.dp), Color(0xFFE53935))
+                    DataCell("${row.score.dontKnow}", Modifier.width(32.dp), orangeLight)
+                }
                 if (onPractice != null) {
                     IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
                         Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
