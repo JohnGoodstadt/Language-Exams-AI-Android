@@ -1,0 +1,30 @@
+{
+  "fileformat": 10,
+  "sheetname": "Grammar-PresentSimple-A1",
+  "title": "Present Simple",
+  "updatedDate": 0,
+  "location": 0,
+  "data": [
+    {
+      "title": "Present Simple",
+      "description": "PLACEHOLDER - replace with real Present Simple (A1) questions.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "Present Simple",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "explain": "Placeholder explanation for Present Simple.",
+          "summary": "Placeholder summary.",
+          "level": "A1",
+          "category": "Present Simple",
+          "words": [
+            { "word": "She goes to school every day.", "ok": true },
+            { "word": "She go to school every day.", "ok": false },
+            { "word": "She going to school every day.", "ok": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "fileformat": 10,
+  "sheetname": "Grammar-PresentPerfectContinuousAspect-B2",
+  "title": "Present Perfect Continuous & Aspect",
+  "updatedDate": 0,
+  "location": 0,
+  "data": [
+    {
+      "title": "Present Perfect Continuous & Aspect",
+      "description": "PLACEHOLDER - replace with real Present Perfect Continuous & Aspect (B2) questions.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "Present Perfect Continuous & Aspect",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "explain": "Placeholder explanation for Present Perfect Continuous & Aspect.",
+          "summary": "Placeholder summary.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "words": [
+            { "word": "She has been working here since 2019.", "ok": true },
+            { "word": "She has been work here since 2019.", "ok": false },
+            { "word": "She is been working here since 2019.", "ok": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

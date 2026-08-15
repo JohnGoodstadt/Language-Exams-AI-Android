@@ -1,0 +1,30 @@
+{
+  "fileformat": 10,
+  "sheetname": "Grammar-PresentPerfect-B1",
+  "title": "Present Perfect",
+  "updatedDate": 0,
+  "location": 0,
+  "data": [
+    {
+      "title": "Present Perfect",
+      "description": "PLACEHOLDER - replace with real Present Perfect (B1) questions.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "Present Perfect",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "explain": "Placeholder explanation for Present Perfect.",
+          "summary": "Placeholder summary.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "words": [
+            { "word": "I have never been to Japan.", "ok": true },
+            { "word": "I have never went to Japan.", "ok": false },
+            { "word": "I am never been to Japan.", "ok": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

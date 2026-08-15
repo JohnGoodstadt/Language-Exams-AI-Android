@@ -1,0 +1,30 @@
+{
+  "fileformat": 7,
+  "sheetname": "Grammar-PastPerfect-B1",
+  "title": "Past Perfect",
+  "updatedDate": 0,
+  "location": 0,
+  "data": [
+    {
+      "title": "Past Perfect",
+      "description": "PLACEHOLDER - replace with real Past Perfect (B1) questions.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "Past Perfect",
+          "page": 1,
+          "sentence": "By the time we arrived, the film _ already started.",
+          "explain": "Placeholder explanation for Past Perfect.",
+          "summary": "Placeholder summary.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "words": [
+            { "word": "had", "ok": true },
+            { "word": "has", "ok": false },
+            { "word": "was", "ok": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

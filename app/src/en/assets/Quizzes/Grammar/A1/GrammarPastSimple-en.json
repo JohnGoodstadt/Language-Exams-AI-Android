@@ -1,0 +1,30 @@
+{
+  "fileformat": 7,
+  "sheetname": "Grammar-PastSimple-A1",
+  "title": "Past Simple",
+  "updatedDate": 0,
+  "location": 0,
+  "data": [
+    {
+      "title": "Past Simple",
+      "description": "PLACEHOLDER - replace with real Past Simple (A1) questions.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "Past Simple",
+          "page": 1,
+          "sentence": "Yesterday we _ to the beach.",
+          "explain": "Placeholder explanation for Past Simple.",
+          "summary": "Placeholder summary.",
+          "level": "A1",
+          "category": "Past Simple",
+          "words": [
+            { "word": "went", "ok": true },
+            { "word": "go", "ok": false },
+            { "word": "goed", "ok": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

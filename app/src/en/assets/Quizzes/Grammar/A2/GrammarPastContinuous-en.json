@@ -1,0 +1,30 @@
+{
+  "fileformat": 7,
+  "sheetname": "Grammar-PastContinuous-A2",
+  "title": "Past Continuous",
+  "updatedDate": 0,
+  "location": 0,
+  "data": [
+    {
+      "title": "Past Continuous",
+      "description": "PLACEHOLDER - replace with real Past Continuous (A2) questions.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "Past Continuous",
+          "page": 1,
+          "sentence": "While I was cooking, the phone _ .",
+          "explain": "Placeholder explanation for Past Continuous.",
+          "summary": "Placeholder summary.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "words": [
+            { "word": "rang", "ok": true },
+            { "word": "was ringing", "ok": false },
+            { "word": "rings", "ok": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

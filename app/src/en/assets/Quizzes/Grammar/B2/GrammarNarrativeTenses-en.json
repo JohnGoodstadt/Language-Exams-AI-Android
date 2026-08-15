@@ -1,0 +1,30 @@
+{
+  "fileformat": 7,
+  "sheetname": "Grammar-NarrativeTenses-B2",
+  "title": "Narrative Tenses",
+  "updatedDate": 0,
+  "location": 0,
+  "data": [
+    {
+      "title": "Narrative Tenses",
+      "description": "PLACEHOLDER - replace with real Narrative Tenses (B2) questions.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "Narrative Tenses",
+          "page": 1,
+          "sentence": "She was exhausted because she _ been travelling all day.",
+          "explain": "Placeholder explanation for Narrative Tenses.",
+          "summary": "Placeholder summary.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "words": [
+            { "word": "had", "ok": true },
+            { "word": "has", "ok": false },
+            { "word": "was", "ok": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

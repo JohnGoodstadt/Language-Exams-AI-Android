@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.CategoryQuizRepository
 import com.goodstadt.john.language.exams.data.CategoryScore
+import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -93,21 +94,30 @@ class FocusViewModel @Inject constructor(
     private val _focusQuiz = MutableStateFlow<FocusQuizSession?>(null)
     val focusQuiz: StateFlow<FocusQuizSession?> = _focusQuiz.asStateFlow()
 
+    /** The canonical grammar grid (category × level) for the "all categories" browse list. */
+    val grammarCategories: List<GrammarRow> = categoryQuizRepository.grammarCatalog()
+
+    /** Practice a weak category from the priority list. */
+    fun practiceCategory(row: FocusRow) = openPractice(row.category, row.level)
+
+    /** Practice any category from the "all grammar categories" browse list. */
+    fun practiceGrammar(row: GrammarRow) = openPractice(row.category, row.level)
+
     /**
-     * Practice a weak category: pull the pooled questions for this (category, level) and open the
-     * quiz sheet. Questions carry their own fileFormat (7 = fill-blank, 10 = choose-the-answer); the
-     * sheet renders both. A category with no pooled questions just no-ops.
+     * Pull the pooled questions for this (category, level) and open the quiz sheet. Questions carry
+     * their own fileFormat (7 = fill-blank, 10 = choose-the-answer); the sheet renders both. A
+     * category with no questions just no-ops.
      */
-    fun practiceCategory(row: FocusRow) {
+    private fun openPractice(category: String, level: String) {
         viewModelScope.launch {
-            val questions = categoryQuizRepository.quizForCategory(row.category, row.level)
+            val questions = categoryQuizRepository.quizForCategory(category, level)
             val formats = questions.map { it.fileFormat }.toSet()
             Timber.d(
-                "FOCUS-PRACTICE category=\"${row.category}\" level=\"${row.level}\" -> " +
+                "FOCUS-PRACTICE category=\"$category\" level=\"$level\" -> " +
                     "${questions.size} questions ready (formats=$formats)."
             )
             if (questions.isNotEmpty()) {
-                _focusQuiz.value = FocusQuizSession(row.category, row.level, questions)
+                _focusQuiz.value = FocusQuizSession(category, level, questions)
             }
         }
     }

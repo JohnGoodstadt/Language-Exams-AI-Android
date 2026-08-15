@@ -52,6 +52,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
@@ -99,6 +100,22 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
                 Spacer(Modifier.height(8.dp))
                 FocusTable(state.rows, onPractice = { viewModel.practiceCategory(it) })
             }
+        }
+
+        // --- All grammar categories: browse & practise anything, not just tested-weak areas. ---
+        // (Starting point for the "weak -> all categories" filter; keep or drop once decided.)
+        if (viewModel.grammarCategories.isNotEmpty()) {
+            Spacer(Modifier.height(24.dp))
+            Text(
+                "All grammar categories",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(Modifier.height(8.dp))
+            GrammarCatalogTable(
+                rows = viewModel.grammarCategories,
+                onPractice = { viewModel.practiceGrammar(it) }
+            )
         }
 
         // --- Debug section: the whole tally, unfiltered ---
@@ -392,6 +409,34 @@ private fun FocusTable(rows: List<FocusRow>, onPractice: ((FocusRow) -> Unit)? =
                     IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
                         Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
                     }
+                }
+            }
+            HorizontalDivider(color = Color.DarkGray.copy(alpha = 0.3f), thickness = 0.5.dp)
+        }
+    }
+}
+
+/** The full canonical grammar grid (category × level), each row playable. */
+@Composable
+private fun GrammarCatalogTable(rows: List<GrammarRow>, onPractice: (GrammarRow) -> Unit) {
+    Column(Modifier.fillMaxWidth()) {
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            HeaderCell("Area", Modifier.weight(1f), TextAlign.Start)
+            HeaderCell("Lvl", Modifier.width(36.dp))
+            Spacer(Modifier.width(40.dp))
+        }
+        HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
+        rows.forEach { row ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(row.category, Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
+                DataCell(row.level, Modifier.width(36.dp))
+                IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
+                    Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
                 }
             }
             HorizontalDivider(color = Color.DarkGray.copy(alpha = 0.3f), thickness = 0.5.dp)

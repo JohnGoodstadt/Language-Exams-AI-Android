@@ -71,14 +71,61 @@ class CategoryQuizRepository @Inject constructor(
         }
 
     /**
-     * A practice quiz for [category]. Prefers questions at [level] (exact CEFR match); if there are
-     * none at that level, falls back to the whole category. Shuffled and capped at [max].
+     * A practice quiz for [category].
+     *
+     * Canonical [GrammarCatalog] categories load directly from their own file
+     * `Quizzes/Grammar/<level>/Grammar<key>-<lang>.json` (level = subfolder, category = filename key).
+     * Anything else (legacy audit/usage categories) is pooled from the scanned index: questions at
+     * [level] (exact CEFR match) if any, otherwise the whole category. Shuffled and capped at [max].
      */
     suspend fun quizForCategory(category: String, level: String? = null, max: Int = 10): List<QuizQuestion> {
+        GrammarCatalog.fileKeyFor(category)?.let { key ->
+            val fromGrammar = withContext(Dispatchers.IO) { loadGrammarFile(key, level) }
+            if (fromGrammar.isNotEmpty()) return fromGrammar.shuffled().take(max)
+            // Empty/missing grammar file -> fall through to the legacy pool below.
+        }
         val all = ensureIndex()[category].orEmpty()
         val atLevel = if (level.isNullOrBlank()) all
         else all.filter { it.level.equals(level, ignoreCase = true) }
         return atLevel.ifEmpty { all }.shuffled().take(max)
+    }
+
+    /** The catalogue rows (category × level) for the Focus "all categories" browse view. */
+    fun grammarCatalog(): List<GrammarRow> = GrammarCatalog.rows
+
+    /**
+     * Load one canonical grammar quiz file. The file is found by prefix so the flavour's language
+     * suffix (-en / -de) doesn't need to be hard-coded here.
+     */
+    private fun loadGrammarFile(fileKey: String, level: String?): List<QuizQuestion> {
+        if (level.isNullOrBlank()) return emptyList()
+        val dir = "Quizzes/Grammar/$level"
+        val file = context.assets.list(dir).orEmpty()
+            .firstOrNull { it.startsWith("Grammar$fileKey-") && it.endsWith(".json") }
+            ?: return emptyList()
+        val root = runCatching {
+            context.assets.open("$dir/$file").bufferedReader().use {
+                json.decodeFromString<TestMyselfListRoot>(it.readText())
+            }
+        }.getOrNull() ?: return emptyList()
+
+        val display = GrammarCatalog.displayNameFor(fileKey)
+        return root.data.flatMap { group ->
+            group.sections.map { sec ->
+                QuizQuestion(
+                    sentence = sec.sentence,
+                    words = sec.words.map { it.word },
+                    correctOption = sec.words.firstOrNull { it.ok }?.word ?: "",
+                    summary = sec.summary,
+                    explain = sec.explain,
+                    title = sec.title,
+                    page = sec.page,
+                    level = sec.level ?: level,
+                    category = sec.category?.trim()?.ifEmpty { null } ?: display,
+                    fileFormat = root.fileFormat
+                )
+            }
+        }
     }
 
     /** All categories that currently have at least one tagged question. */
