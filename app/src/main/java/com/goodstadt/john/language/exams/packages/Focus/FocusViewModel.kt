@@ -6,12 +6,10 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.CategoryQuizRepository
 import com.goodstadt.john.language.exams.data.CategoryScore
 import com.goodstadt.john.language.exams.data.GrammarRow
-import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.managers.AuditEngine
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.AuditStats
-import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -54,26 +52,8 @@ sealed interface FocusUiState {
     data class Priorities(val rows: List<FocusRow>) : FocusUiState
 }
 
-/**
- * A live Focus practice quiz: the pooled questions for one weak (category, level), plus where the
- * learner is up to. Answers are routed to the shared category tally (not word-mastery), so practising
- * a weak area updates the very list it came from.
- */
-data class FocusQuizSession(
-    val category: String,
-    val level: String,
-    val questions: List<QuizQuestion>,
-    val index: Int = 0,
-    /** First-answer correctness per question index - drives the progress dots and Correct count. */
-    val answers: Map<Int, Boolean> = emptyMap(),
-    /** Total taps (a question can be retried) - shown as "Tries". */
-    val tries: Int = 0,
-    /** Indices already written to the tally, so a retry never double-counts. */
-    val recorded: Set<Int> = emptySet()
-) {
-    val current: QuizQuestion? get() = questions.getOrNull(index)
-    val correct: Int get() = answers.count { it.value }
-}
+/** Which (category, level) the Focus screen is practising right now - drives the quiz bottom sheet. */
+data class PracticeTarget(val category: String, val level: String)
 
 /**
  * Focus page data. Reads the shared (category, level) tally the Audit/Usage quizzes write into and
@@ -90,78 +70,25 @@ class FocusViewModel @Inject constructor(
     private val categoryQuizRepository: CategoryQuizRepository
 ) : ViewModel() {
 
-    /** The active practice quiz (bottom sheet), or null when none is open. */
-    private val _focusQuiz = MutableStateFlow<FocusQuizSession?>(null)
-    val focusQuiz: StateFlow<FocusQuizSession?> = _focusQuiz.asStateFlow()
+    /** The (category, level) whose quiz sheet is open, or null when none is. */
+    private val _practiceTarget = MutableStateFlow<PracticeTarget?>(null)
+    val practiceTarget: StateFlow<PracticeTarget?> = _practiceTarget.asStateFlow()
 
     /** The canonical grammar grid (category × level) for the "all categories" browse list. */
     val grammarCategories: List<GrammarRow> = categoryQuizRepository.grammarCatalog()
 
     /** Practice a weak category from the priority list. */
-    fun practiceCategory(row: FocusRow) = openPractice(row.category, row.level)
+    fun practiceCategory(row: FocusRow) {
+        _practiceTarget.value = PracticeTarget(row.category, row.level)
+    }
 
     /** Practice any category from the "all grammar categories" browse list. */
-    fun practiceGrammar(row: GrammarRow) = openPractice(row.category, row.level)
-
-    /**
-     * Pull the pooled questions for this (category, level) and open the quiz sheet. Questions carry
-     * their own fileFormat (7 = fill-blank, 10 = choose-the-answer); the sheet renders both. A
-     * category with no questions just no-ops.
-     */
-    private fun openPractice(category: String, level: String) {
-        viewModelScope.launch {
-            val questions = categoryQuizRepository.quizForCategory(category, level)
-            val formats = questions.map { it.fileFormat }.toSet()
-            Timber.d(
-                "FOCUS-PRACTICE category=\"$category\" level=\"$level\" -> " +
-                    "${questions.size} questions ready (formats=$formats)."
-            )
-            if (questions.isNotEmpty()) {
-                _focusQuiz.value = FocusQuizSession(category, level, questions)
-            }
-        }
+    fun practiceGrammar(row: GrammarRow) {
+        _practiceTarget.value = PracticeTarget(row.category, row.level)
     }
 
-    /**
-     * Record an answer to the current Focus question. Every tap counts as a try; the outcome is
-     * written to the category tally only once per question (first attempt), mirroring how the audit
-     * scores a question. This is the "saving of scores" change: Focus practice feeds the shared
-     * (category, level) tally rather than word-mastery.
-     */
-    fun answerFocusQuiz(isCorrect: Boolean) {
-        val session = _focusQuiz.value ?: return
-        val idx = session.index
-        val firstAttempt = !session.recorded.contains(idx)
-
-        _focusQuiz.value = session.copy(
-            answers = if (firstAttempt) session.answers + (idx to isCorrect) else session.answers,
-            tries = session.tries + 1,
-            recorded = session.recorded + idx
-        )
-
-        if (firstAttempt) {
-            viewModelScope.launch {
-                auditRepository.recordCategoryResult(
-                    session.category,
-                    session.level,
-                    if (isCorrect) AnswerOutcome.CORRECT else AnswerOutcome.INCORRECT
-                )
-            }
-        }
-    }
-
-    fun focusQuizNext() {
-        val s = _focusQuiz.value ?: return
-        if (s.index < s.questions.lastIndex) _focusQuiz.value = s.copy(index = s.index + 1)
-    }
-
-    fun focusQuizPrev() {
-        val s = _focusQuiz.value ?: return
-        if (s.index > 0) _focusQuiz.value = s.copy(index = s.index - 1)
-    }
-
-    fun dismissFocusQuiz() {
-        _focusQuiz.value = null
+    fun dismissPractice() {
+        _practiceTarget.value = null
     }
 
     val currentLevel: StateFlow<String> = userPreferencesRepository.selectedSkillLevelFlow

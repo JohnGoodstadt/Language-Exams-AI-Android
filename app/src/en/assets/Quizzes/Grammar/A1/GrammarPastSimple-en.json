@@ -1,27 +1,164 @@
 {
   "fileformat": 7,
-  "sheetname": "Grammar-PastSimple-A1",
+  "location": 0,
+  "sheetname": "GrammarPastSimpleA1-en",
   "title": "Past Simple",
   "updatedDate": 0,
-  "location": 0,
   "data": [
     {
-      "title": "Past Simple",
-      "description": "PLACEHOLDER - replace with real Past Simple (A1) questions.",
+      "title": "Complete each sentence by choosing the correct word.",
+      "description": "Practise the Past Simple tense at A1 level using regular and common irregular verbs.",
       "sortorder": 1,
+      "learningTitle": "Using the Past Simple",
+      "learningPoints": [
+        "Use the Past Simple to talk about finished actions in the past.",
+        "Regular verbs usually end in -ed in the Past Simple.",
+        "Many common verbs have irregular past forms such as went, saw and had.",
+        "Use did and didn't for Past Simple questions and negatives.",
+        "Learn to recognise common past time expressions such as yesterday, last week and ago.",
+        "Build confidence using the most common A1 past tense verbs.",
+        "Develop accurate speaking and writing about past events.",
+        "Supports CEFR A1 grammar for everyday communication."
+      ],
       "sections": [
         {
-          "title": "Past Simple",
+          "title": "",
           "page": 1,
-          "sentence": "Yesterday we _ to the beach.",
-          "explain": "Placeholder explanation for Past Simple.",
-          "summary": "Placeholder summary.",
+          "summary": "Using the irregular past tense of 'go'.",
           "level": "A1",
           "category": "Past Simple",
+          "explain": "GO becomes WENT in the Past Simple.",
+          "sentence": "Yesterday I _____ to the park.",
           "words": [
-            { "word": "went", "ok": true },
-            { "word": "go", "ok": false },
-            { "word": "goed", "ok": false }
+            { "ok": true, "word": "went" },
+            { "ok": false, "word": "go" },
+            { "ok": false, "word": "gone" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using the regular past tense of 'play'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "Most regular verbs add -ED in the Past Simple.",
+          "sentence": "They _____ football after school.",
+          "words": [
+            { "ok": true, "word": "played" },
+            { "ok": false, "word": "play" },
+            { "ok": false, "word": "playing" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using the irregular past tense of 'have'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "HAVE becomes HAD in the Past Simple.",
+          "sentence": "She _____ breakfast at eight o'clock.",
+          "words": [
+            { "ok": true, "word": "had" },
+            { "ok": false, "word": "has" },
+            { "ok": false, "word": "have" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using the irregular past tense of 'see'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "SEE becomes SAW in the Past Simple.",
+          "sentence": "We _____ a beautiful rainbow.",
+          "words": [
+            { "ok": true, "word": "saw" },
+            { "ok": false, "word": "see" },
+            { "ok": false, "word": "seen" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using the regular past tense of 'watch'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "WATCH becomes WATCHED in the Past Simple.",
+          "sentence": "He _____ television last night.",
+          "words": [
+            { "ok": true, "word": "watched" },
+            { "ok": false, "word": "watch" },
+            { "ok": false, "word": "watching" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using the irregular past tense of 'eat'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "EAT becomes ATE in the Past Simple.",
+          "sentence": "My family _____ dinner together.",
+          "words": [
+            { "ok": true, "word": "ate" },
+            { "ok": false, "word": "eat" },
+            { "ok": false, "word": "eaten" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using the regular past tense of 'visit'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "VISIT becomes VISITED in the Past Simple.",
+          "sentence": "I _____ my grandparents last weekend.",
+          "words": [
+            { "ok": true, "word": "visited" },
+            { "ok": false, "word": "visit" },
+            { "ok": false, "word": "visiting" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using the irregular past tense of 'buy'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "BUY becomes BOUGHT in the Past Simple.",
+          "sentence": "Dad _____ some milk yesterday.",
+          "words": [
+            { "ok": true, "word": "bought" },
+            { "ok": false, "word": "buy" },
+            { "ok": false, "word": "buyed" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using the regular past tense of 'open'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "OPEN becomes OPENED in the Past Simple.",
+          "sentence": "She _____ the window because it was hot.",
+          "words": [
+            { "ok": true, "word": "opened" },
+            { "ok": false, "word": "open" },
+            { "ok": false, "word": "opening" }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using the irregular past tense of 'write'.",
+          "level": "A1",
+          "category": "Past Simple",
+          "explain": "WRITE becomes WROTE in the Past Simple.",
+          "sentence": "Tom _____ a letter to his friend.",
+          "words": [
+            { "ok": true, "word": "wrote" },
+            { "ok": false, "word": "write" },
+            { "ok": false, "word": "written" }
           ]
         }
       ]
