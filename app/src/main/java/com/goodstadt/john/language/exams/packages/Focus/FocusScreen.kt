@@ -1,6 +1,9 @@
 package com.goodstadt.john.language.exams.packages.Focus
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,7 +18,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
@@ -28,9 +30,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.ui.draw.clip
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -55,7 +57,6 @@ import com.goodstadt.john.language.exams.ui.theme.orangeLight
 @Composable
 fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val focusState by viewModel.focusState.collectAsState()
-    val allRows by viewModel.allRows.collectAsState()
     val currentLevel by viewModel.currentLevel.collectAsState()
     val stats by viewModel.auditStats.collectAsState()
     val auditVersion by viewModel.auditVersion.collectAsState()
@@ -64,7 +65,6 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val grammarCatalog by viewModel.grammarCatalog.collectAsState()
 
     var showAuditSheet by remember { mutableStateOf(false) }
-    var answeredOnly by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -96,68 +96,53 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
             }
         }
 
-        // --- All grammar categories: browse & practise anything, not just tested-weak areas. ---
-        // Shows the learner's running score per category. (Starting point for the "weak -> all
-        // categories" filter; keep or drop once decided.)
+        // --- Category progress: gamification-style progress bar per category (green correct / red
+        // incorrect / grey not done, out of 10), modelled on TopicProgressRow. Per CEFR level, shows
+        // only categories with a coloured bar (attempted) PLUS one untouched category as a nudge (the
+        // topmost not-yet-attempted at that level). Tapping a row opens that category's quiz.
+        // (Later: drop levels above the learner's level.) ---
         if (grammarCatalog.isNotEmpty()) {
-            Spacer(Modifier.height(24.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    "All grammar categories",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
-                // Toggle: when selected, show only categories the learner has answered (non-zero
-                // score); when unselected, show the whole grid. FilterChip so the on/off state is
-                // visually obvious.
-                FilterChip(
-                    selected = answeredOnly,
-                    onClick = { answeredOnly = !answeredOnly },
-                    label = { Text("Answered only") },
-                    leadingIcon = if (answeredOnly) {
-                        { Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp)) }
-                    } else null
-                )
-            }
-            Spacer(Modifier.height(8.dp))
-            val shownEntries = if (answeredOnly) {
-                grammarCatalog.filter { it.score.correct + it.score.incorrect + it.score.dontKnow > 0 }
-            } else {
-                grammarCatalog
-            }
-            if (shownEntries.isEmpty()) {
-                Text(
-                    "No categories answered yet.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = Color.Gray
-                )
-            } else {
-                GrammarCatalogTable(
-                    entries = shownEntries,
-                    onPractice = { viewModel.practiceGrammar(it) }
-                )
-            }
-        }
+            fun answeredCount(e: GrammarCatalogEntry) = e.score.correct + e.score.incorrect + e.score.dontKnow
 
-        // --- Debug section: the whole tally, unfiltered ---
-        Spacer(Modifier.height(28.dp))
-        HorizontalDivider(color = Color.DarkGray)
-        Spacer(Modifier.height(8.dp))
-        Text(
-            "All Focus data (debug)",
-            style = MaterialTheme.typography.labelMedium,
-            fontWeight = FontWeight.Bold,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(6.dp))
-        if (allRows.isEmpty()) {
-            Text("(no data yet)", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
-        } else {
-            FocusTable(allRows)
+            Spacer(Modifier.height(20.dp))
+            Text(
+                "Category progress",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold
+            )
+            listOf("A1", "A2", "B1", "B2").forEach { level ->
+                val levelAll = grammarCatalog.filter { it.row.level == level }
+                // One nudge per level: the first not-yet-attempted category at this level.
+                val nudge = levelAll.firstOrNull { answeredCount(it) == 0 }
+                val levelEntries = levelAll.filter { answeredCount(it) > 0 || it === nudge }
+                if (levelEntries.isNotEmpty()) {
+                    Spacer(Modifier.height(12.dp))
+                    Text(
+                        level,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = orangeLight
+                    )
+                    Spacer(Modifier.height(6.dp))
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+                        shape = RoundedCornerShape(16.dp),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            verticalArrangement = Arrangement.spacedBy(14.dp)
+                        ) {
+                            levelEntries.forEach { entry ->
+                                CategoryProgressBarRow(
+                                    entry = entry,
+                                    onClick = { viewModel.practiceGrammar(entry.row) }
+                                )
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -297,54 +282,52 @@ private fun FocusTable(rows: List<FocusRow>, onPractice: ((FocusRow) -> Unit)? =
     }
 }
 
-/** The full canonical grammar grid (category × level), each row showing the learner's running score
- *  and a Play button. */
+/**
+ * One category as a gamification-style progress bar (modelled on TopicProgressRow). Out of [total]
+ * questions: green = correct, red = incorrect, grey = not done. If the learner has answered more
+ * than [total] over repeated attempts, the bar scales to that larger total so it never overflows.
+ */
 @Composable
-private fun GrammarCatalogTable(entries: List<GrammarCatalogEntry>, onPractice: (GrammarRow) -> Unit) {
-    Column(Modifier.fillMaxWidth()) {
-        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            HeaderCell("Area", Modifier.weight(1f), TextAlign.Start)
-            HeaderCell("Lvl", Modifier.width(32.dp))
-            HeaderCell("✓", Modifier.width(28.dp))
-            HeaderCell("✗", Modifier.width(28.dp))
-            // The audit feeds these categories and does have a "Don't Know" button, so ? can be > 0.
-            HeaderCell("?", Modifier.width(28.dp))
-            Spacer(Modifier.width(40.dp))
+private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Unit, total: Int = 10) {
+    val s = entry.score
+    val answered = s.correct + s.incorrect + s.dontKnow
+    val denom = maxOf(total, answered).toFloat()
+    val greenFrac = s.correct / denom
+    val redFrac = s.incorrect / denom
+    val greyFrac = (1f - greenFrac - redFrac).coerceAtLeast(0f)
+
+    // Whole row is tappable and opens the same quiz as the Play button above.
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() },
+        verticalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = entry.row.category,
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                color = if (answered > 0) Color.White else Color.Gray,
+                modifier = Modifier.weight(1f)
+            )
+            Text(
+                text = if (answered > 0) "${s.correct}/$total" else "-",
+                style = MaterialTheme.typography.labelSmall,
+                color = Color.Gray
+            )
         }
-        HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
-        entries.forEach { entry ->
-            val row = entry.row
-            val s = entry.score
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 4.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                // Short label is primary, full name a dim subtitle beneath.
-                Column(Modifier.weight(1f)) {
-                    Text(
-                        row.shortLabel,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.SemiBold,
-                        color = orangeLight
-                    )
-                    Text(
-                        row.category,
-                        style = MaterialTheme.typography.labelSmall,
-                        color = Color.Gray
-                    )
-                }
-                DataCell(row.level, Modifier.width(32.dp))
-                DataCell("${s.correct}", Modifier.width(28.dp), Color(0xFF4CAF50))
-                DataCell("${s.incorrect}", Modifier.width(28.dp), Color(0xFFE53935))
-                // Blank out a zero "?" so the occasional non-zero don't-know stands out.
-                DataCell(if (s.dontKnow == 0) "" else "${s.dontKnow}", Modifier.width(28.dp), orangeLight)
-                IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
-                    Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
-                }
-            }
-            HorizontalDivider(color = Color.DarkGray.copy(alpha = 0.3f), thickness = 0.5.dp)
+        // Segmented bar: grey track with green + red segments drawn from the left.
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(8.dp)
+                .clip(RoundedCornerShape(4.dp))
+                .background(Color.Gray.copy(alpha = 0.25f))
+        ) {
+            if (greenFrac > 0f) Box(Modifier.fillMaxHeight().weight(greenFrac).background(Color(0xFF4CAF50)))
+            if (redFrac > 0f) Box(Modifier.fillMaxHeight().weight(redFrac).background(Color(0xFFE53935)))
+            if (greyFrac > 0f) Box(Modifier.fillMaxHeight().weight(greyFrac))
         }
     }
 }
