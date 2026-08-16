@@ -15,6 +15,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
@@ -27,6 +28,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -62,6 +64,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val grammarCatalog by viewModel.grammarCatalog.collectAsState()
 
     var showAuditSheet by remember { mutableStateOf(false) }
+    var answeredOnly by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -98,16 +101,46 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
         // categories" filter; keep or drop once decided.)
         if (grammarCatalog.isNotEmpty()) {
             Spacer(Modifier.height(24.dp))
-            Text(
-                "All grammar categories",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    "All grammar categories",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                // Toggle: when selected, show only categories the learner has answered (non-zero
+                // score); when unselected, show the whole grid. FilterChip so the on/off state is
+                // visually obvious.
+                FilterChip(
+                    selected = answeredOnly,
+                    onClick = { answeredOnly = !answeredOnly },
+                    label = { Text("Answered only") },
+                    leadingIcon = if (answeredOnly) {
+                        { Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp)) }
+                    } else null
+                )
+            }
             Spacer(Modifier.height(8.dp))
-            GrammarCatalogTable(
-                entries = grammarCatalog,
-                onPractice = { viewModel.practiceGrammar(it) }
-            )
+            val shownEntries = if (answeredOnly) {
+                grammarCatalog.filter { it.score.correct + it.score.incorrect + it.score.dontKnow > 0 }
+            } else {
+                grammarCatalog
+            }
+            if (shownEntries.isEmpty()) {
+                Text(
+                    "No categories answered yet.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color.Gray
+                )
+            } else {
+                GrammarCatalogTable(
+                    entries = shownEntries,
+                    onPractice = { viewModel.practiceGrammar(it) }
+                )
+            }
         }
 
         // --- Debug section: the whole tally, unfiltered ---
