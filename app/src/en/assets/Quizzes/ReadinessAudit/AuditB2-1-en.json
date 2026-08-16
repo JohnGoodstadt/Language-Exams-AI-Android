@@ -13,22 +13,22 @@
         {
           "title": "",
           "page": 1,
-          "sentence": "Choose the correct sentence using the third conditional.",
-          "summary": "Third Conditional.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Present Perfect Continuous & Aspect",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "Use 'if' + past perfect and 'would have' + past participle to describe an unreal past situation.",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "Present perfect continuous is 'have been' + -ing for an action continuing up to now: 'have been waiting'. 'have been waited' misuses the participle, and 'am waiting' loses the up-to-now meaning.",
           "words": [
             {
-              "word": "If I had known about the meeting, I would have attended.",
+              "word": "I have been waiting for over an hour.",
               "ok": true
             },
             {
-              "word": "If I knew about the meeting, I would have attended.",
+              "word": "I have been waited for over an hour.",
               "ok": false
             },
             {
-              "word": "If I had known about the meeting, I would attend.",
+              "word": "I am waiting for over an hour.",
               "ok": false
             }
           ]
@@ -36,22 +36,22 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Identify the correct mixed conditional sentence.",
-          "summary": "Mixed Conditionals.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Future Forms",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "A past condition can have a present result. Use past perfect in the if-clause and 'would' + base verb for the present result.",
+          "category": "Advanced Future Forms",
+          "explain": "'Be about to' + base verb describes the immediate future: 'is about to leave'. It takes 'to' + base verb, not '-ing'.",
           "words": [
             {
-              "word": "If I had taken that job, I would be living in London now.",
+              "word": "The train is about to leave.",
               "ok": true
             },
             {
-              "word": "If I took that job, I would have been living in London now.",
+              "word": "The train is about to leaving.",
               "ok": false
             },
             {
-              "word": "If I had taken that job, I would have lived in London now.",
+              "word": "The train is about leaving.",
               "ok": false
             }
           ]
@@ -59,45 +59,45 @@
         {
           "title": "",
           "page": 3,
-          "sentence": "Choose the correct passive reporting structure.",
-          "summary": "Passive Reporting Verbs.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Comparison",
           "level": "B2",
-          "category": "Passive Voice",
-          "explain": "Formal English often uses 'is believed to' or similar passive reporting structures.",
+          "category": "Advanced Comparison",
+          "explain": "Comparisons of equality use 'as + adjective + as': 'as hard as I expected'. We don't use 'as ... than'.",
           "words": [
             {
-              "word": "The company is believed to be considering a merger.",
+              "word": "The exam was nowhere near as hard than I expected.",
+              "ok": false
+            },
+            {
+              "word": "The exam was nowhere near so hard than I expected.",
+              "ok": false
+            },
+            {
+              "word": "The exam was nowhere near as hard as I expected.",
               "ok": true
-            },
-            {
-              "word": "The company is believed that it is considering a merger.",
-              "ok": false
-            },
-            {
-              "word": "The company believes to be considering a merger.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 4,
-          "sentence": "Identify the correct past modal for deduction.",
-          "summary": "Modal Deduction in the Past.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Modals & Semi-Modals",
           "level": "B2",
-          "category": "Modal Verbs",
-          "explain": "Use 'must have' + past participle for a strong deduction about a past event.",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "'Should have' + past participle criticises a past action: 'should have told'. 'should have telling' and 'should told' are incorrect.",
           "words": [
             {
-              "word": "She must have forgotten about the appointment.",
+              "word": "You should have told me earlier.",
               "ok": true
             },
             {
-              "word": "She must forgot about the appointment.",
+              "word": "You should told me earlier.",
               "ok": false
             },
             {
-              "word": "She must have forget about the appointment.",
+              "word": "You should have telling me earlier.",
               "ok": false
             }
           ]
@@ -105,22 +105,22 @@
         {
           "title": "",
           "page": 5,
-          "sentence": "Choose the correct sentence using inversion.",
-          "summary": "Negative Inversion.",
+          "sentence": "Choose the correct third conditional.",
+          "summary": "B2 · Third & Mixed Conditionals",
           "level": "B2",
-          "category": "Emphasis & Inversion",
-          "explain": "After a negative adverbial such as 'rarely' at the beginning of a sentence, use auxiliary-verb inversion.",
+          "category": "Third & Mixed Conditionals",
+          "explain": "The third conditional uses past perfect in the if-clause and 'would have' + participle in the result. Don't use 'would have' in the if-clause or drop 'have' in the result.",
           "words": [
             {
-              "word": "Rarely have I seen such an impressive performance.",
-              "ok": true
-            },
-            {
-              "word": "Rarely I have seen such an impressive performance.",
+              "word": "If we would have left earlier, we wouldn't have missed the train.",
               "ok": false
             },
             {
-              "word": "Rarely have seen I such an impressive performance.",
+              "word": "If we had left earlier, we wouldn't have missed the train.",
+              "ok": true
+            },
+            {
+              "word": "If we had left earlier, we wouldn't missed the train.",
               "ok": false
             }
           ]
@@ -128,45 +128,45 @@
         {
           "title": "",
           "page": 6,
-          "sentence": "Identify the correct reduced relative clause.",
-          "summary": "Reduced Relative Clauses.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Passive",
           "level": "B2",
-          "category": "Relative Clauses",
-          "explain": "A passive relative clause can often be reduced by removing the relative pronoun and the verb 'be'.",
+          "category": "Advanced Passive",
+          "explain": "A passive infinitive is 'to be' + past participle: 'expected to be introduced'. 'to introduce' is active, and 'the policy expects' reverses the meaning.",
           "words": [
             {
-              "word": "The documents submitted yesterday are being reviewed.",
+              "word": "The new policy expects to be introduced next year.",
+              "ok": false
+            },
+            {
+              "word": "The new policy is expected to introduce next year.",
+              "ok": false
+            },
+            {
+              "word": "The new policy is expected to be introduced next year.",
               "ok": true
-            },
-            {
-              "word": "The documents were submitted yesterday are being reviewed.",
-              "ok": false
-            },
-            {
-              "word": "The documents submitting yesterday are being reviewed.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 7,
-          "sentence": "Choose the correct structure after 'despite'.",
-          "summary": "Concession: Despite.",
+          "sentence": "Choose the correct reported command.",
+          "summary": "B2 · Reported Questions & Commands",
           "level": "B2",
-          "category": "Connectors & Contrast",
-          "explain": "'Despite' is followed by a noun, pronoun or -ing form, not a full clause beginning directly with subject and verb.",
+          "category": "Reported Questions & Commands",
+          "explain": "Reported commands use 'told + object + (not) to + base verb': 'told us not to enter'. 'don't enter' keeps direct speech, and 'not enter' omits 'to'.",
           "words": [
             {
-              "word": "Despite feeling tired, she continued working.",
+              "word": "The officer told us not to enter.",
               "ok": true
             },
             {
-              "word": "Despite she felt tired, she continued working.",
+              "word": "The officer told us don't enter.",
               "ok": false
             },
             {
-              "word": "Despite of feeling tired, she continued working.",
+              "word": "The officer told us not enter.",
               "ok": false
             }
           ]
@@ -174,22 +174,22 @@
         {
           "title": "",
           "page": 8,
-          "sentence": "Identify the correct sentence using 'wish'.",
-          "summary": "Wish about the Past.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Non-Defining Relative Clauses",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "Use 'wish' + past perfect to express regret about a past situation.",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "Non-defining clauses add extra information between commas and use 'which', not 'that': 'The report, which was published today, ...'. The commas are required.",
           "words": [
             {
-              "word": "I wish I had listened to your advice.",
+              "word": "The report, which was published today, is very detailed.",
               "ok": true
             },
             {
-              "word": "I wish I listened to your advice.",
+              "word": "The report which was published today is very detailed.",
               "ok": false
             },
             {
-              "word": "I wish I would have listened to your advice.",
+              "word": "The report, that was published today, is very detailed.",
               "ok": false
             }
           ]
@@ -197,22 +197,22 @@
         {
           "title": "",
           "page": 9,
-          "sentence": "Choose the correct future perfect sentence.",
-          "summary": "Future Perfect.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Phrasal Verbs",
           "level": "B2",
-          "category": "Future Forms",
-          "explain": "Use 'will have' + past participle for something expected to be completed before a future point.",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "'Put off' means to postpone: 'The meeting was put off'. 'put away' means to tidy, and 'put up' has other meanings.",
           "words": [
             {
-              "word": "By next June, I will have worked here for ten years.",
+              "word": "The meeting was put off until next week.",
               "ok": true
             },
             {
-              "word": "By next June, I will work here for ten years.",
+              "word": "The meeting was put away until next week.",
               "ok": false
             },
             {
-              "word": "By next June, I will have work here for ten years.",
+              "word": "The meeting was put up until next week.",
               "ok": false
             }
           ]
@@ -220,23 +220,23 @@
         {
           "title": "",
           "page": 10,
-          "sentence": "Identify the correct emphatic structure.",
-          "summary": "Cleft Sentences.",
+          "sentence": "Choose the correct emphatic sentence.",
+          "summary": "B2 · Inversion & Emphasis",
           "level": "B2",
-          "category": "Emphasis & Inversion",
-          "explain": "A cleft sentence such as 'What I need is...' is used to emphasise a particular part of the message.",
+          "category": "Inversion & Emphasis",
+          "explain": "After a negative adverb like 'never' at the start, subject and auxiliary invert: 'Never have I seen'. The subject can't stay before 'have', and the participle 'seen' is needed, not 'saw'.",
           "words": [
             {
-              "word": "What I need most is a few days off.",
+              "word": "Never have I saw such a beautiful sunset.",
+              "ok": false
+            },
+            {
+              "word": "Never I have seen such a beautiful sunset.",
+              "ok": false
+            },
+            {
+              "word": "Never have I seen such a beautiful sunset.",
               "ok": true
-            },
-            {
-              "word": "What I need most are to have a few days off.",
-              "ok": false
-            },
-            {
-              "word": "That I need most is a few days off.",
-              "ok": false
             }
           ]
         }

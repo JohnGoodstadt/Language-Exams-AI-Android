@@ -13,22 +13,22 @@
         {
           "title": "",
           "page": 1,
-          "sentence": "Choose the correct sentence using the present perfect.",
-          "summary": "Present Perfect with Yet.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Past Perfect",
           "level": "B1",
-          "category": "Present Perfect",
-          "explain": "Use 'have/has' + past participle with 'yet' in negative sentences and questions. The correct form is 'hasn't finished yet'.",
+          "category": "Past Perfect",
+          "explain": "Use the past perfect ('had' + participle) for the earlier past action: 'had started'. 'has started' is present perfect, and 'had start' lacks the participle.",
           "words": [
             {
-              "word": "She hasn't finished her homework yet.",
+              "word": "When I arrived, the meeting had already started.",
               "ok": true
             },
             {
-              "word": "She didn't finish her homework yet.",
+              "word": "When I arrived, the meeting has already started.",
               "ok": false
             },
             {
-              "word": "She hasn't finish her homework yet.",
+              "word": "When I arrived, the meeting had already start.",
               "ok": false
             }
           ]
@@ -36,22 +36,22 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Identify the correct first conditional sentence.",
-          "summary": "First Conditional.",
+          "sentence": "Choose the correct question.",
+          "summary": "B1 · Subject & Object Questions",
           "level": "B1",
-          "category": "Conditionals",
-          "explain": "Use the present simple after 'if' and 'will' + base verb in the main clause for a real future possibility.",
+          "category": "Subject & Object Questions",
+          "explain": "'What' is the subject here, so no auxiliary 'did' is used: 'What happened?'. 'What did happen/happened' incorrectly adds 'did'.",
           "words": [
             {
-              "word": "If you leave now, you will catch the train.",
+              "word": "What happened at the meeting?",
               "ok": true
             },
             {
-              "word": "If you will leave now, you will catch the train.",
+              "word": "What did happened at the meeting?",
               "ok": false
             },
             {
-              "word": "If you leave now, you will caught the train.",
+              "word": "What did happen at the meeting?",
               "ok": false
             }
           ]
@@ -59,22 +59,22 @@
         {
           "title": "",
           "page": 3,
-          "sentence": "Choose the correct sentence for an unreal present situation.",
-          "summary": "Second Conditional.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Articles with Nouns & Names",
           "level": "B1",
-          "category": "Conditionals",
-          "explain": "Use 'if' + past simple and 'would' + base verb for an unreal or unlikely present situation.",
+          "category": "Articles with Nouns & Names",
+          "explain": "Names of oceans take 'the': 'the Atlantic'. Omitting the article or using 'an' with a specific ocean name is wrong.",
           "words": [
             {
-              "word": "If I were you, I would speak to the manager.",
-              "ok": true
-            },
-            {
-              "word": "If I would be you, I spoke to the manager.",
+              "word": "We sailed across an Atlantic.",
               "ok": false
             },
             {
-              "word": "If I am you, I would speak to the manager.",
+              "word": "We sailed across the Atlantic.",
+              "ok": true
+            },
+            {
+              "word": "We sailed across Atlantic.",
               "ok": false
             }
           ]
@@ -82,91 +82,91 @@
         {
           "title": "",
           "page": 4,
-          "sentence": "Identify the correct reported question.",
-          "summary": "Reported Questions.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Adjective & Adverb Distinctions",
           "level": "B1",
-          "category": "Reported Speech",
-          "explain": "In reported questions, use statement word order and do not use 'do' or 'did'. The correct form is 'asked me where I lived'.",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "Use an adverb to describe how an action is done: 'sang beautifully'. The adjective 'beautiful' describes nouns, not verbs.",
           "words": [
             {
-              "word": "He asked me where I lived.",
+              "word": "She sang the song more beautiful.",
+              "ok": false
+            },
+            {
+              "word": "She sang the song beautiful.",
+              "ok": false
+            },
+            {
+              "word": "She sang the song beautifully.",
               "ok": true
-            },
-            {
-              "word": "He asked me where did I live.",
-              "ok": false
-            },
-            {
-              "word": "He asked me where I did live.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 5,
-          "sentence": "Choose the correct defining relative clause.",
-          "summary": "Relative Clauses.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Future Continuous & Perfect",
           "level": "B1",
-          "category": "Relative Clauses",
-          "explain": "Use 'that' or 'which' to introduce a defining relative clause about a thing. Do not repeat the object pronoun.",
+          "category": "Future Continuous & Perfect",
+          "explain": "The future continuous ('will be' + -ing) describes an action in progress at a future time: 'will be flying'. 'will be fly' lacks the -ing form.",
           "words": [
             {
-              "word": "This is the book that I told you about.",
+              "word": "This time tomorrow, I will been flying to Rome.",
+              "ok": false
+            },
+            {
+              "word": "This time tomorrow, I will be fly to Rome.",
+              "ok": false
+            },
+            {
+              "word": "This time tomorrow, I will be flying to Rome.",
               "ok": true
-            },
-            {
-              "word": "This is the book that I told you about it.",
-              "ok": false
-            },
-            {
-              "word": "This is the book who I told you about.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 6,
-          "sentence": "Identify the correct passive sentence.",
-          "summary": "Present Passive.",
+          "sentence": "Choose the correct deduction.",
+          "summary": "B1 · Modals of Deduction & Probability",
           "level": "B1",
-          "category": "Passive Voice",
-          "explain": "The present simple passive is formed with 'am/is/are' + past participle. The correct form is 'is spoken'.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "For a negative deduction, use 'can't be': 'He can't be at home'. 'mustn't' means prohibition, not deduction, and modals take no 'to'.",
           "words": [
             {
-              "word": "English is spoken in many countries.",
+              "word": "He can't to be at home; his car isn't here.",
+              "ok": false
+            },
+            {
+              "word": "He mustn't be at home; his car isn't here.",
+              "ok": false
+            },
+            {
+              "word": "He can't be at home; his car isn't here.",
               "ok": true
-            },
-            {
-              "word": "English speaks in many countries.",
-              "ok": false
-            },
-            {
-              "word": "English is speak in many countries.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 7,
-          "sentence": "Choose the correct modal expression of possibility.",
-          "summary": "Modal Verbs (Might).",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Contrast & Concession",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "Use 'might' + base verb to express possibility. The correct form is 'might arrive'.",
+          "category": "Contrast & Concession",
+          "explain": "'Although' introduces a contrast clause and is not paired with 'but'. 'Despite' is followed by a noun/-ing, not a full clause.",
           "words": [
             {
-              "word": "They might arrive later this evening.",
-              "ok": true
-            },
-            {
-              "word": "They might to arrive later this evening.",
+              "word": "Despite it was raining, we went out.",
               "ok": false
             },
             {
-              "word": "They might arriving later this evening.",
+              "word": "Although it was raining, we went out.",
+              "ok": true
+            },
+            {
+              "word": "Although it was raining, but we went out.",
               "ok": false
             }
           ]
@@ -174,22 +174,22 @@
         {
           "title": "",
           "page": 8,
-          "sentence": "Identify the correct verb pattern after 'enjoy'.",
-          "summary": "Gerund after Enjoy.",
+          "sentence": "Choose the correct collocation.",
+          "summary": "B1 · Common Collocations",
           "level": "B1",
-          "category": "Verb Patterns",
-          "explain": "The verb 'enjoy' is followed by the -ing form. The correct structure is 'enjoy reading'.",
+          "category": "Common Collocations",
+          "explain": "We 'make a decision' in English: it is a fixed collocation. 'do a decision' and 'have a decision' are not standard.",
           "words": [
             {
-              "word": "I really enjoy reading historical novels.",
-              "ok": true
-            },
-            {
-              "word": "I really enjoy to read historical novels.",
+              "word": "I need to do a decision quickly.",
               "ok": false
             },
             {
-              "word": "I really enjoy read historical novels.",
+              "word": "I need to make a decision quickly.",
+              "ok": true
+            },
+            {
+              "word": "I need to have a decision quickly.",
               "ok": false
             }
           ]
@@ -197,22 +197,22 @@
         {
           "title": "",
           "page": 9,
-          "sentence": "Choose the correct sentence using the past perfect.",
-          "summary": "Past Perfect.",
+          "sentence": "Choose the correct word form.",
+          "summary": "B1 · Forming Nouns & Adjectives",
           "level": "B1",
-          "category": "Past Tenses",
-          "explain": "Use the past perfect for an action completed before another past action. The correct form is 'had left'.",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "The noun form of 'explain' is 'explanation': 'Her explanation was clear'. 'explain' is the verb, and 'explanating' is not a word.",
           "words": [
             {
-              "word": "By the time we arrived, the train had left.",
+              "word": "Her explanation was very clear.",
               "ok": true
             },
             {
-              "word": "By the time we arrived, the train has left.",
+              "word": "Her explain was very clear.",
               "ok": false
             },
             {
-              "word": "By the time we arrived, the train left already.",
+              "word": "Her explanating was very clear.",
               "ok": false
             }
           ]
@@ -220,22 +220,22 @@
         {
           "title": "",
           "page": 10,
-          "sentence": "Identify the correct sentence showing a past habit.",
-          "summary": "Used To.",
+          "sentence": "Choose the correct linking phrase.",
+          "summary": "B1 · Cohesive Devices",
           "level": "B1",
-          "category": "Past Tenses",
-          "explain": "Use 'used to' + base verb for a past habit or state that is no longer true.",
+          "category": "Cohesive Devices",
+          "explain": "'Nevertheless' links two sentences to show contrast and stands alone: 'Nevertheless, we will try it'. 'Nevertheless of this' and 'However that' are not correct forms.",
           "words": [
             {
-              "word": "I used to play tennis every weekend.",
+              "word": "The plan is risky. Nevertheless, we will try it.",
               "ok": true
             },
             {
-              "word": "I use to play tennis every weekend.",
+              "word": "The plan is risky. However that, we will try it.",
               "ok": false
             },
             {
-              "word": "I used to playing tennis every weekend.",
+              "word": "The plan is risky. Nevertheless of this, we will try it.",
               "ok": false
             }
           ]

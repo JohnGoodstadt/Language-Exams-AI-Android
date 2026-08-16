@@ -13,22 +13,22 @@
         {
           "title": "",
           "page": 1,
-          "sentence": "Identify the correct present simple sentence.",
-          "summary": "Present Simple (Third Person).",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Present Continuous",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "With 'he', 'she' or 'it' in the present simple, the verb normally ends in -s. The correct form is 'works'.",
+          "category": "Present Continuous",
+          "explain": "Present continuous is am/is/are + -ing for actions happening now: 'is watching'. 'She watching' omits 'is', and the present simple 'watches ... now' is for habits.",
           "words": [
             {
-              "word": "She works in a hospital.",
-              "ok": true
-            },
-            {
-              "word": "She work in a hospital.",
+              "word": "She watches TV at the moment now.",
               "ok": false
             },
             {
-              "word": "She working in a hospital.",
+              "word": "She is watching TV at the moment.",
+              "ok": true
+            },
+            {
+              "word": "She watching TV at the moment.",
               "ok": false
             }
           ]
@@ -36,22 +36,22 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Choose the correct sentence for an action happening now.",
-          "summary": "Present Continuous.",
+          "sentence": "Choose the correct pronoun.",
+          "summary": "A2 · Personal & Possessive Pronouns",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "For an action happening now, use 'am/is/are' + verb-ing. The correct form is 'is talking'.",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "'Ours' is a possessive pronoun that stands alone: 'That car is ours'. 'Our' needs a noun after it, and 'us' is an object pronoun.",
           "words": [
             {
-              "word": "He is talking on the phone now.",
-              "ok": true
-            },
-            {
-              "word": "He talks on the phone now.",
+              "word": "That car is us.",
               "ok": false
             },
             {
-              "word": "He is talk on the phone now.",
+              "word": "That car is ours.",
+              "ok": true
+            },
+            {
+              "word": "That car is our.",
               "ok": false
             }
           ]
@@ -59,45 +59,45 @@
         {
           "title": "",
           "page": 3,
-          "sentence": "Identify the correct past simple sentence.",
-          "summary": "Past Simple (Irregular Verb).",
+          "sentence": "Choose the correct general statement.",
+          "summary": "A2 · Zero Article",
           "level": "A2",
-          "category": "Past Tenses",
-          "explain": "The past simple of 'go' is 'went'.",
+          "category": "Zero Article",
+          "explain": "For a general statement about a whole group, use a plural noun with no article: 'Dogs are loyal'. 'The dogs' means specific dogs, and 'a' can't go with a plural noun.",
           "words": [
             {
-              "word": "We went to London last weekend.",
+              "word": "The dogs are loyal animals.",
+              "ok": false
+            },
+            {
+              "word": "A dogs are loyal animals.",
+              "ok": false
+            },
+            {
+              "word": "Dogs are loyal animals.",
               "ok": true
-            },
-            {
-              "word": "We goed to London last weekend.",
-              "ok": false
-            },
-            {
-              "word": "We have gone to London last weekend.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 4,
-          "sentence": "Choose the correct question in the past simple.",
-          "summary": "Past Simple Questions.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Future: will",
           "level": "A2",
-          "category": "Past Tenses",
-          "explain": "Past simple questions use 'did' + the base form of the verb. The correct form is 'Did you see...?'.",
+          "category": "Future: will",
+          "explain": "'Will' is followed by the base verb: 'will help'. It never adds '-s' or '-ing'.",
           "words": [
             {
-              "word": "Did you see the film yesterday?",
-              "ok": true
-            },
-            {
-              "word": "Did you saw the film yesterday?",
+              "word": "Don't worry, I will helping you.",
               "ok": false
             },
             {
-              "word": "Saw you the film yesterday?",
+              "word": "Don't worry, I will help you.",
+              "ok": true
+            },
+            {
+              "word": "Don't worry, I will helps you.",
               "ok": false
             }
           ]
@@ -105,22 +105,22 @@
         {
           "title": "",
           "page": 5,
-          "sentence": "Identify the correct comparative form.",
-          "summary": "Comparatives.",
+          "sentence": "Choose the correct preposition of movement.",
+          "summary": "A2 · Prepositions of Movement",
           "level": "A2",
-          "category": "Comparatives & Superlatives",
-          "explain": "The comparative form of 'expensive' is 'more expensive'.",
+          "category": "Prepositions of Movement",
+          "explain": "Use 'up' for upward movement: 'climbed up the mountain'. 'On' suggests position on top, and 'at' shows a point, not movement.",
           "words": [
             {
-              "word": "This hotel is more expensive than the other one.",
-              "ok": true
-            },
-            {
-              "word": "This hotel is expensiver than the other one.",
+              "word": "They climbed on the mountain.",
               "ok": false
             },
             {
-              "word": "This hotel is more expensive that the other one.",
+              "word": "They climbed up the mountain.",
+              "ok": true
+            },
+            {
+              "word": "They climbed at the mountain.",
               "ok": false
             }
           ]
@@ -128,45 +128,45 @@
         {
           "title": "",
           "page": 6,
-          "sentence": "Choose the correct expression for a future plan.",
-          "summary": "Going To (Future Plans).",
+          "sentence": "Choose the correct comparison.",
+          "summary": "A2 · Comparatives & Superlatives",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "Use 'am/is/are going to' + base verb to talk about a future plan. The correct form is 'are going to visit'.",
+          "category": "Comparatives & Superlatives",
+          "explain": "Short adjectives add '-er' + 'than': 'hotter than'. We don't use 'more' with short adjectives or 'as' in a comparative.",
           "words": [
             {
-              "word": "We are going to visit my parents tomorrow.",
+              "word": "Today is more hot than yesterday.",
+              "ok": false
+            },
+            {
+              "word": "Today is hotter as yesterday.",
+              "ok": false
+            },
+            {
+              "word": "Today is hotter than yesterday.",
               "ok": true
-            },
-            {
-              "word": "We going to visit my parents tomorrow.",
-              "ok": false
-            },
-            {
-              "word": "We are going visit my parents tomorrow.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 7,
-          "sentence": "Identify the correct modal verb structure.",
-          "summary": "Modal Verbs (Should).",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Past Continuous",
           "level": "A2",
-          "category": "Modal Verbs",
-          "explain": "After a modal verb such as 'should', use the base form of the verb without 'to'. The correct form is 'should drink'.",
+          "category": "Past Continuous",
+          "explain": "Past continuous is was/were + -ing: 'was cooking'. 'I cooking' omits 'was', and 'was cook' uses the base verb.",
           "words": [
             {
-              "word": "You should drink more water.",
+              "word": "While I was cooking, the phone rang.",
               "ok": true
             },
             {
-              "word": "You should to drink more water.",
+              "word": "While I was cook, the phone rang.",
               "ok": false
             },
             {
-              "word": "You should drinking more water.",
+              "word": "While I cooking, the phone rang.",
               "ok": false
             }
           ]
@@ -174,69 +174,69 @@
         {
           "title": "",
           "page": 8,
-          "sentence": "Choose the correct quantity expression.",
-          "summary": "Countable and Uncountable Nouns.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Modals of Obligation & Advice",
           "level": "A2",
-          "category": "Quantifiers & Determiners",
-          "explain": "'Advice' is an uncountable noun, so we say 'some advice', not 'an advice' or 'many advices'.",
+          "category": "Modals of Obligation & Advice",
+          "explain": "'Must not' is followed by the base verb: 'must not park'. Modals take no 'to' or '-ing'.",
           "words": [
             {
-              "word": "She gave me some useful advice.",
+              "word": "You must not to park here.",
+              "ok": false
+            },
+            {
+              "word": "You must not parking here.",
+              "ok": false
+            },
+            {
+              "word": "You must not park here.",
               "ok": true
-            },
-            {
-              "word": "She gave me an useful advice.",
-              "ok": false
-            },
-            {
-              "word": "She gave me many useful advices.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 9,
-          "sentence": "Identify the correct present perfect sentence.",
-          "summary": "Present Perfect (Experience).",
+          "sentence": "Choose the correct first conditional.",
+          "summary": "A2 · Zero & First Conditional",
           "level": "A2",
-          "category": "Present Perfect",
-          "explain": "Use 'have/has' + past participle to talk about life experience when no finished past time is given. The correct form is 'have visited'.",
+          "category": "Zero & First Conditional",
+          "explain": "The first conditional uses 'if' + present simple, then 'will' + base verb: 'If it rains, we will stay'. Don't use 'will' in the if-clause.",
           "words": [
             {
-              "word": "I have visited Spain three times.",
+              "word": "If it rains, we staying at home.",
+              "ok": false
+            },
+            {
+              "word": "If it will rain, we will stay at home.",
+              "ok": false
+            },
+            {
+              "word": "If it rains, we will stay at home.",
               "ok": true
-            },
-            {
-              "word": "I have visit Spain three times.",
-              "ok": false
-            },
-            {
-              "word": "I am visited Spain three times.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 10,
-          "sentence": "Choose the correct sentence using 'since' and 'for'.",
-          "summary": "Present Perfect (Since and For).",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Gerunds & Infinitives",
           "level": "A2",
-          "category": "Present Perfect",
-          "explain": "Use 'for' with a period of time and the present perfect for a situation that started in the past and continues now. The correct form is 'have lived here for three years'.",
+          "category": "Gerunds & Infinitives",
+          "explain": "'Enjoy' is followed by the -ing form: 'enjoy playing'. 'enjoy to play' and 'enjoy play' are incorrect.",
           "words": [
             {
-              "word": "I have lived here for three years.",
+              "word": "I enjoy to play football.",
+              "ok": false
+            },
+            {
+              "word": "I enjoy play football.",
+              "ok": false
+            },
+            {
+              "word": "I enjoy playing football.",
               "ok": true
-            },
-            {
-              "word": "I live here since three years.",
-              "ok": false
-            },
-            {
-              "word": "I have lived here since three years.",
-              "ok": false
             }
           ]
         }

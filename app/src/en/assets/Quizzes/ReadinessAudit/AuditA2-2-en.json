@@ -13,45 +13,45 @@
         {
           "title": "",
           "page": 1,
-          "sentence": "Identify the correct sentence using an adverb of frequency.",
-          "summary": "Adverbs of Frequency.",
+          "sentence": "Choose the correct question.",
+          "summary": "A2 · Wh- Questions",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "Adverbs such as 'usually' normally come before the main verb. The correct form is 'usually walks'.",
+          "category": "Wh- Questions",
+          "explain": "Present simple questions use 'do/does' + subject + base verb: 'Where do you live?'. 'Where you live' has no auxiliary, and 'do you lives' wrongly adds '-s'.",
           "words": [
             {
-              "word": "He usually walks to work.",
+              "word": "Where you live?",
+              "ok": false
+            },
+            {
+              "word": "Where do you lives?",
+              "ok": false
+            },
+            {
+              "word": "Where do you live?",
               "ok": true
-            },
-            {
-              "word": "He walks usually to work.",
-              "ok": false
-            },
-            {
-              "word": "He usually walk to work.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 2,
-          "sentence": "Choose the correct sentence describing an action happening now.",
-          "summary": "Present Continuous.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Adverbs of Manner & Frequency",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "For something happening now, use 'am/is/are' + verb-ing. The correct form is 'are waiting'.",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "Frequency adverbs like 'always' go before the main verb: 'always arrives'. Placing it after the verb is unusual, and 'always arrive' misses the '-s'.",
           "words": [
             {
-              "word": "They are waiting for the bus.",
+              "word": "He always arrives early.",
               "ok": true
             },
             {
-              "word": "They waiting for the bus.",
+              "word": "He arrives always early.",
               "ok": false
             },
             {
-              "word": "They are wait for the bus.",
+              "word": "He always arrive early.",
               "ok": false
             }
           ]
@@ -59,68 +59,68 @@
         {
           "title": "",
           "page": 3,
-          "sentence": "Identify the correct negative sentence in the past simple.",
-          "summary": "Past Simple Negative.",
+          "sentence": "Choose the correct linking word.",
+          "summary": "A2 · Basic Linkers",
           "level": "A2",
-          "category": "Past Tenses",
-          "explain": "Past simple negatives use 'did not' or 'didn't' followed by the base form of the verb. The correct form is 'didn't buy'.",
+          "category": "Basic Linkers",
+          "explain": "'So' introduces a result: 'I was tired, so I went to bed'. 'Because' introduces a cause (reversed here), and 'so that' expresses purpose.",
           "words": [
             {
-              "word": "I didn't buy anything at the shop.",
+              "word": "I was tired, because I went to bed.",
+              "ok": false
+            },
+            {
+              "word": "I was tired, so that I went to bed.",
+              "ok": false
+            },
+            {
+              "word": "I was tired, so I went to bed.",
               "ok": true
-            },
-            {
-              "word": "I didn't bought anything at the shop.",
-              "ok": false
-            },
-            {
-              "word": "I don't bought anything at the shop.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 4,
-          "sentence": "Choose the correct superlative form.",
-          "summary": "Superlatives.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Time & Reason Conjunctions",
           "level": "A2",
-          "category": "Comparatives & Superlatives",
-          "explain": "The superlative of 'good' is 'best'. We normally use 'the' before a superlative.",
+          "category": "Time & Reason Conjunctions",
+          "explain": "After time words like 'when', use the present simple for the future: 'when I arrive'. Don't use 'will' after 'when' or the bare -ing form.",
           "words": [
             {
-              "word": "This is the best restaurant in town.",
+              "word": "I'll call you when I will arrive.",
+              "ok": false
+            },
+            {
+              "word": "I'll call you when I arriving.",
+              "ok": false
+            },
+            {
+              "word": "I'll call you when I arrive.",
               "ok": true
-            },
-            {
-              "word": "This is the better restaurant in town.",
-              "ok": false
-            },
-            {
-              "word": "This is the most good restaurant in town.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 5,
-          "sentence": "Identify the correct expression of quantity.",
-          "summary": "Much and Many.",
+          "sentence": "Choose the correct sentence about a past habit.",
+          "summary": "A2 · Past Habits: used to / would",
           "level": "A2",
-          "category": "Quantifiers & Determiners",
-          "explain": "Use 'many' with countable plural nouns such as 'people'.",
+          "category": "Past Habits: used to / would",
+          "explain": "'Used to' + base verb describes a past habit: 'used to play'. The correct form is 'used' (with -d) + base verb, not '-ing'.",
           "words": [
             {
-              "word": "There weren't many people at the party.",
+              "word": "I used to play tennis every weekend.",
               "ok": true
             },
             {
-              "word": "There weren't much people at the party.",
+              "word": "I used to playing tennis every weekend.",
               "ok": false
             },
             {
-              "word": "There wasn't many people at the party.",
+              "word": "I use to play tennis every weekend.",
               "ok": false
             }
           ]
@@ -128,45 +128,45 @@
         {
           "title": "",
           "page": 6,
-          "sentence": "Choose the correct modal verb structure.",
-          "summary": "Modal Verbs (Can).",
+          "sentence": "Choose the correct word.",
+          "summary": "A2 · Prefixes & Suffixes",
           "level": "A2",
-          "category": "Modal Verbs",
-          "explain": "After 'can', use the base form of the verb without 'to'. The correct form is 'can speak'.",
+          "category": "Prefixes & Suffixes",
+          "explain": "The negative prefix for 'possible' is 'im-': 'impossible'. 'un-' and 'dis-' are not used with 'possible'.",
           "words": [
             {
-              "word": "My sister can speak three languages.",
+              "word": "It is unpossible to finish today.",
+              "ok": false
+            },
+            {
+              "word": "It is dispossible to finish today.",
+              "ok": false
+            },
+            {
+              "word": "It is impossible to finish today.",
               "ok": true
-            },
-            {
-              "word": "My sister can speaks three languages.",
-              "ok": false
-            },
-            {
-              "word": "My sister can to speak three languages.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 7,
-          "sentence": "Identify the correct verb pattern.",
-          "summary": "Want + Infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Present Continuous",
           "level": "A2",
-          "category": "Verb Patterns",
-          "explain": "The verb 'want' is followed by 'to' + the base form of the verb. The correct form is 'want to learn'.",
+          "category": "Present Continuous",
+          "explain": "Present continuous is 'are' + -ing: 'are having'. 'are have' uses the base verb, and 'they having' omits 'are'.",
           "words": [
             {
-              "word": "I want to learn how to drive.",
+              "word": "They are having dinner right now.",
               "ok": true
             },
             {
-              "word": "I want learning how to drive.",
+              "word": "They are have dinner right now.",
               "ok": false
             },
             {
-              "word": "I want learn how to drive.",
+              "word": "They having dinner right now.",
               "ok": false
             }
           ]
@@ -174,22 +174,22 @@
         {
           "title": "",
           "page": 8,
-          "sentence": "Choose the correct future prediction.",
-          "summary": "Future with Will.",
+          "sentence": "Choose the correct superlative.",
+          "summary": "A2 · Comparatives & Superlatives",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "Use 'will' + the base form of the verb for a simple future prediction. The correct form is 'will be'.",
+          "category": "Comparatives & Superlatives",
+          "explain": "'Good' has an irregular superlative: 'the best'. 'most best' doubles the superlative, and 'goodest' is not a word.",
           "words": [
             {
-              "word": "I think the weather will be better tomorrow.",
-              "ok": true
-            },
-            {
-              "word": "I think the weather will is better tomorrow.",
+              "word": "This is the most best film I have ever seen.",
               "ok": false
             },
             {
-              "word": "I think the weather will to be better tomorrow.",
+              "word": "This is the best film I have ever seen.",
+              "ok": true
+            },
+            {
+              "word": "This is the goodest film I have ever seen.",
               "ok": false
             }
           ]
@@ -197,45 +197,45 @@
         {
           "title": "",
           "page": 9,
-          "sentence": "Identify the correct present perfect form.",
-          "summary": "Present Perfect (Already).",
+          "sentence": "Choose the correct zero conditional.",
+          "summary": "A2 · Zero & First Conditional",
           "level": "A2",
-          "category": "Present Perfect",
-          "explain": "Use 'have/has' + past participle with 'already'. The past participle of 'eat' is 'eaten'.",
+          "category": "Zero & First Conditional",
+          "explain": "The zero conditional states a general fact with present simple in both clauses: 'If you heat ice, it melts'. Never add 'will'.",
           "words": [
             {
-              "word": "She has already eaten lunch.",
+              "word": "If you heat ice, it will melts.",
+              "ok": false
+            },
+            {
+              "word": "If you will heat ice, it melts.",
+              "ok": false
+            },
+            {
+              "word": "If you heat ice, it melts.",
               "ok": true
-            },
-            {
-              "word": "She has already ate lunch.",
-              "ok": false
-            },
-            {
-              "word": "She already has eat lunch.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 10,
-          "sentence": "Choose the correct sentence comparing a past event with the present.",
-          "summary": "Present Perfect vs Past Simple.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Gerunds & Infinitives",
           "level": "A2",
-          "category": "Present Perfect",
-          "explain": "Use the past simple with a finished past time such as 'last year'. The correct form is 'visited ... last year'.",
+          "category": "Gerunds & Infinitives",
+          "explain": "'Decide' is followed by the infinitive with 'to': 'decided to leave'. 'decided leaving' and 'decided to leaving' are incorrect.",
           "words": [
             {
-              "word": "We visited France last year.",
-              "ok": true
-            },
-            {
-              "word": "We have visited France last year.",
+              "word": "She decided to leaving early.",
               "ok": false
             },
             {
-              "word": "We have visit France last year.",
+              "word": "She decided to leave early.",
+              "ok": true
+            },
+            {
+              "word": "She decided leaving early.",
               "ok": false
             }
           ]

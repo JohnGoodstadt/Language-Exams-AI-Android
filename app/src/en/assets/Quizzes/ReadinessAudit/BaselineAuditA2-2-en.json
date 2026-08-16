@@ -7,28 +7,28 @@
   "data": [
     {
       "title": "Initial Level Placement",
-      "description": "A high-level scan to establish your current CEFR baseline (A2-B2).",
+      "description": "A high-level scan to establish your current CEFR baseline (A2-B2). One question per grammar point across three bands.",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
-          "sentence": "Choose the correct action in progress.",
-          "summary": "A2: Past Continuous.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Future: will",
           "level": "A2",
-          "category": "Past Tenses",
-          "explain": "Use the past continuous for an action that was already in progress when another past action happened.",
+          "category": "Future: will",
+          "explain": "'Will' is followed by the base verb, with no '-s' and no 'to': 'will rain'. Modal 'will' never takes 'to' or a third-person '-s'.",
           "words": [
             {
-              "word": "When I arrived, they were eating dinner.",
+              "word": "I think it will rain tomorrow.",
               "ok": true
             },
             {
-              "word": "When I arrived, they eat dinner.",
+              "word": "I think it will rains tomorrow.",
               "ok": false
             },
             {
-              "word": "When I arrived, they have eaten dinner.",
+              "word": "I think it will to rain tomorrow.",
               "ok": false
             }
           ]
@@ -36,114 +36,114 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Choose the correct quantity expression.",
-          "summary": "A2: Countable and Uncountable Nouns.",
+          "sentence": "Choose the correct advice.",
+          "summary": "A2 · Modals of Obligation & Advice",
           "level": "A2",
-          "category": "Quantifiers & Determiners",
-          "explain": "'Much' is normally used with uncountable nouns such as 'time'.",
+          "category": "Modals of Obligation & Advice",
+          "explain": "'Should' gives advice and is followed by the base verb: 'should see'. It never takes 'to' or an '-ing' form.",
           "words": [
             {
-              "word": "We do not have many time before the train leaves.",
+              "word": "You should seeing a doctor.",
               "ok": false
             },
             {
-              "word": "We do not have much time before the train leaves.",
+              "word": "You should to see a doctor.",
+              "ok": false
+            },
+            {
+              "word": "You should see a doctor.",
               "ok": true
-            },
-            {
-              "word": "We do not have a few time before the train leaves.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 3,
-          "sentence": "Choose the correct future arrangement.",
-          "summary": "A2: Present Continuous for Future Plans.",
+          "sentence": "Choose the correct pronoun.",
+          "summary": "A2 · Personal & Possessive Pronouns",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "The present continuous can describe a fixed future arrangement.",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "Possessive pronouns stand alone: 'mine', 'yours'. We don't use the adjective forms 'my/your' without a noun, and 'yours' has no apostrophe.",
           "words": [
             {
-              "word": "I meet the dentist at ten tomorrow.",
-              "ok": false
-            },
-            {
-              "word": "I am meet the dentist at ten tomorrow.",
-              "ok": false
-            },
-            {
-              "word": "I am meeting the dentist at ten tomorrow.",
+              "word": "This book is mine, not yours.",
               "ok": true
+            },
+            {
+              "word": "This book is my, not your.",
+              "ok": false
+            },
+            {
+              "word": "This book is mine, not your's.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 4,
-          "sentence": "Choose the correct tense for a finished time.",
-          "summary": "B1: Past Simple and Present Perfect.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Past Perfect",
           "level": "B1",
-          "category": "Present Perfect",
-          "explain": "Use the past simple with a finished time expression such as 'last year'.",
+          "category": "Past Perfect",
+          "explain": "Use the past perfect ('had' + past participle) for the earlier of two past actions: 'had left' happened before 'arrived'. 'has left' is present perfect, and 'had leave' lacks the participle 'left'.",
           "words": [
             {
-              "word": "I have visited Rome last year.",
+              "word": "The train has left before we arrived.",
               "ok": false
             },
             {
-              "word": "I visited Rome last year.",
+              "word": "The train had leave before we arrived.",
+              "ok": false
+            },
+            {
+              "word": "The train had left before we arrived.",
               "ok": true
-            },
-            {
-              "word": "I have been visiting Rome last year.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 5,
-          "sentence": "Select the correct relative clause.",
-          "summary": "B1: Defining Relative Clauses.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Defining Relative Clauses",
           "level": "B1",
-          "category": "Relative Clauses",
-          "explain": "'Who' introduces a defining relative clause about a person.",
+          "category": "Defining Relative Clauses",
+          "explain": "Use 'who' for people in a defining relative clause: 'the man who lives...'. 'Which' is for things, and we don't repeat the subject ('who he lives').",
           "words": [
             {
-              "word": "The woman which helped me was very kind.",
-              "ok": false
-            },
-            {
-              "word": "The woman whose helped me was very kind.",
-              "ok": false
-            },
-            {
-              "word": "The woman who helped me was very kind.",
+              "word": "The man who lives next door is a doctor.",
               "ok": true
+            },
+            {
+              "word": "The man which lives next door is a doctor.",
+              "ok": false
+            },
+            {
+              "word": "The man who he lives next door is a doctor.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 6,
-          "sentence": "Choose the sentence with the correct condition.",
-          "summary": "B1: Unless.",
+          "sentence": "Choose the correct passive sentence.",
+          "summary": "B1 · Present & Past Passive",
           "level": "B1",
-          "category": "Conditionals",
-          "explain": "'Unless' means 'if not', so it is followed by an affirmative verb form.",
+          "category": "Present & Past Passive",
+          "explain": "The past passive is 'was/were' + past participle: 'was built'. 'was build' uses the base verb, and 'is built' (present) doesn't fit the past date 1890.",
           "words": [
             {
-              "word": "We will miss the bus unless we leave now.",
+              "word": "The bridge was built in 1890.",
               "ok": true
             },
             {
-              "word": "We will miss the bus unless we do not leave now.",
+              "word": "The bridge is built in 1890.",
               "ok": false
             },
             {
-              "word": "We would miss the bus unless we will leave now.",
+              "word": "The bridge was build in 1890.",
               "ok": false
             }
           ]
@@ -151,91 +151,91 @@
         {
           "title": "",
           "page": 7,
-          "sentence": "Choose the best deduction about the past.",
-          "summary": "B2: Modal Perfects.",
-          "level": "B2",
-          "category": "Modal Verbs",
-          "explain": "'Must have' expresses a strong logical deduction about a completed past event.",
+          "sentence": "Choose the correct question.",
+          "summary": "B1 · Subject & Object Questions",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "In a subject question the question word is the subject, so use no auxiliary 'do/did': 'Who broke the window?'. 'Who did break/broke' incorrectly adds 'did'.",
           "words": [
             {
-              "word": "The lights are off, so they must leave already.",
+              "word": "Who did break the window?",
               "ok": false
             },
             {
-              "word": "The lights are off, so they must have left already.",
+              "word": "Who did broke the window?",
+              "ok": false
+            },
+            {
+              "word": "Who broke the window?",
               "ok": true
-            },
-            {
-              "word": "The lights are off, so they must be left already.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 8,
-          "sentence": "Choose the correct mixed conditional.",
-          "summary": "B2: Mixed Conditionals.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Modals & Semi-Modals",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "A past condition can have a present result: 'If + past perfect' followed by 'would + base verb'.",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "'Needn't have' + past participle means an action was done but was unnecessary: 'You needn't have brought a gift'. 'needn't had' and 'didn't need have' are not correct forms.",
           "words": [
             {
-              "word": "If I accepted that job, I would have lived in Paris now.",
+              "word": "You didn't need have brought a gift.",
               "ok": false
             },
             {
-              "word": "If I had accepted that job, I would have lived in Paris then.",
-              "ok": false
-            },
-            {
-              "word": "If I had accepted that job, I would live in Paris now.",
+              "word": "You needn't have brought a gift.",
               "ok": true
+            },
+            {
+              "word": "You needn't had brought a gift.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 9,
-          "sentence": "Choose the correctly reduced clause.",
-          "summary": "B2: Participle Clauses.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Passive",
           "level": "B2",
-          "category": "Relative Clauses",
-          "explain": "A past participle clause can replace a passive relative clause when both clauses have the same subject.",
+          "category": "Advanced Passive",
+          "explain": "Passive reporting uses 'is believed/said/thought' + 'to have' + past participle: 'is believed to have left'. 'to have leave' lacks the participle, and 'believes' reverses the meaning.",
           "words": [
             {
-              "word": "Built in the eighteenth century, the house requires extensive repairs.",
+              "word": "The suspect believes to have left the country.",
+              "ok": false
+            },
+            {
+              "word": "The suspect is believed to have leave the country.",
+              "ok": false
+            },
+            {
+              "word": "The suspect is believed to have left the country.",
               "ok": true
-            },
-            {
-              "word": "Building in the eighteenth century, the house requires extensive repairs.",
-              "ok": false
-            },
-            {
-              "word": "Having build in the eighteenth century, the house requires extensive repairs.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 10,
-          "sentence": "Identify the correct inverted structure.",
-          "summary": "B2: Inversion after 'Not until'.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Non-Defining Relative Clauses",
           "level": "B2",
-          "category": "Emphasis & Inversion",
-          "explain": "When 'Not until' begins the sentence, the main clause requires auxiliary inversion.",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "Non-defining relative clauses add extra information between commas and use 'who'/'which', not 'that': 'My brother, who lives in Paris, ...'. 'that' is not used in non-defining clauses, and the commas are required.",
           "words": [
             {
-              "word": "Not until the meeting ended we understood the problem.",
+              "word": "My brother who lives in Paris is visiting us.",
               "ok": false
             },
             {
-              "word": "Not until did the meeting end we understood the problem.",
+              "word": "My brother, that lives in Paris, is visiting us.",
               "ok": false
             },
             {
-              "word": "Not until the meeting ended did we understand the problem.",
+              "word": "My brother, who lives in Paris, is visiting us.",
               "ok": true
             }
           ]

@@ -7,28 +7,28 @@
   "data": [
     {
       "title": "Initial Level Placement",
-      "description": "A high-level scan to establish your current CEFR baseline (A2-B2).",
+      "description": "A high-level scan to establish your current CEFR baseline (A2-B2). One question per grammar point across three bands.",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
-          "sentence": "Choose the correct past action.",
-          "summary": "A2: Irregular Verbs.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Present Continuous",
           "level": "A2",
-          "category": "Past Tenses",
-          "explain": "The past simple of 'go' is 'went'. 'Gone' is the past participle.",
+          "category": "Present Continuous",
+          "explain": "Use the present continuous (am/is/are + -ing) for an action happening now: 'It is raining'. The present simple 'rains' is for habits, and 'It raining' is missing the verb 'is'.",
           "words": [
             {
-              "word": "Last night, I went to the cinema.",
-              "ok": true
-            },
-            {
-              "word": "Last night, I gone to the cinema.",
+              "word": "Look! It rains outside now.",
               "ok": false
             },
             {
-              "word": "Last night, I was go to the cinema.",
+              "word": "Look! It is raining outside.",
+              "ok": true
+            },
+            {
+              "word": "Look! It raining outside.",
               "ok": false
             }
           ]
@@ -36,91 +36,91 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Identify the correct possessive.",
-          "summary": "A2: Possessive Adjectives.",
+          "sentence": "Choose the correct comparison.",
+          "summary": "A2 · Comparatives & Superlatives",
           "level": "A2",
-          "category": "Quantifiers & Determiners",
-          "explain": "'Their' is used for possession. 'There' is a place; 'They're' is 'they are'.",
+          "category": "Comparatives & Superlatives",
+          "explain": "Long adjectives form the comparative with 'more' + adjective + 'than': 'more interesting than'. We don't add '-er' to long adjectives, and we use 'than', not 'as', in comparatives.",
           "words": [
             {
-              "word": "The children left their bags at school.",
+              "word": "This book is more interesting as that one.",
+              "ok": false
+            },
+            {
+              "word": "This book is interestinger than that one.",
+              "ok": false
+            },
+            {
+              "word": "This book is more interesting than that one.",
               "ok": true
-            },
-            {
-              "word": "The children left there bags at school.",
-              "ok": false
-            },
-            {
-              "word": "The children left they're bags at school.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 3,
-          "sentence": "Choose the correct daily habit.",
-          "summary": "A2: Present Simple.",
+          "sentence": "Choose the correct general statement.",
+          "summary": "A2 · Zero Article",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "Third-person singular (he/she/it) requires an 's' on the verb.",
+          "category": "Zero Article",
+          "explain": "Use no article (zero article) with uncountable nouns in a general sense: 'Water boils...'. 'The water' means specific water, and 'a water' is wrong because water is uncountable.",
           "words": [
             {
-              "word": "She works in a bank in London.",
+              "word": "The water boils at 100 degrees.",
+              "ok": false
+            },
+            {
+              "word": "A water boils at 100 degrees.",
+              "ok": false
+            },
+            {
+              "word": "Water boils at 100 degrees.",
               "ok": true
-            },
-            {
-              "word": "She work in a bank in London.",
-              "ok": false
-            },
-            {
-              "word": "She is work in a bank in London.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 4,
-          "sentence": "Select the correct duration.",
-          "summary": "B1: Present Perfect + For.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Present Perfect",
           "level": "B1",
           "category": "Present Perfect",
-          "explain": "Use 'for' for a period of time (duration) and 'since' for a point in time.",
+          "explain": "Use the present perfect with 'since' + a start point for an action continuing to now: 'have lived ... since 2015'. Use 'since' (not 'for') with a point in time, and the present simple 'live' can't take 'since' here.",
           "words": [
             {
-              "word": "I have lived in this city for five years.",
+              "word": "I live here since 2015.",
+              "ok": false
+            },
+            {
+              "word": "I have lived here for 2015.",
+              "ok": false
+            },
+            {
+              "word": "I have lived here since 2015.",
               "ok": true
-            },
-            {
-              "word": "I have lived in this city since five years.",
-              "ok": false
-            },
-            {
-              "word": "I live in this city for five years.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 5,
-          "sentence": "Choose the correct ability modal.",
-          "summary": "B1: Modals of Ability.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Second Conditional",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'Managed to' describes succeeding in a specific, difficult past task.",
+          "category": "Second Conditional",
+          "explain": "The second conditional uses 'if' + past simple, then 'would' + base verb: 'If I had ..., I would ...'. We don't use 'would' in the if-clause.",
           "words": [
             {
-              "word": "The test was hard, but I managed to pass.",
-              "ok": true
-            },
-            {
-              "word": "The test was hard, but I could to pass.",
+              "word": "If I would have more time, I would learn the piano.",
               "ok": false
             },
             {
-              "word": "The test was hard, but I was able pass.",
+              "word": "If I had more time, I would learn the piano.",
+              "ok": true
+            },
+            {
+              "word": "If I have more time, I would learn the piano.",
               "ok": false
             }
           ]
@@ -128,22 +128,22 @@
         {
           "title": "",
           "page": 6,
-          "sentence": "Identify the correct comparison.",
-          "summary": "B1: Comparatives.",
+          "sentence": "Choose the correct deduction.",
+          "summary": "B1 · Modals of Deduction & Probability",
           "level": "B1",
-          "category": "Comparatives & Superlatives",
-          "explain": "Long adjectives (3+ syllables) use 'more' + adjective + 'than'.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "'Must' expresses a confident deduction and is followed by the base verb, with no 'to' and no '-s': 'she must be asleep'. Modals never take 'to' or a third-person '-s'.",
           "words": [
             {
-              "word": "Tokyo is more expensive than Berlin.",
+              "word": "She isn't answering; she must be asleep.",
               "ok": true
             },
             {
-              "word": "Tokyo is expensiver than Berlin.",
+              "word": "She isn't answering; she must to be asleep.",
               "ok": false
             },
             {
-              "word": "Tokyo is most expensive than Berlin.",
+              "word": "She isn't answering; she musts be asleep.",
               "ok": false
             }
           ]
@@ -151,91 +151,91 @@
         {
           "title": "",
           "page": 7,
-          "sentence": "Choose the correct connector.",
-          "summary": "B1: Contrast Connectors.",
+          "sentence": "Choose the correct quantifier.",
+          "summary": "B1 · Quantifiers & Determiners",
           "level": "B1",
-          "category": "Connectors & Contrast",
-          "explain": "'Although' connects two contrasting clauses within one sentence.",
+          "category": "Quantifiers & Determiners",
+          "explain": "Use 'much' with uncountable nouns like 'sugar': 'much sugar'. 'Many' is for countable plurals, and 'sugar' has no plural '-s' here.",
           "words": [
             {
-              "word": "Although it was cold, we went swimming.",
+              "word": "There isn't many sugar left.",
+              "ok": false
+            },
+            {
+              "word": "There isn't much sugars left.",
+              "ok": false
+            },
+            {
+              "word": "There isn't much sugar left.",
               "ok": true
-            },
-            {
-              "word": "Despite it was cold, we went swimming.",
-              "ok": false
-            },
-            {
-              "word": "However it was cold, we went swimming.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 8,
-          "sentence": "Identify the correct hypothetical.",
-          "summary": "B2: Second Conditional.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Future Forms",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "For hypothetical 'unreal' states, use 'were' for all subjects (I/He/She).",
+          "category": "Advanced Future Forms",
+          "explain": "Use the future perfect ('will have' + past participle) for something completed before a future point: 'will have finished'. 'will have finish' lacks the participle, and 'will had' is not a valid form.",
           "words": [
             {
-              "word": "If I were you, I would take the job.",
+              "word": "By next June, I will have finish my degree.",
+              "ok": false
+            },
+            {
+              "word": "By next June, I will had finished my degree.",
+              "ok": false
+            },
+            {
+              "word": "By next June, I will have finished my degree.",
               "ok": true
-            },
-            {
-              "word": "If I was you, I would take the job.",
-              "ok": false
-            },
-            {
-              "word": "If I am you, I will take the job.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 9,
-          "sentence": "Choose the correct formal structure.",
-          "summary": "B2: Passive Reporting.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Third & Mixed Conditionals",
           "level": "B2",
-          "category": "Passive Voice",
-          "explain": "Structure: Subject + is said + to have + past participle.",
+          "category": "Third & Mixed Conditionals",
+          "explain": "A mixed conditional links a past condition to a present result: 'If I had studied ..., I would be ... now'. The past perfect shows the past cause; 'would be' shows the present result.",
           "words": [
             {
-              "word": "He is said to have escaped the prison.",
+              "word": "If I studied medicine, I would be a doctor now.",
+              "ok": false
+            },
+            {
+              "word": "If I had studied medicine, I would have be a doctor now.",
+              "ok": false
+            },
+            {
+              "word": "If I had studied medicine, I would be a doctor now.",
               "ok": true
-            },
-            {
-              "word": "He is said he escaped the prison.",
-              "ok": false
-            },
-            {
-              "word": "He said to have escaped the prison.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 10,
-          "sentence": "Identify the correct formal emphasis.",
-          "summary": "B2: Inversion.",
+          "sentence": "Choose the correct reported question.",
+          "summary": "B2 · Reported Questions & Commands",
           "level": "B2",
-          "category": "Emphasis & Inversion",
-          "explain": "Limiting adverbs (Never/Rarely) at the start require auxiliary inversion.",
+          "category": "Reported Questions & Commands",
+          "explain": "In reported questions, use statement word order and no auxiliary 'do/did': 'where I lived'. The direct-question forms 'where did I live' / 'where do I live' are incorrect when reported.",
           "words": [
             {
-              "word": "Never have I seen such a huge building.",
-              "ok": true
-            },
-            {
-              "word": "Never I have seen such a huge building.",
+              "word": "She asked me where did I live.",
               "ok": false
             },
             {
-              "word": "Never have I see such a huge building.",
+              "word": "She asked me where I lived.",
+              "ok": true
+            },
+            {
+              "word": "She asked me where do I live.",
               "ok": false
             }
           ]

@@ -13,22 +13,22 @@
         {
           "title": "",
           "page": 1,
-          "sentence": "Choose the correct sentence using a modal in the past.",
-          "summary": "Should Have + Past Participle.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Narrative Tenses",
           "level": "B2",
-          "category": "Relative Clauses",
-          "explain": "Use 'should have' + past participle to describe something that would have been better to do in the past.",
+          "category": "Narrative Tenses",
+          "explain": "In past narration, use the past perfect continuous for an earlier ongoing action: 'had been travelling'. 'has been' is present perfect, and 'had been travel' lacks the -ing form.",
           "words": [
             {
-              "word": "You should have told me about the problem earlier.",
-              "ok": true
-            },
-            {
-              "word": "You should told me about the problem earlier.",
+              "word": "She was tired because she had been travel all day.",
               "ok": false
             },
             {
-              "word": "You should have tell me about the problem earlier.",
+              "word": "She was tired because she had been travelling all day.",
+              "ok": true
+            },
+            {
+              "word": "She was tired because she has been travelling all day.",
               "ok": false
             }
           ]
@@ -36,22 +36,22 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Identify the correct sentence using the causative.",
-          "summary": "Have Something Done.",
+          "sentence": "Choose the correct indirect question.",
+          "summary": "B2 · Indirect & Embedded Questions",
           "level": "B2",
-          "category": "Passive Voice",
-          "explain": "Use 'have' + object + past participle when someone else performs a service for you.",
+          "category": "Indirect & Embedded Questions",
+          "explain": "Indirect questions use statement word order: 'where the station is'. We don't invert ('where is the station') or add 'does'.",
           "words": [
             {
-              "word": "I had my car repaired last week.",
-              "ok": true
-            },
-            {
-              "word": "I repaired my car by a mechanic last week.",
+              "word": "Could you tell me where is the station?",
               "ok": false
             },
             {
-              "word": "I had repaired my car last week by a mechanic.",
+              "word": "Could you tell me where the station is?",
+              "ok": true
+            },
+            {
+              "word": "Could you tell me where does the station is?",
               "ok": false
             }
           ]
@@ -59,22 +59,22 @@
         {
           "title": "",
           "page": 3,
-          "sentence": "Choose the correct sentence using an unreal past condition.",
-          "summary": "Third Conditional.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Articles: Advanced Usage",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "For an unreal past condition, use past perfect after 'if' and 'would have' + past participle in the result clause.",
+          "category": "Articles: Advanced Usage",
+          "explain": "With musical instruments in a general sense, use 'the': 'plays the violin'. Omitting the article or using 'a' breaks the meaning.",
           "words": [
             {
-              "word": "If they had left earlier, they wouldn't have missed the flight.",
-              "ok": true
-            },
-            {
-              "word": "If they left earlier, they wouldn't have missed the flight.",
+              "word": "He plays a violin beautifully.",
               "ok": false
             },
             {
-              "word": "If they had left earlier, they wouldn't miss the flight.",
+              "word": "He plays the violin beautifully.",
+              "ok": true
+            },
+            {
+              "word": "He plays violin beautifully.",
               "ok": false
             }
           ]
@@ -82,68 +82,68 @@
         {
           "title": "",
           "page": 4,
-          "sentence": "Identify the correct reported speech structure.",
-          "summary": "Reported Speech with Past Perfect.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Determiners & Reference",
           "level": "B2",
-          "category": "Reported Speech",
-          "explain": "When reporting a completed past action, the past simple often shifts to the past perfect.",
+          "category": "Advanced Determiners & Reference",
+          "explain": "'Each of' + plural noun takes a singular verb: 'Each of the students has'. The verb isn't plural, and the noun must be plural.",
           "words": [
             {
-              "word": "He said that he had finished the report the day before.",
+              "word": "Each of the student has a laptop.",
+              "ok": false
+            },
+            {
+              "word": "Each of the students have a laptop.",
+              "ok": false
+            },
+            {
+              "word": "Each of the students has a laptop.",
               "ok": true
-            },
-            {
-              "word": "He said that he has finished the report the day before.",
-              "ok": false
-            },
-            {
-              "word": "He told that he had finished the report the day before.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 5,
-          "sentence": "Choose the correct formal conditional structure.",
-          "summary": "Conditional Inversion.",
+          "sentence": "Choose the correct intensifier.",
+          "summary": "B2 · Advanced Modifiers & Intensifiers",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "'Had I known...' is a formal alternative to 'If I had known...'.",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "Non-gradable (extreme) adjectives like 'impossible' take 'absolutely', not 'very': 'absolutely impossible'. 'more impossible' also doesn't work with an absolute adjective.",
           "words": [
             {
-              "word": "Had I known about the delay, I would have taken a different train.",
+              "word": "It was very impossible to hear.",
+              "ok": false
+            },
+            {
+              "word": "It was absolutely more impossible to hear.",
+              "ok": false
+            },
+            {
+              "word": "It was absolutely impossible to hear.",
               "ok": true
-            },
-            {
-              "word": "Had I knew about the delay, I would have taken a different train.",
-              "ok": false
-            },
-            {
-              "word": "Had I known about the delay, I had taken a different train.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 6,
-          "sentence": "Identify the correct non-defining relative clause.",
-          "summary": "Non-Defining Relative Clauses.",
+          "sentence": "Choose the correct phrase.",
+          "summary": "B2 · Prepositional Phrases & Idioms",
           "level": "B2",
-          "category": "Relative Clauses",
-          "explain": "Non-defining relative clauses use commas and usually 'who' or 'which', not 'that'.",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "The fixed phrase is 'on purpose' (deliberately): 'She did it on purpose'. 'in purpose' and 'by purpose' are not correct.",
           "words": [
             {
-              "word": "My brother, who lives in Canada, is coming to visit.",
+              "word": "She did it on purpose.",
               "ok": true
             },
             {
-              "word": "My brother, that lives in Canada, is coming to visit.",
+              "word": "She did it by purpose.",
               "ok": false
             },
             {
-              "word": "My brother who he lives in Canada, is coming to visit.",
+              "word": "She did it in purpose.",
               "ok": false
             }
           ]
@@ -151,22 +151,22 @@
         {
           "title": "",
           "page": 7,
-          "sentence": "Choose the correct sentence with a linking expression.",
-          "summary": "Contrast: Although and Despite.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Verb Patterns",
           "level": "B2",
-          "category": "Connectors & Contrast",
-          "explain": "'Although' is followed by a clause, while 'despite' is followed by a noun or -ing form.",
+          "category": "Advanced Verb Patterns",
+          "explain": "'Admit' is followed by the -ing form: 'admitted stealing'. 'admitted to steal' and 'admitted steal' are incorrect.",
           "words": [
             {
-              "word": "Although the journey was long, we enjoyed it.",
-              "ok": true
-            },
-            {
-              "word": "Despite the journey was long, we enjoyed it.",
+              "word": "He admitted steal the money.",
               "ok": false
             },
             {
-              "word": "Although of the long journey, we enjoyed it.",
+              "word": "He admitted stealing the money.",
+              "ok": true
+            },
+            {
+              "word": "He admitted to steal the money.",
               "ok": false
             }
           ]
@@ -174,45 +174,45 @@
         {
           "title": "",
           "page": 8,
-          "sentence": "Identify the correct verb pattern showing a change in meaning.",
-          "summary": "Remember + Gerund or Infinitive.",
+          "sentence": "Choose the correct collocation.",
+          "summary": "B2 · Advanced Collocations",
           "level": "B2",
-          "category": "Verb Patterns",
-          "explain": "'Remember to do' means not to forget a future action. 'Remember doing' refers to a memory of a past action.",
+          "category": "Advanced Collocations",
+          "explain": "We 'take responsibility' in English: this is the standard collocation. 'make/do responsibility' are not used.",
           "words": [
             {
-              "word": "Remember to lock the door before you leave.",
+              "word": "The company will do responsibility for the error.",
+              "ok": false
+            },
+            {
+              "word": "The company will make responsibility for the error.",
+              "ok": false
+            },
+            {
+              "word": "The company will take responsibility for the error.",
               "ok": true
-            },
-            {
-              "word": "Remember locking the door before you leave.",
-              "ok": false
-            },
-            {
-              "word": "Remember lock the door before you leave.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 9,
-          "sentence": "Choose the correct sentence using the future continuous.",
-          "summary": "Future Continuous.",
+          "sentence": "Choose the correct discourse marker.",
+          "summary": "B2 · Advanced Discourse Markers",
           "level": "B2",
-          "category": "Future Forms",
-          "explain": "Use 'will be' + verb-ing for an action that will be in progress at a particular future time.",
+          "category": "Advanced Discourse Markers",
+          "explain": "'That said' is a fixed discourse marker meaning 'nevertheless': 'That said, there were some positives'. 'That saying' and 'That is said' are not correct.",
           "words": [
             {
-              "word": "This time tomorrow, I'll be flying to Madrid.",
+              "word": "The results were poor. That said, there were some positives.",
               "ok": true
             },
             {
-              "word": "This time tomorrow, I'll fly to Madrid.",
+              "word": "The results were poor. That is said, there were some positives.",
               "ok": false
             },
             {
-              "word": "This time tomorrow, I'll be fly to Madrid.",
+              "word": "The results were poor. That saying, there were some positives.",
               "ok": false
             }
           ]
@@ -220,23 +220,23 @@
         {
           "title": "",
           "page": 10,
-          "sentence": "Identify the correct advanced comparison structure.",
-          "summary": "The More... The More....",
+          "sentence": "Choose the correct emphatic (cleft) sentence.",
+          "summary": "B2 · Cleft Sentences",
           "level": "B2",
-          "category": "Comparatives & Superlatives",
-          "explain": "Use 'the + comparative, the + comparative' to show that two changes are connected.",
+          "category": "Cleft Sentences",
+          "explain": "In an it-cleft emphasising a person, use 'who' (or 'that'): 'It was John who broke the window'. 'which' is for things, and the relative pronoun can't be omitted here.",
           "words": [
             {
-              "word": "The more you practise, the more confident you become.",
+              "word": "It was John broke the window.",
+              "ok": false
+            },
+            {
+              "word": "It was John which broke the window.",
+              "ok": false
+            },
+            {
+              "word": "It was John who broke the window.",
               "ok": true
-            },
-            {
-              "word": "The more you practise, more confident you become.",
-              "ok": false
-            },
-            {
-              "word": "More you practise, the more confident you become.",
-              "ok": false
             }
           ]
         }

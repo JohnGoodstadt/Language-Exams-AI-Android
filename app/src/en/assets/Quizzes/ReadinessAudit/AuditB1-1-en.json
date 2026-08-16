@@ -13,22 +13,22 @@
         {
           "title": "",
           "page": 1,
-          "sentence": "Choose the correct sentence using the present perfect.",
-          "summary": "Present Perfect vs Past Simple.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Present Perfect",
           "level": "B1",
           "category": "Present Perfect",
-          "explain": "Use the present perfect for an unfinished time period or experience connected to the present. The correct form is 'have seen'.",
+          "explain": "Present perfect is 'have/has' + past participle: 'have finished'. 'have finish' lacks the participle, and 'am finished' uses the wrong auxiliary.",
           "words": [
             {
-              "word": "I have seen that film three times.",
-              "ok": true
-            },
-            {
-              "word": "I saw that film three times already.",
+              "word": "I have already finish my homework.",
               "ok": false
             },
             {
-              "word": "I have saw that film three times.",
+              "word": "I have already finished my homework.",
+              "ok": true
+            },
+            {
+              "word": "I am already finished my homework.",
               "ok": false
             }
           ]
@@ -36,22 +36,22 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Identify the correct first conditional sentence.",
-          "summary": "First Conditional.",
+          "sentence": "Choose the correct quantifier.",
+          "summary": "B1 · Quantifiers & Determiners",
           "level": "B1",
-          "category": "Conditionals",
-          "explain": "In the first conditional, use the present simple after 'if' and 'will' in the main clause.",
+          "category": "Quantifiers & Determiners",
+          "explain": "Use 'a few' with countable plural nouns like 'people': 'a few people'. 'A little' is for uncountables, and 'few of people' needs 'the'.",
           "words": [
             {
-              "word": "If it rains tomorrow, we will stay at home.",
-              "ok": true
-            },
-            {
-              "word": "If it will rain tomorrow, we will stay at home.",
+              "word": "There were only a little people at the party.",
               "ok": false
             },
             {
-              "word": "If it rains tomorrow, we stay at home.",
+              "word": "There were only a few people at the party.",
+              "ok": true
+            },
+            {
+              "word": "There were only few of people at the party.",
               "ok": false
             }
           ]
@@ -59,22 +59,22 @@
         {
           "title": "",
           "page": 3,
-          "sentence": "Choose the correct second conditional sentence.",
-          "summary": "Second Conditional.",
+          "sentence": "Choose the correct preposition.",
+          "summary": "B1 · Dependent Prepositions",
           "level": "B1",
-          "category": "Conditionals",
-          "explain": "For an unreal or unlikely present situation, use 'if' + past simple and 'would' + base verb.",
+          "category": "Dependent Prepositions",
+          "explain": "The adjective 'good' takes 'at' for skills: 'good at chess'. 'good in/on' are not the correct collocations.",
           "words": [
             {
-              "word": "If I had more time, I would learn another language.",
-              "ok": true
-            },
-            {
-              "word": "If I would have more time, I learned another language.",
+              "word": "She is very good in chess.",
               "ok": false
             },
             {
-              "word": "If I have more time, I would learn another language.",
+              "word": "She is very good at chess.",
+              "ok": true
+            },
+            {
+              "word": "She is very good on chess.",
               "ok": false
             }
           ]
@@ -82,22 +82,22 @@
         {
           "title": "",
           "page": 4,
-          "sentence": "Identify the correct reported speech sentence.",
-          "summary": "Reported Speech.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Comparative Structures",
           "level": "B1",
-          "category": "Reported Speech",
-          "explain": "When reporting a past statement, the verb often moves back one tense. 'I am tired' becomes 'she was tired'.",
+          "category": "Comparative Structures",
+          "explain": "This double-comparative structure needs 'the' before each comparative: 'The more ..., the better ...'. 'the more better' doubles the comparative, and omitting 'the' is wrong.",
           "words": [
             {
-              "word": "She said that she was tired.",
+              "word": "The more you practise, the better you get.",
               "ok": true
             },
             {
-              "word": "She said that she is tired yesterday.",
+              "word": "More you practise, better you get.",
               "ok": false
             },
             {
-              "word": "She told that she was tired.",
+              "word": "The more you practise, the more better you get.",
               "ok": false
             }
           ]
@@ -105,22 +105,22 @@
         {
           "title": "",
           "page": 5,
-          "sentence": "Choose the correct relative clause.",
-          "summary": "Relative Clauses.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Verb + Object + Infinitive",
           "level": "B1",
-          "category": "Relative Clauses",
-          "explain": "Use 'who' to introduce a relative clause describing a person.",
+          "category": "Verb + Object + Infinitive",
+          "explain": "After 'want', use object + to-infinitive: 'want me to study'. English doesn't use 'want that ...', and 'to' is required.",
           "words": [
             {
-              "word": "The woman who lives next door is a doctor.",
+              "word": "My parents want me to study medicine.",
               "ok": true
             },
             {
-              "word": "The woman which lives next door is a doctor.",
+              "word": "My parents want me study medicine.",
               "ok": false
             },
             {
-              "word": "The woman who she lives next door is a doctor.",
+              "word": "My parents want that I study medicine.",
               "ok": false
             }
           ]
@@ -128,22 +128,22 @@
         {
           "title": "",
           "page": 6,
-          "sentence": "Identify the correct passive sentence.",
-          "summary": "Passive Voice.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Second Conditional",
           "level": "B1",
-          "category": "Passive Voice",
-          "explain": "The passive is formed with 'be' + past participle. The correct form is 'was built'.",
+          "category": "Second Conditional",
+          "explain": "The second conditional uses past simple in the if-clause and 'would' in the result: 'If I won ..., I would travel'. Don't use present 'win' or future 'will' here.",
           "words": [
             {
-              "word": "The bridge was built more than fifty years ago.",
+              "word": "If I won the lottery, I would travel the world.",
               "ok": true
             },
             {
-              "word": "The bridge built more than fifty years ago.",
+              "word": "If I win the lottery, I would travel the world.",
               "ok": false
             },
             {
-              "word": "The bridge was build more than fifty years ago.",
+              "word": "If I won the lottery, I will travel the world.",
               "ok": false
             }
           ]
@@ -151,22 +151,22 @@
         {
           "title": "",
           "page": 7,
-          "sentence": "Choose the correct modal verb for obligation.",
-          "summary": "Modal Verbs (Obligation).",
+          "sentence": "Choose the correct passive sentence.",
+          "summary": "B1 · Present & Past Passive",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'Have to' is used for an obligation or requirement. After 'have to', use the base form of the verb.",
+          "category": "Present & Past Passive",
+          "explain": "The present passive is 'is/are' + past participle: 'is spoken'. 'is speaking' is active continuous, and 'English speaks' is active.",
           "words": [
             {
-              "word": "I have to finish this report before Friday.",
+              "word": "English is spoken all over the world.",
               "ok": true
             },
             {
-              "word": "I have finish this report before Friday.",
+              "word": "English speaks all over the world.",
               "ok": false
             },
             {
-              "word": "I have to finishing this report before Friday.",
+              "word": "English is speaking all over the world.",
               "ok": false
             }
           ]
@@ -174,45 +174,45 @@
         {
           "title": "",
           "page": 8,
-          "sentence": "Identify the correct verb pattern.",
-          "summary": "Gerund after Preposition.",
+          "sentence": "Choose the correct reported statement.",
+          "summary": "B1 · Reported Statements",
           "level": "B1",
-          "category": "Verb Patterns",
-          "explain": "After a preposition such as 'in', use the -ing form. The correct structure is 'interested in learning'.",
+          "category": "Reported Statements",
+          "explain": "In reported speech the tense usually shifts back: 'is' becomes 'was'. Also we say 'told me' but 'said' without an object.",
           "words": [
             {
-              "word": "She is interested in learning more about photography.",
+              "word": "He said that he is tired.",
+              "ok": false
+            },
+            {
+              "word": "He said me that he was tired.",
+              "ok": false
+            },
+            {
+              "word": "He said that he was tired.",
               "ok": true
-            },
-            {
-              "word": "She is interested in learn more about photography.",
-              "ok": false
-            },
-            {
-              "word": "She is interested to learning more about photography.",
-              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 9,
-          "sentence": "Choose the correct past continuous and past simple combination.",
-          "summary": "Past Continuous and Past Simple.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Defining Relative Clauses",
           "level": "B1",
-          "category": "Past Tenses",
-          "explain": "Use the past continuous for an action in progress and the past simple for the shorter action that interrupted it.",
+          "category": "Defining Relative Clauses",
+          "explain": "For things, use 'that' (or 'which') in a defining relative clause: 'the house that Jack built'. 'what' is never a relative pronoun here, and 'who' is only for people.",
           "words": [
             {
-              "word": "I was driving home when I saw the accident.",
-              "ok": true
-            },
-            {
-              "word": "I drove home when I was seeing the accident.",
+              "word": "This is the house what Jack built.",
               "ok": false
             },
             {
-              "word": "I was driving home when I was seeing the accident.",
+              "word": "This is the house that Jack built.",
+              "ok": true
+            },
+            {
+              "word": "This is the house who Jack built.",
               "ok": false
             }
           ]
@@ -220,23 +220,23 @@
         {
           "title": "",
           "page": 10,
-          "sentence": "Identify the correct present perfect sentence using 'for'.",
-          "summary": "Present Perfect Continuous Time.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Common Phrasal Verbs",
           "level": "B1",
-          "category": "Present Perfect",
-          "explain": "For a situation that started in the past and continues now, use the present perfect with 'for' plus a period of time.",
+          "category": "Common Phrasal Verbs",
+          "explain": "'Run into' means to meet someone by chance: 'ran into an old friend'. 'run in' and 'run onto' are not correct for this meaning.",
           "words": [
             {
-              "word": "They have lived in this town for eight years.",
+              "word": "I ran onto an old friend yesterday.",
+              "ok": false
+            },
+            {
+              "word": "I ran in an old friend yesterday.",
+              "ok": false
+            },
+            {
+              "word": "I ran into an old friend yesterday.",
               "ok": true
-            },
-            {
-              "word": "They live in this town since eight years.",
-              "ok": false
-            },
-            {
-              "word": "They lived in this town for eight years and still live here.",
-              "ok": false
             }
           ]
         }
