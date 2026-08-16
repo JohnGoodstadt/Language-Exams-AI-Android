@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Zero Article (A2) questions.",
+      "description": "Practise when no article is used with general plural nouns, uncountable nouns, languages, meals and common expressions.",
       "sortorder": 1,
-      "learningTitle": "Using Zero Article",
-      "learningPoints": [],
+      "learningTitle": "Knowing When to Use No Article",
+      "learningPoints": [
+        "Use no article with plural nouns when speaking generally.",
+        "Use no article with uncountable nouns when speaking generally.",
+        "Use no article with most languages and school subjects.",
+        "Use no article with meals such as breakfast, lunch and dinner in general use.",
+        "Recognise common expressions such as go to school and go to bed.",
+        "Contrast zero article with 'the' when the meaning becomes specific."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using no article with plural nouns in general.",
           "level": "A2",
           "category": "Zero Article",
-          "explain": "Placeholder explanation.",
+          "explain": "Plural countable nouns take no article when speaking about the whole class in general.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Dogs are friendly animals."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The dogs are friendly animals."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "A dogs are friendly animals."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using no article with an uncountable noun in general.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "Uncountable nouns often take no article when speaking generally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Water is important for life."
+            },
+            {
+              "ok": false,
+              "word": "The water is important for life."
+            },
+            {
+              "ok": false,
+              "word": "A water is important for life."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using no article with languages.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "Most language names are used without an article.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She speaks Spanish."
+            },
+            {
+              "ok": false,
+              "word": "She speaks the Spanish."
+            },
+            {
+              "ok": false,
+              "word": "She speaks a Spanish."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using no article with meals.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "BREAKFAST, LUNCH and DINNER usually take no article when referring to the meal generally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We have dinner at seven."
+            },
+            {
+              "ok": false,
+              "word": "We have the dinner at seven."
+            },
+            {
+              "ok": false,
+              "word": "We have a dinner at seven every day."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using no article in 'go to school'.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "Use no article with SCHOOL when referring to its normal purpose.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The children go to school at eight."
+            },
+            {
+              "ok": false,
+              "word": "The children go to the school at eight."
+            },
+            {
+              "ok": false,
+              "word": "The children go to a school at eight."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using no article in 'go to bed'.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "BED takes no article in the expression GO TO BED.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I usually go to bed at eleven."
+            },
+            {
+              "ok": false,
+              "word": "I usually go to the bed at eleven."
+            },
+            {
+              "ok": false,
+              "word": "I usually go to a bed at eleven."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using no article with a school subject.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "School subjects normally take no article.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Maths is difficult for me."
+            },
+            {
+              "ok": false,
+              "word": "The maths is difficult for me."
+            },
+            {
+              "ok": false,
+              "word": "A maths is difficult for me."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Contrasting general and specific meaning.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "Use THE when referring to specific things already identified, but no article for things in general.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I like music, but the music in this café is too loud."
+            },
+            {
+              "ok": false,
+              "word": "I like the music, but music in this café is too loud."
+            },
+            {
+              "ok": false,
+              "word": "I like a music, but the music in this café is too loud."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using no article with a general activity.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "Many activities and abstract nouns take no article when used generally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Exercise is good for you."
+            },
+            {
+              "ok": false,
+              "word": "The exercise is good for you."
+            },
+            {
+              "ok": false,
+              "word": "An exercise is good for you."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using no article with plural food nouns generally.",
+          "level": "A2",
+          "category": "Zero Article",
+          "explain": "Use no article with plural nouns when talking about them generally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Vegetables are good for you."
+            },
+            {
+              "ok": false,
+              "word": "The vegetables are good for you."
+            },
+            {
+              "ok": false,
+              "word": "A vegetables are good for you."
             }
           ]
         }

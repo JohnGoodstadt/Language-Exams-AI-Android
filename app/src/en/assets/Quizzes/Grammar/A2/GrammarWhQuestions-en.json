@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Wh- Questions (A2) questions.",
+      "description": "Practise A2 question formation with who, what, where, when, why, which and how.",
       "sortorder": 1,
-      "learningTitle": "Using Wh- Questions",
-      "learningPoints": [],
+      "learningTitle": "Building Wh- Questions",
+      "learningPoints": [
+        "Choose the correct question word for the information you need.",
+        "Use do, does and did with ordinary verbs.",
+        "Use the correct word order after a Wh- word.",
+        "Use forms of 'be' directly before the subject.",
+        "Recognise subject questions such as 'Who called you?'.",
+        "Use how much, how many and how often accurately."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'where' for place.",
           "level": "A2",
           "category": "Wh- Questions",
-          "explain": "Placeholder explanation.",
+          "explain": "WHERE asks about a place, followed by the correct question structure.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Where do you work?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Where you do work?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Where are you work?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'when' for time.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "WHEN asks about time. With a Past Simple question, use DID + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "When did they arrive?"
+            },
+            {
+              "ok": false,
+              "word": "When they did arrive?"
+            },
+            {
+              "ok": false,
+              "word": "When did they arrived?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'why' with 'be'.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "With the verb BE, put the verb before the subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Why are you tired?"
+            },
+            {
+              "ok": false,
+              "word": "Why you are tired?"
+            },
+            {
+              "ok": false,
+              "word": "Why do you tired?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'which' for a limited choice.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "WHICH is used when choosing from a limited set of options.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Which bus do we need?"
+            },
+            {
+              "ok": false,
+              "word": "Which bus we need?"
+            },
+            {
+              "ok": false,
+              "word": "Which do bus we need?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'how often'.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "HOW OFTEN asks about frequency.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "How often do you go swimming?"
+            },
+            {
+              "ok": false,
+              "word": "How often you go swimming?"
+            },
+            {
+              "ok": false,
+              "word": "How often are you go swimming?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'how many'.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "HOW MANY is followed by a plural countable noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "How many brothers do you have?"
+            },
+            {
+              "ok": false,
+              "word": "How much brothers do you have?"
+            },
+            {
+              "ok": false,
+              "word": "How many brothers you have?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'how much' for price.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "HOW MUCH can ask about price.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "How much does this cost?"
+            },
+            {
+              "ok": false,
+              "word": "How many does this cost?"
+            },
+            {
+              "ok": false,
+              "word": "How much this costs?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Recognising a subject question.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "When WHO is the subject, DO/DOES/DID is not normally used.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who called you last night?"
+            },
+            {
+              "ok": false,
+              "word": "Who did call you last night?"
+            },
+            {
+              "ok": false,
+              "word": "Who called did you last night?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'what kind of'.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "WHAT KIND OF asks about type or category.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What kind of music do you like?"
+            },
+            {
+              "ok": false,
+              "word": "What kind music do you like?"
+            },
+            {
+              "ok": false,
+              "word": "What kind of music you like?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a Wh- question in the Present Continuous.",
+          "level": "A2",
+          "category": "Wh- Questions",
+          "explain": "Use WH- word + BE + subject + verb-ing for a current action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What are they doing?"
+            },
+            {
+              "ok": false,
+              "word": "What they are doing?"
+            },
+            {
+              "ok": false,
+              "word": "What do they doing?"
             }
           ]
         }

@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Verb + Object + Infinitive (B1) questions.",
+      "description": "Practise common verb patterns such as ask, tell, want, advise and remind + object + to-infinitive.",
       "sortorder": 1,
       "learningTitle": "Using Verb + Object + Infinitive",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use verb + object + to-infinitive after common verbs such as ask, tell and want.",
+        "Keep the object between the first verb and the infinitive.",
+        "Use the base form after 'to'.",
+        "Recognise verbs that commonly take this pattern.",
+        "Form negative infinitives with 'not to'.",
+        "Avoid incorrect patterns such as 'tell to someone' or 'want that someone'."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'tell + object + to-infinitive'.",
           "level": "B1",
           "category": "Verb + Object + Infinitive",
-          "explain": "Placeholder explanation.",
+          "explain": "Use TELL + someone + TO + base verb.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "She told me to wait outside."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "She told to me wait outside."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "She told me waiting outside."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'ask + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "Use ASK + someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I asked him to help me."
+            },
+            {
+              "ok": false,
+              "word": "I asked to him help me."
+            },
+            {
+              "ok": false,
+              "word": "I asked him helping me."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'want + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "Use WANT + someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We want you to come early."
+            },
+            {
+              "ok": false,
+              "word": "We want that you come early."
+            },
+            {
+              "ok": false,
+              "word": "We want you coming early."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'advise + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "ADVISE can be followed by someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The doctor advised me to rest."
+            },
+            {
+              "ok": false,
+              "word": "The doctor advised to me rest."
+            },
+            {
+              "ok": false,
+              "word": "The doctor advised me resting."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'remind + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "Use REMIND + someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Please remind me to call Anna."
+            },
+            {
+              "ok": false,
+              "word": "Please remind to me call Anna."
+            },
+            {
+              "ok": false,
+              "word": "Please remind me calling Anna."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a negative infinitive.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "Put NOT before TO + base verb in a negative infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He told us not to touch anything."
+            },
+            {
+              "ok": false,
+              "word": "He told us to not touching anything."
+            },
+            {
+              "ok": false,
+              "word": "He told not us to touch anything."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'invite + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "INVITE can be followed by someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They invited us to stay for dinner."
+            },
+            {
+              "ok": false,
+              "word": "They invited to us stay for dinner."
+            },
+            {
+              "ok": false,
+              "word": "They invited us staying for dinner."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'expect + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "EXPECT can be followed by someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I expect them to arrive soon."
+            },
+            {
+              "ok": false,
+              "word": "I expect that them arrive soon."
+            },
+            {
+              "ok": false,
+              "word": "I expect them arriving soon."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'allow + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "ALLOW can be followed by someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They allowed us to leave early."
+            },
+            {
+              "ok": false,
+              "word": "They allowed to us leave early."
+            },
+            {
+              "ok": false,
+              "word": "They allowed us leaving early."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'encourage + object + to-infinitive'.",
+          "level": "B1",
+          "category": "Verb + Object + Infinitive",
+          "explain": "ENCOURAGE can be followed by someone + TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The teacher encouraged us to practise more."
+            },
+            {
+              "ok": false,
+              "word": "The teacher encouraged to us practise more."
+            },
+            {
+              "ok": false,
+              "word": "The teacher encouraged us practising more."
             }
           ]
         }

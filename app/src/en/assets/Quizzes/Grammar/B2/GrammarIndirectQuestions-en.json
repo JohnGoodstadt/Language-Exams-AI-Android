@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarIndirectQuestionsB2-en",
+  "sheetname": "GrammarIndirectEmbeddedQuestionsB2-en",
   "title": "Indirect & Embedded Questions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Indirect & Embedded Questions (B2) questions.",
+      "description": "Practise polite indirect questions and embedded question clauses with statement word order.",
       "sortorder": 1,
-      "learningTitle": "Using Indirect & Embedded Questions",
-      "learningPoints": [],
+      "learningTitle": "Forming Indirect and Embedded Questions",
+      "learningPoints": [
+        "Use statement word order after an introductory question phrase.",
+        "Do not use do/does/did inside the embedded clause.",
+        "Use if or whether for embedded yes/no questions.",
+        "Keep tense and auxiliary choices appropriate to the embedded clause.",
+        "Use polite openings such as 'Could you tell me...?' and 'Do you know...?'.",
+        "Distinguish direct question word order from embedded question word order."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using statement word order after 'Could you tell me'.",
           "level": "B2",
           "category": "Indirect & Embedded Questions",
-          "explain": "Placeholder explanation.",
+          "explain": "Embedded questions use subject + verb order, not direct question order.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Could you tell me where the station is?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Could you tell me where is the station?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Could you tell me where does the station be?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Removing 'do' in an embedded question.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "Do not use DO/DOES/DID inside an embedded clause when it is only the direct-question auxiliary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Do you know what time the shop closes?"
+            },
+            {
+              "ok": false,
+              "word": "Do you know what time does the shop close?"
+            },
+            {
+              "ok": false,
+              "word": "Do you know what time the shop does closes?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'if' for a yes/no embedded question.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "Use IF or WHETHER to embed a yes/no question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Could you tell me if this seat is free?"
+            },
+            {
+              "ok": false,
+              "word": "Could you tell me is this seat free?"
+            },
+            {
+              "ok": false,
+              "word": "Could you tell me if is this seat free?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'whether' in an embedded question.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "WHETHER can introduce an embedded yes/no question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I don't know whether he has arrived yet."
+            },
+            {
+              "ok": false,
+              "word": "I don't know whether has he arrived yet."
+            },
+            {
+              "ok": false,
+              "word": "I don't know does he have arrived yet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Embedding a past question.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "Keep statement word order after the question word.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Can you remember where you left the keys?"
+            },
+            {
+              "ok": false,
+              "word": "Can you remember where did you leave the keys?"
+            },
+            {
+              "ok": false,
+              "word": "Can you remember where you did left the keys?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using an embedded subject question.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "When WHO is already the subject, the word order remains naturally subject + verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Do you know who called earlier?"
+            },
+            {
+              "ok": false,
+              "word": "Do you know who did call earlier?"
+            },
+            {
+              "ok": false,
+              "word": "Do you know who earlier called did?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Embedding a Present Perfect question.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "Keep the auxiliary after the subject inside the embedded clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Could you tell me how long you have lived here?"
+            },
+            {
+              "ok": false,
+              "word": "Could you tell me how long have you lived here?"
+            },
+            {
+              "ok": false,
+              "word": "Could you tell me how long do you have lived here?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a polite introductory phrase.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "A polite indirect question can begin with expressions such as WOULD YOU MIND TELLING ME.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Would you mind telling me where the nearest bank is?"
+            },
+            {
+              "ok": false,
+              "word": "Would you mind telling me where is the nearest bank?"
+            },
+            {
+              "ok": false,
+              "word": "Would you mind tell me where the nearest bank is?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Embedding a modal question.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "The modal comes after the subject in an embedded clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Do you know when we should leave?"
+            },
+            {
+              "ok": false,
+              "word": "Do you know when should we leave?"
+            },
+            {
+              "ok": false,
+              "word": "Do you know when do we should leave?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Embedding a question after a statement.",
+          "level": "B2",
+          "category": "Indirect & Embedded Questions",
+          "explain": "An embedded question can function as part of a statement and still uses statement word order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I'm not sure why she changed her mind."
+            },
+            {
+              "ok": false,
+              "word": "I'm not sure why did she change her mind."
+            },
+            {
+              "ok": false,
+              "word": "I'm not sure why she did changed her mind."
             }
           ]
         }

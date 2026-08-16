@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Contrast & Concession (B1) questions.",
+      "description": "Practise linking contrasting ideas with but, although, even though, however, despite and in spite of.",
       "sortorder": 1,
-      "learningTitle": "Using Contrast & Concession",
-      "learningPoints": [],
+      "learningTitle": "Expressing Contrast and Concession",
+      "learningPoints": [
+        "Use but to connect simple contrasting clauses.",
+        "Use although and even though before clauses.",
+        "Use despite and in spite of before nouns or verb-ing forms.",
+        "Use however to connect contrasting sentences or ideas.",
+        "Avoid combining although with but in the same structure.",
+        "Choose the linker that matches the grammatical pattern that follows."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'although' before a clause.",
           "level": "B1",
           "category": "Contrast & Concession",
-          "explain": "Placeholder explanation.",
+          "explain": "ALTHOUGH is followed by a clause with subject + verb.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Although it was raining, we went for a walk."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Although the rain, we went for a walk."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Although it was raining, but we went for a walk."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'despite' before a noun.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "DESPITE is followed by a noun, pronoun or verb-ing form, not a full finite clause without 'the fact that'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Despite the rain, we went for a walk."
+            },
+            {
+              "ok": false,
+              "word": "Despite it was raining, we went for a walk."
+            },
+            {
+              "ok": false,
+              "word": "Despite of the rain, we went for a walk."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'in spite of'.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "IN SPITE OF is followed by a noun, pronoun or verb-ing form.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "In spite of being tired, she finished the work."
+            },
+            {
+              "ok": false,
+              "word": "In spite being tired, she finished the work."
+            },
+            {
+              "ok": false,
+              "word": "In spite of she was tired, she finished the work."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'however' between sentences.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "HOWEVER can introduce a contrasting sentence and is normally separated by punctuation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The hotel was expensive. However, it was excellent."
+            },
+            {
+              "ok": false,
+              "word": "The hotel was expensive however it was excellent without punctuation."
+            },
+            {
+              "ok": false,
+              "word": "The hotel was expensive however but it was excellent."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'even though' for strong contrast.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "EVEN THOUGH introduces a clause and often emphasises an unexpected contrast.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Even though he was ill, he went to work."
+            },
+            {
+              "ok": false,
+              "word": "Even though his illness, he went to work."
+            },
+            {
+              "ok": false,
+              "word": "Even though he was ill, but he went to work."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'but' for straightforward contrast.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "BUT joins two contrasting clauses.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The room was small, but it was comfortable."
+            },
+            {
+              "ok": false,
+              "word": "The room was small, although but it was comfortable."
+            },
+            {
+              "ok": false,
+              "word": "The room was small, despite it was comfortable."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'despite + -ing'.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "DESPITE can be followed by a verb-ing form.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Despite feeling nervous, she gave a good presentation."
+            },
+            {
+              "ok": false,
+              "word": "Despite she felt nervous, she gave a good presentation."
+            },
+            {
+              "ok": false,
+              "word": "Despite of feeling nervous, she gave a good presentation."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Avoiding 'although ... but'.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "Do not normally use ALTHOUGH and BUT together to link the same two clauses.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Although the journey was long, it wasn't boring."
+            },
+            {
+              "ok": false,
+              "word": "Although the journey was long, but it wasn't boring."
+            },
+            {
+              "ok": false,
+              "word": "Despite the journey was long, it wasn't boring."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'however' after a complete idea.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "HOWEVER contrasts with the previous idea and can begin a new sentence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I liked the design. However, it was too expensive."
+            },
+            {
+              "ok": false,
+              "word": "I liked the design. Although, it was too expensive."
+            },
+            {
+              "ok": false,
+              "word": "I liked the design. Despite, it was too expensive."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing clause versus noun structure.",
+          "level": "B1",
+          "category": "Contrast & Concession",
+          "explain": "Use ALTHOUGH before a clause and DESPITE before a noun phrase.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Although the weather was bad, the match continued."
+            },
+            {
+              "ok": false,
+              "word": "Despite the weather was bad, the match continued."
+            },
+            {
+              "ok": false,
+              "word": "Although the bad weather, the match continued."
             }
           ]
         }

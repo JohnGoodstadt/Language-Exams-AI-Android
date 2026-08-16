@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Non-Defining Relative Clauses (B2) questions.",
+      "description": "Practise non-defining relative clauses that add extra information about already identified people, things and places.",
       "sortorder": 1,
       "learningTitle": "Using Non-Defining Relative Clauses",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use commas around non-defining relative clauses.",
+        "Use who for people and which for things.",
+        "Use whose for possession.",
+        "Do not normally use that in non-defining relative clauses.",
+        "Do not omit the relative pronoun.",
+        "Use which to refer back to a whole previous clause where appropriate."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using commas around extra information.",
           "level": "B2",
           "category": "Non-Defining Relative Clauses",
-          "explain": "Placeholder explanation.",
+          "explain": "Non-defining relative clauses are separated by commas because the information is additional, not identifying.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "My brother, who lives in Bristol, is a teacher."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "My brother who lives in Bristol is a teacher, when I have only one brother and this is extra information."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "My brother, that lives in Bristol, is a teacher."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'which' for things.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "Use WHICH, not THAT, in a standard non-defining relative clause about a thing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "My car, which is ten years old, still runs well."
+            },
+            {
+              "ok": false,
+              "word": "My car, that is ten years old, still runs well."
+            },
+            {
+              "ok": false,
+              "word": "My car, which it is ten years old, still runs well."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'whose' for possession.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "WHOSE can introduce possession in a non-defining relative clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sarah, whose son is at university, works with me."
+            },
+            {
+              "ok": false,
+              "word": "Sarah, who her son is at university, works with me."
+            },
+            {
+              "ok": false,
+              "word": "Sarah, which son is at university, works with me."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Not omitting the relative pronoun.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "The relative pronoun cannot normally be omitted in a non-defining relative clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This book, which I bought yesterday, is excellent."
+            },
+            {
+              "ok": false,
+              "word": "This book, I bought yesterday, is excellent."
+            },
+            {
+              "ok": false,
+              "word": "This book, that I bought yesterday, is excellent."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'who' for a named person.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "A named person is already identified, so additional information is non-defining and takes commas.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "David, who works in finance, is moving abroad."
+            },
+            {
+              "ok": false,
+              "word": "David who works in finance is moving abroad, if there is only one David under discussion and the information is extra."
+            },
+            {
+              "ok": false,
+              "word": "David, that works in finance, is moving abroad."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a place clause with 'where'.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "WHERE can add non-defining information about a place.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Paris, where I studied for a year, has changed a lot."
+            },
+            {
+              "ok": false,
+              "word": "Paris where I studied for a year has changed a lot, with clearly non-defining information."
+            },
+            {
+              "ok": false,
+              "word": "Paris, that I studied for a year, has changed a lot."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'which' to refer to a whole clause.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "WHICH can refer back to the entire previous idea.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He forgot my birthday, which annoyed me."
+            },
+            {
+              "ok": false,
+              "word": "He forgot my birthday, that annoyed me."
+            },
+            {
+              "ok": false,
+              "word": "He forgot my birthday, what annoyed me."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a preposition + relative pronoun in formal style.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "A preposition can come before WHOM/WHICH in formal non-defining clauses.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Mr Lee, with whom I worked for five years, has retired."
+            },
+            {
+              "ok": false,
+              "word": "Mr Lee, with who I worked for five years, has retired."
+            },
+            {
+              "ok": false,
+              "word": "Mr Lee, that I worked with for five years, has retired in this formal non-defining structure."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'which' after a proper noun thing.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "Extra information about a unique or named thing is non-defining.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The Eiffel Tower, which was completed in 1889, attracts millions of visitors."
+            },
+            {
+              "ok": false,
+              "word": "The Eiffel Tower that was completed in 1889 attracts millions of visitors, with the date as non-defining extra information."
+            },
+            {
+              "ok": false,
+              "word": "The Eiffel Tower, that was completed in 1889, attracts millions of visitors."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Distinguishing defining and non-defining meaning.",
+          "level": "B2",
+          "category": "Non-Defining Relative Clauses",
+          "explain": "Commas signal that the relative information is not needed to identify the noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "My only sister, who lives in Leeds, is a doctor."
+            },
+            {
+              "ok": false,
+              "word": "My only sister who lives in Leeds is a doctor, where the clause is needed to identify which only sister."
+            },
+            {
+              "ok": false,
+              "word": "My only sister, that lives in Leeds, is a doctor."
             }
           ]
         }

@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarFutureWillA2-en",
   "title": "Future: will",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Future: will (A2) questions.",
+      "description": "Practise 'will' for simple predictions, instant decisions, offers and promises.",
       "sortorder": 1,
-      "learningTitle": "Using Future: will",
-      "learningPoints": [],
+      "learningTitle": "Using Will for the Future",
+      "learningPoints": [
+        "Use will + base verb for simple future predictions.",
+        "Use will for decisions made at the moment of speaking.",
+        "Use will for offers and promises.",
+        "Use won't for negative future statements.",
+        "Use Will + subject + base verb for questions.",
+        "Do not add -s or 'to' after will."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'will' for a prediction.",
           "level": "A2",
           "category": "Future: will",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "Use WILL + base verb for a simple future prediction.",
+          "sentence": "I think it _____ rain tomorrow.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "will"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "does"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "is"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Keeping the base verb after 'will'.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "The verb after WILL stays in the base form.",
+          "sentence": "She will _____ you later.",
+          "words": [
+            {
+              "ok": true,
+              "word": "call"
+            },
+            {
+              "ok": false,
+              "word": "calls"
+            },
+            {
+              "ok": false,
+              "word": "to call"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'won't' for a negative.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "WON'T is the contracted negative form of WILL NOT.",
+          "sentence": "We _____ be late.",
+          "words": [
+            {
+              "ok": true,
+              "word": "won't"
+            },
+            {
+              "ok": false,
+              "word": "don't will"
+            },
+            {
+              "ok": false,
+              "word": "aren't"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Making an offer with 'will'.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "WILL can be used when offering to do something.",
+          "sentence": "I _____ carry that bag for you.",
+          "words": [
+            {
+              "ok": true,
+              "word": "will"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Making an instant decision.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "Use WILL for a decision made at the moment of speaking.",
+          "sentence": "The phone is ringing. I _____ answer it.",
+          "words": [
+            {
+              "ok": true,
+              "word": "will"
+            },
+            {
+              "ok": false,
+              "word": "am going"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Making a question with 'will'.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "Put WILL before the subject to make a question.",
+          "sentence": "_____ you be at home tonight?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Will"
+            },
+            {
+              "ok": false,
+              "word": "Do"
+            },
+            {
+              "ok": false,
+              "word": "Are"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Making a promise.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "WILL is commonly used for promises.",
+          "sentence": "I _____ help you tomorrow, I promise.",
+          "words": [
+            {
+              "ok": true,
+              "word": "will"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "have"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'will' with a third-person subject.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "WILL does not change with HE, SHE or IT.",
+          "sentence": "He _____ arrive at six.",
+          "words": [
+            {
+              "ok": true,
+              "word": "will"
+            },
+            {
+              "ok": false,
+              "word": "wills"
+            },
+            {
+              "ok": false,
+              "word": "will to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a negative prediction.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "Use WON'T + base verb for a negative prediction.",
+          "sentence": "I don't think they _____ win.",
+          "words": [
+            {
+              "ok": true,
+              "word": "will"
+            },
+            {
+              "ok": false,
+              "word": "are"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'will' after 'probably'.",
+          "level": "A2",
+          "category": "Future: will",
+          "explain": "Probably can be used with WILL for a future prediction.",
+          "sentence": "She will probably _____ by train.",
+          "words": [
+            {
+              "ok": true,
+              "word": "travel"
+            },
+            {
+              "ok": false,
+              "word": "travels"
+            },
+            {
+              "ok": false,
+              "word": "travelled"
             }
           ]
         }

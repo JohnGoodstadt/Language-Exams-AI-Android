@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarPastHabitsUsedToA2-en",
+  "sheetname": "GrammarPastHabitsUsedToWouldA2-en",
   "title": "Past Habits: used to / would",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Past Habits: used to / would (A2) questions.",
+      "description": "Practise 'used to' and 'would' for repeated past habits, with basic contrasts between past and present.",
       "sortorder": 1,
-      "learningTitle": "Using Past Habits: used to / would",
-      "learningPoints": [],
+      "learningTitle": "Talking About Past Habits",
+      "learningPoints": [
+        "Use used to + base verb for past habits and past states that are no longer true.",
+        "Use would + base verb for repeated past actions when the past time is clear.",
+        "Do not use would for past states such as possession or identity.",
+        "Use didn't use to for negative past habits.",
+        "Use Did ... use to...? for questions.",
+        "Recognise when a sentence contrasts a past habit with the present."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'used to' for a past habit.",
           "level": "A2",
           "category": "Past Habits: used to / would",
-          "explain": "Placeholder explanation.",
+          "explain": "USED TO + base verb describes a regular past habit that no longer happens.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "I used to walk to school every day."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "I use to walked to school every day."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "I used walk to school every day."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'used to' for a past state.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "USED TO can describe a past state that is no longer true.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She used to live in London."
+            },
+            {
+              "ok": false,
+              "word": "She would live in London."
+            },
+            {
+              "ok": false,
+              "word": "She used to lived in London."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'would' for a repeated past action.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "WOULD can describe repeated past actions when the past context is clear.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Every summer, we would visit our grandparents."
+            },
+            {
+              "ok": false,
+              "word": "Every summer, we would visited our grandparents."
+            },
+            {
+              "ok": false,
+              "word": "Every summer, we would to visit our grandparents."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Avoiding 'would' for a past state.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "Use USED TO, not WOULD, for a past state such as having or being.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I used to have long hair."
+            },
+            {
+              "ok": false,
+              "word": "I would have long hair."
+            },
+            {
+              "ok": false,
+              "word": "I used to had long hair."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Making a negative with 'didn't use to'.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "After DIDN'T, use USE TO, not USED TO, in careful standard writing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He didn't use to like coffee."
+            },
+            {
+              "ok": false,
+              "word": "He didn't used to like coffee."
+            },
+            {
+              "ok": false,
+              "word": "He didn't use to liked coffee."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Making a question with 'use to'.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "After DID, use USE TO + base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Did you use to play tennis?"
+            },
+            {
+              "ok": false,
+              "word": "Did you used to play tennis?"
+            },
+            {
+              "ok": false,
+              "word": "Did you use to played tennis?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a base verb after 'used to'.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "USED TO is followed by the base form of the verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We used to go there on Sundays."
+            },
+            {
+              "ok": false,
+              "word": "We used to went there on Sundays."
+            },
+            {
+              "ok": false,
+              "word": "We used to going there on Sundays."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'would' in a clear past narrative.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "WOULD works well for repeated actions after the past time has been established.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "When I was a child, my father would read to me at night."
+            },
+            {
+              "ok": false,
+              "word": "When I was a child, my father would reads to me at night."
+            },
+            {
+              "ok": false,
+              "word": "When I was a child, my father would reading to me at night."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Contrasting a past habit with now.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "USED TO commonly contrasts an old habit or situation with the present.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I used to drink tea, but now I prefer coffee."
+            },
+            {
+              "ok": false,
+              "word": "I use to drink tea, but now I prefer coffee."
+            },
+            {
+              "ok": false,
+              "word": "I used to drank tea, but now I prefer coffee."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing 'used to' for a past situation.",
+          "level": "A2",
+          "category": "Past Habits: used to / would",
+          "explain": "USED TO is suitable for situations or states that changed.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "There used to be a shop here."
+            },
+            {
+              "ok": false,
+              "word": "There would be a shop here."
+            },
+            {
+              "ok": false,
+              "word": "There use to be a shop here."
             }
           ]
         }

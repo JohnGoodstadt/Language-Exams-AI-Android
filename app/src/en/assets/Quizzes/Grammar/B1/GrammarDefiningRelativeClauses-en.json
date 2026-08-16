@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Defining Relative Clauses (B1) questions.",
+      "description": "Practise defining relative clauses with who, which, that, where and whose.",
       "sortorder": 1,
       "learningTitle": "Using Defining Relative Clauses",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use who for people and which for things.",
+        "Use that for people or things in many defining clauses.",
+        "Use where for places.",
+        "Use whose to show possession.",
+        "Omit the relative pronoun only when it is the object.",
+        "Do not use commas around defining relative clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'who' for people.",
           "level": "B1",
           "category": "Defining Relative Clauses",
-          "explain": "Placeholder explanation.",
+          "explain": "WHO introduces a defining relative clause about a person.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The woman who lives next door is a doctor."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The woman which lives next door is a doctor."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The woman who she lives next door is a doctor."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'which' for things.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "WHICH introduces a defining relative clause about a thing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The book which is on the table is mine."
+            },
+            {
+              "ok": false,
+              "word": "The book who is on the table is mine."
+            },
+            {
+              "ok": false,
+              "word": "The book which it is on the table is mine."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'that' for a thing.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "THAT can replace WHICH in many defining relative clauses.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The phone that I bought is already broken."
+            },
+            {
+              "ok": false,
+              "word": "The phone that I bought it is already broken."
+            },
+            {
+              "ok": false,
+              "word": "The phone what I bought is already broken."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'where' for a place.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "WHERE introduces a defining clause about a place.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This is the café where we first met."
+            },
+            {
+              "ok": false,
+              "word": "This is the café which we first met there."
+            },
+            {
+              "ok": false,
+              "word": "This is the café who we first met."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'whose' for possession.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "WHOSE shows that something belongs to a person or thing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I know a man whose daughter is a pilot."
+            },
+            {
+              "ok": false,
+              "word": "I know a man who his daughter is a pilot."
+            },
+            {
+              "ok": false,
+              "word": "I know a man which daughter is a pilot."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Omitting an object relative pronoun.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "When the relative pronoun is the object, it can sometimes be omitted.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The film we watched was excellent."
+            },
+            {
+              "ok": false,
+              "word": "The film watched we was excellent."
+            },
+            {
+              "ok": false,
+              "word": "The film we watched it was excellent."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Keeping a subject relative pronoun.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "Do not omit the relative pronoun when it is the subject of the relative clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The man who called you is waiting outside."
+            },
+            {
+              "ok": false,
+              "word": "The man called you is waiting outside, meaning he was the caller."
+            },
+            {
+              "ok": false,
+              "word": "The man who he called you is waiting outside."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'that' for a person.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "THAT can often replace WHO in a defining clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The person that helped me was very kind."
+            },
+            {
+              "ok": false,
+              "word": "The person that he helped me was very kind."
+            },
+            {
+              "ok": false,
+              "word": "The person which helped me was very kind."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Avoiding commas in a defining clause.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "A defining relative clause is essential to identify the noun, so commas are not used.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Students who arrive late must report to reception."
+            },
+            {
+              "ok": false,
+              "word": "Students, who arrive late, must report to reception, meaning only late students."
+            },
+            {
+              "ok": false,
+              "word": "Students who they arrive late must report to reception."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a relative clause after a thing.",
+          "level": "B1",
+          "category": "Defining Relative Clauses",
+          "explain": "Use WHICH or THAT when the antecedent is a thing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I need a computer that can run this program."
+            },
+            {
+              "ok": false,
+              "word": "I need a computer who can run this program."
+            },
+            {
+              "ok": false,
+              "word": "I need a computer that it can run this program."
             }
           ]
         }

@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarComparativesSuperlativesA2-en",
   "title": "Comparatives & Superlatives",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Comparatives & Superlatives (A2) questions.",
+      "description": "Practise common comparative and superlative forms for comparing people, places and things.",
       "sortorder": 1,
-      "learningTitle": "Using Comparatives & Superlatives",
-      "learningPoints": [],
+      "learningTitle": "Making Comparisons",
+      "learningPoints": [
+        "Use -er with many short adjectives to compare two things.",
+        "Use more with many longer adjectives.",
+        "Use the + -est or the most for superlatives.",
+        "Use than after comparative adjectives.",
+        "Learn common irregular forms such as better and best.",
+        "Choose forms that agree with the meaning of the sentence."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using -er with a short adjective.",
           "level": "A2",
           "category": "Comparatives & Superlatives",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "TALL becomes TALLER when comparing two people or things.",
+          "sentence": "My brother is _____ than me.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "taller"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "tallest"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "more tall"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'more' with a longer adjective.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Use MORE with many adjectives of two or more syllables.",
+          "sentence": "This book is _____ than that one.",
+          "words": [
+            {
+              "ok": true,
+              "word": "more interesting"
+            },
+            {
+              "ok": false,
+              "word": "interestinger"
+            },
+            {
+              "ok": false,
+              "word": "most interesting"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using a superlative with -est.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Use THE + -EST to identify the highest degree among three or more.",
+          "sentence": "Mount Everest is _____ mountain in the world.",
+          "words": [
+            {
+              "ok": true,
+              "word": "the highest"
+            },
+            {
+              "ok": false,
+              "word": "higher"
+            },
+            {
+              "ok": false,
+              "word": "the more high"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'than' after a comparative.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "THAN commonly follows a comparative adjective.",
+          "sentence": "My car is faster _____ yours.",
+          "words": [
+            {
+              "ok": true,
+              "word": "than"
+            },
+            {
+              "ok": false,
+              "word": "then"
+            },
+            {
+              "ok": false,
+              "word": "that"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using the irregular comparative 'better'.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "GOOD has the irregular comparative form BETTER.",
+          "sentence": "This restaurant is _____ than the other one.",
+          "words": [
+            {
+              "ok": true,
+              "word": "better"
+            },
+            {
+              "ok": false,
+              "word": "gooder"
+            },
+            {
+              "ok": false,
+              "word": "best"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using the irregular superlative 'best'.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "GOOD has the irregular superlative form BEST.",
+          "sentence": "That was _____ meal of the week.",
+          "words": [
+            {
+              "ok": true,
+              "word": "the best"
+            },
+            {
+              "ok": false,
+              "word": "better"
+            },
+            {
+              "ok": false,
+              "word": "the goodest"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Changing -y to -ier.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Many adjectives ending in consonant + Y change Y to IER in the comparative.",
+          "sentence": "Today is _____ than yesterday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "happier"
+            },
+            {
+              "ok": false,
+              "word": "happyer"
+            },
+            {
+              "ok": false,
+              "word": "happiest"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Doubling a final consonant.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Some short adjectives double the final consonant before -er or -est: BIG → BIGGER.",
+          "sentence": "This room is _____ than the kitchen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "bigger"
+            },
+            {
+              "ok": false,
+              "word": "biger"
+            },
+            {
+              "ok": false,
+              "word": "biggest"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'the most'.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "Use THE MOST with many longer adjectives to form a superlative.",
+          "sentence": "It is _____ expensive hotel in town.",
+          "words": [
+            {
+              "ok": true,
+              "word": "the most"
+            },
+            {
+              "ok": false,
+              "word": "more"
+            },
+            {
+              "ok": false,
+              "word": "the more"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'less' for a lower degree.",
+          "level": "A2",
+          "category": "Comparatives & Superlatives",
+          "explain": "LESS + adjective compares a lower degree.",
+          "sentence": "The bus is _____ expensive than the train.",
+          "words": [
+            {
+              "ok": true,
+              "word": "less"
+            },
+            {
+              "ok": false,
+              "word": "least"
+            },
+            {
+              "ok": false,
+              "word": "little"
             }
           ]
         }

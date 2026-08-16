@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarAdvancedModifiersB2-en",
+  "sheetname": "GrammarAdvancedModifiersIntensifiersB2-en",
   "title": "Advanced Modifiers & Intensifiers",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Modifiers & Intensifiers (B2) questions.",
+      "description": "Practise degree modifiers and intensifiers such as highly, deeply, absolutely, fairly, rather and slightly.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Modifiers & Intensifiers",
-      "learningPoints": [],
+      "learningTitle": "Using Modifiers and Intensifiers Precisely",
+      "learningPoints": [
+        "Use gradable and non-gradable adjectives with appropriate intensifiers.",
+        "Use very, fairly, rather and slightly with gradable adjectives.",
+        "Use absolutely, completely and totally with many non-gradable adjectives.",
+        "Recognise common collocations such as highly successful and deeply concerned.",
+        "Use modifiers to express fine differences in degree.",
+        "Avoid unnatural combinations such as 'very impossible'."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'very' with a gradable adjective.",
           "level": "B2",
           "category": "Advanced Modifiers & Intensifiers",
-          "explain": "Placeholder explanation.",
+          "explain": "VERY naturally modifies many gradable adjectives.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The exam was very difficult."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The exam was absolutely difficult, as the neutral default for a gradable adjective."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The exam was very impossible."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'absolutely' with a non-gradable adjective.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "ABSOLUTELY commonly modifies strong non-gradable adjectives such as EXHAUSTED or IMPOSSIBLE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I was absolutely exhausted."
+            },
+            {
+              "ok": false,
+              "word": "I was very exhausted, as the most natural strong collocation here."
+            },
+            {
+              "ok": false,
+              "word": "I was slightly exhausted completely."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'highly' in a common collocation.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "HIGHLY commonly combines with adjectives such as SUCCESSFUL, LIKELY and RECOMMENDED.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The project was highly successful."
+            },
+            {
+              "ok": false,
+              "word": "The project was deeply successful."
+            },
+            {
+              "ok": false,
+              "word": "The project was strongly success."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'deeply' with emotion.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "DEEPLY commonly modifies emotional adjectives such as CONCERNED, WORRIED and DISAPPOINTED.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We are deeply concerned about the situation."
+            },
+            {
+              "ok": false,
+              "word": "We are highly concerned about the situation, as the most natural collocation."
+            },
+            {
+              "ok": false,
+              "word": "We are deeply concern about the situation."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'slightly' for a small degree.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "SLIGHTLY means to a small extent.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The second option is slightly cheaper."
+            },
+            {
+              "ok": false,
+              "word": "The second option is absolutely cheaper."
+            },
+            {
+              "ok": false,
+              "word": "The second option is slightly cheapest."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'rather' for a noticeable degree.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "RATHER can indicate a fairly strong or unexpected degree, depending on context.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The room was rather small for four people."
+            },
+            {
+              "ok": false,
+              "word": "The room was completely small for four people."
+            },
+            {
+              "ok": false,
+              "word": "The room was rather smallest for four people."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'completely' with a non-gradable meaning.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "COMPLETELY works naturally with adjectives such as WRONG, DIFFERENT and EMPTY.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Your answer is completely wrong."
+            },
+            {
+              "ok": false,
+              "word": "Your answer is very wrongest."
+            },
+            {
+              "ok": false,
+              "word": "Your answer is slightly completely wrong."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'fairly' for moderate degree.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "FAIRLY expresses a moderate degree.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The instructions were fairly clear."
+            },
+            {
+              "ok": false,
+              "word": "The instructions were absolutely clear, meaning only moderately clear."
+            },
+            {
+              "ok": false,
+              "word": "The instructions were fairly clearest."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Avoiding incompatible intensifiers.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "Strong non-gradable adjectives generally prefer intensifiers such as ABSOLUTELY rather than VERY.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The view was absolutely breathtaking."
+            },
+            {
+              "ok": false,
+              "word": "The view was very breathtaking, as the most natural collocation."
+            },
+            {
+              "ok": false,
+              "word": "The view was slightly absolutely breathtaking."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing a natural modifier collocation.",
+          "level": "B2",
+          "category": "Advanced Modifiers & Intensifiers",
+          "explain": "Some modifiers form conventional combinations with particular adjectives.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It is highly unlikely that they will agree."
+            },
+            {
+              "ok": false,
+              "word": "It is deeply unlikely that they will agree."
+            },
+            {
+              "ok": false,
+              "word": "It is highly unlikelihood that they will agree."
             }
           ]
         }

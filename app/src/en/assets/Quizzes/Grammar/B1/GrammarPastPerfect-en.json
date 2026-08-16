@@ -1,27 +1,252 @@
 {
-  "fileformat": 7,
-  "sheetname": "Grammar-PastPerfect-B1",
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarPastPerfectB1-en",
   "title": "Past Perfect",
   "updatedDate": 0,
-  "location": 0,
   "data": [
     {
-      "title": "Past Perfect",
-      "description": "PLACEHOLDER - replace with real Past Perfect (B1) questions.",
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise the Past Perfect to show that one past event happened before another past event.",
       "sortorder": 1,
+      "learningTitle": "Ordering Past Events with the Past Perfect",
+      "learningPoints": [
+        "Use had + past participle to form the Past Perfect.",
+        "Use the tense for an earlier past event before another past event.",
+        "Use the Past Simple for the later event in a sequence.",
+        "Use already, just and never naturally with the Past Perfect.",
+        "Recognise when chronological order is already clear.",
+        "Avoid using the Past Perfect when only one simple past event is needed."
+      ],
       "sections": [
         {
-          "title": "Past Perfect",
+          "title": "",
           "page": 1,
-          "sentence": "By the time we arrived, the film _ already started.",
-          "explain": "Placeholder explanation for Past Perfect.",
-          "summary": "Placeholder summary.",
+          "summary": "Showing an earlier past event.",
           "level": "B1",
           "category": "Past Perfect",
+          "explain": "Use HAD + past participle for the earlier of two past events.",
+          "sentence": "Choose the correct sentence.",
           "words": [
-            { "word": "had", "ok": true },
-            { "word": "has", "ok": false },
-            { "word": "was", "ok": false }
+            {
+              "ok": true,
+              "word": "When I arrived, the film had already started."
+            },
+            {
+              "ok": false,
+              "word": "When I had arrived, the film already started."
+            },
+            {
+              "ok": false,
+              "word": "When I arrived, the film has already started."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using Past Perfect before Past Simple.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "The Past Perfect marks the earlier event; the Past Simple often marks the later event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She had left before I called."
+            },
+            {
+              "ok": false,
+              "word": "She has left before I called."
+            },
+            {
+              "ok": false,
+              "word": "She had leave before I called."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using an irregular past participle.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "GO has the past participle GONE after HAD.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They had gone home by the time we arrived."
+            },
+            {
+              "ok": false,
+              "word": "They had went home by the time we arrived."
+            },
+            {
+              "ok": false,
+              "word": "They have gone home by the time we arrived."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'never' before a past point.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "Use HAD NEVER + past participle for something that had not happened before a past moment.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I had never flown before that trip."
+            },
+            {
+              "ok": false,
+              "word": "I never had flew before that trip."
+            },
+            {
+              "ok": false,
+              "word": "I had never flew before that trip."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'just' with the Past Perfect.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "JUST can show that one event happened shortly before another past event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We had just sat down when the lights went out."
+            },
+            {
+              "ok": false,
+              "word": "We just had sat down when the lights went out."
+            },
+            {
+              "ok": false,
+              "word": "We had just sit down when the lights went out."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Recognising cause in the past.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "The Past Perfect can explain the earlier cause of a past situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He was tired because he had slept badly."
+            },
+            {
+              "ok": false,
+              "word": "He was tired because he has slept badly."
+            },
+            {
+              "ok": false,
+              "word": "He was tired because he had sleep badly."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'by the time'.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "BY THE TIME often introduces the later past point, with the earlier action in the Past Perfect.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By the time we got there, the shop had closed."
+            },
+            {
+              "ok": false,
+              "word": "By the time we had got there, the shop closed before."
+            },
+            {
+              "ok": false,
+              "word": "By the time we got there, the shop has closed."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Avoiding unnecessary Past Perfect.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "If events are simply listed in chronological order, the Past Simple is often enough.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I got up, had breakfast and left the house."
+            },
+            {
+              "ok": false,
+              "word": "I had got up, had had breakfast and had left the house."
+            },
+            {
+              "ok": false,
+              "word": "I have got up, had breakfast and left the house."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a negative Past Perfect.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "Use HADN'T + past participle for an earlier event that did not happen.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She hadn't seen the message before the meeting."
+            },
+            {
+              "ok": false,
+              "word": "She didn't had seen the message before the meeting."
+            },
+            {
+              "ok": false,
+              "word": "She hadn't saw the message before the meeting."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Making a Past Perfect question.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "Use HAD + subject + past participle in a question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Had you met him before the party?"
+            },
+            {
+              "ok": false,
+              "word": "Did you had met him before the party?"
+            },
+            {
+              "ok": false,
+              "word": "Had you metted him before the party?"
+            }
           ]
         }
       ]

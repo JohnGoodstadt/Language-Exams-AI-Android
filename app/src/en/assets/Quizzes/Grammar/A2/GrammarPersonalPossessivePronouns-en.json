@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarPersonalPossessivePronounsA2-en",
   "title": "Personal & Possessive Pronouns",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Personal & Possessive Pronouns (A2) questions.",
+      "description": "Practise subject, object and possessive pronouns and possessive adjectives in everyday A2 sentences.",
       "sortorder": 1,
-      "learningTitle": "Using Personal & Possessive Pronouns",
-      "learningPoints": [],
+      "learningTitle": "Using Personal and Possessive Forms",
+      "learningPoints": [
+        "Use subject pronouns before verbs.",
+        "Use object pronouns after verbs and prepositions.",
+        "Use possessive adjectives before nouns.",
+        "Use possessive pronouns without a following noun.",
+        "Match pronouns correctly to person and number.",
+        "Distinguish forms such as my/mine, your/yours and their/theirs."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using a subject pronoun.",
           "level": "A2",
           "category": "Personal & Possessive Pronouns",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "Use HE as the subject pronoun for a male person.",
+          "sentence": "_____ works in a bank.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "He"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Him"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "His"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using an object pronoun.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "Use HER as an object pronoun after a verb.",
+          "sentence": "I saw _____ yesterday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "her"
+            },
+            {
+              "ok": false,
+              "word": "she"
+            },
+            {
+              "ok": false,
+              "word": "hers"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using a possessive adjective.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "Use MY before a noun to show possession.",
+          "sentence": "This is _____ phone.",
+          "words": [
+            {
+              "ok": true,
+              "word": "my"
+            },
+            {
+              "ok": false,
+              "word": "mine"
+            },
+            {
+              "ok": false,
+              "word": "me"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a possessive pronoun.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "Use MINE without a following noun.",
+          "sentence": "That blue bag is _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mine"
+            },
+            {
+              "ok": false,
+              "word": "my"
+            },
+            {
+              "ok": false,
+              "word": "me"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'their' before a noun.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "THEIR is a possessive adjective used before a noun.",
+          "sentence": "They are visiting _____ parents.",
+          "words": [
+            {
+              "ok": true,
+              "word": "their"
+            },
+            {
+              "ok": false,
+              "word": "theirs"
+            },
+            {
+              "ok": false,
+              "word": "them"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'theirs' without a noun.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "THEIRS is a possessive pronoun and does not need a following noun.",
+          "sentence": "This table is ours, and that one is _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "theirs"
+            },
+            {
+              "ok": false,
+              "word": "their"
+            },
+            {
+              "ok": false,
+              "word": "them"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using an object pronoun after a preposition.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "Use US after a preposition when referring to WE as the object.",
+          "sentence": "Come with _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "us"
+            },
+            {
+              "ok": false,
+              "word": "we"
+            },
+            {
+              "ok": false,
+              "word": "our"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'your' before a noun.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "YOUR is a possessive adjective used before a noun.",
+          "sentence": "Is this _____ coat?",
+          "words": [
+            {
+              "ok": true,
+              "word": "your"
+            },
+            {
+              "ok": false,
+              "word": "yours"
+            },
+            {
+              "ok": false,
+              "word": "you"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'yours' without a noun.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "YOURS replaces 'your + noun' when the noun is already understood.",
+          "sentence": "My shoes are black. _____ are brown.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Yours"
+            },
+            {
+              "ok": false,
+              "word": "Your"
+            },
+            {
+              "ok": false,
+              "word": "You"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'it' for a thing.",
+          "level": "A2",
+          "category": "Personal & Possessive Pronouns",
+          "explain": "Use IT as a subject or object pronoun for a singular thing.",
+          "sentence": "I bought a new laptop. _____ is very light.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It"
+            },
+            {
+              "ok": false,
+              "word": "Its"
+            },
+            {
+              "ok": false,
+              "word": "Him"
             }
           ]
         }

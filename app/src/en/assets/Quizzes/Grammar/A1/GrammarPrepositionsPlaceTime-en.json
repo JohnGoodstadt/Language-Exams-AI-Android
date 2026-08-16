@@ -26,7 +26,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "Use IN when something is inside an enclosed space.",
-          "sentence": "The keys are _____ my bag.",
+          "sentence": "The keys are _ my bag.",
           "words": [
             {
               "ok": true,
@@ -49,7 +49,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "Use ON when something is touching a surface.",
-          "sentence": "The book is _____ the table.",
+          "sentence": "The book is _ the table.",
           "words": [
             {
               "ok": true,
@@ -72,7 +72,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "Use AT before a specific clock time.",
-          "sentence": "The lesson starts _____ nine o'clock.",
+          "sentence": "The lesson starts _ nine o'clock.",
           "words": [
             {
               "ok": true,
@@ -95,7 +95,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "Use ON before days of the week.",
-          "sentence": "I work _____ Monday.",
+          "sentence": "I work _ Monday.",
           "words": [
             {
               "ok": true,
@@ -118,7 +118,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "Use IN before months and years.",
-          "sentence": "My birthday is _____ July.",
+          "sentence": "My birthday is _ July.",
           "words": [
             {
               "ok": true,
@@ -141,7 +141,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "Use UNDER when something is lower than and directly below another thing.",
-          "sentence": "The cat is _____ the chair.",
+          "sentence": "The cat is _ the chair.",
           "words": [
             {
               "ok": true,
@@ -164,7 +164,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "NEXT TO means beside or immediately near something.",
-          "sentence": "The bank is _____ the supermarket.",
+          "sentence": "The bank is _ the supermarket.",
           "words": [
             {
               "ok": true,
@@ -187,7 +187,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "BETWEEN is used when something is in the middle of two people or things.",
-          "sentence": "The café is _____ the bank and the hotel.",
+          "sentence": "The café is _ the bank and the hotel.",
           "words": [
             {
               "ok": true,
@@ -210,7 +210,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "AT HOME is a common fixed expression.",
-          "sentence": "My parents are _____ home.",
+          "sentence": "My parents are _ home.",
           "words": [
             {
               "ok": true,
@@ -233,7 +233,7 @@
           "level": "A1",
           "category": "Prepositions of Place & Time",
           "explain": "Use AT in the common expression AT NIGHT.",
-          "sentence": "I usually read _____ night.",
+          "sentence": "I usually read _ night.",
           "words": [
             {
               "ok": true,

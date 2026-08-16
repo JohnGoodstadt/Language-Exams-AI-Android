@@ -279,7 +279,20 @@ private fun GrammarCatalogTable(rows: List<GrammarRow>, onPractice: (GrammarRow)
                     .padding(vertical = 4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(row.category, Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
+                // Testing the short labels: label is primary, full name a dim subtitle beneath.
+                Column(Modifier.weight(1f)) {
+                    Text(
+                        row.shortLabel,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = orangeLight
+                    )
+                    Text(
+                        row.category,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = Color.Gray
+                    )
+                }
                 DataCell(row.level, Modifier.width(36.dp))
                 IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
                     Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)

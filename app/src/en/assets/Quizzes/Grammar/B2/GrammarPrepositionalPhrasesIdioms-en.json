@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Prepositional Phrases & Idioms (B2) questions.",
+      "description": "Practise advanced prepositional phrases and idiomatic combinations used in formal and everyday B2 English.",
       "sortorder": 1,
-      "learningTitle": "Using Prepositional Phrases & Idioms",
-      "learningPoints": [],
+      "learningTitle": "Using Prepositional Phrases and Idioms",
+      "learningPoints": [
+        "Recognise common fixed prepositional phrases.",
+        "Distinguish idiomatic combinations that cannot be translated word for word.",
+        "Use formal phrases such as in accordance with and in response to.",
+        "Use common expressions such as on purpose, by chance and under pressure.",
+        "Choose the correct preposition according to the whole phrase.",
+        "Build fluency by learning complete multi-word units."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'in charge of'.",
           "level": "B2",
           "category": "Prepositional Phrases & Idioms",
-          "explain": "Placeholder explanation.",
+          "explain": "IN CHARGE OF means responsible for something or someone.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "She is in charge of the marketing team."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "She is on charge of the marketing team."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "She is in charge for the marketing team."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'on purpose'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "ON PURPOSE means intentionally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He broke the rule on purpose."
+            },
+            {
+              "ok": false,
+              "word": "He broke the rule by purpose."
+            },
+            {
+              "ok": false,
+              "word": "He broke the rule in purpose."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'by chance'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "BY CHANCE means accidentally or unexpectedly.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I met her by chance at the station."
+            },
+            {
+              "ok": false,
+              "word": "I met her on chance at the station."
+            },
+            {
+              "ok": false,
+              "word": "I met her in chance at the station."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'under pressure'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "UNDER PRESSURE is a fixed phrase meaning experiencing stress or demands.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "People often make mistakes when they are under pressure."
+            },
+            {
+              "ok": false,
+              "word": "People often make mistakes when they are in pressure."
+            },
+            {
+              "ok": false,
+              "word": "People often make mistakes when they are on pressure."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'in response to'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "IN RESPONSE TO introduces what caused a reaction or reply.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The company changed its policy in response to customer complaints."
+            },
+            {
+              "ok": false,
+              "word": "The company changed its policy on response to customer complaints."
+            },
+            {
+              "ok": false,
+              "word": "The company changed its policy in response for customer complaints."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'in accordance with'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "IN ACCORDANCE WITH means following a rule, agreement or standard.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The work was completed in accordance with the regulations."
+            },
+            {
+              "ok": false,
+              "word": "The work was completed according with the regulations."
+            },
+            {
+              "ok": false,
+              "word": "The work was completed in accordance to the regulations."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'at risk of'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "AT RISK OF means in danger of experiencing something.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The building is at risk of flooding."
+            },
+            {
+              "ok": false,
+              "word": "The building is in risk of flooding."
+            },
+            {
+              "ok": false,
+              "word": "The building is at risk for flood."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'in favour of'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "IN FAVOUR OF means supporting an idea or proposal.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Most members voted in favour of the proposal."
+            },
+            {
+              "ok": false,
+              "word": "Most members voted on favour of the proposal."
+            },
+            {
+              "ok": false,
+              "word": "Most members voted in favour for the proposal."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'on behalf of'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "ON BEHALF OF means representing another person or group.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She accepted the award on behalf of the team."
+            },
+            {
+              "ok": false,
+              "word": "She accepted the award in behalf of the team."
+            },
+            {
+              "ok": false,
+              "word": "She accepted the award on behalf for the team."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'with regard to'.",
+          "level": "B2",
+          "category": "Prepositional Phrases & Idioms",
+          "explain": "WITH REGARD TO is a formal phrase meaning concerning or about.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "With regard to your application, we need more information."
+            },
+            {
+              "ok": false,
+              "word": "With regards of your application, we need more information."
+            },
+            {
+              "ok": false,
+              "word": "With regard for your application, we need more information."
             }
           ]
         }

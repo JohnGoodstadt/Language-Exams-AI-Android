@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Future Continuous & Perfect (B1) questions.",
+      "description": "Practise the Future Continuous for actions in progress at a future time and the Future Perfect for completed future actions.",
       "sortorder": 1,
-      "learningTitle": "Using Future Continuous & Perfect",
-      "learningPoints": [],
+      "learningTitle": "Using Future Continuous and Future Perfect",
+      "learningPoints": [
+        "Use will be + verb-ing for actions in progress at a future time.",
+        "Use will have + past participle for actions completed before a future point.",
+        "Use future time markers such as this time tomorrow and by Friday.",
+        "Distinguish an action in progress from one completed by a deadline.",
+        "Form negatives and questions correctly.",
+        "Use each future form according to the time relationship in context."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using Future Continuous for an action in progress.",
           "level": "B1",
           "category": "Future Continuous & Perfect",
-          "explain": "Placeholder explanation.",
+          "explain": "Use WILL BE + verb-ing for an action that will be in progress at a particular future time.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "This time tomorrow, I'll be flying to Madrid."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "This time tomorrow, I'll fly to Madrid all the time."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "This time tomorrow, I'll have flown to Madrid during the journey."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using Future Perfect with 'by'.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "Use WILL HAVE + past participle for something completed before a future deadline.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By Friday, I will have finished the report."
+            },
+            {
+              "ok": false,
+              "word": "By Friday, I will be finishing the report completely before then."
+            },
+            {
+              "ok": false,
+              "word": "By Friday, I will have finish the report."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using Future Continuous for a scheduled future activity.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "The Future Continuous can describe an activity expected to be in progress at a future time.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "At eight tonight, we will be having dinner."
+            },
+            {
+              "ok": false,
+              "word": "At eight tonight, we will have dinner finished."
+            },
+            {
+              "ok": false,
+              "word": "At eight tonight, we will be have dinner."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using Future Perfect for completion.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "The Future Perfect focuses on completion before a stated future point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By next month, she will have moved into her new flat."
+            },
+            {
+              "ok": false,
+              "word": "By next month, she will be moving into her new flat for completion."
+            },
+            {
+              "ok": false,
+              "word": "By next month, she will has moved into her new flat."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Forming a Future Continuous negative.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "Use WON'T BE + verb-ing for a negative Future Continuous.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I won't be working tomorrow afternoon."
+            },
+            {
+              "ok": false,
+              "word": "I won't working tomorrow afternoon."
+            },
+            {
+              "ok": false,
+              "word": "I won't have working tomorrow afternoon."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Forming a Future Perfect negative.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "Use WON'T HAVE + past participle for a negative Future Perfect.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They won't have completed the work by Monday."
+            },
+            {
+              "ok": false,
+              "word": "They won't have complete the work by Monday."
+            },
+            {
+              "ok": false,
+              "word": "They won't be completed the work by Monday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Making a Future Continuous question.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "Use WILL + subject + BE + verb-ing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Will you be using the car this evening?"
+            },
+            {
+              "ok": false,
+              "word": "Will you using the car this evening?"
+            },
+            {
+              "ok": false,
+              "word": "Will you have using the car this evening?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Making a Future Perfect question.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "Use WILL + subject + HAVE + past participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Will they have arrived by six?"
+            },
+            {
+              "ok": false,
+              "word": "Will they have arrive by six?"
+            },
+            {
+              "ok": false,
+              "word": "Will they be arrived by six?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Choosing progress rather than completion.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "Use the Future Continuous when focusing on what someone will be doing at a particular future moment.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Don't call at ten; I'll be driving."
+            },
+            {
+              "ok": false,
+              "word": "Don't call at ten; I'll have driven at that moment."
+            },
+            {
+              "ok": false,
+              "word": "Don't call at ten; I'll be drive."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing completion rather than progress.",
+          "level": "B1",
+          "category": "Future Continuous & Perfect",
+          "explain": "Use the Future Perfect when the important point is that something will be complete before a future time.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By the end of the year, we will have saved enough money."
+            },
+            {
+              "ok": false,
+              "word": "By the end of the year, we will be saving enough money completed."
+            },
+            {
+              "ok": false,
+              "word": "By the end of the year, we will have save enough money."
             }
           ]
         }

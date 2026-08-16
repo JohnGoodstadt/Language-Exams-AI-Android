@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarCommonPhrasalVerbsB1-en",
   "title": "Common Phrasal Verbs",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Common Phrasal Verbs (B1) questions.",
+      "description": "Practise common B1 phrasal verbs used in everyday situations.",
       "sortorder": 1,
       "learningTitle": "Using Common Phrasal Verbs",
-      "learningPoints": [],
+      "learningPoints": [
+        "Recognise common verb + particle combinations.",
+        "Choose phrasal verbs according to meaning and context.",
+        "Distinguish particles such as up, out, off and after.",
+        "Learn common separable and inseparable patterns.",
+        "Use common phrasal verbs in natural everyday sentences.",
+        "Avoid choosing a particle only from its literal meaning."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'turn on'.",
           "level": "B1",
           "category": "Common Phrasal Verbs",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "TURN ON means start a device or machine.",
+          "sentence": "Could you _____ the lights?",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "turn on"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "turn after"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "turn out of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'turn off'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "TURN OFF means stop a device or machine.",
+          "sentence": "Please _____ your phone during the film.",
+          "words": [
+            {
+              "ok": true,
+              "word": "turn off"
+            },
+            {
+              "ok": false,
+              "word": "turn up"
+            },
+            {
+              "ok": false,
+              "word": "turn after"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'look after'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "LOOK AFTER means take care of someone or something.",
+          "sentence": "Can you _____ my dog this weekend?",
+          "words": [
+            {
+              "ok": true,
+              "word": "look after"
+            },
+            {
+              "ok": false,
+              "word": "look for"
+            },
+            {
+              "ok": false,
+              "word": "look up"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'look for'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "LOOK FOR means try to find something.",
+          "sentence": "I'm _____ my keys.",
+          "words": [
+            {
+              "ok": true,
+              "word": "looking for"
+            },
+            {
+              "ok": false,
+              "word": "looking after"
+            },
+            {
+              "ok": false,
+              "word": "looking up to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'give up'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "GIVE UP means stop doing something, often a habit or activity.",
+          "sentence": "He decided to _____ smoking.",
+          "words": [
+            {
+              "ok": true,
+              "word": "give up"
+            },
+            {
+              "ok": false,
+              "word": "give out"
+            },
+            {
+              "ok": false,
+              "word": "give after"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'find out'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "FIND OUT means discover information.",
+          "sentence": "I need to _____ what time the train leaves.",
+          "words": [
+            {
+              "ok": true,
+              "word": "find out"
+            },
+            {
+              "ok": false,
+              "word": "find up"
+            },
+            {
+              "ok": false,
+              "word": "find off"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'pick up'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "PICK UP can mean collect someone or something.",
+          "sentence": "I'll _____ you from the station at six.",
+          "words": [
+            {
+              "ok": true,
+              "word": "pick up"
+            },
+            {
+              "ok": false,
+              "word": "pick after"
+            },
+            {
+              "ok": false,
+              "word": "pick out of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'take off'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "TAKE OFF can mean remove clothing or leave the ground in an aircraft.",
+          "sentence": "Please _____ your shoes before you come in.",
+          "words": [
+            {
+              "ok": true,
+              "word": "take off"
+            },
+            {
+              "ok": false,
+              "word": "take out"
+            },
+            {
+              "ok": false,
+              "word": "take after"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'run out of'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "RUN OUT OF means have no more of something left.",
+          "sentence": "We've _____ milk.",
+          "words": [
+            {
+              "ok": true,
+              "word": "run out of"
+            },
+            {
+              "ok": false,
+              "word": "run after"
+            },
+            {
+              "ok": false,
+              "word": "run up"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'get on with'.",
+          "level": "B1",
+          "category": "Common Phrasal Verbs",
+          "explain": "GET ON WITH can mean have a good relationship with someone.",
+          "sentence": "Do you _____ your new colleagues?",
+          "words": [
+            {
+              "ok": true,
+              "word": "get on with"
+            },
+            {
+              "ok": false,
+              "word": "get out of"
+            },
+            {
+              "ok": false,
+              "word": "get up to"
             }
           ]
         }

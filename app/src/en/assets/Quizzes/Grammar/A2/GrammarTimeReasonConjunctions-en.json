@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Time & Reason Conjunctions (A2) questions.",
+      "description": "Practise common conjunctions that connect events in time and explain reasons.",
       "sortorder": 1,
-      "learningTitle": "Using Time & Reason Conjunctions",
-      "learningPoints": [],
+      "learningTitle": "Connecting Time and Reasons",
+      "learningPoints": [
+        "Use when to link events around the same time.",
+        "Use before and after to show order.",
+        "Use while for an action happening during another action.",
+        "Use because to give a reason.",
+        "Use so to give a result.",
+        "Choose the conjunction that accurately expresses the relationship between clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'when' to connect events.",
           "level": "A2",
           "category": "Time & Reason Conjunctions",
-          "explain": "Placeholder explanation.",
+          "explain": "WHEN links one event to the time of another event.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Call me when you get home."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Call me because you get home."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Call me so you get home."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'before' for earlier action.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "BEFORE shows that one action happens earlier than another.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wash your hands before you eat."
+            },
+            {
+              "ok": false,
+              "word": "Wash your hands after you eat first."
+            },
+            {
+              "ok": false,
+              "word": "Wash your hands because you eat."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'after' for later action.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "AFTER shows that one action happens later than another.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We went for a walk after we finished lunch."
+            },
+            {
+              "ok": false,
+              "word": "We went for a walk because we finished lunch."
+            },
+            {
+              "ok": false,
+              "word": "We went for a walk before we finished lunch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'while' for simultaneous actions.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "WHILE links actions happening at the same time, especially longer actions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I listened to music while I was cooking."
+            },
+            {
+              "ok": false,
+              "word": "I listened to music because I was cooking."
+            },
+            {
+              "ok": false,
+              "word": "I listened to music after I was cooking at the same time."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'because' for a reason.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "BECAUSE introduces the reason for an action or situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I stayed home because I was ill."
+            },
+            {
+              "ok": false,
+              "word": "I stayed home so I was ill."
+            },
+            {
+              "ok": false,
+              "word": "I stayed home when I was ill because."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'so' for a result.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "SO introduces a result or consequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was cold, so I closed the window."
+            },
+            {
+              "ok": false,
+              "word": "It was cold because I closed the window."
+            },
+            {
+              "ok": false,
+              "word": "It was cold before I closed the window because."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'when' with a past event.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "WHEN can introduce a shorter event in a past situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I was sleeping when the phone rang."
+            },
+            {
+              "ok": false,
+              "word": "I was sleeping because the phone rang."
+            },
+            {
+              "ok": false,
+              "word": "I was sleeping so the phone rang."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'before' with a future instruction.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "BEFORE can link two actions without using WILL in the time clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Check the door before you leave."
+            },
+            {
+              "ok": false,
+              "word": "Check the door because you leave."
+            },
+            {
+              "ok": false,
+              "word": "Check the door so you leave."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using reason and result accurately.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "BECAUSE gives the cause; SO gives the result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The bus was late, so I missed the start."
+            },
+            {
+              "ok": false,
+              "word": "The bus was late because I missed the start."
+            },
+            {
+              "ok": false,
+              "word": "The bus was late while I missed the start."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'after' with completed sequence.",
+          "level": "A2",
+          "category": "Time & Reason Conjunctions",
+          "explain": "AFTER clearly shows that the second action follows the first.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "After I finished work, I went home."
+            },
+            {
+              "ok": false,
+              "word": "Because I finished work, I went home after."
+            },
+            {
+              "ok": false,
+              "word": "While I finished work, I went home before."
             }
           ]
         }

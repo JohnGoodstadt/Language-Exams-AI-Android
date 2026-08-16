@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarAdvancedArticlesB2-en",
+  "sheetname": "GrammarArticlesAdvancedUsageB2-en",
   "title": "Articles: Advanced Usage",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Articles: Advanced Usage (B2) questions.",
+      "description": "Practise nuanced article choices with generic reference, institutions, abstract nouns, titles, geography and fixed expressions.",
       "sortorder": 1,
-      "learningTitle": "Using Articles: Advanced Usage",
-      "learningPoints": [],
+      "learningTitle": "Mastering Advanced Article Usage",
+      "learningPoints": [
+        "Distinguish generic and specific reference with singular, plural and uncountable nouns.",
+        "Use zero article with abstract nouns in general meanings.",
+        "Use the with specific abstract or uncountable reference.",
+        "Recognise institutional uses such as prison, school, university and hospital.",
+        "Use articles accurately with geographical names and titles.",
+        "Interpret article choice as part of meaning, not only grammar."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using a singular noun generically.",
           "level": "B2",
           "category": "Articles: Advanced Usage",
-          "explain": "Placeholder explanation.",
+          "explain": "A singular countable noun can use THE to represent a whole class in formal generalisation.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The tiger is an endangered species."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "A tiger is the endangered species in all formal generalisations."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Tiger is an endangered species."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using plural nouns generically.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Plural nouns normally take zero article when referring to a class in general.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Tigers are endangered in many regions."
+            },
+            {
+              "ok": false,
+              "word": "The tigers are endangered in many regions, meaning all tigers generally."
+            },
+            {
+              "ok": false,
+              "word": "A tigers are endangered in many regions."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using zero article with an abstract noun.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Abstract nouns often take zero article when used generally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Freedom is important to many people."
+            },
+            {
+              "ok": false,
+              "word": "The freedom is important to many people in general."
+            },
+            {
+              "ok": false,
+              "word": "A freedom is important to many people."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'the' with specific abstract reference.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Use THE when the abstract noun is made specific by context.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The freedom we gained was hard won."
+            },
+            {
+              "ok": false,
+              "word": "Freedom we gained was hard won in this specific reference."
+            },
+            {
+              "ok": false,
+              "word": "A freedom we gained was hard won."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using institutional zero article.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Use zero article when an institution is used for its normal purpose.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He was sent to prison for five years."
+            },
+            {
+              "ok": false,
+              "word": "He was sent to the prison for five years, meaning imprisonment as an institution."
+            },
+            {
+              "ok": false,
+              "word": "He was sent to a prison as the fixed institutional expression."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'the' for a specific building.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Use THE when referring to the physical building rather than its institutional function.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I went to the prison to visit my brother."
+            },
+            {
+              "ok": false,
+              "word": "I went to prison to visit my brother, meaning I was incarcerated."
+            },
+            {
+              "ok": false,
+              "word": "I went to a prison as the only possible definite reference."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using zero article before most titles + names.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Titles followed by a personal name normally take no article.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Professor Green will speak first."
+            },
+            {
+              "ok": false,
+              "word": "The Professor Green will speak first."
+            },
+            {
+              "ok": false,
+              "word": "A Professor Green will speak first, when used as his formal title."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'the' with a title without a name.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "A title used as a unique role may take THE when no personal name follows.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The Prime Minister gave a statement."
+            },
+            {
+              "ok": false,
+              "word": "Prime Minister gave a statement, with no name and unique office."
+            },
+            {
+              "ok": false,
+              "word": "A Prime Minister gave a statement, referring to the current unique office-holder."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using articles with geographical group names.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Plural country or island group names often take THE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The Netherlands is in Europe."
+            },
+            {
+              "ok": false,
+              "word": "Netherlands is in Europe."
+            },
+            {
+              "ok": false,
+              "word": "A Netherlands is in Europe."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using zero article in fixed expressions.",
+          "level": "B2",
+          "category": "Articles: Advanced Usage",
+          "explain": "Some common expressions use zero article even though a noun is singular.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She went home after work."
+            },
+            {
+              "ok": false,
+              "word": "She went to the home after the work."
+            },
+            {
+              "ok": false,
+              "word": "She went a home after a work."
             }
           ]
         }

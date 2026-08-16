@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Reported Statements (B1) questions.",
+      "description": "Practise reporting what people said, including basic tense and pronoun changes.",
       "sortorder": 1,
-      "learningTitle": "Using Reported Statements",
-      "learningPoints": [],
+      "learningTitle": "Reporting Statements",
+      "learningPoints": [
+        "Use said (that) + clause to report a statement.",
+        "Use told + person + (that) + clause.",
+        "Backshift present tenses when reporting from a past viewpoint.",
+        "Change pronouns and possessives when the speaker changes.",
+        "Change common time expressions where necessary.",
+        "Avoid using 'told' without an object."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'said' to report a statement.",
           "level": "B1",
           "category": "Reported Statements",
-          "explain": "Placeholder explanation.",
+          "explain": "Use SAID (THAT) + clause. SAID does not require a person object.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "She said that she was tired."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "She said me that she was tired."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "She told that she was tired."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'told' with an object.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "Use TOLD + person + (THAT) + clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He told me that he was busy."
+            },
+            {
+              "ok": false,
+              "word": "He told that he was busy."
+            },
+            {
+              "ok": false,
+              "word": "He said me that he was busy."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Backshifting Present Simple to Past Simple.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "A present tense often shifts back when reporting a past statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'I work here.' → She said that she worked there."
+            },
+            {
+              "ok": false,
+              "word": "'I work here.' → She said that she work there."
+            },
+            {
+              "ok": false,
+              "word": "'I work here.' → She told that she worked there."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Backshifting Present Continuous.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "Present Continuous often becomes Past Continuous in reported speech.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'I'm waiting.' → He said that he was waiting."
+            },
+            {
+              "ok": false,
+              "word": "'I'm waiting.' → He said that he is wait."
+            },
+            {
+              "ok": false,
+              "word": "'I'm waiting.' → He told that he was waiting."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Changing pronouns.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "Pronouns change according to who originally spoke and who is reporting.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Anna said, 'I like my job.' → Anna said that she liked her job."
+            },
+            {
+              "ok": false,
+              "word": "Anna said, 'I like my job.' → Anna said that I liked my job."
+            },
+            {
+              "ok": false,
+              "word": "Anna said, 'I like my job.' → Anna told that she liked her job."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Changing 'will' to 'would'.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "WILL often changes to WOULD when reporting from a past viewpoint.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'I'll call you.' → He said that he would call me."
+            },
+            {
+              "ok": false,
+              "word": "'I'll call you.' → He said that he will called me."
+            },
+            {
+              "ok": false,
+              "word": "'I'll call you.' → He told that he would call me."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Changing 'can' to 'could'.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "CAN often becomes COULD in reported speech.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'I can help.' → She said that she could help."
+            },
+            {
+              "ok": false,
+              "word": "'I can help.' → She said that she can helped."
+            },
+            {
+              "ok": false,
+              "word": "'I can help.' → She told that she could help."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Changing a time expression.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "NOW may change to THEN when the reporting time is later.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'I'm busy now.' → He said that he was busy then."
+            },
+            {
+              "ok": false,
+              "word": "'I'm busy now.' → He said that he is busy now yesterday."
+            },
+            {
+              "ok": false,
+              "word": "'I'm busy now.' → He told that he was busy then."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Changing 'today' where necessary.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "TODAY may change to THAT DAY when the statement is reported later.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'I'm working today.' → She said that she was working that day."
+            },
+            {
+              "ok": false,
+              "word": "'I'm working today.' → She said that she worked today tomorrow."
+            },
+            {
+              "ok": false,
+              "word": "'I'm working today.' → She told that she was working that day."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Reporting a negative statement.",
+          "level": "B1",
+          "category": "Reported Statements",
+          "explain": "Keep the negative meaning while applying the reported-speech structure.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'I don't know.' → He said that he didn't know."
+            },
+            {
+              "ok": false,
+              "word": "'I don't know.' → He said that he doesn't knew."
+            },
+            {
+              "ok": false,
+              "word": "'I don't know.' → He told that he didn't know."
             }
           ]
         }

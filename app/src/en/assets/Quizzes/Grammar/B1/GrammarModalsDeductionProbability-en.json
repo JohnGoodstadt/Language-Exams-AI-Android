@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Modals of Deduction & Probability (B1) questions.",
+      "description": "Practise must, might, may, could and can't to express certainty, possibility and deduction.",
       "sortorder": 1,
-      "learningTitle": "Using Modals of Deduction & Probability",
-      "learningPoints": [],
+      "learningTitle": "Expressing Deduction and Probability",
+      "learningPoints": [
+        "Use must for a strong positive deduction.",
+        "Use can't for a strong negative deduction.",
+        "Use may, might and could for possibility.",
+        "Use modal + base verb for present deductions.",
+        "Use modal + be for deductions about states.",
+        "Choose the modal according to how certain the speaker is."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'must' for a strong deduction.",
           "level": "B1",
           "category": "Modals of Deduction & Probability",
-          "explain": "Placeholder explanation.",
+          "explain": "MUST can show that the speaker is very sure something is true.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The lights are on, so they must be at home."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The lights are on, so they might definitely be at home."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The lights are on, so they must to be at home."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'can't' for an impossible deduction.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "CAN'T can show that the speaker is sure something is not true.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He can't be at work; I just saw him here."
+            },
+            {
+              "ok": false,
+              "word": "He mustn't be at work; I just saw him here."
+            },
+            {
+              "ok": false,
+              "word": "He can't to be at work; I just saw him here."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'might' for possibility.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "MIGHT expresses possibility without certainty.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She might come to the party later."
+            },
+            {
+              "ok": false,
+              "word": "She might to come to the party later."
+            },
+            {
+              "ok": false,
+              "word": "She must come to the party later, maybe."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'may' for possibility.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "MAY can express a possible situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It may rain this afternoon."
+            },
+            {
+              "ok": false,
+              "word": "It may to rain this afternoon."
+            },
+            {
+              "ok": false,
+              "word": "It may rains this afternoon."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'could' for possibility.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "COULD can express a possible explanation or future event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This could be the right address."
+            },
+            {
+              "ok": false,
+              "word": "This could to be the right address."
+            },
+            {
+              "ok": false,
+              "word": "This could is the right address."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Distinguishing strong and weak certainty.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "Use MUST for strong certainty and MIGHT/MAY/COULD for weaker possibility.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He knows every answer; he must be very well prepared."
+            },
+            {
+              "ok": false,
+              "word": "He knows every answer; he can't be prepared."
+            },
+            {
+              "ok": false,
+              "word": "He knows every answer; he might certainly be prepared."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a negative possibility.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "MIGHT NOT expresses that something is possibly not true or may not happen.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They might not know about the change."
+            },
+            {
+              "ok": false,
+              "word": "They don't might know about the change."
+            },
+            {
+              "ok": false,
+              "word": "They might don't know about the change."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a modal before a state verb.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "A modal is followed by the base form, including BE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "That must be expensive."
+            },
+            {
+              "ok": false,
+              "word": "That must is expensive."
+            },
+            {
+              "ok": false,
+              "word": "That must to be expensive."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Avoiding 'mustn't' for negative deduction.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "For a strong negative deduction, use CAN'T rather than MUSTN'T.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "That can't be Sarah; she's abroad."
+            },
+            {
+              "ok": false,
+              "word": "That mustn't be Sarah; she's abroad."
+            },
+            {
+              "ok": false,
+              "word": "That can't Sarah be; she's abroad."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing a possibility modal.",
+          "level": "B1",
+          "category": "Modals of Deduction & Probability",
+          "explain": "Use MIGHT, MAY or COULD when the evidence is uncertain.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I don't know where Tom is. He might be at the gym."
+            },
+            {
+              "ok": false,
+              "word": "I don't know where Tom is. He must be at the gym, perhaps."
+            },
+            {
+              "ok": false,
+              "word": "I don't know where Tom is. He might is at the gym."
             }
           ]
         }

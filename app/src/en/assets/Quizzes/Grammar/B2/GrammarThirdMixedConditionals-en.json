@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Third & Mixed Conditionals (B2) questions.",
+      "description": "Practise unreal past conditionals and mixed conditionals linking past causes with present results or present states with past outcomes.",
       "sortorder": 1,
-      "learningTitle": "Using Third & Mixed Conditionals",
-      "learningPoints": [],
+      "learningTitle": "Using Third and Mixed Conditionals",
+      "learningPoints": [
+        "Use if + Past Perfect, would have + past participle for Third Conditionals.",
+        "Use Third Conditionals for unreal past situations and their imagined past results.",
+        "Use mixed conditionals to connect past causes with present results.",
+        "Use mixed conditionals to connect present states with past results where appropriate.",
+        "Avoid using would in the if-clause.",
+        "Choose the conditional type according to the time relationship."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming a Third Conditional.",
           "level": "B2",
           "category": "Third & Mixed Conditionals",
-          "explain": "Placeholder explanation.",
+          "explain": "Use IF + Past Perfect, WOULD HAVE + past participle.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "If I had known, I would have called you."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "If I would have known, I would have called you."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "If I had knew, I would have call you."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using a negative Third Conditional.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "The if-clause can be negative with HADN'T + past participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If we hadn't missed the train, we would have arrived on time."
+            },
+            {
+              "ok": false,
+              "word": "If we wouldn't have missed the train, we would have arrived on time."
+            },
+            {
+              "ok": false,
+              "word": "If we hadn't miss the train, we would have arrived on time."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using Third Conditional for regret.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "The structure is commonly used to imagine a different past outcome.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She would have passed if she had studied harder."
+            },
+            {
+              "ok": false,
+              "word": "She would pass if she had studied harder yesterday."
+            },
+            {
+              "ok": false,
+              "word": "She would have passed if she would have studied harder."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a mixed conditional: past cause, present result.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "Use Past Perfect in the if-clause and WOULD + base verb for a present result caused by the past.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I had taken that job, I would live in London now."
+            },
+            {
+              "ok": false,
+              "word": "If I took that job, I would have lived in London now."
+            },
+            {
+              "ok": false,
+              "word": "If I had taken that job, I would have lived in London now as a present-state result."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a mixed conditional for a present state caused by a past decision.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "Past unreal cause can lead to a present hypothetical result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If she had gone to university, she might have a different career now."
+            },
+            {
+              "ok": false,
+              "word": "If she went to university then, she might have had a different career now."
+            },
+            {
+              "ok": false,
+              "word": "If she had went to university, she might have a different career now."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a mixed conditional: present state, past result.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "A present unreal state can be connected to a past hypothetical consequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I were more organised, I wouldn't have missed the deadline."
+            },
+            {
+              "ok": false,
+              "word": "If I had been more organised now, I wouldn't miss the deadline yesterday."
+            },
+            {
+              "ok": false,
+              "word": "If I would be more organised, I wouldn't have missed the deadline."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'could have' in a Third Conditional.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "COULD HAVE can express an unreal past possibility.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If we'd left earlier, we could have avoided the traffic."
+            },
+            {
+              "ok": false,
+              "word": "If we'd left earlier, we could avoid the traffic yesterday."
+            },
+            {
+              "ok": false,
+              "word": "If we would have left earlier, we could have avoided the traffic."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'might have' for a less certain past result.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "MIGHT HAVE can express an uncertain imagined result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If he had applied, he might have got the job."
+            },
+            {
+              "ok": false,
+              "word": "If he would have applied, he might have got the job."
+            },
+            {
+              "ok": false,
+              "word": "If he had applied, he might got the job."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Avoiding 'would' in the if-clause.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "Normally, WOULD does not appear in the conditional if-clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If they had listened to the warning, they wouldn't have had the problem."
+            },
+            {
+              "ok": false,
+              "word": "If they would have listened to the warning, they wouldn't have had the problem."
+            },
+            {
+              "ok": false,
+              "word": "If they had listened to the warning, they wouldn't had the problem."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing conditional time relationships accurately.",
+          "level": "B2",
+          "category": "Third & Mixed Conditionals",
+          "explain": "Third and mixed conditionals differ according to whether the imagined result is past or present.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I hadn't moved abroad, I would still be working at the same company."
+            },
+            {
+              "ok": false,
+              "word": "If I didn't move abroad, I would have still worked at the same company now."
+            },
+            {
+              "ok": false,
+              "word": "If I hadn't moved abroad, I would have still be working at the same company."
             }
           ]
         }

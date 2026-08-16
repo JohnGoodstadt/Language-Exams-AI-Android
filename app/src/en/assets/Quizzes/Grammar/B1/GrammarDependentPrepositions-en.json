@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarDependentPrepositionsB1-en",
   "title": "Dependent Prepositions",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Dependent Prepositions (B1) questions.",
+      "description": "Practise common B1 adjective, verb and noun combinations that require particular prepositions.",
       "sortorder": 1,
       "learningTitle": "Using Dependent Prepositions",
-      "learningPoints": [],
+      "learningPoints": [
+        "Learn common adjective + preposition combinations.",
+        "Learn common verb + preposition combinations.",
+        "Recognise noun + preposition patterns.",
+        "Avoid translating prepositions directly from another language.",
+        "Use the preposition that belongs to the fixed expression.",
+        "Build accuracy with high-frequency B1 combinations."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'interested in'.",
           "level": "B1",
           "category": "Dependent Prepositions",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "The adjective INTERESTED is followed by IN.",
+          "sentence": "She is interested _____ photography.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "in"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "on"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "for"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'good at'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "The adjective GOOD is followed by AT when talking about skill.",
+          "sentence": "He's very good _____ maths.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'afraid of'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "The adjective AFRAID is followed by OF.",
+          "sentence": "Are you afraid _____ spiders?",
+          "words": [
+            {
+              "ok": true,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "from"
+            },
+            {
+              "ok": false,
+              "word": "with"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'depend on'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "The verb DEPEND is followed by ON.",
+          "sentence": "It depends _____ the weather.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "from"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'belong to'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "The verb BELONG is followed by TO.",
+          "sentence": "Who does this bag belong _____?",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "with"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'apologise for'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "APOLOGISE FOR is used before the thing or action you are sorry about.",
+          "sentence": "He apologised _____ being late.",
+          "words": [
+            {
+              "ok": true,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "about to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'listen to'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "The verb LISTEN is followed by TO before its object.",
+          "sentence": "I often listen _____ podcasts on the train.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'reason for'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "The noun REASON is commonly followed by FOR.",
+          "sentence": "What was the reason _____ the delay?",
+          "words": [
+            {
+              "ok": true,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'difference between'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "Use BETWEEN when comparing two things in this expression.",
+          "sentence": "What's the difference _____ these two words?",
+          "words": [
+            {
+              "ok": true,
+              "word": "between"
+            },
+            {
+              "ok": false,
+              "word": "among"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'responsible for'.",
+          "level": "B1",
+          "category": "Dependent Prepositions",
+          "explain": "The adjective RESPONSIBLE is followed by FOR.",
+          "sentence": "She is responsible _____ training new staff.",
+          "words": [
+            {
+              "ok": true,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "to"
             }
           ]
         }

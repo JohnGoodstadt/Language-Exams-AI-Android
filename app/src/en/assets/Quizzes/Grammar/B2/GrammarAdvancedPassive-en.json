@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Passive (B2) questions.",
+      "description": "Practise advanced passive structures including reporting passives, modal passives and passive infinitive and gerund forms.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Passive",
-      "learningPoints": [],
+      "learningTitle": "Using Advanced Passive Structures",
+      "learningPoints": [
+        "Use passive forms across a range of tenses and modal structures.",
+        "Use reporting passives such as 'It is believed that...' and 'He is believed to...'.",
+        "Use modal + be + past participle.",
+        "Use perfect passive forms with have been + past participle.",
+        "Recognise passive infinitive and gerund structures.",
+        "Choose passive structures when the action or result is more important than the agent."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using a modal passive.",
           "level": "B2",
           "category": "Advanced Passive",
-          "explain": "Placeholder explanation.",
+          "explain": "Use MODAL + BE + past participle.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The form must be completed by Friday."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The form must completed by Friday."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The form must be complete by Friday, when an action is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using a perfect passive.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "Use HAVE/HAS BEEN + past participle for Present Perfect passive forms.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The documents have been sent."
+            },
+            {
+              "ok": false,
+              "word": "The documents have sent."
+            },
+            {
+              "ok": false,
+              "word": "The documents have been send."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using a reporting passive with 'it'.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "IT IS BELIEVED THAT is a formal reporting passive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It is believed that the company will expand."
+            },
+            {
+              "ok": false,
+              "word": "It believes that the company will expand."
+            },
+            {
+              "ok": false,
+              "word": "It is believe that the company will expand."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a personal reporting passive.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "A person or thing can become the subject of a reporting passive: SUBJECT + BE + believed/said/thought + TO.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The actor is said to live in Paris."
+            },
+            {
+              "ok": false,
+              "word": "The actor is said that he lives in Paris."
+            },
+            {
+              "ok": false,
+              "word": "The actor said to live in Paris."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a perfect infinitive after a reporting passive.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "Use TO HAVE + past participle when the reported action happened earlier.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He is believed to have left the country."
+            },
+            {
+              "ok": false,
+              "word": "He is believed to left the country."
+            },
+            {
+              "ok": false,
+              "word": "He is believed having left the country."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a passive infinitive.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "Use TO BE + past participle in a passive infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The equipment needs to be checked regularly."
+            },
+            {
+              "ok": false,
+              "word": "The equipment needs to checked regularly."
+            },
+            {
+              "ok": false,
+              "word": "The equipment needs being check regularly."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a passive gerund.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "Use BEING + past participle after verbs or prepositions that require a gerund.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She dislikes being told what to do."
+            },
+            {
+              "ok": false,
+              "word": "She dislikes to be told what to do in this gerund pattern."
+            },
+            {
+              "ok": false,
+              "word": "She dislikes being tell what to do."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a Future Perfect passive.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "Use WILL HAVE BEEN + past participle for something completed in passive form before a future point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By June, the new bridge will have been completed."
+            },
+            {
+              "ok": false,
+              "word": "By June, the new bridge will have completed."
+            },
+            {
+              "ok": false,
+              "word": "By June, the new bridge will have been complete."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'get' passive appropriately.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "GET + past participle is common in less formal contexts, often for events affecting the subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He got promoted last month."
+            },
+            {
+              "ok": false,
+              "word": "He got promote last month."
+            },
+            {
+              "ok": false,
+              "word": "He was got promoted last month."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using passive focus in formal writing.",
+          "level": "B2",
+          "category": "Advanced Passive",
+          "explain": "The passive is useful when the process or result is more important than the agent.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Several changes were introduced following the review."
+            },
+            {
+              "ok": false,
+              "word": "Several changes introduced following the review."
+            },
+            {
+              "ok": false,
+              "word": "Several changes were introduce following the review."
             }
           ]
         }

@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Discourse Markers (B2) questions.",
+      "description": "Practise discourse markers that organise argument, signal viewpoint, reformulate ideas and guide the reader through complex texts.",
       "sortorder": 1,
       "learningTitle": "Using Advanced Discourse Markers",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use markers to signal contrast, addition, reformulation and exemplification.",
+        "Use expressions such as in other words, for instance and in particular accurately.",
+        "Use on balance and overall to evaluate or conclude.",
+        "Use admittedly to acknowledge a point before qualifying it.",
+        "Match discourse markers to the logical function they perform.",
+        "Use punctuation and sentence position appropriately."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'in other words' for reformulation.",
           "level": "B2",
           "category": "Advanced Discourse Markers",
-          "explain": "Placeholder explanation.",
+          "explain": "IN OTHER WORDS restates an idea more clearly or simply.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The policy is not sustainable. In other words, it cannot continue in its current form."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The policy is not sustainable. For example, it cannot continue in its current form as a restatement."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The policy is not sustainable in other words because it cannot continue."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'for instance' for an example.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "FOR INSTANCE introduces an example.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Several changes could help. For instance, the company could offer flexible hours."
+            },
+            {
+              "ok": false,
+              "word": "Several changes could help. On balance, the company could offer flexible hours as an example."
+            },
+            {
+              "ok": false,
+              "word": "Several changes could help for instance because flexible hours."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'in particular' to focus.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "IN PARTICULAR highlights one especially relevant item.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Many sectors were affected, in particular tourism and hospitality."
+            },
+            {
+              "ok": false,
+              "word": "Many sectors were affected, in contrast tourism and hospitality."
+            },
+            {
+              "ok": false,
+              "word": "Many sectors were affected, in particular but tourism and hospitality."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'admittedly' to concede a point.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "ADMITTEDLY acknowledges a point before a qualification or contrast.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Admittedly, the plan is expensive, but it could save money in the long term."
+            },
+            {
+              "ok": false,
+              "word": "Admittedly, the plan is expensive, therefore it could save money in the long term as a concession."
+            },
+            {
+              "ok": false,
+              "word": "Admittedly but the plan is expensive, however because it could save money."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'on balance' for overall evaluation.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "ON BALANCE introduces a considered overall judgment.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "On balance, the advantages outweigh the disadvantages."
+            },
+            {
+              "ok": false,
+              "word": "For example, the advantages outweigh the disadvantages as an overall judgment."
+            },
+            {
+              "ok": false,
+              "word": "On balance because the advantages outweigh the disadvantages."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'overall' to summarise.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "OVERALL introduces a general summary or evaluation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Overall, the project was successful despite several delays."
+            },
+            {
+              "ok": false,
+              "word": "In particular, the project was successful despite several delays as a general summary."
+            },
+            {
+              "ok": false,
+              "word": "Overall however because the project was successful."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'by contrast'.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "BY CONTRAST highlights a clear difference from the previous idea.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "City rents have risen sharply. By contrast, prices in rural areas have remained stable."
+            },
+            {
+              "ok": false,
+              "word": "City rents have risen sharply. As a result, prices in rural areas have remained stable as a contrast."
+            },
+            {
+              "ok": false,
+              "word": "City rents have risen sharply by contrast because rural prices remained stable."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'to some extent'.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "TO SOME EXTENT limits or qualifies a claim.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "To some extent, the criticism is justified."
+            },
+            {
+              "ok": false,
+              "word": "In other words, the criticism is justified, meaning only partly."
+            },
+            {
+              "ok": false,
+              "word": "To some extent because the criticism is justified."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'in fact' for correction or emphasis.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "IN FACT can strengthen, correct or clarify a previous statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The journey wasn't difficult. In fact, it was surprisingly easy."
+            },
+            {
+              "ok": false,
+              "word": "The journey wasn't difficult. Nevertheless, it was surprisingly easy as emphasis rather than contrast."
+            },
+            {
+              "ok": false,
+              "word": "The journey wasn't difficult in fact but because it was easy."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using discourse markers to guide argument.",
+          "level": "B2",
+          "category": "Advanced Discourse Markers",
+          "explain": "A discourse marker should match the rhetorical function of the sentence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "There are some drawbacks. Nevertheless, the proposal is worth considering."
+            },
+            {
+              "ok": false,
+              "word": "There are some drawbacks. For instance, the proposal is worth considering as a concession."
+            },
+            {
+              "ok": false,
+              "word": "There are some drawbacks nevertheless because the proposal is worth considering."
             }
           ]
         }

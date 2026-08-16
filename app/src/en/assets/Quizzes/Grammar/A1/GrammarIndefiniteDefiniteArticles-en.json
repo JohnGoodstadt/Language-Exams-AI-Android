@@ -26,7 +26,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use A before a singular countable noun beginning with a consonant sound.",
-          "sentence": "I have _____ dog.",
+          "sentence": "I have _ dog.",
           "words": [
             {
               "ok": true,
@@ -49,7 +49,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use AN before a singular countable noun beginning with a vowel sound.",
-          "sentence": "She is eating _____ apple.",
+          "sentence": "She is eating _ apple.",
           "words": [
             {
               "ok": true,
@@ -72,7 +72,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use THE when both speaker and listener know which thing is meant.",
-          "sentence": "Please close _____ door.",
+          "sentence": "Please close _ door.",
           "words": [
             {
               "ok": true,
@@ -95,7 +95,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use A or AN before a singular job noun.",
-          "sentence": "My father is _____ teacher.",
+          "sentence": "My father is _ teacher.",
           "words": [
             {
               "ok": true,
@@ -118,7 +118,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use AN before a singular noun beginning with a vowel sound.",
-          "sentence": "She is _____ engineer.",
+          "sentence": "She is _ engineer.",
           "words": [
             {
               "ok": true,
@@ -141,7 +141,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use THE when referring to a particular place already understood from the situation.",
-          "sentence": "The children are playing in _____ garden behind our house.",
+          "sentence": "The children are playing in _ garden behind our house.",
           "words": [
             {
               "ok": true,
@@ -164,7 +164,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use A when you mean one of many possible things.",
-          "sentence": "I need _____ pen.",
+          "sentence": "I need _ pen.",
           "words": [
             {
               "ok": true,
@@ -187,7 +187,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use THE with unique things such as the sun.",
-          "sentence": "_____ sun is shining today.",
+          "sentence": "_ sun is shining today.",
           "words": [
             {
               "ok": true,
@@ -210,7 +210,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "Use AN before a word that begins with a vowel sound.",
-          "sentence": "It is _____ old house.",
+          "sentence": "It is _ old house.",
           "words": [
             {
               "ok": true,
@@ -233,7 +233,7 @@
           "level": "A1",
           "category": "Indefinite & Definite Articles",
           "explain": "After introducing something with A or AN, use THE when referring to the same thing again.",
-          "sentence": "I saw a cat. _____ cat was black.",
+          "sentence": "I saw a cat. _ cat was black.",
           "words": [
             {
               "ok": true,

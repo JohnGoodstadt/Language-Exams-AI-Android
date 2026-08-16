@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Cohesive Devices (B1) questions.",
+      "description": "Practise linking ideas across sentences with reference words, addition, contrast, cause, result and sequence.",
       "sortorder": 1,
       "learningTitle": "Using Cohesive Devices",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use pronouns and reference words to avoid unnecessary repetition.",
+        "Use addition linkers such as also and in addition.",
+        "Use contrast linkers such as however and although.",
+        "Use cause and result linkers such as because and therefore.",
+        "Use sequencing expressions such as first, then and finally.",
+        "Choose cohesive devices that make relationships between ideas clear."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using pronoun reference.",
           "level": "B1",
           "category": "Cohesive Devices",
-          "explain": "Placeholder explanation.",
+          "explain": "Use a pronoun to refer back clearly to a noun already mentioned.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "I bought a new laptop. It is much faster than my old one."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "I bought a new laptop. He is much faster than my old one."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "I bought a new laptop. Laptop is much faster than my old one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'also' for addition.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "ALSO adds another related point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The course is useful. It is also very practical."
+            },
+            {
+              "ok": false,
+              "word": "The course is useful. However, it is also very practical as a contrast."
+            },
+            {
+              "ok": false,
+              "word": "The course is useful. Because it is also practical."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'in addition'.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "IN ADDITION introduces another supporting point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The hotel is close to the station. In addition, it is inexpensive."
+            },
+            {
+              "ok": false,
+              "word": "The hotel is close to the station. In contrast, it is inexpensive for the same reason."
+            },
+            {
+              "ok": false,
+              "word": "The hotel is close to the station. Because, it is inexpensive."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'however' for contrast.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "HOWEVER introduces a contrasting idea and is normally separated by punctuation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The job is interesting. However, the hours are long."
+            },
+            {
+              "ok": false,
+              "word": "The job is interesting. Therefore, the hours are long as a contrast."
+            },
+            {
+              "ok": false,
+              "word": "The job is interesting however but the hours are long."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'therefore' for result.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "THEREFORE introduces a logical result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The road was closed. Therefore, we took another route."
+            },
+            {
+              "ok": false,
+              "word": "The road was closed. However, we took another route because this is a result."
+            },
+            {
+              "ok": false,
+              "word": "The road was closed. Although, we took another route."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using repeated noun substitution.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "Use ONE/ONES to avoid repeating a countable noun when the meaning is clear.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I don't like the red shoes; I prefer the black ones."
+            },
+            {
+              "ok": false,
+              "word": "I don't like the red shoes; I prefer the black them."
+            },
+            {
+              "ok": false,
+              "word": "I don't like the red shoes; I prefer black one shoes."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'this' to refer to a previous idea.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "THIS can refer back to a whole previous situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The company reduced its prices. This increased sales."
+            },
+            {
+              "ok": false,
+              "word": "The company reduced its prices. He increased sales."
+            },
+            {
+              "ok": false,
+              "word": "The company reduced its prices. These was increased sales."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'first' and 'then'.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "Sequencing devices help order events or instructions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "First, complete the form. Then send it by email."
+            },
+            {
+              "ok": false,
+              "word": "However, complete the form. Because send it by email."
+            },
+            {
+              "ok": false,
+              "word": "First complete the form, therefore before send it by email."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'although' within a sentence.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "ALTHOUGH introduces a contrasting clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Although the room was small, it was comfortable."
+            },
+            {
+              "ok": false,
+              "word": "Although the room was small, but it was comfortable."
+            },
+            {
+              "ok": false,
+              "word": "Therefore the room was small, it was comfortable."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a clear result connector.",
+          "level": "B1",
+          "category": "Cohesive Devices",
+          "explain": "Choose a connector that logically follows from the first sentence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He had missed several lessons. As a result, he found the test difficult."
+            },
+            {
+              "ok": false,
+              "word": "He had missed several lessons. In addition, he found the test difficult as a result connector."
+            },
+            {
+              "ok": false,
+              "word": "He had missed several lessons. Although, he found the test difficult."
             }
           ]
         }

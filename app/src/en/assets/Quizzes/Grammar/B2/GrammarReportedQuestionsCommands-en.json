@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Reported Questions & Commands (B2) questions.",
+      "description": "Practise reporting questions, requests, instructions and commands with appropriate word order and tense changes.",
       "sortorder": 1,
-      "learningTitle": "Using Reported Questions & Commands",
-      "learningPoints": [],
+      "learningTitle": "Reporting Questions and Commands",
+      "learningPoints": [
+        "Use statement word order in reported questions.",
+        "Use if or whether for reported yes/no questions.",
+        "Backshift tenses where appropriate.",
+        "Use ask/tell + object + to-infinitive for requests and commands.",
+        "Use not to for negative commands.",
+        "Distinguish reporting verbs according to meaning and structure."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Reporting a Wh- question.",
           "level": "B2",
           "category": "Reported Questions & Commands",
-          "explain": "Placeholder explanation.",
+          "explain": "Reported questions use statement word order after the question word.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "She asked me where I lived."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "She asked me where did I live."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "She asked me where I did lived."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Reporting a yes/no question.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "Use IF or WHETHER for reported yes/no questions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He asked if I was ready."
+            },
+            {
+              "ok": false,
+              "word": "He asked was I ready."
+            },
+            {
+              "ok": false,
+              "word": "He asked if was I ready."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Backshifting in a reported question.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "A present tense can shift back when the question is reported later.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "'What are you doing?' → She asked what I was doing."
+            },
+            {
+              "ok": false,
+              "word": "'What are you doing?' → She asked what was I doing."
+            },
+            {
+              "ok": false,
+              "word": "'What are you doing?' → She asked what I am do."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Reporting a request.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "Use ASK + object + TO + verb for a reported request.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She asked me to close the window."
+            },
+            {
+              "ok": false,
+              "word": "She asked that I close the window to."
+            },
+            {
+              "ok": false,
+              "word": "She asked me closing the window."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Reporting a command.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "Use TELL + object + TO + verb for a reported command or instruction.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The officer told us to wait outside."
+            },
+            {
+              "ok": false,
+              "word": "The officer told to us wait outside."
+            },
+            {
+              "ok": false,
+              "word": "The officer told us waiting outside."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Reporting a negative command.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "Use TELL/ASK + object + NOT TO + verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He told me not to touch the switch."
+            },
+            {
+              "ok": false,
+              "word": "He told me to not touching the switch."
+            },
+            {
+              "ok": false,
+              "word": "He told not me to touch the switch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Reporting a question with 'whether'.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "WHETHER can be used instead of IF in reported yes/no questions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They asked whether we had finished."
+            },
+            {
+              "ok": false,
+              "word": "They asked whether had we finished."
+            },
+            {
+              "ok": false,
+              "word": "They asked did we have finished."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Reporting a modal question.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "Modals can backshift or remain depending on meaning; word order still becomes statement order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He asked whether I could help him."
+            },
+            {
+              "ok": false,
+              "word": "He asked whether could I help him."
+            },
+            {
+              "ok": false,
+              "word": "He asked did I could help him."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using the correct reporting verb pattern.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "REQUEST can be reported with ASK; a direct instruction commonly uses TELL.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The teacher told the students to hand in their work."
+            },
+            {
+              "ok": false,
+              "word": "The teacher said the students to hand in their work."
+            },
+            {
+              "ok": false,
+              "word": "The teacher told that the students hand in their work."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Reporting an information question accurately.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "Keep the question word but use statement word order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I asked her why she had left early."
+            },
+            {
+              "ok": false,
+              "word": "I asked her why had she left early."
+            },
+            {
+              "ok": false,
+              "word": "I asked her why did she had left early."
             }
           ]
         }

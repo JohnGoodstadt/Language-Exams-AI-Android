@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarAdvancedWordFormationB2-en",
   "title": "Advanced Word Formation",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Word Formation (B2) questions.",
+      "description": "Practise advanced word-family transformations involving nouns, adjectives, adverbs and negative prefixes.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Word Formation",
-      "learningPoints": [],
+      "learningTitle": "Building Advanced Word Forms",
+      "learningPoints": [
+        "Identify the word class required by sentence structure.",
+        "Use common B2 noun, adjective and adverb suffixes.",
+        "Use negative prefixes such as un-, in-, im-, ir- and dis- accurately.",
+        "Recognise spelling changes within word families.",
+        "Distinguish meaning as well as grammatical form.",
+        "Use derived forms naturally in formal and academic contexts."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming an abstract noun.",
           "level": "B2",
           "category": "Advanced Word Formation",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "The adjective RESPONSIBLE forms the noun RESPONSIBILITY.",
+          "sentence": "Managers have a _____ to protect staff.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "responsibility"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "responsible"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "responsibly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Forming an adjective from a noun.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The noun BENEFIT forms the adjective BENEFICIAL.",
+          "sentence": "Regular exercise has many _____ effects.",
+          "words": [
+            {
+              "ok": true,
+              "word": "beneficial"
+            },
+            {
+              "ok": false,
+              "word": "benefit"
+            },
+            {
+              "ok": false,
+              "word": "beneficially"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Forming an adverb.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The adjective SIGNIFICANT forms the adverb SIGNIFICANTLY.",
+          "sentence": "Costs have risen _____ over the past year.",
+          "words": [
+            {
+              "ok": true,
+              "word": "significantly"
+            },
+            {
+              "ok": false,
+              "word": "significant"
+            },
+            {
+              "ok": false,
+              "word": "significance"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a negative prefix.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The opposite of RELEVANT is IRRELEVANT.",
+          "sentence": "Some of the information was completely _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "irrelevant"
+            },
+            {
+              "ok": false,
+              "word": "unrelevant"
+            },
+            {
+              "ok": false,
+              "word": "irrelevantly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Forming a noun in '-ity'.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The adjective FLEXIBLE forms the noun FLEXIBILITY.",
+          "sentence": "The job offers greater _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "flexibility"
+            },
+            {
+              "ok": false,
+              "word": "flexible"
+            },
+            {
+              "ok": false,
+              "word": "flexibly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Forming an adjective in '-ive'.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The verb PERSUADE forms the adjective PERSUASIVE.",
+          "sentence": "She gave a very _____ argument.",
+          "words": [
+            {
+              "ok": true,
+              "word": "persuasive"
+            },
+            {
+              "ok": false,
+              "word": "persuasion"
+            },
+            {
+              "ok": false,
+              "word": "persuasively"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Forming a noun in '-ance'.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The adjective IMPORTANT forms the noun IMPORTANCE.",
+          "sentence": "The report emphasises the _____ of early action.",
+          "words": [
+            {
+              "ok": true,
+              "word": "importance"
+            },
+            {
+              "ok": false,
+              "word": "important"
+            },
+            {
+              "ok": false,
+              "word": "importantly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a negative adjective prefix.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The opposite of PRACTICAL can be IMPRACTICAL.",
+          "sentence": "The proposal is too expensive and therefore _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "impractical"
+            },
+            {
+              "ok": false,
+              "word": "unpracticality"
+            },
+            {
+              "ok": false,
+              "word": "impractically"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Forming an adjective from a verb.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The verb RELY forms the adjective RELIABLE.",
+          "sentence": "We need a more _____ source of information.",
+          "words": [
+            {
+              "ok": true,
+              "word": "reliable"
+            },
+            {
+              "ok": false,
+              "word": "reliance"
+            },
+            {
+              "ok": false,
+              "word": "reliably"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Forming an adverb from an adjective.",
+          "level": "B2",
+          "category": "Advanced Word Formation",
+          "explain": "The adjective EFFECTIVE forms the adverb EFFECTIVELY.",
+          "sentence": "The team worked _____ under pressure.",
+          "words": [
+            {
+              "ok": true,
+              "word": "effectively"
+            },
+            {
+              "ok": false,
+              "word": "effective"
+            },
+            {
+              "ok": false,
+              "word": "effectiveness"
             }
           ]
         }

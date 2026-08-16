@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Second Conditional (B1) questions.",
+      "description": "Practise the Second Conditional for unreal, unlikely and hypothetical present or future situations.",
       "sortorder": 1,
-      "learningTitle": "Using Second Conditional",
-      "learningPoints": [],
+      "learningTitle": "Using the Second Conditional",
+      "learningPoints": [
+        "Use if + Past Simple, would + base verb.",
+        "Use the Second Conditional for unreal or unlikely present and future situations.",
+        "Use were in formal or careful English with 'I/he/she/it' in hypothetical clauses.",
+        "Do not normally use would in the if-clause.",
+        "Use could or might in the result clause when appropriate.",
+        "Recognise hypothetical advice with 'If I were you...'."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming a basic Second Conditional.",
           "level": "B1",
           "category": "Second Conditional",
-          "explain": "Placeholder explanation.",
+          "explain": "Use IF + Past Simple, WOULD + base verb.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "If I had more time, I would exercise more."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "If I would have more time, I exercised more."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "If I have more time, I would exercised more."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using the Second Conditional for an unlikely future situation.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "Use the form for something possible but unlikely or imagined.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If we won the lottery, we would travel around the world."
+            },
+            {
+              "ok": false,
+              "word": "If we will win the lottery, we would travel around the world."
+            },
+            {
+              "ok": false,
+              "word": "If we won the lottery, we will travelled around the world."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'were' in a hypothetical clause.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "IF I WERE YOU is the standard form for hypothetical advice.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I were you, I'd talk to the manager."
+            },
+            {
+              "ok": false,
+              "word": "If I was you, I'd to talk to the manager."
+            },
+            {
+              "ok": false,
+              "word": "If I would be you, I talked to the manager."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Avoiding 'would' in the if-clause.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "Normally use Past Simple, not WOULD, after IF.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If she knew the answer, she would tell us."
+            },
+            {
+              "ok": false,
+              "word": "If she would know the answer, she would tell us."
+            },
+            {
+              "ok": false,
+              "word": "If she knew the answer, she would told us."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a negative hypothetical condition.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "The Past Simple can be negative in the if-clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I didn't have to work, I'd come with you."
+            },
+            {
+              "ok": false,
+              "word": "If I wouldn't have to work, I'd come with you."
+            },
+            {
+              "ok": false,
+              "word": "If I didn't had to work, I'd come with you."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'could' in the result clause.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "COULD can express an imagined possibility or ability in the result clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If we had a car, we could drive there."
+            },
+            {
+              "ok": false,
+              "word": "If we would have a car, we could drive there."
+            },
+            {
+              "ok": false,
+              "word": "If we had a car, we could drove there."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'might' in a hypothetical result.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "MIGHT can express a less certain hypothetical result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If he asked her, she might agree."
+            },
+            {
+              "ok": false,
+              "word": "If he would ask her, she might agree."
+            },
+            {
+              "ok": false,
+              "word": "If he asked her, she might agreed."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using the Second Conditional for present impossibility.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "The form can describe something unreal now.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I lived nearer, I would visit more often."
+            },
+            {
+              "ok": false,
+              "word": "If I live nearer, I would visit more often."
+            },
+            {
+              "ok": false,
+              "word": "If I would live nearer, I visited more often."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a question with the Second Conditional.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "Use WOULD + subject + base verb in the main question clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What would you do if you lost your phone?"
+            },
+            {
+              "ok": false,
+              "word": "What did you do if you would lose your phone?"
+            },
+            {
+              "ok": false,
+              "word": "What would you did if you lost your phone?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'were' with a third-person subject.",
+          "level": "B1",
+          "category": "Second Conditional",
+          "explain": "WERE is common in hypothetical clauses with BE, especially in careful English.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If he were more confident, he would speak in meetings."
+            },
+            {
+              "ok": false,
+              "word": "If he would be more confident, he spoke in meetings."
+            },
+            {
+              "ok": false,
+              "word": "If he were more confident, he would spoke in meetings."
             }
           ]
         }

@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Text Organisation (B1) questions.",
+      "description": "Practise organising short B1 texts with clear openings, sequencing, paragraph focus and conclusions.",
       "sortorder": 1,
-      "learningTitle": "Using Text Organisation",
-      "learningPoints": [],
+      "learningTitle": "Organising a Clear Text",
+      "learningPoints": [
+        "Begin paragraphs with a clear main idea.",
+        "Keep supporting sentences relevant to the paragraph topic.",
+        "Use sequencing words to organise events and processes.",
+        "Use linking expressions to connect paragraphs and ideas.",
+        "Choose an appropriate concluding sentence.",
+        "Recognise logical order in short emails, stories and opinion texts."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Choosing a clear topic sentence.",
           "level": "B1",
           "category": "Text Organisation",
-          "explain": "Placeholder explanation.",
+          "explain": "A topic sentence introduces the main idea of a paragraph.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "There are several advantages to learning a foreign language."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Yesterday at three o'clock I bought a blue pen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Because however foreign languages."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Keeping supporting detail relevant.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "Supporting sentences should develop the paragraph's main idea.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "For example, speaking another language can make travel easier."
+            },
+            {
+              "ok": false,
+              "word": "My neighbour has a red bicycle, which is unrelated to language learning."
+            },
+            {
+              "ok": false,
+              "word": "However because for example travel."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using sequence in instructions.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "Use FIRST, NEXT and FINALLY to show a logical order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "First, open the file. Next, make your changes. Finally, save it."
+            },
+            {
+              "ok": false,
+              "word": "Finally, open the file. First, save it. Next, make your changes."
+            },
+            {
+              "ok": false,
+              "word": "Because open the file, however save it, although change it."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Choosing an appropriate paragraph opener.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "A new paragraph should clearly signal its topic or relationship to the previous one.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Another important benefit is the flexibility of online study."
+            },
+            {
+              "ok": false,
+              "word": "Blue is my favourite colour."
+            },
+            {
+              "ok": false,
+              "word": "And but because flexibility."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Choosing a concluding sentence.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "A conclusion should summarise or close the main idea rather than introduce an unrelated topic.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Overall, the course was challenging but very useful."
+            },
+            {
+              "ok": false,
+              "word": "My brother bought a car yesterday."
+            },
+            {
+              "ok": false,
+              "word": "Firstly, a completely new topic begins here."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Organising a short narrative.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "A narrative should usually present events in a clear time sequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "After we arrived at the station, we bought our tickets and then boarded the train."
+            },
+            {
+              "ok": false,
+              "word": "Then we boarded the train before we arrived at the station and bought tickets later first."
+            },
+            {
+              "ok": false,
+              "word": "However because the station, finally before arriving."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a contrast paragraph.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "A contrast paragraph should signal that a different viewpoint or disadvantage is being introduced.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "On the other hand, working from home can sometimes feel isolating."
+            },
+            {
+              "ok": false,
+              "word": "In addition, working from home is isolating as an identical advantage."
+            },
+            {
+              "ok": false,
+              "word": "First, because however home."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Avoiding repetition in a paragraph.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "Good organisation avoids repeating the same main idea without adding information.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Public transport reduces traffic. It can also lower air pollution in cities."
+            },
+            {
+              "ok": false,
+              "word": "Public transport reduces traffic. Public transport reduces traffic. Public transport reduces traffic."
+            },
+            {
+              "ok": false,
+              "word": "Traffic public because transport however."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using an example after a general statement.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "An example should directly illustrate the previous general point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Many people use apps to practise languages. For instance, they may use vocabulary quizzes on their phones."
+            },
+            {
+              "ok": false,
+              "word": "Many people use apps to practise languages. For instance, the moon orbits the Earth."
+            },
+            {
+              "ok": false,
+              "word": "Many people use apps. However for instance because phones."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Ending an opinion text.",
+          "level": "B1",
+          "category": "Text Organisation",
+          "explain": "A final sentence should restate the position or summarise the argument.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "For these reasons, I believe public transport should receive more investment."
+            },
+            {
+              "ok": false,
+              "word": "My first reason will now begin in the final sentence."
+            },
+            {
+              "ok": false,
+              "word": "Because however therefore public transport."
             }
           ]
         }

@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Basic Linkers (A2) questions.",
+      "description": "Practise simple linking words for addition, contrast, reason, result and sequence in short A2 texts.",
       "sortorder": 1,
-      "learningTitle": "Using Basic Linkers",
-      "learningPoints": [],
+      "learningTitle": "Linking Ideas Clearly",
+      "learningPoints": [
+        "Use and and also to add information.",
+        "Use but and however to show contrast.",
+        "Use because to give a reason and so to give a result.",
+        "Use first, then and finally to show sequence.",
+        "Choose a linker that matches the relationship between ideas.",
+        "Build short connected texts rather than isolated sentences."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'and' for addition.",
           "level": "A2",
           "category": "Basic Linkers",
-          "explain": "Placeholder explanation.",
+          "explain": "AND joins related ideas or actions.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "I bought some bread and some milk."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "I bought some bread because some milk."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "I bought some bread but some milk."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'also' to add information.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "ALSO adds another related fact and often comes before the main verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She speaks French and she also speaks Spanish."
+            },
+            {
+              "ok": false,
+              "word": "She speaks French and also she speaks Spanish always."
+            },
+            {
+              "ok": false,
+              "word": "She speaks French but she also speaks Spanish because."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'but' for contrast.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "BUT connects contrasting ideas.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The hotel was cheap, but it was clean."
+            },
+            {
+              "ok": false,
+              "word": "The hotel was cheap, because it was clean."
+            },
+            {
+              "ok": false,
+              "word": "The hotel was cheap, so but it was clean."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'because' for a reason.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "BECAUSE introduces a reason.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We stayed inside because it was raining."
+            },
+            {
+              "ok": false,
+              "word": "We stayed inside so it was raining."
+            },
+            {
+              "ok": false,
+              "word": "We stayed inside however it was raining."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'so' for a result.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "SO introduces a result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I was hungry, so I made a sandwich."
+            },
+            {
+              "ok": false,
+              "word": "I was hungry because I made a sandwich."
+            },
+            {
+              "ok": false,
+              "word": "I was hungry however I made a sandwich because."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'first' for the beginning of a sequence.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "FIRST introduces the first step or event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "First, wash the vegetables."
+            },
+            {
+              "ok": false,
+              "word": "Finally, wash the vegetables before the first step."
+            },
+            {
+              "ok": false,
+              "word": "Because, wash the vegetables."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'then' for the next step.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "THEN introduces what happens next.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "First we had lunch, then we went for a walk."
+            },
+            {
+              "ok": false,
+              "word": "First we had lunch, because we went for a walk."
+            },
+            {
+              "ok": false,
+              "word": "First we had lunch, however then because a walk."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'finally' for the last step.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "FINALLY introduces the last event in a sequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Finally, we arrived at the hotel."
+            },
+            {
+              "ok": false,
+              "word": "First, we finally arrived before we started."
+            },
+            {
+              "ok": false,
+              "word": "Because finally, we arrived at the hotel so."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'however' for contrast.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "HOWEVER can introduce a contrasting sentence or clause, especially in writing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The journey was long. However, it was comfortable."
+            },
+            {
+              "ok": false,
+              "word": "The journey was long. Because, it was comfortable."
+            },
+            {
+              "ok": false,
+              "word": "The journey was long. So however because comfortable."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Combining reason and result logically.",
+          "level": "A2",
+          "category": "Basic Linkers",
+          "explain": "Choose linkers according to whether the second idea is a reason or a result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The shop was closed, so we went somewhere else."
+            },
+            {
+              "ok": false,
+              "word": "The shop was closed, because we went somewhere else."
+            },
+            {
+              "ok": false,
+              "word": "The shop was closed, however because we went somewhere else."
             }
           ]
         }

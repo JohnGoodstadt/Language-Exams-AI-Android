@@ -26,7 +26,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "Most countable nouns add -S in the plural.",
-          "sentence": "There are three _____ on the table.",
+          "sentence": "There are three _ on the table.",
           "words": [
             {
               "ok": true,
@@ -49,7 +49,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "Some nouns ending in -s, -sh, -ch or -x add -ES.",
-          "sentence": "I can see two _____ at the bus stop.",
+          "sentence": "I can see two _ at the bus stop.",
           "words": [
             {
               "ok": true,
@@ -72,7 +72,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "The plural of CHILD is CHILDREN.",
-          "sentence": "The _____ are playing outside.",
+          "sentence": "The _ are playing outside.",
           "words": [
             {
               "ok": true,
@@ -95,7 +95,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "The plural of MAN is MEN.",
-          "sentence": "Two _____ are waiting outside.",
+          "sentence": "Two _ are waiting outside.",
           "words": [
             {
               "ok": true,
@@ -118,7 +118,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "A is followed by a singular countable noun.",
-          "sentence": "She has a new _____.",
+          "sentence": "She has a new _.",
           "words": [
             {
               "ok": true,
@@ -141,7 +141,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "A number greater than one is followed by a plural countable noun.",
-          "sentence": "We need four _____.",
+          "sentence": "We need four _.",
           "words": [
             {
               "ok": true,
@@ -164,7 +164,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "For many nouns ending consonant + Y, change Y to IES in the plural.",
-          "sentence": "There are two _____ in this town.",
+          "sentence": "There are two _ in this town.",
           "words": [
             {
               "ok": true,
@@ -187,7 +187,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "The plural of WOMAN is WOMEN.",
-          "sentence": "Three _____ work in this office.",
+          "sentence": "Three _ work in this office.",
           "words": [
             {
               "ok": true,
@@ -210,7 +210,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "Use MANY with plural countable nouns.",
-          "sentence": "How many _____ are in your class?",
+          "sentence": "How many _ are in your class?",
           "words": [
             {
               "ok": true,
@@ -233,7 +233,7 @@
           "level": "A1",
           "category": "Plural & Countable Nouns",
           "explain": "ONE is followed by a singular countable noun.",
-          "sentence": "There is only one _____ in the room.",
+          "sentence": "There is only one _ in the room.",
           "words": [
             {
               "ok": true,

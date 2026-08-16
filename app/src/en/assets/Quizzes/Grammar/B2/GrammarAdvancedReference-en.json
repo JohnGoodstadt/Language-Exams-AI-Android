@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarAdvancedReferenceB2-en",
+  "sheetname": "GrammarAdvancedDeterminersReferenceB2-en",
   "title": "Advanced Determiners & Reference",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Determiners & Reference (B2) questions.",
+      "description": "Practise advanced use of determiners, pronoun reference and substitution across sentences and noun phrases.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Determiners & Reference",
-      "learningPoints": [],
+      "learningTitle": "Using Determiners and Reference Precisely",
+      "learningPoints": [
+        "Distinguish each, every, either, neither, both and all.",
+        "Use another, other, the other and others accurately.",
+        "Use one/ones as noun substitutes.",
+        "Maintain clear pronoun and demonstrative reference.",
+        "Avoid ambiguous reference across clauses and sentences.",
+        "Choose determiners according to number, definiteness and contrast."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Distinguishing 'another' and 'other'.",
           "level": "B2",
           "category": "Advanced Determiners & Reference",
-          "explain": "Placeholder explanation.",
+          "explain": "ANOTHER means one more or a different singular item; OTHER modifies plural or uncountable nouns.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Could I have another cup of coffee?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Could I have other cup of coffee?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Could I have an other cups of coffee?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'the other' for the second of two.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "THE OTHER refers to the remaining one of two known items.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "One shoe is here, but I can't find the other."
+            },
+            {
+              "ok": false,
+              "word": "One shoe is here, but I can't find another, meaning specifically the second of the pair."
+            },
+            {
+              "ok": false,
+              "word": "One shoe is here, but I can't find other one the."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'others' without a noun.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "OTHERS functions as a pronoun and does not take a following noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Some people agreed; others disagreed."
+            },
+            {
+              "ok": false,
+              "word": "Some people agreed; other disagreed."
+            },
+            {
+              "ok": false,
+              "word": "Some people agreed; others people disagreed."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'either' for one of two.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "EITHER refers to one or the other of two alternatives.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Either option would be acceptable."
+            },
+            {
+              "ok": false,
+              "word": "Every option would be acceptable, when only two are meant."
+            },
+            {
+              "ok": false,
+              "word": "Either of option would be acceptable."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'neither' for not one and not the other.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "NEITHER means not either of two.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Neither answer is correct."
+            },
+            {
+              "ok": false,
+              "word": "None answer is correct, when only two are meant."
+            },
+            {
+              "ok": false,
+              "word": "Neither answers are correct in this singular determiner pattern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'each' versus 'every'.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "EACH focuses on members individually; EVERY considers all members of a group one by one.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Each student received a different task."
+            },
+            {
+              "ok": false,
+              "word": "Every students received a different task."
+            },
+            {
+              "ok": false,
+              "word": "Each students received a different task."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'one/ones' as substitutes.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "ONE/ONES can replace a previously mentioned countable noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I prefer the smaller ones."
+            },
+            {
+              "ok": false,
+              "word": "I prefer the smaller them."
+            },
+            {
+              "ok": false,
+              "word": "I prefer smaller one, referring to several items."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Maintaining clear demonstrative reference.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "THIS/THAT can refer back to a whole situation when the reference is clear.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The company cut prices. This led to higher sales."
+            },
+            {
+              "ok": false,
+              "word": "The company cut prices. He led to higher sales."
+            },
+            {
+              "ok": false,
+              "word": "The company cut prices. These led to higher sales, referring to one action."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Avoiding ambiguous pronoun reference.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "A pronoun should clearly identify its antecedent.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "When Maria spoke to Elena, Maria was upset."
+            },
+            {
+              "ok": false,
+              "word": "When Maria spoke to Elena, she was upset, if the intended referent must be unambiguous."
+            },
+            {
+              "ok": false,
+              "word": "When Maria spoke to Elena, it was upset."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'all' with a determiner.",
+          "level": "B2",
+          "category": "Advanced Determiners & Reference",
+          "explain": "ALL can come before THE/MY/THESE + noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "All the students passed the exam."
+            },
+            {
+              "ok": false,
+              "word": "The all students passed the exam."
+            },
+            {
+              "ok": false,
+              "word": "All students the passed the exam."
             }
           ]
         }

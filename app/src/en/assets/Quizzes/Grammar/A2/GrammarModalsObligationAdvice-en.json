@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarModalsObligationAdviceA2-en",
   "title": "Modals of Obligation & Advice",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Modals of Obligation & Advice (A2) questions.",
+      "description": "Practise must, have to, should and shouldn't for basic obligation, rules and advice.",
       "sortorder": 1,
-      "learningTitle": "Using Modals of Obligation & Advice",
-      "learningPoints": [],
+      "learningTitle": "Using Modals for Obligation and Advice",
+      "learningPoints": [
+        "Use must or have to for strong obligation.",
+        "Use mustn't for prohibition.",
+        "Use don't have to when something is not necessary.",
+        "Use should and shouldn't for advice.",
+        "Use the base form of the verb after must and should.",
+        "Choose the modal that matches the intended meaning."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'must' for strong obligation.",
           "level": "A2",
           "category": "Modals of Obligation & Advice",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "MUST expresses a strong obligation or rule.",
+          "sentence": "You _____ wear a seat belt in a car.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "must"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "shouldn't"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "don't have to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'mustn't' for prohibition.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "MUSTN'T means something is not allowed.",
+          "sentence": "You _____ smoke here.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mustn't"
+            },
+            {
+              "ok": false,
+              "word": "don't have to"
+            },
+            {
+              "ok": false,
+              "word": "should"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'should' for advice.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "SHOULD gives advice or says what is a good idea.",
+          "sentence": "You look tired. You _____ rest.",
+          "words": [
+            {
+              "ok": true,
+              "word": "should"
+            },
+            {
+              "ok": false,
+              "word": "mustn't"
+            },
+            {
+              "ok": false,
+              "word": "don't have to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'shouldn't' for negative advice.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "SHOULDN'T says that an action is not a good idea.",
+          "sentence": "You _____ eat so much sugar.",
+          "words": [
+            {
+              "ok": true,
+              "word": "shouldn't"
+            },
+            {
+              "ok": false,
+              "word": "must"
+            },
+            {
+              "ok": false,
+              "word": "have to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'have to' for necessity.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "HAVE TO expresses necessity or obligation.",
+          "sentence": "I _____ get up early for work.",
+          "words": [
+            {
+              "ok": true,
+              "word": "have to"
+            },
+            {
+              "ok": false,
+              "word": "mustn't"
+            },
+            {
+              "ok": false,
+              "word": "shouldn't"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'has to' with a third-person subject.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "Use HAS TO with HE, SHE, IT and singular nouns.",
+          "sentence": "Anna _____ wear a uniform at school.",
+          "words": [
+            {
+              "ok": true,
+              "word": "has to"
+            },
+            {
+              "ok": false,
+              "word": "have to"
+            },
+            {
+              "ok": false,
+              "word": "must to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'don't have to' for no necessity.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "DON'T HAVE TO means something is not necessary.",
+          "sentence": "You _____ bring food; we have enough.",
+          "words": [
+            {
+              "ok": true,
+              "word": "don't have to"
+            },
+            {
+              "ok": false,
+              "word": "mustn't"
+            },
+            {
+              "ok": false,
+              "word": "shouldn't"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using the base verb after 'must'.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "MUST is followed directly by the base form of the verb.",
+          "sentence": "We must _____ now.",
+          "words": [
+            {
+              "ok": true,
+              "word": "leave"
+            },
+            {
+              "ok": false,
+              "word": "to leave"
+            },
+            {
+              "ok": false,
+              "word": "leaves"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using the base verb after 'should'.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "SHOULD is followed by the base form of the verb.",
+          "sentence": "He should _____ a doctor.",
+          "words": [
+            {
+              "ok": true,
+              "word": "see"
+            },
+            {
+              "ok": false,
+              "word": "sees"
+            },
+            {
+              "ok": false,
+              "word": "to see"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing advice rather than obligation.",
+          "level": "A2",
+          "category": "Modals of Obligation & Advice",
+          "explain": "Use SHOULD for a recommendation that is not a strict rule.",
+          "sentence": "You _____ take an umbrella; it might rain.",
+          "words": [
+            {
+              "ok": true,
+              "word": "should"
+            },
+            {
+              "ok": false,
+              "word": "mustn't"
+            },
+            {
+              "ok": false,
+              "word": "don't have to"
             }
           ]
         }

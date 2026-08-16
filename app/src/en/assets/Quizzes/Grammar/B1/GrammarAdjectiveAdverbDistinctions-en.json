@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Adjective & Adverb Distinctions (B1) questions.",
+      "description": "Practise choosing between adjective and adverb forms and recognising common forms with different meanings.",
       "sortorder": 1,
-      "learningTitle": "Using Adjective & Adverb Distinctions",
-      "learningPoints": [],
+      "learningTitle": "Distinguishing Adjectives and Adverbs",
+      "learningPoints": [
+        "Use adjectives to describe nouns and after linking verbs.",
+        "Use adverbs to modify verbs, adjectives and other adverbs.",
+        "Recognise irregular adverbs such as well.",
+        "Distinguish pairs such as hard/hardly and late/lately.",
+        "Avoid using an adjective where an adverb is required.",
+        "Choose the form that matches both grammar and meaning."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using an adjective after a linking verb.",
           "level": "B1",
           "category": "Adjective & Adverb Distinctions",
-          "explain": "Placeholder explanation.",
+          "explain": "Use an adjective after FEEL, LOOK, SEEM and similar linking verbs.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "She looks tired today."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "She looks tiredly today."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "She tired looks today."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using an adverb to modify an action.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "Use an adverb to describe how an action is performed.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He answered the question correctly."
+            },
+            {
+              "ok": false,
+              "word": "He answered the question correct."
+            },
+            {
+              "ok": false,
+              "word": "He correct answered the question."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'well' as an adverb.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "WELL is the usual adverb corresponding to GOOD.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She speaks English very well."
+            },
+            {
+              "ok": false,
+              "word": "She speaks English very good."
+            },
+            {
+              "ok": false,
+              "word": "She well is speaking English very."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'good' after a linking verb.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "GOOD is an adjective and can follow linking verbs such as FEEL.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I feel good about the result."
+            },
+            {
+              "ok": false,
+              "word": "I feel wellly about the result."
+            },
+            {
+              "ok": false,
+              "word": "I good feel about the result."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Distinguishing 'hard' and 'hardly'.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "HARD means with effort; HARDLY means almost not.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She works hard every day."
+            },
+            {
+              "ok": false,
+              "word": "She works hardly every day, meaning with effort."
+            },
+            {
+              "ok": false,
+              "word": "She hardly works hard every day, meaning the same thing."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'hardly' for 'almost not'.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "HARDLY has a negative-like meaning: almost not.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I could hardly hear him."
+            },
+            {
+              "ok": false,
+              "word": "I could hard hear him."
+            },
+            {
+              "ok": false,
+              "word": "I hardly could hear him loudly."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Distinguishing 'late' and 'lately'.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "LATE means after the expected time; LATELY means recently.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He arrived late for the meeting."
+            },
+            {
+              "ok": false,
+              "word": "He arrived lately for the meeting."
+            },
+            {
+              "ok": false,
+              "word": "He late arrived for the meeting."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'lately' to mean recently.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "LATELY means recently and is often used with the Present Perfect.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I haven't seen her much lately."
+            },
+            {
+              "ok": false,
+              "word": "I haven't seen her much late."
+            },
+            {
+              "ok": false,
+              "word": "I lately haven't saw her much."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using an adjective with a noun.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "Adjectives normally come before the nouns they describe.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was a surprisingly difficult exam."
+            },
+            {
+              "ok": false,
+              "word": "It was a surprisingly difficulty exam."
+            },
+            {
+              "ok": false,
+              "word": "It was a surprise difficultly exam."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using an adverb to modify an adjective.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "An adverb can modify an adjective: EXTREMELY + IMPORTANT.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This information is extremely important."
+            },
+            {
+              "ok": false,
+              "word": "This information is extreme important."
+            },
+            {
+              "ok": false,
+              "word": "This information extremely is importance."
             }
           ]
         }

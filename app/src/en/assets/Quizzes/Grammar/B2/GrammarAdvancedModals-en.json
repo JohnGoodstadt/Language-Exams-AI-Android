@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarAdvancedModalsB2-en",
+  "sheetname": "GrammarAdvancedModalsSemiModalsB2-en",
   "title": "Advanced Modals & Semi-Modals",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Modals & Semi-Modals (B2) questions.",
+      "description": "Practise nuanced modal and semi-modal meanings including obligation, deduction, criticism, past possibility and expectation.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Modals & Semi-Modals",
-      "learningPoints": [],
+      "learningTitle": "Using Advanced Modals and Semi-Modals",
+      "learningPoints": [
+        "Use must have, might have and can't have for past deduction.",
+        "Use should have for criticism or regret about the past.",
+        "Distinguish mustn't from don't have to and needn't.",
+        "Use ought to and be supposed to for expectation and advice.",
+        "Use needn't have to describe unnecessary completed actions.",
+        "Choose modal meaning according to certainty, obligation and hindsight."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'must have' for past deduction.",
           "level": "B2",
           "category": "Advanced Modals & Semi-Modals",
-          "explain": "Placeholder explanation.",
+          "explain": "MUST HAVE + past participle expresses a strong deduction about the past.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "She must have forgotten the meeting."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "She must forgot the meeting."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "She must to have forgotten the meeting."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'can't have' for impossible past deduction.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "CAN'T HAVE + past participle expresses strong belief that something did not happen.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He can't have seen the message; his phone was off."
+            },
+            {
+              "ok": false,
+              "word": "He mustn't have seen the message; his phone was off, meaning deduction."
+            },
+            {
+              "ok": false,
+              "word": "He can't has seen the message; his phone was off."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'might have' for uncertain past possibility.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "MIGHT HAVE + past participle expresses a possible past event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They might have taken the wrong train."
+            },
+            {
+              "ok": false,
+              "word": "They might took the wrong train."
+            },
+            {
+              "ok": false,
+              "word": "They might to have taken the wrong train."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'should have' for past criticism.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "SHOULD HAVE + past participle can express criticism or regret about an earlier action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "You should have told me earlier."
+            },
+            {
+              "ok": false,
+              "word": "You should told me earlier."
+            },
+            {
+              "ok": false,
+              "word": "You should have tell me earlier."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Distinguishing 'mustn't' and 'don't have to'.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "MUSTN'T means prohibited; DON'T HAVE TO means not necessary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "You don't have to come if you're busy."
+            },
+            {
+              "ok": false,
+              "word": "You mustn't come if you're busy, meaning it is optional."
+            },
+            {
+              "ok": false,
+              "word": "You don't must come if you're busy."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'needn't have'.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "NEEDN'T HAVE + past participle means an action was done but was unnecessary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "You needn't have bought any food; we had plenty."
+            },
+            {
+              "ok": false,
+              "word": "You didn't need buy any food, so you definitely bought it unnecessarily."
+            },
+            {
+              "ok": false,
+              "word": "You needn't have buy any food."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'ought to'.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "OUGHT TO expresses advice, expectation or moral obligation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "You ought to apologise."
+            },
+            {
+              "ok": false,
+              "word": "You ought apologise."
+            },
+            {
+              "ok": false,
+              "word": "You ought to apologising."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'be supposed to'.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "BE SUPPOSED TO expresses expectation, arrangement or rule.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We're supposed to be there by nine."
+            },
+            {
+              "ok": false,
+              "word": "We're suppose to be there by nine."
+            },
+            {
+              "ok": false,
+              "word": "We're supposed being there by nine."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'could have' for unrealised past possibility.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "COULD HAVE + past participle can express something that was possible but did not happen.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We could have taken a taxi, but we decided to walk."
+            },
+            {
+              "ok": false,
+              "word": "We could took a taxi, but we decided to walk."
+            },
+            {
+              "ok": false,
+              "word": "We could have take a taxi, but we decided to walk."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing modal meaning precisely.",
+          "level": "B2",
+          "category": "Advanced Modals & Semi-Modals",
+          "explain": "Different modal perfect forms express deduction, possibility, criticism or unrealised possibility.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He may have misunderstood what you meant."
+            },
+            {
+              "ok": false,
+              "word": "He may misunderstood what you meant."
+            },
+            {
+              "ok": false,
+              "word": "He may to have misunderstood what you meant."
             }
           ]
         }

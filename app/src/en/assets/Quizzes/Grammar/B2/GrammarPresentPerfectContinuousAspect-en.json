@@ -1,27 +1,252 @@
 {
   "fileformat": 10,
-  "sheetname": "Grammar-PresentPerfectContinuousAspect-B2",
+  "location": 0,
+  "sheetname": "GrammarPresentPerfectContinuousAspectB2-en",
   "title": "Present Perfect Continuous & Aspect",
   "updatedDate": 0,
-  "location": 0,
   "data": [
     {
-      "title": "Present Perfect Continuous & Aspect",
-      "description": "PLACEHOLDER - replace with real Present Perfect Continuous & Aspect (B2) questions.",
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise distinctions between the Present Perfect Simple and Continuous, focusing on duration, repeated activity, result and completion.",
       "sortorder": 1,
+      "learningTitle": "Controlling Present Perfect Aspect",
+      "learningPoints": [
+        "Use the Present Perfect Continuous to emphasise duration or ongoing activity.",
+        "Use the Present Perfect Simple to emphasise completion, result or quantity.",
+        "Recognise stative verbs that are not normally used in continuous forms.",
+        "Use for and since accurately with continuing situations.",
+        "Distinguish repeated activity from completed achievement.",
+        "Choose aspect according to whether the focus is process or result."
+      ],
       "sections": [
         {
-          "title": "Present Perfect Continuous & Aspect",
+          "title": "",
           "page": 1,
-          "sentence": "Choose the correct sentence.",
-          "explain": "Placeholder explanation for Present Perfect Continuous & Aspect.",
-          "summary": "Placeholder summary.",
+          "summary": "Choosing continuous aspect for duration.",
           "level": "B2",
           "category": "Present Perfect Continuous & Aspect",
+          "explain": "Use HAVE/HAS BEEN + verb-ing when the focus is on how long an activity has continued.",
+          "sentence": "Choose the correct sentence.",
           "words": [
-            { "word": "She has been working here since 2019.", "ok": true },
-            { "word": "She has been work here since 2019.", "ok": false },
-            { "word": "She is been working here since 2019.", "ok": false }
+            {
+              "ok": true,
+              "word": "I've been studying for three hours."
+            },
+            {
+              "ok": false,
+              "word": "I've studied for three hours and I'm still in the middle of it, with focus only on process."
+            },
+            {
+              "ok": false,
+              "word": "I've been study for three hours."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Choosing simple aspect for completed quantity.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "Use the Present Perfect Simple when the focus is on a completed amount or number.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I've written five emails this morning."
+            },
+            {
+              "ok": false,
+              "word": "I've been writing five emails this morning, and all five are complete."
+            },
+            {
+              "ok": false,
+              "word": "I've wrote five emails this morning."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using continuous aspect for recent visible evidence.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "The Present Perfect Continuous often explains a present result from a recent activity.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "You're wet. Have you been walking in the rain?"
+            },
+            {
+              "ok": false,
+              "word": "You're wet. Have you walked in the rain continuously until now as a completed result?"
+            },
+            {
+              "ok": false,
+              "word": "You're wet. Have you been walked in the rain?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Avoiding continuous forms with stative verbs.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "Stative verbs such as KNOW are not normally used in continuous perfect forms.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I've known her for years."
+            },
+            {
+              "ok": false,
+              "word": "I've been knowing her for years."
+            },
+            {
+              "ok": false,
+              "word": "I've knew her for years."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Contrasting process and result.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "Use continuous aspect for the activity and simple aspect for its completed result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I've been painting the kitchen, but I haven't finished it yet."
+            },
+            {
+              "ok": false,
+              "word": "I've painted the kitchen, but I haven't finished it yet, with clear completed-result meaning."
+            },
+            {
+              "ok": false,
+              "word": "I've been painted the kitchen, but I haven't finished it yet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using simple aspect for achievement.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "A completed achievement is usually expressed with the Present Perfect Simple.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She has finally passed her driving test."
+            },
+            {
+              "ok": false,
+              "word": "She has finally been passing her driving test."
+            },
+            {
+              "ok": false,
+              "word": "She has finally pass her driving test."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using continuous aspect for repeated activity.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "The Present Perfect Continuous can emphasise repeated activity over a period up to now.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They've been calling me all morning."
+            },
+            {
+              "ok": false,
+              "word": "They've called me all morning, with the focus clearly on the ongoing repeated process."
+            },
+            {
+              "ok": false,
+              "word": "They've been called me all morning."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Choosing simple aspect with 'how many'.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "Questions about completed quantity normally use the Present Perfect Simple.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "How many books have you read this year?"
+            },
+            {
+              "ok": false,
+              "word": "How many books have you been reading this year, if you mean the completed total?"
+            },
+            {
+              "ok": false,
+              "word": "How many books have you readed this year?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using continuous aspect with 'how long'.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "HOW LONG often combines naturally with the Present Perfect Continuous for ongoing activities.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "How long have you been waiting?"
+            },
+            {
+              "ok": false,
+              "word": "How long have you waited, if the waiting is still continuing and duration is the focus?"
+            },
+            {
+              "ok": false,
+              "word": "How long have you been waited?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing aspect according to meaning.",
+          "level": "B2",
+          "category": "Present Perfect Continuous & Aspect",
+          "explain": "Simple aspect highlights result; continuous aspect highlights process.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I've repaired the bike, so you can use it now."
+            },
+            {
+              "ok": false,
+              "word": "I've been repairing the bike, so the completed repair is definitely the focus."
+            },
+            {
+              "ok": false,
+              "word": "I've repair the bike, so you can use it now."
+            }
           ]
         }
       ]

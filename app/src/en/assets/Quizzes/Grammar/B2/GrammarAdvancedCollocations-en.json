@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarAdvancedCollocationsB2-en",
   "title": "Advanced Collocations",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Collocations (B2) questions.",
+      "description": "Practise higher-level verb, adjective and noun collocations used in formal, academic and professional English.",
       "sortorder": 1,
       "learningTitle": "Using Advanced Collocations",
-      "learningPoints": [],
+      "learningPoints": [
+        "Learn common formal verb + noun collocations.",
+        "Recognise adjective + noun combinations used in B2 writing.",
+        "Use fixed combinations such as raise awareness and draw a conclusion.",
+        "Distinguish near-synonymous verbs that do not share the same collocations.",
+        "Choose natural combinations rather than word-for-word translations.",
+        "Build precision and fluency in formal English."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'raise awareness'.",
           "level": "B2",
           "category": "Advanced Collocations",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "The natural collocation is RAISE AWARENESS.",
+          "sentence": "The campaign aims to _____ awareness of the issue.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "raise"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "lift"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "grow"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'draw a conclusion'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "The natural formal collocation is DRAW A CONCLUSION.",
+          "sentence": "We cannot _____ a firm conclusion from one example.",
+          "words": [
+            {
+              "ok": true,
+              "word": "draw"
+            },
+            {
+              "ok": false,
+              "word": "make up"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'meet a requirement'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "The natural collocation is MEET A REQUIREMENT.",
+          "sentence": "Applicants must _____ all the entry requirements.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meet"
+            },
+            {
+              "ok": false,
+              "word": "reach"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'pose a threat'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "The natural collocation is POSE A THREAT.",
+          "sentence": "Climate change may _____ a serious threat to coastal areas.",
+          "words": [
+            {
+              "ok": true,
+              "word": "pose"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            },
+            {
+              "ok": false,
+              "word": "put"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'take measures'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "The formal collocation TAKE MEASURES means act to deal with a problem.",
+          "sentence": "The government needs to _____ measures to reduce pollution.",
+          "words": [
+            {
+              "ok": true,
+              "word": "take"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'reach an agreement'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "The natural collocation is REACH AN AGREEMENT.",
+          "sentence": "After several hours, both sides finally _____ an agreement.",
+          "words": [
+            {
+              "ok": true,
+              "word": "reached"
+            },
+            {
+              "ok": false,
+              "word": "arrived"
+            },
+            {
+              "ok": false,
+              "word": "made to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'highly competitive'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "HIGHLY COMPETITIVE is a common adjective collocation.",
+          "sentence": "The industry is extremely _____, with many firms competing for customers.",
+          "words": [
+            {
+              "ok": true,
+              "word": "competitive"
+            },
+            {
+              "ok": false,
+              "word": "competition"
+            },
+            {
+              "ok": false,
+              "word": "competitively"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'strong evidence'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "STRONG EVIDENCE is a common formal collocation.",
+          "sentence": "There is _____ evidence that the policy has worked.",
+          "words": [
+            {
+              "ok": true,
+              "word": "strong"
+            },
+            {
+              "ok": false,
+              "word": "powerful of"
+            },
+            {
+              "ok": false,
+              "word": "hardly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'growing concern'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "GROWING CONCERN is a common noun phrase in formal writing.",
+          "sentence": "There is _____ concern about rising housing costs.",
+          "words": [
+            {
+              "ok": true,
+              "word": "growing"
+            },
+            {
+              "ok": false,
+              "word": "raising"
+            },
+            {
+              "ok": false,
+              "word": "increasingly of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'play a role'.",
+          "level": "B2",
+          "category": "Advanced Collocations",
+          "explain": "The natural collocation is PLAY A ROLE.",
+          "sentence": "Education can _____ an important role in social mobility.",
+          "words": [
+            {
+              "ok": true,
+              "word": "play"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            },
+            {
+              "ok": false,
+              "word": "make"
             }
           ]
         }

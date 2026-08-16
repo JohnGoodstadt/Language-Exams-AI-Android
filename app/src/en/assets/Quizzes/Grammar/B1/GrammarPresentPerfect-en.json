@@ -1,27 +1,252 @@
 {
   "fileformat": 10,
-  "sheetname": "Grammar-PresentPerfect-B1",
+  "location": 0,
+  "sheetname": "GrammarPresentPerfectB1-en",
   "title": "Present Perfect",
   "updatedDate": 0,
-  "location": 0,
   "data": [
     {
-      "title": "Present Perfect",
-      "description": "PLACEHOLDER - replace with real Present Perfect (B1) questions.",
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise the Present Perfect for experiences, unfinished time, recent events and situations connected to the present.",
       "sortorder": 1,
+      "learningTitle": "Using the Present Perfect",
+      "learningPoints": [
+        "Use have/has + past participle to form the Present Perfect.",
+        "Use the tense for past experiences when the exact time is not stated.",
+        "Use for and since with situations continuing to the present.",
+        "Use already, yet, just, ever and never naturally.",
+        "Distinguish the Present Perfect from the Past Simple.",
+        "Recognise when a past event has a present result."
+      ],
       "sections": [
         {
-          "title": "Present Perfect",
+          "title": "",
           "page": 1,
-          "sentence": "Choose the correct sentence.",
-          "explain": "Placeholder explanation for Present Perfect.",
-          "summary": "Placeholder summary.",
+          "summary": "Using the Present Perfect for life experience.",
           "level": "B1",
           "category": "Present Perfect",
+          "explain": "Use the Present Perfect when talking about experience without saying exactly when it happened.",
+          "sentence": "Choose the correct sentence.",
           "words": [
-            { "word": "I have never been to Japan.", "ok": true },
-            { "word": "I have never went to Japan.", "ok": false },
-            { "word": "I am never been to Japan.", "ok": false }
+            {
+              "ok": true,
+              "word": "I have visited Rome twice."
+            },
+            {
+              "ok": false,
+              "word": "I visited Rome twice in my life ever."
+            },
+            {
+              "ok": false,
+              "word": "I have visit Rome twice."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'since' with a starting point.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "Use SINCE with the point when a continuing situation began.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She has lived here since 2022."
+            },
+            {
+              "ok": false,
+              "word": "She has lived here for 2022."
+            },
+            {
+              "ok": false,
+              "word": "She lived here since 2022 and still does."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'for' with a period of time.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "Use FOR with a duration of time.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We have known each other for ten years."
+            },
+            {
+              "ok": false,
+              "word": "We have known each other since ten years."
+            },
+            {
+              "ok": false,
+              "word": "We knew each other for ten years and still do."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'just' for a recent event.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "JUST commonly appears between HAVE/HAS and the past participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He has just finished his lunch."
+            },
+            {
+              "ok": false,
+              "word": "He just has finish his lunch."
+            },
+            {
+              "ok": false,
+              "word": "He has just finish his lunch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'yet' in a question.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "YET is commonly used in Present Perfect questions and negatives about expected events.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Have you finished your homework yet?"
+            },
+            {
+              "ok": false,
+              "word": "Did you finished your homework yet?"
+            },
+            {
+              "ok": false,
+              "word": "Have you finish your homework yet?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'already' in an affirmative sentence.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "ALREADY often comes between HAVE/HAS and the past participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They have already seen that film."
+            },
+            {
+              "ok": false,
+              "word": "They already have saw that film."
+            },
+            {
+              "ok": false,
+              "word": "They have already saw that film."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using Present Perfect with unfinished time.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "Use the Present Perfect when the time period is still continuing, such as TODAY or THIS WEEK.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I have had three meetings today."
+            },
+            {
+              "ok": false,
+              "word": "I had three meetings today, and today is not finished."
+            },
+            {
+              "ok": false,
+              "word": "I have have three meetings today."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using Past Simple with a finished past time.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "Use the Past Simple when a finished past time is stated.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I saw her yesterday."
+            },
+            {
+              "ok": false,
+              "word": "I have seen her yesterday."
+            },
+            {
+              "ok": false,
+              "word": "I have saw her yesterday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using Present Perfect for a present result.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "Use the Present Perfect when a recent past action has an important result now.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I've lost my keys, so I can't open the door."
+            },
+            {
+              "ok": false,
+              "word": "I lost my keys, so I can't open the door now, ever."
+            },
+            {
+              "ok": false,
+              "word": "I've lose my keys, so I can't open the door."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'ever' in a Present Perfect question.",
+          "level": "B1",
+          "category": "Present Perfect",
+          "explain": "EVER is commonly used in questions about experience.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Have you ever eaten Korean food?"
+            },
+            {
+              "ok": false,
+              "word": "Did you ever eaten Korean food?"
+            },
+            {
+              "ok": false,
+              "word": "Have you ever ate Korean food?"
+            }
           ]
         }
       ]

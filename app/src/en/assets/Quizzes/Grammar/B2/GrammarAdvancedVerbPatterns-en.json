@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Verb Patterns (B2) questions.",
+      "description": "Practise advanced verb patterns where gerund and infinitive choices change meaning or follow specific constructions.",
       "sortorder": 1,
       "learningTitle": "Using Advanced Verb Patterns",
-      "learningPoints": [],
+      "learningPoints": [
+        "Distinguish remember/forget + -ing from remember/forget + to-infinitive.",
+        "Distinguish stop + -ing from stop + to-infinitive.",
+        "Use try + -ing and try + to-infinitive according to meaning.",
+        "Use allow, recommend and advise with appropriate patterns.",
+        "Recognise verbs that take object + infinitive or gerund structures.",
+        "Choose verb patterns according to both grammar and intended meaning."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Distinguishing 'remember doing' and 'remember to do'.",
           "level": "B2",
           "category": "Advanced Verb Patterns",
-          "explain": "Placeholder explanation.",
+          "explain": "REMEMBER + -ING refers to a memory of a past action; REMEMBER + TO means not forgetting a necessary action.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "I remember meeting her for the first time."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "I remember to meet her for the first time, referring to a past memory."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "I remember meet her for the first time."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'remember to do' for a future task.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "REMEMBER + TO + verb means make sure you do something.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Remember to lock the door before you leave."
+            },
+            {
+              "ok": false,
+              "word": "Remember locking the door before you leave, as an instruction."
+            },
+            {
+              "ok": false,
+              "word": "Remember lock the door before you leave."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Distinguishing 'stop doing' and 'stop to do'.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "STOP + -ING means cease an activity; STOP + TO means pause one action in order to do another.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He stopped smoking last year."
+            },
+            {
+              "ok": false,
+              "word": "He stopped to smoke last year, meaning he gave up the habit."
+            },
+            {
+              "ok": false,
+              "word": "He stopped smoke last year."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'stop to do' for purpose.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "STOP + TO + verb means pause what you are doing in order to do something else.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We stopped to have a coffee on the way home."
+            },
+            {
+              "ok": false,
+              "word": "We stopped having a coffee on the way home, meaning we paused the journey for coffee."
+            },
+            {
+              "ok": false,
+              "word": "We stopped have a coffee on the way home."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'try doing' as an experiment.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "TRY + -ING means test a possible solution.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If the screen freezes, try restarting the computer."
+            },
+            {
+              "ok": false,
+              "word": "If the screen freezes, try to restart the computer, meaning test this as one possible solution."
+            },
+            {
+              "ok": false,
+              "word": "If the screen freezes, try restart the computer."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'try to do' for effort.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "TRY + TO + verb means make an effort to do something, whether or not it succeeds.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I tried to open the window, but it was stuck."
+            },
+            {
+              "ok": false,
+              "word": "I tried opening the window, but it was stuck, with the focus on unsuccessful effort rather than experimenting."
+            },
+            {
+              "ok": false,
+              "word": "I tried open the window, but it was stuck."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'allow + object + to-infinitive'.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "ALLOW can take object + TO + infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The new system allows users to change their settings."
+            },
+            {
+              "ok": false,
+              "word": "The new system allows users changing their settings."
+            },
+            {
+              "ok": false,
+              "word": "The new system allows to users change their settings."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'recommend + -ing'.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "RECOMMEND is commonly followed by -ING when no object is stated.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I recommend booking in advance."
+            },
+            {
+              "ok": false,
+              "word": "I recommend to book in advance."
+            },
+            {
+              "ok": false,
+              "word": "I recommend book in advance."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'advise + object + to-infinitive'.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "ADVISE can take object + TO + infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The doctor advised him to reduce his workload."
+            },
+            {
+              "ok": false,
+              "word": "The doctor advised him reducing his workload."
+            },
+            {
+              "ok": false,
+              "word": "The doctor advised to him reduce his workload."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'regret + -ing' for a past action.",
+          "level": "B2",
+          "category": "Advanced Verb Patterns",
+          "explain": "REGRET + -ING expresses regret about something already done.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I regret telling him the secret."
+            },
+            {
+              "ok": false,
+              "word": "I regret to tell him the secret, meaning I am sorry about a past action."
+            },
+            {
+              "ok": false,
+              "word": "I regret tell him the secret."
             }
           ]
         }

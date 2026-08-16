@@ -26,7 +26,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "Use CAN + base verb to say someone is able to do something.",
-          "sentence": "I _____ swim very well.",
+          "sentence": "I _ swim very well.",
           "words": [
             {
               "ok": true,
@@ -49,7 +49,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "Use CAN'T + base verb to say someone is not able to do something.",
-          "sentence": "My baby brother _____ read yet.",
+          "sentence": "My baby brother _ read yet.",
           "words": [
             {
               "ok": true,
@@ -72,7 +72,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "The verb after CAN stays in the base form.",
-          "sentence": "She can _____ the piano.",
+          "sentence": "She can _ the piano.",
           "words": [
             {
               "ok": true,
@@ -95,7 +95,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "Use CAN I + base verb to ask simple permission.",
-          "sentence": "_____ I open the window?",
+          "sentence": "_ I open the window?",
           "words": [
             {
               "ok": true,
@@ -118,7 +118,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "CAN can be used to give permission.",
-          "sentence": "You _____ use my phone.",
+          "sentence": "You _ use my phone.",
           "words": [
             {
               "ok": true,
@@ -141,7 +141,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "CAN'T can mean that something is not permitted.",
-          "sentence": "You _____ park your car here.",
+          "sentence": "You _ park your car here.",
           "words": [
             {
               "ok": true,
@@ -164,7 +164,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "Use CAN before the subject to ask about ability.",
-          "sentence": "_____ your sister drive?",
+          "sentence": "_ your sister drive?",
           "words": [
             {
               "ok": true,
@@ -187,7 +187,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "CAN does not change with HE, SHE or IT.",
-          "sentence": "Tom _____ speak French.",
+          "sentence": "Tom _ speak French.",
           "words": [
             {
               "ok": true,
@@ -210,7 +210,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "Use CAN'T directly before the base form of the main verb.",
-          "sentence": "We _____ come to the party tonight.",
+          "sentence": "We _ come to the party tonight.",
           "words": [
             {
               "ok": true,
@@ -233,7 +233,7 @@
           "level": "A1",
           "category": "Modals of Ability & Permission",
           "explain": "Use CAN I + base verb when asking permission to do something.",
-          "sentence": "_____ I take this chair?",
+          "sentence": "_ I take this chair?",
           "words": [
             {
               "ok": true,

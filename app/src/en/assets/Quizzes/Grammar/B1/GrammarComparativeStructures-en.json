@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Comparative Structures (B1) questions.",
+      "description": "Practise B1 comparison structures including as...as, less, much/far + comparative, and the same as.",
       "sortorder": 1,
       "learningTitle": "Using Comparative Structures",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use comparative adjectives with than.",
+        "Use as...as for equal comparison.",
+        "Use not as...as for inequality.",
+        "Use much, far and a bit to modify comparatives.",
+        "Use less + adjective for a lower degree.",
+        "Use the same as and different from accurately."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'as...as' for equality.",
           "level": "B1",
           "category": "Comparative Structures",
-          "explain": "Placeholder explanation.",
+          "explain": "Use AS + adjective + AS when two things are equal in a quality.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "My car is as fast as yours."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "My car is as faster as yours."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "My car is so fast than yours."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'not as...as'.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "Use NOT AS + adjective + AS to show that one thing has less of a quality.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This test isn't as difficult as the last one."
+            },
+            {
+              "ok": false,
+              "word": "This test isn't so more difficult than the last one."
+            },
+            {
+              "ok": false,
+              "word": "This test isn't as difficult than the last one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'much' before a comparative.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "MUCH can strengthen a comparative adjective.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This route is much shorter than the other one."
+            },
+            {
+              "ok": false,
+              "word": "This route is very shorter than the other one."
+            },
+            {
+              "ok": false,
+              "word": "This route is much shortest than the other one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'a bit' before a comparative.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "A BIT can make a comparative difference sound small.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The blue jacket is a bit cheaper."
+            },
+            {
+              "ok": false,
+              "word": "The blue jacket is a bit cheapest."
+            },
+            {
+              "ok": false,
+              "word": "The blue jacket is a bit more cheap."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'far' before a comparative.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "FAR can strengthen a comparative.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The new system is far better than the old one."
+            },
+            {
+              "ok": false,
+              "word": "The new system is far best than the old one."
+            },
+            {
+              "ok": false,
+              "word": "The new system is very more better than the old one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'less + adjective'.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "LESS + adjective expresses a lower degree.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This option is less expensive than the first one."
+            },
+            {
+              "ok": false,
+              "word": "This option is lesser expensive than the first one."
+            },
+            {
+              "ok": false,
+              "word": "This option is less more expensive than the first one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'the same as'.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "Use THE SAME AS to say two things are equal in a particular respect.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "My phone is the same model as yours."
+            },
+            {
+              "ok": false,
+              "word": "My phone is the same model than yours."
+            },
+            {
+              "ok": false,
+              "word": "My phone is same model as yours."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'different from'.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "Use DIFFERENT FROM for contrast between two things.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Her idea is different from mine."
+            },
+            {
+              "ok": false,
+              "word": "Her idea is different than mine in standard British English here."
+            },
+            {
+              "ok": false,
+              "word": "Her idea is more different from mine."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a comparative with repeated change.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "Use comparative + AND + comparative to describe continuing change.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The weather is getting colder and colder."
+            },
+            {
+              "ok": false,
+              "word": "The weather is getting more cold and more cold."
+            },
+            {
+              "ok": false,
+              "word": "The weather is getting coldest and coldest."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'the more..., the more...'.",
+          "level": "B1",
+          "category": "Comparative Structures",
+          "explain": "THE + comparative, THE + comparative expresses a relationship between two changing things.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The more you practise, the easier it becomes."
+            },
+            {
+              "ok": false,
+              "word": "The more you practise, easier it becomes."
+            },
+            {
+              "ok": false,
+              "word": "More you practise, the more easy it becomes."
             }
           ]
         }

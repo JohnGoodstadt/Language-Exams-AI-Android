@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarFormingNounsAdjectivesB1-en",
   "title": "Forming Nouns & Adjectives",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Forming Nouns & Adjectives (B1) questions.",
+      "description": "Practise common B1 suffixes used to form nouns and adjectives from familiar base words.",
       "sortorder": 1,
-      "learningTitle": "Using Forming Nouns & Adjectives",
-      "learningPoints": [],
+      "learningTitle": "Forming Nouns and Adjectives",
+      "learningPoints": [
+        "Use common noun suffixes such as -ment, -tion, -ness and -ity.",
+        "Use common adjective suffixes such as -ful, -less, -able and -ive.",
+        "Recognise simple spelling changes when suffixes are added.",
+        "Choose a word form that fits the grammar of the sentence.",
+        "Distinguish nouns from adjectives in context.",
+        "Build vocabulary by recognising related word families."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming a noun with '-ment'.",
           "level": "B1",
           "category": "Forming Nouns & Adjectives",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "DEVELOP becomes DEVELOPMENT when referring to the process or result.",
+          "sentence": "The new road is an important _____ for the town.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "development"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "developful"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "developed"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Forming a noun with '-tion'.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "INFORM becomes INFORMATION.",
+          "sentence": "We need more _____ before we decide.",
+          "words": [
+            {
+              "ok": true,
+              "word": "information"
+            },
+            {
+              "ok": false,
+              "word": "informative"
+            },
+            {
+              "ok": false,
+              "word": "inform"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Forming a noun with '-ness'.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "KIND becomes KINDNESS.",
+          "sentence": "Thank you for your _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "kindness"
+            },
+            {
+              "ok": false,
+              "word": "kindly"
+            },
+            {
+              "ok": false,
+              "word": "kindful"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Forming an adjective with '-ful'.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "CARE becomes CAREFUL.",
+          "sentence": "Be _____ when you cross the road.",
+          "words": [
+            {
+              "ok": true,
+              "word": "careful"
+            },
+            {
+              "ok": false,
+              "word": "care"
+            },
+            {
+              "ok": false,
+              "word": "carefully"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Forming an adjective with '-less'.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "HOPE becomes HOPELESS when something has no hope.",
+          "sentence": "The situation seemed _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "hopeless"
+            },
+            {
+              "ok": false,
+              "word": "hope"
+            },
+            {
+              "ok": false,
+              "word": "hopefully"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Forming an adjective with '-able'.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "RELY becomes RELIABLE, meaning able to be trusted or depended on.",
+          "sentence": "We need a _____ person for this job.",
+          "words": [
+            {
+              "ok": true,
+              "word": "reliable"
+            },
+            {
+              "ok": false,
+              "word": "reliance"
+            },
+            {
+              "ok": false,
+              "word": "reliably"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Forming a noun with '-ity'.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "POSSIBLE becomes POSSIBILITY.",
+          "sentence": "There is a _____ of rain later.",
+          "words": [
+            {
+              "ok": true,
+              "word": "possibility"
+            },
+            {
+              "ok": false,
+              "word": "possible"
+            },
+            {
+              "ok": false,
+              "word": "possibly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Forming an adjective with '-ive'.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "ATTRACT becomes ATTRACTIVE.",
+          "sentence": "It's an _____ place to visit.",
+          "words": [
+            {
+              "ok": true,
+              "word": "attractive"
+            },
+            {
+              "ok": false,
+              "word": "attraction"
+            },
+            {
+              "ok": false,
+              "word": "attractively"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Choosing a noun after an adjective.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "After an adjective such as GREAT, a noun is required here.",
+          "sentence": "Her greatest _____ is her patience.",
+          "words": [
+            {
+              "ok": true,
+              "word": "strength"
+            },
+            {
+              "ok": false,
+              "word": "strong"
+            },
+            {
+              "ok": false,
+              "word": "strongly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing an adjective before a noun.",
+          "level": "B1",
+          "category": "Forming Nouns & Adjectives",
+          "explain": "Before a noun, an adjective is required.",
+          "sentence": "They gave us some very _____ advice.",
+          "words": [
+            {
+              "ok": true,
+              "word": "useful"
+            },
+            {
+              "ok": false,
+              "word": "use"
+            },
+            {
+              "ok": false,
+              "word": "usefully"
             }
           ]
         }

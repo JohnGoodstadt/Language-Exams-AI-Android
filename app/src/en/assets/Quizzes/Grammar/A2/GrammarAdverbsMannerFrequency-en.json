@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Adverbs of Manner & Frequency (A2) questions.",
+      "description": "Practise common adverbs that describe how often and how an action happens.",
       "sortorder": 1,
-      "learningTitle": "Using Adverbs of Manner & Frequency",
-      "learningPoints": [],
+      "learningTitle": "Using Adverbs of Manner and Frequency",
+      "learningPoints": [
+        "Put frequency adverbs such as always, usually and often before most main verbs.",
+        "Put frequency adverbs after the verb 'to be'.",
+        "Use adverbs of manner to describe how an action is performed.",
+        "Many manner adverbs are formed with adjective + -ly.",
+        "Recognise irregular forms such as good → well.",
+        "Place manner adverbs naturally in simple sentences."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Positioning 'usually' before a main verb.",
           "level": "A2",
           "category": "Adverbs of Manner & Frequency",
-          "explain": "Placeholder explanation.",
+          "explain": "Frequency adverbs normally come before most main verbs.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "I usually walk to work."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "I walk usually to work."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "I usually to work walk."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Positioning a frequency adverb after 'be'.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "With the verb BE, the frequency adverb normally comes after the verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is always friendly."
+            },
+            {
+              "ok": false,
+              "word": "She always is friendly."
+            },
+            {
+              "ok": false,
+              "word": "She is friendly always."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using an adverb of manner.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "Use an adverb to describe how an action is done.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He speaks quietly."
+            },
+            {
+              "ok": false,
+              "word": "He speaks quiet."
+            },
+            {
+              "ok": false,
+              "word": "He quietly is speaks."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Forming an adverb with -ly.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "SLOW becomes SLOWLY when it describes how an action happens.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Please drive slowly."
+            },
+            {
+              "ok": false,
+              "word": "Please drive slow."
+            },
+            {
+              "ok": false,
+              "word": "Please slowly drive you."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'well' rather than 'good' after an action verb.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "WELL is the adverb used to describe how an action is performed.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She sings very well."
+            },
+            {
+              "ok": false,
+              "word": "She sings very good."
+            },
+            {
+              "ok": false,
+              "word": "She very well is singing."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'never' correctly.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "NEVER already has a negative meaning and normally comes before the main verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I never drink coffee at night."
+            },
+            {
+              "ok": false,
+              "word": "I don't never drink coffee at night."
+            },
+            {
+              "ok": false,
+              "word": "I drink never coffee at night."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'often' in a question answer.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "OFTEN normally comes before the main verb in an affirmative sentence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We often visit them at weekends."
+            },
+            {
+              "ok": false,
+              "word": "We visit often them at weekends."
+            },
+            {
+              "ok": false,
+              "word": "We are often visit them at weekends."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a manner adverb at the end of a clause.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "A manner adverb often comes after the verb or object.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She closed the door carefully."
+            },
+            {
+              "ok": false,
+              "word": "She closed carefully the door."
+            },
+            {
+              "ok": false,
+              "word": "She careful closed the door."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'sometimes' flexibly.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "SOMETIMES can naturally appear at the beginning or before the main verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sometimes I take the bus."
+            },
+            {
+              "ok": false,
+              "word": "I take sometimes the bus."
+            },
+            {
+              "ok": false,
+              "word": "Sometimes do I take the bus."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Distinguishing adjective and adverb forms.",
+          "level": "A2",
+          "category": "Adverbs of Manner & Frequency",
+          "explain": "Use an adverb to modify an action verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The children played happily."
+            },
+            {
+              "ok": false,
+              "word": "The children played happy."
+            },
+            {
+              "ok": false,
+              "word": "The happily children played."
             }
           ]
         }

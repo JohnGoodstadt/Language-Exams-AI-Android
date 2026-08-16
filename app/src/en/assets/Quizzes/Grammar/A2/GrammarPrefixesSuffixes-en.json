@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarPrefixesSuffixesA2-en",
   "title": "Prefixes & Suffixes",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Prefixes & Suffixes (A2) questions.",
+      "description": "Practise common A2 prefixes and suffixes that change the meaning or word class of familiar words.",
       "sortorder": 1,
-      "learningTitle": "Using Prefixes & Suffixes",
-      "learningPoints": [],
+      "learningTitle": "Building Words with Prefixes and Suffixes",
+      "learningPoints": [
+        "Use common negative prefixes such as un- and im-.",
+        "Use re- to express doing something again.",
+        "Use -er for a person who performs an action or job.",
+        "Use -ful and -less to form common adjectives.",
+        "Use -ly to form many adverbs from adjectives.",
+        "Recognise simple spelling changes when adding suffixes."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using the negative prefix 'im-'.",
           "level": "A2",
           "category": "Prefixes & Suffixes",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "IM- forms the opposite of some adjectives: POSSIBLE → IMPOSSIBLE.",
+          "sentence": "It is _____ to open this door without a key.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "impossible"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "possiblely"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "repossible"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'un-' with a familiar adjective.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "UN- forms the opposite of HAPPY: UNHAPPY.",
+          "sentence": "He looks _____ today.",
+          "words": [
+            {
+              "ok": true,
+              "word": "unhappy"
+            },
+            {
+              "ok": false,
+              "word": "rehappy"
+            },
+            {
+              "ok": false,
+              "word": "happily"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 're-' for repetition.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "RE- often means again. REWRITE means write again.",
+          "sentence": "Please _____ the sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "rewrite"
+            },
+            {
+              "ok": false,
+              "word": "unwrite"
+            },
+            {
+              "ok": false,
+              "word": "writer"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using '-er' for a person.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "-ER can form a noun for a person who does an activity or job.",
+          "sentence": "My sister is a _____. She teaches English.",
+          "words": [
+            {
+              "ok": true,
+              "word": "teacher"
+            },
+            {
+              "ok": false,
+              "word": "teachful"
+            },
+            {
+              "ok": false,
+              "word": "teachingly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using '-ful' to form an adjective.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "-FUL can mean 'full of' or 'having'. CARE → CAREFUL.",
+          "sentence": "Be _____ when you cross the road.",
+          "words": [
+            {
+              "ok": true,
+              "word": "careful"
+            },
+            {
+              "ok": false,
+              "word": "careless"
+            },
+            {
+              "ok": false,
+              "word": "carefully"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using '-less' to show absence.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "-LESS can mean 'without'. CARELESS means not careful.",
+          "sentence": "That was a _____ mistake.",
+          "words": [
+            {
+              "ok": true,
+              "word": "careless"
+            },
+            {
+              "ok": false,
+              "word": "careful"
+            },
+            {
+              "ok": false,
+              "word": "carely"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using '-ly' to form an adverb.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "Many adverbs are formed with adjective + -LY.",
+          "sentence": "She spoke _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "quietly"
+            },
+            {
+              "ok": false,
+              "word": "quiet"
+            },
+            {
+              "ok": false,
+              "word": "quietness"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using '-ness' to form a noun.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "-NESS can form a noun from some adjectives. HAPPY → HAPPINESS.",
+          "sentence": "Money doesn't always bring _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "happiness"
+            },
+            {
+              "ok": false,
+              "word": "happyful"
+            },
+            {
+              "ok": false,
+              "word": "happily"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using the negative prefix 'im-'.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "IM- forms the opposite of some adjectives beginning with certain consonants: POSSIBLE → IMPOSSIBLE.",
+          "sentence": "It is _____ to finish this in one minute.",
+          "words": [
+            {
+              "ok": true,
+              "word": "impossible"
+            },
+            {
+              "ok": false,
+              "word": "unpossible"
+            },
+            {
+              "ok": false,
+              "word": "possibly"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Recognising a person noun in -er.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "DRIVE becomes DRIVER for a person who drives.",
+          "sentence": "My uncle is a bus _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "driver"
+            },
+            {
+              "ok": false,
+              "word": "drively"
+            },
+            {
+              "ok": false,
+              "word": "driveful"
             }
           ]
         }

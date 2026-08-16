@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarAdvancedPhrasalVerbsB2-en",
   "title": "Advanced Phrasal Verbs",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Phrasal Verbs (B2) questions.",
+      "description": "Practise higher-level phrasal verbs used in work, study, problem-solving and abstract discussion.",
       "sortorder": 1,
       "learningTitle": "Using Advanced Phrasal Verbs",
-      "learningPoints": [],
+      "learningPoints": [
+        "Recognise phrasal verbs with non-literal meanings.",
+        "Use phrasal verbs common in B2 work and academic contexts.",
+        "Distinguish similar particles and meanings.",
+        "Recognise separable and inseparable patterns where relevant.",
+        "Choose the phrasal verb that fits the whole context.",
+        "Build fluency with multi-word verbs used in natural English."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'carry out'.",
           "level": "B2",
           "category": "Advanced Phrasal Verbs",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "CARRY OUT means perform or conduct a task, study or plan.",
+          "sentence": "The researchers will _____ a new survey.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "carry out"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "carry on"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "carry off"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'come up with'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "COME UP WITH means think of or produce an idea or solution.",
+          "sentence": "We need to _____ a better solution.",
+          "words": [
+            {
+              "ok": true,
+              "word": "come up with"
+            },
+            {
+              "ok": false,
+              "word": "come across"
+            },
+            {
+              "ok": false,
+              "word": "come out of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'put off'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "PUT OFF means postpone.",
+          "sentence": "They decided to _____ the meeting until Friday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "put off"
+            },
+            {
+              "ok": false,
+              "word": "put out"
+            },
+            {
+              "ok": false,
+              "word": "put through"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'look into'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "LOOK INTO means investigate.",
+          "sentence": "The manager promised to _____ the complaint.",
+          "words": [
+            {
+              "ok": true,
+              "word": "look into"
+            },
+            {
+              "ok": false,
+              "word": "look after"
+            },
+            {
+              "ok": false,
+              "word": "look over to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'bring about'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "BRING ABOUT means cause something to happen.",
+          "sentence": "The new law could _____ major changes.",
+          "words": [
+            {
+              "ok": true,
+              "word": "bring about"
+            },
+            {
+              "ok": false,
+              "word": "bring up"
+            },
+            {
+              "ok": false,
+              "word": "bring out of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'work out'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "WORK OUT can mean solve or calculate.",
+          "sentence": "We finally _____ why the system was failing.",
+          "words": [
+            {
+              "ok": true,
+              "word": "worked out"
+            },
+            {
+              "ok": false,
+              "word": "worked up"
+            },
+            {
+              "ok": false,
+              "word": "worked after"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'rule out'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "RULE OUT means eliminate as a possibility.",
+          "sentence": "The doctor was able to _____ a serious infection.",
+          "words": [
+            {
+              "ok": true,
+              "word": "rule out"
+            },
+            {
+              "ok": false,
+              "word": "rule in"
+            },
+            {
+              "ok": false,
+              "word": "rule over"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'point out'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "POINT OUT means draw attention to a fact or detail.",
+          "sentence": "She _____ several errors in the report.",
+          "words": [
+            {
+              "ok": true,
+              "word": "pointed out"
+            },
+            {
+              "ok": false,
+              "word": "pointed up to"
+            },
+            {
+              "ok": false,
+              "word": "pointed after"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'set up'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "SET UP means establish or arrange something.",
+          "sentence": "They plan to _____ a new training programme.",
+          "words": [
+            {
+              "ok": true,
+              "word": "set up"
+            },
+            {
+              "ok": false,
+              "word": "set off"
+            },
+            {
+              "ok": false,
+              "word": "set after"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'take over'.",
+          "level": "B2",
+          "category": "Advanced Phrasal Verbs",
+          "explain": "TAKE OVER means assume control or responsibility.",
+          "sentence": "A larger company may _____ the business.",
+          "words": [
+            {
+              "ok": true,
+              "word": "take over"
+            },
+            {
+              "ok": false,
+              "word": "take out"
+            },
+            {
+              "ok": false,
+              "word": "take after"
             }
           ]
         }

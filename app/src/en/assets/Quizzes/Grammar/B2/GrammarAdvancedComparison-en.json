@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Comparison (B2) questions.",
+      "description": "Practise sophisticated comparison structures including double comparatives, proportional comparison, superlative emphasis and similarity.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Comparison",
-      "learningPoints": [],
+      "learningTitle": "Using Advanced Comparative Structures",
+      "learningPoints": [
+        "Use the + comparative..., the + comparative... for proportional relationships.",
+        "Use comparative and comparative to show gradual change.",
+        "Use by far, easily and one of the with superlatives.",
+        "Use no/not much/far + comparative to express degree.",
+        "Use nowhere near as...as for strong inequality.",
+        "Use comparison structures precisely in formal and informal contexts."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using proportional comparison.",
           "level": "B2",
           "category": "Advanced Comparison",
-          "explain": "Placeholder explanation.",
+          "explain": "THE + comparative, THE + comparative expresses a linked change.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The more you practise, the more confident you become."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "More you practise, more confident you become."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The more you practise, the most confident you become."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using repeated comparatives for gradual change.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "Comparative + AND + comparative expresses continuing change.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The situation is becoming more and more complicated."
+            },
+            {
+              "ok": false,
+              "word": "The situation is becoming most and most complicated."
+            },
+            {
+              "ok": false,
+              "word": "The situation is becoming more complicated and most complicated."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'by far' with a superlative.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "BY FAR strongly intensifies a superlative.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This is by far the best option."
+            },
+            {
+              "ok": false,
+              "word": "This is by far better option."
+            },
+            {
+              "ok": false,
+              "word": "This is the by far bestest option."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'one of the + superlative + plural noun'.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "After ONE OF THE + superlative, use a plural noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It is one of the most interesting books I've read."
+            },
+            {
+              "ok": false,
+              "word": "It is one of the most interesting book I've read."
+            },
+            {
+              "ok": false,
+              "word": "It is one of most interesting books I've read."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'nowhere near as...as'.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "NOWHERE NEAR AS + adjective + AS expresses a large difference.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The second film was nowhere near as good as the first."
+            },
+            {
+              "ok": false,
+              "word": "The second film was nowhere near so better than the first."
+            },
+            {
+              "ok": false,
+              "word": "The second film was nowhere near as better as the first."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'not much + comparative'.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "NOT MUCH + comparative indicates only a small difference.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This version isn't much cheaper than the old one."
+            },
+            {
+              "ok": false,
+              "word": "This version isn't very cheapest than the old one."
+            },
+            {
+              "ok": false,
+              "word": "This version isn't much more cheaper than the old one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'far + comparative'.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "FAR can intensify a comparative.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The new route is far more convenient."
+            },
+            {
+              "ok": false,
+              "word": "The new route is far most convenient."
+            },
+            {
+              "ok": false,
+              "word": "The new route is very more convenient."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'easily' with a superlative.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "EASILY can intensify a superlative meaning 'without doubt'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is easily the most experienced person on the team."
+            },
+            {
+              "ok": false,
+              "word": "She is easily more experienced person on the team."
+            },
+            {
+              "ok": false,
+              "word": "She is the easily most experience person on the team."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'twice as...as'.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "Use TWICE AS + adjective + AS to express a precise proportional comparison.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This room is twice as large as the other one."
+            },
+            {
+              "ok": false,
+              "word": "This room is twice larger as the other one."
+            },
+            {
+              "ok": false,
+              "word": "This room is two times more large than the other one."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'the same...as'.",
+          "level": "B2",
+          "category": "Advanced Comparison",
+          "explain": "Use THE SAME + noun + AS to compare equality of type or quality.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We bought the same model as you."
+            },
+            {
+              "ok": false,
+              "word": "We bought the same model than you."
+            },
+            {
+              "ok": false,
+              "word": "We bought same the model as you."
             }
           ]
         }

@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Inversion & Emphasis (B2) questions.",
+      "description": "Practise inversion after negative and restrictive expressions and emphatic auxiliary structures.",
       "sortorder": 1,
-      "learningTitle": "Using Inversion & Emphasis",
-      "learningPoints": [],
+      "learningTitle": "Using Inversion and Emphasis",
+      "learningPoints": [
+        "Use auxiliary-subject inversion after negative adverbials placed first.",
+        "Use structures such as never have I..., rarely do we... and only then did I....",
+        "Use not only... but also with inversion when fronted.",
+        "Use emphatic do/does/did in affirmative clauses.",
+        "Recognise when inversion is formal or rhetorical.",
+        "Keep auxiliary and main verb forms accurate."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using inversion after 'never'.",
           "level": "B2",
           "category": "Inversion & Emphasis",
-          "explain": "Placeholder explanation.",
+          "explain": "When NEVER begins the clause, invert auxiliary and subject.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Never have I seen such a beautiful view."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Never I have seen such a beautiful view."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Never have I saw such a beautiful view."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using inversion after 'rarely'.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "Fronted RARELY triggers auxiliary-subject inversion.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Rarely do we get an opportunity like this."
+            },
+            {
+              "ok": false,
+              "word": "Rarely we do get an opportunity like this."
+            },
+            {
+              "ok": false,
+              "word": "Rarely do we gets an opportunity like this."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using inversion after 'only then'.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "ONLY THEN at the front triggers inversion in the main clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Only then did I understand what had happened."
+            },
+            {
+              "ok": false,
+              "word": "Only then I did understand what had happened."
+            },
+            {
+              "ok": false,
+              "word": "Only then did I understood what had happened."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using inversion after 'not until'.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "A fronted NOT UNTIL phrase triggers inversion in the main clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Not until midnight did they finally arrive."
+            },
+            {
+              "ok": false,
+              "word": "Not until midnight they finally arrived."
+            },
+            {
+              "ok": false,
+              "word": "Not until midnight did they finally arrived."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'not only' with inversion.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "When NOT ONLY begins the clause, invert auxiliary and subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Not only did she apologise, but she also offered a refund."
+            },
+            {
+              "ok": false,
+              "word": "Not only she apologised, but she also offered a refund."
+            },
+            {
+              "ok": false,
+              "word": "Not only did she apologised, but she also offered a refund."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using inversion after 'hardly'.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "HARDLY at the beginning can trigger inversion, often with WHEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Hardly had I sat down when the phone rang."
+            },
+            {
+              "ok": false,
+              "word": "Hardly I had sat down when the phone rang."
+            },
+            {
+              "ok": false,
+              "word": "Hardly had I sit down when the phone rang."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using inversion after 'under no circumstances'.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "Negative fronted phrases trigger inversion in formal English.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Under no circumstances should you open this door."
+            },
+            {
+              "ok": false,
+              "word": "Under no circumstances you should open this door."
+            },
+            {
+              "ok": false,
+              "word": "Under no circumstances should you to open this door."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using emphatic 'do'.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "DO/DOES/DID can add emphasis to an affirmative statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I do understand your concern."
+            },
+            {
+              "ok": false,
+              "word": "I am understand your concern."
+            },
+            {
+              "ok": false,
+              "word": "I do understood your concern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using emphatic 'did' in the past.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "DID + base verb can emphasise that something really happened.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She did try to contact you."
+            },
+            {
+              "ok": false,
+              "word": "She did tried to contact you."
+            },
+            {
+              "ok": false,
+              "word": "She was try to contact you."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using inversion after 'seldom'.",
+          "level": "B2",
+          "category": "Inversion & Emphasis",
+          "explain": "Fronted SELDOM triggers inversion.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Seldom has the company faced such a serious challenge."
+            },
+            {
+              "ok": false,
+              "word": "Seldom the company has faced such a serious challenge."
+            },
+            {
+              "ok": false,
+              "word": "Seldom has the company face such a serious challenge."
             }
           ]
         }

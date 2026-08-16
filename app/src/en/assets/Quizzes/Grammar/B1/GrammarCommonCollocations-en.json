@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarCommonCollocationsB1-en",
   "title": "Common Collocations",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Common Collocations (B1) questions.",
+      "description": "Practise common B1 word combinations with make, do, take, have, pay and other high-frequency verbs.",
       "sortorder": 1,
       "learningTitle": "Using Common Collocations",
-      "learningPoints": [],
+      "learningPoints": [
+        "Learn common verb + noun combinations as fixed or semi-fixed phrases.",
+        "Use make and do with common nouns accurately.",
+        "Use take and have in everyday collocations.",
+        "Recognise common combinations such as pay attention and make progress.",
+        "Choose the natural collocation rather than translating word by word.",
+        "Build fluency by learning words in combinations."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'make a decision'.",
           "level": "B1",
           "category": "Common Collocations",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "The natural collocation is MAKE A DECISION.",
+          "sentence": "We need to _____ a decision today.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "make"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "do"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "take"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'do homework'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "The natural collocation is DO HOMEWORK.",
+          "sentence": "Have you _____ your homework yet?",
+          "words": [
+            {
+              "ok": true,
+              "word": "done"
+            },
+            {
+              "ok": false,
+              "word": "made"
+            },
+            {
+              "ok": false,
+              "word": "taken"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'take a break'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "The natural collocation is TAKE A BREAK.",
+          "sentence": "Let's _____ a short break.",
+          "words": [
+            {
+              "ok": true,
+              "word": "take"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'have a look'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "HAVE A LOOK is a common collocation meaning look at something.",
+          "sentence": "Can I _____ a look at your notes?",
+          "words": [
+            {
+              "ok": true,
+              "word": "have"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'pay attention'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "The natural collocation is PAY ATTENTION.",
+          "sentence": "Please _____ attention to the instructions.",
+          "words": [
+            {
+              "ok": true,
+              "word": "pay"
+            },
+            {
+              "ok": false,
+              "word": "give"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'make progress'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "The natural collocation is MAKE PROGRESS.",
+          "sentence": "She's _____ good progress with her English.",
+          "words": [
+            {
+              "ok": true,
+              "word": "making"
+            },
+            {
+              "ok": false,
+              "word": "doing"
+            },
+            {
+              "ok": false,
+              "word": "taking"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'do your best'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "The natural expression is DO YOUR BEST.",
+          "sentence": "Just _____ your best in the exam.",
+          "words": [
+            {
+              "ok": true,
+              "word": "do"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            },
+            {
+              "ok": false,
+              "word": "take"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'take responsibility'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "The natural collocation is TAKE RESPONSIBILITY.",
+          "sentence": "Someone needs to _____ responsibility for the mistake.",
+          "words": [
+            {
+              "ok": true,
+              "word": "take"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            },
+            {
+              "ok": false,
+              "word": "pay"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'have a chance'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "HAVE A CHANCE means have an opportunity or possibility.",
+          "sentence": "Do you think we _____ a chance of winning?",
+          "words": [
+            {
+              "ok": true,
+              "word": "have"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'make a mistake'.",
+          "level": "B1",
+          "category": "Common Collocations",
+          "explain": "The natural collocation is MAKE A MISTAKE.",
+          "sentence": "I think I've _____ a mistake.",
+          "words": [
+            {
+              "ok": true,
+              "word": "made"
+            },
+            {
+              "ok": false,
+              "word": "done"
+            },
+            {
+              "ok": false,
+              "word": "taken"
             }
           ]
         }

@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarPrepositionsMovementA2-en",
   "title": "Prepositions of Movement",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Prepositions of Movement (A2) questions.",
+      "description": "Practise common prepositions that describe movement from one place to another.",
       "sortorder": 1,
-      "learningTitle": "Using Prepositions of Movement",
-      "learningPoints": [],
+      "learningTitle": "Describing Movement",
+      "learningPoints": [
+        "Use into for movement from outside to inside.",
+        "Use out of for movement from inside to outside.",
+        "Use across for movement from one side to another.",
+        "Use through for movement within and out of an enclosed space.",
+        "Use along, past, towards and over for common movement patterns.",
+        "Choose the preposition that matches the direction of movement."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'into'.",
           "level": "A2",
           "category": "Prepositions of Movement",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "INTO describes movement from outside to inside.",
+          "sentence": "She walked _____ the room.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "into"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "on"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'out of'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "OUT OF describes movement from inside to outside.",
+          "sentence": "He ran _____ the house.",
+          "words": [
+            {
+              "ok": true,
+              "word": "out of"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "across"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'across'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "ACROSS means from one side to the other side of an area.",
+          "sentence": "We walked _____ the road.",
+          "words": [
+            {
+              "ok": true,
+              "word": "across"
+            },
+            {
+              "ok": false,
+              "word": "through"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'through'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "THROUGH describes movement within an enclosed or surrounded space and out the other side.",
+          "sentence": "The train went _____ the tunnel.",
+          "words": [
+            {
+              "ok": true,
+              "word": "through"
+            },
+            {
+              "ok": false,
+              "word": "across"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'along'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "ALONG means following the length of a road, river, path or similar line.",
+          "sentence": "They walked _____ the river.",
+          "words": [
+            {
+              "ok": true,
+              "word": "along"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "over"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'past'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "PAST means moving beyond a person or place.",
+          "sentence": "I walked _____ the bank and turned left.",
+          "words": [
+            {
+              "ok": true,
+              "word": "past"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "under"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'towards'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "TOWARDS means moving in the direction of something.",
+          "sentence": "The dog ran _____ me.",
+          "words": [
+            {
+              "ok": true,
+              "word": "towards"
+            },
+            {
+              "ok": false,
+              "word": "through"
+            },
+            {
+              "ok": false,
+              "word": "out of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'over'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "OVER can describe movement above and across something.",
+          "sentence": "The bird flew _____ the wall.",
+          "words": [
+            {
+              "ok": true,
+              "word": "over"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "along"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'up'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "UP describes movement to a higher position.",
+          "sentence": "We walked _____ the hill.",
+          "words": [
+            {
+              "ok": true,
+              "word": "up"
+            },
+            {
+              "ok": false,
+              "word": "out of"
+            },
+            {
+              "ok": false,
+              "word": "across"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'down'.",
+          "level": "A2",
+          "category": "Prepositions of Movement",
+          "explain": "DOWN describes movement to a lower position or along something in a downward direction.",
+          "sentence": "She ran _____ the stairs.",
+          "words": [
+            {
+              "ok": true,
+              "word": "down"
+            },
+            {
+              "ok": false,
+              "word": "towards"
+            },
+            {
+              "ok": false,
+              "word": "through"
             }
           ]
         }

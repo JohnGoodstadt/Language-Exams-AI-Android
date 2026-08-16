@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Coherence & Register (B2) questions.",
+      "description": "Practise maintaining logical flow and choosing language appropriate to formal, neutral and informal contexts.",
       "sortorder": 1,
-      "learningTitle": "Using Coherence & Register",
-      "learningPoints": [],
+      "learningTitle": "Maintaining Coherence and Appropriate Register",
+      "learningPoints": [
+        "Keep pronoun and reference chains clear across sentences.",
+        "Use consistent levels of formality within a text.",
+        "Choose formal alternatives for academic and professional writing.",
+        "Avoid abrupt topic shifts and unsupported ideas.",
+        "Use cohesive links that reflect the intended relationship.",
+        "Match tone and register to audience and purpose."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Choosing formal wording in a report.",
           "level": "B2",
           "category": "Coherence & Register",
-          "explain": "Placeholder explanation.",
+          "explain": "Formal reports prefer neutral, precise language.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The results indicate that further research is required."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The results kind of show we need to look into it more."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The results are, like, saying more research is needed."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Choosing informal wording in a message to a friend.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Informal personal messages can use contractions and conversational phrasing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I can't make it tonight, but I'll call you tomorrow."
+            },
+            {
+              "ok": false,
+              "word": "I regret to inform you that I am unable to attend this evening."
+            },
+            {
+              "ok": false,
+              "word": "Attendance shall not be possible on my behalf tonight."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Maintaining clear reference.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Reference words should clearly point back to the intended noun or idea.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The company introduced flexible hours. This improved staff morale."
+            },
+            {
+              "ok": false,
+              "word": "The company introduced flexible hours. He improved staff morale."
+            },
+            {
+              "ok": false,
+              "word": "The company introduced flexible hours. They improved it, with no clear referent."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Avoiding an abrupt topic shift.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "A coherent paragraph should develop one central topic.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The scheme reduced traffic. It also lowered air pollution in the city centre."
+            },
+            {
+              "ok": false,
+              "word": "The scheme reduced traffic. My cousin is learning Italian."
+            },
+            {
+              "ok": false,
+              "word": "The scheme reduced traffic. However because yesterday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using formal request language.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Formal correspondence often uses polite, indirect phrasing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I would be grateful if you could provide further details."
+            },
+            {
+              "ok": false,
+              "word": "Send me more details when you get a chance."
+            },
+            {
+              "ok": false,
+              "word": "Give me the info ASAP."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Keeping register consistent.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Avoid mixing highly formal and very casual language without a reason.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The proposal is unlikely to succeed unless additional funding is secured."
+            },
+            {
+              "ok": false,
+              "word": "The proposal is unlikely to succeed unless we get loads more cash."
+            },
+            {
+              "ok": false,
+              "word": "The proposal's gonna fail unless additional funding is secured herein."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a coherent contrast link.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Choose a linker that accurately connects contrasting ideas.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The course is demanding; however, it is extremely rewarding."
+            },
+            {
+              "ok": false,
+              "word": "The course is demanding; therefore, it is extremely rewarding as a contrast."
+            },
+            {
+              "ok": false,
+              "word": "The course is demanding; for example, it is rewarding."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using neutral professional tone.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Professional communication should be clear without being excessively casual or emotional.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "There appears to be an error in the latest invoice."
+            },
+            {
+              "ok": false,
+              "word": "You've totally messed up the latest invoice."
+            },
+            {
+              "ok": false,
+              "word": "I am absolutely furious beyond belief about this invoice!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Maintaining logical progression.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Each sentence should follow logically from the one before it.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sales declined in the first quarter. As a result, the company reduced production."
+            },
+            {
+              "ok": false,
+              "word": "Sales declined in the first quarter. In contrast, the company reduced production as a result."
+            },
+            {
+              "ok": false,
+              "word": "Sales declined in the first quarter. My office has three windows."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing register for an academic conclusion.",
+          "level": "B2",
+          "category": "Coherence & Register",
+          "explain": "Academic conclusions should summarise cautiously and objectively.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Overall, the evidence suggests that the policy has been moderately effective."
+            },
+            {
+              "ok": false,
+              "word": "Basically, the policy worked pretty well."
+            },
+            {
+              "ok": false,
+              "word": "The policy was awesome and totally did the job."
             }
           ]
         }

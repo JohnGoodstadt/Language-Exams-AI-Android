@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Future Forms (B2) questions.",
+      "description": "Practise nuanced future choices including will, going to, Present Continuous, Present Simple, Future Continuous and Future Perfect.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Future Forms",
-      "learningPoints": [],
+      "learningTitle": "Choosing Advanced Future Forms",
+      "learningPoints": [
+        "Use Present Continuous for personal arrangements.",
+        "Use Present Simple for timetables and schedules.",
+        "Use going to for prior intentions and evidence-based predictions.",
+        "Use will for spontaneous decisions and neutral predictions.",
+        "Use Future Continuous for actions in progress at a future time.",
+        "Use Future Perfect for actions completed before a future deadline."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using Present Continuous for an arrangement.",
           "level": "B2",
           "category": "Advanced Future Forms",
-          "explain": "Placeholder explanation.",
+          "explain": "Use the Present Continuous for a fixed personal arrangement.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "I'm meeting Sara at six tomorrow."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "I meet Sara at six tomorrow, as a personal arrangement with no timetable meaning."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "I'll meeting Sara at six tomorrow."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using Present Simple for a timetable.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "Use the Present Simple for scheduled public events and timetables.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The train leaves at 07:45 tomorrow."
+            },
+            {
+              "ok": false,
+              "word": "The train is leaving at 07:45 tomorrow because all timetables require continuous."
+            },
+            {
+              "ok": false,
+              "word": "The train will leaves at 07:45 tomorrow."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'going to' for evidence-based prediction.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "Use GOING TO when there is present evidence for a future result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Look at those clouds. It's going to rain."
+            },
+            {
+              "ok": false,
+              "word": "Look at those clouds. It will rain because 'will' is always required for evidence."
+            },
+            {
+              "ok": false,
+              "word": "Look at those clouds. It's going rain."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'will' for a spontaneous decision.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "Use WILL for a decision made at the moment of speaking.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The phone's ringing. I'll answer it."
+            },
+            {
+              "ok": false,
+              "word": "The phone's ringing. I'm going to answer it, expressing a long-standing plan."
+            },
+            {
+              "ok": false,
+              "word": "The phone's ringing. I'll answering it."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using Future Continuous for a future activity in progress.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "Use WILL BE + verb-ing for an activity in progress at a specified future time.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "At this time tomorrow, we'll be flying over France."
+            },
+            {
+              "ok": false,
+              "word": "At this time tomorrow, we'll have flown over France if the action is still in progress."
+            },
+            {
+              "ok": false,
+              "word": "At this time tomorrow, we'll be fly over France."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using Future Perfect for completion.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "Use WILL HAVE + past participle for an action completed before a future point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By next June, she will have completed the course."
+            },
+            {
+              "ok": false,
+              "word": "By next June, she will be completing the course, with completed-before-deadline meaning."
+            },
+            {
+              "ok": false,
+              "word": "By next June, she will have complete the course."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a future time clause without 'will'.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "After WHEN, BEFORE, AFTER and similar time conjunctions, use a present form for future reference.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I'll call you when I arrive."
+            },
+            {
+              "ok": false,
+              "word": "I'll call you when I will arrive."
+            },
+            {
+              "ok": false,
+              "word": "I'll call you when I arrived tomorrow."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'be about to' for the immediate future.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "BE ABOUT TO describes something expected to happen very soon.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The film is about to start."
+            },
+            {
+              "ok": false,
+              "word": "The film about to starts."
+            },
+            {
+              "ok": false,
+              "word": "The film will about start."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'be likely to'.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "BE LIKELY TO expresses probability about the future.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Prices are likely to rise next year."
+            },
+            {
+              "ok": false,
+              "word": "Prices likely rise next year are."
+            },
+            {
+              "ok": false,
+              "word": "Prices are likely rising next year."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing form according to context.",
+          "level": "B2",
+          "category": "Advanced Future Forms",
+          "explain": "Future forms differ according to arrangement, schedule, intention, prediction and completion.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We're having dinner with them on Friday; the restaurant opens at seven."
+            },
+            {
+              "ok": false,
+              "word": "We have dinner with them on Friday as a personal arrangement; the restaurant is opening at seven as a timetable."
+            },
+            {
+              "ok": false,
+              "word": "We're have dinner with them on Friday; the restaurant will opens at seven."
             }
           ]
         }

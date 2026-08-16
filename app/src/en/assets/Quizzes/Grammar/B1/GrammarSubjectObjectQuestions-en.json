@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Subject & Object Questions (B1) questions.",
+      "description": "Practise the difference between subject questions and object questions in present and past contexts.",
       "sortorder": 1,
-      "learningTitle": "Using Subject & Object Questions",
-      "learningPoints": [],
+      "learningTitle": "Forming Subject and Object Questions",
+      "learningPoints": [
+        "Recognise whether the question word is the subject or object.",
+        "Do not use do/does/did in most subject questions.",
+        "Use auxiliary verbs in object questions.",
+        "Keep the main verb in the base form after do/does/did.",
+        "Use who and what accurately in both question types.",
+        "Apply the distinction in both present and past tenses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Recognising a subject question.",
           "level": "B1",
           "category": "Subject & Object Questions",
-          "explain": "Placeholder explanation.",
+          "explain": "When WHO is the subject, do not use DO/DOES/DID.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Who called you last night?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Who did call you last night?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Who did called you last night?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Recognising an object question.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "When WHO is the object, use the normal question auxiliary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who did you call last night?"
+            },
+            {
+              "ok": false,
+              "word": "Who you called last night?"
+            },
+            {
+              "ok": false,
+              "word": "Who called you last night?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'what' as the subject.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "A subject question uses WHAT + verb directly.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What happened after the meeting?"
+            },
+            {
+              "ok": false,
+              "word": "What did happen after the meeting?"
+            },
+            {
+              "ok": false,
+              "word": "What did happened after the meeting?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'what' as the object.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "An object question uses an auxiliary when needed.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What did she buy?"
+            },
+            {
+              "ok": false,
+              "word": "What she bought?"
+            },
+            {
+              "ok": false,
+              "word": "What bought she?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a Present Simple subject question.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "With WHO as subject in the Present Simple, the verb agrees directly with WHO.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who works in this office?"
+            },
+            {
+              "ok": false,
+              "word": "Who does work in this office?"
+            },
+            {
+              "ok": false,
+              "word": "Who do works in this office?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a Present Simple object question.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "Use DOES + subject + base verb when asking about the object.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who does Anna work with?"
+            },
+            {
+              "ok": false,
+              "word": "Who Anna works with?"
+            },
+            {
+              "ok": false,
+              "word": "Who works Anna with?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Distinguishing meaning between two question types.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "Word order changes depending on whether WHO is doing or receiving the action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who helped you?"
+            },
+            {
+              "ok": false,
+              "word": "Who did helped you?"
+            },
+            {
+              "ok": false,
+              "word": "Who did you helped?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Forming an object question with a preposition.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "A preposition can remain at the end of an informal object question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who were you talking to?"
+            },
+            {
+              "ok": false,
+              "word": "Who you were talking to?"
+            },
+            {
+              "ok": false,
+              "word": "Who was talking you to?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a subject question in the past.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "Do not add DID when the question word itself is the subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Which team won the match?"
+            },
+            {
+              "ok": false,
+              "word": "Which team did win the match?"
+            },
+            {
+              "ok": false,
+              "word": "Which team did won the match?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using an object question in the past.",
+          "level": "B1",
+          "category": "Subject & Object Questions",
+          "explain": "Use DID + subject + base verb when the question word is the object.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Which team did they beat?"
+            },
+            {
+              "ok": false,
+              "word": "Which team they beat?"
+            },
+            {
+              "ok": false,
+              "word": "Which team did they beaten?"
             }
           ]
         }

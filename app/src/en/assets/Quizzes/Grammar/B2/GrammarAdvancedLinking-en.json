@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Linking (B2) questions.",
+      "description": "Practise advanced linking expressions for contrast, addition, cause, result, condition and qualification.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Linking",
-      "learningPoints": [],
+      "learningTitle": "Linking Complex Ideas",
+      "learningPoints": [
+        "Use moreover and furthermore to add supporting information.",
+        "Use nevertheless, whereas and while to express contrast.",
+        "Use therefore, consequently and as a result for logical outcomes.",
+        "Use provided that and unless to express conditions.",
+        "Use despite/in spite of and although with the correct structures.",
+        "Choose linkers according to both meaning and grammar."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'moreover' for addition.",
           "level": "B2",
           "category": "Advanced Linking",
-          "explain": "Placeholder explanation.",
+          "explain": "MOREOVER adds a further supporting point, often in formal writing.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "The plan is affordable. Moreover, it can be implemented quickly."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "The plan is affordable. Nevertheless, it can be implemented quickly as an additional point."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "The plan is affordable moreover because it can be implemented quickly."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'nevertheless' for concession.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "NEVERTHELESS introduces a contrast despite what has just been said.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The task was difficult. Nevertheless, we completed it on time."
+            },
+            {
+              "ok": false,
+              "word": "The task was difficult. Therefore, we completed it on time despite the contrast."
+            },
+            {
+              "ok": false,
+              "word": "The task was difficult nevertheless but we completed it on time."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'whereas' for direct contrast.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "WHEREAS contrasts two facts or situations within one sentence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Tom prefers working alone, whereas Anna enjoys teamwork."
+            },
+            {
+              "ok": false,
+              "word": "Tom prefers working alone, therefore Anna enjoys teamwork."
+            },
+            {
+              "ok": false,
+              "word": "Tom prefers working alone, whereas but Anna enjoys teamwork."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'consequently' for result.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "CONSEQUENTLY introduces a result caused by the preceding situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Demand fell sharply. Consequently, production was reduced."
+            },
+            {
+              "ok": false,
+              "word": "Demand fell sharply. Whereas, production was reduced."
+            },
+            {
+              "ok": false,
+              "word": "Demand fell sharply consequently because production was reduced."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'provided that'.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "PROVIDED THAT means only if a condition is satisfied.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "You can borrow the car provided that you return it by six."
+            },
+            {
+              "ok": false,
+              "word": "You can borrow the car despite that you return it by six."
+            },
+            {
+              "ok": false,
+              "word": "You can borrow the car provided you will return it by six only."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'unless'.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "UNLESS means if not.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We won't finish on time unless everyone helps."
+            },
+            {
+              "ok": false,
+              "word": "We won't finish on time unless everyone doesn't help."
+            },
+            {
+              "ok": false,
+              "word": "We won't finish on time unless everyone will help."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'in addition to'.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "IN ADDITION TO is followed by a noun or -ing form.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "In addition to reducing costs, the change improved efficiency."
+            },
+            {
+              "ok": false,
+              "word": "In addition to reduce costs, the change improved efficiency."
+            },
+            {
+              "ok": false,
+              "word": "In addition that it reduced costs, the change improved efficiency."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'despite the fact that'.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "DESPITE THE FACT THAT can be followed by a full clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Despite the fact that it was late, they continued working."
+            },
+            {
+              "ok": false,
+              "word": "Despite it was late, they continued working."
+            },
+            {
+              "ok": false,
+              "word": "Despite the fact of it was late, they continued working."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'as a result'.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "AS A RESULT introduces a consequence and is normally separated from the previous sentence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The road was flooded. As a result, the event was cancelled."
+            },
+            {
+              "ok": false,
+              "word": "The road was flooded. Although, the event was cancelled."
+            },
+            {
+              "ok": false,
+              "word": "The road was flooded as a result because the event was cancelled."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'on the other hand'.",
+          "level": "B2",
+          "category": "Advanced Linking",
+          "explain": "ON THE OTHER HAND introduces a contrasting perspective.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Working from home is convenient. On the other hand, it can be isolating."
+            },
+            {
+              "ok": false,
+              "word": "Working from home is convenient. In addition, it can be isolating as a contrast."
+            },
+            {
+              "ok": false,
+              "word": "Working from home is convenient on the other hand but it can be isolating."
             }
           ]
         }

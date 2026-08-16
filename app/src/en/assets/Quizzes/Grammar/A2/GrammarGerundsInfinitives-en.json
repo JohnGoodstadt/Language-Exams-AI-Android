@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarGerundsInfinitivesA2-en",
   "title": "Gerunds & Infinitives",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Gerunds & Infinitives (A2) questions.",
+      "description": "Practise common A2 verb patterns using verb-ing and to + infinitive.",
       "sortorder": 1,
-      "learningTitle": "Using Gerunds & Infinitives",
-      "learningPoints": [],
+      "learningTitle": "Using Gerunds and Infinitives",
+      "learningPoints": [
+        "Use verb-ing after common verbs such as enjoy, like and finish.",
+        "Use to + infinitive after common verbs such as want, need and hope.",
+        "Use the base verb after modal verbs such as can.",
+        "Recognise common fixed verb patterns.",
+        "Avoid adding 'to' where a gerund is required.",
+        "Choose the form that follows the first verb correctly."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using a gerund after 'enjoy'.",
           "level": "A2",
           "category": "Gerunds & Infinitives",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "ENJOY is followed by verb-ing.",
+          "sentence": "I enjoy _____ books.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "reading"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "to read"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "read"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using an infinitive after 'want'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "WANT is commonly followed by TO + base verb.",
+          "sentence": "She wants _____ a new phone.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to buy"
+            },
+            {
+              "ok": false,
+              "word": "buying"
+            },
+            {
+              "ok": false,
+              "word": "buy"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using a gerund after 'finish'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "FINISH is followed by verb-ing.",
+          "sentence": "We finished _____ the kitchen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "cleaning"
+            },
+            {
+              "ok": false,
+              "word": "to clean"
+            },
+            {
+              "ok": false,
+              "word": "clean"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using an infinitive after 'need'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "NEED can be followed by TO + base verb when saying what someone must do.",
+          "sentence": "I need _____ some milk.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to buy"
+            },
+            {
+              "ok": false,
+              "word": "buying"
+            },
+            {
+              "ok": false,
+              "word": "bought"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a gerund after 'like'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "LIKE can be followed by verb-ing when talking about enjoyment of an activity.",
+          "sentence": "He likes _____ football.",
+          "words": [
+            {
+              "ok": true,
+              "word": "playing"
+            },
+            {
+              "ok": false,
+              "word": "to played"
+            },
+            {
+              "ok": false,
+              "word": "play to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using an infinitive after 'hope'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "HOPE is followed by TO + base verb for a hoped-for action.",
+          "sentence": "They hope _____ us next week.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to visit"
+            },
+            {
+              "ok": false,
+              "word": "visiting"
+            },
+            {
+              "ok": false,
+              "word": "visited"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a base verb after 'can'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "Modal verbs such as CAN are followed by the base form without TO.",
+          "sentence": "I can _____ you tomorrow.",
+          "words": [
+            {
+              "ok": true,
+              "word": "help"
+            },
+            {
+              "ok": false,
+              "word": "to help"
+            },
+            {
+              "ok": false,
+              "word": "helping"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a gerund after 'stop'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "STOP + verb-ing means finish or cease an activity.",
+          "sentence": "Please stop _____ so much noise.",
+          "words": [
+            {
+              "ok": true,
+              "word": "making"
+            },
+            {
+              "ok": false,
+              "word": "to make"
+            },
+            {
+              "ok": false,
+              "word": "make"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using an infinitive after 'decide'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "DECIDE is followed by TO + base verb.",
+          "sentence": "We decided _____ by train.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to travel"
+            },
+            {
+              "ok": false,
+              "word": "travelling"
+            },
+            {
+              "ok": false,
+              "word": "travelled"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a gerund after 'love'.",
+          "level": "A2",
+          "category": "Gerunds & Infinitives",
+          "explain": "LOVE can be followed by verb-ing when talking about an activity someone enjoys.",
+          "sentence": "She loves _____ photos.",
+          "words": [
+            {
+              "ok": true,
+              "word": "taking"
+            },
+            {
+              "ok": false,
+              "word": "to took"
+            },
+            {
+              "ok": false,
+              "word": "take to"
             }
           ]
         }

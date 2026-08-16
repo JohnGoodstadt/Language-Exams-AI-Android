@@ -1,27 +1,252 @@
 {
-  "fileformat": 7,
-  "sheetname": "Grammar-NarrativeTenses-B2",
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarNarrativeTensesB2-en",
   "title": "Narrative Tenses",
   "updatedDate": 0,
-  "location": 0,
   "data": [
     {
-      "title": "Narrative Tenses",
-      "description": "PLACEHOLDER - replace with real Narrative Tenses (B2) questions.",
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise combining Past Simple, Past Continuous and Past Perfect to organise events and background in narratives.",
       "sortorder": 1,
+      "learningTitle": "Controlling Narrative Tenses",
+      "learningPoints": [
+        "Use Past Simple for the main sequence of completed events.",
+        "Use Past Continuous for background actions and scenes in progress.",
+        "Use Past Perfect for events completed before another past point.",
+        "Shift tense according to foreground, background and prior events.",
+        "Avoid overusing the Past Perfect once the time sequence is clear.",
+        "Use narrative tenses to make stories coherent and easy to follow."
+      ],
       "sections": [
         {
-          "title": "Narrative Tenses",
+          "title": "",
           "page": 1,
-          "sentence": "She was exhausted because she _ been travelling all day.",
-          "explain": "Placeholder explanation for Narrative Tenses.",
-          "summary": "Placeholder summary.",
+          "summary": "Combining background and main event.",
           "level": "B2",
           "category": "Narrative Tenses",
+          "explain": "Use Past Continuous for background and Past Simple for the interrupting event.",
+          "sentence": "Choose the correct sentence.",
           "words": [
-            { "word": "had", "ok": true },
-            { "word": "has", "ok": false },
-            { "word": "was", "ok": false }
+            {
+              "ok": true,
+              "word": "I was driving home when I saw the accident."
+            },
+            {
+              "ok": false,
+              "word": "I drove home when I was seeing the accident."
+            },
+            {
+              "ok": false,
+              "word": "I had driven home when I was seeing the accident."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Showing an earlier past event.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "Use Past Perfect for an action completed before the main past event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "When we arrived, the guests had already left."
+            },
+            {
+              "ok": false,
+              "word": "When we had arrived, the guests already left."
+            },
+            {
+              "ok": false,
+              "word": "When we arrived, the guests have already left."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using Past Simple for the main sequence.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "Once the order of main events is clear, Past Simple is normally used for successive actions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She opened the door, walked in and turned on the light."
+            },
+            {
+              "ok": false,
+              "word": "She had opened the door, had walked in and had turned on the light."
+            },
+            {
+              "ok": false,
+              "word": "She was opening the door, walked in and had turned on the light."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using Past Continuous for scene setting.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "Past Continuous describes an action already in progress in the background.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "People were chatting while the band was playing."
+            },
+            {
+              "ok": false,
+              "word": "People chatted while the band had played, as two background actions in progress."
+            },
+            {
+              "ok": false,
+              "word": "People had been chat while the band was playing."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Explaining a past state with an earlier cause.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "Past Perfect can explain why a past situation existed.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He was exhausted because he hadn't slept well."
+            },
+            {
+              "ok": false,
+              "word": "He had been exhausted because he didn't sleep well afterwards."
+            },
+            {
+              "ok": false,
+              "word": "He was exhausted because he hasn't slept well."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'by the time' with Past Perfect.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "An event completed before another past point often takes Past Perfect.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "By the time the police arrived, the thief had disappeared."
+            },
+            {
+              "ok": false,
+              "word": "By the time the police had arrived, the thief disappeared first."
+            },
+            {
+              "ok": false,
+              "word": "By the time the police arrived, the thief has disappeared."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Returning to Past Simple after establishing earlier time.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "After the earlier sequence is clear, Past Simple can resume for subsequent events.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He had packed his bag the night before. In the morning, he left at six."
+            },
+            {
+              "ok": false,
+              "word": "He had packed his bag the night before. In the morning, he had left at six."
+            },
+            {
+              "ok": false,
+              "word": "He packed his bag after he left in the morning."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a continuous background interrupted by a short event.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "Use Past Continuous for the longer background action and Past Simple for the shorter event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We were having dinner when the lights went out."
+            },
+            {
+              "ok": false,
+              "word": "We had dinner when the lights were going out."
+            },
+            {
+              "ok": false,
+              "word": "We had been dinner when the lights went out."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using Past Perfect to avoid ambiguity.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "Use Past Perfect when you need to make clear which of two past events happened first.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I realised that I had left my phone at home."
+            },
+            {
+              "ok": false,
+              "word": "I realised that I left my phone at home after the realisation."
+            },
+            {
+              "ok": false,
+              "word": "I had realised that I left my phone at home afterwards."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Combining all three narrative tenses.",
+          "level": "B2",
+          "category": "Narrative Tenses",
+          "explain": "A narrative may use Past Continuous for background, Past Simple for the main event and Past Perfect for an earlier event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was raining when I reached the station, but the train had already left."
+            },
+            {
+              "ok": false,
+              "word": "It rained when I had reached the station, but the train already leaves."
+            },
+            {
+              "ok": false,
+              "word": "It had rained when I was reaching the station, but the train left before already."
+            }
           ]
         }
       ]

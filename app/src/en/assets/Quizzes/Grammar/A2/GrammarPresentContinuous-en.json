@@ -1,27 +1,252 @@
 {
-  "fileformat": 10,
-  "sheetname": "Grammar-PresentContinuous-A2",
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GrammarPresentContinuousA2-en",
   "title": "Present Continuous",
   "updatedDate": 0,
-  "location": 0,
   "data": [
     {
-      "title": "Present Continuous",
-      "description": "PLACEHOLDER - replace with real Present Continuous (A2) questions.",
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise the Present Continuous for actions happening now, temporary situations and current activities.",
       "sortorder": 1,
+      "learningTitle": "Using the Present Continuous",
+      "learningPoints": [
+        "Use am, is or are + verb-ing for actions happening now.",
+        "Choose the correct form of 'be' for the subject.",
+        "Form common -ing spellings correctly.",
+        "Use the Present Continuous for temporary situations.",
+        "Make negatives with am not, isn't and aren't.",
+        "Make questions by putting am, is or are before the subject."
+      ],
       "sections": [
         {
-          "title": "Present Continuous",
+          "title": "",
           "page": 1,
-          "sentence": "Choose the correct sentence.",
-          "explain": "Placeholder explanation for Present Continuous.",
-          "summary": "Placeholder summary.",
+          "summary": "Using 'is + -ing' with a singular subject.",
           "level": "A2",
           "category": "Present Continuous",
+          "explain": "Use IS + verb-ing with HE, SHE, IT and singular nouns.",
+          "sentence": "She _____ dinner now.",
           "words": [
-            { "word": "They are watching a film right now.", "ok": true },
-            { "word": "They watching a film right now.", "ok": false },
-            { "word": "They is watching a film right now.", "ok": false }
+            {
+              "ok": true,
+              "word": "is cooking"
+            },
+            {
+              "ok": false,
+              "word": "cooks"
+            },
+            {
+              "ok": false,
+              "word": "cooking"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'are + -ing' with a plural subject.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "Use ARE + verb-ing with YOU, WE and THEY.",
+          "sentence": "They _____ football at the moment.",
+          "words": [
+            {
+              "ok": true,
+              "word": "are playing"
+            },
+            {
+              "ok": false,
+              "word": "is playing"
+            },
+            {
+              "ok": false,
+              "word": "play"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'am + -ing' with 'I'.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "Use AM + verb-ing with I.",
+          "sentence": "I _____ for the bus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am waiting"
+            },
+            {
+              "ok": false,
+              "word": "is waiting"
+            },
+            {
+              "ok": false,
+              "word": "wait"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Making a Present Continuous negative.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "Use ISN'T or AREN'T + verb-ing for a negative action happening now.",
+          "sentence": "Tom _____ today.",
+          "words": [
+            {
+              "ok": true,
+              "word": "isn't working"
+            },
+            {
+              "ok": false,
+              "word": "doesn't working"
+            },
+            {
+              "ok": false,
+              "word": "isn't work"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Making a Present Continuous question.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "Put IS or ARE before the subject in a question.",
+          "sentence": "_____ you listening to me?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Are"
+            },
+            {
+              "ok": false,
+              "word": "Do"
+            },
+            {
+              "ok": false,
+              "word": "Is"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Dropping final -e before -ing.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "For many verbs ending in silent -e, drop the -e before adding -ing: WRITE → WRITING.",
+          "sentence": "He is _____ an email.",
+          "words": [
+            {
+              "ok": true,
+              "word": "writing"
+            },
+            {
+              "ok": false,
+              "word": "writeing"
+            },
+            {
+              "ok": false,
+              "word": "writes"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Doubling a final consonant in a common -ing form.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "RUN becomes RUNNING in the -ing form.",
+          "sentence": "The children are _____ in the park.",
+          "words": [
+            {
+              "ok": true,
+              "word": "running"
+            },
+            {
+              "ok": false,
+              "word": "runing"
+            },
+            {
+              "ok": false,
+              "word": "runs"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using the tense for a temporary situation.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "Use the Present Continuous for a situation that is temporary around now.",
+          "sentence": "We _____ with friends this week.",
+          "words": [
+            {
+              "ok": true,
+              "word": "are staying"
+            },
+            {
+              "ok": false,
+              "word": "stay"
+            },
+            {
+              "ok": false,
+              "word": "stays"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'now' as a time signal.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "NOW often signals an action happening at this moment.",
+          "sentence": "My phone _____ now.",
+          "words": [
+            {
+              "ok": true,
+              "word": "is ringing"
+            },
+            {
+              "ok": false,
+              "word": "rings"
+            },
+            {
+              "ok": false,
+              "word": "ring"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a question about a current action.",
+          "level": "A2",
+          "category": "Present Continuous",
+          "explain": "Use WHAT + BE + subject + verb-ing to ask about an action happening now.",
+          "sentence": "What _____ you doing?",
+          "words": [
+            {
+              "ok": true,
+              "word": "are"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            },
+            {
+              "ok": false,
+              "word": "is"
+            }
           ]
         }
       ]

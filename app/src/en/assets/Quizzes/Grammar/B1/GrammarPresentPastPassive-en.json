@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Present & Past Passive (B1) questions.",
+      "description": "Practise Present Simple and Past Simple passive forms when the action or result is more important than the doer.",
       "sortorder": 1,
-      "learningTitle": "Using Present & Past Passive",
-      "learningPoints": [],
+      "learningTitle": "Using Present and Past Passive Forms",
+      "learningPoints": [
+        "Form the Present Simple passive with am/is/are + past participle.",
+        "Form the Past Simple passive with was/were + past participle.",
+        "Use the passive when the doer is unknown, obvious or unimportant.",
+        "Use 'by' when the doer needs to be mentioned.",
+        "Keep tense information in the form of 'be'.",
+        "Distinguish active and passive sentence structure."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming the Present Simple passive.",
           "level": "B1",
           "category": "Present & Past Passive",
-          "explain": "Placeholder explanation.",
+          "explain": "Use IS/ARE + past participle for Present Simple passive forms.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "English is spoken in many countries."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "English speaks in many countries."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "English is speak in many countries."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Forming the Past Simple passive.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "Use WAS/WERE + past participle for Past Simple passive forms.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The bridge was built in 1998."
+            },
+            {
+              "ok": false,
+              "word": "The bridge built in 1998."
+            },
+            {
+              "ok": false,
+              "word": "The bridge was build in 1998."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using a plural Present Simple passive.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "Use ARE + past participle with a plural subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "These cars are made in Japan."
+            },
+            {
+              "ok": false,
+              "word": "These cars is made in Japan."
+            },
+            {
+              "ok": false,
+              "word": "These cars are make in Japan."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a plural Past Simple passive.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "Use WERE + past participle with a plural subject in the past.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The windows were cleaned yesterday."
+            },
+            {
+              "ok": false,
+              "word": "The windows was cleaned yesterday."
+            },
+            {
+              "ok": false,
+              "word": "The windows were clean yesterday by someone."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'by' to mention the agent.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "Use BY when it is useful to say who performed the action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The novel was written by George Orwell."
+            },
+            {
+              "ok": false,
+              "word": "The novel wrote by George Orwell."
+            },
+            {
+              "ok": false,
+              "word": "The novel was wrote from George Orwell."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using the passive when the doer is unimportant.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "The passive focuses on the process or result rather than the person doing it.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The rubbish is collected every Tuesday."
+            },
+            {
+              "ok": false,
+              "word": "They collect every Tuesday the rubbish is."
+            },
+            {
+              "ok": false,
+              "word": "The rubbish collects every Tuesday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using an irregular past participle.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "TAKE has the past participle TAKEN in passive structures.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The photo was taken last summer."
+            },
+            {
+              "ok": false,
+              "word": "The photo was took last summer."
+            },
+            {
+              "ok": false,
+              "word": "The photo took last summer."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Making a Present Passive question.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "Put IS/ARE before the subject in a passive question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Is this room used every day?"
+            },
+            {
+              "ok": false,
+              "word": "Does this room used every day?"
+            },
+            {
+              "ok": false,
+              "word": "Is this room use every day?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Making a Past Passive question.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "Put WAS/WERE before the subject in a Past Simple passive question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Were the tickets sold online?"
+            },
+            {
+              "ok": false,
+              "word": "Did the tickets sold online?"
+            },
+            {
+              "ok": false,
+              "word": "Were the tickets sell online?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing active versus passive focus.",
+          "level": "B1",
+          "category": "Present & Past Passive",
+          "explain": "Use the passive when the receiver of the action is the topic.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The new hospital was opened last year."
+            },
+            {
+              "ok": false,
+              "word": "The new hospital opened someone last year."
+            },
+            {
+              "ok": false,
+              "word": "The new hospital was open by last year."
             }
           ]
         }

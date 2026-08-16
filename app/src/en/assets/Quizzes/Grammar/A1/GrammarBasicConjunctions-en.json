@@ -26,7 +26,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "Use AND to join similar or additional information.",
-          "sentence": "I have a brother _____ a sister.",
+          "sentence": "I have a brother _ a sister.",
           "words": [
             {
               "ok": true,
@@ -49,7 +49,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "Use BUT when the second idea contrasts with the first.",
-          "sentence": "The room is small _____ comfortable.",
+          "sentence": "The room is small _ comfortable.",
           "words": [
             {
               "ok": true,
@@ -72,7 +72,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "Use OR when presenting alternatives.",
-          "sentence": "Would you like tea _____ coffee?",
+          "sentence": "Would you like tea _ coffee?",
           "words": [
             {
               "ok": true,
@@ -95,7 +95,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "Use BECAUSE before the reason for something.",
-          "sentence": "I am wearing a coat _____ it is cold.",
+          "sentence": "I am wearing a coat _ it is cold.",
           "words": [
             {
               "ok": true,
@@ -118,7 +118,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "Use SO before a simple result.",
-          "sentence": "It was raining, _____ I took an umbrella.",
+          "sentence": "It was raining, _ I took an umbrella.",
           "words": [
             {
               "ok": true,
@@ -141,7 +141,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "Use AND to connect two actions or ideas that go together.",
-          "sentence": "She opened the door _____ walked inside.",
+          "sentence": "She opened the door _ walked inside.",
           "words": [
             {
               "ok": true,
@@ -164,7 +164,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "BUT joins two ideas that are different or opposite.",
-          "sentence": "I like coffee, _____ I don't like tea.",
+          "sentence": "I like coffee, _ I don't like tea.",
           "words": [
             {
               "ok": true,
@@ -187,7 +187,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "BECAUSE introduces the reason why something happens or is true.",
-          "sentence": "He is tired _____ he worked all day.",
+          "sentence": "He is tired _ he worked all day.",
           "words": [
             {
               "ok": true,
@@ -210,7 +210,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "OR is used when someone must choose between alternatives.",
-          "sentence": "Do you want to walk _____ take the bus?",
+          "sentence": "Do you want to walk _ take the bus?",
           "words": [
             {
               "ok": true,
@@ -233,7 +233,7 @@
           "level": "A1",
           "category": "Basic Conjunctions",
           "explain": "SO introduces the result of the first part of the sentence.",
-          "sentence": "The shop was closed, _____ we went home.",
+          "sentence": "The shop was closed, _ we went home.",
           "words": [
             {
               "ok": true,

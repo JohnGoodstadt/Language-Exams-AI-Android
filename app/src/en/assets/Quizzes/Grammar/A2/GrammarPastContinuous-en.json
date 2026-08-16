@@ -1,27 +1,252 @@
 {
   "fileformat": 7,
-  "sheetname": "Grammar-PastContinuous-A2",
+  "location": 0,
+  "sheetname": "GrammarPastContinuousA2-en",
   "title": "Past Continuous",
   "updatedDate": 0,
-  "location": 0,
   "data": [
     {
-      "title": "Past Continuous",
-      "description": "PLACEHOLDER - replace with real Past Continuous (A2) questions.",
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise the Past Continuous for actions in progress at a particular time in the past.",
       "sortorder": 1,
+      "learningTitle": "Using the Past Continuous",
+      "learningPoints": [
+        "Use was or were + verb-ing for actions in progress in the past.",
+        "Use was with I, he, she and it.",
+        "Use were with you, we and they.",
+        "Make negatives with wasn't and weren't.",
+        "Make questions by putting was or were before the subject.",
+        "Use the Past Continuous to describe background actions."
+      ],
       "sections": [
         {
-          "title": "Past Continuous",
+          "title": "",
           "page": 1,
-          "sentence": "While I was cooking, the phone _ .",
-          "explain": "Placeholder explanation for Past Continuous.",
-          "summary": "Placeholder summary.",
+          "summary": "Using 'was + -ing' with 'I'.",
           "level": "A2",
           "category": "Past Continuous",
+          "explain": "Use WAS + verb-ing with I, HE, SHE and IT.",
+          "sentence": "I _____ television at eight o'clock.",
           "words": [
-            { "word": "rang", "ok": true },
-            { "word": "was ringing", "ok": false },
-            { "word": "rings", "ok": false }
+            {
+              "ok": true,
+              "word": "was watching"
+            },
+            {
+              "ok": false,
+              "word": "were watching"
+            },
+            {
+              "ok": false,
+              "word": "watched"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'were + -ing' with 'they'.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "Use WERE + verb-ing with YOU, WE and THEY.",
+          "sentence": "They _____ dinner when I called.",
+          "words": [
+            {
+              "ok": true,
+              "word": "were eating"
+            },
+            {
+              "ok": false,
+              "word": "was eating"
+            },
+            {
+              "ok": false,
+              "word": "ate"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'was + -ing' with a singular subject.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "A singular third-person subject normally takes WAS.",
+          "sentence": "Anna _____ when the phone rang.",
+          "words": [
+            {
+              "ok": true,
+              "word": "was sleeping"
+            },
+            {
+              "ok": false,
+              "word": "were sleeping"
+            },
+            {
+              "ok": false,
+              "word": "slept"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Making a negative with 'wasn't'.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "Use WASN'T + verb-ing with I, HE, SHE and IT.",
+          "sentence": "He _____ at ten o'clock.",
+          "words": [
+            {
+              "ok": true,
+              "word": "wasn't working"
+            },
+            {
+              "ok": false,
+              "word": "didn't working"
+            },
+            {
+              "ok": false,
+              "word": "wasn't work"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Making a negative with 'weren't'.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "Use WEREN'T + verb-ing with YOU, WE and THEY.",
+          "sentence": "We _____ attention.",
+          "words": [
+            {
+              "ok": true,
+              "word": "weren't listening"
+            },
+            {
+              "ok": false,
+              "word": "wasn't listening"
+            },
+            {
+              "ok": false,
+              "word": "didn't listening"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Making a Past Continuous question.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "Put WAS or WERE before the subject to make a question.",
+          "sentence": "_____ you sleeping when I phoned?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Were"
+            },
+            {
+              "ok": false,
+              "word": "Did"
+            },
+            {
+              "ok": false,
+              "word": "Was"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Describing an action in progress at a past time.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "The Past Continuous describes an action that was continuing at a specific past time.",
+          "sentence": "At six yesterday, I _____ home.",
+          "words": [
+            {
+              "ok": true,
+              "word": "was driving"
+            },
+            {
+              "ok": false,
+              "word": "drove"
+            },
+            {
+              "ok": false,
+              "word": "am driving"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a background action with 'when'.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "A Past Continuous action can provide the background for a shorter Past Simple event.",
+          "sentence": "She _____ when the door opened.",
+          "words": [
+            {
+              "ok": true,
+              "word": "was reading"
+            },
+            {
+              "ok": false,
+              "word": "read"
+            },
+            {
+              "ok": false,
+              "word": "is reading"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'were' with a plural subject.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "Use WERE with plural subjects.",
+          "sentence": "The children _____ outside.",
+          "words": [
+            {
+              "ok": true,
+              "word": "were playing"
+            },
+            {
+              "ok": false,
+              "word": "was playing"
+            },
+            {
+              "ok": false,
+              "word": "played"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'what' with the Past Continuous.",
+          "level": "A2",
+          "category": "Past Continuous",
+          "explain": "Use WHAT + WAS/WERE + subject + verb-ing for a past action in progress.",
+          "sentence": "What _____ he doing at lunchtime?",
+          "words": [
+            {
+              "ok": true,
+              "word": "was"
+            },
+            {
+              "ok": false,
+              "word": "did"
+            },
+            {
+              "ok": false,
+              "word": "were"
+            }
           ]
         }
       ]

@@ -26,7 +26,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "Use AM GOING TO + base verb with I.",
-          "sentence": "I _____ visit my grandmother tomorrow.",
+          "sentence": "I _ visit my grandmother tomorrow.",
           "words": [
             {
               "ok": true,
@@ -49,7 +49,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "Use IS GOING TO + base verb with HE, SHE and IT.",
-          "sentence": "She _____ buy a new coat.",
+          "sentence": "She _ buy a new coat.",
           "words": [
             {
               "ok": true,
@@ -72,7 +72,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "Use ARE GOING TO + base verb with WE and THEY.",
-          "sentence": "We _____ cook dinner tonight.",
+          "sentence": "We _ cook dinner tonight.",
           "words": [
             {
               "ok": true,
@@ -95,7 +95,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "After GOING TO, use the base form of the main verb.",
-          "sentence": "He is going to _____ football after school.",
+          "sentence": "He is going to _ football after school.",
           "words": [
             {
               "ok": true,
@@ -118,7 +118,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "Put NOT after AM, IS or ARE to make a negative.",
-          "sentence": "They _____ travel this weekend.",
+          "sentence": "They _ travel this weekend.",
           "words": [
             {
               "ok": true,
@@ -141,7 +141,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "Put AM, IS or ARE before the subject to make a question.",
-          "sentence": "_____ you going to watch the film tonight?",
+          "sentence": "_ you going to watch the film tonight?",
           "words": [
             {
               "ok": true,
@@ -164,7 +164,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "A singular third-person subject takes IS before GOING TO.",
-          "sentence": "My brother _____ start a new job next week.",
+          "sentence": "My brother _ start a new job next week.",
           "words": [
             {
               "ok": true,
@@ -187,7 +187,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "A plural subject takes ARE before GOING TO.",
-          "sentence": "My friends _____ come to my house later.",
+          "sentence": "My friends _ come to my house later.",
           "words": [
             {
               "ok": true,
@@ -210,7 +210,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "Use GOING TO for something someone plans or intends to do.",
-          "sentence": "I am going to _____ English every day.",
+          "sentence": "I am going to _ English every day.",
           "words": [
             {
               "ok": true,
@@ -233,7 +233,7 @@
           "level": "A1",
           "category": "Future: going to",
           "explain": "Use ISN'T GOING TO with HE, SHE, IT or a singular noun.",
-          "sentence": "Anna _____ work tomorrow.",
+          "sentence": "Anna _ work tomorrow.",
           "words": [
             {
               "ok": true,

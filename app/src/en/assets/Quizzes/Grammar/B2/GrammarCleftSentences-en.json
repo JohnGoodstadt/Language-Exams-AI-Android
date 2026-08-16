@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Cleft Sentences (B2) questions.",
+      "description": "Practise it-clefts and wh-clefts used to emphasise specific information in a sentence.",
       "sortorder": 1,
-      "learningTitle": "Using Cleft Sentences",
-      "learningPoints": [],
+      "learningTitle": "Using Cleft Sentences for Emphasis",
+      "learningPoints": [
+        "Use it-clefts to emphasise a person, thing, place or time.",
+        "Use what-clefts to emphasise an action, need or result.",
+        "Keep the relative clause structure grammatical.",
+        "Use clefts to contrast or correct information.",
+        "Recognise how emphasis changes without changing the core meaning.",
+        "Choose cleft structures that sound natural in formal and spoken English."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using an it-cleft to emphasise a person.",
           "level": "B2",
           "category": "Cleft Sentences",
-          "explain": "Placeholder explanation.",
+          "explain": "IT WAS/IS + focused element + WHO/THAT + clause emphasises one part of the sentence.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "It was Anna who solved the problem."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "It Anna was who solved the problem."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "It was Anna which solved the problem."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using an it-cleft to emphasise time.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "An it-cleft can focus on a time expression.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was last year that we first met."
+            },
+            {
+              "ok": false,
+              "word": "It last year was that we first met."
+            },
+            {
+              "ok": false,
+              "word": "It was last year when that we first met."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using an it-cleft to emphasise place.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "An it-cleft can focus on place.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was in Paris that they got married."
+            },
+            {
+              "ok": false,
+              "word": "It in Paris was that they got married."
+            },
+            {
+              "ok": false,
+              "word": "It was Paris where that they got married."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a what-cleft to emphasise need.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "WHAT + clause + BE + focus can highlight the important information.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What we need is more time."
+            },
+            {
+              "ok": false,
+              "word": "What do we need is more time."
+            },
+            {
+              "ok": false,
+              "word": "What we need are more time."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a what-cleft to emphasise an action.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "A what-cleft can emphasise what someone did or wants to do.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What I want to do is take a break."
+            },
+            {
+              "ok": false,
+              "word": "What do I want to do is take a break."
+            },
+            {
+              "ok": false,
+              "word": "What I want to do it is take a break."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a cleft for correction.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "Cleft sentences are useful when correcting a misunderstanding or contrasting information.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was John, not Mark, who sent the email."
+            },
+            {
+              "ok": false,
+              "word": "It John was, not Mark, who sent the email."
+            },
+            {
+              "ok": false,
+              "word": "It was John, not Mark, which sent the email."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'the thing that'.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "THE THING THAT + clause + BE + focus is another cleft-like structure.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The thing that worries me is the cost."
+            },
+            {
+              "ok": false,
+              "word": "The thing what worries me is the cost."
+            },
+            {
+              "ok": false,
+              "word": "The thing that worries me are the cost."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'all I need'.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "ALL + clause + BE can emphasise a limited requirement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "All I need is a little more time."
+            },
+            {
+              "ok": false,
+              "word": "All do I need is a little more time."
+            },
+            {
+              "ok": false,
+              "word": "All I need are a little more time."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using an it-cleft with a reason-related focus.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "An it-cleft can emphasise the element that caused or explains something.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It was because of the weather that the match was cancelled."
+            },
+            {
+              "ok": false,
+              "word": "It because of the weather was that the match was cancelled."
+            },
+            {
+              "ok": false,
+              "word": "It was because the weather that the match was cancelled."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a wh-cleft to emphasise the key point.",
+          "level": "B2",
+          "category": "Cleft Sentences",
+          "explain": "Wh-clefts can foreground the information the speaker considers most important.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What surprised me most was his reaction."
+            },
+            {
+              "ok": false,
+              "word": "What did surprise me most was his reaction, as a standard wh-cleft."
+            },
+            {
+              "ok": false,
+              "word": "What surprised me most were his reaction."
             }
           ]
         }

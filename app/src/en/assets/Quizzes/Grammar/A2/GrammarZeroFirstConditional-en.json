@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Zero & First Conditional (A2) questions.",
+      "description": "Practise the Zero Conditional for general truths and the First Conditional for real future possibilities.",
       "sortorder": 1,
-      "learningTitle": "Using Zero & First Conditional",
-      "learningPoints": [],
+      "learningTitle": "Using Zero and First Conditionals",
+      "learningPoints": [
+        "Use the Zero Conditional for facts, rules and things that are generally true.",
+        "Use Present Simple in both clauses of the Zero Conditional.",
+        "Use the First Conditional for a real future possibility.",
+        "Use Present Simple after if and will + base verb in the result clause.",
+        "Do not normally use will directly after if in a First Conditional.",
+        "Choose the conditional form that matches fact versus future possibility."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using the Zero Conditional for a general truth.",
           "level": "A2",
           "category": "Zero & First Conditional",
-          "explain": "Placeholder explanation.",
+          "explain": "Use IF + Present Simple, Present Simple for facts and general truths.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "If you heat water to 100°C, it boils."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "If you will heat water to 100°C, it boils."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "If you heat water to 100°C, it will always boiled."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using the Zero Conditional for a routine result.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "The Zero Conditional describes a result that regularly follows a condition.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I drink coffee at night, I don't sleep well."
+            },
+            {
+              "ok": false,
+              "word": "If I will drink coffee at night, I don't sleep well."
+            },
+            {
+              "ok": false,
+              "word": "If I drank coffee at night, I don't sleep well."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using the First Conditional for a future possibility.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "Use IF + Present Simple, WILL + base verb for a real future possibility.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If it rains tomorrow, we'll stay at home."
+            },
+            {
+              "ok": false,
+              "word": "If it will rain tomorrow, we'll stay at home."
+            },
+            {
+              "ok": false,
+              "word": "If it rains tomorrow, we stayed at home."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Keeping Present Simple after 'if'.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "Do not normally use WILL in the IF-clause of a First Conditional.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If she calls, I will tell her."
+            },
+            {
+              "ok": false,
+              "word": "If she will call, I will tell her."
+            },
+            {
+              "ok": false,
+              "word": "If she calls, I tell her yesterday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a negative condition.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "A First Conditional can use a negative Present Simple condition.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If we don't hurry, we'll miss the bus."
+            },
+            {
+              "ok": false,
+              "word": "If we won't hurry, we'll miss the bus."
+            },
+            {
+              "ok": false,
+              "word": "If we don't hurry, we miss the bus yesterday."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using an imperative result in a real condition.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "An IF-clause can be followed by an imperative for instructions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If you feel tired, go to bed."
+            },
+            {
+              "ok": false,
+              "word": "If you will feel tired, go to bed."
+            },
+            {
+              "ok": false,
+              "word": "If you felt tired, go to bed every day."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Recognising a general fact.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "Use the Zero Conditional when the result is generally or scientifically true.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If you don't water plants, they die."
+            },
+            {
+              "ok": false,
+              "word": "If you won't water plants, they die."
+            },
+            {
+              "ok": false,
+              "word": "If you didn't water plants, they always die now."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'will' in the result clause.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "In a First Conditional, WILL normally appears in the result clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If I finish early, I'll call you."
+            },
+            {
+              "ok": false,
+              "word": "If I'll finish early, I call you."
+            },
+            {
+              "ok": false,
+              "word": "If I finish early, I called you."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a First Conditional question.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "A First Conditional can appear inside a question about a future possibility.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What will you do if you miss the train?"
+            },
+            {
+              "ok": false,
+              "word": "What do you will do if you miss the train?"
+            },
+            {
+              "ok": false,
+              "word": "What will you do if you will miss the train?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Distinguishing fact from future possibility.",
+          "level": "A2",
+          "category": "Zero & First Conditional",
+          "explain": "Use First Conditional when the situation concerns a specific possible future event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "If the weather is nice this weekend, we'll go to the beach."
+            },
+            {
+              "ok": false,
+              "word": "If the weather will be nice this weekend, we'll go to the beach."
+            },
+            {
+              "ok": false,
+              "word": "If the weather is nice this weekend, we went to the beach."
             }
           ]
         }

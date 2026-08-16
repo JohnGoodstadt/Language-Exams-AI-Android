@@ -1,5 +1,5 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
   "sheetname": "GrammarQuantifiersDeterminersB1-en",
   "title": "Quantifiers & Determiners",
@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Quantifiers & Determiners (B1) questions.",
+      "description": "Practise common B1 quantifiers and determiners with countable and uncountable nouns.",
       "sortorder": 1,
-      "learningTitle": "Using Quantifiers & Determiners",
-      "learningPoints": [],
+      "learningTitle": "Using Quantifiers and Determiners",
+      "learningPoints": [
+        "Use many and a few with plural countable nouns.",
+        "Use much and a little with uncountable nouns.",
+        "Distinguish few/a few and little/a little.",
+        "Use enough, too much and too many accurately.",
+        "Use each, every, both and either with the correct noun patterns.",
+        "Choose determiners according to countability and meaning."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'many' with countable nouns.",
           "level": "B1",
           "category": "Quantifiers & Determiners",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "Use MANY with plural countable nouns.",
+          "sentence": "There aren't _____ people here today.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "many"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "much"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "a little"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'much' with uncountable nouns.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "Use MUCH with uncountable nouns.",
+          "sentence": "We don't have _____ time.",
+          "words": [
+            {
+              "ok": true,
+              "word": "much"
+            },
+            {
+              "ok": false,
+              "word": "many"
+            },
+            {
+              "ok": false,
+              "word": "a few"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Distinguishing 'few' and 'a few'.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "A FEW means some; FEW means almost none.",
+          "sentence": "I have _____ friends in this city, so I don't feel alone.",
+          "words": [
+            {
+              "ok": true,
+              "word": "a few"
+            },
+            {
+              "ok": false,
+              "word": "few"
+            },
+            {
+              "ok": false,
+              "word": "a little"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Distinguishing 'little' and 'a little'.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "A LITTLE means some; LITTLE means almost none.",
+          "sentence": "We have _____ milk left, enough for one cup of tea.",
+          "words": [
+            {
+              "ok": true,
+              "word": "a little"
+            },
+            {
+              "ok": false,
+              "word": "little"
+            },
+            {
+              "ok": false,
+              "word": "a few"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'too many' with countable nouns.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "Use TOO MANY with plural countable nouns.",
+          "sentence": "There are _____ cars on this road.",
+          "words": [
+            {
+              "ok": true,
+              "word": "too many"
+            },
+            {
+              "ok": false,
+              "word": "too much"
+            },
+            {
+              "ok": false,
+              "word": "too little"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'too much' with uncountable nouns.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "Use TOO MUCH with uncountable nouns.",
+          "sentence": "You put _____ sugar in my coffee.",
+          "words": [
+            {
+              "ok": true,
+              "word": "too much"
+            },
+            {
+              "ok": false,
+              "word": "too many"
+            },
+            {
+              "ok": false,
+              "word": "too few"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'enough'.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "ENOUGH means as much or as many as needed.",
+          "sentence": "We have _____ chairs for everyone.",
+          "words": [
+            {
+              "ok": true,
+              "word": "enough"
+            },
+            {
+              "ok": false,
+              "word": "too"
+            },
+            {
+              "ok": false,
+              "word": "much of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'both'.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "BOTH refers to two people or things together.",
+          "sentence": "_____ of my parents work from home.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Both"
+            },
+            {
+              "ok": false,
+              "word": "Every"
+            },
+            {
+              "ok": false,
+              "word": "Either of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'each'.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "EACH can refer to members of a group one by one.",
+          "sentence": "_____ student received a certificate.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Each"
+            },
+            {
+              "ok": false,
+              "word": "Both"
+            },
+            {
+              "ok": false,
+              "word": "Many of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'either'.",
+          "level": "B1",
+          "category": "Quantifiers & Determiners",
+          "explain": "EITHER refers to one or the other of two choices.",
+          "sentence": "You can sit on _____ side of the table.",
+          "words": [
+            {
+              "ok": true,
+              "word": "either"
+            },
+            {
+              "ok": false,
+              "word": "every"
+            },
+            {
+              "ok": false,
+              "word": "both of one"
             }
           ]
         }

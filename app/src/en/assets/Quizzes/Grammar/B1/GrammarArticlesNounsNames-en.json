@@ -7,31 +7,245 @@
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Articles with Nouns & Names (B1) questions.",
+      "description": "Practise article use with general and specific nouns, geographical names, institutions and common proper names.",
       "sortorder": 1,
-      "learningTitle": "Using Articles with Nouns & Names",
-      "learningPoints": [],
+      "learningTitle": "Using Articles with Nouns and Names",
+      "learningPoints": [
+        "Use a/an for one non-specific singular countable noun.",
+        "Use the for specific or unique nouns.",
+        "Use zero article for many proper names, languages and general plural nouns.",
+        "Use the with some geographical names such as rivers, seas and mountain ranges.",
+        "Recognise common institutional expressions such as go to school or be in hospital.",
+        "Distinguish general meaning from specific reference."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using zero article with a country name.",
           "level": "B1",
           "category": "Articles with Nouns & Names",
-          "explain": "Placeholder explanation.",
+          "explain": "Most country names take no article.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "She lives in France."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "She lives in the France."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "She lives in a France."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'the' with a river name.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "River names normally take THE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The Thames runs through London."
+            },
+            {
+              "ok": false,
+              "word": "Thames runs through London."
+            },
+            {
+              "ok": false,
+              "word": "A Thames runs through London."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'the' with a mountain range.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "Mountain ranges normally take THE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They went skiing in the Alps."
+            },
+            {
+              "ok": false,
+              "word": "They went skiing in Alps."
+            },
+            {
+              "ok": false,
+              "word": "They went skiing in an Alps."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using zero article with a city name.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "Most city names take no article.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Madrid is the capital of Spain."
+            },
+            {
+              "ok": false,
+              "word": "The Madrid is the capital of Spain."
+            },
+            {
+              "ok": false,
+              "word": "A Madrid is the capital of Spain."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'the' for something specific.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "Use THE when both speaker and listener know which noun is meant.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Could you close the window, please?"
+            },
+            {
+              "ok": false,
+              "word": "Could you close a window, please, the one beside you?"
+            },
+            {
+              "ok": false,
+              "word": "Could you close window, please?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using zero article for general plural nouns.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "Plural nouns take no article when speaking generally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Computers are useful tools."
+            },
+            {
+              "ok": false,
+              "word": "The computers are useful tools in general."
+            },
+            {
+              "ok": false,
+              "word": "A computers are useful tools."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'a' for first mention.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "Use A/AN when mentioning one non-specific singular countable noun for the first time.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I saw a man outside the station."
+            },
+            {
+              "ok": false,
+              "word": "I saw the man outside the station for the first time, any man."
+            },
+            {
+              "ok": false,
+              "word": "I saw man outside the station."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'the' after first mention.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "After introducing something with A/AN, use THE for the same thing.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "I bought a book. The book was very interesting."
+            },
+            {
+              "ok": false,
+              "word": "I bought the book. A book was very interesting."
+            },
+            {
+              "ok": false,
+              "word": "I bought a book. Book was very interesting."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using zero article in an institutional expression.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "Use no article with SCHOOL when referring to its normal function.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "My children are at school now."
+            },
+            {
+              "ok": false,
+              "word": "My children are at the school now, meaning they are pupils there."
+            },
+            {
+              "ok": false,
+              "word": "My children are at a school now, as a fixed expression."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'the' with seas.",
+          "level": "B1",
+          "category": "Articles with Nouns & Names",
+          "explain": "Names of seas normally take THE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They sailed across the Mediterranean."
+            },
+            {
+              "ok": false,
+              "word": "They sailed across Mediterranean."
+            },
+            {
+              "ok": false,
+              "word": "They sailed across a Mediterranean."
             }
           ]
         }
