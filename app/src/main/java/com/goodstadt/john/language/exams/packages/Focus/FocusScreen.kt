@@ -274,8 +274,8 @@ private fun GrammarCatalogTable(entries: List<GrammarCatalogEntry>, onPractice: 
             HeaderCell("Lvl", Modifier.width(32.dp))
             HeaderCell("✓", Modifier.width(28.dp))
             HeaderCell("✗", Modifier.width(28.dp))
-            // No "?" column: the grammar quiz has no "Don't Know" button (that's audit-only), so
-            // dontKnow is always 0 here.
+            // The audit feeds these categories and does have a "Don't Know" button, so ? can be > 0.
+            HeaderCell("?", Modifier.width(28.dp))
             Spacer(Modifier.width(40.dp))
         }
         HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
@@ -305,6 +305,8 @@ private fun GrammarCatalogTable(entries: List<GrammarCatalogEntry>, onPractice: 
                 DataCell(row.level, Modifier.width(32.dp))
                 DataCell("${s.correct}", Modifier.width(28.dp), Color(0xFF4CAF50))
                 DataCell("${s.incorrect}", Modifier.width(28.dp), Color(0xFFE53935))
+                // Blank out a zero "?" so the occasional non-zero don't-know stands out.
+                DataCell(if (s.dontKnow == 0) "" else "${s.dontKnow}", Modifier.width(28.dp), orangeLight)
                 IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
                     Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
                 }

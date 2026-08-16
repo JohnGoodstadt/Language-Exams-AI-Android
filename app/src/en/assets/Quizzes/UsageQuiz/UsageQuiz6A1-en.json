@@ -23,7 +23,7 @@
           "page": 1,
           "summary": "Using 'and' to add information.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'And' connects two similar ideas. Correct: 'I have a brother and a sister.'",
           "sentence": "I have a brother ___ a sister.",
           "words": [
@@ -46,7 +46,7 @@
           "page": 2,
           "summary": "Using 'but' to show contrast.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'But' connects opposite or contrasting ideas.",
           "sentence": "She is small ___ she is strong.",
           "words": [
@@ -69,7 +69,7 @@
           "page": 3,
           "summary": "Using 'because' to give a reason.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'Because' explains why something happens.",
           "sentence": "I stayed home ___ I was tired.",
           "words": [
@@ -92,7 +92,7 @@
           "page": 4,
           "summary": "Using 'so' to show a result.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'So' shows the result of something.",
           "sentence": "It was raining, ___ we stayed inside.",
           "words": [
@@ -115,7 +115,7 @@
           "page": 5,
           "summary": "Using 'when' to show time.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'When' connects actions happening at the same time or in sequence.",
           "sentence": "Call me ___ you arrive.",
           "words": [
@@ -138,7 +138,7 @@
           "page": 6,
           "summary": "Using 'before' to show sequence.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'Before' shows that one action happens earlier.",
           "sentence": "She washed her hands ___ dinner.",
           "words": [
@@ -161,7 +161,7 @@
           "page": 7,
           "summary": "Using 'after' to show sequence.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'After' shows that one action happens later.",
           "sentence": "He went to bed ___ he finished his homework.",
           "words": [
@@ -184,7 +184,7 @@
           "page": 8,
           "summary": "Using 'but' to contrast two ideas.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'But' connects two opposite ideas.",
           "sentence": "I like coffee ___ I don't like tea.",
           "words": [
@@ -207,7 +207,7 @@
           "page": 9,
           "summary": "Using 'so' to show a result.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'So' introduces the result of the first clause.",
           "sentence": "She studied hard, ___ she passed the test.",
           "words": [
@@ -230,7 +230,7 @@
           "page": 10,
           "summary": "Using 'and' to connect two actions.",
           "level": "A1",
-          "category": "Connectors & Contrast",
+          "category": "Basic Conjunctions",
           "explain": "'And' connects two actions that both happened.",
           "sentence": "We went to the park ___ we played football.",
           "words": [

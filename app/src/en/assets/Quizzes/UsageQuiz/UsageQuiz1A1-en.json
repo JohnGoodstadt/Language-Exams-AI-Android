@@ -23,7 +23,7 @@
           "page": 1,
           "summary": "Basic word order in simple present sentences (Subject + Verb + Place).",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Present Simple",
           "explain": "English basic structure: Subject + Verb + Place. 'I eat at home.' follows correct order.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -46,7 +46,7 @@
           "page": 2,
           "summary": "Using the verb 'to be' with a job (Subject + be + article + noun).",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Present Simple",
           "explain": "Structure: Subject + am/is/are + a/an + job noun. 'She is a doctor.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -69,7 +69,7 @@
           "page": 3,
           "summary": "Present simple with plural subject (Subject + base verb).",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Present Simple",
           "explain": "'They' uses the base verb form. 'They walk to school.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -92,7 +92,7 @@
           "page": 4,
           "summary": "Prepositions of place with 'be' (Subject + be + place phrase).",
           "level": "A1",
-          "category": "Prepositions",
+          "category": "Prepositions of Place & Time",
           "explain": "Structure: Subject + is + preposition + object. 'The book is on the table.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -115,7 +115,7 @@
           "page": 5,
           "summary": "Adjective position before a noun.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Adjective Order",
           "explain": "Adjective + noun order: 'small house', not 'house small'.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -138,7 +138,7 @@
           "page": 6,
           "summary": "Verb patterns with common verbs (listen + to).",
           "level": "A1",
-          "category": "Verb Patterns",
+          "category": "Present Simple",
           "explain": "'Listen' requires the preposition 'to'. Correct structure: 'We listen to music.'",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -161,7 +161,7 @@
           "page": 7,
           "summary": "Prepositions of place (under, on, in).",
           "level": "A1",
-          "category": "Prepositions",
+          "category": "Prepositions of Place & Time",
           "explain": "Correct structure: Subject + is + under + object. 'The bag is under the chair.'",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -184,7 +184,7 @@
           "page": 8,
           "summary": "Third person singular in present simple (verb + s).",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Present Simple",
           "explain": "'He' requires verb + s in present simple. 'He runs in the park.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -207,7 +207,7 @@
           "page": 9,
           "summary": "Preposition 'in' for enclosed spaces.",
           "level": "A1",
-          "category": "Prepositions",
+          "category": "Prepositions of Place & Time",
           "explain": "Correct structure: Subject + is + in + object. 'The mobile is in the bag.'",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -230,7 +230,7 @@
           "page": 10,
           "summary": "Subject pronoun + verb agreement.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Present Simple",
           "explain": "'We' uses the base verb form. 'We walk to school.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [

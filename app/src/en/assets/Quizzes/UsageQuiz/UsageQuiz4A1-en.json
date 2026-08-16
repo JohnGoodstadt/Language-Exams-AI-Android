@@ -23,7 +23,7 @@
           "page": 1,
           "summary": "Short answers in the present simple with 'do'.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Question Formation",
           "explain": "For 'you', the short answer is: Yes, I do. / No, I don't.",
           "sentence": "Do you work in an office?",
           "words": [
@@ -46,7 +46,7 @@
           "page": 2,
           "summary": "Short answers in the present simple with 'does'.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Question Formation",
           "explain": "For 'she', we use: Yes, she does. / No, she doesn't.",
           "sentence": "Does she live in the city?",
           "words": [
@@ -69,7 +69,7 @@
           "page": 3,
           "summary": "Short answers in the past simple with 'did'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Question Formation",
           "explain": "Past simple short answers use 'did'. Correct form: Yes, they did.",
           "sentence": "Did they visit the zoo yesterday?",
           "words": [
@@ -92,7 +92,7 @@
           "page": 4,
           "summary": "Short answers with the verb 'to be' (present).",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Question Formation",
           "explain": "With 'is', the short answer is: Yes, he is. / No, he isn't.",
           "sentence": "Is he a teacher?",
           "words": [
@@ -115,7 +115,7 @@
           "page": 5,
           "summary": "Short answers with 'are'.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Question Formation",
           "explain": "With 'are', use: Yes, they are. / No, they aren't.",
           "sentence": "Are they at home?",
           "words": [
@@ -138,7 +138,7 @@
           "page": 6,
           "summary": "Short answers with 'was' in the past.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Question Formation",
           "explain": "With 'was', the short answer is: Yes, she was. / No, she wasn't.",
           "sentence": "Was she at school yesterday?",
           "words": [
@@ -161,7 +161,7 @@
           "page": 7,
           "summary": "Yes/No questions with 'do' and plural subjects.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Question Formation",
           "explain": "With 'they', use 'Do' + base verb. Short answer: Yes, they do.",
           "sentence": "Do they walk to school?",
           "words": [
@@ -184,7 +184,7 @@
           "page": 8,
           "summary": "Past simple questions use 'Did' + base verb.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Question Formation",
           "explain": "After 'Did', we use the base verb. Short answer: Yes, he did.",
           "sentence": "Did he run yesterday?",
           "words": [
@@ -207,7 +207,7 @@
           "page": 9,
           "summary": "Yes/No questions with 'is'.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Question Formation",
           "explain": "Be verb questions invert subject and verb. Short answer: Yes, it is.",
           "sentence": "Is the bag under the table?",
           "words": [
@@ -230,7 +230,7 @@
           "page": 10,
           "summary": "Short answers with 'do' in present simple.",
           "level": "A1",
-          "category": "Present Tenses",
+          "category": "Question Formation",
           "explain": "Present simple questions with 'you' use 'Do'. Short answer: No, I don't.",
           "sentence": "Do you like coffee?",
           "words": [

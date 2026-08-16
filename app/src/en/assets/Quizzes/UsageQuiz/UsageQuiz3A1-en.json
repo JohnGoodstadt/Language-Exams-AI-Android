@@ -23,7 +23,7 @@
           "page": 1,
           "summary": "Past simple of regular verbs (verb + ed).",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "Regular verbs form the past with -ed. 'She walked to school yesterday.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -46,7 +46,7 @@
           "page": 2,
           "summary": "Past simple of irregular verb 'go'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "The past of 'go' is 'went'. 'They went to the park.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -69,7 +69,7 @@
           "page": 3,
           "summary": "Past simple of 'be' (was).",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "For 'I/he/she/it', the past of 'be' is 'was'. 'She was at home yesterday.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -92,7 +92,7 @@
           "page": 4,
           "summary": "Past simple of irregular verb 'see'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "The past of 'see' is 'saw'. 'I saw a movie last night.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -115,7 +115,7 @@
           "page": 5,
           "summary": "Past simple negative with 'didn't'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "After 'didn't', we use the base verb. 'We didn't eat at the restaurant.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -138,7 +138,7 @@
           "page": 6,
           "summary": "Past simple questions with 'Did'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "Past simple questions use 'Did' + subject + base verb. 'Did you visit the zoo?' is correct.",
           "sentence": "Choose the correct question.",
           "words": [
@@ -161,7 +161,7 @@
           "page": 7,
           "summary": "Past simple of irregular verb 'take'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "The past of 'take' is 'took'. 'He took the bus yesterday.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -184,7 +184,7 @@
           "page": 8,
           "summary": "Past simple with time marker 'last night'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "Past time expressions like 'last night' require past tense. 'She watched television last night.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -207,7 +207,7 @@
           "page": 9,
           "summary": "Past simple of irregular verb 'run'.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "The past of 'run' is 'ran'. 'He ran in the park yesterday.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -230,7 +230,7 @@
           "page": 10,
           "summary": "Past simple of regular verbs with -ed.",
           "level": "A1",
-          "category": "Past Tenses",
+          "category": "Past Simple",
           "explain": "Regular verbs add -ed in the past. 'They studied English yesterday.' is correct.",
           "sentence": "Choose the correct sentence.",
           "words": [
