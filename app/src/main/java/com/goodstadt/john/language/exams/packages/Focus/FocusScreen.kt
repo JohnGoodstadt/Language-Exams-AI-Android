@@ -17,8 +17,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -26,8 +24,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -43,9 +39,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
@@ -78,22 +72,15 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
 
         Spacer(Modifier.height(12.dp))
 
-        when (val state = focusState) {
+        when (focusState) {
             is FocusUiState.NotEnoughData ->
                 NotEnoughDataCard(confidence = stats.confidence, onTakeAudit = { showAuditSheet = true })
 
             is FocusUiState.AllCaughtUp ->
                 AllCaughtUpCard(currentLevel = currentLevel)
 
-            is FocusUiState.Priorities -> {
-                Text(
-                    "Your top priorities at or below $currentLevel:",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = Color.LightGray
-                )
-                Spacer(Modifier.height(8.dp))
-                FocusTable(state.rows, onPractice = { viewModel.practiceCategory(it) })
-            }
+            // Weak areas now surface directly in Category progress below (red segments).
+            is FocusUiState.Priorities -> Unit
         }
 
         // --- Category progress: gamification-style progress bar per category (green correct / red
@@ -104,13 +91,13 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
         if (grammarCatalog.isNotEmpty()) {
             fun answeredCount(e: GrammarCatalogEntry) = e.score.correct + e.score.incorrect + e.score.dontKnow
 
-            Spacer(Modifier.height(20.dp))
-            Text(
-                "Category progress",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
-            )
-            listOf("A1", "A2", "B1", "B2").forEach { level ->
+            // Show only levels at or below the learner's current level (hide the ones above).
+            val levelOrder = listOf("A1", "A2", "B1", "B2")
+            val maxIdx = levelOrder.indexOf(currentLevel)
+            val levelsToShow = if (maxIdx >= 0) levelOrder.take(maxIdx + 1) else levelOrder
+
+            Spacer(Modifier.height(8.dp))
+            levelsToShow.forEach { level ->
                 val levelAll = grammarCatalog.filter { it.row.level == level }
                 // One nudge per level: the first not-yet-attempted category at this level.
                 val nudge = levelAll.firstOrNull { answeredCount(it) == 0 }
@@ -240,48 +227,6 @@ private fun AllCaughtUpCard(currentLevel: String) {
     }
 }
 
-@Composable
-private fun FocusTable(rows: List<FocusRow>, onPractice: ((FocusRow) -> Unit)? = null) {
-    Column(Modifier.fillMaxWidth()) {
-        // The priority list (onPractice != null) is a clean to-do list: category + level + Play.
-        // The count columns live only in the debug table below, so they stay off here.
-        val showCounts = onPractice == null
-        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            HeaderCell("Area", Modifier.weight(1f), TextAlign.Start)
-            HeaderCell("Lvl", Modifier.width(36.dp))
-            if (showCounts) {
-                HeaderCell("✓", Modifier.width(32.dp))
-                HeaderCell("✗", Modifier.width(32.dp))
-                HeaderCell("?", Modifier.width(32.dp))
-            }
-            if (onPractice != null) Spacer(Modifier.width(40.dp)) // column for the Practice button
-        }
-        HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
-        rows.forEach { row ->
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 4.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(row.category, Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
-                DataCell(row.level, Modifier.width(36.dp))
-                if (showCounts) {
-                    DataCell("${row.score.correct}", Modifier.width(32.dp), Color(0xFF4CAF50))
-                    DataCell("${row.score.incorrect}", Modifier.width(32.dp), Color(0xFFE53935))
-                    DataCell("${row.score.dontKnow}", Modifier.width(32.dp), orangeLight)
-                }
-                if (onPractice != null) {
-                    IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
-                        Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
-                    }
-                }
-            }
-            HorizontalDivider(color = Color.DarkGray.copy(alpha = 0.3f), thickness = 0.5.dp)
-        }
-    }
-}
-
 /**
  * One category as a gamification-style progress bar (modelled on TopicProgressRow). Out of [total]
  * questions: green = correct, red = incorrect, grey = not done. If the learner has answered more
@@ -330,28 +275,4 @@ private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Un
             if (greyFrac > 0f) Box(Modifier.fillMaxHeight().weight(greyFrac))
         }
     }
-}
-
-@Composable
-private fun HeaderCell(text: String, modifier: Modifier, align: TextAlign = TextAlign.Center) {
-    Text(
-        text = text,
-        modifier = modifier.padding(vertical = 6.dp),
-        style = MaterialTheme.typography.labelMedium,
-        fontWeight = FontWeight.Bold,
-        color = Color.Gray,
-        textAlign = align,
-        fontSize = 13.sp
-    )
-}
-
-@Composable
-private fun DataCell(text: String, modifier: Modifier, color: Color = Color.Unspecified) {
-    Text(
-        text = text,
-        modifier = modifier,
-        style = MaterialTheme.typography.bodyMedium,
-        color = color,
-        textAlign = TextAlign.Center
-    )
 }
