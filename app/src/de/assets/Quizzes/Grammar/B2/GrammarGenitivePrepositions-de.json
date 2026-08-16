@@ -1,0 +1,41 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarGenitivePrepositionsB2-de",
+  "title": "Genitive Prepositions",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "PLACEHOLDER - replace with real Genitive Prepositions (B2) German questions.",
+      "sortorder": 1,
+      "learningTitle": "Using Genitive Prepositions",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Placeholder question.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "Placeholder explanation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "PLACEHOLDER correct answer."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 1."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 2."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarWordOrderTimeMannerPlaceB1-de",
+  "title": "Word Order: Time, Manner, Place",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "PLACEHOLDER - replace with real Word Order: Time, Manner, Place (B1) German questions.",
+      "sortorder": 1,
+      "learningTitle": "Using Word Order: Time, Manner, Place",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Placeholder question.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "Placeholder explanation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "PLACEHOLDER correct answer."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 1."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 2."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
