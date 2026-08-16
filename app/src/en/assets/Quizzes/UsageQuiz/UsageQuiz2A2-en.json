@@ -23,7 +23,7 @@
           "page": 1,
           "summary": "Present continuous for actions happening now.",
           "level": "A2",
-          "category": "Present Tenses",
+          "category": "Present Continuous",
           "explain": "Present continuous uses am/is/are + verb + ing for actions happening now.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -44,23 +44,23 @@
         {
           "title": "",
           "page": 2,
-          "summary": "Present simple for daily routines.",
+          "summary": "Present continuous for actions happening now.",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "Present simple is used for habits and routines. 'He goes to work every day.'",
+          "category": "Present Continuous",
+          "explain": "Present continuous is 'is' + -ing: 'is driving'. 'is drive' uses the base verb, and 'He driving' omits 'is'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "He goes to work every day."
+              "word": "He driving to work now.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "He is going to work every day."
+              "word": "He is driving to work now.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "He go to work every day."
+              "word": "He is drive to work now.",
+              "ok": false
             }
           ]
         },
@@ -69,7 +69,7 @@
           "page": 3,
           "summary": "Present continuous with time marker 'now'.",
           "level": "A2",
-          "category": "Present Tenses",
+          "category": "Present Continuous",
           "explain": "'Now' signals present continuous: 'They are studying now.'",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -92,7 +92,7 @@
           "page": 4,
           "summary": "Present simple with frequency adverbs.",
           "level": "A2",
-          "category": "Present Tenses",
+          "category": "Adverbs of Manner & Frequency",
           "explain": "Frequency words like 'always' are used with present simple.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -115,7 +115,7 @@
           "page": 5,
           "summary": "Present continuous for temporary actions.",
           "level": "A2",
-          "category": "Present Tenses",
+          "category": "Present Continuous",
           "explain": "Temporary actions happening today use present continuous.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -136,23 +136,23 @@
         {
           "title": "",
           "page": 6,
-          "summary": "Present simple for general facts.",
+          "summary": "Present continuous for something happening right now.",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "General facts use present simple.",
+          "category": "Present Continuous",
+          "explain": "Use 'is' + -ing for an action happening now: 'is boiling'. 'is boil' and 'water boiling' are incorrect forms.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "Water boils at 100 degrees."
+              "word": "Look, the water is boil!",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Water is boiling at 100 degrees."
+              "word": "Look, the water boiling!",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Water boil at 100 degrees."
+              "word": "Look, the water is boiling!",
+              "ok": true
             }
           ]
         },
@@ -161,7 +161,7 @@
           "page": 7,
           "summary": "Present continuous negative form.",
           "level": "A2",
-          "category": "Present Tenses",
+          "category": "Present Continuous",
           "explain": "Negative present continuous: am/is/are + not + verb + ing.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -182,23 +182,23 @@
         {
           "title": "",
           "page": 8,
-          "summary": "Present simple negative form.",
+          "summary": "Present continuous negative (isn't + -ing).",
           "level": "A2",
-          "category": "Present Tenses",
-          "explain": "Present simple negative uses don't/doesn't + base verb.",
+          "category": "Present Continuous",
+          "explain": "The negative present continuous is 'isn't' + -ing: 'isn't listening'. 'isn't listen' uses the base verb, and 'She not listening' omits 'is'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "He doesn't drive to work."
+              "word": "She isn't listening to me.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "He isn't drive to work."
+              "word": "She isn't listen to me.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "He doesn't drives to work."
+              "word": "She not listening to me.",
+              "ok": false
             }
           ]
         },
@@ -207,7 +207,7 @@
           "page": 9,
           "summary": "Present continuous question form.",
           "level": "A2",
-          "category": "Present Tenses",
+          "category": "Present Continuous",
           "explain": "Questions invert be verb: 'Are they studying?'",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -230,7 +230,7 @@
           "page": 10,
           "summary": "Contrast between routine and action happening now.",
           "level": "A2",
-          "category": "Present Tenses",
+          "category": "Present Continuous",
           "explain": "Use present simple for routine and present continuous for current action.",
           "sentence": "Choose the correct sentence.",
           "words": [

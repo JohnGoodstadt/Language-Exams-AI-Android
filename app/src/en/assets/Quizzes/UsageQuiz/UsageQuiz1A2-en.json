@@ -21,23 +21,23 @@
         {
           "title": "",
           "page": 1,
-          "summary": "Use 'going to' for planned actions.",
+          "summary": "Use 'will' for future predictions.",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "'Going to' is used for plans decided before now.",
+          "category": "Future: will",
+          "explain": "'Will' + base verb makes a prediction: 'will travel'. It never takes '-s' or 'to'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "She is going to travel to Spain in summer."
+              "word": "One day, people will travel to Mars.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "She will going to travel to Spain in summer."
+              "word": "One day, people will to travel to Mars.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "She going to will travel to Spain."
+              "word": "One day, people will travels to Mars.",
+              "ok": false
             }
           ]
         },
@@ -46,7 +46,7 @@
           "page": 2,
           "summary": "Use 'will' for decisions made at the moment.",
           "level": "A2",
-          "category": "Future Forms",
+          "category": "Future: will",
           "explain": "'Will' is used when we decide something now.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -69,7 +69,7 @@
           "page": 3,
           "summary": "Use 'will' for promises.",
           "level": "A2",
-          "category": "Future Forms",
+          "category": "Future: will",
           "explain": "'Will' is often used to make promises.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -90,23 +90,23 @@
         {
           "title": "",
           "page": 4,
-          "summary": "Use 'going to' for future plans.",
+          "summary": "Use 'will' for promises.",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "'Going to' expresses a plan already decided.",
+          "category": "Future: will",
+          "explain": "Use 'will' + base verb for a promise: 'will call'. '-ing' and 'to' are not used after 'will'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "They are going to buy a new apartment."
+              "word": "Don't worry, I will to call you tonight.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "They will buying a new apartment."
+              "word": "Don't worry, I will call you tonight.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "They are going buy a new apartment."
+              "word": "Don't worry, I will calling you tonight.",
+              "ok": false
             }
           ]
         },
@@ -115,7 +115,7 @@
           "page": 5,
           "summary": "Use 'will' for predictions.",
           "level": "A2",
-          "category": "Future Forms",
+          "category": "Future: will",
           "explain": "'Will' can express predictions about the future.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -136,23 +136,23 @@
         {
           "title": "",
           "page": 6,
-          "summary": "Negative form of 'going to'.",
+          "summary": "Negative of 'will' (won't).",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "Negative structure: am/is/are + not + going to + base verb.",
+          "category": "Future: will",
+          "explain": "The negative of 'will' is 'won't' + base verb: 'won't be'. 'willn't' is not a word, and no 'to' follows.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "She is not going to attend the meeting."
+              "word": "She won't to be at the office tomorrow.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "She not going to attend the meeting."
+              "word": "She willn't be at the office tomorrow.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "She will not going to attend the meeting."
+              "word": "She won't be at the office tomorrow.",
+              "ok": true
             }
           ]
         },
@@ -161,7 +161,7 @@
           "page": 7,
           "summary": "Question form with 'will'.",
           "level": "A2",
-          "category": "Future Forms",
+          "category": "Future: will",
           "explain": "Future questions with 'will' invert subject and auxiliary.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -182,23 +182,23 @@
         {
           "title": "",
           "page": 8,
-          "summary": "Question form with 'going to'.",
+          "summary": "Question form with 'will'.",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "Structure: Am/Is/Are + subject + going to + base verb.",
+          "category": "Future: will",
+          "explain": "Questions with 'will' invert: 'Will you help...?'. The verb stays in the base form, and we don't add 'do'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "Are they going to study tonight?"
+              "word": "Will you helps me with this box?",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Do they going to study tonight?"
+              "word": "Will you help me with this box?",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "Are they going study tonight?"
+              "word": "Do you will help me with this box?",
+              "ok": false
             }
           ]
         },
@@ -207,7 +207,7 @@
           "page": 9,
           "summary": "Use 'will' for spontaneous offers.",
           "level": "A2",
-          "category": "Future Forms",
+          "category": "Future: will",
           "explain": "'Will' is used for offers made at the moment of speaking.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -228,23 +228,23 @@
         {
           "title": "",
           "page": 10,
-          "summary": "Contrast between plan and decision.",
+          "summary": "Use 'will' for predictions about people.",
           "level": "A2",
-          "category": "Future Forms",
-          "explain": "Use 'going to' for prior plans and 'will' for decisions made now.",
+          "category": "Future: will",
+          "explain": "'Will' + base verb predicts: 'will do'. No 'to' or '-ing' after 'will'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "She is going to start a new job next month."
+              "word": "I'm sure you will doing well.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "She will starting a new job next month."
+              "word": "I'm sure you will to do well.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "She going to will start a new job next month."
+              "word": "I'm sure you will do well.",
+              "ok": true
             }
           ]
         }

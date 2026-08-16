@@ -23,7 +23,7 @@
           "page": 1,
           "summary": "Use 'because' to give a reason.",
           "level": "A2",
-          "category": "Connectors & Contrast",
+          "category": "Time & Reason Conjunctions",
           "explain": "'Because' introduces the reason clause.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -46,7 +46,7 @@
           "page": 2,
           "summary": "Use 'so' to show a result.",
           "level": "A2",
-          "category": "Connectors & Contrast",
+          "category": "Basic Linkers",
           "explain": "'So' connects cause and result.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -69,7 +69,7 @@
           "page": 3,
           "summary": "Use 'although' to show contrast.",
           "level": "A2",
-          "category": "Connectors & Contrast",
+          "category": "Basic Linkers",
           "explain": "'Although' introduces a contrast clause.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -92,7 +92,7 @@
           "page": 4,
           "summary": "First conditional: If + present, will + base verb.",
           "level": "A2",
-          "category": "Conditionals",
+          "category": "Zero & First Conditional",
           "explain": "Structure: If + present simple, will + base verb.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -115,7 +115,7 @@
           "page": 5,
           "summary": "Use 'when' for future time clauses (present form).",
           "level": "A2",
-          "category": "Future Forms",
+          "category": "Time & Reason Conjunctions",
           "explain": "After 'when', use present simple for future meaning.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -138,7 +138,7 @@
           "page": 6,
           "summary": "Use 'before' to show earlier action.",
           "level": "A2",
-          "category": "Connectors & Contrast",
+          "category": "Time & Reason Conjunctions",
           "explain": "'Before' introduces the earlier action.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -161,7 +161,7 @@
           "page": 7,
           "summary": "Use 'after' to show later action.",
           "level": "A2",
-          "category": "Connectors & Contrast",
+          "category": "Time & Reason Conjunctions",
           "explain": "'After' introduces the later action in sequence.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -184,7 +184,7 @@
           "page": 8,
           "summary": "Use 'if' for real future conditions.",
           "level": "A2",
-          "category": "Conditionals",
+          "category": "Zero & First Conditional",
           "explain": "First conditional uses present simple after 'if'.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -207,7 +207,7 @@
           "page": 9,
           "summary": "Use 'though' to show contrast (similar to although).",
           "level": "A2",
-          "category": "Connectors & Contrast",
+          "category": "Basic Linkers",
           "explain": "'Though' expresses contrast and does not need 'but'.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -230,7 +230,7 @@
           "page": 10,
           "summary": "Correct clause order in first conditional.",
           "level": "A2",
-          "category": "Conditionals",
+          "category": "Zero & First Conditional",
           "explain": "Main clause can come first, followed by if-clause.",
           "sentence": "Choose the correct sentence.",
           "words": [
