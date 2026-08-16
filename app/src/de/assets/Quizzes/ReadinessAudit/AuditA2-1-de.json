@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditA2-1-de",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "A2 Level Check",
+      "description": "A mixed grammar check to estimate whether the learner is working securely at CEFR A2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Perfect Tense",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "Perfekt: 'haben' + participle 'gespielt' at the end. 'spielen' takes 'haben' and the participle is 'gespielt'.",
+          "words": [
+            {
+              "word": "Wir haben am Wochenende Fußball gespielen.",
+              "ok": false
+            },
+            {
+              "word": "Wir sind am Wochenende Fußball gespielt.",
+              "ok": false
+            },
+            {
+              "word": "Wir haben am Wochenende Fußball gespielt.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct comparison.",
+          "summary": "A2 · Comparative & Superlative",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "Comparative adds '-er' + 'als': 'schneller als'. Don't use the base form or the superlative in an 'als' comparison.",
+          "words": [
+            {
+              "word": "Der Zug ist schneller als das Auto.",
+              "ok": true
+            },
+            {
+              "word": "Der Zug ist schnell als das Auto.",
+              "ok": false
+            },
+            {
+              "word": "Der Zug ist am schnellsten als das Auto.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Coordinating Conjunctions",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "'aber' is coordinating: normal word order, verb second: 'aber sie arbeitet weiter'. No inversion, no verb-final.",
+          "words": [
+            {
+              "word": "Sie ist müde, aber arbeitet sie weiter.",
+              "ok": false
+            },
+            {
+              "word": "Sie ist müde, aber sie weiter arbeitet.",
+              "ok": false
+            },
+            {
+              "word": "Sie ist müde, aber sie arbeitet weiter.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Imperative",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "The du-imperative drops the ending: 'Mach!' (not 'Machst'). A separable prefix goes to the end: 'mach … zu'.",
+          "words": [
+            {
+              "word": "Machst bitte das Fenster zu!",
+              "ok": false
+            },
+            {
+              "word": "Mach bitte das Fenster zumachen!",
+              "ok": false
+            },
+            {
+              "word": "Mach bitte das Fenster zu!",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Demonstratives",
+          "level": "A2",
+          "category": "Demonstratives",
+          "explain": "'dieser' agrees with the noun: masculine nominative 'dieser Mantel'. 'diese' (fem) and 'diesen' (accusative) are wrong for a masculine subject.",
+          "words": [
+            {
+              "word": "Dieser Mantel gefällt mir.",
+              "ok": true
+            },
+            {
+              "word": "Diesen Mantel gefällt mir.",
+              "ok": false
+            },
+            {
+              "word": "Diese Mantel gefällt mir.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Dative Case",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "The indirect object is dative: 'meinem Freund'. 'geben' takes dative (recipient) + accusative (thing); 'meinen'/'mein' are not dative.",
+          "words": [
+            {
+              "word": "Ich gebe meinen Freund ein Geschenk.",
+              "ok": false
+            },
+            {
+              "word": "Ich gebe mein Freund ein Geschenk.",
+              "ok": false
+            },
+            {
+              "word": "Ich gebe meinem Freund ein Geschenk.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Reflexive Verbs",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "'sich treffen' is reflexive; for 'wir' the pronoun is 'uns': 'treffen uns'. 'sich' is 3rd person, and the reflexive can't be dropped.",
+          "words": [
+            {
+              "word": "Wir treffen uns um acht Uhr.",
+              "ok": true
+            },
+            {
+              "word": "Wir treffen sich um acht Uhr.",
+              "ok": false
+            },
+            {
+              "word": "Wir treffen um acht Uhr.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Two-Way Prepositions",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "For a static location, two-way prepositions take the dative: 'an der Wand'. Accusative 'an die Wand' is for movement, and 'dem' is the wrong article for feminine 'Wand'.",
+          "words": [
+            {
+              "word": "Das Bild hängt an die Wand.",
+              "ok": false
+            },
+            {
+              "word": "Das Bild hängt an der Wand.",
+              "ok": true
+            },
+            {
+              "word": "Das Bild hängt an dem Wand.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Subordinate Clauses: weil & dass",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "'weil' sends the verb to the end: 'weil ich krank bin'. No verb-second and no inversion in the weil-clause.",
+          "words": [
+            {
+              "word": "Ich bleibe zu Hause, weil ich bin krank.",
+              "ok": false
+            },
+            {
+              "word": "Ich bleibe zu Hause, weil bin ich krank.",
+              "ok": false
+            },
+            {
+              "word": "Ich bleibe zu Hause, weil ich krank bin.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Simple Past: sein, haben & Modals",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "The Präteritum of 'sein' is 'war': 'Gestern war ich …'. Use 'war' (not present 'bin'), and keep the verb in second position.",
+          "words": [
+            {
+              "word": "Gestern ich war im Kino.",
+              "ok": false
+            },
+            {
+              "word": "Gestern war ich im Kino.",
+              "ok": true
+            },
+            {
+              "word": "Gestern bin ich im Kino.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

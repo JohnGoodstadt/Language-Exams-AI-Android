@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "BaselineAuditA2-1-de",
+  "title": "Part 1: Baseline Verification",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Initial Level Placement",
+      "description": "A high-level scan to establish your current CEFR baseline (A2-B2). One question per grammar point across three bands.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Perfect Tense",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "The Perfekt uses 'haben'/'sein' + past participle at the end: 'habe … gesehen'. 'sehen' takes 'haben' (not 'sein'), and its participle is the irregular 'gesehen' (not 'geseht').",
+          "words": [
+            {
+              "word": "Ich habe gestern einen Film geseht.",
+              "ok": false
+            },
+            {
+              "word": "Ich habe gestern einen Film gesehen.",
+              "ok": true
+            },
+            {
+              "word": "Ich bin gestern einen Film gesehen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct comparison.",
+          "summary": "A2 · Comparative & Superlative",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "German forms the comparative with '-er' + 'als': 'größer als'. It uses 'als' (not 'wie'), and doesn't use 'mehr' like English 'more'.",
+          "words": [
+            {
+              "word": "Mein Bruder ist mehr groß als ich.",
+              "ok": false
+            },
+            {
+              "word": "Mein Bruder ist größer wie ich.",
+              "ok": false
+            },
+            {
+              "word": "Mein Bruder ist größer als ich.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Coordinating Conjunctions",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "Coordinating conjunctions like 'denn' (because) keep normal word order — the verb stays in second position: 'denn ich bin müde'. They don't send the verb to the end (that's 'weil') or cause inversion.",
+          "words": [
+            {
+              "word": "Ich bleibe zu Hause, denn ich müde bin.",
+              "ok": false
+            },
+            {
+              "word": "Ich bleibe zu Hause, denn bin ich müde.",
+              "ok": false
+            },
+            {
+              "word": "Ich bleibe zu Hause, denn ich bin müde.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Konjunktiv II",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "Konjunktiv II expresses hypothetical situations: 'hätte' in the wenn-clause and 'würde' + infinitive in the main clause. Avoid 'haben würde', and don't use the future 'werde'.",
+          "words": [
+            {
+              "word": "Wenn ich Zeit haben würde, würde ich dir helfen.",
+              "ok": false
+            },
+            {
+              "word": "Wenn ich Zeit hätte, werde ich dir helfen.",
+              "ok": false
+            },
+            {
+              "word": "Wenn ich Zeit hätte, würde ich dir helfen.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct passive sentence.",
+          "summary": "B1 · Passive Voice",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "The passive (Vorgangspassiv) is 'werden' + past participle: 'wird geschrieben'. The participle is 'geschrieben' (not the infinitive), and present passive doesn't take 'worden' (that's the perfect: 'ist geschrieben worden').",
+          "words": [
+            {
+              "word": "Der Brief wird von ihm schreiben.",
+              "ok": false
+            },
+            {
+              "word": "Der Brief wird von ihm geschrieben.",
+              "ok": true
+            },
+            {
+              "word": "Der Brief wird von ihm geschrieben worden.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Relative Clauses",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "In a relative clause the verb goes to the end: 'der mir geholfen hat'. The relative pronoun takes the case of its role — here the subject, so nominative 'der' (not accusative 'den').",
+          "words": [
+            {
+              "word": "Das ist der Mann, der mir geholfen hat.",
+              "ok": true
+            },
+            {
+              "word": "Das ist der Mann, der mir hat geholfen.",
+              "ok": false
+            },
+            {
+              "word": "Das ist der Mann, den mir geholfen hat.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Genitive Case",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "The genitive shows possession: 'das Auto meines Vaters'. Masculine nouns add '-s' ('Vaters') and the article is genitive 'meines' (not dative 'meinem').",
+          "words": [
+            {
+              "word": "Das ist das Auto meinem Vater.",
+              "ok": false
+            },
+            {
+              "word": "Das ist das Auto meines Vater.",
+              "ok": false
+            },
+            {
+              "word": "Das ist das Auto meines Vaters.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Konjunktiv II (Past)",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "Past Konjunktiv II uses 'hätte'/'wäre' + participle: 'Wenn ich … gewusst hätte, wäre ich … gekommen'. Use 'wäre' with motion verbs (not 'würde … gekommen sein'), and 'hätte' (not indicative 'habe').",
+          "words": [
+            {
+              "word": "Wenn ich das gewusst hätte, würde ich früher gekommen sein.",
+              "ok": false
+            },
+            {
+              "word": "Wenn ich das gewusst habe, wäre ich früher gekommen.",
+              "ok": false
+            },
+            {
+              "word": "Wenn ich das gewusst hätte, wäre ich früher gekommen.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Genitive Prepositions",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "Prepositions like 'wegen' take the genitive: 'wegen des schlechten Wetters'. The colloquial dative ('wegen dem Wetter') is non-standard, and the accusative is incorrect.",
+          "words": [
+            {
+              "word": "Wegen dem schlechten Wetter bleiben wir zu Hause.",
+              "ok": false
+            },
+            {
+              "word": "Wegen das schlechte Wetter bleiben wir zu Hause.",
+              "ok": false
+            },
+            {
+              "word": "Wegen des schlechten Wetters bleiben wir zu Hause.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct reported speech.",
+          "summary": "B2 · Konjunktiv I (Reported Speech)",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "Indirect speech uses Konjunktiv I: 'Er sagte, er sei krank'. Use 'sei' (not the indicative 'ist' or the infinitive 'sein').",
+          "words": [
+            {
+              "word": "Er sagte, er ist krank.",
+              "ok": false
+            },
+            {
+              "word": "Er sagte, er sei krank.",
+              "ok": true
+            },
+            {
+              "word": "Er sagte, er sein krank.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

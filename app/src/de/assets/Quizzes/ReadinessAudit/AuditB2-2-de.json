@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB2-2-de",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B2 Progress Check",
+      "description": "A second mixed grammar check to measure progress and confirm whether the learner is working securely at CEFR B2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Extended Participle Attributes",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "An extended participle attribute uses the participle with the correct adjective ending before the noun: 'der von allen bewunderte Künstler' (nominative → '-e').",
+          "words": [
+            {
+              "word": "Der von allen bewunderte Künstler kam zu spät.",
+              "ok": true
+            },
+            {
+              "word": "Der von allen bewundert Künstler kam zu spät.",
+              "ok": false
+            },
+            {
+              "word": "Der von allen bewunderten Künstler kam zu spät.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Participles as Adjectives",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "Partizip I ('-end') as an adjective takes endings: 'das weinende Kind'. Not the base 'weinen', and Partizip II 'geweint' has a passive/past meaning.",
+          "words": [
+            {
+              "word": "Das weinende Kind suchte seine Mutter.",
+              "ok": true
+            },
+            {
+              "word": "Das weinen Kind suchte seine Mutter.",
+              "ok": false
+            },
+            {
+              "word": "Das geweinte Kind suchte seine Mutter.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Nominalisation",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "A nominalised verb is capitalised and takes 'das': 'Das Rauchen ist … verboten'. It's written with a capital letter and stands as the subject.",
+          "words": [
+            {
+              "word": "Das Rauchen ist hier verboten.",
+              "ok": true
+            },
+            {
+              "word": "Rauchen das ist hier verboten.",
+              "ok": false
+            },
+            {
+              "word": "Das rauchen ist hier verboten.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Noun-Verb Collocations",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The fixed collocation is 'eine Entscheidung treffen' (to make a decision). German uses 'treffen' here, not 'machen' or 'nehmen'.",
+          "words": [
+            {
+              "word": "Wir machen eine Entscheidung.",
+              "ok": false
+            },
+            {
+              "word": "Wir nehmen eine Entscheidung.",
+              "ok": false
+            },
+            {
+              "word": "Wir treffen eine Entscheidung.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Discourse Connectors",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "'trotzdem' at the start triggers inversion (verb second): 'Trotzdem arbeiteten sie weiter'. The subject follows the verb.",
+          "words": [
+            {
+              "word": "Es war spät. Trotzdem sie arbeiteten weiter.",
+              "ok": false
+            },
+            {
+              "word": "Es war spät. Sie trotzdem arbeiteten weiter.",
+              "ok": false
+            },
+            {
+              "word": "Es war spät. Trotzdem arbeiteten sie weiter.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Concessive & Consecutive Clauses",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "'sodass' introduces a consequence and sends the verb to the end: 'sodass ich ihn kaum verstand'. It's one connector 'sodass' (not just 'so').",
+          "words": [
+            {
+              "word": "Er sprach leise, sodass ich verstand ihn kaum.",
+              "ok": false
+            },
+            {
+              "word": "Er sprach leise, so ich ihn kaum verstand.",
+              "ok": false
+            },
+            {
+              "word": "Er sprach leise, sodass ich ihn kaum verstand.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Word Formation",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "The noun from 'arbeitslos' is 'die Arbeitslosigkeit' (suffix '-igkeit'). Not '-keit' directly ('Arbeitloskeit') and not the bare adjective.",
+          "words": [
+            {
+              "word": "Die Arbeitloskeit ist gestiegen.",
+              "ok": false
+            },
+            {
+              "word": "Die Arbeitslosigkeit ist gestiegen.",
+              "ok": true
+            },
+            {
+              "word": "Die Arbeitslos ist gestiegen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Verb & Adjective Prepositions",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "'abhängen von' + dative: 'hängt von deiner Arbeit ab'. The fixed preposition is 'von' (not 'an'), and the separable prefix 'ab' goes to the end.",
+          "words": [
+            {
+              "word": "Der Erfolg hängt an deiner Arbeit ab.",
+              "ok": false
+            },
+            {
+              "word": "Der Erfolg hängt von deiner Arbeit.",
+              "ok": false
+            },
+            {
+              "word": "Der Erfolg hängt von deiner Arbeit ab.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Comparative & Modal Clauses",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "'als ob' (as if) takes Konjunktiv II with the verb at the end: 'als ob er alles wüsste'. Not the indicative 'weiß', and no inversion.",
+          "words": [
+            {
+              "word": "Er tut so, als ob er alles weiß.",
+              "ok": false
+            },
+            {
+              "word": "Er tut so, als ob er alles wüsste.",
+              "ok": true
+            },
+            {
+              "word": "Er tut so, als ob wüsste er alles.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Emphasis & Word Order",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "Any element can be fronted for emphasis, but the finite verb stays second: 'Diesen Film habe ich schon gesehen'. The subject follows the verb.",
+          "words": [
+            {
+              "word": "Diesen Film habe ich schon gesehen.",
+              "ok": true
+            },
+            {
+              "word": "Diesen Film habe schon ich gesehen.",
+              "ok": false
+            },
+            {
+              "word": "Diesen Film ich habe schon gesehen.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

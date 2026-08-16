@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditA2-2-de",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "A2 Progress Check",
+      "description": "A second mixed grammar check to measure progress and confirm whether the learner is working securely at CEFR A2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Accusative & Dative Prepositions",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "'für' takes the accusative: 'für dich'. 'dir' is dative and 'du' nominative.",
+          "words": [
+            {
+              "word": "Das Geschenk ist für dir.",
+              "ok": false
+            },
+            {
+              "word": "Das Geschenk ist für dich.",
+              "ok": true
+            },
+            {
+              "word": "Das Geschenk ist für du.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Adjective Endings",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After the definite article 'der', the adjective takes the weak ending '-e': 'der neue Lehrer'. Not the strong '-er' and not a bare adjective.",
+          "words": [
+            {
+              "word": "Der neuer Lehrer ist nett.",
+              "ok": false
+            },
+            {
+              "word": "Der neue Lehrer ist nett.",
+              "ok": true
+            },
+            {
+              "word": "Der neu Lehrer ist nett.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Conditional & Time Clauses: wenn",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "'wenn' sends its verb to the end ('wenn es regnet'); the following main clause begins with the verb: 'bleibe ich zu Hause'.",
+          "words": [
+            {
+              "word": "Wenn es regnet, ich bleibe zu Hause.",
+              "ok": false
+            },
+            {
+              "word": "Wenn es regnet, bleibe ich zu Hause.",
+              "ok": true
+            },
+            {
+              "word": "Wenn regnet es, bleibe ich zu Hause.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Dative Verbs",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "'helfen' takes the dative: 'ich helfe meiner Mutter'. Not accusative 'meine', and the feminine dative article is 'meiner' (not 'meinem').",
+          "words": [
+            {
+              "word": "Ich helfe meiner Mutter.",
+              "ok": true
+            },
+            {
+              "word": "Ich helfe meinem Mutter.",
+              "ok": false
+            },
+            {
+              "word": "Ich helfe meine Mutter.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Accusative & Dative Pronouns",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "The recipient is dative: 'mir'. 'geben' takes a dative person + accusative thing; 'mich' is accusative and 'ich' nominative.",
+          "words": [
+            {
+              "word": "Kannst du mir das Buch geben?",
+              "ok": true
+            },
+            {
+              "word": "Kannst du ich das Buch geben?",
+              "ok": false
+            },
+            {
+              "word": "Kannst du mich das Buch geben?",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Verbs with Prepositions",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "'warten' combines with 'auf' + accusative: 'warte auf den Bus'. The verb-specific preposition is 'auf' (not 'für'), and it takes the accusative 'den'.",
+          "words": [
+            {
+              "word": "Ich warte auf den Bus.",
+              "ok": true
+            },
+            {
+              "word": "Ich warte auf dem Bus.",
+              "ok": false
+            },
+            {
+              "word": "Ich warte für den Bus.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Perfect Tense",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "Motion verbs like 'fahren' form the Perfekt with 'sein': 'ist … gefahren'. Not 'haben', and the participle is the irregular 'gefahren'.",
+          "words": [
+            {
+              "word": "Sie ist nach Berlin gefahren.",
+              "ok": true
+            },
+            {
+              "word": "Sie ist nach Berlin gefahrt.",
+              "ok": false
+            },
+            {
+              "word": "Sie hat nach Berlin gefahren.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct superlative.",
+          "summary": "A2 · Comparative & Superlative",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "The superlative of a predicate uses 'am …sten': 'am kältesten'. Not 'am kälteste' and not 'der kälteste' (which needs a noun).",
+          "words": [
+            {
+              "word": "Im Winter ist es am kälteste.",
+              "ok": false
+            },
+            {
+              "word": "Im Winter ist es der kälteste.",
+              "ok": false
+            },
+            {
+              "word": "Im Winter ist es am kältesten.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Reflexive Verbs",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "With an accusative object ('die Hände'), the reflexive pronoun is dative: 'ich wasche mir die Hände'. 'mich' is accusative, and the reflexive shouldn't be dropped.",
+          "words": [
+            {
+              "word": "Ich wasche mich die Hände.",
+              "ok": false
+            },
+            {
+              "word": "Ich wasche mir die Hände.",
+              "ok": true
+            },
+            {
+              "word": "Ich wasche die Hände.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Two-Way Prepositions",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "'legen' expresses movement, so the two-way preposition takes the accusative: 'auf den Tisch'. The dative 'auf dem Tisch' is for location.",
+          "words": [
+            {
+              "word": "Er legt das Buch auf der Tisch.",
+              "ok": false
+            },
+            {
+              "word": "Er legt das Buch auf dem Tisch.",
+              "ok": false
+            },
+            {
+              "word": "Er legt das Buch auf den Tisch.",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

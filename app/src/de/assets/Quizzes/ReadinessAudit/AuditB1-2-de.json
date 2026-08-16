@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB1-2-de",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B1 Progress Check",
+      "description": "A second mixed grammar check to measure progress and confirm whether the learner is working securely at CEFR B1 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Subordinate Clauses: Cause & Concession",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "'da' (as/since) sends the verb to the end: 'Da es spät war'. The following main clause starts with the verb: 'gingen wir'.",
+          "words": [
+            {
+              "word": "Da es spät war, gingen wir nach Hause.",
+              "ok": true
+            },
+            {
+              "word": "Da es spät war, wir gingen nach Hause.",
+              "ok": false
+            },
+            {
+              "word": "Da war es spät, gingen wir nach Hause.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Purpose Clauses: damit & um zu",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "Purpose with the same subject uses 'um … zu' + infinitive: 'um in Wien zu studieren'. 'zu' is required, and 'um dass' is incorrect.",
+          "words": [
+            {
+              "word": "Ich lerne Deutsch, um in Wien zu studieren.",
+              "ok": true
+            },
+            {
+              "word": "Ich lerne Deutsch, um in Wien studieren.",
+              "ok": false
+            },
+            {
+              "word": "Ich lerne Deutsch, um dass ich in Wien studiere.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Infinitive Clauses with zu",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "After 'versprechen', use a 'zu'-infinitive: 'zu sein'. 'zu' precedes the infinitive and can't be dropped or combined with 'dass'.",
+          "words": [
+            {
+              "word": "Er hat versprochen, pünktlich sein.",
+              "ok": false
+            },
+            {
+              "word": "Er hat versprochen, dass pünktlich zu sein.",
+              "ok": false
+            },
+            {
+              "word": "Er hat versprochen, pünktlich zu sein.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Prepositional Adverbs",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "For things, combine 'da(r)-' with the verb's preposition: 'denken an' → 'daran'. Not 'an es' for a thing, and the preposition must match the verb.",
+          "words": [
+            {
+              "word": "Ich denke oft daran.",
+              "ok": true
+            },
+            {
+              "word": "Ich denke oft darauf.",
+              "ok": false
+            },
+            {
+              "word": "Ich denke oft an es.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Indirect Questions",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "In an indirect question the verb goes to the end: 'wann der Film beginnt'. No inversion, and the finite verb is 'beginnt'.",
+          "words": [
+            {
+              "word": "Ich weiß nicht, wann beginnt der Film.",
+              "ok": false
+            },
+            {
+              "word": "Ich weiß nicht, wann der Film beginnt.",
+              "ok": true
+            },
+            {
+              "word": "Ich weiß nicht, wann der Film beginnen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Two-Part Connectors",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "'je + comparative … desto + comparative': the je-clause is verb-final ('je mehr ich übe'); after 'desto' comes comparative then verb-subject: 'desto besser werde ich'.",
+          "words": [
+            {
+              "word": "Je mehr übe ich, desto besser werde ich.",
+              "ok": false
+            },
+            {
+              "word": "Je mehr ich übe, desto ich besser werde.",
+              "ok": false
+            },
+            {
+              "word": "Je mehr ich übe, desto besser werde ich.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Weak Noun Declension",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "Weak masculine nouns (n-Deklination) add '-en' in all cases except nominative: 'dem Studenten'. Not 'dem Student', and singular dative is 'dem' (not 'den').",
+          "words": [
+            {
+              "word": "Ich habe mit dem Studenten gesprochen.",
+              "ok": true
+            },
+            {
+              "word": "Ich habe mit dem Student gesprochen.",
+              "ok": false
+            },
+            {
+              "word": "Ich habe mit den Studenten gesprochen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Accusative & Dative Reflexive Verbs",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "'sich etwas vorstellen' (to imagine) uses the dative reflexive: 'mir'. With the accusative object 'das', the reflexive is dative 'mir' (not 'mich') and can't be dropped.",
+          "words": [
+            {
+              "word": "Ich kann mir das nicht vorstellen.",
+              "ok": true
+            },
+            {
+              "word": "Ich kann das nicht vorstellen.",
+              "ok": false
+            },
+            {
+              "word": "Ich kann mich das nicht vorstellen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Comparison Structures",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "Equality uses 'so … wie': 'so groß wie sein Bruder'. Use 'wie' (not 'als'), and the compared noun stays nominative 'sein Bruder'.",
+          "words": [
+            {
+              "word": "Er ist so groß wie sein Bruder.",
+              "ok": true
+            },
+            {
+              "word": "Er ist so groß als sein Bruder.",
+              "ok": false
+            },
+            {
+              "word": "Er ist so groß wie seinem Bruder.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Word Order: Time, Manner, Place",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "German middle-field order is Time–Manner–Place: 'morgen mit dem Auto nach Hamburg'. Time first and place last.",
+          "words": [
+            {
+              "word": "Ich fahre mit dem Auto morgen nach Hamburg.",
+              "ok": false
+            },
+            {
+              "word": "Ich fahre nach Hamburg mit dem Auto morgen.",
+              "ok": false
+            },
+            {
+              "word": "Ich fahre morgen mit dem Auto nach Hamburg.",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

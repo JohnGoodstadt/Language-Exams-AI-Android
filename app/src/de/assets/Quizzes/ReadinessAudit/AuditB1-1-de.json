@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB1-1-de",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B1 Level Check",
+      "description": "A mixed grammar check to estimate whether the learner is working securely at CEFR B1 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Narrative Past",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "The Präteritum of 'gehen' is the irregular 'ging' (not 'gehte'), and 'machen' is 'machte'.",
+          "words": [
+            {
+              "word": "Er ging nach Hause und machte das Licht an.",
+              "ok": true
+            },
+            {
+              "word": "Er ging nach Hause und macht das Licht an.",
+              "ok": false
+            },
+            {
+              "word": "Er gehte nach Hause und machte das Licht an.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Past Perfect",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "'nachdem' pairs Plusquamperfekt with Präteritum: 'Nachdem er gegessen hatte, ging er …'. 'essen' takes 'hatte' (not 'war'); 'hat' is present perfect.",
+          "words": [
+            {
+              "word": "Nachdem er gegessen hatte, ging er spazieren.",
+              "ok": true
+            },
+            {
+              "word": "Nachdem er gegessen war, ging er spazieren.",
+              "ok": false
+            },
+            {
+              "word": "Nachdem er gegessen hat, ging er spazieren.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Genitive Case",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "Genitive: 'die Farbe des Autos'. Neuter nouns add '-s' ('Autos') with the genitive article 'des' (not dative 'dem').",
+          "words": [
+            {
+              "word": "Die Farbe des Auto ist rot.",
+              "ok": false
+            },
+            {
+              "word": "Die Farbe des Autos ist rot.",
+              "ok": true
+            },
+            {
+              "word": "Die Farbe dem Auto ist rot.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct polite request.",
+          "summary": "B1 · Konjunktiv II",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "Polite Konjunktiv II: 'Könnten Sie …?'. Modals take a bare infinitive (no 'zu'), and with 'Sie' the form is 'könnten' (not 'könntest').",
+          "words": [
+            {
+              "word": "Könntest Sie mir bitte helfen?",
+              "ok": false
+            },
+            {
+              "word": "Könnten Sie mir bitte zu helfen?",
+              "ok": false
+            },
+            {
+              "word": "Könnten Sie mir bitte helfen?",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct passive sentence.",
+          "summary": "B1 · Passive Voice",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "Past passive is 'wurde' + participle: 'wurde … bezahlt'. Use the participle (not the infinitive), and passive uses 'werden', not 'haben'.",
+          "words": [
+            {
+              "word": "Die Rechnung hat gestern bezahlt.",
+              "ok": false
+            },
+            {
+              "word": "Die Rechnung wurde gestern bezahlen.",
+              "ok": false
+            },
+            {
+              "word": "Die Rechnung wurde gestern bezahlt.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Relative Clauses",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "The relative pronoun takes its verb's case — 'helfen' + dative → 'der'. The verb goes to the end: 'der ich geholfen habe'.",
+          "words": [
+            {
+              "word": "Die Frau, der ich habe geholfen, ist Ärztin.",
+              "ok": false
+            },
+            {
+              "word": "Die Frau, die ich geholfen habe, ist Ärztin.",
+              "ok": false
+            },
+            {
+              "word": "Die Frau, der ich geholfen habe, ist Ärztin.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Adjective Declension: All Cases",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After 'dem' (dative), the adjective takes '-en': 'dem schnellen Zug'. Not strong '-em', and 'mit' requires dative 'dem' (not 'den').",
+          "words": [
+            {
+              "word": "Ich fahre mit den schnellen Zug.",
+              "ok": false
+            },
+            {
+              "word": "Ich fahre mit dem schnellen Zug.",
+              "ok": true
+            },
+            {
+              "word": "Ich fahre mit dem schnellem Zug.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Temporal Clauses",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "For a single completed past event use 'als' (not 'wenn'): 'Als ich jung war …'. The verb goes to the end: 'war'.",
+          "words": [
+            {
+              "word": "Wenn ich jung war, wohnte ich in Berlin.",
+              "ok": false
+            },
+            {
+              "word": "Als ich jung war, wohnte ich in Berlin.",
+              "ok": true
+            },
+            {
+              "word": "Als war ich jung, wohnte ich in Berlin.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Verbs with Fixed Prepositions",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "'sich interessieren für' + accusative: 'interessiert sich für Politik'. The fixed preposition is 'für' (not 'an'), and the verb is reflexive.",
+          "words": [
+            {
+              "word": "Sie interessiert sich für Politik.",
+              "ok": true
+            },
+            {
+              "word": "Sie interessiert sich an Politik.",
+              "ok": false
+            },
+            {
+              "word": "Sie interessiert für Politik.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Future Tense",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "Futur I: 'werden' + infinitive at the end: 'werde … studieren'. Keep 'werde' second and use the infinitive (not the participle).",
+          "words": [
+            {
+              "word": "Nächstes Jahr werde ich in Wien studieren.",
+              "ok": true
+            },
+            {
+              "word": "Nächstes Jahr werde ich in Wien studiert.",
+              "ok": false
+            },
+            {
+              "word": "Nächstes Jahr ich werde in Wien studieren.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "AuditB2-1-de",
+  "title": "Part 4: Core Accuracy",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "B2 Level Check",
+      "description": "A mixed grammar check to estimate whether the learner is working securely at CEFR B2 level.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Konjunktiv II: Past & Unreal Conditionals",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "Past Konjunktiv II: 'hätte/wäre' + participle in both clauses. Use 'hättest' (not indicative 'hast'), and 'hätte geholfen' (not 'würde … geholfen haben').",
+          "words": [
+            {
+              "word": "Ich würde dir geholfen haben, wenn du gefragt hättest.",
+              "ok": false
+            },
+            {
+              "word": "Ich hätte dir geholfen, wenn du gefragt hättest.",
+              "ok": true
+            },
+            {
+              "word": "Ich hätte dir geholfen, wenn du gefragt hast.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct reported speech.",
+          "summary": "B2 · Konjunktiv I: Reported Speech",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "Reported speech uses Konjunktiv I: 'sie habe keine Zeit'. Use 'habe' (not indicative 'hat' or the wrong form 'habt').",
+          "words": [
+            {
+              "word": "Sie sagte, sie hat keine Zeit.",
+              "ok": false
+            },
+            {
+              "word": "Sie sagte, sie habe keine Zeit.",
+              "ok": true
+            },
+            {
+              "word": "Sie sagte, sie habt keine Zeit.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Passive with Modals & State Passive",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "Passive with a modal: 'kann … gelöst werden'. Use the participle 'gelöst' (not 'lösen') and 'werden' (not perfect 'worden').",
+          "words": [
+            {
+              "word": "Die Aufgabe kann leicht gelöst worden.",
+              "ok": false
+            },
+            {
+              "word": "Die Aufgabe kann leicht gelöst werden.",
+              "ok": true
+            },
+            {
+              "word": "Die Aufgabe kann leicht lösen werden.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Passive Alternatives",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "'sich lassen' + infinitive is a passive alternative ('can be done'): 'lässt sich … lösen'. It takes the infinitive (not the participle), and the 3rd-person form is 'lässt'.",
+          "words": [
+            {
+              "word": "Das Problem lasst sich leicht lösen.",
+              "ok": false
+            },
+            {
+              "word": "Das Problem lässt sich leicht gelöst.",
+              "ok": false
+            },
+            {
+              "word": "Das Problem lässt sich leicht lösen.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Genitive Prepositions",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "'trotz' takes the genitive: 'trotz des Regens'. The dative 'trotz dem Regen' is colloquial/non-standard, and 'der Regen' is nominative.",
+          "words": [
+            {
+              "word": "Trotz dem Regen spielten sie weiter.",
+              "ok": false
+            },
+            {
+              "word": "Trotz der Regen spielten sie weiter.",
+              "ok": false
+            },
+            {
+              "word": "Trotz des Regens spielten sie weiter.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Subjective Modal Verbs",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "'sollen' can express hearsay ('he is said to be rich'): 'Er soll … sein'. Modals take a bare infinitive (no 'zu'), and the 3rd-person form is 'soll'.",
+          "words": [
+            {
+              "word": "Er soll sehr reich sein.",
+              "ok": true
+            },
+            {
+              "word": "Er sollt sehr reich sein.",
+              "ok": false
+            },
+            {
+              "word": "Er soll sehr reich zu sein.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Advanced Relative Clauses",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "A preposition precedes the relative pronoun, which takes that preposition's case: 'mit dem' (dative). Not 'mit den', and the verb goes to the end.",
+          "words": [
+            {
+              "word": "Das ist der Kollege, mit dem ich arbeiten.",
+              "ok": false
+            },
+            {
+              "word": "Das ist der Kollege, mit dem ich arbeite.",
+              "ok": true
+            },
+            {
+              "word": "Das ist der Kollege, mit den ich arbeite.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Negation & Its Position",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "In the Perfekt, 'nicht' comes before the participle: 'das Buch nicht gelesen'. It can't follow the participle or precede the finite verb.",
+          "words": [
+            {
+              "word": "Ich nicht habe das Buch gelesen.",
+              "ok": false
+            },
+            {
+              "word": "Ich habe das Buch gelesen nicht.",
+              "ok": false
+            },
+            {
+              "word": "Ich habe das Buch nicht gelesen.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Future Perfect",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "Futur II is 'werden' + participle + 'haben': 'werde … beendet haben'. Use the participle 'beendet' (not the infinitive) and a single 'werden'.",
+          "words": [
+            {
+              "word": "Bis morgen werde ich die Arbeit beendet haben.",
+              "ok": true
+            },
+            {
+              "word": "Bis morgen werde ich die Arbeit beendet haben werden.",
+              "ok": false
+            },
+            {
+              "word": "Bis morgen werde ich die Arbeit beenden haben.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Reporting Verbs & Indirect Speech",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "Reported yes/no questions use 'ob' with the verb at the end, often in Konjunktiv II: 'ob ich Zeit hätte'. No inversion, and a finite verb 'hätte'.",
+          "words": [
+            {
+              "word": "Er fragte, ob ich Zeit haben.",
+              "ok": false
+            },
+            {
+              "word": "Er fragte, ob ich hätte Zeit.",
+              "ok": false
+            },
+            {
+              "word": "Er fragte, ob ich Zeit hätte.",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

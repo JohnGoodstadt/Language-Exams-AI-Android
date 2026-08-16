@@ -1,0 +1,246 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "BaselineAuditA2-2-de",
+  "title": "Part 1: Baseline Verification",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Initial Level Placement",
+      "description": "A high-level scan to establish your current CEFR baseline (A2-B2). One question per grammar point across three bands.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Dative Case",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "'mit' takes the dative: 'mit dem Bus'. 'den' is accusative and 'der' nominative; the masculine dative article is 'dem'.",
+          "words": [
+            {
+              "word": "Ich fahre mit der Bus zur Arbeit.",
+              "ok": false
+            },
+            {
+              "word": "Ich fahre mit dem Bus zur Arbeit.",
+              "ok": true
+            },
+            {
+              "word": "Ich fahre mit den Bus zur Arbeit.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Two-Way Prepositions",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "Two-way prepositions take the accusative for movement: 'in die Küche'. The dative 'in der Küche' means location, and 'den' is the wrong article for feminine 'Küche'.",
+          "words": [
+            {
+              "word": "Ich gehe in den Küche.",
+              "ok": false
+            },
+            {
+              "word": "Ich gehe in die Küche.",
+              "ok": true
+            },
+            {
+              "word": "Ich gehe in der Küche.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Reflexive Verbs",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "'sich freuen' takes the accusative reflexive: 'freue mich'. 'mir' is dative, and the reflexive pronoun can't be dropped.",
+          "words": [
+            {
+              "word": "Ich freue mir auf das Wochenende.",
+              "ok": false
+            },
+            {
+              "word": "Ich freue auf das Wochenende.",
+              "ok": false
+            },
+            {
+              "word": "Ich freue mich auf das Wochenende.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Narrative Past",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "The Präteritum of 'spielen' is 'spielte'. After a fronted element ('Als Kind') the verb stays in second position: 'spielte ich'.",
+          "words": [
+            {
+              "word": "Als Kind ich spielte oft im Garten.",
+              "ok": false
+            },
+            {
+              "word": "Als Kind spielte ich oft im Garten.",
+              "ok": true
+            },
+            {
+              "word": "Als Kind spielt ich oft im Garten.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Future Tense",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "Futur I is 'werden' + infinitive at the end: 'werde … besuchen'. Use the infinitive (not the participle) and keep 'werde' in second position.",
+          "words": [
+            {
+              "word": "Morgen werde ich meine Oma besucht.",
+              "ok": false
+            },
+            {
+              "word": "Morgen werde ich meine Oma besuchen.",
+              "ok": true
+            },
+            {
+              "word": "Morgen ich werde meine Oma besuchen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Subordinate Clauses: Cause & Concession",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "'obwohl' sends its verb to the end ('obwohl es regnet'); the following main clause starts with the verb: 'gehen wir'.",
+          "words": [
+            {
+              "word": "Obwohl es regnet, wir gehen spazieren.",
+              "ok": false
+            },
+            {
+              "word": "Obwohl regnet es, gehen wir spazieren.",
+              "ok": false
+            },
+            {
+              "word": "Obwohl es regnet, gehen wir spazieren.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Infinitive Clauses with zu",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "Infinitive clauses use 'zu' + infinitive at the end: 'die Tür zu schließen'. 'zu' comes directly before the infinitive and can't be omitted.",
+          "words": [
+            {
+              "word": "Ich habe vergessen, die Tür zu schließen.",
+              "ok": true
+            },
+            {
+              "word": "Ich habe vergessen, zu die Tür schließen.",
+              "ok": false
+            },
+            {
+              "word": "Ich habe vergessen, die Tür schließen.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Passive with Modals & State Passive",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "Passive with a modal is 'modal + participle + werden': 'muss … ausgefüllt werden'. Use the participle 'ausgefüllt' (not the infinitive) and 'werden' (not perfect 'worden').",
+          "words": [
+            {
+              "word": "Das Formular muss bis Freitag ausfüllen werden.",
+              "ok": false
+            },
+            {
+              "word": "Das Formular muss bis Freitag ausgefüllt worden.",
+              "ok": false
+            },
+            {
+              "word": "Das Formular muss bis Freitag ausgefüllt werden.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Subjective Modal Verbs",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "Modals can express assumptions: 'er muss krank sein'. Modals take a bare infinitive — no 'zu' and no second modal.",
+          "words": [
+            {
+              "word": "Er ist nicht da; er muss krank sein müssen.",
+              "ok": false
+            },
+            {
+              "word": "Er ist nicht da; er muss krank zu sein.",
+              "ok": false
+            },
+            {
+              "word": "Er ist nicht da; er muss krank sein.",
+              "ok": true
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "sentence": "Choose the correct sentence.",
+          "summary": "B2 · Nominalisation",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "Nominal style uses a noun + genitive: 'die Eröffnung des Museums'. 'Eröffnung' is feminine (dative 'der'), and the following noun is genitive 'des Museums'.",
+          "words": [
+            {
+              "word": "Nach dem Eröffnung des Museums kamen viele Besucher.",
+              "ok": false
+            },
+            {
+              "word": "Nach der Eröffnung dem Museum kamen viele Besucher.",
+              "ok": false
+            },
+            {
+              "word": "Nach der Eröffnung des Museums kamen viele Besucher.",
+              "ok": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
