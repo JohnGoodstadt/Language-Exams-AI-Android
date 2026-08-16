@@ -1,0 +1,255 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GrammarPrepositionsPlaceTimeA1-en",
+  "title": "Prepositions of Place & Time",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise common A1 prepositions for place and time, including in, on, at, under, next to and between.",
+      "sortorder": 1,
+      "learningTitle": "Using Basic Prepositions of Place and Time",
+      "learningPoints": [
+        "Use in for enclosed places and for months and years.",
+        "Use on for surfaces, days and dates.",
+        "Use at for specific places and clock times.",
+        "Use under, next to and between to describe position.",
+        "Recognise common fixed expressions such as at home and at night.",
+        "Choose the preposition that matches the place or time expression."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Using 'in' for an enclosed place.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "Use IN when something is inside an enclosed space.",
+          "sentence": "The keys are _____ my bag.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'on' for a surface.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "Use ON when something is touching a surface.",
+          "sentence": "The book is _____ the table.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'at' with clock time.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "Use AT before a specific clock time.",
+          "sentence": "The lesson starts _____ nine o'clock.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'on' with days.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "Use ON before days of the week.",
+          "sentence": "I work _____ Monday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'in' with months.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "Use IN before months and years.",
+          "sentence": "My birthday is _____ July.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'under' for position.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "Use UNDER when something is lower than and directly below another thing.",
+          "sentence": "The cat is _____ the chair.",
+          "words": [
+            {
+              "ok": true,
+              "word": "under"
+            },
+            {
+              "ok": false,
+              "word": "between"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'next to'.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "NEXT TO means beside or immediately near something.",
+          "sentence": "The bank is _____ the supermarket.",
+          "words": [
+            {
+              "ok": true,
+              "word": "next to"
+            },
+            {
+              "ok": false,
+              "word": "under"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'between'.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "BETWEEN is used when something is in the middle of two people or things.",
+          "sentence": "The café is _____ the bank and the hotel.",
+          "words": [
+            {
+              "ok": true,
+              "word": "between"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "under"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'at' in 'at home'.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "AT HOME is a common fixed expression.",
+          "sentence": "My parents are _____ home.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'at' in 'at night'.",
+          "level": "A1",
+          "category": "Prepositions of Place & Time",
+          "explain": "Use AT in the common expression AT NIGHT.",
+          "sentence": "I usually read _____ night.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

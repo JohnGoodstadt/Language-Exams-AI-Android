@@ -1,0 +1,255 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarAdjectiveOrderA1-en",
+  "title": "Adjective Order",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise basic adjective position and simple adjective order in common A1 noun phrases.",
+      "sortorder": 1,
+      "learningTitle": "Putting Adjectives in the Right Place",
+      "learningPoints": [
+        "Put most adjectives before the noun they describe.",
+        "Do not normally put an adjective after a noun in a basic noun phrase.",
+        "Use adjectives after forms of the verb 'to be'.",
+        "When two simple adjectives come before a noun, opinion commonly comes before size.",
+        "Size commonly comes before colour.",
+        "Do not add -s to an adjective when the noun is plural."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Putting an adjective before a noun.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "In a basic noun phrase, the adjective normally comes before the noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She has a red car."
+            },
+            {
+              "ok": false,
+              "word": "She has a car red."
+            },
+            {
+              "ok": false,
+              "word": "She has a reds car."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using an adjective after 'be'.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "An adjective can come after AM, IS or ARE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The house is big."
+            },
+            {
+              "ok": false,
+              "word": "The house big is."
+            },
+            {
+              "ok": false,
+              "word": "The is house big."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Keeping adjectives unchanged with plural nouns.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "English adjectives do not normally take a plural -s.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They are small dogs."
+            },
+            {
+              "ok": false,
+              "word": "They are smalls dogs."
+            },
+            {
+              "ok": false,
+              "word": "They are dogs small."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Putting size before colour.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "In simple adjective order, size normally comes before colour.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He has a big black bag."
+            },
+            {
+              "ok": false,
+              "word": "He has a black big bag."
+            },
+            {
+              "ok": false,
+              "word": "He has a bag big black."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Putting opinion before size.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "A simple opinion adjective normally comes before a size adjective.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "It is a nice small café."
+            },
+            {
+              "ok": false,
+              "word": "It is a small nice café."
+            },
+            {
+              "ok": false,
+              "word": "It is a café nice small."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Putting colour before the noun.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "A colour adjective normally comes directly before the noun if it is the only adjective.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "She is wearing a blue dress."
+            },
+            {
+              "ok": false,
+              "word": "She is wearing a dress blue."
+            },
+            {
+              "ok": false,
+              "word": "She is wearing a blues dress."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using two simple adjectives naturally.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "Size normally comes before colour in a simple two-adjective phrase.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "We have a small white table."
+            },
+            {
+              "ok": false,
+              "word": "We have a white small table."
+            },
+            {
+              "ok": false,
+              "word": "We have a table small white."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using an adjective after 'looks'.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "After LOOKS meaning 'appears', use an adjective.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Your room looks clean."
+            },
+            {
+              "ok": false,
+              "word": "Your room clean looks."
+            },
+            {
+              "ok": false,
+              "word": "Your clean looks room."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Putting an age adjective before a noun.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "An age adjective such as OLD or NEW normally comes before the noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "They live in an old house."
+            },
+            {
+              "ok": false,
+              "word": "They live in a house old."
+            },
+            {
+              "ok": false,
+              "word": "They live in an olds house."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Ordering size and age adjectives.",
+          "level": "A1",
+          "category": "Adjective Order",
+          "explain": "In simple adjective order, size generally comes before age.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "He bought a small new phone."
+            },
+            {
+              "ok": false,
+              "word": "He bought a new small phone."
+            },
+            {
+              "ok": false,
+              "word": "He bought a phone small new."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

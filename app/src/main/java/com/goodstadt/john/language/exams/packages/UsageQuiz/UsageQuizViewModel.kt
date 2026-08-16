@@ -636,8 +636,21 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         // 1. Check History BEFORE saving
         val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
+        val questionCount = _questions.value.size
+        // Distinct (category, level) pairs this run covered - for the mastery clear below.
+        val practisedPairs = _questions.value.mapNotNull { q ->
+            val c = q.category; val l = q.level
+            if (!c.isNullOrBlank() && !l.isNullOrBlank()) c to l else null
+        }.toSet()
 
         viewModelScope.launch {
+
+            // Mastery clear (same rule as the Grammar quiz): aced on first try - every question
+            // answered, exactly one tap each, all correct (correct == tries == questionCount).
+            // Zeroes the weak counts for the categories practised, so the Focus page moves on.
+            if (questionCount > 0 && qs.value.correct == questionCount && qs.value.tries == questionCount) {
+                practisedPairs.forEach { (c, l) -> auditRepository.clearCategoryWeakness(c, l) }
+            }
 
             quizHistoryManager.saveAttempt(qs.value.skillLevel, qs.value.quizNumber, qs.value.title, qs.value.correct, qs.value.tries)
 

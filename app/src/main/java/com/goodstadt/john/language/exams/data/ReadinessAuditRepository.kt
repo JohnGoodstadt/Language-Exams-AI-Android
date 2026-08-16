@@ -117,6 +117,23 @@ class ReadinessAuditRepository @Inject constructor(
         return updated
     }
 
+    /**
+     * Mastery clear: a fully-correct quiz run means the learner has (re)mastered [category] at
+     * [level], so zero its incorrect / don't-know counts. The [correct] tally is kept, so weakness
+     * ([incorrect] + [dontKnow]) drops to 0 and the category leaves the Focus list until the learner
+     * slips again. No-op if the category has no entry yet.
+     */
+    suspend fun clearCategoryWeakness(category: String, level: String) {
+        val key = categoryScoreKey(category, level)
+        context.auditDataStore.edit { prefs ->
+            val map = decodeCategoryScores(prefs[KEY_CATEGORY_SCORES]).toMutableMap()
+            val current = map[key] ?: return@edit
+            if (current.incorrect == 0 && current.dontKnow == 0) return@edit
+            map[key] = current.copy(incorrect = 0, dontKnow = 0)
+            prefs[KEY_CATEGORY_SCORES] = json.encodeToString(map)
+        }
+    }
+
     private fun decodeCategoryScores(raw: String?): Map<String, CategoryScore> =
         if (raw.isNullOrBlank()) emptyMap()
         else try { json.decodeFromString<Map<String, CategoryScore>>(raw) } catch (e: Exception) { emptyMap() }

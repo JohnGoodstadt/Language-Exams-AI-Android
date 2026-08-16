@@ -1,0 +1,255 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GrammarArticlesA1-en",
+  "title": "Indefinite & Definite Articles",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise the basic use of 'a', 'an' and 'the' with common A1 nouns.",
+      "sortorder": 1,
+      "learningTitle": "Using A, An and The",
+      "learningPoints": [
+        "Use a before a singular countable noun beginning with a consonant sound.",
+        "Use an before a singular countable noun beginning with a vowel sound.",
+        "Use the when the listener knows which person or thing you mean.",
+        "Use a or an when mentioning one non-specific thing.",
+        "Choose articles by sound, not simply by the first written letter.",
+        "Recognise common A1 phrases that use the definite article."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Using 'a' before a consonant sound.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use A before a singular countable noun beginning with a consonant sound.",
+          "sentence": "I have _____ dog.",
+          "words": [
+            {
+              "ok": true,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "the"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'an' before a vowel sound.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use AN before a singular countable noun beginning with a vowel sound.",
+          "sentence": "She is eating _____ apple.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "the"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'the' for a known object.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use THE when both speaker and listener know which thing is meant.",
+          "sentence": "Please close _____ door.",
+          "words": [
+            {
+              "ok": true,
+              "word": "the"
+            },
+            {
+              "ok": false,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'a' for a job.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use A or AN before a singular job noun.",
+          "sentence": "My father is _____ teacher.",
+          "words": [
+            {
+              "ok": true,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "the"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'an' before a vowel sound in a job noun.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use AN before a singular noun beginning with a vowel sound.",
+          "sentence": "She is _____ engineer.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "the"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'the' for a specific place in context.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use THE when referring to a particular place already understood from the situation.",
+          "sentence": "The children are playing in _____ garden behind our house.",
+          "words": [
+            {
+              "ok": true,
+              "word": "the"
+            },
+            {
+              "ok": false,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'a' when something is mentioned non-specifically.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use A when you mean one of many possible things.",
+          "sentence": "I need _____ pen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "the"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'the' with the sun.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use THE with unique things such as the sun.",
+          "sentence": "_____ sun is shining today.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The"
+            },
+            {
+              "ok": false,
+              "word": "A"
+            },
+            {
+              "ok": false,
+              "word": "An"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Choosing an article by sound.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "Use AN before a word that begins with a vowel sound.",
+          "sentence": "It is _____ old house.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "a"
+            },
+            {
+              "ok": false,
+              "word": "the"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'the' when a noun has already been introduced.",
+          "level": "A1",
+          "category": "Indefinite & Definite Articles",
+          "explain": "After introducing something with A or AN, use THE when referring to the same thing again.",
+          "sentence": "I saw a cat. _____ cat was black.",
+          "words": [
+            {
+              "ok": true,
+              "word": "The"
+            },
+            {
+              "ok": false,
+              "word": "A"
+            },
+            {
+              "ok": false,
+              "word": "An"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

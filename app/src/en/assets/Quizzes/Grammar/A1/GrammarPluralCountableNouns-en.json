@@ -1,0 +1,255 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GrammarPluralCountableNounsA1-en",
+  "title": "Plural & Countable Nouns",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise singular and plural countable nouns, including common regular and irregular plural forms.",
+      "sortorder": 1,
+      "learningTitle": "Using Singular and Plural Countable Nouns",
+      "learningPoints": [
+        "Use singular countable nouns for one person or thing.",
+        "Add -s to form most regular plurals.",
+        "Add -es to some nouns ending in sounds such as -s, -sh, -ch or -x.",
+        "Learn common irregular plurals such as children and men.",
+        "Use a or an with one singular countable noun.",
+        "Use numbers and words such as many with plural countable nouns."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Forming a regular plural with -s.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "Most countable nouns add -S in the plural.",
+          "sentence": "There are three _____ on the table.",
+          "words": [
+            {
+              "ok": true,
+              "word": "books"
+            },
+            {
+              "ok": false,
+              "word": "book"
+            },
+            {
+              "ok": false,
+              "word": "bookes"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Forming a plural with -es.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "Some nouns ending in -s, -sh, -ch or -x add -ES.",
+          "sentence": "I can see two _____ at the bus stop.",
+          "words": [
+            {
+              "ok": true,
+              "word": "buses"
+            },
+            {
+              "ok": false,
+              "word": "bus"
+            },
+            {
+              "ok": false,
+              "word": "buss"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using the irregular plural 'children'.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "The plural of CHILD is CHILDREN.",
+          "sentence": "The _____ are playing outside.",
+          "words": [
+            {
+              "ok": true,
+              "word": "children"
+            },
+            {
+              "ok": false,
+              "word": "childs"
+            },
+            {
+              "ok": false,
+              "word": "child"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using the irregular plural 'men'.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "The plural of MAN is MEN.",
+          "sentence": "Two _____ are waiting outside.",
+          "words": [
+            {
+              "ok": true,
+              "word": "men"
+            },
+            {
+              "ok": false,
+              "word": "mans"
+            },
+            {
+              "ok": false,
+              "word": "man"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a singular countable noun after 'a'.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "A is followed by a singular countable noun.",
+          "sentence": "She has a new _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "phone"
+            },
+            {
+              "ok": false,
+              "word": "phones"
+            },
+            {
+              "ok": false,
+              "word": "phonees"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a plural noun after a number.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "A number greater than one is followed by a plural countable noun.",
+          "sentence": "We need four _____.",
+          "words": [
+            {
+              "ok": true,
+              "word": "chairs"
+            },
+            {
+              "ok": false,
+              "word": "chair"
+            },
+            {
+              "ok": false,
+              "word": "chaires"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Changing -y to -ies after a consonant.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "For many nouns ending consonant + Y, change Y to IES in the plural.",
+          "sentence": "There are two _____ in this town.",
+          "words": [
+            {
+              "ok": true,
+              "word": "libraries"
+            },
+            {
+              "ok": false,
+              "word": "librarys"
+            },
+            {
+              "ok": false,
+              "word": "library"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using the plural of 'woman'.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "The plural of WOMAN is WOMEN.",
+          "sentence": "Three _____ work in this office.",
+          "words": [
+            {
+              "ok": true,
+              "word": "women"
+            },
+            {
+              "ok": false,
+              "word": "womans"
+            },
+            {
+              "ok": false,
+              "word": "woman"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'many' with a plural countable noun.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "Use MANY with plural countable nouns.",
+          "sentence": "How many _____ are in your class?",
+          "words": [
+            {
+              "ok": true,
+              "word": "students"
+            },
+            {
+              "ok": false,
+              "word": "student"
+            },
+            {
+              "ok": false,
+              "word": "student's"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'one' with a singular countable noun.",
+          "level": "A1",
+          "category": "Plural & Countable Nouns",
+          "explain": "ONE is followed by a singular countable noun.",
+          "sentence": "There is only one _____ in the room.",
+          "words": [
+            {
+              "ok": true,
+              "word": "window"
+            },
+            {
+              "ok": false,
+              "word": "windows"
+            },
+            {
+              "ok": false,
+              "word": "windowes"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

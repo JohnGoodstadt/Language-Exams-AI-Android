@@ -1,0 +1,41 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarReportedQuestionsCommandsB2-en",
+  "title": "Reported Questions & Commands",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "PLACEHOLDER - replace with real Reported Questions & Commands (B2) questions.",
+      "sortorder": 1,
+      "learningTitle": "Using Reported Questions & Commands",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Placeholder question.",
+          "level": "B2",
+          "category": "Reported Questions & Commands",
+          "explain": "Placeholder explanation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "PLACEHOLDER correct answer."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 1."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 2."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

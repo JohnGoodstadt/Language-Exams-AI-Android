@@ -1,0 +1,255 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GrammarFutureGoingToA1-en",
+  "title": "Future: going to",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise 'be going to' for simple future plans and intentions.",
+      "sortorder": 1,
+      "learningTitle": "Talking About Plans with Going To",
+      "learningPoints": [
+        "Use am, is or are + going to + base verb for future plans.",
+        "Choose the correct form of the verb 'to be' for the subject.",
+        "Use going to for intentions and plans.",
+        "Use not after am, is or are to make negatives.",
+        "Put am, is or are before the subject to make questions.",
+        "Keep the main verb in its base form after going to."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Using 'am going to' with 'I'.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "Use AM GOING TO + base verb with I.",
+          "sentence": "I _____ visit my grandmother tomorrow.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am going to"
+            },
+            {
+              "ok": false,
+              "word": "is going to"
+            },
+            {
+              "ok": false,
+              "word": "am go to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'is going to' with 'she'.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "Use IS GOING TO + base verb with HE, SHE and IT.",
+          "sentence": "She _____ buy a new coat.",
+          "words": [
+            {
+              "ok": true,
+              "word": "is going to"
+            },
+            {
+              "ok": false,
+              "word": "are going to"
+            },
+            {
+              "ok": false,
+              "word": "is go to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'are going to' with 'we'.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "Use ARE GOING TO + base verb with WE and THEY.",
+          "sentence": "We _____ cook dinner tonight.",
+          "words": [
+            {
+              "ok": true,
+              "word": "are going to"
+            },
+            {
+              "ok": false,
+              "word": "is going to"
+            },
+            {
+              "ok": false,
+              "word": "are go to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Keeping the main verb in the base form.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "After GOING TO, use the base form of the main verb.",
+          "sentence": "He is going to _____ football after school.",
+          "words": [
+            {
+              "ok": true,
+              "word": "play"
+            },
+            {
+              "ok": false,
+              "word": "plays"
+            },
+            {
+              "ok": false,
+              "word": "played"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Making a negative with 'going to'.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "Put NOT after AM, IS or ARE to make a negative.",
+          "sentence": "They _____ travel this weekend.",
+          "words": [
+            {
+              "ok": true,
+              "word": "aren't going to"
+            },
+            {
+              "ok": false,
+              "word": "don't going to"
+            },
+            {
+              "ok": false,
+              "word": "not going to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Making a question with 'going to'.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "Put AM, IS or ARE before the subject to make a question.",
+          "sentence": "_____ you going to watch the film tonight?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Are"
+            },
+            {
+              "ok": false,
+              "word": "Do"
+            },
+            {
+              "ok": false,
+              "word": "Is"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'is' with a singular subject.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "A singular third-person subject takes IS before GOING TO.",
+          "sentence": "My brother _____ start a new job next week.",
+          "words": [
+            {
+              "ok": true,
+              "word": "is going to"
+            },
+            {
+              "ok": false,
+              "word": "are going to"
+            },
+            {
+              "ok": false,
+              "word": "going to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'are' with a plural subject.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "A plural subject takes ARE before GOING TO.",
+          "sentence": "My friends _____ come to my house later.",
+          "words": [
+            {
+              "ok": true,
+              "word": "are going to"
+            },
+            {
+              "ok": false,
+              "word": "is going to"
+            },
+            {
+              "ok": false,
+              "word": "are going"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'going to' for an intention.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "Use GOING TO for something someone plans or intends to do.",
+          "sentence": "I am going to _____ English every day.",
+          "words": [
+            {
+              "ok": true,
+              "word": "study"
+            },
+            {
+              "ok": false,
+              "word": "studies"
+            },
+            {
+              "ok": false,
+              "word": "studied"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Forming a negative with 'isn't going to'.",
+          "level": "A1",
+          "category": "Future: going to",
+          "explain": "Use ISN'T GOING TO with HE, SHE, IT or a singular noun.",
+          "sentence": "Anna _____ work tomorrow.",
+          "words": [
+            {
+              "ok": true,
+              "word": "isn't going to"
+            },
+            {
+              "ok": false,
+              "word": "doesn't going to"
+            },
+            {
+              "ok": false,
+              "word": "isn't go to"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

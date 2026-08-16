@@ -1,0 +1,255 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GrammarBasicConjunctionsA1-en",
+  "title": "Basic Conjunctions",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise basic conjunctions used to join simple A1 ideas, including and, but, or, because and so.",
+      "sortorder": 1,
+      "learningTitle": "Joining Simple Ideas",
+      "learningPoints": [
+        "Use and to add similar information.",
+        "Use but to show a contrast.",
+        "Use or to show a choice.",
+        "Use because to give a reason.",
+        "Use so to give a simple result.",
+        "Choose a conjunction by understanding the relationship between the two ideas."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Using 'and' to add information.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "Use AND to join similar or additional information.",
+          "sentence": "I have a brother _____ a sister.",
+          "words": [
+            {
+              "ok": true,
+              "word": "and"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'but' for contrast.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "Use BUT when the second idea contrasts with the first.",
+          "sentence": "The room is small _____ comfortable.",
+          "words": [
+            {
+              "ok": true,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "and"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'or' for a choice.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "Use OR when presenting alternatives.",
+          "sentence": "Would you like tea _____ coffee?",
+          "words": [
+            {
+              "ok": true,
+              "word": "or"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "so"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'because' to give a reason.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "Use BECAUSE before the reason for something.",
+          "sentence": "I am wearing a coat _____ it is cold.",
+          "words": [
+            {
+              "ok": true,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "or"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'so' to show a result.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "Use SO before a simple result.",
+          "sentence": "It was raining, _____ I took an umbrella.",
+          "words": [
+            {
+              "ok": true,
+              "word": "so"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'and' to join actions.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "Use AND to connect two actions or ideas that go together.",
+          "sentence": "She opened the door _____ walked inside.",
+          "words": [
+            {
+              "ok": true,
+              "word": "and"
+            },
+            {
+              "ok": false,
+              "word": "or"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'but' to contrast preferences.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "BUT joins two ideas that are different or opposite.",
+          "sentence": "I like coffee, _____ I don't like tea.",
+          "words": [
+            {
+              "ok": true,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "so"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'because' after a statement.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "BECAUSE introduces the reason why something happens or is true.",
+          "sentence": "He is tired _____ he worked all day.",
+          "words": [
+            {
+              "ok": true,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "or"
+            },
+            {
+              "ok": false,
+              "word": "and"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'or' in a question.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "OR is used when someone must choose between alternatives.",
+          "sentence": "Do you want to walk _____ take the bus?",
+          "words": [
+            {
+              "ok": true,
+              "word": "or"
+            },
+            {
+              "ok": false,
+              "word": "but"
+            },
+            {
+              "ok": false,
+              "word": "so"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'so' for cause and result.",
+          "level": "A1",
+          "category": "Basic Conjunctions",
+          "explain": "SO introduces the result of the first part of the sentence.",
+          "sentence": "The shop was closed, _____ we went home.",
+          "words": [
+            {
+              "ok": true,
+              "word": "so"
+            },
+            {
+              "ok": false,
+              "word": "because"
+            },
+            {
+              "ok": false,
+              "word": "or"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

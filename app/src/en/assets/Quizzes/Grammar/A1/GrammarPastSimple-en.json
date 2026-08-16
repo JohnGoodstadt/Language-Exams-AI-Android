@@ -28,7 +28,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "GO becomes WENT in the Past Simple.",
-          "sentence": "Yesterday I _____ to the park.",
+          "sentence": "Yesterday I _ to the park.",
           "words": [
             { "ok": true, "word": "went" },
             { "ok": false, "word": "go" },
@@ -42,7 +42,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "Most regular verbs add -ED in the Past Simple.",
-          "sentence": "They _____ football after school.",
+          "sentence": "They _ football after school.",
           "words": [
             { "ok": true, "word": "played" },
             { "ok": false, "word": "play" },
@@ -56,7 +56,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "HAVE becomes HAD in the Past Simple.",
-          "sentence": "She _____ breakfast at eight o'clock.",
+          "sentence": "She _ breakfast at eight o'clock.",
           "words": [
             { "ok": true, "word": "had" },
             { "ok": false, "word": "has" },
@@ -70,7 +70,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "SEE becomes SAW in the Past Simple.",
-          "sentence": "We _____ a beautiful rainbow.",
+          "sentence": "We _ a beautiful rainbow.",
           "words": [
             { "ok": true, "word": "saw" },
             { "ok": false, "word": "see" },
@@ -84,7 +84,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "WATCH becomes WATCHED in the Past Simple.",
-          "sentence": "He _____ television last night.",
+          "sentence": "He _ television last night.",
           "words": [
             { "ok": true, "word": "watched" },
             { "ok": false, "word": "watch" },
@@ -98,7 +98,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "EAT becomes ATE in the Past Simple.",
-          "sentence": "My family _____ dinner together.",
+          "sentence": "My family _ dinner together.",
           "words": [
             { "ok": true, "word": "ate" },
             { "ok": false, "word": "eat" },
@@ -112,7 +112,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "VISIT becomes VISITED in the Past Simple.",
-          "sentence": "I _____ my grandparents last weekend.",
+          "sentence": "I _ my grandparents last weekend.",
           "words": [
             { "ok": true, "word": "visited" },
             { "ok": false, "word": "visit" },
@@ -126,7 +126,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "BUY becomes BOUGHT in the Past Simple.",
-          "sentence": "Dad _____ some milk yesterday.",
+          "sentence": "Dad _ some milk yesterday.",
           "words": [
             { "ok": true, "word": "bought" },
             { "ok": false, "word": "buy" },
@@ -140,7 +140,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "OPEN becomes OPENED in the Past Simple.",
-          "sentence": "She _____ the window because it was hot.",
+          "sentence": "She _ the window because it was hot.",
           "words": [
             { "ok": true, "word": "opened" },
             { "ok": false, "word": "open" },
@@ -154,7 +154,7 @@
           "level": "A1",
           "category": "Past Simple",
           "explain": "WRITE becomes WROTE in the Past Simple.",
-          "sentence": "Tom _____ a letter to his friend.",
+          "sentence": "Tom _ a letter to his friend.",
           "words": [
             { "ok": true, "word": "wrote" },
             { "ok": false, "word": "write" },

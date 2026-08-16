@@ -32,14 +32,10 @@ data class FocusRow(
     val weakness: Int get() = score.incorrect + score.dontKnow
     val total: Int get() = score.correct + score.incorrect + score.dontKnow
 
-    // Priority = don't-knows (explicit "I don't know", weighted heavier) + incorrects (possible slip).
-    // Correct answers never lower this. Higher = nearer the top of the list.
-    val priorityScore: Int get() = score.dontKnow * DONT_KNOW_WEIGHT + score.incorrect * INCORRECT_WEIGHT
-
-    companion object {
-        const val DONT_KNOW_WEIGHT = 3
-        const val INCORRECT_WEIGHT = 1
-    }
+    // How well the learner scores in this category, 0f..1f (e.g. 3 of 10 -> 0.3). Lower = weaker.
+    // A don't-know counts against you just like a wrong answer. No answers yet -> treated as 1f
+    // (nothing to worry about), though such rows are filtered out before ranking anyway.
+    val accuracy: Float get() = if (total == 0) 1f else score.correct.toFloat() / total
 }
 
 /** What the Focus screen should show. */
@@ -107,7 +103,14 @@ class FocusViewModel @Inject constructor(
             val ceiling = levelRank(level)
             val prioritised = toRows(scores)
                 .filter { it.weakness > 0 && levelRank(it.level) in 1..ceiling }
-                .sortedWith(compareByDescending<FocusRow> { it.priorityScore }.thenBy { it.category })
+                // Weakest first: lowest score (e.g. 3/10 above 4/10) at the top. Ties broken by more
+                // admitted don't-knows, then more evidence (bigger sample), then name for stability.
+                .sortedWith(
+                    compareBy<FocusRow> { it.accuracy }
+                        .thenByDescending { it.score.dontKnow }
+                        .thenByDescending { it.total }
+                        .thenBy { it.category }
+                )
                 .take(MAX_FOCUS_ROWS)
 
             when {

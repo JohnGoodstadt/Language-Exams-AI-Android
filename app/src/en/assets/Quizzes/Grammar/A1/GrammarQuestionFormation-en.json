@@ -1,0 +1,255 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarQuestionFormationA1-en",
+  "title": "Question Formation",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise the basic word order used to form A1 questions with be, do, does and common question words.",
+      "sortorder": 1,
+      "learningTitle": "Forming Basic English Questions",
+      "learningPoints": [
+        "Put the verb 'to be' before the subject in questions.",
+        "Use do with I, you, we and they.",
+        "Use does with he, she and it.",
+        "Use the base verb after do and does.",
+        "Use question words such as what, where, when, who and how.",
+        "Keep the correct word order after a question word."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Making a question with 'be'.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "With the verb BE, put AM, IS or ARE before the subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Are you tired?"
+            },
+            {
+              "ok": false,
+              "word": "You are tired?"
+            },
+            {
+              "ok": false,
+              "word": "Do you are tired?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Making a question with 'do'.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "Use DO before YOU and a base verb in a Present Simple question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Do you like coffee?"
+            },
+            {
+              "ok": false,
+              "word": "You do like coffee?"
+            },
+            {
+              "ok": false,
+              "word": "Are you like coffee?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Making a question with 'does'.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "Use DOES with HE, SHE and IT, followed by the base verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Does he work here?"
+            },
+            {
+              "ok": false,
+              "word": "Does he works here?"
+            },
+            {
+              "ok": false,
+              "word": "Do he work here?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'where' with the verb 'be'.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "With BE, use question word + BE + subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Where is your bag?"
+            },
+            {
+              "ok": false,
+              "word": "Where your bag is?"
+            },
+            {
+              "ok": false,
+              "word": "Where does your bag?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'what' with 'do'.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "Use WHAT + DO + subject + base verb for this type of question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "What do you eat for breakfast?"
+            },
+            {
+              "ok": false,
+              "word": "What you eat for breakfast?"
+            },
+            {
+              "ok": false,
+              "word": "What do you eats for breakfast?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'when' in a Present Simple question.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "Use WHEN + DOES + subject + base verb with a singular third-person subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "When does the shop open?"
+            },
+            {
+              "ok": false,
+              "word": "When the shop opens?"
+            },
+            {
+              "ok": false,
+              "word": "When does the shop opens?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'how old' with 'be'.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "Use HOW OLD + BE + subject to ask about age.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "How old is your sister?"
+            },
+            {
+              "ok": false,
+              "word": "How old your sister is?"
+            },
+            {
+              "ok": false,
+              "word": "How old does your sister?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'who' with the verb 'be'.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "WHO can be followed directly by IS when asking someone's identity.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who is that man?"
+            },
+            {
+              "ok": false,
+              "word": "Who that man is?"
+            },
+            {
+              "ok": false,
+              "word": "Who does that man?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Making a Past Simple question.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "Use DID + subject + base verb for a Past Simple question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Did you see Maria yesterday?"
+            },
+            {
+              "ok": false,
+              "word": "Did you saw Maria yesterday?"
+            },
+            {
+              "ok": false,
+              "word": "Do you saw Maria yesterday?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'why' in a simple question.",
+          "level": "A1",
+          "category": "Question Formation",
+          "explain": "With BE, use WHY + BE + subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Why are you late?"
+            },
+            {
+              "ok": false,
+              "word": "Why you are late?"
+            },
+            {
+              "ok": false,
+              "word": "Why do you late?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

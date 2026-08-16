@@ -1,0 +1,41 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarPrefixesSuffixesA2-en",
+  "title": "Prefixes & Suffixes",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "PLACEHOLDER - replace with real Prefixes & Suffixes (A2) questions.",
+      "sortorder": 1,
+      "learningTitle": "Using Prefixes & Suffixes",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Placeholder question.",
+          "level": "A2",
+          "category": "Prefixes & Suffixes",
+          "explain": "Placeholder explanation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "PLACEHOLDER correct answer."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 1."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 2."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

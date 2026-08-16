@@ -1,0 +1,41 @@
+{
+  "fileformat": 10,
+  "location": 0,
+  "sheetname": "GrammarAdjectiveAdverbDistinctionsB1-en",
+  "title": "Adjective & Adverb Distinctions",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "PLACEHOLDER - replace with real Adjective & Adverb Distinctions (B1) questions.",
+      "sortorder": 1,
+      "learningTitle": "Using Adjective & Adverb Distinctions",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Placeholder question.",
+          "level": "B1",
+          "category": "Adjective & Adverb Distinctions",
+          "explain": "Placeholder explanation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "PLACEHOLDER correct answer."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 1."
+            },
+            {
+              "ok": false,
+              "word": "PLACEHOLDER wrong answer 2."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

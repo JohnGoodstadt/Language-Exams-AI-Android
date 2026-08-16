@@ -311,8 +311,22 @@ class GrammarQuizViewModel @Inject constructor(
         val qs = quizStatistics
         val now = System.currentTimeMillis()
         val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
+        val questionCount = _questions.value.size
+        // The distinct (category, level) pairs this run covered - for the mastery clear below.
+        val practisedPairs = _questions.value.mapNotNull { q ->
+            val c = q.category; val l = q.level
+            if (!c.isNullOrBlank() && !l.isNullOrBlank()) c to l else null
+        }.toSet()
 
         viewModelScope.launch {
+            // Mastery clear: aced on first try (every question answered, exactly one tap each, all
+            // correct -> correct == tries == questionCount). Zeroes the weak counts for the
+            // categories practised, so the Focus page can move on to the next weak area. A single
+            // wrong tap anywhere (tries > correct) means it was not aced, so nothing clears.
+            if (questionCount > 0 && qs.value.correct == questionCount && qs.value.tries == questionCount) {
+                practisedPairs.forEach { (c, l) -> auditRepository.clearCategoryWeakness(c, l) }
+            }
+
             quizHistoryManager.saveAttempt(qs.value.skillLevel, qs.value.quizNumber, qs.value.title, qs.value.correct, qs.value.tries)
 
             if (qs.value.correct < qs.value.tries) {

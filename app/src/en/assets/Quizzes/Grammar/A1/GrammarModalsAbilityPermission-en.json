@@ -1,0 +1,255 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GrammarModalsAbilityPermissionA1-en",
+  "title": "Modals of Ability & Permission",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Practise 'can' and 'can't' for basic ability and permission.",
+      "sortorder": 1,
+      "learningTitle": "Using Can and Can't",
+      "learningPoints": [
+        "Use can to talk about ability.",
+        "Use can't to say that someone is not able to do something.",
+        "Use can to ask for and give simple permission.",
+        "Use Can I...? for basic permission questions.",
+        "Use the base form of the verb after can and can't.",
+        "Do not add -s to a verb after can."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Using 'can' for ability.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "Use CAN + base verb to say someone is able to do something.",
+          "sentence": "I _____ swim very well.",
+          "words": [
+            {
+              "ok": true,
+              "word": "can"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "do"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'can't' for lack of ability.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "Use CAN'T + base verb to say someone is not able to do something.",
+          "sentence": "My baby brother _____ read yet.",
+          "words": [
+            {
+              "ok": true,
+              "word": "can't"
+            },
+            {
+              "ok": false,
+              "word": "doesn't can"
+            },
+            {
+              "ok": false,
+              "word": "isn't"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using the base verb after 'can'.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "The verb after CAN stays in the base form.",
+          "sentence": "She can _____ the piano.",
+          "words": [
+            {
+              "ok": true,
+              "word": "play"
+            },
+            {
+              "ok": false,
+              "word": "plays"
+            },
+            {
+              "ok": false,
+              "word": "playing"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Asking permission with 'Can I...?'.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "Use CAN I + base verb to ask simple permission.",
+          "sentence": "_____ I open the window?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Can"
+            },
+            {
+              "ok": false,
+              "word": "Do"
+            },
+            {
+              "ok": false,
+              "word": "Am"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Giving permission with 'can'.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "CAN can be used to give permission.",
+          "sentence": "You _____ use my phone.",
+          "words": [
+            {
+              "ok": true,
+              "word": "can"
+            },
+            {
+              "ok": false,
+              "word": "are"
+            },
+            {
+              "ok": false,
+              "word": "have"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Refusing permission with 'can't'.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "CAN'T can mean that something is not permitted.",
+          "sentence": "You _____ park your car here.",
+          "words": [
+            {
+              "ok": true,
+              "word": "can't"
+            },
+            {
+              "ok": false,
+              "word": "don't can"
+            },
+            {
+              "ok": false,
+              "word": "not can"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Asking about another person's ability.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "Use CAN before the subject to ask about ability.",
+          "sentence": "_____ your sister drive?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Can"
+            },
+            {
+              "ok": false,
+              "word": "Does can"
+            },
+            {
+              "ok": false,
+              "word": "Is"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'can' with a third-person subject.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "CAN does not change with HE, SHE or IT.",
+          "sentence": "Tom _____ speak French.",
+          "words": [
+            {
+              "ok": true,
+              "word": "can"
+            },
+            {
+              "ok": false,
+              "word": "cans"
+            },
+            {
+              "ok": false,
+              "word": "can to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'can't' before a base verb.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "Use CAN'T directly before the base form of the main verb.",
+          "sentence": "We _____ come to the party tonight.",
+          "words": [
+            {
+              "ok": true,
+              "word": "can't"
+            },
+            {
+              "ok": false,
+              "word": "can't to"
+            },
+            {
+              "ok": false,
+              "word": "don't can"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Asking permission to take something.",
+          "level": "A1",
+          "category": "Modals of Ability & Permission",
+          "explain": "Use CAN I + base verb when asking permission to do something.",
+          "sentence": "_____ I take this chair?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Can"
+            },
+            {
+              "ok": false,
+              "word": "Am"
+            },
+            {
+              "ok": false,
+              "word": "Have"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
