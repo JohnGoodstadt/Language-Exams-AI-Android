@@ -51,6 +51,9 @@ sealed interface FocusUiState {
 /** Which (category, level) the Focus screen is practising right now - drives the quiz bottom sheet. */
 data class PracticeTarget(val category: String, val level: String)
 
+/** A catalogue row paired with the learner's current tally for it (all-zero if never answered). */
+data class GrammarCatalogEntry(val row: GrammarRow, val score: CategoryScore)
+
 /**
  * Focus page data. Reads the shared (category, level) tally the Audit/Usage quizzes write into and
  * produces:
@@ -70,8 +73,19 @@ class FocusViewModel @Inject constructor(
     private val _practiceTarget = MutableStateFlow<PracticeTarget?>(null)
     val practiceTarget: StateFlow<PracticeTarget?> = _practiceTarget.asStateFlow()
 
-    /** The canonical grammar grid (category × level) for the "all categories" browse list. */
-    val grammarCategories: List<GrammarRow> = categoryQuizRepository.grammarCatalog()
+    /**
+     * The whole canonical grammar grid (category × level) for the "all categories" browse list, each
+     * row paired with the learner's current tally (0s if never answered). Reactive so the counts
+     * update as quizzes are taken. Later this list can be filtered (e.g. weak-only).
+     */
+    val grammarCatalog: StateFlow<List<GrammarCatalogEntry>> =
+        auditRepository.categoryScores
+            .map { scores ->
+                categoryQuizRepository.grammarCatalog().map { row ->
+                    GrammarCatalogEntry(row, scores["${row.category}|${row.level}"] ?: CategoryScore())
+                }
+            }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     /** Practice a weak category from the priority list. */
     fun practiceCategory(row: FocusRow) {

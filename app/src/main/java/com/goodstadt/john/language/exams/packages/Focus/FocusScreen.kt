@@ -59,6 +59,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val auditVersion by viewModel.auditVersion.collectAsState()
 
     val practiceTarget by viewModel.practiceTarget.collectAsState()
+    val grammarCatalog by viewModel.grammarCatalog.collectAsState()
 
     var showAuditSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -93,8 +94,9 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
         }
 
         // --- All grammar categories: browse & practise anything, not just tested-weak areas. ---
-        // (Starting point for the "weak -> all categories" filter; keep or drop once decided.)
-        if (viewModel.grammarCategories.isNotEmpty()) {
+        // Shows the learner's running score per category. (Starting point for the "weak -> all
+        // categories" filter; keep or drop once decided.)
+        if (grammarCatalog.isNotEmpty()) {
             Spacer(Modifier.height(24.dp))
             Text(
                 "All grammar categories",
@@ -103,7 +105,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
             )
             Spacer(Modifier.height(8.dp))
             GrammarCatalogTable(
-                rows = viewModel.grammarCategories,
+                entries = grammarCatalog,
                 onPractice = { viewModel.practiceGrammar(it) }
             )
         }
@@ -262,24 +264,31 @@ private fun FocusTable(rows: List<FocusRow>, onPractice: ((FocusRow) -> Unit)? =
     }
 }
 
-/** The full canonical grammar grid (category × level), each row playable. */
+/** The full canonical grammar grid (category × level), each row showing the learner's running score
+ *  and a Play button. */
 @Composable
-private fun GrammarCatalogTable(rows: List<GrammarRow>, onPractice: (GrammarRow) -> Unit) {
+private fun GrammarCatalogTable(entries: List<GrammarCatalogEntry>, onPractice: (GrammarRow) -> Unit) {
     Column(Modifier.fillMaxWidth()) {
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             HeaderCell("Area", Modifier.weight(1f), TextAlign.Start)
-            HeaderCell("Lvl", Modifier.width(36.dp))
+            HeaderCell("Lvl", Modifier.width(32.dp))
+            HeaderCell("✓", Modifier.width(28.dp))
+            HeaderCell("✗", Modifier.width(28.dp))
+            // No "?" column: the grammar quiz has no "Don't Know" button (that's audit-only), so
+            // dontKnow is always 0 here.
             Spacer(Modifier.width(40.dp))
         }
         HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
-        rows.forEach { row ->
+        entries.forEach { entry ->
+            val row = entry.row
+            val s = entry.score
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Testing the short labels: label is primary, full name a dim subtitle beneath.
+                // Short label is primary, full name a dim subtitle beneath.
                 Column(Modifier.weight(1f)) {
                     Text(
                         row.shortLabel,
@@ -293,7 +302,9 @@ private fun GrammarCatalogTable(rows: List<GrammarRow>, onPractice: (GrammarRow)
                         color = Color.Gray
                     )
                 }
-                DataCell(row.level, Modifier.width(36.dp))
+                DataCell(row.level, Modifier.width(32.dp))
+                DataCell("${s.correct}", Modifier.width(28.dp), Color(0xFF4CAF50))
+                DataCell("${s.incorrect}", Modifier.width(28.dp), Color(0xFFE53935))
                 IconButton(onClick = { onPractice(row) }, modifier = Modifier.width(40.dp)) {
                     Icon(Icons.Default.PlayArrow, contentDescription = "Practice ${row.category}", tint = orangeLight)
                 }
