@@ -24,7 +24,7 @@
           "page": 1,
           "summary": "Backshift present simple to past simple in reported speech.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "In reported speech, present simple usually changes to past simple.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -47,7 +47,7 @@
           "page": 2,
           "summary": "Backshift 'will' to 'would'.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "In reported speech, 'will' usually changes to 'would'.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -70,7 +70,7 @@
           "page": 3,
           "summary": "Use 'told' with an object.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "'Told' requires a person: told me, told her, etc.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -93,7 +93,7 @@
           "page": 4,
           "summary": "Use 'said that' without an object.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "'Said' does not take a direct object without a preposition.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -116,7 +116,7 @@
           "page": 5,
           "summary": "Backshift past continuous correctly.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "Past continuous usually remains past continuous in reporting.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -139,7 +139,7 @@
           "page": 6,
           "summary": "Backshift present perfect to past perfect.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "Present perfect often changes to past perfect in reported speech.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -160,46 +160,46 @@
         {
           "title": "",
           "page": 7,
-          "summary": "Report yes/no questions using 'if' or 'whether'.",
+          "summary": "Backshift present to past in reported statements.",
           "level": "B1",
-          "category": "Reported Speech",
-          "explain": "Reported yes/no questions use 'if' or 'whether' and statement word order.",
+          "category": "Reported Statements",
+          "explain": "In reported speech the tense shifts back: 'feels' becomes 'felt'. Also we say 'told me' but 'said' without an object.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "She asked if I was available."
+              "word": "She said me that she felt much better.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "She asked was I available."
+              "word": "She said that she feels much better.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "She asked if was I available."
+              "word": "She said that she felt much better.",
+              "ok": true
             }
           ]
         },
         {
           "title": "",
           "page": 8,
-          "summary": "Report wh-questions using statement word order.",
+          "summary": "Backshift present perfect to past perfect; 'told' + object.",
           "level": "B1",
-          "category": "Reported Speech",
-          "explain": "Reported wh-questions use statement word order, not question order.",
+          "category": "Reported Statements",
+          "explain": "Present perfect 'has lost' backshifts to past perfect 'had lost'. Use 'told us' (with object) or 'said' (without an object).",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "He asked where I lived."
+              "word": "He told us that he has lost his keys.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "He asked where did I live."
+              "word": "He said us that he had lost his keys.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "He asked where I live."
+              "word": "He told us that he had lost his keys.",
+              "ok": true
             }
           ]
         },
@@ -208,7 +208,7 @@
           "page": 9,
           "summary": "Backshift 'can' to 'could'.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "In reported speech, 'can' usually becomes 'could'.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -231,7 +231,7 @@
           "page": 10,
           "summary": "Time expression shift in reported speech.",
           "level": "B1",
-          "category": "Reported Speech",
+          "category": "Reported Statements",
           "explain": "Time expressions often change (e.g., today → that day).",
           "sentence": "Choose the correct sentence.",
           "words": [

@@ -22,23 +22,23 @@
         {
           "title": "",
           "page": 1,
-          "summary": "Use 'should' for advice.",
+          "summary": "'Must' for a confident deduction.",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'Should' is commonly used to give advice.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "'Must' expresses a confident deduction + base verb: 'must be busy'. No 'to' or '-s' after a modal.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "You should prepare carefully for the interview."
+              "word": "She isn't answering; she musts be busy.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "You must prepare carefully for the interview."
+              "word": "She isn't answering; she must be busy.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "You should to prepare carefully."
+              "word": "She isn't answering; she must to be busy.",
+              "ok": false
             }
           ]
         },
@@ -47,7 +47,7 @@
           "page": 2,
           "summary": "Use 'might' for possibility.",
           "level": "B1",
-          "category": "Modal Verbs",
+          "category": "Modals of Deduction & Probability",
           "explain": "'Might' expresses uncertainty or possibility.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -68,138 +68,138 @@
         {
           "title": "",
           "page": 3,
-          "summary": "Polite requests using 'could'.",
+          "summary": "'Can't' for a negative deduction (impossibility).",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'Could you…?' is a polite request form.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "For a negative deduction use 'can't be': 'they can't be at home'. 'mustn't' means prohibition, and modals take no 'to'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "Could you send me the report, please?"
+              "word": "The lights are off; they mustn't be at home.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Can you send me the report immediately?"
+              "word": "The lights are off; they can't to be at home.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "You could send me the report?"
+              "word": "The lights are off; they can't be at home.",
+              "ok": true
             }
           ]
         },
         {
           "title": "",
           "page": 4,
-          "summary": "Expressing opinion formally.",
+          "summary": "'Might' for a possibility.",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'In my opinion' is commonly used to express a personal view.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "'Might' expresses possibility + base verb: 'might be'. No 'to' or '-ing' after 'might'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "In my opinion, education is essential for success."
+              "word": "He might be stuck in traffic.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "In my opinion education essential success."
+              "word": "He might being stuck in traffic.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "My opinion education is essential."
+              "word": "He might to be stuck in traffic.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 5,
-          "summary": "Use 'have to' for external obligation.",
+          "summary": "'Can't' to reject a claim as impossible.",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'Have to' expresses obligation from rules or necessity.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "'Can't be' rejects something as impossible: 'That can't be true'. Modals aren't used with 'do' ('doesn't can'), and the adjective is 'true', not 'truly'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "Employees have to follow company policies."
+              "word": "That doesn't can be true; I don't believe it.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Employees must to follow company policies."
+              "word": "That can't be truly; I don't believe it.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Employees have follow company policies."
+              "word": "That can't be true; I don't believe it.",
+              "ok": true
             }
           ]
         },
         {
           "title": "",
           "page": 6,
-          "summary": "Expressing regret using 'should have'.",
+          "summary": "'May' for possibility.",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'Should have + past participle' expresses regret about the past.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "'May' + base verb expresses possibility: 'may know'. No '-ing' or 'to' after 'may'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "I should have studied harder for the exam."
+              "word": "They may to know the answer already.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "I should studied harder for the exam."
+              "word": "They may know the answer already.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "I should have study harder."
+              "word": "They may knowing the answer already.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 7,
-          "summary": "Softening statements using 'It seems that…'.",
+          "summary": "'Must have' + participle for a past deduction.",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'It seems that' softens a statement and sounds less direct.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "'Must have' + past participle deduces about the past: 'must have rained'. 'must have rain' lacks the participle, and 'must has' is wrong.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "It seems that the project will take longer than expected."
+              "word": "The road is wet; it must have rained.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "It seems the project will take longer than expected."
+              "word": "The road is wet; it must has rained.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Seems that the project will take longer."
+              "word": "The road is wet; it must have rain.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 8,
-          "summary": "Polite suggestion using 'would you mind'.",
+          "summary": "'Could' for a present possibility.",
           "level": "B1",
-          "category": "Modal Verbs",
-          "explain": "'Would you mind + -ing form' is used for polite requests.",
+          "category": "Modals of Deduction & Probability",
+          "explain": "'Could' expresses possibility + base verb: 'could be'. No 'to' or '-ing' after 'could'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "Would you mind closing the window?"
+              "word": "She could be at the library.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "Would you mind to close the window?"
+              "word": "She could to be at the library.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "Would you mind close the window?"
+              "word": "She could being at the library.",
+              "ok": false
             }
           ]
         },
@@ -208,7 +208,7 @@
           "page": 9,
           "summary": "Using 'could' for possibility.",
           "level": "B1",
-          "category": "Modal Verbs",
+          "category": "Modals of Deduction & Probability",
           "explain": "'Could' expresses possible outcomes.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -231,7 +231,7 @@
           "page": 10,
           "summary": "Balanced opinion with modal nuance.",
           "level": "B1",
-          "category": "Modal Verbs",
+          "category": "Modals of Deduction & Probability",
           "explain": "Using modal verbs carefully expresses balanced opinion.",
           "sentence": "Choose the correct sentence.",
           "words": [

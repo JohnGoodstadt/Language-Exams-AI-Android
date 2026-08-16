@@ -24,7 +24,7 @@
           "page": 1,
           "summary": "Third conditional for unreal past situations.",
           "level": "B2",
-          "category": "Conditionals",
+          "category": "Third & Mixed Conditionals",
           "explain": "Third conditional structure: If + past perfect, would have + past participle.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -47,7 +47,7 @@
           "page": 2,
           "summary": "Mixed conditional (past condition, present result).",
           "level": "B2",
-          "category": "Conditionals",
+          "category": "Third & Mixed Conditionals",
           "explain": "Mixed conditional: If + past perfect, would + base verb (present result).",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -68,23 +68,23 @@
         {
           "title": "",
           "page": 3,
-          "summary": "Second conditional for hypothetical present.",
+          "summary": "Third conditional for an unreal past situation.",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "Second conditional uses past simple + would + base verb.",
+          "category": "Third & Mixed Conditionals",
+          "explain": "Third conditional: past perfect in the if-clause, 'would have' + participle in the result: 'had invested ... would have grown'. Don't mix in past simple 'invested' or drop 'have'.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "If the company invested more, it would grow faster."
+              "word": "If the company had invested more, it would have grown faster.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "If the company would invest more, it grew faster."
+              "word": "If the company invested more, it would have grown faster.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "If the company invested more, it would have grown faster."
+              "word": "If the company had invested more, it would grown faster.",
+              "ok": false
             }
           ]
         },
@@ -93,7 +93,7 @@
           "page": 4,
           "summary": "Modal perfect for possibility in the past.",
           "level": "B2",
-          "category": "Modal Verbs",
+          "category": "Advanced Modals & Semi-Modals",
           "explain": "'Might have' expresses past possibility.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -116,7 +116,7 @@
           "page": 5,
           "summary": "Modal perfect for unrealised ability.",
           "level": "B2",
-          "category": "Modal Verbs",
+          "category": "Advanced Modals & Semi-Modals",
           "explain": "'Could have' expresses past ability or possibility that did not happen.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -139,7 +139,7 @@
           "page": 6,
           "summary": "Inverted third conditional (formal style).",
           "level": "B2",
-          "category": "Conditionals",
+          "category": "Third & Mixed Conditionals",
           "explain": "Formal inversion removes 'if': Had + subject + past participle.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -162,7 +162,7 @@
           "page": 7,
           "summary": "Mixed conditional (present condition, past result).",
           "level": "B2",
-          "category": "Conditionals",
+          "category": "Third & Mixed Conditionals",
           "explain": "If + past simple (present unreal), would have + past participle (past result).",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -185,7 +185,7 @@
           "page": 8,
           "summary": "Third conditional with 'unless' alternative.",
           "level": "B2",
-          "category": "Conditionals",
+          "category": "Third & Mixed Conditionals",
           "explain": "'Unless' replaces 'if not' in conditional structures.",
           "sentence": "Choose the correct sentence.",
           "words": [
@@ -206,23 +206,23 @@
         {
           "title": "",
           "page": 9,
-          "summary": "Second conditional with modal variation.",
+          "summary": "Third conditional with a modal in the result.",
           "level": "B2",
-          "category": "Conditionals",
-          "explain": "'Might' can replace 'would' to express uncertainty.",
+          "category": "Third & Mixed Conditionals",
+          "explain": "Past perfect in the if-clause, then 'might have' + participle: 'had applied ... might have got'. Present 'applied' and 'might got' are incorrect.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "If she applied, she might get the position."
+              "word": "If she had applied earlier, she might have got the position.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "If she would apply, she might get the position."
+              "word": "If she had applied earlier, she might got the position.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "If she applied, she might got the position."
+              "word": "If she applied earlier, she might have got the position.",
+              "ok": false
             }
           ]
         },
@@ -231,7 +231,7 @@
           "page": 10,
           "summary": "Third conditional for regret and reflection.",
           "level": "B2",
-          "category": "Conditionals",
+          "category": "Third & Mixed Conditionals",
           "explain": "Third conditional expresses regret about past events.",
           "sentence": "Choose the correct sentence.",
           "words": [

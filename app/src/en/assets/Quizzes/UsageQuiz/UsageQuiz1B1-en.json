@@ -45,23 +45,23 @@
         {
           "title": "",
           "page": 2,
-          "summary": "Use past simple with finished time expressions.",
+          "summary": "Past perfect for an action completed before another past action.",
           "level": "B1",
-          "category": "Past Tenses",
-          "explain": "Past simple is required with specific past time such as 'yesterday'.",
+          "category": "Past Perfect",
+          "explain": "Use past perfect ('had' + participle) for the earlier past action: 'had finished'. 'has finished' is present perfect, and 'had finish' lacks the participle.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "He finished the project yesterday."
+              "word": "By the time I arrived, he had already finished the project.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "He has finished the project yesterday."
+              "word": "By the time I arrived, he had already finish the project.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "He has finish the project yesterday."
+              "word": "By the time I arrived, he has already finished the project.",
+              "ok": false
             }
           ]
         },
@@ -160,23 +160,23 @@
         {
           "title": "",
           "page": 7,
-          "summary": "Use past continuous for interrupted actions.",
+          "summary": "Past perfect for the earlier of two past events.",
           "level": "B1",
-          "category": "Past Tenses",
-          "explain": "Past continuous describes an action in progress interrupted by past simple.",
+          "category": "Past Perfect",
+          "explain": "The earlier past action takes past perfect: 'had left'. 'had leave' lacks the participle, and 'has left' is present perfect.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
-              "ok": true,
-              "word": "I was studying when the phone rang."
+              "word": "The train had already leave when we got to the station.",
+              "ok": false
             },
             {
-              "ok": false,
-              "word": "I studied when the phone was ringing."
+              "word": "The train had already left when we got to the station.",
+              "ok": true
             },
             {
-              "ok": false,
-              "word": "I was study when the phone rang."
+              "word": "The train has already left when we got to the station.",
+              "ok": false
             }
           ]
         },
