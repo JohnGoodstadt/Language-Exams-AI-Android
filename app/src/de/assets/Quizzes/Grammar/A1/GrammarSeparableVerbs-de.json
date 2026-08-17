@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarSeparableVerbsA1-de",
+  "sheetname": "GermanSeparableVerbsA1-de",
   "title": "Separable Verbs",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Separable Verbs (A1) German questions.",
+      "description": "Practise common separable German verbs and the position of their prefixes in main clauses and questions.",
       "sortorder": 1,
       "learningTitle": "Using Separable Verbs",
-      "learningPoints": [],
+      "learningPoints": [
+        "Recognise common separable verbs such as aufstehen, einkaufen and anrufen.",
+        "Conjugate the main verb part in second position.",
+        "Move the separable prefix to the end of a main clause.",
+        "Keep the verb together in the infinitive form.",
+        "Use separable verbs correctly in yes/no and W-questions.",
+        "Build accurate everyday A1 sentences with common routines."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'aufstehen'.",
           "level": "A1",
           "category": "Separable Verbs",
-          "explain": "Placeholder explanation.",
+          "explain": "In a main clause, STEHEN is conjugated and AUF moves to the end.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich stehe um sieben Uhr auf."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich aufstehe um sieben Uhr."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich stehe auf um sieben Uhr auf."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'einkaufen'.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "KAUFEN is conjugated and EIN moves to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir kaufen am Samstag ein."
+            },
+            {
+              "ok": false,
+              "word": "Wir einkaufen am Samstag."
+            },
+            {
+              "ok": false,
+              "word": "Wir kaufen ein am Samstag kaufen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'anrufen'.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "RUFEN is conjugated and AN moves to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich rufe meine Mutter an."
+            },
+            {
+              "ok": false,
+              "word": "Ich anrufe meine Mutter."
+            },
+            {
+              "ok": false,
+              "word": "Ich rufe an meine Mutter an."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'fernsehen'.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "SEHEN is conjugated and FERN moves to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er sieht jeden Abend fern."
+            },
+            {
+              "ok": false,
+              "word": "Er fernsieht jeden Abend."
+            },
+            {
+              "ok": false,
+              "word": "Er sieht fern jeden Abend fern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'mitkommen'.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "KOMMEN is conjugated and MIT moves to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kommst du heute mit?"
+            },
+            {
+              "ok": false,
+              "word": "Mitkommst du heute?"
+            },
+            {
+              "ok": false,
+              "word": "Kommst mit du heute?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'zumachen'.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "MACHEN is conjugated and ZU moves to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bitte mach die Tür zu."
+            },
+            {
+              "ok": false,
+              "word": "Bitte zumach die Tür."
+            },
+            {
+              "ok": false,
+              "word": "Bitte mach zu die Tür zu."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'abfahren'.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "FAHREN is conjugated and AB moves to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Zug fährt um acht Uhr ab."
+            },
+            {
+              "ok": false,
+              "word": "Der Zug abfährt um acht Uhr."
+            },
+            {
+              "ok": false,
+              "word": "Der Zug fährt ab um acht Uhr ab."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'aufmachen'.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "MACHEN is conjugated and AUF moves to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie macht das Fenster auf."
+            },
+            {
+              "ok": false,
+              "word": "Sie aufmacht das Fenster."
+            },
+            {
+              "ok": false,
+              "word": "Sie macht auf das Fenster auf."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a separable verb after a modal.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "After a modal verb, the separable verb remains together as an infinitive at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich muss morgen früh aufstehen."
+            },
+            {
+              "ok": false,
+              "word": "Ich muss morgen früh stehe auf."
+            },
+            {
+              "ok": false,
+              "word": "Ich auf muss morgen früh stehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a W-question with a separable verb.",
+          "level": "A1",
+          "category": "Separable Verbs",
+          "explain": "In a W-question, the finite verb follows the question word and the prefix goes to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wann stehst du am Sonntag auf?"
+            },
+            {
+              "ok": false,
+              "word": "Wann du stehst am Sonntag auf?"
+            },
+            {
+              "ok": false,
+              "word": "Wann aufstehst du am Sonntag?"
             }
           ]
         }

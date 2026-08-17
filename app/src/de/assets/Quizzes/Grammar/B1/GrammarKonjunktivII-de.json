@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarKonjunktivIIB1-de",
+  "sheetname": "GermanKonjunktivIIB1-de",
   "title": "Konjunktiv II",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Konjunktiv II (B1) German questions.",
+      "description": "Practise Konjunktiv II for polite requests, wishes, hypothetical situations and advice.",
       "sortorder": 1,
       "learningTitle": "Using Konjunktiv II",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use würde + infinitive for many hypothetical statements.",
+        "Use hätte and wäre for common hypothetical forms.",
+        "Use könnte for polite possibility and requests.",
+        "Use sollte for advice.",
+        "Recognise wenn-clauses with hypothetical meaning.",
+        "Distinguish real statements from unreal or polite forms."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using würde + infinitive.",
           "level": "B1",
           "category": "Konjunktiv II",
-          "explain": "Placeholder explanation.",
+          "explain": "WÜRDE + infinitive is common for hypothetical actions.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich würde gern mehr reisen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich werde gern mehr reisen, if the meaning is hypothetical."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich würde gern mehr gereist."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using hätte.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "HÄTTE is the Konjunktiv II form of HABEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich mehr Zeit hätte, würde ich Sport machen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich mehr Zeit habe, würde ich Sport machen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich mehr Zeit hätte, ich würde Sport machen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using wäre.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "WÄRE is the Konjunktiv II form of SEIN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "An deiner Stelle wäre ich vorsichtig."
+            },
+            {
+              "ok": false,
+              "word": "An deiner Stelle bin ich vorsichtig."
+            },
+            {
+              "ok": false,
+              "word": "An deiner Stelle würde ich vorsichtig sein gewesen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using könnte politely.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "KÖNNTE softens a request or suggestion.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Könnten Sie mir bitte helfen?"
+            },
+            {
+              "ok": false,
+              "word": "Können Sie mir helfen, if specifically testing the more polite hypothetical form."
+            },
+            {
+              "ok": false,
+              "word": "Könnten Sie mir bitte geholfen?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using sollte for advice.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "SOLLTE can express advice.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Du solltest mehr schlafen."
+            },
+            {
+              "ok": false,
+              "word": "Du sollst mehr schlafen, if giving softer advice."
+            },
+            {
+              "ok": false,
+              "word": "Du solltest mehr geschlafen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a hypothetical wenn-clause.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "The verb in the WENN-clause can use Konjunktiv II.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn das Wetter besser wäre, würden wir wandern gehen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn das Wetter besser ist, würden wir wandern gehen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn wäre das Wetter besser, würden wir wandern gehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using würde in the main clause.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "A hypothetical result commonly uses WÜRDE + infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich würde das kaufen, wenn es billiger wäre."
+            },
+            {
+              "ok": false,
+              "word": "Ich kaufe das, wenn es billiger wäre."
+            },
+            {
+              "ok": false,
+              "word": "Ich würde das gekauft, wenn es billiger wäre."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using hätte gern.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "HÄTTE GERN is a polite way to express a wish.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich hätte gern einen Kaffee."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe gern einen Kaffee, for a polite request."
+            },
+            {
+              "ok": false,
+              "word": "Ich hätte einen Kaffee gern gehabt jetzt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using müsste.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "MÜSSTE can express hypothetical necessity.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich müsste früher gehen, wenn der Zug um sechs fährt."
+            },
+            {
+              "ok": false,
+              "word": "Ich muss früher gegangen, wenn der Zug um sechs fährt."
+            },
+            {
+              "ok": false,
+              "word": "Ich müsste früher gegangen sein, for a present hypothetical need."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using wäre + adjective.",
+          "level": "B1",
+          "category": "Konjunktiv II",
+          "explain": "WÄRE can express an unreal or tentative evaluation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es wäre besser, morgen zu fahren."
+            },
+            {
+              "ok": false,
+              "word": "Es ist besser, morgen zu fahren, if the intended meaning is hypothetical advice."
+            },
+            {
+              "ok": false,
+              "word": "Es wäre besser, morgen gefahren."
             }
           ]
         }

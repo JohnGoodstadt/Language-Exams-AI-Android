@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarPerfectTenseA2-de",
+  "sheetname": "GermanPerfectTenseA2-de",
   "title": "Perfect Tense",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Perfect Tense (A2) German questions.",
+      "description": "Practise the German Perfekt tense with haben, sein and common past participles.",
       "sortorder": 1,
-      "learningTitle": "Using Perfect Tense",
-      "learningPoints": [],
+      "learningTitle": "Using the German Perfect Tense",
+      "learningPoints": [
+        "Form the Perfekt with haben or sein plus a past participle.",
+        "Use sein with many verbs of movement and change of state.",
+        "Use haben with most other verbs.",
+        "Place the past participle at the end of a main clause.",
+        "Recognise common regular and irregular past participles.",
+        "Use the Perfekt naturally to talk about completed past events."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using haben with a regular verb.",
           "level": "A2",
           "category": "Perfect Tense",
-          "explain": "Placeholder explanation.",
+          "explain": "Most verbs form the Perfekt with HABEN + past participle.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich habe gestern gearbeitet."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich bin gestern gearbeitet."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich habe gestern arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using sein with a movement verb.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "GEHEN forms the Perfekt with SEIN: IST GEGANGEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er ist nach Hause gegangen."
+            },
+            {
+              "ok": false,
+              "word": "Er hat nach Hause gegangen."
+            },
+            {
+              "ok": false,
+              "word": "Er ist nach Hause gehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Placing the participle at the end.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "In a main clause, the participle normally comes at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir haben einen Film gesehen."
+            },
+            {
+              "ok": false,
+              "word": "Wir haben gesehen einen Film."
+            },
+            {
+              "ok": false,
+              "word": "Wir einen Film haben gesehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using an irregular participle.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "ESSEN has the past participle GEGESSEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie hat Pizza gegessen."
+            },
+            {
+              "ok": false,
+              "word": "Sie hat Pizza geesst."
+            },
+            {
+              "ok": false,
+              "word": "Sie ist Pizza gegessen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using sein with fahren.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "FAHREN commonly uses SEIN for movement from one place to another.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir sind nach Köln gefahren."
+            },
+            {
+              "ok": false,
+              "word": "Wir haben nach Köln gefahren."
+            },
+            {
+              "ok": false,
+              "word": "Wir sind nach Köln fahren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Forming a regular participle.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "MACHEN forms GEMACHT.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Was hast du am Wochenende gemacht?"
+            },
+            {
+              "ok": false,
+              "word": "Was bist du am Wochenende gemacht?"
+            },
+            {
+              "ok": false,
+              "word": "Was hast du am Wochenende gemachen?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a separable verb in the Perfekt.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "AUFSTEHEN forms AUFGESTANDEN and uses SEIN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bin um sieben Uhr aufgestanden."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe um sieben Uhr aufgestanden."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin um sieben Uhr geaufstanden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a non-separable verb participle.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "Verbs beginning with BE- normally do not add GE-. BESUCHEN forms BESUCHT.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir haben unsere Freunde besucht."
+            },
+            {
+              "ok": false,
+              "word": "Wir haben unsere Freunde gebesucht."
+            },
+            {
+              "ok": false,
+              "word": "Wir sind unsere Freunde besucht."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a verb ending in -ieren.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "Verbs ending in -IEREN do not take GE-. STUDIEREN forms STUDIERT.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie hat in Berlin studiert."
+            },
+            {
+              "ok": false,
+              "word": "Sie hat in Berlin gestudiert."
+            },
+            {
+              "ok": false,
+              "word": "Sie ist in Berlin studiert."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Forming a Perfekt negative.",
+          "level": "A2",
+          "category": "Perfect Tense",
+          "explain": "NICHT normally comes before the final participle or the element being negated.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich habe die E-Mail nicht gelesen."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe nicht die E-Mail gelest."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin die E-Mail nicht gelesen."
             }
           ]
         }

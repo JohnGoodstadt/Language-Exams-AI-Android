@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarWordFormationB2-de",
+  "sheetname": "GermanWordFormationB2-de",
   "title": "Word Formation",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Word Formation (B2) German questions.",
+      "description": "Practise advanced German word formation with prefixes, suffixes, compounds and derived nouns/adjectives.",
       "sortorder": 1,
-      "learningTitle": "Using Word Formation",
-      "learningPoints": [],
+      "learningTitle": "Building Advanced German Word Forms",
+      "learningPoints": [
+        "Form nouns with common suffixes such as -ung, -heit, -keit and -nis.",
+        "Form adjectives with suffixes such as -lich, -bar and -los.",
+        "Use prefixes to modify meaning.",
+        "Recognise common compound nouns and linking elements.",
+        "Choose the word class required by the sentence.",
+        "Use derived forms naturally in formal and academic contexts."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming a noun in -ung.",
           "level": "B2",
           "category": "Word Formation",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "ENTWICKELN forms ENTWICKLUNG.",
+          "sentence": "Die wirtschaftliche _ ist positiv.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Entwicklung"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "entwickelbar"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "entwickelnd"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Forming an adjective in -bar.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "VERSTEHEN can form VERSTÄNDLICH, but MACHEN forms MACHBAR; here the required meaning is feasible.",
+          "sentence": "Der Plan ist technisch _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "machbar"
+            },
+            {
+              "ok": false,
+              "word": "Machung"
+            },
+            {
+              "ok": false,
+              "word": "gemachtlich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Forming a noun in -keit.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "MÖGLICH forms MÖGLICHKEIT.",
+          "sentence": "Es besteht die _ einer Änderung.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Möglichkeit"
+            },
+            {
+              "ok": false,
+              "word": "möglich"
+            },
+            {
+              "ok": false,
+              "word": "möglicherweise"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a negative prefix.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "VERSTÄNDLICH can become UNVERSTÄNDLICH.",
+          "sentence": "Seine Erklärung war völlig _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "unverständlich"
+            },
+            {
+              "ok": false,
+              "word": "missverständlich"
+            },
+            {
+              "ok": false,
+              "word": "unverstehen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Forming an adjective in -los.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "HILFE forms HILFLOS.",
+          "sentence": "Ohne Unterstützung fühlte er sich _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "hilflos"
+            },
+            {
+              "ok": false,
+              "word": "hilfreich"
+            },
+            {
+              "ok": false,
+              "word": "Hilflosigkeit"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Forming a noun in -nis.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "ERKENNEN forms ERKENNTNIS.",
+          "sentence": "Die Studie führte zu einer wichtigen _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Erkenntnis"
+            },
+            {
+              "ok": false,
+              "word": "erkennbar"
+            },
+            {
+              "ok": false,
+              "word": "Erkennung"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Forming an adjective from a noun.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "VERANTWORTUNG forms VERANTWORTLICH.",
+          "sentence": "Wer ist dafür _?",
+          "words": [
+            {
+              "ok": true,
+              "word": "verantwortlich"
+            },
+            {
+              "ok": false,
+              "word": "Verantwortung"
+            },
+            {
+              "ok": false,
+              "word": "verantwortungslosigkeit"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a compound noun.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "German often combines nouns into compounds.",
+          "sentence": "Der Schutz der Daten ist ein wichtiges Thema des _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Datenschutzes"
+            },
+            {
+              "ok": false,
+              "word": "Daten Schutz"
+            },
+            {
+              "ok": false,
+              "word": "Datenbeschützens"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Forming a noun from an adjective.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "SICHER can form SICHERHEIT.",
+          "sentence": "Die _ der Mitarbeiter hat höchste Priorität.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sicherheit"
+            },
+            {
+              "ok": false,
+              "word": "sicher"
+            },
+            {
+              "ok": false,
+              "word": "sicherlich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing the correct derived form.",
+          "level": "B2",
+          "category": "Word Formation",
+          "explain": "Sentence structure determines the required word class.",
+          "sentence": "Die Maßnahme ist langfristig sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "wirkungsvoll"
+            },
+            {
+              "ok": false,
+              "word": "Wirkung"
+            },
+            {
+              "ok": false,
+              "word": "wirksamkeit"
             }
           ]
         }

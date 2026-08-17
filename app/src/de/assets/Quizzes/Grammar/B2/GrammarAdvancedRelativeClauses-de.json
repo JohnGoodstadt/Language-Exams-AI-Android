@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarAdvancedRelativeClausesB2-de",
+  "sheetname": "GermanAdvancedRelativeClausesB2-de",
   "title": "Advanced Relative Clauses",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Relative Clauses (B2) German questions.",
+      "description": "Practise advanced relative clauses with prepositions, genitive forms, was and wo(r)- compounds.",
       "sortorder": 1,
       "learningTitle": "Using Advanced Relative Clauses",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use relative pronouns after prepositions.",
+        "Use dessen and deren for possession.",
+        "Use was after indefinite pronouns and whole clauses.",
+        "Use wo or preposition + relative pronoun where appropriate.",
+        "Keep the finite verb at the end of the relative clause.",
+        "Choose case according to the relative pronoun's function inside the clause."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using preposition + relative pronoun.",
           "level": "B2",
           "category": "Advanced Relative Clauses",
-          "explain": "Placeholder explanation.",
+          "explain": "The preposition determines the case of the relative pronoun.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Das ist die Kollegin, mit der ich zusammenarbeite."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Das ist die Kollegin, mit die ich zusammenarbeite."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Das ist die Kollegin, der ich mit zusammenarbeite."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using dessen for masculine/neuter possession.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "DESSEN means whose for masculine or neuter antecedents.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Mann, dessen Auto gestohlen wurde, rief die Polizei."
+            },
+            {
+              "ok": false,
+              "word": "Der Mann, der sein Auto gestohlen wurde, rief die Polizei."
+            },
+            {
+              "ok": false,
+              "word": "Der Mann, dessen Auto wurde gestohlen, rief die Polizei."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using deren for feminine/plural possession.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "DEREN means whose for feminine or plural antecedents.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Frau, deren Sohn in Kanada lebt, ist meine Nachbarin."
+            },
+            {
+              "ok": false,
+              "word": "Die Frau, dessen Sohn in Kanada lebt, ist meine Nachbarin."
+            },
+            {
+              "ok": false,
+              "word": "Die Frau, deren Sohn lebt in Kanada, ist meine Nachbarin."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using was after alles.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "After ALLES, ETWAS, NICHTS and similar words, WAS is common.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Alles, was er sagt, klingt überzeugend."
+            },
+            {
+              "ok": false,
+              "word": "Alles, das er sagt, klingt überzeugend."
+            },
+            {
+              "ok": false,
+              "word": "Alles, was er sagt klingt, überzeugend."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using was after a whole clause.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "WAS can refer back to an entire preceding statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er hat die Prüfung bestanden, was mich sehr gefreut hat."
+            },
+            {
+              "ok": false,
+              "word": "Er hat die Prüfung bestanden, das mich sehr gefreut hat."
+            },
+            {
+              "ok": false,
+              "word": "Er hat die Prüfung bestanden, was hat mich sehr gefreut."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using worüber-like meaning with preposition + pronoun.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "For people, use preposition + relative pronoun rather than wo-compounds.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das ist der Experte, mit dem wir gesprochen haben."
+            },
+            {
+              "ok": false,
+              "word": "Das ist der Experte, womit wir gesprochen haben."
+            },
+            {
+              "ok": false,
+              "word": "Das ist der Experte, mit dem wir haben gesprochen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using accusative after preposition.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "The preposition and verb determine the relative pronoun case.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Thema, über das wir gesprochen haben, ist kompliziert."
+            },
+            {
+              "ok": false,
+              "word": "Das Thema, über dem wir gesprochen haben, ist kompliziert."
+            },
+            {
+              "ok": false,
+              "word": "Das Thema, über das wir haben gesprochen, ist kompliziert."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using dative plural 'denen'.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "DENEN is dative plural.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Leute, von denen ich dir erzählt habe, kommen morgen."
+            },
+            {
+              "ok": false,
+              "word": "Die Leute, von die ich dir erzählt habe, kommen morgen."
+            },
+            {
+              "ok": false,
+              "word": "Die Leute, denen von ich dir erzählt habe, kommen morgen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using genitive relative forms.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "Possessive relation can be expressed directly with DESSEN/DEREN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Unternehmen, dessen Produkte weltweit verkauft werden, expandiert weiter."
+            },
+            {
+              "ok": false,
+              "word": "Das Unternehmen, deren Produkte weltweit verkauft werden, expandiert weiter."
+            },
+            {
+              "ok": false,
+              "word": "Das Unternehmen, dessen Produkte werden weltweit verkauft, expandiert weiter."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using an advanced relative clause with a preposition.",
+          "level": "B2",
+          "category": "Advanced Relative Clauses",
+          "explain": "The finite verb remains final despite the prepositional phrase.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Bedingungen, unter denen wir arbeiten, haben sich verbessert."
+            },
+            {
+              "ok": false,
+              "word": "Die Bedingungen, unter die wir arbeiten, haben sich verbessert."
+            },
+            {
+              "ok": false,
+              "word": "Die Bedingungen, unter denen wir arbeiten haben, sich verbessert."
             }
           ]
         }

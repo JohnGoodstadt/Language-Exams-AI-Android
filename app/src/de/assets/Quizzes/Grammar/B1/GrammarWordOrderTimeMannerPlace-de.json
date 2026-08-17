@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarWordOrderTimeMannerPlaceB1-de",
+  "sheetname": "GermanWordOrderTimeMannerPlaceB1-de",
   "title": "Word Order: Time, Manner, Place",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Word Order: Time, Manner, Place (B1) German questions.",
+      "description": "Practise neutral German word order for time, manner and place information.",
       "sortorder": 1,
-      "learningTitle": "Using Word Order: Time, Manner, Place",
-      "learningPoints": [],
+      "learningTitle": "Ordering Time, Manner and Place",
+      "learningPoints": [
+        "Use the common neutral order Time → Manner → Place.",
+        "Keep the finite verb in second position in main clauses.",
+        "Place pronouns and objects naturally before many adverbials.",
+        "Recognise that emphasis can change order, but neutral order follows common patterns.",
+        "Use time expressions before place in ordinary sentences.",
+        "Build fluent multi-element B1 clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using time before place.",
           "level": "B1",
           "category": "Word Order: Time, Manner, Place",
-          "explain": "Placeholder explanation.",
+          "explain": "Time normally comes before place in neutral word order.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich fahre morgen nach Berlin."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich fahre nach Berlin morgen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich morgen fahre nach Berlin."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using time, manner, place.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "A common neutral order is time, manner, place.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir fahren morgen mit dem Zug nach Hamburg."
+            },
+            {
+              "ok": false,
+              "word": "Wir fahren nach Hamburg morgen mit dem Zug."
+            },
+            {
+              "ok": false,
+              "word": "Wir morgen mit dem Zug fahren nach Hamburg."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Keeping the finite verb second.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "Even with several adverbials, the verb remains second.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Am Montag arbeite ich zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Am Montag ich arbeite zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Am Montag zu Hause ich arbeite."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using manner before place.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "When both appear, manner commonly comes before place.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie fährt mit dem Fahrrad zur Arbeit."
+            },
+            {
+              "ok": false,
+              "word": "Sie fährt zur Arbeit mit dem Fahrrad, as the neutral default being tested."
+            },
+            {
+              "ok": false,
+              "word": "Sie mit dem Fahrrad fährt zur Arbeit."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using time before manner.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "Time normally precedes manner in neutral order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er kommt heute mit dem Bus."
+            },
+            {
+              "ok": false,
+              "word": "Er kommt mit dem Bus heute."
+            },
+            {
+              "ok": false,
+              "word": "Er heute kommt mit dem Bus."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using all three elements.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "Time → manner → place is a useful neutral pattern.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir treffen uns am Samstag mit Freunden im Park."
+            },
+            {
+              "ok": false,
+              "word": "Wir treffen uns im Park am Samstag mit Freunden."
+            },
+            {
+              "ok": false,
+              "word": "Wir am Samstag mit Freunden treffen uns im Park."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Fronting time correctly.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "A fronted time phrase is followed by the finite verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Heute Abend gehe ich mit Anna ins Kino."
+            },
+            {
+              "ok": false,
+              "word": "Heute Abend ich gehe mit Anna ins Kino."
+            },
+            {
+              "ok": false,
+              "word": "Heute Abend mit Anna ich gehe ins Kino."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using place later in the clause.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "Place commonly follows time and manner.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich arbeite jeden Tag mit meinem Laptop im Büro."
+            },
+            {
+              "ok": false,
+              "word": "Ich arbeite im Büro jeden Tag mit meinem Laptop."
+            },
+            {
+              "ok": false,
+              "word": "Ich jeden Tag mit meinem Laptop arbeite im Büro."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a frequency adverb with TMP order.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "Frequency and time information normally come before place.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie geht jeden Morgen zu Fuß zur Schule."
+            },
+            {
+              "ok": false,
+              "word": "Sie geht zur Schule jeden Morgen zu Fuß."
+            },
+            {
+              "ok": false,
+              "word": "Sie jeden Morgen zu Fuß geht zur Schule."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using neutral ordering in a longer sentence.",
+          "level": "B1",
+          "category": "Word Order: Time, Manner, Place",
+          "explain": "Neutral ordering helps the sentence sound natural and easy to process.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir fahren nächste Woche mit dem Auto an die Nordsee."
+            },
+            {
+              "ok": false,
+              "word": "Wir fahren an die Nordsee nächste Woche mit dem Auto."
+            },
+            {
+              "ok": false,
+              "word": "Wir nächste Woche mit dem Auto fahren an die Nordsee."
             }
           ]
         }

@@ -65,7 +65,6 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.IOException
-import java.util.Locale
 import javax.inject.Inject
 
 data class AuditStats(
@@ -1192,37 +1191,25 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
     }
     private fun resolveLocalizedBaseName(baseName: String): String {
-        val locale = Locale.getDefault()
-        val regionCode = "en"
+        // The enum declares version-1 English filenames, which end in "-1-en"
+        // (e.g. "AuditA2-1-en", "BaselineAuditA2-1-en"). Two things vary:
+        //  - VERSION: version 2 is the same file with a "-2-en" suffix.
+        //  - LANGUAGE: each flavour ships its own assets with its own language suffix
+        //    (-en / -de / -zh). BuildConfig.FLAVOR ("en"/"de"/"zh") is exactly that suffix.
+        val lang = com.goodstadt.john.language.exams.BuildConfig.FLAVOR
 
-        // 1. If no region or it's a standard English region, stick to baseName
-        val englishDefaults = listOf("gb", "us", "au", "ca")
-        if (regionCode.isBlank() || englishDefaults.contains(regionCode)) {
-            return baseName
+        // 1. Apply the requested version.
+        val versioned = if (_currentVersion.value == 1) baseName else baseName.replace("-1-en", "-2-en")
+
+        // 2. Swap the "-en" language suffix for this flavour's language.
+        val localized = if (lang == "en" || !versioned.endsWith("-en")) {
+            versioned
+        } else {
+            versioned.removeSuffix("-en") + "-$lang"
         }
 
-        // 2. Only attempt swap if the filename follows the "-en" pattern
-        if (baseName.endsWith("-en")) {
-            // The enum declares the version-1 files, which end in "-1-en"
-            // (e.g. "AuditA2-1-en", "BaselineAuditA2-1-en"). Version 2 is the same file
-            // with a "-2-en" suffix. This is the only thing that differs between the two tests.
-            val candidateName = if (_currentVersion.value == 1) {
-                baseName
-            } else {
-                baseName.replace("-1-en", "-2-en")
-            }
-
-            // 3. Check if the file "candidateName.json" actually exists in Assets
-            val assetPath = "Quizzes/ReadinessAudit/$candidateName.json"
-
-            return if (assetExists(assetPath)) {
-                candidateName // Found the requested version
-            } else {
-                baseName // Fallback to the version-1 file
-            }
-        }
-
-        return baseName
+        // 3. Use it if the file exists; otherwise fall back to the un-localised name.
+        return if (assetExists("Quizzes/ReadinessAudit/$localized.json")) localized else versioned
     }
     // 2. Update the filename resolver logic
     // NOTE: unused - the active resolver is resolveLocalizedBaseName() above, which swaps

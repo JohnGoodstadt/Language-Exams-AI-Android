@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarKonjunktivIIPastB2-de",
-  "title": "Konjunktiv II: Past & Unreal Conditionals",
+  "sheetname": "GermanKonjunktivIIPastUnrealConditionalsB2-de",
+  "title": "Konjunktiv II - Past & Unreal Conditionals",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Konjunktiv II: Past & Unreal Conditionals (B2) German questions.",
+      "description": "Practise past unreal conditionals and hypothetical past situations with hätte/wäre + past participle and würde constructions.",
       "sortorder": 1,
-      "learningTitle": "Using Konjunktiv II: Past & Unreal Conditionals",
-      "learningPoints": [],
+      "learningTitle": "Using Konjunktiv II for Unreal Past Situations",
+      "learningPoints": [
+        "Form unreal past conditions with hätte/wäre + past participle.",
+        "Use würde + infinitive for hypothetical present or future results.",
+        "Use hätte/wäre + infinitive or participle structures accurately.",
+        "Distinguish unreal past from unreal present meaning.",
+        "Use wenn-clauses with verb-final order.",
+        "Express regret, criticism and alternative past outcomes."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming an unreal past condition.",
           "level": "B2",
           "category": "Konjunktiv II: Past & Unreal Conditionals",
-          "explain": "Placeholder explanation.",
+          "explain": "Use WENN + HÄTTE/WÄRE + participle and a corresponding unreal result.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Wenn ich früher losgefahren wäre, hätte ich den Zug erreicht."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Wenn ich früher losfahren würde, hätte ich den Zug erreicht."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Wenn ich früher losgefahren bin, hätte ich den Zug erreicht."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using hätte + participle.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "HÄTTE + past participle expresses an unreal past action with verbs using HABEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich hätte dir geholfen, wenn ich Zeit gehabt hätte."
+            },
+            {
+              "ok": false,
+              "word": "Ich würde dir geholfen haben, wenn ich Zeit hatte."
+            },
+            {
+              "ok": false,
+              "word": "Ich hätte dir helfen, wenn ich Zeit gehabt hätte."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using wäre + participle.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "WÄRE + past participle is used with verbs that form the perfect with SEIN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie wäre mitgekommen, wenn sie nicht krank gewesen wäre."
+            },
+            {
+              "ok": false,
+              "word": "Sie hätte mitgekommen, wenn sie nicht krank gewesen wäre."
+            },
+            {
+              "ok": false,
+              "word": "Sie wäre mitkommen, wenn sie nicht krank gewesen wäre."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Expressing past regret.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "Konjunktiv II past is often used to express regret.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich hätte mehr lernen sollen."
+            },
+            {
+              "ok": false,
+              "word": "Ich sollte mehr gelernt haben, if expressing regret about the past."
+            },
+            {
+              "ok": false,
+              "word": "Ich hätte mehr gelernt sollen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a modal in unreal past.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "Modal verbs in unreal past use hätte + infinitive + modal infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir hätten früher gehen müssen."
+            },
+            {
+              "ok": false,
+              "word": "Wir wären früher gehen müssen."
+            },
+            {
+              "ok": false,
+              "word": "Wir hätten früher gegangen müssen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using unreal result without wenn.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "The condition can be implied rather than stated.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ohne deine Hilfe hätte ich das nicht geschafft."
+            },
+            {
+              "ok": false,
+              "word": "Ohne deine Hilfe würde ich das nicht geschafft haben."
+            },
+            {
+              "ok": false,
+              "word": "Ohne deine Hilfe habe ich das nicht geschafft hätte."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Contrasting unreal past and present.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "Use past forms when the imagined condition refers to a completed past situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn er besser aufgepasst hätte, wäre der Fehler nicht passiert."
+            },
+            {
+              "ok": false,
+              "word": "Wenn er besser aufpassen würde, wäre der Fehler nicht passiert gestern."
+            },
+            {
+              "ok": false,
+              "word": "Wenn er besser aufgepasst hat, wäre der Fehler nicht passiert."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using wäre gern + participle.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "This structure can express an unrealised wish in the past.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich wäre gern mitgefahren."
+            },
+            {
+              "ok": false,
+              "word": "Ich würde gern mitgefahren sein."
+            },
+            {
+              "ok": false,
+              "word": "Ich wäre gern mitfahren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using mixed time reference carefully.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "A past unreal cause can have a present consequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich damals Deutsch gelernt hätte, könnte ich jetzt hier arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich damals Deutsch lernen würde, könnte ich jetzt hier arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich damals Deutsch gelernt habe, könnte ich jetzt hier arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using hätte/wäre correctly in both clauses.",
+          "level": "B2",
+          "category": "Konjunktiv II: Past & Unreal Conditionals",
+          "explain": "Each clause must reflect the correct auxiliary and tense relationship.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn wir früher angekommen wären, hätten wir bessere Plätze bekommen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn wir früher angekommen hätten, wären wir bessere Plätze bekommen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn wir früher ankommen würden, hätten wir bessere Plätze bekommen."
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarTwoWayPrepositionsA2-de",
+  "sheetname": "GermanTwoWayPrepositionsA2-de",
   "title": "Two-Way Prepositions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Two-Way Prepositions (A2) German questions.",
+      "description": "Practise two-way prepositions with accusative for direction and dative for location.",
       "sortorder": 1,
       "learningTitle": "Using Two-Way Prepositions",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use accusative for movement towards a destination.",
+        "Use dative for a fixed location.",
+        "Practise in, an, auf, unter, vor and zwischen.",
+        "Use wo? for location and wohin? for direction.",
+        "Match article, gender and case.",
+        "Distinguish movement from position."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Accusative with in.",
           "level": "A2",
           "category": "Two-Way Prepositions",
-          "explain": "Placeholder explanation.",
+          "explain": "IN takes accusative for movement into a destination.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich gehe in die Küche."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich gehe in der Küche."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich gehe der Küche in."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Dative with in.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "IN takes dative for location.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bin in der Küche."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin in die Küche."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin die Küche in."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Accusative with auf.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "AUF takes accusative when placing something onto a surface.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich lege das Buch auf den Tisch."
+            },
+            {
+              "ok": false,
+              "word": "Ich lege das Buch auf dem Tisch."
+            },
+            {
+              "ok": false,
+              "word": "Ich lege auf der Tisch das Buch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Dative with auf.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "AUF takes dative for location.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Buch liegt auf dem Tisch."
+            },
+            {
+              "ok": false,
+              "word": "Das Buch liegt auf den Tisch."
+            },
+            {
+              "ok": false,
+              "word": "Das Buch auf dem Tisch liegt ist."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Accusative with an.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "AN takes accusative for movement towards a boundary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich hänge das Bild an die Wand."
+            },
+            {
+              "ok": false,
+              "word": "Ich hänge das Bild an der Wand."
+            },
+            {
+              "ok": false,
+              "word": "Ich hänge an die Wand das Bild hängt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Dative with an.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "AN takes dative for a fixed position.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Bild hängt an der Wand."
+            },
+            {
+              "ok": false,
+              "word": "Das Bild hängt an die Wand."
+            },
+            {
+              "ok": false,
+              "word": "Das Bild an der Wand hängt es."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Dative with zwischen.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "ZWISCHEN takes dative for location.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Stuhl steht zwischen dem Tisch und dem Fenster."
+            },
+            {
+              "ok": false,
+              "word": "Der Stuhl steht zwischen den Tisch und das Fenster."
+            },
+            {
+              "ok": false,
+              "word": "Der Stuhl zwischen dem Tisch und dem Fenster stehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Accusative with unter.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "UNTER takes accusative for movement to a position underneath.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Katze läuft unter den Tisch."
+            },
+            {
+              "ok": false,
+              "word": "Die Katze läuft unter dem Tisch, wenn das Ziel unter den Tisch gemeint ist."
+            },
+            {
+              "ok": false,
+              "word": "Die Katze unter den Tisch läuft ist."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Dative with vor.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "VOR takes dative for location.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Auto steht vor dem Haus."
+            },
+            {
+              "ok": false,
+              "word": "Das Auto steht vor das Haus."
+            },
+            {
+              "ok": false,
+              "word": "Das Auto vor dem Haus steht es."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Direction versus location.",
+          "level": "A2",
+          "category": "Two-Way Prepositions",
+          "explain": "Case depends on WOHIN? versus WO?.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir setzen uns neben den Lehrer, aber jetzt sitzen wir neben dem Lehrer."
+            },
+            {
+              "ok": false,
+              "word": "Wir setzen uns neben dem Lehrer, aber jetzt sitzen wir neben den Lehrer."
+            },
+            {
+              "ok": false,
+              "word": "Wir setzen uns neben den Lehrer, aber jetzt sitzen wir neben den Lehrer."
             }
           ]
         }

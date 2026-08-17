@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarPassiveAlternativesB2-de",
+  "sheetname": "GermanPassiveAlternativesB2-de",
   "title": "Passive Alternatives",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Passive Alternatives (B2) German questions.",
+      "description": "Practise alternatives to the passive such as man, sich lassen, sein + zu-infinitive and reflexive structures.",
       "sortorder": 1,
-      "learningTitle": "Using Passive Alternatives",
-      "learningPoints": [],
+      "learningTitle": "Using Alternatives to the Passive",
+      "learningPoints": [
+        "Use man when the agent is general or unknown.",
+        "Use sich lassen + infinitive for possibility or feasibility.",
+        "Use sein + zu-infinitive for necessity or possibility in formal style.",
+        "Recognise reflexive structures with passive-like meaning.",
+        "Choose between active, passive and passive alternatives by register.",
+        "Preserve the intended meaning while changing structure."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using man as a passive alternative.",
           "level": "B2",
           "category": "Passive Alternatives",
-          "explain": "Placeholder explanation.",
+          "explain": "MAN can replace an impersonal passive.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Man kann das Problem leicht lösen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Man kann das Problem leicht gelöst werden."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Man das Problem kann leicht lösen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using sich lassen.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "SICH LASSEN + infinitive expresses that something can be done.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Problem lässt sich leicht lösen."
+            },
+            {
+              "ok": false,
+              "word": "Das Problem lässt leicht sich gelöst."
+            },
+            {
+              "ok": false,
+              "word": "Das Problem lässt sich leicht gelöst werden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using sein + zu-infinitive.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "SEIN + ZU + infinitive can express necessity or possibility.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Aufgabe ist bis morgen zu erledigen."
+            },
+            {
+              "ok": false,
+              "word": "Die Aufgabe ist bis morgen erledigt zu werden."
+            },
+            {
+              "ok": false,
+              "word": "Die Aufgabe zu erledigen ist bis morgen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a reflexive passive-like structure.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "Some verbs allow a reflexive structure with passive-like meaning.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Buch liest sich leicht."
+            },
+            {
+              "ok": false,
+              "word": "Das Buch liest leicht sich."
+            },
+            {
+              "ok": false,
+              "word": "Das Buch wird sich leicht lesen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using man in everyday language.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "MAN is often more natural than a formal passive in speech.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Hier spricht man Deutsch."
+            },
+            {
+              "ok": false,
+              "word": "Hier man spricht Deutsch."
+            },
+            {
+              "ok": false,
+              "word": "Hier spricht Deutsch man."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using sich lassen with modal meaning.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "The structure often corresponds to 'can be + participle'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Datei lässt sich nicht öffnen."
+            },
+            {
+              "ok": false,
+              "word": "Die Datei lässt nicht sich öffnen."
+            },
+            {
+              "ok": false,
+              "word": "Die Datei lässt sich nicht geöffnet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using sein + zu for obligation.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "In formal style, SEIN + ZU can express what must be done.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Regeln sind unbedingt zu beachten."
+            },
+            {
+              "ok": false,
+              "word": "Die Regeln sind unbedingt beachtet zu werden."
+            },
+            {
+              "ok": false,
+              "word": "Die Regeln unbedingt sind zu beachten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Choosing alternative for feasibility.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "Use SICH LASSEN when the emphasis is on whether something is possible.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Fehler lässt sich vermeiden."
+            },
+            {
+              "ok": false,
+              "word": "Der Fehler ist sich vermeiden."
+            },
+            {
+              "ok": false,
+              "word": "Der Fehler lässt sich vermieden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using man with a modal.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "MAN + modal + infinitive is a common active alternative to modal passive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Man muss die Daten regelmäßig sichern."
+            },
+            {
+              "ok": false,
+              "word": "Man muss die Daten regelmäßig gesichert werden."
+            },
+            {
+              "ok": false,
+              "word": "Man die Daten muss regelmäßig sichern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Maintaining meaning across structures.",
+          "level": "B2",
+          "category": "Passive Alternatives",
+          "explain": "Different passive alternatives can express similar meanings with different register.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Diese Maschine lässt sich einfach bedienen."
+            },
+            {
+              "ok": false,
+              "word": "Diese Maschine ist einfach bedienen."
+            },
+            {
+              "ok": false,
+              "word": "Diese Maschine lässt sich einfach bedient."
             }
           ]
         }

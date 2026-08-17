@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarQuestionsA1-de",
+  "sheetname": "GermanQuestionsA1-de",
   "title": "Questions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Questions (A1) German questions.",
+      "description": "Practise basic German yes/no questions and W-questions with correct verb position.",
       "sortorder": 1,
-      "learningTitle": "Using Questions",
-      "learningPoints": [],
+      "learningTitle": "Forming German Questions",
+      "learningPoints": [
+        "Put the finite verb first in yes/no questions.",
+        "Use W-words such as wer, was, wo, wann, warum and wie.",
+        "Put the finite verb immediately after the W-word.",
+        "Keep the subject after the verb in W-questions.",
+        "Use common question phrases such as wie viel and wie alt.",
+        "Distinguish statements from correctly formed questions."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming a yes/no question.",
           "level": "A1",
           "category": "Questions",
-          "explain": "Placeholder explanation.",
+          "explain": "A German yes/no question normally begins with the finite verb.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Wohnst du in Berlin?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Du wohnst in Berlin?"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Wohnst in Berlin du?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'wo' for place.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "In a W-question, the question word comes first, followed by the finite verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wo arbeitest du?"
+            },
+            {
+              "ok": false,
+              "word": "Wo du arbeitest?"
+            },
+            {
+              "ok": false,
+              "word": "Wo arbeitest? du"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'was' for things.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "WAS means what and is followed by the finite verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Was machst du heute?"
+            },
+            {
+              "ok": false,
+              "word": "Was du machst heute?"
+            },
+            {
+              "ok": false,
+              "word": "Was heute du machst?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'wann' for time.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "WANN asks when something happens.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wann kommt der Bus?"
+            },
+            {
+              "ok": false,
+              "word": "Wann der Bus kommt?"
+            },
+            {
+              "ok": false,
+              "word": "Wann kommt? der Bus"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'warum' for reason.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "WARUM asks why; the verb follows immediately.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Warum lernst du Deutsch?"
+            },
+            {
+              "ok": false,
+              "word": "Warum du lernst Deutsch?"
+            },
+            {
+              "ok": false,
+              "word": "Warum Deutsch du lernst?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'wer' as the subject.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "WER can itself be the subject, so the verb follows directly.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wer kommt heute?"
+            },
+            {
+              "ok": false,
+              "word": "Wer heute kommt?"
+            },
+            {
+              "ok": false,
+              "word": "Wer tut heute kommen?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'wie' for personal information.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "WIE is used in common questions such as 'Wie heißt du?'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wie heißt du?"
+            },
+            {
+              "ok": false,
+              "word": "Wie du heißt?"
+            },
+            {
+              "ok": false,
+              "word": "Wie heißt? du"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'wie alt'.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "WIE ALT asks someone's age.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wie alt bist du?"
+            },
+            {
+              "ok": false,
+              "word": "Wie alt du bist?"
+            },
+            {
+              "ok": false,
+              "word": "Wie bist du alt?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'wie viel'.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "WIE VIEL asks about amount or price.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wie viel kostet das?"
+            },
+            {
+              "ok": false,
+              "word": "Wie viel das kostet?"
+            },
+            {
+              "ok": false,
+              "word": "Wie kostet viel das?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Forming a question with 'haben'.",
+          "level": "A1",
+          "category": "Questions",
+          "explain": "In yes/no questions, HABEN comes before the subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Hast du Geschwister?"
+            },
+            {
+              "ok": false,
+              "word": "Du hast Geschwister?"
+            },
+            {
+              "ok": false,
+              "word": "Hast Geschwister du?"
             }
           ]
         }

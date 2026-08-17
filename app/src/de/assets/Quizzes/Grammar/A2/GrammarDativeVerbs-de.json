@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarDativeVerbsA2-de",
+  "sheetname": "GermanDativeVerbsA2-de",
   "title": "Dative Verbs",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Dative Verbs (A2) German questions.",
+      "description": "Practise common German verbs that require a dative object.",
       "sortorder": 1,
-      "learningTitle": "Using Dative Verbs",
-      "learningPoints": [],
+      "learningTitle": "Using Common Dative Verbs",
+      "learningPoints": [
+        "Learn helfen, danken, gefallen and gehören.",
+        "Use dative articles and pronouns.",
+        "Recognise dative experiencers and recipients.",
+        "Distinguish mir/dir/ihm/ihr.",
+        "Do not default to accusative.",
+        "Learn verb and case together."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Helfen.",
           "level": "A2",
           "category": "Dative Verbs",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "HELFEN takes dative.",
+          "sentence": "Kannst du _ helfen?",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "mir"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "mich"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Danken.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "DANKEN takes dative.",
+          "sentence": "Ich danke _ für deine Hilfe.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dir"
+            },
+            {
+              "ok": false,
+              "word": "dich"
+            },
+            {
+              "ok": false,
+              "word": "du"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Gefallen.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "The person who likes something is dative.",
+          "sentence": "Der Film gefällt _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Gehören.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "GEHÖREN takes dative.",
+          "sentence": "Das Fahrrad gehört _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihm"
+            },
+            {
+              "ok": false,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Schmecken.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "The experiencer is dative.",
+          "sentence": "Die Suppe schmeckt _ gut.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihre"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Passen.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "PASSEN takes a dative person.",
+          "sentence": "Die Jacke passt _ nicht.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "mein"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Noun after helfen.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "A noun after HELFEN is dative.",
+          "sentence": "Wir helfen _ Nachbarn.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Feminine after danken.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "Feminine dative uses DER.",
+          "sentence": "Er dankt _ Ärztin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Plural pronoun.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "Plural dative pronoun is IHNEN.",
+          "sentence": "Die Fotos gefallen _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihnen"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihre"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Formal dative.",
+          "level": "A2",
+          "category": "Dative Verbs",
+          "explain": "Formal SIE becomes IHNEN.",
+          "sentence": "Kann ich _ helfen?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ihnen"
+            },
+            {
+              "ok": false,
+              "word": "Sie"
+            },
+            {
+              "ok": false,
+              "word": "Ihr"
             }
           ]
         }

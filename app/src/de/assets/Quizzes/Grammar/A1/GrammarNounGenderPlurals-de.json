@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarNounGenderPluralsA1-de",
+  "sheetname": "GermanNounGenderPluralsA1-de",
   "title": "Noun Gender & Plurals",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Noun Gender & Plurals (A1) German questions.",
+      "description": "Practise common German noun genders and basic plural forms at A1 level.",
       "sortorder": 1,
-      "learningTitle": "Using Noun Gender & Plurals",
-      "learningPoints": [],
+      "learningTitle": "Learning Noun Gender and Plural Forms",
+      "learningPoints": [
+        "Learn nouns together with their gender: der, die or das.",
+        "Recognise common plural patterns such as -e, -en, -er and -s.",
+        "Learn irregular plural forms as vocabulary items.",
+        "Use die as the definite article for all nominative plurals.",
+        "Match singular nouns with the correct plural.",
+        "Build confidence with high-frequency A1 nouns."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Recognising the gender of 'Apfel'.",
           "level": "A1",
           "category": "Noun Gender & Plurals",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "APFEL is masculine: DER APFEL.",
+          "sentence": "_ Apfel ist rot.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Der"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Die"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Recognising the gender of 'Lampe'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "LAMPE is feminine: DIE LAMPE.",
+          "sentence": "_ Lampe ist neu.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die"
+            },
+            {
+              "ok": false,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Recognising the gender of 'Mädchen'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "MÄDCHEN is neuter: DAS MÄDCHEN.",
+          "sentence": "_ Mädchen heißt Anna.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das"
+            },
+            {
+              "ok": false,
+              "word": "Die"
+            },
+            {
+              "ok": false,
+              "word": "Der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using the plural of 'Buch'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "The plural of BUCH is BÜCHER.",
+          "sentence": "Ich habe zwei _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bücher"
+            },
+            {
+              "ok": false,
+              "word": "Buche"
+            },
+            {
+              "ok": false,
+              "word": "Buchs"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using the plural of 'Kind'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "The plural of KIND is KINDER.",
+          "sentence": "Die _ spielen im Garten.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kinder"
+            },
+            {
+              "ok": false,
+              "word": "Kinds"
+            },
+            {
+              "ok": false,
+              "word": "Kinde"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using the plural of 'Frau'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "The plural of FRAU is FRAUEN.",
+          "sentence": "Drei _ arbeiten hier.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Frauen"
+            },
+            {
+              "ok": false,
+              "word": "Fraus"
+            },
+            {
+              "ok": false,
+              "word": "Fraue"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using the plural of 'Auto'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "The plural of AUTO is AUTOS.",
+          "sentence": "Vor dem Haus stehen zwei _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Autos"
+            },
+            {
+              "ok": false,
+              "word": "Autoen"
+            },
+            {
+              "ok": false,
+              "word": "Auter"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using the plural article.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "All nominative plural nouns use DIE as the definite article.",
+          "sentence": "_ Bücher sind auf dem Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die"
+            },
+            {
+              "ok": false,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using the plural of 'Mann'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "The plural of MANN is MÄNNER.",
+          "sentence": "Die _ warten draußen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Männer"
+            },
+            {
+              "ok": false,
+              "word": "Manns"
+            },
+            {
+              "ok": false,
+              "word": "Mannen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using the plural of 'Schule'.",
+          "level": "A1",
+          "category": "Noun Gender & Plurals",
+          "explain": "The plural of SCHULE is SCHULEN.",
+          "sentence": "In der Stadt gibt es drei _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Schulen"
+            },
+            {
+              "ok": false,
+              "word": "Schules"
+            },
+            {
+              "ok": false,
+              "word": "Schüler"
             }
           ]
         }

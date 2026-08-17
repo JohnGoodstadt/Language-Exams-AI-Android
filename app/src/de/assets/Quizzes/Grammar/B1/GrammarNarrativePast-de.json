@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarNarrativePastB1-de",
+  "sheetname": "GermanNarrativePastB1-de",
   "title": "Narrative Past",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Narrative Past (B1) German questions.",
+      "description": "Practise combining Perfekt and Präteritum forms naturally when telling past events.",
       "sortorder": 1,
-      "learningTitle": "Using Narrative Past",
-      "learningPoints": [],
+      "learningTitle": "Using Past Tenses in Narratives",
+      "learningPoints": [
+        "Use Präteritum commonly with sein, haben and modal verbs.",
+        "Use Perfekt for many completed spoken past events.",
+        "Keep a clear sequence of past events.",
+        "Use past-time expressions to organise a narrative.",
+        "Recognise common irregular past forms.",
+        "Choose the tense form that sounds natural in context."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using Präteritum of sein.",
           "level": "B1",
           "category": "Narrative Past",
-          "explain": "Placeholder explanation.",
+          "explain": "WAR is common in past narratives.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Es war spät, als wir nach Hause kamen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Es ist spät gewesen, als wir nach Hause kommen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Es war spät, als wir nach Hause gekommen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using Perfekt for a completed event.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "Perfekt is common for completed events in spoken German.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Dann haben wir ein Taxi genommen."
+            },
+            {
+              "ok": false,
+              "word": "Dann sind wir ein Taxi genommen."
+            },
+            {
+              "ok": false,
+              "word": "Dann haben wir ein Taxi nehmen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using Präteritum of haben.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "HATTE is common in narratives.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich hatte kein Geld dabei."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe kein Geld dabei gehabt jetzt."
+            },
+            {
+              "ok": false,
+              "word": "Ich hatte kein Geld dabei haben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Sequencing two past events.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "Use clear past forms to show sequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir sind angekommen und haben sofort angerufen."
+            },
+            {
+              "ok": false,
+              "word": "Wir haben angekommen und sind sofort angerufen."
+            },
+            {
+              "ok": false,
+              "word": "Wir sind ankommen und haben sofort angeruft."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a modal in Präteritum.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "Modal verbs commonly use Präteritum in the past.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir mussten lange warten."
+            },
+            {
+              "ok": false,
+              "word": "Wir haben lange warten gemusst in every simple narrative."
+            },
+            {
+              "ok": false,
+              "word": "Wir mussten lange gewartet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a past-time marker.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "A past-time expression can introduce a narrative event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Am nächsten Morgen sind wir früh aufgestanden."
+            },
+            {
+              "ok": false,
+              "word": "Am nächsten Morgen haben wir früh aufgestanden."
+            },
+            {
+              "ok": false,
+              "word": "Am nächsten Morgen sind wir früh aufstehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using an irregular participle.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "SEHEN forms GESEHEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Plötzlich haben wir einen Unfall gesehen."
+            },
+            {
+              "ok": false,
+              "word": "Plötzlich haben wir einen Unfall geseht."
+            },
+            {
+              "ok": false,
+              "word": "Plötzlich sind wir einen Unfall gesehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using Präteritum for können.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "KONNTE is a common narrative past form.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich konnte die Tür nicht öffnen."
+            },
+            {
+              "ok": false,
+              "word": "Ich kann die Tür nicht öffnen gestern."
+            },
+            {
+              "ok": false,
+              "word": "Ich konnte die Tür nicht geöffnet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Keeping narrative order clear.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "Use linking words and correct past forms.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Zuerst haben wir gegessen, danach sind wir spazieren gegangen."
+            },
+            {
+              "ok": false,
+              "word": "Zuerst sind wir gegessen, danach haben wir spazieren gegangen."
+            },
+            {
+              "ok": false,
+              "word": "Zuerst haben wir essen, danach sind wir spazieren gehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using past forms consistently.",
+          "level": "B1",
+          "category": "Narrative Past",
+          "explain": "Past events should remain in appropriate past forms.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es regnete, aber wir sind trotzdem weitergegangen."
+            },
+            {
+              "ok": false,
+              "word": "Es regnet, aber wir sind trotzdem weitergegangen gestern."
+            },
+            {
+              "ok": false,
+              "word": "Es regnete, aber wir haben trotzdem weitergegangen."
             }
           ]
         }

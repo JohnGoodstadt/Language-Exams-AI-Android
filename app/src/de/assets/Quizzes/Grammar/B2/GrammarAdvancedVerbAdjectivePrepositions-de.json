@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarAdvancedVerbAdjectivePrepositionsB2-de",
+  "sheetname": "GermanAdvancedVerbAdjectivePrepositionsB2-de",
   "title": "Advanced Verb & Adjective Prepositions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Advanced Verb & Adjective Prepositions (B2) German questions.",
+      "description": "Practise advanced verb-preposition and adjective-preposition combinations.",
       "sortorder": 1,
-      "learningTitle": "Using Advanced Verb & Adjective Prepositions",
-      "learningPoints": [],
+      "learningTitle": "Using Advanced Verb and Adjective Prepositions",
+      "learningPoints": [
+        "Learn fixed verb-preposition combinations as complete units.",
+        "Learn adjective-preposition combinations with their governed cases.",
+        "Distinguish near-synonymous prepositional patterns.",
+        "Use sich beziehen auf, bestehen auf and verfügen über accurately.",
+        "Use abhängig von, verantwortlich für and überzeugt von accurately.",
+        "Avoid translating prepositions directly from English."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'sich beziehen auf'.",
           "level": "B2",
           "category": "Advanced Verb & Adjective Prepositions",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "SICH BEZIEHEN AUF takes accusative.",
+          "sentence": "Diese Aussage bezieht sich _ den letzten Bericht.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "auf"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "an"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "über"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'bestehen auf'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "BESTEHEN AUF takes dative.",
+          "sentence": "Er besteht _ einer schriftlichen Bestätigung.",
+          "words": [
+            {
+              "ok": true,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'verfügen über'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "VERFÜGEN ÜBER takes accusative.",
+          "sentence": "Das Unternehmen verfügt _ moderne Anlagen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'abhängig von'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "ABHÄNGIG VON takes dative.",
+          "sentence": "Der Erfolg ist stark _ der Nachfrage abhängig.",
+          "words": [
+            {
+              "ok": true,
+              "word": "von"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'verantwortlich für'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "VERANTWORTLICH FÜR takes accusative.",
+          "sentence": "Sie ist _ das Projekt verantwortlich.",
+          "words": [
+            {
+              "ok": true,
+              "word": "für"
+            },
+            {
+              "ok": false,
+              "word": "von"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'überzeugt von'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "ÜBERZEUGT VON takes dative.",
+          "sentence": "Ich bin _ seiner Idee überzeugt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "von"
+            },
+            {
+              "ok": false,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'geeignet für'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "GEEIGNET FÜR takes accusative.",
+          "sentence": "Das Gerät ist _ den professionellen Einsatz geeignet.",
+          "words": [
+            {
+              "ok": true,
+              "word": "für"
+            },
+            {
+              "ok": false,
+              "word": "zu"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'beteiligt an'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "BETEILIGT AN takes dative.",
+          "sentence": "Mehrere Firmen sind _ dem Projekt beteiligt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'zweifeln an'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "ZWEIFELN AN takes dative.",
+          "sentence": "Niemand zweifelt _ seiner Kompetenz.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'schützen vor'.",
+          "level": "B2",
+          "category": "Advanced Verb & Adjective Prepositions",
+          "explain": "SCHÜTZEN VOR takes dative.",
+          "sentence": "Diese Maßnahmen sollen die Daten _ Missbrauch schützen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "vor"
+            },
+            {
+              "ok": false,
+              "word": "gegen"
+            },
+            {
+              "ok": false,
+              "word": "von"
             }
           ]
         }

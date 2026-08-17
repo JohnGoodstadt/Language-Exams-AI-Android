@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarWeakNounDeclensionB1-de",
+  "sheetname": "GermanWeakNounDeclensionB1-de",
   "title": "Weak Noun Declension",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Weak Noun Declension (B1) German questions.",
+      "description": "Practise common masculine weak nouns that take -n or -en outside the nominative singular.",
       "sortorder": 1,
       "learningTitle": "Using Weak Noun Declension",
-      "learningPoints": [],
+      "learningPoints": [
+        "Recognise common weak masculine nouns such as Student, Kunde and Mensch.",
+        "Add -n or -en in accusative, dative and genitive singular.",
+        "Keep nominative singular without the weak ending.",
+        "Learn common exceptions and high-frequency patterns.",
+        "Match case and noun form.",
+        "Use weak nouns accurately in everyday B1 sentences."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using accusative 'Studenten'.",
           "level": "B1",
           "category": "Weak Noun Declension",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "STUDENT is weak: accusative singular is STUDENTEN.",
+          "sentence": "Ich sehe den _.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Studenten"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Student"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Students"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using dative 'Studenten'.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "Dative singular also takes -EN.",
+          "sentence": "Ich helfe dem _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Studenten"
+            },
+            {
+              "ok": false,
+              "word": "Student"
+            },
+            {
+              "ok": false,
+              "word": "Students"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using accusative 'Kunden'.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "KUNDE is weak and takes -N outside nominative singular.",
+          "sentence": "Wir besuchen den _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kunden"
+            },
+            {
+              "ok": false,
+              "word": "Kunde"
+            },
+            {
+              "ok": false,
+              "word": "Kundes"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using dative 'Kollegen'.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "KOLLEGE is weak.",
+          "sentence": "Ich spreche mit meinem _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kollegen"
+            },
+            {
+              "ok": false,
+              "word": "Kollege"
+            },
+            {
+              "ok": false,
+              "word": "Kolleges"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using accusative 'Menschen'.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "MENSCH takes -EN outside nominative singular.",
+          "sentence": "Sie kennt diesen _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Menschen"
+            },
+            {
+              "ok": false,
+              "word": "Mensch"
+            },
+            {
+              "ok": false,
+              "word": "Menschs"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using nominative singular without ending.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "Nominative singular remains the base form.",
+          "sentence": "Der _ arbeitet hier.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Student"
+            },
+            {
+              "ok": false,
+              "word": "Studenten"
+            },
+            {
+              "ok": false,
+              "word": "Students"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using genitive weak form.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "Weak nouns take -N/-EN in genitive too.",
+          "sentence": "Das Auto des _ ist neu.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kollegen"
+            },
+            {
+              "ok": false,
+              "word": "Kollege"
+            },
+            {
+              "ok": false,
+              "word": "Kolleges"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'Junge' as weak noun.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "JUNGE takes -N in oblique cases.",
+          "sentence": "Ich sehe den _ im Garten.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Jungen"
+            },
+            {
+              "ok": false,
+              "word": "Junge"
+            },
+            {
+              "ok": false,
+              "word": "Junges"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'Herrn'.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "HERR has the weak accusative/dative form HERRN.",
+          "sentence": "Ich spreche mit _ Müller.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Herrn"
+            },
+            {
+              "ok": false,
+              "word": "Herr"
+            },
+            {
+              "ok": false,
+              "word": "Herren"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'Präsidenten'.",
+          "level": "B1",
+          "category": "Weak Noun Declension",
+          "explain": "PRÄSIDENT is weak.",
+          "sentence": "Sie interviewt den _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Präsidenten"
+            },
+            {
+              "ok": false,
+              "word": "Präsident"
+            },
+            {
+              "ok": false,
+              "word": "Präsidentes"
             }
           ]
         }

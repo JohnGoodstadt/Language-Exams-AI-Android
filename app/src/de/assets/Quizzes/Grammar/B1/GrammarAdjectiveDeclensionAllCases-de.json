@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarAdjectiveDeclensionAllCasesB1-de",
+  "sheetname": "GermanAdjectiveDeclensionAllCasesB1-de",
   "title": "Adjective Declension: All Cases",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Adjective Declension: All Cases (B1) German questions.",
+      "description": "Practise adjective endings across nominative, accusative, dative and genitive cases.",
       "sortorder": 1,
-      "learningTitle": "Using Adjective Declension: All Cases",
-      "learningPoints": [],
+      "learningTitle": "Using Adjective Declension Across Cases",
+      "learningPoints": [
+        "Match adjective endings to case, gender and article type.",
+        "Use weak endings after definite articles.",
+        "Use mixed endings after ein-words and possessives.",
+        "Use strong endings where no article shows case clearly.",
+        "Recognise dative and genitive -en patterns.",
+        "Apply adjective endings in complete noun phrases."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Nominative masculine after definite article.",
           "level": "B1",
           "category": "Adjective Declension: All Cases",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "After DER, nominative masculine adjective ends -E.",
+          "sentence": "Der neu_ Lehrer ist nett.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "e"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "en"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Accusative masculine after indefinite article.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After EINEN, adjective ends -EN.",
+          "sentence": "Ich sehe einen alt_ Freund.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Dative feminine after definite article.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After DER in dative, adjective ends -EN.",
+          "sentence": "Ich spreche mit der nett_ Kollegin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Dative neuter after ein-word.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After EINEM, adjective ends -EN.",
+          "sentence": "Wir wohnen in einem klein_ Haus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "es"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Genitive masculine after definite article.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After DES, adjective normally ends -EN.",
+          "sentence": "Das Auto des jung_ Mannes ist neu.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            },
+            {
+              "ok": false,
+              "word": "es"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Nominative neuter without article.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "Without an article, the adjective carries the strong neuter ending -ES.",
+          "sentence": "Kalt_ Wasser ist erfrischend.",
+          "words": [
+            {
+              "ok": true,
+              "word": "es"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Accusative feminine without article.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "Strong feminine accusative ending is -E.",
+          "sentence": "Ich kaufe frisch_ Milch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Dative plural after definite article.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After DEN in dative plural, adjective ends -EN.",
+          "sentence": "Ich spreche mit den neu_ Mitarbeitern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Nominative feminine after possessive.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After MEINE, adjective ends -E.",
+          "sentence": "Meine älter_ Schwester wohnt in Bonn.",
+          "words": [
+            {
+              "ok": true,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Genitive feminine after definite article.",
+          "level": "B1",
+          "category": "Adjective Declension: All Cases",
+          "explain": "After DER in genitive feminine, adjective ends -EN.",
+          "sentence": "Die Meinung der erfahren_ Ärztin ist wichtig.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "er"
             }
           ]
         }

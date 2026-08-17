@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarAccusativeDativePrepositionsA2-de",
+  "sheetname": "GermanAccusativeDativePrepositionsA2-de",
   "title": "Accusative & Dative Prepositions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Accusative & Dative Prepositions (A2) German questions.",
+      "description": "Practise prepositions that always govern accusative or dative.",
       "sortorder": 1,
-      "learningTitle": "Using Accusative & Dative Prepositions",
-      "learningPoints": [],
+      "learningTitle": "Using Accusative and Dative Prepositions",
+      "learningPoints": [
+        "Use durch, für, gegen, ohne and um with accusative.",
+        "Use aus, bei, mit, nach, seit, von and zu with dative.",
+        "Choose case from the preposition.",
+        "Match articles and pronouns.",
+        "Learn common phrases as units.",
+        "Avoid choosing case only from the verb."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "After für.",
           "level": "A2",
           "category": "Accusative & Dative Prepositions",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "FÜR takes accusative.",
+          "sentence": "Das Geschenk ist für _ Mann.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "den"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "dem"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "After ohne.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "OHNE takes accusative.",
+          "sentence": "Ich gehe ohne _ Bruder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meinen"
+            },
+            {
+              "ok": false,
+              "word": "meinem"
+            },
+            {
+              "ok": false,
+              "word": "mein"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "After durch.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "DURCH takes accusative.",
+          "sentence": "Wir gehen durch _ Park.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "After mit.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "MIT takes dative.",
+          "sentence": "Sie fährt mit _ Auto.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "After bei.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "BEI takes dative.",
+          "sentence": "Ich wohne bei _ Eltern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meinen"
+            },
+            {
+              "ok": false,
+              "word": "meine"
+            },
+            {
+              "ok": false,
+              "word": "meiner"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "After nach.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "NACH takes dative; city names usually have no article.",
+          "sentence": "Nach _ fahre ich weiter nach Bonn.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Köln"
+            },
+            {
+              "ok": false,
+              "word": "den Köln"
+            },
+            {
+              "ok": false,
+              "word": "dem Köln"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "After von.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "VON takes dative.",
+          "sentence": "Die Nachricht kommt von _ Chef.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "After zu.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "ZU takes dative.",
+          "sentence": "Ich gehe zu _ Arzt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "After gegen.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "GEGEN takes accusative.",
+          "sentence": "Das Team spielt gegen _ Meister.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "After seit.",
+          "level": "A2",
+          "category": "Accusative & Dative Prepositions",
+          "explain": "SEIT takes dative.",
+          "sentence": "Ich wohne seit _ Jahr hier.",
+          "words": [
+            {
+              "ok": true,
+              "word": "einem"
+            },
+            {
+              "ok": false,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "einen"
             }
           ]
         }

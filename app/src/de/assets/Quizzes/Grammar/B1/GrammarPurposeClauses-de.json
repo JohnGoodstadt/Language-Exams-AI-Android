@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarPurposeClausesB1-de",
+  "sheetname": "GermanPurposeClausesDamitUmZuB1-de",
   "title": "Purpose Clauses: damit & um zu",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Purpose Clauses: damit & um zu (B1) German questions.",
+      "description": "Practise expressing purpose with damit and um ... zu.",
       "sortorder": 1,
-      "learningTitle": "Using Purpose Clauses: damit & um zu",
-      "learningPoints": [],
+      "learningTitle": "Expressing Purpose",
+      "learningPoints": [
+        "Use um ... zu when the subject is the same in both clauses.",
+        "Use damit when the subjects are different or when a full clause is needed.",
+        "Place zu correctly before the infinitive.",
+        "Put the finite verb at the end of a damit-clause.",
+        "Use purpose structures to answer 'why?'.",
+        "Distinguish purpose from cause."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using um...zu with same subject.",
           "level": "B1",
           "category": "Purpose Clauses: damit & um zu",
-          "explain": "Placeholder explanation.",
+          "explain": "Use UM ... ZU when the subject of both actions is the same.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich lerne Deutsch, um in Deutschland zu arbeiten."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich lerne Deutsch, damit ich in Deutschland arbeiten."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich lerne Deutsch, um ich in Deutschland arbeite."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using damit with different subjects.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "Use DAMIT when the subjects differ.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich spreche langsam, damit du mich verstehst."
+            },
+            {
+              "ok": false,
+              "word": "Ich spreche langsam, um du mich zu verstehen."
+            },
+            {
+              "ok": false,
+              "word": "Ich spreche langsam, damit verstehst du mich."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Placing zu correctly.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "ZU comes immediately before the infinitive in simple forms.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er spart Geld, um ein Auto zu kaufen."
+            },
+            {
+              "ok": false,
+              "word": "Er spart Geld, um zu ein Auto kaufen."
+            },
+            {
+              "ok": false,
+              "word": "Er spart Geld, um ein Auto kaufen zu."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using damit verb-final order.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "DAMIT introduces a subordinate clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir schreiben es auf, damit niemand es vergisst."
+            },
+            {
+              "ok": false,
+              "word": "Wir schreiben es auf, damit niemand vergisst es."
+            },
+            {
+              "ok": false,
+              "word": "Wir schreiben es auf, damit vergisst niemand es."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using um...zu with a separable verb.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "ZU appears inside many separable infinitives: EINZUKAUFEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich gehe in die Stadt, um einzukaufen."
+            },
+            {
+              "ok": false,
+              "word": "Ich gehe in die Stadt, um zu einkaufen."
+            },
+            {
+              "ok": false,
+              "word": "Ich gehe in die Stadt, um einkaufen zu."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using damit with a modal.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "The modal is final after the infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich erkläre es noch einmal, damit ihr es verstehen könnt."
+            },
+            {
+              "ok": false,
+              "word": "Ich erkläre es noch einmal, damit ihr könnt es verstehen."
+            },
+            {
+              "ok": false,
+              "word": "Ich erkläre es noch einmal, um ihr es verstehen zu können."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using purpose, not cause.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "UM...ZU expresses intention or purpose.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie fährt früher los, um pünktlich anzukommen."
+            },
+            {
+              "ok": false,
+              "word": "Sie fährt früher los, weil pünktlich anzukommen."
+            },
+            {
+              "ok": false,
+              "word": "Sie fährt früher los, um sie pünktlich ankommt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using damit for another person's action.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "Different subjects require DAMIT.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich öffne das Fenster, damit die Kinder frische Luft bekommen."
+            },
+            {
+              "ok": false,
+              "word": "Ich öffne das Fenster, um die Kinder frische Luft zu bekommen."
+            },
+            {
+              "ok": false,
+              "word": "Ich öffne das Fenster, damit bekommen die Kinder frische Luft."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using um...zu after a main clause.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "The infinitive structure does not need a separate subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir nehmen ein Taxi, um Zeit zu sparen."
+            },
+            {
+              "ok": false,
+              "word": "Wir nehmen ein Taxi, damit Zeit zu sparen."
+            },
+            {
+              "ok": false,
+              "word": "Wir nehmen ein Taxi, um wir Zeit sparen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing between damit and um...zu.",
+          "level": "B1",
+          "category": "Purpose Clauses: damit & um zu",
+          "explain": "Choose according to whether the subject changes.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich gebe dir den Schlüssel, damit du die Tür öffnen kannst."
+            },
+            {
+              "ok": false,
+              "word": "Ich gebe dir den Schlüssel, um du die Tür öffnen zu können."
+            },
+            {
+              "ok": false,
+              "word": "Ich gebe dir den Schlüssel, damit du kannst die Tür öffnen."
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarPassiveVoiceB1-de",
+  "sheetname": "GermanPassiveVoiceB1-de",
   "title": "Passive Voice",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Passive Voice (B1) German questions.",
+      "description": "Practise the German process passive with werden + past participle in present and past contexts.",
       "sortorder": 1,
-      "learningTitle": "Using Passive Voice",
-      "learningPoints": [],
+      "learningTitle": "Using the Passive Voice",
+      "learningPoints": [
+        "Form the present passive with werden + past participle.",
+        "Form the simple past passive with wurde/wurden + past participle.",
+        "Use the passive when the action is more important than the agent.",
+        "Use von + dative to mention the agent when needed.",
+        "Keep the past participle at the end.",
+        "Distinguish active and passive sentence structure."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming the present passive.",
           "level": "B1",
           "category": "Passive Voice",
-          "explain": "Placeholder explanation.",
+          "explain": "Use WIRD + past participle with a singular subject.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Das Auto wird repariert."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Das Auto repariert wird."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Das Auto wird reparieren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using plural passive.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "Plural subjects use WERDEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Fenster werden gereinigt."
+            },
+            {
+              "ok": false,
+              "word": "Die Fenster wird gereinigt."
+            },
+            {
+              "ok": false,
+              "word": "Die Fenster werden reinigen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using past passive.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "The Präteritum passive uses WURDE/WURDEN + participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Straße wurde gestern gesperrt."
+            },
+            {
+              "ok": false,
+              "word": "Die Straße war gestern gesperrt worden, if testing simple past process passive."
+            },
+            {
+              "ok": false,
+              "word": "Die Straße wurde gestern sperren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using plural past passive.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "Plural subjects use WURDEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Häuser wurden 1990 gebaut."
+            },
+            {
+              "ok": false,
+              "word": "Die Häuser wurde 1990 gebaut."
+            },
+            {
+              "ok": false,
+              "word": "Die Häuser wurden 1990 bauen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Mentioning the agent with von.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "Use VON + dative to name the agent.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Brief wurde von Anna geschrieben."
+            },
+            {
+              "ok": false,
+              "word": "Der Brief wurde durch Anna geschrieben in this normal agent meaning."
+            },
+            {
+              "ok": false,
+              "word": "Der Brief wurde von Anna schreiben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using passive for a process.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "The passive focuses on what happens to the subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Hier wird Deutsch gesprochen."
+            },
+            {
+              "ok": false,
+              "word": "Hier spricht Deutsch geworden."
+            },
+            {
+              "ok": false,
+              "word": "Hier wird Deutsch sprechen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a modal passive.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "Use modal + participle + WERDEN at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Formular muss heute ausgefüllt werden."
+            },
+            {
+              "ok": false,
+              "word": "Das Formular muss heute werden ausgefüllt."
+            },
+            {
+              "ok": false,
+              "word": "Das Formular muss heute ausfüllen werden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a passive question.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "The finite form of WERDEN comes first in a yes/no question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wird das Essen hier frisch gekocht?"
+            },
+            {
+              "ok": false,
+              "word": "Das Essen wird hier frisch gekocht?"
+            },
+            {
+              "ok": false,
+              "word": "Wird das Essen hier frisch kochen?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using passive with man alternative in mind.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "Passive is natural when the doer is general or unimportant.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "In diesem Hotel wird Frühstück serviert."
+            },
+            {
+              "ok": false,
+              "word": "In diesem Hotel Frühstück wird serviert."
+            },
+            {
+              "ok": false,
+              "word": "In diesem Hotel wird Frühstück servieren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using separable participles in passive.",
+          "level": "B1",
+          "category": "Passive Voice",
+          "explain": "The participle remains intact at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Tür wird um acht Uhr abgeschlossen."
+            },
+            {
+              "ok": false,
+              "word": "Die Tür wird um acht Uhr ab schließen."
+            },
+            {
+              "ok": false,
+              "word": "Die Tür abgeschlossen wird um acht Uhr."
             }
           ]
         }

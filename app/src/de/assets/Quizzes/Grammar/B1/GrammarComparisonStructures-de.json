@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarComparisonStructuresB1-de",
+  "sheetname": "GermanComparisonStructuresB1-de",
   "title": "Comparison Structures",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Comparison Structures (B1) German questions.",
+      "description": "Practise German comparison structures with als, wie, genauso...wie and je...desto.",
       "sortorder": 1,
       "learningTitle": "Using Comparison Structures",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use als after comparative adjectives.",
+        "Use so/genauso...wie for equality.",
+        "Use nicht so...wie for inequality.",
+        "Use je...desto/umso for proportional comparison.",
+        "Recognise irregular comparative forms.",
+        "Use comparison structures in complete clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using als after comparative.",
           "level": "B1",
           "category": "Comparison Structures",
-          "explain": "Placeholder explanation.",
+          "explain": "Comparatives use ALS.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Mein Auto ist schneller als deins."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Mein Auto ist schneller wie deins."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Mein Auto ist so schneller als deins."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using genauso...wie.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "Use GENAUSO...WIE for equality.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Anna ist genauso groß wie Maria."
+            },
+            {
+              "ok": false,
+              "word": "Anna ist genauso größer als Maria."
+            },
+            {
+              "ok": false,
+              "word": "Anna ist gleich groß als Maria."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using nicht so...wie.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "Use NICHT SO...WIE for inequality.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Test war nicht so schwer wie erwartet."
+            },
+            {
+              "ok": false,
+              "word": "Der Test war nicht so schwer als erwartet."
+            },
+            {
+              "ok": false,
+              "word": "Der Test war nicht schwerer wie erwartet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using irregular besser.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "GUT becomes BESSER.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Dieses Restaurant ist besser als das andere."
+            },
+            {
+              "ok": false,
+              "word": "Dieses Restaurant ist guter als das andere."
+            },
+            {
+              "ok": false,
+              "word": "Dieses Restaurant ist am besten als das andere."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using je...desto.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "JE + comparative..., DESTO + comparative expresses linked change.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Je mehr du übst, desto besser wirst du."
+            },
+            {
+              "ok": false,
+              "word": "Je mehr du übst, besser wirst du."
+            },
+            {
+              "ok": false,
+              "word": "Mehr du übst, desto am besten wirst du."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using umso as alternative.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "UMSO can replace DESTO.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Je früher wir gehen, umso besser ist es."
+            },
+            {
+              "ok": false,
+              "word": "Je früher wir gehen, umso am besten ist es."
+            },
+            {
+              "ok": false,
+              "word": "Je wir früher gehen, umso besser es ist."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using viel + comparative.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "VIEL can intensify a comparative.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die neue Wohnung ist viel größer."
+            },
+            {
+              "ok": false,
+              "word": "Die neue Wohnung ist sehr größer."
+            },
+            {
+              "ok": false,
+              "word": "Die neue Wohnung ist viel am größten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using etwas + comparative.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "ETWAS can soften a comparative.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Heute ist es etwas wärmer als gestern."
+            },
+            {
+              "ok": false,
+              "word": "Heute ist es etwas am wärmsten als gestern."
+            },
+            {
+              "ok": false,
+              "word": "Heute ist es etwas warm wie gestern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using am + superlative.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "Adverbial superlatives use AM + -STEN/-ESTEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Von allen fährt Paul am schnellsten."
+            },
+            {
+              "ok": false,
+              "word": "Von allen fährt Paul schneller."
+            },
+            {
+              "ok": false,
+              "word": "Von allen fährt Paul der schnellste."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Combining equality and contrast.",
+          "level": "B1",
+          "category": "Comparison Structures",
+          "explain": "Use WIE for equality and ALS for inequality.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Mein Bruder ist so groß wie ich, aber älter als ich."
+            },
+            {
+              "ok": false,
+              "word": "Mein Bruder ist so groß als ich, aber älter wie ich."
+            },
+            {
+              "ok": false,
+              "word": "Mein Bruder ist größer wie ich und so alt als ich."
             }
           ]
         }

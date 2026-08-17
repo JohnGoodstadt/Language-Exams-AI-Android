@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarConditionalTimeClausesWennA2-de",
+  "sheetname": "GermanConditionalTimeClausesWennA2-de",
   "title": "Conditional & Time Clauses: wenn",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Conditional & Time Clauses: wenn (A2) German questions.",
+      "description": "Practise wenn clauses for conditions and repeated or future time situations.",
       "sortorder": 1,
-      "learningTitle": "Using Conditional & Time Clauses: wenn",
-      "learningPoints": [],
+      "learningTitle": "Using wenn for Conditions and Time",
+      "learningPoints": [
+        "Use wenn for real conditions and repeated time.",
+        "Put the verb at the end of the wenn-clause.",
+        "Use present tense for many future conditions.",
+        "Use verb-second in the main clause.",
+        "Invert after a fronted wenn-clause.",
+        "Distinguish condition from statement."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Condition.",
           "level": "A2",
           "category": "Conditional & Time Clauses: wenn",
-          "explain": "Placeholder explanation.",
+          "explain": "WENN sends the verb to the end.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Wenn es regnet, bleibe ich zu Hause."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Wenn es regnet, ich bleibe zu Hause."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Wenn regnet es, bleibe ich zu Hause."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Future time.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "German often uses present tense in a future WENN-clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich morgen Zeit habe, rufe ich dich an."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich morgen Zeit haben werde, ich rufe dich an."
+            },
+            {
+              "ok": false,
+              "word": "Wenn habe ich morgen Zeit, rufe ich dich an."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Verb-final order.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "Finite verb goes to the end of the WENN-clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich fahre mit dem Fahrrad, wenn das Wetter gut ist."
+            },
+            {
+              "ok": false,
+              "word": "Ich fahre mit dem Fahrrad, wenn das Wetter ist gut."
+            },
+            {
+              "ok": false,
+              "word": "Ich fahre mit dem Fahrrad, wenn ist das Wetter gut."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Modal in wenn-clause.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "Infinitive precedes the final modal.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn du kommen kannst, feiern wir zusammen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn du kannst kommen, feiern wir zusammen."
+            },
+            {
+              "ok": false,
+              "word": "Wenn kannst du kommen, feiern wir zusammen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Separable verb.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "Separable verb stays together at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich früh aufstehe, frühstücke ich zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich stehe früh auf, frühstücke ich zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Wenn stehe ich früh auf, frühstücke ich zu Hause."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Repeated situation.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "WENN can mean whenever.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich müde bin, trinke ich Kaffee."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich bin müde, trinke ich Kaffee."
+            },
+            {
+              "ok": false,
+              "word": "Wenn bin ich müde, trinke ich Kaffee."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Main clause first.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "The subordinate verb is still final.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir gehen spazieren, wenn es nicht regnet."
+            },
+            {
+              "ok": false,
+              "word": "Wir gehen spazieren, wenn es regnet nicht."
+            },
+            {
+              "ok": false,
+              "word": "Wir gehen spazieren, wenn regnet es nicht."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Perfekt in wenn-clause.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "Participle precedes final auxiliary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich die Arbeit gemacht habe, gehe ich nach Hause."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich habe die Arbeit gemacht, gehe ich nach Hause."
+            },
+            {
+              "ok": false,
+              "word": "Wenn habe ich die Arbeit gemacht, gehe ich nach Hause."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Negation.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "NICHT remains inside the clause with final verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn du nicht kommst, fangen wir ohne dich an."
+            },
+            {
+              "ok": false,
+              "word": "Wenn du kommst nicht, fangen wir ohne dich an."
+            },
+            {
+              "ok": false,
+              "word": "Wenn nicht du kommst, wir fangen ohne dich an."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Fronted clause inversion.",
+          "level": "A2",
+          "category": "Conditional & Time Clauses: wenn",
+          "explain": "After a fronted WENN-clause, the main finite verb comes before its subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich Urlaub habe, fahre ich ans Meer."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich Urlaub habe, ich fahre ans Meer."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich habe Urlaub, fahre ich ans Meer."
             }
           ]
         }

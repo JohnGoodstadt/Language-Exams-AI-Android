@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarConcessiveConsecutiveClausesB2-de",
+  "sheetname": "GermanConcessiveConsecutiveClausesB2-de",
   "title": "Concessive & Consecutive Clauses",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Concessive & Consecutive Clauses (B2) German questions.",
+      "description": "Practise concessive clauses with obwohl, obgleich and selbst wenn, and consecutive clauses with sodass/so dass.",
       "sortorder": 1,
-      "learningTitle": "Using Concessive & Consecutive Clauses",
-      "learningPoints": [],
+      "learningTitle": "Expressing Concession and Consequence",
+      "learningPoints": [
+        "Use obwohl/obgleich to express unexpected contrast.",
+        "Use selbst wenn for strong hypothetical concession.",
+        "Use sodass/so dass to express a result or consequence.",
+        "Keep the finite verb at the end of subordinate clauses.",
+        "Distinguish concession from cause and consequence.",
+        "Use fronted subordinate clauses with correct main-clause inversion."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'obwohl'.",
           "level": "B2",
           "category": "Concessive & Consecutive Clauses",
-          "explain": "Placeholder explanation.",
+          "explain": "OBWOHL introduces concession and sends the verb to the end.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Obwohl er müde war, arbeitete er weiter."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Obwohl er war müde, arbeitete er weiter."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Weil er müde war, arbeitete er weiter, if unexpected contrast is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'obgleich'.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "OBGLEICH is a more formal concessive conjunction.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obgleich die Kosten hoch sind, wird das Projekt fortgesetzt."
+            },
+            {
+              "ok": false,
+              "word": "Obgleich die Kosten sind hoch, wird das Projekt fortgesetzt."
+            },
+            {
+              "ok": false,
+              "word": "Sodass die Kosten hoch sind, wird das Projekt fortgesetzt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'selbst wenn'.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "SELBST WENN expresses concession even under a hypothetical condition.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Selbst wenn es morgen regnet, findet die Veranstaltung statt."
+            },
+            {
+              "ok": false,
+              "word": "Selbst wenn es morgen regnet, die Veranstaltung findet statt."
+            },
+            {
+              "ok": false,
+              "word": "Sodass es morgen regnet, findet die Veranstaltung statt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'sodass'.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "SODASS introduces a consequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es schneite stark, sodass viele Straßen gesperrt wurden."
+            },
+            {
+              "ok": false,
+              "word": "Es schneite stark, obwohl viele Straßen gesperrt wurden."
+            },
+            {
+              "ok": false,
+              "word": "Es schneite stark, sodass wurden viele Straßen gesperrt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'so dass'.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "SO DASS is an alternative spelling to SODASS.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er sprach sehr leise, so dass ich ihn kaum verstehen konnte."
+            },
+            {
+              "ok": false,
+              "word": "Er sprach sehr leise, so dass konnte ich ihn kaum verstehen."
+            },
+            {
+              "ok": false,
+              "word": "Er sprach sehr leise, obwohl ich ihn kaum verstehen konnte, if consequence is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Fronting a concessive clause.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "The main-clause finite verb follows immediately after the fronted subordinate clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obwohl das Risiko bekannt war, investierte die Firma weiter."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl das Risiko bekannt war, die Firma investierte weiter."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl war das Risiko bekannt, investierte die Firma weiter."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a modal in a consecutive clause.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "The modal goes to the end after the infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Lärm war so stark, dass wir uns kaum unterhalten konnten."
+            },
+            {
+              "ok": false,
+              "word": "Der Lärm war so stark, dass wir konnten uns kaum unterhalten."
+            },
+            {
+              "ok": false,
+              "word": "Der Lärm war so stark, obwohl wir uns kaum unterhalten konnten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using concession with Perfekt.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "The auxiliary remains final in the subordinate clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obwohl er wenig geschlafen hat, wirkt er konzentriert."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl er hat wenig geschlafen, wirkt er konzentriert."
+            },
+            {
+              "ok": false,
+              "word": "Sodass er wenig geschlafen hat, wirkt er konzentriert."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Distinguishing consequence from purpose.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "SODASS describes a result, not an intention.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Straße war vereist, sodass mehrere Unfälle passierten."
+            },
+            {
+              "ok": false,
+              "word": "Die Straße war vereist, damit mehrere Unfälle passierten."
+            },
+            {
+              "ok": false,
+              "word": "Die Straße war vereist, sodass passierten mehrere Unfälle."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Combining concession and consequence.",
+          "level": "B2",
+          "category": "Concessive & Consecutive Clauses",
+          "explain": "The conjunctions must match their respective logical relations.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obwohl die Technik veraltet war, funktionierte sie noch zuverlässig, sodass sie weiter genutzt wurde."
+            },
+            {
+              "ok": false,
+              "word": "Sodass die Technik veraltet war, funktionierte sie noch zuverlässig, obwohl sie weiter genutzt wurde."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl die Technik war veraltet, funktionierte sie noch zuverlässig, sodass wurde sie weiter genutzt."
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarExtendedParticipleAttributesB2-de",
+  "sheetname": "GermanExtendedParticipleAttributesB2-de",
   "title": "Extended Participle Attributes",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Extended Participle Attributes (B2) German questions.",
+      "description": "Practise extended participial attributes before nouns in formal and written German.",
       "sortorder": 1,
       "learningTitle": "Using Extended Participle Attributes",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use present participles for ongoing or active meaning.",
+        "Use past participles for completed or passive meaning.",
+        "Place extended participial phrases before the noun.",
+        "Apply adjective endings to the participle.",
+        "Interpret long noun phrases accurately.",
+        "Rewrite relative-clause meanings as participial attributes."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using a present participle attribute.",
           "level": "B2",
           "category": "Extended Participle Attributes",
-          "explain": "Placeholder explanation.",
+          "explain": "A present participle can describe an ongoing action before a noun.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Die vor dem Haus wartenden Gäste wurden hereingebeten."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Die vor dem Haus gewarteten Gäste wurden hereingebeten."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Die wartenden vor dem Haus Gäste wurden hereingebeten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using a past participle attribute.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "A past participle can express completed/passive meaning.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die gestern veröffentlichten Zahlen waren überraschend."
+            },
+            {
+              "ok": false,
+              "word": "Die gestern veröffentlichenden Zahlen waren überraschend."
+            },
+            {
+              "ok": false,
+              "word": "Die veröffentlicht gestern Zahlen waren überraschend."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Applying adjective endings.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "The participle takes the same endings as an adjective.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir diskutierten über die neu eingeführten Regeln."
+            },
+            {
+              "ok": false,
+              "word": "Wir diskutierten über die neu eingeführte Regeln."
+            },
+            {
+              "ok": false,
+              "word": "Wir diskutierten über die eingeführt neuen Regeln."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using an extended active attribute.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "Modifiers come before the participle and noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die seit Jahren in Berlin lebende Familie zieht um."
+            },
+            {
+              "ok": false,
+              "word": "Die lebende seit Jahren in Berlin Familie zieht um."
+            },
+            {
+              "ok": false,
+              "word": "Die seit Jahren in Berlin gelebt Familie zieht um."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using an extended passive attribute.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "A completed passive action can be packed into the noun phrase.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die vom Ausschuss vorgeschlagenen Änderungen wurden angenommen."
+            },
+            {
+              "ok": false,
+              "word": "Die vom Ausschuss vorschlagenden Änderungen wurden angenommen."
+            },
+            {
+              "ok": false,
+              "word": "Die vorgeschlagen vom Ausschuss Änderungen wurden angenommen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Distinguishing present and past participle meaning.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "Present participle is active/ongoing; past participle is completed/passive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die ständig steigenden Preise bereiten vielen Menschen Sorgen."
+            },
+            {
+              "ok": false,
+              "word": "Die ständig gestiegenen Preise bereiten vielen Menschen Sorgen, if the focus is an ongoing rise."
+            },
+            {
+              "ok": false,
+              "word": "Die ständig steigen Preise bereiten vielen Menschen Sorgen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using an article + extended attribute.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "The whole attribute stands between article and noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das im letzten Jahr renovierte Gebäude ist wieder geöffnet."
+            },
+            {
+              "ok": false,
+              "word": "Das renovierte im letzten Jahr Gebäude ist wieder geöffnet."
+            },
+            {
+              "ok": false,
+              "word": "Das im letzten Jahr renovierend Gebäude ist wieder geöffnet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a dative extended attribute.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "The participle ending follows dative adjective declension.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir sprechen mit den an dem Projekt beteiligten Mitarbeitern."
+            },
+            {
+              "ok": false,
+              "word": "Wir sprechen mit den an dem Projekt beteiligte Mitarbeitern."
+            },
+            {
+              "ok": false,
+              "word": "Wir sprechen mit den beteiligten an dem Projekt Mitarbeitern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a genitive extended attribute.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "The extended participle can occur inside genitive noun phrases.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Folgen der gestern getroffenen Entscheidung sind noch unklar."
+            },
+            {
+              "ok": false,
+              "word": "Die Folgen der gestern treffenden Entscheidung sind noch unklar."
+            },
+            {
+              "ok": false,
+              "word": "Die Folgen der getroffenen gestern Entscheidung sind noch unklar."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Converting a relative idea to a participial attribute.",
+          "level": "B2",
+          "category": "Extended Participle Attributes",
+          "explain": "The attribute compresses information that could otherwise form a relative clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die für das Projekt verantwortliche Person ist heute nicht da."
+            },
+            {
+              "ok": false,
+              "word": "Die verantwortliche für das Projekt Person ist heute nicht da."
+            },
+            {
+              "ok": false,
+              "word": "Die für das Projekt verantwortet Person ist heute nicht da."
             }
           ]
         }

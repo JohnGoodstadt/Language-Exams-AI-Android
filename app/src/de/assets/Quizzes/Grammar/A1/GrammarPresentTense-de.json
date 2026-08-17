@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarPresentTenseA1-de",
+  "sheetname": "GermanPresentTenseA1-de",
   "title": "Present Tense",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Present Tense (A1) German questions.",
+      "description": "Practise basic German present-tense verb forms with common regular and irregular verbs.",
       "sortorder": 1,
-      "learningTitle": "Using Present Tense",
-      "learningPoints": [],
+      "learningTitle": "Using the German Present Tense",
+      "learningPoints": [
+        "Use the correct present-tense ending for each subject pronoun.",
+        "Recognise common regular verb endings such as -e, -st, -t and -en.",
+        "Use common irregular verbs with stem changes.",
+        "Match the verb form correctly to ich, du, er/sie/es, wir, ihr and sie/Sie.",
+        "Build accurate A1 sentences about everyday actions.",
+        "Recognise the infinitive form when it follows another structure."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using the -e ending with 'ich'.",
           "level": "A1",
           "category": "Present Tense",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "With ICH, many regular verbs end in -E.",
+          "sentence": "Ich _ in Berlin.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "wohne"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "wohnst"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "wohnt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using the -st ending with 'du'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "With DU, many regular verbs end in -ST.",
+          "sentence": "Du _ Deutsch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "lernst"
+            },
+            {
+              "ok": false,
+              "word": "lerne"
+            },
+            {
+              "ok": false,
+              "word": "lernt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using the -t ending with 'er'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "With ER, SIE and ES, many regular verbs end in -T.",
+          "sentence": "Er _ jeden Tag.",
+          "words": [
+            {
+              "ok": true,
+              "word": "arbeitet"
+            },
+            {
+              "ok": false,
+              "word": "arbeite"
+            },
+            {
+              "ok": false,
+              "word": "arbeiten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using the infinitive-like form with 'wir'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "With WIR, the verb usually has the same form as the infinitive.",
+          "sentence": "Wir _ in München.",
+          "words": [
+            {
+              "ok": true,
+              "word": "leben"
+            },
+            {
+              "ok": false,
+              "word": "lebt"
+            },
+            {
+              "ok": false,
+              "word": "lebst"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using the -t ending with 'ihr'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "With IHR, many regular verbs end in -T.",
+          "sentence": "Ihr _ Fußball.",
+          "words": [
+            {
+              "ok": true,
+              "word": "spielt"
+            },
+            {
+              "ok": false,
+              "word": "spielen"
+            },
+            {
+              "ok": false,
+              "word": "spielst"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using the plural form with 'sie'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "With plural SIE, the verb usually has the same form as the infinitive.",
+          "sentence": "Sie _ Kaffee.",
+          "words": [
+            {
+              "ok": true,
+              "word": "trinken"
+            },
+            {
+              "ok": false,
+              "word": "trinkt"
+            },
+            {
+              "ok": false,
+              "word": "trinkst"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a stem-changing verb with 'du'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "Some common verbs change their stem vowel with DU and ER/SIE/ES. FAHREN becomes FÄHRST with DU.",
+          "sentence": "Du _ mit dem Bus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "fährst"
+            },
+            {
+              "ok": false,
+              "word": "fahrst"
+            },
+            {
+              "ok": false,
+              "word": "fährt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a stem-changing verb with 'er'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "LESEN becomes LIEST with ER/SIE/ES.",
+          "sentence": "Er _ die Zeitung.",
+          "words": [
+            {
+              "ok": true,
+              "word": "liest"
+            },
+            {
+              "ok": false,
+              "word": "lese"
+            },
+            {
+              "ok": false,
+              "word": "lesen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a regular verb after a singular noun.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "A singular third-person subject takes the ER/SIE/ES verb form.",
+          "sentence": "Anna _ in einem Büro.",
+          "words": [
+            {
+              "ok": true,
+              "word": "arbeitet"
+            },
+            {
+              "ok": false,
+              "word": "arbeiten"
+            },
+            {
+              "ok": false,
+              "word": "arbeitest"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using the formal 'Sie'.",
+          "level": "A1",
+          "category": "Present Tense",
+          "explain": "Formal SIE uses the same verb form as the plural SIE.",
+          "sentence": "_ Sie in Hamburg?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wohnen"
+            },
+            {
+              "ok": false,
+              "word": "Wohnst"
+            },
+            {
+              "ok": false,
+              "word": "Wohnt"
             }
           ]
         }

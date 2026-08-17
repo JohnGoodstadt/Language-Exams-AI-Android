@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarNounVerbCollocationsB2-de",
+  "sheetname": "GermanNounVerbCollocationsB2-de",
   "title": "Noun-Verb Collocations",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Noun-Verb Collocations (B2) German questions.",
+      "description": "Practise common German Funktionsverbgefüge and noun-verb collocations used in formal language.",
       "sortorder": 1,
       "learningTitle": "Using Noun-Verb Collocations",
-      "learningPoints": [],
+      "learningPoints": [
+        "Learn common combinations such as eine Entscheidung treffen.",
+        "Use formal collocations such as Maßnahmen ergreifen and Kritik üben.",
+        "Recognise light-verb constructions common in written German.",
+        "Choose the conventional verb rather than a literal synonym.",
+        "Use collocations to increase formal accuracy and fluency.",
+        "Learn the whole phrase as a unit."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'eine Entscheidung treffen'.",
           "level": "B2",
           "category": "Noun-Verb Collocations",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "The standard collocation is EINE ENTSCHEIDUNG TREFFEN.",
+          "sentence": "Wir müssen bald eine Entscheidung _.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "treffen"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "machen"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "nehmen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'Maßnahmen ergreifen'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The formal collocation is MASSNAHMEN ERGREIFEN.",
+          "sentence": "Die Regierung will neue Maßnahmen _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ergreifen"
+            },
+            {
+              "ok": false,
+              "word": "machen"
+            },
+            {
+              "ok": false,
+              "word": "führen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'Kritik üben'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The standard collocation is KRITIK ÜBEN.",
+          "sentence": "Mehrere Experten _ Kritik an dem Plan.",
+          "words": [
+            {
+              "ok": true,
+              "word": "üben"
+            },
+            {
+              "ok": false,
+              "word": "machen"
+            },
+            {
+              "ok": false,
+              "word": "geben"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'in Betracht ziehen'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The collocation means consider.",
+          "sentence": "Wir sollten diese Möglichkeit in Betracht _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ziehen"
+            },
+            {
+              "ok": false,
+              "word": "nehmen"
+            },
+            {
+              "ok": false,
+              "word": "bringen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'zur Verfügung stellen'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "This means make available/provide.",
+          "sentence": "Die Firma wird zusätzliche Mittel zur Verfügung _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "stellen"
+            },
+            {
+              "ok": false,
+              "word": "setzen"
+            },
+            {
+              "ok": false,
+              "word": "legen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'Einfluss nehmen auf'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The collocation is EINFLUSS NEHMEN AUF.",
+          "sentence": "Politische Entscheidungen können Einfluss auf die Wirtschaft _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "nehmen"
+            },
+            {
+              "ok": false,
+              "word": "machen"
+            },
+            {
+              "ok": false,
+              "word": "setzen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'eine Rolle spielen'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The standard phrase is EINE ROLLE SPIELEN.",
+          "sentence": "Erfahrung kann dabei eine wichtige Rolle _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "spielen"
+            },
+            {
+              "ok": false,
+              "word": "machen"
+            },
+            {
+              "ok": false,
+              "word": "führen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'Verantwortung übernehmen'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The collocation is VERANTWORTUNG ÜBERNEHMEN.",
+          "sentence": "Jemand muss die Verantwortung _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "übernehmen"
+            },
+            {
+              "ok": false,
+              "word": "nehmen über"
+            },
+            {
+              "ok": false,
+              "word": "machen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'Kontakt aufnehmen'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The phrase means establish contact.",
+          "sentence": "Bitte _ Sie Kontakt mit uns auf.",
+          "words": [
+            {
+              "ok": true,
+              "word": "nehmen"
+            },
+            {
+              "ok": false,
+              "word": "machen"
+            },
+            {
+              "ok": false,
+              "word": "stellen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'zur Sprache bringen'.",
+          "level": "B2",
+          "category": "Noun-Verb Collocations",
+          "explain": "The phrase means raise a topic for discussion.",
+          "sentence": "Sie wollte das Problem zur Sprache _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "bringen"
+            },
+            {
+              "ok": false,
+              "word": "stellen"
+            },
+            {
+              "ok": false,
+              "word": "nehmen"
             }
           ]
         }

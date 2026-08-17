@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarWordOrderVerbPositionA1-de",
+  "sheetname": "GermanWordOrderVerbPositionA1-de",
   "title": "Word Order & Verb Position",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Word Order & Verb Position (A1) German questions.",
+      "description": "Practise basic German word order, especially the position of the finite verb in main clauses.",
       "sortorder": 1,
-      "learningTitle": "Using Word Order & Verb Position",
-      "learningPoints": [],
+      "learningTitle": "Building German Sentences in the Correct Order",
+      "learningPoints": [
+        "Put the finite verb in second position in a main clause.",
+        "Keep the subject close to the verb when possible.",
+        "Recognise that another element can come first, followed by the verb and then the subject.",
+        "Use natural basic order for time, manner and place.",
+        "Avoid copying English word order mechanically.",
+        "Build accurate A1 main clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using verb-second order after the subject.",
           "level": "A1",
           "category": "Word Order & Verb Position",
-          "explain": "Placeholder explanation.",
+          "explain": "In a simple main clause beginning with the subject, the finite verb is normally in second position.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich wohne in Berlin."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich in Berlin wohne."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Wohne ich in Berlin."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Putting the verb second after a time expression.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "If a time expression comes first, the finite verb stays in second position and the subject follows.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Heute arbeite ich zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Heute ich arbeite zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Heute zu Hause ich arbeite."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using normal word order with an object.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "A common order is subject + finite verb + object.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Anna kauft ein Buch."
+            },
+            {
+              "ok": false,
+              "word": "Anna ein Buch kauft."
+            },
+            {
+              "ok": false,
+              "word": "Kauft Anna ein Buch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using verb-second with a place expression first.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "A place expression can come first, but the finite verb must remain second.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "In Berlin wohnt mein Bruder."
+            },
+            {
+              "ok": false,
+              "word": "In Berlin mein Bruder wohnt."
+            },
+            {
+              "ok": false,
+              "word": "In Berlin wohnt mein Bruder ist."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a frequency expression after the verb.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "In a basic clause, the verb remains second and frequency information can follow.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich spiele oft Tennis."
+            },
+            {
+              "ok": false,
+              "word": "Ich oft spiele Tennis."
+            },
+            {
+              "ok": false,
+              "word": "Spiele ich oft Tennis."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using time before place.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "A common neutral pattern is time before place.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir fahren morgen nach Hamburg."
+            },
+            {
+              "ok": false,
+              "word": "Wir morgen fahren nach Hamburg."
+            },
+            {
+              "ok": false,
+              "word": "Morgen wir nach Hamburg fahren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using inversion after 'am Montag'.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "When a time phrase starts the sentence, the verb comes next.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Am Montag habe ich Deutsch."
+            },
+            {
+              "ok": false,
+              "word": "Am Montag ich habe Deutsch."
+            },
+            {
+              "ok": false,
+              "word": "Am Montag Deutsch ich habe."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Keeping the finite verb in second position with 'manchmal'.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "A fronted adverb such as MANCHMAL is followed by the finite verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Manchmal esse ich im Restaurant."
+            },
+            {
+              "ok": false,
+              "word": "Manchmal ich esse im Restaurant."
+            },
+            {
+              "ok": false,
+              "word": "Manchmal im Restaurant ich esse."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using correct order with two complements.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "The verb stays second even when the sentence contains more information.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Meine Schwester lernt heute in der Bibliothek."
+            },
+            {
+              "ok": false,
+              "word": "Meine Schwester heute in der Bibliothek lernt."
+            },
+            {
+              "ok": false,
+              "word": "Lernt meine Schwester heute in der Bibliothek."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using verb-second after an object placed first.",
+          "level": "A1",
+          "category": "Word Order & Verb Position",
+          "explain": "An object can be fronted for emphasis, but the finite verb still comes second.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Deutsch lerne ich jeden Tag."
+            },
+            {
+              "ok": false,
+              "word": "Deutsch ich lerne jeden Tag."
+            },
+            {
+              "ok": false,
+              "word": "Deutsch jeden Tag ich lerne."
             }
           ]
         }

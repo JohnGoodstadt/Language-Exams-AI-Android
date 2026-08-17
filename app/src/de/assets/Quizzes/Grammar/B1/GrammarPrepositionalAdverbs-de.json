@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarPrepositionalAdverbsB1-de",
+  "sheetname": "GermanPrepositionalAdverbsB1-de",
   "title": "Prepositional Adverbs",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Prepositional Adverbs (B1) German questions.",
+      "description": "Practise da- and wo- compounds such as darauf, daran, darüber and worauf.",
       "sortorder": 1,
       "learningTitle": "Using Prepositional Adverbs",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use da- compounds to refer to things or ideas.",
+        "Use wo- compounds in questions about things or ideas.",
+        "Do not normally use da-/wo- compounds for people.",
+        "Match the compound to the verb's fixed preposition.",
+        "Use forms such as daran, darauf, darüber and damit.",
+        "Recognise the inserted -r- before vowel-initial prepositions."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'darauf' with warten auf.",
           "level": "B1",
           "category": "Prepositional Adverbs",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "DARAUF replaces auf + thing.",
+          "sentence": "Ich warte _.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "darauf"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "daran"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "darüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'worauf' in a question.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "WORAUF asks about a thing after WARTEN AUF.",
+          "sentence": "_ wartest du?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Worauf"
+            },
+            {
+              "ok": false,
+              "word": "Woran"
+            },
+            {
+              "ok": false,
+              "word": "Womit"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'daran' with denken an.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "DARAN replaces an + thing.",
+          "sentence": "Ich denke oft _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "daran"
+            },
+            {
+              "ok": false,
+              "word": "darauf"
+            },
+            {
+              "ok": false,
+              "word": "davon"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'woran' in a question.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "WORAN asks about a thing after DENKEN AN.",
+          "sentence": "_ denkst du?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Woran"
+            },
+            {
+              "ok": false,
+              "word": "Worauf"
+            },
+            {
+              "ok": false,
+              "word": "Worüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'darüber' with sprechen über.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "DARÜBER means about it.",
+          "sentence": "Wir sprechen morgen _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "darüber"
+            },
+            {
+              "ok": false,
+              "word": "damit"
+            },
+            {
+              "ok": false,
+              "word": "daran"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'worüber' in a question.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "WORÜBER means about what.",
+          "sentence": "_ sprecht ihr?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Worüber"
+            },
+            {
+              "ok": false,
+              "word": "Woran"
+            },
+            {
+              "ok": false,
+              "word": "Wofür"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'damit' with sich beschäftigen mit.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "DAMIT can mean with it.",
+          "sentence": "Sie beschäftigt sich intensiv _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "damit"
+            },
+            {
+              "ok": false,
+              "word": "darauf"
+            },
+            {
+              "ok": false,
+              "word": "davon"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'wofür' with sich interessieren für.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "WOFÜR means for what / what...for.",
+          "sentence": "_ interessierst du dich?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wofür"
+            },
+            {
+              "ok": false,
+              "word": "Womit"
+            },
+            {
+              "ok": false,
+              "word": "Woran"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'davon' with abhängen von.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "DAVON means on/from that in this fixed pattern.",
+          "sentence": "Alles hängt _ ab.",
+          "words": [
+            {
+              "ok": true,
+              "word": "davon"
+            },
+            {
+              "ok": false,
+              "word": "darauf"
+            },
+            {
+              "ok": false,
+              "word": "dazu"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'womit'.",
+          "level": "B1",
+          "category": "Prepositional Adverbs",
+          "explain": "WOMIT asks with what.",
+          "sentence": "_ beschäftigst du dich gerade?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Womit"
+            },
+            {
+              "ok": false,
+              "word": "Worauf"
+            },
+            {
+              "ok": false,
+              "word": "Wovon"
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarPersonalPronounsA1-de",
+  "sheetname": "GermanPersonalPronounsA1-de",
   "title": "Personal Pronouns",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Personal Pronouns (A1) German questions.",
+      "description": "Practise common German subject and basic accusative personal pronouns.",
       "sortorder": 1,
       "learningTitle": "Using Personal Pronouns",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use ich, du, er, sie, es, wir, ihr and sie/Sie as subject pronouns.",
+        "Match pronouns correctly to people and things.",
+        "Use basic accusative forms such as mich, dich, ihn and sie.",
+        "Distinguish informal du/ihr from formal Sie.",
+        "Use pronouns to avoid unnecessary noun repetition.",
+        "Match pronouns to verb forms accurately."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'ich' for the speaker.",
           "level": "A1",
           "category": "Personal Pronouns",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "ICH means I and is the first-person singular subject pronoun.",
+          "sentence": "_ komme aus England.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Du"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'du' for one informal person.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "DU means you when speaking informally to one person.",
+          "sentence": "Wo wohnst _?",
+          "words": [
+            {
+              "ok": true,
+              "word": "du"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "Sie"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'er' for a masculine noun/person.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "ER means he and can replace a masculine person noun.",
+          "sentence": "Peter ist Lehrer. _ arbeitet in Berlin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er"
+            },
+            {
+              "ok": false,
+              "word": "Sie"
+            },
+            {
+              "ok": false,
+              "word": "Es"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'sie' for a feminine person.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "SIE means she when referring to a feminine person.",
+          "sentence": "Anna kommt aus Wien. _ spricht Deutsch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie"
+            },
+            {
+              "ok": false,
+              "word": "Er"
+            },
+            {
+              "ok": false,
+              "word": "Es"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'wir' for 'we'.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "WIR means we.",
+          "sentence": "_ lernen zusammen Deutsch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir"
+            },
+            {
+              "ok": false,
+              "word": "Ihr"
+            },
+            {
+              "ok": false,
+              "word": "Sie"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'ihr' for informal plural 'you'.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "IHR means you when speaking informally to more than one person.",
+          "sentence": "Kommt _ heute Abend?",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "du"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using accusative 'mich'.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "ICH changes to MICH when it is the direct object.",
+          "sentence": "Sie sieht _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "ich"
+            },
+            {
+              "ok": false,
+              "word": "mir"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using accusative 'dich'.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "DU changes to DICH in the accusative.",
+          "sentence": "Ich höre _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dich"
+            },
+            {
+              "ok": false,
+              "word": "du"
+            },
+            {
+              "ok": false,
+              "word": "dir"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using accusative 'ihn'.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "ER changes to IHN in the accusative.",
+          "sentence": "Kennst du Peter? Ja, ich kenne _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            },
+            {
+              "ok": false,
+              "word": "ihm"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using formal 'Sie'.",
+          "level": "A1",
+          "category": "Personal Pronouns",
+          "explain": "Formal SIE is capitalised and is used with the plural verb form.",
+          "sentence": "Wo wohnen _?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "du"
             }
           ]
         }

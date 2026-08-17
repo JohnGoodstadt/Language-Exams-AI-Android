@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarAdjectiveEndingsA2-de",
+  "sheetname": "GermanAdjectiveEndingsA2-de",
   "title": "Adjective Endings",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Adjective Endings (A2) German questions.",
+      "description": "Practise common adjective endings after definite, indefinite and possessive articles.",
       "sortorder": 1,
-      "learningTitle": "Using Adjective Endings",
-      "learningPoints": [],
+      "learningTitle": "Using Basic Adjective Endings",
+      "learningPoints": [
+        "Match endings to gender, case and article type.",
+        "Use nominative endings after der/die/das and ein/eine.",
+        "Use masculine accusative -en.",
+        "Use dative -en after articles.",
+        "Keep endings consistent.",
+        "Build accuracy with common noun phrases."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "After der.",
           "level": "A2",
           "category": "Adjective Endings",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "After DER in nominative masculine, adjective ends -E.",
+          "sentence": "Der alt_ Mann ist nett.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "e"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "en"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "After die.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After DIE nominative feminine, adjective ends -E.",
+          "sentence": "Die neu_ Wohnung ist schön.",
+          "words": [
+            {
+              "ok": true,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "es"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "After das.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After DAS nominative neuter, adjective ends -E.",
+          "sentence": "Das klein_ Kind spielt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "es"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "After ein masculine.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After EIN masculine nominative, adjective takes -ER.",
+          "sentence": "Ein nett_ Mann hilft uns.",
+          "words": [
+            {
+              "ok": true,
+              "word": "er"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "After eine.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After EINE feminine nominative, adjective takes -E.",
+          "sentence": "Eine jung_ Frau wartet draußen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "After ein neuter.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After EIN neuter nominative, adjective takes -ES.",
+          "sentence": "Ein kalt_ Getränk, bitte.",
+          "words": [
+            {
+              "ok": true,
+              "word": "es"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "en"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Accusative masculine.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After DEN, adjective ends -EN.",
+          "sentence": "Ich sehe den alt_ Mann.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "After einen.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After EINEN, adjective ends -EN.",
+          "sentence": "Ich kaufe einen neu_ Computer.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            },
+            {
+              "ok": false,
+              "word": "es"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Dative adjective.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "After a dative article, adjective normally ends -EN.",
+          "sentence": "Ich spreche mit der nett_ Lehrerin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Possessive plural.",
+          "level": "A2",
+          "category": "Adjective Endings",
+          "explain": "Plural after MEINE uses adjective -EN.",
+          "sentence": "Meine neu_ Schuhe sind bequem.",
+          "words": [
+            {
+              "ok": true,
+              "word": "en"
+            },
+            {
+              "ok": false,
+              "word": "e"
+            },
+            {
+              "ok": false,
+              "word": "er"
             }
           ]
         }

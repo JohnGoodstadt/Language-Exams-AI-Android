@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarDativeCaseA2-de",
+  "sheetname": "GermanDativeCaseA2-de",
   "title": "Dative Case",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Dative Case (A2) German questions.",
+      "description": "Practise basic dative articles and noun phrases.",
       "sortorder": 1,
-      "learningTitle": "Using Dative Case",
-      "learningPoints": [],
+      "learningTitle": "Using the Dative Case",
+      "learningPoints": [
+        "Use dem with masculine and neuter nouns.",
+        "Use der with feminine nouns.",
+        "Use den with plural nouns.",
+        "Use einem/einer with indefinite noun phrases.",
+        "Recognise dative indirect objects.",
+        "Match article, gender and case."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Masculine dative.",
           "level": "A2",
           "category": "Dative Case",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "DER becomes DEM.",
+          "sentence": "Ich helfe _ Mann.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "dem"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "den"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Feminine dative.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "DIE becomes DER.",
+          "sentence": "Ich danke _ Frau.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Neuter dative.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "DAS becomes DEM.",
+          "sentence": "Das gehört _ Kind.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Plural dative.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "Plural DIE becomes DEN.",
+          "sentence": "Wir helfen _ Kindern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using einem.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "EIN becomes EINEM in masculine dative.",
+          "sentence": "Ich spreche mit _ Kollegen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "einem"
+            },
+            {
+              "ok": false,
+              "word": "einen"
+            },
+            {
+              "ok": false,
+              "word": "ein"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using einer.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "EINE becomes EINER in feminine dative.",
+          "sentence": "Sie hilft _ Freundin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "einer"
+            },
+            {
+              "ok": false,
+              "word": "eine"
+            },
+            {
+              "ok": false,
+              "word": "einem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "After mit.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "MIT always takes dative.",
+          "sentence": "Ich fahre mit _ Bus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "After von.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "VON takes dative.",
+          "sentence": "Das Geschenk ist von _ Schwester.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meiner"
+            },
+            {
+              "ok": false,
+              "word": "meine"
+            },
+            {
+              "ok": false,
+              "word": "meinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Indirect object.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "The recipient is often dative.",
+          "sentence": "Ich gebe _ Kind ein Buch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Plural noun ending.",
+          "level": "A2",
+          "category": "Dative Case",
+          "explain": "Many dative plurals add -N.",
+          "sentence": "Ich spreche mit den _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kindern"
+            },
+            {
+              "ok": false,
+              "word": "Kinder"
+            },
+            {
+              "ok": false,
+              "word": "Kindes"
             }
           ]
         }

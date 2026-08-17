@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarSubordinateCauseConcessionB1-de",
+  "sheetname": "GermanCauseConcessionClausesB1-de",
   "title": "Subordinate Clauses: Cause & Concession",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Subordinate Clauses: Cause & Concession (B1) German questions.",
+      "description": "Practise causal and concessive subordinate clauses with weil, da and obwohl.",
       "sortorder": 1,
-      "learningTitle": "Using Subordinate Clauses: Cause & Concession",
-      "learningPoints": [],
+      "learningTitle": "Expressing Cause and Concession",
+      "learningPoints": [
+        "Use weil and da to give reasons.",
+        "Use obwohl to express concession or contrast.",
+        "Put the finite verb at the end of subordinate clauses.",
+        "Use correct main-clause inversion when a subordinate clause comes first.",
+        "Distinguish cause from concession by meaning.",
+        "Use commas between clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using weil for cause.",
           "level": "B1",
           "category": "Subordinate Clauses: Cause & Concession",
-          "explain": "Placeholder explanation.",
+          "explain": "WEIL introduces a reason and sends the verb to the end.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich bleibe zu Hause, weil ich krank bin."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich bleibe zu Hause, weil ich bin krank."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich bleibe zu Hause, obwohl ich krank bin, if the intended meaning is cause."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using da for cause.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "DA can give a reason, often in more formal style.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Da es spät ist, fahren wir nach Hause."
+            },
+            {
+              "ok": false,
+              "word": "Da es ist spät, fahren wir nach Hause."
+            },
+            {
+              "ok": false,
+              "word": "Da es spät ist, wir fahren nach Hause."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using obwohl for concession.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "OBWOHL introduces an unexpected contrast.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obwohl es regnet, gehen wir spazieren."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl es regnet, wir gehen spazieren."
+            },
+            {
+              "ok": false,
+              "word": "Weil es regnet, gehen wir spazieren, if the meaning is concession."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using obwohl with modal.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "The modal goes to the end after the infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obwohl er arbeiten muss, kommt er mit."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl er muss arbeiten, kommt er mit."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl muss er arbeiten, kommt er mit."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using weil after the main clause.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "The finite verb remains final in the subordinate clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir nehmen ein Taxi, weil der Bus nicht kommt."
+            },
+            {
+              "ok": false,
+              "word": "Wir nehmen ein Taxi, weil der Bus kommt nicht."
+            },
+            {
+              "ok": false,
+              "word": "Wir nehmen ein Taxi, da kommt der Bus nicht."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using obwohl after main clause.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "OBWOHL can follow the main clause and still uses verb-final order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie geht arbeiten, obwohl sie sich nicht gut fühlt."
+            },
+            {
+              "ok": false,
+              "word": "Sie geht arbeiten, obwohl sie fühlt sich nicht gut."
+            },
+            {
+              "ok": false,
+              "word": "Sie geht arbeiten, weil sie sich nicht gut fühlt, if the intended meaning is concession."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using Perfekt in a causal clause.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "The participle comes before the final auxiliary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bin müde, weil ich schlecht geschlafen habe."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, weil ich habe schlecht geschlafen."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, weil schlecht habe ich geschlafen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using fronted concession.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "The main clause verb comes immediately after the fronted subordinate clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obwohl das Hotel teuer war, haben wir dort übernachtet."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl das Hotel teuer war, wir haben dort übernachtet."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl war das Hotel teuer, haben wir dort übernachtet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Choosing cause versus concession.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "The conjunction must match the logical relationship.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Da der Zug ausfiel, mussten wir den Bus nehmen."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl der Zug ausfiel, mussten wir den Bus nehmen, if the cancellation directly caused the bus journey."
+            },
+            {
+              "ok": false,
+              "word": "Da der Zug fiel aus, mussten wir den Bus nehmen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Combining reason and contrast.",
+          "level": "B1",
+          "category": "Subordinate Clauses: Cause & Concession",
+          "explain": "Different subordinate conjunctions carry different meanings.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Obwohl er wenig Zeit hatte, half er uns, weil das Problem dringend war."
+            },
+            {
+              "ok": false,
+              "word": "Weil er wenig Zeit hatte, half er uns, obwohl das Problem dringend war, with the intended relations reversed."
+            },
+            {
+              "ok": false,
+              "word": "Obwohl er hatte wenig Zeit, half er uns, weil war das Problem dringend."
             }
           ]
         }

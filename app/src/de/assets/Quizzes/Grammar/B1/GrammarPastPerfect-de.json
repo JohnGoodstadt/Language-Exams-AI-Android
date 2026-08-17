@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarPastPerfectB1-de",
+  "sheetname": "GermanPastPerfectB1-de",
   "title": "Past Perfect",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Past Perfect (B1) German questions.",
+      "description": "Practise the German Plusquamperfekt to show that one past event happened before another.",
       "sortorder": 1,
-      "learningTitle": "Using Past Perfect",
-      "learningPoints": [],
+      "learningTitle": "Using the Past Perfect",
+      "learningPoints": [
+        "Form the Plusquamperfekt with hatte/war + past participle.",
+        "Use it for an event completed before another past event.",
+        "Use war with verbs that form Perfekt with sein.",
+        "Use hatte with most other verbs.",
+        "Keep the participle at the end.",
+        "Distinguish earlier past from later past events."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using hatte + participle.",
           "level": "B1",
           "category": "Past Perfect",
-          "explain": "Placeholder explanation.",
+          "explain": "Most verbs form Plusquamperfekt with HATTE + participle.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich hatte schon gegessen, bevor er kam."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich habe schon gegessen, bevor er kam."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich hatte schon essen, bevor er kam."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using war + participle.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "Movement verbs that use SEIN in Perfekt use WAR in Plusquamperfekt.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie war schon gegangen, als ich anrief."
+            },
+            {
+              "ok": false,
+              "word": "Sie hatte schon gegangen, als ich anrief."
+            },
+            {
+              "ok": false,
+              "word": "Sie war schon gehen, als ich anrief."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Showing earlier past.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "Plusquamperfekt marks the earlier event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Nachdem wir angekommen waren, riefen wir an."
+            },
+            {
+              "ok": false,
+              "word": "Nachdem wir ankamen, waren wir angerufen."
+            },
+            {
+              "ok": false,
+              "word": "Nachdem wir angekommen hatten, riefen wir an."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using hatte with machen.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "MACHEN forms HATTE GEMACHT.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er hatte die Arbeit schon gemacht."
+            },
+            {
+              "ok": false,
+              "word": "Er war die Arbeit schon gemacht."
+            },
+            {
+              "ok": false,
+              "word": "Er hatte die Arbeit schon machen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using war with fahren.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "FAHREN as movement forms WAR GEFAHREN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir waren schon nach Hause gefahren."
+            },
+            {
+              "ok": false,
+              "word": "Wir hatten schon nach Hause gefahren."
+            },
+            {
+              "ok": false,
+              "word": "Wir waren schon nach Hause fahren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using bevor with two past events.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "The earlier event can be in Plusquamperfekt.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bevor der Film begann, hatten wir unsere Plätze gefunden."
+            },
+            {
+              "ok": false,
+              "word": "Bevor der Film begann, haben wir unsere Plätze gefunden."
+            },
+            {
+              "ok": false,
+              "word": "Bevor der Film begann, waren wir unsere Plätze gefunden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a negative earlier event.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "NICHT can negate the earlier action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich hatte die Nachricht noch nicht gelesen."
+            },
+            {
+              "ok": false,
+              "word": "Ich war die Nachricht noch nicht gelesen."
+            },
+            {
+              "ok": false,
+              "word": "Ich hatte die Nachricht noch nicht lesen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using schon with Plusquamperfekt.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "SCHON commonly marks completion before another point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie hatte schon bezahlt, als der Kellner zurückkam."
+            },
+            {
+              "ok": false,
+              "word": "Sie war schon bezahlt, als der Kellner zurückkam."
+            },
+            {
+              "ok": false,
+              "word": "Sie hatte schon bezahlen, als der Kellner zurückkam."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using nachdem.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "NACHDEM often introduces the earlier completed action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Nachdem er geduscht hatte, ging er zur Arbeit."
+            },
+            {
+              "ok": false,
+              "word": "Nachdem er hatte geduscht, ging er zur Arbeit."
+            },
+            {
+              "ok": false,
+              "word": "Nachdem er geduscht war, ging er zur Arbeit."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Contrasting Perfekt and Plusquamperfekt.",
+          "level": "B1",
+          "category": "Past Perfect",
+          "explain": "Plusquamperfekt is used for the earlier of two past events.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Als ich ankam, hatte der Zug den Bahnhof bereits verlassen."
+            },
+            {
+              "ok": false,
+              "word": "Als ich ankam, hat der Zug den Bahnhof bereits verlassen."
+            },
+            {
+              "ok": false,
+              "word": "Als ich ankam, war der Zug den Bahnhof bereits verlassen."
             }
           ]
         }

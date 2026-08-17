@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarGenitiveCaseB1-de",
+  "sheetname": "GermanGenitiveCaseB1-de",
   "title": "Genitive Case",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Genitive Case (B1) German questions.",
+      "description": "Practise basic genitive articles and common genitive expressions of possession.",
       "sortorder": 1,
-      "learningTitle": "Using Genitive Case",
-      "learningPoints": [],
+      "learningTitle": "Using the Genitive Case",
+      "learningPoints": [
+        "Use des with masculine and neuter nouns.",
+        "Use der with feminine and plural nouns.",
+        "Add -s or -es to many masculine and neuter nouns.",
+        "Use genitive to express possession in formal or written German.",
+        "Recognise common genitive prepositions and phrases.",
+        "Match article, noun ending and gender."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using masculine genitive 'des'.",
           "level": "B1",
           "category": "Genitive Case",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "Masculine DER becomes DES in the genitive.",
+          "sentence": "Das Auto _ Mannes ist neu.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "des"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "dem"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using feminine genitive 'der'.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "Feminine DIE becomes DER.",
+          "sentence": "Das ist die Tasche _ Frau.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "des"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using neuter genitive 'des'.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "Neuter DAS becomes DES.",
+          "sentence": "Die Tür _ Hauses ist offen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "des"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using plural genitive 'der'.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "Plural DIE becomes DER.",
+          "sentence": "Die Namen _ Studenten stehen hier.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "des"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Adding -s to a masculine noun.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "Many masculine nouns add -S or -ES in the genitive.",
+          "sentence": "Das Fahrrad meines _ ist kaputt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bruders"
+            },
+            {
+              "ok": false,
+              "word": "Bruder"
+            },
+            {
+              "ok": false,
+              "word": "Brudern"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Adding -es to a short noun.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "Short masculine/neuter nouns often take -ES.",
+          "sentence": "Die Farbe des _ ist blau.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Hauses"
+            },
+            {
+              "ok": false,
+              "word": "Haus"
+            },
+            {
+              "ok": false,
+              "word": "Hausen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a possessive genitive article.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "MEIN becomes MEINES with masculine/neuter genitive nouns.",
+          "sentence": "Die Meinung _ Vaters ist wichtig.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meines"
+            },
+            {
+              "ok": false,
+              "word": "meinem"
+            },
+            {
+              "ok": false,
+              "word": "meinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using genitive after 'während'.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "WÄHREND is commonly followed by genitive in standard German.",
+          "sentence": "Während _ Urlaubs war es sehr warm.",
+          "words": [
+            {
+              "ok": true,
+              "word": "des"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using genitive after 'wegen'.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "WEGEN commonly takes genitive in standard written German.",
+          "sentence": "Wegen _ Wetters bleiben wir zu Hause.",
+          "words": [
+            {
+              "ok": true,
+              "word": "des"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using feminine possessive genitive.",
+          "level": "B1",
+          "category": "Genitive Case",
+          "explain": "Feminine genitive possessive articles end in -ER.",
+          "sentence": "Das ist das Büro _ Chefin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meiner"
+            },
+            {
+              "ok": false,
+              "word": "meine"
+            },
+            {
+              "ok": false,
+              "word": "meinem"
             }
           ]
         }

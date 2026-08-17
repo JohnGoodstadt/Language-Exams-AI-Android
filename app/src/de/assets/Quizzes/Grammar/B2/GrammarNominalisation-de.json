@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarNominalisationB2-de",
+  "sheetname": "GermanNominalisationB2-de",
   "title": "Nominalisation",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Nominalisation (B2) German questions.",
+      "description": "Practise nominalisation of verbs and adjectives in formal German.",
       "sortorder": 1,
       "learningTitle": "Using Nominalisation",
-      "learningPoints": [],
+      "learningPoints": [
+        "Turn verbs into nouns for formal and academic style.",
+        "Capitalise nominalised infinitives.",
+        "Use articles and prepositions with nominalised forms.",
+        "Nominalise adjectives where appropriate.",
+        "Recognise common suffixes such as -ung, -heit and -keit.",
+        "Choose the noun form that fits the sentence structure."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Nominalising an infinitive.",
           "level": "B2",
           "category": "Nominalisation",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "Nominalised infinitives are capitalised.",
+          "sentence": "Das _ ist hier verboten.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Rauchen"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "rauchen"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Rauchend"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using a noun in -ung.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "ENTSCHEIDEN forms ENTSCHEIDUNG.",
+          "sentence": "Die _ fiel sehr spät.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Entscheidung"
+            },
+            {
+              "ok": false,
+              "word": "Entscheiden"
+            },
+            {
+              "ok": false,
+              "word": "entscheidend"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using nominalised adjective.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "Adjectives can be nominalised and capitalised.",
+          "sentence": "Das _ an der Sache ist die Einfachheit.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Interessante"
+            },
+            {
+              "ok": false,
+              "word": "interessante"
+            },
+            {
+              "ok": false,
+              "word": "Interesse"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using nominalised infinitive after beim.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "BEIM + nominalised infinitive is common.",
+          "sentence": "Beim _ höre ich Musik.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kochen"
+            },
+            {
+              "ok": false,
+              "word": "kochen"
+            },
+            {
+              "ok": false,
+              "word": "gekocht"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using a noun in -keit.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "MÖGLICH forms MÖGLICHKEIT.",
+          "sentence": "Es gibt mehrere _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Möglichkeiten"
+            },
+            {
+              "ok": false,
+              "word": "Möglichen"
+            },
+            {
+              "ok": false,
+              "word": "möglich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a noun in -heit.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "FREI forms FREIHEIT.",
+          "sentence": "Viele Menschen schätzen ihre _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Freiheit"
+            },
+            {
+              "ok": false,
+              "word": "Frei"
+            },
+            {
+              "ok": false,
+              "word": "freiheitlich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using nominalisation after zum.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "ZUM + nominalised infinitive expresses purpose/function.",
+          "sentence": "Diese Maschine ist zum _ geeignet.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Schneiden"
+            },
+            {
+              "ok": false,
+              "word": "schneiden"
+            },
+            {
+              "ok": false,
+              "word": "geschnitten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a deverbal noun.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "BEWERBEN forms BEWERBUNG.",
+          "sentence": "Ihre _ war erfolgreich.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bewerbung"
+            },
+            {
+              "ok": false,
+              "word": "Bewerben"
+            },
+            {
+              "ok": false,
+              "word": "beworben"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using nominalised adjective in plural.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "Nominalised adjectives take adjective endings and are capitalised.",
+          "sentence": "Die _ müssen unterstützt werden.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Arbeitslosen"
+            },
+            {
+              "ok": false,
+              "word": "arbeitslosen"
+            },
+            {
+              "ok": false,
+              "word": "Arbeitslosigkeit"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing nominal style.",
+          "level": "B2",
+          "category": "Nominalisation",
+          "explain": "Formal texts often prefer a noun over a verb phrase.",
+          "sentence": "Nach der _ des Projekts begann die Auswertung.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Durchführung"
+            },
+            {
+              "ok": false,
+              "word": "durchführen"
+            },
+            {
+              "ok": false,
+              "word": "durchgeführt"
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarCoordinatingConjunctionsA2-de",
+  "sheetname": "GermanCoordinatingConjunctionsA2-de",
   "title": "Coordinating Conjunctions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Coordinating Conjunctions (A2) German questions.",
+      "description": "Practise und, aber, oder, denn and sondern without changing main-clause word order.",
       "sortorder": 1,
       "learningTitle": "Using Coordinating Conjunctions",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use und to add information.",
+        "Use aber for contrast.",
+        "Use oder for alternatives.",
+        "Use denn for reason with main-clause order.",
+        "Use sondern after a negative correction.",
+        "Keep finite verb in normal position."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using und.",
           "level": "A2",
           "category": "Coordinating Conjunctions",
-          "explain": "Placeholder explanation.",
+          "explain": "UND joins equal clauses without verb-final order.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich koche und meine Schwester deckt den Tisch."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich koche und meine Schwester den Tisch deckt."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich koche und deckt meine Schwester den Tisch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using aber.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "ABER keeps normal main-clause order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bin müde, aber ich muss arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, aber ich arbeiten muss."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, aber muss ich arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using oder.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "ODER connects alternatives.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir fahren mit dem Bus oder wir gehen zu Fuß."
+            },
+            {
+              "ok": false,
+              "word": "Wir fahren mit dem Bus oder wir zu Fuß gehen."
+            },
+            {
+              "ok": false,
+              "word": "Wir fahren mit dem Bus oder gehen wir zu Fuß."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using denn.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "DENN gives a reason and keeps normal order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bleibe zu Hause, denn ich bin krank."
+            },
+            {
+              "ok": false,
+              "word": "Ich bleibe zu Hause, denn ich krank bin."
+            },
+            {
+              "ok": false,
+              "word": "Ich bleibe zu Hause, denn bin ich krank."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using sondern.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "SONDERN corrects a negative statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich trinke keinen Kaffee, sondern ich trinke Tee."
+            },
+            {
+              "ok": false,
+              "word": "Ich trinke keinen Kaffee, sondern ich Tee trinke."
+            },
+            {
+              "ok": false,
+              "word": "Ich trinke keinen Kaffee, sondern Tee ich trinke."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Aber with two clauses.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "ABER does not create subordinate order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er wohnt in Berlin, aber er arbeitet in Potsdam."
+            },
+            {
+              "ok": false,
+              "word": "Er wohnt in Berlin, aber er in Potsdam arbeitet."
+            },
+            {
+              "ok": false,
+              "word": "Er wohnt in Berlin, aber arbeitet er in Potsdam."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Denn with modal.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "Conjugated modal stays second.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir gehen jetzt, denn wir müssen morgen früh arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Wir gehen jetzt, denn wir morgen früh arbeiten müssen."
+            },
+            {
+              "ok": false,
+              "word": "Wir gehen jetzt, denn müssen wir morgen früh arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Sondern correction.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "SONDERN replaces the negated information.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das ist nicht mein Bruder, sondern mein Cousin."
+            },
+            {
+              "ok": false,
+              "word": "Das ist nicht mein Bruder, aber mein Cousin, wenn die Identität korrigiert wird."
+            },
+            {
+              "ok": false,
+              "word": "Das ist mein Bruder nicht, sondern mein Cousin ist."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Und with different subjects.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "Each clause may have its own subject.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Anna liest und Paul hört Musik."
+            },
+            {
+              "ok": false,
+              "word": "Anna liest und Paul Musik hört."
+            },
+            {
+              "ok": false,
+              "word": "Anna liest und hört Paul Musik."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Denn versus weil order.",
+          "level": "A2",
+          "category": "Coordinating Conjunctions",
+          "explain": "DENN keeps main-clause word order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich komme später, denn ich habe noch Arbeit."
+            },
+            {
+              "ok": false,
+              "word": "Ich komme später, denn ich noch Arbeit habe."
+            },
+            {
+              "ok": false,
+              "word": "Ich komme später, denn habe ich noch Arbeit."
             }
           ]
         }

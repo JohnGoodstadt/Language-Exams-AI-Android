@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarSeinHabenA1-de",
+  "sheetname": "GermanSeinHabenA1-de",
   "title": "sein & haben",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real sein & haben (A1) German questions.",
+      "description": "Practise the present-tense forms of the essential German verbs 'sein' and 'haben'.",
       "sortorder": 1,
-      "learningTitle": "Using sein & haben",
-      "learningPoints": [],
+      "learningTitle": "Using sein and haben",
+      "learningPoints": [
+        "Use the correct form of sein for each subject.",
+        "Use the correct form of haben for each subject.",
+        "Recognise common irregular forms such as bin, bist, ist and sind.",
+        "Use haben to talk about possession and everyday situations.",
+        "Use sein to describe identity, location and condition.",
+        "Match verb form and subject accurately."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'bin' with 'ich'.",
           "level": "A1",
           "category": "sein & haben",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "ICH uses BIN, the first-person singular form of SEIN.",
+          "sentence": "Ich _ müde.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "bin"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "bist"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "ist"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'bist' with 'du'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "DU uses BIST.",
+          "sentence": "Du _ sehr nett.",
+          "words": [
+            {
+              "ok": true,
+              "word": "bist"
+            },
+            {
+              "ok": false,
+              "word": "bin"
+            },
+            {
+              "ok": false,
+              "word": "seid"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'ist' with 'er'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "ER, SIE and ES use IST.",
+          "sentence": "Er _ zu Hause.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ist"
+            },
+            {
+              "ok": false,
+              "word": "sind"
+            },
+            {
+              "ok": false,
+              "word": "seid"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'sind' with 'wir'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "WIR uses SIND.",
+          "sentence": "Wir _ in Berlin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sind"
+            },
+            {
+              "ok": false,
+              "word": "seid"
+            },
+            {
+              "ok": false,
+              "word": "ist"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'seid' with 'ihr'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "IHR uses SEID.",
+          "sentence": "Ihr _ spät.",
+          "words": [
+            {
+              "ok": true,
+              "word": "seid"
+            },
+            {
+              "ok": false,
+              "word": "sind"
+            },
+            {
+              "ok": false,
+              "word": "bist"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'habe' with 'ich'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "ICH uses HABE.",
+          "sentence": "Ich _ einen Bruder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "habe"
+            },
+            {
+              "ok": false,
+              "word": "hast"
+            },
+            {
+              "ok": false,
+              "word": "hat"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'hast' with 'du'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "DU uses HAST.",
+          "sentence": "Du _ ein Auto.",
+          "words": [
+            {
+              "ok": true,
+              "word": "hast"
+            },
+            {
+              "ok": false,
+              "word": "habe"
+            },
+            {
+              "ok": false,
+              "word": "haben"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'hat' with a third-person singular subject.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "ER, SIE and ES use HAT.",
+          "sentence": "Maria _ zwei Kinder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "hat"
+            },
+            {
+              "ok": false,
+              "word": "haben"
+            },
+            {
+              "ok": false,
+              "word": "hast"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'haben' with 'wir'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "WIR uses HABEN.",
+          "sentence": "Wir _ heute Zeit.",
+          "words": [
+            {
+              "ok": true,
+              "word": "haben"
+            },
+            {
+              "ok": false,
+              "word": "hat"
+            },
+            {
+              "ok": false,
+              "word": "habt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'haben' with formal 'Sie'.",
+          "level": "A1",
+          "category": "sein & haben",
+          "explain": "Formal SIE uses HABEN.",
+          "sentence": "_ Sie einen Termin?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Haben"
+            },
+            {
+              "ok": false,
+              "word": "Hat"
+            },
+            {
+              "ok": false,
+              "word": "Hast"
             }
           ]
         }

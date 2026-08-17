@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarTemporalClausesB1-de",
+  "sheetname": "GermanTemporalClausesB1-de",
   "title": "Temporal Clauses",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Temporal Clauses (B1) German questions.",
+      "description": "Practise temporal subordinate clauses with als, wenn, bevor, nachdem, während and seitdem.",
       "sortorder": 1,
       "learningTitle": "Using Temporal Clauses",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use als for a single event in the past.",
+        "Use wenn for repeated events and present/future time.",
+        "Use bevor and nachdem to show sequence.",
+        "Use während for simultaneous actions.",
+        "Use seitdem for an action continuing from a past point.",
+        "Keep the finite verb at the end of subordinate clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using als for one past event.",
           "level": "B1",
           "category": "Temporal Clauses",
-          "explain": "Placeholder explanation.",
+          "explain": "ALS is used for a single event or period in the past.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Als ich zehn war, lebte ich in Hamburg."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Wenn ich zehn war, lebte ich in Hamburg, for a single past period."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Als ich war zehn, lebte ich in Hamburg."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using wenn for repeated events.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "WENN is used for repeated past events.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn wir Ferien hatten, besuchten wir unsere Großeltern."
+            },
+            {
+              "ok": false,
+              "word": "Als wir Ferien hatten, besuchten wir unsere Großeltern jedes Jahr."
+            },
+            {
+              "ok": false,
+              "word": "Wenn wir hatten Ferien, besuchten wir unsere Großeltern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using bevor.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "BEVOR introduces the event that happens later than the main-clause action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich frühstücke, bevor ich zur Arbeit gehe."
+            },
+            {
+              "ok": false,
+              "word": "Ich frühstücke, bevor gehe ich zur Arbeit."
+            },
+            {
+              "ok": false,
+              "word": "Ich frühstücke, bevor ich gehe zur Arbeit."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using nachdem.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "NACHDEM introduces an earlier completed event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Nachdem wir gegessen hatten, gingen wir spazieren."
+            },
+            {
+              "ok": false,
+              "word": "Nachdem wir hatten gegessen, gingen wir spazieren."
+            },
+            {
+              "ok": false,
+              "word": "Nachdem wir gegessen, hatten wir gingen spazieren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using während.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "WÄHREND connects simultaneous actions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Während ich koche, hört er Musik."
+            },
+            {
+              "ok": false,
+              "word": "Während ich koche, er hört Musik."
+            },
+            {
+              "ok": false,
+              "word": "Während koche ich, hört er Musik."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using seitdem.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "SEITDEM connects a starting point in the past with a continuing situation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Seitdem ich hier wohne, fahre ich mit dem Fahrrad zur Arbeit."
+            },
+            {
+              "ok": false,
+              "word": "Seitdem ich wohne hier, fahre ich mit dem Fahrrad zur Arbeit."
+            },
+            {
+              "ok": false,
+              "word": "Seitdem wohne ich hier, fahre ich mit dem Fahrrad zur Arbeit."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using als with Perfekt-like past content.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "ALS still requires verb-final subordinate order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Als ich angekommen bin, war niemand zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Als bin ich angekommen, war niemand zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Als ich bin angekommen, war niemand zu Hause."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using wenn for future time.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "WENN is used for future time conditions/events.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wenn ich morgen fertig bin, rufe ich dich an."
+            },
+            {
+              "ok": false,
+              "word": "Als ich morgen fertig bin, rufe ich dich an."
+            },
+            {
+              "ok": false,
+              "word": "Wenn ich bin morgen fertig, rufe ich dich an."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using während in the past.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "Both actions can be in past tenses while the subordinate verb remains final.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Während sie arbeitete, spielte das Kind im Garten."
+            },
+            {
+              "ok": false,
+              "word": "Während sie arbeitete, das Kind spielte im Garten."
+            },
+            {
+              "ok": false,
+              "word": "Während arbeitete sie, spielte das Kind im Garten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Contrasting bevor and nachdem.",
+          "level": "B1",
+          "category": "Temporal Clauses",
+          "explain": "The conjunction must match the order of events.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bevor ich schlafen ging, hatte ich die Tür abgeschlossen."
+            },
+            {
+              "ok": false,
+              "word": "Nachdem ich schlafen ging, hatte ich die Tür abgeschlossen, if locking happened first."
+            },
+            {
+              "ok": false,
+              "word": "Bevor ich ging schlafen, hatte ich die Tür abgeschlossen."
             }
           ]
         }

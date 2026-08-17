@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarVerbsWithFixedPrepositionsB1-de",
+  "sheetname": "GermanVerbsFixedPrepositionsB1-de",
   "title": "Verbs with Fixed Prepositions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Verbs with Fixed Prepositions (B1) German questions.",
+      "description": "Practise common B1 verbs with fixed prepositions and the cases they govern.",
       "sortorder": 1,
       "learningTitle": "Using Verbs with Fixed Prepositions",
-      "learningPoints": [],
+      "learningPoints": [
+        "Learn verbs together with their fixed prepositions.",
+        "Recognise whether the preposition governs accusative or dative.",
+        "Use denken an, warten auf, sprechen über and teilnehmen an accurately.",
+        "Use sich erinnern an and sich kümmern um.",
+        "Avoid translating prepositions directly from English.",
+        "Learn each verb-preposition pattern as a unit."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'warten auf'.",
           "level": "B1",
           "category": "Verbs with Fixed Prepositions",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "WARTEN AUF takes accusative.",
+          "sentence": "Wir warten _ den Zug.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "auf"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "an"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'denken an'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "DENKEN AN takes accusative.",
+          "sentence": "Ich denke oft _ meine Familie.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "über"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'teilnehmen an'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "TEILNEHMEN AN takes dative.",
+          "sentence": "Sie nimmt _ einem Kurs teil.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'sich erinnern an'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "SICH ERINNERN AN takes accusative.",
+          "sentence": "Er erinnert sich _ seinen ersten Schultag.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            },
+            {
+              "ok": false,
+              "word": "mit"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'sich kümmern um'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "SICH KÜMMERN UM takes accusative.",
+          "sentence": "Wer kümmert sich _ die Kinder?",
+          "words": [
+            {
+              "ok": true,
+              "word": "um"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'sprechen über'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "SPRECHEN ÜBER is used for a topic.",
+          "sentence": "Wir sprechen _ das Problem.",
+          "words": [
+            {
+              "ok": true,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "mit"
+            },
+            {
+              "ok": false,
+              "word": "von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'abhängen von'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "ABHÄNGEN VON takes dative.",
+          "sentence": "Das hängt _ Wetter ab.",
+          "words": [
+            {
+              "ok": true,
+              "word": "vom"
+            },
+            {
+              "ok": false,
+              "word": "für das"
+            },
+            {
+              "ok": false,
+              "word": "an das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'bitten um'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "JEMANDEN UM ETWAS BITTEN uses UM.",
+          "sentence": "Ich bitte dich _ Hilfe.",
+          "words": [
+            {
+              "ok": true,
+              "word": "um"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            },
+            {
+              "ok": false,
+              "word": "zu"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'sich beschäftigen mit'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "SICH BESCHÄFTIGEN MIT takes dative.",
+          "sentence": "Sie beschäftigt sich _ deutscher Geschichte.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mit"
+            },
+            {
+              "ok": false,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'bestehen aus'.",
+          "level": "B1",
+          "category": "Verbs with Fixed Prepositions",
+          "explain": "BESTEHEN AUS takes dative.",
+          "sentence": "Das Team besteht _ fünf Personen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "aus"
+            },
+            {
+              "ok": false,
+              "word": "von"
+            },
+            {
+              "ok": false,
+              "word": "mit"
             }
           ]
         }

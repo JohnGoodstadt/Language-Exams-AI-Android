@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarNegationNichtKeinA1-de",
+  "sheetname": "GermanNegationNichtKeinA1-de",
   "title": "Negation: nicht & kein",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Negation: nicht & kein (A1) German questions.",
+      "description": "Practise the basic distinction between 'nicht' and 'kein' and their position in simple German sentences.",
       "sortorder": 1,
-      "learningTitle": "Using Negation: nicht & kein",
-      "learningPoints": [],
+      "learningTitle": "Using nicht and kein",
+      "learningPoints": [
+        "Use kein to negate a noun that would otherwise take ein/eine or no article.",
+        "Use nicht to negate verbs, adjectives, adverbs or definite noun phrases.",
+        "Match kein forms to gender and case.",
+        "Place nicht naturally in simple A1 sentences.",
+        "Distinguish 'I do not have...' from 'This is not...'.",
+        "Avoid using nicht directly before an indefinite noun where kein is required."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'kein' with a masculine noun.",
           "level": "A1",
           "category": "Negation: nicht & kein",
-          "explain": "Placeholder explanation.",
+          "explain": "Use KEIN to negate an indefinite masculine noun.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich habe keinen Hund."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich habe nicht einen Hund."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich keinen habe Hund."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'keine' with a feminine noun.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "Use KEINE with a feminine noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie hat keine Schwester."
+            },
+            {
+              "ok": false,
+              "word": "Sie hat nicht eine Schwester."
+            },
+            {
+              "ok": false,
+              "word": "Sie keine hat Schwester."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'kein' with a neuter noun.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "Use KEIN with a neuter nominative or accusative noun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das ist kein Problem."
+            },
+            {
+              "ok": false,
+              "word": "Das ist nicht ein Problem."
+            },
+            {
+              "ok": false,
+              "word": "Das kein ist Problem."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'nicht' with an adjective.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "Use NICHT to negate an adjective.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Wetter ist nicht gut."
+            },
+            {
+              "ok": false,
+              "word": "Das Wetter ist kein gut."
+            },
+            {
+              "ok": false,
+              "word": "Das Wetter nicht ist gut."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'nicht' to negate a verb phrase.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "NICHT can negate the action or statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich arbeite heute nicht."
+            },
+            {
+              "ok": false,
+              "word": "Ich kein arbeite heute."
+            },
+            {
+              "ok": false,
+              "word": "Ich nicht heute arbeite."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'nicht' with a definite noun phrase.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "Use NICHT, not KEIN, to negate a noun phrase with a definite article.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich nehme nicht den Bus."
+            },
+            {
+              "ok": false,
+              "word": "Ich nehme keinen den Bus."
+            },
+            {
+              "ok": false,
+              "word": "Ich nicht nehme den Bus."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'keine' with a plural noun.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "Use KEINE with plural nouns when negating possession or existence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir haben keine Kinder."
+            },
+            {
+              "ok": false,
+              "word": "Wir haben nicht Kinder."
+            },
+            {
+              "ok": false,
+              "word": "Wir keine haben Kinder."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'nicht' with a place phrase contrast.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "NICHT can negate a place or other specific element.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er wohnt nicht in Berlin."
+            },
+            {
+              "ok": false,
+              "word": "Er kein wohnt in Berlin."
+            },
+            {
+              "ok": false,
+              "word": "Er wohnt in Berlin kein."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'kein' after 'haben'.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "HABEN + noun often uses KEIN/KEINE when the noun is negated.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich habe heute keine Zeit."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe heute nicht Zeit."
+            },
+            {
+              "ok": false,
+              "word": "Ich heute keine Zeit habe."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'nicht' with a name.",
+          "level": "A1",
+          "category": "Negation: nicht & kein",
+          "explain": "Names are normally negated with NICHT.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das ist nicht Peter."
+            },
+            {
+              "ok": false,
+              "word": "Das ist kein Peter, wenn nur die Person identifiziert wird."
+            },
+            {
+              "ok": false,
+              "word": "Das nicht ist Peter."
             }
           ]
         }

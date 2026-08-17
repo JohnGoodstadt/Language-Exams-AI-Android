@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarSimplePastBasicsA2-de",
+  "sheetname": "GermanSimplePastSeinHabenModalsA2-de",
   "title": "Simple Past: sein, haben & Modals",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Simple Past: sein, haben & Modals (A2) German questions.",
+      "description": "Practise common Präteritum forms of sein, haben and modal verbs.",
       "sortorder": 1,
-      "learningTitle": "Using Simple Past: sein, haben & Modals",
-      "learningPoints": [],
+      "learningTitle": "Using Simple Past Forms of sein, haben and Modals",
+      "learningPoints": [
+        "Use war and waren as common past forms of sein.",
+        "Use hatte and hatten as common past forms of haben.",
+        "Recognise konnte, musste, wollte and durfte.",
+        "Match the form to the subject.",
+        "Use modal Präteritum forms with a main infinitive.",
+        "Describe past situations and abilities."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using war.",
           "level": "A2",
           "category": "Simple Past: sein, haben & Modals",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "WAR is used with ich and er/sie/es.",
+          "sentence": "Ich _ gestern krank.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "war"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "bin"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "waren"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using waren.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "WAREN is used with wir and sie/Sie.",
+          "sentence": "Wir _ am Wochenende in Bonn.",
+          "words": [
+            {
+              "ok": true,
+              "word": "waren"
+            },
+            {
+              "ok": false,
+              "word": "war"
+            },
+            {
+              "ok": false,
+              "word": "sind"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using hatte.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "HATTE is a singular past form of HABEN.",
+          "sentence": "Sie _ keine Zeit.",
+          "words": [
+            {
+              "ok": true,
+              "word": "hatte"
+            },
+            {
+              "ok": false,
+              "word": "hat"
+            },
+            {
+              "ok": false,
+              "word": "hatten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using hatten.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "HATTEN is the plural past form of HABEN.",
+          "sentence": "Wir _ ein großes Problem.",
+          "words": [
+            {
+              "ok": true,
+              "word": "hatten"
+            },
+            {
+              "ok": false,
+              "word": "hatte"
+            },
+            {
+              "ok": false,
+              "word": "haben"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using konnte.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "KONNTE expresses past ability.",
+          "sentence": "Als Kind _ ich gut schwimmen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "konnte"
+            },
+            {
+              "ok": false,
+              "word": "kann"
+            },
+            {
+              "ok": false,
+              "word": "könnte"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using musste.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "MUSSTE expresses past necessity.",
+          "sentence": "Er _ lange arbeiten.",
+          "words": [
+            {
+              "ok": true,
+              "word": "musste"
+            },
+            {
+              "ok": false,
+              "word": "muss"
+            },
+            {
+              "ok": false,
+              "word": "müsste"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using wollte.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "WOLLTE expresses a past intention.",
+          "sentence": "Ich _ dich anrufen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "wollte"
+            },
+            {
+              "ok": false,
+              "word": "will"
+            },
+            {
+              "ok": false,
+              "word": "wollen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using durfte.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "DURFTE can express past permission.",
+          "sentence": "Sie _ länger bleiben.",
+          "words": [
+            {
+              "ok": true,
+              "word": "durfte"
+            },
+            {
+              "ok": false,
+              "word": "darf"
+            },
+            {
+              "ok": false,
+              "word": "dürfte"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using konnten.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "With WIR, KÖNNEN becomes KONNTEN.",
+          "sentence": "Wir _ das nicht verstehen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "konnten"
+            },
+            {
+              "ok": false,
+              "word": "konnte"
+            },
+            {
+              "ok": false,
+              "word": "können"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using mussten.",
+          "level": "A2",
+          "category": "Simple Past: sein, haben & Modals",
+          "explain": "With plural SIE, MÜSSEN becomes MUSSTEN.",
+          "sentence": "Die Kinder _ früh ins Bett gehen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mussten"
+            },
+            {
+              "ok": false,
+              "word": "musste"
+            },
+            {
+              "ok": false,
+              "word": "müssen"
             }
           ]
         }

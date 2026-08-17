@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarIndirectQuestionsB1-de",
+  "sheetname": "GermanIndirectQuestionsB1-de",
   "title": "Indirect Questions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Indirect Questions (B1) German questions.",
+      "description": "Practise indirect questions with ob and question words, using subordinate-clause word order.",
       "sortorder": 1,
-      "learningTitle": "Using Indirect Questions",
-      "learningPoints": [],
+      "learningTitle": "Forming Indirect Questions",
+      "learningPoints": [
+        "Use ob for indirect yes/no questions.",
+        "Keep the question word in indirect W-questions.",
+        "Move the finite verb to the end of the indirect question clause.",
+        "Use polite introductory phrases.",
+        "Avoid direct-question inversion inside the embedded clause.",
+        "Use commas before the indirect clause."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using ob for yes/no questions.",
           "level": "B1",
           "category": "Indirect Questions",
-          "explain": "Placeholder explanation.",
+          "explain": "OB introduces an indirect yes/no question.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich weiß nicht, ob er heute kommt."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich weiß nicht, ob kommt er heute."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich weiß nicht, kommt er heute ob."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using wo in an indirect question.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "The finite verb goes to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kannst du mir sagen, wo der Bahnhof ist?"
+            },
+            {
+              "ok": false,
+              "word": "Kannst du mir sagen, wo ist der Bahnhof?"
+            },
+            {
+              "ok": false,
+              "word": "Kannst du mir sagen, wo der Bahnhof?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using wann indirectly.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "WANN remains, but word order becomes subordinate.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich möchte wissen, wann der Kurs beginnt."
+            },
+            {
+              "ok": false,
+              "word": "Ich möchte wissen, wann beginnt der Kurs."
+            },
+            {
+              "ok": false,
+              "word": "Ich möchte wissen, wann der Kurs beginnen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using warum indirectly.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "The question word stays first and the verb goes final.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Weißt du, warum sie nicht kommt?"
+            },
+            {
+              "ok": false,
+              "word": "Weißt du, warum kommt sie nicht?"
+            },
+            {
+              "ok": false,
+              "word": "Weißt du, warum sie kommt nicht?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using ob with a modal.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "The infinitive comes before the final modal.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich frage mich, ob er morgen kommen kann."
+            },
+            {
+              "ok": false,
+              "word": "Ich frage mich, ob er kann morgen kommen."
+            },
+            {
+              "ok": false,
+              "word": "Ich frage mich, ob kann er morgen kommen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using Perfekt in an indirect question.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "The participle comes before the final auxiliary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Weißt du, was er gestern gemacht hat?"
+            },
+            {
+              "ok": false,
+              "word": "Weißt du, was hat er gestern gemacht?"
+            },
+            {
+              "ok": false,
+              "word": "Weißt du, was er hat gestern gemacht?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using wie viel indirectly.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "The embedded clause keeps verb-final order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Können Sie mir sagen, wie viel das kostet?"
+            },
+            {
+              "ok": false,
+              "word": "Können Sie mir sagen, wie viel kostet das?"
+            },
+            {
+              "ok": false,
+              "word": "Können Sie mir sagen, wie viel das kosten?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using ob after wissen.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "WISSEN can introduce an indirect yes/no question with OB.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie weiß nicht, ob das Geschäft geöffnet ist."
+            },
+            {
+              "ok": false,
+              "word": "Sie weiß nicht, ob ist das Geschäft geöffnet."
+            },
+            {
+              "ok": false,
+              "word": "Sie weiß nicht, ist das Geschäft geöffnet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using wer as subject in an indirect question.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "Even with WER, the clause follows embedded-question structure.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich weiß nicht, wer angerufen hat."
+            },
+            {
+              "ok": false,
+              "word": "Ich weiß nicht, wer hat angerufen."
+            },
+            {
+              "ok": false,
+              "word": "Ich weiß nicht, hat wer angerufen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a polite indirect question.",
+          "level": "B1",
+          "category": "Indirect Questions",
+          "explain": "Indirect questions sound more polite and use subordinate word order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Könnten Sie mir sagen, wann der nächste Zug fährt?"
+            },
+            {
+              "ok": false,
+              "word": "Könnten Sie mir sagen, wann fährt der nächste Zug?"
+            },
+            {
+              "ok": false,
+              "word": "Könnten Sie mir sagen, wann der nächste Zug fahren?"
             }
           ]
         }

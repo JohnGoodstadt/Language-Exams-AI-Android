@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarReflexiveVerbsAccusativeDativeB1-de",
+  "sheetname": "GermanAccusativeDativeReflexiveVerbsB1-de",
   "title": "Accusative & Dative Reflexive Verbs",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Accusative & Dative Reflexive Verbs (B1) German questions.",
+      "description": "Practise reflexive pronouns in accusative and dative structures.",
       "sortorder": 1,
-      "learningTitle": "Using Accusative & Dative Reflexive Verbs",
-      "learningPoints": [],
+      "learningTitle": "Using Accusative and Dative Reflexive Pronouns",
+      "learningPoints": [
+        "Use mich/dich/sich/uns/euch as accusative reflexive pronouns.",
+        "Use mir/dir/sich/uns/euch as dative reflexive pronouns.",
+        "Use dative reflexive pronouns when another accusative object is present.",
+        "Recognise common patterns such as sich die Hände waschen.",
+        "Distinguish accusative and dative reflexive structures.",
+        "Match the pronoun to the subject."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using accusative reflexive 'mich'.",
           "level": "B1",
           "category": "Accusative & Dative Reflexive Verbs",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "With no separate direct object, many reflexive verbs use accusative.",
+          "sentence": "Ich erinnere _ an den Termin.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "mich"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "mir"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using dative reflexive 'mir'.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "With another accusative object, the reflexive pronoun is often dative.",
+          "sentence": "Ich wasche _ die Hände.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "mein"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using dative 'dir'.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "DU uses DIR when another accusative object is present.",
+          "sentence": "Du putzt _ die Zähne.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dir"
+            },
+            {
+              "ok": false,
+              "word": "dich"
+            },
+            {
+              "ok": false,
+              "word": "du"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using accusative 'dich'.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "SICH INTERESSIEREN uses accusative reflexive pronouns.",
+          "sentence": "Interessierst du _ für Politik?",
+          "words": [
+            {
+              "ok": true,
+              "word": "dich"
+            },
+            {
+              "ok": false,
+              "word": "dir"
+            },
+            {
+              "ok": false,
+              "word": "du"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using dative 'sich'.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "Third person uses SICH for both accusative and dative; here it is dative because there is another object.",
+          "sentence": "Er kauft _ ein neues Hemd.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "ihm"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using accusative 'uns'.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "WIR uses UNS.",
+          "sentence": "Wir freuen _ auf die Ferien.",
+          "words": [
+            {
+              "ok": true,
+              "word": "uns"
+            },
+            {
+              "ok": false,
+              "word": "wir"
+            },
+            {
+              "ok": false,
+              "word": "unser"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using dative 'uns'.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "UNS can also be dative when another object is present.",
+          "sentence": "Wir merken _ die Adresse.",
+          "words": [
+            {
+              "ok": true,
+              "word": "uns"
+            },
+            {
+              "ok": false,
+              "word": "wir"
+            },
+            {
+              "ok": false,
+              "word": "unsere"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using dative 'euch'.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "EUCH can be dative reflexive with another object.",
+          "sentence": "Ihr zieht _ die Jacken an.",
+          "words": [
+            {
+              "ok": true,
+              "word": "euch"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "eure"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using accusative 'sich' with plural sie.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "Plural SIE uses SICH.",
+          "sentence": "Die Kinder beeilen _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihnen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Distinguishing reflexive cases.",
+          "level": "B1",
+          "category": "Accusative & Dative Reflexive Verbs",
+          "explain": "The presence of a separate accusative object often triggers dative reflexive pronoun.",
+          "sentence": "Ich bestelle _ einen Kaffee.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "mein"
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarPossessiveArticlesA1-de",
+  "sheetname": "GermanPossessiveArticlesA1-de",
   "title": "Possessive Articles",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Possessive Articles (A1) German questions.",
+      "description": "Practise basic German possessive articles such as mein, dein, sein, ihr, unser and euer.",
       "sortorder": 1,
       "learningTitle": "Using Possessive Articles",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use mein for possession linked to ich.",
+        "Use dein for possession linked to du.",
+        "Use sein for possession linked to er and ihr for possession linked to sie.",
+        "Use unser and euer for wir and ihr.",
+        "Match possessive endings to the gender and number of the following noun.",
+        "Use possessive articles naturally in simple A1 noun phrases."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'mein' with a masculine noun.",
           "level": "A1",
           "category": "Possessive Articles",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "MEIN means my before a masculine nominative noun.",
+          "sentence": "Das ist _ Bruder.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "mein"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "meine"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "meinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'meine' with a feminine noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "Feminine nouns take MEINE in the nominative.",
+          "sentence": "Das ist _ Schwester.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meine"
+            },
+            {
+              "ok": false,
+              "word": "mein"
+            },
+            {
+              "ok": false,
+              "word": "meinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'dein' with a neuter noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "DEIN means your and stays DEIN before a neuter nominative noun.",
+          "sentence": "Ist das _ Handy?",
+          "words": [
+            {
+              "ok": true,
+              "word": "dein"
+            },
+            {
+              "ok": false,
+              "word": "deine"
+            },
+            {
+              "ok": false,
+              "word": "deinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'seine' for 'his' with a feminine noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "SEIN means his; before a feminine noun use SEINE.",
+          "sentence": "Peter besucht _ Mutter.",
+          "words": [
+            {
+              "ok": true,
+              "word": "seine"
+            },
+            {
+              "ok": false,
+              "word": "sein"
+            },
+            {
+              "ok": false,
+              "word": "seinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'ihr' for 'her' with a masculine noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "IHR means her; before a masculine nominative noun use IHR.",
+          "sentence": "Anna sagt: Das ist _ Vater.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "ihre"
+            },
+            {
+              "ok": false,
+              "word": "ihren"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'unsere' with a plural noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "Plural nouns normally take UNSERE.",
+          "sentence": "Das sind _ Freunde.",
+          "words": [
+            {
+              "ok": true,
+              "word": "unsere"
+            },
+            {
+              "ok": false,
+              "word": "unser"
+            },
+            {
+              "ok": false,
+              "word": "unseren"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'euer' with a masculine noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "EUER means your when speaking to more than one person informally.",
+          "sentence": "Ist das _ Lehrer?",
+          "words": [
+            {
+              "ok": true,
+              "word": "euer"
+            },
+            {
+              "ok": false,
+              "word": "eure"
+            },
+            {
+              "ok": false,
+              "word": "euren"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'meinen' in the masculine accusative.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "Masculine accusative possessive articles take -EN.",
+          "sentence": "Ich sehe _ Bruder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meinen"
+            },
+            {
+              "ok": false,
+              "word": "mein"
+            },
+            {
+              "ok": false,
+              "word": "meine"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'deine' with a plural noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "Plural nouns take DEINE.",
+          "sentence": "Wo sind _ Schlüssel?",
+          "words": [
+            {
+              "ok": true,
+              "word": "deine"
+            },
+            {
+              "ok": false,
+              "word": "dein"
+            },
+            {
+              "ok": false,
+              "word": "deinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'seine' with a plural noun.",
+          "level": "A1",
+          "category": "Possessive Articles",
+          "explain": "Plural nouns take SEINE.",
+          "sentence": "Tom besucht _ Freunde.",
+          "words": [
+            {
+              "ok": true,
+              "word": "seine"
+            },
+            {
+              "ok": false,
+              "word": "sein"
+            },
+            {
+              "ok": false,
+              "word": "seinen"
             }
           ]
         }

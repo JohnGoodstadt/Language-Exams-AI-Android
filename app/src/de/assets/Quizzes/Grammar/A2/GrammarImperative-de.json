@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarImperativeA2-de",
+  "sheetname": "GermanImperativeA2-de",
   "title": "Imperative",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Imperative (A2) German questions.",
+      "description": "Practise German imperative forms for du, ihr and formal Sie.",
       "sortorder": 1,
-      "learningTitle": "Using Imperative",
-      "learningPoints": [],
+      "learningTitle": "Giving Instructions and Commands",
+      "learningPoints": [
+        "Use the verb stem for many du imperatives.",
+        "Use the normal ihr form without pronoun.",
+        "Use infinitive + Sie formally.",
+        "Recognise sei and nimm.",
+        "Place separable prefixes at the end.",
+        "Use bitte for politeness."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Du imperative.",
           "level": "A2",
           "category": "Imperative",
-          "explain": "Placeholder explanation.",
+          "explain": "Many DU imperatives use the stem without DU.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Komm bitte rein!"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Kommst bitte rein!"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Du komm bitte rein!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Ihr imperative.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "Use the normal IHR verb form without IHR.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kommt bitte rein!"
+            },
+            {
+              "ok": false,
+              "word": "Kommen bitte rein!"
+            },
+            {
+              "ok": false,
+              "word": "Ihr kommt bitte rein!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Formal imperative.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "Use infinitive + SIE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kommen Sie bitte rein!"
+            },
+            {
+              "ok": false,
+              "word": "Kommt Sie bitte rein!"
+            },
+            {
+              "ok": false,
+              "word": "Sie kommen bitte rein!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Irregular nimm.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "NEHMEN has DU imperative NIMM.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Nimm den Bus!"
+            },
+            {
+              "ok": false,
+              "word": "Nehm den Bus!"
+            },
+            {
+              "ok": false,
+              "word": "Nimmst den Bus!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Imperative of sein.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "DU imperative of SEIN is SEI.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sei vorsichtig!"
+            },
+            {
+              "ok": false,
+              "word": "Bist vorsichtig!"
+            },
+            {
+              "ok": false,
+              "word": "Sein vorsichtig!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Separable imperative.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "Prefix goes to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ruf mich morgen an!"
+            },
+            {
+              "ok": false,
+              "word": "Anruf mich morgen!"
+            },
+            {
+              "ok": false,
+              "word": "Ruf an mich morgen an!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Negative imperative.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "NICHT can make an imperative negative.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Mach das nicht!"
+            },
+            {
+              "ok": false,
+              "word": "Nicht mach das!"
+            },
+            {
+              "ok": false,
+              "word": "Machst das nicht!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Formal negative instruction.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "Keep verb + SIE order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Öffnen Sie die Tür nicht!"
+            },
+            {
+              "ok": false,
+              "word": "Sie öffnen die Tür nicht!"
+            },
+            {
+              "ok": false,
+              "word": "Öffnet Sie die Tür nicht!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using bitte.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "BITTE softens a command.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Warte bitte hier!"
+            },
+            {
+              "ok": false,
+              "word": "Wartest bitte hier!"
+            },
+            {
+              "ok": false,
+              "word": "Du warte bitte hier!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Ihr with separable verb.",
+          "level": "A2",
+          "category": "Imperative",
+          "explain": "Use IHR form and move prefix to end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Steht bitte früh auf!"
+            },
+            {
+              "ok": false,
+              "word": "Aufsteht bitte früh!"
+            },
+            {
+              "ok": false,
+              "word": "Stehen bitte früh auf!"
             }
           ]
         }

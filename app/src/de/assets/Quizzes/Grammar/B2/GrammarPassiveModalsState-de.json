@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarPassiveModalsStateB2-de",
+  "sheetname": "GermanPassiveModalsStatePassiveB2-de",
   "title": "Passive with Modals & State Passive",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Passive with Modals & State Passive (B2) German questions.",
+      "description": "Practise passive constructions with modal verbs and distinguish process passive from state passive.",
       "sortorder": 1,
-      "learningTitle": "Using Passive with Modals & State Passive",
-      "learningPoints": [],
+      "learningTitle": "Using Modal and State Passive Structures",
+      "learningPoints": [
+        "Form modal passives with modal + past participle + werden.",
+        "Use sein + past participle for state passive.",
+        "Distinguish an action/process from the resulting state.",
+        "Place infinitive and participle elements correctly at the end.",
+        "Use tense forms accurately in both passive types.",
+        "Recognise context differences between wird geöffnet and ist geöffnet."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming a modal passive.",
           "level": "B2",
           "category": "Passive with Modals & State Passive",
-          "explain": "Placeholder explanation.",
+          "explain": "Use MODAL + participle + WERDEN.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Die Rechnung muss heute bezahlt werden."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Die Rechnung muss heute werden bezahlt."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Die Rechnung muss heute bezahlen werden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using state passive.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "SEIN + participle describes a resulting state.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Tür ist geschlossen."
+            },
+            {
+              "ok": false,
+              "word": "Die Tür wird geschlossen, if the focus is the completed state."
+            },
+            {
+              "ok": false,
+              "word": "Die Tür ist schließen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Contrasting process and state.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "WIRD GEÖFFNET describes the action; IST GEÖFFNET describes the state.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Um neun Uhr wird die Tür geöffnet; danach ist sie geöffnet."
+            },
+            {
+              "ok": false,
+              "word": "Um neun Uhr ist die Tür geöffnet; danach wird sie geöffnet, with the sequence reversed."
+            },
+            {
+              "ok": false,
+              "word": "Um neun Uhr wird die Tür öffnen; danach ist sie geöffnet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using past modal passive.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "Präteritum modal + participle + werden expresses past necessity in passive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Straße musste gesperrt werden."
+            },
+            {
+              "ok": false,
+              "word": "Die Straße musste werden gesperrt."
+            },
+            {
+              "ok": false,
+              "word": "Die Straße musste gesperrt worden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using present state passive.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "A current state can be expressed with IST + participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Fenster ist schon geöffnet."
+            },
+            {
+              "ok": false,
+              "word": "Das Fenster wird schon geöffnet, if it is already in the open state."
+            },
+            {
+              "ok": false,
+              "word": "Das Fenster ist schon öffnen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a future modal passive.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "The modal infinitive and WERDEN remain at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Arbeiten werden bis Freitag abgeschlossen werden müssen."
+            },
+            {
+              "ok": false,
+              "word": "Die Arbeiten werden bis Freitag müssen abgeschlossen werden."
+            },
+            {
+              "ok": false,
+              "word": "Die Arbeiten werden bis Freitag abgeschlossen müssen werden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using state passive in the past.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "WAR + participle describes a past state.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Als wir ankamen, war das Geschäft geschlossen."
+            },
+            {
+              "ok": false,
+              "word": "Als wir ankamen, wurde das Geschäft geschlossen, if it had already been closed."
+            },
+            {
+              "ok": false,
+              "word": "Als wir ankamen, war das Geschäft schließen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using modal passive with negation.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "NICHT negates the passive requirement while the verbal bracket remains intact.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Diese Daten dürfen nicht veröffentlicht werden."
+            },
+            {
+              "ok": false,
+              "word": "Diese Daten dürfen nicht werden veröffentlicht."
+            },
+            {
+              "ok": false,
+              "word": "Diese Daten dürfen nicht veröffentlichen werden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using state passive with result focus.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "State passive answers what condition something is in.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Alle Plätze sind bereits reserviert."
+            },
+            {
+              "ok": false,
+              "word": "Alle Plätze werden bereits reserviert, if the reservation process is complete."
+            },
+            {
+              "ok": false,
+              "word": "Alle Plätze sind bereits reservieren."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing passive type by meaning.",
+          "level": "B2",
+          "category": "Passive with Modals & State Passive",
+          "explain": "Choose WERDEN for process and SEIN for result.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Raum wird gerade gereinigt, deshalb ist er noch nicht geöffnet."
+            },
+            {
+              "ok": false,
+              "word": "Der Raum ist gerade gereinigt, deshalb wird er noch nicht geöffnet, if the cleaning process is ongoing."
+            },
+            {
+              "ok": false,
+              "word": "Der Raum wird gerade reinigen, deshalb ist er noch nicht geöffnet."
             }
           ]
         }

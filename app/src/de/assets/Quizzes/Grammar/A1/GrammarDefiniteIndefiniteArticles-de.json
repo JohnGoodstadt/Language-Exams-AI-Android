@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarDefiniteIndefiniteArticlesA1-de",
+  "sheetname": "GermanDefiniteIndefiniteArticlesA1-de",
   "title": "Definite & Indefinite Articles",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Definite & Indefinite Articles (A1) German questions.",
+      "description": "Practise basic German definite and indefinite articles with common singular nouns.",
       "sortorder": 1,
-      "learningTitle": "Using Definite & Indefinite Articles",
-      "learningPoints": [],
+      "learningTitle": "Using German Articles",
+      "learningPoints": [
+        "Use der, die and das with masculine, feminine and neuter nouns.",
+        "Use ein and eine with singular countable nouns.",
+        "Match the article to the noun's grammatical gender.",
+        "Recognise that German article choice is part of the noun phrase.",
+        "Use articles accurately in simple nominative phrases.",
+        "Build familiarity with high-frequency A1 nouns and their articles."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'der' with a masculine noun.",
           "level": "A1",
           "category": "Definite & Indefinite Articles",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "MANN is masculine, so the definite article is DER in the nominative.",
+          "sentence": "_ Mann ist nett.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Der"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Die"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'die' with a feminine noun.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "FRAU is feminine, so the definite article is DIE.",
+          "sentence": "_ Frau kommt aus Wien.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die"
+            },
+            {
+              "ok": false,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'das' with a neuter noun.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "KIND is neuter, so the definite article is DAS.",
+          "sentence": "_ Kind spielt draußen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das"
+            },
+            {
+              "ok": false,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Die"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'ein' with a masculine noun.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "HUND is masculine, so the indefinite article is EIN in the nominative.",
+          "sentence": "Das ist _ Hund.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "eine"
+            },
+            {
+              "ok": false,
+              "word": "einen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'eine' with a feminine noun.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "KATZE is feminine, so the indefinite article is EINE.",
+          "sentence": "Das ist _ Katze.",
+          "words": [
+            {
+              "ok": true,
+              "word": "eine"
+            },
+            {
+              "ok": false,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "einen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'ein' with a neuter noun.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "HAUS is neuter, so the nominative indefinite article is EIN.",
+          "sentence": "Das ist _ Haus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "eine"
+            },
+            {
+              "ok": false,
+              "word": "einen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using the correct definite article with 'Tisch'.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "TISCH is masculine: DER TISCH.",
+          "sentence": "_ Tisch ist neu.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Die"
+            },
+            {
+              "ok": false,
+              "word": "Das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using the correct definite article with 'Schule'.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "SCHULE is feminine: DIE SCHULE.",
+          "sentence": "_ Schule ist groß.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die"
+            },
+            {
+              "ok": false,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using the correct definite article with 'Buch'.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "BUCH is neuter: DAS BUCH.",
+          "sentence": "_ Buch ist interessant.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das"
+            },
+            {
+              "ok": false,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Die"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using an indefinite article with a feminine profession.",
+          "level": "A1",
+          "category": "Definite & Indefinite Articles",
+          "explain": "LEHRERIN is feminine, so use EINE.",
+          "sentence": "Sie ist _ Lehrerin.",
+          "words": [
+            {
+              "ok": true,
+              "word": "eine"
+            },
+            {
+              "ok": false,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "einen"
             }
           ]
         }

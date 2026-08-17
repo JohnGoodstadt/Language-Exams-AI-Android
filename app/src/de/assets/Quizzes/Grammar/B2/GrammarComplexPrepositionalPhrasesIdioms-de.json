@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarComplexPrepositionalPhrasesIdiomsB2-de",
+  "sheetname": "GermanComplexPrepositionalPhrasesIdiomsB2-de",
   "title": "Complex Prepositional Phrases & Idioms",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Complex Prepositional Phrases & Idioms (B2) German questions.",
+      "description": "Practise complex prepositional phrases and formal idiomatic expressions used in B2 German.",
       "sortorder": 1,
-      "learningTitle": "Using Complex Prepositional Phrases & Idioms",
-      "learningPoints": [],
+      "learningTitle": "Using Complex Prepositional Phrases and Idioms",
+      "learningPoints": [
+        "Learn fixed phrases such as im Hinblick auf and im Gegensatz zu.",
+        "Use aufgrund von, in Bezug auf and mit Hilfe von accurately.",
+        "Recognise formal idiomatic prepositional expressions.",
+        "Match the phrase to the intended meaning.",
+        "Use the required preposition and case pattern.",
+        "Learn multi-word units as complete expressions."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'im Hinblick auf'.",
           "level": "B2",
           "category": "Complex Prepositional Phrases & Idioms",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "IM HINBLICK AUF means with regard to.",
+          "sentence": "_ die Kosten müssen wir vorsichtig sein.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Im Hinblick auf"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Im Gegensatz zu"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Mit Hilfe von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'im Gegensatz zu'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "IM GEGENSATZ ZU expresses contrast.",
+          "sentence": "_ seinem Bruder ist er sehr ruhig.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Im Gegensatz zu"
+            },
+            {
+              "ok": false,
+              "word": "In Bezug auf"
+            },
+            {
+              "ok": false,
+              "word": "Aufgrund von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'in Bezug auf'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "IN BEZUG AUF means regarding.",
+          "sentence": "_ Ihre Anfrage senden wir Ihnen weitere Informationen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "In Bezug auf"
+            },
+            {
+              "ok": false,
+              "word": "Im Gegensatz zu"
+            },
+            {
+              "ok": false,
+              "word": "Mit Ausnahme von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'aufgrund von'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "AUFGRUND VON means because of.",
+          "sentence": "_ technischen Problemen beginnt die Sitzung später.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Aufgrund von"
+            },
+            {
+              "ok": false,
+              "word": "Im Hinblick auf"
+            },
+            {
+              "ok": false,
+              "word": "Anstelle von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'mit Hilfe von'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "MIT HILFE VON means with the help of/by means of.",
+          "sentence": "Die Daten wurden _ spezieller Software ausgewertet.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mit Hilfe von"
+            },
+            {
+              "ok": false,
+              "word": "im Gegensatz zu"
+            },
+            {
+              "ok": false,
+              "word": "in Bezug auf"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'im Laufe von'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "IM LAUFE VON means over the course of.",
+          "sentence": "_ wenigen Jahren hat sich die Situation stark verändert.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Im Laufe von"
+            },
+            {
+              "ok": false,
+              "word": "Im Gegensatz zu"
+            },
+            {
+              "ok": false,
+              "word": "Mit Ausnahme von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'mit Ausnahme von'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "MIT AUSNAHME VON means except for.",
+          "sentence": "_ zwei Teilnehmern waren alle anwesend.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Mit Ausnahme von"
+            },
+            {
+              "ok": false,
+              "word": "Im Hinblick auf"
+            },
+            {
+              "ok": false,
+              "word": "Anhand von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'anhand von'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "ANHAND VON means on the basis of/by means of.",
+          "sentence": "Die Ergebnisse lassen sich _ konkreten Beispielen erklären.",
+          "words": [
+            {
+              "ok": true,
+              "word": "anhand von"
+            },
+            {
+              "ok": false,
+              "word": "im Gegensatz zu"
+            },
+            {
+              "ok": false,
+              "word": "anstelle von"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'anstelle von'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "ANSTELLE VON means instead of.",
+          "sentence": "_ Papierdokumenten verwendet die Firma digitale Dateien.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Anstelle von"
+            },
+            {
+              "ok": false,
+              "word": "Mit Hilfe von"
+            },
+            {
+              "ok": false,
+              "word": "Im Hinblick auf"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'zum Zweck der'.",
+          "level": "B2",
+          "category": "Complex Prepositional Phrases & Idioms",
+          "explain": "ZUM ZWECK DER is a formal phrase meaning for the purpose of.",
+          "sentence": "Die Daten werden _ Qualitätskontrolle gespeichert.",
+          "words": [
+            {
+              "ok": true,
+              "word": "zum Zweck der"
+            },
+            {
+              "ok": false,
+              "word": "im Gegensatz zur"
+            },
+            {
+              "ok": false,
+              "word": "anhand der"
             }
           ]
         }

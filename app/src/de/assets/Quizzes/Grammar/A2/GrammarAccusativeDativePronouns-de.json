@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarAccusativeDativePronounsA2-de",
+  "sheetname": "GermanAccusativeDativePronounsA2-de",
   "title": "Accusative & Dative Pronouns",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Accusative & Dative Pronouns (A2) German questions.",
+      "description": "Practise personal pronouns in accusative and dative.",
       "sortorder": 1,
-      "learningTitle": "Using Accusative & Dative Pronouns",
-      "learningPoints": [],
+      "learningTitle": "Using Accusative and Dative Pronouns",
+      "learningPoints": [
+        "Use common accusative pronouns.",
+        "Use common dative pronouns.",
+        "Choose according to verb or preposition.",
+        "Distinguish direct and indirect objects.",
+        "Recognise formal Ihnen.",
+        "Avoid noun repetition."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Accusative mich.",
           "level": "A2",
           "category": "Accusative & Dative Pronouns",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "ICH becomes MICH.",
+          "sentence": "Sie sieht _.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "mich"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "mir"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Dative mir.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "ICH becomes MIR.",
+          "sentence": "Kannst du _ helfen?",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Accusative ihn.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "ER becomes IHN.",
+          "sentence": "Ich kenne Peter. Ich kenne _ gut.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "ihm"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Dative ihm.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "ER becomes IHM.",
+          "sentence": "Ich gebe _ das Buch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihm"
+            },
+            {
+              "ok": false,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Accusative sie.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "SIE stays SIE in accusative.",
+          "sentence": "Kennst du Anna? Ja, ich kenne _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "ihnen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Dative ihr.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "SIE becomes IHR in dative.",
+          "sentence": "Ich schreibe _ eine E-Mail.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihren"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Accusative uns.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "WIR becomes UNS.",
+          "sentence": "Er besucht _ morgen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "uns"
+            },
+            {
+              "ok": false,
+              "word": "wir"
+            },
+            {
+              "ok": false,
+              "word": "unser"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Dative euch.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "IHR becomes EUCH.",
+          "sentence": "Ich komme mit _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "euch"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "euer"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Plural dative ihnen.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "Plural SIE becomes IHNEN.",
+          "sentence": "Die Kinder sind nett. Ich helfe _ gern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihnen"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Formal Ihnen.",
+          "level": "A2",
+          "category": "Accusative & Dative Pronouns",
+          "explain": "Formal SIE becomes IHNEN.",
+          "sentence": "Kann ich _ etwas zeigen?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ihnen"
+            },
+            {
+              "ok": false,
+              "word": "Sie"
+            },
+            {
+              "ok": false,
+              "word": "Ihr"
             }
           ]
         }

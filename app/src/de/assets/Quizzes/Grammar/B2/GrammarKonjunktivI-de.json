@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarKonjunktivIB2-de",
-  "title": "Konjunktiv I: Reported Speech",
+  "sheetname": "GermanKonjunktivIReportedSpeechB2-de",
+  "title": "Konjunktiv I - Reported Speech",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Konjunktiv I: Reported Speech (B2) German questions.",
+      "description": "Practise Konjunktiv I in formal reported speech and recognise when Konjunktiv II is used to avoid ambiguity.",
       "sortorder": 1,
-      "learningTitle": "Using Konjunktiv I: Reported Speech",
-      "learningPoints": [],
+      "learningTitle": "Using Konjunktiv I in Reported Speech",
+      "learningPoints": [
+        "Use Konjunktiv I to report statements neutrally.",
+        "Recognise common forms such as sei, habe, werde and könne.",
+        "Use Konjunktiv II when Konjunktiv I is identical to indicative.",
+        "Keep reported content grammatically independent from the reporting verb.",
+        "Use formal reported-speech structures common in news and written German.",
+        "Distinguish direct quotation from reported speech."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'sei' in reported speech.",
           "level": "B2",
           "category": "Konjunktiv I: Reported Speech",
-          "explain": "Placeholder explanation.",
+          "explain": "SEI is the Konjunktiv I form of SEIN used for reported statements.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Er sagte, er sei krank."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Er sagte, er ist krank, if formal neutral reported speech is required."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Er sagte, er wäre krank, as the default Konjunktiv I form."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'habe'.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "HABE can mark reported speech.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie erklärte, sie habe keine Zeit."
+            },
+            {
+              "ok": false,
+              "word": "Sie erklärte, sie hat keine Zeit, in formal neutral report."
+            },
+            {
+              "ok": false,
+              "word": "Sie erklärte, sie hätte keine Zeit, as the standard Konjunktiv I form."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'werde'.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "WERDE is the Konjunktiv I form of WERDEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er sagte, er werde morgen kommen."
+            },
+            {
+              "ok": false,
+              "word": "Er sagte, er wird morgen kommen, in formal reported speech."
+            },
+            {
+              "ok": false,
+              "word": "Er sagte, er würde morgen kommen, as the direct Konjunktiv I equivalent."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'könne'.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "KÖNNE is a common Konjunktiv I modal form.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie sagte, sie könne uns helfen."
+            },
+            {
+              "ok": false,
+              "word": "Sie sagte, sie kann uns helfen, in formal neutral reporting."
+            },
+            {
+              "ok": false,
+              "word": "Sie sagte, sie könnte uns helfen, as the default Konjunktiv I form."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using plural substitution with Konjunktiv II.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "When Konjunktiv I is identical to indicative, Konjunktiv II may be used to keep reported speech distinct.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie sagten, sie hätten keine Zeit."
+            },
+            {
+              "ok": false,
+              "word": "Sie sagten, sie haben keine Zeit, if clear formal reported speech marking is required."
+            },
+            {
+              "ok": false,
+              "word": "Sie sagten, sie habe keine Zeit."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using reported speech in a news style.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "Konjunktiv I is common in journalistic reporting.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Minister erklärte, die Lage sei unter Kontrolle."
+            },
+            {
+              "ok": false,
+              "word": "Der Minister erklärte, die Lage ist unter Kontrolle, in formal news style."
+            },
+            {
+              "ok": false,
+              "word": "Der Minister erklärte, die Lage wäre unter Kontrolle, as the direct Konjunktiv I form."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using Konjunktiv I with perfect meaning.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "Reported past events can use HABE/SEI + past participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er sagte, er habe den Bericht bereits gelesen."
+            },
+            {
+              "ok": false,
+              "word": "Er sagte, er hat den Bericht bereits gelesen, in formal reported speech."
+            },
+            {
+              "ok": false,
+              "word": "Er sagte, er hätte den Bericht bereits gelesen, as the standard Konjunktiv I form."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'sei' with a past participle.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "Verbs using SEIN in perfect reported speech take SEI + participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie sagte, sie sei gestern angekommen."
+            },
+            {
+              "ok": false,
+              "word": "Sie sagte, sie habe gestern angekommen."
+            },
+            {
+              "ok": false,
+              "word": "Sie sagte, sie wäre gestern angekommen, as the default Konjunktiv I form."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Distinguishing report from speaker commitment.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "Konjunktiv I signals that the speaker is reporting another person's statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Zeuge behauptete, er habe nichts gesehen."
+            },
+            {
+              "ok": false,
+              "word": "Der Zeuge behauptete, er hat nichts gesehen, if formal distance is intended."
+            },
+            {
+              "ok": false,
+              "word": "Der Zeuge behauptete, er hätte nichts gesehen, as the direct Konjunktiv I form."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using Konjunktiv I consistently.",
+          "level": "B2",
+          "category": "Konjunktiv I: Reported Speech",
+          "explain": "Maintain reported-speech marking through the clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Sprecherin sagte, das Unternehmen werde investieren und neue Stellen schaffen."
+            },
+            {
+              "ok": false,
+              "word": "Die Sprecherin sagte, das Unternehmen wird investieren und schaffe neue Stellen."
+            },
+            {
+              "ok": false,
+              "word": "Die Sprecherin sagte, das Unternehmen würde investieren und neue Stellen geschaffen."
             }
           ]
         }

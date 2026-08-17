@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarNominativeAccusativeCaseA1-de",
+  "sheetname": "GermanNominativeAccusativeA1-de",
   "title": "Nominative & Accusative Case",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Nominative & Accusative Case (A1) German questions.",
+      "description": "Practise the basic difference between nominative subjects and accusative direct objects.",
       "sortorder": 1,
-      "learningTitle": "Using Nominative & Accusative Case",
-      "learningPoints": [],
+      "learningTitle": "Using Nominative and Accusative Cases",
+      "learningPoints": [
+        "Use the nominative for the subject of the sentence.",
+        "Use the accusative for the direct object.",
+        "Recognise the masculine change der → den.",
+        "Recognise the masculine indefinite change ein → einen.",
+        "Remember that feminine and neuter articles often stay the same in the accusative.",
+        "Use common A1 verbs with direct objects."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using nominative 'der' for the subject.",
           "level": "A1",
           "category": "Nominative & Accusative Case",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "A masculine subject uses DER in the nominative.",
+          "sentence": "_ Mann arbeitet hier.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Der"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Den"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Einen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using accusative 'den' for a masculine object.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "A masculine direct object changes DER to DEN.",
+          "sentence": "Ich sehe _ Mann.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using accusative 'einen' for a masculine object.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "The masculine indefinite article changes EIN to EINEN in the accusative.",
+          "sentence": "Ich kaufe _ Apfel.",
+          "words": [
+            {
+              "ok": true,
+              "word": "einen"
+            },
+            {
+              "ok": false,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "eine"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using nominative 'ein' with a masculine subject.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "A masculine nominative noun uses EIN.",
+          "sentence": "_ Hund ist im Garten.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ein"
+            },
+            {
+              "ok": false,
+              "word": "Einen"
+            },
+            {
+              "ok": false,
+              "word": "Eine"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using feminine accusative 'die'.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "Feminine DIE stays DIE in the accusative.",
+          "sentence": "Ich kenne _ Frau.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using feminine accusative 'eine'.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "Feminine EINE stays EINE in the accusative.",
+          "sentence": "Er hat _ Schwester.",
+          "words": [
+            {
+              "ok": true,
+              "word": "eine"
+            },
+            {
+              "ok": false,
+              "word": "einen"
+            },
+            {
+              "ok": false,
+              "word": "ein"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using neuter accusative 'das'.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "Neuter DAS stays DAS in the accusative.",
+          "sentence": "Wir kaufen _ Brot.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using neuter accusative 'ein'.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "Neuter EIN stays EIN in the accusative.",
+          "sentence": "Sie braucht _ Handy.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "einen"
+            },
+            {
+              "ok": false,
+              "word": "eine"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Distinguishing subject and object articles.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "The subject is nominative; the masculine direct object is accusative.",
+          "sentence": "_ Junge sieht den Hund.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der"
+            },
+            {
+              "ok": false,
+              "word": "Den"
+            },
+            {
+              "ok": false,
+              "word": "Einen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a masculine accusative object after 'haben'.",
+          "level": "A1",
+          "category": "Nominative & Accusative Case",
+          "explain": "HABEN commonly takes a direct object; a masculine indefinite noun uses EINEN.",
+          "sentence": "Ich habe _ Bruder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "einen"
+            },
+            {
+              "ok": false,
+              "word": "ein"
+            },
+            {
+              "ok": false,
+              "word": "eine"
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarReflexiveVerbsA2-de",
+  "sheetname": "GermanReflexiveVerbsA2-de",
   "title": "Reflexive Verbs",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Reflexive Verbs (A2) German questions.",
+      "description": "Practise common German reflexive verbs and pronouns.",
       "sortorder": 1,
       "learningTitle": "Using Reflexive Verbs",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use mich, dich, sich, uns and euch.",
+        "Match pronoun to subject.",
+        "Recognise common reflexive verbs.",
+        "Use accusative reflexive pronouns.",
+        "Place pronouns naturally.",
+        "Distinguish reflexive meanings."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using mich.",
           "level": "A2",
           "category": "Reflexive Verbs",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "ICH takes MICH.",
+          "sentence": "Ich freue _ auf den Urlaub.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "mich"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "dich"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "sich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using dich.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "DU takes DICH.",
+          "sentence": "Interessierst du _ für Musik?",
+          "words": [
+            {
+              "ok": true,
+              "word": "dich"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "euch"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using sich.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "ER/SIE/ES takes SICH.",
+          "sentence": "Er wäscht _ jeden Morgen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using uns.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "WIR takes UNS.",
+          "sentence": "Wir treffen _ um acht Uhr.",
+          "words": [
+            {
+              "ok": true,
+              "word": "uns"
+            },
+            {
+              "ok": false,
+              "word": "euch"
+            },
+            {
+              "ok": false,
+              "word": "sich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using euch.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "IHR takes EUCH.",
+          "sentence": "Beeilt _ bitte!",
+          "words": [
+            {
+              "ok": true,
+              "word": "euch"
+            },
+            {
+              "ok": false,
+              "word": "uns"
+            },
+            {
+              "ok": false,
+              "word": "sich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Plural sich.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "Plural SIE takes SICH.",
+          "sentence": "Die Kinder setzen _ an den Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "euch"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Sich erinnern.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "SICH ERINNERN AN means remember.",
+          "sentence": "Ich erinnere _ an den Namen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Sich interessieren.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "SICH INTERESSIEREN FÜR is reflexive.",
+          "sentence": "Sie interessiert _ für Kunst.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Sich ausruhen.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "SICH AUSRUHEN means rest.",
+          "sentence": "Nach der Arbeit ruhe ich _ aus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "sich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Formal Sie.",
+          "level": "A2",
+          "category": "Reflexive Verbs",
+          "explain": "Formal SIE also uses SICH.",
+          "sentence": "Setzen Sie _ bitte.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "Sie"
+            },
+            {
+              "ok": false,
+              "word": "euch"
             }
           ]
         }

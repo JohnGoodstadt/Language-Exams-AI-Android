@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarTextCohesionRegisterB2-de",
+  "sheetname": "GermanTextCohesionRegisterB2-de",
   "title": "Text Cohesion & Register",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Text Cohesion & Register (B2) German questions.",
+      "description": "Practise cohesive reference, logical progression and appropriate formal or informal register in German texts.",
       "sortorder": 1,
-      "learningTitle": "Using Text Cohesion & Register",
-      "learningPoints": [],
+      "learningTitle": "Maintaining Cohesion and Appropriate Register",
+      "learningPoints": [
+        "Use reference words to link sentences clearly.",
+        "Choose connectors that match the logical relationship.",
+        "Maintain a consistent level of formality.",
+        "Use formal alternatives in reports, applications and academic writing.",
+        "Avoid abrupt topic shifts and ambiguous pronouns.",
+        "Match tone, vocabulary and sentence structure to audience and purpose."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using formal register in a report.",
           "level": "B2",
           "category": "Text Cohesion & Register",
-          "explain": "Placeholder explanation.",
+          "explain": "Formal written German prefers precise, neutral phrasing.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Die Ergebnisse deuten darauf hin, dass weitere Untersuchungen erforderlich sind."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Die Ergebnisse zeigen irgendwie, dass man da noch mal schauen muss."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Die Ergebnisse sind voll eindeutig, da muss man noch was machen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using informal register in a personal message.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "Informal messages can use direct, conversational language.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich schaffe es heute leider nicht, aber ich rufe dich morgen an."
+            },
+            {
+              "ok": false,
+              "word": "Leider sehe ich mich außerstande, Ihrer Einladung heute Folge zu leisten."
+            },
+            {
+              "ok": false,
+              "word": "Hiermit teile ich Ihnen mit, dass meine Teilnahme heute nicht erfolgen kann."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Maintaining clear reference.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "Reference expressions should point unambiguously to the intended idea.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Firma führte flexible Arbeitszeiten ein. Diese Maßnahme verbesserte die Zufriedenheit der Beschäftigten."
+            },
+            {
+              "ok": false,
+              "word": "Die Firma führte flexible Arbeitszeiten ein. Er verbesserte die Zufriedenheit der Beschäftigten."
+            },
+            {
+              "ok": false,
+              "word": "Die Firma führte flexible Arbeitszeiten ein. Das verbesserte sie, with ambiguous reference."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using a cohesive contrast.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "The connector must reflect the relationship between ideas.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Lösung ist kostengünstig. Allerdings ist sie technisch schwer umzusetzen."
+            },
+            {
+              "ok": false,
+              "word": "Die Lösung ist kostengünstig. Daher ist sie technisch schwer umzusetzen, if contrast is intended."
+            },
+            {
+              "ok": false,
+              "word": "Die Lösung ist kostengünstig. Außerdem ist sie technisch schwer umzusetzen, if contrast is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using formal request language.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "Formal correspondence uses polite, indirect wording.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich wäre Ihnen dankbar, wenn Sie mir die Unterlagen bis Freitag zusenden könnten."
+            },
+            {
+              "ok": false,
+              "word": "Schicken Sie mir die Unterlagen bitte bis Freitag rüber."
+            },
+            {
+              "ok": false,
+              "word": "Ich brauch die Unterlagen bis Freitag, danke."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Keeping register consistent.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "Avoid mixing formal and highly colloquial expressions without reason.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Vorschlag erscheint sinnvoll, sofern ausreichende finanzielle Mittel zur Verfügung stehen."
+            },
+            {
+              "ok": false,
+              "word": "Der Vorschlag erscheint sinnvoll, sofern genug Kohle da ist."
+            },
+            {
+              "ok": false,
+              "word": "Der Vorschlag ist echt super, sofern ausreichende finanzielle Mittel zur Verfügung stehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Avoiding abrupt topic shifts.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "A coherent paragraph develops one central idea.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Ausbau des öffentlichen Verkehrs könnte den Autoverkehr reduzieren. Gleichzeitig würde sich dadurch die Luftqualität verbessern."
+            },
+            {
+              "ok": false,
+              "word": "Der Ausbau des öffentlichen Verkehrs könnte den Autoverkehr reduzieren. Mein Nachbar hat gestern einen Hund gekauft."
+            },
+            {
+              "ok": false,
+              "word": "Der Ausbau des öffentlichen Verkehrs könnte den Autoverkehr reduzieren. Außerdem obwohl gestern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using neutral professional tone.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "Professional texts avoid unnecessarily emotional or accusatory language.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bei der letzten Rechnung scheint ein Fehler aufgetreten zu sein."
+            },
+            {
+              "ok": false,
+              "word": "Sie haben die Rechnung total vermasselt."
+            },
+            {
+              "ok": false,
+              "word": "Diese Rechnung ist eine absolute Katastrophe!"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a logical conclusion.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "A concluding sentence should summarise rather than introduce an unrelated point.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Insgesamt lässt sich feststellen, dass die Maßnahme überwiegend positive Auswirkungen hatte."
+            },
+            {
+              "ok": false,
+              "word": "Insgesamt möchte ich jetzt ein völlig neues Thema beginnen."
+            },
+            {
+              "ok": false,
+              "word": "Also war alles ziemlich cool und fertig."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Maintaining cohesion across sentences.",
+          "level": "B2",
+          "category": "Text Cohesion & Register",
+          "explain": "Use cohesive devices and reference words to connect ideas naturally.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Zahl der Beschwerden ist deutlich gesunken. Dies spricht dafür, dass die neuen Maßnahmen Wirkung zeigen."
+            },
+            {
+              "ok": false,
+              "word": "Die Zahl der Beschwerden ist deutlich gesunken. Dieser ist dafür, dass die neuen Maßnahmen Wirkung zeigen."
+            },
+            {
+              "ok": false,
+              "word": "Die Zahl der Beschwerden ist deutlich gesunken. Trotzdem zeigen die Maßnahmen Wirkung, if no contrast is intended."
             }
           ]
         }

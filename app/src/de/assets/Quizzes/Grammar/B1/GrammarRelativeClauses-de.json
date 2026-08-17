@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarRelativeClausesB1-de",
+  "sheetname": "GermanRelativeClausesB1-de",
   "title": "Relative Clauses",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Relative Clauses (B1) German questions.",
+      "description": "Practise German relative clauses with der, die, das and related case forms.",
       "sortorder": 1,
       "learningTitle": "Using Relative Clauses",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use relative pronouns that match the noun's gender and number.",
+        "Choose the relative pronoun case from its role inside the relative clause.",
+        "Put the finite verb at the end of the relative clause.",
+        "Use commas to separate the relative clause.",
+        "Recognise accusative and dative relative pronouns.",
+        "Build descriptions without repeating nouns."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using nominative masculine 'der'.",
           "level": "B1",
           "category": "Relative Clauses",
-          "explain": "Placeholder explanation.",
+          "explain": "Use DER when the masculine noun is the subject inside the relative clause.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Der Mann, der dort steht, ist mein Lehrer."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Der Mann, den dort steht, ist mein Lehrer."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Der Mann, der steht dort, ist mein Lehrer."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using nominative feminine 'die'.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "Use DIE for a feminine subject relative pronoun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Frau, die nebenan wohnt, ist Ärztin."
+            },
+            {
+              "ok": false,
+              "word": "Die Frau, der nebenan wohnt, ist Ärztin."
+            },
+            {
+              "ok": false,
+              "word": "Die Frau, die wohnt nebenan, ist Ärztin."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using neuter 'das'.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "Use DAS for a neuter subject relative pronoun.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Buch, das auf dem Tisch liegt, gehört mir."
+            },
+            {
+              "ok": false,
+              "word": "Das Buch, den auf dem Tisch liegt, gehört mir."
+            },
+            {
+              "ok": false,
+              "word": "Das Buch, das liegt auf dem Tisch, gehört mir."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using accusative masculine 'den'.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "Use DEN when the masculine noun is the direct object in the relative clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Film, den wir gesehen haben, war gut."
+            },
+            {
+              "ok": false,
+              "word": "Der Film, der wir gesehen haben, war gut."
+            },
+            {
+              "ok": false,
+              "word": "Der Film, den wir haben gesehen, war gut."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using dative masculine 'dem'.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "Use DEM when the relative pronoun is dative masculine/neuter.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Mann, dem ich geholfen habe, war dankbar."
+            },
+            {
+              "ok": false,
+              "word": "Der Mann, den ich geholfen habe, war dankbar."
+            },
+            {
+              "ok": false,
+              "word": "Der Mann, dem ich habe geholfen, war dankbar."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using dative feminine 'der'.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "Use DER for feminine dative relative pronouns.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Kollegin, mit der ich arbeite, ist sehr nett."
+            },
+            {
+              "ok": false,
+              "word": "Die Kollegin, mit die ich arbeite, ist sehr nett."
+            },
+            {
+              "ok": false,
+              "word": "Die Kollegin, der mit ich arbeite, ist sehr nett."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using plural 'die'.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "Plural nominative/accusative relative pronoun is DIE.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Leute, die hier arbeiten, kommen aus vielen Ländern."
+            },
+            {
+              "ok": false,
+              "word": "Die Leute, der hier arbeiten, kommen aus vielen Ländern."
+            },
+            {
+              "ok": false,
+              "word": "Die Leute, die arbeiten hier, kommen aus vielen Ländern."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using plural dative 'denen'.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "Use DENEN for plural dative relative pronouns.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Freunde, mit denen wir reisen, wohnen in Köln."
+            },
+            {
+              "ok": false,
+              "word": "Die Freunde, mit die wir reisen, wohnen in Köln."
+            },
+            {
+              "ok": false,
+              "word": "Die Freunde, denen mit wir reisen, wohnen in Köln."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a relative clause in Perfekt.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "The auxiliary goes to the end after the participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das ist die Stadt, die ich letztes Jahr besucht habe."
+            },
+            {
+              "ok": false,
+              "word": "Das ist die Stadt, die ich habe letztes Jahr besucht."
+            },
+            {
+              "ok": false,
+              "word": "Das ist die Stadt, die habe ich letztes Jahr besucht."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using a relative clause with a modal.",
+          "level": "B1",
+          "category": "Relative Clauses",
+          "explain": "The modal is final after the infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das ist der Computer, den ich kaufen möchte."
+            },
+            {
+              "ok": false,
+              "word": "Das ist der Computer, den ich möchte kaufen."
+            },
+            {
+              "ok": false,
+              "word": "Das ist der Computer, den möchte ich kaufen."
             }
           ]
         }

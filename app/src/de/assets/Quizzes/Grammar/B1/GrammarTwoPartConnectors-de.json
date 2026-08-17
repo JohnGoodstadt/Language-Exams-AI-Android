@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarTwoPartConnectorsB1-de",
+  "sheetname": "GermanTwoPartConnectorsB1-de",
   "title": "Two-Part Connectors",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Two-Part Connectors (B1) German questions.",
+      "description": "Practise paired connectors such as entweder...oder, weder...noch, sowohl...als auch and zwar...aber.",
       "sortorder": 1,
       "learningTitle": "Using Two-Part Connectors",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use entweder...oder for alternatives.",
+        "Use weder...noch for two negatives.",
+        "Use sowohl...als auch for addition.",
+        "Use nicht nur...sondern auch for emphasis and addition.",
+        "Use zwar...aber for concession/contrast.",
+        "Keep parallel grammatical structure after paired connectors."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using entweder...oder.",
           "level": "B1",
           "category": "Two-Part Connectors",
-          "explain": "Placeholder explanation.",
+          "explain": "Use the pair for alternatives.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Wir fahren entweder mit dem Bus oder mit dem Zug."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Wir fahren weder mit dem Bus oder mit dem Zug."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Wir entweder fahren mit dem Bus oder mit dem Zug."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using weder...noch.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "Use the pair to negate both alternatives.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er trinkt weder Kaffee noch Tee."
+            },
+            {
+              "ok": false,
+              "word": "Er trinkt entweder Kaffee noch Tee."
+            },
+            {
+              "ok": false,
+              "word": "Er weder trinkt Kaffee noch Tee."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using sowohl...als auch.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "Use the pair to include both items.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie spricht sowohl Deutsch als auch Englisch."
+            },
+            {
+              "ok": false,
+              "word": "Sie spricht sowohl Deutsch oder Englisch."
+            },
+            {
+              "ok": false,
+              "word": "Sie sowohl spricht Deutsch als auch Englisch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using nicht nur...sondern auch.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "Use the pair for emphatic addition.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das Hotel ist nicht nur günstig, sondern auch zentral."
+            },
+            {
+              "ok": false,
+              "word": "Das Hotel ist nicht nur günstig, aber auch zentral."
+            },
+            {
+              "ok": false,
+              "word": "Das Hotel nicht nur ist günstig, sondern auch zentral."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using zwar...aber.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "Use ZWAR...ABER to acknowledge one point and contrast it with another.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Weg ist zwar lang, aber sehr schön."
+            },
+            {
+              "ok": false,
+              "word": "Der Weg ist entweder lang, aber sehr schön."
+            },
+            {
+              "ok": false,
+              "word": "Der Weg zwar ist lang, aber sehr schön."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Keeping parallel noun phrases.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "Paired connectors should link grammatically similar elements.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir besuchen entweder Berlin oder Hamburg."
+            },
+            {
+              "ok": false,
+              "word": "Wir besuchen entweder Berlin oder nach Hamburg."
+            },
+            {
+              "ok": false,
+              "word": "Wir entweder besuchen Berlin oder Hamburg."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using weder...noch with adjectives.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "The pair can connect adjectives.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Film war weder spannend noch lustig."
+            },
+            {
+              "ok": false,
+              "word": "Der Film war weder spannend oder lustig."
+            },
+            {
+              "ok": false,
+              "word": "Der Film weder war spannend noch lustig."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using sowohl...als auch with subjects.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "The pair can connect two subjects.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sowohl Anna als auch Paul kommen heute."
+            },
+            {
+              "ok": false,
+              "word": "Sowohl Anna oder auch Paul kommen heute."
+            },
+            {
+              "ok": false,
+              "word": "Sowohl Anna als Paul auch kommt heute."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using nicht nur...sondern auch with verbs.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "The linked structures should remain parallel.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er arbeitet nicht nur viel, sondern lernt auch jeden Abend."
+            },
+            {
+              "ok": false,
+              "word": "Er arbeitet nicht nur viel, aber lernt auch jeden Abend."
+            },
+            {
+              "ok": false,
+              "word": "Er nicht nur arbeitet viel, sondern auch lernt jeden Abend."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using zwar...aber in a full sentence.",
+          "level": "B1",
+          "category": "Two-Part Connectors",
+          "explain": "The pair expresses concession plus contrast.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich habe zwar wenig Zeit, aber ich helfe dir."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe zwar wenig Zeit, sondern ich helfe dir."
+            },
+            {
+              "ok": false,
+              "word": "Ich zwar habe wenig Zeit, aber ich helfe dir."
             }
           ]
         }

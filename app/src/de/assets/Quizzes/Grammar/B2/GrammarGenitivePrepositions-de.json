@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarGenitivePrepositionsB2-de",
+  "sheetname": "GermanGenitivePrepositionsB2-de",
   "title": "Genitive Prepositions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Genitive Prepositions (B2) German questions.",
+      "description": "Practise common formal prepositions that govern the genitive.",
       "sortorder": 1,
       "learningTitle": "Using Genitive Prepositions",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use trotz, während, wegen and statt/anstatt with genitive in standard formal German.",
+        "Use aufgrund, innerhalb and außerhalb with genitive.",
+        "Match articles and noun endings to genitive case.",
+        "Recognise register differences between formal genitive and colloquial alternatives.",
+        "Use genitive prepositions in written and formal contexts.",
+        "Choose the correct form of the following noun phrase."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using genitive after 'trotz'.",
           "level": "B2",
           "category": "Genitive Prepositions",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "TROTZ commonly takes genitive in standard formal German.",
+          "sentence": "Trotz _ schlechten Wetters gingen wir spazieren.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "des"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "dem"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using genitive after 'während'.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "WÄHREND takes genitive in formal standard German.",
+          "sentence": "Während _ Sitzung war das Handy ausgeschaltet.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using genitive after 'wegen'.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "WEGEN commonly governs genitive in formal usage.",
+          "sentence": "Wegen _ starken Regens fiel das Spiel aus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "des"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using genitive after 'statt'.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "STATT/ANSTATT can take genitive.",
+          "sentence": "Statt _ Autos nahm er das Fahrrad.",
+          "words": [
+            {
+              "ok": true,
+              "word": "des"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using genitive after 'aufgrund'.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "AUFGRUND is a formal genitive preposition.",
+          "sentence": "Aufgrund _ neuen Regelung müssen wir umplanen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using genitive after 'innerhalb'.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "INNERHALB commonly takes genitive.",
+          "sentence": "Innerhalb _ nächsten Woche erhalten Sie eine Antwort.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using genitive after 'außerhalb'.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "AUSSERHALB commonly takes genitive.",
+          "sentence": "Außerhalb _ Stadt ist es ruhiger.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using masculine genitive ending.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "Masculine/neuter nouns often add -S/-ES after genitive prepositions.",
+          "sentence": "Wegen des _ wurde die Straße gesperrt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Unfalls"
+            },
+            {
+              "ok": false,
+              "word": "Unfall"
+            },
+            {
+              "ok": false,
+              "word": "Unfallen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using feminine genitive article.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "Feminine genitive uses DER.",
+          "sentence": "Trotz _ langen Reise war sie nicht müde.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using plural genitive article.",
+          "level": "B2",
+          "category": "Genitive Prepositions",
+          "explain": "Plural genitive uses DER.",
+          "sentence": "Während _ Ferien arbeitet das Büro nur vormittags.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarDiscourseConnectorsB2-de",
+  "sheetname": "GermanDiscourseConnectorsB2-de",
   "title": "Discourse Connectors",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Discourse Connectors (B2) German questions.",
+      "description": "Practise advanced German connectors used to structure arguments, add information, contrast ideas and signal conclusions.",
       "sortorder": 1,
       "learningTitle": "Using Discourse Connectors",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use außerdem and darüber hinaus for addition.",
+        "Use allerdings, dennoch and hingegen for contrast and concession.",
+        "Use folglich and daher for consequence.",
+        "Use einerseits...andererseits to balance viewpoints.",
+        "Use zusammenfassend and insgesamt to conclude or summarise.",
+        "Match each connector to its logical function and sentence position."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'außerdem' for addition.",
           "level": "B2",
           "category": "Discourse Connectors",
-          "explain": "Placeholder explanation.",
+          "explain": "AUSSERDEM adds another point and occupies first position when fronted.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Außerdem bietet das Unternehmen flexible Arbeitszeiten."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Außerdem das Unternehmen bietet flexible Arbeitszeiten."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Allerdings bietet das Unternehmen flexible Arbeitszeiten, if simple addition is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'allerdings' for qualification.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "ALLERDINGS introduces a contrast or limitation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Lösung ist günstig. Allerdings ist sie nicht besonders nachhaltig."
+            },
+            {
+              "ok": false,
+              "word": "Die Lösung ist günstig. Außerdem ist sie nicht besonders nachhaltig, if contrast is intended."
+            },
+            {
+              "ok": false,
+              "word": "Die Lösung ist günstig. Allerdings sie ist nicht besonders nachhaltig."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'dennoch' for concession.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "DENNOCH means nevertheless and triggers verb-second order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es regnete stark. Dennoch gingen wir spazieren."
+            },
+            {
+              "ok": false,
+              "word": "Es regnete stark. Dennoch wir gingen spazieren."
+            },
+            {
+              "ok": false,
+              "word": "Es regnete stark. Daher gingen wir spazieren, if concession is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'hingegen' for contrast.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "HINGEGEN contrasts one item or viewpoint with another.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die erste Studie war eindeutig, die zweite hingegen ergab gemischte Ergebnisse."
+            },
+            {
+              "ok": false,
+              "word": "Die erste Studie war eindeutig, die zweite daher ergab gemischte Ergebnisse."
+            },
+            {
+              "ok": false,
+              "word": "Die erste Studie war eindeutig, hingegen die zweite ergab gemischte Ergebnisse."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'folglich' for result.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "FOLGLICH introduces a logical consequence.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Nachfrage sank deutlich. Folglich wurde die Produktion reduziert."
+            },
+            {
+              "ok": false,
+              "word": "Die Nachfrage sank deutlich. Hingegen wurde die Produktion reduziert."
+            },
+            {
+              "ok": false,
+              "word": "Die Nachfrage sank deutlich. Folglich die Produktion wurde reduziert."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'einerseits...andererseits'.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "This pair balances two sides of an argument.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Einerseits ist die Arbeit flexibel, andererseits fehlt der persönliche Kontakt."
+            },
+            {
+              "ok": false,
+              "word": "Einerseits ist die Arbeit flexibel, außerdem fehlt der persönliche Kontakt."
+            },
+            {
+              "ok": false,
+              "word": "Einerseits die Arbeit ist flexibel, andererseits fehlt der persönliche Kontakt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'darüber hinaus'.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "DARÜBER HINAUS adds a further point, often in formal style.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Darüber hinaus sind zusätzliche Investitionen erforderlich."
+            },
+            {
+              "ok": false,
+              "word": "Darüber hinaus zusätzliche Investitionen sind erforderlich."
+            },
+            {
+              "ok": false,
+              "word": "Dennoch sind zusätzliche Investitionen erforderlich, if addition is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'daher' for consequence.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "DAHER links a cause to its result and triggers inversion when fronted.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Frist wurde verkürzt. Daher müssen wir schneller arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Die Frist wurde verkürzt. Daher wir müssen schneller arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Die Frist wurde verkürzt. Allerdings müssen wir schneller arbeiten, if consequence is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'zusammenfassend'.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "ZUSAMMENFASSEND introduces a summary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Zusammenfassend lässt sich sagen, dass die Vorteile überwiegen."
+            },
+            {
+              "ok": false,
+              "word": "Zusammenfassend man kann sagen, dass die Vorteile überwiegen."
+            },
+            {
+              "ok": false,
+              "word": "Hingegen lässt sich sagen, dass die Vorteile überwiegen, if a summary is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using connectors coherently.",
+          "level": "B2",
+          "category": "Discourse Connectors",
+          "explain": "Choose a connector that matches the argument relationship.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Methode ist aufwendig. Dennoch liefert sie sehr zuverlässige Ergebnisse."
+            },
+            {
+              "ok": false,
+              "word": "Die Methode ist aufwendig. Folglich liefert sie sehr zuverlässige Ergebnisse, if no causal relation is intended."
+            },
+            {
+              "ok": false,
+              "word": "Die Methode ist aufwendig. Dennoch sie liefert sehr zuverlässige Ergebnisse."
             }
           ]
         }

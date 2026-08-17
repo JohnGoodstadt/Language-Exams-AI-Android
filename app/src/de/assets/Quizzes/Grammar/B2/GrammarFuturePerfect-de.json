@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarFuturePerfectB2-de",
+  "sheetname": "GermanFuturePerfectB2-de",
   "title": "Future Perfect",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Future Perfect (B2) German questions.",
+      "description": "Practise Futur II for completed future actions and assumptions about past events.",
       "sortorder": 1,
-      "learningTitle": "Using Future Perfect",
-      "learningPoints": [],
+      "learningTitle": "Using the Future Perfect",
+      "learningPoints": [
+        "Form Futur II with werden + past participle + haben/sein.",
+        "Use it for actions completed before a future point.",
+        "Use it to express assumptions about past events.",
+        "Choose haben or sein according to the perfect auxiliary.",
+        "Keep the infinitive group correctly at the end.",
+        "Use future time markers such as bis dahin and bis morgen."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming Futur II with haben.",
           "level": "B2",
           "category": "Future Perfect",
-          "explain": "Placeholder explanation.",
+          "explain": "Use WERDEN + participle + HABEN.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Bis morgen werde ich den Bericht geschrieben haben."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Bis morgen werde ich den Bericht geschrieben sein."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Bis morgen werde ich den Bericht haben geschrieben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Forming Futur II with sein.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "Movement verbs may take SEIN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bis dahin wird er angekommen sein."
+            },
+            {
+              "ok": false,
+              "word": "Bis dahin wird er angekommen haben."
+            },
+            {
+              "ok": false,
+              "word": "Bis dahin wird er sein angekommen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using completion before a future point.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "Futur II focuses on future completion.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "In zwei Jahren werden sie das Projekt abgeschlossen haben."
+            },
+            {
+              "ok": false,
+              "word": "In zwei Jahren werden sie das Projekt abschließen haben."
+            },
+            {
+              "ok": false,
+              "word": "In zwei Jahren haben sie das Projekt abgeschlossen werden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using assumption about the past.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "Futur II can express a present assumption about a past event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er wird den Zug verpasst haben."
+            },
+            {
+              "ok": false,
+              "word": "Er wird den Zug verpassen haben."
+            },
+            {
+              "ok": false,
+              "word": "Er wird den Zug verpasst sein."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using wahrscheinlich with Futur II.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "Probability markers often accompany assumptions.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie wird wahrscheinlich schon zu Hause angekommen sein."
+            },
+            {
+              "ok": false,
+              "word": "Sie wird wahrscheinlich schon zu Hause angekommen haben."
+            },
+            {
+              "ok": false,
+              "word": "Sie wahrscheinlich wird schon zu Hause angekommen sein."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using a negative Futur II.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "NICHT remains inside the verbal frame.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bis Freitag werden wir die Arbeit noch nicht beendet haben."
+            },
+            {
+              "ok": false,
+              "word": "Bis Freitag werden wir die Arbeit noch nicht beendet sein."
+            },
+            {
+              "ok": false,
+              "word": "Bis Freitag werden wir noch nicht haben die Arbeit beendet."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a future deadline.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "BIS + time point naturally combines with Futur II for completion.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bis Ende des Monats wird die Firma alle Rechnungen bezahlt haben."
+            },
+            {
+              "ok": false,
+              "word": "Bis Ende des Monats wird die Firma alle Rechnungen bezahlen haben."
+            },
+            {
+              "ok": false,
+              "word": "Bis Ende des Monats hat die Firma alle Rechnungen bezahlt werden."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a question in Futur II.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "The finite WERDEN form comes first in a yes/no question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wirst du die Arbeit bis morgen erledigt haben?"
+            },
+            {
+              "ok": false,
+              "word": "Du wirst die Arbeit bis morgen erledigt haben?"
+            },
+            {
+              "ok": false,
+              "word": "Wirst du die Arbeit bis morgen haben erledigt?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a modal-style assumption context.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "Futur II expresses what the speaker assumes has happened.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Kollegen werden die Nachricht inzwischen erhalten haben."
+            },
+            {
+              "ok": false,
+              "word": "Die Kollegen werden die Nachricht inzwischen erhalten sein."
+            },
+            {
+              "ok": false,
+              "word": "Die Kollegen werden inzwischen haben die Nachricht erhalten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing auxiliary accurately.",
+          "level": "B2",
+          "category": "Future Perfect",
+          "explain": "The final auxiliary reflects whether the perfect uses HABEN or SEIN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Bis Mitternacht wird der Zug abgefahren sein."
+            },
+            {
+              "ok": false,
+              "word": "Bis Mitternacht wird der Zug abgefahren haben."
+            },
+            {
+              "ok": false,
+              "word": "Bis Mitternacht wird der Zug sein abgefahren."
             }
           ]
         }

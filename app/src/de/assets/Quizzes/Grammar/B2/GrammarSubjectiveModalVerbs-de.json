@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarSubjectiveModalVerbsB2-de",
+  "sheetname": "GermanSubjectiveModalVerbsB2-de",
   "title": "Subjective Modal Verbs",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Subjective Modal Verbs (B2) German questions.",
+      "description": "Practise subjective uses of modal verbs to express probability, assumption and reported information.",
       "sortorder": 1,
       "learningTitle": "Using Subjective Modal Verbs",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use müssen for strong logical deduction.",
+        "Use können/könnte for possibility.",
+        "Use sollen for reported information from another source.",
+        "Use wollen for claims made by the subject.",
+        "Recognise past forms such as muss ... gewesen sein.",
+        "Distinguish objective obligation from subjective modal meaning."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using müssen for deduction.",
           "level": "B2",
           "category": "Subjective Modal Verbs",
-          "explain": "Placeholder explanation.",
+          "explain": "MÜSSEN can express a strong conclusion rather than obligation.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Er muss zu Hause sein; das Licht brennt."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Er muss zu Hause arbeiten, if the meaning is deduction rather than obligation."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Er muss zu Hause gewesen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using könnte for possibility.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "KÖNNTE can express an uncertain possibility.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das könnte die richtige Lösung sein."
+            },
+            {
+              "ok": false,
+              "word": "Das muss die richtige Lösung sein, if the speaker is uncertain."
+            },
+            {
+              "ok": false,
+              "word": "Das könnte die richtige Lösung gewesen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using sollen for reported information.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "SOLLEN can mean 'is said to'.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der neue Film soll sehr gut sein."
+            },
+            {
+              "ok": false,
+              "word": "Der neue Film muss sehr gut sein, if only reporting what others say."
+            },
+            {
+              "ok": false,
+              "word": "Der neue Film soll sehr gut gewesen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using wollen for a claim.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "WOLLEN can mean that someone claims something about themselves.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er will nichts davon gewusst haben."
+            },
+            {
+              "ok": false,
+              "word": "Er soll nichts davon gewusst haben, if reporting his own claim specifically."
+            },
+            {
+              "ok": false,
+              "word": "Er will nichts davon wissen haben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using past deduction with müssen.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "Use modal + perfect infinitive for deduction about the past.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie muss den Termin vergessen haben."
+            },
+            {
+              "ok": false,
+              "word": "Sie musste den Termin vergessen, if expressing a present deduction about the past."
+            },
+            {
+              "ok": false,
+              "word": "Sie muss den Termin vergessen gewesen sein."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using past possibility.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "KÖNNTE + perfect infinitive can express a possible past explanation.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er könnte den Zug verpasst haben."
+            },
+            {
+              "ok": false,
+              "word": "Er könnte den Zug verpassen haben."
+            },
+            {
+              "ok": false,
+              "word": "Er kann den Zug verpasst, if expressing uncertain past possibility."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using sollen for reported past information.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "SOLL + perfect infinitive can report an alleged past event.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Politiker soll von dem Problem gewusst haben."
+            },
+            {
+              "ok": false,
+              "word": "Der Politiker muss von dem Problem gewusst haben, if merely reporting others' claims."
+            },
+            {
+              "ok": false,
+              "word": "Der Politiker soll von dem Problem wissen gehabt haben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Distinguishing subjective from objective modal.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "Context decides whether the modal means obligation or inference.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie muss sehr müde sein; sie ist seit 20 Stunden wach."
+            },
+            {
+              "ok": false,
+              "word": "Sie muss sehr müde sein, because someone ordered her to be tired."
+            },
+            {
+              "ok": false,
+              "word": "Sie muss sehr müde gewesen, with present deduction meaning."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using dürfte for probability.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "DÜRFTE can express a fairly probable assumption in formal German.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Das dürfte stimmen."
+            },
+            {
+              "ok": false,
+              "word": "Das darf stimmen, if expressing probability."
+            },
+            {
+              "ok": false,
+              "word": "Das dürfte gestimmt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing the correct subjective modal meaning.",
+          "level": "B2",
+          "category": "Subjective Modal Verbs",
+          "explain": "The modal verb should reflect the speaker's degree and source of certainty.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er soll im Ausland leben, aber ich weiß es nicht sicher."
+            },
+            {
+              "ok": false,
+              "word": "Er muss im Ausland leben, aber ich weiß es nicht sicher, if only hearsay is intended."
+            },
+            {
+              "ok": false,
+              "word": "Er soll im Ausland gelebt, aber ich weiß es nicht sicher."
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarComparativeModalClausesB2-de",
+  "sheetname": "GermanComparativeModalClausesB2-de",
   "title": "Comparative & Modal Clauses",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Comparative & Modal Clauses (B2) German questions.",
+      "description": "Practise comparative and modal subordinate clauses with als, als ob, je...desto and indem.",
       "sortorder": 1,
-      "learningTitle": "Using Comparative & Modal Clauses",
-      "learningPoints": [],
+      "learningTitle": "Using Comparative and Modal Clauses",
+      "learningPoints": [
+        "Use als ob to express unreal comparison.",
+        "Use je...desto/umso for proportional relationships.",
+        "Use indem to explain how something is done.",
+        "Keep verb-final order in subordinate clauses.",
+        "Use appropriate Konjunktiv II forms after als ob.",
+        "Distinguish comparison, manner and cause."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'als ob'.",
           "level": "B2",
           "category": "Comparative & Modal Clauses",
-          "explain": "Placeholder explanation.",
+          "explain": "ALS OB introduces an unreal comparison and commonly takes Konjunktiv II.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Er tut so, als ob er alles wüsste."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Er tut so, als ob er weiß alles."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Er tut so, als ob wüsste er alles."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using past unreal comparison.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "Past unreal comparison can use hätte/wäre + participle.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie sah aus, als ob sie die ganze Nacht nicht geschlafen hätte."
+            },
+            {
+              "ok": false,
+              "word": "Sie sah aus, als ob sie die ganze Nacht nicht geschlafen hat."
+            },
+            {
+              "ok": false,
+              "word": "Sie sah aus, als ob hätte sie die ganze Nacht nicht geschlafen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using je...desto.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "The comparative in the JE-clause is matched by a comparative in the main clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Je länger wir warten, desto schwieriger wird die Situation."
+            },
+            {
+              "ok": false,
+              "word": "Je länger wir warten, schwieriger wird die Situation."
+            },
+            {
+              "ok": false,
+              "word": "Je wir länger warten, desto schwieriger die Situation wird."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using indem for manner.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "INDEM explains how an action is achieved.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Man kann Energie sparen, indem man die Heizung niedriger stellt."
+            },
+            {
+              "ok": false,
+              "word": "Man kann Energie sparen, obwohl man die Heizung niedriger stellt."
+            },
+            {
+              "ok": false,
+              "word": "Man kann Energie sparen, indem man stellt die Heizung niedriger."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using als ob with wäre.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "WÄRE is a common Konjunktiv II form after ALS OB.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es klingt, als ob das Problem komplizierter wäre."
+            },
+            {
+              "ok": false,
+              "word": "Es klingt, als ob das Problem ist komplizierter."
+            },
+            {
+              "ok": false,
+              "word": "Es klingt, als ob wäre das Problem komplizierter."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using umso as alternative.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "UMSO can replace DESTO.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Je besser die Vorbereitung ist, umso leichter fällt die Prüfung."
+            },
+            {
+              "ok": false,
+              "word": "Je besser ist die Vorbereitung, umso leichter fällt die Prüfung."
+            },
+            {
+              "ok": false,
+              "word": "Je besser die Vorbereitung ist, umso die Prüfung leichter fällt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using indem with reflexive structure.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "The finite verb remains final in the subordinate clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er beruhigte sich, indem er langsam atmete."
+            },
+            {
+              "ok": false,
+              "word": "Er beruhigte sich, indem er atmete langsam."
+            },
+            {
+              "ok": false,
+              "word": "Er beruhigte sich, weil er langsam atmete, if manner is intended."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using als ob without explicit 'so'.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "ALS OB can directly introduce the comparison.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie spricht, als ob sie die Chefin wäre."
+            },
+            {
+              "ok": false,
+              "word": "Sie spricht, als ob sie wäre die Chefin."
+            },
+            {
+              "ok": false,
+              "word": "Sie spricht, wie sie die Chefin wäre."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using proportional comparison in a complex sentence.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "Both clauses maintain their required word order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Je mehr Erfahrung man sammelt, desto sicherer trifft man Entscheidungen."
+            },
+            {
+              "ok": false,
+              "word": "Je mehr Erfahrung sammelt man, desto sicherer man trifft Entscheidungen."
+            },
+            {
+              "ok": false,
+              "word": "Je mehr Erfahrung man sammelt, desto sicherer man Entscheidungen trifft."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Distinguishing manner from purpose.",
+          "level": "B2",
+          "category": "Comparative & Modal Clauses",
+          "explain": "INDEM explains method, not purpose.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie verbesserte ihre Aussprache, indem sie täglich laut las."
+            },
+            {
+              "ok": false,
+              "word": "Sie verbesserte ihre Aussprache, damit sie täglich laut las."
+            },
+            {
+              "ok": false,
+              "word": "Sie verbesserte ihre Aussprache, indem las sie täglich laut."
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarSubordinateClausesWeilDassA2-de",
+  "sheetname": "GermanSubordinateClausesWeilDassA2-de",
   "title": "Subordinate Clauses: weil & dass",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Subordinate Clauses: weil & dass (A2) German questions.",
+      "description": "Practise subordinate clauses with weil and dass, including verb-final word order.",
       "sortorder": 1,
-      "learningTitle": "Using Subordinate Clauses: weil & dass",
-      "learningPoints": [],
+      "learningTitle": "Using weil and dass Clauses",
+      "learningPoints": [
+        "Use weil for reasons.",
+        "Use dass for reported facts and opinions.",
+        "Move the finite verb to the end.",
+        "Keep verb-second in the main clause.",
+        "Use commas.",
+        "Recognise modal and separable verb patterns."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Verb-final after weil.",
           "level": "A2",
           "category": "Subordinate Clauses: weil & dass",
-          "explain": "Placeholder explanation.",
+          "explain": "WEIL sends the finite verb to the end.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich bleibe zu Hause, weil ich krank bin."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich bleibe zu Hause, weil ich bin krank."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich bleibe zu Hause, weil bin ich krank."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Verb-final after dass.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "DASS sends the verb to the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich glaube, dass er heute arbeitet."
+            },
+            {
+              "ok": false,
+              "word": "Ich glaube, dass er arbeitet heute."
+            },
+            {
+              "ok": false,
+              "word": "Ich glaube, dass arbeitet er heute."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Separable verb.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "A separable verb stays together at the end of a subordinate clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bin müde, weil ich jeden Tag früh aufstehe."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, weil ich stehe jeden Tag früh auf."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, weil ich jeden Tag stehe früh auf."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Modal in subordinate clause.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "Infinitive comes before the final modal.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie bleibt hier, weil sie arbeiten muss."
+            },
+            {
+              "ok": false,
+              "word": "Sie bleibt hier, weil sie muss arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Sie bleibt hier, weil muss sie arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Dass after sagen.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "DASS introduces the content of a statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er sagt, dass er keine Zeit hat."
+            },
+            {
+              "ok": false,
+              "word": "Er sagt, dass er hat keine Zeit."
+            },
+            {
+              "ok": false,
+              "word": "Er sagt, dass hat er keine Zeit."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Subordinate clause first.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "After a fronted subordinate clause, the main-clause verb comes immediately.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Weil es regnet, bleibe ich zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Weil es regnet, ich bleibe zu Hause."
+            },
+            {
+              "ok": false,
+              "word": "Weil regnet es, bleibe ich zu Hause."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Perfekt subordinate clause.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "The participle comes before the final auxiliary.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bin müde, weil ich schlecht geschlafen habe."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, weil ich habe schlecht geschlafen."
+            },
+            {
+              "ok": false,
+              "word": "Ich bin müde, weil ich schlecht habe geschlafen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Dass with pronoun subject.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "Use subject + details + final verb.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir wissen, dass sie in Berlin wohnt."
+            },
+            {
+              "ok": false,
+              "word": "Wir wissen, dass sie wohnt in Berlin."
+            },
+            {
+              "ok": false,
+              "word": "Wir wissen, dass wohnt sie in Berlin."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Negation in subordinate clause.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "NICHT stays in the clause; finite verb remains final.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er kommt nicht, weil er heute nicht arbeiten kann."
+            },
+            {
+              "ok": false,
+              "word": "Er kommt nicht, weil er kann heute nicht arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Er kommt nicht, weil kann er heute nicht arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Weil versus dass.",
+          "level": "A2",
+          "category": "Subordinate Clauses: weil & dass",
+          "explain": "WEIL gives a reason; DASS introduces content.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich weiß, dass sie kommt, weil sie mir geschrieben hat."
+            },
+            {
+              "ok": false,
+              "word": "Ich weiß, weil sie kommt, dass sie mir geschrieben hat."
+            },
+            {
+              "ok": false,
+              "word": "Ich weiß, dass sie kommt, weil sie hat mir geschrieben."
             }
           ]
         }

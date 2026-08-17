@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarVerbsWithPrepositionsA2-de",
+  "sheetname": "GermanVerbsWithPrepositionsA2-de",
   "title": "Verbs with Prepositions",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Verbs with Prepositions (A2) German questions.",
+      "description": "Practise common German verb-preposition combinations.",
       "sortorder": 1,
       "learningTitle": "Using Verbs with Prepositions",
-      "learningPoints": [],
+      "learningPoints": [
+        "Learn verbs with required prepositions.",
+        "Use warten auf, denken an and sprechen über.",
+        "Use sich interessieren für and sich freuen auf.",
+        "Recognise preposition-governed case.",
+        "Avoid direct English translation.",
+        "Learn complete combinations."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Warten auf.",
           "level": "A2",
           "category": "Verbs with Prepositions",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "WARTEN AUF means wait for.",
+          "sentence": "Ich warte _ den Bus.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "auf"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "für"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Denken an.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "DENKEN AN means think of/about.",
+          "sentence": "Sie denkt oft _ ihre Familie.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Sprechen über.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "SPRECHEN ÜBER means talk about a topic.",
+          "sentence": "Wir sprechen _ das Problem.",
+          "words": [
+            {
+              "ok": true,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "mit"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Sprechen mit.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "SPRECHEN MIT means speak with a person.",
+          "sentence": "Ich spreche _ meinem Chef.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mit"
+            },
+            {
+              "ok": false,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Sich interessieren für.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "This pattern takes FÜR.",
+          "sentence": "Er interessiert sich _ Geschichte.",
+          "words": [
+            {
+              "ok": true,
+              "word": "für"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Sich freuen auf.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "Use AUF for looking forward to a future event.",
+          "sentence": "Ich freue mich _ den Urlaub.",
+          "words": [
+            {
+              "ok": true,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "mit"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Sich freuen über.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "Use ÜBER for happiness about something present or completed.",
+          "sentence": "Sie freut sich _ das Geschenk.",
+          "words": [
+            {
+              "ok": true,
+              "word": "über"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Bitten um.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "JEMANDEN UM ETWAS BITTEN means ask someone for something.",
+          "sentence": "Er bittet mich _ Hilfe.",
+          "words": [
+            {
+              "ok": true,
+              "word": "um"
+            },
+            {
+              "ok": false,
+              "word": "für"
+            },
+            {
+              "ok": false,
+              "word": "zu"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Teilnehmen an.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "TEILNEHMEN AN governs dative.",
+          "sentence": "Wir nehmen _ dem Kurs teil.",
+          "words": [
+            {
+              "ok": true,
+              "word": "an"
+            },
+            {
+              "ok": false,
+              "word": "auf"
+            },
+            {
+              "ok": false,
+              "word": "über"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Abhängen von.",
+          "level": "A2",
+          "category": "Verbs with Prepositions",
+          "explain": "ABHÄNGEN VON means depend on.",
+          "sentence": "Das hängt _ Wetter ab.",
+          "words": [
+            {
+              "ok": true,
+              "word": "vom"
+            },
+            {
+              "ok": false,
+              "word": "für das"
+            },
+            {
+              "ok": false,
+              "word": "an das"
             }
           ]
         }

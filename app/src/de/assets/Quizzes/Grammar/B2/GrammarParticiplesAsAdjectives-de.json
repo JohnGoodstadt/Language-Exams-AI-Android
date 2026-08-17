@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarParticiplesAsAdjectivesB2-de",
+  "sheetname": "GermanParticiplesAsAdjectivesB2-de",
   "title": "Participles as Adjectives",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Participles as Adjectives (B2) German questions.",
+      "description": "Practise present and past participles used adjectivally with appropriate endings.",
       "sortorder": 1,
       "learningTitle": "Using Participles as Adjectives",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use Partizip I for active or ongoing meaning.",
+        "Use Partizip II for completed or passive meaning.",
+        "Add adjective endings to participles.",
+        "Distinguish meaning pairs such as spannend/gespannt.",
+        "Use participial adjectives before nouns and after sein where appropriate.",
+        "Match form to context and noun phrase grammar."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using a present participle adjectivally.",
           "level": "B2",
           "category": "Participles as Adjectives",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "A present participle often expresses active/ongoing meaning.",
+          "sentence": "Das ist eine _ Geschichte.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "spannende"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "gespannte"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "gespannt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using a past participle adjectivally.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "A past participle can describe a resulting state.",
+          "sentence": "Die Tür ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "geschlossen"
+            },
+            {
+              "ok": false,
+              "word": "schließend"
+            },
+            {
+              "ok": false,
+              "word": "schlossene"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using an adjective ending on Partizip I.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "Before a noun, the participle takes an adjective ending.",
+          "sentence": "Wir hören das _ Kind.",
+          "words": [
+            {
+              "ok": true,
+              "word": "weinende"
+            },
+            {
+              "ok": false,
+              "word": "geweinte"
+            },
+            {
+              "ok": false,
+              "word": "weinend"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using an adjective ending on Partizip II.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "Past participles used before nouns also take adjective endings.",
+          "sentence": "Die _ Rechnung liegt auf dem Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "bezahlte"
+            },
+            {
+              "ok": false,
+              "word": "bezahlend"
+            },
+            {
+              "ok": false,
+              "word": "bezahlt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Distinguishing active and result meaning.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "The meaning determines whether Partizip I or II is appropriate.",
+          "sentence": "Der _ Mann wartet seit einer Stunde.",
+          "words": [
+            {
+              "ok": true,
+              "word": "wartende"
+            },
+            {
+              "ok": false,
+              "word": "gewartete"
+            },
+            {
+              "ok": false,
+              "word": "gewartet"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using Partizip II for emotional state.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "GESCHOCKT can function adjectivally as a resulting state.",
+          "sentence": "Die Leute waren völlig _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "geschockt"
+            },
+            {
+              "ok": false,
+              "word": "schockierend"
+            },
+            {
+              "ok": false,
+              "word": "schockende"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using Partizip I for effect on others.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "SCHOCKIEREND describes something that causes shock.",
+          "sentence": "Das war eine _ Nachricht.",
+          "words": [
+            {
+              "ok": true,
+              "word": "schockierende"
+            },
+            {
+              "ok": false,
+              "word": "geschockte"
+            },
+            {
+              "ok": false,
+              "word": "geschockt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using dative adjective ending.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "Participles follow normal adjective declension.",
+          "sentence": "Wir sprechen mit einem _ Kunden.",
+          "words": [
+            {
+              "ok": true,
+              "word": "verärgerten"
+            },
+            {
+              "ok": false,
+              "word": "verärgerte"
+            },
+            {
+              "ok": false,
+              "word": "verärgert"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using plural adjective ending.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "Plural participial adjectives take the expected ending.",
+          "sentence": "Die _ Fenster müssen ersetzt werden.",
+          "words": [
+            {
+              "ok": true,
+              "word": "beschädigten"
+            },
+            {
+              "ok": false,
+              "word": "beschädigte"
+            },
+            {
+              "ok": false,
+              "word": "beschädigt"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using participle meaning accurately.",
+          "level": "B2",
+          "category": "Participles as Adjectives",
+          "explain": "Choose the form that describes the noun's role.",
+          "sentence": "Die _ Mitarbeiter diskutieren laut.",
+          "words": [
+            {
+              "ok": true,
+              "word": "diskutierenden"
+            },
+            {
+              "ok": false,
+              "word": "diskutierten"
+            },
+            {
+              "ok": false,
+              "word": "diskutiert"
             }
           ]
         }

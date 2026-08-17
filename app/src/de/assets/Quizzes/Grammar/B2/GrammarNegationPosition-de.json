@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarNegationPositionB2-de",
+  "sheetname": "GermanNegationPositionB2-de",
   "title": "Negation & Its Position",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Negation & Its Position (B2) German questions.",
+      "description": "Practise nuanced placement of nicht and other negative elements in complex German sentences.",
       "sortorder": 1,
-      "learningTitle": "Using Negation & Its Position",
-      "learningPoints": [],
+      "learningTitle": "Placing Negation Precisely",
+      "learningPoints": [
+        "Place nicht according to the element being negated.",
+        "Distinguish sentence negation from constituent negation.",
+        "Use nicht before adjectives, adverbs and prepositional phrases when these are specifically negated.",
+        "Place nicht before infinitive or participle groups where appropriate.",
+        "Use weder...noch and keineswegs for stronger negation.",
+        "Interpret meaning changes caused by negation position."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Negating the whole predicate.",
           "level": "B2",
           "category": "Negation & Its Position",
-          "explain": "Placeholder explanation.",
+          "explain": "NICHT often appears late in the middle field when negating the overall statement.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich habe den Bericht gestern nicht gelesen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich habe nicht den Bericht gestern gelesen, if the whole action is negated."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich nicht habe den Bericht gestern gelesen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Negating a specific noun phrase.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "Place NICHT directly before the element being contrasted.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich meine nicht den alten Bericht, sondern den neuen."
+            },
+            {
+              "ok": false,
+              "word": "Ich meine den alten Bericht nicht, sondern den neuen, if only the noun phrase is contrasted."
+            },
+            {
+              "ok": false,
+              "word": "Nicht ich meine den alten Bericht, sondern den neuen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Negating an adjective.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "NICHT comes before the adjective being negated.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Aufgabe ist nicht besonders schwierig."
+            },
+            {
+              "ok": false,
+              "word": "Die Aufgabe nicht ist besonders schwierig."
+            },
+            {
+              "ok": false,
+              "word": "Die Aufgabe ist besonders nicht schwierig."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Negating a prepositional phrase.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "NICHT can stand directly before the phrase in focus.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er arbeitet nicht in Berlin, sondern in Potsdam."
+            },
+            {
+              "ok": false,
+              "word": "Er arbeitet in Berlin nicht, sondern in Potsdam, if location is the direct contrast."
+            },
+            {
+              "ok": false,
+              "word": "Er nicht arbeitet in Berlin, sondern in Potsdam."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Negating an infinitive construction.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "NICHT normally precedes the infinitive group or focused element.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie versucht, nicht zu spät zu kommen."
+            },
+            {
+              "ok": false,
+              "word": "Sie versucht, zu nicht spät kommen."
+            },
+            {
+              "ok": false,
+              "word": "Sie nicht versucht, zu spät zu kommen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using weder...noch.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "The pair negates two coordinated elements.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er hat weder angerufen noch geschrieben."
+            },
+            {
+              "ok": false,
+              "word": "Er hat nicht angerufen noch nicht geschrieben."
+            },
+            {
+              "ok": false,
+              "word": "Er weder hat angerufen noch geschrieben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using keineswegs.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "KEINESWEGS is a strong formal negator meaning by no means.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Entscheidung ist keineswegs endgültig."
+            },
+            {
+              "ok": false,
+              "word": "Die Entscheidung keineswegs ist endgültig."
+            },
+            {
+              "ok": false,
+              "word": "Die Entscheidung ist endgültig keineswegs, as the neutral position."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Negating a subordinate clause element.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "Negation remains inside the subordinate clause while the finite verb stays final.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er bleibt zu Hause, weil er heute nicht arbeiten kann."
+            },
+            {
+              "ok": false,
+              "word": "Er bleibt zu Hause, weil er heute kann nicht arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Er bleibt zu Hause, weil nicht er heute arbeiten kann."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Changing meaning through negation placement.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "The position of NICHT determines what is contrasted.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Nicht Peter hat den Vertrag unterschrieben, sondern Anna."
+            },
+            {
+              "ok": false,
+              "word": "Peter hat den Vertrag nicht unterschrieben, sondern Anna, if the subject rather than the action is contrasted."
+            },
+            {
+              "ok": false,
+              "word": "Peter nicht hat den Vertrag unterschrieben, sondern Anna."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using negation in a passive construction.",
+          "level": "B2",
+          "category": "Negation & Its Position",
+          "explain": "NICHT normally appears before the participle or focused element while the verbal bracket remains intact.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Daten dürfen nicht veröffentlicht werden."
+            },
+            {
+              "ok": false,
+              "word": "Die Daten nicht dürfen veröffentlicht werden."
+            },
+            {
+              "ok": false,
+              "word": "Die Daten dürfen veröffentlicht nicht werden."
             }
           ]
         }

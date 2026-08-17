@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarInfinitiveClausesZuB1-de",
+  "sheetname": "GermanInfinitiveClausesZuB1-de",
   "title": "Infinitive Clauses with zu",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Infinitive Clauses with zu (B1) German questions.",
+      "description": "Practise infinitive clauses with zu after common verbs, adjectives and expressions.",
       "sortorder": 1,
       "learningTitle": "Using Infinitive Clauses with zu",
-      "learningPoints": [],
+      "learningPoints": [
+        "Use zu + infinitive after common verbs and expressions.",
+        "Place zu before the infinitive or inside separable verbs.",
+        "Use commas where the infinitive group is expanded or required for clarity.",
+        "Recognise verbs that do not use zu after modal verbs.",
+        "Use infinitive clauses when the understood subject is the same.",
+        "Distinguish zu-infinitives from subordinate clauses."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using versuchen + zu.",
           "level": "B1",
           "category": "Infinitive Clauses with zu",
-          "explain": "Placeholder explanation.",
+          "explain": "VERSUCHEN is commonly followed by ZU + infinitive.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich versuche, früher zu kommen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich versuche, früher kommen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich versuche, zu früher kommen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using vergessen + zu.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "VERGESSEN can be followed by ZU + infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er hat vergessen, die Tür zu schließen."
+            },
+            {
+              "ok": false,
+              "word": "Er hat vergessen, die Tür schließen."
+            },
+            {
+              "ok": false,
+              "word": "Er hat vergessen, zu die Tür schließen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using anfangen + zu.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "ANFANGEN can take a zu-infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie fängt an, Deutsch zu lernen."
+            },
+            {
+              "ok": false,
+              "word": "Sie fängt an, Deutsch lernen."
+            },
+            {
+              "ok": false,
+              "word": "Sie fängt zu an, Deutsch lernen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using zu inside a separable verb.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "For many separable verbs, ZU appears between prefix and stem.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich hoffe, morgen früh aufzustehen."
+            },
+            {
+              "ok": false,
+              "word": "Ich hoffe, morgen früh zu aufstehen."
+            },
+            {
+              "ok": false,
+              "word": "Ich hoffe, morgen früh aufstehen zu."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using adjective + zu.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "Adjectives can be followed by a zu-infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es ist wichtig, genug zu schlafen."
+            },
+            {
+              "ok": false,
+              "word": "Es ist wichtig, genug schlafen."
+            },
+            {
+              "ok": false,
+              "word": "Es ist wichtig, zu genug schlafen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using haben + noun + zu.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "Expressions such as ZEIT HABEN can introduce a zu-infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich habe keine Zeit, heute zu kochen."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe keine Zeit, heute kochen."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe keine Zeit, zu heute kochen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Avoiding zu after a modal.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "Modal verbs take the bare infinitive, not ZU.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich muss heute länger arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Ich muss heute länger zu arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Ich muss zu heute länger arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using planen + zu.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "PLANEN can be followed by a zu-infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir planen, nächstes Jahr umzuziehen."
+            },
+            {
+              "ok": false,
+              "word": "Wir planen, nächstes Jahr zu umziehen."
+            },
+            {
+              "ok": false,
+              "word": "Wir planen, nächstes Jahr umziehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using bitten + object + zu.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "BITTEN can take object + zu-infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich bitte dich, leiser zu sprechen."
+            },
+            {
+              "ok": false,
+              "word": "Ich bitte dich, leiser sprechen."
+            },
+            {
+              "ok": false,
+              "word": "Ich bitte dich, zu leiser sprechen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using zu-infinitive for same understood subject.",
+          "level": "B1",
+          "category": "Infinitive Clauses with zu",
+          "explain": "The infinitive clause often shares its understood subject with the main clause.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie hofft, bald eine neue Stelle zu finden."
+            },
+            {
+              "ok": false,
+              "word": "Sie hofft, dass bald eine neue Stelle zu finden."
+            },
+            {
+              "ok": false,
+              "word": "Sie hofft, bald zu eine neue Stelle finden."
             }
           ]
         }

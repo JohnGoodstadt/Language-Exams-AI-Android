@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarModalVerbsA1-de",
+  "sheetname": "GermanModalVerbsA1-de",
   "title": "Modal Verbs",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Modal Verbs (A1) German questions.",
+      "description": "Practise basic German modal verbs and the sentence structure they require.",
       "sortorder": 1,
-      "learningTitle": "Using Modal Verbs",
-      "learningPoints": [],
+      "learningTitle": "Using German Modal Verbs",
+      "learningPoints": [
+        "Conjugate common modal verbs such as können, müssen, wollen, dürfen and möchten.",
+        "Place the conjugated modal verb in second position in a main clause.",
+        "Put the main infinitive at the end of the clause.",
+        "Use können for ability and dürfen for permission.",
+        "Use müssen for necessity and wollen/möchten for intention or preference.",
+        "Keep the main verb in infinitive form after a modal."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'können' for ability.",
           "level": "A1",
           "category": "Modal Verbs",
-          "explain": "Placeholder explanation.",
+          "explain": "With a modal verb, the conjugated modal is second and the main infinitive goes to the end.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich kann gut schwimmen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich kann schwimme gut."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich schwimmen kann gut."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'müssen' for necessity.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "The modal is conjugated and the main verb remains an infinitive at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir müssen heute arbeiten."
+            },
+            {
+              "ok": false,
+              "word": "Wir müssen heute arbeitet."
+            },
+            {
+              "ok": false,
+              "word": "Wir arbeiten müssen heute."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'dürfen' for permission.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "DÜRFEN expresses permission; the main verb stays in the infinitive.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Darf ich hier sitzen?"
+            },
+            {
+              "ok": false,
+              "word": "Ich darf sitze hier?"
+            },
+            {
+              "ok": false,
+              "word": "Darf ich hier sitzt?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'wollen' for intention.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "WOLLEN can express what someone wants or intends to do.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er will ein Auto kaufen."
+            },
+            {
+              "ok": false,
+              "word": "Er will kauft ein Auto."
+            },
+            {
+              "ok": false,
+              "word": "Er kaufen will ein Auto."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'möchten' politely.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "MÖCHTEN is commonly used for polite wants and requests.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich möchte einen Kaffee trinken."
+            },
+            {
+              "ok": false,
+              "word": "Ich möchte trinke einen Kaffee."
+            },
+            {
+              "ok": false,
+              "word": "Ich trinken möchte einen Kaffee."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using the correct modal form with 'du'.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "DU takes KANNST from KÖNNEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Du kannst sehr gut kochen."
+            },
+            {
+              "ok": false,
+              "word": "Du kann sehr gut kochen."
+            },
+            {
+              "ok": false,
+              "word": "Du kannst sehr gut kochst."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using the correct modal form with 'ihr'.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "IHR takes MÜSST from MÜSSEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ihr müsst jetzt gehen."
+            },
+            {
+              "ok": false,
+              "word": "Ihr müssen jetzt gehen."
+            },
+            {
+              "ok": false,
+              "word": "Ihr müsst jetzt geht."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a modal negative.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "NICHT normally negates the modal meaning or action while the infinitive remains at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich kann heute nicht kommen."
+            },
+            {
+              "ok": false,
+              "word": "Ich nicht kann heute kommen."
+            },
+            {
+              "ok": false,
+              "word": "Ich kann heute nicht komme."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using modal word order in a question.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "In a yes/no question, the conjugated modal comes first and the infinitive remains at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Kannst du morgen kommen?"
+            },
+            {
+              "ok": false,
+              "word": "Du kannst morgen kommen?"
+            },
+            {
+              "ok": false,
+              "word": "Kannst du morgen kommst?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using 'dürfen' for prohibition with 'nicht'.",
+          "level": "A1",
+          "category": "Modal Verbs",
+          "explain": "NICHT DÜRFEN means not be allowed to do something.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Du darfst hier nicht rauchen."
+            },
+            {
+              "ok": false,
+              "word": "Du darfst hier nicht rauchst."
+            },
+            {
+              "ok": false,
+              "word": "Du nicht darfst hier rauchen."
             }
           ]
         }

@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarReportingVerbsIndirectSpeechB2-de",
+  "sheetname": "GermanReportingVerbsIndirectSpeechB2-de",
   "title": "Reporting Verbs & Indirect Speech",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Reporting Verbs & Indirect Speech (B2) German questions.",
+      "description": "Practise varied reporting verbs and indirect-speech structures in formal German.",
       "sortorder": 1,
-      "learningTitle": "Using Reporting Verbs & Indirect Speech",
-      "learningPoints": [],
+      "learningTitle": "Using Reporting Verbs and Indirect Speech",
+      "learningPoints": [
+        "Use verbs such as behaupten, erklären, betonen, zugeben and bestreiten.",
+        "Use dass-clauses and Konjunktiv I appropriately.",
+        "Match reporting verb meaning to the speaker's attitude.",
+        "Keep subordinate-clause word order after dass.",
+        "Use infinitive structures after suitable reporting verbs.",
+        "Distinguish neutral reporting from agreement, denial and emphasis."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Using 'behaupten'.",
           "level": "B2",
           "category": "Reporting Verbs & Indirect Speech",
-          "explain": "Placeholder explanation.",
+          "explain": "BEHAUPTEN reports a claim that may not be accepted as fact.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Er behauptete, er habe nichts davon gewusst."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Er bewies, er habe nichts davon gewusst, if only a claim is reported."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Er behauptete, er hat nichts davon gewusst, in formal indirect speech."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using 'betonen'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "BETONEN means emphasise.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Ministerin betonte, dass weitere Maßnahmen nötig seien."
+            },
+            {
+              "ok": false,
+              "word": "Die Ministerin bestritt, dass weitere Maßnahmen nötig seien, if she emphasised rather than denied this."
+            },
+            {
+              "ok": false,
+              "word": "Die Ministerin betonte, dass seien weitere Maßnahmen nötig."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'zugeben'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "ZUGEBEN means admit.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er gab zu, einen Fehler gemacht zu haben."
+            },
+            {
+              "ok": false,
+              "word": "Er bestritt, einen Fehler gemacht zu haben, if he admitted it."
+            },
+            {
+              "ok": false,
+              "word": "Er gab zu, einen Fehler zu gemacht haben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'bestreiten'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "BESTREITEN means deny.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie bestritt, die Informationen weitergegeben zu haben."
+            },
+            {
+              "ok": false,
+              "word": "Sie bestätigte, die Informationen weitergegeben zu haben, if she denied it."
+            },
+            {
+              "ok": false,
+              "word": "Sie bestritt, die Informationen zu weitergegeben haben."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'erklären'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "ERKLÄREN can introduce a reported explanation or statement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Sprecher erklärte, das Unternehmen werde die Entscheidung prüfen."
+            },
+            {
+              "ok": false,
+              "word": "Der Sprecher erklärte, das Unternehmen wird die Entscheidung prüfen, in formal indirect speech."
+            },
+            {
+              "ok": false,
+              "word": "Der Sprecher erklärte, werde das Unternehmen die Entscheidung prüfen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using 'versichern'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "VERSICHERN means assure.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie versicherte uns, dass alles unter Kontrolle sei."
+            },
+            {
+              "ok": false,
+              "word": "Sie zweifelte uns, dass alles unter Kontrolle sei."
+            },
+            {
+              "ok": false,
+              "word": "Sie versicherte uns, dass sei alles unter Kontrolle."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using 'ankündigen'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "ANKÜNDIGEN reports a future plan or announcement.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Die Firma kündigte an, im nächsten Jahr neue Stellen zu schaffen."
+            },
+            {
+              "ok": false,
+              "word": "Die Firma bestritt, im nächsten Jahr neue Stellen zu schaffen, if announcing the plan."
+            },
+            {
+              "ok": false,
+              "word": "Die Firma kündigte an, im nächsten Jahr neue Stellen schaffen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using 'darauf hinweisen'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "DARAUF HINWEISEN means point out.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Bericht weist darauf hin, dass die Kosten gestiegen sind."
+            },
+            {
+              "ok": false,
+              "word": "Der Bericht weist darauf hin, die Kosten sind gestiegen."
+            },
+            {
+              "ok": false,
+              "word": "Der Bericht weist hin darauf, dass die Kosten gestiegen sind."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using 'warnen'.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "WARNEN can report a warning with VOR or DAVOR, DASS.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Experten warnten davor, die Risiken zu unterschätzen."
+            },
+            {
+              "ok": false,
+              "word": "Experten empfahlen davor, die Risiken zu unterschätzen, if warning rather than recommending."
+            },
+            {
+              "ok": false,
+              "word": "Experten warnten davor, die Risiken unterschätzen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Choosing reporting verb by stance.",
+          "level": "B2",
+          "category": "Reporting Verbs & Indirect Speech",
+          "explain": "The reporting verb should match whether the speaker claims, admits, denies or emphasises.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Der Manager räumte ein, dass Fehler gemacht worden seien."
+            },
+            {
+              "ok": false,
+              "word": "Der Manager bestritt, dass Fehler gemacht worden seien, if he admitted them."
+            },
+            {
+              "ok": false,
+              "word": "Der Manager räumte ein, dass Fehler seien gemacht worden."
             }
           ]
         }

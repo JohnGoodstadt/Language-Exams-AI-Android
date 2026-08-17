@@ -1,37 +1,251 @@
 {
-  "fileformat": 10,
+  "fileformat": 7,
   "location": 0,
-  "sheetname": "GrammarComparativeSuperlativeA2-de",
+  "sheetname": "GermanComparativeSuperlativeA2-de",
   "title": "Comparative & Superlative",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Comparative & Superlative (A2) German questions.",
+      "description": "Practise basic comparative and superlative forms.",
       "sortorder": 1,
-      "learningTitle": "Using Comparative & Superlative",
-      "learningPoints": [],
+      "learningTitle": "Making Comparisons in German",
+      "learningPoints": [
+        "Form many comparatives with -er.",
+        "Use als after comparatives.",
+        "Use am + -sten/-esten for adverbial superlatives.",
+        "Learn besser and lieber.",
+        "Recognise umlaut changes.",
+        "Compare accurately."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Regular comparative.",
           "level": "A2",
           "category": "Comparative & Superlative",
-          "explain": "Placeholder explanation.",
-          "sentence": "Choose the correct sentence.",
+          "explain": "Many adjectives add -ER.",
+          "sentence": "Mein Auto ist _ als deins.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "schneller"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "schnellste"
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "mehr schnell"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using als.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "ALS follows a comparative.",
+          "sentence": "Berlin ist größer _ Bonn.",
+          "words": [
+            {
+              "ok": true,
+              "word": "als"
+            },
+            {
+              "ok": false,
+              "word": "wie"
+            },
+            {
+              "ok": false,
+              "word": "denn"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Umlaut comparative.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "ALT becomes ÄLTER.",
+          "sentence": "Mein Bruder ist _ als ich.",
+          "words": [
+            {
+              "ok": true,
+              "word": "älter"
+            },
+            {
+              "ok": false,
+              "word": "alter"
+            },
+            {
+              "ok": false,
+              "word": "am ältesten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Irregular besser.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "GUT becomes BESSER.",
+          "sentence": "Dieser Film ist _ als der andere.",
+          "words": [
+            {
+              "ok": true,
+              "word": "besser"
+            },
+            {
+              "ok": false,
+              "word": "guter"
+            },
+            {
+              "ok": false,
+              "word": "am besten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Superlative besten.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "GUT becomes AM BESTEN.",
+          "sentence": "Sie singt _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am besten"
+            },
+            {
+              "ok": false,
+              "word": "besser"
+            },
+            {
+              "ok": false,
+              "word": "am gutesten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Superlative schnellsten.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "Use AM + adjective + STEN/ESTEN.",
+          "sentence": "Tom läuft _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am schnellsten"
+            },
+            {
+              "ok": false,
+              "word": "schneller"
+            },
+            {
+              "ok": false,
+              "word": "der schnellste"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Comparative höher.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "HOCH becomes HÖHER.",
+          "sentence": "Der Berg ist _ als dieser Hügel.",
+          "words": [
+            {
+              "ok": true,
+              "word": "höher"
+            },
+            {
+              "ok": false,
+              "word": "hocher"
+            },
+            {
+              "ok": false,
+              "word": "am höchsten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Comparative lieber.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "GERN becomes LIEBER.",
+          "sentence": "Ich trinke _ Tee als Kaffee.",
+          "words": [
+            {
+              "ok": true,
+              "word": "lieber"
+            },
+            {
+              "ok": false,
+              "word": "gerner"
+            },
+            {
+              "ok": false,
+              "word": "am liebsten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Superlative liebsten.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "GERN becomes AM LIEBSTEN.",
+          "sentence": "Am Wochenende schlafe ich _ lange.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am liebsten"
+            },
+            {
+              "ok": false,
+              "word": "lieber"
+            },
+            {
+              "ok": false,
+              "word": "am gernsten"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Regular superlative.",
+          "level": "A2",
+          "category": "Comparative & Superlative",
+          "explain": "KLEIN becomes AM KLEINSTEN.",
+          "sentence": "Dieses Zimmer ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am kleinsten"
+            },
+            {
+              "ok": false,
+              "word": "kleiner"
+            },
+            {
+              "ok": false,
+              "word": "am kleinersten"
             }
           ]
         }

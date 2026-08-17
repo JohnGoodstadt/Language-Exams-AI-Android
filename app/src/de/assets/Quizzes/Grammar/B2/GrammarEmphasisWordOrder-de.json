@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarEmphasisWordOrderB2-de",
+  "sheetname": "GermanEmphasisWordOrderB2-de",
   "title": "Emphasis & Word Order",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Emphasis & Word Order (B2) German questions.",
+      "description": "Practise fronting, inversion and information structure used to emphasise elements in German sentences.",
       "sortorder": 1,
-      "learningTitle": "Using Emphasis & Word Order",
-      "learningPoints": [],
+      "learningTitle": "Using Word Order for Emphasis",
+      "learningPoints": [
+        "Front time, place, object or adverbial elements while keeping the finite verb second.",
+        "Use es-cleft-like structures and focus particles such as gerade, sogar and erst.",
+        "Recognise how word order changes information focus.",
+        "Place unstressed pronouns before many full noun phrases.",
+        "Use contrastive fronting without breaking verb-second order.",
+        "Distinguish neutral from emphatic ordering."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Fronting an object.",
           "level": "B2",
           "category": "Emphasis & Word Order",
-          "explain": "Placeholder explanation.",
+          "explain": "A fronted object occupies first position and the finite verb remains second.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Diesen Bericht habe ich gestern gelesen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Diesen Bericht ich habe gestern gelesen."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Diesen Bericht gestern ich gelesen habe."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Fronting a place phrase.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "The finite verb follows the fronted phrase.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "In diesem Punkt stimme ich dir völlig zu."
+            },
+            {
+              "ok": false,
+              "word": "In diesem Punkt ich stimme dir völlig zu."
+            },
+            {
+              "ok": false,
+              "word": "In diesem Punkt dir stimme ich völlig zu."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using 'gerade' for focus.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "GERADE can emphasise a particular element.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Gerade diese Lösung halte ich für problematisch."
+            },
+            {
+              "ok": false,
+              "word": "Diese gerade Lösung ich halte für problematisch."
+            },
+            {
+              "ok": false,
+              "word": "Gerade diese Lösung ich halte für problematisch."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Using 'sogar' for emphasis.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "SOGAR marks something as surprising or stronger than expected.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sogar der Chef hat dem Vorschlag zugestimmt."
+            },
+            {
+              "ok": false,
+              "word": "Der sogar Chef hat dem Vorschlag zugestimmt."
+            },
+            {
+              "ok": false,
+              "word": "Sogar der Chef dem Vorschlag hat zugestimmt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using 'erst' to restrict focus.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "ERST can mean only/not until depending on context.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er hat die Nachricht erst gestern erhalten."
+            },
+            {
+              "ok": false,
+              "word": "Er erst hat die Nachricht gestern erhalten."
+            },
+            {
+              "ok": false,
+              "word": "Er hat erst die Nachricht gestern erhalten, if the focus is specifically the time."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using pronoun order naturally.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "Unstressed pronouns tend to come early in the middle field.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich habe es meinem Kollegen gestern erklärt."
+            },
+            {
+              "ok": false,
+              "word": "Ich habe meinem Kollegen gestern es erklärt."
+            },
+            {
+              "ok": false,
+              "word": "Ich es habe meinem Kollegen gestern erklärt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using contrastive fronting.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "Fronting highlights a contrast while preserving verb-second order.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Mit diesem Argument kann ich nichts anfangen."
+            },
+            {
+              "ok": false,
+              "word": "Mit diesem Argument ich kann nichts anfangen."
+            },
+            {
+              "ok": false,
+              "word": "Mit diesem Argument nichts kann ich anfangen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using an es-cleft-like focus structure.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "German can use ES IST/WAR + focus + relative clause for emphasis.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es war Anna, die den Fehler entdeckt hat."
+            },
+            {
+              "ok": false,
+              "word": "Es Anna war, die den Fehler entdeckt hat."
+            },
+            {
+              "ok": false,
+              "word": "Es war Anna, die hat den Fehler entdeckt."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using a fronted subordinate clause.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "The entire subordinate clause occupies first position, so the main finite verb comes next.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Was mich besonders überrascht hat, war seine Reaktion."
+            },
+            {
+              "ok": false,
+              "word": "Was mich besonders überrascht hat, seine Reaktion war."
+            },
+            {
+              "ok": false,
+              "word": "Was hat mich besonders überrascht, war seine Reaktion."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using emphasis without breaking syntax.",
+          "level": "B2",
+          "category": "Emphasis & Word Order",
+          "explain": "Emphasis can change order, but the core word-order rules remain.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Nur unter diesen Bedingungen können wir zustimmen."
+            },
+            {
+              "ok": false,
+              "word": "Nur unter diesen Bedingungen wir können zustimmen."
+            },
+            {
+              "ok": false,
+              "word": "Nur können wir unter diesen Bedingungen zustimmen, if the condition is the intended focus."
             }
           ]
         }

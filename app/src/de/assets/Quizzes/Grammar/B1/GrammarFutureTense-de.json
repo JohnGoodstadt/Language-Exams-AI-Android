@@ -1,37 +1,251 @@
 {
   "fileformat": 10,
   "location": 0,
-  "sheetname": "GrammarFutureTenseB1-de",
+  "sheetname": "GermanFutureTenseB1-de",
   "title": "Future Tense",
   "updatedDate": 0,
   "data": [
     {
       "title": "Choose the correct answer for each question.",
-      "description": "PLACEHOLDER - replace with real Future Tense (B1) German questions.",
+      "description": "Practise the German future with werden + infinitive and contrast it with present tense used for future meaning.",
       "sortorder": 1,
-      "learningTitle": "Using Future Tense",
-      "learningPoints": [],
+      "learningTitle": "Using the Future Tense",
+      "learningPoints": [
+        "Form Futur I with werden + infinitive.",
+        "Conjugate werden correctly.",
+        "Place the infinitive at the end.",
+        "Use Futur I for predictions, assumptions and explicit future reference.",
+        "Recognise that present tense can also express scheduled future events.",
+        "Use future markers to clarify meaning."
+      ],
       "sections": [
         {
           "title": "",
           "page": 1,
-          "summary": "Placeholder question.",
+          "summary": "Forming Futur I.",
           "level": "B1",
           "category": "Future Tense",
-          "explain": "Placeholder explanation.",
+          "explain": "Use WERDEN + infinitive.",
           "sentence": "Choose the correct sentence.",
           "words": [
             {
               "ok": true,
-              "word": "PLACEHOLDER correct answer."
+              "word": "Ich werde morgen arbeiten."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 1."
+              "word": "Ich werde morgen gearbeitet."
             },
             {
               "ok": false,
-              "word": "PLACEHOLDER wrong answer 2."
+              "word": "Ich morgen werde arbeiten."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Using wird with singular subject.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "ER/SIE/ES uses WIRD.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Sie wird später anrufen."
+            },
+            {
+              "ok": false,
+              "word": "Sie werde später anrufen."
+            },
+            {
+              "ok": false,
+              "word": "Sie wird später angerufen, if she is the caller."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Using werden with plural subject.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "WIR/SIE use WERDEN.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir werden nächstes Jahr umziehen."
+            },
+            {
+              "ok": false,
+              "word": "Wir wird nächstes Jahr umziehen."
+            },
+            {
+              "ok": false,
+              "word": "Wir werden nächstes Jahr umgezogen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Putting infinitive at the end.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "The lexical infinitive goes at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er wird wahrscheinlich später kommen."
+            },
+            {
+              "ok": false,
+              "word": "Er wird kommen wahrscheinlich später."
+            },
+            {
+              "ok": false,
+              "word": "Er wahrscheinlich später wird kommen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Using Futur I for prediction.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "Future tense can express a prediction.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Es wird morgen wahrscheinlich regnen."
+            },
+            {
+              "ok": false,
+              "word": "Es wird morgen wahrscheinlich geregnet."
+            },
+            {
+              "ok": false,
+              "word": "Es morgen wird wahrscheinlich regnen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Using present tense for fixed future plan.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "Present tense with a future time marker is often natural.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Morgen fahre ich nach Berlin."
+            },
+            {
+              "ok": false,
+              "word": "Morgen ich fahre nach Berlin."
+            },
+            {
+              "ok": false,
+              "word": "Morgen werde ich nach Berlin gefahren, if I am driving myself."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Using a future question.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "WERDEN comes first in a yes/no question.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wirst du morgen kommen?"
+            },
+            {
+              "ok": false,
+              "word": "Du wirst morgen kommen?"
+            },
+            {
+              "ok": false,
+              "word": "Wirst du morgen gekommen?"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Using a negative future.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "NICHT can negate the future action.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Ich werde heute Abend nicht ausgehen."
+            },
+            {
+              "ok": false,
+              "word": "Ich werde nicht heute Abend ausgegangen."
+            },
+            {
+              "ok": false,
+              "word": "Ich nicht werde heute Abend ausgehen."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Using Futur I for assumption.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "Futur I can express an assumption about the present.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Er wird jetzt wahrscheinlich zu Hause sein."
+            },
+            {
+              "ok": false,
+              "word": "Er wird jetzt wahrscheinlich zu Hause gewesen."
+            },
+            {
+              "ok": false,
+              "word": "Er jetzt wird wahrscheinlich zu Hause sein."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Using modal-like future content.",
+          "level": "B1",
+          "category": "Future Tense",
+          "explain": "The infinitive group stays at the end.",
+          "sentence": "Choose the correct sentence.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wir werden das Problem lösen müssen."
+            },
+            {
+              "ok": false,
+              "word": "Wir werden müssen das Problem lösen."
+            },
+            {
+              "ok": false,
+              "word": "Wir das Problem werden lösen müssen."
             }
           ]
         }
