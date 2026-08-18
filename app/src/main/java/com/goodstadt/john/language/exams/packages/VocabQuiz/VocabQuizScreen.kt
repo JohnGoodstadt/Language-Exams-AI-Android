@@ -285,6 +285,13 @@ fun VocabQuizScreen(
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+                // Explain what the tapped filter(s) actually mean.
+                Text(
+                    text = activeFilters.joinToString("\n") { vocabMasteryExplanation(it) },
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
                 Text(
                     text = "Select All to see more.",
                     style = MaterialTheme.typography.bodyMedium,
@@ -739,6 +746,17 @@ fun WorddotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
     }
 
     return Color.LightGray
+}
+
+/** Short, plain-English definition of each mastery level, shown in the filtered-empty state. */
+fun vocabMasteryExplanation(level: WordMasteryLevel): String {
+    return when (level) {
+        WordMasteryLevel.New -> "New: not attempted yet."
+        WordMasteryLevel.Struggling -> "Struggling: answered wrong — comes back soon to try again."
+        WordMasteryLevel.Learning -> "Learning: got it right, but only after a wrong try."
+        WordMasteryLevel.Review -> "Review: right first time — building towards mastery over spaced sessions."
+        WordMasteryLevel.Mastered -> "Mastered: correct first time in 3 separate sessions."
+    }
 }
 
 @Composable

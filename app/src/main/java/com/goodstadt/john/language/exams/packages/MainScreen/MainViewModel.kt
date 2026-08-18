@@ -174,13 +174,15 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
 //            if (false){
 //                hasChosen = false
 //            }
+            // On first launch every flavour shows an onboarding choice sheet: English shows the
+            // combined dialect + level sheet (ChooseEnglishAndExamSheet), other flavours show the
+            // level-only sheet (ChooseExamLevelSheet). Closing that sheet then triggers the
+            // Readiness Audit intro via onLanguageChoiceDismissed().
             if (!hasChosen) {
-                // If the user has NOT chosen, update the state to show the sheet.
-//                _uiState.update { it.copy(showEnglishChoiceSheet = true) }
-                _uiState.update { it.copy(showEnglishChoiceSheet = true)}
+                _uiState.update { it.copy(showEnglishChoiceSheet = true) }
             } else {
-                // Already chosen in a previous session - it's safe to check the Readiness
-                // Audit intro right away since the English sheet won't be shown this time.
+                // Already chosen in a previous session - the choice sheet won't show, so it's safe
+                // to check the Readiness Audit intro right away.
                 checkForReadinessAuditIntro()
             }
         }

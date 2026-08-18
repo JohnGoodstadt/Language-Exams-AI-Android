@@ -1380,7 +1380,9 @@ class VocabSectionQuizViewModel @Inject constructor(
             _currentQuestionAttempts = 0
             _currentQuestionWord = null
         } else {
-            _currentQuestionAttempts++
+            // NB: do NOT increment here - vocabQuizAttemptStats() already counted this tap on the
+            // same click. Incrementing again double-counted every wrong tap, so a wrong-then-correct
+            // answer read as 3 tries -> FAILED instead of 2 -> STUMBLED.
         }
         Timber.i("markAnswerSelected()")
         vocabQuizRepository.debugPrintAllWordStates()

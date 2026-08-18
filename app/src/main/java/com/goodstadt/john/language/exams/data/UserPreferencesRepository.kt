@@ -100,9 +100,11 @@ class UserPreferencesRepository @Inject constructor(
 
         .map { preferences ->
             // 1. Try to get the user's saved choice.
-            // 2. If it's not set, fall back to the default from the build flavor's LanguageConfig.
-
-            preferences[PreferenceKeys.SELECTED_LANGUAGE_CODE] ?: LanguageConfig.languageCode
+            // 2. If it's not set - OR it's a bare flavour code like "de" with no region (which the
+            //    TTS API rejects: it needs "de-DE") - fall back to the flavour's proper locale.
+            val stored = preferences[PreferenceKeys.SELECTED_LANGUAGE_CODE]
+            if (stored.isNullOrBlank() || !stored.contains('-')) LanguageConfig.languageCode
+            else stored
         }
     /**
      * A Flow that emits the currently selected voice name whenever it changes.

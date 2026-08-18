@@ -342,6 +342,13 @@ fun UsageQuizScreen(
                     textAlign = TextAlign.Center,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+                // Explain what the tapped filter(s) actually mean.
+                Text(
+                    text = activeFilters.joinToString("\n") { usageMasteryExplanation(it) },
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
                 Text(
                     text = "Select All to see more.",
                     style = MaterialTheme.typography.bodyMedium,
@@ -961,6 +968,17 @@ fun usageMasteryChipColor(level: UsageMastery): Color {
         UsageMastery.Learning -> Color(0xFFFF9800) // Orange
         UsageMastery.Review -> Color(0xFF2196F3) // Blue
         UsageMastery.Mastered -> Color(0xFF4CAF50) // Green
+    }
+}
+
+/** Short, plain-English definition of each mastery level, shown in the filtered-empty state. */
+fun usageMasteryExplanation(level: UsageMastery): String {
+    return when (level) {
+        UsageMastery.New -> "New: not attempted yet."
+        UsageMastery.Struggling -> "Struggling: answered wrong — comes back soon to try again."
+        UsageMastery.Learning -> "Learning: got it right, but only after a wrong try."
+        UsageMastery.Review -> "Review: right first time — building towards mastery over spaced sessions."
+        UsageMastery.Mastered -> "Mastered: correct first time in 3 separate sessions."
     }
 }
 

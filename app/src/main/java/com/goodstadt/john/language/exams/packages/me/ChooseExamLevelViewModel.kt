@@ -27,6 +27,10 @@ class ChooseExamLevelViewModel @Inject constructor(
     fun saveLevel(selectedLevel: String, onComplete: () -> Unit) {
         viewModelScope.launch {
             userPreferencesRepository.saveSelectedSkillLevel(selectedLevel)
+            // Mark onboarding complete so this sheet doesn't reappear on the next launch. Persist
+            // the flavour's proper locale code (e.g. "de-DE", NOT the bare flavour "de" which the
+            // TTS voice rejects); this also sets the USER_HAS_CHOSEN_ENGLISH flag MainViewModel checks.
+            userPreferencesRepository.saveSelectedLanguageCode(LanguageConfig.languageCode)
             onComplete()
         }
     }

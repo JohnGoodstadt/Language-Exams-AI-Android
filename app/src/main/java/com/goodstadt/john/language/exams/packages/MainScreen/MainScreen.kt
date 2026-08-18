@@ -70,6 +70,7 @@ import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditS
 import com.goodstadt.john.language.exams.packages.ReferenceTabContainer.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishAndExamSheet
+import com.goodstadt.john.language.exams.packages.me.ChooseExamLevelSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
@@ -351,7 +352,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
         }
     } //: Scaffold
 
-    if (globalUiState.showEnglishChoiceSheet && LanguageConfig.hasDialectSelection) {
+    if (globalUiState.showEnglishChoiceSheet) {
         ModalBottomSheet(
             // An empty lambda makes the sheet non-dismissible by dragging or tapping outside.
             // The user MUST make a choice.
@@ -359,16 +360,17 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             sheetState = sheetState,
             modifier = Modifier.fillMaxHeight(0.80f) //NOTE: if too low then button off screen
         ) {
-                // Your existing 2-choice sheet (Dialect + Exam Level)
+            if (LanguageConfig.hasDialectSelection) {
+                // English: the combined 2-choice sheet (Dialect + Exam Level).
                 ChooseEnglishAndExamSheet(
                     onClose = { mainViewModel.onLanguageChoiceDismissed() }
                 )
-//            else if ( false ) { //Do I need this as I am testing user to choose?
-//                // The new 1-choice sheet (Exam Level only)
-//                ChooseExamLevelSheet(
-//                    onClose = { mainViewModel.onLanguageChoiceDismissed() }
-//                )
-//            }
+            } else {
+                // Other flavours (de, zh): no dialect to pick, so just the Exam Level sheet.
+                ChooseExamLevelSheet(
+                    onClose = { mainViewModel.onLanguageChoiceDismissed() }
+                )
+            }
         }
     }
 

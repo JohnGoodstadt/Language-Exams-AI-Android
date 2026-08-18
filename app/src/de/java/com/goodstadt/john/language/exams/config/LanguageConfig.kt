@@ -4,7 +4,7 @@ package com.goodstadt.john.language.exams.config
 // It can be empty or provide default values.
 object LanguageConfig {
     val showLanguageSelectionSetting: Boolean = false
-    val hasDialectSelection: Boolean = false // 👈 Only nglish needs US/UK/AU choice
+    val hasDialectSelection: Boolean = false // 👈 Only English needs US/UK/AU choice
     val voiceName: String = "de-DE-Neural2-G" //female
     val languageCode: String = "de-DE"
     val defaultFileName: String = "vocab_data_a1"
