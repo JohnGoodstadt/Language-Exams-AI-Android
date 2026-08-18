@@ -43,6 +43,7 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.models.UsageMastery
+import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import com.goodstadt.john.language.exams.packages.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
@@ -356,6 +357,11 @@ class UsageQuizViewModel @Inject constructor(
     private val quizTitleCache = mutableMapOf<UsageQuizLevelsFilename, List<QuizDetail>>()
     private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question
 
+    // Per-question SRS outcome tracking (keyed by question index; cleared on resetQuiz). Lets us tell
+    // a first-try correct (FLAWLESS) from a retry (STUMBLED), and stop re-recording once solved.
+    private val questionTapCounts = mutableMapOf<Int, Int>()
+    private val questionResolved = mutableSetOf<Int>()
+
 //    private val _quizFluency = mutableStateOf(UsageQuizRepository.QuizFluency.NEVER_DONE)
 //    val quizFluency: State<UsageQuizRepository.QuizFluency> = _quizFluency
 
@@ -565,6 +571,8 @@ class UsageQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
         categoryRecordedIndices.clear()
+        questionTapCounts.clear()
+        questionResolved.clear()
         _activeFilters.value = emptySet()
 
     }
@@ -754,14 +762,27 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         }
 
-        val page = quizStatistics.value.page
-        val currentQuizFileName = quizStatistics.value.filename
-        usageQuizRepository.recordQuestionResult(
-            quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
-            pageNumber = page,      // e.g. 5
-            attemptsTaken = currentTries,
-            infoUsedForCurrentQuestion
-        )
+        // Record THIS question's result for spaced repetition. Compute a 4-way outcome from how the
+        // question went so far: first tap & no hint -> FLAWLESS; first tap but hint used -> ASSISTED;
+        // got it right only after a wrong tap -> STUMBLED; a wrong tap -> FAILED. Once solved we stop
+        // recording so extra taps (speaker/text/radio on the same option) can't downgrade it.
+        val currentPage = _questions.value.getOrNull(index)?.page ?: (index + 1)
+        if (index !in questionResolved) {
+            val priorTaps = questionTapCounts.getOrDefault(index, 0)
+            questionTapCounts[index] = priorTaps + 1
+            val outcome = when {
+                !isCorrect -> VocabQuizOutcome.FAILED
+                priorTaps == 0 && !infoUsedForCurrentQuestion -> VocabQuizOutcome.FLAWLESS
+                priorTaps == 0 -> VocabQuizOutcome.ASSISTED
+                else -> VocabQuizOutcome.STUMBLED
+            }
+            usageQuizRepository.recordQuestionResult(
+                quizId = quizStatistics.value.filename, // e.g. "UsageQuiz1A1"
+                pageNumber = currentPage,
+                outcome = outcome
+            )
+            if (isCorrect) questionResolved.add(index)
+        }
 
     }
 

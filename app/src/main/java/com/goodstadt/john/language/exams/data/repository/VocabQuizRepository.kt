@@ -127,66 +127,8 @@ class VocabQuizRepository @Inject constructor(
 
     // Requires: import java.time.*
     private fun updateMasteryLogic(state: VocabLearningState, outcome: VocabQuizOutcome) {
-        val now = System.currentTimeMillis()
-
-        // 🛑 ANTI-CRAMMING CHECK
-        // If it wasn't due yet, and they got it right, don't boost them further.
-        if (state.nextReviewTime > now && state.masteryLevel != WordMasteryLevel.Struggling) {
-            // Only return if it was a "Success" type outcome.
-            // If they failed or stumbled while cramming, we STILL want to downgrade them.
-            if (outcome == VocabQuizOutcome.FLAWLESS || outcome == VocabQuizOutcome.ASSISTED) {
-                Timber.d("Quiz: User reviewed '${state.word}' too early. Schedule unchanged.")
-                return
-            }
-        }
-
-        when (outcome) {
-            // --- PERFECT ---
-            VocabQuizOutcome.FLAWLESS -> {
-                state.correctStreak++
-
-                if (state.masteryLevel == WordMasteryLevel.Struggling) {
-                    // Graduated from struggling
-                    state.masteryLevel = WordMasteryLevel.Learning
-                    state.nextReviewTime = getFutureMorningTime(1) // Tomorrow
-                } else if (state.correctStreak >= 3) {
-                    // Mastered
-                    state.masteryLevel = WordMasteryLevel.Mastered
-                    state.nextReviewTime = Long.MAX_VALUE
-                } else {
-                    // Standard Review
-                    state.masteryLevel = WordMasteryLevel.Review
-                    state.nextReviewTime = getFutureMorningTime(state.correctStreak)
-                }
-            }
-
-            // --- CHEATED / HINTED ---
-            VocabQuizOutcome.ASSISTED -> {
-                // They got it right, but needed help.
-                // Treat as "Learning" (Tomorrow), but don't increase streak.
-                state.masteryLevel = WordMasteryLevel.Review
-                state.nextReviewTime = getFutureMorningTime(1)
-                // Optional: Reset streak or keep it? usually reset or freeze.
-                // state.correctStreak = 0
-            }
-
-            // --- ALMOST ---
-            VocabQuizOutcome.STUMBLED -> {
-                state.correctStreak = 0
-                state.masteryLevel = WordMasteryLevel.Learning
-                // Review later today (e.g. 6 hours)
-                state.nextReviewTime = now + (6 * 60 * 60 * 1000L)
-            }
-
-            // --- FAILED ---
-            VocabQuizOutcome.FAILED -> {
-                state.correctStreak = 0
-                state.masteryLevel = WordMasteryLevel.Struggling
-                // Review immediately (10 mins)
-                state.nextReviewTime = now + (10 * 60 * 1000L)
-            }
-        }
-
+        // The spaced-repetition transition lives in the pure, unit-tested VocabMasteryEngine.
+        VocabMasteryEngine.updateMastery(state, outcome, System.currentTimeMillis())
         Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. Outcome: $outcome")
     }
 
@@ -198,19 +140,6 @@ class VocabQuizRepository @Inject constructor(
             VocabQuizOutcome.FAILED -> 3
         }
     }
-    private fun getFutureMorningTime(daysToAdd: Int): Long {
-        val zone = ZoneId.systemDefault()
-        val today = LocalDate.now(zone)
-
-        // Add days to current date
-        val targetDate = today.plusDays(daysToAdd.toLong())
-
-        // Set time to 06:00 AM
-        val targetDateTime = targetDate.atTime(6, 0) // 06:00
-
-        return targetDateTime.atZone(zone).toInstant().toEpochMilli()
-    }
-
     // MARK: - Persistence
 
     private fun saveToDisk() {

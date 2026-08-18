@@ -259,7 +259,8 @@ fun UsageQuizRow(item: UsageQuizOverviewItem, isNextUp: Boolean, onClick: () -> 
                     (1..10).forEach { i ->
                         val mastery = item.questionMastery[i] ?: UsageMastery.New
                         val color = when(mastery) {
-                            UsageMastery.Fluent -> Color(0xFF4CAF50) // Green
+                            UsageMastery.Mastered -> Color(0xFF4CAF50) // Green
+                            UsageMastery.Review -> Color(0xFF2196F3) // Blue
                             UsageMastery.Learning -> Color(0xFFFF9800) // Orange
                             UsageMastery.Struggling -> Color(0xFFF44336) // Red
                             UsageMastery.New -> Color.Gray.copy(alpha = 0.2f)

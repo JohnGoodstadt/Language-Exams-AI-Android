@@ -959,7 +959,8 @@ fun usageMasteryChipColor(level: UsageMastery): Color {
         UsageMastery.New -> Color.Gray
         UsageMastery.Struggling -> Color.Red
         UsageMastery.Learning -> Color(0xFFFF9800) // Orange
-        UsageMastery.Fluent -> Color(0xFF4CAF50) // Green
+        UsageMastery.Review -> Color(0xFF2196F3) // Blue
+        UsageMastery.Mastered -> Color(0xFF4CAF50) // Green
     }
 }
 

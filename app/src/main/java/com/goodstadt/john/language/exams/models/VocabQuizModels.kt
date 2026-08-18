@@ -46,13 +46,13 @@ data class VocabLearningState(
 
     @SerializedName("lvl_src") var sourceLevel: String = "", //ee.g. B1,A2...
 
-    @SerializedName("lvl") var masteryLevel: WordMasteryLevel = WordMasteryLevel.New,
+    @SerializedName("lvl") override var masteryLevel: WordMasteryLevel = WordMasteryLevel.New,
 
-    @SerializedName("streak") var correctStreak: Int = 0, // Consecutive first-try successes
+    @SerializedName("streak") override var correctStreak: Int = 0, // Consecutive first-try successes
 
-    @SerializedName("next_due") var nextReviewTime: Long = 0, // When to show this again
+    @SerializedName("next_due") override var nextReviewTime: Long = 0, // When to show this again
 
     @SerializedName("history") val history: MutableList<WordQuizAttempt> = mutableListOf(),
 
     @SerializedName("last_out") var lastOutcome: VocabQuizOutcome? = null
-)
+) : SrsState

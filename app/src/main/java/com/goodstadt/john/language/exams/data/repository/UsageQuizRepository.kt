@@ -5,6 +5,8 @@ import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.UsageQuestionStat
 import com.goodstadt.john.language.exams.models.UsageQuizStat
+import com.goodstadt.john.language.exams.models.VocabQuizOutcome
+import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -41,34 +43,27 @@ class UsageQuizRepository @Inject constructor(
     // MARK: - UPDATE (Record Result)
 
     /**
-     * Records the result of a single question.
-     * @param quizId: "UsageQuiz1A1"
-     * @param pageNumber: 1 to 10
-     * @param attemptsTaken: How many clicks to get it right? (1 = Fluent)
+     * Records one answer for a single question and runs the shared spaced-repetition engine.
+     * The [outcome] captures how the answer went (see [VocabQuizOutcome]); the engine turns that
+     * into a mastery level, streak and next-review time. Mastery = correct first-try in 3 separate
+     * spaced sessions, matching the Vocab Quiz.
+     * @param quizId:     e.g. "UsageQuiz1A1"
+     * @param pageNumber: the question's stable page id (1..10) - the unique key with quizId
+     * @param outcome:    FLAWLESS / ASSISTED / STUMBLED / FAILED for this question
      */
-    fun recordQuestionResult(quizId: String, pageNumber: Int, attemptsTaken: Int,wasAssisted: Boolean ) {
+    fun recordQuestionResult(quizId: String, pageNumber: Int, outcome: VocabQuizOutcome) {
         scope.launch {
-            // 1. Get or Create Quiz State
             val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
+            val questionStat = quizStat.questions.getOrPut(pageNumber) { UsageQuestionStat(pageNumber) }
 
-            // 2. Get or Create Question State
-            val questionStat = quizStat.questions.getOrPut(pageNumber) {
-                UsageQuestionStat(pageNumber)
-            }
+            val now = System.currentTimeMillis()
+            VocabMasteryEngine.updateMastery(questionStat, outcome, now)
+            questionStat.lastAnsweredAt = now
 
-            // 3. Update Logic
-            questionStat.correctCount += 1 // Assuming this function is called on success
-            questionStat.triesCount += attemptsTaken
-
-            if (attemptsTaken == 1 && !wasAssisted) {
-                // Perfect answer -> Boost streak
-                questionStat.streak += 1
-            } else {
-                // Stumbled -> Reset streak (User is not fluent yet)
-                questionStat.streak = 0
-            }
-
-            Timber.d("UsageQuiz: $quizId [$pageNumber] -> Tries: $attemptsTaken Assisted: $wasAssisted, Streak: ${questionStat.streak}")
+            Timber.d(
+                "UsageQuiz: $quizId [$pageNumber] $outcome -> ${questionStat.masteryLevel} " +
+                    "(streak=${questionStat.correctStreak})"
+            )
 
             saveToDisk()
             _dataUpdateEvents.emit(Unit)
@@ -199,14 +194,15 @@ class UsageQuizRepository @Inject constructor(
     }
 
     /**
-     * Returns display label + color for a given UsageMastery level.
+     * Returns display label + color for a given UsageMastery level (shared 5-level model).
      */
     fun getMasteryDisplay(mastery: UsageMastery): Pair<String, Color> {
         return when (mastery) {
-            UsageMastery.New -> "New" to Color.Gray
-            UsageMastery.Struggling -> "Struggling" to Color.Red
-            UsageMastery.Learning -> "Learning" to Color(0xFFFF9800) // Orange
-            UsageMastery.Fluent -> "Fluent" to Color(0xFF4CAF50) // Green
+            WordMasteryLevel.New -> "New" to Color.Gray
+            WordMasteryLevel.Struggling -> "Struggling" to Color.Red
+            WordMasteryLevel.Learning -> "Learning" to Color(0xFFFF9800) // Orange
+            WordMasteryLevel.Review -> "Review" to Color(0xFF2196F3) // Blue
+            WordMasteryLevel.Mastered -> "Mastered" to Color(0xFF4CAF50) // Green
         }
     }
 
@@ -217,7 +213,7 @@ class UsageQuizRepository @Inject constructor(
         quizStates.forEach { (id, stat) ->
             Timber.d("Quiz: $id (Completed: ${stat.timesCompleted}, Best: ${stat.bestScore})")
             stat.questions.forEach { (page, qStat) ->
-                Timber.d("   Page $page: ${qStat.mastery} (Correct: ${qStat.correctCount}/${qStat.triesCount})")
+                Timber.d("   Page $page: ${qStat.masteryLevel} (streak=${qStat.correctStreak})")
             }
         }
         Timber.d("=============================")

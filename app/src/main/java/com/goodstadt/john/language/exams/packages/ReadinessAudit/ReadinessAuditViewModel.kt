@@ -45,6 +45,7 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.models.UsageMastery
+import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizStatistics
@@ -913,13 +914,13 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             viewModelScope.launch { _uiEvent.emit(UiEvent.QuizCompleted) }
         }
 
-        val page = quizStatistics.value.page
-        val currentQuizFileName = quizStatistics.value.filename
+        // Record THIS question's result for spaced repetition. The audit is one-shot per question,
+        // so a correct answer is FLAWLESS and a wrong one FAILED.
+        val currentPage = _questions.value.getOrNull(index)?.page ?: (index + 1)
         usageQuizRepository.recordQuestionResult(
-            quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
-            pageNumber = page,      // e.g. 5
-            attemptsTaken = currentTries,
-            infoUsedForCurrentQuestion
+            quizId = quizStatistics.value.filename,
+            pageNumber = currentPage,
+            outcome = if (isCorrect) VocabQuizOutcome.FLAWLESS else VocabQuizOutcome.FAILED
         )
 
     }

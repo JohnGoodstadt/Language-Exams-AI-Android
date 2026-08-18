@@ -3,30 +3,22 @@ package com.goodstadt.john.language.exams.models
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
-@Keep
-enum class UsageMastery {
-    New,
-    Struggling, // Many tries, low accuracy
-    Learning,   // Getting there, but not perfect every time
-    Fluent      // Consistent first-time success
-}
+/**
+ * The Usage Quiz now shares the Vocab Quiz's spaced-repetition mastery model, so its filter chips
+ * use the same 5 levels (New / Struggling / Learning / Review / Mastered).
+ */
+typealias UsageMastery = WordMasteryLevel
 
 @Keep
 data class UsageQuestionStat(
-    val pageNumber: Int,   // The static ID (1-10)
-    var correctCount: Int = 0,  // Total times answered correctly
-    var triesCount: Int = 0,    // Total attempts made (clicks)
-    var streak: Int = 0         // Consecutive first-try successes
-) {
-    // Computed property to help UI decide color (Red/Orange/Green)
-    val mastery: UsageMastery
-        get() {
-            if (triesCount == 0) return UsageMastery.New
-            if (streak >= 3) return UsageMastery.Fluent
-            // If accuracy is > 80%
-            if (correctCount.toDouble() / triesCount.toDouble() > 0.8) return UsageMastery.Learning
-            return UsageMastery.Struggling
-        }
+    val pageNumber: Int,   // The static ID (1-10) — the unique key together with the quizId
+    @SerializedName("lvl") override var masteryLevel: WordMasteryLevel = WordMasteryLevel.New,
+    @SerializedName("streak") override var correctStreak: Int = 0, // first-try successes across sessions
+    @SerializedName("next_due") override var nextReviewTime: Long = 0, // when this question is due again
+    @SerializedName("last_at") var lastAnsweredAt: Long = 0 // timestamp of the most recent answer
+) : SrsState {
+    /** Convenience alias so existing call-sites reading `.mastery` keep working. */
+    val mastery: UsageMastery get() = masteryLevel
 }
 
 @Keep

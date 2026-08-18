@@ -35,6 +35,7 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.models.UsageMastery
+import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizStatistics
@@ -133,6 +134,10 @@ class GrammarQuizViewModel @Inject constructor(
     val currentFileFormat = mutableStateOf(quizFillInTheBlanks)
 
     private var infoUsedForCurrentQuestion = false
+
+    // Per-question SRS outcome tracking (keyed by question index; cleared on resetQuiz).
+    private val questionTapCounts = mutableMapOf<Int, Int>()
+    private val questionResolved = mutableSetOf<Int>()
 
     private val _fluency = mutableStateOf(UsageQuizRepository.QuizFluency.NEVER_DONE)
     val fluency: State<UsageQuizRepository.QuizFluency> = _fluency
@@ -261,6 +266,8 @@ class GrammarQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
         categoryRecordedIndices.clear()
+        questionTapCounts.clear()
+        questionResolved.clear()
         _activeFilters.value = emptySet()
     }
 
@@ -404,13 +411,26 @@ class GrammarQuizViewModel @Inject constructor(
             onQuizFinished()
         }
 
-        val page = quizStatistics.value.page
-        usageQuizRepository.recordQuestionResult(
-            quizId = quizStatistics.value.filename,
-            pageNumber = page,
-            attemptsTaken = currentTries,
-            infoUsedForCurrentQuestion
-        )
+        // Record THIS question's result for spaced repetition: first tap & no hint -> FLAWLESS;
+        // first tap with hint -> ASSISTED; right only after a wrong tap -> STUMBLED; wrong -> FAILED.
+        // Stop recording once solved so extra taps on the same option can't downgrade it.
+        val currentPage = _questions.value.getOrNull(index)?.page ?: (index + 1)
+        if (index !in questionResolved) {
+            val priorTaps = questionTapCounts.getOrDefault(index, 0)
+            questionTapCounts[index] = priorTaps + 1
+            val outcome = when {
+                !isCorrect -> VocabQuizOutcome.FAILED
+                priorTaps == 0 && !infoUsedForCurrentQuestion -> VocabQuizOutcome.FLAWLESS
+                priorTaps == 0 -> VocabQuizOutcome.ASSISTED
+                else -> VocabQuizOutcome.STUMBLED
+            }
+            usageQuizRepository.recordQuestionResult(
+                quizId = quizStatistics.value.filename,
+                pageNumber = currentPage,
+                outcome = outcome
+            )
+            if (isCorrect) questionResolved.add(index)
+        }
     }
 
     fun doIHaveCurrentQuestionInfo(): Boolean =
