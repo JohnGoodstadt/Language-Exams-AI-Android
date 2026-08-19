@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizSocial1-de",
-  "title": "",
+  "title": "Gesellschaft",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Gemeinschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gruppe von Menschen, die durch gemeinsame Merkmale, Ziele oder Zusammenleben verbunden ist.",
+          "explain": {
+            "entryId": "Gemeinschaft",
+            "headword": "Gemeinschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈmaɪ̯nʃaft/",
+              "ipaUS": "/ɡəˈmaɪ̯nʃaft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gemeinschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gruppe",
+                  "Gemeinwesen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Gruppe von Menschen, die durch gemeinsame Merkmale, Ziele oder Zusammenleben verbunden ist.",
+                    "examples": [
+                      "Die Dorfgemeinschaft organisiert jedes Jahr ein Fest."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gemeinschaft – Beispielsatz folgt.",
+              "answer": "Eine Gruppe von Menschen, die durch gemeinsame Merkmale, Ziele oder Zusammenleben verbunden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Menschen und das Gebiet in unmittelbarer Nähe einer Wohnung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die gesamte soziale Ordnung und Bevölkerung eines Landes.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "Nachbarschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Menschen oder das Gebiet in unmittelbarer Nähe des eigenen Wohnorts.",
+          "explain": {
+            "entryId": "Nachbarschaft",
+            "headword": "Nachbarschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxˌbaːɐ̯ʃaft/",
+              "ipaUS": "/ˈnaːxˌbaːɐ̯ʃaft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Nachbarschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wohnumfeld",
+                  "Nachbarn"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Menschen oder das Gebiet in unmittelbarer Nähe des eigenen Wohnorts.",
+                    "examples": [
+                      "In unserer Nachbarschaft helfen sich die Menschen gegenseitig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachbarschaft – Beispielsatz folgt.",
+              "answer": "Die Menschen oder das Gebiet in unmittelbarer Nähe des eigenen Wohnorts.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede Gruppe, die durch gemeinsame Interessen oder Ziele verbunden ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die gesamte Bevölkerung mit ihren Institutionen und Beziehungen.",
               "ok": false
             }
           ]
@@ -54,18 +126,53 @@
           "title": "",
           "page": 3,
           "question": "Gesellschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Gesamtheit der Menschen eines Landes oder Bereichs mit ihren Beziehungen und Institutionen.",
+          "explain": {
+            "entryId": "Gesellschaft",
+            "headword": "Gesellschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈzɛlʃaft/",
+              "ipaUS": "/ɡəˈzɛlʃaft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gesellschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "soziale Gemeinschaft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Gesamtheit der Menschen eines Landes oder Bereichs mit ihren Beziehungen und Institutionen.",
+                    "examples": [
+                      "Die Gesellschaft verändert sich durch neue Technologien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gesellschaft – Beispielsatz folgt.",
+              "answer": "Die Gesamtheit der Menschen eines Landes oder Bereichs mit ihren Beziehungen und Institutionen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine kleinere Gruppe mit engen gemeinsamen Zielen oder Interessen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Menschen, die in derselben Straße oder Gegend wohnen.",
               "ok": false
             }
           ]
@@ -74,18 +181,54 @@
           "title": "",
           "page": 4,
           "question": "Kultur",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die gemeinsamen Werte, Lebensweisen, Künste und Ausdrucksformen einer Gesellschaft oder Gruppe.",
+          "explain": {
+            "entryId": "Kultur",
+            "headword": "Kultur",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kʊlˈtuːɐ̯/",
+              "ipaUS": "/kʊlˈtuːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Kultur",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lebensweise",
+                  "Kulturgut"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die gemeinsamen Werte, Lebensweisen, Künste und Ausdrucksformen einer Gesellschaft oder Gruppe.",
+                    "examples": [
+                      "Sprache ist ein wichtiger Teil der Kultur."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kultur – Beispielsatz folgt.",
+              "answer": "Die gemeinsamen Werte, Lebensweisen, Künste und Ausdrucksformen einer Gesellschaft oder Gruppe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein einzelner Brauch, der über Generationen weitergegeben wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kulturelle und natürliche Güter, die aus der Vergangenheit übernommen wurden.",
               "ok": false
             }
           ]
@@ -94,18 +237,54 @@
           "title": "",
           "page": 5,
           "question": "Tradition",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Brauch, Wissen oder Verhalten, das über längere Zeit und Generationen weitergegeben wird.",
+          "explain": {
+            "entryId": "Tradition",
+            "headword": "Tradition",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/tʁadit͡si̯oːn/",
+              "ipaUS": "/tʁadit͡si̯oːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Tradition",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Brauch",
+                  "Überlieferung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Brauch, Wissen oder Verhalten, das über längere Zeit und Generationen weitergegeben wird.",
+                    "examples": [
+                      "Das gemeinsame Fest ist eine alte Tradition im Ort."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tradition – Beispielsatz folgt.",
+              "answer": "Ein Brauch, Wissen oder Verhalten, das über längere Zeit und Generationen weitergegeben wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gesamte Lebensweise und Kunst einer Gesellschaft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alle materiellen und immateriellen Güter aus der Vergangenheit.",
               "ok": false
             }
           ]
@@ -114,18 +293,54 @@
           "title": "",
           "page": 6,
           "question": "Erbe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Materielle oder kulturelle Werte, die von früheren Generationen übernommen und weitergegeben werden.",
+          "explain": {
+            "entryId": "Erbe",
+            "headword": "Erbe",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɛʁbə/",
+              "ipaUS": "/ˈɛʁbə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Erbe",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hinterlassenschaft",
+                  "Kulturerbe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Materielle oder kulturelle Werte, die von früheren Generationen übernommen und weitergegeben werden.",
+                    "examples": [
+                      "Die Altstadt gehört zum kulturellen Erbe der Region."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erbe – Beispielsatz folgt.",
+              "answer": "Materielle oder kulturelle Werte, die von früheren Generationen übernommen und weitergegeben werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein bestimmter Brauch, der regelmäßig wiederholt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Gesamtheit aktueller Werte und Lebensweisen einer Gesellschaft.",
               "ok": false
             }
           ]
@@ -134,18 +349,54 @@
           "title": "",
           "page": 7,
           "question": "Vielfalt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das gleichzeitige Vorhandensein vieler unterschiedlicher Menschen, Formen oder Möglichkeiten.",
+          "explain": {
+            "entryId": "Vielfalt",
+            "headword": "Vielfalt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfiːlˌfalt/",
+              "ipaUS": "/ˈfiːlˌfalt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Vielfalt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Diversität",
+                  "Verschiedenheit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das gleichzeitige Vorhandensein vieler unterschiedlicher Menschen, Formen oder Möglichkeiten.",
+                    "examples": [
+                      "Die kulturelle Vielfalt bereichert die Stadt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vielfalt – Beispielsatz folgt.",
+              "answer": "Das gleichzeitige Vorhandensein vieler unterschiedlicher Menschen, Formen oder Möglichkeiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Wechsel zwischen Tätigkeiten, der Langeweile verhindert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die aktive Einbeziehung aller Menschen in gemeinsame Bereiche.",
               "ok": false
             }
           ]
@@ -154,18 +405,54 @@
           "title": "",
           "page": 8,
           "question": "Abwechslung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Wechsel zwischen verschiedenen Tätigkeiten oder Eindrücken, der Eintönigkeit verhindert.",
+          "explain": {
+            "entryId": "Abwechslung",
+            "headword": "Abwechslung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌvɛkslʊŋ/",
+              "ipaUS": "/ˈapˌvɛkslʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Abwechslung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Variation",
+                  "Wechsel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Wechsel zwischen verschiedenen Tätigkeiten oder Eindrücken, der Eintönigkeit verhindert.",
+                    "examples": [
+                      "Ein Spaziergang bringt Abwechslung in den Arbeitsalltag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abwechslung – Beispielsatz folgt.",
+              "answer": "Ein Wechsel zwischen verschiedenen Tätigkeiten oder Eindrücken, der Eintönigkeit verhindert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Vorhandensein vieler unterschiedlicher Gruppen und Möglichkeiten gleichzeitig.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die gleichberechtigte Teilnahme aller Menschen an einer Gemeinschaft.",
               "ok": false
             }
           ]
@@ -174,18 +461,54 @@
           "title": "",
           "page": 9,
           "question": "Inklusion",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die gleichberechtigte Einbeziehung aller Menschen in gesellschaftliche Bereiche und Aktivitäten.",
+          "explain": {
+            "entryId": "Inklusion",
+            "headword": "Inklusion",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪnkluˈzi̯oːn/",
+              "ipaUS": "/ɪnkluˈzi̯oːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Inklusion",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Einbeziehung",
+                  "Teilhabe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die gleichberechtigte Einbeziehung aller Menschen in gesellschaftliche Bereiche und Aktivitäten.",
+                    "examples": [
+                      "Inklusion ermöglicht Kindern mit Behinderung gemeinsamen Unterricht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Inklusion – Beispielsatz folgt.",
+              "answer": "Die gleichberechtigte Einbeziehung aller Menschen in gesellschaftliche Bereiche und Aktivitäten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Zustand, in dem alle Menschen genau dieselben Eigenschaften besitzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die faire Verteilung von Chancen unter Berücksichtigung unterschiedlicher Bedürfnisse.",
               "ok": false
             }
           ]
@@ -194,18 +517,53 @@
           "title": "",
           "page": 10,
           "question": "Gleichheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zustand, in dem Menschen dieselben Rechte, Chancen oder denselben Status haben.",
+          "explain": {
+            "entryId": "Gleichheit",
+            "headword": "Gleichheit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɡlaɪ̯çhaɪ̯t/",
+              "ipaUS": "/ˈɡlaɪ̯çhaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gleichheit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gleichberechtigung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zustand, in dem Menschen dieselben Rechte, Chancen oder denselben Status haben.",
+                    "examples": [
+                      "Das Gesetz soll die Gleichheit aller Bürger sichern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gleichheit – Beispielsatz folgt.",
+              "answer": "Der Zustand, in dem Menschen dieselben Rechte, Chancen oder denselben Status haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine faire Behandlung, die unterschiedliche Situationen berücksichtigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die aktive Teilnahme aller Gruppen an denselben gesellschaftlichen Bereichen.",
               "ok": false
             }
           ]

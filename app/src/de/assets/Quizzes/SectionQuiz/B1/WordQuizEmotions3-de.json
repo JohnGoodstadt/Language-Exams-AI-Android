@@ -2,210 +2,566 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEmotions3-de",
-  "title": "",
+  "title": "Emotionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Sichtweise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der besondere Blickwinkel, aus dem jemand eine Situation versteht und beurteilt.",
+          "explain": {
+            "entryId": "Sichtweise",
+            "headword": "Sichtweise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɪçtˌvaɪ̯zə/",
+              "ipaUS": "/ˈzɪçtˌvaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Sichtweise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Perspektive",
+                  "Blickwinkel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der besondere Blickwinkel, aus dem jemand eine Situation versteht und beurteilt.",
+                    "examples": [
+                      "Das Gespräch half mir, ihre Sichtweise zu verstehen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sichtweise – Beispielsatz folgt.",
+              "answer": "Der besondere Blickwinkel, aus dem jemand eine Situation versteht und beurteilt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine persönliche Aussage darüber, ob man etwas gut oder schlecht findet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine allgemeine Auffassung, die häufig sachlich zu einem Thema vertreten wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Persönlichkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Gesamtheit der individuellen psychischen Merkmale, die einen Menschen unverwechselbar machen.",
+          "explain": {
+            "entryId": "Persönlichkeit",
+            "headword": "Persönlichkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/pɛʁzøːnˈlɪçkaɪ̯t/",
+              "ipaUS": "/pɛʁzøːnˈlɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Persönlichkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wesen",
+                  "Individualität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Gesamtheit der individuellen psychischen Merkmale, die einen Menschen unverwechselbar machen.",
+                    "examples": [
+                      "Ihre offene Persönlichkeit hilft ihr im Kontakt mit Kunden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Persönlichkeit – Beispielsatz folgt.",
+              "answer": "Die Gesamtheit der individuellen psychischen Merkmale, die einen Menschen unverwechselbar machen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die besonders moralischen und willensbezogenen Seiten eines Menschen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einzelne Merkmale, die eine Person oder Sache beschreiben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Charakter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die relativ dauerhaften, besonders moralischen und willensbezogenen Eigenschaften einer Person.",
+          "explain": {
+            "entryId": "Charakter",
+            "headword": "Charakter",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kaˈʁaktɐ/",
+              "ipaUS": "/kaˈʁaktɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Charakter",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wesensart"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die relativ dauerhaften, besonders moralischen und willensbezogenen Eigenschaften einer Person.",
+                    "examples": [
+                      "Er zeigte in der schwierigen Situation einen starken Charakter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Charakter – Beispielsatz folgt.",
+              "answer": "Die relativ dauerhaften, besonders moralischen und willensbezogenen Eigenschaften einer Person.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gesamtheit aller psychischen Merkmale und Verhaltensmuster eines Menschen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einzelne beobachtbare Merkmale einer Person oder Sache.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Eigenschaften",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Merkmale oder Qualitäten, durch die eine Person oder Sache beschrieben wird.",
+          "explain": {
+            "entryId": "Eigenschaften",
+            "headword": "Eigenschaften",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯ɡn̩ʃaftn̩/",
+              "ipaUS": "/ˈaɪ̯ɡn̩ʃaftn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Plural",
+                "headwordLine": "Eigenschaften",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Merkmale",
+                  "Qualitäten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Merkmale oder Qualitäten, durch die eine Person oder Sache beschrieben wird.",
+                    "examples": [
+                      "Geduld und Zuverlässigkeit sind wichtige Eigenschaften."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Eigenschaften – Beispielsatz folgt.",
+              "answer": "Merkmale oder Qualitäten, durch die eine Person oder Sache beschrieben wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gesamte individuelle psychische Struktur einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur die moralischen und willensbezogenen Seiten eines Menschen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Talent",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine besondere natürliche Fähigkeit für einen bestimmten Bereich.",
+          "explain": {
+            "entryId": "Talent",
+            "headword": "Talent",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/taˈlɛnt/",
+              "ipaUS": "/taˈlɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Talent",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Begabung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine besondere natürliche Fähigkeit für einen bestimmten Bereich.",
+                    "examples": [
+                      "Sie hat großes Talent für Musik."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Talent – Beispielsatz folgt.",
+              "answer": "Eine besondere natürliche Fähigkeit für einen bestimmten Bereich.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das allgemeine Vermögen, eine Aufgabe erfolgreich auszuführen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine natürliche Anlage mit Entwicklungsmöglichkeiten, die noch nicht voll ausgebildet sein muss.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Fähigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das allgemeine Können oder Vermögen, etwas erfolgreich zu tun.",
+          "explain": {
+            "entryId": "Fähigkeit",
+            "headword": "Fähigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfɛːɪçkaɪ̯t/",
+              "ipaUS": "/ˈfɛːɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Fähigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Können",
+                  "Kompetenz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das allgemeine Können oder Vermögen, etwas erfolgreich zu tun.",
+                    "examples": [
+                      "Die Fähigkeit zur Zusammenarbeit ist im Beruf wichtig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fähigkeit – Beispielsatz folgt.",
+              "answer": "Das allgemeine Können oder Vermögen, etwas erfolgreich zu tun.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine besondere natürliche Stärke in einem bestimmten Bereich.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein durch gezielte Übung erlerntes praktisches Können.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Begabung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine natürliche Anlage, durch die jemand in einem Bereich besonders leicht lernen oder leisten kann.",
+          "explain": {
+            "entryId": "Begabung",
+            "headword": "Begabung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈɡaːbʊŋ/",
+              "ipaUS": "/bəˈɡaːbʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Begabung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Anlage",
+                  "Talent"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine natürliche Anlage, durch die jemand in einem Bereich besonders leicht lernen oder leisten kann.",
+                    "examples": [
+                      "Seine mathematische Begabung wurde früh erkannt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Begabung – Beispielsatz folgt.",
+              "answer": "Eine natürliche Anlage, durch die jemand in einem Bereich besonders leicht lernen oder leisten kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine bereits deutlich sichtbare besondere Fähigkeit für einen Bereich.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das allgemeine Vermögen, eine Aufgabe erfolgreich auszuführen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Weisheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Fähigkeit, Wissen und Lebenserfahrung mit gutem Urteil anzuwenden.",
+          "explain": {
+            "entryId": "Weisheit",
+            "headword": "Weisheit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvaɪ̯shaɪ̯t/",
+              "ipaUS": "/ˈvaɪ̯shaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Weisheit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lebensklugheit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Fähigkeit, Wissen und Lebenserfahrung mit gutem Urteil anzuwenden.",
+                    "examples": [
+                      "Ihre Entscheidung zeigte große Weisheit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Weisheit – Beispielsatz folgt.",
+              "answer": "Die Fähigkeit, Wissen und Lebenserfahrung mit gutem Urteil anzuwenden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gespeicherte Informationen und Kenntnisse über Fakten oder Themen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein plötzliches tieferes Verstehen eines Zusammenhangs oder eigenen Fehlers.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Wissen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Informationen, Kenntnisse und Verständnis, die jemand gelernt oder erfahren hat.",
+          "explain": {
+            "entryId": "Wissen",
+            "headword": "Wissen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɪsn̩/",
+              "ipaUS": "/ˈvɪsn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Wissen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kenntnisse"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Informationen, Kenntnisse und Verständnis, die jemand gelernt oder erfahren hat.",
+                    "examples": [
+                      "Sein Wissen über Geschichte ist beeindruckend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wissen – Beispielsatz folgt.",
+              "answer": "Informationen, Kenntnisse und Verständnis, die jemand gelernt oder erfahren hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die kluge Anwendung von Erfahrung und Kenntnissen in schwierigen Situationen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das tiefere Verstehen eines bestimmten Zusammenhangs oder Fehlers.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 30,
           "question": "Einsicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein tieferes Verstehen eines Zusammenhangs oder die Anerkennung, dass etwas richtig oder notwendig ist.",
+          "explain": {
+            "entryId": "Einsicht",
+            "headword": "Einsicht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nˌzɪçt/",
+              "ipaUS": "/ˈaɪ̯nˌzɪçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Einsicht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erkenntnis",
+                  "Verständnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein tieferes Verstehen eines Zusammenhangs oder die Anerkennung, dass etwas richtig oder notwendig ist.",
+                    "examples": [
+                      "Nach dem Gespräch kam er zu der Einsicht, dass er sich geirrt hatte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Einsicht – Beispielsatz folgt.",
+              "answer": "Ein tieferes Verstehen eines Zusammenhangs oder die Anerkennung, dass etwas richtig oder notwendig ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gesamtheit gelernter Informationen und Kenntnisse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Fähigkeit, Erfahrung in jeder Situation besonders klug anzuwenden.",
               "ok": false
             }
           ]

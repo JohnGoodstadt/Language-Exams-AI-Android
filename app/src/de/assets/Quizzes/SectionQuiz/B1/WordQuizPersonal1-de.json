@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal1-de",
-  "title": "",
+  "title": "Persönliches",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Biografie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die schriftliche Darstellung des Lebens einer Person, meist von jemand anderem verfasst.",
+          "explain": {
+            "entryId": "Biografie",
+            "headword": "Biografie",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bioɡʁaˈfiː/",
+              "ipaUS": "/bioɡʁaˈfiː/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Biografie",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lebensbeschreibung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die schriftliche Darstellung des Lebens einer Person, meist von jemand anderem verfasst.",
+                    "examples": [
+                      "Die Biografie erzählt das Leben der berühmten Ärztin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Biografie – Beispielsatz folgt.",
+              "answer": "Eine Darstellung des Lebens einer Person, die meist von jemand anderem geschrieben wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Text, in dem eine Person ausschließlich ihre eigenen Erinnerungen aufschreibt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein offizieller Nachweis über eine bestandene Prüfung.",
               "ok": false
             }
           ]
@@ -34,18 +69,54 @@
           "title": "",
           "page": 2,
           "question": "Autobiografie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die von einer Person selbst geschriebene Darstellung ihres eigenen Lebens.",
+          "explain": {
+            "entryId": "Autobiografie",
+            "headword": "Autobiografie",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/aʊ̯tobioɡʁaˈfiː/",
+              "ipaUS": "/aʊ̯tobioɡʁaˈfiː/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Autobiografie",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Selbstbiografie",
+                  "Lebensbericht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die von einer Person selbst geschriebene Darstellung ihres eigenen Lebens.",
+                    "examples": [
+                      "In ihrer Autobiografie beschreibt sie ihre Kindheit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Autobiografie – Beispielsatz folgt.",
+              "answer": "Eine Person schreibt darin über ihr eigenes Leben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein anderer Autor beschreibt darin das gesamte Leben einer bekannten Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Betrieb sammelt darin Angaben von Bewerbern.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "Memoiren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Persönliche Erinnerungen an wichtige Erlebnisse und oft auch an öffentliche Ereignisse.",
+          "explain": {
+            "entryId": "Memoiren",
+            "headword": "Memoiren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/meˈmo̯aːʁən/",
+              "ipaUS": "/meˈmo̯aːʁən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Plural",
+                "headwordLine": "Memoiren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erinnerungen",
+                  "Lebenserinnerungen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Persönliche Erinnerungen an wichtige Erlebnisse und oft auch an öffentliche Ereignisse.",
+                    "examples": [
+                      "Der Politiker berichtet in seinen Memoiren von wichtigen Entscheidungen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Memoiren – Beispielsatz folgt.",
+              "answer": "Persönliche Erinnerungen an Erlebnisse und häufig auch an historische oder öffentliche Ereignisse.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine vollständige amtliche Liste aller persönlichen Daten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein kurzer Lebenslauf, der nur Ausbildung und Arbeit nennt.",
               "ok": false
             }
           ]
@@ -74,18 +181,54 @@
           "title": "",
           "page": 4,
           "question": "Dokument",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine schriftliche oder digitale Unterlage, die Informationen festhält oder als Nachweis dient.",
+          "explain": {
+            "entryId": "Dokument",
+            "headword": "Dokument",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/dokuˈmɛnt/",
+              "ipaUS": "/dokuˈmɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Dokument",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Unterlage",
+                  "Schriftstück"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine schriftliche oder digitale Unterlage, die Informationen festhält oder als Nachweis dient.",
+                    "examples": [
+                      "Bitte laden Sie das Dokument als PDF hoch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Dokument – Beispielsatz folgt.",
+              "answer": "Eine schriftliche oder digitale Unterlage, die Informationen enthält oder etwas belegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Blatt mit leeren Feldern, das erst ausgefüllt werden muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Befragung, mit der Meinungen vieler Menschen gesammelt werden.",
               "ok": false
             }
           ]
@@ -94,18 +237,53 @@
           "title": "",
           "page": 5,
           "question": "Formular",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein vorbereitetes Dokument mit Feldern, in die bestimmte Angaben eingetragen werden.",
+          "explain": {
+            "entryId": "Formular",
+            "headword": "Formular",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɔʁmuˈlaːɐ̯/",
+              "ipaUS": "/fɔʁmuˈlaːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Formular",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vordruck"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein vorbereitetes Dokument mit Feldern, in die bestimmte Angaben eingetragen werden.",
+                    "examples": [
+                      "Füllen Sie bitte das Formular mit Ihren persönlichen Daten aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Formular – Beispielsatz folgt.",
+              "answer": "Ein vorbereitetes Dokument, in dessen Felder bestimmte Angaben eingetragen werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein amtlicher Nachweis, dass eine Tatsache bestätigt wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Sammlung persönlicher Erinnerungen aus dem eigenen Leben.",
               "ok": false
             }
           ]
@@ -114,18 +292,54 @@
           "title": "",
           "page": 6,
           "question": "Bescheinigung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein offizielles Schriftstück, das eine Tatsache oder Leistung bestätigt.",
+          "explain": {
+            "entryId": "Bescheinigung",
+            "headword": "Bescheinigung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʃaɪ̯nɪɡʊŋ/",
+              "ipaUS": "/bəˈʃaɪ̯nɪɡʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Bescheinigung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bestätigung",
+                  "Nachweis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein offizielles Schriftstück, das eine Tatsache oder Leistung bestätigt.",
+                    "examples": [
+                      "Für die Anmeldung brauche ich eine Bescheinigung vom Arzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bescheinigung – Beispielsatz folgt.",
+              "answer": "Ein offizielles Schriftstück, das eine Tatsache, Teilnahme oder Leistung bestätigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Reisedokument, das an einer Staatsgrenze vorgezeigt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dokument mit Fragen, das verschiedene Personen beantworten sollen.",
               "ok": false
             }
           ]
@@ -134,18 +348,53 @@
           "title": "",
           "page": 7,
           "question": "Ausweis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein offizielles Dokument, mit dem eine Person ihre Identität oder Berechtigung nachweist.",
+          "explain": {
+            "entryId": "Ausweis",
+            "headword": "Ausweis",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯svaɪ̯s/",
+              "ipaUS": "/ˈaʊ̯svaɪ̯s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Ausweis",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Identitätsnachweis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein offizielles Dokument, mit dem eine Person ihre Identität oder Berechtigung nachweist.",
+                    "examples": [
+                      "Am Eingang muss jeder seinen Ausweis zeigen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ausweis – Beispielsatz folgt.",
+              "answer": "Ein offizielles Dokument zum Nachweis der Identität oder einer bestimmten Berechtigung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Erlaubnis, mit der man in andere Länder reisen darf.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine schriftliche Bitte um eine Arbeitsstelle.",
               "ok": false
             }
           ]
@@ -154,18 +403,53 @@
           "title": "",
           "page": 8,
           "question": "Reisepass",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein amtliches Identitätsdokument, das besonders für Reisen ins Ausland verwendet wird.",
+          "explain": {
+            "entryId": "Reisepass",
+            "headword": "Reisepass",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁaɪ̯zəpas/",
+              "ipaUS": "/ˈʁaɪ̯zəpas/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Reisepass",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Pass"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein amtliches Identitätsdokument, das besonders für Reisen ins Ausland verwendet wird.",
+                    "examples": [
+                      "Für diese Reise muss der Reisepass noch sechs Monate gültig sein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Reisepass – Beispielsatz folgt.",
+              "answer": "Ein amtliches Identitätsdokument, das besonders bei Reisen ins Ausland benötigt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Dokument, das die Erlaubnis zum Autofahren bestätigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Karte, die nur die Adresse des Arbeitgebers zeigt.",
               "ok": false
             }
           ]
@@ -174,18 +458,53 @@
           "title": "",
           "page": 9,
           "question": "Führerschein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein amtlicher Nachweis, dass jemand bestimmte Fahrzeuge fahren darf.",
+          "explain": {
+            "entryId": "Führerschein",
+            "headword": "Führerschein",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfyːʁɐʃaɪ̯n/",
+              "ipaUS": "/ˈfyːʁɐʃaɪ̯n/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Führerschein",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fahrerlaubnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein amtlicher Nachweis, dass jemand bestimmte Fahrzeuge fahren darf.",
+                    "examples": [
+                      "Sie hat ihren Führerschein mit achtzehn gemacht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Führerschein – Beispielsatz folgt.",
+              "answer": "Ein amtlicher Nachweis, dass eine Person bestimmte Fahrzeuge führen darf.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Reisedokument für die Einreise in ein anderes Land.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Bescheinigung über den Abschluss einer Berufsausbildung.",
               "ok": false
             }
           ]
@@ -194,18 +513,53 @@
           "title": "",
           "page": 10,
           "question": "Vorstellungsgespräch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gespräch, bei dem sich ein Bewerber und ein möglicher Arbeitgeber kennenlernen.",
+          "explain": {
+            "entryId": "Vorstellungsgespräch",
+            "headword": "Vorstellungsgespräch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ʃtɛlʊŋsɡəʃpʁɛːç/",
+              "ipaUS": "/ˈfoːɐ̯ʃtɛlʊŋsɡəʃpʁɛːç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Vorstellungsgespräch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bewerbungsgespräch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Gespräch, bei dem sich ein Bewerber und ein möglicher Arbeitgeber kennenlernen.",
+                    "examples": [
+                      "Morgen hat Ali ein Vorstellungsgespräch bei einer Bank."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vorstellungsgespräch – Beispielsatz folgt.",
+              "answer": "Ein Gespräch, in dem ein Bewerber und ein möglicher Arbeitgeber prüfen, ob die Stelle passt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine öffentliche Befragung, mit der politische Meinungen gemessen werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gespräch, in dem ein Mitarbeiter seinen Reisepass beantragt.",
               "ok": false
             }
           ]

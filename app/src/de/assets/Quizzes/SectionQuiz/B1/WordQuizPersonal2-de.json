@@ -2,210 +2,563 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal2-de",
-  "title": "",
+  "title": "Persönliches",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Interviewer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die in einem Interview gezielt Fragen stellt.",
+          "explain": {
+            "entryId": "Interviewer",
+            "headword": "Interviewer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɪntɐvjuːɐ̯/",
+              "ipaUS": "/ˈɪntɐvjuːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Interviewer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fragesteller"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die in einem Interview gezielt Fragen stellt.",
+                    "examples": [
+                      "Der Interviewer fragte die Kandidatin nach ihrer Erfahrung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Interviewer – Beispielsatz folgt.",
+              "answer": "Eine Person, die während eines Interviews die Fragen stellt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die sich um eine freie Stelle bewirbt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die ein Formular offiziell unterschreiben darf.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Kandidat",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die sich um eine Stelle, ein Amt oder einen Platz bewirbt oder zur Wahl steht.",
+          "explain": {
+            "entryId": "Kandidat",
+            "headword": "Kandidat",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kandiˈdaːt/",
+              "ipaUS": "/kandiˈdaːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Kandidat",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bewerber"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die sich um eine Stelle, ein Amt oder einen Platz bewirbt oder zur Wahl steht.",
+                    "examples": [
+                      "Drei Kandidaten wurden zum Gespräch eingeladen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kandidat – Beispielsatz folgt.",
+              "answer": "Eine Person, die für eine Stelle, ein Amt oder einen Platz in Betracht kommt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die bei einem Interview nur die Fragen stellt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die Dokumente am Empfang kontrolliert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Anmeldung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Vorgang oder das Dokument, mit dem man sich offiziell registriert.",
+          "explain": {
+            "entryId": "Anmeldung",
+            "headword": "Anmeldung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌmɛldʊŋ/",
+              "ipaUS": "/ˈanˌmɛldʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Anmeldung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Registrierung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Vorgang oder das Dokument, mit dem man sich offiziell registriert.",
+                    "examples": [
+                      "Die Anmeldung für den Sprachkurs endet am Freitag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Anmeldung – Beispielsatz folgt.",
+              "answer": "Die offizielle Registrierung für eine Veranstaltung, Leistung oder bei einer Stelle.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die ausführliche Darstellung des Lebens einer anderen Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Bestätigung durch eine handgeschriebene Namenszeichnung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "sich anmelden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich offiziell registrieren oder mitteilen, dass man teilnehmen möchte.",
+          "explain": {
+            "entryId": "sich anmelden",
+            "headword": "sich anmelden",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç ˈanˌmɛldn̩/",
+              "ipaUS": "/zɪç ˈanˌmɛldn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "reflexiv",
+                "headwordLine": "sich anmelden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sich registrieren",
+                  "sich einschreiben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sich offiziell registrieren oder mitteilen, dass man teilnehmen möchte.",
+                    "examples": [
+                      "Sie möchte sich für den Computerkurs anmelden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich anmelden – Beispielsatz folgt.",
+              "answer": "Sich offiziell registrieren oder die eigene Teilnahme mitteilen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Dokument mit der eigenen Namenszeichnung bestätigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person nach ihrer Meinung zu einem Thema fragen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Bewerbung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Unterlagen oder ein Verfahren, mit denen man sich um eine Stelle oder einen Platz bemüht.",
+          "explain": {
+            "entryId": "Bewerbung",
+            "headword": "Bewerbung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈvɛʁbʊŋ/",
+              "ipaUS": "/bəˈvɛʁbʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Bewerbung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bewerbungsunterlagen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Unterlagen oder ein Verfahren, mit denen man sich um eine Stelle oder einen Platz bemüht.",
+                    "examples": [
+                      "Seine Bewerbung für das Praktikum war erfolgreich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bewerbung – Beispielsatz folgt.",
+              "answer": "Unterlagen oder ein Verfahren, mit denen man sich um eine Stelle oder einen Platz bemüht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein offizieller Nachweis über die Identität einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Liste mit Fragen zur Meinung einer größeren Gruppe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Unterschrift",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der mit der Hand geschriebene Name, der ein Dokument bestätigt.",
+          "explain": {
+            "entryId": "Unterschrift",
+            "headword": "Unterschrift",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊntɐʃʁɪft/",
+              "ipaUS": "/ˈʊntɐʃʁɪft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Unterschrift",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Signatur"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der mit der Hand geschriebene Name, der ein Dokument bestätigt.",
+                    "examples": [
+                      "Auf dem Vertrag fehlt noch Ihre Unterschrift."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unterschrift – Beispielsatz folgt.",
+              "answer": "Der handgeschriebene Name, mit dem eine Person ein Dokument bestätigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Berufsbezeichnung, die unter einem Namen steht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die offizielle Registrierung für einen Kurs.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "unterschreiben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Den eigenen Namen unter ein Dokument schreiben und es dadurch bestätigen.",
+          "explain": {
+            "entryId": "unterschreiben",
+            "headword": "unterschreiben",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊntɐʃʁaɪ̯bn̩/",
+              "ipaUS": "/ˈʊntɐʃʁaɪ̯bn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "unterschreiben",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "signieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Den eigenen Namen unter ein Dokument schreiben und es dadurch bestätigen.",
+                    "examples": [
+                      "Bitte lesen Sie den Vertrag, bevor Sie ihn unterschreiben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unterschreiben – Beispielsatz folgt.",
+              "answer": "Den eigenen Namen unter ein Dokument schreiben, um es zu bestätigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Formular vollständig mit persönlichen Angaben ausfüllen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Befragung mit vielen Teilnehmern organisieren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "abzeichnen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Dokument mit einem Zeichen oder einer Unterschrift prüfen und genehmigen.",
+          "explain": {
+            "entryId": "abzeichnen",
+            "headword": "abzeichnen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌt͡saɪ̯çnən/",
+              "ipaUS": "/ˈapˌt͡saɪ̯çnən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "abzeichnen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gegenzeichnen",
+                  "bestätigen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Dokument mit einem Zeichen oder einer Unterschrift prüfen und genehmigen.",
+                    "examples": [
+                      "Die Chefin muss die Rechnung noch abzeichnen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abzeichnen – Beispielsatz folgt.",
+              "answer": "Ein geprüftes Dokument mit einem Zeichen oder einer Unterschrift bestätigen oder genehmigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Den eigenen Reisepass bei einer Behörde neu beantragen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Bewerbung ohne Prüfung automatisch ablehnen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Umfrage",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine systematische Befragung mehrerer Personen zu einem bestimmten Thema.",
+          "explain": {
+            "entryId": "Umfrage",
+            "headword": "Umfrage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊmˌfʁaːɡə/",
+              "ipaUS": "/ˈʊmˌfʁaːɡə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Umfrage",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Befragung",
+                  "Erhebung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine systematische Befragung mehrerer Personen zu einem bestimmten Thema.",
+                    "examples": [
+                      "Die Schule macht eine Umfrage zur Nutzung der Bibliothek."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Umfrage – Beispielsatz folgt.",
+              "answer": "Eine systematische Befragung mehrerer Personen zu einem bestimmten Thema.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein amtliches Dokument zum Nachweis der eigenen Identität.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein persönliches Gespräch zwischen Bewerber und Arbeitgeber.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Fragebogen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Dokument mit einer geordneten Reihe von Fragen, die beantwortet werden sollen.",
+          "explain": {
+            "entryId": "Fragebogen",
+            "headword": "Fragebogen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁaːɡəˌboːɡn̩/",
+              "ipaUS": "/ˈfʁaːɡəˌboːɡn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Fragebogen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fragenkatalog"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Dokument mit einer geordneten Reihe von Fragen, die beantwortet werden sollen.",
+                    "examples": [
+                      "Alle Teilnehmer füllten den Fragebogen anonym aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fragebogen – Beispielsatz folgt.",
+              "answer": "Ein Dokument mit mehreren geordneten Fragen, auf die Antworten eingetragen werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Ergebnis einer Befragung, das die öffentliche Meinung zeigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Urkunde über eine berufliche Qualifikation.",
               "ok": false
             }
           ]

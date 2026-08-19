@@ -2,190 +2,511 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizLeisure3-de",
-  "title": "",
+  "title": "Freizeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Bühne",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Bereich in einem Theater oder Veranstaltungsort, auf dem Künstler auftreten.",
+          "explain": {
+            "entryId": "Bühne",
+            "headword": "Bühne",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈbyːnə/",
+              "ipaUS": "/ˈbyːnə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Bühne",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Podium",
+                  "Spielfläche"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Bereich in einem Theater oder Veranstaltungsort, auf dem Künstler auftreten.",
+                    "examples": [
+                      "Nach dem Konzert kamen alle Musiker noch einmal auf die Bühne."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bühne – Beispielsatz folgt.",
+              "answer": "Der Bereich in einem Theater oder Veranstaltungsort, auf dem Künstler auftreten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Zuschauerraum, in dem das Publikum sitzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das geschriebene Drama, das Schauspieler aufführen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Erholung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Wiedergewinnung von Kraft und Wohlbefinden nach Arbeit, Krankheit oder Belastung.",
+          "explain": {
+            "entryId": "Erholung",
+            "headword": "Erholung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈhoːlʊŋ/",
+              "ipaUS": "/ɛɐ̯ˈhoːlʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erholung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Regeneration",
+                  "Ausruhen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Wiedergewinnung von Kraft und Wohlbefinden nach Arbeit, Krankheit oder Belastung.",
+                    "examples": [
+                      "Nach der langen Wanderung braucht der Körper Erholung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erholung – Beispielsatz folgt.",
+              "answer": "Die Wiedergewinnung von Kraft und Wohlbefinden nach Arbeit, Krankheit oder Belastung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das kurzfristige Nachlassen von innerer oder körperlicher Anspannung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine regelmäßige Freizeitbeschäftigung, die besonderes Können erfordert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Sport",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Körperliche Aktivität nach bestimmten Übungen oder Regeln, oft zur Fitness oder im Wettbewerb.",
+          "explain": {
+            "entryId": "Sport",
+            "headword": "Sport",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃpɔʁt/",
+              "ipaUS": "/ʃpɔʁt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Sport",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "körperliche Betätigung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Körperliche Aktivität nach bestimmten Übungen oder Regeln, oft zur Fitness oder im Wettbewerb.",
+                    "examples": [
+                      "Sport hilft ihm, fit und gesund zu bleiben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sport – Beispielsatz folgt.",
+              "answer": "Körperliche Aktivität nach bestimmten Übungen oder Regeln, oft zur Fitness oder im Wettbewerb.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede ruhige Beschäftigung, die ausschließlich zur Entspannung ausgeübt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Bühnenveranstaltung mit Musik und Tanz.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Theater",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gebäude oder eine Kunstform, in der Geschichten live auf einer Bühne dargestellt werden.",
+          "explain": {
+            "entryId": "Theater",
+            "headword": "Theater",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/teˈaːtɐ/",
+              "ipaUS": "/teˈaːtɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Theater",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schauspielhaus",
+                  "Bühnenkunst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Gebäude oder eine Kunstform, in der Geschichten live auf einer Bühne dargestellt werden.",
+                    "examples": [
+                      "Wir gehen am Samstag ins Theater."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Theater – Beispielsatz folgt.",
+              "answer": "Ein Gebäude oder eine Kunstform, in der Geschichten live auf einer Bühne dargestellt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein einzelnes geschriebenes Werk, das auf einer Bühne gespielt werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine ernste Form eines Bühnenstücks mit schweren Konflikten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Theaterstück",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein geschriebenes dramatisches Werk, das von Schauspielern auf einer Bühne aufgeführt wird.",
+          "explain": {
+            "entryId": "Theaterstück",
+            "headword": "Theaterstück",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/teˈaːtɐˌʃtʏk/",
+              "ipaUS": "/teˈaːtɐˌʃtʏk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Theaterstück",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bühnenstück",
+                  "Schauspiel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein geschriebenes dramatisches Werk, das von Schauspielern auf einer Bühne aufgeführt wird.",
+                    "examples": [
+                      "Die Klasse übt ein Theaterstück für das Schulfest."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Theaterstück – Beispielsatz folgt.",
+              "answer": "Ein geschriebenes dramatisches Werk, das von Schauspielern auf einer Bühne aufgeführt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Gebäude, in dem Schauspiel und andere Bühnenkunst gezeigt werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne öffentliche Darbietung eines bereits geschriebenen Werks.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Drama",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Bühnen- oder Filmwerk mit ernsten Konflikten; auch die literarische Gattung für Theatertexte.",
+          "explain": {
+            "entryId": "Drama",
+            "headword": "Drama",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈdʁaːma/",
+              "ipaUS": "/ˈdʁaːma/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Drama",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ernstes Schauspiel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Bühnen- oder Filmwerk mit ernsten Konflikten; auch die literarische Gattung für Theatertexte.",
+                    "examples": [
+                      "Das Drama handelt von einem Konflikt zwischen zwei Familien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Drama – Beispielsatz folgt.",
+              "answer": "Ein Bühnen- oder Filmwerk mit ernsten Konflikten; auch die literarische Gattung für Theatertexte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jedes geschriebene Theaterstück unabhängig von Inhalt und Stimmung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine leichte und lustige Bühnenshow mit Musik.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Tourismus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Reisen zu Erholungs- oder Freizeitzwecken sowie der dazugehörige Wirtschaftsbereich.",
+          "explain": {
+            "entryId": "Tourismus",
+            "headword": "Tourismus",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/tuˈʁɪsmʊs/",
+              "ipaUS": "/tuˈʁɪsmʊs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Tourismus",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fremdenverkehr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Reisen zu Erholungs- oder Freizeitzwecken sowie der dazugehörige Wirtschaftsbereich.",
+                    "examples": [
+                      "Der Tourismus ist für die Region wirtschaftlich wichtig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tourismus – Beispielsatz folgt.",
+              "answer": "Das Reisen zu Erholungs- oder Freizeitzwecken sowie der dazugehörige Wirtschaftsbereich.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Reise mit mehreren Stationen und Besichtigungen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die für kurze Zeit einen fremden Ort besucht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Tourist",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die einen Ort vorübergehend zu Erholungs- oder Besichtigungszwecken besucht.",
+          "explain": {
+            "entryId": "Tourist",
+            "headword": "Tourist",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/tuˈʁɪst/",
+              "ipaUS": "/tuˈʁɪst/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Tourist",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Reisender",
+                  "Besucher"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die einen Ort vorübergehend zu Erholungs- oder Besichtigungszwecken besucht.",
+                    "examples": [
+                      "Im Sommer besuchen viele Touristen die Altstadt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tourist – Beispielsatz folgt.",
+              "answer": "Eine Person, die einen Ort vorübergehend zu Erholungs- oder Besichtigungszwecken besucht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Wirtschaftsbereich, der Reisen und Dienstleistungen für Besucher umfasst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die beruflich Führungen in einem Museum organisiert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Besichtigung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der geplante Besuch eines Ortes oder Gebäudes, um ihn genauer anzusehen.",
+          "explain": {
+            "entryId": "Besichtigung",
+            "headword": "Besichtigung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈzɪçtɪɡʊŋ/",
+              "ipaUS": "/bəˈzɪçtɪɡʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Besichtigung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Besuch",
+                  "Führung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der geplante Besuch eines Ortes oder Gebäudes, um ihn genauer anzusehen.",
+                    "examples": [
+                      "Die Besichtigung des Schlosses dauert eine Stunde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Besichtigung – Beispielsatz folgt.",
+              "answer": "Der geplante Besuch eines Ortes oder Gebäudes, um ihn genauer anzusehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein besonderer Ort, der wegen seiner Bedeutung viele Besucher anzieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Reise mit mehreren Stationen, die zum Ausgangsort zurückführt.",
               "ok": false
             }
           ]

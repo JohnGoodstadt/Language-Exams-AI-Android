@@ -2,190 +2,506 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizNature3-de",
-  "title": "",
+  "title": "Natur",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "erneuerbar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So beschaffen, dass sich eine natürliche Ressource in überschaubarer Zeit wieder bildet.",
+          "explain": {
+            "entryId": "erneuerbar",
+            "headword": "erneuerbar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/",
+              "ipaUS": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Ressourcen",
+                "headwordLine": "erneuerbar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "regenerativ"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So beschaffen, dass sich eine natürliche Ressource in überschaubarer Zeit wieder bildet.",
+                    "examples": [
+                      "Wind und Sonne liefern erneuerbare Energie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erneuerbar – Beispielsatz folgt.",
+              "answer": "So beschaffen, dass sich eine natürliche Ressource in überschaubarer Zeit wieder bildet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So genutzt, dass die Bedürfnisse zukünftiger Generationen nicht gefährdet werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So hergestellt, dass die Umwelt möglichst wenig belastet wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "nachhaltig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So gestaltet, dass Ressourcen langfristig erhalten und zukünftige Bedürfnisse nicht gefährdet werden.",
+          "explain": {
+            "entryId": "nachhaltig",
+            "headword": "nachhaltig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxhaltɪç/",
+              "ipaUS": "/ˈnaːxhaltɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "langfristige Wirkung",
+                "headwordLine": "nachhaltig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zukunftsfähig",
+                  "dauerhaft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So gestaltet, dass Ressourcen langfristig erhalten und zukünftige Bedürfnisse nicht gefährdet werden.",
+                    "examples": [
+                      "Das Unternehmen möchte nachhaltiger produzieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nachhaltig – Beispielsatz folgt.",
+              "answer": "So gestaltet, dass Ressourcen langfristig erhalten und zukünftige Bedürfnisse nicht gefährdet werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Aus einer Quelle stammend, die sich natürlich schnell wieder bildet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bei Herstellung und Nutzung lediglich weniger schädlich für die Umwelt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "umweltfreundlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So gestaltet, dass die Umwelt möglichst wenig belastet oder geschädigt wird.",
+          "explain": {
+            "entryId": "umweltfreundlich",
+            "headword": "umweltfreundlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/",
+              "ipaUS": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Umweltwirkung",
+                "headwordLine": "umweltfreundlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ökologisch verträglich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So gestaltet, dass die Umwelt möglichst wenig belastet oder geschädigt wird.",
+                    "examples": [
+                      "Die neuen Busse fahren mit umweltfreundlicher Technik."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "umweltfreundlich – Beispielsatz folgt.",
+              "answer": "So gestaltet, dass die Umwelt möglichst wenig belastet oder geschädigt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So geplant, dass Ressourcen auch für zukünftige Generationen erhalten bleiben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ausschließlich aus einer natürlich nachwachsenden Energiequelle stammend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Wildtiere",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Tiere, die nicht als Haustiere gehalten werden und überwiegend frei in der Natur leben.",
+          "explain": {
+            "entryId": "Wildtiere",
+            "headword": "Wildtiere",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɪltˌtiːʁə/",
+              "ipaUS": "/ˈvɪltˌtiːʁə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Plural",
+                "headwordLine": "Wildtiere",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "wild lebende Tiere"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Tiere, die nicht als Haustiere gehalten werden und überwiegend frei in der Natur leben.",
+                    "examples": [
+                      "Wildtiere brauchen ungestörte Lebensräume."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wildtiere – Beispielsatz folgt.",
+              "answer": "Tiere, die nicht als Haustiere gehalten werden und überwiegend frei in der Natur leben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gesamtheit aller Tierarten eines Gebiets.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alle Pflanzenarten, die natürlicherweise in einer Region wachsen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Tierwelt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Gesamtheit der Tiere beziehungsweise Tierarten eines Gebiets oder Zeitraums.",
+          "explain": {
+            "entryId": "Tierwelt",
+            "headword": "Tierwelt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈtiːɐ̯ˌvɛlt/",
+              "ipaUS": "/ˈtiːɐ̯ˌvɛlt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Tierwelt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fauna"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Gesamtheit der Tiere beziehungsweise Tierarten eines Gebiets oder Zeitraums.",
+                    "examples": [
+                      "Die Tierwelt der Insel ist einzigartig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tierwelt – Beispielsatz folgt.",
+              "answer": "Die Gesamtheit der Tiere beziehungsweise Tierarten eines Gebiets oder Zeitraums.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einzelne Tiere, die frei und nicht als Haustiere leben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Gesamtheit aller Pflanzenarten eines Gebiets.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Pflanzenwelt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Gesamtheit der Pflanzen beziehungsweise Pflanzenarten eines Gebiets oder Zeitraums.",
+          "explain": {
+            "entryId": "Pflanzenwelt",
+            "headword": "Pflanzenwelt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈpflant͡sn̩ˌvɛlt/",
+              "ipaUS": "/ˈpflant͡sn̩ˌvɛlt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Pflanzenwelt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Flora"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Gesamtheit der Pflanzen beziehungsweise Pflanzenarten eines Gebiets oder Zeitraums.",
+                    "examples": [
+                      "Das trockene Klima prägt die Pflanzenwelt der Region."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Pflanzenwelt – Beispielsatz folgt.",
+              "answer": "Die Gesamtheit der Pflanzen beziehungsweise Pflanzenarten eines Gebiets oder Zeitraums.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gesamtheit aller Tiere und Tierarten eines Gebiets.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur Pflanzen, die ohne menschliche Pflege in Wäldern wachsen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Erderwärmung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der langfristige Anstieg der durchschnittlichen Temperatur der Erde.",
+          "explain": {
+            "entryId": "Erderwärmung",
+            "headword": "Erderwärmung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/",
+              "ipaUS": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erderwärmung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "globale Erwärmung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der langfristige Anstieg der durchschnittlichen Temperatur der Erde.",
+                    "examples": [
+                      "Die Erderwärmung lässt viele Gletscher schmelzen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erderwärmung – Beispielsatz folgt.",
+              "answer": "Der langfristige Anstieg der durchschnittlichen Temperatur der Erde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede langfristige Veränderung von Temperatur, Niederschlag und anderen Klimamerkmalen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der natürliche Vorgang, bei dem Gase in der Atmosphäre Wärme zurückhalten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Klimawandel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine langfristige Veränderung des Klimas, heute besonders durch menschliche Treibhausgase verursacht.",
+          "explain": {
+            "entryId": "Klimawandel",
+            "headword": "Klimawandel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkliːmaˌvandl̩/",
+              "ipaUS": "/ˈkliːmaˌvandl̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Klimawandel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Klimaänderung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine langfristige Veränderung des Klimas, heute besonders durch menschliche Treibhausgase verursacht.",
+                    "examples": [
+                      "Der Klimawandel verändert Niederschläge und Temperaturen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Klimawandel – Beispielsatz folgt.",
+              "answer": "Eine langfristige Veränderung des Klimas, heute besonders durch menschliche Treibhausgase verursacht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur der Anstieg der durchschnittlichen Temperatur der Erde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Vorgang, bei dem bestimmte Gase Wärme in der Atmosphäre halten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Treibhauseffekt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Vorgang, bei dem Gase in der Atmosphäre Wärme zurückhalten und dadurch die Erde erwärmen.",
+          "explain": {
+            "entryId": "Treibhauseffekt",
+            "headword": "Treibhauseffekt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/",
+              "ipaUS": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Treibhauseffekt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wärmerückhaltung der Atmosphäre"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Vorgang, bei dem Gase in der Atmosphäre Wärme zurückhalten und dadurch die Erde erwärmen.",
+                    "examples": [
+                      "Zusätzliches Kohlendioxid verstärkt den Treibhauseffekt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Treibhauseffekt – Beispielsatz folgt.",
+              "answer": "Der Vorgang, bei dem Gase in der Atmosphäre Wärme zurückhalten und dadurch die Erde erwärmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der gemessene langfristige Anstieg der globalen Durchschnittstemperatur.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alle langfristigen Veränderungen des Klimas und ihrer Folgen.",
               "ok": false
             }
           ]

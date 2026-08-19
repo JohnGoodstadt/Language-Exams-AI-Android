@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTravel1-de",
-  "title": "",
+  "title": "Reisen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Unterkunft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Ort, an dem man vorübergehend wohnen oder übernachten kann.",
+          "explain": {
+            "entryId": "Unterkunft",
+            "headword": "Unterkunft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊntɐˌkʊnft/",
+              "ipaUS": "/ˈʊntɐˌkʊnft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Unterkunft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Übernachtungsmöglichkeit",
+                  "Bleibe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Ort, an dem man vorübergehend wohnen oder übernachten kann.",
+                    "examples": [
+                      "Wir suchen eine günstige Unterkunft in der Nähe des Bahnhofs."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unterkunft – Beispielsatz folgt.",
+              "answer": "Ein Ort, an dem man vorübergehend wohnen oder übernachten kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Verkehrsmittel für eine Reise über das Meer.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dokument, das die Einreise in ein Land erlaubt.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "Hotel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Betrieb, der Gästen gegen Bezahlung Zimmer und oft weitere Leistungen anbietet.",
+          "explain": {
+            "entryId": "Hotel",
+            "headword": "Hotel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/hoˈtɛl/",
+              "ipaUS": "/hoˈtɛl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Hotel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Beherbergungsbetrieb"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Betrieb, der Gästen gegen Bezahlung Zimmer und oft weitere Leistungen anbietet.",
+                    "examples": [
+                      "Das Hotel bietet Frühstück und kostenloses WLAN an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hotel – Beispielsatz folgt.",
+              "answer": "Ein Betrieb, der Gästen gegen Bezahlung Zimmer und oft weitere Leistungen anbietet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einfache Unterkunft, in der hauptsächlich junge Menschen gemeinsam schlafen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Schalter, an dem Waren bei der Einreise kontrolliert werden.",
               "ok": false
             }
           ]
@@ -54,18 +125,53 @@
           "title": "",
           "page": 3,
           "question": "Jugendherberge",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine meist preiswerte Unterkunft mit einfachen Zimmern und Gemeinschaftsbereichen.",
+          "explain": {
+            "entryId": "Jugendherberge",
+            "headword": "Jugendherberge",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈjuːɡn̩tˌhɛɐ̯bɛʁɡə/",
+              "ipaUS": "/ˈjuːɡn̩tˌhɛɐ̯bɛʁɡə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Jugendherberge",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hostel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine meist preiswerte Unterkunft mit einfachen Zimmern und Gemeinschaftsbereichen.",
+                    "examples": [
+                      "Die Schulklasse übernachtet in einer Jugendherberge."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Jugendherberge – Beispielsatz folgt.",
+              "answer": "Eine meist preiswerte Unterkunft mit einfachen Zimmern und Gemeinschaftsbereichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein luxuriöses Schiff für lange Urlaubsreisen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Raum am Flughafen, in dem Reisepässe ausgestellt werden.",
               "ok": false
             }
           ]
@@ -74,18 +180,53 @@
           "title": "",
           "page": 4,
           "question": "Ankunft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zeitpunkt oder Vorgang, bei dem jemand ein Ziel erreicht.",
+          "explain": {
+            "entryId": "Ankunft",
+            "headword": "Ankunft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌkʊnft/",
+              "ipaUS": "/ˈanˌkʊnft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Ankunft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Eintreffen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zeitpunkt oder Vorgang, bei dem jemand ein Ziel erreicht.",
+                    "examples": [
+                      "Unsere Ankunft in Wien ist für 18 Uhr geplant."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ankunft – Beispielsatz folgt.",
+              "answer": "Der Zeitpunkt oder Vorgang, bei dem jemand ein Ziel erreicht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Moment, in dem ein Verkehrsmittel seine Reise beginnt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Kontrolle von Waren an einer Staatsgrenze.",
               "ok": false
             }
           ]
@@ -94,18 +235,54 @@
           "title": "",
           "page": 5,
           "question": "Check-in",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Anmeldung vor einem Flug oder beim Beginn eines Hotelaufenthalts.",
+          "explain": {
+            "entryId": "Check-in",
+            "headword": "Check-in",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈtʃɛkʔɪn/",
+              "ipaUS": "/ˈtʃɛkʔɪn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Check-in",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Abfertigung",
+                  "Anmeldung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Anmeldung vor einem Flug oder beim Beginn eines Hotelaufenthalts.",
+                    "examples": [
+                      "Der Check-in für den Flug öffnet zwei Stunden vor dem Abflug."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Check-in – Beispielsatz folgt.",
+              "answer": "Die Anmeldung und Registrierung vor einem Flug oder bei der Ankunft im Hotel.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Kontrolle des Gepäcks durch den Zoll nach der Landung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Besichtigung mehrerer Orte während einer Rundreise.",
               "ok": false
             }
           ]
@@ -114,18 +291,53 @@
           "title": "",
           "page": 6,
           "question": "Landung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Vorgang, bei dem ein Flugzeug wieder den Boden erreicht.",
+          "explain": {
+            "entryId": "Landung",
+            "headword": "Landung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈlandʊŋ/",
+              "ipaUS": "/ˈlandʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Landung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Aufsetzen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Vorgang, bei dem ein Flugzeug wieder den Boden erreicht.",
+                    "examples": [
+                      "Wegen des starken Windes war die Landung schwierig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Landung – Beispielsatz folgt.",
+              "answer": "Der Vorgang, bei dem ein Flugzeug aus der Luft wieder den Boden erreicht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Zeitpunkt, an dem ein Flugzeug den Boden verlässt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Eintritt eines Reisenden in ein fremdes Land.",
               "ok": false
             }
           ]
@@ -134,18 +346,53 @@
           "title": "",
           "page": 7,
           "question": "Gepäck",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Alle Taschen, Koffer und persönlichen Sachen, die jemand auf einer Reise mitnimmt.",
+          "explain": {
+            "entryId": "Gepäck",
+            "headword": "Gepäck",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈpɛk/",
+              "ipaUS": "/ɡəˈpɛk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral, kollektiv",
+                "headwordLine": "Gepäck",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Reisegepäck"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Alle Taschen, Koffer und persönlichen Sachen, die jemand auf einer Reise mitnimmt.",
+                    "examples": [
+                      "Das Gepäck darf höchstens zwanzig Kilo wiegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gepäck – Beispielsatz folgt.",
+              "answer": "Alle Taschen, Koffer und persönlichen Sachen, die jemand auf einer Reise mitnimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur die Dokumente, die bei einer Passkontrolle gezeigt werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die genaue Reihenfolge der geplanten Reiseziele.",
               "ok": false
             }
           ]
@@ -154,18 +401,53 @@
           "title": "",
           "page": 8,
           "question": "Koffer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein fester, verschließbarer Behälter zum Transport von Kleidung und anderen Reisesachen.",
+          "explain": {
+            "entryId": "Koffer",
+            "headword": "Koffer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkɔfɐ/",
+              "ipaUS": "/ˈkɔfɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Koffer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Reisekoffer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein fester, verschließbarer Behälter zum Transport von Kleidung und anderen Reisesachen.",
+                    "examples": [
+                      "Ich packe meine Kleidung in den Koffer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Koffer – Beispielsatz folgt.",
+              "answer": "Ein fester, verschließbarer Behälter zum Transport von Reisesachen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine weiche Tasche, die meist an Griffen oder einem Gurt getragen wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Gesamtheit aller Gegenstände, die ein Reisender mitnimmt.",
               "ok": false
             }
           ]
@@ -174,18 +456,53 @@
           "title": "",
           "page": 9,
           "question": "Reisetasche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine meist weiche, tragbare Tasche für Kleidung und andere Dinge auf einer Reise.",
+          "explain": {
+            "entryId": "Reisetasche",
+            "headword": "Reisetasche",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁaɪ̯zəˌtaʃə/",
+              "ipaUS": "/ˈʁaɪ̯zəˌtaʃə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Reisetasche",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Reisegepäcktasche"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine meist weiche, tragbare Tasche für Kleidung und andere Dinge auf einer Reise.",
+                    "examples": [
+                      "Für das Wochenende reicht mir eine kleine Reisetasche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Reisetasche – Beispielsatz folgt.",
+              "answer": "Eine meist weiche, tragbare Tasche für Dinge, die man auf eine Reise mitnimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein fester großer Behälter mit Deckel und oft mit Rollen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine schriftliche Bestätigung, dass ein Hotelzimmer bezahlt wurde.",
               "ok": false
             }
           ]
@@ -194,18 +511,53 @@
           "title": "",
           "page": 10,
           "question": "Buchung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die verbindliche Bestellung einer Reiseleistung, eines Zimmers oder eines Tickets.",
+          "explain": {
+            "entryId": "Buchung",
+            "headword": "Buchung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈbuːxʊŋ/",
+              "ipaUS": "/ˈbuːxʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Buchung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Booking"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die verbindliche Bestellung einer Reiseleistung, eines Zimmers oder eines Tickets.",
+                    "examples": [
+                      "Nach der Buchung erhielt sie eine Bestätigung per E-Mail."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Buchung – Beispielsatz folgt.",
+              "answer": "Die verbindliche Bestellung einer Reiseleistung, eines Zimmers oder eines Tickets.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das unverbindliche Sammeln verschiedener möglicher Reiseziele.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die amtliche Kontrolle eines Reisepasses an der Grenze.",
               "ok": false
             }
           ]

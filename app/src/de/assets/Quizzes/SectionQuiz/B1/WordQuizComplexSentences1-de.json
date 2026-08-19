@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizComplexSentences1-de",
-  "title": "",
+  "title": "Komplexe Sätze",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "weil",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet den Grund oder die Ursache für eine Aussage ein.",
+          "explain": {
+            "entryId": "weil",
+            "headword": "weil",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/vaɪ̯l/",
+              "ipaUS": "/vaɪ̯l/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Grund",
+                "headwordLine": "weil",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "da"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet den Grund oder die Ursache für eine Aussage ein.",
+                    "examples": [
+                      "Ich bleibe zu Hause, weil ich krank bin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "weil – Beispielsatz folgt.",
+              "answer": "Leitet den Grund oder die Ursache für eine Aussage ein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet einen Gegensatz ein, der das Ergebnis nicht verhindert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet eine Bedingung oder einen möglichen Zeitpunkt ein.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "obwohl",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet einen Umstand ein, der gegen das Ergebnis spricht, es aber nicht verhindert.",
+          "explain": {
+            "entryId": "obwohl",
+            "headword": "obwohl",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɔpˈvoːl/",
+              "ipaUS": "/ɔpˈvoːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Einräumung",
+                "headwordLine": "obwohl",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "obgleich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet einen Umstand ein, der gegen das Ergebnis spricht, es aber nicht verhindert.",
+                    "examples": [
+                      "Obwohl es regnet, gehen wir spazieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "obwohl – Beispielsatz folgt.",
+              "answer": "Leitet einen Umstand ein, der gegen das Ergebnis spricht, es aber nicht verhindert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet den direkten Grund für eine Aussage ein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet eine Ausnahme ein, bei der etwas sonst gilt.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "da",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet einen Grund ein, der häufig als bekannt oder selbstverständlich dargestellt wird.",
+          "explain": {
+            "entryId": "da",
+            "headword": "da",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/daː/",
+              "ipaUS": "/daː/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "als bekannt angenommener Grund",
+                "headwordLine": "da",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "weil"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet einen Grund ein, der häufig als bekannt oder selbstverständlich dargestellt wird.",
+                    "examples": [
+                      "Da der Bus nicht fährt, nehmen wir ein Taxi."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "da – Beispielsatz folgt.",
+              "answer": "Leitet einen Grund ein, der häufig als bekannt oder selbstverständlich dargestellt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet einen neuen, besonders betonten Grund in alltäglicher Sprache ein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet einen zeitlichen Gegensatz zwischen zwei gleichzeitigen Handlungen ein.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "wenn",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine Bedingung oder einen möglichen beziehungsweise wiederholten Zeitpunkt ein.",
+          "explain": {
+            "entryId": "wenn",
+            "headword": "wenn",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/vɛn/",
+              "ipaUS": "/vɛn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Bedingung oder Zeitpunkt",
+                "headwordLine": "wenn",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "falls"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet eine Bedingung oder einen möglichen beziehungsweise wiederholten Zeitpunkt ein.",
+                    "examples": [
+                      "Wenn ich Zeit habe, besuche ich dich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wenn – Beispielsatz folgt.",
+              "answer": "Leitet eine Bedingung oder einen möglichen beziehungsweise wiederholten Zeitpunkt ein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet einen Grund ein, den die andere Person bereits kennt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet eine Ausnahme von einer allgemeinen Aussage ein.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "es sei denn",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine Ausnahme oder Bedingung ein, unter der die vorherige Aussage nicht gilt.",
+          "explain": {
+            "entryId": "es sei denn",
+            "headword": "es sei denn",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛs zaɪ̯ dɛn/",
+              "ipaUS": "/ɛs zaɪ̯ dɛn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktionale Wendung",
+                "grammarType": "Ausnahme",
+                "headwordLine": "es sei denn",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "außer wenn"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet eine Ausnahme oder Bedingung ein, unter der die vorherige Aussage nicht gilt.",
+                    "examples": [
+                      "Wir gehen spazieren, es sei denn, es regnet stark."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "es sei denn – Beispielsatz folgt.",
+              "answer": "Leitet eine Ausnahme oder Bedingung ein, unter der die vorherige Aussage nicht gilt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet eine normale Bedingung ein, unter der etwas geschieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet einen überraschenden Gegensatz ein, der das Ergebnis nicht verhindert.",
               "ok": false
             }
           ]
@@ -114,18 +289,54 @@
           "title": "",
           "page": 6,
           "question": "während",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine gleichzeitig stattfindende Handlung oder einen direkten Gegensatz ein.",
+          "explain": {
+            "entryId": "während",
+            "headword": "während",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɛːʁənt/",
+              "ipaUS": "/ˈvɛːʁənt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Gleichzeitigkeit oder Gegensatz",
+                "headwordLine": "während",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zur gleichen Zeit",
+                  "wohingegen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet eine gleichzeitig stattfindende Handlung oder einen direkten Gegensatz ein.",
+                    "examples": [
+                      "Während ich koche, deckt er den Tisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "während – Beispielsatz folgt.",
+              "answer": "Leitet eine gleichzeitig stattfindende Handlung oder einen direkten Gegensatz ein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet eine Handlung ein, die erst nach einer anderen beginnt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet einen Gegensatz ein, obwohl ein Hindernis besteht.",
               "ok": false
             }
           ]
@@ -134,18 +345,53 @@
           "title": "",
           "page": 7,
           "question": "nachdem",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt, dass eine Handlung abgeschlossen ist und danach eine andere Handlung folgt.",
+          "explain": {
+            "entryId": "nachdem",
+            "headword": "nachdem",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/naːxˈdeːm/",
+              "ipaUS": "/naːxˈdeːm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "zeitliche Folge",
+                "headwordLine": "nachdem",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Anschluss an"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zeigt, dass eine Handlung abgeschlossen ist und danach eine andere Handlung folgt.",
+                    "examples": [
+                      "Nachdem wir gegessen hatten, gingen wir spazieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nachdem – Beispielsatz folgt.",
+              "answer": "Zeigt, dass eine Handlung abgeschlossen ist und danach eine andere Handlung folgt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass eine Handlung früher geschieht als eine andere.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zeigt, dass zwei Handlungen gleichzeitig ablaufen.",
               "ok": false
             }
           ]
@@ -154,18 +400,53 @@
           "title": "",
           "page": 8,
           "question": "bevor",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt, dass eine Handlung früher geschieht als eine andere.",
+          "explain": {
+            "entryId": "bevor",
+            "headword": "bevor",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈfoːɐ̯/",
+              "ipaUS": "/bəˈfoːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Vorzeitigkeit",
+                "headwordLine": "bevor",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ehe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zeigt, dass eine Handlung früher geschieht als eine andere.",
+                    "examples": [
+                      "Ich prüfe die Adresse, bevor ich das Paket abschicke."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bevor – Beispielsatz folgt.",
+              "answer": "Zeigt, dass eine Handlung früher geschieht als eine andere.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass eine Handlung abgeschlossen ist und danach eine andere folgt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zeigt, dass zwei Handlungen gleichzeitig stattfinden.",
               "ok": false
             }
           ]
@@ -174,18 +455,54 @@
           "title": "",
           "page": 9,
           "question": "obgleich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet wie „obwohl“ einen nicht verhindernden Gegensatz ein, wirkt aber formeller.",
+          "explain": {
+            "entryId": "obgleich",
+            "headword": "obgleich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɔpˈɡlaɪ̯ç/",
+              "ipaUS": "/ɔpˈɡlaɪ̯ç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "formelle Einräumung",
+                "headwordLine": "obgleich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "obwohl",
+                  "wenngleich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet wie „obwohl“ einen nicht verhindernden Gegensatz ein, wirkt aber formeller.",
+                    "examples": [
+                      "Obgleich der Weg lang war, erreichten wir das Ziel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "obgleich – Beispielsatz folgt.",
+              "answer": "Leitet wie „obwohl“ einen nicht verhindernden Gegensatz ein, wirkt aber formeller.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet eine Bedingung ein, die möglicherweise erfüllt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet einen formell dargestellten Grund für eine Entscheidung ein.",
               "ok": false
             }
           ]
@@ -194,18 +511,53 @@
           "title": "",
           "page": 10,
           "question": "damit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet das Ziel oder den beabsichtigten Zweck einer Handlung ein.",
+          "explain": {
+            "entryId": "damit",
+            "headword": "damit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/daˈmɪt/",
+              "ipaUS": "/daˈmɪt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Zweck",
+                "headwordLine": "damit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sodass zum Zweck"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet das Ziel oder den beabsichtigten Zweck einer Handlung ein.",
+                    "examples": [
+                      "Ich spreche langsam, damit alle mich verstehen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "damit – Beispielsatz folgt.",
+              "answer": "Leitet das Ziel oder den beabsichtigten Zweck einer Handlung ein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet die Ursache oder den Grund für eine Handlung ein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet einen direkten Gegensatz zwischen zwei Personen ein.",
               "ok": false
             }
           ]

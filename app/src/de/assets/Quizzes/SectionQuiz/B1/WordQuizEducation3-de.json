@@ -2,210 +2,566 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEducation3-de",
-  "title": "",
+  "title": "Bildung",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Lehrer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die besonders an einer Schule Wissen und Fähigkeiten vermittelt.",
+          "explain": {
+            "entryId": "Lehrer",
+            "headword": "Lehrer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈleːʁɐ/",
+              "ipaUS": "/ˈleːʁɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Lehrer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lehrkraft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die besonders an einer Schule Wissen und Fähigkeiten vermittelt.",
+                    "examples": [
+                      "Der Lehrer bereitet den Unterricht für die nächste Woche vor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Lehrer – Beispielsatz folgt.",
+              "answer": "Eine Person, die besonders an einer Schule Wissen und Fähigkeiten vermittelt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Führungskraft, die eine Firma wirtschaftlich leitet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die an einer Umfrage teilnimmt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Beruf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine erlernte oder regelmäßig ausgeübte Arbeit, mit der man meist Geld verdient.",
+          "explain": {
+            "entryId": "Beruf",
+            "headword": "Beruf",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʁuːf/",
+              "ipaUS": "/bəˈʁuːf/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Beruf",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Profession",
+                  "Tätigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine erlernte oder regelmäßig ausgeübte Arbeit, mit der man meist Geld verdient.",
+                    "examples": [
+                      "Welchen Beruf möchten Sie später ausüben?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Beruf – Beispielsatz folgt.",
+              "answer": "Eine erlernte oder regelmäßig ausgeübte Arbeit, mit der man meist Geld verdient.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Entwicklung aller beruflichen Stationen einer Person über viele Jahre.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine kurze unbezahlte Tätigkeit zum ersten Kennenlernen eines Betriebs.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Karriere",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die längerfristige berufliche Entwicklung und Folge verschiedener Positionen.",
+          "explain": {
+            "entryId": "Karriere",
+            "headword": "Karriere",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kaˈʁi̯eːʁə/",
+              "ipaUS": "/kaˈʁi̯eːʁə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Karriere",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Berufslaufbahn"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die längerfristige berufliche Entwicklung und Folge verschiedener Positionen.",
+                    "examples": [
+                      "Sie plant eine internationale Karriere als Ingenieurin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Karriere – Beispielsatz folgt.",
+              "answer": "Die längerfristige berufliche Entwicklung und Folge verschiedener Positionen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Arbeit, die heute noch erledigt werden muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein amtliches Dokument mit Schulnoten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Tätigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine bestimmte Arbeit, Beschäftigung oder Handlung, die jemand ausübt.",
+          "explain": {
+            "entryId": "Tätigkeit",
+            "headword": "Tätigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈtɛːtɪçkaɪ̯t/",
+              "ipaUS": "/ˈtɛːtɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Tätigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Beschäftigung",
+                  "Arbeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine bestimmte Arbeit, Beschäftigung oder Handlung, die jemand ausübt.",
+                    "examples": [
+                      "Zu seiner Tätigkeit gehört der Kontakt mit Kunden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tätigkeit – Beispielsatz folgt.",
+              "answer": "Eine bestimmte Arbeit, Beschäftigung oder Handlung, die jemand ausübt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die offizielle Bestätigung eines akademischen Abschlusses.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die gesamte Belegschaft eines Unternehmens.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Qualifikation",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kenntnisse, Fähigkeiten oder Abschlüsse, die jemanden für eine Aufgabe geeignet machen.",
+          "explain": {
+            "entryId": "Qualifikation",
+            "headword": "Qualifikation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kvalifikat͡si̯oːn/",
+              "ipaUS": "/kvalifikat͡si̯oːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Qualifikation",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Befähigung",
+                  "Kompetenz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kenntnisse, Fähigkeiten oder Abschlüsse, die jemanden für eine Aufgabe geeignet machen.",
+                    "examples": [
+                      "Für diese Stelle ist eine technische Qualifikation erforderlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Qualifikation – Beispielsatz folgt.",
+              "answer": "Kenntnisse, Fähigkeiten oder Abschlüsse, die jemanden für eine Aufgabe geeignet machen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Erlebnisse und Kenntnisse, die man erst durch längere Praxis sammelt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne natürliche Begabung ohne Lernen oder Abschluss.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Erfahrung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Wissen und Können, das durch Erleben und praktische Tätigkeit entsteht.",
+          "explain": {
+            "entryId": "Erfahrung",
+            "headword": "Erfahrung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈfaːʁʊŋ/",
+              "ipaUS": "/ɛɐ̯ˈfaːʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erfahrung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Praxis",
+                  "Kenntnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Wissen und Können, das durch Erleben und praktische Tätigkeit entsteht.",
+                    "examples": [
+                      "Sie hat fünf Jahre Erfahrung im Kundenservice."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erfahrung – Beispielsatz folgt.",
+              "answer": "Wissen und Können, das durch Erleben und praktische Tätigkeit entsteht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine formale Urkunde, die allein durch eine Prüfung erworben wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Aufgabe, die Lernende zu Hause bearbeiten müssen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Fähigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Möglichkeit oder das Können, etwas erfolgreich zu tun.",
+          "explain": {
+            "entryId": "Fähigkeit",
+            "headword": "Fähigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfɛːɪçkaɪ̯t/",
+              "ipaUS": "/ˈfɛːɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Fähigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Können",
+                  "Kompetenz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Möglichkeit oder das Können, etwas erfolgreich zu tun.",
+                    "examples": [
+                      "Teamarbeit ist eine wichtige Fähigkeit in diesem Beruf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fähigkeit – Beispielsatz folgt.",
+              "answer": "Das Können oder Vermögen, etwas erfolgreich zu tun.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Zeit, die man bereits in einem bestimmten Beruf gearbeitet hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine offizielle Bescheinigung über den Besuch eines Seminars.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Seminar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Lehrveranstaltung, in der ein Thema in einer kleineren Gruppe aktiv bearbeitet wird.",
+          "explain": {
+            "entryId": "Seminar",
+            "headword": "Seminar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zemiˈnaːɐ̯/",
+              "ipaUS": "/zemiˈnaːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Seminar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lehrveranstaltung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Lehrveranstaltung, in der ein Thema in einer kleineren Gruppe aktiv bearbeitet wird.",
+                    "examples": [
+                      "Im Seminar diskutieren die Studierenden verschiedene Texte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Seminar – Beispielsatz folgt.",
+              "answer": "Eine Lehrveranstaltung, in der eine kleinere Gruppe ein Thema aktiv bearbeitet und diskutiert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine große Veranstaltung, bei der viele Fachleute mehrere Vorträge besuchen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine rein praktische Sitzung, in der vor allem ein konkretes Ergebnis hergestellt wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Workshop",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Veranstaltung, bei der Teilnehmer praktisch und gemeinsam an einem Thema arbeiten.",
+          "explain": {
+            "entryId": "Workshop",
+            "headword": "Workshop",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvœːɐ̯kʃɔp/",
+              "ipaUS": "/ˈvœːɐ̯kʃɔp/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Workshop",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Arbeitsseminar",
+                  "Arbeitsgruppe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Veranstaltung, bei der Teilnehmer praktisch und gemeinsam an einem Thema arbeiten.",
+                    "examples": [
+                      "Im Workshop entwickeln die Teilnehmer eigene Präsentationen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Workshop – Beispielsatz folgt.",
+              "answer": "Eine Veranstaltung, bei der Teilnehmer praktisch und gemeinsam an einem Thema oder Ergebnis arbeiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Vorlesung, bei der eine Person lange vor einer großen Gruppe spricht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein offizieller Abschluss einer mehrjährigen Ausbildung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 30,
           "question": "Konferenz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein größeres Treffen, bei dem Fachleute Informationen austauschen und Themen besprechen.",
+          "explain": {
+            "entryId": "Konferenz",
+            "headword": "Konferenz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kɔnfeˈʁɛnt͡s/",
+              "ipaUS": "/kɔnfeˈʁɛnt͡s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Konferenz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Tagung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein größeres Treffen, bei dem Fachleute Informationen austauschen und Themen besprechen.",
+                    "examples": [
+                      "Auf der Konferenz stellen Forscher ihre neuen Ergebnisse vor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Konferenz – Beispielsatz folgt.",
+              "answer": "Ein größeres Treffen, bei dem Fachleute Informationen austauschen und Themen besprechen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Unterrichtsstunde für Schüler derselben Klasse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine praktische Berufsausbildung in nur einem Betrieb.",
               "ok": false
             }
           ]

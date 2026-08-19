@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdverbs1-de",
-  "title": "",
+  "title": "Adverbien",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "absolut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Einschränkung oder Ausnahme; in höchstem Maße.",
+          "explain": {
+            "entryId": "absolut",
+            "headword": "absolut",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/apzoˈluːt/",
+              "ipaUS": "/apzoˈluːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "vollständiger Grad",
+                "headwordLine": "absolut",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "völlig",
+                  "uneingeschränkt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne Einschränkung oder Ausnahme; in höchstem Maße.",
+                    "examples": [
+                      "Diese Information ist absolut korrekt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "absolut – Beispielsatz folgt.",
+              "answer": "Ohne Einschränkung oder Ausnahme; in höchstem Maße.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vollkommen, oft umgangssprachlich und emotional verstärkend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So vollständig, dass kein Rest mehr übrig bleibt.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "total",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Vollständig oder sehr stark, häufig in umgangssprachlicher Verstärkung.",
+          "explain": {
+            "entryId": "total",
+            "headword": "total",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/toˈtaːl/",
+              "ipaUS": "/toˈtaːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "umgangssprachliche Verstärkung",
+                "headwordLine": "total",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "völlig",
+                  "ganz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Vollständig oder sehr stark, häufig in umgangssprachlicher Verstärkung.",
+                    "examples": [
+                      "Ich war nach der Reise total müde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "total – Beispielsatz folgt.",
+              "answer": "Vollständig oder sehr stark, häufig in umgangssprachlicher Verstärkung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne Einschränkung oder Ausnahme und eher neutral bis formell.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So vollständig, dass kein Teil oder Rest übrig bleibt.",
               "ok": false
             }
           ]
@@ -54,18 +126,54 @@
           "title": "",
           "page": 3,
           "question": "restlos",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Vollständig, sodass nichts oder kein Rest mehr übrig bleibt.",
+          "explain": {
+            "entryId": "restlos",
+            "headword": "restlos",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁɛstloːs/",
+              "ipaUS": "/ˈʁɛstloːs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Vollständigkeit ohne Rest",
+                "headwordLine": "restlos",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vollkommen",
+                  "ohne Rest"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Vollständig, sodass nichts oder kein Rest mehr übrig bleibt.",
+                    "examples": [
+                      "Die Tickets waren restlos ausverkauft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "restlos – Beispielsatz folgt.",
+              "answer": "Vollständig, sodass nichts oder kein Rest mehr übrig bleibt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne jede Einschränkung oder Ausnahme gültig.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vollständig, besonders als umgangssprachliche starke Bewertung.",
               "ok": false
             }
           ]
@@ -74,18 +182,54 @@
           "title": "",
           "page": 4,
           "question": "bestimmt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit hoher persönlicher Sicherheit oder Wahrscheinlichkeit.",
+          "explain": {
+            "entryId": "bestimmt",
+            "headword": "bestimmt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʃtɪmt/",
+              "ipaUS": "/bəˈʃtɪmt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Sicherheit",
+                "headwordLine": "bestimmt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sicher",
+                  "gewiss"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit hoher persönlicher Sicherheit oder Wahrscheinlichkeit.",
+                    "examples": [
+                      "Er kommt bestimmt noch heute."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bestimmt – Beispielsatz folgt.",
+              "answer": "Mit hoher persönlicher Sicherheit oder Wahrscheinlichkeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eindeutig, endgültig und ohne Möglichkeit eines späteren Zweifels.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sehr wahrscheinlich, aber oft etwas höflicher oder vorsichtiger ausgedrückt.",
               "ok": false
             }
           ]
@@ -94,18 +238,54 @@
           "title": "",
           "page": 5,
           "question": "definitiv",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eindeutig, endgültig und ohne verbleibenden Zweifel.",
+          "explain": {
+            "entryId": "definitiv",
+            "headword": "definitiv",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/definiˈtiːf/",
+              "ipaUS": "/definiˈtiːf/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "eindeutige Festlegung",
+                "headwordLine": "definitiv",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "endgültig",
+                  "zweifellos"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eindeutig, endgültig und ohne verbleibenden Zweifel.",
+                    "examples": [
+                      "Wir werden definitiv an dem Projekt teilnehmen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "definitiv – Beispielsatz folgt.",
+              "answer": "Eindeutig, endgültig und ohne verbleibenden Zweifel.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit starker persönlicher Erwartung, aber nicht als endgültige Festlegung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sehr wahrscheinlich und häufig als höfliche Bestätigung verwendet.",
               "ok": false
             }
           ]
@@ -114,18 +294,54 @@
           "title": "",
           "page": 6,
           "question": "sicherlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit großer Wahrscheinlichkeit oder als höflich abgeschwächte Bestätigung.",
+          "explain": {
+            "entryId": "sicherlich",
+            "headword": "sicherlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɪçɐlɪç/",
+              "ipaUS": "/ˈzɪçɐlɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "hohe Wahrscheinlichkeit",
+                "headwordLine": "sicherlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gewiss",
+                  "wahrscheinlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit großer Wahrscheinlichkeit oder als höflich abgeschwächte Bestätigung.",
+                    "examples": [
+                      "Das ist sicherlich eine gute Lösung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sicherlich – Beispielsatz folgt.",
+              "answer": "Mit großer Wahrscheinlichkeit oder als höflich abgeschwächte Bestätigung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit persönlicher Gewissheit, oft deutlich und direkt ausgesprochen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Endgültig festgelegt und ohne jede spätere Änderung möglich.",
               "ok": false
             }
           ]
@@ -134,18 +350,54 @@
           "title": "",
           "page": 7,
           "question": "komplett",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ganz und mit allen vorgesehenen Teilen; vollständig.",
+          "explain": {
+            "entryId": "komplett",
+            "headword": "komplett",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kɔmˈplɛt/",
+              "ipaUS": "/kɔmˈplɛt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Ganzheit",
+                "headwordLine": "komplett",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vollständig",
+                  "ganz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ganz und mit allen vorgesehenen Teilen; vollständig.",
+                    "examples": [
+                      "Die Wohnung wurde komplett renoviert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "komplett – Beispielsatz folgt.",
+              "answer": "Ganz und mit allen vorgesehenen Teilen; vollständig.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In formeller Sprache vollständig ohne irgendeine Ausnahme.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So vollständig, dass ausdrücklich nichts mehr übrig bleibt.",
               "ok": false
             }
           ]
@@ -154,18 +406,54 @@
           "title": "",
           "page": 8,
           "question": "gänzlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Vollständig und ohne Ausnahme, häufig in eher formeller Sprache.",
+          "explain": {
+            "entryId": "gänzlich",
+            "headword": "gänzlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɡɛnt͡slɪç/",
+              "ipaUS": "/ˈɡɛnt͡slɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "formelle Vollständigkeit",
+                "headwordLine": "gänzlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "völlig",
+                  "vollkommen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Vollständig und ohne Ausnahme, häufig in eher formeller Sprache.",
+                    "examples": [
+                      "Der Plan wurde gänzlich verändert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gänzlich – Beispielsatz folgt.",
+              "answer": "Vollständig und ohne Ausnahme, häufig in eher formeller Sprache.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit allen notwendigen Teilen vorhanden oder abgeschlossen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vollständig, besonders in alltäglicher und technischer Sprache.",
               "ok": false
             }
           ]
@@ -174,18 +462,54 @@
           "title": "",
           "page": 9,
           "question": "vollständig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So, dass alle notwendigen Teile vorhanden sind oder nichts fehlt.",
+          "explain": {
+            "entryId": "vollständig",
+            "headword": "vollständig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfɔlˌʃtɛndɪç/",
+              "ipaUS": "/ˈfɔlˌʃtɛndɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "alle Teile",
+                "headwordLine": "vollständig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "komplett",
+                  "lückenlos"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So, dass alle notwendigen Teile vorhanden sind oder nichts fehlt.",
+                    "examples": [
+                      "Bitte füllen Sie das Formular vollständig aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vollständig – Beispielsatz folgt.",
+              "answer": "So, dass alle notwendigen Teile vorhanden sind oder nichts fehlt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne Ausnahme und in eher formeller Sprache ganz und gar.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ganz, häufig als alltägliche Beschreibung eines Gesamtzustands.",
               "ok": false
             }
           ]
@@ -194,18 +518,54 @@
           "title": "",
           "page": 10,
           "question": "ziemlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In relativ hohem, aber nicht vollständigem Maße; recht.",
+          "explain": {
+            "entryId": "ziemlich",
+            "headword": "ziemlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡siːmlɪç/",
+              "ipaUS": "/ˈt͡siːmlɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "mittlerer bis hoher Grad",
+                "headwordLine": "ziemlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "recht",
+                  "recht sehr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In relativ hohem, aber nicht vollständigem Maße; recht.",
+                    "examples": [
+                      "Der Weg zum Bahnhof ist ziemlich lang."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ziemlich – Beispielsatz folgt.",
+              "answer": "In relativ hohem, aber nicht vollständigem Maße; recht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In einem eher hohen Grad, häufig etwas sachlicher oder zurückhaltender.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In einem akzeptablen, aber nur mittleren oder begrenzten Maße.",
               "ok": false
             }
           ]

@@ -2,210 +2,565 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizShopping2-de",
-  "title": "",
+  "title": "Einkaufen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Versand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Verpacken und Befördern von Waren oder Sendungen zu einem Empfänger.",
+          "explain": {
+            "entryId": "Versand",
+            "headword": "Versand",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈzant/",
+              "ipaUS": "/fɛɐ̯ˈzant/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Versand",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verschickung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Verpacken und Befördern von Waren oder Sendungen zu einem Empfänger.",
+                    "examples": [
+                      "Der Versand innerhalb Deutschlands ist kostenlos."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Versand – Beispielsatz folgt.",
+              "answer": "Das Verpacken und Befördern von Waren oder Sendungen zu einem Empfänger.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das tatsächliche Übergeben bestellter Waren am Ziel oder die Ware selbst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die schnelle persönliche Überbringung durch einen beauftragten Boten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Kurier",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person oder ein Dienst, der Sendungen direkt und häufig besonders schnell überbringt.",
+          "explain": {
+            "entryId": "Kurier",
+            "headword": "Kurier",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kuˈʁiːɐ̯/",
+              "ipaUS": "/kuˈʁiːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Kurier",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bote",
+                  "Kurierdienst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person oder ein Dienst, der Sendungen direkt und häufig besonders schnell überbringt.",
+                    "examples": [
+                      "Ein Kurier brachte die wichtigen Dokumente noch am selben Tag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kurier – Beispielsatz folgt.",
+              "answer": "Eine Person oder ein Dienst, der Sendungen direkt und häufig besonders schnell überbringt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der allgemeine Vorgang des Verpackens und Verschickens von Waren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die bestellte Ware, die beim Empfänger angekommen ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Umtausch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Zurückgeben einer Ware, um dafür eine andere Ware zu erhalten.",
+          "explain": {
+            "entryId": "Umtausch",
+            "headword": "Umtausch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊmˌtaʊ̯ʃ/",
+              "ipaUS": "/ˈʊmˌtaʊ̯ʃ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Umtausch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Austausch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Zurückgeben einer Ware, um dafür eine andere Ware zu erhalten.",
+                    "examples": [
+                      "Der Umtausch in eine andere Größe war problemlos."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Umtausch – Beispielsatz folgt.",
+              "answer": "Das Zurückgeben einer Ware, um dafür eine andere Ware zu erhalten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Zurückgeben einer Ware gegen Erstattung des Kaufpreises.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der direkte Austausch von Dingen zwischen zwei Personen ohne Kauf.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Rückgabe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Zurückbringen oder Zurücksenden einer gekauften oder geliehenen Sache.",
+          "explain": {
+            "entryId": "Rückgabe",
+            "headword": "Rückgabe",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁʏkˌɡaːbə/",
+              "ipaUS": "/ˈʁʏkˌɡaːbə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Rückgabe",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Retoure",
+                  "Zurückgabe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Zurückbringen oder Zurücksenden einer gekauften oder geliehenen Sache.",
+                    "examples": [
+                      "Für die Rückgabe haben Kunden vierzehn Tage Zeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rückgabe – Beispielsatz folgt.",
+              "answer": "Das Zurückbringen oder Zurücksenden einer gekauften oder geliehenen Sache.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Ersetzen einer gekauften Ware durch ein anderes Produkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Austausch gleichwertiger Gegenstände ohne Zahlung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Tausch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der gegenseitige Austausch von Dingen oder Leistungen, häufig ohne Geldzahlung.",
+          "explain": {
+            "entryId": "Tausch",
+            "headword": "Tausch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/taʊ̯ʃ/",
+              "ipaUS": "/taʊ̯ʃ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Tausch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Austausch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der gegenseitige Austausch von Dingen oder Leistungen, häufig ohne Geldzahlung.",
+                    "examples": [
+                      "Beim Tausch erhielt sie ein Buch und gab dafür ein Spiel ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tausch – Beispielsatz folgt.",
+              "answer": "Der gegenseitige Austausch von Dingen oder Leistungen, häufig ohne Geldzahlung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Rücksendung einer gekauften Ware an ein Geschäft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Ersetzen einer Ware durch eine andere innerhalb desselben Kaufs.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Anschaffung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Erwerb einer Sache, besonders eines länger benötigten oder größeren Gegenstands.",
+          "explain": {
+            "entryId": "Anschaffung",
+            "headword": "Anschaffung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌʃafʊŋ/",
+              "ipaUS": "/ˈanˌʃafʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Anschaffung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kauf",
+                  "Erwerbung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Erwerb einer Sache, besonders eines länger benötigten oder größeren Gegenstands.",
+                    "examples": [
+                      "Der neue Computer war eine teure Anschaffung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Anschaffung – Beispielsatz folgt.",
+              "answer": "Der Erwerb einer Sache, besonders eines länger benötigten oder größeren Gegenstands.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der allgemeine Vorgang, für eine Ware Geld zu bezahlen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der formelle Erwerb von Eigentum, Rechten oder Kenntnissen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "kaufen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Ware oder Leistung gegen Bezahlung erhalten.",
+          "explain": {
+            "entryId": "kaufen",
+            "headword": "kaufen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkaʊ̯fn̩/",
+              "ipaUS": "/ˈkaʊ̯fn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "kaufen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bezahlen und erhalten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Ware oder Leistung gegen Bezahlung erhalten.",
+                    "examples": [
+                      "Wir möchten einen neuen Kühlschrank kaufen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kaufen – Beispielsatz folgt.",
+              "answer": "Eine Ware oder Leistung gegen Bezahlung erhalten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Etwas auf formelle Weise in Besitz bekommen oder sich Kenntnisse aneignen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen größeren Gegenstand auswählen, der langfristig genutzt werden soll.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "erwerben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas in Besitz bekommen, kaufen oder sich durch Lernen aneignen.",
+          "explain": {
+            "entryId": "erwerben",
+            "headword": "erwerben",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈvɛʁbn̩/",
+              "ipaUS": "/ɛɐ̯ˈvɛʁbn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, gehoben",
+                "headwordLine": "erwerben",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erlangen",
+                  "sich aneignen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas in Besitz bekommen, kaufen oder sich durch Lernen aneignen.",
+                    "examples": [
+                      "Sie hat im Kurs wichtige Kenntnisse erworben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erwerben – Beispielsatz folgt.",
+              "answer": "Etwas in Besitz bekommen, kaufen oder sich durch Lernen aneignen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ausschließlich eine Ware in einem Geschäft gegen Geld erhalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen größeren Gegenstand für eine langfristige Nutzung auswählen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Kassenbon",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der an der Kasse ausgegebene Beleg mit Waren, Preisen und gezahltem Gesamtbetrag.",
+          "explain": {
+            "entryId": "Kassenbon",
+            "headword": "Kassenbon",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkasn̩ˌbɔŋ/",
+              "ipaUS": "/ˈkasn̩ˌbɔŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Kassenbon",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kassenzettel",
+                  "Bon"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der an der Kasse ausgegebene Beleg mit Waren, Preisen und gezahltem Gesamtbetrag.",
+                    "examples": [
+                      "Bewahren Sie den Kassenbon für einen möglichen Umtausch auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kassenbon – Beispielsatz folgt.",
+              "answer": "Der an der Kasse ausgegebene Beleg mit Waren, Preisen und gezahltem Gesamtbetrag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jeder Nachweis, mit dem ein Kauf unabhängig von seiner Form belegt werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Zahlungsaufforderung mit einem noch offenen Betrag.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Kaufbeleg",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein allgemeiner Nachweis wie Bon, Rechnung oder Bestätigung, dass ein Kauf stattgefunden hat.",
+          "explain": {
+            "entryId": "Kaufbeleg",
+            "headword": "Kaufbeleg",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkaʊ̯fˌbəleːk/",
+              "ipaUS": "/ˈkaʊ̯fˌbəleːk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Kaufbeleg",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kaufnachweis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein allgemeiner Nachweis wie Bon, Rechnung oder Bestätigung, dass ein Kauf stattgefunden hat.",
+                    "examples": [
+                      "Für die Garantie müssen Sie einen Kaufbeleg vorlegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kaufbeleg – Beispielsatz folgt.",
+              "answer": "Ein allgemeiner Nachweis wie Bon, Rechnung oder Bestätigung, dass ein Kauf stattgefunden hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der spezielle Papierstreifen, der direkt von einer Ladenkasse gedruckt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dokument, das einen noch zu zahlenden Betrag fordert.",
               "ok": false
             }
           ]

@@ -2,210 +2,564 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives2-de",
-  "title": "",
+  "title": "Adjektive",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "beschämt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von Scham oder Schuldgefühl über das eigene Verhalten oder einen persönlichen Fehler erfüllt.",
+          "explain": {
+            "entryId": "beschämt",
+            "headword": "beschämt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʃɛːmt/",
+              "ipaUS": "/bəˈʃɛːmt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Scham",
+                "headwordLine": "beschämt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "voller Scham"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von Scham oder Schuldgefühl über das eigene Verhalten oder einen persönlichen Fehler erfüllt.",
+                    "examples": [
+                      "Sie war wegen ihrer unfairen Bemerkung beschämt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "beschämt – Beispielsatz folgt.",
+              "answer": "Von Scham oder Schuldgefühl über das eigene Verhalten oder einen persönlichen Fehler erfüllt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In einer sozialen Situation kurz unsicher und peinlich berührt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von anderen absichtlich erniedrigt und in der Würde verletzt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "gedemütigt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch eine Behandlung von anderen erniedrigt und in der eigenen Würde verletzt.",
+          "explain": {
+            "entryId": "gedemütigt",
+            "headword": "gedemütigt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈdyːtɪçt/",
+              "ipaUS": "/ɡəˈdyːtɪçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Würdeverletzung",
+                "headwordLine": "gedemütigt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erniedrigt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch eine Behandlung von anderen erniedrigt und in der eigenen Würde verletzt.",
+                    "examples": [
+                      "Nach der öffentlichen Kritik fühlte er sich gedemütigt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gedemütigt – Beispielsatz folgt.",
+              "answer": "Durch eine Behandlung von anderen erniedrigt und in der eigenen Würde verletzt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wegen eines eigenen Fehlers von innerer Scham erfüllt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Durch unerwartete Aufmerksamkeit kurz peinlich berührt und unsicher.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "begeistert",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von großer Freude und starkem positivem Interesse erfüllt.",
+          "explain": {
+            "entryId": "begeistert",
+            "headword": "begeistert",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈɡaɪ̯stɐt/",
+              "ipaUS": "/bəˈɡaɪ̯stɐt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "stark positive Emotion",
+                "headwordLine": "begeistert",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "enthusiastisch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von großer Freude und starkem positivem Interesse erfüllt.",
+                    "examples": [
+                      "Das Publikum war von dem Konzert begeistert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "begeistert – Beispielsatz folgt.",
+              "answer": "Von großer Freude und starkem positivem Interesse erfüllt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wegen Erwartung oder Nervosität innerlich stark erregt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit besonders viel Energie und Fleiß an einer Aufgabe arbeitend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "aufgeregt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Innerlich stark erregt, gespannt oder nervös, positiv oder negativ.",
+          "explain": {
+            "entryId": "aufgeregt",
+            "headword": "aufgeregt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fɡəˌʁeːkt/",
+              "ipaUS": "/ˈaʊ̯fɡəˌʁeːkt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Erregung",
+                "headwordLine": "aufgeregt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erregt",
+                  "nervös"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Innerlich stark erregt, gespannt oder nervös, positiv oder negativ.",
+                    "examples": [
+                      "Vor der Reise waren die Kinder sehr aufgeregt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aufgeregt – Beispielsatz folgt.",
+              "answer": "Innerlich stark erregt, gespannt oder nervös, positiv oder negativ.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von großer positiver Freude über eine Sache erfüllt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit fleißiger Energie und großem Einsatz tätig.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "eifrig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit großer Energie, Ernsthaftigkeit und fleißigem Bemühen bei einer Tätigkeit.",
+          "explain": {
+            "entryId": "eifrig",
+            "headword": "eifrig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯fʁɪç/",
+              "ipaUS": "/ˈaɪ̯fʁɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Einsatz",
+                "headwordLine": "eifrig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fleißig",
+                  "engagiert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit großer Energie, Ernsthaftigkeit und fleißigem Bemühen bei einer Tätigkeit.",
+                    "examples": [
+                      "Die Teilnehmer arbeiteten eifrig an ihren Projekten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "eifrig – Beispielsatz folgt.",
+              "answer": "Mit großer Energie, Ernsthaftigkeit und fleißigem Bemühen bei einer Tätigkeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von starker Freude und positivem Interesse erfüllt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Innerlich gespannt oder nervös vor einem Ereignis.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "dankbar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von Dank erfüllt, weil man Hilfe, etwas Gutes oder einen Vorteil erhalten hat.",
+          "explain": {
+            "entryId": "dankbar",
+            "headword": "dankbar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈdaŋkbaːɐ̯/",
+              "ipaUS": "/ˈdaŋkbaːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Dankgefühl",
+                "headwordLine": "dankbar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "voller Dank"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von Dank erfüllt, weil man Hilfe, etwas Gutes oder einen Vorteil erhalten hat.",
+                    "examples": [
+                      "Ich bin dir für deine Unterstützung sehr dankbar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "dankbar – Beispielsatz folgt.",
+              "answer": "Von Dank erfüllt, weil man Hilfe, etwas Gutes oder einen Vorteil erhalten hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Dankbar und bereit, den eigenen Dank durch eine Handlung zu zeigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zustimmung oder Wertschätzung gegenüber einer Leistung ausdrückend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "erkenntlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Dankbar und bereit, die Dankbarkeit durch eine Handlung oder Gegenleistung zu zeigen.",
+          "explain": {
+            "entryId": "erkenntlich",
+            "headword": "erkenntlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈkɛntlɪç/",
+              "ipaUS": "/ɛɐ̯ˈkɛntlɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Dank zeigen",
+                "headwordLine": "erkenntlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "dankbar",
+                  "anerkennend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Dankbar und bereit, die Dankbarkeit durch eine Handlung oder Gegenleistung zu zeigen.",
+                    "examples": [
+                      "Für die Hilfe zeigte sie sich mit einem Geschenk erkenntlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erkenntlich – Beispielsatz folgt.",
+              "answer": "Dankbar und bereit, die Dankbarkeit durch eine Handlung oder Gegenleistung zu zeigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Innerlich von Dank für eine erhaltene Hilfe erfüllt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Leistung oder Eigenschaft ausdrücklich lobend und wertschätzend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "anerkennend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zustimmung, Respekt oder Wertschätzung für eine Person oder Leistung ausdrückend.",
+          "explain": {
+            "entryId": "anerkennend",
+            "headword": "anerkennend",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanʔɛɐ̯ˌkɛnənt/",
+              "ipaUS": "/ˈanʔɛɐ̯ˌkɛnənt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Wertschätzung",
+                "headwordLine": "anerkennend",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "lobend",
+                  "wertschätzend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zustimmung, Respekt oder Wertschätzung für eine Person oder Leistung ausdrückend.",
+                    "examples": [
+                      "Die Chefin äußerte sich anerkennend über das Ergebnis."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "anerkennend – Beispielsatz folgt.",
+              "answer": "Zustimmung, Respekt oder Wertschätzung für eine Person oder Leistung ausdrückend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von Dank für eine erhaltene Hilfe oder Freundlichkeit erfüllt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bereit, Dank durch ein Geschenk oder eine Gegenleistung zu zeigen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "eifersüchtig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von Angst oder Ärger erfüllt, die Zuneigung oder Aufmerksamkeit einer nahestehenden Person zu verlieren.",
+          "explain": {
+            "entryId": "eifersüchtig",
+            "headword": "eifersüchtig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯fɐˌzʏçtɪç/",
+              "ipaUS": "/ˈaɪ̯fɐˌzʏçtɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Beziehungsgefühl",
+                "headwordLine": "eifersüchtig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "von Eifersucht erfüllt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von Angst oder Ärger erfüllt, die Zuneigung oder Aufmerksamkeit einer nahestehenden Person zu verlieren.",
+                    "examples": [
+                      "Er wurde eifersüchtig, als sein Partner viel Zeit mit jemand anderem verbrachte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "eifersüchtig – Beispielsatz folgt.",
+              "answer": "Von Angst oder Ärger erfüllt, die Zuneigung oder Aufmerksamkeit einer nahestehenden Person zu verlieren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Unzufrieden, weil eine andere Person etwas Begehrtes besitzt oder erreicht hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von übermäßigem Verlangen nach Geld und Besitz bestimmt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "neidisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Unzufrieden oder missgünstig, weil eine andere Person etwas Begehrtes besitzt oder erreicht hat.",
+          "explain": {
+            "entryId": "neidisch",
+            "headword": "neidisch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaɪ̯dɪʃ/",
+              "ipaUS": "/ˈnaɪ̯dɪʃ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Vergleichsgefühl",
+                "headwordLine": "neidisch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "missgünstig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Unzufrieden oder missgünstig, weil eine andere Person etwas Begehrtes besitzt oder erreicht hat.",
+                    "examples": [
+                      "Sie war neidisch auf den beruflichen Erfolg ihrer Freundin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "neidisch – Beispielsatz folgt.",
+              "answer": "Unzufrieden oder missgünstig, weil eine andere Person etwas Begehrtes besitzt oder erreicht hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Aus Angst vor dem Verlust von Liebe oder Aufmerksamkeit beunruhigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von einem übermäßigen Wunsch nach immer mehr Besitz geprägt.",
               "ok": false
             }
           ]

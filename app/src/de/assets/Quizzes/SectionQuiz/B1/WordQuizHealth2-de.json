@@ -2,210 +2,564 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizHealth2-de",
-  "title": "",
+  "title": "Gesundheit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Krankenhaus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine medizinische Einrichtung, in der Kranke und Verletzte untersucht und behandelt werden.",
+          "explain": {
+            "entryId": "Krankenhaus",
+            "headword": "Krankenhaus",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkʁaŋkn̩ˌhaʊ̯s/",
+              "ipaUS": "/ˈkʁaŋkn̩ˌhaʊ̯s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Krankenhaus",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Klinik"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine medizinische Einrichtung, in der Kranke und Verletzte untersucht und behandelt werden.",
+                    "examples": [
+                      "Nach dem Unfall wurde er ins Krankenhaus gebracht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Krankenhaus – Beispielsatz folgt.",
+              "answer": "Eine medizinische Einrichtung, in der Kranke und Verletzte untersucht und behandelt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Stelle, die ausschließlich Versicherungsverträge verkauft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Geschäft, in dem Medikamente und Rezepte hergestellt werden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "dringend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So wichtig oder eilig, dass etwas sehr bald geschehen muss.",
+          "explain": {
+            "entryId": "dringend",
+            "headword": "dringend",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈdʁɪŋənt/",
+              "ipaUS": "/ˈdʁɪŋənt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Dringlichkeit",
+                "headwordLine": "dringend",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "eilig",
+                  "unaufschiebbar"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So wichtig oder eilig, dass etwas sehr bald geschehen muss.",
+                    "examples": [
+                      "Der Patient braucht dringend ärztliche Hilfe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "dringend – Beispielsatz folgt.",
+              "answer": "So wichtig oder eilig, dass etwas sehr bald geschehen muss.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So regelmäßig, dass es jeden Tag zur gleichen Zeit geschieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So angenehm, dass sich Körper und Geist besonders wohlfühlen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Bewegung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Veränderung einer Körperposition oder allgemein körperliche Aktivität.",
+          "explain": {
+            "entryId": "Bewegung",
+            "headword": "Bewegung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈveːɡʊŋ/",
+              "ipaUS": "/bəˈveːɡʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Bewegung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "körperliche Aktivität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Veränderung einer Körperposition oder allgemein körperliche Aktivität.",
+                    "examples": [
+                      "Regelmäßige Bewegung kann Rückenproblemen vorbeugen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bewegung – Beispielsatz folgt.",
+              "answer": "Die Veränderung einer Körperposition oder allgemein körperliche Aktivität.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein festes Programm für sportliche Leistungssteigerung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine medizinische Maßnahme zur Heilung einer Verletzung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Training",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Regelmäßiges und gezieltes Üben, um Leistung oder Fähigkeit zu verbessern.",
+          "explain": {
+            "entryId": "Training",
+            "headword": "Training",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈtʁɛːnɪŋ/",
+              "ipaUS": "/ˈtʁɛːnɪŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Training",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Übung",
+                  "Sportprogramm"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Regelmäßiges und gezieltes Üben, um Leistung oder Fähigkeit zu verbessern.",
+                    "examples": [
+                      "Nach dem Training fühlt sie sich müde, aber zufrieden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Training – Beispielsatz folgt.",
+              "answer": "Regelmäßiges und gezieltes Üben, um Leistung oder Fähigkeit zu verbessern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede kleine Bewegung, die zufällig im Alltag entsteht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein ärztliches Gespräch über die richtige Ernährung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Routine",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein regelmäßig wiederholter und vertrauter Ablauf oder eine dadurch erworbene Sicherheit.",
+          "explain": {
+            "entryId": "Routine",
+            "headword": "Routine",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁuˈtiːnə/",
+              "ipaUS": "/ʁuˈtiːnə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Routine",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gewohnheit",
+                  "fester Ablauf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein regelmäßig wiederholter und vertrauter Ablauf oder eine dadurch erworbene Sicherheit.",
+                    "examples": [
+                      "Der Spaziergang am Morgen gehört zu ihrer täglichen Routine."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Routine – Beispielsatz folgt.",
+              "answer": "Ein regelmäßig wiederholter und vertrauter Ablauf oder eine dadurch erworbene Sicherheit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einmalige dringende Maßnahme in einem Notfall.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein neues Medikament, das noch nicht geprüft wurde.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Gesundheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zustand, körperlich und seelisch nicht krank und leistungsfähig zu sein.",
+          "explain": {
+            "entryId": "Gesundheit",
+            "headword": "Gesundheit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈzʊnthaɪ̯t/",
+              "ipaUS": "/ɡəˈzʊnthaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gesundheit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gesundheitszustand"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zustand, körperlich und seelisch nicht krank und leistungsfähig zu sein.",
+                    "examples": [
+                      "Schlaf und Bewegung sind wichtig für die Gesundheit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gesundheit – Beispielsatz folgt.",
+              "answer": "Der Zustand, körperlich und seelisch nicht krank und leistungsfähig zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das persönliche Gefühl von Zufriedenheit und innerer Ruhe allein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Zeitraum, in dem eine Verletzung langsam verschwindet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Wohlbefinden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das angenehme Gefühl, sich körperlich und seelisch gut zu fühlen.",
+          "explain": {
+            "entryId": "Wohlbefinden",
+            "headword": "Wohlbefinden",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvoːlbəˌfɪndn̩/",
+              "ipaUS": "/ˈvoːlbəˌfɪndn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Wohlbefinden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wohlergehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das angenehme Gefühl, sich körperlich und seelisch gut zu fühlen.",
+                    "examples": [
+                      "Genügend Pausen verbessern das Wohlbefinden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wohlbefinden – Beispielsatz folgt.",
+              "answer": "Das angenehme Gefühl, sich körperlich und seelisch gut zu fühlen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die medizinisch bestätigte Abwesenheit jeder möglichen Krankheit.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die vollständige Wiederherstellung nach einer schweren Verletzung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Untersuchung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die genaue medizinische Prüfung des Körpers oder einer Probe, um den Gesundheitszustand festzustellen.",
+          "explain": {
+            "entryId": "Untersuchung",
+            "headword": "Untersuchung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˌʊntɐˈzuːxʊŋ/",
+              "ipaUS": "/ˌʊntɐˈzuːxʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Untersuchung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "medizinische Kontrolle",
+                  "Diagnostik"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die genaue medizinische Prüfung des Körpers oder einer Probe, um den Gesundheitszustand festzustellen.",
+                    "examples": [
+                      "Bei der Untersuchung hörte die Ärztin Herz und Lunge ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Untersuchung – Beispielsatz folgt.",
+              "answer": "Die genaue medizinische Prüfung des Körpers oder einer Probe, um den Gesundheitszustand festzustellen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die geplante Anwendung von Maßnahmen gegen eine bereits bekannte Krankheit.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die schriftliche Anweisung, ein bestimmtes Medikament zu erhalten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Verletzung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Schädigung des Körpers durch einen Unfall, Stoß oder eine andere äußere Einwirkung.",
+          "explain": {
+            "entryId": "Verletzung",
+            "headword": "Verletzung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈlɛt͡sʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈlɛt͡sʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Verletzung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "körperlicher Schaden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Schädigung des Körpers durch einen Unfall, Stoß oder eine andere äußere Einwirkung.",
+                    "examples": [
+                      "Die Verletzung am Knie muss behandelt werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verletzung – Beispielsatz folgt.",
+              "answer": "Eine Schädigung des Körpers durch einen Unfall oder eine äußere Einwirkung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine offene Stelle der Haut, die bei jeder Krankheit entstehen muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine übermäßige Reaktion des Körpers auf einen harmlosen Stoff.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Wunde",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine verletzte oder offene Stelle an Haut oder Gewebe.",
+          "explain": {
+            "entryId": "Wunde",
+            "headword": "Wunde",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvʊndə/",
+              "ipaUS": "/ˈvʊndə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Wunde",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hautverletzung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine verletzte oder offene Stelle an Haut oder Gewebe.",
+                    "examples": [
+                      "Die Pflegekraft reinigte und verband die Wunde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wunde – Beispielsatz folgt.",
+              "answer": "Eine verletzte oder offene Stelle an Haut oder Gewebe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede Art von körperlichem Schaden, auch ohne beschädigte Haut.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein allgemeines Zeichen, das auf eine Krankheit hinweisen kann.",
               "ok": false
             }
           ]

@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizNature1-de",
-  "title": "",
+  "title": "Natur",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Klima",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die typischen Wetterverhältnisse einer Region über einen langen Zeitraum.",
+          "explain": {
+            "entryId": "Klima",
+            "headword": "Klima",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkliːma/",
+              "ipaUS": "/ˈkliːma/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Klima",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "langfristige Wetterverhältnisse"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die typischen Wetterverhältnisse einer Region über einen langen Zeitraum.",
+                    "examples": [
+                      "Das Klima an der Küste ist mild und feucht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Klima – Beispielsatz folgt.",
+              "answer": "Die typischen Wetterverhältnisse einer Region über einen langen Zeitraum.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der aktuelle Zustand der Luft an einem bestimmten Ort und Zeitpunkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein messbarer Wert dafür, wie warm oder kalt etwas ist.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Wetter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der aktuelle Zustand der Atmosphäre mit Sonne, Regen, Wind und Temperatur an einem Ort.",
+          "explain": {
+            "entryId": "Wetter",
+            "headword": "Wetter",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɛtɐ/",
+              "ipaUS": "/ˈvɛtɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Wetter",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wetterlage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der aktuelle Zustand der Atmosphäre mit Sonne, Regen, Wind und Temperatur an einem Ort.",
+                    "examples": [
+                      "Das Wetter soll morgen sonnig und warm werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wetter – Beispielsatz folgt.",
+              "answer": "Der aktuelle Zustand der Atmosphäre mit Sonne, Regen, Wind und Temperatur an einem Ort.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die typischen Wetterbedingungen einer Region über viele Jahre.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur der messbare Grad von Wärme oder Kälte der Luft.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Temperatur",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein messbarer Wert dafür, wie warm oder kalt etwas ist.",
+          "explain": {
+            "entryId": "Temperatur",
+            "headword": "Temperatur",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/tɛmpəʁaˈtuːɐ̯/",
+              "ipaUS": "/tɛmpəʁaˈtuːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Temperatur",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wärmegrad"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein messbarer Wert dafür, wie warm oder kalt etwas ist.",
+                    "examples": [
+                      "Die Temperatur steigt heute auf dreißig Grad."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Temperatur – Beispielsatz folgt.",
+              "answer": "Ein messbarer Wert dafür, wie warm oder kalt etwas ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gesamte aktuelle Wetterlage mit Wind, Regen und Sonne.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die langfristigen Wetterverhältnisse einer ganzen Region.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Naturschutz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Maßnahmen zum Schutz von Arten, Lebensräumen und natürlichen Landschaften.",
+          "explain": {
+            "entryId": "Naturschutz",
+            "headword": "Naturschutz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/naˈtuːɐ̯ˌʃʊt͡s/",
+              "ipaUS": "/naˈtuːɐ̯ˌʃʊt͡s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Naturschutz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schutz der Natur"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Maßnahmen zum Schutz von Arten, Lebensräumen und natürlichen Landschaften.",
+                    "examples": [
+                      "Der Naturschutz soll seltene Tiere und Pflanzen erhalten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Naturschutz – Beispielsatz folgt.",
+              "answer": "Maßnahmen zum Schutz von Arten, Lebensräumen und natürlichen Landschaften.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das langfristige Bewahren eines einzelnen Zustands oder Bestands.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jede Maßnahme, die Menschen oder Dinge vor einer Gefahr schützt.",
               "ok": false
             }
           ]
@@ -94,18 +234,54 @@
           "title": "",
           "page": 5,
           "question": "Erhaltung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das langfristige Bewahren eines Zustands, Bestands oder wertvollen Gutes.",
+          "explain": {
+            "entryId": "Erhaltung",
+            "headword": "Erhaltung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈhaltʊŋ/",
+              "ipaUS": "/ɛɐ̯ˈhaltʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erhaltung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bewahrung",
+                  "Konservierung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das langfristige Bewahren eines Zustands, Bestands oder wertvollen Gutes.",
+                    "examples": [
+                      "Die Erhaltung alter Wälder ist für viele Arten wichtig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erhaltung – Beispielsatz folgt.",
+              "answer": "Das langfristige Bewahren eines Zustands, Bestands oder wertvollen Gutes.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Abwehren einer konkreten Gefahr oder eines Schadens.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ausschließlich der gesetzliche Schutz wilder Tiere und Landschaften.",
               "ok": false
             }
           ]
@@ -114,18 +290,54 @@
           "title": "",
           "page": 6,
           "question": "Schutz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Maßnahmen oder ein Zustand, durch die Schaden und Gefahr verhindert werden.",
+          "explain": {
+            "entryId": "Schutz",
+            "headword": "Schutz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃʊt͡s/",
+              "ipaUS": "/ʃʊt͡s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Schutz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Sicherheit",
+                  "Abschirmung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Maßnahmen oder ein Zustand, durch die Schaden und Gefahr verhindert werden.",
+                    "examples": [
+                      "Die Pflanzen brauchen Schutz vor starkem Frost."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schutz – Beispielsatz folgt.",
+              "answer": "Maßnahmen oder ein Zustand, durch die Schaden und Gefahr verhindert werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das dauerhafte Bewahren eines Bestands in seinem jetzigen Zustand.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein staatliches Programm ausschließlich zur Erhaltung von Naturräumen.",
               "ok": false
             }
           ]
@@ -134,18 +346,53 @@
           "title": "",
           "page": 7,
           "question": "Ökosystem",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gemeinschaft von Lebewesen und ihrer unbelebten Umwelt, die miteinander in Beziehung stehen.",
+          "explain": {
+            "entryId": "Ökosystem",
+            "headword": "Ökosystem",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/øːkozyˈsteːm/",
+              "ipaUS": "/øːkozyˈsteːm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Ökosystem",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ökologisches System"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Gemeinschaft von Lebewesen und ihrer unbelebten Umwelt, die miteinander in Beziehung stehen.",
+                    "examples": [
+                      "Der See bildet ein empfindliches Ökosystem."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ökosystem – Beispielsatz folgt.",
+              "answer": "Eine Gemeinschaft von Lebewesen und ihrer unbelebten Umwelt, die miteinander in Beziehung stehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Zahl und Verschiedenheit der Arten in einem Gebiet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Ort, an dem eine einzelne Art natürlicherweise lebt.",
               "ok": false
             }
           ]
@@ -154,18 +401,53 @@
           "title": "",
           "page": 8,
           "question": "Artenvielfalt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Verschiedenheit und Zahl von Tier-, Pflanzen- und anderen Arten in einem Gebiet.",
+          "explain": {
+            "entryId": "Artenvielfalt",
+            "headword": "Artenvielfalt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaːɐ̯tn̩fiːlˌfalt/",
+              "ipaUS": "/ˈaːɐ̯tn̩fiːlˌfalt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Artenvielfalt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Biodiversität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Verschiedenheit und Zahl von Tier-, Pflanzen- und anderen Arten in einem Gebiet.",
+                    "examples": [
+                      "Im Regenwald gibt es eine besonders große Artenvielfalt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Artenvielfalt – Beispielsatz folgt.",
+              "answer": "Die Verschiedenheit und Zahl von Tier-, Pflanzen- und anderen Arten in einem Gebiet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Zusammenspiel von Lebewesen und unbelebter Umwelt in einem Gebiet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der natürliche Wohn- und Lebensbereich einer bestimmten Art.",
               "ok": false
             }
           ]
@@ -174,18 +456,53 @@
           "title": "",
           "page": 9,
           "question": "Lebensraum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der natürliche Bereich, in dem eine Art lebt und die nötigen Bedingungen findet.",
+          "explain": {
+            "entryId": "Lebensraum",
+            "headword": "Lebensraum",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈleːbn̩sˌʁaʊ̯m/",
+              "ipaUS": "/ˈleːbn̩sˌʁaʊ̯m/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Lebensraum",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Habitat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der natürliche Bereich, in dem eine Art lebt und die nötigen Bedingungen findet.",
+                    "examples": [
+                      "Feuchte Wiesen sind der Lebensraum vieler Insekten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Lebensraum – Beispielsatz folgt.",
+              "answer": "Der natürliche Bereich, in dem eine Art lebt und die nötigen Bedingungen findet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gesamtheit aller Arten, die in einer Region vorkommen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein System aus Lebewesen und allen gegenseitigen Beziehungen.",
               "ok": false
             }
           ]
@@ -194,18 +511,53 @@
           "title": "",
           "page": 10,
           "question": "Umwelt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die natürlichen und vom Menschen geprägten Bedingungen, die Lebewesen umgeben und beeinflussen.",
+          "explain": {
+            "entryId": "Umwelt",
+            "headword": "Umwelt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊmˌvɛlt/",
+              "ipaUS": "/ˈʊmˌvɛlt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Umwelt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lebensumfeld"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die natürlichen und vom Menschen geprägten Bedingungen, die Lebewesen umgeben und beeinflussen.",
+                    "examples": [
+                      "Plastikabfall belastet die Umwelt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Umwelt – Beispielsatz folgt.",
+              "answer": "Die natürlichen und vom Menschen geprägten Bedingungen, die Lebewesen umgeben und beeinflussen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gesamte Welt der Tiere, Pflanzen und unbelebten Landschaft ohne menschliche Einrichtungen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der unmittelbare Bereich rund um eine Person oder einen Ort.",
               "ok": false
             }
           ]

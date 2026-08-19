@@ -2,210 +2,563 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizLeisure2-de",
-  "title": "",
+  "title": "Freizeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Sammlung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gruppe von Gegenständen, die bewusst zusammengetragen und geordnet wurden.",
+          "explain": {
+            "entryId": "Sammlung",
+            "headword": "Sammlung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzamlʊŋ/",
+              "ipaUS": "/ˈzamlʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Sammlung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kollektion"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Gruppe von Gegenständen, die bewusst zusammengetragen und geordnet wurden.",
+                    "examples": [
+                      "Im Museum gibt es eine Sammlung alter Münzen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sammlung – Beispielsatz folgt.",
+              "answer": "Eine Gruppe von Gegenständen, die bewusst zusammengetragen und geordnet wurden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine vorübergehende Präsentation ausgewählter Werke für Besucher.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine praktische Tätigkeit, bei der Gegenstände mit Werkzeug hergestellt werden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Handwerk",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine berufliche oder kreative Tätigkeit, bei der Dinge mit praktischem Können und Werkzeug hergestellt oder repariert werden.",
+          "explain": {
+            "entryId": "Handwerk",
+            "headword": "Handwerk",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhantˌvɛʁk/",
+              "ipaUS": "/ˈhantˌvɛʁk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Handwerk",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "handwerkliche Arbeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine berufliche oder kreative Tätigkeit, bei der Dinge mit praktischem Können und Werkzeug hergestellt oder repariert werden.",
+                    "examples": [
+                      "Töpfern ist ein traditionelles Handwerk."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Handwerk – Beispielsatz folgt.",
+              "answer": "Eine berufliche oder kreative Tätigkeit, bei der Dinge mit praktischem Können und Werkzeug hergestellt oder repariert werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine systematisch geordnete Gruppe ähnlicher Gegenstände.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Sportart, die nur zur körperlichen Entspannung dient.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Freizeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zeit außerhalb von Arbeit, Schule und notwendigen Pflichten, über die man selbst verfügen kann.",
+          "explain": {
+            "entryId": "Freizeit",
+            "headword": "Freizeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁaɪ̯ˌt͡saɪ̯t/",
+              "ipaUS": "/ˈfʁaɪ̯ˌt͡saɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Freizeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "freie Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Zeit außerhalb von Arbeit, Schule und notwendigen Pflichten, über die man selbst verfügen kann.",
+                    "examples": [
+                      "In seiner Freizeit fährt er gern Fahrrad."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Freizeit – Beispielsatz folgt.",
+              "answer": "Die Zeit außerhalb von Arbeit, Schule und notwendigen Pflichten, über die man selbst verfügen kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein kurzer Zeitraum, der zufällig in einem Tagesplan noch frei ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Tätigkeit, die regelmäßig gegen Bezahlung ausgeübt wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Entspannung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zustand oder Vorgang, bei dem körperliche oder seelische Anspannung abnimmt.",
+          "explain": {
+            "entryId": "Entspannung",
+            "headword": "Entspannung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛntˈʃpanʊŋ/",
+              "ipaUS": "/ɛntˈʃpanʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Entspannung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ruhe",
+                  "Lockerung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Zustand oder Vorgang, bei dem körperliche oder seelische Anspannung abnimmt.",
+                    "examples": [
+                      "Musik sorgt nach der Arbeit für Entspannung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Entspannung – Beispielsatz folgt.",
+              "answer": "Ein Zustand oder Vorgang, bei dem körperliche oder seelische Anspannung abnimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Wiederherstellung von Kraft nach einer Krankheit oder Belastung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine intensive sportliche Belastung zur Verbesserung der Leistung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "freie Zeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum, in dem jemand gerade keine Verpflichtungen oder festgelegten Aufgaben hat.",
+          "explain": {
+            "entryId": "freie Zeit",
+            "headword": "freie Zeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁaɪ̯ə t͡saɪ̯t/",
+              "ipaUS": "/ˈfʁaɪ̯ə t͡saɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Zeitangabe",
+                "headwordLine": "freie Zeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "verfügbare Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Zeitraum, in dem jemand gerade keine Verpflichtungen oder festgelegten Aufgaben hat.",
+                    "examples": [
+                      "Am Nachmittag habe ich zwei Stunden freie Zeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "freie Zeit – Beispielsatz folgt.",
+              "answer": "Ein Zeitraum, in dem jemand gerade keine Verpflichtungen oder festgelegten Aufgaben hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die allgemeine Zeit außerhalb von Arbeit und Pflichten als Lebensbereich.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Zeitraum, der für eine berufliche Aufgabe reserviert ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Museum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Einrichtung, die bedeutende Gegenstände sammelt, bewahrt, erforscht und öffentlich zeigt.",
+          "explain": {
+            "entryId": "Museum",
+            "headword": "Museum",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/muˈzeːʊm/",
+              "ipaUS": "/muˈzeːʊm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Museum",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ausstellungshaus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Einrichtung, die bedeutende Gegenstände sammelt, bewahrt, erforscht und öffentlich zeigt.",
+                    "examples": [
+                      "Das Museum zeigt Funde aus der römischen Zeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Museum – Beispielsatz folgt.",
+              "answer": "Eine Einrichtung, die bedeutende Gegenstände sammelt, bewahrt, erforscht und öffentlich zeigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine vorübergehende Präsentation ausgewählter Werke oder Gegenstände.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Geschäft, das Bilder ausstellt und häufig auch verkauft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Ausstellung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine zeitlich begrenzte oder dauerhafte öffentliche Präsentation ausgewählter Gegenstände oder Werke.",
+          "explain": {
+            "entryId": "Ausstellung",
+            "headword": "Ausstellung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯sˌʃtɛlʊŋ/",
+              "ipaUS": "/ˈaʊ̯sˌʃtɛlʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Ausstellung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Exposition",
+                  "Schau"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine zeitlich begrenzte oder dauerhafte öffentliche Präsentation ausgewählter Gegenstände oder Werke.",
+                    "examples": [
+                      "Die Ausstellung über moderne Architektur läuft bis September."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ausstellung – Beispielsatz folgt.",
+              "answer": "Eine zeitlich begrenzte oder dauerhafte öffentliche Präsentation ausgewählter Gegenstände oder Werke.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Einrichtung, die eigene Sammlungen dauerhaft bewahrt und erforscht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Raum oder Geschäft, das hauptsächlich Kunst zeigt und verkauft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Galerie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Raum oder Geschäft, in dem besonders Kunstwerke gezeigt und häufig verkauft werden.",
+          "explain": {
+            "entryId": "Galerie",
+            "headword": "Galerie",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡaləˈʁiː/",
+              "ipaUS": "/ɡaləˈʁiː/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Galerie",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kunstgalerie"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Raum oder Geschäft, in dem besonders Kunstwerke gezeigt und häufig verkauft werden.",
+                    "examples": [
+                      "Die Galerie präsentiert Bilder junger Künstler."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Galerie – Beispielsatz folgt.",
+              "answer": "Ein Raum oder Geschäft, in dem besonders Kunstwerke gezeigt und häufig verkauft werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine öffentliche Einrichtung, die historische Sammlungen bewahrt und erforscht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne zeitlich begrenzte Präsentation zu einem bestimmten Thema.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Aufführung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die öffentliche Darbietung eines Theaterstücks, Musikwerks oder anderen Bühnenprogramms.",
+          "explain": {
+            "entryId": "Aufführung",
+            "headword": "Aufführung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fˌfyːʁʊŋ/",
+              "ipaUS": "/ˈaʊ̯fˌfyːʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Aufführung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Darbietung",
+                  "Vorstellung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die öffentliche Darbietung eines Theaterstücks, Musikwerks oder anderen Bühnenprogramms.",
+                    "examples": [
+                      "Die Aufführung beginnt um halb acht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Aufführung – Beispielsatz folgt.",
+              "answer": "Die öffentliche Darbietung eines Theaterstücks, Musikwerks oder anderen Bühnenprogramms.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das geschriebene Werk, das für die Bühne bestimmt ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der erhöhte Bereich, auf dem Künstler auftreten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Schauspieler",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die Rollen in Theaterstücken, Filmen oder Serien darstellt.",
+          "explain": {
+            "entryId": "Schauspieler",
+            "headword": "Schauspieler",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃaʊ̯ˌʃpiːlɐ/",
+              "ipaUS": "/ˈʃaʊ̯ˌʃpiːlɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Schauspieler",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Darsteller"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die Rollen in Theaterstücken, Filmen oder Serien darstellt.",
+                    "examples": [
+                      "Der Schauspieler spielt die Hauptrolle im neuen Film."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schauspieler – Beispielsatz folgt.",
+              "answer": "Eine Person, die Rollen in Theaterstücken, Filmen oder Serien darstellt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die eine Ausstellung plant und Kunstwerke auswählt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die als Tourist Sehenswürdigkeiten besichtigt.",
               "ok": false
             }
           ]

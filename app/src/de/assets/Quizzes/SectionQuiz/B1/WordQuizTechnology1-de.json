@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTechnology1-de",
-  "title": "",
+  "title": "Technologie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Anwendung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Computerprogramm für eine bestimmte Aufgabe; auch der praktische Einsatz von etwas.",
+          "explain": {
+            "entryId": "Anwendung",
+            "headword": "Anwendung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanvɛndʊŋ/",
+              "ipaUS": "/ˈanvɛndʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Anwendung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Applikation",
+                  "Einsatz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Computerprogramm für eine bestimmte Aufgabe; auch der praktische Einsatz von etwas.",
+                    "examples": [
+                      "Die Anwendung hilft beim Planen von Terminen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Anwendung – Beispielsatz folgt.",
+              "answer": "Ein Computerprogramm für eine bestimmte Aufgabe; auch der praktische Einsatz von etwas.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein kleines Programm, das ausschließlich auf einem Smartphone läuft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine vollständige Folge von Befehlen, die ein Computer ausführt.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "App",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Anwendungsprogramm, das besonders für Smartphones oder Tablets entwickelt wurde.",
+          "explain": {
+            "entryId": "App",
+            "headword": "App",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛp/",
+              "ipaUS": "/ɛp/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "App",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mobilanwendung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Anwendungsprogramm, das besonders für Smartphones oder Tablets entwickelt wurde.",
+                    "examples": [
+                      "Mit dieser App kann man Fahrkarten kaufen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "App – Beispielsatz folgt.",
+              "answer": "Ein Anwendungsprogramm, das besonders für Smartphones oder Tablets entwickelt wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jedes Programm, das auf einem beliebigen Computer ausgeführt werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gerät, das Daten elektronisch verarbeitet.",
               "ok": false
             }
           ]
@@ -54,18 +125,53 @@
           "title": "",
           "page": 3,
           "question": "Programm",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Folge von Befehlen beziehungsweise Software, mit der ein Computer bestimmte Aufgaben ausführt.",
+          "explain": {
+            "entryId": "Programm",
+            "headword": "Programm",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/pʁoˈɡʁam/",
+              "ipaUS": "/pʁoˈɡʁam/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Programm",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Computerprogramm"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Folge von Befehlen beziehungsweise Software, mit der ein Computer bestimmte Aufgaben ausführt.",
+                    "examples": [
+                      "Das Programm erstellt automatisch eine Rechnung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Programm – Beispielsatz folgt.",
+              "answer": "Eine Folge von Befehlen beziehungsweise Software, mit der ein Computer bestimmte Aufgaben ausführt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine für Mobilgeräte entwickelte kleine Anwendung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dienst, mit dem Informationen im Internet gesucht werden.",
               "ok": false
             }
           ]
@@ -74,18 +180,53 @@
           "title": "",
           "page": 4,
           "question": "Browser",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Programm, mit dem Webseiten im Internet aufgerufen und angezeigt werden.",
+          "explain": {
+            "entryId": "Browser",
+            "headword": "Browser",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈbʁaʊ̯zɐ/",
+              "ipaUS": "/ˈbʁaʊ̯zɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Browser",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Webbrowser"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Programm, mit dem Webseiten im Internet aufgerufen und angezeigt werden.",
+                    "examples": [
+                      "Öffnen Sie den Link in Ihrem Browser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Browser – Beispielsatz folgt.",
+              "answer": "Ein Programm, mit dem Webseiten im Internet aufgerufen und angezeigt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Onlinedienst, der nach eingegebenen Begriffen passende Webseiten findet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die erste Seite, die beim Öffnen einer Website erscheint.",
               "ok": false
             }
           ]
@@ -94,18 +235,53 @@
           "title": "",
           "page": 5,
           "question": "Suchmaschine",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Onlinedienst, der das Internet nach Begriffen durchsucht und passende Ergebnisse zeigt.",
+          "explain": {
+            "entryId": "Suchmaschine",
+            "headword": "Suchmaschine",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzuːxmaˌʃiːnə/",
+              "ipaUS": "/ˈzuːxmaˌʃiːnə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Suchmaschine",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Internetsuche"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Onlinedienst, der das Internet nach Begriffen durchsucht und passende Ergebnisse zeigt.",
+                    "examples": [
+                      "Mit einer Suchmaschine fand sie die Öffnungszeiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Suchmaschine – Beispielsatz folgt.",
+              "answer": "Ein Onlinedienst, der das Internet nach Begriffen durchsucht und passende Ergebnisse zeigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Programm, das Webseiten auf einem Bildschirm darstellt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne Adresse, über die eine Webseite erreichbar ist.",
               "ok": false
             }
           ]
@@ -114,18 +290,54 @@
           "title": "",
           "page": 6,
           "question": "Registerkarte",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein eigener Reiter in einem Programmfenster, in dem eine Seite oder Ansicht geöffnet ist.",
+          "explain": {
+            "entryId": "Registerkarte",
+            "headword": "Registerkarte",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁeˈɡɪstɐˌkaʁtə/",
+              "ipaUS": "/ʁeˈɡɪstɐˌkaʁtə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Registerkarte",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Tab",
+                  "Reiter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein eigener Reiter in einem Programmfenster, in dem eine Seite oder Ansicht geöffnet ist.",
+                    "examples": [
+                      "Ich habe den Artikel in einer neuen Registerkarte geöffnet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Registerkarte – Beispielsatz folgt.",
+              "answer": "Ein eigener Reiter in einem Programmfenster, in dem eine Seite oder Ansicht geöffnet ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die erste Seite einer Website oder eines Browsers.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein gespeichertes Dokument, das mit einem Programm geöffnet wird.",
               "ok": false
             }
           ]
@@ -134,18 +346,53 @@
           "title": "",
           "page": 7,
           "question": "Gerät",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein technischer Gegenstand, der für eine bestimmte Funktion gebaut wurde.",
+          "explain": {
+            "entryId": "Gerät",
+            "headword": "Gerät",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈʁɛːt/",
+              "ipaUS": "/ɡəˈʁɛːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Gerät",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Apparat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein technischer Gegenstand, der für eine bestimmte Funktion gebaut wurde.",
+                    "examples": [
+                      "Das Gerät misst die Temperatur im Raum."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gerät – Beispielsatz folgt.",
+              "answer": "Ein technischer Gegenstand, der für eine bestimmte Funktion gebaut wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein kleines neuartiges technisches Zubehör mit besonderem Unterhaltungswert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein tragbares Telefon mit Internetzugang und Apps.",
               "ok": false
             }
           ]
@@ -154,18 +401,53 @@
           "title": "",
           "page": 8,
           "question": "Gadget",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein kleines, oft neuartiges technisches Gerät oder Zubehör mit einer besonderen Funktion.",
+          "explain": {
+            "entryId": "Gadget",
+            "headword": "Gadget",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɡɛd͡ʒɪt/",
+              "ipaUS": "/ˈɡɛd͡ʒɪt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Gadget",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "technisches Zubehör"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein kleines, oft neuartiges technisches Gerät oder Zubehör mit einer besonderen Funktion.",
+                    "examples": [
+                      "Die intelligente Uhr ist ein nützliches Gadget."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gadget – Beispielsatz folgt.",
+              "answer": "Ein kleines, oft neuartiges technisches Gerät oder Zubehör mit einer besonderen Funktion.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jeder technische Gegenstand unabhängig von Größe und Zweck.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Mobiltelefon mit Computerfunktionen und Internetzugang.",
               "ok": false
             }
           ]
@@ -174,18 +456,54 @@
           "title": "",
           "page": 9,
           "question": "Smartphone",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Mobiltelefon mit Computerfunktionen, Internetzugang und installierbaren Apps.",
+          "explain": {
+            "entryId": "Smartphone",
+            "headword": "Smartphone",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈsmaːɐ̯tfoːn/",
+              "ipaUS": "/ˈsmaːɐ̯tfoːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Smartphone",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mobiltelefon",
+                  "Handy"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Mobiltelefon mit Computerfunktionen, Internetzugang und installierbaren Apps.",
+                    "examples": [
+                      "Sie liest ihre E-Mails auf dem Smartphone."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Smartphone – Beispielsatz folgt.",
+              "answer": "Ein Mobiltelefon mit Computerfunktionen, Internetzugang und installierbaren Apps.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein kleines technisches Zubehör, das nur eine einzelne Funktion erfüllt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jedes elektronische Gerät, das Daten digital speichert.",
               "ok": false
             }
           ]
@@ -194,18 +512,53 @@
           "title": "",
           "page": 10,
           "question": "digital",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In Form von Zahlen beziehungsweise elektronisch verarbeiteten Daten dargestellt oder arbeitend.",
+          "explain": {
+            "entryId": "digital",
+            "headword": "digital",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/diɡiˈtaːl/",
+              "ipaUS": "/diɡiˈtaːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Technik",
+                "headwordLine": "digital",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "datenbasiert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In Form von Zahlen beziehungsweise elektronisch verarbeiteten Daten dargestellt oder arbeitend.",
+                    "examples": [
+                      "Die Tickets sind nur noch digital verfügbar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "digital – Beispielsatz folgt.",
+              "answer": "In Form von Zahlen beziehungsweise elektronisch verarbeiteten Daten dargestellt oder arbeitend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit elektrischen Bauteilen oder elektrischem Strom arbeitend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur in einer simulierten, nicht körperlich vorhandenen Umgebung bestehend.",
               "ok": false
             }
           ]

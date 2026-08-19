@@ -2,210 +2,567 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdverbs3-de",
-  "title": "",
+  "title": "Adverbien",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "eventuell",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Möglicherweise und abhängig von Umständen oder einer späteren Entscheidung.",
+          "explain": {
+            "entryId": "eventuell",
+            "headword": "eventuell",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/evɛntuˈɛl/",
+              "ipaUS": "/evɛntuˈɛl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "bedingte Möglichkeit",
+                "headwordLine": "eventuell",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gegebenenfalls",
+                  "möglicherweise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Möglicherweise und abhängig von Umständen oder einer späteren Entscheidung.",
+                    "examples": [
+                      "Wir können uns eventuell am Freitag treffen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "eventuell – Beispielsatz folgt.",
+              "answer": "Möglicherweise und abhängig von Umständen oder einer späteren Entscheidung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Als eher formelle objektive Möglichkeit ohne besondere Bedingung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Als kurze alltägliche Vermutung oder unsichere Aussage.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "relativ",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In Bezug auf einen Maßstab oder die Umstände; nicht absolut.",
+          "explain": {
+            "entryId": "relativ",
+            "headword": "relativ",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁelatiːf/",
+              "ipaUS": "/ʁelatiːf/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Bezug auf Maßstab",
+                "headwordLine": "relativ",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "verhältnismäßig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In Bezug auf einen Maßstab oder die Umstände; nicht absolut.",
+                    "examples": [
+                      "Die Wohnung ist für diese Gegend relativ günstig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "relativ – Beispielsatz folgt.",
+              "answer": "In Bezug auf einen Maßstab oder die Umstände; nicht absolut.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Im direkten Vergleich mit anderen Fällen oder Beispielen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In einem mittleren und nicht besonders starken Grad.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "vergleichsweise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Im Vergleich mit anderen Personen, Dingen oder Situationen.",
+          "explain": {
+            "entryId": "vergleichsweise",
+            "headword": "vergleichsweise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈɡlaɪ̯çsˌvaɪ̯zə/",
+              "ipaUS": "/fɛɐ̯ˈɡlaɪ̯çsˌvaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "direkter Vergleich",
+                "headwordLine": "vergleichsweise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Vergleich",
+                  "verhältnismäßig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Im Vergleich mit anderen Personen, Dingen oder Situationen.",
+                    "examples": [
+                      "Der Winter war vergleichsweise mild."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vergleichsweise – Beispielsatz folgt.",
+              "answer": "Im Vergleich mit anderen Personen, Dingen oder Situationen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In Bezug auf einen allgemeinen Maßstab oder die Umstände, nicht absolut.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In einem nur mittleren oder begrenzten Ausmaß.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "mäßig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In mittlerem, begrenztem oder nicht besonders starkem Maße.",
+          "explain": {
+            "entryId": "mäßig",
+            "headword": "mäßig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmɛːsɪç/",
+              "ipaUS": "/ˈmɛːsɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "mittlerer Grad",
+                "headwordLine": "mäßig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "moderat",
+                  "mittelmäßig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In mittlerem, begrenztem oder nicht besonders starkem Maße.",
+                    "examples": [
+                      "Der Wind weht heute nur mäßig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "mäßig – Beispielsatz folgt.",
+              "answer": "In mittlerem, begrenztem oder nicht besonders starkem Maße.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In Bezug auf andere Umstände oder einen allgemeinen Maßstab.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Im direkten Vergleich mit mehreren konkreten Fällen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "plötzlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sehr schnell und ohne längere Vorankündigung eintretend.",
+          "explain": {
+            "entryId": "plötzlich",
+            "headword": "plötzlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈplœt͡slɪç/",
+              "ipaUS": "/ˈplœt͡slɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "unerwarteter schneller Eintritt",
+                "headwordLine": "plötzlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auf einmal"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sehr schnell und ohne längere Vorankündigung eintretend.",
+                    "examples": [
+                      "Plötzlich ging das Licht aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "plötzlich – Beispielsatz folgt.",
+              "answer": "Sehr schnell und ohne längere Vorankündigung eintretend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sehr plötzlich, hart und mit einem scharfen Wechsel.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nicht erwartet, unabhängig davon, ob es schnell oder langsam eintritt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "abrupt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sehr plötzlich, hart und ohne sanften Übergang.",
+          "explain": {
+            "entryId": "abrupt",
+            "headword": "abrupt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/apˈʁʊpt/",
+              "ipaUS": "/apˈʁʊpt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "scharfer Wechsel",
+                "headwordLine": "abrupt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "unvermittelt",
+                  "schlagartig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sehr plötzlich, hart und ohne sanften Übergang.",
+                    "examples": [
+                      "Das Gespräch endete abrupt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abrupt – Beispielsatz folgt.",
+              "answer": "Sehr plötzlich, hart und ohne sanften Übergang.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schnell und ohne längere Vorankündigung, aber nicht unbedingt hart.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Entgegen der Erwartung, auch wenn die Veränderung langsam geschieht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "unerwartet",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So, dass etwas nicht erwartet oder vorhergesehen wurde.",
+          "explain": {
+            "entryId": "unerwartet",
+            "headword": "unerwartet",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʊnʔɛɐ̯ˈvaʁtət/",
+              "ipaUS": "/ʊnʔɛɐ̯ˈvaʁtət/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "fehlende Erwartung",
+                "headwordLine": "unerwartet",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "überraschend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So, dass etwas nicht erwartet oder vorhergesehen wurde.",
+                    "examples": [
+                      "Unerwartet erhielt sie ein neues Angebot."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unerwartet – Beispielsatz folgt.",
+              "answer": "So, dass etwas nicht erwartet oder vorhergesehen wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sehr schnell und ohne Vorwarnung eintretend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit einem harten und scharfen Wechsel ohne Übergang.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "wirklich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Tatsächlich und nicht nur scheinbar; auch zur Verstärkung einer Aussage.",
+          "explain": {
+            "entryId": "wirklich",
+            "headword": "wirklich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɪʁklɪç/",
+              "ipaUS": "/ˈvɪʁklɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Tatsächlichkeit oder Verstärkung",
+                "headwordLine": "wirklich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "tatsächlich",
+                  "in Wahrheit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Tatsächlich und nicht nur scheinbar; auch zur Verstärkung einer Aussage.",
+                    "examples": [
+                      "Der Film war wirklich interessant."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wirklich – Beispielsatz folgt.",
+              "answer": "Tatsächlich und nicht nur scheinbar; auch zur Verstärkung einer Aussage.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Tatsächlich, aber besonders umgangssprachlich und emotional gebraucht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ehrlich gemeint und ohne Täuschungsabsicht geäußert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "echt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Tatsächlich oder sehr, häufig als umgangssprachliche Verstärkung; als Adjektiv auch nicht künstlich.",
+          "explain": {
+            "entryId": "echt",
+            "headword": "echt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛçt/",
+              "ipaUS": "/ɛçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "umgangssprachliche Tatsächlichkeit",
+                "headwordLine": "echt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "wirklich",
+                  "tatsächlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Tatsächlich oder sehr, häufig als umgangssprachliche Verstärkung; als Adjektiv auch nicht künstlich.",
+                    "examples": [
+                      "Das Konzert war echt beeindruckend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "echt – Beispielsatz folgt.",
+              "answer": "Tatsächlich oder sehr, häufig als umgangssprachliche Verstärkung; als Adjektiv auch nicht künstlich.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Tatsächlich und neutral zur Bestätigung einer Wahrheit.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ehrlich, ernst gemeint und frei von Täuschung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 30,
           "question": "aufrichtig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ehrlich, ernst gemeint und ohne Täuschungsabsicht.",
+          "explain": {
+            "entryId": "aufrichtig",
+            "headword": "aufrichtig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fˌʁɪçtɪç/",
+              "ipaUS": "/ˈaʊ̯fˌʁɪçtɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Ehrlichkeit",
+                "headwordLine": "aufrichtig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ehrlich",
+                  "ernsthaft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ehrlich, ernst gemeint und ohne Täuschungsabsicht.",
+                    "examples": [
+                      "Ich möchte mich aufrichtig bei Ihnen entschuldigen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aufrichtig – Beispielsatz folgt.",
+              "answer": "Ehrlich, ernst gemeint und ohne Täuschungsabsicht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Tatsächlich und nicht nur scheinbar vorhanden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sehr stark, besonders als umgangssprachliche emotionale Verstärkung.",
               "ok": false
             }
           ]

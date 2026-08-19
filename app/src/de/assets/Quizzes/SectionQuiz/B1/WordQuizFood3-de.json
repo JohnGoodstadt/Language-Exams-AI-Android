@@ -2,210 +2,566 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFood3-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Liste",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine geordnete schriftliche oder digitale Aufzählung mehrerer Einträge.",
+          "explain": {
+            "entryId": "Liste",
+            "headword": "Liste",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈlɪstə/",
+              "ipaUS": "/ˈlɪstə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Liste",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Aufstellung",
+                  "Verzeichnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine geordnete schriftliche oder digitale Aufzählung mehrerer Einträge.",
+                    "examples": [
+                      "Wir schreiben eine Liste mit allen Zutaten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Liste – Beispielsatz folgt.",
+              "answer": "Eine geordnete schriftliche oder digitale Aufzählung mehrerer Einträge.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Gruppe von Möglichkeiten, zwischen denen aktiv gewählt werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine genaue Folge von Schritten zur Zubereitung eines Gerichts.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Rezept",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Beschreibung der Zutaten und Arbeitsschritte zur Zubereitung eines Gerichts.",
+          "explain": {
+            "entryId": "Rezept",
+            "headword": "Rezept",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁeˈt͡sɛpt/",
+              "ipaUS": "/ʁeˈt͡sɛpt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Rezept",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kochrezept"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Beschreibung der Zutaten und Arbeitsschritte zur Zubereitung eines Gerichts.",
+                    "examples": [
+                      "Das Rezept erklärt, wie man die Suppe zubereitet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rezept – Beispielsatz folgt.",
+              "answer": "Eine Beschreibung der Zutaten und Arbeitsschritte zur Zubereitung eines Gerichts.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine allgemeine Folge von Schritten zur Bedienung oder Herstellung von etwas.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein planmäßiges Verfahren, das für viele verschiedene Aufgaben genutzt werden kann.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Anleitung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Erklärung in einzelnen Schritten, wie etwas gemacht oder benutzt wird.",
+          "explain": {
+            "entryId": "Anleitung",
+            "headword": "Anleitung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌlaɪ̯tʊŋ/",
+              "ipaUS": "/ˈanˌlaɪ̯tʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Anleitung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gebrauchsanweisung",
+                  "Erklärung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Erklärung in einzelnen Schritten, wie etwas gemacht oder benutzt wird.",
+                    "examples": [
+                      "Folgen Sie der Anleitung auf der Verpackung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Anleitung – Beispielsatz folgt.",
+              "answer": "Eine Erklärung in einzelnen Schritten, wie etwas gemacht oder benutzt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Beschreibung, die nur Zutaten und Zubereitung eines Gerichts enthält.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein allgemeines systematisches Vorgehen zur Lösung verschiedener Aufgaben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Methode",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein planmäßiges und systematisches Vorgehen, um ein Ziel zu erreichen.",
+          "explain": {
+            "entryId": "Methode",
+            "headword": "Methode",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/meˈtoːdə/",
+              "ipaUS": "/meˈtoːdə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Methode",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verfahren",
+                  "Vorgehensweise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein planmäßiges und systematisches Vorgehen, um ein Ziel zu erreichen.",
+                    "examples": [
+                      "Diese Methode macht die Zubereitung schneller."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Methode – Beispielsatz folgt.",
+              "answer": "Ein planmäßiges und systematisches Vorgehen, um ein Ziel zu erreichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine konkrete Erklärung mit einzelnen Schritten für eine bestimmte Aufgabe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Liste aus Zutaten und Kochschritten für ein einzelnes Gericht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Snack",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine kleine Mahlzeit, die zwischen den Hauptmahlzeiten gegessen wird.",
+          "explain": {
+            "entryId": "Snack",
+            "headword": "Snack",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/snɛk/",
+              "ipaUS": "/snɛk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Snack",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zwischenmahlzeit",
+                  "Imbiss"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine kleine Mahlzeit, die zwischen den Hauptmahlzeiten gegessen wird.",
+                    "examples": [
+                      "Am Nachmittag esse ich einen kleinen Snack."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Snack – Beispielsatz folgt.",
+              "answer": "Eine kleine Mahlzeit, die zwischen den Hauptmahlzeiten gegessen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine besonders leckere kleine Speise, die man sich als Genuss gönnt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine sehr kleine Portion, die bei einem Empfang in wenigen Bissen gegessen wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Leckerei",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine besonders schmackhafte Speise, die als kleiner Genuss empfunden wird.",
+          "explain": {
+            "entryId": "Leckerei",
+            "headword": "Leckerei",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/lɛkəˈʁaɪ̯/",
+              "ipaUS": "/lɛkəˈʁaɪ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Leckerei",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Köstlichkeit",
+                  "Nascherei"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine besonders schmackhafte Speise, die als kleiner Genuss empfunden wird.",
+                    "examples": [
+                      "Die Bäckerei verkauft viele süße Leckereien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Leckerei – Beispielsatz folgt.",
+              "answer": "Eine besonders schmackhafte Speise, die als kleiner Genuss empfunden wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede kleine Mahlzeit, die zwischen den Hauptmahlzeiten gegessen wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine kleine Portion, die speziell bei einem Empfang angeboten wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "knabbern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kleine feste Lebensmittel langsam und in kleinen Bissen essen.",
+          "explain": {
+            "entryId": "knabbern",
+            "headword": "knabbern",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈknabɐn/",
+              "ipaUS": "/ˈknabɐn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv oder transitiv",
+                "headwordLine": "knabbern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "naschen",
+                  "in kleinen Bissen essen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kleine feste Lebensmittel langsam und in kleinen Bissen essen.",
+                    "examples": [
+                      "Beim Film knabbern wir gern Nüsse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "knabbern – Beispielsatz folgt.",
+              "answer": "Kleine feste Lebensmittel langsam und in kleinen Bissen essen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine vollständige Mahlzeit in einem formellen Restaurant einnehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine besonders leckere Speise schnell und vollständig essen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Vegetarier",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die kein Fleisch und normalerweise auch keinen Fisch isst.",
+          "explain": {
+            "entryId": "Vegetarier",
+            "headword": "Vegetarier",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/veɡetaˈʁi̯ɐ/",
+              "ipaUS": "/veɡetaˈʁi̯ɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Vegetarier",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fleischlos lebende Person"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die kein Fleisch und normalerweise auch keinen Fisch isst.",
+                    "examples": [
+                      "Als Vegetarier bestellt er ein Gericht ohne Fleisch und Fisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vegetarier – Beispielsatz folgt.",
+              "answer": "Eine Person, die kein Fleisch und normalerweise auch keinen Fisch isst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die keinerlei Produkte tierischen Ursprungs verwendet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die bei einer einzelnen Mahlzeit kein Fleisch isst.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "vegan",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Lebensmittel oder andere Produkte tierischen Ursprungs.",
+          "explain": {
+            "entryId": "vegan",
+            "headword": "vegan",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/veˈɡaːn/",
+              "ipaUS": "/veˈɡaːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Ernährungsweise",
+                "headwordLine": "vegan",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "rein pflanzlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne Lebensmittel oder andere Produkte tierischen Ursprungs.",
+                    "examples": [
+                      "Das vegane Gericht enthält weder Fleisch noch Milch oder Eier."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vegan – Beispielsatz folgt.",
+              "answer": "Ohne Lebensmittel oder andere Produkte tierischen Ursprungs.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne Fleisch, aber möglicherweise mit Milch, Eiern oder anderen Tierprodukten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von einer Person, die nur auf Fleisch und Fisch verzichtet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 30,
           "question": "fleischlos",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Fleisch zubereitet oder auskommend, aber nicht unbedingt ohne andere tierische Produkte.",
+          "explain": {
+            "entryId": "fleischlos",
+            "headword": "fleischlos",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈflaɪ̯ʃˌloːs/",
+              "ipaUS": "/ˈflaɪ̯ʃˌloːs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Zusammensetzung",
+                "headwordLine": "fleischlos",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ohne Fleisch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne Fleisch zubereitet oder auskommend, aber nicht unbedingt ohne andere tierische Produkte.",
+                    "examples": [
+                      "Die Suppe ist fleischlos, enthält aber Sahne."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "fleischlos – Beispielsatz folgt.",
+              "answer": "Ohne Fleisch zubereitet oder auskommend, aber nicht unbedingt ohne andere tierische Produkte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vollständig ohne Produkte tierischen Ursprungs.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von einer Person, die dauerhaft weder Fleisch noch Fisch isst.",
               "ok": false
             }
           ]

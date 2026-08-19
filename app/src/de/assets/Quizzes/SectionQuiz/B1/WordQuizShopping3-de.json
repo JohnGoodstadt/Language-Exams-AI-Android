@@ -2,190 +2,511 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizShopping3-de",
-  "title": "",
+  "title": "Einkaufen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Rechnung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Dokument, das gelieferte Waren oder Leistungen und den dafür zu zahlenden Betrag auflistet.",
+          "explain": {
+            "entryId": "Rechnung",
+            "headword": "Rechnung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁɛçnʊŋ/",
+              "ipaUS": "/ˈʁɛçnʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Rechnung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Faktura",
+                  "Zahlungsaufforderung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Dokument, das gelieferte Waren oder Leistungen und den dafür zu zahlenden Betrag auflistet.",
+                    "examples": [
+                      "Die Rechnung muss innerhalb von vierzehn Tagen bezahlt werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rechnung – Beispielsatz folgt.",
+              "answer": "Ein Dokument, das gelieferte Waren oder Leistungen und den dafür zu zahlenden Betrag auflistet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein allgemeiner Nachweis, dass eine Ware bereits gekauft und bezahlt wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der kleine Beleg, den eine Kasse unmittelbar nach der Zahlung druckt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Rückerstattung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Rückzahlung eines bereits gezahlten Betrags, etwa nach einer Rückgabe oder Stornierung.",
+          "explain": {
+            "entryId": "Rückerstattung",
+            "headword": "Rückerstattung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁʏkʔɛɐ̯ˌʃtatʊŋ/",
+              "ipaUS": "/ˈʁʏkʔɛɐ̯ˌʃtatʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Rückerstattung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Refund",
+                  "Rückzahlung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Rückzahlung eines bereits gezahlten Betrags, etwa nach einer Rückgabe oder Stornierung.",
+                    "examples": [
+                      "Nach der Stornierung erhielt sie eine vollständige Rückerstattung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rückerstattung – Beispielsatz folgt.",
+              "answer": "Die Rückzahlung eines bereits gezahlten Betrags, etwa nach einer Rückgabe oder Stornierung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Rückzahlung von Kosten, die jemand zunächst für eine andere Stelle bezahlt hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Zahlung als Ausgleich für einen Schaden oder Nachteil.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Erstattung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Rückzahlung oder Übernahme von Kosten, die jemand zuvor bezahlt hat.",
+          "explain": {
+            "entryId": "Erstattung",
+            "headword": "Erstattung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈʃtatʊŋ/",
+              "ipaUS": "/ɛɐ̯ˈʃtatʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erstattung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kostenersatz",
+                  "Rückzahlung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Rückzahlung oder Übernahme von Kosten, die jemand zuvor bezahlt hat.",
+                    "examples": [
+                      "Die Versicherung prüft die Erstattung der Behandlungskosten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erstattung – Beispielsatz folgt.",
+              "answer": "Die Rückzahlung oder Übernahme von Kosten, die jemand zuvor bezahlt hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Rückzahlung des Kaufpreises nach der Rückgabe einer Ware.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine zusätzliche Zahlung als Ausgleich für einen erlittenen Schaden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Entschädigung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Geld- oder Ersatzleistung als Ausgleich für einen Schaden, Verlust oder Nachteil.",
+          "explain": {
+            "entryId": "Entschädigung",
+            "headword": "Entschädigung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛntˈʃɛːdɪɡʊŋ/",
+              "ipaUS": "/ɛntˈʃɛːdɪɡʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Entschädigung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ausgleich",
+                  "Schadenersatz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Geld- oder Ersatzleistung als Ausgleich für einen Schaden, Verlust oder Nachteil.",
+                    "examples": [
+                      "Wegen der langen Verspätung bekam sie eine Entschädigung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Entschädigung – Beispielsatz folgt.",
+              "answer": "Eine Geld- oder Ersatzleistung als Ausgleich für einen Schaden, Verlust oder Nachteil.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Rückzahlung des Preises für eine zurückgegebene Ware.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Übernahme von Kosten, die jemand für eine Organisation vorgestreckt hat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Ausverkauf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Verkaufsaktion, bei der vorhandene Waren stark reduziert und möglichst vollständig verkauft werden.",
+          "explain": {
+            "entryId": "Ausverkauf",
+            "headword": "Ausverkauf",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯sˌfɛɐ̯kaʊ̯f/",
+              "ipaUS": "/ˈaʊ̯sˌfɛɐ̯kaʊ̯f/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Ausverkauf",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schlussverkauf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Verkaufsaktion, bei der vorhandene Waren stark reduziert und möglichst vollständig verkauft werden.",
+                    "examples": [
+                      "Im Ausverkauf waren viele Winterjacken stark reduziert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ausverkauf – Beispielsatz folgt.",
+              "answer": "Eine Verkaufsaktion, bei der vorhandene Waren stark reduziert und möglichst vollständig verkauft werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Verkauf wegen der endgültigen Schließung oder Räumung eines Geschäfts.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine normale zeitlich begrenzte Preisaktion für einzelne Produkte.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Räumungsverkauf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein stark reduzierter Verkauf, weil ein Geschäft oder Lager geräumt oder geschlossen wird.",
+          "explain": {
+            "entryId": "Räumungsverkauf",
+            "headword": "Räumungsverkauf",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁɔɪ̯mʊŋsˌfɛɐ̯kaʊ̯f/",
+              "ipaUS": "/ˈʁɔɪ̯mʊŋsˌfɛɐ̯kaʊ̯f/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Räumungsverkauf",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Geschäftsauflösung",
+                  "Abverkauf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein stark reduzierter Verkauf, weil ein Geschäft oder Lager geräumt oder geschlossen wird.",
+                    "examples": [
+                      "Wegen der Geschäftsaufgabe findet ein Räumungsverkauf statt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Räumungsverkauf – Beispielsatz folgt.",
+              "answer": "Ein stark reduzierter Verkauf, weil ein Geschäft oder Lager geräumt oder geschlossen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine allgemeine Aktion, bei der saisonale Restbestände verkauft werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein einzelnes besonders günstig gekauftes Produkt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Einkaufszentrum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein großer Gebäudekomplex, in dem viele Geschäfte und Dienstleistungen zusammen untergebracht sind.",
+          "explain": {
+            "entryId": "Einkaufszentrum",
+            "headword": "Einkaufszentrum",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nkaʊ̯fsˌt͡sɛntʁʊm/",
+              "ipaUS": "/ˈaɪ̯nkaʊ̯fsˌt͡sɛntʁʊm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Einkaufszentrum",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Shoppingcenter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein großer Gebäudekomplex, in dem viele Geschäfte und Dienstleistungen zusammen untergebracht sind.",
+                    "examples": [
+                      "Das Einkaufszentrum hat mehr als achtzig Geschäfte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Einkaufszentrum – Beispielsatz folgt.",
+              "answer": "Ein großer Gebäudekomplex, in dem viele Geschäfte und Dienstleistungen zusammen untergebracht sind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die englisch beeinflusste Bezeichnung für denselben Gebäudekomplex.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein überdachter Durchgang mit Geschäften auf beiden Seiten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Shoppingcenter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine aus dem Englischen übernommene Bezeichnung für ein großes Einkaufszentrum mit vielen Geschäften.",
+          "explain": {
+            "entryId": "Shoppingcenter",
+            "headword": "Shoppingcenter",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃɔpɪŋˌsɛntɐ/",
+              "ipaUS": "/ˈʃɔpɪŋˌsɛntɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Shoppingcenter",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Einkaufszentrum",
+                  "Mall"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine aus dem Englischen übernommene Bezeichnung für ein großes Einkaufszentrum mit vielen Geschäften.",
+                    "examples": [
+                      "Im neuen Shoppingcenter gibt es auch ein Kino."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Shoppingcenter – Beispielsatz folgt.",
+              "answer": "Eine aus dem Englischen übernommene Bezeichnung für ein großes Einkaufszentrum mit vielen Geschäften.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die traditionelle deutsche Bezeichnung für denselben Gebäudekomplex.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein schmaler überdachter Durchgang, an dem einzelne Läden liegen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Einkaufspassage",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein meist überdachter Durchgang oder eine Halle mit Geschäften auf beiden Seiten.",
+          "explain": {
+            "entryId": "Einkaufspassage",
+            "headword": "Einkaufspassage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nkaʊ̯fsˌpasaːʒə/",
+              "ipaUS": "/ˈaɪ̯nkaʊ̯fsˌpasaːʒə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Einkaufspassage",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ladenpassage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein meist überdachter Durchgang oder eine Halle mit Geschäften auf beiden Seiten.",
+                    "examples": [
+                      "Die Einkaufspassage verbindet den Bahnhof mit der Innenstadt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Einkaufspassage – Beispielsatz folgt.",
+              "answer": "Ein meist überdachter Durchgang oder eine Halle mit Geschäften auf beiden Seiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein großer geschlossener Gebäudekomplex mit vielen Geschäften und Freizeitangeboten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein vorübergehender Markt mit Verkaufsständen im Freien.",
               "ok": false
             }
           ]

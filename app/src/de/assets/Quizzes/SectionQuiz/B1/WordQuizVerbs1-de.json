@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs1-de",
-  "title": "",
+  "title": "Verben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "erreichen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An ein Ziel gelangen oder ein gewünschtes Ergebnis erfolgreich erzielen.",
+          "explain": {
+            "entryId": "erreichen",
+            "headword": "erreichen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈʁaɪ̯çn̩/",
+              "ipaUS": "/ɛɐ̯ˈʁaɪ̯çn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "erreichen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erzielen",
+                  "gelangen zu"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "An ein Ziel gelangen oder ein gewünschtes Ergebnis erfolgreich erzielen.",
+                    "examples": [
+                      "Nach vielen Versuchen erreichte sie ihr Ziel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erreichen – Beispielsatz folgt.",
+              "answer": "An ein Ziel gelangen oder ein gewünschtes Ergebnis erfolgreich erzielen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine schwierige Aufgabe erfolgreich erledigen oder etwas neu herstellen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Etwas Wertvolles, einen Status oder Kenntnisse erhalten.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "schaffen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Aufgabe erfolgreich bewältigen oder etwas Neues hervorbringen.",
+          "explain": {
+            "entryId": "schaffen",
+            "headword": "schaffen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃafn̩/",
+              "ipaUS": "/ˈʃafn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "schaffen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bewältigen",
+                  "erzeugen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Aufgabe erfolgreich bewältigen oder etwas Neues hervorbringen.",
+                    "examples": [
+                      "Wir schaffen die Arbeit bis Freitag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schaffen – Beispielsatz folgt.",
+              "answer": "Eine Aufgabe erfolgreich bewältigen oder etwas Neues hervorbringen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein festgelegtes Ziel oder einen bestimmten Ort erreichen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen Status oder Besitz nach längerem Bemühen erhalten.",
               "ok": false
             }
           ]
@@ -54,18 +126,54 @@
           "title": "",
           "page": 3,
           "question": "erlangen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas wie Wissen, Besitz, Anerkennung oder einen Status nach Bemühen erhalten.",
+          "explain": {
+            "entryId": "erlangen",
+            "headword": "erlangen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈlaŋən/",
+              "ipaUS": "/ɛɐ̯ˈlaŋən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, gehoben",
+                "headwordLine": "erlangen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erwerben",
+                  "gewinnen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas wie Wissen, Besitz, Anerkennung oder einen Status nach Bemühen erhalten.",
+                    "examples": [
+                      "Durch die Ausbildung erlangte er neue Qualifikationen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erlangen – Beispielsatz folgt.",
+              "answer": "Etwas wie Wissen, Besitz, Anerkennung oder einen Status nach Bemühen erhalten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine konkrete Aufgabe rechtzeitig erfolgreich erledigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "An einem räumlichen Ziel ankommen oder ein Ergebnis erzielen.",
               "ok": false
             }
           ]
@@ -74,18 +182,53 @@
           "title": "",
           "page": 4,
           "question": "bewundern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person oder Sache wegen besonderer Eigenschaften oder Leistungen mit Anerkennung betrachten.",
+          "explain": {
+            "entryId": "bewundern",
+            "headword": "bewundern",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈvʊndɐn/",
+              "ipaUS": "/bəˈvʊndɐn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "bewundern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bestaunen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person oder Sache wegen besonderer Eigenschaften oder Leistungen mit Anerkennung betrachten.",
+                    "examples": [
+                      "Ich bewundere ihren Mut und ihre Geduld."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bewundern – Beispielsatz folgt.",
+              "answer": "Eine Person oder Sache wegen besonderer Eigenschaften oder Leistungen mit Anerkennung betrachten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person als gleichwertig anerkennen und ihre Grenzen beachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Den Wert oder die Bedeutung einer Person oder Sache positiv beurteilen.",
               "ok": false
             }
           ]
@@ -94,18 +237,54 @@
           "title": "",
           "page": 5,
           "question": "respektieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, Regel oder Grenze anerkennen und angemessen beachten.",
+          "explain": {
+            "entryId": "respektieren",
+            "headword": "respektieren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁɛspɛkˈtiːʁən/",
+              "ipaUS": "/ʁɛspɛkˈtiːʁən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "respektieren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "achten",
+                  "anerkennen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, Regel oder Grenze anerkennen und angemessen beachten.",
+                    "examples": [
+                      "Wir müssen die Entscheidung der anderen respektieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "respektieren – Beispielsatz folgt.",
+              "answer": "Eine Person, Regel oder Grenze anerkennen und angemessen beachten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jemanden wegen außergewöhnlicher Leistungen mit großer Anerkennung betrachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Den persönlichen oder materiellen Wert von etwas hoch einschätzen.",
               "ok": false
             }
           ]
@@ -114,18 +293,54 @@
           "title": "",
           "page": 6,
           "question": "schätzen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Den Wert einer Person oder Sache anerkennen; auch eine Größe ungefähr beurteilen.",
+          "explain": {
+            "entryId": "schätzen",
+            "headword": "schätzen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃɛt͡sn̩/",
+              "ipaUS": "/ˈʃɛt͡sn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "schätzen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "wertschätzen",
+                  "abschätzen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Den Wert einer Person oder Sache anerkennen; auch eine Größe ungefähr beurteilen.",
+                    "examples": [
+                      "Ich schätze ihre ehrliche Unterstützung sehr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schätzen – Beispielsatz folgt.",
+              "answer": "Den Wert einer Person oder Sache anerkennen; auch eine Größe ungefähr beurteilen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person wegen besonderer Leistungen staunend betrachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Rechte und Grenzen einer anderen Person beachten.",
               "ok": false
             }
           ]
@@ -134,18 +349,54 @@
           "title": "",
           "page": 7,
           "question": "kommunizieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Informationen, Gedanken oder Gefühle mit anderen austauschen oder mitteilen.",
+          "explain": {
+            "entryId": "kommunizieren",
+            "headword": "kommunizieren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/komuniˈt͡siːʁən/",
+              "ipaUS": "/komuniˈt͡siːʁən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv oder transitiv",
+                "headwordLine": "kommunizieren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sich verständigen",
+                  "mitteilen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Informationen, Gedanken oder Gefühle mit anderen austauschen oder mitteilen.",
+                    "examples": [
+                      "Das Team kommuniziert hauptsächlich per E-Mail."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kommunizieren – Beispielsatz folgt.",
+              "answer": "Informationen, Gedanken oder Gefühle mit anderen austauschen oder mitteilen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Informationen zwischen Personen übertragen oder bei einem Konflikt vermitteln.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wechselseitig handeln und direkt aufeinander reagieren.",
               "ok": false
             }
           ]
@@ -154,18 +405,54 @@
           "title": "",
           "page": 8,
           "question": "vermitteln",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Informationen oder Fähigkeiten weitergeben oder zwischen verschiedenen Seiten eine Verbindung herstellen.",
+          "explain": {
+            "entryId": "vermitteln",
+            "headword": "vermitteln",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈmɪtl̩n/",
+              "ipaUS": "/fɛɐ̯ˈmɪtl̩n/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "vermitteln",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "weitergeben",
+                  "übertragen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Informationen oder Fähigkeiten weitergeben oder zwischen verschiedenen Seiten eine Verbindung herstellen.",
+                    "examples": [
+                      "Die Lehrerin vermittelt den Schülern praktische Kenntnisse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vermitteln – Beispielsatz folgt.",
+              "answer": "Informationen oder Fähigkeiten weitergeben oder zwischen verschiedenen Seiten eine Verbindung herstellen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gedanken und Nachrichten direkt mit anderen austauschen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gegenseitig handeln und auf das Verhalten anderer reagieren.",
               "ok": false
             }
           ]
@@ -174,18 +461,53 @@
           "title": "",
           "page": 9,
           "question": "interagieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Wechselseitig handeln, sich beeinflussen und aufeinander reagieren.",
+          "explain": {
+            "entryId": "interagieren",
+            "headword": "interagieren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪntɐʔaˈɡiːʁən/",
+              "ipaUS": "/ɪntɐʔaˈɡiːʁən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv",
+                "headwordLine": "interagieren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aufeinander reagieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Wechselseitig handeln, sich beeinflussen und aufeinander reagieren.",
+                    "examples": [
+                      "Im Kurs interagieren die Teilnehmer in kleinen Gruppen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "interagieren – Beispielsatz folgt.",
+              "answer": "Wechselseitig handeln, sich beeinflussen und aufeinander reagieren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Informationen oder Gefühle durch Sprache und Zeichen austauschen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kenntnisse weitergeben oder zwischen zwei Konfliktparteien helfen.",
               "ok": false
             }
           ]
@@ -194,18 +516,53 @@
           "title": "",
           "page": 10,
           "question": "überzeugen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Jemanden durch Gründe oder Beweise dazu bringen, etwas für richtig oder wahr zu halten.",
+          "explain": {
+            "entryId": "überzeugen",
+            "headword": "überzeugen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/yːbɐˈt͡sɔɪ̯ɡn̩/",
+              "ipaUS": "/yːbɐˈt͡sɔɪ̯ɡn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "überzeugen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "überzeugen von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Jemanden durch Gründe oder Beweise dazu bringen, etwas für richtig oder wahr zu halten.",
+                    "examples": [
+                      "Die guten Argumente überzeugten die Gruppe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "überzeugen – Beispielsatz folgt.",
+              "answer": "Jemanden durch Gründe oder Beweise dazu bringen, etwas für richtig oder wahr zu halten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jemanden durch Drängen oder Zureden zu einer Handlung bewegen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jemandem mit Nachdruck bestätigen, dass eine Aussage wahr ist.",
               "ok": false
             }
           ]

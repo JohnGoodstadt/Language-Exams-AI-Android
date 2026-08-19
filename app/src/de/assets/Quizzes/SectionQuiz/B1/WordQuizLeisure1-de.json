@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizLeisure1-de",
-  "title": "",
+  "title": "Freizeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Aktivität",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Handlung oder Beschäftigung, bei der jemand aktiv etwas tut.",
+          "explain": {
+            "entryId": "Aktivität",
+            "headword": "Aktivität",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/aktiviˈtɛːt/",
+              "ipaUS": "/aktiviˈtɛːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Aktivität",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Beschäftigung",
+                  "Tätigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Handlung oder Beschäftigung, bei der jemand aktiv etwas tut.",
+                    "examples": [
+                      "Der Verein bietet viele Aktivitäten für Familien an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Aktivität – Beispielsatz folgt.",
+              "answer": "Eine Handlung oder Beschäftigung, bei der jemand aktiv etwas tut.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein organisiertes Ereignis mit festem Ort und Termin.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Zeit, in der man keine beruflichen oder privaten Pflichten hat.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "Spiel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Beschäftigung mit Regeln oder Fantasie, die der Unterhaltung oder einem Wettbewerb dient.",
+          "explain": {
+            "entryId": "Spiel",
+            "headword": "Spiel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃpiːl/",
+              "ipaUS": "/ʃpiːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Spiel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wettspiel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Beschäftigung mit Regeln oder Fantasie, die der Unterhaltung oder einem Wettbewerb dient.",
+                    "examples": [
+                      "Das Spiel endet nach neunzig Minuten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Spiel – Beispielsatz folgt.",
+              "answer": "Eine Beschäftigung mit Regeln oder Fantasie, die der Unterhaltung oder einem Wettbewerb dient.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine öffentliche Darbietung von Musik vor Zuhörern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine regelmäßige private Beschäftigung, der man über Jahre nachgeht.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "Veranstaltung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein organisiertes Ereignis mit einem bestimmten Programm, Ort und Termin.",
+          "explain": {
+            "entryId": "Veranstaltung",
+            "headword": "Veranstaltung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʔanʃtaltʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈʔanʃtaltʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Veranstaltung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Event",
+                  "Ereignis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein organisiertes Ereignis mit einem bestimmten Programm, Ort und Termin.",
+                    "examples": [
+                      "Die Veranstaltung beginnt am Samstag um 19 Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Veranstaltung – Beispielsatz folgt.",
+              "answer": "Ein organisiertes Ereignis mit einem bestimmten Programm, Ort und Termin.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Handlung, die ohne festen Termin ausgeführt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gebäude, in dem historische Gegenstände gesammelt werden.",
               "ok": false
             }
           ]
@@ -74,18 +181,53 @@
           "title": "",
           "page": 4,
           "question": "Konzert",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Veranstaltung, bei der Musik live vor einem Publikum gespielt oder gesungen wird.",
+          "explain": {
+            "entryId": "Konzert",
+            "headword": "Konzert",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kɔnˈt͡sɛʁt/",
+              "ipaUS": "/kɔnˈt͡sɛʁt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Konzert",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Musikveranstaltung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Veranstaltung, bei der Musik live vor einem Publikum gespielt oder gesungen wird.",
+                    "examples": [
+                      "Mehr als tausend Menschen besuchten das Konzert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Konzert – Beispielsatz folgt.",
+              "answer": "Eine Veranstaltung, bei der Musik live vor einem Publikum gespielt oder gesungen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Aufführung, bei der Schauspieler ein geschriebenes Stück darstellen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Ausstellung, in der Kunstwerke betrachtet oder gekauft werden können.",
               "ok": false
             }
           ]
@@ -94,18 +236,53 @@
           "title": "",
           "page": 5,
           "question": "Band",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gruppe von Musikern, die regelmäßig gemeinsam moderne Musik spielt.",
+          "explain": {
+            "entryId": "Band",
+            "headword": "Band",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bɛnt/",
+              "ipaUS": "/bɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Band",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Musikgruppe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Gruppe von Musikern, die regelmäßig gemeinsam moderne Musik spielt.",
+                    "examples": [
+                      "Die Band spielt heute Abend in einem kleinen Club."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Band – Beispielsatz folgt.",
+              "answer": "Eine Gruppe von Musikern, die regelmäßig gemeinsam moderne Musik spielt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Menschen, die einer Aufführung zuhören oder zusehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Gruppe von Schauspielern, die in einem Theaterstück auftritt.",
               "ok": false
             }
           ]
@@ -114,18 +291,54 @@
           "title": "",
           "page": 6,
           "question": "Publikum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Menschen, die eine Aufführung, Veranstaltung oder Sendung ansehen oder anhören.",
+          "explain": {
+            "entryId": "Publikum",
+            "headword": "Publikum",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈpuːblikʊm/",
+              "ipaUS": "/ˈpuːblikʊm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral, kollektiv",
+                "headwordLine": "Publikum",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zuschauer",
+                  "Zuhörer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Menschen, die eine Aufführung, Veranstaltung oder Sendung ansehen oder anhören.",
+                    "examples": [
+                      "Das Publikum applaudierte nach dem letzten Lied."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Publikum – Beispielsatz folgt.",
+              "answer": "Die Menschen, die eine Aufführung, Veranstaltung oder Sendung ansehen oder anhören.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Künstler, die gemeinsam auf einer Bühne auftreten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Mitarbeiter, die eine Veranstaltung planen und organisieren.",
               "ok": false
             }
           ]
@@ -134,18 +347,54 @@
           "title": "",
           "page": 7,
           "question": "Unterhaltung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas, das Menschen angenehm beschäftigt und ihnen Vergnügen bietet; auch ein Gespräch.",
+          "explain": {
+            "entryId": "Unterhaltung",
+            "headword": "Unterhaltung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˌʊntɐˈhaltʊŋ/",
+              "ipaUS": "/ˌʊntɐˈhaltʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Unterhaltung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vergnügen",
+                  "Entertainment"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas, das Menschen angenehm beschäftigt und ihnen Vergnügen bietet; auch ein Gespräch.",
+                    "examples": [
+                      "Der Film bietet gute Unterhaltung für die ganze Familie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unterhaltung – Beispielsatz folgt.",
+              "answer": "Etwas, das Menschen angenehm beschäftigt und ihnen Vergnügen bietet; auch ein Gespräch.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Pause, die ausschließlich der körperlichen Erholung dient.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine ernsthafte berufliche Aufgabe mit einem festen Ergebnis.",
               "ok": false
             }
           ]
@@ -154,18 +403,54 @@
           "title": "",
           "page": 8,
           "question": "Show",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine unterhaltende, meist auffällige Darbietung vor Publikum oder im Fernsehen.",
+          "explain": {
+            "entryId": "Show",
+            "headword": "Show",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃoː/",
+              "ipaUS": "/ʃoː/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Show",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Unterhaltungssendung",
+                  "Darbietung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine unterhaltende, meist auffällige Darbietung vor Publikum oder im Fernsehen.",
+                    "examples": [
+                      "Die Show verbindet Musik, Tanz und lustige Geschichten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Show – Beispielsatz folgt.",
+              "answer": "Eine unterhaltende, meist auffällige Darbietung vor Publikum oder im Fernsehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine stille Ausstellung wissenschaftlicher Dokumente in einem Museum.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein geschriebenes Werk, das nur für das Lesen bestimmt ist.",
               "ok": false
             }
           ]
@@ -174,18 +459,53 @@
           "title": "",
           "page": 9,
           "question": "Film",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Folge bewegter Bilder, die eine Geschichte oder ein Thema für Kino, Fernsehen oder Internet darstellt.",
+          "explain": {
+            "entryId": "Film",
+            "headword": "Film",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɪlm/",
+              "ipaUS": "/fɪlm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Film",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kinofilm"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Folge bewegter Bilder, die eine Geschichte oder ein Thema für Kino, Fernsehen oder Internet darstellt.",
+                    "examples": [
+                      "Der Film erzählt die Geschichte einer jungen Musikerin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Film – Beispielsatz folgt.",
+              "answer": "Eine Folge bewegter Bilder, die eine Geschichte oder ein Thema für Kino, Fernsehen oder Internet darstellt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine live gespielte Handlung mit Schauspielern auf einer Bühne.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Sammlung von Bildern, die ohne Bewegung ausgestellt wird.",
               "ok": false
             }
           ]
@@ -194,18 +514,53 @@
           "title": "",
           "page": 10,
           "question": "Hobby",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Beschäftigung, die jemand regelmäßig und freiwillig in der Freizeit aus Interesse ausübt.",
+          "explain": {
+            "entryId": "Hobby",
+            "headword": "Hobby",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhɔbi/",
+              "ipaUS": "/ˈhɔbi/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Hobby",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Freizeitbeschäftigung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Beschäftigung, die jemand regelmäßig und freiwillig in der Freizeit aus Interesse ausübt.",
+                    "examples": [
+                      "Fotografieren ist seit vielen Jahren ihr Hobby."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hobby – Beispielsatz folgt.",
+              "answer": "Eine Beschäftigung, die jemand regelmäßig und freiwillig in der Freizeit aus Interesse ausübt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Veranstaltung, die man nur einmal besucht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine vorgeschriebene Tätigkeit während der Arbeitszeit.",
               "ok": false
             }
           ]

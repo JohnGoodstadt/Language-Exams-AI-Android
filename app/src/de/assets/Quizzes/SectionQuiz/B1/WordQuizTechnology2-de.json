@@ -2,210 +2,563 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTechnology2-de",
-  "title": "",
+  "title": "Technologie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "elektronisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit elektronischen Bauteilen oder Systemen arbeitend beziehungsweise darüber übertragen.",
+          "explain": {
+            "entryId": "elektronisch",
+            "headword": "elektronisch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/elɛkˈtʁoːnɪʃ/",
+              "ipaUS": "/elɛkˈtʁoːnɪʃ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Technik",
+                "headwordLine": "elektronisch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "elektrisch gesteuert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit elektronischen Bauteilen oder Systemen arbeitend beziehungsweise darüber übertragen.",
+                    "examples": [
+                      "Die Rechnung wird elektronisch verschickt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "elektronisch – Beispielsatz folgt.",
+              "answer": "Mit elektronischen Bauteilen oder Systemen arbeitend beziehungsweise darüber übertragen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ausschließlich als Zahlen und Daten gespeichert oder verarbeitet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In einer künstlich erzeugten Wirklichkeit statt körperlich anwesend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "virtuell",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch Computer erzeugt oder online statt in einer körperlich vorhandenen Umgebung stattfindend.",
+          "explain": {
+            "entryId": "virtuell",
+            "headword": "virtuell",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/vɪʁtuˈɛl/",
+              "ipaUS": "/vɪʁtuˈɛl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "digitale Umgebung",
+                "headwordLine": "virtuell",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "online",
+                  "simuliert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch Computer erzeugt oder online statt in einer körperlich vorhandenen Umgebung stattfindend.",
+                    "examples": [
+                      "Das Team trifft sich in einem virtuellen Konferenzraum."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "virtuell – Beispielsatz folgt.",
+              "answer": "Durch Computer erzeugt oder online statt in einer körperlich vorhandenen Umgebung stattfindend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In Form von elektronisch verarbeiteten Zahlen und Daten gespeichert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit elektrischen Bauteilen statt mechanisch funktionierend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "E-Mail",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine elektronische Nachricht, die über das Internet an eine Adresse gesendet wird.",
+          "explain": {
+            "entryId": "E-Mail",
+            "headword": "E-Mail",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈiːmeɪ̯l/",
+              "ipaUS": "/ˈiːmeɪ̯l/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "E-Mail",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "elektronische Post"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine elektronische Nachricht, die über das Internet an eine Adresse gesendet wird.",
+                    "examples": [
+                      "Bitte schicken Sie die Bestätigung per E-Mail."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "E-Mail – Beispielsatz folgt.",
+              "answer": "Eine elektronische Nachricht, die über das Internet an eine Adresse gesendet wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede kurze Information, die über ein digitales Gerät übermittelt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Bereich eines E-Mail-Kontos, in dem neue Nachrichten ankommen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Nachricht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine mitgeteilte Information, die mündlich, schriftlich oder digital übermittelt werden kann.",
+          "explain": {
+            "entryId": "Nachricht",
+            "headword": "Nachricht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxʁɪçt/",
+              "ipaUS": "/ˈnaːxʁɪçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Nachricht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mitteilung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine mitgeteilte Information, die mündlich, schriftlich oder digital übermittelt werden kann.",
+                    "examples": [
+                      "Ich habe dir eine Nachricht über den Messenger geschickt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachricht – Beispielsatz folgt.",
+              "answer": "Eine mitgeteilte Information, die mündlich, schriftlich oder digital übermittelt werden kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine elektronische Mitteilung, die immer an eine E-Mail-Adresse gesendet wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Datei, die zusammen mit einer E-Mail übertragen wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Posteingang",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Bereich eines E-Mail- oder Nachrichtendienstes, in dem eingegangene Mitteilungen angezeigt werden.",
+          "explain": {
+            "entryId": "Posteingang",
+            "headword": "Posteingang",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈpɔstʔaɪ̯nˌɡaŋ/",
+              "ipaUS": "/ˈpɔstʔaɪ̯nˌɡaŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Posteingang",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Inbox"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Bereich eines E-Mail- oder Nachrichtendienstes, in dem eingegangene Mitteilungen angezeigt werden.",
+                    "examples": [
+                      "Die neue E-Mail liegt bereits im Posteingang."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Posteingang – Beispielsatz folgt.",
+              "answer": "Der Bereich eines E-Mail- oder Nachrichtendienstes, in dem eingegangene Mitteilungen angezeigt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Ordner, in dem bereits verschickte Nachrichten gespeichert werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Datei, die einer elektronischen Nachricht beigefügt wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Datei",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine unter einem Namen gespeicherte Einheit digitaler Daten auf einem Gerät.",
+          "explain": {
+            "entryId": "Datei",
+            "headword": "Datei",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/daˈtaɪ̯/",
+              "ipaUS": "/daˈtaɪ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Datei",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "File"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine unter einem Namen gespeicherte Einheit digitaler Daten auf einem Gerät.",
+                    "examples": [
+                      "Speichern Sie die Datei auf Ihrem Computer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Datei – Beispielsatz folgt.",
+              "answer": "Eine unter einem Namen gespeicherte Einheit digitaler Daten auf einem Gerät.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine lesbare Unterlage mit Text oder Bildern, unabhängig von ihrer Speicherform.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein zusätzliches Dokument, das gemeinsam mit einer E-Mail verschickt wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Dokument",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine schriftliche oder digitale Unterlage, die Informationen festhält oder als Nachweis dient.",
+          "explain": {
+            "entryId": "Dokument",
+            "headword": "Dokument",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/dokuˈmɛnt/",
+              "ipaUS": "/dokuˈmɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Dokument",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Unterlage",
+                  "Schriftstück"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine schriftliche oder digitale Unterlage, die Informationen festhält oder als Nachweis dient.",
+                    "examples": [
+                      "Das Dokument enthält alle wichtigen Vertragsdaten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Dokument – Beispielsatz folgt.",
+              "answer": "Eine schriftliche oder digitale Unterlage, die Informationen festhält oder als Nachweis dient.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede gespeicherte Einheit digitaler Daten, auch ein Bild oder Programm.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Datei, die ausschließlich als Zusatz zu einer Nachricht verschickt wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Anhang",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Datei oder zusätzliche Unterlage, die einer E-Mail oder einem Dokument beigefügt ist.",
+          "explain": {
+            "entryId": "Anhang",
+            "headword": "Anhang",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌhaŋ/",
+              "ipaUS": "/ˈanˌhaŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Anhang",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Attachment",
+                  "Anlage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Datei oder zusätzliche Unterlage, die einer E-Mail oder einem Dokument beigefügt ist.",
+                    "examples": [
+                      "Die Rechnung finden Sie im Anhang der E-Mail."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Anhang – Beispielsatz folgt.",
+              "answer": "Eine Datei oder zusätzliche Unterlage, die einer E-Mail oder einem Dokument beigefügt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine eigenständig gespeicherte Einheit digitaler Daten auf einem Gerät.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Haupttext einer elektronischen Nachricht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Internet",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das weltweite System miteinander verbundener Computernetze für Daten und Dienste.",
+          "explain": {
+            "entryId": "Internet",
+            "headword": "Internet",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɪntɐnɛt/",
+              "ipaUS": "/ˈɪntɐnɛt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Internet",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "weltweites Netz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das weltweite System miteinander verbundener Computernetze für Daten und Dienste.",
+                    "examples": [
+                      "Über das Internet können Menschen weltweit kommunizieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Internet – Beispielsatz folgt.",
+              "answer": "Das weltweite System miteinander verbundener Computernetze für Daten und Dienste.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine begrenzte Gruppe direkt miteinander verbundener Geräte.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne drahtlose Verbindung in einem Gebäude.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Netz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein System verbundener Leitungen, Geräte oder Kommunikationswege; oft kurz für Internet oder Mobilfunknetz.",
+          "explain": {
+            "entryId": "Netz",
+            "headword": "Netz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/nɛt͡s/",
+              "ipaUS": "/nɛt͡s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Netz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kommunikationsnetz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein System verbundener Leitungen, Geräte oder Kommunikationswege; oft kurz für Internet oder Mobilfunknetz.",
+                    "examples": [
+                      "In den Bergen hatte das Telefon kein Netz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Netz – Beispielsatz folgt.",
+              "answer": "Ein System verbundener Leitungen, Geräte oder Kommunikationswege; oft kurz für Internet oder Mobilfunknetz.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine technisch organisierte Gruppe von Computern und Geräten, die Daten austauschen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die konkrete Verbindung zwischen genau zwei Geräten oder Diensten.",
               "ok": false
             }
           ]

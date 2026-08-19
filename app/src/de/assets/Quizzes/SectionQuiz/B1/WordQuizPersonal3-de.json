@@ -2,90 +2,235 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal3-de",
-  "title": "",
+  "title": "Persönliches",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Meinungsumfrage",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Befragung, die Einstellungen oder Ansichten einer Gruppe ermittelt.",
+          "explain": {
+            "entryId": "Meinungsumfrage",
+            "headword": "Meinungsumfrage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmaɪ̯nʊŋsʔʊmˌfʁaːɡə/",
+              "ipaUS": "/ˈmaɪ̯nʊŋsʔʊmˌfʁaːɡə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Meinungsumfrage",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Meinungsforschung",
+                  "Meinungsbefragung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Befragung, die Einstellungen oder Ansichten einer Gruppe ermittelt.",
+                    "examples": [
+                      "Die Meinungsumfrage zeigt, was die Bürger über den Plan denken."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Meinungsumfrage – Beispielsatz folgt.",
+              "answer": "Eine Befragung, mit der Ansichten oder Einstellungen einer Gruppe ermittelt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Formular zur Anmeldung bei einer Behörde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gespräch, in dem nur die berufliche Erfahrung geprüft wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Titel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Bezeichnung für ein Werk, Amt oder eine erworbene akademische Würde.",
+          "explain": {
+            "entryId": "Titel",
+            "headword": "Titel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈtiːtl̩/",
+              "ipaUS": "/ˈtiːtl̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Titel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Überschrift",
+                  "Bezeichnung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Bezeichnung für ein Werk, Amt oder eine erworbene akademische Würde.",
+                    "examples": [
+                      "Der Titel des Buches steht auf dem Umschlag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Titel – Beispielsatz folgt.",
+              "answer": "Eine Bezeichnung für ein Werk, eine Funktion oder eine erworbene akademische Würde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die genaue Stufe einer Person innerhalb einer festen Ordnung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine freie Arbeitsstelle in einem Unternehmen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Position",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Stelle, Funktion, Haltung oder Lage innerhalb eines Zusammenhangs.",
+          "explain": {
+            "entryId": "Position",
+            "headword": "Position",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/poziˈt͡si̯oːn/",
+              "ipaUS": "/poziˈt͡si̯oːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Position",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Stelle",
+                  "Funktion",
+                  "Standpunkt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Stelle, Funktion, Haltung oder Lage innerhalb eines Zusammenhangs.",
+                    "examples": [
+                      "Sie hat eine verantwortungsvolle Position in der Firma."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Position – Beispielsatz folgt.",
+              "answer": "Eine Stelle oder Funktion in einer Organisation; auch eine Lage oder ein Standpunkt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die feste Reihenfolge von Personen nach ihrer offiziellen Bedeutung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dokument, das die Teilnahme an einem Kurs bestätigt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Rang",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Stufe einer Person oder Sache innerhalb einer geordneten Hierarchie.",
+          "explain": {
+            "entryId": "Rang",
+            "headword": "Rang",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁaŋ/",
+              "ipaUS": "/ʁaŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Rang",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Stufe",
+                  "Dienstgrad"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Stufe einer Person oder Sache innerhalb einer geordneten Hierarchie.",
+                    "examples": [
+                      "Er hat einen hohen Rang in der Organisation."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rang – Beispielsatz folgt.",
+              "answer": "Die Stufe oder Stellung innerhalb einer geordneten Hierarchie.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine allgemeine Bezeichnung für jede freie Arbeitsstelle.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Name eines Buches, Films oder wissenschaftlichen Textes.",
               "ok": false
             }
           ]

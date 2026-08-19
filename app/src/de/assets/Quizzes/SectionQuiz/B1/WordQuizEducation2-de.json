@@ -2,210 +2,566 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEducation2-de",
-  "title": "",
+  "title": "Bildung",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Personal",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Alle Beschäftigten eines Betriebs oder einer Einrichtung zusammen.",
+          "explain": {
+            "entryId": "Personal",
+            "headword": "Personal",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/pɛʁzoˈnaːl/",
+              "ipaUS": "/pɛʁzoˈnaːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral, kollektiv",
+                "headwordLine": "Personal",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Belegschaft",
+                  "Mitarbeiterschaft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Alle Beschäftigten eines Betriebs oder einer Einrichtung zusammen.",
+                    "examples": [
+                      "Das Hotel sucht zusätzliches Personal für den Sommer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Personal – Beispielsatz folgt.",
+              "answer": "Die Gesamtheit der Beschäftigten eines Betriebs oder einer Einrichtung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Person, die nur körperliche Arbeit verrichtet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Abteilung, die ausschließlich neue Produkte verkauft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Arbeiter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die meist körperliche oder handwerkliche Arbeit gegen Lohn ausübt.",
+          "explain": {
+            "entryId": "Arbeiter",
+            "headword": "Arbeiter",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʁbaɪ̯tɐ/",
+              "ipaUS": "/ˈaʁbaɪ̯tɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Arbeiter",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Arbeitskraft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die meist körperliche oder handwerkliche Arbeit gegen Lohn ausübt.",
+                    "examples": [
+                      "Die Arbeiter reparieren die Straße."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Arbeiter – Beispielsatz folgt.",
+              "answer": "Eine Person, die meist körperliche oder handwerkliche Arbeit gegen Lohn ausübt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die an einer Universität Vorlesungen hält.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Organisation, die anderen Personen Arbeit anbietet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Arbeitgeber",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person oder Organisation, die Beschäftigte einstellt und bezahlt.",
+          "explain": {
+            "entryId": "Arbeitgeber",
+            "headword": "Arbeitgeber",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʁbaɪ̯tˌɡeːbɐ/",
+              "ipaUS": "/ˈaʁbaɪ̯tˌɡeːbɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Arbeitgeber",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Unternehmen",
+                  "Dienstherr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person oder Organisation, die Beschäftigte einstellt und bezahlt.",
+                    "examples": [
+                      "Der Arbeitgeber bietet flexible Arbeitszeiten an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Arbeitgeber – Beispielsatz folgt.",
+              "answer": "Eine Person oder Organisation, die Beschäftigte einstellt und bezahlt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die bei einem Betrieb angestellt ist und Lohn erhält.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Lehrkraft, die nur praktische Kurse anbietet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Chef",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Person, die einen Betrieb, eine Abteilung oder ein Team leitet.",
+          "explain": {
+            "entryId": "Chef",
+            "headword": "Chef",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃɛf/",
+              "ipaUS": "/ʃɛf/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Chef",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vorgesetzter",
+                  "Leiter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Person, die einen Betrieb, eine Abteilung oder ein Team leitet.",
+                    "examples": [
+                      "Mein Chef bespricht morgen den neuen Arbeitsplan."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Chef – Beispielsatz folgt.",
+              "answer": "Die Person, die einen Betrieb, eine Abteilung oder ein Team leitet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Alle Beschäftigten eines Unternehmens als Gruppe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person am Anfang einer Berufsausbildung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Manager",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Führungskraft, die Bereiche plant, organisiert und verantwortet.",
+          "explain": {
+            "entryId": "Manager",
+            "headword": "Manager",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmɛnɪd͡ʒɐ/",
+              "ipaUS": "/ˈmɛnɪd͡ʒɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Manager",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Führungskraft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Führungskraft, die Bereiche plant, organisiert und verantwortet.",
+                    "examples": [
+                      "Die Managerin ist für das internationale Team verantwortlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Manager – Beispielsatz folgt.",
+              "answer": "Eine Führungskraft, die einen Bereich plant, organisiert und verantwortet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die als Lehrling einen Beruf erlernt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Lehrperson, die ausschließlich an einer Grundschule unterrichtet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Praktikum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine zeitlich begrenzte praktische Tätigkeit zum Kennenlernen eines Berufs oder Arbeitsbereichs.",
+          "explain": {
+            "entryId": "Praktikum",
+            "headword": "Praktikum",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈpʁaktikʊm/",
+              "ipaUS": "/ˈpʁaktikʊm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Praktikum",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Praxisphase"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine zeitlich begrenzte praktische Tätigkeit zum Kennenlernen eines Berufs oder Arbeitsbereichs.",
+                    "examples": [
+                      "Im Sommer macht er ein Praktikum in einer Werbeagentur."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Praktikum – Beispielsatz folgt.",
+              "answer": "Eine begrenzte praktische Tätigkeit, durch die man einen Beruf oder Arbeitsbereich kennenlernt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine vollständige Berufsausbildung mit staatlichem Abschluss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine wissenschaftliche Konferenz für erfahrene Professoren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Lehrling",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die in einem Betrieb einen Beruf praktisch erlernt.",
+          "explain": {
+            "entryId": "Lehrling",
+            "headword": "Lehrling",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈleːɐ̯lɪŋ/",
+              "ipaUS": "/ˈleːɐ̯lɪŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Lehrling",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Auszubildender",
+                  "Azubi"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die in einem Betrieb einen Beruf praktisch erlernt.",
+                    "examples": [
+                      "Der Lehrling arbeitet vier Tage im Betrieb und besucht einen Tag die Berufsschule."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Lehrling – Beispielsatz folgt.",
+              "answer": "Eine Person, die in einem Betrieb einen Beruf praktisch erlernt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine erfahrene Führungskraft mit Verantwortung für mehrere Abteilungen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die nur für wenige Wochen einen Beruf beobachtet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Ausbildung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein geregelter Lernweg, der Kenntnisse und praktische Fähigkeiten für einen Beruf vermittelt.",
+          "explain": {
+            "entryId": "Ausbildung",
+            "headword": "Ausbildung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯sˌbɪldʊŋ/",
+              "ipaUS": "/ˈaʊ̯sˌbɪldʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Ausbildung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Berufsausbildung",
+                  "Lehre"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein geregelter Lernweg, der Kenntnisse und praktische Fähigkeiten für einen Beruf vermittelt.",
+                    "examples": [
+                      "Nach der Schule beginnt sie eine Ausbildung zur Elektronikerin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ausbildung – Beispielsatz folgt.",
+              "answer": "Ein geregelter Lernweg, der Kenntnisse und praktische Fähigkeiten für einen Beruf vermittelt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne kurze Übung innerhalb eines Kurses.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein unverbindliches Treffen von Fachleuten ohne Lernziel.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Dozent",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die an einer Hochschule oder in der Erwachsenenbildung unterrichtet.",
+          "explain": {
+            "entryId": "Dozent",
+            "headword": "Dozent",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/doˈt͡sɛnt/",
+              "ipaUS": "/doˈt͡sɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Dozent",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lehrbeauftragter",
+                  "Kursleiter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die an einer Hochschule oder in der Erwachsenenbildung unterrichtet.",
+                    "examples": [
+                      "Der Dozent erklärt den Teilnehmern die neue Methode."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Dozent – Beispielsatz folgt.",
+              "answer": "Eine Person, die an einer Hochschule oder in der Erwachsenenbildung unterrichtet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die ausschließlich eine Schulklasse mit Kindern leitet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Führungskraft, die das Personal eines Betriebs einstellt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Professor",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person mit einer hohen akademischen Lehr- und Forschungsposition an einer Hochschule.",
+          "explain": {
+            "entryId": "Professor",
+            "headword": "Professor",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/pʁoˈfɛsoːɐ̯/",
+              "ipaUS": "/pʁoˈfɛsoːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Professor",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hochschullehrer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person mit einer hohen akademischen Lehr- und Forschungsposition an einer Hochschule.",
+                    "examples": [
+                      "Der Professor forscht über künstliche Intelligenz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Professor – Beispielsatz folgt.",
+              "answer": "Eine Person mit einer hohen akademischen Lehr- und Forschungsposition an einer Hochschule.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person am Anfang einer handwerklichen Berufsausbildung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Lehrkraft, die immer nur an einer Grundschule arbeitet.",
               "ok": false
             }
           ]

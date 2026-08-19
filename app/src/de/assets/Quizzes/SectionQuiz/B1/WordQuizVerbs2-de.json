@@ -2,210 +2,565 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs2-de",
-  "title": "",
+  "title": "Verben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "überreden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Jemanden durch Zureden dazu bringen, etwas zu tun, das die Person zunächst nicht tun wollte.",
+          "explain": {
+            "entryId": "überreden",
+            "headword": "überreden",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/yːbɐˈʁeːdn̩/",
+              "ipaUS": "/yːbɐˈʁeːdn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "überreden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beschwatzen",
+                  "bewegen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Jemanden durch Zureden dazu bringen, etwas zu tun, das die Person zunächst nicht tun wollte.",
+                    "examples": [
+                      "Sie überredete ihn, an der Reise teilzunehmen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "überreden – Beispielsatz folgt.",
+              "answer": "Jemanden durch Zureden dazu bringen, etwas zu tun, das die Person zunächst nicht tun wollte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jemanden mit Beweisen zu einer festen Überzeugung bringen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jemandem ausdrücklich versprechen, dass etwas sicher oder wahr ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "versichern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas nachdrücklich als wahr bestätigen; auch durch eine Versicherung gegen Risiken schützen.",
+          "explain": {
+            "entryId": "versichern",
+            "headword": "versichern",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈzɪçɐn/",
+              "ipaUS": "/fɛɐ̯ˈzɪçɐn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "versichern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beteuern",
+                  "absichern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas nachdrücklich als wahr bestätigen; auch durch eine Versicherung gegen Risiken schützen.",
+                    "examples": [
+                      "Er versicherte mir, dass alles vorbereitet sei."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "versichern – Beispielsatz folgt.",
+              "answer": "Etwas nachdrücklich als wahr bestätigen; auch durch eine Versicherung gegen Risiken schützen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jemanden durch sachliche Beweise von einer Meinung überzeugen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jemanden trotz anfänglicher Ablehnung zu einer Handlung bewegen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "abhängen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch eine Bedingung oder andere Sache bestimmt sein.",
+          "explain": {
+            "entryId": "abhängen",
+            "headword": "abhängen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌhɛŋən/",
+              "ipaUS": "/ˈapˌhɛŋən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv mit von",
+                "headwordLine": "abhängen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bedingt sein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch eine Bedingung oder andere Sache bestimmt sein.",
+                    "examples": [
+                      "Der Erfolg hängt von einer guten Vorbereitung ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abhängen – Beispielsatz folgt.",
+              "answer": "Durch eine Bedingung oder andere Sache bestimmt sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einer Person oder Sache vertrauen und mit ihrer Hilfe rechnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fest glauben, dass eine Person ehrlich und zuverlässig handelt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "sich verlassen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Auf eine Person oder Sache vertrauen und sicher mit ihrer Hilfe oder Wirkung rechnen.",
+          "explain": {
+            "entryId": "sich verlassen",
+            "headword": "sich verlassen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç fɛɐ̯ˈlasn̩/",
+              "ipaUS": "/zɪç fɛɐ̯ˈlasn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "reflexiv mit auf",
+                "headwordLine": "sich verlassen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zählen auf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Auf eine Person oder Sache vertrauen und sicher mit ihrer Hilfe oder Wirkung rechnen.",
+                    "examples": [
+                      "Du kannst dich auf meine Unterstützung verlassen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich verlassen – Beispielsatz folgt.",
+              "answer": "Auf eine Person oder Sache vertrauen und sicher mit ihrer Hilfe oder Wirkung rechnen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Durch eine äußere Bedingung vollständig bestimmt sein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Allgemein glauben, dass jemand ehrlich oder zuverlässig ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "vertrauen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Glauben, dass eine Person oder Sache ehrlich, zuverlässig oder sicher ist.",
+          "explain": {
+            "entryId": "vertrauen",
+            "headword": "vertrauen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
+              "ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv mit Dativ",
+                "headwordLine": "vertrauen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Glauben schenken"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Glauben, dass eine Person oder Sache ehrlich, zuverlässig oder sicher ist.",
+                    "examples": [
+                      "Ich vertraue meinem Arzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vertrauen – Beispielsatz folgt.",
+              "answer": "Glauben, dass eine Person oder Sache ehrlich, zuverlässig oder sicher ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sicher mit der Hilfe einer bestimmten Person rechnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von einer äußeren Bedingung oder Entscheidung bestimmt sein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "entdecken",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas bisher Unbekanntes oder Verborgenes erstmals finden oder bemerken.",
+          "explain": {
+            "entryId": "entdecken",
+            "headword": "entdecken",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛntˈdɛkn̩/",
+              "ipaUS": "/ɛntˈdɛkn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "entdecken",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auffinden",
+                  "neu erkennen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas bisher Unbekanntes oder Verborgenes erstmals finden oder bemerken.",
+                    "examples": [
+                      "Forscher entdeckten eine seltene Pflanzenart."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "entdecken – Beispielsatz folgt.",
+              "answer": "Etwas bisher Unbekanntes oder Verborgenes erstmals finden oder bemerken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Etwas Gesuchtes oder Verlorenes lokalisieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine verborgene Tatsache oder ein Fehlverhalten öffentlich sichtbar machen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "finden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas Gesuchtes, Verlorenes oder Vorhandenes entdecken beziehungsweise zu einem Ergebnis kommen.",
+          "explain": {
+            "entryId": "finden",
+            "headword": "finden",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfɪndn̩/",
+              "ipaUS": "/ˈfɪndn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "finden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auffinden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas Gesuchtes, Verlorenes oder Vorhandenes entdecken beziehungsweise zu einem Ergebnis kommen.",
+                    "examples": [
+                      "Nach langer Suche fand sie ihren Schlüssel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "finden – Beispielsatz folgt.",
+              "answer": "Etwas Gesuchtes, Verlorenes oder Vorhandenes entdecken beziehungsweise zu einem Ergebnis kommen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Etwas bisher völlig Unbekanntes erstmals erkennen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine absichtlich verborgene Information untersuchen und bekannt machen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "aufdecken",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas Verborgenes, besonders einen Fehler oder ein Fehlverhalten, untersuchen und bekannt machen.",
+          "explain": {
+            "entryId": "aufdecken",
+            "headword": "aufdecken",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fˌdɛkn̩/",
+              "ipaUS": "/ˈaʊ̯fˌdɛkn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "aufdecken",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "enthüllen",
+                  "offenlegen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas Verborgenes, besonders einen Fehler oder ein Fehlverhalten, untersuchen und bekannt machen.",
+                    "examples": [
+                      "Die Zeitung deckte den Betrug auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aufdecken – Beispielsatz folgt.",
+              "answer": "Etwas Verborgenes, besonders einen Fehler oder ein Fehlverhalten, untersuchen und bekannt machen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Etwas Gesuchtes oder Verlorenes nach einer Suche lokalisieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Etwas bisher Unbekanntes zufällig oder durch Forschung erstmals erkennen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "ausdrücken",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Gedanken, Gefühle oder Bedeutungen durch Worte, Zeichen oder Verhalten zeigen.",
+          "explain": {
+            "entryId": "ausdrücken",
+            "headword": "ausdrücken",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯sˌdʁʏkn̩/",
+              "ipaUS": "/ˈaʊ̯sˌdʁʏkn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "ausdrücken",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "äußern",
+                  "zum Ausdruck bringen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Gedanken, Gefühle oder Bedeutungen durch Worte, Zeichen oder Verhalten zeigen.",
+                    "examples": [
+                      "Sie konnte ihre Gefühle klar ausdrücken."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ausdrücken – Beispielsatz folgt.",
+              "answer": "Gedanken, Gefühle oder Bedeutungen durch Worte, Zeichen oder Verhalten zeigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Aussage sprachlich genau und bewusst gestalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine bestehende Leistung, Qualität oder Situation besser machen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "formulieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen Gedanken oder eine Aussage bewusst in passende und genaue Worte fassen.",
+          "explain": {
+            "entryId": "formulieren",
+            "headword": "formulieren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɔʁmuˈliːʁən/",
+              "ipaUS": "/fɔʁmuˈliːʁən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "formulieren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in Worte fassen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Einen Gedanken oder eine Aussage bewusst in passende und genaue Worte fassen.",
+                    "examples": [
+                      "Bitte formulieren Sie Ihre Frage möglichst klar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "formulieren – Beispielsatz folgt.",
+              "answer": "Einen Gedanken oder eine Aussage bewusst in passende und genaue Worte fassen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gedanken oder Gefühle mit beliebigen Zeichen und Verhaltensweisen zeigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Idee Schritt für Schritt zu einem vollständigen Konzept ausbauen.",
               "ok": false
             }
           ]

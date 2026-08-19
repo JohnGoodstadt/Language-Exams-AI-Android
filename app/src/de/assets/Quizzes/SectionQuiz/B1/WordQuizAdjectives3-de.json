@@ -2,190 +2,513 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives3-de",
-  "title": "",
+  "title": "Adjektive",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "habgierig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von einem übermäßigen und selbstbezogenen Verlangen nach Geld oder Besitz bestimmt.",
+          "explain": {
+            "entryId": "habgierig",
+            "headword": "habgierig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhaːpˌɡiːʁɪç/",
+              "ipaUS": "/ˈhaːpˌɡiːʁɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Besitzstreben",
+                "headwordLine": "habgierig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gierig",
+                  "raffgierig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von einem übermäßigen und selbstbezogenen Verlangen nach Geld oder Besitz bestimmt.",
+                    "examples": [
+                      "Der habgierige Geschäftsmann wollte immer noch mehr Gewinn."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "habgierig – Beispielsatz folgt.",
+              "answer": "Von einem übermäßigen und selbstbezogenen Verlangen nach Geld oder Besitz bestimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Unzufrieden über den Besitz oder Erfolg einer anderen Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ängstlich, die Zuneigung eines nahestehenden Menschen zu verlieren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "bange",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ängstlich und sorgenvoll wegen eines erwarteten oder möglichen Ereignisses.",
+          "explain": {
+            "entryId": "bange",
+            "headword": "bange",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈbaŋə/",
+              "ipaUS": "/ˈbaŋə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Sorge oder Angst",
+                "headwordLine": "bange",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "angstvoll",
+                  "besorgt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ängstlich und sorgenvoll wegen eines erwarteten oder möglichen Ereignisses.",
+                    "examples": [
+                      "Vor der wichtigen Nachricht war ihr bange."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bange – Beispielsatz folgt.",
+              "answer": "Ängstlich und sorgenvoll wegen eines erwarteten oder möglichen Ereignisses.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Körperlich und seelisch unter Druck und nicht locker.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Allgemein leicht erschreckt und dauerhaft von Angst geprägt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "angespannt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Körperlich oder seelisch unter Druck, unruhig und nicht locker.",
+          "explain": {
+            "entryId": "angespannt",
+            "headword": "angespannt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanɡəˌʃpant/",
+              "ipaUS": "/ˈanɡəˌʃpant/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Spannungszustand",
+                "headwordLine": "angespannt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nervös",
+                  "gespannt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Körperlich oder seelisch unter Druck, unruhig und nicht locker.",
+                    "examples": [
+                      "Vor der Entscheidung war die Stimmung angespannt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "angespannt – Beispielsatz folgt.",
+              "answer": "Körperlich oder seelisch unter Druck, unruhig und nicht locker.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ängstlich wegen eines möglichen negativen Ergebnisses.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ruhig und von innerer Belastung befreit.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "geduldig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bereit, ruhig zu warten oder Schwierigkeiten auszuhalten, ohne schnell unruhig zu werden.",
+          "explain": {
+            "entryId": "geduldig",
+            "headword": "geduldig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈdʊldɪç/",
+              "ipaUS": "/ɡəˈdʊldɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Umgang mit Dauer",
+                "headwordLine": "geduldig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "langmütig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bereit, ruhig zu warten oder Schwierigkeiten auszuhalten, ohne schnell unruhig zu werden.",
+                    "examples": [
+                      "Die Lehrerin erklärte die Aufgabe geduldig ein zweites Mal."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "geduldig – Beispielsatz folgt.",
+              "answer": "Bereit, ruhig zu warten oder Schwierigkeiten auszuhalten, ohne schnell unruhig zu werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bereit, andere Meinungen und Lebensweisen zu akzeptieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Innerlich ruhig und durch Probleme nicht leicht aus dem Gleichgewicht zu bringen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "tolerant",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bereit, andere Meinungen, Lebensweisen oder Unterschiede zu akzeptieren und zu respektieren.",
+          "explain": {
+            "entryId": "tolerant",
+            "headword": "tolerant",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/toleˈʁant/",
+              "ipaUS": "/toleˈʁant/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Akzeptanz",
+                "headwordLine": "tolerant",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aufgeschlossen",
+                  "duldsam"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bereit, andere Meinungen, Lebensweisen oder Unterschiede zu akzeptieren und zu respektieren.",
+                    "examples": [
+                      "Eine tolerante Gesellschaft respektiert unterschiedliche Lebensweisen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "tolerant – Beispielsatz folgt.",
+              "answer": "Bereit, andere Meinungen, Lebensweisen oder Unterschiede zu akzeptieren und zu respektieren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bereit, lange zu warten und Schwierigkeiten ruhig auszuhalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ohne Streit, Gewalt oder feindliche Absicht handelnd.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "ruhig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne starke Bewegung, Lärm oder innere Unruhe.",
+          "explain": {
+            "entryId": "ruhig",
+            "headword": "ruhig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁuːɪç/",
+              "ipaUS": "/ˈʁuːɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "geringe Unruhe oder Lautstärke",
+                "headwordLine": "ruhig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "still",
+                  "unaufgeregt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne starke Bewegung, Lärm oder innere Unruhe.",
+                    "examples": [
+                      "Trotz der Kritik blieb sie ruhig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ruhig – Beispielsatz folgt.",
+              "answer": "Ohne starke Bewegung, Lärm oder innere Unruhe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von körperlicher und seelischer Spannung befreit.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Auch unter Belastung innerlich ausgeglichen und nicht leicht gestört.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "entspannt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von körperlicher oder seelischer Spannung befreit und angenehm locker.",
+          "explain": {
+            "entryId": "entspannt",
+            "headword": "entspannt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛntˈʃpant/",
+              "ipaUS": "/ɛntˈʃpant/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "fehlende Anspannung",
+                "headwordLine": "entspannt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "locker",
+                  "gelöst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von körperlicher oder seelischer Spannung befreit und angenehm locker.",
+                    "examples": [
+                      "Nach dem Urlaub wirkte er entspannt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "entspannt – Beispielsatz folgt.",
+              "answer": "Von körperlicher oder seelischer Spannung befreit und angenehm locker.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne starke Bewegung, Lärm oder sichtbare Unruhe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In schwierigen Situationen bewusst ausgeglichen und unbeeindruckt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "friedlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Streit, Gewalt oder feindliche Absicht; von Frieden geprägt.",
+          "explain": {
+            "entryId": "friedlich",
+            "headword": "friedlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁiːtlɪç/",
+              "ipaUS": "/ˈfʁiːtlɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Gewaltfreiheit",
+                "headwordLine": "friedlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gewaltfrei",
+                  "harmonisch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne Streit, Gewalt oder feindliche Absicht; von Frieden geprägt.",
+                    "examples": [
+                      "Die Demonstration verlief friedlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "friedlich – Beispielsatz folgt.",
+              "answer": "Ohne Streit, Gewalt oder feindliche Absicht; von Frieden geprägt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne Lärm, Bewegung oder innere Unruhe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von körperlicher und seelischer Spannung befreit.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "gelassen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Innerlich ausgeglichen und auch bei Problemen nicht leicht beunruhigt oder gestört.",
+          "explain": {
+            "entryId": "gelassen",
+            "headword": "gelassen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈlasn̩/",
+              "ipaUS": "/ɡəˈlasn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "innere Ausgeglichenheit",
+                "headwordLine": "gelassen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "besonnen",
+                  "ruhig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Innerlich ausgeglichen und auch bei Problemen nicht leicht beunruhigt oder gestört.",
+                    "examples": [
+                      "Sie reagierte gelassen auf die Verspätung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gelassen – Beispielsatz folgt.",
+              "answer": "Innerlich ausgeglichen und auch bei Problemen nicht leicht beunruhigt oder gestört.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne Lärm oder sichtbare Bewegung und Unruhe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Körperlich locker und von jeder Spannung befreit.",
               "ok": false
             }
           ]

@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFood1-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Vorspeise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein kleines Gericht, das vor dem Hauptgericht serviert wird.",
+          "explain": {
+            "entryId": "Vorspeise",
+            "headword": "Vorspeise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ˌʃpaɪ̯zə/",
+              "ipaUS": "/ˈfoːɐ̯ˌʃpaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Vorspeise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Appetitanreger",
+                  "Starter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein kleines Gericht, das vor dem Hauptgericht serviert wird.",
+                    "examples": [
+                      "Als Vorspeise bestellten wir eine Suppe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vorspeise – Beispielsatz folgt.",
+              "answer": "Ein kleines Gericht, das vor dem Hauptgericht serviert wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der erste Teil einer Mahlzeit, der auch ein größeres Gericht sein kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine kleine Menge Essen, die mit wenigen Bissen gegessen wird.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "erster Gang",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das erste servierte Gericht in einer Mahlzeit mit mehreren aufeinanderfolgenden Gängen.",
+          "explain": {
+            "entryId": "erster Gang",
+            "headword": "erster Gang",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈeːɐ̯stɐ ɡaŋ/",
+              "ipaUS": "/ˈeːɐ̯stɐ ɡaŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Teil einer Menüfolge",
+                "headwordLine": "erster Gang",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erster Teil des Menüs"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das erste servierte Gericht in einer Mahlzeit mit mehreren aufeinanderfolgenden Gängen.",
+                    "examples": [
+                      "Der erste Gang bestand aus einer leichten Gemüsesuppe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erster Gang – Beispielsatz folgt.",
+              "answer": "Das erste servierte Gericht in einer Mahlzeit mit mehreren aufeinanderfolgenden Gängen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein kleines Gericht, das grundsätzlich vor jedem Hauptgericht serviert wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine kleine Portion, die bei einem Empfang im Stehen gegessen wird.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "Häppchen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine kleine Portion Essen, die sich mit wenigen Bissen verzehren lässt.",
+          "explain": {
+            "entryId": "Häppchen",
+            "headword": "Häppchen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhɛpçən/",
+              "ipaUS": "/ˈhɛpçən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Häppchen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "kleiner Imbiss",
+                  "Bissen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine kleine Portion Essen, die sich mit wenigen Bissen verzehren lässt.",
+                    "examples": [
+                      "Auf dem Empfang wurden kleine Häppchen angeboten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Häppchen – Beispielsatz folgt.",
+              "answer": "Eine kleine Portion Essen, die sich mit wenigen Bissen verzehren lässt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein vollständiger erster Gang in einem Menü.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine süße Speise, die nach dem Hauptgericht serviert wird.",
               "ok": false
             }
           ]
@@ -74,18 +181,53 @@
           "title": "",
           "page": 4,
           "question": "Getränk",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Flüssigkeit, die zum Trinken bestimmt ist.",
+          "explain": {
+            "entryId": "Getränk",
+            "headword": "Getränk",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈtʁɛŋk/",
+              "ipaUS": "/ɡəˈtʁɛŋk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Getränk",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Trank"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Flüssigkeit, die zum Trinken bestimmt ist.",
+                    "examples": [
+                      "Im Preis ist ein alkoholfreies Getränk enthalten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Getränk – Beispielsatz folgt.",
+              "answer": "Eine Flüssigkeit, die zum Trinken bestimmt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein meist gemischtes und häufig alkoholisches Getränk in einer Bar.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Kleinigkeit zu essen oder zu trinken, die neue Energie gibt.",
               "ok": false
             }
           ]
@@ -94,18 +236,54 @@
           "title": "",
           "page": 5,
           "question": "Drink",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein meist gemischtes und häufig alkoholisches Getränk, besonders in einer Bar.",
+          "explain": {
+            "entryId": "Drink",
+            "headword": "Drink",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/dʁɪŋk/",
+              "ipaUS": "/dʁɪŋk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Drink",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Cocktail",
+                  "Mischgetränk"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein meist gemischtes und häufig alkoholisches Getränk, besonders in einer Bar.",
+                    "examples": [
+                      "Am Abend bestellten sie einen Drink an der Hotelbar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Drink – Beispielsatz folgt.",
+              "answer": "Ein meist gemischtes und häufig alkoholisches Getränk, besonders in einer Bar.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede beliebige Flüssigkeit, die zum Trinken geeignet ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine leichte Speise oder ein Getränk, das jemanden erfrischt.",
               "ok": false
             }
           ]
@@ -114,18 +292,54 @@
           "title": "",
           "page": 6,
           "question": "Erfrischung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Getränk oder eine kleine Speise, die belebt und neue Energie gibt.",
+          "explain": {
+            "entryId": "Erfrischung",
+            "headword": "Erfrischung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈfʁɪʃʊŋ/",
+              "ipaUS": "/ɛɐ̯ˈfʁɪʃʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erfrischung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erfrischungsgetränk",
+                  "kleiner Imbiss"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Getränk oder eine kleine Speise, die belebt und neue Energie gibt.",
+                    "examples": [
+                      "Nach der Wanderung brauchten alle eine Erfrischung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erfrischung – Beispielsatz folgt.",
+              "answer": "Ein Getränk oder eine kleine Speise, die belebt und neue Energie gibt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein meist alkoholisches Mischgetränk, das in einer Bar serviert wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein vollständiges warmes Gericht als Hauptteil einer Mahlzeit.",
               "ok": false
             }
           ]
@@ -134,18 +348,53 @@
           "title": "",
           "page": 7,
           "question": "Küche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Raum zum Zubereiten von Speisen oder die typische Kochweise eines Landes oder einer Region.",
+          "explain": {
+            "entryId": "Küche",
+            "headword": "Küche",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkʏçə/",
+              "ipaUS": "/ˈkʏçə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Küche",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kochkunst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Raum zum Zubereiten von Speisen oder die typische Kochweise eines Landes oder einer Region.",
+                    "examples": [
+                      "Das Restaurant ist für seine italienische Küche bekannt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Küche – Beispielsatz folgt.",
+              "answer": "Ein Raum zum Zubereiten von Speisen oder die typische Kochweise eines Landes oder einer Region.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne zubereitete Speise, die als Mahlzeit serviert wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein für eine Region besonders typisches und bekanntes Gericht.",
               "ok": false
             }
           ]
@@ -154,18 +403,53 @@
           "title": "",
           "page": 8,
           "question": "Gericht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine zubereitete Speise, die allein oder als Teil einer Mahlzeit serviert wird.",
+          "explain": {
+            "entryId": "Gericht",
+            "headword": "Gericht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈʁɪçt/",
+              "ipaUS": "/ɡəˈʁɪçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Gericht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Speise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine zubereitete Speise, die allein oder als Teil einer Mahlzeit serviert wird.",
+                    "examples": [
+                      "Dieses Gericht wird mit Reis und Gemüse serviert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gericht – Beispielsatz folgt.",
+              "answer": "Eine zubereitete Speise, die allein oder als Teil einer Mahlzeit serviert wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gesamte Kochtradition eines Landes oder einer Region.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine besondere Speise, für die ein Ort oder Restaurant bekannt ist.",
               "ok": false
             }
           ]
@@ -174,18 +458,54 @@
           "title": "",
           "page": 9,
           "question": "Spezialität",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine besondere Speise oder ein Produkt, für die ein Ort, eine Region oder ein Betrieb bekannt ist.",
+          "explain": {
+            "entryId": "Spezialität",
+            "headword": "Spezialität",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃpet͡si̯aliˈtɛːt/",
+              "ipaUS": "/ʃpet͡si̯aliˈtɛːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Spezialität",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Besonderheit",
+                  "lokale Speise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine besondere Speise oder ein Produkt, für die ein Ort, eine Region oder ein Betrieb bekannt ist.",
+                    "examples": [
+                      "Käsekuchen ist die Spezialität dieses Cafés."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Spezialität – Beispielsatz folgt.",
+              "answer": "Eine besondere Speise oder ein Produkt, für die ein Ort, eine Region oder ein Betrieb bekannt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede zubereitete Speise, die als Teil einer Mahlzeit serviert wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die typische Art des Kochens in einem ganzen Land.",
               "ok": false
             }
           ]
@@ -194,18 +514,54 @@
           "title": "",
           "page": 10,
           "question": "Nachtisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine meist süße Speise, die nach dem Hauptgericht gegessen wird.",
+          "explain": {
+            "entryId": "Nachtisch",
+            "headword": "Nachtisch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxˌtɪʃ/",
+              "ipaUS": "/ˈnaːxˌtɪʃ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Nachtisch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Dessert",
+                  "Nachspeise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine meist süße Speise, die nach dem Hauptgericht gegessen wird.",
+                    "examples": [
+                      "Zum Nachtisch gibt es Obstsalat."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachtisch – Beispielsatz folgt.",
+              "answer": "Eine meist süße Speise, die nach dem Hauptgericht gegessen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede süße Speise unabhängig davon, wann sie gegessen wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine weiche Süßspeise, die häufig aus Milch hergestellt wird.",
               "ok": false
             }
           ]

@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEducation1-de",
-  "title": "",
+  "title": "Bildung",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Aufgabe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Arbeit, Übung oder Pflicht, die erledigt werden soll.",
+          "explain": {
+            "entryId": "Aufgabe",
+            "headword": "Aufgabe",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fˌɡaːbə/",
+              "ipaUS": "/ˈaʊ̯fˌɡaːbə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Aufgabe",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Übung",
+                  "Auftrag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Arbeit, Übung oder Pflicht, die erledigt werden soll.",
+                    "examples": [
+                      "Die Aufgabe am Ende des Kapitels ist schwierig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Aufgabe – Beispielsatz folgt.",
+              "answer": "Eine Arbeit, Übung oder Pflicht, die jemand erledigen soll.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine längere praktische Ausbildung in einem Betrieb.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein offizieller Nachweis über einen Schulabschluss.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "Hausaufgabe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine schulische Aufgabe, die Lernende außerhalb des Unterrichts erledigen.",
+          "explain": {
+            "entryId": "Hausaufgabe",
+            "headword": "Hausaufgabe",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhaʊ̯sʔaʊ̯fˌɡaːbə/",
+              "ipaUS": "/ˈhaʊ̯sʔaʊ̯fˌɡaːbə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Hausaufgabe",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schularbeit für zu Hause"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine schulische Aufgabe, die Lernende außerhalb des Unterrichts erledigen.",
+                    "examples": [
+                      "Wir müssen die Hausaufgabe bis morgen machen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hausaufgabe – Beispielsatz folgt.",
+              "answer": "Eine Aufgabe, die Lernende außerhalb des Unterrichts erledigen sollen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine praktische Veranstaltung, bei der eine Gruppe gemeinsam arbeitet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Prüfung, die am Ende eines Studiums abgelegt wird.",
               "ok": false
             }
           ]
@@ -54,18 +125,53 @@
           "title": "",
           "page": 3,
           "question": "Projekt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein geplantes Vorhaben mit einem bestimmten Ziel, Zeitraum und mehreren Arbeitsschritten.",
+          "explain": {
+            "entryId": "Projekt",
+            "headword": "Projekt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/pʁoˈjɛkt/",
+              "ipaUS": "/pʁoˈjɛkt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Projekt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vorhaben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein geplantes Vorhaben mit einem bestimmten Ziel, Zeitraum und mehreren Arbeitsschritten.",
+                    "examples": [
+                      "Die Klasse arbeitet an einem Projekt über erneuerbare Energie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Projekt – Beispielsatz folgt.",
+              "answer": "Ein geplantes Vorhaben mit einem bestimmten Ziel und mehreren Arbeitsschritten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne kurze Übung, die sofort gelöst werden muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine regelmäßige Universitätsveranstaltung, bei der nur ein Dozent spricht.",
               "ok": false
             }
           ]
@@ -74,18 +180,53 @@
           "title": "",
           "page": 4,
           "question": "Kurs",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Reihe von Unterrichtsstunden zu einem bestimmten Thema.",
+          "explain": {
+            "entryId": "Kurs",
+            "headword": "Kurs",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kʊʁs/",
+              "ipaUS": "/kʊʁs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Kurs",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lehrgang"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Reihe von Unterrichtsstunden zu einem bestimmten Thema.",
+                    "examples": [
+                      "Sie besucht einen Kurs für Business-Deutsch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kurs – Beispielsatz folgt.",
+              "answer": "Eine Reihe zusammengehöriger Unterrichtsstunden zu einem bestimmten Thema.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine schriftliche Bewertung aller Leistungen eines Schuljahres.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein großes Treffen von Fachleuten aus mehreren Ländern.",
               "ok": false
             }
           ]
@@ -94,18 +235,53 @@
           "title": "",
           "page": 5,
           "question": "Klasse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gruppe von Schülern, die gemeinsam unterrichtet wird, oder ihre Schulstufe.",
+          "explain": {
+            "entryId": "Klasse",
+            "headword": "Klasse",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈklasə/",
+              "ipaUS": "/ˈklasə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Klasse",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schulklasse"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Gruppe von Schülern, die gemeinsam unterrichtet wird, oder ihre Schulstufe.",
+                    "examples": [
+                      "In unserer Klasse lernen fünfundzwanzig Schüler."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Klasse – Beispielsatz folgt.",
+              "answer": "Eine Gruppe von Schülern, die gemeinsam unterrichtet wird, oder ihre Schulstufe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Unterrichtsreihe für Erwachsene an einer Universität.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine berufliche Tätigkeit ohne feste Aufgaben.",
               "ok": false
             }
           ]
@@ -114,18 +290,53 @@
           "title": "",
           "page": 6,
           "question": "Vorlesung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Lehrveranstaltung an einer Hochschule, bei der meist eine Lehrperson vorträgt.",
+          "explain": {
+            "entryId": "Vorlesung",
+            "headword": "Vorlesung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ˌleːzʊŋ/",
+              "ipaUS": "/ˈfoːɐ̯ˌleːzʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Vorlesung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hochschulvortrag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Lehrveranstaltung an einer Hochschule, bei der meist eine Lehrperson vorträgt.",
+                    "examples": [
+                      "Die Vorlesung über europäische Geschichte beginnt um zehn Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vorlesung – Beispielsatz folgt.",
+              "answer": "Eine Hochschulveranstaltung, bei der meist eine Lehrperson vor einer größeren Gruppe vorträgt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine praktische Arbeitssitzung, in der alle Teilnehmer etwas herstellen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine schulische Aufgabe, die zu Hause erledigt wird.",
               "ok": false
             }
           ]
@@ -134,18 +345,53 @@
           "title": "",
           "page": 7,
           "question": "Diplom",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Urkunde oder ein akademischer Abschluss als Nachweis einer Ausbildung oder Leistung.",
+          "explain": {
+            "entryId": "Diplom",
+            "headword": "Diplom",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/diˈploːm/",
+              "ipaUS": "/diˈploːm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Diplom",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Abschlussurkunde"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Urkunde oder ein akademischer Abschluss als Nachweis einer Ausbildung oder Leistung.",
+                    "examples": [
+                      "Nach dem Studium erhielt sie ihr Diplom."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Diplom – Beispielsatz folgt.",
+              "answer": "Eine Urkunde oder ein Abschluss, der eine Ausbildung oder besondere Leistung nachweist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Bewertung des Verhaltens und der Noten in einem einzelnen Schuljahr.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine kurze praktische Beschäftigung zum Kennenlernen eines Berufs.",
               "ok": false
             }
           ]
@@ -154,18 +400,54 @@
           "title": "",
           "page": 8,
           "question": "Zeugnis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Dokument, das Leistungen, Noten oder eine berufliche Tätigkeit offiziell beurteilt.",
+          "explain": {
+            "entryId": "Zeugnis",
+            "headword": "Zeugnis",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡sɔɪ̯knɪs/",
+              "ipaUS": "/ˈt͡sɔɪ̯knɪs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Zeugnis",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schulzeugnis",
+                  "Arbeitszeugnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Dokument, das Leistungen, Noten oder eine berufliche Tätigkeit offiziell beurteilt.",
+                    "examples": [
+                      "Am letzten Schultag bekommen alle Schüler ihr Zeugnis."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zeugnis – Beispielsatz folgt.",
+              "answer": "Ein Dokument, das schulische Leistungen oder eine berufliche Tätigkeit offiziell beurteilt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Gespräch, in dem ein Arbeitgeber einen Bewerber kennenlernt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Veranstaltung, bei der Forschungsergebnisse öffentlich diskutiert werden.",
               "ok": false
             }
           ]
@@ -174,18 +456,54 @@
           "title": "",
           "page": 9,
           "question": "Abschluss",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das erfolgreiche Ende einer Ausbildung oder die dabei erworbene Qualifikation.",
+          "explain": {
+            "entryId": "Abschluss",
+            "headword": "Abschluss",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌʃlʊs/",
+              "ipaUS": "/ˈapˌʃlʊs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Abschluss",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schulabschluss",
+                  "Studienabschluss"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das erfolgreiche Ende einer Ausbildung oder die dabei erworbene Qualifikation.",
+                    "examples": [
+                      "Für diese Stelle braucht man einen technischen Abschluss."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abschluss – Beispielsatz folgt.",
+              "answer": "Das erfolgreiche Ende einer Ausbildung oder die dabei erworbene Qualifikation.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Beginn einer beruflichen Ausbildung in einem Betrieb.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne Bewertung innerhalb eines Zeugnisses.",
               "ok": false
             }
           ]
@@ -194,18 +512,54 @@
           "title": "",
           "page": 10,
           "question": "Mitarbeiter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die in einem Betrieb oder einer Organisation beschäftigt ist.",
+          "explain": {
+            "entryId": "Mitarbeiter",
+            "headword": "Mitarbeiter",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmɪtʔaʁˌbaɪ̯tɐ/",
+              "ipaUS": "/ˈmɪtʔaʁˌbaɪ̯tɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Mitarbeiter",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Beschäftigter",
+                  "Angestellter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die in einem Betrieb oder einer Organisation beschäftigt ist.",
+                    "examples": [
+                      "Die Firma beschäftigt mehr als hundert Mitarbeiter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mitarbeiter – Beispielsatz folgt.",
+              "answer": "Eine Person, die in einem Betrieb oder einer Organisation beschäftigt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Person oder Organisation, die anderen eine Arbeitsstelle gibt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alle Führungskräfte eines Unternehmens gemeinsam.",
               "ok": false
             }
           ]

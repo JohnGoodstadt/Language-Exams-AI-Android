@@ -2,210 +2,567 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizRelationships2-de",
-  "title": "",
+  "title": "Beziehungen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Beziehung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Art, wie Personen oder Dinge miteinander verbunden sind und zueinander stehen.",
+          "explain": {
+            "entryId": "Beziehung",
+            "headword": "Beziehung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈt͡siːʊŋ/",
+              "ipaUS": "/bəˈt͡siːʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Beziehung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verhältnis",
+                  "Relation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Art, wie Personen oder Dinge miteinander verbunden sind und zueinander stehen.",
+                    "examples": [
+                      "Sie haben eine gute berufliche Beziehung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Beziehung – Beispielsatz folgt.",
+              "answer": "Die Art, wie Personen oder Dinge miteinander verbunden sind und zueinander stehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein lockerer Kontakt zu einer Person, die man nur oberflächlich kennt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine ausschließlich romantische und meist kurze Liebesgeschichte.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Verabredung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Vereinbarung, sich zu einer bestimmten Zeit und an einem bestimmten Ort zu treffen.",
+          "explain": {
+            "entryId": "Verabredung",
+            "headword": "Verabredung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʔapʁeːdʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈʔapʁeːdʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Verabredung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Treffen",
+                  "Abmachung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Vereinbarung, sich zu einer bestimmten Zeit und an einem bestimmten Ort zu treffen.",
+                    "examples": [
+                      "Ich habe am Abend eine Verabredung mit Freunden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verabredung – Beispielsatz folgt.",
+              "answer": "Eine Vereinbarung, sich zu einer bestimmten Zeit und an einem bestimmten Ort zu treffen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine romantische Beziehung, die häufig nicht lange dauert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Versuch, die Zuneigung oder Zustimmung einer Person zu gewinnen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Romanze",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine romantische Liebesbeziehung oder Liebesgeschichte, die häufig von begrenzter Dauer ist.",
+          "explain": {
+            "entryId": "Romanze",
+            "headword": "Romanze",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁoˈmant͡sə/",
+              "ipaUS": "/ʁoˈmant͡sə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Romanze",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Liebesgeschichte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine romantische Liebesbeziehung oder Liebesgeschichte, die häufig von begrenzter Dauer ist.",
+                    "examples": [
+                      "Im Urlaub begann eine kurze Romanze."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Romanze – Beispielsatz folgt.",
+              "answer": "Eine romantische Liebesbeziehung oder Liebesgeschichte, die häufig von begrenzter Dauer ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein vereinbartes Treffen, das auch rein freundschaftlich sein kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine enge, nicht romantische Beziehung mit gegenseitigem Vertrauen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Werben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich darum bemühen, die Zuneigung, Zustimmung oder Unterstützung einer Person zu gewinnen.",
+          "explain": {
+            "entryId": "Werben",
+            "headword": "Werben",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɛʁbn̩/",
+              "ipaUS": "/ˈvɛʁbn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv mit um",
+                "headwordLine": "Werben",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "umwerben",
+                  "für sich gewinnen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sich darum bemühen, die Zuneigung, Zustimmung oder Unterstützung einer Person zu gewinnen.",
+                    "examples": [
+                      "Er warb lange um ihr Vertrauen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Werben – Beispielsatz folgt.",
+              "answer": "Sich darum bemühen, die Zuneigung, Zustimmung oder Unterstützung einer Person zu gewinnen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine romantische Beziehung von kurzer Dauer führen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Treffen zu einer bestimmten Zeit und an einem bestimmten Ort vereinbaren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Freundschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine enge persönliche Beziehung, die auf Zuneigung, Vertrauen und gegenseitiger Unterstützung beruht.",
+          "explain": {
+            "entryId": "Freundschaft",
+            "headword": "Freundschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁɔɪ̯ntʃaft/",
+              "ipaUS": "/ˈfʁɔɪ̯ntʃaft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Freundschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "enge Verbundenheit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine enge persönliche Beziehung, die auf Zuneigung, Vertrauen und gegenseitiger Unterstützung beruht.",
+                    "examples": [
+                      "Ihre Freundschaft besteht seit der Schulzeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Freundschaft – Beispielsatz folgt.",
+              "answer": "Eine enge persönliche Beziehung, die auf Zuneigung, Vertrauen und gegenseitiger Unterstützung beruht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein lockerer Kontakt zu jemandem, den man nur gelegentlich trifft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine romantische Beziehung zwischen zwei Personen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Gesellschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Anwesenheit anderer Menschen als Begleitung; auch die Gesamtheit sozial zusammenlebender Menschen.",
+          "explain": {
+            "entryId": "Gesellschaft",
+            "headword": "Gesellschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈzɛlʃaft/",
+              "ipaUS": "/ɡəˈzɛlʃaft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gesellschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Begleitung",
+                  "soziales Umfeld"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Anwesenheit anderer Menschen als Begleitung; auch die Gesamtheit sozial zusammenlebender Menschen.",
+                    "examples": [
+                      "Nach dem Umzug freute er sich über Gesellschaft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gesellschaft – Beispielsatz folgt.",
+              "answer": "Die Anwesenheit anderer Menschen als Begleitung; auch die Gesamtheit sozial zusammenlebender Menschen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Gruppe, deren Mitglieder durch enge gemeinsame Ziele verbunden sind.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Menschen, mit denen man über digitale Plattformen vernetzt ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Gemeinschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gruppe von Menschen, die durch gemeinsame Merkmale, Ziele oder Zusammenleben verbunden ist.",
+          "explain": {
+            "entryId": "Gemeinschaft",
+            "headword": "Gemeinschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈmaɪ̯nʃaft/",
+              "ipaUS": "/ɡəˈmaɪ̯nʃaft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gemeinschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gruppe",
+                  "Gemeinwesen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Gruppe von Menschen, die durch gemeinsame Merkmale, Ziele oder Zusammenleben verbunden ist.",
+                    "examples": [
+                      "Die Gemeinschaft organisiert Hilfe für neue Nachbarn."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gemeinschaft – Beispielsatz folgt.",
+              "answer": "Eine Gruppe von Menschen, die durch gemeinsame Merkmale, Ziele oder Zusammenleben verbunden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die bloße Anwesenheit anderer Menschen als Begleitung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein technisches System zum Austausch von Nachrichten im Internet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "soziale Medien",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Internetdienste, auf denen Nutzer Inhalte veröffentlichen, teilen und miteinander kommunizieren.",
+          "explain": {
+            "entryId": "soziale Medien",
+            "headword": "soziale Medien",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zoˈt͡si̯aːlə ˈmeːdi̯ən/",
+              "ipaUS": "/zoˈt͡si̯aːlə ˈmeːdi̯ən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Plural",
+                "headwordLine": "soziale Medien",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Social Media"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Internetdienste, auf denen Nutzer Inhalte veröffentlichen, teilen und miteinander kommunizieren.",
+                    "examples": [
+                      "Viele Vereine informieren über soziale Medien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "soziale Medien – Beispielsatz folgt.",
+              "answer": "Internetdienste, auf denen Nutzer Inhalte veröffentlichen, teilen und miteinander kommunizieren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der allgemeine Prozess, berufliche und private Kontakte aufzubauen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne technische Internetseite, die verschiedene Dienste anbietet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Vernetzung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Aufbau und die Pflege von Verbindungen zwischen Personen, Organisationen oder technischen Systemen.",
+          "explain": {
+            "entryId": "Vernetzung",
+            "headword": "Vernetzung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈnɛt͡sʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈnɛt͡sʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Vernetzung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Netzwerkbildung",
+                  "Networking"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Aufbau und die Pflege von Verbindungen zwischen Personen, Organisationen oder technischen Systemen.",
+                    "examples": [
+                      "Die Vernetzung der Vereine verbessert den Informationsaustausch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vernetzung – Beispielsatz folgt.",
+              "answer": "Der Aufbau und die Pflege von Verbindungen zwischen Personen, Organisationen oder technischen Systemen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Internetdienst, auf dem Nutzer Inhalte veröffentlichen und teilen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die technische oder organisatorische Grundlage, auf der Angebote bereitgestellt werden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Plattform",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine technische oder organisatorische Grundlage, über die Menschen Inhalte, Dienste oder Kontakte nutzen können.",
+          "explain": {
+            "entryId": "Plattform",
+            "headword": "Plattform",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/platˈfɔʁm/",
+              "ipaUS": "/platˈfɔʁm/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Plattform",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Portal",
+                  "Onlineplattform"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine technische oder organisatorische Grundlage, über die Menschen Inhalte, Dienste oder Kontakte nutzen können.",
+                    "examples": [
+                      "Die Plattform verbindet Freiwillige mit sozialen Projekten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Plattform – Beispielsatz folgt.",
+              "answer": "Eine technische oder organisatorische Grundlage, über die Menschen Inhalte, Dienste oder Kontakte nutzen können.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Vorgang, bei dem neue Kontakte und Verbindungen aufgebaut werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alle Internetdienste, die dem Teilen persönlicher Beiträge dienen.",
               "ok": false
             }
           ]

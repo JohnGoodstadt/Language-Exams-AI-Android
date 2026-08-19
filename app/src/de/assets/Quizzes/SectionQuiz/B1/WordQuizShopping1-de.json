@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizShopping1-de",
-  "title": "",
+  "title": "Einkaufen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Schnäppchen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Ware oder Leistung, die im Verhältnis zu ihrem Wert besonders günstig gekauft wird.",
+          "explain": {
+            "entryId": "Schnäppchen",
+            "headword": "Schnäppchen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃnɛpçən/",
+              "ipaUS": "/ˈʃnɛpçən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Schnäppchen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "günstiger Kauf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Ware oder Leistung, die im Verhältnis zu ihrem Wert besonders günstig gekauft wird.",
+                    "examples": [
+                      "Die Jacke war für diesen Preis ein echtes Schnäppchen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schnäppchen – Beispielsatz folgt.",
+              "answer": "Eine Ware oder Leistung, die im Verhältnis zu ihrem Wert besonders günstig gekauft wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine allgemeine Preissenkung um einen bestimmten Betrag oder Prozentsatz.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine zeitlich begrenzte Verkaufsaktion für bestimmte Waren.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Rabatt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Verringerung des normalen Preises um einen Betrag oder Prozentsatz.",
+          "explain": {
+            "entryId": "Rabatt",
+            "headword": "Rabatt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁaˈbat/",
+              "ipaUS": "/ʁaˈbat/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Rabatt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Preisnachlass"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Verringerung des normalen Preises um einen Betrag oder Prozentsatz.",
+                    "examples": [
+                      "Mit der Kundenkarte erhalten Sie zehn Prozent Rabatt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rabatt – Beispielsatz folgt.",
+              "answer": "Eine Verringerung des normalen Preises um einen Betrag oder Prozentsatz.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Ware, die überraschend günstig im Verhältnis zu ihrem Wert ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Vorschlag oder eine Verkaufsaktion mit bestimmten Bedingungen.",
               "ok": false
             }
           ]
@@ -54,18 +124,54 @@
           "title": "",
           "page": 3,
           "question": "Angebot",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine angebotene Ware oder Leistung mit bestimmten Bedingungen, oft zu einem vorübergehend günstigen Preis.",
+          "explain": {
+            "entryId": "Angebot",
+            "headword": "Angebot",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanɡəˌboːt/",
+              "ipaUS": "/ˈanɡəˌboːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Angebot",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Offerte",
+                  "Sonderangebot"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine angebotene Ware oder Leistung mit bestimmten Bedingungen, oft zu einem vorübergehend günstigen Preis.",
+                    "examples": [
+                      "Diese Woche ist Kaffee im Angebot."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Angebot – Beispielsatz folgt.",
+              "answer": "Eine angebotene Ware oder Leistung mit bestimmten Bedingungen, oft zu einem vorübergehend günstigen Preis.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die direkte Verringerung eines normalen Preises um einen festen Prozentsatz.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein besonders günstiger Kauf, den ein Kunde bereits gemacht hat.",
               "ok": false
             }
           ]
@@ -74,18 +180,53 @@
           "title": "",
           "page": 4,
           "question": "Kassierer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die an einer Kasse Zahlungen entgegennimmt und abrechnet.",
+          "explain": {
+            "entryId": "Kassierer",
+            "headword": "Kassierer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kaˈsiːʁɐ/",
+              "ipaUS": "/kaˈsiːʁɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Kassierer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kassenkraft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die an einer Kasse Zahlungen entgegennimmt und abrechnet.",
+                    "examples": [
+                      "Der Kassierer gab mir das Wechselgeld."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kassierer – Beispielsatz folgt.",
+              "answer": "Eine Person, die an einer Kasse Zahlungen entgegennimmt und abrechnet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die Kunden berät und Waren verkauft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die eine Ware tatsächlich kauft und bezahlt.",
               "ok": false
             }
           ]
@@ -94,18 +235,53 @@
           "title": "",
           "page": 5,
           "question": "Verkäufer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die Waren oder Dienstleistungen anbietet, Kunden berät und Verkäufe abschließt.",
+          "explain": {
+            "entryId": "Verkäufer",
+            "headword": "Verkäufer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈkɔɪ̯fɐ/",
+              "ipaUS": "/fɛɐ̯ˈkɔɪ̯fɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Verkäufer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verkaufskraft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die Waren oder Dienstleistungen anbietet, Kunden berät und Verkäufe abschließt.",
+                    "examples": [
+                      "Der Verkäufer zeigte uns verschiedene Modelle."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verkäufer – Beispielsatz folgt.",
+              "answer": "Eine Person, die Waren oder Dienstleistungen anbietet, Kunden berät und Verkäufe abschließt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die ausschließlich Zahlungen an einer Kasse bearbeitet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die eine Ware für sich selbst erwirbt.",
               "ok": false
             }
           ]
@@ -114,18 +290,54 @@
           "title": "",
           "page": 6,
           "question": "Kasse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Ort oder das Gerät, an dem Einkäufe bezahlt und Zahlungen registriert werden.",
+          "explain": {
+            "entryId": "Kasse",
+            "headword": "Kasse",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkasə/",
+              "ipaUS": "/ˈkasə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Kasse",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zahlstelle",
+                  "Kassenbereich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Ort oder das Gerät, an dem Einkäufe bezahlt und Zahlungen registriert werden.",
+                    "examples": [
+                      "An der Kasse war eine lange Schlange."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kasse – Beispielsatz folgt.",
+              "answer": "Der Ort oder das Gerät, an dem Einkäufe bezahlt und Zahlungen registriert werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Person, die Zahlungen entgegennimmt und Wechselgeld gibt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Beleg, den ein Kunde nach dem Bezahlen erhält.",
               "ok": false
             }
           ]
@@ -134,18 +346,53 @@
           "title": "",
           "page": 7,
           "question": "Kunde",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person oder Organisation, die Waren oder Dienstleistungen eines Unternehmens nutzt oder kauft.",
+          "explain": {
+            "entryId": "Kunde",
+            "headword": "Kunde",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkʊndə/",
+              "ipaUS": "/ˈkʊndə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Kunde",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Abnehmer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person oder Organisation, die Waren oder Dienstleistungen eines Unternehmens nutzt oder kauft.",
+                    "examples": [
+                      "Der Kunde fragte nach einem günstigeren Modell."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kunde – Beispielsatz folgt.",
+              "answer": "Eine Person oder Organisation, die Waren oder Dienstleistungen eines Unternehmens nutzt oder kauft.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die bereits eine bestimmte Ware gekauft hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die persönliche professionelle Beratung oder Betreuung erhält.",
               "ok": false
             }
           ]
@@ -154,18 +401,54 @@
           "title": "",
           "page": 8,
           "question": "Klient",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die eine individuelle professionelle Dienstleistung, Beratung oder Betreuung erhält.",
+          "explain": {
+            "entryId": "Klient",
+            "headword": "Klient",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kliˈɛnt/",
+              "ipaUS": "/kliˈɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Klient",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mandant",
+                  "betreuter Kunde"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die eine individuelle professionelle Dienstleistung, Beratung oder Betreuung erhält.",
+                    "examples": [
+                      "Die Anwältin bespricht den Vertrag mit ihrem Klienten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Klient – Beispielsatz folgt.",
+              "answer": "Eine Person, die eine individuelle professionelle Dienstleistung, Beratung oder Betreuung erhält.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede Person, die in einem Geschäft eine Ware ansieht oder kauft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die das Eigentum an einer Ware durch Kauf erwirbt.",
               "ok": false
             }
           ]
@@ -174,18 +457,53 @@
           "title": "",
           "page": 9,
           "question": "Käufer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person oder Organisation, die eine Ware oder ein Recht tatsächlich kauft.",
+          "explain": {
+            "entryId": "Käufer",
+            "headword": "Käufer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkɔɪ̯fɐ/",
+              "ipaUS": "/ˈkɔɪ̯fɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Käufer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erwerber"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person oder Organisation, die eine Ware oder ein Recht tatsächlich kauft.",
+                    "examples": [
+                      "Der Käufer unterschrieb den Vertrag für das Auto."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Käufer – Beispielsatz folgt.",
+              "answer": "Eine Person oder Organisation, die eine Ware oder ein Recht tatsächlich kauft.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede Person, die Waren oder Leistungen eines Unternehmens nutzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die länger professionell beraten und betreut wird.",
               "ok": false
             }
           ]
@@ -194,18 +512,53 @@
           "title": "",
           "page": 10,
           "question": "Lieferung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Bringen bestellter Waren zum Empfänger oder die dabei gelieferten Waren selbst.",
+          "explain": {
+            "entryId": "Lieferung",
+            "headword": "Lieferung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈliːfəʁʊŋ/",
+              "ipaUS": "/ˈliːfəʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Lieferung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zustellung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Bringen bestellter Waren zum Empfänger oder die dabei gelieferten Waren selbst.",
+                    "examples": [
+                      "Die Lieferung kommt voraussichtlich am Dienstag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Lieferung – Beispielsatz folgt.",
+              "answer": "Das Bringen bestellter Waren zum Empfänger oder die dabei gelieferten Waren selbst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Organisation und Beförderung von Waren vom Absender zum Empfänger.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person oder Firma, die Sendungen besonders schnell überbringt.",
               "ok": false
             }
           ]

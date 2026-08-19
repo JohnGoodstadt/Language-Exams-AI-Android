@@ -2,210 +2,562 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizSocial2-de",
-  "title": "",
+  "title": "Gesellschaft",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Gerechtigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Prinzip, Menschen fair zu behandeln und Rechte, Chancen oder Lasten angemessen zu verteilen.",
+          "explain": {
+            "entryId": "Gerechtigkeit",
+            "headword": "Gerechtigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈʁɛçtɪçkaɪ̯t/",
+              "ipaUS": "/ɡəˈʁɛçtɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gerechtigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fairness"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Prinzip, Menschen fair zu behandeln und Rechte, Chancen oder Lasten angemessen zu verteilen.",
+                    "examples": [
+                      "Viele Menschen fordern mehr soziale Gerechtigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gerechtigkeit – Beispielsatz folgt.",
+              "answer": "Das Prinzip, Menschen fair zu behandeln und Rechte, Chancen oder Lasten angemessen zu verteilen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Zustand, in dem alle Menschen exakt dasselbe erhalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das staatliche System aus Gerichten und Staatsanwaltschaften.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Justiz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das staatliche System von Gerichten, Staatsanwaltschaften und Rechtsprechung.",
+          "explain": {
+            "entryId": "Justiz",
+            "headword": "Justiz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/jʊsˈtiːt͡s/",
+              "ipaUS": "/jʊsˈtiːt͡s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Justiz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Rechtspflege"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das staatliche System von Gerichten, Staatsanwaltschaften und Rechtsprechung.",
+                    "examples": [
+                      "Die Justiz prüft den Fall vor Gericht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Justiz – Beispielsatz folgt.",
+              "answer": "Das staatliche System von Gerichten, Staatsanwaltschaften und Rechtsprechung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das allgemeine Prinzip einer fairen Behandlung und Verteilung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Gesamtheit der Regeln, die ein Parlament neu beschließt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Einwanderung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Vorgang, bei dem Menschen in ein anderes Land ziehen, um dort länger zu leben.",
+          "explain": {
+            "entryId": "Einwanderung",
+            "headword": "Einwanderung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nˌvandəʁʊŋ/",
+              "ipaUS": "/ˈaɪ̯nˌvandəʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Einwanderung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Immigration",
+                  "Zuwanderung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Vorgang, bei dem Menschen in ein anderes Land ziehen, um dort länger zu leben.",
+                    "examples": [
+                      "Die Einwanderung hat die Stadt kulturell geprägt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Einwanderung – Beispielsatz folgt.",
+              "answer": "Der Vorgang, bei dem Menschen in ein anderes Land ziehen, um dort länger zu leben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verlassen des eigenen Landes, um anderswo zu leben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der staatliche Schutz für eine verfolgte Person aus einem anderen Land.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Migrant",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die ihren Wohnort über eine größere Entfernung oder Landesgrenze hinweg verlegt.",
+          "explain": {
+            "entryId": "Migrant",
+            "headword": "Migrant",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/miˈɡʁant/",
+              "ipaUS": "/miˈɡʁant/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Migrant",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zuwanderer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person, die ihren Wohnort über eine größere Entfernung oder Landesgrenze hinweg verlegt.",
+                    "examples": [
+                      "Der Migrant lebt seit fünf Jahren in Deutschland."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Migrant – Beispielsatz folgt.",
+              "answer": "Eine Person, die ihren Wohnort über eine größere Entfernung oder Landesgrenze hinweg verlegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person, die ausschließlich wegen politischer Verfolgung Schutz beantragt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Vorgang, dauerhaft in ein anderes Land einzuwandern.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Asyl",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Schutz, den ein Staat einer verfolgten oder ernsthaft gefährdeten Person gewährt.",
+          "explain": {
+            "entryId": "Asyl",
+            "headword": "Asyl",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/aˈzyːl/",
+              "ipaUS": "/aˈzyːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Asyl",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "staatlicher Schutz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Schutz, den ein Staat einer verfolgten oder ernsthaft gefährdeten Person gewährt.",
+                    "examples": [
+                      "Die Familie beantragte Asyl, weil sie verfolgt wurde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Asyl – Beispielsatz folgt.",
+              "answer": "Der Schutz, den ein Staat einer verfolgten oder ernsthaft gefährdeten Person gewährt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der allgemeine Vorgang, in ein anderes Land umzuziehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Recht jeder reisenden Person, dauerhaft in einem Land zu bleiben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Politik",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Bereich, in dem öffentliche Entscheidungen getroffen, Macht ausgeübt und Gesellschaft gestaltet wird.",
+          "explain": {
+            "entryId": "Politik",
+            "headword": "Politik",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/poliˈtiːk/",
+              "ipaUS": "/poliˈtiːk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Politik",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Staatsführung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Bereich, in dem öffentliche Entscheidungen getroffen, Macht ausgeübt und Gesellschaft gestaltet wird.",
+                    "examples": [
+                      "In der Politik wird über neue Regeln für den Verkehr diskutiert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Politik – Beispielsatz folgt.",
+              "answer": "Der Bereich, in dem öffentliche Entscheidungen getroffen, Macht ausgeübt und Gesellschaft gestaltet wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne verbindliche Regel für ein bestimmtes Verhalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der formelle Prozess und die Gesamtheit der neu beschlossenen Gesetze.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Vorschrift",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine verbindliche Regel, die ein bestimmtes Verhalten oder Vorgehen festlegt.",
+          "explain": {
+            "entryId": "Vorschrift",
+            "headword": "Vorschrift",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ˌʃʁɪft/",
+              "ipaUS": "/ˈfoːɐ̯ˌʃʁɪft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Vorschrift",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Regel",
+                  "Bestimmung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine verbindliche Regel, die ein bestimmtes Verhalten oder Vorgehen festlegt.",
+                    "examples": [
+                      "Aus Sicherheitsgründen müssen alle die Vorschrift beachten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vorschrift – Beispielsatz folgt.",
+              "answer": "Eine verbindliche Regel, die ein bestimmtes Verhalten oder Vorgehen festlegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der politische Prozess, in dem allgemeine Gesetze geschaffen werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine persönliche Empfehlung ohne verpflichtende Wirkung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Gesetzgebung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Prozess des Beschließens von Gesetzen oder die Gesamtheit der geltenden gesetzlichen Regeln.",
+          "explain": {
+            "entryId": "Gesetzgebung",
+            "headword": "Gesetzgebung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈzɛt͡sˌɡeːbʊŋ/",
+              "ipaUS": "/ɡəˈzɛt͡sˌɡeːbʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gesetzgebung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Legislation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Prozess des Beschließens von Gesetzen oder die Gesamtheit der geltenden gesetzlichen Regeln.",
+                    "examples": [
+                      "Die Gesetzgebung zum Datenschutz wurde geändert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gesetzgebung – Beispielsatz folgt.",
+              "answer": "Der Prozess des Beschließens von Gesetzen oder die Gesamtheit der geltenden gesetzlichen Regeln.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne genaue Regel für einen bestimmten Arbeitsablauf.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das staatliche System, das Gesetze vor Gericht anwendet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Armut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zustand, in dem Menschen nicht genügend Geld oder Mittel für grundlegende Bedürfnisse haben.",
+          "explain": {
+            "entryId": "Armut",
+            "headword": "Armut",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʁmuːt/",
+              "ipaUS": "/ˈaʁmuːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Armut",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mittellosigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Zustand, in dem Menschen nicht genügend Geld oder Mittel für grundlegende Bedürfnisse haben.",
+                    "examples": [
+                      "Das Programm soll Familien aus der Armut helfen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Armut – Beispielsatz folgt.",
+              "answer": "Ein Zustand, in dem Menschen nicht genügend Geld oder Mittel für grundlegende Bedürfnisse haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Zustand, keine bezahlte Arbeitsstelle zu haben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Zustand, keine feste und sichere Unterkunft zu besitzen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Arbeitslosigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zustand, arbeitsfähig zu sein, aber keine bezahlte Beschäftigung zu haben.",
+          "explain": {
+            "entryId": "Arbeitslosigkeit",
+            "headword": "Arbeitslosigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʁbaɪ̯t͡sloːzɪçkaɪ̯t/",
+              "ipaUS": "/ˈaʁbaɪ̯t͡sloːzɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Arbeitslosigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erwerbslosigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zustand, arbeitsfähig zu sein, aber keine bezahlte Beschäftigung zu haben.",
+                    "examples": [
+                      "Nach der Schließung der Fabrik stieg die Arbeitslosigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Arbeitslosigkeit – Beispielsatz folgt.",
+              "answer": "Der Zustand, arbeitsfähig zu sein, aber keine bezahlte Beschäftigung zu haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Mangel an Geld und Mitteln für grundlegende Bedürfnisse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Leben ohne eine feste und sichere Unterkunft.",
               "ok": false
             }
           ]

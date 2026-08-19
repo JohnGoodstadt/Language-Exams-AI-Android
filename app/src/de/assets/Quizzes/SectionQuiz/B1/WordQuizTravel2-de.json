@@ -2,210 +2,564 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTravel2-de",
-  "title": "",
+  "title": "Reisen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Reservierung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Freihalten eines Platzes, Zimmers oder Tisches für eine bestimmte Person und Zeit.",
+          "explain": {
+            "entryId": "Reservierung",
+            "headword": "Reservierung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁezɛʁˈviːʁʊŋ/",
+              "ipaUS": "/ʁezɛʁˈviːʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Reservierung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vorbestellung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Freihalten eines Platzes, Zimmers oder Tisches für eine bestimmte Person und Zeit.",
+                    "examples": [
+                      "Wir haben eine Reservierung für zwei Nächte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Reservierung – Beispielsatz folgt.",
+              "answer": "Das Freihalten eines Platzes, Zimmers oder Tisches für eine bestimmte Zeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Kauf eines Reisepasses für eine Fahrt ins Ausland.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Ankunft eines Flugzeugs auf dem Flughafen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Ticket",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Papier oder digitaler Nachweis, der zur Fahrt, zum Flug oder zum Eintritt berechtigt.",
+          "explain": {
+            "entryId": "Ticket",
+            "headword": "Ticket",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈtɪkət/",
+              "ipaUS": "/ˈtɪkət/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Ticket",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fahrkarte",
+                  "Eintrittskarte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Papier oder digitaler Nachweis, der zur Fahrt, zum Flug oder zum Eintritt berechtigt.",
+                    "examples": [
+                      "Zeigen Sie beim Einsteigen bitte Ihr Ticket."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ticket – Beispielsatz folgt.",
+              "answer": "Ein Papier oder digitaler Nachweis, der zur Fahrt, zum Flug oder zum Eintritt berechtigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Liste mit allen Aktivitäten und Uhrzeiten einer Reise.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dokument, das Waren beim Zoll beschreibt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Kreuzfahrt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Urlaubsreise auf einem Schiff, bei der häufig mehrere Orte besucht werden.",
+          "explain": {
+            "entryId": "Kreuzfahrt",
+            "headword": "Kreuzfahrt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkʁɔɪ̯t͡sˌfaːɐ̯t/",
+              "ipaUS": "/ˈkʁɔɪ̯t͡sˌfaːɐ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Kreuzfahrt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schiffsreise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Urlaubsreise auf einem Schiff, bei der häufig mehrere Orte besucht werden.",
+                    "examples": [
+                      "Die Kreuzfahrt führt durch das Mittelmeer und hält in fünf Häfen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kreuzfahrt – Beispielsatz folgt.",
+              "answer": "Eine Urlaubsreise auf einem Schiff, bei der häufig mehrere Ziele besucht werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine direkte Überfahrt über das Meer, bei der nur der Transport wichtig ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Rundfahrt mit dem Bus durch mehrere Städte eines Landes.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Schiff",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein großes Wasserfahrzeug für den Transport von Menschen oder Gütern.",
+          "explain": {
+            "entryId": "Schiff",
+            "headword": "Schiff",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃɪf/",
+              "ipaUS": "/ʃɪf/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Schiff",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wasserfahrzeug"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein großes Wasserfahrzeug für den Transport von Menschen oder Gütern.",
+                    "examples": [
+                      "Das Schiff verlässt am Abend den Hafen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schiff – Beispielsatz folgt.",
+              "answer": "Ein großes Wasserfahrzeug für den Transport von Menschen oder Gütern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Gebäude, in dem Reisende übernachten und frühstücken können.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Bereich am Flughafen, von dem Passagiere ins Flugzeug steigen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Seereise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Reise über das Meer mit einem Schiff.",
+          "explain": {
+            "entryId": "Seereise",
+            "headword": "Seereise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzeːˌʁaɪ̯zə/",
+              "ipaUS": "/ˈzeːˌʁaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Seereise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Reise auf dem Seeweg"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Reise über das Meer mit einem Schiff.",
+                    "examples": [
+                      "Die Seereise von Europa nach Amerika dauerte früher mehrere Wochen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Seereise – Beispielsatz folgt.",
+              "answer": "Eine Reise über das Meer mit einem Schiff.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Urlaubsfahrt, die immer mehrere Häfen und Freizeitangebote umfasst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Reise mit dem Flugzeug zu einem weit entfernten Ziel.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Zoll",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Behörde und Kontrolle für Waren, die über eine Staatsgrenze gebracht werden.",
+          "explain": {
+            "entryId": "Zoll",
+            "headword": "Zoll",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/t͡sɔl/",
+              "ipaUS": "/t͡sɔl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Zoll",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zollbehörde",
+                  "Warenkontrolle"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Behörde und Kontrolle für Waren, die über eine Staatsgrenze gebracht werden.",
+                    "examples": [
+                      "Am Zoll mussten wir einige Waren anmelden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zoll – Beispielsatz folgt.",
+              "answer": "Die Behörde und Kontrolle für Waren, die über eine Staatsgrenze gebracht werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Stelle, die ausschließlich Reisepässe und Identitäten kontrolliert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Ort, an dem Passagiere vor dem Abflug einchecken.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Passkontrolle",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die amtliche Prüfung von Reisepass und Identität bei einer Grenzüberschreitung.",
+          "explain": {
+            "entryId": "Passkontrolle",
+            "headword": "Passkontrolle",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈpasˌkɔntʁɔlə/",
+              "ipaUS": "/ˈpasˌkɔntʁɔlə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Passkontrolle",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Grenzkontrolle"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die amtliche Prüfung von Reisepass und Identität bei einer Grenzüberschreitung.",
+                    "examples": [
+                      "Nach der Landung gingen wir zur Passkontrolle."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Passkontrolle – Beispielsatz folgt.",
+              "answer": "Die amtliche Prüfung von Reisepass und Identität bei einer Grenzüberschreitung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Prüfung von Koffern und eingeführten Waren durch den Zoll.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Anmeldung des Gepäcks am Schalter der Fluggesellschaft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Einreise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Betreten eines Landes von außen unter Beachtung der geltenden Regeln.",
+          "explain": {
+            "entryId": "Einreise",
+            "headword": "Einreise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nˌʁaɪ̯zə/",
+              "ipaUS": "/ˈaɪ̯nˌʁaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Einreise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Grenzübertritt ins Land"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Betreten eines Landes von außen unter Beachtung der geltenden Regeln.",
+                    "examples": [
+                      "Für die Einreise benötigen Besucher einen gültigen Pass."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Einreise – Beispielsatz folgt.",
+              "answer": "Das Betreten eines Landes von außen unter Beachtung der Einreisebestimmungen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verlassen eines Landes am Ende einer Reise.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Einsteigen in ein Schiff vor einer Kreuzfahrt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Abfahrt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zeitpunkt, an dem ein Fahrzeug oder Schiff einen Ort verlässt.",
+          "explain": {
+            "entryId": "Abfahrt",
+            "headword": "Abfahrt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌfaːɐ̯t/",
+              "ipaUS": "/ˈapˌfaːɐ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Abfahrt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Abreise",
+                  "Start"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zeitpunkt, an dem ein Fahrzeug oder Schiff einen Ort verlässt.",
+                    "examples": [
+                      "Die Abfahrt des Zuges ist um 7.35 Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abfahrt – Beispielsatz folgt.",
+              "answer": "Der Zeitpunkt, an dem ein Fahrzeug oder Schiff einen Ort verlässt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Zeitpunkt, an dem ein Verkehrsmittel sein Ziel erreicht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Start eines Flugzeugs vom Boden in die Luft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Abflug",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Start beziehungsweise die geplante Abreise eines Flugzeugs.",
+          "explain": {
+            "entryId": "Abflug",
+            "headword": "Abflug",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌfluːk/",
+              "ipaUS": "/ˈapˌfluːk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Abflug",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Flugabreise",
+                  "Start"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Start beziehungsweise die geplante Abreise eines Flugzeugs.",
+                    "examples": [
+                      "Der Abflug wurde um eine Stunde verschoben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abflug – Beispielsatz folgt.",
+              "answer": "Der Start beziehungsweise die geplante Abreise eines Flugzeugs.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Moment, in dem ein Flugzeug am Ziel aufsetzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Abreise eines Schiffes oder Zuges von einem Bahnhof.",
               "ok": false
             }
           ]

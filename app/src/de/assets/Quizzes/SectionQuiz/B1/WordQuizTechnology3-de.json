@@ -2,170 +2,453 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTechnology3-de",
-  "title": "",
+  "title": "Technologie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "online",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit dem Internet verbunden oder über das Internet verfügbar und aktiv.",
+          "explain": {
+            "entryId": "online",
+            "headword": "online",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɔnˈlaɪ̯n/",
+              "ipaUS": "/ɔnˈlaɪ̯n/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Internetverbindung",
+                "headwordLine": "online",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Internet"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit dem Internet verbunden oder über das Internet verfügbar und aktiv.",
+                    "examples": [
+                      "Der Antrag kann online ausgefüllt werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "online – Beispielsatz folgt.",
+              "answer": "Mit dem Internet verbunden oder über das Internet verfügbar und aktiv.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In einer künstlich erzeugten Umgebung statt körperlich vorhanden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Als Zahlen und elektronisch verarbeitete Daten gespeichert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Netzwerk",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine organisierte Gruppe verbundener Computer oder Geräte, die Daten und Ressourcen austauschen.",
+          "explain": {
+            "entryId": "Netzwerk",
+            "headword": "Netzwerk",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnɛt͡sˌvɛʁk/",
+              "ipaUS": "/ˈnɛt͡sˌvɛʁk/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Netzwerk",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Computernetz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine organisierte Gruppe verbundener Computer oder Geräte, die Daten und Ressourcen austauschen.",
+                    "examples": [
+                      "Alle Computer im Büro sind mit demselben Netzwerk verbunden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Netzwerk – Beispielsatz folgt.",
+              "answer": "Eine organisierte Gruppe verbundener Computer oder Geräte, die Daten und Ressourcen austauschen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das weltweite System aller öffentlich verbundenen Computernetze.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die einzelne technische oder persönliche Verbindung zwischen zwei Punkten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Verbindung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine technische oder andere Beziehung, durch die zwei Punkte, Geräte oder Personen miteinander verbunden sind.",
+          "explain": {
+            "entryId": "Verbindung",
+            "headword": "Verbindung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈbɪndʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈbɪndʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Verbindung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kontakt",
+                  "Anschluss"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine technische oder andere Beziehung, durch die zwei Punkte, Geräte oder Personen miteinander verbunden sind.",
+                    "examples": [
+                      "Die Verbindung zum Server wurde unterbrochen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verbindung – Beispielsatz folgt.",
+              "answer": "Eine technische oder andere Beziehung, durch die zwei Punkte, Geräte oder Personen miteinander verbunden sind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Gruppe vieler Geräte, die gemeinsam Daten austauschen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein drahtloses lokales Netz nach einem bestimmten Funkstandard.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "WLAN",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein lokales drahtloses Netzwerk, das Geräte per Funk verbindet und oft Internetzugang bietet.",
+          "explain": {
+            "entryId": "WLAN",
+            "headword": "WLAN",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈveːlaːn/",
+              "ipaUS": "/ˈveːlaːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "WLAN",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wi-Fi",
+                  "Funknetz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein lokales drahtloses Netzwerk, das Geräte per Funk verbindet und oft Internetzugang bietet.",
+                    "examples": [
+                      "Im Hotel ist das WLAN kostenlos."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "WLAN – Beispielsatz folgt.",
+              "answer": "Ein lokales drahtloses Netzwerk, das Geräte per Funk verbindet und oft Internetzugang bietet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede technische Verbindung zwischen zwei Geräten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das weltweite Netz aus miteinander verbundenen Computern.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Software",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Programme und digitalen Anweisungen, mit denen ein Computer oder Gerät arbeitet.",
+          "explain": {
+            "entryId": "Software",
+            "headword": "Software",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈsɔftvɛːɐ̯/",
+              "ipaUS": "/ˈsɔftvɛːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Software",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Programme"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Programme und digitalen Anweisungen, mit denen ein Computer oder Gerät arbeitet.",
+                    "examples": [
+                      "Die Software muss regelmäßig aktualisiert werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Software – Beispielsatz folgt.",
+              "answer": "Die Programme und digitalen Anweisungen, mit denen ein Computer oder Gerät arbeitet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die körperlichen Bauteile eines Computers oder Geräts.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne Internetseite mit Texten und Bildern.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Webseite",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine einzelne Seite mit Inhalten, die über eine Webadresse im Browser aufgerufen wird.",
+          "explain": {
+            "entryId": "Webseite",
+            "headword": "Webseite",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɛpˌzaɪ̯tə/",
+              "ipaUS": "/ˈvɛpˌzaɪ̯tə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Webseite",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Internetseite"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine einzelne Seite mit Inhalten, die über eine Webadresse im Browser aufgerufen wird.",
+                    "examples": [
+                      "Auf der Webseite stehen die aktuellen Öffnungszeiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Webseite – Beispielsatz folgt.",
+              "answer": "Eine einzelne Seite mit Inhalten, die über eine Webadresse im Browser aufgerufen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die erste oder zentrale Seite eines gesamten Webauftritts.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die genaue Adresse, unter der eine Seite im Internet erreichbar ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Startseite",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die erste oder zentrale Seite einer Website oder die beim Browserstart angezeigte Seite.",
+          "explain": {
+            "entryId": "Startseite",
+            "headword": "Startseite",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃtaʁtˌzaɪ̯tə/",
+              "ipaUS": "/ˈʃtaʁtˌzaɪ̯tə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Startseite",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Homepage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die erste oder zentrale Seite einer Website oder die beim Browserstart angezeigte Seite.",
+                    "examples": [
+                      "Von der Startseite gelangt man zu allen Angeboten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Startseite – Beispielsatz folgt.",
+              "answer": "Die erste oder zentrale Seite einer Website oder die beim Browserstart angezeigte Seite.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede einzelne Seite, die über einen Browser angesehen werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Zeichenfolge, die die Adresse einer Internetseite angibt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "URL",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die eindeutige Zeichenfolge, die die Adresse einer Ressource im Internet angibt.",
+          "explain": {
+            "entryId": "URL",
+            "headword": "URL",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/uːʔɛʁˈʔɛl/",
+              "ipaUS": "/uːʔɛʁˈʔɛl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "URL",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Webadresse",
+                  "Internetadresse"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die eindeutige Zeichenfolge, die die Adresse einer Ressource im Internet angibt.",
+                    "examples": [
+                      "Kopieren Sie die URL in die Adresszeile des Browsers."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "URL – Beispielsatz folgt.",
+              "answer": "Die eindeutige Zeichenfolge, die die Adresse einer Ressource im Internet angibt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die erste Seite, die ein Webauftritt seinen Besuchern zeigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne Seite mit Inhalten im World Wide Web.",
               "ok": false
             }
           ]

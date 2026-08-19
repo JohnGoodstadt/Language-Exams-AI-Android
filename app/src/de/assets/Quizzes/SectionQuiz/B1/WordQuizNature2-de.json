@@ -2,210 +2,563 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizNature2-de",
-  "title": "",
+  "title": "Natur",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Natur",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die nicht vom Menschen geschaffene Welt mit Landschaften, Pflanzen, Tieren und natürlichen Vorgängen.",
+          "explain": {
+            "entryId": "Natur",
+            "headword": "Natur",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/naˈtuːɐ̯/",
+              "ipaUS": "/naˈtuːɐ̯/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Natur",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "natürliche Welt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die nicht vom Menschen geschaffene Welt mit Landschaften, Pflanzen, Tieren und natürlichen Vorgängen.",
+                    "examples": [
+                      "Am Wochenende verbringen wir viel Zeit in der Natur."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Natur – Beispielsatz folgt.",
+              "answer": "Die nicht vom Menschen geschaffene Welt mit Landschaften, Pflanzen, Tieren und natürlichen Vorgängen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Alle äußeren Bedingungen, die Menschen und andere Lebewesen beeinflussen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der unmittelbare räumliche Bereich in der Nähe eines Ortes.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Umgebung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der räumliche Bereich oder die Verhältnisse, die sich unmittelbar um jemanden oder etwas befinden.",
+          "explain": {
+            "entryId": "Umgebung",
+            "headword": "Umgebung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʊmˈɡeːbʊŋ/",
+              "ipaUS": "/ʊmˈɡeːbʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Umgebung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Umfeld",
+                  "Nähe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der räumliche Bereich oder die Verhältnisse, die sich unmittelbar um jemanden oder etwas befinden.",
+                    "examples": [
+                      "In der Umgebung des Sees gibt es viele Wanderwege."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Umgebung – Beispielsatz folgt.",
+              "answer": "Der räumliche Bereich oder die Verhältnisse, die sich unmittelbar um jemanden oder etwas befinden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Alle natürlichen und gesellschaftlichen Bedingungen, die Lebewesen beeinflussen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die nicht von Menschen geschaffene Welt als Ganzes.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Zuhause",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Ort, an dem jemand wohnt und sich persönlich heimisch fühlt.",
+          "explain": {
+            "entryId": "Zuhause",
+            "headword": "Zuhause",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/t͡suˈhaʊ̯zə/",
+              "ipaUS": "/t͡suˈhaʊ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Zuhause",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Heim"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Ort, an dem jemand wohnt und sich persönlich heimisch fühlt.",
+                    "examples": [
+                      "Nach der langen Reise freute sie sich auf ihr Zuhause."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zuhause – Beispielsatz folgt.",
+              "answer": "Der Ort, an dem jemand wohnt und sich persönlich heimisch fühlt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein vorübergehender geschützter Ort für Menschen oder Tiere.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der natürliche Bereich, in dem eine Tier- oder Pflanzenart lebt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Unterschlupf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein geschützter Ort, an dem Menschen oder Tiere vorübergehend Sicherheit finden.",
+          "explain": {
+            "entryId": "Unterschlupf",
+            "headword": "Unterschlupf",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊntɐˌʃlʊpf/",
+              "ipaUS": "/ˈʊntɐˌʃlʊpf/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Unterschlupf",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schutzort",
+                  "Zuflucht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein geschützter Ort, an dem Menschen oder Tiere vorübergehend Sicherheit finden.",
+                    "examples": [
+                      "Die Tiere suchten bei dem Sturm Unterschlupf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unterschlupf – Beispielsatz folgt.",
+              "answer": "Ein geschützter Ort, an dem Menschen oder Tiere vorübergehend Sicherheit finden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der dauerhafte Wohnort, an dem sich eine Person heimisch fühlt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der gesamte natürliche Lebensraum einer bestimmten Art.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Umweltverschmutzung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die schädliche Belastung von Luft, Wasser oder Boden durch Abfälle und Schadstoffe.",
+          "explain": {
+            "entryId": "Umweltverschmutzung",
+            "headword": "Umweltverschmutzung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊmvɛltfɛɐ̯ˌʃmʊt͡sʊŋ/",
+              "ipaUS": "/ˈʊmvɛltfɛɐ̯ˌʃmʊt͡sʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Umweltverschmutzung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Umweltbelastung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die schädliche Belastung von Luft, Wasser oder Boden durch Abfälle und Schadstoffe.",
+                    "examples": [
+                      "Verkehr und Industrie tragen zur Umweltverschmutzung bei."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Umweltverschmutzung – Beispielsatz folgt.",
+              "answer": "Die schädliche Belastung von Luft, Wasser oder Boden durch Abfälle und Schadstoffe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede Verunreinigung eines Gegenstands oder bestimmten Bereichs.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Material, das nicht mehr gebraucht und weggeworfen wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Verschmutzung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zustand oder Vorgang, bei dem etwas durch Schmutz oder Schadstoffe verunreinigt wird.",
+          "explain": {
+            "entryId": "Verschmutzung",
+            "headword": "Verschmutzung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʃmʊt͡sʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈʃmʊt͡sʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Verschmutzung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verunreinigung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zustand oder Vorgang, bei dem etwas durch Schmutz oder Schadstoffe verunreinigt wird.",
+                    "examples": [
+                      "Die Verschmutzung des Flusses gefährdet die Fische."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verschmutzung – Beispielsatz folgt.",
+              "answer": "Der Zustand oder Vorgang, bei dem etwas durch Schmutz oder Schadstoffe verunreinigt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ausschließlich die Belastung der gesamten natürlichen Umwelt durch Industrie.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Sammeln und Verarbeiten gebrauchter Materialien.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Abfall",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Material oder Gegenstände, die nicht mehr gebraucht und deshalb weggeworfen werden.",
+          "explain": {
+            "entryId": "Abfall",
+            "headword": "Abfall",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌfal/",
+              "ipaUS": "/ˈapˌfal/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Abfall",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Müll"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Material oder Gegenstände, die nicht mehr gebraucht und deshalb weggeworfen werden.",
+                    "examples": [
+                      "Der Abfall wird nach Papier, Glas und Restmüll getrennt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abfall – Beispielsatz folgt.",
+              "answer": "Material oder Gegenstände, die nicht mehr gebraucht und deshalb weggeworfen werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schadstoffe, die Luft, Wasser oder Boden verunreinigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gebrauchtes Material, das bereits zu neuen Produkten verarbeitet wurde.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Recycling",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Sammeln und Verarbeiten gebrauchter Materialien, damit daraus neue Produkte entstehen.",
+          "explain": {
+            "entryId": "Recycling",
+            "headword": "Recycling",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁiˈsaɪ̯klɪŋ/",
+              "ipaUS": "/ʁiˈsaɪ̯klɪŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Recycling",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wiederverwertung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Sammeln und Verarbeiten gebrauchter Materialien, damit daraus neue Produkte entstehen.",
+                    "examples": [
+                      "Recycling spart Rohstoffe und verringert Abfall."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Recycling – Beispielsatz folgt.",
+              "answer": "Das Sammeln und Verarbeiten gebrauchter Materialien, damit daraus neue Produkte entstehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das erneute Nutzen eines Gegenstands ohne grundlegende Verarbeitung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das allgemeine Verringern von Verbrauch, Menge oder Belastung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "wiederverwenden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen Gegenstand erneut benutzen, statt ihn wegzuwerfen oder neu zu kaufen.",
+          "explain": {
+            "entryId": "wiederverwenden",
+            "headword": "wiederverwenden",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/",
+              "ipaUS": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "wiederverwenden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erneut benutzen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Einen Gegenstand erneut benutzen, statt ihn wegzuwerfen oder neu zu kaufen.",
+                    "examples": [
+                      "Wir können die Gläser als Behälter wiederverwenden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wiederverwenden – Beispielsatz folgt.",
+              "answer": "Einen Gegenstand erneut benutzen, statt ihn wegzuwerfen oder neu zu kaufen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gebrauchtes Material industriell zu einem neuen Produkt verarbeiten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Menge eines verbrauchten Materials allgemein kleiner machen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "reduzieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Menge, einen Verbrauch oder eine Belastung kleiner machen.",
+          "explain": {
+            "entryId": "reduzieren",
+            "headword": "reduzieren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁedut͡siːʁən/",
+              "ipaUS": "/ʁedut͡siːʁən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "reduzieren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "verringern",
+                  "senken"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Menge, einen Verbrauch oder eine Belastung kleiner machen.",
+                    "examples": [
+                      "Die Firma will ihren Energieverbrauch reduzieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "reduzieren – Beispielsatz folgt.",
+              "answer": "Eine Menge, einen Verbrauch oder eine Belastung kleiner machen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einen gebrauchten Gegenstand ohne Veränderung erneut benutzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Altes Material sammeln und zu einem neuen Produkt verarbeiten.",
               "ok": false
             }
           ]

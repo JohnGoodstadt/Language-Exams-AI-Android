@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizHealth1-de",
-  "title": "",
+  "title": "Gesundheit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Allergie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine übermäßige Reaktion des Körpers auf einen normalerweise harmlosen Stoff.",
+          "explain": {
+            "entryId": "Allergie",
+            "headword": "Allergie",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/alɛʁˈɡiː/",
+              "ipaUS": "/alɛʁˈɡiː/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Allergie",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Überempfindlichkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine übermäßige Reaktion des Körpers auf einen normalerweise harmlosen Stoff.",
+                    "examples": [
+                      "Wegen ihrer Allergie darf sie keine Nüsse essen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Allergie – Beispielsatz folgt.",
+              "answer": "Eine übermäßige Reaktion des Körpers auf einen normalerweise harmlosen Stoff.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine ansteckende Krankheit, die immer durch Bakterien verursacht wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Verletzung der Haut durch einen scharfen Gegenstand.",
               "ok": false
             }
           ]
@@ -34,18 +69,54 @@
           "title": "",
           "page": 2,
           "question": "Reaktion",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Antwort des Körpers oder einer Person auf einen Reiz, ein Ereignis oder eine Handlung.",
+          "explain": {
+            "entryId": "Reaktion",
+            "headword": "Reaktion",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁeakˈt͡si̯oːn/",
+              "ipaUS": "/ʁeakˈt͡si̯oːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Reaktion",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Antwort",
+                  "Wirkung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Antwort des Körpers oder einer Person auf einen Reiz, ein Ereignis oder eine Handlung.",
+                    "examples": [
+                      "Das Medikament verursachte eine unerwartete Reaktion."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Reaktion – Beispielsatz folgt.",
+              "answer": "Eine Antwort des Körpers oder einer Person auf einen Reiz, ein Ereignis oder eine Handlung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein sichtbares Zeichen, das sicher auf eine bestimmte Krankheit hinweist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine geplante Methode zur langfristigen Behandlung einer Krankheit.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "Symptome",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Wahrnehmbare Anzeichen, die auf eine Krankheit oder Störung hinweisen können.",
+          "explain": {
+            "entryId": "Symptome",
+            "headword": "Symptome",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zʏmpˈtoːmə/",
+              "ipaUS": "/zʏmpˈtoːmə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Plural",
+                "headwordLine": "Symptome",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Krankheitszeichen",
+                  "Beschwerden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Wahrnehmbare Anzeichen, die auf eine Krankheit oder Störung hinweisen können.",
+                    "examples": [
+                      "Fieber und Husten können Symptome einer Infektion sein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Symptome – Beispielsatz folgt.",
+              "answer": "Wahrnehmbare Anzeichen, die auf eine Krankheit oder Störung hinweisen können.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gründe, aus denen eine Krankheit ursprünglich entstanden ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Maßnahmen, mit denen eine Krankheit vollständig geheilt wird.",
               "ok": false
             }
           ]
@@ -74,18 +181,54 @@
           "title": "",
           "page": 4,
           "question": "Termin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein fest vereinbarter Zeitpunkt für ein Treffen, eine Untersuchung oder eine Aufgabe.",
+          "explain": {
+            "entryId": "Termin",
+            "headword": "Termin",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/tɛʁˈmiːn/",
+              "ipaUS": "/tɛʁˈmiːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Termin",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verabredung",
+                  "Zeitpunkt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein fest vereinbarter Zeitpunkt für ein Treffen, eine Untersuchung oder eine Aufgabe.",
+                    "examples": [
+                      "Ich habe morgen einen Termin beim Zahnarzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Termin – Beispielsatz folgt.",
+              "answer": "Ein fest vereinbarter Zeitpunkt für ein Treffen, eine Untersuchung oder eine Aufgabe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine allgemeine Empfehlung für gesunde Ernährung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein offizielles Dokument über den Versicherungsschutz.",
               "ok": false
             }
           ]
@@ -94,18 +237,54 @@
           "title": "",
           "page": 5,
           "question": "vereinbaren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Gemeinsam festlegen oder abmachen, dass etwas zu einer bestimmten Zeit oder auf bestimmte Weise geschieht.",
+          "explain": {
+            "entryId": "vereinbaren",
+            "headword": "vereinbaren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʔaɪ̯nbaːʁən/",
+              "ipaUS": "/fɛɐ̯ˈʔaɪ̯nbaːʁən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "vereinbaren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "abmachen",
+                  "festlegen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Gemeinsam festlegen oder abmachen, dass etwas zu einer bestimmten Zeit oder auf bestimmte Weise geschieht.",
+                    "examples": [
+                      "Sie möchte telefonisch einen Termin vereinbaren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vereinbaren – Beispielsatz folgt.",
+              "answer": "Gemeinsam festlegen oder abmachen, dass etwas zu einer bestimmten Zeit geschieht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine ärztliche Untersuchung ohne Anmeldung durchführen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Medikament genau nach Rezept einnehmen.",
               "ok": false
             }
           ]
@@ -114,18 +293,54 @@
           "title": "",
           "page": 6,
           "question": "Beratung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gespräch, in dem eine fachkundige Person informiert und bei einer Entscheidung hilft.",
+          "explain": {
+            "entryId": "Beratung",
+            "headword": "Beratung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʁaːtʊŋ/",
+              "ipaUS": "/bəˈʁaːtʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Beratung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ratschlag",
+                  "Konsultation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Gespräch, in dem eine fachkundige Person informiert und bei einer Entscheidung hilft.",
+                    "examples": [
+                      "Die Apotheke bietet eine Beratung zu den Medikamenten an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Beratung – Beispielsatz folgt.",
+              "answer": "Ein Gespräch, in dem eine fachkundige Person informiert und bei einer Entscheidung hilft.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine körperliche Untersuchung, bei der eine Krankheit festgestellt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine regelmäßige Folge von Übungen zur Verbesserung der Fitness.",
               "ok": false
             }
           ]
@@ -134,18 +349,54 @@
           "title": "",
           "page": 7,
           "question": "Ernährung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Art und Weise, wie ein Mensch Lebensmittel auswählt und zu sich nimmt.",
+          "explain": {
+            "entryId": "Ernährung",
+            "headword": "Ernährung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈnɛːʁʊŋ/",
+              "ipaUS": "/ɛɐ̯ˈnɛːʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Ernährung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kost",
+                  "Nahrungsweise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Art und Weise, wie ein Mensch Lebensmittel auswählt und zu sich nimmt.",
+                    "examples": [
+                      "Eine ausgewogene Ernährung ist wichtig für die Gesundheit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ernährung – Beispielsatz folgt.",
+              "answer": "Die Art und Weise, wie ein Mensch Lebensmittel auswählt und zu sich nimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die einzelnen essbaren Stoffe, die dem Körper Energie liefern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die körperliche Aktivität, die im Alltag oder beim Sport stattfindet.",
               "ok": false
             }
           ]
@@ -154,18 +405,54 @@
           "title": "",
           "page": 8,
           "question": "Nahrung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Essbare Stoffe, die ein Lebewesen aufnimmt und die Energie sowie Nährstoffe liefern.",
+          "explain": {
+            "entryId": "Nahrung",
+            "headword": "Nahrung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːʁʊŋ/",
+              "ipaUS": "/ˈnaːʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Nahrung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Essen",
+                  "Lebensmittel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Essbare Stoffe, die ein Lebewesen aufnimmt und die Energie sowie Nährstoffe liefern.",
+                    "examples": [
+                      "Der Körper braucht Nahrung, Wasser und ausreichend Schlaf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nahrung – Beispielsatz folgt.",
+              "answer": "Essbare Stoffe, die ein Lebewesen aufnimmt und die Energie sowie Nährstoffe liefern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die persönliche Art und Weise, wie jemand täglich Lebensmittel auswählt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein genauer Plan für sportliche Übungen und Ruhezeiten.",
               "ok": false
             }
           ]
@@ -174,18 +461,54 @@
           "title": "",
           "page": 9,
           "question": "ausgewogen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So zusammengesetzt, dass wichtige Teile in einem gesunden oder passenden Verhältnis stehen.",
+          "explain": {
+            "entryId": "ausgewogen",
+            "headword": "ausgewogen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯sɡəˌvoːɡn̩/",
+              "ipaUS": "/ˈaʊ̯sɡəˌvoːɡn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "qualitativ",
+                "headwordLine": "ausgewogen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ausgeglichen",
+                  "gut zusammengestellt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So zusammengesetzt, dass wichtige Teile in einem gesunden oder passenden Verhältnis stehen.",
+                    "examples": [
+                      "Sie achtet auf eine ausgewogene Ernährung mit viel Gemüse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ausgewogen – Beispielsatz folgt.",
+              "answer": "So zusammengesetzt, dass wichtige Teile in einem gesunden oder passenden Verhältnis stehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So dringend, dass sofort medizinische Hilfe gerufen werden muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So einseitig, dass nur eine Art von Nahrung gegessen wird.",
               "ok": false
             }
           ]
@@ -194,18 +517,53 @@
           "title": "",
           "page": 10,
           "question": "Notfall",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine gefährliche oder ernste Situation, in der schnell Hilfe nötig ist.",
+          "explain": {
+            "entryId": "Notfall",
+            "headword": "Notfall",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnoːtˌfal/",
+              "ipaUS": "/ˈnoːtˌfal/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Notfall",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Notsituation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine gefährliche oder ernste Situation, in der schnell Hilfe nötig ist.",
+                    "examples": [
+                      "Bei einem medizinischen Notfall rufen Sie den Rettungsdienst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Notfall – Beispielsatz folgt.",
+              "answer": "Eine gefährliche oder ernste Situation, in der schnell Hilfe nötig ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein normaler Kontrolltermin ohne akute Beschwerden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine lange geplante Therapie für eine leichte Erkrankung.",
               "ok": false
             }
           ]

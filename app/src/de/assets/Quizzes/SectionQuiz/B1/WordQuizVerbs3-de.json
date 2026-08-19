@@ -2,190 +2,511 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs3-de",
-  "title": "",
+  "title": "Verben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "verbessern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Qualität, Leistung oder Situation besser machen beziehungsweise besser werden.",
+          "explain": {
+            "entryId": "verbessern",
+            "headword": "verbessern",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈbɛsɐn/",
+              "ipaUS": "/fɛɐ̯ˈbɛsɐn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv oder reflexiv",
+                "headwordLine": "verbessern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "optimieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Qualität, Leistung oder Situation besser machen beziehungsweise besser werden.",
+                    "examples": [
+                      "Der Kurs hilft mir, mein Deutsch zu verbessern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verbessern – Beispielsatz folgt.",
+              "answer": "Die Qualität, Leistung oder Situation besser machen beziehungsweise besser werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine messbare Menge oder Intensität gezielt erhöhen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Etwas über längere Zeit entstehen, wachsen oder reifer werden lassen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "steigern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine messbare Leistung, Menge, Intensität oder einen Wert erhöhen.",
+          "explain": {
+            "entryId": "steigern",
+            "headword": "steigern",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃtaɪ̯ɡɐn/",
+              "ipaUS": "/ˈʃtaɪ̯ɡɐn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "steigern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erhöhen",
+                  "vergrößern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine messbare Leistung, Menge, Intensität oder einen Wert erhöhen.",
+                    "examples": [
+                      "Die Firma möchte ihre Produktion steigern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "steigern – Beispielsatz folgt.",
+              "answer": "Eine messbare Leistung, Menge, Intensität oder einen Wert erhöhen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die allgemeine Qualität einer Sache besser machen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Fähigkeit oder Idee schrittweise entstehen und wachsen lassen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "entwickeln",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas schrittweise entstehen, wachsen oder zu einer reiferen Form werden lassen.",
+          "explain": {
+            "entryId": "entwickeln",
+            "headword": "entwickeln",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛntˈvɪkl̩n/",
+              "ipaUS": "/ɛntˈvɪkl̩n/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv oder reflexiv",
+                "headwordLine": "entwickeln",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ausarbeiten",
+                  "entfalten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas schrittweise entstehen, wachsen oder zu einer reiferen Form werden lassen.",
+                    "examples": [
+                      "Das Team entwickelt eine neue Lernmethode."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "entwickeln – Beispielsatz folgt.",
+              "answer": "Etwas schrittweise entstehen, wachsen oder zu einer reiferen Form werden lassen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Qualität einer bestehenden Sache unmittelbar besser machen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur einen messbaren Wert oder eine Menge erhöhen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "einbeziehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person oder Sache bei einer Entscheidung, Betrachtung oder Aktivität berücksichtigen und beteiligen.",
+          "explain": {
+            "entryId": "einbeziehen",
+            "headword": "einbeziehen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nbəˌt͡siːən/",
+              "ipaUS": "/ˈaɪ̯nbəˌt͡siːən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "einbeziehen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "berücksichtigen",
+                  "integrieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Person oder Sache bei einer Entscheidung, Betrachtung oder Aktivität berücksichtigen und beteiligen.",
+                    "examples": [
+                      "Wir sollten alle Mitarbeiter in die Planung einbeziehen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einbeziehen – Beispielsatz folgt.",
+              "answer": "Eine Person oder Sache bei einer Entscheidung, Betrachtung oder Aktivität berücksichtigen und beteiligen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Selbst aktiv an einer gemeinsamen Tätigkeit oder Entscheidung teilnehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Etwas als festen Teil einer Menge enthalten oder räumlich umgeben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "beteiligen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Jemanden teilnehmen lassen oder selbst an einer Aktivität, Entscheidung oder einem Besitz teilnehmen.",
+          "explain": {
+            "entryId": "beteiligen",
+            "headword": "beteiligen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈtaɪ̯lɪɡn̩/",
+              "ipaUS": "/bəˈtaɪ̯lɪɡn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv oder reflexiv",
+                "headwordLine": "beteiligen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "teilnehmen",
+                  "mitwirken"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Jemanden teilnehmen lassen oder selbst an einer Aktivität, Entscheidung oder einem Besitz teilnehmen.",
+                    "examples": [
+                      "Viele Bürger beteiligten sich an der Diskussion."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "beteiligen – Beispielsatz folgt.",
+              "answer": "Jemanden teilnehmen lassen oder selbst an einer Aktivität, Entscheidung oder einem Besitz teilnehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine andere Person oder Sache bei der eigenen Planung berücksichtigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Etwas vollständig als Bestandteil einer Menge enthalten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "einschließen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas als Bestandteil enthalten; auch jemanden oder etwas in einem Raum verschließen.",
+          "explain": {
+            "entryId": "einschließen",
+            "headword": "einschließen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nˌʃliːsn̩/",
+              "ipaUS": "/ˈaɪ̯nˌʃliːsn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "einschließen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beinhalten",
+                  "inkludieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas als Bestandteil enthalten; auch jemanden oder etwas in einem Raum verschließen.",
+                    "examples": [
+                      "Der Preis schließt das Frühstück ein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einschließen – Beispielsatz folgt.",
+              "answer": "Etwas als Bestandteil enthalten; auch jemanden oder etwas in einem Raum verschließen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person aktiv an einer Entscheidung oder Planung mitwirken lassen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Selbst an einer gemeinsamen Tätigkeit teilnehmen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "empfehlen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aufgrund eigener Einschätzung zu einer Person, Sache oder Handlung raten.",
+          "explain": {
+            "entryId": "empfehlen",
+            "headword": "empfehlen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛmˈpfeːlən/",
+              "ipaUS": "/ɛmˈpfeːlən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "empfehlen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "anraten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Aufgrund eigener Einschätzung zu einer Person, Sache oder Handlung raten.",
+                    "examples": [
+                      "Ich kann dieses Restaurant sehr empfehlen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "empfehlen – Beispielsatz folgt.",
+              "answer": "Aufgrund eigener Einschätzung zu einer Person, Sache oder Handlung raten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Idee zur gemeinsamen Prüfung oder Entscheidung nennen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einer Person sagen, was sie in ihrer Situation am besten tun sollte.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "vorschlagen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Idee oder Möglichkeit nennen, damit andere darüber entscheiden können.",
+          "explain": {
+            "entryId": "vorschlagen",
+            "headword": "vorschlagen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ˌʃlaːɡn̩/",
+              "ipaUS": "/ˈfoːɐ̯ˌʃlaːɡn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "vorschlagen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "anregen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Idee oder Möglichkeit nennen, damit andere darüber entscheiden können.",
+                    "examples": [
+                      "Sie schlug einen anderen Termin vor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vorschlagen – Beispielsatz folgt.",
+              "answer": "Eine Idee oder Möglichkeit nennen, damit andere darüber entscheiden können.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person oder Sache aufgrund eigener Erfahrung besonders positiv beurteilen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jemandem sagen, welche Handlung in einer schwierigen Lage sinnvoll wäre.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "raten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Jemandem aufgrund einer Einschätzung sagen, was er tun sollte; auch eine unbekannte Antwort vermuten.",
+          "explain": {
+            "entryId": "raten",
+            "headword": "raten",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁaːtn̩/",
+              "ipaUS": "/ˈʁaːtn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv oder transitiv",
+                "headwordLine": "raten",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "einen Rat geben",
+                  "vermuten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Jemandem aufgrund einer Einschätzung sagen, was er tun sollte; auch eine unbekannte Antwort vermuten.",
+                    "examples": [
+                      "Der Arzt riet ihm zu mehr Bewegung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "raten – Beispielsatz folgt.",
+              "answer": "Jemandem aufgrund einer Einschätzung sagen, was er tun sollte; auch eine unbekannte Antwort vermuten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Person oder Sache aufgrund eigener Erfahrung weiterempfehlen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Idee ohne persönliche Beratung zur gemeinsamen Entscheidung nennen.",
               "ok": false
             }
           ]

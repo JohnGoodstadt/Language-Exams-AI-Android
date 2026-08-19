@@ -2,210 +2,568 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdverbs2-de",
-  "title": "",
+  "title": "Adverbien",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "recht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In einem ziemlich hohen oder bemerkenswerten Grad.",
+          "explain": {
+            "entryId": "recht",
+            "headword": "recht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁɛçt/",
+              "ipaUS": "/ʁɛçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Gradangabe",
+                "headwordLine": "recht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ziemlich",
+                  "recht stark"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In einem ziemlich hohen oder bemerkenswerten Grad.",
+                    "examples": [
+                      "Die Aufgabe war recht schwierig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "recht – Beispielsatz folgt.",
+              "answer": "In einem ziemlich hohen oder bemerkenswerten Grad.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In relativ hohem Grad und häufig stärker umgangssprachlich empfunden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur bis zu einem akzeptablen oder mittleren Grad.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "einigermaßen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In einem gewissen, akzeptablen, aber nicht besonders hohen Maße.",
+          "explain": {
+            "entryId": "einigermaßen",
+            "headword": "einigermaßen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nɪɡɐˌmaːsn̩/",
+              "ipaUS": "/ˈaɪ̯nɪɡɐˌmaːsn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "begrenzter Grad",
+                "headwordLine": "einigermaßen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "halbwegs",
+                  "leidlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In einem gewissen, akzeptablen, aber nicht besonders hohen Maße.",
+                    "examples": [
+                      "Nach der Pause fühlte sie sich einigermaßen besser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einigermaßen – Beispielsatz folgt.",
+              "answer": "In einem gewissen, akzeptablen, aber nicht besonders hohen Maße.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In einem deutlich hohen, aber nicht vollständigen Grad.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In einem bemerkenswerten Grad, der stärker als nur akzeptabel ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "kaum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fast nicht oder nur in sehr geringem Maße.",
+          "explain": {
+            "entryId": "kaum",
+            "headword": "kaum",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kaʊ̯m/",
+              "ipaUS": "/kaʊ̯m/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "nahezu nicht",
+                "headwordLine": "kaum",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fast nicht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fast nicht oder nur in sehr geringem Maße.",
+                    "examples": [
+                      "Wegen des Lärms konnte ich ihn kaum verstehen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kaum – Beispielsatz folgt.",
+              "answer": "Fast nicht oder nur in sehr geringem Maße.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur wenig unter einer Grenze oder Menge.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit Mühe gerade noch innerhalb einer notwendigen Grenze.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "knapp",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nur wenig unter, über oder vor einer Grenze; mit sehr geringem Abstand.",
+          "explain": {
+            "entryId": "knapp",
+            "headword": "knapp",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/knap/",
+              "ipaUS": "/knap/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "geringer Abstand zur Grenze",
+                "headwordLine": "knapp",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beinahe",
+                  "nur wenig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nur wenig unter, über oder vor einer Grenze; mit sehr geringem Abstand.",
+                    "examples": [
+                      "Wir erreichten den Zug knapp vor der Abfahrt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "knapp – Beispielsatz folgt.",
+              "answer": "Nur wenig unter, über oder vor einer Grenze; mit sehr geringem Abstand.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fast überhaupt nicht oder nur in sehr geringem Maße.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit letzter Möglichkeit und gerade noch erfolgreich.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "gerade noch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nur mit knapper Möglichkeit oder am äußersten Rand einer Grenze noch erfolgreich.",
+          "explain": {
+            "entryId": "gerade noch",
+            "headword": "gerade noch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈʁaːdə nɔx/",
+              "ipaUS": "/ɡəˈʁaːdə nɔx/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Grenzfall",
+                "headwordLine": "gerade noch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "so eben",
+                  "mit Mühe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nur mit knapper Möglichkeit oder am äußersten Rand einer Grenze noch erfolgreich.",
+                    "examples": [
+                      "Sie bestand die Prüfung gerade noch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gerade noch – Beispielsatz folgt.",
+              "answer": "Nur mit knapper Möglichkeit oder am äußersten Rand einer Grenze noch erfolgreich.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fast überhaupt nicht und nur in sehr geringem Maße.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit geringem Abstand zu einer Zeit-, Mengen- oder Zahlengrenze.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "höchst",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In sehr hohem oder dem denkbar höchsten Maße, oft wertend oder formell.",
+          "explain": {
+            "entryId": "höchst",
+            "headword": "höchst",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/høːçst/",
+              "ipaUS": "/høːçst/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "sehr hoher Grad",
+                "headwordLine": "höchst",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "äußerst",
+                  "überaus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In sehr hohem oder dem denkbar höchsten Maße, oft wertend oder formell.",
+                    "examples": [
+                      "Sein Verhalten war höchst ungewöhnlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "höchst – Beispielsatz folgt.",
+              "answer": "In sehr hohem oder dem denkbar höchsten Maße, oft wertend oder formell.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In deutlich messbarem und wichtigem Ausmaß.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In extrem starkem Maße, meist als allgemeine Verstärkung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "erheblich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In einem großen, deutlich messbaren oder wichtigen Ausmaß.",
+          "explain": {
+            "entryId": "erheblich",
+            "headword": "erheblich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈheːplɪç/",
+              "ipaUS": "/ɛɐ̯ˈheːplɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "bedeutendes Ausmaß",
+                "headwordLine": "erheblich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "deutlich",
+                  "beträchtlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In einem großen, deutlich messbaren oder wichtigen Ausmaß.",
+                    "examples": [
+                      "Die Kosten sind erheblich gestiegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erheblich – Beispielsatz folgt.",
+              "answer": "In einem großen, deutlich messbaren oder wichtigen Ausmaß.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In dem denkbar höchsten Maße, häufig wertend gebraucht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In extrem starkem Maße ohne Bezug auf eine messbare Veränderung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "äußerst",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In extrem hohem Maße; sehr stark.",
+          "explain": {
+            "entryId": "äußerst",
+            "headword": "äußerst",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɔɪ̯sɐst/",
+              "ipaUS": "/ˈɔɪ̯sɐst/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "extremer Grad",
+                "headwordLine": "äußerst",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "extrem",
+                  "überaus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In extrem hohem Maße; sehr stark.",
+                    "examples": [
+                      "Die Verhandlungen waren äußerst schwierig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "äußerst – Beispielsatz folgt.",
+              "answer": "In extrem hohem Maße; sehr stark.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In einem großen und oft messbaren Ausmaß.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In dem denkbar höchsten Grad, häufig formell wertend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "möglicherweise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So, dass etwas möglich ist, aber nicht sicher feststeht.",
+          "explain": {
+            "entryId": "möglicherweise",
+            "headword": "möglicherweise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmøːklɪçɐˌvaɪ̯zə/",
+              "ipaUS": "/ˈmøːklɪçɐˌvaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Möglichkeit",
+                "headwordLine": "möglicherweise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "unter Umständen",
+                  "eventuell"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So, dass etwas möglich ist, aber nicht sicher feststeht.",
+                    "examples": [
+                      "Der Termin wird möglicherweise verschoben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "möglicherweise – Beispielsatz folgt.",
+              "answer": "So, dass etwas möglich ist, aber nicht sicher feststeht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vielleicht, meist kürzer und persönlicher im alltäglichen Gebrauch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Unter bestimmten Umständen eventuell eintretend oder relevant.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "vielleicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass etwas möglich, aber ungewiss ist; häufig im Alltag.",
+          "explain": {
+            "entryId": "vielleicht",
+            "headword": "vielleicht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fiˈlaɪ̯çt/",
+              "ipaUS": "/fiˈlaɪ̯çt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Unsicherheit",
+                "headwordLine": "vielleicht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "möglicherweise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt aus, dass etwas möglich, aber ungewiss ist; häufig im Alltag.",
+                    "examples": [
+                      "Vielleicht regnet es am Nachmittag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vielleicht – Beispielsatz folgt.",
+              "answer": "Drückt aus, dass etwas möglich, aber ungewiss ist; häufig im Alltag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In eher formeller Sprache als objektive Möglichkeit dargestellt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von bestimmten Bedingungen abhängig eventuell eintretend.",
               "ok": false
             }
           ]

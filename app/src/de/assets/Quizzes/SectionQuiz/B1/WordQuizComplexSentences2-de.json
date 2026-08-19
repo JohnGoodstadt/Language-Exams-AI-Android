@@ -2,50 +2,120 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizComplexSentences2-de",
-  "title": "",
+  "title": "Komplexe Sätze",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "wohingegen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Verbindet zwei Aussagen, um einen deutlichen Gegensatz oder Unterschied hervorzuheben.",
+          "explain": {
+            "entryId": "wohingegen",
+            "headword": "wohingegen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voːʔɪnˈɡeːɡn̩/",
+              "ipaUS": "/voːʔɪnˈɡeːɡn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "direkter Gegensatz",
+                "headwordLine": "wohingegen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "während hingegen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Verbindet zwei Aussagen, um einen deutlichen Gegensatz oder Unterschied hervorzuheben.",
+                    "examples": [
+                      "Mia arbeitet gern früh, wohingegen Tom lieber spät beginnt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wohingegen – Beispielsatz folgt.",
+              "answer": "Verbindet zwei Aussagen, um einen deutlichen Gegensatz oder Unterschied hervorzuheben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet zwei Handlungen ein, die nur zeitlich gleichzeitig stattfinden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet einen Gegensatz ein, der trotz eines Hindernisses eintritt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "auch wenn",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine mögliche Bedingung ein, die am Ergebnis nichts ändert.",
+          "explain": {
+            "entryId": "auch wenn",
+            "headword": "auch wenn",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/aʊ̯x vɛn/",
+              "ipaUS": "/aʊ̯x vɛn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktionale Wendung",
+                "grammarType": "Einräumung oder irrelevante Bedingung",
+                "headwordLine": "auch wenn",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "selbst wenn"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet eine mögliche Bedingung ein, die am Ergebnis nichts ändert.",
+                    "examples": [
+                      "Auch wenn es regnet, findet das Fest statt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "auch wenn – Beispielsatz folgt.",
+              "answer": "Leitet eine mögliche Bedingung ein, die am Ergebnis nichts ändert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet eine normale Bedingung ein, von der das Ergebnis vollständig abhängt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet eine Ausnahme ein, bei der die vorherige Aussage nicht gilt.",
               "ok": false
             }
           ]

@@ -2,210 +2,565 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFood2-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Süßspeise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein süßes Gericht, das als Dessert oder manchmal als eigene Mahlzeit gegessen wird.",
+          "explain": {
+            "entryId": "Süßspeise",
+            "headword": "Süßspeise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzyːsˌʃpaɪ̯zə/",
+              "ipaUS": "/ˈzyːsˌʃpaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Süßspeise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "süßes Gericht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein süßes Gericht, das als Dessert oder manchmal als eigene Mahlzeit gegessen wird.",
+                    "examples": [
+                      "Der Kaiserschmarrn ist eine bekannte Süßspeise."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Süßspeise – Beispielsatz folgt.",
+              "answer": "Ein süßes Gericht, das als Dessert oder manchmal als eigene Mahlzeit gegessen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Speise, die immer erst nach einem Hauptgericht serviert wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine bestimmte weiche Nachspeise aus Milch oder ähnlichen Zutaten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Pudding",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine weiche Süßspeise, die häufig aus Milch, Zucker und Stärke zubereitet wird.",
+          "explain": {
+            "entryId": "Pudding",
+            "headword": "Pudding",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈpʊdɪŋ/",
+              "ipaUS": "/ˈpʊdɪŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Pudding",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Creme"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine weiche Süßspeise, die häufig aus Milch, Zucker und Stärke zubereitet wird.",
+                    "examples": [
+                      "Zum Nachtisch gibt es Schokoladenpudding."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Pudding – Beispielsatz folgt.",
+              "answer": "Eine weiche Süßspeise, die häufig aus Milch, Zucker und Stärke zubereitet wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jedes süße Gericht, auch Kuchen oder süße Hauptspeisen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jede Nachspeise, unabhängig davon, ob sie süß oder herzhaft ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Speisen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zubereitete Lebensmittel oder Gerichte, die zum Essen angeboten werden.",
+          "explain": {
+            "entryId": "Speisen",
+            "headword": "Speisen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃpaɪ̯zn̩/",
+              "ipaUS": "/ˈʃpaɪ̯zn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Plural",
+                "headwordLine": "Speisen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gerichte",
+                  "Essen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zubereitete Lebensmittel oder Gerichte, die zum Essen angeboten werden.",
+                    "examples": [
+                      "Das Restaurant bietet warme und kalte Speisen an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Speisen – Beispielsatz folgt.",
+              "answer": "Zubereitete Lebensmittel oder Gerichte, die zum Essen angeboten werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der formelle Vorgang, eine Mahlzeit einzunehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die einzelnen Bestandteile, die beim Kochen hinzugefügt werden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "speisen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In gehobener oder formeller Sprache eine Mahlzeit essen.",
+          "explain": {
+            "entryId": "speisen",
+            "headword": "speisen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃpaɪ̯zn̩/",
+              "ipaUS": "/ˈʃpaɪ̯zn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv, gehoben",
+                "headwordLine": "speisen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "essen",
+                  "dinieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In gehobener oder formeller Sprache eine Mahlzeit essen.",
+                    "examples": [
+                      "Die Gäste speisen heute im großen Saal."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "speisen – Beispielsatz folgt.",
+              "answer": "In gehobener oder formeller Sprache eine Mahlzeit essen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Verschiedene fertige Gerichte auf einer Karte anbieten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kleine feste Lebensmittel langsam mit den Zähnen essen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Abendessen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Mahlzeit, die am Abend gegessen wird.",
+          "explain": {
+            "entryId": "Abendessen",
+            "headword": "Abendessen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaːbn̩tˌʔɛsn̩/",
+              "ipaUS": "/ˈaːbn̩tˌʔɛsn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Abendessen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Abendmahl"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Mahlzeit, die am Abend gegessen wird.",
+                    "examples": [
+                      "Das Abendessen wird um sieben Uhr serviert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abendessen – Beispielsatz folgt.",
+              "answer": "Die Mahlzeit, die am Abend gegessen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine kleine Zwischenmahlzeit am Nachmittag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der süße letzte Gang nach einer Hauptmahlzeit.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Zutat",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Lebensmittel oder Stoff, der zur Zubereitung eines Gerichts hinzugefügt wird.",
+          "explain": {
+            "entryId": "Zutat",
+            "headword": "Zutat",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡suːˌtaːt/",
+              "ipaUS": "/ˈt͡suːˌtaːt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Zutat",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ingredienz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Lebensmittel oder Stoff, der zur Zubereitung eines Gerichts hinzugefügt wird.",
+                    "examples": [
+                      "Frische Tomaten sind die wichtigste Zutat der Soße."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zutat – Beispielsatz folgt.",
+              "answer": "Ein Lebensmittel oder Stoff, der zur Zubereitung eines Gerichts hinzugefügt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Teil, aus dem etwas besteht, auch wenn er nicht beim Kochen hinzugefügt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine grundlegende Einheit innerhalb eines allgemeinen Systems.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Bestandteil",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Teil, aus dem ein größeres Ganzes zusammengesetzt ist.",
+          "explain": {
+            "entryId": "Bestandteil",
+            "headword": "Bestandteil",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʃtantˌtaɪ̯l/",
+              "ipaUS": "/bəˈʃtantˌtaɪ̯l/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Bestandteil",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Komponente",
+                  "Teil"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Teil, aus dem ein größeres Ganzes zusammengesetzt ist.",
+                    "examples": [
+                      "Gemüse ist ein wichtiger Bestandteil einer ausgewogenen Ernährung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bestandteil – Beispielsatz folgt.",
+              "answer": "Ein Teil, aus dem ein größeres Ganzes zusammengesetzt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Lebensmittel, das absichtlich während des Kochens hinzugefügt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne Position auf einer Speisekarte.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Element",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein grundlegender einzelner Teil eines Systems, Plans oder Ganzen.",
+          "explain": {
+            "entryId": "Element",
+            "headword": "Element",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/eleˈmɛnt/",
+              "ipaUS": "/eleˈmɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Element",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Grundelement",
+                  "Baustein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein grundlegender einzelner Teil eines Systems, Plans oder Ganzen.",
+                    "examples": [
+                      "Guter Service ist ein wichtiges Element des Restaurantkonzepts."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Element – Beispielsatz folgt.",
+              "answer": "Ein grundlegender einzelner Teil eines Systems, Plans oder Ganzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Lebensmittel, das für ein bestimmtes Rezept benötigt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein körperlich vorhandener Teil, aus dem eine Speise direkt besteht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Speisekarte",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Übersicht der Speisen und Getränke, die ein Restaurant anbietet.",
+          "explain": {
+            "entryId": "Speisekarte",
+            "headword": "Speisekarte",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃpaɪ̯zəˌkaʁtə/",
+              "ipaUS": "/ˈʃpaɪ̯zəˌkaʁtə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Speisekarte",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Menükarte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Übersicht der Speisen und Getränke, die ein Restaurant anbietet.",
+                    "examples": [
+                      "Der Kellner brachte uns die Speisekarte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Speisekarte – Beispielsatz folgt.",
+              "answer": "Eine Übersicht der Speisen und Getränke, die ein Restaurant anbietet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gruppe verschiedener Möglichkeiten, aus denen ein Gast wählen kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine geordnete Aufzählung beliebiger Dinge ohne Restaurantbezug.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Auswahl",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gruppe verfügbarer Möglichkeiten oder der Vorgang, daraus etwas zu wählen.",
+          "explain": {
+            "entryId": "Auswahl",
+            "headword": "Auswahl",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯sˌvaːl/",
+              "ipaUS": "/ˈaʊ̯sˌvaːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Auswahl",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Angebot",
+                  "Wahlmöglichkeiten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Gruppe verfügbarer Möglichkeiten oder der Vorgang, daraus etwas zu wählen.",
+                    "examples": [
+                      "Das Café hat eine große Auswahl an Kuchen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Auswahl – Beispielsatz folgt.",
+              "answer": "Eine Gruppe verfügbarer Möglichkeiten oder der Vorgang, daraus etwas zu wählen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine geordnete schriftliche Aufzählung ohne Entscheidung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Restaurantkarte mit Preisen und allen angebotenen Gerichten.",
               "ok": false
             }
           ]

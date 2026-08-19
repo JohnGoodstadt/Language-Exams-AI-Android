@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives1-de",
-  "title": "",
+  "title": "Adjektive",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Funktion passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "ängstlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von Angst geprägt oder leicht dazu neigend, Angst zu bekommen.",
+          "explain": {
+            "entryId": "ängstlich",
+            "headword": "ängstlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɛŋstlɪç/",
+              "ipaUS": "/ˈɛŋstlɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Gefühlszustand oder Eigenschaft",
+                "headwordLine": "ängstlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "furchtsam"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von Angst geprägt oder leicht dazu neigend, Angst zu bekommen.",
+                    "examples": [
+                      "Das ängstliche Kind wollte nicht allein bleiben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ängstlich – Beispielsatz folgt.",
+              "answer": "Von Angst geprägt oder leicht dazu neigend, Angst zu bekommen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wegen eines möglichen Problems um jemanden oder etwas beunruhigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vor einem Ereignis innerlich unruhig und körperlich angespannt.",
               "ok": false
             }
           ]
@@ -34,18 +69,54 @@
           "title": "",
           "page": 2,
           "question": "besorgt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Beunruhigt, weil man für jemanden oder etwas ein mögliches Problem befürchtet.",
+          "explain": {
+            "entryId": "besorgt",
+            "headword": "besorgt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈzɔʁkt/",
+              "ipaUS": "/bəˈzɔʁkt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Gefühlszustand",
+                "headwordLine": "besorgt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beunruhigt",
+                  "sorgenvoll"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Beunruhigt, weil man für jemanden oder etwas ein mögliches Problem befürchtet.",
+                    "examples": [
+                      "Die Eltern waren besorgt, weil ihr Sohn nicht anrief."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "besorgt – Beispielsatz folgt.",
+              "answer": "Beunruhigt, weil man für jemanden oder etwas ein mögliches Problem befürchtet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Allgemein von Angst geprägt oder leicht zu erschrecken.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vor einer Prüfung unruhig und nicht entspannt.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "nervös",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Innerlich unruhig, angespannt oder unsicher, besonders vor einem wichtigen Ereignis.",
+          "explain": {
+            "entryId": "nervös",
+            "headword": "nervös",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/nɛʁˈvøːs/",
+              "ipaUS": "/nɛʁˈvøːs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Gefühlszustand",
+                "headwordLine": "nervös",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aufgeregt",
+                  "unruhig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Innerlich unruhig, angespannt oder unsicher, besonders vor einem wichtigen Ereignis.",
+                    "examples": [
+                      "Vor dem Vorstellungsgespräch war sie sehr nervös."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nervös – Beispielsatz folgt.",
+              "answer": "Innerlich unruhig, angespannt oder unsicher, besonders vor einem wichtigen Ereignis.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Aus Sorge vor einer möglichen Gefahr um eine andere Person beunruhigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Allgemein leicht von Furcht bestimmt und wenig mutig.",
               "ok": false
             }
           ]
@@ -74,18 +181,53 @@
           "title": "",
           "page": 4,
           "question": "selbstsicher",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von den eigenen Fähigkeiten überzeugt und im Auftreten wenig unsicher.",
+          "explain": {
+            "entryId": "selbstsicher",
+            "headword": "selbstsicher",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɛlpstˌzɪçɐ/",
+              "ipaUS": "/ˈzɛlpstˌzɪçɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Auftreten",
+                "headwordLine": "selbstsicher",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "selbstbewusst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von den eigenen Fähigkeiten überzeugt und im Auftreten wenig unsicher.",
+                    "examples": [
+                      "Sie beantwortete die Fragen selbstsicher."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "selbstsicher – Beispielsatz folgt.",
+              "answer": "Von den eigenen Fähigkeiten überzeugt und im Auftreten wenig unsicher.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Auch in schwierigen Situationen besonders ruhig, kontrolliert und kompetent.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ohne Gefahr oder mit hoher Gewissheit vor einem Fehler geschützt.",
               "ok": false
             }
           ]
@@ -94,18 +236,54 @@
           "title": "",
           "page": 5,
           "question": "souverän",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In einer schwierigen Situation ruhig, kontrolliert, überlegen und kompetent handelnd.",
+          "explain": {
+            "entryId": "souverän",
+            "headword": "souverän",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zuvəˈʁɛːn/",
+              "ipaUS": "/zuvəˈʁɛːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Auftreten",
+                "headwordLine": "souverän",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "überlegen",
+                  "beherrscht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In einer schwierigen Situation ruhig, kontrolliert, überlegen und kompetent handelnd.",
+                    "examples": [
+                      "Der Moderator löste das Problem souverän."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "souverän – Beispielsatz folgt.",
+              "answer": "In einer schwierigen Situation ruhig, kontrolliert, überlegen und kompetent handelnd.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von den eigenen Fähigkeiten überzeugt und ohne persönliche Unsicherheit auftretend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ohne Risiko oder mit Gewissheit richtig und geschützt.",
               "ok": false
             }
           ]
@@ -114,18 +292,54 @@
           "title": "",
           "page": 6,
           "question": "sicher",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Gefahr oder Zweifel; auch überzeugt und zuverlässig in einer Handlung.",
+          "explain": {
+            "entryId": "sicher",
+            "headword": "sicher",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɪçɐ/",
+              "ipaUS": "/ˈzɪçɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Gewissheit oder Schutz",
+                "headwordLine": "sicher",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gewiss",
+                  "geschützt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne Gefahr oder Zweifel; auch überzeugt und zuverlässig in einer Handlung.",
+                    "examples": [
+                      "Nach viel Übung spricht er sicher vor Publikum."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sicher – Beispielsatz folgt.",
+              "answer": "Ohne Gefahr oder Zweifel; auch überzeugt und zuverlässig in einer Handlung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von den eigenen Fähigkeiten überzeugt und bewusst selbstbewusst auftretend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In einer schwierigen Lage besonders ruhig und überlegen handelnd.",
               "ok": false
             }
           ]
@@ -134,18 +348,54 @@
           "title": "",
           "page": 7,
           "question": "neugierig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit dem Wunsch, etwas Neues, Unbekanntes oder Persönliches zu erfahren.",
+          "explain": {
+            "entryId": "neugierig",
+            "headword": "neugierig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnɔɪ̯ˌɡiːʁɪç/",
+              "ipaUS": "/ˈnɔɪ̯ˌɡiːʁɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Interesse",
+                "headwordLine": "neugierig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gespannt",
+                  "interessiert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit dem Wunsch, etwas Neues, Unbekanntes oder Persönliches zu erfahren.",
+                    "examples": [
+                      "Die Kinder waren neugierig auf das Experiment."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "neugierig – Beispielsatz folgt.",
+              "answer": "Mit dem Wunsch, etwas Neues, Unbekanntes oder Persönliches zu erfahren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit starkem Wunsch, systematisch neues Wissen zu erwerben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aufmerksam und positiv an einem bestimmten Thema beteiligt.",
               "ok": false
             }
           ]
@@ -154,18 +404,53 @@
           "title": "",
           "page": 8,
           "question": "wissbegierig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit einem starken und anhaltenden Wunsch, Wissen zu erwerben und zu lernen.",
+          "explain": {
+            "entryId": "wissbegierig",
+            "headword": "wissbegierig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɪsbəˌɡiːʁɪç/",
+              "ipaUS": "/ˈvɪsbəˌɡiːʁɪç/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Lerninteresse",
+                "headwordLine": "wissbegierig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "lernbegierig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit einem starken und anhaltenden Wunsch, Wissen zu erwerben und zu lernen.",
+                    "examples": [
+                      "Die wissbegierige Schülerin stellte viele Fachfragen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wissbegierig – Beispielsatz folgt.",
+              "answer": "Mit einem starken und anhaltenden Wunsch, Wissen zu erwerben und zu lernen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit dem Wunsch, beliebige neue oder persönliche Informationen zu erfahren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aufmerksam und positiv an einem bereits bekannten Thema beteiligt.",
               "ok": false
             }
           ]
@@ -174,18 +459,54 @@
           "title": "",
           "page": 9,
           "question": "interessiert",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aufmerksam und innerlich an einem Thema, einer Person oder Tätigkeit beteiligt.",
+          "explain": {
+            "entryId": "interessiert",
+            "headword": "interessiert",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪntəʁɛˈsiːɐ̯t/",
+              "ipaUS": "/ɪntəʁɛˈsiːɐ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Aufmerksamkeit",
+                "headwordLine": "interessiert",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aufmerksam",
+                  "zugewandt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Aufmerksam und innerlich an einem Thema, einer Person oder Tätigkeit beteiligt.",
+                    "examples": [
+                      "Er ist an moderner Kunst interessiert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "interessiert – Beispielsatz folgt.",
+              "answer": "Aufmerksam und innerlich an einem Thema, einer Person oder Tätigkeit beteiligt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Darauf aus, auch private oder unbekannte Einzelheiten zu erfahren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von starkem und allgemeinem Verlangen nach neuem Wissen geprägt.",
               "ok": false
             }
           ]
@@ -194,18 +515,54 @@
           "title": "",
           "page": 10,
           "question": "verlegen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In einer sozialen Situation unsicher, peinlich berührt oder nicht wissend, wie man reagieren soll.",
+          "explain": {
+            "entryId": "verlegen",
+            "headword": "verlegen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈleːɡn̩/",
+              "ipaUS": "/fɛɐ̯ˈleːɡn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "soziales Gefühl",
+                "headwordLine": "verlegen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "peinlich berührt",
+                  "unsicher"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In einer sozialen Situation unsicher, peinlich berührt oder nicht wissend, wie man reagieren soll.",
+                    "examples": [
+                      "Das unerwartete Lob machte ihn verlegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verlegen – Beispielsatz folgt.",
+              "answer": "In einer sozialen Situation unsicher, peinlich berührt oder nicht wissend, wie man reagieren soll.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von Schuldgefühl über das eigene falsche Verhalten erfüllt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Durch andere öffentlich in der eigenen Würde verletzt.",
               "ok": false
             }
           ]

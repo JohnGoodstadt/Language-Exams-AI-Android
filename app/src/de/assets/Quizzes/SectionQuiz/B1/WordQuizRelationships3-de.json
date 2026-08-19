@@ -2,130 +2,345 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizRelationships3-de",
-  "title": "",
+  "title": "Beziehungen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Unterstützung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Materielle, praktische oder emotionale Hilfe, die jemanden bei einem Ziel oder Problem stärkt.",
+          "explain": {
+            "entryId": "Unterstützung",
+            "headword": "Unterstützung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˌʊntɐˈʃtʏt͡sʊŋ/",
+              "ipaUS": "/ˌʊntɐˈʃtʏt͡sʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Unterstützung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Förderung",
+                  "Hilfe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Materielle, praktische oder emotionale Hilfe, die jemanden bei einem Ziel oder Problem stärkt.",
+                    "examples": [
+                      "Sie erhielt viel Unterstützung von ihrer Familie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unterstützung – Beispielsatz folgt.",
+              "answer": "Materielle, praktische oder emotionale Hilfe, die jemanden bei einem Ziel oder Problem stärkt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Persönliches Dasein und Zuspruch besonders in einer schwierigen Situation.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine konkrete Handlung, die ein akutes Problem direkt löst.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Beistand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Persönliche Unterstützung und Zuspruch für jemanden in einer schwierigen Situation.",
+          "explain": {
+            "entryId": "Beistand",
+            "headword": "Beistand",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈbaɪ̯ˌʃtant/",
+              "ipaUS": "/ˈbaɪ̯ˌʃtant/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Beistand",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Rückhalt",
+                  "Zuspruch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Persönliche Unterstützung und Zuspruch für jemanden in einer schwierigen Situation.",
+                    "examples": [
+                      "In dieser schweren Zeit gab ihr die Familie Beistand."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Beistand – Beispielsatz folgt.",
+              "answer": "Persönliche Unterstützung und Zuspruch für jemanden in einer schwierigen Situation.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede materielle oder organisatorische Förderung bei einem Ziel.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine praktische Handlung, die ein Problem unmittelbar beseitigt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Hilfe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Handlung oder Leistung, durch die ein Problem leichter gelöst oder eine Notlage verbessert wird.",
+          "explain": {
+            "entryId": "Hilfe",
+            "headword": "Hilfe",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhɪlfə/",
+              "ipaUS": "/ˈhɪlfə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Hilfe",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Unterstützung",
+                  "Hilfestellung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Handlung oder Leistung, durch die ein Problem leichter gelöst oder eine Notlage verbessert wird.",
+                    "examples": [
+                      "Danke für deine Hilfe beim Umzug."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hilfe – Beispielsatz folgt.",
+              "answer": "Eine Handlung oder Leistung, durch die ein Problem leichter gelöst oder eine Notlage verbessert wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine längerfristige materielle oder emotionale Förderung bei einem Ziel.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Persönlicher Zuspruch und Anwesenheit in einer schweren Zeit.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Vertrauen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die sichere Erwartung, dass eine Person ehrlich, zuverlässig oder fähig ist.",
+          "explain": {
+            "entryId": "Vertrauen",
+            "headword": "Vertrauen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
+              "ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Vertrauen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zutrauen",
+                  "Sicherheit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die sichere Erwartung, dass eine Person ehrlich, zuverlässig oder fähig ist.",
+                    "examples": [
+                      "Gegenseitiges Vertrauen ist für eine Beziehung wichtig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vertrauen – Beispielsatz folgt.",
+              "answer": "Die sichere Erwartung, dass eine Person ehrlich, zuverlässig oder fähig ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine religiöse oder feste innere Überzeugung ohne sicheren Beweis.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine positive Erwartung, dass sich eine zukünftige Situation gut entwickelt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Glaube",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine religiöse oder feste innere Überzeugung, die nicht auf vollständigem Beweis beruhen muss.",
+          "explain": {
+            "entryId": "Glaube",
+            "headword": "Glaube",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɡlaʊ̯bə/",
+              "ipaUS": "/ˈɡlaʊ̯bə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Glaube",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Überzeugung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine religiöse oder feste innere Überzeugung, die nicht auf vollständigem Beweis beruhen muss.",
+                    "examples": [
+                      "Sein Glaube gibt ihm in schweren Zeiten Kraft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Glaube – Beispielsatz folgt.",
+              "answer": "Eine religiöse oder feste innere Überzeugung, die nicht auf vollständigem Beweis beruhen muss.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Erwartung, dass eine bestimmte Person zuverlässig und ehrlich handelt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der optimistische Blick auf den guten Ausgang eines zukünftigen Ereignisses.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Zuversicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine ruhige positive Erwartung, dass sich etwas künftig gut entwickeln wird.",
+          "explain": {
+            "entryId": "Zuversicht",
+            "headword": "Zuversicht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡suːfɛɐ̯ˌzɪçt/",
+              "ipaUS": "/ˈt͡suːfɛɐ̯ˌzɪçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Zuversicht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Optimismus",
+                  "Hoffnung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine ruhige positive Erwartung, dass sich etwas künftig gut entwickeln wird.",
+                    "examples": [
+                      "Trotz der Schwierigkeiten blickt sie mit Zuversicht nach vorn."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zuversicht – Beispielsatz folgt.",
+              "answer": "Eine ruhige positive Erwartung, dass sich etwas künftig gut entwickeln wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die sichere Erwartung, dass eine bestimmte Person zuverlässig handelt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine religiöse Überzeugung, die keine vollständigen Beweise benötigt.",
               "ok": false
             }
           ]

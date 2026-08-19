@@ -2,190 +2,511 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTravel3-de",
-  "title": "",
+  "title": "Reisen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Flugsteig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Bereich am Flughafen, von dem Passagiere zu ihrem Flugzeug gehen.",
+          "explain": {
+            "entryId": "Flugsteig",
+            "headword": "Flugsteig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfluːkˌʃtaɪ̯k/",
+              "ipaUS": "/ˈfluːkˌʃtaɪ̯k/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Flugsteig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gate"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Bereich am Flughafen, von dem Passagiere zu ihrem Flugzeug gehen.",
+                    "examples": [
+                      "Unser Flug startet am Flugsteig B12."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Flugsteig – Beispielsatz folgt.",
+              "answer": "Der Bereich am Flughafen, von dem Passagiere zu ihrem Flugzeug gehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Schalter, an dem ausschließlich Gepäck nach der Landung abgeholt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Bahn, auf der ein Flugzeug landet und startet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Reiseziel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Ort oder das Gebiet, das jemand auf einer Reise erreichen und besuchen möchte.",
+          "explain": {
+            "entryId": "Reiseziel",
+            "headword": "Reiseziel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁaɪ̯zəˌt͡siːl/",
+              "ipaUS": "/ˈʁaɪ̯zəˌt͡siːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Reiseziel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Destination",
+                  "Zielort"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Ort oder das Gebiet, das jemand auf einer Reise erreichen und besuchen möchte.",
+                    "examples": [
+                      "Portugal ist dieses Jahr ein beliebtes Reiseziel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Reiseziel – Beispielsatz folgt.",
+              "answer": "Der Ort oder das Gebiet, das jemand auf einer Reise erreichen und besuchen möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der genaue Zeitpunkt, an dem ein Verkehrsmittel abfährt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Strecke, die ein Reisender bereits zurückgelegt hat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Reise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine längere Fahrt oder ein Aufenthalt außerhalb des gewöhnlichen Wohnorts.",
+          "explain": {
+            "entryId": "Reise",
+            "headword": "Reise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁaɪ̯zə/",
+              "ipaUS": "/ˈʁaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Reise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Fahrt",
+                  "Trip"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine längere Fahrt oder ein Aufenthalt außerhalb des gewöhnlichen Wohnorts.",
+                    "examples": [
+                      "Unsere Reise nach Spanien dauert zwei Wochen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Reise – Beispielsatz folgt.",
+              "answer": "Eine Fahrt oder ein Aufenthalt außerhalb des gewöhnlichen Wohnorts.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur ein schriftlicher Plan mit Zielen und Uhrzeiten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ausschließlich eine Fahrt mit einem Schiff über das Meer.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Reiseplan",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Übersicht über Ziele, Strecken und geplante Aktivitäten einer Reise.",
+          "explain": {
+            "entryId": "Reiseplan",
+            "headword": "Reiseplan",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁaɪ̯zəˌplaːn/",
+              "ipaUS": "/ˈʁaɪ̯zəˌplaːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Reiseplan",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Reiseroute",
+                  "Reiseprogramm"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Übersicht über Ziele, Strecken und geplante Aktivitäten einer Reise.",
+                    "examples": [
+                      "Der Reiseplan enthält drei Städte und mehrere Besichtigungen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Reiseplan – Beispielsatz folgt.",
+              "answer": "Eine Übersicht über Ziele, Strecken und geplante Aktivitäten einer Reise.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine allgemeine Liste mit Uhrzeiten für jedes beliebige Projekt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die verbindliche Bestellung eines Hotelzimmers.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Zeitplan",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Übersicht, die festlegt, wann einzelne Aufgaben oder Ereignisse stattfinden sollen.",
+          "explain": {
+            "entryId": "Zeitplan",
+            "headword": "Zeitplan",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡saɪ̯tˌplaːn/",
+              "ipaUS": "/ˈt͡saɪ̯tˌplaːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Zeitplan",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Terminplan",
+                  "Ablaufplan"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Übersicht, die festlegt, wann einzelne Aufgaben oder Ereignisse stattfinden sollen.",
+                    "examples": [
+                      "Unser Zeitplan ist eng, deshalb müssen wir pünktlich starten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zeitplan – Beispielsatz folgt.",
+              "answer": "Eine Übersicht, die festlegt, wann einzelne Aufgaben oder Ereignisse stattfinden sollen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Liste, die nur die Orte einer Reise ohne Zeiten nennt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Nachweis, der zur Fahrt mit einem Zug berechtigt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "planen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Im Voraus überlegen und festlegen, wie etwas durchgeführt werden soll.",
+          "explain": {
+            "entryId": "planen",
+            "headword": "planen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈplaːnən/",
+              "ipaUS": "/ˈplaːnən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv oder intransitiv",
+                "headwordLine": "planen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vorbereiten",
+                  "organisieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Im Voraus überlegen und festlegen, wie etwas durchgeführt werden soll.",
+                    "examples": [
+                      "Wir planen die Reise mehrere Monate im Voraus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "planen – Beispielsatz folgt.",
+              "answer": "Im Voraus überlegen und festlegen, wie etwas durchgeführt werden soll.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne Vorbereitung sofort mit einer Reise beginnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nach einer Reise alle Rechnungen kontrollieren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Besichtigung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der geplante Besuch eines Ortes oder Gebäudes, um ihn genauer anzusehen.",
+          "explain": {
+            "entryId": "Besichtigung",
+            "headword": "Besichtigung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈzɪçtɪɡʊŋ/",
+              "ipaUS": "/bəˈzɪçtɪɡʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Besichtigung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Besuch",
+                  "Führung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der geplante Besuch eines Ortes oder Gebäudes, um ihn genauer anzusehen.",
+                    "examples": [
+                      "Am Nachmittag machen wir eine Besichtigung des Schlosses."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Besichtigung – Beispielsatz folgt.",
+              "answer": "Der geplante Besuch eines Ortes oder Gebäudes, um ihn genauer anzusehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Reise, die nacheinander durch viele Regionen führt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein bekanntes Gebäude oder Naturdenkmal, das viele Besucher anzieht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Rundreise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Reise mit mehreren Stationen, die häufig wieder zum Ausgangsort zurückführt.",
+          "explain": {
+            "entryId": "Rundreise",
+            "headword": "Rundreise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁʊntˌʁaɪ̯zə/",
+              "ipaUS": "/ˈʁʊntˌʁaɪ̯zə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Rundreise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Tour"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Reise mit mehreren Stationen, die häufig wieder zum Ausgangsort zurückführt.",
+                    "examples": [
+                      "Auf der Rundreise besuchen wir fünf Städte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rundreise – Beispielsatz folgt.",
+              "answer": "Eine Reise mit mehreren Stationen, die häufig wieder zum Ausgangsort zurückführt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein kurzer geführter Besuch eines einzigen Gebäudes.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine direkte Reise ohne Zwischenstopp zu nur einem Ziel.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Sehenswürdigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein besonderer Ort oder Gegenstand, den viele Besucher interessant und sehenswert finden.",
+          "explain": {
+            "entryId": "Sehenswürdigkeit",
+            "headword": "Sehenswürdigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzeːənsˌvʏʁdɪçkaɪ̯t/",
+              "ipaUS": "/ˈzeːənsˌvʏʁdɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Sehenswürdigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Attraktion"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein besonderer Ort oder Gegenstand, den viele Besucher interessant und sehenswert finden.",
+                    "examples": [
+                      "Der Kölner Dom ist eine bekannte Sehenswürdigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sehenswürdigkeit – Beispielsatz folgt.",
+              "answer": "Ein besonderer Ort oder Gegenstand, den viele Besucher interessant und sehenswert finden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein organisierter Besuch, bei dem ein Gebäude genauer angesehen wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Übersicht mit allen Abfahrts- und Ankunftszeiten.",
               "ok": false
             }
           ]

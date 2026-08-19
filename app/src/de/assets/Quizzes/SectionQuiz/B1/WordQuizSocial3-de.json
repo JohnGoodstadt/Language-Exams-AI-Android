@@ -2,210 +2,562 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizSocial3-de",
-  "title": "",
+  "title": "Gesellschaft",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Obdachlosigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zustand, keine feste, sichere und angemessene Unterkunft zu haben.",
+          "explain": {
+            "entryId": "Obdachlosigkeit",
+            "headword": "Obdachlosigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɔpdaχloːzɪçkaɪ̯t/",
+              "ipaUS": "/ˈɔpdaχloːzɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Obdachlosigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wohnungslosigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zustand, keine feste, sichere und angemessene Unterkunft zu haben.",
+                    "examples": [
+                      "Die Stadt eröffnet neue Hilfsangebote gegen Obdachlosigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Obdachlosigkeit – Beispielsatz folgt.",
+              "answer": "Der Zustand, keine feste, sichere und angemessene Unterkunft zu haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Zustand, keine bezahlte Beschäftigung zu finden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der allgemeine Mangel an Geld für notwendige Lebensmittel.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Rassismus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Abwertung oder Benachteiligung von Menschen aufgrund zugeschriebener Herkunft oder rassistischer Vorstellungen.",
+          "explain": {
+            "entryId": "Rassismus",
+            "headword": "Rassismus",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁaˈsɪsmʊs/",
+              "ipaUS": "/ʁaˈsɪsmʊs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Rassismus",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "rassistische Diskriminierung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Abwertung oder Benachteiligung von Menschen aufgrund zugeschriebener Herkunft oder rassistischer Vorstellungen.",
+                    "examples": [
+                      "Die Schule organisiert ein Projekt gegen Rassismus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rassismus – Beispielsatz folgt.",
+              "answer": "Die Abwertung oder Benachteiligung von Menschen aufgrund zugeschriebener Herkunft oder rassistischer Vorstellungen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede vorgefasste Meinung über eine Person oder Gruppe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jede ungerechte Benachteiligung aufgrund irgendeines Merkmals.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Vorurteil",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine vorgefasste, meist unbegründete Meinung über eine Person, Gruppe oder Sache.",
+          "explain": {
+            "entryId": "Vorurteil",
+            "headword": "Vorurteil",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ʔʊʁˌtaɪ̯l/",
+              "ipaUS": "/ˈfoːɐ̯ʔʊʁˌtaɪ̯l/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Vorurteil",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "voreilige Meinung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine vorgefasste, meist unbegründete Meinung über eine Person, Gruppe oder Sache.",
+                    "examples": [
+                      "Persönlicher Kontakt kann Vorurteile abbauen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vorurteil – Beispielsatz folgt.",
+              "answer": "Eine vorgefasste, meist unbegründete Meinung über eine Person, Gruppe oder Sache.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die konkrete ungerechte Benachteiligung wegen eines Merkmals.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Abwertung von Menschen speziell aufgrund zugeschriebener Herkunft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Diskriminierung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die ungerechte Benachteiligung einer Person oder Gruppe aufgrund bestimmter Merkmale.",
+          "explain": {
+            "entryId": "Diskriminierung",
+            "headword": "Diskriminierung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/dɪskʁimiˈniːʁʊŋ/",
+              "ipaUS": "/dɪskʁimiˈniːʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Diskriminierung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Benachteiligung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die ungerechte Benachteiligung einer Person oder Gruppe aufgrund bestimmter Merkmale.",
+                    "examples": [
+                      "Diskriminierung am Arbeitsplatz ist verboten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Diskriminierung – Beispielsatz folgt.",
+              "answer": "Die ungerechte Benachteiligung einer Person oder Gruppe aufgrund bestimmter Merkmale.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine vorgefasste Meinung, die nicht unbedingt zu einer Handlung führt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ausschließlich die Abwertung aufgrund zugeschriebener Herkunft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Rechte",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Gesetzlich oder moralisch anerkannte Ansprüche und Freiheiten, die Menschen besitzen.",
+          "explain": {
+            "entryId": "Rechte",
+            "headword": "Rechte",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁɛçtə/",
+              "ipaUS": "/ˈʁɛçtə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Plural",
+                "headwordLine": "Rechte",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ansprüche",
+                  "Befugnisse"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Gesetzlich oder moralisch anerkannte Ansprüche und Freiheiten, die Menschen besitzen.",
+                    "examples": [
+                      "Kinder haben Rechte und müssen geschützt werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rechte – Beispielsatz folgt.",
+              "answer": "Gesetzlich oder moralisch anerkannte Ansprüche und Freiheiten, die Menschen besitzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der allgemeine Zustand, ohne unnötigen Zwang handeln zu können.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Fähigkeit, selbst über das eigene Leben zu entscheiden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Freiheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zustand, ohne unnötigen Zwang handeln, denken und entscheiden zu können.",
+          "explain": {
+            "entryId": "Freiheit",
+            "headword": "Freiheit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁaɪ̯haɪ̯t/",
+              "ipaUS": "/ˈfʁaɪ̯haɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Freiheit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Unabhängigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zustand, ohne unnötigen Zwang handeln, denken und entscheiden zu können.",
+                    "examples": [
+                      "Meinungsfreiheit ist ein wichtiger Teil der Demokratie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Freiheit – Beispielsatz folgt.",
+              "answer": "Der Zustand, ohne unnötigen Zwang handeln, denken und entscheiden zu können.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die konkrete Befugnis, die durch ein Gesetz garantiert wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die persönliche Kontrolle über Entscheidungen zum eigenen Leben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Selbstbestimmung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Möglichkeit, eigenständig über das eigene Leben und persönliche Angelegenheiten zu entscheiden.",
+          "explain": {
+            "entryId": "Selbstbestimmung",
+            "headword": "Selbstbestimmung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɛlpstbəˌʃtɪmʊŋ/",
+              "ipaUS": "/ˈzɛlpstbəˌʃtɪmʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Selbstbestimmung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Autonomie"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Möglichkeit, eigenständig über das eigene Leben und persönliche Angelegenheiten zu entscheiden.",
+                    "examples": [
+                      "Selbstbestimmung bedeutet, wichtige Entscheidungen selbst treffen zu dürfen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Selbstbestimmung – Beispielsatz folgt.",
+              "answer": "Die Möglichkeit, eigenständig über das eigene Leben und persönliche Angelegenheiten zu entscheiden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der allgemeine Zustand, ohne äußere Einschränkungen handeln zu können.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein einzelner gesetzlich garantierter Anspruch gegenüber dem Staat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Gewalt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Einsatz körperlicher oder psychischer Kraft, um Menschen zu verletzen, zu bedrohen oder zu zwingen.",
+          "explain": {
+            "entryId": "Gewalt",
+            "headword": "Gewalt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈvalt/",
+              "ipaUS": "/ɡəˈvalt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gewalt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zwang",
+                  "Aggression"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Einsatz körperlicher oder psychischer Kraft, um Menschen zu verletzen, zu bedrohen oder zu zwingen.",
+                    "examples": [
+                      "Die Organisation bietet Opfern von Gewalt Schutz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gewalt – Beispielsatz folgt.",
+              "answer": "Der Einsatz körperlicher oder psychischer Kraft, um Menschen zu verletzen, zu bedrohen oder zu zwingen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die schädliche oder unangemessene Nutzung von Macht, Vertrauen oder einer Sache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine schwere Handlung, die gegen ein Strafgesetz verstößt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Missbrauch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die schädliche, falsche oder unerlaubte Nutzung von Macht, Vertrauen, Personen oder Dingen.",
+          "explain": {
+            "entryId": "Missbrauch",
+            "headword": "Missbrauch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmɪsˌbʁaʊ̯x/",
+              "ipaUS": "/ˈmɪsˌbʁaʊ̯x/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Missbrauch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "unrechtmäßige Nutzung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die schädliche, falsche oder unerlaubte Nutzung von Macht, Vertrauen, Personen oder Dingen.",
+                    "examples": [
+                      "Der Missbrauch persönlicher Daten kann großen Schaden verursachen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Missbrauch – Beispielsatz folgt.",
+              "answer": "Die schädliche, falsche oder unerlaubte Nutzung von Macht, Vertrauen, Personen oder Dingen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der direkte Einsatz körperlicher Kraft gegen eine Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jede schwere strafbare Handlung unabhängig von ihrer Art.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 30,
           "question": "Verbrechen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine schwere rechtswidrige und strafbare Handlung.",
+          "explain": {
+            "entryId": "Verbrechen",
+            "headword": "Verbrechen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈbʁɛçn̩/",
+              "ipaUS": "/fɛɐ̯ˈbʁɛçn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Verbrechen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "schwere Straftat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine schwere rechtswidrige und strafbare Handlung.",
+                    "examples": [
+                      "Die Polizei untersucht das Verbrechen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verbrechen – Beispielsatz folgt.",
+              "answer": "Eine schwere rechtswidrige und strafbare Handlung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede Form körperlicher oder psychischer Kraft gegen andere.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die falsche Nutzung einer Sache, auch wenn sie nicht strafbar ist.",
               "ok": false
             }
           ]

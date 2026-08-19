@@ -2,210 +2,565 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizHealth3-de",
-  "title": "",
+  "title": "Gesundheit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 21,
           "question": "Genesung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Prozess, in dem eine kranke oder verletzte Person wieder gesund wird.",
+          "explain": {
+            "entryId": "Genesung",
+            "headword": "Genesung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈneːzʊŋ/",
+              "ipaUS": "/ɡəˈneːzʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Genesung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erholung",
+                  "Wiederherstellung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Prozess, in dem eine kranke oder verletzte Person wieder gesund wird.",
+                    "examples": [
+                      "Nach der Operation braucht sie Zeit zur Genesung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Genesung – Beispielsatz folgt.",
+              "answer": "Der Prozess, in dem eine kranke oder verletzte Person wieder gesund wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der einzelne Moment, in dem ein Medikament eingenommen wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Untersuchung, mit der eine Krankheit erstmals festgestellt wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 22,
           "question": "Versicherung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Vertragssystem, das gegen Beiträge finanzielle Risiken abdeckt.",
+          "explain": {
+            "entryId": "Versicherung",
+            "headword": "Versicherung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈzɪçɐʁʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈzɪçɐʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Versicherung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Assekuranz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Vertragssystem, das gegen Beiträge finanzielle Risiken abdeckt.",
+                    "examples": [
+                      "Die Versicherung übernimmt einen Teil der Behandlungskosten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Versicherung – Beispielsatz folgt.",
+              "answer": "Ein Vertragssystem, das gegen Beiträge bestimmte finanzielle Risiken abdeckt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Dokument, in dem nur die Bedingungen eines einzelnen Vertrags stehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der konkrete Umfang der Leistungen, die in einem Schadensfall gelten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 23,
           "question": "Police",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Urkunde oder das Dokument, das einen Versicherungsvertrag bestätigt und beschreibt.",
+          "explain": {
+            "entryId": "Police",
+            "headword": "Police",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/poˈliːsə/",
+              "ipaUS": "/poˈliːsə/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Police",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Versicherungsschein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Urkunde oder das Dokument, das einen Versicherungsvertrag bestätigt und beschreibt.",
+                    "examples": [
+                      "Die genauen Leistungen stehen in der Police."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Police – Beispielsatz folgt.",
+              "answer": "Die Urkunde oder das Dokument, das einen Versicherungsvertrag bestätigt und beschreibt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine staatliche Behörde, die in Notfällen für Sicherheit sorgt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Geldbetrag, den eine Versicherung im Schadensfall bezahlt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 24,
           "question": "Versicherungsschutz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Umfang der Risiken und Leistungen, die durch eine Versicherung abgedeckt sind.",
+          "explain": {
+            "entryId": "Versicherungsschutz",
+            "headword": "Versicherungsschutz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈzɪçɐʁʊŋsˌʃʊt͡s/",
+              "ipaUS": "/fɛɐ̯ˈzɪçɐʁʊŋsˌʃʊt͡s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Versicherungsschutz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Deckung",
+                  "Absicherung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Umfang der Risiken und Leistungen, die durch eine Versicherung abgedeckt sind.",
+                    "examples": [
+                      "Prüfen Sie vor der Reise Ihren Versicherungsschutz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Versicherungsschutz – Beispielsatz folgt.",
+              "answer": "Der Umfang der Risiken und Leistungen, die durch eine Versicherung abgedeckt sind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Vertragsdokument, auf dem die Versicherungsnummer steht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die regelmäßige Zahlung, die der Versicherte an das Unternehmen leistet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 25,
           "question": "Medikament",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Mittel mit Wirkstoffen zur Vorbeugung, Linderung oder Behandlung von Krankheiten.",
+          "explain": {
+            "entryId": "Medikament",
+            "headword": "Medikament",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/medikaˈmɛnt/",
+              "ipaUS": "/medikaˈmɛnt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Medikament",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Arzneimittel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Mittel mit Wirkstoffen zur Vorbeugung, Linderung oder Behandlung von Krankheiten.",
+                    "examples": [
+                      "Dieses Medikament muss nach dem Essen eingenommen werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Medikament – Beispielsatz folgt.",
+              "answer": "Ein Mittel mit Wirkstoffen zur Vorbeugung, Linderung oder Behandlung von Krankheiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine schriftliche ärztliche Anweisung zum Erhalt eines Mittels.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die genaue Menge eines Wirkstoffs, die auf einmal genommen wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 26,
           "question": "Rezept",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine ärztliche Verordnung, mit der ein bestimmtes Medikament in der Apotheke erhältlich ist.",
+          "explain": {
+            "entryId": "Rezept",
+            "headword": "Rezept",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁeˈt͡sɛpt/",
+              "ipaUS": "/ʁeˈt͡sɛpt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Rezept",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ärztliche Verordnung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine ärztliche Verordnung, mit der ein bestimmtes Medikament in der Apotheke erhältlich ist.",
+                    "examples": [
+                      "Für dieses Medikament benötigen Sie ein Rezept."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rezept – Beispielsatz folgt.",
+              "answer": "Eine ärztliche Verordnung, mit der ein bestimmtes Medikament erhältlich ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Medikament selbst, das einen bestimmten Wirkstoff enthält.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Menge eines Medikaments, die bei einer Einnahme verwendet wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 27,
           "question": "Dosis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine festgelegte Menge eines Medikaments oder Wirkstoffs für eine Anwendung.",
+          "explain": {
+            "entryId": "Dosis",
+            "headword": "Dosis",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈdoːzɪs/",
+              "ipaUS": "/ˈdoːzɪs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Dosis",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Dosierung",
+                  "Menge"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine festgelegte Menge eines Medikaments oder Wirkstoffs für eine Anwendung.",
+                    "examples": [
+                      "Nehmen Sie die empfohlene Dosis nicht öfter als dreimal täglich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Dosis – Beispielsatz folgt.",
+              "answer": "Eine festgelegte Menge eines Medikaments oder Wirkstoffs für eine Anwendung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine schriftliche Erlaubnis, ein verschreibungspflichtiges Mittel zu kaufen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein vollständiger Behandlungsplan mit mehreren medizinischen Maßnahmen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 28,
           "question": "Behandlung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Medizinische Maßnahmen, die Beschwerden lindern oder eine Krankheit verbessern sollen.",
+          "explain": {
+            "entryId": "Behandlung",
+            "headword": "Behandlung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈhandlʊŋ/",
+              "ipaUS": "/bəˈhandlʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Behandlung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Versorgung",
+                  "Therapie"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Medizinische Maßnahmen, die Beschwerden lindern oder eine Krankheit verbessern sollen.",
+                    "examples": [
+                      "Die Behandlung der Verletzung dauert mehrere Wochen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Behandlung – Beispielsatz folgt.",
+              "answer": "Medizinische Maßnahmen, die Beschwerden lindern oder eine Krankheit verbessern sollen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die genaue Prüfung, mit der ein Gesundheitsproblem erkannt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der natürliche Prozess, in dem der Körper wieder vollständig gesund wird.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 29,
           "question": "Therapie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine geplante medizinische oder psychologische Behandlung nach einer bestimmten Methode.",
+          "explain": {
+            "entryId": "Therapie",
+            "headword": "Therapie",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/teʁaˈpiː/",
+              "ipaUS": "/teʁaˈpiː/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Therapie",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Behandlung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine geplante medizinische oder psychologische Behandlung nach einer bestimmten Methode.",
+                    "examples": [
+                      "Die Therapie hilft ihm, sich nach dem Unfall wieder besser zu bewegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Therapie – Beispielsatz folgt.",
+              "answer": "Eine geplante medizinische oder psychologische Behandlung nach einer bestimmten Methode.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne Untersuchung ohne anschließende Maßnahmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die vollständige Beseitigung einer Krankheit als Ergebnis.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 30,
           "question": "Heilung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Wiederherstellung der Gesundheit oder das Verschwinden einer Krankheit oder Verletzung.",
+          "explain": {
+            "entryId": "Heilung",
+            "headword": "Heilung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhaɪ̯lʊŋ/",
+              "ipaUS": "/ˈhaɪ̯lʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Heilung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gesundwerden",
+                  "Wiederherstellung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Wiederherstellung der Gesundheit oder das Verschwinden einer Krankheit oder Verletzung.",
+                    "examples": [
+                      "Die Heilung der Wunde verläuft gut."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Heilung – Beispielsatz folgt.",
+              "answer": "Die Wiederherstellung der Gesundheit oder das Verschwinden einer Krankheit oder Verletzung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der längere Prozess, in dem sich eine Person nach einer Krankheit erholt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Methode, mit der eine Krankheit behandelt werden soll.",
               "ok": false
             }
           ]

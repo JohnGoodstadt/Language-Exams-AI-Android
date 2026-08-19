@@ -2,210 +2,567 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEmotions2-de",
-  "title": "",
+  "title": "Emotionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Gefühl",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein bewusst erlebter innerer Zustand oder eine intuitive Wahrnehmung.",
+          "explain": {
+            "entryId": "Gefühl",
+            "headword": "Gefühl",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈfyːl/",
+              "ipaUS": "/ɡəˈfyːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Gefühl",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Empfinden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein bewusst erlebter innerer Zustand oder eine intuitive Wahrnehmung.",
+                    "examples": [
+                      "Ich habe das Gefühl, dass etwas nicht stimmt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gefühl – Beispielsatz folgt.",
+              "answer": "Ein bewusst erlebter innerer Zustand oder eine intuitive Wahrnehmung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine wissenschaftlich beschriebene psychische Reaktion mit körperlichen Veränderungen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine unmittelbare körperliche Wahrnehmung wie Wärme oder Schmerz.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Empfindung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine körperliche, sinnliche oder feine innere Wahrnehmung.",
+          "explain": {
+            "entryId": "Empfindung",
+            "headword": "Empfindung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛmˈpfɪndʊŋ/",
+              "ipaUS": "/ɛmˈpfɪndʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Empfindung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wahrnehmung",
+                  "Empfinden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine körperliche, sinnliche oder feine innere Wahrnehmung.",
+                    "examples": [
+                      "Nach der Behandlung hatte sie eine warme Empfindung im Arm."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Empfindung – Beispielsatz folgt.",
+              "answer": "Eine körperliche, sinnliche oder feine innere Wahrnehmung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein allgemein bewusst erlebter emotionaler oder intuitiver Zustand.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine starke psychische Reaktion wie Freude, Angst oder Ärger.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Begeisterung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Große Freude und starkes positives Interesse an einer Sache.",
+          "explain": {
+            "entryId": "Begeisterung",
+            "headword": "Begeisterung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈɡaɪ̯stɐʁʊŋ/",
+              "ipaUS": "/bəˈɡaɪ̯stɐʁʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Begeisterung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Enthusiasmus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Große Freude und starkes positives Interesse an einer Sache.",
+                    "examples": [
+                      "Die Kinder zeigten große Begeisterung für das Experiment."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Begeisterung – Beispielsatz folgt.",
+              "answer": "Große Freude und starkes positives Interesse an einer Sache.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein nervöser oder sehr erregter Zustand vor einem Ereignis.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein besonders intensives und fleißiges Bemühen bei einer Aufgabe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Aufregung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zustand starker innerer Erregung, Nervosität oder gespannter Freude.",
+          "explain": {
+            "entryId": "Aufregung",
+            "headword": "Aufregung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fˌʁeːɡʊŋ/",
+              "ipaUS": "/ˈaʊ̯fˌʁeːɡʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Aufregung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erregung",
+                  "Nervosität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Zustand starker innerer Erregung, Nervosität oder gespannter Freude.",
+                    "examples": [
+                      "Vor dem Auftritt konnte sie vor Aufregung kaum schlafen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Aufregung – Beispielsatz folgt.",
+              "answer": "Ein Zustand starker innerer Erregung, Nervosität oder gespannter Freude.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Große positive Freude und anhaltendes Interesse an einer Sache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fleißige Energie und starkes Bemühen bei der Durchführung einer Aufgabe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Eifer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Große Energie, Ernsthaftigkeit und fleißiges Bemühen bei einer Tätigkeit.",
+          "explain": {
+            "entryId": "Eifer",
+            "headword": "Eifer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯fɐ/",
+              "ipaUS": "/ˈaɪ̯fɐ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Eifer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Tatendrang",
+                  "Engagement"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Große Energie, Ernsthaftigkeit und fleißiges Bemühen bei einer Tätigkeit.",
+                    "examples": [
+                      "Mit viel Eifer arbeitete er an seinem Projekt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Eifer – Beispielsatz folgt.",
+              "answer": "Große Energie, Ernsthaftigkeit und fleißiges Bemühen bei einer Tätigkeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Starke positive Freude und Interesse an einem Thema.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein nervöser Zustand vor einer wichtigen Veranstaltung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Erlebnis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Ereignis, das jemand persönlich erfahren hat und das einen besonderen Eindruck hinterlässt.",
+          "explain": {
+            "entryId": "Erlebnis",
+            "headword": "Erlebnis",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈleːpnɪs/",
+              "ipaUS": "/ɛɐ̯ˈleːpnɪs/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Erlebnis",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erfahrung",
+                  "Ereignis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Ereignis, das jemand persönlich erfahren hat und das einen besonderen Eindruck hinterlässt.",
+                    "examples": [
+                      "Die Reise durch die Berge war ein besonderes Erlebnis."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erlebnis – Beispielsatz folgt.",
+              "answer": "Ein Ereignis, das jemand persönlich erfahren hat und das einen besonderen Eindruck hinterlässt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Ort oder die soziale Gruppe, aus der jemand ursprünglich kommt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Praktisches Können, das durch Übung erlernt wurde.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "Herkunft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Ort, die Familie oder der soziale und kulturelle Hintergrund, aus dem jemand oder etwas stammt.",
+          "explain": {
+            "entryId": "Herkunft",
+            "headword": "Herkunft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhɛɐ̯ˌkʊnft/",
+              "ipaUS": "/ˈhɛɐ̯ˌkʊnft/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Herkunft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ursprung",
+                  "Abstammung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Ort, die Familie oder der soziale und kulturelle Hintergrund, aus dem jemand oder etwas stammt.",
+                    "examples": [
+                      "Die Herkunft eines Menschen sagt nichts über seine Fähigkeiten aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Herkunft – Beispielsatz folgt.",
+              "answer": "Der Ort, die Familie oder der soziale und kulturelle Hintergrund, aus dem jemand oder etwas stammt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein persönliches Ereignis, das einen starken Eindruck hinterlassen hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die individuellen Merkmale, die einen Menschen unverwechselbar machen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "Fertigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein durch Lernen und Übung entwickeltes praktisches Können.",
+          "explain": {
+            "entryId": "Fertigkeit",
+            "headword": "Fertigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfɛʁtɪçkaɪ̯t/",
+              "ipaUS": "/ˈfɛʁtɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Fertigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Geschick",
+                  "Können"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein durch Lernen und Übung entwickeltes praktisches Können.",
+                    "examples": [
+                      "Sicheres Schreiben ist eine wichtige berufliche Fertigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fertigkeit – Beispielsatz folgt.",
+              "answer": "Ein durch Lernen und Übung entwickeltes praktisches Können.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das allgemeine Vermögen, etwas erfolgreich tun zu können.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine besondere natürliche Anlage, durch die jemand etwas leicht lernt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 9,
+          "page": 19,
           "question": "Meinung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine persönliche Beurteilung oder Überzeugung zu einem Thema.",
+          "explain": {
+            "entryId": "Meinung",
+            "headword": "Meinung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmaɪ̯nʊŋ/",
+              "ipaUS": "/ˈmaɪ̯nʊŋ/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Meinung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Auffassung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine persönliche Beurteilung oder Überzeugung zu einem Thema.",
+                    "examples": [
+                      "Meiner Meinung nach ist der Plan zu teuer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Meinung – Beispielsatz folgt.",
+              "answer": "Eine persönliche Beurteilung oder Überzeugung zu einem Thema.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine häufig sachlich betrachtete Auffassung zu einem Thema.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die besondere Perspektive, aus der jemand eine Situation betrachtet.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 10,
+          "page": 20,
           "question": "Ansicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Auffassung oder Beurteilung, die jemand über ein Thema hat.",
+          "explain": {
+            "entryId": "Ansicht",
+            "headword": "Ansicht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌzɪçt/",
+              "ipaUS": "/ˈanˌzɪçt/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Ansicht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Auffassung",
+                  "Meinung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Auffassung oder Beurteilung, die jemand über ein Thema hat.",
+                    "examples": [
+                      "Nach Ansicht der Expertin ist die Methode sicher."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ansicht – Beispielsatz folgt.",
+              "answer": "Eine Auffassung oder Beurteilung, die jemand über ein Thema hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine ausdrücklich persönliche Bewertung oder Überzeugung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Blickwinkel, aus dem eine Situation wahrgenommen und erklärt wird.",
               "ok": false
             }
           ]

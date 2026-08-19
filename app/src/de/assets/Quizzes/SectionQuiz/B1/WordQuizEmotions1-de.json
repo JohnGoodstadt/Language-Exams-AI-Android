@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEmotions1-de",
-  "title": "",
+  "title": "Emotionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "B1 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Ehrgeiz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der starke Wunsch, anspruchsvolle Ziele zu erreichen und erfolgreich zu sein.",
+          "explain": {
+            "entryId": "Ehrgeiz",
+            "headword": "Ehrgeiz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈeːɐ̯ɡaɪ̯t͡s/",
+              "ipaUS": "/ˈeːɐ̯ɡaɪ̯t͡s/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Ehrgeiz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ambition"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der starke Wunsch, anspruchsvolle Ziele zu erreichen und erfolgreich zu sein.",
+                    "examples": [
+                      "Mit viel Ehrgeiz bereitete sie sich auf die Prüfung vor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ehrgeiz – Beispielsatz folgt.",
+              "answer": "Der starke Wunsch, anspruchsvolle Ziele zu erreichen und erfolgreich zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein konkretes Ergebnis, das jemand in Zukunft erreichen möchte.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das anhaltende Bemühen, sich einem gewünschten Ziel zu nähern.",
               "ok": false
             }
           ]
@@ -34,18 +69,54 @@
           "title": "",
           "page": 2,
           "question": "Ziel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein gewünschtes Ergebnis oder ein Punkt, den jemand erreichen möchte.",
+          "explain": {
+            "entryId": "Ziel",
+            "headword": "Ziel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/t͡siːl/",
+              "ipaUS": "/t͡siːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Ziel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Absicht",
+                  "Zweck"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein gewünschtes Ergebnis oder ein Punkt, den jemand erreichen möchte.",
+                    "examples": [
+                      "Sein Ziel ist ein erfolgreicher Abschluss."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ziel – Beispielsatz folgt.",
+              "answer": "Ein gewünschtes Ergebnis oder ein Punkt, den jemand erreichen möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der starke persönliche Wunsch nach Erfolg und Anerkennung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das dauerhafte Bemühen, etwas Bestimmtes zu erreichen.",
               "ok": false
             }
           ]
@@ -54,18 +125,53 @@
           "title": "",
           "page": 3,
           "question": "Streben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein anhaltendes und zielgerichtetes Bemühen, etwas zu erreichen.",
+          "explain": {
+            "entryId": "Streben",
+            "headword": "Streben",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃtʁeːbn̩/",
+              "ipaUS": "/ˈʃtʁeːbn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Streben",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bemühen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein anhaltendes und zielgerichtetes Bemühen, etwas zu erreichen.",
+                    "examples": [
+                      "Ihr Streben nach Wissen führte sie an die Universität."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Streben – Beispielsatz folgt.",
+              "answer": "Ein anhaltendes und zielgerichtetes Bemühen, etwas zu erreichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das konkrete Ergebnis, das am Ende erreicht werden soll.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der starke Wunsch, im Vergleich mit anderen besonders erfolgreich zu sein.",
               "ok": false
             }
           ]
@@ -74,18 +180,53 @@
           "title": "",
           "page": 4,
           "question": "Verhalten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Art, wie eine Person oder ein Lebewesen in einer Situation handelt und reagiert.",
+          "explain": {
+            "entryId": "Verhalten",
+            "headword": "Verhalten",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈhaltn̩/",
+              "ipaUS": "/fɛɐ̯ˈhaltn̩/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Verhalten",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Handlungsweise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Art, wie eine Person oder ein Lebewesen in einer Situation handelt und reagiert.",
+                    "examples": [
+                      "Sein Verhalten im Gespräch war ruhig und respektvoll."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verhalten – Beispielsatz folgt.",
+              "answer": "Die Art, wie eine Person oder ein Lebewesen in einer Situation handelt und reagiert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die sichtbaren Umgangsformen einer Person, besonders gegenüber anderen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine allgemeine Weise oder Form, in der etwas getan wird.",
               "ok": false
             }
           ]
@@ -94,18 +235,54 @@
           "title": "",
           "page": 5,
           "question": "Benehmen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das äußere Verhalten und die Umgangsformen einer Person in sozialen Situationen.",
+          "explain": {
+            "entryId": "Benehmen",
+            "headword": "Benehmen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈneːmən/",
+              "ipaUS": "/bəˈneːmən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Benehmen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Umgangsformen",
+                  "Auftreten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das äußere Verhalten und die Umgangsformen einer Person in sozialen Situationen.",
+                    "examples": [
+                      "Die Lehrerin lobte das höfliche Benehmen der Klasse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Benehmen – Beispielsatz folgt.",
+              "answer": "Das äußere Verhalten und die Umgangsformen einer Person in sozialen Situationen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jede Handlung und Reaktion einer Person in beliebigen Situationen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die persönliche Methode oder Weise, wie eine Aufgabe ausgeführt wird.",
               "ok": false
             }
           ]
@@ -114,18 +291,54 @@
           "title": "",
           "page": 6,
           "question": "Art",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine bestimmte Weise, Form oder Kategorie, in der etwas geschieht oder beschaffen ist.",
+          "explain": {
+            "entryId": "Art",
+            "headword": "Art",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/aːɐ̯t/",
+              "ipaUS": "/aːɐ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Art",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Weise",
+                  "Typ"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine bestimmte Weise, Form oder Kategorie, in der etwas geschieht oder beschaffen ist.",
+                    "examples": [
+                      "Ihre freundliche Art macht die Zusammenarbeit angenehm."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Art – Beispielsatz folgt.",
+              "answer": "Eine bestimmte Weise, Form oder Kategorie, in der etwas geschieht oder beschaffen ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das gesamte beobachtbare Handeln einer Person in einer Situation.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die sozialen Umgangsformen, die als höflich oder unhöflich gelten.",
               "ok": false
             }
           ]
@@ -134,18 +347,53 @@
           "title": "",
           "page": 7,
           "question": "Selbstvertrauen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Vertrauen in die eigenen Fähigkeiten und die eigene Handlungsfähigkeit.",
+          "explain": {
+            "entryId": "Selbstvertrauen",
+            "headword": "Selbstvertrauen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/",
+              "ipaUS": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Selbstvertrauen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vertrauen in sich selbst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Vertrauen in die eigenen Fähigkeiten und die eigene Handlungsfähigkeit.",
+                    "examples": [
+                      "Durch die Übung gewann er mehr Selbstvertrauen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Selbstvertrauen – Beispielsatz folgt.",
+              "answer": "Das Vertrauen in die eigenen Fähigkeiten und die eigene Handlungsfähigkeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das grundlegende Gefühl, als Person wertvoll zu sein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein nach außen ruhiges und sicheres Auftreten in schwierigen Situationen.",
               "ok": false
             }
           ]
@@ -154,18 +402,53 @@
           "title": "",
           "page": 8,
           "question": "Selbstwertgefühl",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das grundlegende Gefühl und die Bewertung des eigenen persönlichen Wertes.",
+          "explain": {
+            "entryId": "Selbstwertgefühl",
+            "headword": "Selbstwertgefühl",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɛlpstveːɐ̯tɡəˌfyːl/",
+              "ipaUS": "/ˈzɛlpstveːɐ̯tɡəˌfyːl/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Selbstwertgefühl",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Selbstachtung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das grundlegende Gefühl und die Bewertung des eigenen persönlichen Wertes.",
+                    "examples": [
+                      "Ständige Kritik kann das Selbstwertgefühl schwächen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Selbstwertgefühl – Beispielsatz folgt.",
+              "answer": "Das grundlegende Gefühl und die Bewertung des eigenen persönlichen Wertes.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Vertrauen, eine konkrete Aufgabe mit den eigenen Fähigkeiten lösen zu können.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein souveränes und angstfreies Auftreten vor anderen Menschen.",
               "ok": false
             }
           ]
@@ -174,18 +457,53 @@
           "title": "",
           "page": 9,
           "question": "Selbstsicherheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein ruhiges, souveränes Auftreten und die Sicherheit im eigenen Handeln.",
+          "explain": {
+            "entryId": "Selbstsicherheit",
+            "headword": "Selbstsicherheit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɛlpstˌzɪçɐhaɪ̯t/",
+              "ipaUS": "/ˈzɛlpstˌzɪçɐhaɪ̯t/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Selbstsicherheit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Souveränität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein ruhiges, souveränes Auftreten und die Sicherheit im eigenen Handeln.",
+                    "examples": [
+                      "Sie beantwortete die Fragen mit großer Selbstsicherheit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Selbstsicherheit – Beispielsatz folgt.",
+              "answer": "Ein ruhiges, souveränes Auftreten und die Sicherheit im eigenen Handeln.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das innere Vertrauen in die eigenen Fähigkeiten bei einer Aufgabe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die grundlegende Bewertung des eigenen Wertes als Person.",
               "ok": false
             }
           ]
@@ -194,18 +512,53 @@
           "title": "",
           "page": 10,
           "question": "Emotion",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine psychische Reaktion wie Freude, Angst oder Ärger, oft mit körperlichen Veränderungen.",
+          "explain": {
+            "entryId": "Emotion",
+            "headword": "Emotion",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/emot͡si̯oːn/",
+              "ipaUS": "/emot͡si̯oːn/"
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Emotion",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gemütsbewegung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine psychische Reaktion wie Freude, Angst oder Ärger, oft mit körperlichen Veränderungen.",
+                    "examples": [
+                      "Die Nachricht löste starke Emotionen aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Emotion – Beispielsatz folgt.",
+              "answer": "Eine psychische Reaktion wie Freude, Angst oder Ärger, oft mit körperlichen Veränderungen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das bewusste persönliche Erleben eines inneren Zustands.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine unmittelbare körperliche oder feine sinnliche Wahrnehmung.",
               "ok": false
             }
           ]
