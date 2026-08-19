@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPrepositions1-de",
-  "title": "",
+  "title": "Präpositionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "während",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet etwas, das zur gleichen Zeit wie ein anderer Vorgang geschieht.",
+          "explain": {
+            "entryId": "während",
+            "headword": "während",
+            "pronunciation": {
+              "display": "VÄÄ-rent",
+              "ipaUK": "/ˈvɛːʁənt/",
+              "ipaUS": "/ˈvɛːʁənt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Gleichzeitigkeit",
+                "headwordLine": "während",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Verlauf von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet etwas, das zur gleichen Zeit wie ein anderer Vorgang geschieht",
+                    "examples": [
+                      "Während des Films blieb es ruhig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "während – Beispielsatz folgt.",
+              "answer": "Bezeichnet einen Zeitraum, in dem gleichzeitig etwas anderes geschieht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet ausschließlich den Grund für ein Ereignis.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet einen Zeitpunkt nach dem Ende eines Ereignisses.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "wegen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nennt den Grund oder die Ursache für etwas.",
+          "explain": {
+            "entryId": "wegen",
+            "headword": "wegen",
+            "pronunciation": {
+              "display": "VEE-gen",
+              "ipaUK": "/ˈveːɡn̩/",
+              "ipaUS": "/ˈveːɡn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Grund",
+                "headwordLine": "wegen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aufgrund"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nennt den Grund oder die Ursache für etwas",
+                    "examples": [
+                      "Wegen des Regens bleiben wir zu Hause."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wegen – Beispielsatz folgt.",
+              "answer": "Nennt den Grund oder die Ursache für etwas.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass etwas trotz eines Hindernisses geschieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet die Position genau zwischen zwei Dingen.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "trotz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt, dass ein Hindernis etwas nicht verhindert.",
+          "explain": {
+            "entryId": "trotz",
+            "headword": "trotz",
+            "pronunciation": {
+              "display": "trots",
+              "ipaUK": "/tʁɔt͡s/",
+              "ipaUS": "/tʁɔt͡s/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Gegengrund",
+                "headwordLine": "trotz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ungeachtet"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zeigt, dass ein Hindernis etwas nicht verhindert",
+                    "examples": [
+                      "Trotz des Regens gehen wir spazieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "trotz – Beispielsatz folgt.",
+              "answer": "Zeigt, dass etwas geschieht, obwohl ein Hindernis besteht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt den direkten Grund dafür, dass etwas geschieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Bewegung von innen nach außen.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "seit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet einen Beginn in der Vergangenheit, der bis jetzt reicht.",
+          "explain": {
+            "entryId": "seit",
+            "headword": "seit",
+            "pronunciation": {
+              "display": "sait",
+              "ipaUK": "/zaɪ̯t/",
+              "ipaUS": "/zaɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Beginn und Dauer",
+                "headwordLine": "seit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "von … an bis heute"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet einen Beginn in der Vergangenheit, der bis jetzt reicht",
+                    "examples": [
+                      "Ich wohne seit 2022 in Berlin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "seit – Beispielsatz folgt.",
+              "answer": "Bezeichnet einen Beginn in der Vergangenheit und eine Dauer bis zur Gegenwart.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet nur einen zukünftigen Endpunkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine ungefähre Uhrzeit.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "bis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet den Endpunkt einer Zeit, Strecke oder Frist.",
+          "explain": {
+            "entryId": "bis",
+            "headword": "bis",
+            "pronunciation": {
+              "display": "biss",
+              "ipaUK": "/bɪs/",
+              "ipaUS": "/bɪs/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Endpunkt",
+                "headwordLine": "bis",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bis zu"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet den Endpunkt einer Zeit, Strecke oder Frist",
+                    "examples": [
+                      "Ich arbeite bis fünf Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bis – Beispielsatz folgt.",
+              "answer": "Bezeichnet den Endpunkt einer Zeit, Strecke oder Frist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet den Beginn eines Zeitraums.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet die Mitte zwischen zwei Orten.",
               "ok": false
             }
           ]
@@ -114,18 +289,54 @@
           "title": "",
           "page": 6,
           "question": "gegen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kann eine entgegengesetzte Richtung, einen Widerstand oder eine ungefähre Zeit bezeichnen.",
+          "explain": {
+            "entryId": "gegen",
+            "headword": "gegen",
+            "pronunciation": {
+              "display": "GEE-gen",
+              "ipaUK": "/ˈɡeːɡn̩/",
+              "ipaUS": "/ˈɡeːɡn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Richtung, Widerstand oder ungefähre Zeit",
+                "headwordLine": "gegen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "entgegen",
+                  "ungefähr um"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "kann eine entgegengesetzte Richtung, einen Widerstand oder eine ungefähre Zeit bezeichnen",
+                    "examples": [
+                      "Wir kommen gegen acht Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gegen – Beispielsatz folgt.",
+              "answer": "Kann eine Richtung entgegen etwas, Widerstand oder eine ungefähre Zeit ausdrücken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bedeutet immer, dass man sich innerhalb eines Gebäudes befindet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet ausschließlich einen Zeitpunkt weit in der Vergangenheit.",
               "ok": false
             }
           ]
@@ -134,18 +345,54 @@
           "title": "",
           "page": 7,
           "question": "durch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet einen Weg von einer Seite zur anderen oder das Mittel einer Handlung.",
+          "explain": {
+            "entryId": "durch",
+            "headword": "durch",
+            "pronunciation": {
+              "display": "durch",
+              "ipaUK": "/dʊʁç/",
+              "ipaUS": "/dʊʁç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Weg oder Mittel",
+                "headwordLine": "durch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "hindurch",
+                  "mithilfe von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet einen Weg von einer Seite zur anderen oder das Mittel einer Handlung",
+                    "examples": [
+                      "Wir gehen durch den Park."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "durch – Beispielsatz folgt.",
+              "answer": "Bezeichnet einen Weg durch einen Bereich oder das Mittel, mit dem etwas geschieht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet eine feste Position direkt vor einem Ort.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet einen Zeitpunkt unmittelbar nach einem Ereignis.",
               "ok": false
             }
           ]
@@ -154,18 +401,53 @@
           "title": "",
           "page": 8,
           "question": "um",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine Position rundherum oder eine genaue Uhrzeit.",
+          "explain": {
+            "entryId": "um",
+            "headword": "um",
+            "pronunciation": {
+              "display": "um",
+              "ipaUK": "/ʊm/",
+              "ipaUS": "/ʊm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Umgebung oder Uhrzeit",
+                "headwordLine": "um",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "rund um"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine Position rundherum oder eine genaue Uhrzeit",
+                    "examples": [
+                      "Der Kurs beginnt um neun Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "um – Beispielsatz folgt.",
+              "answer": "Bezeichnet etwas rundherum oder nennt eine genaue Uhrzeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet nur eine ungefähre Menge.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Bewegung aus einem Raum heraus.",
               "ok": false
             }
           ]
@@ -174,18 +456,53 @@
           "title": "",
           "page": 9,
           "question": "zwischen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine Position in der Mitte von zwei oder mehreren Dingen.",
+          "explain": {
+            "entryId": "zwischen",
+            "headword": "zwischen",
+            "pronunciation": {
+              "display": "TSVI-schen",
+              "ipaUK": "/ˈt͡svɪʃn̩/",
+              "ipaUS": "/ˈt͡svɪʃn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mittlere Position",
+                "headwordLine": "zwischen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in der Mitte von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine Position in der Mitte von zwei oder mehreren Dingen",
+                    "examples": [
+                      "Die Apotheke liegt zwischen der Bank und dem Café."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zwischen – Beispielsatz folgt.",
+              "answer": "Bezeichnet eine Position oder Beziehung in der Mitte von zwei oder mehreren Dingen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet eine Position direkt gegenüber einer Sache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet alles, was außerhalb einer Grenze liegt.",
               "ok": false
             }
           ]
@@ -194,18 +511,53 @@
           "title": "",
           "page": 10,
           "question": "gegenüber",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine Position auf der anderen Seite oder eine Beziehung zu jemandem.",
+          "explain": {
+            "entryId": "gegenüber",
+            "headword": "gegenüber",
+            "pronunciation": {
+              "display": "gee-gen-ÜÜ-ber",
+              "ipaUK": "/ɡeːɡn̩ˈʔyːbɐ/",
+              "ipaUS": "/ɡeːɡn̩ˈʔyːbɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Gegenposition oder Beziehung",
+                "headwordLine": "gegenüber",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auf der anderen Seite von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine Position auf der anderen Seite oder eine Beziehung zu jemandem",
+                    "examples": [
+                      "Der Bahnhof ist dem Hotel gegenüber."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gegenüber – Beispielsatz folgt.",
+              "answer": "Bezeichnet eine Position auf der anderen Seite oder eine Haltung in Bezug auf jemanden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet eine Position genau in der Mitte von zwei Dingen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Bewegung vollständig durch einen Ort.",
               "ok": false
             }
           ]

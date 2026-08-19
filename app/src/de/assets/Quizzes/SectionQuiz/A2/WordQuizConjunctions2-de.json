@@ -2,90 +2,228 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizConjunctions2-de",
-  "title": "",
+  "title": "Konjunktionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "sondern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ersetzt nach einer Verneinung die falsche Information durch die richtige.",
+          "explain": {
+            "entryId": "sondern",
+            "headword": "sondern",
+            "pronunciation": {
+              "display": "SON-dern",
+              "ipaUK": "/ˈzɔndɐn/",
+              "ipaUS": "/ˈzɔndɐn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Korrektur nach Verneinung",
+                "headwordLine": "sondern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vielmehr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ersetzt nach einer Verneinung die falsche Information durch die richtige",
+                    "examples": [
+                      "Das ist nicht teuer, sondern billig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sondern – Beispielsatz folgt.",
+              "answer": "Korrigiert nach einer Verneinung eine Information und nennt die richtige Alternative.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fügt zwei Informationen hinzu, die beide gleichzeitig stimmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet den Grund für eine Entscheidung ein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "damit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet das Ziel oder den Zweck einer Handlung ein.",
+          "explain": {
+            "entryId": "damit",
+            "headword": "damit",
+            "pronunciation": {
+              "display": "da-MIT",
+              "ipaUK": "/daˈmɪt/",
+              "ipaUS": "/daˈmɪt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Zweck",
+                "headwordLine": "damit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "um … zu"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "leitet das Ziel oder den Zweck einer Handlung ein",
+                    "examples": [
+                      "Ich spreche langsam, damit du mich verstehst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "damit – Beispielsatz folgt.",
+              "answer": "Leitet ein, welches Ziel oder welchen Zweck eine Handlung hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet ein, was bereits vor einer anderen Handlung passiert ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Stellt zwei Möglichkeiten zur freien Auswahl.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "bevor",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine Handlung ein, die früher als eine andere geschieht.",
+          "explain": {
+            "entryId": "bevor",
+            "headword": "bevor",
+            "pronunciation": {
+              "display": "be-FOOR",
+              "ipaUK": "/bəˈfoːɐ̯/",
+              "ipaUS": "/bəˈfoːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Vorzeitigkeit",
+                "headwordLine": "bevor",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ehe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "leitet eine Handlung ein, die früher als eine andere geschieht",
+                    "examples": [
+                      "Ich frühstücke, bevor ich zur Arbeit fahre."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bevor – Beispielsatz folgt.",
+              "answer": "Leitet eine Handlung ein, die zeitlich früher als eine andere geschieht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet eine Handlung ein, die erst nach einer anderen geschieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet einen unerwarteten Gegensatz ein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "nachdem",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine Handlung ein, die nach einer bereits geschehenen Handlung folgt.",
+          "explain": {
+            "entryId": "nachdem",
+            "headword": "nachdem",
+            "pronunciation": {
+              "display": "naach-DEEM",
+              "ipaUK": "/naːxˈdeːm/",
+              "ipaUS": "/naːxˈdeːm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktion",
+                "grammarType": "Nachzeitigkeit",
+                "headwordLine": "nachdem",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "leitet eine Handlung ein, die nach einer bereits geschehenen Handlung folgt",
+                    "examples": [
+                      "Nachdem ich gegessen habe, gehe ich spazieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nachdem – Beispielsatz folgt.",
+              "answer": "Leitet eine Handlung ein, nach der eine andere Handlung folgt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet eine Handlung ein, die vor allen anderen Handlungen geschieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet eine Alternative zwischen zwei Möglichkeiten ein.",
               "ok": false
             }
           ]

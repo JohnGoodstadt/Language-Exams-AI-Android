@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizQuestions2-de",
-  "title": "",
+  "title": "Fragewörter",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, der die Bedeutung des Frageworts richtig erklärt.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "welche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einer Auswahl aus mehreren Möglichkeiten.",
+          "explain": {
+            "entryId": "welche",
+            "headword": "welche",
+            "pronunciation": {
+              "display": "WEL-che",
+              "ipaUK": "/ˈvɛlçə/",
+              "ipaUS": "/ˈvɛlçə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativartikel oder -pronomen",
+                "grammarType": "flektiert",
+                "headwordLine": "welcher, welche, welches?",
+                "inflectionsLine": "Form richtet sich nach Genus, Numerus und Kasus",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach einer bestimmten Person oder Sache aus mehreren Möglichkeiten",
+                    "examples": [
+                      "Welche Farbe magst du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "welche – Beispielsatz folgt.",
+              "answer": "Mit „welche“ fragt man nach einer Auswahl aus mehreren Möglichkeiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „welche“ fragt man ausschließlich nach einer Uhrzeit.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „welche“ fragt man ausschließlich nach einem Grund.",
               "ok": false
             }
           ]

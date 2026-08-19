@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTime1-de",
-  "title": "",
+  "title": "Zeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Uhr",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gerät zum Messen der Zeit; auch Teil einer Zeitangabe.",
+          "explain": {
+            "entryId": "Uhr",
+            "headword": "Uhr",
+            "pronunciation": {
+              "display": "UUR",
+              "ipaUK": "/uːɐ̯/",
+              "ipaUS": "/uːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Uhr",
+                "inflectionsLine": "Plural: die Uhren",
+                "synonyms": [
+                  "Zeitmesser"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Gerät, das die Zeit zeigt; das Wort wird auch nach einer Stundenzahl verwendet",
+                    "examples": [
+                      "Der Kurs beginnt um neun Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Uhr – Beispielsatz folgt.",
+              "answer": "Der Kurs beginnt um neun Uhr.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Uhr ist ein Zeitraum von sieben Tagen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Uhr ist die warme Jahreszeit nach dem Frühling.",
               "ok": false
             }
           ]
@@ -34,18 +69,51 @@
           "title": "",
           "page": 2,
           "question": "Zeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das, was in Sekunden, Minuten und Stunden gemessen wird.",
+          "explain": {
+            "entryId": "Zeit",
+            "headword": "Zeit",
+            "pronunciation": {
+              "display": "TSAIT",
+              "ipaUK": "/t͡saɪ̯t/",
+              "ipaUS": "/t͡saɪ̯t/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Zeit",
+                "inflectionsLine": "Plural: die Zeiten",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "das, was mit Uhren in Sekunden, Minuten und Stunden gemessen wird",
+                    "examples": [
+                      "Ich habe heute Zeit für einen Kaffee."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zeit – Beispielsatz folgt.",
+              "answer": "Ich habe heute Zeit für einen Kaffee.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Zeit ist ein Gerät zum Telefonieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Zeit ist ein Mitglied meiner Familie.",
               "ok": false
             }
           ]
@@ -54,18 +122,51 @@
           "title": "",
           "page": 3,
           "question": "Stunde",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum von 60 Minuten.",
+          "explain": {
+            "entryId": "Stunde",
+            "headword": "Stunde",
+            "pronunciation": {
+              "display": "SCHTUN-de",
+              "ipaUK": "/ˈʃtʊndə/",
+              "ipaUS": "/ˈʃtʊndə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Stunde",
+                "inflectionsLine": "Plural: die Stunden",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Zeiteinheit von 60 Minuten",
+                    "examples": [
+                      "Der Film dauert eine Stunde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Stunde – Beispielsatz folgt.",
+              "answer": "Eine Stunde hat 60 Minuten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Stunde hat sieben Tage.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Stunde hat zwölf Monate.",
               "ok": false
             }
           ]
@@ -74,18 +175,51 @@
           "title": "",
           "page": 4,
           "question": "Minute",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Zeiteinheit von 60 Sekunden.",
+          "explain": {
+            "entryId": "Minute",
+            "headword": "Minute",
+            "pronunciation": {
+              "display": "mi-NUU-te",
+              "ipaUK": "/miˈnuːtə/",
+              "ipaUS": "/miˈnuːtə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Minute",
+                "inflectionsLine": "Plural: die Minuten",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Zeiteinheit von 60 Sekunden; der sechzigste Teil einer Stunde",
+                    "examples": [
+                      "Warte bitte eine Minute."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Minute – Beispielsatz folgt.",
+              "answer": "Eine Minute hat 60 Sekunden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Minute hat 60 Stunden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Minute hat sieben Tage.",
               "ok": false
             }
           ]
@@ -94,18 +228,51 @@
           "title": "",
           "page": 5,
           "question": "Tag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum von 24 Stunden.",
+          "explain": {
+            "entryId": "Tag",
+            "headword": "Tag",
+            "pronunciation": {
+              "display": "TAAK",
+              "ipaUK": "/taːk/",
+              "ipaUS": "/taːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Tag",
+                "inflectionsLine": "Plural: die Tage",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Zeitraum von 24 Stunden von Mitternacht bis Mitternacht",
+                    "examples": [
+                      "Ein Tag hat 24 Stunden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tag – Beispielsatz folgt.",
+              "answer": "Ein Tag hat 24 Stunden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Tag hat zwölf Monate.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Tag besteht aus sieben Wochen.",
               "ok": false
             }
           ]
@@ -114,18 +281,51 @@
           "title": "",
           "page": 6,
           "question": "Woche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum von sieben Tagen.",
+          "explain": {
+            "entryId": "Woche",
+            "headword": "Woche",
+            "pronunciation": {
+              "display": "WO-che",
+              "ipaUK": "/ˈvɔxə/",
+              "ipaUS": "/ˈvɔxə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Woche",
+                "inflectionsLine": "Plural: die Wochen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Zeitraum von sieben Tagen",
+                    "examples": [
+                      "Eine Woche hat sieben Tage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Woche – Beispielsatz folgt.",
+              "answer": "Eine Woche hat sieben Tage.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Woche hat 60 Minuten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Woche hat zwölf Monate.",
               "ok": false
             }
           ]
@@ -134,18 +334,51 @@
           "title": "",
           "page": 7,
           "question": "Monat",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einer der zwölf Zeitabschnitte eines Jahres.",
+          "explain": {
+            "entryId": "Monat",
+            "headword": "Monat",
+            "pronunciation": {
+              "display": "MOO-nat",
+              "ipaUK": "/ˈmoːnat/",
+              "ipaUS": "/ˈmoːnat/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Monat",
+                "inflectionsLine": "Plural: die Monate",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einer der zwölf Zeitabschnitte eines Jahres, zum Beispiel Januar oder Februar",
+                    "examples": [
+                      "Der Januar ist ein Monat."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Monat – Beispielsatz folgt.",
+              "answer": "Der Januar ist ein Monat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Montag ist ein Monat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Minute ist ein Monat.",
               "ok": false
             }
           ]
@@ -154,18 +387,51 @@
           "title": "",
           "page": 8,
           "question": "Jahr",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum von zwölf Monaten.",
+          "explain": {
+            "entryId": "Jahr",
+            "headword": "Jahr",
+            "pronunciation": {
+              "display": "JAAR",
+              "ipaUK": "/jaːɐ̯/",
+              "ipaUS": "/jaːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Jahr",
+                "inflectionsLine": "Plural: die Jahre",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Zeitraum von zwölf Monaten beziehungsweise etwa 365 Tagen",
+                    "examples": [
+                      "Ein Jahr hat zwölf Monate."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Jahr – Beispielsatz folgt.",
+              "answer": "Ein Jahr hat zwölf Monate.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Jahr hat sieben Tage.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Jahr hat 60 Sekunden.",
               "ok": false
             }
           ]
@@ -174,18 +440,53 @@
           "title": "",
           "page": 9,
           "question": "heute",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An dem Tag, der jetzt ist.",
+          "explain": {
+            "entryId": "heute",
+            "headword": "heute",
+            "pronunciation": {
+              "display": "HOI-te",
+              "ipaUK": "/ˈhɔɪ̯tə/",
+              "ipaUS": "/ˈhɔɪ̯tə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Temporaladverb",
+                "headwordLine": "heute",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "an diesem Tag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an dem gegenwärtigen Tag; nicht gestern und nicht morgen",
+                    "examples": [
+                      "Heute ist Dienstag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "heute – Beispielsatz folgt.",
+              "answer": "Mit heute meine ich den Tag, der jetzt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit heute meine ich immer den Tag vor dem jetzigen Tag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit heute meine ich immer den nächsten Monat.",
               "ok": false
             }
           ]
@@ -194,18 +495,53 @@
           "title": "",
           "page": 10,
           "question": "morgen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An dem Tag nach heute.",
+          "explain": {
+            "entryId": "morgen",
+            "headword": "morgen",
+            "pronunciation": {
+              "display": "MOR-gen",
+              "ipaUK": "/ˈmɔʁɡn̩/",
+              "ipaUS": "/ˈmɔʁɡn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Temporaladverb",
+                "headwordLine": "morgen",
+                "inflectionsLine": "kleingeschrieben in der Bedeutung ‚am nächsten Tag‘",
+                "synonyms": [
+                  "am nächsten Tag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an dem Tag, der auf heute folgt",
+                    "examples": [
+                      "Heute ist Montag; morgen ist Dienstag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "morgen – Beispielsatz folgt.",
+              "answer": "Heute ist Montag; morgen ist Dienstag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit morgen meine ich den Tag vor heute.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit morgen meine ich das vergangene Jahr.",
               "ok": false
             }
           ]

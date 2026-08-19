@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizColors2-de",
-  "title": "",
+  "title": "Farben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "bunt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit vielen verschiedenen Farben.",
+          "explain": {
+            "entryId": "bunt",
+            "headword": "bunt",
+            "pronunciation": {
+              "display": "BUNT",
+              "ipaUK": "/bʊnt/",
+              "ipaUS": "/bʊnt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "bunt",
+                "inflectionsLine": "bunter, bunte, buntes",
+                "synonyms": [
+                  "vielfarbig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit vielen verschiedenen Farben",
+                    "examples": [
+                      "Der Regenbogen ist bunt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bunt – Beispielsatz folgt.",
+              "answer": "Ein Bild mit vielen verschiedenen Farben ist bunt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein vollständig schwarzes Bild ist bunt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein farbloses Glas Wasser ist bunt.",
               "ok": false
             }
           ]

@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs1-de",
-  "title": "",
+  "title": "Verben (Auswahl)",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Verbs passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "können",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Fähigkeit oder Möglichkeit haben, etwas zu tun.",
+          "explain": {
+            "entryId": "können",
+            "headword": "können",
+            "pronunciation": {
+              "display": "KÖN-nen",
+              "ipaUK": "/ˈkœnən/",
+              "ipaUS": "/ˈkœnən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Modalverb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "können",
+                "inflectionsLine": "ich kann; du kannst; er/sie/es kann",
+                "synonyms": [
+                  "fähig sein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Fähigkeit oder Möglichkeit haben, etwas zu tun",
+                    "examples": [
+                      "Ich kann gut schwimmen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "können – Beispielsatz folgt.",
+              "answer": "Können drückt aus, dass jemand die Fähigkeit oder Möglichkeit für etwas hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Können drückt aus, dass jemand wegen einer Regel etwas unbedingt tun muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Können drückt aus, dass jemand keine Erlaubnis für etwas hat.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "müssen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Verpflichtet oder gezwungen sein, etwas zu tun.",
+          "explain": {
+            "entryId": "müssen",
+            "headword": "müssen",
+            "pronunciation": {
+              "display": "MÜS-sen",
+              "ipaUK": "/ˈmʏsn̩/",
+              "ipaUS": "/ˈmʏsn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Modalverb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "müssen",
+                "inflectionsLine": "ich muss; du musst; er/sie/es muss",
+                "synonyms": [
+                  "verpflichtet sein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "durch eine Pflicht, Notwendigkeit oder Situation gezwungen sein, etwas zu tun",
+                    "examples": [
+                      "Ich muss morgen früh arbeiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "müssen – Beispielsatz folgt.",
+              "answer": "Müssen drückt eine Pflicht oder starke Notwendigkeit aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Müssen drückt nur eine persönliche Vorliebe aus.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Müssen drückt aus, dass etwas ausdrücklich verboten ist.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "dürfen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Erlaubnis haben, etwas zu tun.",
+          "explain": {
+            "entryId": "dürfen",
+            "headword": "dürfen",
+            "pronunciation": {
+              "display": "DÜR-fen",
+              "ipaUK": "/ˈdʏʁfn̩/",
+              "ipaUS": "/ˈdʏʁfn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Modalverb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "dürfen",
+                "inflectionsLine": "ich darf; du darfst; er/sie/es darf",
+                "synonyms": [
+                  "erlaubt sein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Erlaubnis haben, etwas zu tun",
+                    "examples": [
+                      "Hier dürfen Sie parken."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "dürfen – Beispielsatz folgt.",
+              "answer": "Dürfen drückt aus, dass jemand die Erlaubnis für etwas hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Dürfen drückt aus, dass jemand die Fähigkeit für etwas besitzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Dürfen drückt eine unvermeidbare Pflicht aus.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "wollen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen Wunsch oder eine feste Absicht haben.",
+          "explain": {
+            "entryId": "wollen",
+            "headword": "wollen",
+            "pronunciation": {
+              "display": "WOL-len",
+              "ipaUK": "/ˈvɔlən/",
+              "ipaUS": "/ˈvɔlən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Modalverb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "wollen",
+                "inflectionsLine": "ich will; du willst; er/sie/es will",
+                "synonyms": [
+                  "beabsichtigen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einen Wunsch oder eine feste Absicht haben, etwas zu tun",
+                    "examples": [
+                      "Wir wollen im Sommer reisen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wollen – Beispielsatz folgt.",
+              "answer": "Wollen drückt einen Wunsch oder eine feste Absicht aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wollen drückt aus, dass eine andere Person einen Auftrag gegeben hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wollen drückt nur aus, dass etwas erlaubt ist.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "sollen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen Auftrag, Rat oder eine Erwartung von anderen ausdrücken.",
+          "explain": {
+            "entryId": "sollen",
+            "headword": "sollen",
+            "pronunciation": {
+              "display": "ZOL-len",
+              "ipaUK": "/ˈzɔlən/",
+              "ipaUS": "/ˈzɔlən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Modalverb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "sollen",
+                "inflectionsLine": "ich soll; du sollst; er/sie/es soll",
+                "synonyms": [
+                  "den Auftrag haben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einen Auftrag, Rat oder eine Erwartung ausdrücken, die meist von einer anderen Person kommt",
+                    "examples": [
+                      "Der Arzt sagt, ich soll mich ausruhen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sollen – Beispielsatz folgt.",
+              "answer": "Sollen drückt oft einen Auftrag, Rat oder eine Erwartung von anderen aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sollen drückt ausschließlich eine persönliche Vorliebe aus.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sollen bedeutet, eine Person oder einen Ort bereits zu kennen.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "mögen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas oder jemanden gernhaben.",
+          "explain": {
+            "entryId": "mögen",
+            "headword": "mögen",
+            "pronunciation": {
+              "display": "MÖÖ-gen",
+              "ipaUK": "/ˈmøːɡn̩/",
+              "ipaUS": "/ˈmøːɡn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Modalverb oder Vollverb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "mögen",
+                "inflectionsLine": "ich mag; du magst; er/sie/es mag",
+                "synonyms": [
+                  "gern haben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Person oder Sache gernhaben oder angenehm finden",
+                    "examples": [
+                      "Ich mag italienisches Essen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "mögen – Beispielsatz folgt.",
+              "answer": "Mögen bedeutet, eine Person oder Sache gernzuhaben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mögen bedeutet, wegen einer Pflicht etwas tun zu müssen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mögen bedeutet, eine Information sicher zu wissen.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "brauchen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas benötigen.",
+          "explain": {
+            "entryId": "brauchen",
+            "headword": "brauchen",
+            "pronunciation": {
+              "display": "BRAU-chen",
+              "ipaUK": "/ˈbʁaʊ̯xn̩/",
+              "ipaUS": "/ˈbʁaʊ̯xn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "brauchen",
+                "inflectionsLine": "ich brauche; du brauchst; er/sie/es braucht",
+                "synonyms": [
+                  "benötigen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "etwas benötigen, weil es notwendig oder nützlich ist",
+                    "examples": [
+                      "Ich brauche Hilfe bei der Aufgabe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "brauchen – Beispielsatz folgt.",
+              "answer": "Brauchen bedeutet, etwas zu benötigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Brauchen bedeutet, etwas bereits zu besitzen und nicht zu benötigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Brauchen bedeutet, eine Person telefonisch zu erreichen.",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "verstehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Bedeutung oder den Zusammenhang erfassen.",
+          "explain": {
+            "entryId": "verstehen",
+            "headword": "verstehen",
+            "pronunciation": {
+              "display": "fer-SCHTEE-en",
+              "ipaUK": "/fɛɐ̯ˈʃteːən/",
+              "ipaUS": "/fɛɐ̯ˈʃteːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, nicht trennbar",
+                "headwordLine": "verstehen",
+                "inflectionsLine": "ich verstehe; du verstehst; er/sie/es versteht",
+                "synonyms": [
+                  "begreifen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Bedeutung, Erklärung oder den Zusammenhang von etwas erfassen",
+                    "examples": [
+                      "Ich verstehe die Erklärung jetzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verstehen – Beispielsatz folgt.",
+              "answer": "Verstehen bedeutet, die Bedeutung oder den Zusammenhang von etwas zu erfassen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Verstehen bedeutet, eine Information aus dem Gedächtnis zu verlieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Verstehen bedeutet, einen Raum ordentlich zu machen.",
               "ok": false
             }
           ]
@@ -174,18 +454,53 @@
           "title": "",
           "page": 9,
           "question": "wissen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Tatsache oder Information im Gedächtnis haben.",
+          "explain": {
+            "entryId": "wissen",
+            "headword": "wissen",
+            "pronunciation": {
+              "display": "WIS-sen",
+              "ipaUK": "/ˈvɪsn̩/",
+              "ipaUS": "/ˈvɪsn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "wissen",
+                "inflectionsLine": "ich weiß; du weißt; er/sie/es weiß",
+                "synonyms": [
+                  "Kenntnis haben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Tatsache oder Information kennen und im Gedächtnis haben",
+                    "examples": [
+                      "Ich weiß, wann der Zug fährt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wissen – Beispielsatz folgt.",
+              "answer": "Wissen bedeutet, eine Tatsache oder Information zu kennen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wissen bedeutet nur, mit einer Person persönlich vertraut zu sein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wissen bedeutet, eine wichtige Information zu vergessen.",
               "ok": false
             }
           ]
@@ -194,18 +509,53 @@
           "title": "",
           "page": 10,
           "question": "kennen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit einer Person, einem Ort oder einer Sache vertraut sein.",
+          "explain": {
+            "entryId": "kennen",
+            "headword": "kennen",
+            "pronunciation": {
+              "display": "KEN-nen",
+              "ipaUK": "/ˈkɛnən/",
+              "ipaUS": "/ˈkɛnən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "kennen",
+                "inflectionsLine": "ich kenne; du kennst; er/sie/es kennt",
+                "synonyms": [
+                  "vertraut sein mit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit einer Person, einem Ort oder einer Sache durch Erfahrung vertraut sein",
+                    "examples": [
+                      "Ich kenne Berlin sehr gut."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kennen – Beispielsatz folgt.",
+              "answer": "Kennen bedeutet, mit einer Person, einem Ort oder einer Sache vertraut zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kennen bedeutet nur, eine einzelne Tatsache als Antwort zu wissen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kennen bedeutet, einen vereinbarten Termin zu vergessen.",
               "ok": false
             }
           ]

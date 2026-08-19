@@ -2,170 +2,444 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs2-de",
-  "title": "",
+  "title": "Häufige Verben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Verb mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "lernen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Neue Kenntnisse oder Fähigkeiten erwerben.",
+          "explain": {
+            "entryId": "lernen",
+            "headword": "lernen",
+            "pronunciation": {
+              "display": "LER-nen",
+              "ipaUK": "/ˈlɛʁnən/",
+              "ipaUS": "/ˈlɛʁnən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "lernen",
+                "inflectionsLine": "ich lerne; du lernst; er/sie/es lernt",
+                "synonyms": [
+                  "sich Wissen aneignen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "neue Kenntnisse oder Fähigkeiten erwerben und üben",
+                    "examples": [
+                      "Ich lerne jeden Tag Deutsch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "lernen – Beispielsatz folgt.",
+              "answer": "In „Ich lerne Deutsch“ bedeutet lernen, neue Kenntnisse zu erwerben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb lernen bedeutet, eine Ware gegen Geld zu bekommen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb lernen bedeutet, mit einem Fahrzeug unterwegs zu sein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "spielen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Spiel machen oder ein Musikinstrument benutzen.",
+          "explain": {
+            "entryId": "spielen",
+            "headword": "spielen",
+            "pronunciation": {
+              "display": "SCHPII-len",
+              "ipaUK": "/ˈʃpiːlən/",
+              "ipaUS": "/ˈʃpiːlən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "spielen",
+                "inflectionsLine": "ich spiele; du spielst; er/sie/es spielt",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an einem Spiel teilnehmen oder ein Musikinstrument benutzen",
+                    "examples": [
+                      "Die Kinder spielen Fußball."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "spielen – Beispielsatz folgt.",
+              "answer": "In „Die Kinder spielen Fußball“ bedeutet spielen, an einem Spiel teilzunehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb spielen bedeutet, einen Text mit Buchstaben zu verfassen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb spielen bedeutet, Nahrung mit dem Mund aufzunehmen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "lesen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Geschriebene Wörter ansehen und verstehen.",
+          "explain": {
+            "entryId": "lesen",
+            "headword": "lesen",
+            "pronunciation": {
+              "display": "LEE-zen",
+              "ipaUK": "/ˈleːzn̩/",
+              "ipaUS": "/ˈleːzn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "lesen",
+                "inflectionsLine": "ich lese; du liest; er/sie/es liest",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "geschriebene oder gedruckte Wörter ansehen und ihren Inhalt verstehen",
+                    "examples": [
+                      "Ich lese ein Buch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "lesen – Beispielsatz folgt.",
+              "answer": "In „Ich lese ein Buch“ bedeutet lesen, einen geschriebenen Text zu verstehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb lesen bedeutet, Flüssigkeit aus einem Glas aufzunehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb lesen bedeutet, ein Auto zu steuern.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "schreiben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Buchstaben oder Wörter als Text festhalten.",
+          "explain": {
+            "entryId": "schreiben",
+            "headword": "schreiben",
+            "pronunciation": {
+              "display": "SCHRAI-ben",
+              "ipaUK": "/ˈʃʁaɪ̯bn̩/",
+              "ipaUS": "/ˈʃʁaɪ̯bn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "schreiben",
+                "inflectionsLine": "ich schreibe; du schreibst; er/sie/es schreibt",
+                "synonyms": [
+                  "verfassen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Buchstaben, Wörter oder Sätze als Text festhalten",
+                    "examples": [
+                      "Ich schreibe eine E-Mail."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schreiben – Beispielsatz folgt.",
+              "answer": "In „Ich schreibe eine E-Mail“ bedeutet schreiben, einen Text zu verfassen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb schreiben bedeutet, mit den Augen etwas wahrzunehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb schreiben bedeutet, im Bett zu ruhen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "kaufen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas gegen Geld bekommen.",
+          "explain": {
+            "entryId": "kaufen",
+            "headword": "kaufen",
+            "pronunciation": {
+              "display": "KAU-fen",
+              "ipaUK": "/ˈkaʊ̯fn̩/",
+              "ipaUS": "/ˈkaʊ̯fn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "kaufen",
+                "inflectionsLine": "ich kaufe; du kaufst; er/sie/es kauft",
+                "synonyms": [
+                  "erwerben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Ware oder Leistung bekommen und dafür Geld bezahlen",
+                    "examples": [
+                      "Ich kaufe Brot im Supermarkt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kaufen – Beispielsatz folgt.",
+              "answer": "In „Ich kaufe Brot“ bedeutet kaufen, eine Ware gegen Geld zu bekommen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb kaufen bedeutet, nachts im Bett zu ruhen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb kaufen bedeutet, Wörter mit der Stimme zu äußern.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "fahren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich mit einem Fahrzeug fortbewegen oder es steuern.",
+          "explain": {
+            "entryId": "fahren",
+            "headword": "fahren",
+            "pronunciation": {
+              "display": "FAA-ren",
+              "ipaUK": "/ˈfaːʁən/",
+              "ipaUS": "/ˈfaːʁən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "fahren",
+                "inflectionsLine": "ich fahre; du fährst; er/sie/es fährt",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "sich mit einem Fahrzeug fortbewegen oder ein Fahrzeug steuern",
+                    "examples": [
+                      "Wir fahren mit dem Bus zur Schule."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "fahren – Beispielsatz folgt.",
+              "answer": "In „Wir fahren mit dem Bus“ bedeutet fahren, sich mit einem Fahrzeug fortzubewegen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb fahren bedeutet, einen Brief mit einem Stift zu verfassen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb fahren bedeutet, Nahrung mit dem Mund aufzunehmen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "sehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas mit den Augen wahrnehmen.",
+          "explain": {
+            "entryId": "sehen",
+            "headword": "sehen",
+            "pronunciation": {
+              "display": "ZEE-en",
+              "ipaUK": "/ˈzeːən/",
+              "ipaUS": "/ˈzeːən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "sehen",
+                "inflectionsLine": "ich sehe; du siehst; er/sie/es sieht",
+                "synonyms": [
+                  "erblicken"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Person oder Sache mit den Augen wahrnehmen",
+                    "examples": [
+                      "Ich sehe einen Vogel im Baum."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sehen – Beispielsatz folgt.",
+              "answer": "In „Ich sehe einen Vogel“ bedeutet sehen, etwas mit den Augen wahrzunehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb sehen bedeutet, eine Flüssigkeit zu trinken.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb sehen bedeutet, eine Ware gegen Geld zu bekommen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "schlafen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit geschlossenen Augen ruhen.",
+          "explain": {
+            "entryId": "schlafen",
+            "headword": "schlafen",
+            "pronunciation": {
+              "display": "SCHLAA-fen",
+              "ipaUK": "/ˈʃlaːfn̩/",
+              "ipaUS": "/ˈʃlaːfn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "schlafen",
+                "inflectionsLine": "ich schlafe; du schläfst; er/sie/es schläft",
+                "synonyms": [
+                  "ruhen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "meist mit geschlossenen Augen in einem natürlichen Ruhezustand sein",
+                    "examples": [
+                      "Das Baby schläft in seinem Bett."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schlafen – Beispielsatz folgt.",
+              "answer": "In „Das Baby schläft“ bedeutet schlafen, in einem Ruhezustand zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb schlafen bedeutet, ein Fahrzeug zu steuern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb schlafen bedeutet, laut Wörter mit der Stimme zu äußern.",
               "ok": false
             }
           ]

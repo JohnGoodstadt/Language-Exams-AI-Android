@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizHello1-de",
-  "title": "",
+  "title": "Hallo",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem der Ausdruck richtig verwendet wird.",
+      "description": "",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Hallo",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine informelle Begrüßung.",
+          "explain": {
+            "entryId": "Hallo",
+            "headword": "Hallo",
+            "pronunciation": {
+              "display": "ha-LO",
+              "ipaUK": "/haˈloː/",
+              "ipaUS": "/haˈloː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interjektion",
+                "grammarType": null,
+                "headwordLine": "Hallo!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hi"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine informelle Begrüßung, die man zu jeder Tageszeit verwenden kann",
+                    "examples": [
+                      "Hallo, ich bin Anna."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hallo – Beispielsatz folgt.",
+              "answer": "Hallo, ich bin Anna.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Hallo, gute Nacht für den Morgen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich hallo aus Berlin.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Guten Morgen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Begrüßung am Morgen.",
+          "explain": {
+            "entryId": "Guten Morgen",
+            "headword": "Guten Morgen",
+            "pronunciation": {
+              "display": "GU-ten MOR-gen",
+              "ipaUK": "/ˌɡuːtn̩ ˈmɔʁɡn̩/",
+              "ipaUS": "/ˌɡuːtn̩ ˈmɔʁɡn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Guten Morgen!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Morgen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Begrüßung, die man morgens verwendet",
+                    "examples": [
+                      "Guten Morgen, Frau Weber!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Guten Morgen – Beispielsatz folgt.",
+              "answer": "Guten Morgen, Frau Weber!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gute Morgen, Frau Weber!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Guten Morgen, bevor ich schlafen gehe!",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Guten Tag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine höfliche Begrüßung am Tag.",
+          "explain": {
+            "entryId": "Guten Tag",
+            "headword": "Guten Tag",
+            "pronunciation": {
+              "display": "GU-ten TAAK",
+              "ipaUK": "/ˌɡuːtn̩ ˈtaːk/",
+              "ipaUS": "/ˌɡuːtn̩ ˈtaːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Guten Tag!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hallo"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine höfliche Begrüßung, die tagsüber verwendet wird",
+                    "examples": [
+                      "Guten Tag, kann ich Ihnen helfen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Guten Tag – Beispielsatz folgt.",
+              "answer": "Guten Tag, kann ich Ihnen helfen?",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gute Tag, kann ich Ihnen helfen?",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Guten Tag, schlaf gut!",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Guten Abend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Begrüßung am Abend.",
+          "explain": {
+            "entryId": "Guten Abend",
+            "headword": "Guten Abend",
+            "pronunciation": {
+              "display": "GU-ten AA-bent",
+              "ipaUK": "/ˌɡuːtn̩ ˈaːbn̩t/",
+              "ipaUS": "/ˌɡuːtn̩ ˈaːbn̩t/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Guten Abend!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hallo"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Begrüßung, die man am Abend verwendet",
+                    "examples": [
+                      "Guten Abend, Herr Klein!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Guten Abend – Beispielsatz folgt.",
+              "answer": "Guten Abend, Herr Klein!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gute Abend, Herr Klein!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Guten Abend, es ist sieben Uhr morgens.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "Gute Nacht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Abschiedsgruß vor dem Schlafengehen.",
+          "explain": {
+            "entryId": "Gute Nacht",
+            "headword": "Gute Nacht",
+            "pronunciation": {
+              "display": "GU-te NACHT",
+              "ipaUK": "/ˌɡuːtə ˈnaxt/",
+              "ipaUS": "/ˌɡuːtə ˈnaxt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Gute Nacht!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schlaf gut"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Abschiedsgruß, den man vor dem Schlafengehen verwendet",
+                    "examples": [
+                      "Ich gehe jetzt ins Bett. Gute Nacht!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gute Nacht – Beispielsatz folgt.",
+              "answer": "Ich gehe jetzt ins Bett. Gute Nacht!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Guten Nacht, schlaf gut!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gute Nacht, ich begrüße Sie zum Mittagessen.",
               "ok": false
             }
           ]
@@ -114,18 +289,54 @@
           "title": "",
           "page": 6,
           "question": "Tschüss",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein informeller Abschiedsgruß.",
+          "explain": {
+            "entryId": "Tschüss",
+            "headword": "Tschüss",
+            "pronunciation": {
+              "display": "TSCHÜSS",
+              "ipaUK": "/tʃʏs/",
+              "ipaUS": "/tʃʏs/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interjektion",
+                "grammarType": null,
+                "headwordLine": "Tschüss!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bis bald",
+                  "Auf Wiedersehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein informeller Gruß beim Abschied",
+                    "examples": [
+                      "Tschüss, wir sehen uns morgen!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tschüss – Beispielsatz folgt.",
+              "answer": "Tschüss, wir sehen uns morgen!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Tschüss, schön dich kennenzulernen zu beginnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich tschüsse jeden Morgen zur Arbeit.",
               "ok": false
             }
           ]
@@ -134,18 +345,53 @@
           "title": "",
           "page": 7,
           "question": "Auf Wiedersehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein höflicher Abschiedsgruß.",
+          "explain": {
+            "entryId": "Auf Wiedersehen",
+            "headword": "Auf Wiedersehen",
+            "pronunciation": {
+              "display": "auf WII-der-see-en",
+              "ipaUK": "/aʊ̯f ˈviːdɐˌzeːən/",
+              "ipaUS": "/aʊ̯f ˈviːdɐˌzeːən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Auf Wiedersehen!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Tschüss"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein höflicher oder formeller Gruß beim Abschied",
+                    "examples": [
+                      "Vielen Dank für Ihren Besuch. Auf Wiedersehen!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Auf Wiedersehen – Beispielsatz folgt.",
+              "answer": "Vielen Dank für Ihren Besuch. Auf Wiedersehen!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Auf Wiedersehen, herzlich willkommen!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich bin auf Wiedersehen müde.",
               "ok": false
             }
           ]
@@ -154,18 +400,53 @@
           "title": "",
           "page": 8,
           "question": "Wie heißt du?",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine informelle Frage nach dem Namen einer Person.",
+          "explain": {
+            "entryId": "Wie heißt du?",
+            "headword": "Wie heißt du?",
+            "pronunciation": {
+              "display": "wii haisst du",
+              "ipaUK": "/viː haɪ̯st duː/",
+              "ipaUS": "/viː haɪ̯st duː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Fragesatz",
+                "grammarType": "informell",
+                "headwordLine": "Wie heißt du?",
+                "inflectionsLine": "formell: Wie heißen Sie?",
+                "synonyms": [
+                  "Was ist dein Name?"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Frage, mit der man eine vertraute oder gleichaltrige Person nach ihrem Namen fragt",
+                    "examples": [
+                      "Hallo! Wie heißt du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wie heißt du? – Beispielsatz folgt.",
+              "answer": "Hallo! Wie heißt du?",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Hallo! Wie heißen du?",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Hallo! Wie heißt ich?",
               "ok": false
             }
           ]
@@ -174,18 +455,53 @@
           "title": "",
           "page": 9,
           "question": "Ich heiße",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Wendung, mit der man seinen Namen nennt.",
+          "explain": {
+            "entryId": "Ich heiße",
+            "headword": "Ich heiße",
+            "pronunciation": {
+              "display": "ich HAI-se",
+              "ipaUK": "/ɪç ˈhaɪ̯sə/",
+              "ipaUS": "/ɪç ˈhaɪ̯sə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Aussagesatzanfang",
+                "headwordLine": "Ich heiße …",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mein Name ist"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Wendung, mit der eine Person ihren eigenen Namen angibt",
+                    "examples": [
+                      "Ich heiße Lukas."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich heiße – Beispielsatz folgt.",
+              "answer": "Ich heiße Lukas.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ich heißt Lukas.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Du heiße Lukas.",
               "ok": false
             }
           ]
@@ -194,18 +510,53 @@
           "title": "",
           "page": 10,
           "question": "Wie geht es dir?",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine informelle Frage nach dem Befinden.",
+          "explain": {
+            "entryId": "Wie geht es dir?",
+            "headword": "Wie geht es dir?",
+            "pronunciation": {
+              "display": "wii geet es diir",
+              "ipaUK": "/viː ɡeːt ɛs diːɐ̯/",
+              "ipaUS": "/viː ɡeːt ɛs diːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Fragesatz",
+                "grammarType": "informell",
+                "headwordLine": "Wie geht es dir?",
+                "inflectionsLine": "formell: Wie geht es Ihnen?",
+                "synonyms": [
+                  "Wie geht's?"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine informelle Frage, mit der man sich nach dem Befinden einer Person erkundigt",
+                    "examples": [
+                      "Hallo, Mia! Wie geht es dir?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wie geht es dir? – Beispielsatz folgt.",
+              "answer": "Hallo, Mia! Wie geht es dir?",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Hallo, Mia! Wie gehen es dir?",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Hallo, Mia! Wie geht es dich?",
               "ok": false
             }
           ]

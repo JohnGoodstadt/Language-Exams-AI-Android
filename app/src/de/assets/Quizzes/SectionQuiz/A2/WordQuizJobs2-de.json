@@ -2,130 +2,343 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizJobs2-de",
-  "title": "",
+  "title": "Berufe & Tätigkeiten",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Kollege",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Mann, mit dem man zusammenarbeitet.",
+          "explain": {
+            "entryId": "Kollege",
+            "headword": "Kollege",
+            "pronunciation": {
+              "display": "ko-LEE-ge",
+              "ipaUK": "/kɔˈleːɡə/",
+              "ipaUS": "/kɔˈleːɡə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Kollege",
+                "inflectionsLine": "Plural: die Kollegen; feminin: die Kollegin",
+                "synonyms": [
+                  "Mitarbeiter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Mann, der im selben Unternehmen, Beruf oder Team arbeitet",
+                    "examples": [
+                      "Mein Kollege hilft mir bei der Aufgabe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kollege – Beispielsatz folgt.",
+              "answer": "Ein Kollege ist ein Mann, mit dem man im selben Unternehmen oder Team arbeitet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Kollege ist immer die Person, die alle Mitarbeiter leitet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Kollege ist ausschließlich ein Kunde der Firma.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Chef",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die Mitarbeiter oder einen Arbeitsbereich leitet.",
+          "explain": {
+            "entryId": "Chef",
+            "headword": "Chef",
+            "pronunciation": {
+              "display": "SCHEF",
+              "ipaUK": "/ʃɛf/",
+              "ipaUS": "/ʃɛf/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Chef",
+                "inflectionsLine": "Plural: die Chefs; feminin: die Chefin",
+                "synonyms": [
+                  "Vorgesetzter",
+                  "Leiter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Person, die ein Unternehmen, eine Abteilung oder andere Mitarbeiter leitet",
+                    "examples": [
+                      "Der Chef bespricht den Plan mit dem Team."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Chef – Beispielsatz folgt.",
+              "answer": "Ein Chef leitet ein Unternehmen, einen Bereich oder andere Mitarbeiter.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Chef ist immer ein Mitarbeiter ohne Verantwortung für andere.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Chef ist ausschließlich eine Person, die als Kunde einkauft.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Arbeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine berufliche oder zielgerichtete Tätigkeit.",
+          "explain": {
+            "entryId": "Arbeit",
+            "headword": "Arbeit",
+            "pronunciation": {
+              "display": "AR-bait",
+              "ipaUK": "/ˈaʁbaɪ̯t/",
+              "ipaUS": "/ˈaʁbaɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Arbeit",
+                "inflectionsLine": "Plural: die Arbeiten",
+                "synonyms": [
+                  "Tätigkeit",
+                  "Beschäftigung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine berufliche oder andere zielgerichtete Tätigkeit, die Mühe oder Zeit erfordert",
+                    "examples": [
+                      "Ich beginne meine Arbeit um acht Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Arbeit – Beispielsatz folgt.",
+              "answer": "Arbeit ist eine berufliche oder zielgerichtete Tätigkeit, die Zeit und Mühe erfordert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Arbeit ist ausschließlich die freie Zeit ohne Pflichten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Arbeit ist nur das Geld, das man am Monatsende erhält.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "verdienen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Für Arbeit Geld erhalten.",
+          "explain": {
+            "entryId": "verdienen",
+            "headword": "verdienen",
+            "pronunciation": {
+              "display": "fer-DII-nen",
+              "ipaUK": "/fɛɐ̯ˈdiːnən/",
+              "ipaUS": "/fɛɐ̯ˈdiːnən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig, nicht trennbar",
+                "headwordLine": "verdienen",
+                "inflectionsLine": "ich verdiene; du verdienst; er/sie/es verdient",
+                "synonyms": [
+                  "Geld bekommen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "als Gegenleistung für Arbeit Geld erhalten",
+                    "examples": [
+                      "Sie verdient 2.500 Euro im Monat."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verdienen – Beispielsatz folgt.",
+              "answer": "Verdienen bedeutet, als Gegenleistung für Arbeit Geld zu erhalten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Verdienen bedeutet, Geld für eine Ware auszugeben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Verdienen bedeutet, eine Stelle zu suchen und eine Bewerbung zu schicken.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "arbeitslos",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne bezahlte Arbeitsstelle.",
+          "explain": {
+            "entryId": "arbeitslos",
+            "headword": "arbeitslos",
+            "pronunciation": {
+              "display": "AR-baits-loos",
+              "ipaUK": "/ˈaʁbaɪ̯t͡sloːs/",
+              "ipaUS": "/ˈaʁbaɪ̯t͡sloːs/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Beschäftigungsstatus",
+                "headwordLine": "arbeitslos",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ohne Arbeit",
+                  "erwerbslos"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ohne bezahlte Arbeitsstelle, obwohl man arbeiten kann oder möchte",
+                    "examples": [
+                      "Nach der Schließung der Firma war er arbeitslos."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "arbeitslos – Beispielsatz folgt.",
+              "answer": "Arbeitslos bedeutet, keine bezahlte Arbeitsstelle zu haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Arbeitslos bedeutet, eine feste Vollzeitstelle zu haben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Arbeitslos bedeutet, nur einen Tag Urlaub von der Arbeit zu haben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "sich bewerben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Offiziell Interesse an einer Stelle zeigen und Unterlagen schicken.",
+          "explain": {
+            "entryId": "sich bewerben",
+            "headword": "sich bewerben",
+            "pronunciation": {
+              "display": "sich be-WER-ben",
+              "ipaUK": "/zɪç bəˈvɛʁbn̩/",
+              "ipaUS": "/zɪç bəˈvɛʁbn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexives Verb",
+                "grammarType": "unregelmäßig, nicht trennbar",
+                "headwordLine": "sich bewerben",
+                "inflectionsLine": "ich bewerbe mich; du bewirbst dich; er/sie/es bewirbt sich",
+                "synonyms": [
+                  "eine Bewerbung einreichen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "offiziell Interesse an einer Arbeitsstelle zeigen und meist Unterlagen einreichen",
+                    "examples": [
+                      "Sie bewirbt sich um eine Stelle als Ingenieurin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich bewerben – Beispielsatz folgt.",
+              "answer": "Sich bewerben bedeutet, offiziell Interesse an einer Stelle zu zeigen und Unterlagen einzureichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich bewerben bedeutet, eine Arbeitsstelle freiwillig zu kündigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich bewerben bedeutet, für geleistete Arbeit sein Gehalt zu erhalten.",
               "ok": false
             }
           ]

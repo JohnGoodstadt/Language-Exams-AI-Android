@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizNumbers1-de",
-  "title": "",
+  "title": "Zahlen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "null",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 0; keine Menge.",
+          "explain": {
+            "entryId": "null",
+            "headword": "null",
+            "pronunciation": {
+              "display": "NULL",
+              "ipaUK": "/nʊl/",
+              "ipaUS": "/nʊl/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "null (0)",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "kein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 0; sie bezeichnet, dass nichts vorhanden ist",
+                    "examples": [
+                      "Die leere Schachtel enthält null Äpfel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "null – Beispielsatz folgt.",
+              "answer": "Die Schachtel ist leer; sie enthält null Äpfel.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Schachtel enthält genau einen Apfel; sie enthält null Äpfel.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Schachtel enthält zehn Äpfel; sie enthält null Äpfel.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "eins",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 1; eine einzelne Einheit.",
+          "explain": {
+            "entryId": "eins",
+            "headword": "eins",
+            "pronunciation": {
+              "display": "AINS",
+              "ipaUK": "/aɪ̯ns/",
+              "ipaUS": "/aɪ̯ns/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "eins (1)",
+                "inflectionsLine": "vor einem Substantiv meist: ein/eine",
+                "synonyms": [
+                  "ein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 1; eine einzelne Einheit",
+                    "examples": [
+                      "Auf dem Tisch liegt ein Buch; die Anzahl ist eins."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "eins – Beispielsatz folgt.",
+              "answer": "Auf dem Tisch liegt genau ein Buch; die Anzahl ist eins.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Auf dem Tisch liegen genau zwei Bücher; die Anzahl ist eins.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Auf dem Tisch liegen genau elf Bücher; die Anzahl ist eins.",
               "ok": false
             }
           ]
@@ -54,18 +124,51 @@
           "title": "",
           "page": 3,
           "question": "zwei",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 2; eine Menge aus zwei Einheiten.",
+          "explain": {
+            "entryId": "zwei",
+            "headword": "zwei",
+            "pronunciation": {
+              "display": "TSWAI",
+              "ipaUK": "/t͡svaɪ̯/",
+              "ipaUS": "/t͡svaɪ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "zwei (2)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 2; eine Menge aus zwei Einheiten",
+                    "examples": [
+                      "Ein Paar Schuhe besteht aus zwei Schuhen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zwei – Beispielsatz folgt.",
+              "answer": "Ein Paar Schuhe besteht aus zwei Schuhen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Dreieck hat zwei Seiten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Hand hat zwei Finger.",
               "ok": false
             }
           ]
@@ -74,18 +177,51 @@
           "title": "",
           "page": 4,
           "question": "drei",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 3; eine Menge aus drei Einheiten.",
+          "explain": {
+            "entryId": "drei",
+            "headword": "drei",
+            "pronunciation": {
+              "display": "DRAI",
+              "ipaUK": "/dʁaɪ̯/",
+              "ipaUS": "/dʁaɪ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "drei (3)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 3; eine Menge aus drei Einheiten",
+                    "examples": [
+                      "Ein Dreieck hat drei Seiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "drei – Beispielsatz folgt.",
+              "answer": "Ein Dreieck hat drei Seiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Quadrat hat drei Seiten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Woche hat drei Tage.",
               "ok": false
             }
           ]
@@ -94,18 +230,51 @@
           "title": "",
           "page": 5,
           "question": "vier",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 4; eine Menge aus vier Einheiten.",
+          "explain": {
+            "entryId": "vier",
+            "headword": "vier",
+            "pronunciation": {
+              "display": "FIIA",
+              "ipaUK": "/fiːɐ̯/",
+              "ipaUS": "/fiːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "vier (4)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 4; eine Menge aus vier Einheiten",
+                    "examples": [
+                      "Ein Quadrat hat vier Seiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vier – Beispielsatz folgt.",
+              "answer": "Ein Quadrat hat vier Seiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Dreieck hat vier Seiten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Paar besteht aus vier Dingen.",
               "ok": false
             }
           ]
@@ -114,18 +283,51 @@
           "title": "",
           "page": 6,
           "question": "fünf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 5; eine Menge aus fünf Einheiten.",
+          "explain": {
+            "entryId": "fünf",
+            "headword": "fünf",
+            "pronunciation": {
+              "display": "FÜNF",
+              "ipaUK": "/fʏnf/",
+              "ipaUS": "/fʏnf/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "fünf (5)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 5; eine Menge aus fünf Einheiten",
+                    "examples": [
+                      "Eine Hand hat fünf Finger."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "fünf – Beispielsatz folgt.",
+              "answer": "Eine Hand hat normalerweise fünf Finger.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Paar besteht aus fünf Dingen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dreieck hat fünf Seiten.",
               "ok": false
             }
           ]
@@ -134,18 +336,51 @@
           "title": "",
           "page": 7,
           "question": "sechs",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 6; eine Menge aus sechs Einheiten.",
+          "explain": {
+            "entryId": "sechs",
+            "headword": "sechs",
+            "pronunciation": {
+              "display": "ZEKS",
+              "ipaUK": "/zɛks/",
+              "ipaUS": "/zɛks/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "sechs (6)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 6; eine Menge aus sechs Einheiten",
+                    "examples": [
+                      "Ein halbes Dutzend besteht aus sechs Stück."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sechs – Beispielsatz folgt.",
+              "answer": "Ein halbes Dutzend besteht aus sechs Stück.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Dutzend besteht aus sechs Stück.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zwei plus zwei ergibt sechs.",
               "ok": false
             }
           ]
@@ -154,18 +389,51 @@
           "title": "",
           "page": 8,
           "question": "sieben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 7; eine Menge aus sieben Einheiten.",
+          "explain": {
+            "entryId": "sieben",
+            "headword": "sieben",
+            "pronunciation": {
+              "display": "SII-ben",
+              "ipaUK": "/ˈziːbn̩/",
+              "ipaUS": "/ˈziːbn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "sieben (7)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 7; eine Menge aus sieben Einheiten",
+                    "examples": [
+                      "Eine Woche hat sieben Tage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sieben – Beispielsatz folgt.",
+              "answer": "Eine Woche hat sieben Tage.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Wochenende hat sieben Tage.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Paar besteht aus sieben Dingen.",
               "ok": false
             }
           ]
@@ -174,18 +442,51 @@
           "title": "",
           "page": 9,
           "question": "acht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 8; eine Menge aus acht Einheiten.",
+          "explain": {
+            "entryId": "acht",
+            "headword": "acht",
+            "pronunciation": {
+              "display": "ACHT",
+              "ipaUK": "/axt/",
+              "ipaUS": "/axt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "acht (8)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 8; eine Menge aus acht Einheiten",
+                    "examples": [
+                      "Eine Spinne hat acht Beine."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "acht – Beispielsatz folgt.",
+              "answer": "Eine Spinne hat normalerweise acht Beine.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Mensch hat normalerweise acht Beine.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Woche hat acht Tage.",
               "ok": false
             }
           ]
@@ -194,18 +495,51 @@
           "title": "",
           "page": 10,
           "question": "neun",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 9; eine Menge aus neun Einheiten.",
+          "explain": {
+            "entryId": "neun",
+            "headword": "neun",
+            "pronunciation": {
+              "display": "NOIN",
+              "ipaUK": "/nɔɪ̯n/",
+              "ipaUS": "/nɔɪ̯n/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "neun (9)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 9; eine Menge aus neun Einheiten",
+                    "examples": [
+                      "Drei mal drei ist neun."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "neun – Beispielsatz folgt.",
+              "answer": "Drei mal drei ist neun.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zwei mal drei ist neun.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zehn minus zwei ist neun.",
               "ok": false
             }
           ]

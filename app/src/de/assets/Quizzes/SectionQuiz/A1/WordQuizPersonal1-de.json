@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal1-de",
-  "title": "",
+  "title": "Persönliche Informationen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort oder der Ausdruck richtig verwendet wird.",
+      "description": "A1",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Name",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Wort, mit dem eine Person bezeichnet wird.",
+          "explain": {
+            "entryId": "Name",
+            "headword": "Name",
+            "pronunciation": {
+              "display": "NAA-me",
+              "ipaUK": "/ˈnaːmə/",
+              "ipaUS": "/ˈnaːmə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Name",
+                "inflectionsLine": "Genitiv: des Namens; Plural: die Namen",
+                "synonyms": [
+                  "Bezeichnung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "das Wort oder die Wörter, mit denen eine Person bezeichnet wird",
+                    "examples": [
+                      "Mein Name ist Paul Becker."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Name – Beispielsatz folgt.",
+              "answer": "Mein Name ist Paul Becker.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Meine Name ist Paul Becker.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mein Name sind Paul Becker.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Vorname",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der persönliche Name vor dem Nachnamen.",
+          "explain": {
+            "entryId": "Vorname",
+            "headword": "Vorname",
+            "pronunciation": {
+              "display": "FOR-naa-me",
+              "ipaUK": "/ˈfoːɐ̯ˌnaːmə/",
+              "ipaUS": "/ˈfoːɐ̯ˌnaːmə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Vorname",
+                "inflectionsLine": "Plural: die Vornamen",
+                "synonyms": [
+                  "Rufname"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der persönliche Name, der vor dem Familiennamen steht",
+                    "examples": [
+                      "Mein Vorname ist Lena."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vorname – Beispielsatz folgt.",
+              "answer": "Mein Vorname ist Lena.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mein Vorname sind Lena.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Meine Vorname ist Lena.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Nachname",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Familienname einer Person.",
+          "explain": {
+            "entryId": "Nachname",
+            "headword": "Nachname",
+            "pronunciation": {
+              "display": "NACH-naa-me",
+              "ipaUK": "/ˈnaːxˌnaːmə/",
+              "ipaUS": "/ˈnaːxˌnaːmə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Nachname",
+                "inflectionsLine": "Plural: die Nachnamen",
+                "synonyms": [
+                  "Familienname"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der Familienname, den eine Person mit anderen Familienmitgliedern teilen kann",
+                    "examples": [
+                      "Ihr Nachname ist Müller."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachname – Beispielsatz folgt.",
+              "answer": "Ihr Nachname ist Müller.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ihre Nachname ist Müller.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ihr Nachname heißen Müller.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Adresse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Angabe, wo eine Person wohnt.",
+          "explain": {
+            "entryId": "Adresse",
+            "headword": "Adresse",
+            "pronunciation": {
+              "display": "a-DRES-se",
+              "ipaUK": "/aˈdʁɛsə/",
+              "ipaUS": "/aˈdʁɛsə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Adresse",
+                "inflectionsLine": "Plural: die Adressen",
+                "synonyms": [
+                  "Anschrift"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Angabe von Straße, Hausnummer, Ort und oft Postleitzahl",
+                    "examples": [
+                      "Meine Adresse ist Gartenstraße 8."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Adresse – Beispielsatz folgt.",
+              "answer": "Meine Adresse ist Gartenstraße 8.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mein Adresse ist Gartenstraße 8.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Meine Adresse sind Gartenstraße 8.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "Stadt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein größerer Ort, in dem viele Menschen leben.",
+          "explain": {
+            "entryId": "Stadt",
+            "headword": "Stadt",
+            "pronunciation": {
+              "display": "SCHTATT",
+              "ipaUK": "/ʃtat/",
+              "ipaUS": "/ʃtat/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Stadt",
+                "inflectionsLine": "Plural: die Städte",
+                "synonyms": [
+                  "Ort"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein größerer Ort mit vielen Häusern, Straßen und Einwohnern",
+                    "examples": [
+                      "Berlin ist eine große Stadt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Stadt – Beispielsatz folgt.",
+              "answer": "Berlin ist eine große Stadt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Berlin ist ein große Stadt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Berlin sind eine große Stadt.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "Land",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Staat mit einem bestimmten Gebiet.",
+          "explain": {
+            "entryId": "Land",
+            "headword": "Land",
+            "pronunciation": {
+              "display": "LANT",
+              "ipaUK": "/lant/",
+              "ipaUS": "/lant/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Land",
+                "inflectionsLine": "Plural: die Länder",
+                "synonyms": [
+                  "Staat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Staat oder ein geografisches Gebiet mit eigenen Grenzen",
+                    "examples": [
+                      "Deutschland ist ein Land in Europa."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Land – Beispielsatz folgt.",
+              "answer": "Deutschland ist ein Land in Europa.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Deutschland ist eine Land in Europa.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Deutschland sind ein Land in Europa.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "Telefonnummer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Zahlenfolge, mit der man jemanden anrufen kann.",
+          "explain": {
+            "entryId": "Telefonnummer",
+            "headword": "Telefonnummer",
+            "pronunciation": {
+              "display": "te-le-FOON-num-mer",
+              "ipaUK": "/teleˈfoːnˌnʊmɐ/",
+              "ipaUS": "/teleˈfoːnˌnʊmɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Telefonnummer",
+                "inflectionsLine": "Plural: die Telefonnummern",
+                "synonyms": [
+                  "Rufnummer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Folge von Ziffern, die man wählt, um jemanden anzurufen",
+                    "examples": [
+                      "Wie ist deine Telefonnummer?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Telefonnummer – Beispielsatz folgt.",
+              "answer": "Wie ist deine Telefonnummer?",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wie ist dein Telefonnummer?",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wie sind deine Telefonnummer?",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "E-Mail-Adresse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Adresse zum Senden und Empfangen von E-Mails.",
+          "explain": {
+            "entryId": "E-Mail-Adresse",
+            "headword": "E-Mail-Adresse",
+            "pronunciation": {
+              "display": "II-meil-a-DRES-se",
+              "ipaUK": "/ˈiːmeɪ̯lʔaˌdʁɛsə/",
+              "ipaUS": "/ˈiːmeɪ̯lʔaˌdʁɛsə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die E-Mail-Adresse",
+                "inflectionsLine": "Plural: die E-Mail-Adressen",
+                "synonyms": [
+                  "Mailadresse"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine eindeutige Adresse, über die elektronische Nachrichten gesendet und empfangen werden",
+                    "examples": [
+                      "Meine E-Mail-Adresse ist lena@example.de."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "E-Mail-Adresse – Beispielsatz folgt.",
+              "answer": "Meine E-Mail-Adresse ist lena@example.de.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mein E-Mail-Adresse ist lena@example.de.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Meine E-Mail-Adresse sind lena@example.de.",
               "ok": false
             }
           ]
@@ -174,18 +454,53 @@
           "title": "",
           "page": 9,
           "question": "Alter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl der Jahre, die eine Person gelebt hat.",
+          "explain": {
+            "entryId": "Alter",
+            "headword": "Alter",
+            "pronunciation": {
+              "display": "AL-ter",
+              "ipaUK": "/ˈaltɐ/",
+              "ipaUS": "/ˈaltɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Alter",
+                "inflectionsLine": "kein Plural in dieser Bedeutung",
+                "synonyms": [
+                  "Lebensalter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Anzahl der Jahre, die eine Person bereits gelebt hat",
+                    "examples": [
+                      "Bitte geben Sie Ihr Alter an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Alter – Beispielsatz folgt.",
+              "answer": "Bitte geben Sie Ihr Alter an.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bitte geben Sie Ihre Alter an.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bitte geben Sie Ihren Alter an.",
               "ok": false
             }
           ]
@@ -194,18 +509,54 @@
           "title": "",
           "page": 10,
           "question": "Beruf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Arbeit, die eine Person regelmäßig ausübt.",
+          "explain": {
+            "entryId": "Beruf",
+            "headword": "Beruf",
+            "pronunciation": {
+              "display": "be-RUUF",
+              "ipaUK": "/bəˈʁuːf/",
+              "ipaUS": "/bəˈʁuːf/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Beruf",
+                "inflectionsLine": "Plural: die Berufe",
+                "synonyms": [
+                  "Arbeit",
+                  "Tätigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine erlernte oder regelmäßige Arbeit, mit der eine Person Geld verdient",
+                    "examples": [
+                      "Was sind Sie von Beruf?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Beruf – Beispielsatz folgt.",
+              "answer": "Was sind Sie von Beruf?",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Was sind Sie von Berufe?",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Was ist Sie von Beruf?",
               "ok": false
             }
           ]

@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizLeisure1-de",
-  "title": "",
+  "title": "Tagesablauf & Freizeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "aufstehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nach dem Schlafen das Bett verlassen und sich aufrichten.",
+          "explain": {
+            "entryId": "aufstehen",
+            "headword": "aufstehen",
+            "pronunciation": {
+              "display": "AUF-schtee-en",
+              "ipaUK": "/ˈaʊ̯fˌʃteːən/",
+              "ipaUS": "/ˈaʊ̯fˌʃteːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, trennbar",
+                "headwordLine": "aufstehen",
+                "inflectionsLine": "ich stehe auf; du stehst auf; er/sie/es steht auf",
+                "synonyms": [
+                  "das Bett verlassen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nach dem Schlafen oder Sitzen in eine stehende Position kommen",
+                    "examples": [
+                      "Ich stehe jeden Morgen um sieben Uhr auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aufstehen – Beispielsatz folgt.",
+              "answer": "Aufstehen bedeutet, sich aufzurichten und nach dem Schlafen das Bett zu verlassen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Aufstehen bedeutet nur, die Augen zu öffnen und im Bett liegen zu bleiben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aufstehen bedeutet, sich abends zum Schlafen ins Bett zu legen.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "sich duschen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Den Körper unter einer Dusche waschen.",
+          "explain": {
+            "entryId": "sich duschen",
+            "headword": "sich duschen",
+            "pronunciation": {
+              "display": "sich DUU-schen",
+              "ipaUK": "/zɪç ˈduːʃn̩/",
+              "ipaUS": "/zɪç ˈduːʃn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexives Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "sich duschen",
+                "inflectionsLine": "ich dusche mich; du duschst dich; er/sie/es duscht sich",
+                "synonyms": [
+                  "unter die Dusche gehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "den eigenen Körper unter fließendem Wasser einer Dusche waschen",
+                    "examples": [
+                      "Nach dem Sport dusche ich mich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich duschen – Beispielsatz folgt.",
+              "answer": "Sich duschen bedeutet, den eigenen Körper unter einer Dusche zu waschen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich duschen bedeutet, nur das Geschirr in der Küche zu waschen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich duschen bedeutet, Kleidung anzuziehen, ohne sich zu waschen.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "frühstücken",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Am Morgen die erste Mahlzeit des Tages essen.",
+          "explain": {
+            "entryId": "frühstücken",
+            "headword": "frühstücken",
+            "pronunciation": {
+              "display": "FRÜÜ-sch-tük-ken",
+              "ipaUK": "/ˈfʁyːˌʃtʏkn̩/",
+              "ipaUS": "/ˈfʁyːˌʃtʏkn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "frühstücken",
+                "inflectionsLine": "ich frühstücke; du frühstückst; er/sie/es frühstückt",
+                "synonyms": [
+                  "Frühstück essen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "am Morgen die erste Mahlzeit des Tages essen",
+                    "examples": [
+                      "Wir frühstücken um halb acht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "frühstücken – Beispielsatz folgt.",
+              "answer": "Frühstücken bedeutet, am Morgen die erste Mahlzeit des Tages zu essen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Frühstücken bedeutet, am Abend die letzte Mahlzeit des Tages zu essen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Frühstücken bedeutet, nachmittags nur Kaffee zu trinken.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "zur Arbeit fahren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit einem Verkehrsmittel zum Arbeitsplatz gelangen.",
+          "explain": {
+            "entryId": "zur Arbeit fahren",
+            "headword": "zur Arbeit fahren",
+            "pronunciation": {
+              "display": "tsur AR-bait FAA-ren",
+              "ipaUK": "/t͡suːɐ̯ ˈaʁbaɪ̯t ˈfaːʁən/",
+              "ipaUS": "/t͡suːɐ̯ ˈaʁbaɪ̯t ˈfaːʁən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "mit Verkehrsmittel",
+                "headwordLine": "zur Arbeit fahren",
+                "inflectionsLine": "ich fahre zur Arbeit; du fährst zur Arbeit",
+                "synonyms": [
+                  "zum Arbeitsplatz fahren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit einem Fahrzeug oder Verkehrsmittel von zu Hause zum Arbeitsplatz gelangen",
+                    "examples": [
+                      "Sie fährt jeden Morgen mit dem Bus zur Arbeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zur Arbeit fahren – Beispielsatz folgt.",
+              "answer": "Zur Arbeit fahren bedeutet, mit einem Verkehrsmittel zum Arbeitsplatz zu gelangen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zur Arbeit fahren bedeutet, die beruflichen Aufgaben zu Hause zu erledigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zur Arbeit fahren bedeutet, nach Feierabend vom Arbeitsplatz nach Hause zurückzukehren.",
               "ok": false
             }
           ]
@@ -94,18 +234,54 @@
           "title": "",
           "page": 5,
           "question": "sich ausruhen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Pause machen, um neue Energie zu bekommen.",
+          "explain": {
+            "entryId": "sich ausruhen",
+            "headword": "sich ausruhen",
+            "pronunciation": {
+              "display": "sich AUS-ruu-en",
+              "ipaUK": "/zɪç ˈaʊ̯sˌʁuːən/",
+              "ipaUS": "/zɪç ˈaʊ̯sˌʁuːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexives Verb",
+                "grammarType": "regelmäßig, trennbar",
+                "headwordLine": "sich ausruhen",
+                "inflectionsLine": "ich ruhe mich aus; du ruhst dich aus",
+                "synonyms": [
+                  "eine Pause machen",
+                  "sich erholen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine ruhige Pause machen, um nach Anstrengung neue Energie zu bekommen",
+                    "examples": [
+                      "Nach der Arbeit ruhe ich mich kurz aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich ausruhen – Beispielsatz folgt.",
+              "answer": "Sich ausruhen bedeutet, eine ruhige Pause zu machen und neue Energie zu bekommen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich ausruhen bedeutet, besonders intensiv Sport zu treiben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich ausruhen bedeutet, ohne Pause weiterzuarbeiten.",
               "ok": false
             }
           ]
@@ -114,18 +290,53 @@
           "title": "",
           "page": 6,
           "question": "einkaufen gehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zu Geschäften gehen, um Waren zu kaufen.",
+          "explain": {
+            "entryId": "einkaufen gehen",
+            "headword": "einkaufen gehen",
+            "pronunciation": {
+              "display": "AIN-kau-fen gee-en",
+              "ipaUK": "/ˈaɪ̯nˌkaʊ̯fn̩ ˈɡeːən/",
+              "ipaUS": "/ˈaɪ̯nˌkaʊ̯fn̩ ˈɡeːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "trennbares Verb mit gehen",
+                "headwordLine": "einkaufen gehen",
+                "inflectionsLine": "ich gehe einkaufen; du gehst einkaufen",
+                "synonyms": [
+                  "zum Einkaufen gehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zu einem Geschäft oder Markt gehen, um Waren zu kaufen",
+                    "examples": [
+                      "Am Samstag gehen wir im Supermarkt einkaufen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einkaufen gehen – Beispielsatz folgt.",
+              "answer": "Einkaufen gehen bedeutet, Geschäfte zu besuchen, um Waren zu kaufen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einkaufen gehen bedeutet, Waren zu Hause herzustellen und nicht zu kaufen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einkaufen gehen bedeutet, ohne Ziel im Park spazieren zu gehen.",
               "ok": false
             }
           ]
@@ -134,18 +345,53 @@
           "title": "",
           "page": 7,
           "question": "kochen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Mahlzeit zubereiten, oft mit Wärme.",
+          "explain": {
+            "entryId": "kochen",
+            "headword": "kochen",
+            "pronunciation": {
+              "display": "KOCH-en",
+              "ipaUK": "/ˈkɔxn̩/",
+              "ipaUS": "/ˈkɔxn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "kochen",
+                "inflectionsLine": "ich koche; du kochst; er/sie/es kocht",
+                "synonyms": [
+                  "zubereiten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Lebensmittel zu einer Mahlzeit zubereiten, meistens mit Wärme",
+                    "examples": [
+                      "Heute koche ich eine Gemüsesuppe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kochen – Beispielsatz folgt.",
+              "answer": "Kochen bedeutet, Lebensmittel zu einer Mahlzeit zuzubereiten, oft mit Wärme.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kochen bedeutet, eine fertige Mahlzeit im Restaurant zu bestellen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kochen bedeutet, Musik aufmerksam anzuhören.",
               "ok": false
             }
           ]
@@ -154,18 +400,53 @@
           "title": "",
           "page": 8,
           "question": "fernsehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sendungen oder Filme auf einem Fernsehgerät ansehen.",
+          "explain": {
+            "entryId": "fernsehen",
+            "headword": "fernsehen",
+            "pronunciation": {
+              "display": "FERN-zee-en",
+              "ipaUK": "/ˈfɛʁnˌzeːən/",
+              "ipaUS": "/ˈfɛʁnˌzeːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, trennbar",
+                "headwordLine": "fernsehen",
+                "inflectionsLine": "ich sehe fern; du siehst fern; er/sie/es sieht fern",
+                "synonyms": [
+                  "TV schauen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sendungen, Nachrichten oder Filme auf einem Fernsehgerät ansehen",
+                    "examples": [
+                      "Am Abend sehen wir eine Stunde fern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "fernsehen – Beispielsatz folgt.",
+              "answer": "Fernsehen bedeutet, Sendungen oder Filme auf einem Fernsehgerät anzusehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fernsehen bedeutet, einen Film ausschließlich im Kinosaal anzusehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fernsehen bedeutet, ein Buch still zu lesen.",
               "ok": false
             }
           ]
@@ -174,18 +455,53 @@
           "title": "",
           "page": 9,
           "question": "Hobby",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine regelmäßige Tätigkeit, die man gern in der Freizeit macht.",
+          "explain": {
+            "entryId": "Hobby",
+            "headword": "Hobby",
+            "pronunciation": {
+              "display": "HOB-bi",
+              "ipaUK": "/ˈhɔbi/",
+              "ipaUS": "/ˈhɔbi/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Hobby",
+                "inflectionsLine": "Plural: die Hobbys",
+                "synonyms": [
+                  "Freizeitbeschäftigung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Tätigkeit, die man regelmäßig und freiwillig zum Vergnügen in der Freizeit macht",
+                    "examples": [
+                      "Fotografieren ist mein Hobby."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hobby – Beispielsatz folgt.",
+              "answer": "Ein Hobby ist eine Tätigkeit, die man freiwillig und gern in der Freizeit macht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Hobby ist immer eine bezahlte berufliche Pflicht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Hobby ist jede Aufgabe, die man gegen seinen Willen erledigen muss.",
               "ok": false
             }
           ]
@@ -194,18 +510,53 @@
           "title": "",
           "page": 10,
           "question": "Sport",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Körperliche Aktivität zum Training, Wettkampf oder Vergnügen.",
+          "explain": {
+            "entryId": "Sport",
+            "headword": "Sport",
+            "pronunciation": {
+              "display": "SCHPORT",
+              "ipaUK": "/ʃpɔʁt/",
+              "ipaUS": "/ʃpɔʁt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Sport",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [
+                  "körperliche Aktivität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "körperliche Aktivität nach bestimmten Regeln oder zum Training und Vergnügen",
+                    "examples": [
+                      "Sie macht dreimal pro Woche Sport."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sport – Beispielsatz folgt.",
+              "answer": "Sport ist körperliche Aktivität zum Training, Wettkampf oder Vergnügen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sport bedeutet nur, anderen Menschen beim Training zuzusehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sport ist eine ruhige Tätigkeit, bei der man immer schläft.",
               "ok": false
             }
           ]

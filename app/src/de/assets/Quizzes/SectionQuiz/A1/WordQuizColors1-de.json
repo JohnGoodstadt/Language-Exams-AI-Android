@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizColors1-de",
-  "title": "",
+  "title": "Farben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "rot",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Farbe von reifen Tomaten oder Blut.",
+          "explain": {
+            "entryId": "rot",
+            "headword": "rot",
+            "pronunciation": {
+              "display": "ROOT",
+              "ipaUK": "/ʁoːt/",
+              "ipaUS": "/ʁoːt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "rot",
+                "inflectionsLine": "roter, rote, rotes",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der Farbe reifer Tomaten oder von Blut",
+                    "examples": [
+                      "Die reife Tomate ist rot."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "rot – Beispielsatz folgt.",
+              "answer": "Eine reife Tomate ist normalerweise rot.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Frischer Schnee ist normalerweise rot.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kohle ist normalerweise rot.",
               "ok": false
             }
           ]
@@ -34,18 +67,51 @@
           "title": "",
           "page": 2,
           "question": "blau",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Farbe eines klaren Himmels.",
+          "explain": {
+            "entryId": "blau",
+            "headword": "blau",
+            "pronunciation": {
+              "display": "BLAU",
+              "ipaUK": "/blaʊ̯/",
+              "ipaUS": "/blaʊ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "blau",
+                "inflectionsLine": "blauer, blaue, blaues",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der Farbe eines klaren Himmels oder des Meeres",
+                    "examples": [
+                      "Der Himmel ist heute blau."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "blau – Beispielsatz folgt.",
+              "answer": "Ein klarer Himmel sieht oft blau aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine reife Zitrone ist normalerweise blau.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Frische Milch ist normalerweise blau.",
               "ok": false
             }
           ]
@@ -54,18 +120,51 @@
           "title": "",
           "page": 3,
           "question": "gelb",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Farbe von Zitronen oder reifen Bananen.",
+          "explain": {
+            "entryId": "gelb",
+            "headword": "gelb",
+            "pronunciation": {
+              "display": "GELP",
+              "ipaUK": "/ɡɛlp/",
+              "ipaUS": "/ɡɛlp/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "gelb",
+                "inflectionsLine": "gelber, gelbe, gelbes",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der Farbe von Zitronen oder reifen Bananen",
+                    "examples": [
+                      "Die Zitrone ist gelb."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gelb – Beispielsatz folgt.",
+              "answer": "Eine reife Zitrone ist normalerweise gelb.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kohle ist normalerweise gelb.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Frischer Schnee ist normalerweise gelb.",
               "ok": false
             }
           ]
@@ -74,18 +173,51 @@
           "title": "",
           "page": 4,
           "question": "grün",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Farbe von Gras und vielen Blättern.",
+          "explain": {
+            "entryId": "grün",
+            "headword": "grün",
+            "pronunciation": {
+              "display": "GRÜÜN",
+              "ipaUK": "/ɡʁyːn/",
+              "ipaUS": "/ɡʁyːn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "grün",
+                "inflectionsLine": "grüner, grüne, grünes",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der Farbe von frischem Gras und vielen Blättern",
+                    "examples": [
+                      "Das Gras ist grün."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "grün – Beispielsatz folgt.",
+              "answer": "Frisches Gras ist normalerweise grün.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kohle ist normalerweise grün.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine reife Banane ist normalerweise grün, wenn sie gelb ist.",
               "ok": false
             }
           ]
@@ -94,18 +226,53 @@
           "title": "",
           "page": 5,
           "question": "schwarz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine sehr dunkle Farbe, wie Kohle.",
+          "explain": {
+            "entryId": "schwarz",
+            "headword": "schwarz",
+            "pronunciation": {
+              "display": "SCHWARTS",
+              "ipaUK": "/ʃvaʁt͡s/",
+              "ipaUS": "/ʃvaʁt͡s/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "schwarz",
+                "inflectionsLine": "schwarzer, schwarze, schwarzes",
+                "synonyms": [
+                  "dunkel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der sehr dunklen Farbe von Kohle",
+                    "examples": [
+                      "Die Kohle ist schwarz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schwarz – Beispielsatz folgt.",
+              "answer": "Kohle ist normalerweise schwarz.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Frischer Schnee ist normalerweise schwarz.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Zitrone ist normalerweise schwarz.",
               "ok": false
             }
           ]
@@ -114,18 +281,53 @@
           "title": "",
           "page": 6,
           "question": "weiß",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die sehr helle Farbe von Schnee oder Milch.",
+          "explain": {
+            "entryId": "weiß",
+            "headword": "weiß",
+            "pronunciation": {
+              "display": "WAISS",
+              "ipaUK": "/vaɪ̯s/",
+              "ipaUS": "/vaɪ̯s/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "weiß",
+                "inflectionsLine": "weißer, weiße, weißes",
+                "synonyms": [
+                  "hell"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der sehr hellen Farbe von Schnee oder Milch",
+                    "examples": [
+                      "Frischer Schnee ist weiß."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "weiß – Beispielsatz folgt.",
+              "answer": "Frischer Schnee ist normalerweise weiß.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kohle ist normalerweise weiß.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine reife Tomate ist normalerweise weiß.",
               "ok": false
             }
           ]
@@ -134,18 +336,51 @@
           "title": "",
           "page": 7,
           "question": "braun",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Farbe von Erde, Holz oder Schokolade.",
+          "explain": {
+            "entryId": "braun",
+            "headword": "braun",
+            "pronunciation": {
+              "display": "BRAUN",
+              "ipaUK": "/bʁaʊ̯n/",
+              "ipaUS": "/bʁaʊ̯n/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "braun",
+                "inflectionsLine": "brauner, braune, braunes",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der Farbe von Erde, Holz oder Schokolade",
+                    "examples": [
+                      "Der Baumstamm ist braun."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "braun – Beispielsatz folgt.",
+              "answer": "Viele Baumstämme sind braun.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein klarer Himmel ist normalerweise braun.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Frische Milch ist normalerweise braun.",
               "ok": false
             }
           ]
@@ -154,18 +389,51 @@
           "title": "",
           "page": 8,
           "question": "orange",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Farbe von Orangen oder Karotten.",
+          "explain": {
+            "entryId": "orange",
+            "headword": "orange",
+            "pronunciation": {
+              "display": "o-RAN-sche",
+              "ipaUK": "/oˈʁaŋʒə/",
+              "ipaUS": "/oˈʁaŋʒə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "orange",
+                "inflectionsLine": "meist nicht verändert",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von der Farbe zwischen Rot und Gelb, typisch für Orangen und Karotten",
+                    "examples": [
+                      "Die Karotte ist orange."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "orange – Beispielsatz folgt.",
+              "answer": "Eine Karotte ist normalerweise orange.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kohle ist normalerweise orange.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Frischer Schnee ist normalerweise orange.",
               "ok": false
             }
           ]
@@ -174,18 +442,53 @@
           "title": "",
           "page": 9,
           "question": "rosa",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine helle Farbe zwischen Rot und Weiß.",
+          "explain": {
+            "entryId": "rosa",
+            "headword": "rosa",
+            "pronunciation": {
+              "display": "ROO-za",
+              "ipaUK": "/ˈʁoːza/",
+              "ipaUS": "/ˈʁoːza/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "rosa",
+                "inflectionsLine": "nicht verändert",
+                "synonyms": [
+                  "pink"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von einer hellen Farbe zwischen Rot und Weiß",
+                    "examples": [
+                      "Die Blüte ist rosa."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "rosa – Beispielsatz folgt.",
+              "answer": "Viele Flamingos sehen rosa aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kohle ist normalerweise rosa.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein klarer Nachthimmel ist normalerweise rosa.",
               "ok": false
             }
           ]
@@ -194,18 +497,51 @@
           "title": "",
           "page": 10,
           "question": "grau",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Farbe zwischen Schwarz und Weiß.",
+          "explain": {
+            "entryId": "grau",
+            "headword": "grau",
+            "pronunciation": {
+              "display": "GRAU",
+              "ipaUK": "/ɡʁaʊ̯/",
+              "ipaUS": "/ɡʁaʊ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Farbadjektiv",
+                "headwordLine": "grau",
+                "inflectionsLine": "grauer, graue, graues",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von einer Farbe zwischen Schwarz und Weiß",
+                    "examples": [
+                      "Die Regenwolken sind grau."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "grau – Beispielsatz folgt.",
+              "answer": "Regenwolken sehen oft grau aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine reife Zitrone ist normalerweise grau.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Frisches Gras ist normalerweise grau.",
               "ok": false
             }
           ]

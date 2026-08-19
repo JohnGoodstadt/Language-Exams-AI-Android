@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizShopping1-de",
-  "title": "",
+  "title": "Einkaufen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "einkaufen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Waren für Geld erwerben.",
+          "explain": {
+            "entryId": "einkaufen",
+            "headword": "einkaufen",
+            "pronunciation": {
+              "display": "AIN-kau-fen",
+              "ipaUK": "/ˈaɪ̯nˌkaʊ̯fn̩/",
+              "ipaUS": "/ˈaɪ̯nˌkaʊ̯fn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig, trennbar",
+                "headwordLine": "einkaufen",
+                "inflectionsLine": "ich kaufe ein; du kaufst ein; er/sie/es kauft ein",
+                "synonyms": [
+                  "Waren kaufen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in einem Geschäft oder online Waren auswählen und für Geld erwerben",
+                    "examples": [
+                      "Wir kaufen im Supermarkt ein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einkaufen – Beispielsatz folgt.",
+              "answer": "Einkaufen bedeutet, Waren auszuwählen und für Geld zu erwerben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einkaufen bedeutet, eine bereits gekaufte Ware gegen eine andere zurückzugeben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einkaufen bedeutet nur, Produkte anzusehen, ohne etwas erwerben zu wollen.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Supermarkt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein großes Selbstbedienungsgeschäft für Lebensmittel und Alltagswaren.",
+          "explain": {
+            "entryId": "Supermarkt",
+            "headword": "Supermarkt",
+            "pronunciation": {
+              "display": "ZUU-per-markt",
+              "ipaUK": "/ˈzuːpɐˌmaʁkt/",
+              "ipaUS": "/ˈzuːpɐˌmaʁkt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Supermarkt",
+                "inflectionsLine": "Plural: die Supermärkte",
+                "synonyms": [
+                  "Lebensmittelmarkt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein größeres Selbstbedienungsgeschäft, das Lebensmittel und viele Alltagswaren verkauft",
+                    "examples": [
+                      "Im Supermarkt kaufe ich Milch und Brot."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Supermarkt – Beispielsatz folgt.",
+              "answer": "Ein Supermarkt ist ein größeres Geschäft für Lebensmittel und viele Alltagswaren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Supermarkt ist ein Lokal, in dem Speisen am Tisch serviert werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Supermarkt ist ein Schalter, an dem man nur Fahrkarten kauft.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Geschäft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Laden oder Unternehmen, das Waren oder Leistungen anbietet.",
+          "explain": {
+            "entryId": "Geschäft",
+            "headword": "Geschäft",
+            "pronunciation": {
+              "display": "ge-SCHEFT",
+              "ipaUK": "/ɡəˈʃɛft/",
+              "ipaUS": "/ɡəˈʃɛft/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Geschäft",
+                "inflectionsLine": "Plural: die Geschäfte",
+                "synonyms": [
+                  "Laden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Laden oder Unternehmen, in dem Waren oder Dienstleistungen angeboten werden",
+                    "examples": [
+                      "Das Geschäft schließt um achtzehn Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Geschäft – Beispielsatz folgt.",
+              "answer": "Ein Geschäft ist ein Laden oder Unternehmen, das Waren oder Leistungen anbietet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Geschäft ist nur der Ort im Laden, an dem man bezahlt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Geschäft ist der schriftliche Beleg nach einer Zahlung.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Preis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Geldbetrag, den eine Ware oder Leistung kostet.",
+          "explain": {
+            "entryId": "Preis",
+            "headword": "Preis",
+            "pronunciation": {
+              "display": "PRAIS",
+              "ipaUK": "/pʁaɪ̯s/",
+              "ipaUS": "/pʁaɪ̯s/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Preis",
+                "inflectionsLine": "Plural: die Preise",
+                "synonyms": [
+                  "Kosten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der Geldbetrag, den man für eine Ware oder Dienstleistung bezahlen muss",
+                    "examples": [
+                      "Der Preis für das T-Shirt beträgt zwanzig Euro."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Preis – Beispielsatz folgt.",
+              "answer": "Der Preis ist der Geldbetrag, den eine Ware oder Leistung kostet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Preis ist das Geld, das man nach einer zu hohen Zahlung zurückbekommt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Preis ist der Beleg, der eine bereits erfolgte Zahlung bestätigt.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "kosten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen bestimmten Preis haben.",
+          "explain": {
+            "entryId": "kosten",
+            "headword": "kosten",
+            "pronunciation": {
+              "display": "KOS-ten",
+              "ipaUK": "/ˈkɔstn̩/",
+              "ipaUS": "/ˈkɔstn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "kosten",
+                "inflectionsLine": "es kostet; sie kosten",
+                "synonyms": [
+                  "einen Preis haben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einen bestimmten Geldwert oder Preis haben",
+                    "examples": [
+                      "Wie viel kostet diese Jacke?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kosten – Beispielsatz folgt.",
+              "answer": "Kosten bedeutet bei einer Ware, einen bestimmten Preis zu haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kosten bedeutet, den geforderten Geldbetrag an der Kasse zu geben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kosten bedeutet, eine Ware kurz anzuziehen und ihre Größe zu prüfen.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "bezahlen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Den geforderten Geldbetrag geben oder überweisen.",
+          "explain": {
+            "entryId": "bezahlen",
+            "headword": "bezahlen",
+            "pronunciation": {
+              "display": "be-TSAA-len",
+              "ipaUK": "/bəˈt͡saːlən/",
+              "ipaUS": "/bəˈt͡saːlən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig, nicht trennbar",
+                "headwordLine": "bezahlen",
+                "inflectionsLine": "ich bezahle; du bezahlst; er/sie/es bezahlt",
+                "synonyms": [
+                  "zahlen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "den geforderten Geldbetrag für eine Ware, Leistung oder Rechnung geben oder überweisen",
+                    "examples": [
+                      "Ich bezahle die Jacke an der Kasse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bezahlen – Beispielsatz folgt.",
+              "answer": "Bezahlen bedeutet, den geforderten Geldbetrag für etwas zu geben oder zu überweisen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezahlen bedeutet, nur nach dem Preis einer Ware zu fragen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezahlen bedeutet, eine Ware ohne Zahlung aus dem Geschäft mitzunehmen.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "Kasse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Ort oder das Gerät, an dem bezahlt wird.",
+          "explain": {
+            "entryId": "Kasse",
+            "headword": "Kasse",
+            "pronunciation": {
+              "display": "KAS-se",
+              "ipaUK": "/ˈkasə/",
+              "ipaUS": "/ˈkasə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Kasse",
+                "inflectionsLine": "Plural: die Kassen",
+                "synonyms": [
+                  "Zahlstelle"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der Ort oder das Gerät in einem Geschäft, an dem Waren bezahlt werden",
+                    "examples": [
+                      "Bitte bezahlen Sie an der Kasse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kasse – Beispielsatz folgt.",
+              "answer": "Die Kasse ist der Ort oder das Gerät im Geschäft, an dem man bezahlt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Kasse ist der Raum, in dem Kunden Kleidung anprobieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Kasse ist das Schild, auf dem die Größe einer Jacke steht.",
               "ok": false
             }
           ]
@@ -154,18 +399,54 @@
           "title": "",
           "page": 8,
           "question": "Angebot",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Ware oder Leistung zu einem besonderen Preis.",
+          "explain": {
+            "entryId": "Angebot",
+            "headword": "Angebot",
+            "pronunciation": {
+              "display": "AN-ge-boot",
+              "ipaUK": "/ˈanɡəˌboːt/",
+              "ipaUS": "/ˈanɡəˌboːt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Angebot",
+                "inflectionsLine": "Plural: die Angebote",
+                "synonyms": [
+                  "Sonderangebot",
+                  "Aktion"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Ware oder Leistung, die oft für kurze Zeit zu einem besonders günstigen Preis angeboten wird",
+                    "examples": [
+                      "Der Kaffee ist diese Woche im Angebot."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Angebot – Beispielsatz folgt.",
+              "answer": "Beim Einkaufen ist ein Angebot oft eine Ware zu einem zeitlich begrenzten günstigeren Preis.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Angebot ist immer der normale Preis ohne jede besondere Bedingung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Angebot ist der Zahlungsbeleg, den man nach dem Kauf erhält.",
               "ok": false
             }
           ]
@@ -174,18 +455,54 @@
           "title": "",
           "page": 9,
           "question": "billig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Wenig Geld kostend.",
+          "explain": {
+            "entryId": "billig",
+            "headword": "billig",
+            "pronunciation": {
+              "display": "BIL-lich",
+              "ipaUK": "/ˈbɪlɪç/",
+              "ipaUS": "/ˈbɪlɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "billig",
+                "inflectionsLine": "billiger; am billigsten",
+                "synonyms": [
+                  "preiswert",
+                  "günstig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "wenig Geld kostend; zu einem niedrigen Preis",
+                    "examples": [
+                      "Das T-Shirt war sehr billig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "billig – Beispielsatz folgt.",
+              "answer": "Eine billige Ware kostet wenig Geld.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine billige Ware kostet besonders viel Geld.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine billige Ware wurde bereits bezahlt und kann nicht umgetauscht werden.",
               "ok": false
             }
           ]
@@ -194,18 +511,53 @@
           "title": "",
           "page": 10,
           "question": "teuer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Viel Geld kostend.",
+          "explain": {
+            "entryId": "teuer",
+            "headword": "teuer",
+            "pronunciation": {
+              "display": "TOI-er",
+              "ipaUK": "/ˈtɔɪ̯ɐ/",
+              "ipaUS": "/ˈtɔɪ̯ɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "teuer",
+                "inflectionsLine": "teurer; am teuersten",
+                "synonyms": [
+                  "kostspielig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "viel Geld kostend; zu einem hohen Preis",
+                    "examples": [
+                      "Die neue Jacke ist mir zu teuer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "teuer – Beispielsatz folgt.",
+              "answer": "Eine teure Ware kostet viel Geld.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine teure Ware kostet besonders wenig Geld.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine teure Ware ist immer ein zeitlich begrenztes Sonderangebot.",
               "ok": false
             }
           ]

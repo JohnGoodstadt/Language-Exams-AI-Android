@@ -2,130 +2,343 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPlaces2-de",
-  "title": "",
+  "title": "Orte & Richtungen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Ecke",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Stelle, an der zwei Seiten oder Straßen zusammentreffen.",
+          "explain": {
+            "entryId": "Ecke",
+            "headword": "Ecke",
+            "pronunciation": {
+              "display": "EK-ke",
+              "ipaUK": "/ˈɛkə/",
+              "ipaUS": "/ˈɛkə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Ecke",
+                "inflectionsLine": "Plural: die Ecken",
+                "synonyms": [
+                  "Straßenecke"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Stelle, an der zwei Seiten, Wände oder Straßen in einem Winkel zusammentreffen",
+                    "examples": [
+                      "Die Bäckerei ist gleich um die Ecke."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ecke – Beispielsatz folgt.",
+              "answer": "Eine Ecke ist die Stelle, an der zwei Seiten oder Straßen zusammentreffen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Ecke ist immer die Mitte einer langen geraden Straße.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Ecke ist ein Bauwerk, das einen Fluss überquert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Brücke",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Bauwerk über einem Hindernis wie einem Fluss oder einer Straße.",
+          "explain": {
+            "entryId": "Brücke",
+            "headword": "Brücke",
+            "pronunciation": {
+              "display": "BRÜK-ke",
+              "ipaUK": "/ˈbʁʏkə/",
+              "ipaUS": "/ˈbʁʏkə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Brücke",
+                "inflectionsLine": "Plural: die Brücken",
+                "synonyms": [
+                  "Überführung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Bauwerk, das über einen Fluss, eine Straße oder ein anderes Hindernis führt",
+                    "examples": [
+                      "Wir gehen über die Brücke auf die andere Seite des Flusses."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Brücke – Beispielsatz folgt.",
+              "answer": "Eine Brücke führt über ein Hindernis wie einen Fluss oder eine Straße.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Brücke ist eine Stelle, an der ein Bus regelmäßig hält.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Brücke ist eine Anlage mit roten, gelben und grünen Lichtern.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Weg",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Strecke oder Route von einem Ort zu einem anderen.",
+          "explain": {
+            "entryId": "Weg",
+            "headword": "Weg",
+            "pronunciation": {
+              "display": "WEEK",
+              "ipaUK": "/veːk/",
+              "ipaUS": "/veːk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Weg",
+                "inflectionsLine": "Plural: die Wege",
+                "synonyms": [
+                  "Route",
+                  "Pfad"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Strecke, Route oder ein Pfad, auf dem man von einem Ort zu einem anderen gelangt",
+                    "examples": [
+                      "Können Sie mir den Weg zum Bahnhof zeigen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Weg – Beispielsatz folgt.",
+              "answer": "Ein Weg ist eine Strecke oder Route von einem Ort zu einem anderen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Weg ist nur die Himmelsrichtung, aber keine Strecke oder Route.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Weg ist ausschließlich der Abstand zwischen zwei Orten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "weit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In großem räumlichem Abstand.",
+          "explain": {
+            "entryId": "weit",
+            "headword": "weit",
+            "pronunciation": {
+              "display": "WAIT",
+              "ipaUK": "/vaɪ̯t/",
+              "ipaUS": "/vaɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Entfernungsangabe",
+                "headwordLine": "weit",
+                "inflectionsLine": "weiter; am weitesten",
+                "synonyms": [
+                  "fern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in großem räumlichem Abstand; nicht in der Nähe",
+                    "examples": [
+                      "Der Bahnhof ist weit von hier entfernt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "weit – Beispielsatz folgt.",
+              "answer": "Weit bedeutet, dass zwischen zwei Orten ein großer Abstand liegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Weit bedeutet, dass etwas direkt in der Nähe liegt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Weit bedeutet, dass man an einer Kreuzung links abbiegt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Zentrum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der mittlere oder wichtigste Bereich eines Ortes.",
+          "explain": {
+            "entryId": "Zentrum",
+            "headword": "Zentrum",
+            "pronunciation": {
+              "display": "TSEN-trum",
+              "ipaUK": "/ˈt͡sɛntʁʊm/",
+              "ipaUS": "/ˈt͡sɛntʁʊm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Zentrum",
+                "inflectionsLine": "Plural: die Zentren",
+                "synonyms": [
+                  "Mitte",
+                  "Stadtmitte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der mittlere oder wichtigste Bereich einer Stadt oder eines Gebiets",
+                    "examples": [
+                      "Im Zentrum gibt es viele Geschäfte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zentrum – Beispielsatz folgt.",
+              "answer": "Das Zentrum ist der mittlere oder wichtigste Bereich eines Ortes.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Zentrum ist immer der entfernteste Rand eines Ortes.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Zentrum ist ausschließlich eine Haltestelle für Busse.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "sich verlaufen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Beim Gehen den richtigen Weg verlieren.",
+          "explain": {
+            "entryId": "sich verlaufen",
+            "headword": "sich verlaufen",
+            "pronunciation": {
+              "display": "sich fer-LAU-fen",
+              "ipaUK": "/zɪç fɛɐ̯ˈlaʊ̯fn̩/",
+              "ipaUS": "/zɪç fɛɐ̯ˈlaʊ̯fn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexives Verb",
+                "grammarType": "unregelmäßig, nicht trennbar",
+                "headwordLine": "sich verlaufen",
+                "inflectionsLine": "ich verlaufe mich; du verläufst dich; er/sie/es verläuft sich",
+                "synonyms": [
+                  "den Weg verlieren",
+                  "sich verirren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "beim Gehen den richtigen Weg verlieren und nicht mehr wissen, wo man ist",
+                    "examples": [
+                      "Ohne Stadtplan habe ich mich verlaufen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich verlaufen – Beispielsatz folgt.",
+              "answer": "Sich verlaufen bedeutet, den richtigen Weg zu verlieren und die Orientierung nicht mehr zu kennen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich verlaufen bedeutet, einer bekannten Route ohne Probleme zu folgen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich verlaufen bedeutet, an einer Kreuzung bewusst nach rechts abzubiegen.",
               "ok": false
             }
           ]

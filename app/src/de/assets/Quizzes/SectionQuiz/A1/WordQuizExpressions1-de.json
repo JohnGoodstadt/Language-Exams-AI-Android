@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizExpressions1-de",
-  "title": "",
+  "title": "Häufige Ausdrücke",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Situation, in der der Ausdruck richtig verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Danke",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Ausdruck der Dankbarkeit.",
+          "explain": {
+            "entryId": "Danke",
+            "headword": "Danke",
+            "pronunciation": {
+              "display": "DANG-ke",
+              "ipaUK": "/ˈdaŋkə/",
+              "ipaUS": "/ˈdaŋkə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interjektion",
+                "grammarType": "Höflichkeitsformel",
+                "headwordLine": "Danke!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vielen Dank"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Ausdruck, mit dem man Dankbarkeit zeigt",
+                    "examples": [
+                      "Danke für deine Hilfe!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Danke – Beispielsatz folgt.",
+              "answer": "Mit Danke zeigt man, dass man für etwas dankbar ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit Danke fragt man nach einem Ort.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit Danke sagt man, dass man etwas nicht versteht.",
               "ok": false
             }
           ]
@@ -34,18 +69,54 @@
           "title": "",
           "page": 2,
           "question": "Bitte",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein höfliches Wort für eine Bitte oder als Antwort auf Dank.",
+          "explain": {
+            "entryId": "Bitte",
+            "headword": "Bitte",
+            "pronunciation": {
+              "display": "BIT-te",
+              "ipaUK": "/ˈbɪtə/",
+              "ipaUS": "/ˈbɪtə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interjektion oder Partikel",
+                "grammarType": "Höflichkeitsformel",
+                "headwordLine": "Bitte!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gern geschehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "macht eine Aufforderung höflich oder antwortet auf einen Dank",
+                    "examples": [
+                      "Bitte öffne das Fenster.",
+                      "Danke! – Bitte!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bitte – Beispielsatz folgt.",
+              "answer": "Bitte kann eine Aufforderung höflich machen oder auf Danke antworten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bitte bedeutet immer, dass man die Antwort nicht weiß.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bitte ist ausschließlich ein Abschiedsgruß.",
               "ok": false
             }
           ]
@@ -54,18 +125,53 @@
           "title": "",
           "page": 3,
           "question": "Entschuldigung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine höfliche Entschuldigung oder ein Wort, um Aufmerksamkeit zu bekommen.",
+          "explain": {
+            "entryId": "Entschuldigung",
+            "headword": "Entschuldigung",
+            "pronunciation": {
+              "display": "ent-SCHUL-di-gung",
+              "ipaUK": "/ɛntˈʃʊldɪɡʊŋ/",
+              "ipaUS": "/ɛntˈʃʊldɪɡʊŋ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv oder Interjektion",
+                "grammarType": "feminin, Höflichkeitsformel",
+                "headwordLine": "die Entschuldigung; Entschuldigung!",
+                "inflectionsLine": "Plural: die Entschuldigungen",
+                "synonyms": [
+                  "Verzeihung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine höfliche Formel, wenn man einen Fehler bedauert oder Aufmerksamkeit möchte",
+                    "examples": [
+                      "Entschuldigung, können Sie mir helfen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Entschuldigung – Beispielsatz folgt.",
+              "answer": "Entschuldigung kann man sagen, wenn man einen Fehler bedauert oder höflich Aufmerksamkeit möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Entschuldigung sagt man ausschließlich, um einer Aussage zuzustimmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Entschuldigung bedeutet immer, dass alles verstanden wurde.",
               "ok": false
             }
           ]
@@ -74,18 +180,54 @@
           "title": "",
           "page": 4,
           "question": "Ja",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine bejahende Antwort oder Zustimmung.",
+          "explain": {
+            "entryId": "Ja",
+            "headword": "Ja",
+            "pronunciation": {
+              "display": "JAA",
+              "ipaUK": "/jaː/",
+              "ipaUS": "/jaː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Antwortpartikel",
+                "grammarType": "bejahend",
+                "headwordLine": "ja",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "doch",
+                  "genau"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine bejahende Antwort, Zustimmung oder Bestätigung",
+                    "examples": [
+                      "Kommst du mit? – Ja."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ja – Beispielsatz folgt.",
+              "answer": "Ja verwendet man, um zuzustimmen oder eine Frage zu bejahen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ja verwendet man ausschließlich, um eine Frage zu verneinen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ja bedeutet immer, dass man unsicher ist.",
               "ok": false
             }
           ]
@@ -94,18 +236,53 @@
           "title": "",
           "page": 5,
           "question": "Nein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine verneinende Antwort oder Ablehnung.",
+          "explain": {
+            "entryId": "Nein",
+            "headword": "Nein",
+            "pronunciation": {
+              "display": "NAIN",
+              "ipaUK": "/naɪ̯n/",
+              "ipaUS": "/naɪ̯n/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Antwortpartikel",
+                "grammarType": "verneinend",
+                "headwordLine": "nein",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nicht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine verneinende Antwort, Ablehnung oder ein Widerspruch",
+                    "examples": [
+                      "Möchtest du Kaffee? – Nein, danke."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nein – Beispielsatz folgt.",
+              "answer": "Nein verwendet man, um abzulehnen oder eine Frage zu verneinen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nein verwendet man ausschließlich, um begeistert zuzustimmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nein ist immer ein Ausdruck der Dankbarkeit.",
               "ok": false
             }
           ]
@@ -114,18 +291,53 @@
           "title": "",
           "page": 6,
           "question": "Vielleicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt Unsicherheit oder eine Möglichkeit aus.",
+          "explain": {
+            "entryId": "Vielleicht",
+            "headword": "Vielleicht",
+            "pronunciation": {
+              "display": "fi-LAICHT",
+              "ipaUK": "/fiˈlaɪ̯çt/",
+              "ipaUS": "/fiˈlaɪ̯çt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Modaladverb",
+                "headwordLine": "vielleicht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "möglicherweise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt aus, dass etwas möglich, aber nicht sicher ist",
+                    "examples": [
+                      "Vielleicht komme ich morgen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vielleicht – Beispielsatz folgt.",
+              "answer": "Vielleicht sagt man, wenn etwas möglich, aber nicht sicher ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vielleicht bedeutet, dass etwas absolut sicher ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vielleicht ist ausschließlich ein höflicher Dank.",
               "ok": false
             }
           ]
@@ -134,18 +346,54 @@
           "title": "",
           "page": 7,
           "question": "Kein Problem",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass etwas in Ordnung oder nicht schwierig ist.",
+          "explain": {
+            "entryId": "Kein Problem",
+            "headword": "Kein Problem",
+            "pronunciation": {
+              "display": "kain pro-BLEEM",
+              "ipaUK": "/kaɪ̯n pʁoˈbleːm/",
+              "ipaUS": "/kaɪ̯n pʁoˈbleːm/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Antwortformel",
+                "headwordLine": "Kein Problem!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Macht nichts",
+                  "Gern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt aus, dass etwas in Ordnung, leicht möglich oder nicht störend ist",
+                    "examples": [
+                      "Kannst du mir helfen? – Kein Problem."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kein Problem – Beispielsatz folgt.",
+              "answer": "Kein Problem kann bedeuten, dass etwas in Ordnung ist oder gern gemacht wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kein Problem bedeutet immer, dass eine große Schwierigkeit besteht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kein Problem ist ausschließlich eine Frage nach dem Namen.",
               "ok": false
             }
           ]
@@ -154,18 +402,54 @@
           "title": "",
           "page": 8,
           "question": "Es tut mir leid",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Ausdruck des Bedauerns oder Mitgefühls.",
+          "explain": {
+            "entryId": "Es tut mir leid",
+            "headword": "Es tut mir leid",
+            "pronunciation": {
+              "display": "es tuut miir lait",
+              "ipaUK": "/ɛs tuːt miːɐ̯ laɪ̯t/",
+              "ipaUS": "/ɛs tuːt miːɐ̯ laɪ̯t/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Aussagesatz",
+                "headwordLine": "Es tut mir leid.",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Entschuldigung",
+                  "Ich bedaure es"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt Bedauern, eine Entschuldigung oder Mitgefühl aus",
+                    "examples": [
+                      "Es tut mir leid, dass ich zu spät bin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Es tut mir leid – Beispielsatz folgt.",
+              "answer": "Es tut mir leid sagt man, wenn man etwas bedauert oder sich entschuldigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Es tut mir leid verwendet man ausschließlich, um sicher zuzustimmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Es tut mir leid ist ausschließlich ein fröhlicher Willkommensgruß.",
               "ok": false
             }
           ]
@@ -174,18 +458,53 @@
           "title": "",
           "page": 9,
           "question": "Ich weiß nicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt fehlendes Wissen über etwas aus.",
+          "explain": {
+            "entryId": "Ich weiß nicht",
+            "headword": "Ich weiß nicht",
+            "pronunciation": {
+              "display": "ich waiss nicht",
+              "ipaUK": "/ɪç vaɪ̯s nɪçt/",
+              "ipaUS": "/ɪç vaɪ̯s nɪçt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "verneinter Aussagesatz",
+                "headwordLine": "Ich weiß nicht.",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Keine Ahnung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt aus, dass die sprechende Person eine Information nicht kennt",
+                    "examples": [
+                      "Wann kommt der Bus? – Ich weiß nicht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich weiß nicht – Beispielsatz folgt.",
+              "answer": "Ich weiß nicht sagt man, wenn man die Antwort oder Information nicht kennt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ich weiß nicht bedeutet, dass man die Antwort ganz sicher kennt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich weiß nicht ist ausschließlich ein Abschiedsgruß.",
               "ok": false
             }
           ]
@@ -194,18 +513,53 @@
           "title": "",
           "page": 10,
           "question": "Ich verstehe nicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass man etwas nicht versteht.",
+          "explain": {
+            "entryId": "Ich verstehe nicht",
+            "headword": "Ich verstehe nicht",
+            "pronunciation": {
+              "display": "ich fer-SCHTEE-e nicht",
+              "ipaUK": "/ɪç fɛɐ̯ˈʃteːə nɪçt/",
+              "ipaUS": "/ɪç fɛɐ̯ˈʃteːə nɪçt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "verneinter Aussagesatz",
+                "headwordLine": "Ich verstehe nicht.",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Das ist mir nicht klar"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt aus, dass die Bedeutung oder Erklärung für die sprechende Person nicht klar ist",
+                    "examples": [
+                      "Bitte erklären Sie das noch einmal. Ich verstehe nicht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich verstehe nicht – Beispielsatz folgt.",
+              "answer": "Ich verstehe nicht sagt man, wenn eine Bedeutung oder Erklärung nicht klar ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ich verstehe nicht bedeutet, dass alles vollständig klar ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich verstehe nicht ist ausschließlich ein Ausdruck der Zustimmung.",
               "ok": false
             }
           ]

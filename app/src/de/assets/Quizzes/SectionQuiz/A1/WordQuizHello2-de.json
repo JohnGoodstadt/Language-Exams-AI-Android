@@ -2,110 +2,285 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizHello2-de",
-  "title": "",
+  "title": "Hallo",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem der Ausdruck richtig verwendet wird.",
+      "description": "",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Mir geht es gut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine positive Antwort auf die Frage nach dem Befinden.",
+          "explain": {
+            "entryId": "Mir geht es gut",
+            "headword": "Mir geht es gut",
+            "pronunciation": {
+              "display": "miir geet es guut",
+              "ipaUK": "/miːɐ̯ ɡeːt ɛs ɡuːt/",
+              "ipaUS": "/miːɐ̯ ɡeːt ɛs ɡuːt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Aussagesatz",
+                "headwordLine": "Mir geht es gut.",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Es geht mir gut"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Antwort, mit der man sagt, dass man sich wohlfühlt",
+                    "examples": [
+                      "Danke, mir geht es gut."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mir geht es gut – Beispielsatz folgt.",
+              "answer": "Danke, mir geht es gut.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Danke, mich geht es gut.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Danke, mir gehen es gut.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Freut mich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine freundliche Reaktion beim Kennenlernen.",
+          "explain": {
+            "entryId": "Freut mich",
+            "headword": "Freut mich",
+            "pronunciation": {
+              "display": "froyt mich",
+              "ipaUK": "/fʁɔɪ̯t mɪç/",
+              "ipaUS": "/fʁɔɪ̯t mɪç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "verkürzter Aussagesatz",
+                "headwordLine": "Freut mich.",
+                "inflectionsLine": "vollständig: Es freut mich, dich kennenzulernen.",
+                "synonyms": [
+                  "Schön, dich kennenzulernen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine freundliche Wendung, die man verwendet, wenn man jemanden kennenlernt",
+                    "examples": [
+                      "Ich bin Jonas. – Freut mich!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Freut mich – Beispielsatz folgt.",
+              "answer": "Ich bin Jonas. – Freut mich!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ich bin Jonas. – Freuen mich!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich bin Jonas. – Freut ich!",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Willkommen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gruß zur freundlichen Begrüßung eines Gastes.",
+          "explain": {
+            "entryId": "Willkommen",
+            "headword": "Willkommen",
+            "pronunciation": {
+              "display": "will-KOM-men",
+              "ipaUK": "/vɪlˈkɔmən/",
+              "ipaUS": "/vɪlˈkɔmən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "prädikativ",
+                "headwordLine": "willkommen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "herzlich begrüßt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Gruß, mit dem man einen Gast freundlich empfängt",
+                    "examples": [
+                      "Herzlich willkommen in Berlin!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Willkommen – Beispielsatz folgt.",
+              "answer": "Herzlich willkommen in Berlin!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Herzlich Willkommen in Berlin!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich willkommen jeden Tag zur Schule.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Bis bald",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Abschiedsgruß, wenn man sich bald wiedersieht.",
+          "explain": {
+            "entryId": "Bis bald",
+            "headword": "Bis bald",
+            "pronunciation": {
+              "display": "bis balt",
+              "ipaUK": "/bɪs balt/",
+              "ipaUS": "/bɪs balt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Bis bald!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bis später"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Abschiedsgruß, mit dem man ausdrückt, dass man sich in naher Zukunft wiedersieht",
+                    "examples": [
+                      "Danke für deinen Besuch. Bis bald!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bis bald – Beispielsatz folgt.",
+              "answer": "Danke für deinen Besuch. Bis bald!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Danke für deinen Besuch. Bis balde!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bis bald, wir sehen uns nie wieder.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Bis morgen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Abschiedsgruß, wenn man sich am nächsten Tag wiedersieht.",
+          "explain": {
+            "entryId": "Bis morgen",
+            "headword": "Bis morgen",
+            "pronunciation": {
+              "display": "bis MOR-gen",
+              "ipaUK": "/bɪs ˈmɔʁɡn̩/",
+              "ipaUS": "/bɪs ˈmɔʁɡn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Bis morgen!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wir sehen uns morgen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Abschiedsgruß, den man verwendet, wenn man die andere Person am nächsten Tag wiedersieht",
+                    "examples": [
+                      "Der Unterricht ist zu Ende. Bis morgen!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bis morgen – Beispielsatz folgt.",
+              "answer": "Der Unterricht ist zu Ende. Bis morgen!",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Unterricht ist zu Ende. Bis Morgens!",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bis morgen, wir treffen uns heute Abend.",
               "ok": false
             }
           ]

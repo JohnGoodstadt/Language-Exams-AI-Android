@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPronouns1-de",
-  "title": "",
+  "title": "Pronomen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "ich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet die Person, die gerade spricht.",
+          "explain": {
+            "entryId": "ich",
+            "headword": "ich",
+            "pronunciation": {
+              "display": "ich",
+              "ipaUK": "/ɪç/",
+              "ipaUS": "/ɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronomen",
+                "grammarType": "erste Person Singular",
+                "headwordLine": "ich",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet die Person, die gerade spricht",
+                    "examples": [
+                      "Ich heiße Lea."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ich – Beispielsatz folgt.",
+              "answer": "Bezeichnet die Person, die gerade spricht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet eine einzelne Person, mit der man informell spricht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet mehrere Personen, zu denen die sprechende Person nicht gehört.",
               "ok": false
             }
           ]
@@ -34,18 +67,51 @@
           "title": "",
           "page": 2,
           "question": "du",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine einzelne Person, die informell angesprochen wird.",
+          "explain": {
+            "entryId": "du",
+            "headword": "du",
+            "pronunciation": {
+              "display": "duu",
+              "ipaUK": "/duː/",
+              "ipaUS": "/duː/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronomen",
+                "grammarType": "zweite Person Singular",
+                "headwordLine": "du",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine einzelne Person, die informell angesprochen wird",
+                    "examples": [
+                      "Kommst du heute?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "du – Beispielsatz folgt.",
+              "answer": "Bezeichnet eine einzelne Person, die man informell anspricht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet die Person, die gerade spricht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Gruppe, zu der die sprechende Person gehört.",
               "ok": false
             }
           ]
@@ -54,18 +120,51 @@
           "title": "",
           "page": 3,
           "question": "er",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet meist eine männliche Person oder ein grammatisch männliches Nomen.",
+          "explain": {
+            "entryId": "er",
+            "headword": "er",
+            "pronunciation": {
+              "display": "eer",
+              "ipaUK": "/eːɐ̯/",
+              "ipaUS": "/eːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronomen",
+                "grammarType": "dritte Person Singular maskulin",
+                "headwordLine": "er",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet meist eine männliche Person oder ein grammatisch männliches Nomen",
+                    "examples": [
+                      "Tom ist Arzt. Er arbeitet im Krankenhaus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "er – Beispielsatz folgt.",
+              "answer": "Bezeichnet meist eine männliche Person oder etwas mit grammatisch männlichem Nomen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet immer mehrere weibliche Personen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet die Person, die gerade zuhört und informell angesprochen wird.",
               "ok": false
             }
           ]
@@ -74,18 +173,51 @@
           "title": "",
           "page": 4,
           "question": "sie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet je nach Zusammenhang eine weibliche Person oder mehrere Personen beziehungsweise Dinge.",
+          "explain": {
+            "entryId": "sie",
+            "headword": "sie",
+            "pronunciation": {
+              "display": "zii",
+              "ipaUK": "/ziː/",
+              "ipaUS": "/ziː/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronomen",
+                "grammarType": "dritte Person Singular feminin oder Plural",
+                "headwordLine": "sie",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet je nach Zusammenhang eine weibliche Person oder mehrere Personen beziehungsweise Dinge",
+                    "examples": [
+                      "Anna ist da. Sie wartet draußen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sie – Beispielsatz folgt.",
+              "answer": "Bezeichnet je nach Zusammenhang eine weibliche Person oder mehrere Personen beziehungsweise Dinge.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet ausschließlich die Person, die gerade spricht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet nur einen männlichen Besitzer.",
               "ok": false
             }
           ]
@@ -94,18 +226,51 @@
           "title": "",
           "page": 5,
           "question": "wir",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet die sprechende Person zusammen mit mindestens einer weiteren Person.",
+          "explain": {
+            "entryId": "wir",
+            "headword": "wir",
+            "pronunciation": {
+              "display": "viir",
+              "ipaUK": "/viːɐ̯/",
+              "ipaUS": "/viːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronomen",
+                "grammarType": "erste Person Plural",
+                "headwordLine": "wir",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet die sprechende Person zusammen mit mindestens einer weiteren Person",
+                    "examples": [
+                      "Wir wohnen in Köln."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wir – Beispielsatz folgt.",
+              "answer": "Bezeichnet die sprechende Person zusammen mit einer oder mehreren weiteren Personen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet mehrere Personen, die informell angesprochen werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine unbekannte einzelne Person.",
               "ok": false
             }
           ]
@@ -114,18 +279,51 @@
           "title": "",
           "page": 6,
           "question": "ihr",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet mehrere Personen, die informell angesprochen werden.",
+          "explain": {
+            "entryId": "ihr",
+            "headword": "ihr",
+            "pronunciation": {
+              "display": "iir",
+              "ipaUK": "/iːɐ̯/",
+              "ipaUS": "/iːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronomen",
+                "grammarType": "zweite Person Plural",
+                "headwordLine": "ihr",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet mehrere Personen, die informell angesprochen werden",
+                    "examples": [
+                      "Kommt ihr morgen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ihr – Beispielsatz folgt.",
+              "answer": "Bezeichnet mehrere Personen, die man informell anspricht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet die sprechende Person und ihre Gruppe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine weibliche Person, über die gesprochen wird.",
               "ok": false
             }
           ]
@@ -134,18 +332,51 @@
           "title": "",
           "page": 7,
           "question": "mein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt, dass etwas der sprechenden Person gehört oder zu ihr gehört.",
+          "explain": {
+            "entryId": "mein",
+            "headword": "mein",
+            "pronunciation": {
+              "display": "main",
+              "ipaUK": "/maɪ̯n/",
+              "ipaUS": "/maɪ̯n/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Possessivartikel oder Possessivpronomen",
+                "grammarType": "erste Person Singular",
+                "headwordLine": "mein",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zeigt, dass etwas der sprechenden Person gehört oder zu ihr gehört",
+                    "examples": [
+                      "Das ist mein Buch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "mein – Beispielsatz folgt.",
+              "answer": "Zeigt, dass etwas der sprechenden Person gehört oder zu ihr gehört.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass etwas der informell angesprochenen Person gehört.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zeigt, dass etwas keiner Person gehört.",
               "ok": false
             }
           ]
@@ -154,18 +385,51 @@
           "title": "",
           "page": 8,
           "question": "dein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt, dass etwas der informell angesprochenen Person gehört oder zu ihr gehört.",
+          "explain": {
+            "entryId": "dein",
+            "headword": "dein",
+            "pronunciation": {
+              "display": "dain",
+              "ipaUK": "/daɪ̯n/",
+              "ipaUS": "/daɪ̯n/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Possessivartikel oder Possessivpronomen",
+                "grammarType": "zweite Person Singular",
+                "headwordLine": "dein",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zeigt, dass etwas der informell angesprochenen Person gehört oder zu ihr gehört",
+                    "examples": [
+                      "Ist das dein Fahrrad?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "dein – Beispielsatz folgt.",
+              "answer": "Zeigt, dass etwas der informell angesprochenen Person gehört oder zu ihr gehört.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass etwas der sprechenden Person gehört.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zeigt, dass etwas der gesamten Gruppe der sprechenden Person gehört.",
               "ok": false
             }
           ]
@@ -174,18 +438,51 @@
           "title": "",
           "page": 9,
           "question": "sein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt als Besitzwort, dass etwas zu einer männlichen Person oder zu einem sächlichen Nomen gehört.",
+          "explain": {
+            "entryId": "sein",
+            "headword": "sein",
+            "pronunciation": {
+              "display": "zain",
+              "ipaUK": "/zaɪ̯n/",
+              "ipaUS": "/zaɪ̯n/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Possessivartikel oder Possessivpronomen",
+                "grammarType": "dritte Person Singular maskulin oder neutral",
+                "headwordLine": "sein",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zeigt als Besitzwort, dass etwas zu einer männlichen Person oder zu einem sächlichen Nomen gehört",
+                    "examples": [
+                      "Paul sucht sein Handy."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sein – Beispielsatz folgt.",
+              "answer": "Zeigt als Besitzwort, dass etwas zu einer männlichen Person oder zu einem sächlichen Nomen gehört.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass etwas zur sprechenden Person und ihrer Gruppe gehört.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zeigt, dass etwas zur informell angesprochenen Person gehört.",
               "ok": false
             }
           ]
@@ -194,18 +491,51 @@
           "title": "",
           "page": 10,
           "question": "unser",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt, dass etwas der sprechenden Person und ihrer Gruppe gehört.",
+          "explain": {
+            "entryId": "unser",
+            "headword": "unser",
+            "pronunciation": {
+              "display": "UN-ser",
+              "ipaUK": "/ˈʊnzɐ/",
+              "ipaUS": "/ˈʊnzɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Possessivartikel oder Possessivpronomen",
+                "grammarType": "erste Person Plural",
+                "headwordLine": "unser",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zeigt, dass etwas der sprechenden Person und ihrer Gruppe gehört",
+                    "examples": [
+                      "Das ist unser Haus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unser – Beispielsatz folgt.",
+              "answer": "Zeigt, dass etwas der sprechenden Person und ihrer Gruppe gehört oder zu ihr gehört.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass etwas nur einer informell angesprochenen Person gehört.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zeigt, dass etwas einer unbekannten Person gehört.",
               "ok": false
             }
           ]

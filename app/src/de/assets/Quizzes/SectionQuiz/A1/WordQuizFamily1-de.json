@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFamily1-de",
-  "title": "",
+  "title": "Familie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Familie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Gruppe aus Eltern, Kindern und anderen verwandten Personen.",
+          "explain": {
+            "entryId": "Familie",
+            "headword": "Familie",
+            "pronunciation": {
+              "display": "fa-MII-li-e",
+              "ipaUK": "/faˈmiːli̯ə/",
+              "ipaUS": "/faˈmiːli̯ə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Familie",
+                "inflectionsLine": "Plural: die Familien",
+                "synonyms": [
+                  "Angehörige"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Gruppe von Menschen, die miteinander verwandt sind oder als Eltern und Kinder zusammengehören",
+                    "examples": [
+                      "Meine Eltern und Geschwister gehören zu meiner Familie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Familie – Beispielsatz folgt.",
+              "answer": "Meine Eltern und Geschwister gehören zu meiner Familie.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mein Fahrrad und mein Auto sind meine Familie.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Montag und Dienstag gehören zu meiner Familie.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Mutter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein weibliches Elternteil.",
+          "explain": {
+            "entryId": "Mutter",
+            "headword": "Mutter",
+            "pronunciation": {
+              "display": "MUT-ter",
+              "ipaUK": "/ˈmʊtɐ/",
+              "ipaUS": "/ˈmʊtɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Mutter",
+                "inflectionsLine": "Plural: die Mütter",
+                "synonyms": [
+                  "Mama"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein weibliches Elternteil eines Kindes",
+                    "examples": [
+                      "Eva ist meine Mutter; ich bin ihr Sohn."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mutter – Beispielsatz folgt.",
+              "answer": "Eva ist meine Mutter; ich bin ihr Sohn.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Mutter ist ein männliches Geschwisterkind.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Mutter ist der Vater eines Elternteils.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Vater",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein männliches Elternteil.",
+          "explain": {
+            "entryId": "Vater",
+            "headword": "Vater",
+            "pronunciation": {
+              "display": "FAA-ter",
+              "ipaUK": "/ˈfaːtɐ/",
+              "ipaUS": "/ˈfaːtɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Vater",
+                "inflectionsLine": "Plural: die Väter",
+                "synonyms": [
+                  "Papa"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein männliches Elternteil eines Kindes",
+                    "examples": [
+                      "Paul ist mein Vater; ich bin seine Tochter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vater – Beispielsatz folgt.",
+              "answer": "Paul ist mein Vater; ich bin seine Tochter.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Vater ist ein weibliches Geschwisterkind.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Vater ist die Tochter seiner Eltern.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Eltern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mutter und Vater beziehungsweise die Personen, die ein Kind erziehen.",
+          "explain": {
+            "entryId": "Eltern",
+            "headword": "Eltern",
+            "pronunciation": {
+              "display": "EL-tern",
+              "ipaUK": "/ˈɛltɐn/",
+              "ipaUS": "/ˈɛltɐn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Pluralwort",
+                "headwordLine": "die Eltern",
+                "inflectionsLine": "nur im Plural",
+                "synonyms": [
+                  "Mutter und Vater"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Mutter und der Vater oder die Personen, die für ein Kind als Eltern sorgen",
+                    "examples": [
+                      "Meine Mutter und mein Vater sind meine Eltern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Eltern – Beispielsatz folgt.",
+              "answer": "Meine Mutter und mein Vater sind meine Eltern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Meine beiden Söhne sind meine Eltern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Meine Großmutter und ihr Bruder sind meine Eltern.",
               "ok": false
             }
           ]
@@ -94,18 +234,51 @@
           "title": "",
           "page": 5,
           "question": "Bruder",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein männliches Geschwisterkind.",
+          "explain": {
+            "entryId": "Bruder",
+            "headword": "Bruder",
+            "pronunciation": {
+              "display": "BRUU-der",
+              "ipaUK": "/ˈbʁuːdɐ/",
+              "ipaUS": "/ˈbʁuːdɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Bruder",
+                "inflectionsLine": "Plural: die Brüder",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein männliches Geschwisterkind einer Person",
+                    "examples": [
+                      "Ein Bruder ist ein männliches Geschwisterkind."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bruder – Beispielsatz folgt.",
+              "answer": "Ein Bruder ist ein männliches Geschwisterkind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Bruder ist ein weibliches Geschwisterkind.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Bruder ist der Vater eines Elternteils.",
               "ok": false
             }
           ]
@@ -114,18 +287,51 @@
           "title": "",
           "page": 6,
           "question": "Schwester",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein weibliches Geschwisterkind.",
+          "explain": {
+            "entryId": "Schwester",
+            "headword": "Schwester",
+            "pronunciation": {
+              "display": "SCHWES-ter",
+              "ipaUK": "/ˈʃvɛstɐ/",
+              "ipaUS": "/ˈʃvɛstɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Schwester",
+                "inflectionsLine": "Plural: die Schwestern",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein weibliches Geschwisterkind einer Person",
+                    "examples": [
+                      "Eine Schwester ist ein weibliches Geschwisterkind."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schwester – Beispielsatz folgt.",
+              "answer": "Eine Schwester ist ein weibliches Geschwisterkind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Schwester ist ein männliches Elternteil.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Schwester ist die Mutter eines Elternteils.",
               "ok": false
             }
           ]
@@ -134,18 +340,53 @@
           "title": "",
           "page": 7,
           "question": "Geschwister",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Brüder und Schwestern einer Person.",
+          "explain": {
+            "entryId": "Geschwister",
+            "headword": "Geschwister",
+            "pronunciation": {
+              "display": "ge-SCHWIS-ter",
+              "ipaUK": "/ɡəˈʃvɪstɐ/",
+              "ipaUS": "/ɡəˈʃvɪstɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Pluralwort",
+                "headwordLine": "die Geschwister",
+                "inflectionsLine": "meist im Plural",
+                "synonyms": [
+                  "Brüder und Schwestern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Brüder und Schwestern einer Person",
+                    "examples": [
+                      "Brüder und Schwestern sind Geschwister."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Geschwister – Beispielsatz folgt.",
+              "answer": "Brüder und Schwestern sind Geschwister.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mütter und Väter sind die Geschwister ihrer Kinder.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Großmütter und Großväter sind die Geschwister ihrer Enkel.",
               "ok": false
             }
           ]
@@ -154,18 +395,53 @@
           "title": "",
           "page": 8,
           "question": "Sohn",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein männliches Kind.",
+          "explain": {
+            "entryId": "Sohn",
+            "headword": "Sohn",
+            "pronunciation": {
+              "display": "SOON",
+              "ipaUK": "/zoːn/",
+              "ipaUS": "/zoːn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Sohn",
+                "inflectionsLine": "Plural: die Söhne",
+                "synonyms": [
+                  "männliches Kind"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "das männliche Kind einer Person",
+                    "examples": [
+                      "Ein Sohn ist das männliche Kind seiner Eltern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sohn – Beispielsatz folgt.",
+              "answer": "Ein Sohn ist das männliche Kind seiner Eltern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Sohn ist das weibliche Kind seiner Eltern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Sohn ist der Vater eines Elternteils.",
               "ok": false
             }
           ]
@@ -174,18 +450,53 @@
           "title": "",
           "page": 9,
           "question": "Tochter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein weibliches Kind.",
+          "explain": {
+            "entryId": "Tochter",
+            "headword": "Tochter",
+            "pronunciation": {
+              "display": "TOCH-ter",
+              "ipaUK": "/ˈtɔxtɐ/",
+              "ipaUS": "/ˈtɔxtɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Tochter",
+                "inflectionsLine": "Plural: die Töchter",
+                "synonyms": [
+                  "weibliches Kind"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "das weibliche Kind einer Person",
+                    "examples": [
+                      "Eine Tochter ist das weibliche Kind ihrer Eltern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tochter – Beispielsatz folgt.",
+              "answer": "Eine Tochter ist das weibliche Kind ihrer Eltern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Tochter ist das männliche Kind ihrer Eltern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Tochter ist die Mutter eines Elternteils.",
               "ok": false
             }
           ]
@@ -194,18 +505,53 @@
           "title": "",
           "page": 10,
           "question": "Kind",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Sohn oder eine Tochter; auch ein junger Mensch.",
+          "explain": {
+            "entryId": "Kind",
+            "headword": "Kind",
+            "pronunciation": {
+              "display": "KINT",
+              "ipaUK": "/kɪnt/",
+              "ipaUS": "/kɪnt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Kind",
+                "inflectionsLine": "Plural: die Kinder",
+                "synonyms": [
+                  "Sohn oder Tochter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Sohn oder eine Tochter beziehungsweise ein junger Mensch",
+                    "examples": [
+                      "Ein Sohn oder eine Tochter ist ein Kind seiner Eltern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kind – Beispielsatz folgt.",
+              "answer": "Ein Sohn oder eine Tochter ist ein Kind seiner Eltern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Kind ist immer der Vater seiner Eltern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Kind ist ein Gegenstand zum Telefonieren.",
               "ok": false
             }
           ]

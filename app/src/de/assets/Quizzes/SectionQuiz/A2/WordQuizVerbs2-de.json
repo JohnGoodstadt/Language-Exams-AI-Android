@@ -2,170 +2,450 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs2-de",
-  "title": "",
+  "title": "Verben (Auswahl)",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Verbs passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "anrufen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit jemandem telefonisch Kontakt aufnehmen.",
+          "explain": {
+            "entryId": "anrufen",
+            "headword": "anrufen",
+            "pronunciation": {
+              "display": "AN-ruu-fen",
+              "ipaUK": "/ˈanˌʁuːfn̩/",
+              "ipaUS": "/ˈanˌʁuːfn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, trennbar",
+                "headwordLine": "anrufen",
+                "inflectionsLine": "ich rufe an; du rufst an; er/sie/es ruft an",
+                "synonyms": [
+                  "telefonieren mit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Telefonnummer wählen, um telefonisch mit jemandem zu sprechen",
+                    "examples": [
+                      "Ich rufe dich heute Abend an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "anrufen – Beispielsatz folgt.",
+              "answer": "Anrufen bedeutet, telefonisch Kontakt mit jemandem aufzunehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Anrufen bedeutet, jemandem ausschließlich einen Brief per Post zu schicken.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Anrufen bedeutet, einen Raum sauber und ordentlich zu machen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "aufräumen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Dinge ordnen und einen Raum sauber machen.",
+          "explain": {
+            "entryId": "aufräumen",
+            "headword": "aufräumen",
+            "pronunciation": {
+              "display": "AUF-roi-men",
+              "ipaUK": "/ˈaʊ̯fˌʁɔɪ̯mən/",
+              "ipaUS": "/ˈaʊ̯fˌʁɔɪ̯mən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig, trennbar",
+                "headwordLine": "aufräumen",
+                "inflectionsLine": "ich räume auf; du räumst auf; er/sie/es räumt auf",
+                "synonyms": [
+                  "Ordnung machen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Dinge an ihren Platz bringen und einen Raum ordentlich machen",
+                    "examples": [
+                      "Am Samstag räume ich mein Zimmer auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aufräumen – Beispielsatz folgt.",
+              "answer": "Aufräumen bedeutet, Dinge zu ordnen und einen Raum ordentlich zu machen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Aufräumen bedeutet, absichtlich Unordnung in einem Raum zu schaffen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aufräumen bedeutet, telefonisch mit einer Person zu sprechen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "sich freuen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Freude empfinden oder etwas mit Freude erwarten.",
+          "explain": {
+            "entryId": "sich freuen",
+            "headword": "sich freuen",
+            "pronunciation": {
+              "display": "sich FROI-en",
+              "ipaUK": "/zɪç ˈfʁɔɪ̯ən/",
+              "ipaUS": "/zɪç ˈfʁɔɪ̯ən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexives Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "sich freuen",
+                "inflectionsLine": "ich freue mich; du freust dich; er/sie/es freut sich",
+                "synonyms": [
+                  "glücklich sein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Freude empfinden oder ein zukünftiges Ereignis mit Freude erwarten",
+                    "examples": [
+                      "Ich freue mich auf den Urlaub."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich freuen – Beispielsatz folgt.",
+              "answer": "Sich freuen bedeutet, Freude zu empfinden oder etwas mit Freude zu erwarten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich freuen bedeutet, traurig über ein Ereignis zu sein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich freuen bedeutet, kein Interesse an einer Sache zu haben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "sich interessieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aufmerksamkeit und Neugier für etwas haben.",
+          "explain": {
+            "entryId": "sich interessieren",
+            "headword": "sich interessieren",
+            "pronunciation": {
+              "display": "sich in-te-res-SII-ren",
+              "ipaUK": "/zɪç ɪntəʁɛˈsiːʁən/",
+              "ipaUS": "/zɪç ɪntəʁɛˈsiːʁən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexives Verb",
+                "grammarType": "regelmäßig, für + Akkusativ",
+                "headwordLine": "sich für etwas interessieren",
+                "inflectionsLine": "ich interessiere mich; du interessierst dich",
+                "synonyms": [
+                  "Interesse haben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Aufmerksamkeit und Neugier für ein Thema, eine Person oder Tätigkeit haben",
+                    "examples": [
+                      "Sie interessiert sich für moderne Kunst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich interessieren – Beispielsatz folgt.",
+              "answer": "Sich interessieren bedeutet, Aufmerksamkeit und Neugier für etwas zu haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich interessieren bedeutet, ein Thema bewusst völlig zu ignorieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich interessieren bedeutet, eine Tatsache sicher zu wissen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "reisen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Für längere Strecken andere Orte oder Länder besuchen.",
+          "explain": {
+            "entryId": "reisen",
+            "headword": "reisen",
+            "pronunciation": {
+              "display": "RAI-zen",
+              "ipaUK": "/ˈʁaɪ̯zn̩/",
+              "ipaUS": "/ˈʁaɪ̯zn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "reisen",
+                "inflectionsLine": "ich reise; du reist; er/sie/es reist",
+                "synonyms": [
+                  "eine Reise machen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "für eine gewisse Zeit und meist über eine längere Strecke andere Orte oder Länder besuchen",
+                    "examples": [
+                      "Im Sommer reisen wir nach Spanien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "reisen – Beispielsatz folgt.",
+              "answer": "Reisen bedeutet, andere Orte oder Länder über eine längere Strecke zu besuchen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Reisen bedeutet, dauerhaft am selben Ort zu bleiben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Reisen bedeutet nur, in der eigenen Wohnung aufzuräumen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "bleiben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen Ort nicht verlassen oder einen Zustand fortsetzen.",
+          "explain": {
+            "entryId": "bleiben",
+            "headword": "bleiben",
+            "pronunciation": {
+              "display": "BLAI-ben",
+              "ipaUK": "/ˈblaɪ̯bn̩/",
+              "ipaUS": "/ˈblaɪ̯bn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "bleiben",
+                "inflectionsLine": "ich bleibe; du bleibst; er/sie/es bleibt",
+                "synonyms": [
+                  "nicht weggehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einen Ort nicht verlassen oder einen Zustand weiter bestehen lassen",
+                    "examples": [
+                      "Ich bleibe heute zu Hause."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bleiben – Beispielsatz folgt.",
+              "answer": "Bleiben bedeutet, einen Ort nicht zu verlassen oder einen Zustand fortzusetzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bleiben bedeutet, sofort von einem Ort wegzugehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bleiben bedeutet, über eine lange Strecke in ein anderes Land zu reisen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "vergessen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich nicht mehr an etwas erinnern.",
+          "explain": {
+            "entryId": "vergessen",
+            "headword": "vergessen",
+            "pronunciation": {
+              "display": "fer-GES-sen",
+              "ipaUK": "/fɛɐ̯ˈɡɛsn̩/",
+              "ipaUS": "/fɛɐ̯ˈɡɛsn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, nicht trennbar",
+                "headwordLine": "vergessen",
+                "inflectionsLine": "ich vergesse; du vergisst; er/sie/es vergisst",
+                "synonyms": [
+                  "nicht mehr erinnern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Information oder Aufgabe nicht mehr im Gedächtnis haben",
+                    "examples": [
+                      "Ich habe den Termin vergessen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vergessen – Beispielsatz folgt.",
+              "answer": "Vergessen bedeutet, sich nicht mehr an eine Information oder Aufgabe zu erinnern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vergessen bedeutet, eine Information sicher im Gedächtnis zu behalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vergessen bedeutet, mit einer Person oder einem Ort vertraut zu sein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "helfen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Jemanden bei einer Aufgabe oder in einer Schwierigkeit unterstützen.",
+          "explain": {
+            "entryId": "helfen",
+            "headword": "helfen",
+            "pronunciation": {
+              "display": "HEL-fen",
+              "ipaUK": "/ˈhɛlfn̩/",
+              "ipaUS": "/ˈhɛlfn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, mit Dativ",
+                "headwordLine": "jemandem helfen",
+                "inflectionsLine": "ich helfe; du hilfst; er/sie/es hilft",
+                "synonyms": [
+                  "unterstützen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "jemanden bei einer Aufgabe, einem Problem oder in einer schwierigen Situation unterstützen",
+                    "examples": [
+                      "Kannst du mir mit der Aufgabe helfen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "helfen – Beispielsatz folgt.",
+              "answer": "Helfen bedeutet, jemanden bei einer Aufgabe oder in einer Schwierigkeit zu unterstützen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Helfen bedeutet, eine Person mit ihrem Problem absichtlich allein zu lassen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Helfen bedeutet, sich nicht mehr an eine wichtige Information zu erinnern.",
               "ok": false
             }
           ]

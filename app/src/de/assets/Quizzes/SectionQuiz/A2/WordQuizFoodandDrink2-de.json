@@ -2,130 +2,339 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFoodandDrink2-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "die Rechnung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die schriftliche Aufstellung des zu zahlenden Betrags.",
+          "explain": {
+            "entryId": "die Rechnung",
+            "headword": "die Rechnung",
+            "pronunciation": {
+              "display": "dii RECH-nung",
+              "ipaUK": "/diː ˈʁɛçnʊŋ/",
+              "ipaUS": "/diː ˈʁɛçnʊŋ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Rechnung",
+                "inflectionsLine": "Plural: die Rechnungen",
+                "synonyms": [
+                  "Abrechnung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine schriftliche Aufstellung der bestellten Dinge und des Betrags, den man bezahlen muss",
+                    "examples": [
+                      "Können wir bitte die Rechnung bekommen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "die Rechnung – Beispielsatz folgt.",
+              "answer": "Die Rechnung zeigt, wie viel man für bestellte Speisen und Getränke bezahlen muss.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Rechnung zeigt alle Speisen, die das Restaurant grundsätzlich anbietet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Rechnung ist die Bestellung, die man vor dem Essen aufgibt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "vegetarisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Fleisch und Fisch.",
+          "explain": {
+            "entryId": "vegetarisch",
+            "headword": "vegetarisch",
+            "pronunciation": {
+              "display": "vee-ge-TAA-risch",
+              "ipaUK": "/veɡeˈtaːʁɪʃ/",
+              "ipaUS": "/veɡeˈtaːʁɪʃ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Ernährungsweise",
+                "headwordLine": "vegetarisch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fleischlos"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ohne Fleisch und Fisch zubereitet oder sich entsprechend ernährend",
+                    "examples": [
+                      "Die Gemüsesuppe ist vegetarisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vegetarisch – Beispielsatz folgt.",
+              "answer": "Ein vegetarisches Gericht enthält kein Fleisch und keinen Fisch.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein vegetarisches Gericht enthält immer Fleisch, aber kein Gemüse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein vegetarisches Gericht ist jedes Gericht ohne Zucker, auch wenn es Fisch enthält.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Hunger",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das körperliche Bedürfnis, etwas zu essen.",
+          "explain": {
+            "entryId": "Hunger",
+            "headword": "Hunger",
+            "pronunciation": {
+              "display": "HUNG-er",
+              "ipaUK": "/ˈhʊŋɐ/",
+              "ipaUS": "/ˈhʊŋɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Hunger",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [
+                  "Appetit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "das körperliche Gefühl oder Bedürfnis, Nahrung zu essen",
+                    "examples": [
+                      "Ich habe Hunger und möchte etwas essen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hunger – Beispielsatz folgt.",
+              "answer": "Hunger ist das körperliche Bedürfnis, etwas zu essen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Hunger ist das körperliche Bedürfnis, etwas zu trinken.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Hunger bedeutet, dass man nach einer großen Mahlzeit völlig satt ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Durst",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das körperliche Bedürfnis, etwas zu trinken.",
+          "explain": {
+            "entryId": "Durst",
+            "headword": "Durst",
+            "pronunciation": {
+              "display": "DURST",
+              "ipaUK": "/dʊʁst/",
+              "ipaUS": "/dʊʁst/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Durst",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "das körperliche Gefühl oder Bedürfnis, Flüssigkeit zu trinken",
+                    "examples": [
+                      "Nach dem Sport habe ich großen Durst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Durst – Beispielsatz folgt.",
+              "answer": "Durst ist das körperliche Bedürfnis, etwas zu trinken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Durst ist das körperliche Bedürfnis, eine feste Mahlzeit zu essen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Durst bedeutet, dass man bereits zu viel getrunken hat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Restaurant",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Lokal, in dem Gäste Speisen und Getränke bestellen.",
+          "explain": {
+            "entryId": "Restaurant",
+            "headword": "Restaurant",
+            "pronunciation": {
+              "display": "res-to-RANG",
+              "ipaUK": "/ʁɛstoˈʁãː/",
+              "ipaUS": "/ʁɛstoˈʁãː/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Restaurant",
+                "inflectionsLine": "Plural: die Restaurants",
+                "synonyms": [
+                  "Gaststätte",
+                  "Lokal"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein öffentliches Lokal, in dem Gäste Speisen und Getränke bestellen und dort essen können",
+                    "examples": [
+                      "Wir essen heute Abend im Restaurant."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Restaurant – Beispielsatz folgt.",
+              "answer": "Ein Restaurant ist ein Lokal, in dem Gäste Speisen und Getränke bestellen können.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Restaurant ist ein Geschäft, das nur ungekochte Lebensmittel für zu Hause verkauft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Restaurant ist ausschließlich eine Küche in einer privaten Wohnung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "gesund",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Gut für den Körper und das Wohlbefinden.",
+          "explain": {
+            "entryId": "gesund",
+            "headword": "gesund",
+            "pronunciation": {
+              "display": "ge-ZUNT",
+              "ipaUK": "/ɡəˈzʊnt/",
+              "ipaUS": "/ɡəˈzʊnt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "gesund",
+                "inflectionsLine": "gesünder; am gesündesten",
+                "synonyms": [
+                  "förderlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "gut für den Körper, die Gesundheit oder das allgemeine Wohlbefinden",
+                    "examples": [
+                      "Obst und Gemüse sind gesund."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gesund – Beispielsatz folgt.",
+              "answer": "Gesundes Essen unterstützt den Körper und das Wohlbefinden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gesundes Essen macht den Körper grundsätzlich krank.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gesund bedeutet nur, dass ein Gericht besonders teuer ist.",
               "ok": false
             }
           ]

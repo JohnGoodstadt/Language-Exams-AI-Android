@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizJobs1-de",
-  "title": "",
+  "title": "Berufe & Tätigkeiten",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Arzt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Mann, der Krankheiten untersucht und behandelt.",
+          "explain": {
+            "entryId": "Arzt",
+            "headword": "Arzt",
+            "pronunciation": {
+              "display": "ARTST",
+              "ipaUK": "/aːɐ̯t͡st/",
+              "ipaUS": "/aːɐ̯t͡st/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Arzt",
+                "inflectionsLine": "Plural: die Ärzte; feminin: die Ärztin",
+                "synonyms": [
+                  "Mediziner"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein medizinisch ausgebildeter Mann, der Krankheiten erkennt und behandelt",
+                    "examples": [
+                      "Der Arzt untersucht den Patienten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Arzt – Beispielsatz folgt.",
+              "answer": "Ein Arzt untersucht kranke Menschen und behandelt Krankheiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Arzt unterrichtet hauptsächlich Kinder in einer Schule.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Arzt verkauft hauptsächlich Waren in einem Geschäft.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Lehrerin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Frau, die Schülerinnen und Schüler unterrichtet.",
+          "explain": {
+            "entryId": "Lehrerin",
+            "headword": "Lehrerin",
+            "pronunciation": {
+              "display": "LEE-re-rin",
+              "ipaUK": "/ˈleːʁəʁɪn/",
+              "ipaUS": "/ˈleːʁəʁɪn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Lehrerin",
+                "inflectionsLine": "Plural: die Lehrerinnen; maskulin: der Lehrer",
+                "synonyms": [
+                  "Pädagogin"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Frau, die an einer Schule oder in einem Kurs Wissen und Fähigkeiten vermittelt",
+                    "examples": [
+                      "Die Lehrerin erklärt die Aufgabe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Lehrerin – Beispielsatz folgt.",
+              "answer": "Eine Lehrerin vermittelt Wissen und unterrichtet Lernende.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Lehrerin behandelt hauptsächlich Krankheiten im Krankenhaus.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Lehrerin leitet immer eine Polizeidienststelle.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Verkäufer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Mann, der Waren verkauft und Kunden berät.",
+          "explain": {
+            "entryId": "Verkäufer",
+            "headword": "Verkäufer",
+            "pronunciation": {
+              "display": "fer-KOI-fer",
+              "ipaUK": "/fɛɐ̯ˈkɔɪ̯fɐ/",
+              "ipaUS": "/fɛɐ̯ˈkɔɪ̯fɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Verkäufer",
+                "inflectionsLine": "Plural: die Verkäufer; feminin: die Verkäuferin",
+                "synonyms": [
+                  "Verkaufskraft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Mann, der in einem Geschäft Waren verkauft und Kunden berät",
+                    "examples": [
+                      "Der Verkäufer zeigt mir eine andere Größe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verkäufer – Beispielsatz folgt.",
+              "answer": "Ein Verkäufer verkauft Waren und berät Kunden in einem Geschäft.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Verkäufer entwirft hauptsächlich Brücken und Maschinen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Verkäufer pflegt hauptsächlich kranke Menschen im Krankenhaus.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Krankenschwester",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Frau, die kranke Menschen pflegt und medizinisch versorgt.",
+          "explain": {
+            "entryId": "Krankenschwester",
+            "headword": "Krankenschwester",
+            "pronunciation": {
+              "display": "KRANG-ken-schwes-ter",
+              "ipaUK": "/ˈkʁaŋkn̩ˌʃvɛstɐ/",
+              "ipaUS": "/ˈkʁaŋkn̩ˌʃvɛstɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Krankenschwester",
+                "inflectionsLine": "Plural: die Krankenschwestern; heute oft: Pflegefachfrau",
+                "synonyms": [
+                  "Pflegefachfrau"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine medizinisch ausgebildete Frau, die kranke oder verletzte Menschen pflegt",
+                    "examples": [
+                      "Die Krankenschwester bringt dem Patienten Medikamente."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Krankenschwester – Beispielsatz folgt.",
+              "answer": "Eine Krankenschwester pflegt und versorgt kranke oder verletzte Menschen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Krankenschwester verkauft hauptsächlich Kleidung in einem Geschäft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Krankenschwester plant hauptsächlich technische Maschinen.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "Ingenieur",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Fachmann, der technische Systeme plant oder entwickelt.",
+          "explain": {
+            "entryId": "Ingenieur",
+            "headword": "Ingenieur",
+            "pronunciation": {
+              "display": "in-sche-NJÖÖR",
+              "ipaUK": "/ɪnʒeˈnjøːɐ̯/",
+              "ipaUS": "/ɪnʒeˈnjøːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Ingenieur",
+                "inflectionsLine": "Plural: die Ingenieure; feminin: die Ingenieurin",
+                "synonyms": [
+                  "Techniker"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Fachmann, der technische Produkte, Maschinen, Gebäude oder Systeme plant und entwickelt",
+                    "examples": [
+                      "Der Ingenieur plant eine neue Brücke."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ingenieur – Beispielsatz folgt.",
+              "answer": "Ein Ingenieur plant oder entwickelt technische Systeme, Maschinen oder Bauwerke.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Ingenieur bereitet hauptsächlich Speisen in einer Restaurantküche zu.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Ingenieur unterrichtet ausschließlich kleine Kinder in der Schule.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "Koch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Mann, der beruflich Speisen zubereitet.",
+          "explain": {
+            "entryId": "Koch",
+            "headword": "Koch",
+            "pronunciation": {
+              "display": "KOCH",
+              "ipaUK": "/kɔx/",
+              "ipaUS": "/kɔx/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Koch",
+                "inflectionsLine": "Plural: die Köche; feminin: die Köchin",
+                "synonyms": [
+                  "Küchenchef"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Mann, der beruflich in einer Küche Speisen zubereitet",
+                    "examples": [
+                      "Der Koch bereitet das Abendessen vor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Koch – Beispielsatz folgt.",
+              "answer": "Ein Koch bereitet beruflich Speisen in einer Küche zu.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Koch kontrolliert hauptsächlich den Straßenverkehr.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Koch bearbeitet hauptsächlich Briefe und Termine im Büro.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "Polizist",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Mann, der für Sicherheit und die Einhaltung von Gesetzen arbeitet.",
+          "explain": {
+            "entryId": "Polizist",
+            "headword": "Polizist",
+            "pronunciation": {
+              "display": "po-li-TSIST",
+              "ipaUK": "/poliˈt͡sɪst/",
+              "ipaUS": "/poliˈt͡sɪst/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Polizist",
+                "inflectionsLine": "Plural: die Polizisten; feminin: die Polizistin",
+                "synonyms": [
+                  "Polizeibeamter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Mann bei der Polizei, der für Sicherheit sorgt und Gesetze durchsetzt",
+                    "examples": [
+                      "Der Polizist regelt den Verkehr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Polizist – Beispielsatz folgt.",
+              "answer": "Ein Polizist sorgt für Sicherheit und achtet auf die Einhaltung von Gesetzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Polizist verkauft hauptsächlich Lebensmittel im Supermarkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Polizist behandelt hauptsächlich Patienten in einer Arztpraxis.",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "Sekretärin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Frau, die organisatorische Aufgaben in einem Büro erledigt.",
+          "explain": {
+            "entryId": "Sekretärin",
+            "headword": "Sekretärin",
+            "pronunciation": {
+              "display": "ze-kre-TÄÄ-rin",
+              "ipaUK": "/zekʁeˈtɛːʁɪn/",
+              "ipaUS": "/zekʁeˈtɛːʁɪn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Sekretärin",
+                "inflectionsLine": "Plural: die Sekretärinnen; maskulin: der Sekretär",
+                "synonyms": [
+                  "Bürokraft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Frau, die im Büro Termine, Briefe, Anrufe und andere organisatorische Aufgaben bearbeitet",
+                    "examples": [
+                      "Die Sekretärin vereinbart einen Termin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sekretärin – Beispielsatz folgt.",
+              "answer": "Eine Sekretärin organisiert Termine, Anrufe und Dokumente in einem Büro.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Sekretärin behandelt hauptsächlich Krankheiten im Krankenhaus.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Sekretärin entwirft hauptsächlich technische Motoren.",
               "ok": false
             }
           ]
@@ -174,18 +454,53 @@
           "title": "",
           "page": 9,
           "question": "Firma",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Unternehmen, das Waren oder Dienstleistungen anbietet.",
+          "explain": {
+            "entryId": "Firma",
+            "headword": "Firma",
+            "pronunciation": {
+              "display": "FIR-ma",
+              "ipaUK": "/ˈfɪʁma/",
+              "ipaUS": "/ˈfɪʁma/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Firma",
+                "inflectionsLine": "Plural: die Firmen",
+                "synonyms": [
+                  "Unternehmen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Unternehmen, das Waren herstellt, verkauft oder Dienstleistungen anbietet",
+                    "examples": [
+                      "Die Firma beschäftigt hundert Mitarbeiter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Firma – Beispielsatz folgt.",
+              "answer": "Eine Firma ist ein Unternehmen, das Waren oder Dienstleistungen anbietet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Firma ist nur ein einzelner Raum mit Schreibtischen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Firma ist ausschließlich die Person, die eine Abteilung leitet.",
               "ok": false
             }
           ]
@@ -194,18 +509,53 @@
           "title": "",
           "page": 10,
           "question": "Büro",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Raum oder Arbeitsbereich für Verwaltungs- und Schreibtischarbeit.",
+          "explain": {
+            "entryId": "Büro",
+            "headword": "Büro",
+            "pronunciation": {
+              "display": "bü-ROO",
+              "ipaUK": "/byˈʁoː/",
+              "ipaUS": "/byˈʁoː/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Büro",
+                "inflectionsLine": "Plural: die Büros",
+                "synonyms": [
+                  "Arbeitszimmer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Raum oder Bereich, in dem Verwaltungs-, Computer- oder Schreibtischarbeit erledigt wird",
+                    "examples": [
+                      "Mein Büro ist im zweiten Stock."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Büro – Beispielsatz folgt.",
+              "answer": "Ein Büro ist ein Raum oder Bereich für Verwaltungs- und Schreibtischarbeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Büro ist das gesamte Unternehmen mit allen Standorten und Mitarbeitern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Büro ist ausschließlich eine Küche zur Zubereitung von Speisen.",
               "ok": false
             }
           ]

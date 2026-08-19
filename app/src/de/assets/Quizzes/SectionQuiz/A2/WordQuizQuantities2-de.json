@@ -2,130 +2,341 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizQuantities2-de",
-  "title": "",
+  "title": "Zahlen & Mengen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "viel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine große Menge oder Anzahl.",
+          "explain": {
+            "entryId": "viel",
+            "headword": "viel",
+            "pronunciation": {
+              "display": "FIIL",
+              "ipaUK": "/fiːl/",
+              "ipaUS": "/fiːl/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen oder Zahlwort",
+                "grammarType": "Mengenangabe",
+                "headwordLine": "viel",
+                "inflectionsLine": "mehr; am meisten",
+                "synonyms": [
+                  "eine große Menge"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine große Menge oder Anzahl",
+                    "examples": [
+                      "Sie trinkt viel Wasser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "viel – Beispielsatz folgt.",
+              "answer": "Viel bezeichnet eine große Menge oder Anzahl.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Viel bezeichnet eine sehr kleine Menge oder Anzahl.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Viel bedeutet genau die Hälfte einer Menge.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "wenig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine kleine Menge oder Anzahl.",
+          "explain": {
+            "entryId": "wenig",
+            "headword": "wenig",
+            "pronunciation": {
+              "display": "WEE-nich",
+              "ipaUK": "/ˈveːnɪç/",
+              "ipaUS": "/ˈveːnɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen oder Zahlwort",
+                "grammarType": "Mengenangabe",
+                "headwordLine": "wenig",
+                "inflectionsLine": "weniger; am wenigsten",
+                "synonyms": [
+                  "eine kleine Menge"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine kleine Menge oder Anzahl; nicht viel",
+                    "examples": [
+                      "Ich habe heute wenig Zeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wenig – Beispielsatz folgt.",
+              "answer": "Wenig bezeichnet eine kleine Menge oder Anzahl.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wenig bezeichnet eine besonders große Menge oder Anzahl.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wenig bedeutet, dass die Menge genau ausreichend ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "genug",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So viel wie benötigt; ausreichend.",
+          "explain": {
+            "entryId": "genug",
+            "headword": "genug",
+            "pronunciation": {
+              "display": "ge-NUUK",
+              "ipaUK": "/ɡəˈnuːk/",
+              "ipaUS": "/ɡəˈnuːk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen oder Adverb",
+                "grammarType": "Mengenangabe",
+                "headwordLine": "genug",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ausreichend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "so viel oder so viele, wie für einen Zweck benötigt werden",
+                    "examples": [
+                      "Wir haben genug Essen für alle Gäste."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "genug – Beispielsatz folgt.",
+              "answer": "Genug bedeutet, dass die vorhandene Menge für den Zweck ausreicht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Genug bedeutet immer, dass deutlich zu wenig vorhanden ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Genug bedeutet immer, dass viel mehr als nötig vorhanden ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Menge",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine bestimmte Anzahl oder ein bestimmtes Volumen von etwas.",
+          "explain": {
+            "entryId": "Menge",
+            "headword": "Menge",
+            "pronunciation": {
+              "display": "MENG-e",
+              "ipaUK": "/ˈmɛŋə/",
+              "ipaUS": "/ˈmɛŋə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Menge",
+                "inflectionsLine": "Plural: die Mengen",
+                "synonyms": [
+                  "Quantität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine bestimmte Anzahl, Masse oder ein bestimmtes Volumen von etwas",
+                    "examples": [
+                      "Für die Suppe braucht man eine kleine Menge Salz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Menge – Beispielsatz folgt.",
+              "answer": "Eine Menge beschreibt, wie viel oder wie viele von etwas vorhanden sind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Menge ist immer eine genaue Gewichtseinheit von 1.000 Gramm.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Menge bezeichnet nur zwei zusammengehörende Gegenstände.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "ungefähr",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht genau, sondern nur annähernd.",
+          "explain": {
+            "entryId": "ungefähr",
+            "headword": "ungefähr",
+            "pronunciation": {
+              "display": "UN-ge-fäär",
+              "ipaUK": "/ˈʊnɡəˌfɛːɐ̯/",
+              "ipaUS": "/ˈʊnɡəˌfɛːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Näherungsangabe",
+                "headwordLine": "ungefähr",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "etwa",
+                  "circa"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nicht genau, sondern annähernd oder geschätzt",
+                    "examples": [
+                      "Die Fahrt dauert ungefähr eine Stunde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ungefähr – Beispielsatz folgt.",
+              "answer": "Ungefähr zeigt, dass eine Zahl oder Angabe nicht genau, sondern geschätzt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ungefähr zeigt, dass eine Zahl mathematisch vollkommen exakt ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ungefähr bedeutet, dass die Menge für einen Zweck ausreicht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "mehr",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine größere Menge oder Anzahl als zuvor oder im Vergleich.",
+          "explain": {
+            "entryId": "mehr",
+            "headword": "mehr",
+            "pronunciation": {
+              "display": "MEER",
+              "ipaUK": "/meːɐ̯/",
+              "ipaUS": "/meːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen oder Adverb",
+                "grammarType": "Komparativ von viel",
+                "headwordLine": "mehr",
+                "inflectionsLine": "Grundform: viel; höchste Stufe: am meisten",
+                "synonyms": [
+                  "eine größere Menge"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine größere Menge oder Anzahl als vorher, erwartet oder im Vergleich",
+                    "examples": [
+                      "Heute sind mehr Gäste da als gestern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "mehr – Beispielsatz folgt.",
+              "answer": "Mehr bezeichnet eine größere Menge oder Anzahl im Vergleich.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mehr bezeichnet eine kleinere Menge oder Anzahl im Vergleich.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mehr bedeutet, dass zwei Mengen genau gleich groß sind.",
               "ok": false
             }
           ]

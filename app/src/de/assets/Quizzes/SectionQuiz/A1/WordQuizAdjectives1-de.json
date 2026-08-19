@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives1-de",
-  "title": "",
+  "title": "Adjektive (häufig)",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Adjektiv mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "gut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von hoher Qualität, angenehm oder richtig.",
+          "explain": {
+            "entryId": "gut",
+            "headword": "gut",
+            "pronunciation": {
+              "display": "GUUT",
+              "ipaUK": "/ɡuːt/",
+              "ipaUS": "/ɡuːt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "unregelmäßig gesteigert",
+                "headwordLine": "gut",
+                "inflectionsLine": "besser; am besten",
+                "synonyms": [
+                  "positiv"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von hoher Qualität, angenehm, nützlich oder richtig",
+                    "examples": [
+                      "Das Essen schmeckt gut."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gut – Beispielsatz folgt.",
+              "answer": "Wenn das Essen lecker ist, schmeckt es gut.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gut bedeutet immer von sehr niedriger Qualität.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gut bedeutet ausschließlich sehr müde.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "schlecht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von niedriger Qualität, unangenehm oder falsch.",
+          "explain": {
+            "entryId": "schlecht",
+            "headword": "schlecht",
+            "pronunciation": {
+              "display": "SCHLECHT",
+              "ipaUK": "/ʃlɛçt/",
+              "ipaUS": "/ʃlɛçt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "schlecht",
+                "inflectionsLine": "schlechter; am schlechtesten",
+                "synonyms": [
+                  "mangelhaft"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von niedriger Qualität, unangenehm oder nicht richtig",
+                    "examples": [
+                      "Das verdorbene Essen schmeckt schlecht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schlecht – Beispielsatz folgt.",
+              "answer": "Verdorbenes Essen kann schlecht schmecken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schlecht bedeutet immer von höchster Qualität.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schlecht bedeutet ausschließlich sehr freundlich.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "groß",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von beträchtlicher Höhe, Länge oder Menge.",
+          "explain": {
+            "entryId": "groß",
+            "headword": "groß",
+            "pronunciation": {
+              "display": "GROOSS",
+              "ipaUK": "/ɡʁoːs/",
+              "ipaUS": "/ɡʁoːs/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "groß",
+                "inflectionsLine": "größer; am größten",
+                "synonyms": [
+                  "umfangreich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von beträchtlicher Höhe, Länge, Fläche oder Menge",
+                    "examples": [
+                      "Der Elefant ist groß."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "groß – Beispielsatz folgt.",
+              "answer": "Im Vergleich zu einer Maus ist ein Elefant groß.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Groß bedeutet immer von geringer Größe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Groß bedeutet ausschließlich preiswert.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "klein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von geringer Größe oder Menge.",
+          "explain": {
+            "entryId": "klein",
+            "headword": "klein",
+            "pronunciation": {
+              "display": "KLAIN",
+              "ipaUK": "/klaɪ̯n/",
+              "ipaUS": "/klaɪ̯n/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "klein",
+                "inflectionsLine": "kleiner; am kleinsten",
+                "synonyms": [
+                  "gering"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von geringer Größe, Länge, Fläche oder Menge",
+                    "examples": [
+                      "Die Maus ist klein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "klein – Beispielsatz folgt.",
+              "answer": "Im Vergleich zu einem Elefanten ist eine Maus klein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Klein bedeutet immer von sehr großer Größe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Klein bedeutet ausschließlich sehr schnell.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "neu",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Erst seit kurzer Zeit vorhanden oder benutzt.",
+          "explain": {
+            "entryId": "neu",
+            "headword": "neu",
+            "pronunciation": {
+              "display": "NOI",
+              "ipaUK": "/nɔɪ̯/",
+              "ipaUS": "/nɔɪ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "neu",
+                "inflectionsLine": "neuer; am neuesten",
+                "synonyms": [
+                  "ungebraucht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "erst seit kurzer Zeit hergestellt, gekauft oder vorhanden",
+                    "examples": [
+                      "Mein neues Handy ist erst einen Tag alt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "neu – Beispielsatz folgt.",
+              "answer": "Ein gestern gekauftes Handy kann noch neu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Neu bedeutet, seit sehr vielen Jahren benutzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Neu bedeutet ausschließlich sehr langsam.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "alt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Seit langer Zeit vorhanden oder schon viele Jahre lebend.",
+          "explain": {
+            "entryId": "alt",
+            "headword": "alt",
+            "pronunciation": {
+              "display": "ALT",
+              "ipaUK": "/alt/",
+              "ipaUS": "/alt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "alt",
+                "inflectionsLine": "älter; am ältesten",
+                "synonyms": [
+                  "betagt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "seit langer Zeit vorhanden oder bereits viele Jahre lebend",
+                    "examples": [
+                      "Das Haus ist über hundert Jahre alt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "alt – Beispielsatz folgt.",
+              "answer": "Ein Haus aus dem Jahr 1800 ist sehr alt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Alt bedeutet, gerade erst hergestellt worden zu sein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alt bedeutet ausschließlich sehr preiswert.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "schön",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Angenehm anzusehen, zu hören oder zu erleben.",
+          "explain": {
+            "entryId": "schön",
+            "headword": "schön",
+            "pronunciation": {
+              "display": "SCHÖÖN",
+              "ipaUK": "/ʃøːn/",
+              "ipaUS": "/ʃøːn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "schön",
+                "inflectionsLine": "schöner; am schönsten",
+                "synonyms": [
+                  "hübsch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "angenehm anzusehen, zu hören oder zu erleben",
+                    "examples": [
+                      "Der Garten ist schön."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schön – Beispielsatz folgt.",
+              "answer": "Ein Garten, den man gern ansieht, kann schön sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schön bedeutet immer unangenehm und hässlich.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schön bedeutet ausschließlich sehr teuer.",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "teuer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Viel Geld kostend.",
+          "explain": {
+            "entryId": "teuer",
+            "headword": "teuer",
+            "pronunciation": {
+              "display": "TOI-er",
+              "ipaUK": "/ˈtɔɪ̯ɐ/",
+              "ipaUS": "/ˈtɔɪ̯ɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "teuer",
+                "inflectionsLine": "teurer; am teuersten",
+                "synonyms": [
+                  "kostspielig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "viel Geld kostend",
+                    "examples": [
+                      "Das Auto ist sehr teuer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "teuer – Beispielsatz folgt.",
+              "answer": "Ein Produkt, das sehr viel Geld kostet, ist teuer.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Teuer bedeutet, sehr wenig Geld zu kosten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Teuer bedeutet ausschließlich eine niedrige Temperatur zu haben.",
               "ok": false
             }
           ]
@@ -174,18 +454,53 @@
           "title": "",
           "page": 9,
           "question": "billig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Wenig Geld kostend.",
+          "explain": {
+            "entryId": "billig",
+            "headword": "billig",
+            "pronunciation": {
+              "display": "BIL-lich",
+              "ipaUK": "/ˈbɪlɪç/",
+              "ipaUS": "/ˈbɪlɪç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "billig",
+                "inflectionsLine": "billiger; am billigsten",
+                "synonyms": [
+                  "preiswert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "wenig Geld kostend",
+                    "examples": [
+                      "Das T-Shirt war billig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "billig – Beispielsatz folgt.",
+              "answer": "Ein Produkt, das sehr wenig Geld kostet, ist billig.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Billig bedeutet, besonders viel Geld zu kosten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Billig bedeutet ausschließlich sehr müde zu sein.",
               "ok": false
             }
           ]
@@ -194,18 +509,51 @@
           "title": "",
           "page": 10,
           "question": "warm",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von einer angenehm hohen Temperatur.",
+          "explain": {
+            "entryId": "warm",
+            "headword": "warm",
+            "pronunciation": {
+              "display": "WARM",
+              "ipaUK": "/vaʁm/",
+              "ipaUS": "/vaʁm/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "warm",
+                "inflectionsLine": "wärmer; am wärmsten",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von einer relativ hohen, oft angenehmen Temperatur",
+                    "examples": [
+                      "Die Suppe ist noch warm."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "warm – Beispielsatz folgt.",
+              "answer": "Eine Suppe mit angenehm hoher Temperatur ist warm.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Warm bedeutet immer gefroren und sehr kalt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Warm bedeutet ausschließlich besonders schnell.",
               "ok": false
             }
           ]

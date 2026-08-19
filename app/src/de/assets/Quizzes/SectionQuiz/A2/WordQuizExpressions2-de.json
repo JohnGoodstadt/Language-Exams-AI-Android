@@ -2,110 +2,285 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizExpressions2-de",
-  "title": "",
+  "title": "Häufige Ausdrücke",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Schade",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt Bedauern oder Enttäuschung über etwas Ungünstiges aus.",
+          "explain": {
+            "entryId": "Schade",
+            "headword": "Schade",
+            "pronunciation": {
+              "display": "SCHAA-de",
+              "ipaUK": "/ˈʃaːdə/",
+              "ipaUS": "/ˈʃaːdə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Antwortpartikel",
+                "grammarType": "Bedauern",
+                "headwordLine": "Schade",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bedauerlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt Bedauern oder Enttäuschung über etwas Ungünstiges aus",
+                    "examples": [
+                      "Du kannst nicht kommen? Schade!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schade – Beispielsatz folgt.",
+              "answer": "Damit drückt man Bedauern oder Enttäuschung über etwas Ungünstiges aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit entschuldigt man sich für einen eigenen Fehler.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit bestätigt man, dass eine Aussage richtig ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Stimmt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bestätigt, dass eine Aussage richtig oder wahr ist.",
+          "explain": {
+            "entryId": "Stimmt",
+            "headword": "Stimmt",
+            "pronunciation": {
+              "display": "schtimmt",
+              "ipaUK": "/ʃtɪmt/",
+              "ipaUS": "/ʃtɪmt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Antwortpartikel",
+                "grammarType": "Bestätigung",
+                "headwordLine": "Stimmt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Das ist richtig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bestätigt, dass eine Aussage richtig oder wahr ist",
+                    "examples": [
+                      "Der Laden schließt um sechs. – Stimmt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Stimmt – Beispielsatz folgt.",
+              "answer": "Damit bestätigt man, dass eine Aussage richtig oder wahr ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit zeigt man, dass man eine Aussage nicht verstanden hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit drückt man Enttäuschung über eine schlechte Nachricht aus.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Was ist los?",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt, was passiert ist oder welches Problem besteht.",
+          "explain": {
+            "entryId": "Was ist los?",
+            "headword": "Was ist los?",
+            "pronunciation": {
+              "display": "vas ist loos",
+              "ipaUK": "/vas ɪst loːs/",
+              "ipaUS": "/vas ɪst loːs/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Frage nach einer Situation",
+                "headwordLine": "Was ist los?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Was ist passiert?"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt, was passiert ist oder welches Problem besteht",
+                    "examples": [
+                      "Du siehst traurig aus. Was ist los?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Was ist los? – Beispielsatz folgt.",
+              "answer": "Damit fragt man, was passiert ist oder welches Problem besteht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit fragt man nach der Meinung zu einem Film.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit wünscht man jemandem Erfolg bei einer Aufgabe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Mach dir keine Sorgen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Beruhigt jemanden und bittet die Person, nicht besorgt zu sein.",
+          "explain": {
+            "entryId": "Mach dir keine Sorgen",
+            "headword": "Mach dir keine Sorgen",
+            "pronunciation": {
+              "display": "mach diir KAI-ne SOR-gen",
+              "ipaUK": "/max diːɐ̯ ˈkaɪ̯nə ˈzɔʁɡn̩/",
+              "ipaUS": "/max diːɐ̯ ˈkaɪ̯nə ˈzɔʁɡn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Beruhigung",
+                "headwordLine": "Mach dir keine Sorgen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Keine Angst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "beruhigt jemanden und bittet die Person, nicht besorgt zu sein",
+                    "examples": [
+                      "Mach dir keine Sorgen, ich helfe dir."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mach dir keine Sorgen – Beispielsatz folgt.",
+              "answer": "Damit beruhigt man jemanden und bittet die Person, nicht besorgt zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit warnt man jemanden vor einer großen Gefahr.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit sagt man, dass einem eine Sache gleichgültig ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Viel Glück",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Wünscht jemandem Erfolg bei etwas mit ungewissem Ausgang.",
+          "explain": {
+            "entryId": "Viel Glück",
+            "headword": "Viel Glück",
+            "pronunciation": {
+              "display": "fiil glük",
+              "ipaUK": "/fiːl ɡlʏk/",
+              "ipaUS": "/fiːl ɡlʏk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wunschformel",
+                "grammarType": "Erfolgswunsch",
+                "headwordLine": "Viel Glück",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Alles Gute"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "wünscht jemandem Erfolg bei etwas mit ungewissem Ausgang",
+                    "examples": [
+                      "Du hast morgen eine Prüfung? Viel Glück!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Viel Glück – Beispielsatz folgt.",
+              "answer": "Damit wünscht man jemandem Erfolg bei einer Prüfung oder einer anderen Herausforderung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit wünscht man jemandem Freude bei einer Freizeitaktivität.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit begrüßt man jemanden nach einer langen Reise.",
               "ok": false
             }
           ]

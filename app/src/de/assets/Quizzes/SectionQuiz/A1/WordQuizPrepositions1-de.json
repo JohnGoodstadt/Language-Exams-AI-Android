@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPrepositions1-de",
-  "title": "",
+  "title": "Präpositionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, der die Bedeutung der Präposition richtig erklärt.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "in",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Innerhalb eines Raumes oder Bereichs.",
+          "explain": {
+            "entryId": "in",
+            "headword": "in",
+            "pronunciation": {
+              "display": "IN",
+              "ipaUK": "/ɪn/",
+              "ipaUS": "/ɪn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "in",
+                "inflectionsLine": "Wo? in + Dativ; Wohin? in + Akkusativ",
+                "synonyms": [
+                  "innerhalb"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "innerhalb eines Raumes, Behälters oder Bereichs",
+                    "examples": [
+                      "Der Schlüssel ist in der Tasche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in – Beispielsatz folgt.",
+              "answer": "In bedeutet hier, dass etwas innerhalb eines Raumes oder Behälters ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In bedeutet hier, dass etwas auf der Oberseite eines Gegenstands liegt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In bedeutet hier, dass etwas tiefer als ein anderer Gegenstand liegt.",
               "ok": false
             }
           ]
@@ -34,18 +69,51 @@
           "title": "",
           "page": 2,
           "question": "auf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Auf der Oberfläche eines Gegenstands.",
+          "explain": {
+            "entryId": "auf",
+            "headword": "auf",
+            "pronunciation": {
+              "display": "AUF",
+              "ipaUK": "/aʊ̯f/",
+              "ipaUS": "/aʊ̯f/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "auf",
+                "inflectionsLine": "Wo? auf + Dativ; Wohin? auf + Akkusativ",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "auf der Oberseite oder Oberfläche eines Gegenstands",
+                    "examples": [
+                      "Das Buch liegt auf dem Tisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "auf – Beispielsatz folgt.",
+              "answer": "Auf bedeutet hier, dass etwas die obere Fläche eines Gegenstands berührt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Auf bedeutet hier, dass etwas vollständig innerhalb eines Behälters ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Auf bedeutet hier, dass etwas tiefer als ein anderer Gegenstand liegt.",
               "ok": false
             }
           ]
@@ -54,18 +122,53 @@
           "title": "",
           "page": 3,
           "question": "unter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An einer tieferen Stelle als etwas anderes.",
+          "explain": {
+            "entryId": "unter",
+            "headword": "unter",
+            "pronunciation": {
+              "display": "UN-ter",
+              "ipaUK": "/ˈʊntɐ/",
+              "ipaUS": "/ˈʊntɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "unter",
+                "inflectionsLine": "Wo? unter + Dativ; Wohin? unter + Akkusativ",
+                "synonyms": [
+                  "unterhalb"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an einer tieferen Stelle als ein anderer Gegenstand",
+                    "examples": [
+                      "Die Tasche liegt unter dem Tisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unter – Beispielsatz folgt.",
+              "answer": "Unter bedeutet hier, dass etwas tiefer als ein anderer Gegenstand liegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Unter bedeutet hier, dass etwas höher als ein anderer Gegenstand liegt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Unter bedeutet hier, dass etwas seitlich neben einem Gegenstand liegt.",
               "ok": false
             }
           ]
@@ -74,18 +177,53 @@
           "title": "",
           "page": 4,
           "question": "über",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An einer höheren Stelle als etwas anderes.",
+          "explain": {
+            "entryId": "über",
+            "headword": "über",
+            "pronunciation": {
+              "display": "ÜÜ-ber",
+              "ipaUK": "/ˈyːbɐ/",
+              "ipaUS": "/ˈyːbɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "über",
+                "inflectionsLine": "Wo? über + Dativ; Wohin? über + Akkusativ",
+                "synonyms": [
+                  "oberhalb"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an einer höheren Stelle als ein anderer Gegenstand",
+                    "examples": [
+                      "Die Lampe hängt über dem Tisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "über – Beispielsatz folgt.",
+              "answer": "Über bedeutet hier, dass etwas höher als ein anderer Gegenstand ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Über bedeutet hier, dass etwas tiefer als ein anderer Gegenstand ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Über bedeutet hier, dass etwas innerhalb eines geschlossenen Behälters ist.",
               "ok": false
             }
           ]
@@ -94,18 +232,53 @@
           "title": "",
           "page": 5,
           "question": "neben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Seitlich unmittelbar bei etwas oder jemandem.",
+          "explain": {
+            "entryId": "neben",
+            "headword": "neben",
+            "pronunciation": {
+              "display": "NEE-ben",
+              "ipaUK": "/ˈneːbn̩/",
+              "ipaUS": "/ˈneːbn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "neben",
+                "inflectionsLine": "Wo? neben + Dativ; Wohin? neben + Akkusativ",
+                "synonyms": [
+                  "seitlich bei"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "unmittelbar an der Seite von etwas oder jemandem",
+                    "examples": [
+                      "Der Stuhl steht neben dem Tisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "neben – Beispielsatz folgt.",
+              "answer": "Neben bedeutet hier, dass etwas seitlich bei einem anderen Gegenstand steht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Neben bedeutet hier, dass etwas direkt darüber hängt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Neben bedeutet hier, dass etwas vollständig darin liegt.",
               "ok": false
             }
           ]
@@ -114,18 +287,53 @@
           "title": "",
           "page": 6,
           "question": "vor",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An der Vorderseite oder zeitlich früher.",
+          "explain": {
+            "entryId": "vor",
+            "headword": "vor",
+            "pronunciation": {
+              "display": "FOOR",
+              "ipaUK": "/foːɐ̯/",
+              "ipaUS": "/foːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "vor",
+                "inflectionsLine": "Wo? vor + Dativ; Wohin? vor + Akkusativ",
+                "synonyms": [
+                  "an der Vorderseite"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an der Vorderseite von etwas; auch zeitlich früher",
+                    "examples": [
+                      "Das Auto steht vor dem Haus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vor – Beispielsatz folgt.",
+              "answer": "Vor bedeutet hier, dass etwas an der Vorderseite eines anderen Gegenstands ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vor bedeutet hier, dass etwas an der Rückseite eines anderen Gegenstands ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vor bedeutet hier, dass etwas genau in der Mitte von zwei Dingen ist.",
               "ok": false
             }
           ]
@@ -134,18 +342,53 @@
           "title": "",
           "page": 7,
           "question": "hinter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An der Rückseite von etwas oder jemandem.",
+          "explain": {
+            "entryId": "hinter",
+            "headword": "hinter",
+            "pronunciation": {
+              "display": "HIN-ter",
+              "ipaUK": "/ˈhɪntɐ/",
+              "ipaUS": "/ˈhɪntɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "hinter",
+                "inflectionsLine": "Wo? hinter + Dativ; Wohin? hinter + Akkusativ",
+                "synonyms": [
+                  "an der Rückseite"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an der Rückseite von etwas oder jemandem",
+                    "examples": [
+                      "Der Garten liegt hinter dem Haus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hinter – Beispielsatz folgt.",
+              "answer": "Hinter bedeutet hier, dass etwas an der Rückseite eines anderen Gegenstands ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Hinter bedeutet hier, dass etwas an der Vorderseite eines anderen Gegenstands ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Hinter bedeutet hier, dass etwas auf dessen Oberfläche liegt.",
               "ok": false
             }
           ]
@@ -154,18 +397,53 @@
           "title": "",
           "page": 8,
           "question": "zwischen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In der Mitte von zwei oder mehreren Dingen.",
+          "explain": {
+            "entryId": "zwischen",
+            "headword": "zwischen",
+            "pronunciation": {
+              "display": "TSWISCH-en",
+              "ipaUK": "/ˈt͡svɪʃn̩/",
+              "ipaUS": "/ˈt͡svɪʃn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "zwischen",
+                "inflectionsLine": "Wo? zwischen + Dativ; Wohin? zwischen + Akkusativ",
+                "synonyms": [
+                  "in der Mitte von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in der Mitte von zwei oder mehreren Personen oder Dingen",
+                    "examples": [
+                      "Der Stuhl steht zwischen dem Tisch und der Tür."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zwischen – Beispielsatz folgt.",
+              "answer": "Zwischen bedeutet hier, dass etwas in der Mitte von zwei Dingen ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zwischen bedeutet hier, dass etwas nur oberhalb eines einzelnen Gegenstands ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zwischen bedeutet hier, dass etwas vollständig außerhalb jeder Gruppe ist.",
               "ok": false
             }
           ]
@@ -174,18 +452,53 @@
           "title": "",
           "page": 9,
           "question": "mit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Gemeinsam mit jemandem oder unter Verwendung von etwas.",
+          "explain": {
+            "entryId": "mit",
+            "headword": "mit",
+            "pronunciation": {
+              "display": "MIT",
+              "ipaUK": "/mɪt/",
+              "ipaUS": "/mɪt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ",
+                "headwordLine": "mit",
+                "inflectionsLine": "mit + Dativ",
+                "synonyms": [
+                  "gemeinsam mit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "gemeinsam mit einer Person oder unter Verwendung eines Gegenstands",
+                    "examples": [
+                      "Ich fahre mit dem Bus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "mit – Beispielsatz folgt.",
+              "answer": "Mit kann ausdrücken, dass man etwas gemeinsam tut oder ein Mittel benutzt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit drückt immer aus, dass etwas vollständig fehlt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit bezeichnet ausschließlich einen Ort unter einem Tisch.",
               "ok": false
             }
           ]
@@ -194,18 +507,53 @@
           "title": "",
           "page": 10,
           "question": "ohne",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht zusammen mit; etwas fehlt.",
+          "explain": {
+            "entryId": "ohne",
+            "headword": "ohne",
+            "pronunciation": {
+              "display": "OO-ne",
+              "ipaUK": "/ˈoːnə/",
+              "ipaUS": "/ˈoːnə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Akkusativ",
+                "headwordLine": "ohne",
+                "inflectionsLine": "ohne + Akkusativ",
+                "synonyms": [
+                  "nicht mit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nicht zusammen mit einer Person oder Sache; etwas ist nicht vorhanden",
+                    "examples": [
+                      "Ich trinke Kaffee ohne Zucker."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ohne – Beispielsatz folgt.",
+              "answer": "Ohne bedeutet, dass eine Person oder Sache nicht dabei oder nicht vorhanden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne bedeutet immer gemeinsam mit einer Person oder Sache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ohne bezeichnet ausschließlich die Oberseite eines Gegenstands.",
               "ok": false
             }
           ]

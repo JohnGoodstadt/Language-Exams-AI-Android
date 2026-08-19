@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEveryday1-de",
-  "title": "",
+  "title": "Gegenstände & Haushaltsartikel",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Tisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Möbelstück mit einer flachen Platte.",
+          "explain": {
+            "entryId": "Tisch",
+            "headword": "Tisch",
+            "pronunciation": {
+              "display": "TISCH",
+              "ipaUK": "/tɪʃ/",
+              "ipaUS": "/tɪʃ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Tisch",
+                "inflectionsLine": "Plural: die Tische",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Möbelstück mit einer flachen Platte, auf das man Dinge stellt",
+                    "examples": [
+                      "Das Essen steht auf dem Tisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tisch – Beispielsatz folgt.",
+              "answer": "Auf einen Tisch kann man Teller und Gläser stellen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Tisch ist ein Gerät zum Telefonieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Tisch ist ein Behälter zum Kühlen von Lebensmitteln.",
               "ok": false
             }
           ]
@@ -34,18 +67,53 @@
           "title": "",
           "page": 2,
           "question": "Stuhl",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Möbelstück zum Sitzen.",
+          "explain": {
+            "entryId": "Stuhl",
+            "headword": "Stuhl",
+            "pronunciation": {
+              "display": "SCHTUUL",
+              "ipaUK": "/ʃtuːl/",
+              "ipaUS": "/ʃtuːl/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Stuhl",
+                "inflectionsLine": "Plural: die Stühle",
+                "synonyms": [
+                  "Sitzmöbel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Möbelstück mit Sitzfläche und meist einer Rückenlehne für eine Person",
+                    "examples": [
+                      "Ich sitze auf einem Stuhl."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Stuhl – Beispielsatz folgt.",
+              "answer": "Auf einem Stuhl kann eine Person sitzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Stuhl ist ein Gerät zum Kühlen von Milch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Stuhl ist ein Gefäß zum Trinken.",
               "ok": false
             }
           ]
@@ -54,18 +122,53 @@
           "title": "",
           "page": 3,
           "question": "Bett",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Möbelstück zum Schlafen.",
+          "explain": {
+            "entryId": "Bett",
+            "headword": "Bett",
+            "pronunciation": {
+              "display": "BETT",
+              "ipaUK": "/bɛt/",
+              "ipaUS": "/bɛt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Bett",
+                "inflectionsLine": "Plural: die Betten",
+                "synonyms": [
+                  "Schlafplatz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Möbelstück, auf dem man liegt und schläft",
+                    "examples": [
+                      "Das Kind schläft im Bett."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bett – Beispielsatz folgt.",
+              "answer": "In einem Bett kann man liegen und schlafen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Bett ist ein Gerät zum Schreiben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Bett ist ein Gefäß für Suppe.",
               "ok": false
             }
           ]
@@ -74,18 +177,53 @@
           "title": "",
           "page": 4,
           "question": "Lampe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gegenstand, der Licht gibt.",
+          "explain": {
+            "entryId": "Lampe",
+            "headword": "Lampe",
+            "pronunciation": {
+              "display": "LAM-pe",
+              "ipaUK": "/ˈlampə/",
+              "ipaUS": "/ˈlampə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Lampe",
+                "inflectionsLine": "Plural: die Lampen",
+                "synonyms": [
+                  "Leuchte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein elektrischer oder anderer Gegenstand, der Licht erzeugt",
+                    "examples": [
+                      "Ich schalte die Lampe ein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Lampe – Beispielsatz folgt.",
+              "answer": "Eine Lampe macht einen dunklen Raum heller.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Lampe ist ein Möbelstück zum Schlafen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Lampe ist ein Gerät zum Kühlen von Essen.",
               "ok": false
             }
           ]
@@ -94,18 +232,51 @@
           "title": "",
           "page": 5,
           "question": "Tür",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine bewegliche Fläche zum Öffnen oder Schließen eines Eingangs.",
+          "explain": {
+            "entryId": "Tür",
+            "headword": "Tür",
+            "pronunciation": {
+              "display": "TÜÜR",
+              "ipaUK": "/tyːɐ̯/",
+              "ipaUS": "/tyːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Tür",
+                "inflectionsLine": "Plural: die Türen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine bewegliche Fläche, mit der man einen Eingang öffnet oder schließt",
+                    "examples": [
+                      "Bitte schließe die Tür."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tür – Beispielsatz folgt.",
+              "answer": "Durch eine offene Tür kann man in ein Zimmer gehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Tür ist ein Gerät zum Fernsehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Tür ist ein Werkzeug zum Schreiben.",
               "ok": false
             }
           ]
@@ -114,18 +285,51 @@
           "title": "",
           "page": 6,
           "question": "Fenster",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine verglaste Öffnung, die Licht in einen Raum lässt.",
+          "explain": {
+            "entryId": "Fenster",
+            "headword": "Fenster",
+            "pronunciation": {
+              "display": "FENS-ter",
+              "ipaUK": "/ˈfɛnstɐ/",
+              "ipaUS": "/ˈfɛnstɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Fenster",
+                "inflectionsLine": "Plural: die Fenster",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine meist verglaste Öffnung in einer Wand, die Licht und Luft hereinlässt",
+                    "examples": [
+                      "Ich öffne das Fenster."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fenster – Beispielsatz folgt.",
+              "answer": "Durch ein Fenster kann Licht in ein Zimmer kommen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Fenster ist ein Gefäß zum Trinken.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Fenster ist ein Möbelstück zum Schlafen.",
               "ok": false
             }
           ]
@@ -134,18 +338,51 @@
           "title": "",
           "page": 7,
           "question": "Buch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Gebundene oder digitale Seiten mit Text oder Bildern.",
+          "explain": {
+            "entryId": "Buch",
+            "headword": "Buch",
+            "pronunciation": {
+              "display": "BUUCH",
+              "ipaUK": "/buːx/",
+              "ipaUS": "/buːx/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Buch",
+                "inflectionsLine": "Plural: die Bücher",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Sammlung von Seiten oder digitalen Inhalten mit Text oder Bildern zum Lesen",
+                    "examples": [
+                      "Ich lese ein Buch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Buch – Beispielsatz folgt.",
+              "answer": "Ein Buch enthält Seiten oder digitale Inhalte zum Lesen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Buch ist ein Gerät zum Kühlen von Essen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Buch ist ein Möbelstück zum Sitzen.",
               "ok": false
             }
           ]
@@ -154,18 +391,53 @@
           "title": "",
           "page": 8,
           "question": "Stift",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Werkzeug zum Schreiben oder Zeichnen.",
+          "explain": {
+            "entryId": "Stift",
+            "headword": "Stift",
+            "pronunciation": {
+              "display": "SCHTIFT",
+              "ipaUK": "/ʃtɪft/",
+              "ipaUS": "/ʃtɪft/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Stift",
+                "inflectionsLine": "Plural: die Stifte",
+                "synonyms": [
+                  "Schreibgerät"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein schmales Werkzeug, mit dem man schreibt oder zeichnet",
+                    "examples": [
+                      "Ich schreibe mit einem Stift."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Stift – Beispielsatz folgt.",
+              "answer": "Mit einem Stift kann man schreiben oder zeichnen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Stift ist ein Gerät zum Fernsehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Stift ist ein Möbelstück zum Liegen.",
               "ok": false
             }
           ]
@@ -174,18 +446,53 @@
           "title": "",
           "page": 9,
           "question": "Handy",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein tragbares Telefon.",
+          "explain": {
+            "entryId": "Handy",
+            "headword": "Handy",
+            "pronunciation": {
+              "display": "HEN-di",
+              "ipaUK": "/ˈhɛndi/",
+              "ipaUS": "/ˈhɛndi/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Handy",
+                "inflectionsLine": "Plural: die Handys",
+                "synonyms": [
+                  "Mobiltelefon"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein kleines tragbares Telefon, oft mit Internet und Apps",
+                    "examples": [
+                      "Ich rufe dich mit meinem Handy an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Handy – Beispielsatz folgt.",
+              "answer": "Mit einem Handy kann man unterwegs telefonieren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Handy ist ein Möbelstück zum Essen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Handy ist ein Gefäß für Kaffee.",
               "ok": false
             }
           ]
@@ -194,18 +501,53 @@
           "title": "",
           "page": 10,
           "question": "Computer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein elektronisches Gerät zum Verarbeiten von Daten.",
+          "explain": {
+            "entryId": "Computer",
+            "headword": "Computer",
+            "pronunciation": {
+              "display": "kom-PJUU-ter",
+              "ipaUK": "/kɔmˈpjuːtɐ/",
+              "ipaUS": "/kɔmˈpjuːtɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Computer",
+                "inflectionsLine": "Plural: die Computer",
+                "synonyms": [
+                  "Rechner"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein elektronisches Gerät, das Daten verarbeitet und Programme ausführt",
+                    "examples": [
+                      "Ich schreibe die E-Mail am Computer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Computer – Beispielsatz folgt.",
+              "answer": "Mit einem Computer kann man Programme benutzen und Dateien bearbeiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Computer ist ein Möbelstück zum Schlafen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Computer ist ein Teller für Essen.",
               "ok": false
             }
           ]

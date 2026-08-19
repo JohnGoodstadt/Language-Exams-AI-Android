@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizGreetings1-de",
-  "title": "",
+  "title": "Begrüßungen & Verabschiedungen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Situation, die am besten zur Bedeutung des Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Guten Tag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine höfliche Begrüßung am Tag.",
+          "explain": {
+            "entryId": "Guten Tag",
+            "headword": "Guten Tag",
+            "pronunciation": {
+              "display": "GU-ten TAAK",
+              "ipaUK": "/ˌɡuːtn̩ ˈtaːk/",
+              "ipaUS": "/ˌɡuːtn̩ ˈtaːk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "höflich",
+                "headwordLine": "Guten Tag!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Hallo"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine höfliche Begrüßung, die man tagsüber verwendet",
+                    "examples": [
+                      "Guten Tag, Frau Keller!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Guten Tag – Beispielsatz folgt.",
+              "answer": "Das sagt man höflich, wenn man jemanden tagsüber begrüßt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man, wenn man sich vor dem Schlafengehen verabschiedet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, um einer kranken Person schnelle Genesung zu wünschen.",
               "ok": false
             }
           ]
@@ -34,18 +69,54 @@
           "title": "",
           "page": 2,
           "question": "Grüß dich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine informelle Begrüßung für eine vertraute Person.",
+          "explain": {
+            "entryId": "Grüß dich",
+            "headword": "Grüß dich",
+            "pronunciation": {
+              "display": "GRÜÜSS dich",
+              "ipaUK": "/ɡʁyːs dɪç/",
+              "ipaUS": "/ɡʁyːs dɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "informell, Singular",
+                "headwordLine": "Grüß dich!",
+                "inflectionsLine": "zu mehreren Personen: Grüßt euch!",
+                "synonyms": [
+                  "Hallo",
+                  "Hi"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine informelle Begrüßung für eine Person, die man duzt",
+                    "examples": [
+                      "Grüß dich, Tom! Lange nicht gesehen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Grüß dich – Beispielsatz folgt.",
+              "answer": "Das sagt man zur informellen Begrüßung einer Person, die man duzt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man als formellen Abschied von einer unbekannten Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, um jemandem Erfolg bei einer Prüfung zu wünschen.",
               "ok": false
             }
           ]
@@ -54,18 +125,53 @@
           "title": "",
           "page": 3,
           "question": "Herzlich willkommen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine besonders freundliche Begrüßung eines Gastes.",
+          "explain": {
+            "entryId": "Herzlich willkommen",
+            "headword": "Herzlich willkommen",
+            "pronunciation": {
+              "display": "HERTS-lich will-KOM-men",
+              "ipaUK": "/ˈhɛʁt͡slɪç vɪlˈkɔmən/",
+              "ipaUS": "/ˈhɛʁt͡slɪç vɪlˈkɔmən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "freundlich",
+                "headwordLine": "Herzlich willkommen!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Willkommen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine besonders warme und freundliche Begrüßung für einen Gast oder Besucher",
+                    "examples": [
+                      "Herzlich willkommen in unserem Hotel!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Herzlich willkommen – Beispielsatz folgt.",
+              "answer": "Das sagt man, wenn man einen Gast besonders freundlich empfängt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man, wenn ein Gast das Haus verlässt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, wenn man eine Reise absagen muss.",
               "ok": false
             }
           ]
@@ -74,18 +180,53 @@
           "title": "",
           "page": 4,
           "question": "Wie geht es Ihnen?",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine höfliche Frage nach dem Befinden.",
+          "explain": {
+            "entryId": "Wie geht es Ihnen?",
+            "headword": "Wie geht es Ihnen?",
+            "pronunciation": {
+              "display": "wii geet es II-nen",
+              "ipaUK": "/viː ɡeːt ɛs ˈiːnən/",
+              "ipaUS": "/viː ɡeːt ɛs ˈiːnən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Frageformel",
+                "grammarType": "formell",
+                "headwordLine": "Wie geht es Ihnen?",
+                "inflectionsLine": "informell: Wie geht es dir?",
+                "synonyms": [
+                  "Wie geht es Ihnen heute?"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine höfliche Frage danach, wie sich eine Person fühlt",
+                    "examples": [
+                      "Guten Morgen, Herr Braun. Wie geht es Ihnen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wie geht es Ihnen? – Beispielsatz folgt.",
+              "answer": "Damit fragt man eine Person höflich nach ihrem Befinden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit fragt man eine Person höflich nach ihrer Adresse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit fragt man, wohin eine Person reisen möchte.",
               "ok": false
             }
           ]
@@ -94,18 +235,53 @@
           "title": "",
           "page": 5,
           "question": "Schön, Sie kennenzulernen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine höfliche Reaktion beim ersten Kennenlernen.",
+          "explain": {
+            "entryId": "Schön, Sie kennenzulernen",
+            "headword": "Schön, Sie kennenzulernen",
+            "pronunciation": {
+              "display": "schöön zii KEN-nen-tsu-ler-nen",
+              "ipaUK": "/ʃøːn ziː ˈkɛnənˌt͡suˌlɛʁnən/",
+              "ipaUS": "/ʃøːn ziː ˈkɛnənˌt͡suˌlɛʁnən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "formell",
+                "headwordLine": "Schön, Sie kennenzulernen.",
+                "inflectionsLine": "informell: Schön, dich kennenzulernen.",
+                "synonyms": [
+                  "Freut mich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine höfliche Wendung, die man bei der ersten persönlichen Begegnung verwendet",
+                    "examples": [
+                      "Ich bin Frau König. – Schön, Sie kennenzulernen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schön, Sie kennenzulernen – Beispielsatz folgt.",
+              "answer": "Das sagt man höflich, wenn man eine Person zum ersten Mal kennenlernt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man, wenn man sich nach vielen Jahren endgültig verabschiedet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, um nach dem Geburtsdatum einer Person zu fragen.",
               "ok": false
             }
           ]
@@ -114,18 +290,53 @@
           "title": "",
           "page": 6,
           "question": "Auf Wiedersehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein höflicher oder formeller Abschiedsgruß.",
+          "explain": {
+            "entryId": "Auf Wiedersehen",
+            "headword": "Auf Wiedersehen",
+            "pronunciation": {
+              "display": "auf WII-der-see-en",
+              "ipaUK": "/aʊ̯f ˈviːdɐˌzeːən/",
+              "ipaUS": "/aʊ̯f ˈviːdɐˌzeːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "höflich oder formell",
+                "headwordLine": "Auf Wiedersehen!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Tschüss"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein höflicher oder formeller Gruß beim Abschied",
+                    "examples": [
+                      "Vielen Dank für Ihren Besuch. Auf Wiedersehen!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Auf Wiedersehen – Beispielsatz folgt.",
+              "answer": "Das sagt man höflich, wenn man sich von jemandem verabschiedet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man, wenn man einen Gast zum ersten Mal begrüßt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, um einer Person zum Geburtstag zu gratulieren.",
               "ok": false
             }
           ]
@@ -134,18 +345,53 @@
           "title": "",
           "page": 7,
           "question": "Bis später",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Abschiedsgruß, wenn man sich später wiedersieht.",
+          "explain": {
+            "entryId": "Bis später",
+            "headword": "Bis später",
+            "pronunciation": {
+              "display": "bis SCHPÄÄ-ter",
+              "ipaUK": "/bɪs ˈʃpɛːtɐ/",
+              "ipaUS": "/bɪs ˈʃpɛːtɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "informell",
+                "headwordLine": "Bis später!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bis nachher"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Abschiedsgruß, wenn man erwartet, die Person später wiederzusehen",
+                    "examples": [
+                      "Ich gehe kurz einkaufen. Bis später!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bis später – Beispielsatz folgt.",
+              "answer": "Das sagt man beim Abschied, wenn man sich später wiedersehen möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man, wenn man sicher erst im nächsten Jahr zurückkommt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man zur Begrüßung eines neuen Kollegen.",
               "ok": false
             }
           ]
@@ -154,18 +400,53 @@
           "title": "",
           "page": 8,
           "question": "Bis bald",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Abschiedsgruß mit der Hoffnung auf ein baldiges Wiedersehen.",
+          "explain": {
+            "entryId": "Bis bald",
+            "headword": "Bis bald",
+            "pronunciation": {
+              "display": "bis BALT",
+              "ipaUK": "/bɪs balt/",
+              "ipaUS": "/bɪs balt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "informell",
+                "headwordLine": "Bis bald!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bis demnächst"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Abschiedsgruß, mit dem man ein Wiedersehen in naher Zukunft erwartet oder erhofft",
+                    "examples": [
+                      "Danke für deinen Besuch. Bis bald!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bis bald – Beispielsatz folgt.",
+              "answer": "Das sagt man beim Abschied, wenn man sich in naher Zukunft wiedersehen möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man nur, wenn man sich genau eine Stunde später trifft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, um eine Person nach ihrer Herkunft zu fragen.",
               "ok": false
             }
           ]
@@ -174,18 +455,54 @@
           "title": "",
           "page": 9,
           "question": "Mach's gut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein informeller Abschiedsgruß mit guten Wünschen.",
+          "explain": {
+            "entryId": "Mach's gut",
+            "headword": "Mach's gut",
+            "pronunciation": {
+              "display": "MACHS GUUT",
+              "ipaUK": "/maxs ɡuːt/",
+              "ipaUS": "/maxs ɡuːt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "informell",
+                "headwordLine": "Mach's gut!",
+                "inflectionsLine": "zu mehreren Personen: Macht's gut!",
+                "synonyms": [
+                  "Tschüss",
+                  "Pass auf dich auf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein informeller Abschiedsgruß, mit dem man einer Person alles Gute wünscht",
+                    "examples": [
+                      "Ich muss los. Mach's gut!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mach's gut – Beispielsatz folgt.",
+              "answer": "Das sagt man informell beim Abschied und wünscht der Person alles Gute.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man formell, um nach einer Unterschrift zu fragen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, wenn man eine kranke Person nach ihrer Telefonnummer fragt.",
               "ok": false
             }
           ]
@@ -194,18 +511,53 @@
           "title": "",
           "page": 10,
           "question": "Schönen Tag noch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein freundlicher Wunsch für den restlichen Tag.",
+          "explain": {
+            "entryId": "Schönen Tag noch",
+            "headword": "Schönen Tag noch",
+            "pronunciation": {
+              "display": "SCHÖÖ-nen taak noch",
+              "ipaUK": "/ˈʃøːnən taːk nɔx/",
+              "ipaUS": "/ˈʃøːnən taːk nɔx/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Abschiedswunsch",
+                "headwordLine": "Schönen Tag noch!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Einen schönen Tag noch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein freundlicher Wunsch beim Abschied für den restlichen Tag",
+                    "examples": [
+                      "Danke für Ihren Einkauf. Schönen Tag noch!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schönen Tag noch – Beispielsatz folgt.",
+              "answer": "Das sagt man beim Abschied und wünscht der Person einen angenehmen restlichen Tag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man nur vor einer langen Auslandsreise.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, um nach dem Familienstand zu fragen.",
               "ok": false
             }
           ]

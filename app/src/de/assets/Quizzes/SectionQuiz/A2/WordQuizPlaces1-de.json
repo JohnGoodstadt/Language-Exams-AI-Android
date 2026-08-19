@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPlaces1-de",
-  "title": "",
+  "title": "Orte & Richtungen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Bahnhof",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Ort, an dem Züge ankommen und abfahren.",
+          "explain": {
+            "entryId": "Bahnhof",
+            "headword": "Bahnhof",
+            "pronunciation": {
+              "display": "BAAN-hoof",
+              "ipaUK": "/ˈbaːnˌhoːf/",
+              "ipaUS": "/ˈbaːnˌhoːf/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Bahnhof",
+                "inflectionsLine": "Plural: die Bahnhöfe",
+                "synonyms": [
+                  "Bahnstation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Ort mit Gleisen und Bahnsteigen, an dem Züge ankommen und abfahren",
+                    "examples": [
+                      "Der Zug fährt am Hauptbahnhof ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bahnhof – Beispielsatz folgt.",
+              "answer": "Ein Bahnhof ist ein Ort, an dem Züge ankommen und abfahren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Bahnhof ist eine Stelle am Straßenrand, an der nur Busse halten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Bahnhof ist eine Kreuzung, die nur durch eine Ampel geregelt wird.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Haltestelle",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein festgelegter Ort, an dem Busse oder Straßenbahnen halten.",
+          "explain": {
+            "entryId": "Haltestelle",
+            "headword": "Haltestelle",
+            "pronunciation": {
+              "display": "HAL-te-sch-tel-le",
+              "ipaUK": "/ˈhaltəˌʃtɛlə/",
+              "ipaUS": "/ˈhaltəˌʃtɛlə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Haltestelle",
+                "inflectionsLine": "Plural: die Haltestellen",
+                "synonyms": [
+                  "Station"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein festgelegter Ort, an dem Busse oder Straßenbahnen halten, damit Fahrgäste ein- und aussteigen",
+                    "examples": [
+                      "Der Bus hält an der nächsten Haltestelle."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Haltestelle – Beispielsatz folgt.",
+              "answer": "Eine Haltestelle ist ein festgelegter Ort, an dem Busse oder Straßenbahnen halten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Haltestelle ist ein großes Gebäude mit Bahnsteigen nur für Fernzüge.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Haltestelle ist die Mitte einer Stadt mit vielen Geschäften.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Kreuzung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Stelle, an der sich Straßen kreuzen oder treffen.",
+          "explain": {
+            "entryId": "Kreuzung",
+            "headword": "Kreuzung",
+            "pronunciation": {
+              "display": "KROI-tsung",
+              "ipaUK": "/ˈkʁɔɪ̯t͡sʊŋ/",
+              "ipaUS": "/ˈkʁɔɪ̯t͡sʊŋ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Kreuzung",
+                "inflectionsLine": "Plural: die Kreuzungen",
+                "synonyms": [
+                  "Straßenkreuzung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Stelle, an der sich zwei oder mehrere Straßen treffen oder kreuzen",
+                    "examples": [
+                      "An der nächsten Kreuzung biegen Sie links ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kreuzung – Beispielsatz folgt.",
+              "answer": "Eine Kreuzung ist eine Stelle, an der sich mehrere Straßen treffen oder kreuzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Kreuzung ist ein Bauwerk, das über einen Fluss führt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Kreuzung ist ein Ort, an dem ausschließlich Züge halten.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "geradeaus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne nach links oder rechts abzubiegen.",
+          "explain": {
+            "entryId": "geradeaus",
+            "headword": "geradeaus",
+            "pronunciation": {
+              "display": "ge-RAA-de-aus",
+              "ipaUK": "/ɡəˌʁaːdəˈʔaʊ̯s/",
+              "ipaUS": "/ɡəˌʁaːdəˈʔaʊ̯s/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Richtungsangabe",
+                "headwordLine": "geradeaus",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gerade weiter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in derselben Richtung weiter, ohne nach links oder rechts abzubiegen",
+                    "examples": [
+                      "Gehen Sie an der Ampel geradeaus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "geradeaus – Beispielsatz folgt.",
+              "answer": "Geradeaus bedeutet, ohne eine Kurve nach links oder rechts weiterzugehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Geradeaus bedeutet, an der nächsten Ecke nach links abzubiegen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Geradeaus bedeutet, umzukehren und denselben Weg zurückzugehen.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "links",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Auf oder zu der linken Seite.",
+          "explain": {
+            "entryId": "links",
+            "headword": "links",
+            "pronunciation": {
+              "display": "LINKS",
+              "ipaUK": "/lɪŋks/",
+              "ipaUS": "/lɪŋks/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Richtungsangabe",
+                "headwordLine": "links",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auf der linken Seite"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "auf der linken Seite oder in Richtung der linken Seite",
+                    "examples": [
+                      "Die Apotheke ist links neben der Bank."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "links – Beispielsatz folgt.",
+              "answer": "Links bezeichnet die Seite, die der rechten Seite gegenüberliegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Links bezeichnet immer dieselbe Seite wie rechts.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Links bedeutet, ohne Richtungsänderung geradeaus weiterzugehen.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "rechts",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Auf oder zu der rechten Seite.",
+          "explain": {
+            "entryId": "rechts",
+            "headword": "rechts",
+            "pronunciation": {
+              "display": "RECHTS",
+              "ipaUK": "/ʁɛçt͡s/",
+              "ipaUS": "/ʁɛçt͡s/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Richtungsangabe",
+                "headwordLine": "rechts",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auf der rechten Seite"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "auf der rechten Seite oder in Richtung der rechten Seite",
+                    "examples": [
+                      "Biegen Sie an der Kreuzung rechts ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "rechts – Beispielsatz folgt.",
+              "answer": "Rechts bezeichnet die Seite, die der linken Seite gegenüberliegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Rechts bezeichnet immer dieselbe Seite wie links.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Rechts bedeutet, ohne Richtungsänderung geradeaus weiterzugehen.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "abbiegen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Richtung nach links oder rechts ändern.",
+          "explain": {
+            "entryId": "abbiegen",
+            "headword": "abbiegen",
+            "pronunciation": {
+              "display": "AP-bii-gen",
+              "ipaUK": "/ˈapˌbiːɡn̩/",
+              "ipaUS": "/ˈapˌbiːɡn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, trennbar",
+                "headwordLine": "abbiegen",
+                "inflectionsLine": "ich biege ab; du biegst ab; er/sie/es biegt ab",
+                "synonyms": [
+                  "die Richtung ändern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an einer Straße oder Kreuzung die Richtung nach links oder rechts ändern",
+                    "examples": [
+                      "An der Ampel müssen Sie rechts abbiegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abbiegen – Beispielsatz folgt.",
+              "answer": "Abbiegen bedeutet, an einer Straße die Richtung nach links oder rechts zu ändern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Abbiegen bedeutet, ohne jede Richtungsänderung geradeaus zu fahren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Abbiegen bedeutet, sich zu verirren und den Weg nicht mehr zu kennen.",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "Richtung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Verlauf oder das Ziel einer Bewegung.",
+          "explain": {
+            "entryId": "Richtung",
+            "headword": "Richtung",
+            "pronunciation": {
+              "display": "RICH-tung",
+              "ipaUK": "/ˈʁɪçtʊŋ/",
+              "ipaUS": "/ˈʁɪçtʊŋ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Richtung",
+                "inflectionsLine": "Plural: die Richtungen",
+                "synonyms": [
+                  "Orientierung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der räumliche Verlauf oder das Ziel, in das sich jemand oder etwas bewegt",
+                    "examples": [
+                      "In welcher Richtung liegt der Bahnhof?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Richtung – Beispielsatz folgt.",
+              "answer": "Die Richtung zeigt, wohin eine Bewegung verläuft oder welches Ziel sie hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Richtung zeigt nur, wie lange ein Weg dauert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Richtung ist immer der genaue Abstand in Kilometern.",
               "ok": false
             }
           ]
@@ -174,18 +454,54 @@
           "title": "",
           "page": 9,
           "question": "in der Nähe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht weit entfernt.",
+          "explain": {
+            "entryId": "in der Nähe",
+            "headword": "in der Nähe",
+            "pronunciation": {
+              "display": "in der NÄÄ-e",
+              "ipaUK": "/ɪn deːɐ̯ ˈnɛːə/",
+              "ipaUS": "/ɪn deːɐ̯ ˈnɛːə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präpositionalphrase",
+                "grammarType": "Ortsangabe",
+                "headwordLine": "in der Nähe",
+                "inflectionsLine": "oft: in der Nähe von + Dativ",
+                "synonyms": [
+                  "nicht weit entfernt",
+                  "nah"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in kurzem räumlichem Abstand; nicht weit entfernt",
+                    "examples": [
+                      "Gibt es in der Nähe eine Haltestelle?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in der Nähe – Beispielsatz folgt.",
+              "answer": "In der Nähe bedeutet, dass etwas nicht weit entfernt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In der Nähe bedeutet, dass etwas sehr weit entfernt ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In der Nähe bedeutet, dass etwas genau im Stadtzentrum liegt.",
               "ok": false
             }
           ]
@@ -194,18 +510,53 @@
           "title": "",
           "page": 10,
           "question": "Ampel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Lichtanlage, die den Verkehr regelt.",
+          "explain": {
+            "entryId": "Ampel",
+            "headword": "Ampel",
+            "pronunciation": {
+              "display": "AM-pel",
+              "ipaUK": "/ˈampl̩/",
+              "ipaUS": "/ˈampl̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Ampel",
+                "inflectionsLine": "Plural: die Ampeln",
+                "synonyms": [
+                  "Lichtzeichenanlage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Anlage mit roten, gelben und grünen Lichtern, die den Verkehr regelt",
+                    "examples": [
+                      "Bei Rot warten wir an der Ampel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ampel – Beispielsatz folgt.",
+              "answer": "Eine Ampel regelt mit farbigen Lichtzeichen den Verkehr.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Ampel ist ein Schild, das nur den Namen einer Straße zeigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Ampel ist ein Bauwerk, das über einen Fluss führt.",
               "ok": false
             }
           ]

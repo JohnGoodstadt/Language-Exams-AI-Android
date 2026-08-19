@@ -2,110 +2,285 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizGreetings2-de",
-  "title": "",
+  "title": "Begrüßungen & Verabschiedungen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Situation, die am besten zur Bedeutung des Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Gute Reise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein guter Wunsch vor einer Reise.",
+          "explain": {
+            "entryId": "Gute Reise",
+            "headword": "Gute Reise",
+            "pronunciation": {
+              "display": "GUU-te RAI-ze",
+              "ipaUK": "/ˈɡuːtə ˈʁaɪ̯zə/",
+              "ipaUS": "/ˈɡuːtə ˈʁaɪ̯zə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wunschformel",
+                "grammarType": "vor einer Reise",
+                "headwordLine": "Gute Reise!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Komm gut an"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Wunsch für eine angenehme und sichere Reise",
+                    "examples": [
+                      "Dein Zug fährt gleich. Gute Reise!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gute Reise – Beispielsatz folgt.",
+              "answer": "Das sagt man zu jemandem, der gleich eine Reise beginnt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man zu jemandem, der eine Prüfung bestanden hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man zu jemandem, der krank im Bett liegt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Viel Erfolg",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Wunsch, dass etwas gut gelingt.",
+          "explain": {
+            "entryId": "Viel Erfolg",
+            "headword": "Viel Erfolg",
+            "pronunciation": {
+              "display": "fiil er-FOLK",
+              "ipaUK": "/fiːl ɛɐ̯ˈfɔlk/",
+              "ipaUS": "/fiːl ɛɐ̯ˈfɔlk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wunschformel",
+                "grammarType": "vor einer Aufgabe",
+                "headwordLine": "Viel Erfolg!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Viel Glück"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Wunsch, dass eine Aufgabe, Prüfung oder ein Vorhaben gut gelingt",
+                    "examples": [
+                      "Du hast morgen eine Prüfung. Viel Erfolg!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Viel Erfolg – Beispielsatz folgt.",
+              "answer": "Das sagt man zu jemandem vor einer wichtigen Aufgabe oder Prüfung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man nur zu jemandem, der von einer Reise zurückkommt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man als formelle Frage nach dem Befinden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Gute Besserung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Wunsch an eine kranke oder verletzte Person.",
+          "explain": {
+            "entryId": "Gute Besserung",
+            "headword": "Gute Besserung",
+            "pronunciation": {
+              "display": "GUU-te BES-se-rung",
+              "ipaUK": "/ˈɡuːtə ˈbɛsəʁʊŋ/",
+              "ipaUS": "/ˈɡuːtə ˈbɛsəʁʊŋ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wunschformel",
+                "grammarType": "bei Krankheit oder Verletzung",
+                "headwordLine": "Gute Besserung!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Werd schnell gesund"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Wunsch, dass eine kranke oder verletzte Person schnell wieder gesund wird",
+                    "examples": [
+                      "Du hast eine starke Erkältung. Gute Besserung!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gute Besserung – Beispielsatz folgt.",
+              "answer": "Das sagt man zu einer kranken oder verletzten Person und wünscht ihr Genesung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man zu einer Person, die eine neue Arbeit beginnt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man zu einem Gast, der gerade angekommen ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Willkommen zurück",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Begrüßung für jemanden, der zurückgekommen ist.",
+          "explain": {
+            "entryId": "Willkommen zurück",
+            "headword": "Willkommen zurück",
+            "pronunciation": {
+              "display": "will-KOM-men tsu-RÜK",
+              "ipaUK": "/vɪlˈkɔmən t͡suˈʁʏk/",
+              "ipaUS": "/vɪlˈkɔmən t͡suˈʁʏk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "bei einer Rückkehr",
+                "headwordLine": "Willkommen zurück!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Schön, dass du wieder da bist"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine freundliche Begrüßung für eine Person, die an einen Ort zurückgekehrt ist",
+                    "examples": [
+                      "Du bist wieder aus dem Urlaub da. Willkommen zurück!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Willkommen zurück – Beispielsatz folgt.",
+              "answer": "Das sagt man zur Begrüßung, wenn jemand an einen Ort zurückgekehrt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das sagt man beim Abschied vor einer langen Reise.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das sagt man, um jemandem schnelle Genesung zu wünschen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Alles Gute",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein allgemeiner Wunsch für Glück und Wohlergehen.",
+          "explain": {
+            "entryId": "Alles Gute",
+            "headword": "Alles Gute",
+            "pronunciation": {
+              "display": "AL-les GUU-te",
+              "ipaUK": "/ˈaləs ˈɡuːtə/",
+              "ipaUS": "/ˈaləs ˈɡuːtə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wunschformel",
+                "grammarType": "allgemein",
+                "headwordLine": "Alles Gute!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Die besten Wünsche"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein allgemeiner Wunsch für Glück, Gesundheit und eine gute Zukunft",
+                    "examples": [
+                      "Alles Gute zum Geburtstag!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Alles Gute – Beispielsatz folgt.",
+              "answer": "Damit wünscht man einer Person allgemein Glück und Wohlergehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit fragt man eine Person nach ihrer Postleitzahl.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit sagt man, dass man eine Erklärung nicht verstanden hat.",
               "ok": false
             }
           ]

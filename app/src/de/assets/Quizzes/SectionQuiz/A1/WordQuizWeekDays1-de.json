@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizWeekDays1-de",
-  "title": "",
+  "title": "Wochentage",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Montag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der erste Wochentag; der Tag nach Sonntag.",
+          "explain": {
+            "entryId": "Montag",
+            "headword": "Montag",
+            "pronunciation": {
+              "display": "MOON-taak",
+              "ipaUK": "/ˈmoːntaːk/",
+              "ipaUS": "/ˈmoːntaːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Montag",
+                "inflectionsLine": "Plural: die Montage",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der erste Tag der Woche; der Tag nach Sonntag und vor Dienstag",
+                    "examples": [
+                      "Am Montag beginnt die neue Arbeitswoche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Montag – Beispielsatz folgt.",
+              "answer": "Der Montag kommt direkt nach dem Sonntag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Montag kommt direkt nach dem Dienstag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Montag liegt zwischen Freitag und Sonntag.",
               "ok": false
             }
           ]
@@ -34,18 +67,51 @@
           "title": "",
           "page": 2,
           "question": "Dienstag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der zweite Wochentag; der Tag nach Montag.",
+          "explain": {
+            "entryId": "Dienstag",
+            "headword": "Dienstag",
+            "pronunciation": {
+              "display": "DIINS-taak",
+              "ipaUK": "/ˈdiːnstaːk/",
+              "ipaUS": "/ˈdiːnstaːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Dienstag",
+                "inflectionsLine": "Plural: die Dienstage",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der zweite Tag der Woche; der Tag nach Montag und vor Mittwoch",
+                    "examples": [
+                      "Am Dienstag habe ich Deutschunterricht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Dienstag – Beispielsatz folgt.",
+              "answer": "Der Dienstag liegt zwischen Montag und Mittwoch.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Dienstag liegt zwischen Donnerstag und Samstag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Dienstag kommt direkt nach dem Sonntag.",
               "ok": false
             }
           ]
@@ -54,18 +120,51 @@
           "title": "",
           "page": 3,
           "question": "Mittwoch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der dritte Wochentag; der Tag zwischen Dienstag und Donnerstag.",
+          "explain": {
+            "entryId": "Mittwoch",
+            "headword": "Mittwoch",
+            "pronunciation": {
+              "display": "MIT-woch",
+              "ipaUK": "/ˈmɪtvɔx/",
+              "ipaUS": "/ˈmɪtvɔx/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Mittwoch",
+                "inflectionsLine": "Plural: die Mittwoche",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der dritte Tag der Woche; der Tag nach Dienstag und vor Donnerstag",
+                    "examples": [
+                      "Am Mittwoch ist die Mitte der Arbeitswoche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mittwoch – Beispielsatz folgt.",
+              "answer": "Der Mittwoch liegt zwischen Dienstag und Donnerstag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Mittwoch liegt zwischen Freitag und Sonntag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Mittwoch kommt direkt nach dem Donnerstag.",
               "ok": false
             }
           ]
@@ -74,18 +173,51 @@
           "title": "",
           "page": 4,
           "question": "Donnerstag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der vierte Wochentag; der Tag nach Mittwoch.",
+          "explain": {
+            "entryId": "Donnerstag",
+            "headword": "Donnerstag",
+            "pronunciation": {
+              "display": "DON-ners-taak",
+              "ipaUK": "/ˈdɔnɐstaːk/",
+              "ipaUS": "/ˈdɔnɐstaːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Donnerstag",
+                "inflectionsLine": "Plural: die Donnerstage",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der vierte Tag der Woche; der Tag nach Mittwoch und vor Freitag",
+                    "examples": [
+                      "Am Donnerstag gehe ich einkaufen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Donnerstag – Beispielsatz folgt.",
+              "answer": "Der Donnerstag liegt zwischen Mittwoch und Freitag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Donnerstag liegt zwischen Sonntag und Dienstag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Donnerstag kommt direkt nach dem Freitag.",
               "ok": false
             }
           ]
@@ -94,18 +226,51 @@
           "title": "",
           "page": 5,
           "question": "Freitag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der fünfte Wochentag; der Tag vor Samstag.",
+          "explain": {
+            "entryId": "Freitag",
+            "headword": "Freitag",
+            "pronunciation": {
+              "display": "FRAI-taak",
+              "ipaUK": "/ˈfʁaɪ̯taːk/",
+              "ipaUS": "/ˈfʁaɪ̯taːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Freitag",
+                "inflectionsLine": "Plural: die Freitage",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der fünfte Tag der Woche; der Tag nach Donnerstag und vor Samstag",
+                    "examples": [
+                      "Am Freitag endet für viele Menschen die Arbeitswoche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Freitag – Beispielsatz folgt.",
+              "answer": "Der Freitag liegt zwischen Donnerstag und Samstag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Freitag liegt zwischen Montag und Mittwoch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Freitag kommt direkt nach dem Samstag.",
               "ok": false
             }
           ]
@@ -114,18 +279,53 @@
           "title": "",
           "page": 6,
           "question": "Samstag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der sechste Wochentag; der erste Tag des Wochenendes.",
+          "explain": {
+            "entryId": "Samstag",
+            "headword": "Samstag",
+            "pronunciation": {
+              "display": "ZAMS-taak",
+              "ipaUK": "/ˈzamstaːk/",
+              "ipaUS": "/ˈzamstaːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Samstag",
+                "inflectionsLine": "Plural: die Samstage",
+                "synonyms": [
+                  "Sonnabend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der sechste Tag der Woche; der Tag nach Freitag und vor Sonntag",
+                    "examples": [
+                      "Am Samstag beginnt das Wochenende."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Samstag – Beispielsatz folgt.",
+              "answer": "Der Samstag liegt zwischen Freitag und Sonntag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Samstag liegt zwischen Montag und Mittwoch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Samstag kommt direkt nach dem Sonntag.",
               "ok": false
             }
           ]
@@ -134,18 +334,51 @@
           "title": "",
           "page": 7,
           "question": "Sonntag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der siebte Wochentag; der Tag nach Samstag.",
+          "explain": {
+            "entryId": "Sonntag",
+            "headword": "Sonntag",
+            "pronunciation": {
+              "display": "ZONN-taak",
+              "ipaUK": "/ˈzɔntaːk/",
+              "ipaUS": "/ˈzɔntaːk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Sonntag",
+                "inflectionsLine": "Plural: die Sonntage",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der siebte Tag der Woche; der Tag nach Samstag und vor Montag",
+                    "examples": [
+                      "Am Sonntag ist das Wochenende fast vorbei."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sonntag – Beispielsatz folgt.",
+              "answer": "Der Sonntag liegt zwischen Samstag und Montag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Sonntag liegt zwischen Dienstag und Donnerstag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Sonntag kommt direkt vor dem Samstag.",
               "ok": false
             }
           ]
@@ -154,18 +387,51 @@
           "title": "",
           "page": 8,
           "question": "Wochenende",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Samstag und Sonntag am Ende der Woche.",
+          "explain": {
+            "entryId": "Wochenende",
+            "headword": "Wochenende",
+            "pronunciation": {
+              "display": "WO-chen-en-de",
+              "ipaUK": "/ˈvɔxn̩ˌʔɛndə/",
+              "ipaUS": "/ˈvɔxn̩ˌʔɛndə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Wochenende",
+                "inflectionsLine": "Plural: die Wochenenden",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die freien Tage am Ende der Woche, normalerweise Samstag und Sonntag",
+                    "examples": [
+                      "Am Wochenende habe ich frei."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wochenende – Beispielsatz folgt.",
+              "answer": "Samstag und Sonntag bilden normalerweise das Wochenende.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Montag und Dienstag bilden normalerweise das Wochenende.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Wochenende ist ein einzelner Monat im Jahr.",
               "ok": false
             }
           ]

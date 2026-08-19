@@ -2,90 +2,232 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizExpressions2-de",
-  "title": "",
+  "title": "Häufige Ausdrücke",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Situation, in der der Ausdruck richtig verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Wie bitte?",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine höfliche Bitte, etwas zu wiederholen oder zu erklären.",
+          "explain": {
+            "entryId": "Wie bitte?",
+            "headword": "Wie bitte?",
+            "pronunciation": {
+              "display": "wii BIT-te",
+              "ipaUK": "/viː ˈbɪtə/",
+              "ipaUS": "/viː ˈbɪtə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Frageformel",
+                "headwordLine": "Wie bitte?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Können Sie das wiederholen?"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine höfliche Bitte, etwas nicht Gehörtes oder Verstandenes zu wiederholen",
+                    "examples": [
+                      "Wie bitte? Können Sie das noch einmal sagen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wie bitte? – Beispielsatz folgt.",
+              "answer": "Wie bitte? sagt man höflich, wenn jemand etwas wiederholen soll.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wie bitte? sagt man ausschließlich, um sich zu verabschieden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wie bitte? bedeutet immer, dass man alles sicher verstanden hat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Alles klar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass alles verstanden oder in Ordnung ist.",
+          "explain": {
+            "entryId": "Alles klar",
+            "headword": "Alles klar",
+            "pronunciation": {
+              "display": "AL-les klaar",
+              "ipaUK": "/ˈaləs klaːɐ̯/",
+              "ipaUS": "/ˈaləs klaːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Antwortformel",
+                "headwordLine": "Alles klar!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verstanden",
+                  "In Ordnung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt aus, dass man etwas verstanden hat oder dass alles in Ordnung ist",
+                    "examples": [
+                      "Wir treffen uns um acht. – Alles klar!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Alles klar – Beispielsatz folgt.",
+              "answer": "Alles klar kann bedeuten, dass man etwas verstanden hat oder dass alles in Ordnung ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Alles klar bedeutet immer, dass nichts verstanden wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alles klar ist ausschließlich eine Bitte um Entschuldigung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Natürlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt Selbstverständlichkeit, Sicherheit oder bereitwillige Zustimmung aus.",
+          "explain": {
+            "entryId": "Natürlich",
+            "headword": "Natürlich",
+            "pronunciation": {
+              "display": "na-TÜÜR-lich",
+              "ipaUK": "/naˈtyːɐ̯lɪç/",
+              "ipaUS": "/naˈtyːɐ̯lɪç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Modaladverb",
+                "headwordLine": "natürlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "selbstverständlich",
+                  "klar"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt aus, dass etwas selbstverständlich oder sicher ist oder dass man gern zustimmt",
+                    "examples": [
+                      "Kannst du mir helfen? – Natürlich!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Natürlich – Beispielsatz folgt.",
+              "answer": "Natürlich kann eine sichere oder bereitwillige Zustimmung ausdrücken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Natürlich bedeutet immer, dass etwas unmöglich ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Natürlich ist ausschließlich ein Ausdruck fehlenden Wissens.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Bis später",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Abschiedsgruß, wenn man sich später wiedersieht.",
+          "explain": {
+            "entryId": "Bis später",
+            "headword": "Bis später",
+            "pronunciation": {
+              "display": "bis SCHPÄÄ-ter",
+              "ipaUK": "/bɪs ˈʃpɛːtɐ/",
+              "ipaUS": "/bɪs ˈʃpɛːtɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Grußformel",
+                "grammarType": "Abschiedsformel",
+                "headwordLine": "Bis später!",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bis nachher"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Abschiedsgruß, wenn man erwartet, die andere Person später wiederzusehen",
+                    "examples": [
+                      "Ich muss jetzt gehen. Bis später!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bis später – Beispielsatz folgt.",
+              "answer": "Bis später sagt man beim Abschied, wenn man sich später wiedersehen möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bis später ist ausschließlich ein Gruß beim ersten Kennenlernen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bis später bedeutet, dass man die andere Person nie wiedersehen will.",
               "ok": false
             }
           ]

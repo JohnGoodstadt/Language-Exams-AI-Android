@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives1-de",
-  "title": "",
+  "title": "Adjektive",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Adjektivs passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "wichtig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von großer Bedeutung oder notwendig.",
+          "explain": {
+            "entryId": "wichtig",
+            "headword": "wichtig",
+            "pronunciation": {
+              "display": "WICH-tich",
+              "ipaUK": "/ˈvɪçtɪç/",
+              "ipaUS": "/ˈvɪçtɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "wichtig",
+                "inflectionsLine": "wichtiger; am wichtigsten",
+                "synonyms": [
+                  "bedeutend",
+                  "notwendig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von großer Bedeutung oder für ein Ziel notwendig",
+                    "examples": [
+                      "Gesundheit ist für viele Menschen wichtig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wichtig – Beispielsatz folgt.",
+              "answer": "Wichtig bedeutet, dass etwas große Bedeutung hat oder notwendig ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wichtig bedeutet, dass etwas ohne jede Bedeutung ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wichtig bedeutet nur, dass etwas viel Lärm macht.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "interessant",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aufmerksamkeit oder Neugier weckend.",
+          "explain": {
+            "entryId": "interessant",
+            "headword": "interessant",
+            "pronunciation": {
+              "display": "in-te-res-SANT",
+              "ipaUK": "/ɪntəʁɛˈsant/",
+              "ipaUS": "/ɪntəʁɛˈsant/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "interessant",
+                "inflectionsLine": "interessanter; am interessantesten",
+                "synonyms": [
+                  "spannend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "so, dass etwas Aufmerksamkeit, Neugier oder Interesse weckt",
+                    "examples": [
+                      "Der Vortrag war sehr interessant."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "interessant – Beispielsatz folgt.",
+              "answer": "Interessant ist etwas, das Aufmerksamkeit oder Neugier weckt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Interessant ist etwas, das niemanden beschäftigt und sehr langweilig wirkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Interessant bedeutet ausschließlich gefährlich.",
               "ok": false
             }
           ]
@@ -54,18 +125,53 @@
           "title": "",
           "page": 3,
           "question": "langweilig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Interesse oder Abwechslung.",
+          "explain": {
+            "entryId": "langweilig",
+            "headword": "langweilig",
+            "pronunciation": {
+              "display": "LANG-wai-lich",
+              "ipaUK": "/ˈlaŋvaɪ̯lɪç/",
+              "ipaUS": "/ˈlaŋvaɪ̯lɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "langweilig",
+                "inflectionsLine": "langweiliger; am langweiligsten",
+                "synonyms": [
+                  "eintönig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ohne Interesse, Spannung oder Abwechslung",
+                    "examples": [
+                      "Der Film war lang und langweilig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "langweilig – Beispielsatz folgt.",
+              "answer": "Langweilig ist etwas, das wenig Interesse oder Abwechslung bietet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Langweilig ist etwas, das starke Neugier und Spannung weckt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Langweilig bedeutet ausschließlich besonders bequem.",
               "ok": false
             }
           ]
@@ -74,18 +180,54 @@
           "title": "",
           "page": 4,
           "question": "freundlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nett, höflich und zugewandt.",
+          "explain": {
+            "entryId": "freundlich",
+            "headword": "freundlich",
+            "pronunciation": {
+              "display": "FROINT-lich",
+              "ipaUK": "/ˈfʁɔɪ̯ntlɪç/",
+              "ipaUS": "/ˈfʁɔɪ̯ntlɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "freundlich",
+                "inflectionsLine": "freundlicher; am freundlichsten",
+                "synonyms": [
+                  "nett",
+                  "höflich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nett, höflich und positiv im Umgang mit anderen Menschen",
+                    "examples": [
+                      "Die Verkäuferin war sehr freundlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "freundlich – Beispielsatz folgt.",
+              "answer": "Freundlich ist jemand, der anderen nett, höflich und positiv begegnet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Freundlich ist jemand, der andere absichtlich unhöflich behandelt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Freundlich bedeutet ausschließlich leise und ohne Geräusche.",
               "ok": false
             }
           ]
@@ -94,18 +236,53 @@
           "title": "",
           "page": 5,
           "question": "gefährlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit einem Risiko für Schaden oder Verletzung.",
+          "explain": {
+            "entryId": "gefährlich",
+            "headword": "gefährlich",
+            "pronunciation": {
+              "display": "ge-FÄÄR-lich",
+              "ipaUK": "/ɡəˈfɛːɐ̯lɪç/",
+              "ipaUS": "/ɡəˈfɛːɐ̯lɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "gefährlich",
+                "inflectionsLine": "gefährlicher; am gefährlichsten",
+                "synonyms": [
+                  "riskant"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit einem Risiko, dass jemand verletzt wird oder ein Schaden entsteht",
+                    "examples": [
+                      "Bei Rot über die Straße zu gehen ist gefährlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gefährlich – Beispielsatz folgt.",
+              "answer": "Gefährlich ist etwas, bei dem ein Risiko für Schaden oder Verletzung besteht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gefährlich ist etwas, das sicher und ohne jedes Risiko ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gefährlich bedeutet ausschließlich modern und neu.",
               "ok": false
             }
           ]
@@ -114,18 +291,54 @@
           "title": "",
           "page": 6,
           "question": "ruhig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Still, entspannt oder mit wenig Lärm.",
+          "explain": {
+            "entryId": "ruhig",
+            "headword": "ruhig",
+            "pronunciation": {
+              "display": "RUU-ich",
+              "ipaUK": "/ˈʁuːɪç/",
+              "ipaUS": "/ˈʁuːɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "ruhig",
+                "inflectionsLine": "ruhiger; am ruhigsten",
+                "synonyms": [
+                  "still",
+                  "entspannt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit wenig Lärm, Bewegung oder Aufregung; entspannt",
+                    "examples": [
+                      "Die Straße ist nachts sehr ruhig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ruhig – Beispielsatz folgt.",
+              "answer": "Ruhig beschreibt einen Ort mit wenig Lärm oder eine entspannte Person.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ruhig beschreibt einen Ort mit sehr starkem Lärm.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ruhig bedeutet ausschließlich krank und schwach.",
               "ok": false
             }
           ]
@@ -134,18 +347,53 @@
           "title": "",
           "page": 7,
           "question": "laut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit starkem, gut hörbarem Geräusch.",
+          "explain": {
+            "entryId": "laut",
+            "headword": "laut",
+            "pronunciation": {
+              "display": "LAUT",
+              "ipaUK": "/laʊ̯t/",
+              "ipaUS": "/laʊ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "laut",
+                "inflectionsLine": "lauter; am lautesten",
+                "synonyms": [
+                  "geräuschvoll"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit starkem, deutlich hörbarem Geräusch",
+                    "examples": [
+                      "Die Musik ist zu laut."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "laut – Beispielsatz folgt.",
+              "answer": "Laut beschreibt ein starkes, deutlich hörbares Geräusch.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Laut beschreibt völlige Stille ohne Geräusche.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Laut bedeutet ausschließlich bequem und angenehm.",
               "ok": false
             }
           ]
@@ -154,18 +402,53 @@
           "title": "",
           "page": 8,
           "question": "modern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Dem heutigen Stand oder Stil entsprechend.",
+          "explain": {
+            "entryId": "modern",
+            "headword": "modern",
+            "pronunciation": {
+              "display": "mo-DERN",
+              "ipaUK": "/moˈdɛʁn/",
+              "ipaUS": "/moˈdɛʁn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "modern",
+                "inflectionsLine": "moderner; am modernsten",
+                "synonyms": [
+                  "zeitgemäß"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "dem heutigen Stand der Technik, Mode oder Lebensweise entsprechend",
+                    "examples": [
+                      "Das Büro hat moderne Computer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "modern – Beispielsatz folgt.",
+              "answer": "Modern ist etwas, das dem heutigen Stand oder Stil entspricht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Modern ist etwas, das nur aus einer weit vergangenen Zeit stammt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Modern bedeutet ausschließlich billig.",
               "ok": false
             }
           ]
@@ -174,18 +457,53 @@
           "title": "",
           "page": 9,
           "question": "bequem",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Angenehm zu benutzen, zu tragen oder darin zu sitzen.",
+          "explain": {
+            "entryId": "bequem",
+            "headword": "bequem",
+            "pronunciation": {
+              "display": "be-KWEEM",
+              "ipaUK": "/bəˈkveːm/",
+              "ipaUS": "/bəˈkveːm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "bequem",
+                "inflectionsLine": "bequemer; am bequemsten",
+                "synonyms": [
+                  "komfortabel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "angenehm und komfortabel zu benutzen, zu tragen oder darin zu sitzen",
+                    "examples": [
+                      "Dieser Stuhl ist sehr bequem."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bequem – Beispielsatz folgt.",
+              "answer": "Bequem ist etwas, das angenehm und komfortabel zu benutzen ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bequem ist etwas, das unangenehm drückt und Schmerzen verursacht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bequem bedeutet ausschließlich interessant und spannend.",
               "ok": false
             }
           ]
@@ -194,18 +512,54 @@
           "title": "",
           "page": 10,
           "question": "gesund",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht krank oder gut für die Gesundheit.",
+          "explain": {
+            "entryId": "gesund",
+            "headword": "gesund",
+            "pronunciation": {
+              "display": "ge-ZUNT",
+              "ipaUK": "/ɡəˈzʊnt/",
+              "ipaUS": "/ɡəˈzʊnt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "gesund",
+                "inflectionsLine": "gesünder; am gesündesten",
+                "synonyms": [
+                  "fit",
+                  "nicht krank"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "körperlich oder geistig nicht krank; auch gut für die Gesundheit",
+                    "examples": [
+                      "Bewegung und Gemüse sind gesund."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gesund – Beispielsatz folgt.",
+              "answer": "Gesund bedeutet, nicht krank zu sein oder die Gesundheit zu unterstützen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gesund bedeutet, an einer Krankheit zu leiden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gesund bedeutet ausschließlich pünktlich zu sein.",
               "ok": false
             }
           ]

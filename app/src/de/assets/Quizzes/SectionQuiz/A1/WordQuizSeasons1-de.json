@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizSeasons1-de",
-  "title": "",
+  "title": "Jahreszeiten",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Frühling",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Jahreszeit nach dem Winter und vor dem Sommer.",
+          "explain": {
+            "entryId": "Frühling",
+            "headword": "Frühling",
+            "pronunciation": {
+              "display": "FRÜÜ-ling",
+              "ipaUK": "/ˈfʁyːlɪŋ/",
+              "ipaUS": "/ˈfʁyːlɪŋ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Frühling",
+                "inflectionsLine": "Plural: die Frühlinge",
+                "synonyms": [
+                  "Frühjahr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Jahreszeit nach dem Winter und vor dem Sommer, in der es wärmer wird",
+                    "examples": [
+                      "Im Frühling blühen viele Blumen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Frühling – Beispielsatz folgt.",
+              "answer": "Im Frühling wird es wärmer und viele Blumen blühen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Frühling ist die Jahreszeit nach dem Sommer und vor dem Winter.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Im Frühling sind die Nächte normalerweise am längsten und kältesten.",
               "ok": false
             }
           ]
@@ -34,18 +69,51 @@
           "title": "",
           "page": 2,
           "question": "Sommer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die warme Jahreszeit nach dem Frühling.",
+          "explain": {
+            "entryId": "Sommer",
+            "headword": "Sommer",
+            "pronunciation": {
+              "display": "ZOM-mer",
+              "ipaUK": "/ˈzɔmɐ/",
+              "ipaUS": "/ˈzɔmɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Sommer",
+                "inflectionsLine": "Plural: die Sommer",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die meist wärmste Jahreszeit nach dem Frühling und vor dem Herbst",
+                    "examples": [
+                      "Im Sommer sind die Tage lang und oft warm."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sommer – Beispielsatz folgt.",
+              "answer": "Der Sommer liegt zwischen Frühling und Herbst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Sommer liegt zwischen Herbst und Frühling.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Im Sommer sind die Tage normalerweise am kürzesten.",
               "ok": false
             }
           ]
@@ -54,18 +122,51 @@
           "title": "",
           "page": 3,
           "question": "Herbst",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Jahreszeit nach dem Sommer und vor dem Winter.",
+          "explain": {
+            "entryId": "Herbst",
+            "headword": "Herbst",
+            "pronunciation": {
+              "display": "HERPST",
+              "ipaUK": "/hɛʁpst/",
+              "ipaUS": "/hɛʁpst/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Herbst",
+                "inflectionsLine": "Plural: die Herbste",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Jahreszeit nach dem Sommer und vor dem Winter, in der viele Blätter fallen",
+                    "examples": [
+                      "Im Herbst fallen die Blätter von den Bäumen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Herbst – Beispielsatz folgt.",
+              "answer": "Im Herbst fallen viele Blätter von den Bäumen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Herbst liegt zwischen Winter und Sommer.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Im Herbst beginnt direkt nach dem Frühling der heißeste Teil des Jahres.",
               "ok": false
             }
           ]
@@ -74,18 +175,51 @@
           "title": "",
           "page": 4,
           "question": "Winter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die kalte Jahreszeit nach dem Herbst.",
+          "explain": {
+            "entryId": "Winter",
+            "headword": "Winter",
+            "pronunciation": {
+              "display": "WIN-ter",
+              "ipaUK": "/ˈvɪntɐ/",
+              "ipaUS": "/ˈvɪntɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Winter",
+                "inflectionsLine": "Plural: die Winter",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die meist kälteste Jahreszeit nach dem Herbst und vor dem Frühling",
+                    "examples": [
+                      "Im Winter kann es schneien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Winter – Beispielsatz folgt.",
+              "answer": "Der Winter liegt zwischen Herbst und Frühling.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Winter liegt zwischen Frühling und Herbst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Winter ist normalerweise die wärmste Jahreszeit.",
               "ok": false
             }
           ]

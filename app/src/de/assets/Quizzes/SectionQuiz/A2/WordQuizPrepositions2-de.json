@@ -2,110 +2,288 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPrepositions2-de",
-  "title": "",
+  "title": "Präpositionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "innerhalb",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet etwas in einer Grenze, einem Bereich oder einer Frist.",
+          "explain": {
+            "entryId": "innerhalb",
+            "headword": "innerhalb",
+            "pronunciation": {
+              "display": "IN-ner-halp",
+              "ipaUK": "/ˈɪnɐhalp/",
+              "ipaUS": "/ˈɪnɐhalp/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "innere Grenze",
+                "headwordLine": "innerhalb",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Inneren von",
+                  "binnen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet etwas in einer Grenze, einem Bereich oder einer Frist",
+                    "examples": [
+                      "Bitte antworten Sie innerhalb einer Woche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "innerhalb – Beispielsatz folgt.",
+              "answer": "Bezeichnet etwas innerhalb einer räumlichen Grenze oder vor Ablauf einer Frist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet etwas jenseits einer Grenze oder nach einer Frist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Bewegung in Richtung einer Person.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "außerhalb",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet etwas jenseits einer Grenze oder eines Bereichs.",
+          "explain": {
+            "entryId": "außerhalb",
+            "headword": "außerhalb",
+            "pronunciation": {
+              "display": "AU-ser-halp",
+              "ipaUK": "/ˈaʊ̯sɐhalp/",
+              "ipaUS": "/ˈaʊ̯sɐhalp/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "äußere Position",
+                "headwordLine": "außerhalb",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nicht innerhalb von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet etwas jenseits einer Grenze oder eines Bereichs",
+                    "examples": [
+                      "Außerhalb der Stadt ist es ruhiger."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "außerhalb – Beispielsatz folgt.",
+              "answer": "Bezeichnet etwas, das nicht innerhalb einer Grenze oder eines Bereichs liegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet etwas in der Mitte eines begrenzten Bereichs.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet den Anfang eines zukünftigen Zeitraums.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "ab",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet einen Ausgangspunkt in Zeit oder Raum.",
+          "explain": {
+            "entryId": "ab",
+            "headword": "ab",
+            "pronunciation": {
+              "display": "ap",
+              "ipaUK": "/ap/",
+              "ipaUS": "/ap/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Ausgangspunkt",
+                "headwordLine": "ab",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "von … an"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet einen Ausgangspunkt in Zeit oder Raum",
+                    "examples": [
+                      "Ab Montag arbeite ich wieder."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ab – Beispielsatz folgt.",
+              "answer": "Bezeichnet den Punkt, an dem etwas in Zeit oder Raum beginnt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet den Punkt, an dem etwas endgültig endet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Position gegenüber einem Gebäude.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "nach",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine spätere Zeit oder eine Richtung zu einem Ort.",
+          "explain": {
+            "entryId": "nach",
+            "headword": "nach",
+            "pronunciation": {
+              "display": "naach",
+              "ipaUK": "/naːx/",
+              "ipaUS": "/naːx/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "spätere Zeit oder Richtung",
+                "headwordLine": "nach",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "später als",
+                  "in Richtung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine spätere Zeit oder eine Richtung zu einem Ort",
+                    "examples": [
+                      "Nach dem Essen gehen wir nach Hause."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nach – Beispielsatz folgt.",
+              "answer": "Bezeichnet etwas später als ein Ereignis oder eine Richtung zu einem Ziel.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet ausschließlich etwas vor einem Ereignis.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Position rund um ein Objekt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "vor",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine frühere Zeit oder eine Position an der Vorderseite.",
+          "explain": {
+            "entryId": "vor",
+            "headword": "vor",
+            "pronunciation": {
+              "display": "foor",
+              "ipaUK": "/foːɐ̯/",
+              "ipaUS": "/foːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "frühere Zeit oder Vorderseite",
+                "headwordLine": "vor",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "früher als",
+                  "an der Vorderseite von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine frühere Zeit oder eine Position an der Vorderseite",
+                    "examples": [
+                      "Wir treffen uns vor dem Kino."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vor – Beispielsatz folgt.",
+              "answer": "Bezeichnet etwas früher als ein Ereignis oder eine Position an der Vorderseite.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet etwas später als ein Ereignis oder hinter einem Ort.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine Bewegung quer durch einen Bereich.",
               "ok": false
             }
           ]

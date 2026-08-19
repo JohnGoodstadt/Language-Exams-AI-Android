@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizMonths1-de",
-  "title": "",
+  "title": "Monate",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Januar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der erste Monat des Jahres.",
+          "explain": {
+            "entryId": "Januar",
+            "headword": "Januar",
+            "pronunciation": {
+              "display": "JAN-u-ar",
+              "ipaUK": "/ˈjanuaːɐ̯/",
+              "ipaUS": "/ˈjanuaːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Januar",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der erste Monat des Jahres; der Monat nach Dezember und vor Februar",
+                    "examples": [
+                      "Das neue Jahr beginnt im Januar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Januar – Beispielsatz folgt.",
+              "answer": "Der Januar ist der erste Monat des Jahres.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Januar liegt zwischen Juni und August.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Januar ist der letzte Monat des Jahres.",
               "ok": false
             }
           ]
@@ -34,18 +67,51 @@
           "title": "",
           "page": 2,
           "question": "Februar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der zweite Monat des Jahres.",
+          "explain": {
+            "entryId": "Februar",
+            "headword": "Februar",
+            "pronunciation": {
+              "display": "FEE-bru-ar",
+              "ipaUK": "/ˈfeːbʁuaːɐ̯/",
+              "ipaUS": "/ˈfeːbʁuaːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Februar",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der zweite Monat des Jahres; der Monat nach Januar und vor März",
+                    "examples": [
+                      "Der Februar hat normalerweise 28 Tage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Februar – Beispielsatz folgt.",
+              "answer": "Der Februar liegt zwischen Januar und März.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Februar liegt zwischen August und Oktober.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Februar ist der zwölfte Monat des Jahres.",
               "ok": false
             }
           ]
@@ -54,18 +120,51 @@
           "title": "",
           "page": 3,
           "question": "März",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der dritte Monat des Jahres.",
+          "explain": {
+            "entryId": "März",
+            "headword": "März",
+            "pronunciation": {
+              "display": "MÄRTS",
+              "ipaUK": "/mɛʁt͡s/",
+              "ipaUS": "/mɛʁt͡s/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der März",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der dritte Monat des Jahres; der Monat nach Februar und vor April",
+                    "examples": [
+                      "Im März beginnt der Frühling."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "März – Beispielsatz folgt.",
+              "answer": "Der März liegt zwischen Februar und April.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der März liegt zwischen September und November.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der März ist der erste Monat des Jahres.",
               "ok": false
             }
           ]
@@ -74,18 +173,51 @@
           "title": "",
           "page": 4,
           "question": "April",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der vierte Monat des Jahres.",
+          "explain": {
+            "entryId": "April",
+            "headword": "April",
+            "pronunciation": {
+              "display": "a-PRILL",
+              "ipaUK": "/aˈpʁɪl/",
+              "ipaUS": "/aˈpʁɪl/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der April",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der vierte Monat des Jahres; der Monat nach März und vor Mai",
+                    "examples": [
+                      "Im April wird das Wetter oft wärmer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "April – Beispielsatz folgt.",
+              "answer": "Der April liegt zwischen März und Mai.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der April liegt zwischen Oktober und Dezember.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der April ist der achte Monat des Jahres.",
               "ok": false
             }
           ]
@@ -94,18 +226,51 @@
           "title": "",
           "page": 5,
           "question": "Mai",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der fünfte Monat des Jahres.",
+          "explain": {
+            "entryId": "Mai",
+            "headword": "Mai",
+            "pronunciation": {
+              "display": "MAI",
+              "ipaUK": "/maɪ̯/",
+              "ipaUS": "/maɪ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Mai",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der fünfte Monat des Jahres; der Monat nach April und vor Juni",
+                    "examples": [
+                      "Im Mai blühen viele Blumen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mai – Beispielsatz folgt.",
+              "answer": "Der Mai liegt zwischen April und Juni.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Mai liegt zwischen November und Januar.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Mai ist der zehnte Monat des Jahres.",
               "ok": false
             }
           ]
@@ -114,18 +279,51 @@
           "title": "",
           "page": 6,
           "question": "Juni",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der sechste Monat des Jahres.",
+          "explain": {
+            "entryId": "Juni",
+            "headword": "Juni",
+            "pronunciation": {
+              "display": "JUU-ni",
+              "ipaUK": "/ˈjuːni/",
+              "ipaUS": "/ˈjuːni/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Juni",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der sechste Monat des Jahres; der Monat nach Mai und vor Juli",
+                    "examples": [
+                      "Im Juni beginnt der Sommer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Juni – Beispielsatz folgt.",
+              "answer": "Der Juni liegt zwischen Mai und Juli.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Juni liegt zwischen Dezember und Februar.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Juni ist der zweite Monat des Jahres.",
               "ok": false
             }
           ]
@@ -134,18 +332,51 @@
           "title": "",
           "page": 7,
           "question": "Juli",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der siebte Monat des Jahres.",
+          "explain": {
+            "entryId": "Juli",
+            "headword": "Juli",
+            "pronunciation": {
+              "display": "JUU-li",
+              "ipaUK": "/ˈjuːli/",
+              "ipaUS": "/ˈjuːli/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Juli",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der siebte Monat des Jahres; der Monat nach Juni und vor August",
+                    "examples": [
+                      "Im Juli sind oft Sommerferien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Juli – Beispielsatz folgt.",
+              "answer": "Der Juli liegt zwischen Juni und August.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Juli liegt zwischen Januar und März.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Juli ist der vierte Monat des Jahres.",
               "ok": false
             }
           ]
@@ -154,18 +385,51 @@
           "title": "",
           "page": 8,
           "question": "August",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der achte Monat des Jahres.",
+          "explain": {
+            "entryId": "August",
+            "headword": "August",
+            "pronunciation": {
+              "display": "au-GUST",
+              "ipaUK": "/aʊ̯ˈɡʊst/",
+              "ipaUS": "/aʊ̯ˈɡʊst/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der August",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der achte Monat des Jahres; der Monat nach Juli und vor September",
+                    "examples": [
+                      "Im August ist es oft warm."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "August – Beispielsatz folgt.",
+              "answer": "Der August liegt zwischen Juli und September.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der August liegt zwischen Februar und April.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der August ist der erste Monat des Jahres.",
               "ok": false
             }
           ]
@@ -174,18 +438,51 @@
           "title": "",
           "page": 9,
           "question": "September",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der neunte Monat des Jahres.",
+          "explain": {
+            "entryId": "September",
+            "headword": "September",
+            "pronunciation": {
+              "display": "zep-TEM-ber",
+              "ipaUK": "/zɛpˈtɛmbɐ/",
+              "ipaUS": "/zɛpˈtɛmbɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der September",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der neunte Monat des Jahres; der Monat nach August und vor Oktober",
+                    "examples": [
+                      "Im September beginnt der Herbst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "September – Beispielsatz folgt.",
+              "answer": "Der September liegt zwischen August und Oktober.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der September liegt zwischen März und Mai.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der September ist der zwölfte Monat des Jahres.",
               "ok": false
             }
           ]
@@ -194,18 +491,51 @@
           "title": "",
           "page": 10,
           "question": "Oktober",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der zehnte Monat des Jahres.",
+          "explain": {
+            "entryId": "Oktober",
+            "headword": "Oktober",
+            "pronunciation": {
+              "display": "ok-TOO-ber",
+              "ipaUK": "/ɔkˈtoːbɐ/",
+              "ipaUS": "/ɔkˈtoːbɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Oktober",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der zehnte Monat des Jahres; der Monat nach September und vor November",
+                    "examples": [
+                      "Im Oktober fallen viele Blätter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Oktober – Beispielsatz folgt.",
+              "answer": "Der Oktober liegt zwischen September und November.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Oktober liegt zwischen April und Juni.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Oktober ist der zweite Monat des Jahres.",
               "ok": false
             }
           ]

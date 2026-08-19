@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs1-de",
-  "title": "",
+  "title": "Häufige Verben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Verb mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "sein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich in einem Zustand befinden oder eine Identität haben.",
+          "explain": {
+            "entryId": "sein",
+            "headword": "sein",
+            "pronunciation": {
+              "display": "ZAIN",
+              "ipaUK": "/zaɪ̯n/",
+              "ipaUS": "/zaɪ̯n/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "sein",
+                "inflectionsLine": "ich bin; du bist; er/sie/es ist",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Identität, Eigenschaft, Position oder einen Zustand ausdrücken",
+                    "examples": [
+                      "Ich bin müde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sein – Beispielsatz folgt.",
+              "answer": "In „Ich bin müde“ wird sein für einen Zustand verwendet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb sein bedeutet, ein Getränk zu sich zu nehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb sein bedeutet, einen Text mit einem Stift zu produzieren.",
               "ok": false
             }
           ]
@@ -34,18 +67,53 @@
           "title": "",
           "page": 2,
           "question": "haben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas besitzen oder über etwas verfügen.",
+          "explain": {
+            "entryId": "haben",
+            "headword": "haben",
+            "pronunciation": {
+              "display": "HAA-ben",
+              "ipaUK": "/ˈhaːbn̩/",
+              "ipaUS": "/ˈhaːbn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "haben",
+                "inflectionsLine": "ich habe; du hast; er/sie/es hat",
+                "synonyms": [
+                  "besitzen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "etwas besitzen, bei sich tragen oder über etwas verfügen",
+                    "examples": [
+                      "Ich habe ein Fahrrad."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "haben – Beispielsatz folgt.",
+              "answer": "In „Ich habe ein Fahrrad“ bedeutet haben, etwas zu besitzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb haben bedeutet, sich zu Fuß fortzubewegen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb haben bedeutet, nachts zu ruhen.",
               "ok": false
             }
           ]
@@ -54,18 +122,53 @@
           "title": "",
           "page": 3,
           "question": "gehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich zu Fuß von einem Ort zu einem anderen bewegen.",
+          "explain": {
+            "entryId": "gehen",
+            "headword": "gehen",
+            "pronunciation": {
+              "display": "GEE-en",
+              "ipaUK": "/ˈɡeːən/",
+              "ipaUS": "/ˈɡeːən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "gehen",
+                "inflectionsLine": "ich gehe; du gehst; er/sie/es geht",
+                "synonyms": [
+                  "laufen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "sich zu Fuß von einem Ort zu einem anderen bewegen",
+                    "examples": [
+                      "Ich gehe zu Fuß zur Schule."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gehen – Beispielsatz folgt.",
+              "answer": "In „Ich gehe zu Fuß zur Schule“ bezeichnet gehen eine Bewegung zu Fuß.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb gehen bedeutet, Flüssigkeit zu sich zu nehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb gehen bedeutet, einen geschriebenen Text zu verstehen.",
               "ok": false
             }
           ]
@@ -74,18 +177,53 @@
           "title": "",
           "page": 4,
           "question": "kommen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich zu einem Ort oder einer Person hinbewegen.",
+          "explain": {
+            "entryId": "kommen",
+            "headword": "kommen",
+            "pronunciation": {
+              "display": "KOM-men",
+              "ipaUK": "/ˈkɔmən/",
+              "ipaUS": "/ˈkɔmən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "kommen",
+                "inflectionsLine": "ich komme; du kommst; er/sie/es kommt",
+                "synonyms": [
+                  "ankommen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "sich zu einem Ort oder zu einer Person hinbewegen oder dort eintreffen",
+                    "examples": [
+                      "Kommst du heute zu mir?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kommen – Beispielsatz folgt.",
+              "answer": "In „Kommst du heute zu mir?“ bedeutet kommen, sich zu einem Ort hinzubewegen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb kommen bedeutet, Nahrung mit dem Mund aufzunehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb kommen bedeutet, Buchstaben auf Papier zu setzen.",
               "ok": false
             }
           ]
@@ -94,18 +232,54 @@
           "title": "",
           "page": 5,
           "question": "machen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas tun, herstellen oder bewirken.",
+          "explain": {
+            "entryId": "machen",
+            "headword": "machen",
+            "pronunciation": {
+              "display": "MACH-en",
+              "ipaUK": "/ˈmaxn̩/",
+              "ipaUS": "/ˈmaxn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "machen",
+                "inflectionsLine": "ich mache; du machst; er/sie/es macht",
+                "synonyms": [
+                  "tun",
+                  "herstellen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "etwas tun, herstellen oder bewirken",
+                    "examples": [
+                      "Ich mache meine Hausaufgaben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "machen – Beispielsatz folgt.",
+              "answer": "In „Ich mache meine Hausaufgaben“ bedeutet machen, etwas zu tun.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb machen bedeutet ausschließlich, mit den Augen wahrzunehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb machen bedeutet ausschließlich, nachts zu ruhen.",
               "ok": false
             }
           ]
@@ -114,18 +288,53 @@
           "title": "",
           "page": 6,
           "question": "essen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nahrung mit dem Mund aufnehmen.",
+          "explain": {
+            "entryId": "essen",
+            "headword": "essen",
+            "pronunciation": {
+              "display": "ES-sen",
+              "ipaUK": "/ˈɛsn̩/",
+              "ipaUS": "/ˈɛsn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "essen",
+                "inflectionsLine": "ich esse; du isst; er/sie/es isst",
+                "synonyms": [
+                  "Nahrung aufnehmen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nahrung mit dem Mund aufnehmen und schlucken",
+                    "examples": [
+                      "Wir essen Brot und Käse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "essen – Beispielsatz folgt.",
+              "answer": "In „Wir essen Brot“ bedeutet essen, Nahrung aufzunehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb essen bedeutet, ein Fahrzeug zu benutzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb essen bedeutet, einen geschriebenen Text zu verstehen.",
               "ok": false
             }
           ]
@@ -134,18 +343,53 @@
           "title": "",
           "page": 7,
           "question": "trinken",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Flüssigkeit mit dem Mund aufnehmen.",
+          "explain": {
+            "entryId": "trinken",
+            "headword": "trinken",
+            "pronunciation": {
+              "display": "TRINK-en",
+              "ipaUK": "/ˈtʁɪŋkn̩/",
+              "ipaUS": "/ˈtʁɪŋkn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "trinken",
+                "inflectionsLine": "ich trinke; du trinkst; er/sie/es trinkt",
+                "synonyms": [
+                  "Flüssigkeit aufnehmen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Flüssigkeit mit dem Mund aufnehmen und schlucken",
+                    "examples": [
+                      "Ich trinke ein Glas Wasser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "trinken – Beispielsatz folgt.",
+              "answer": "In „Ich trinke Wasser“ bedeutet trinken, eine Flüssigkeit aufzunehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb trinken bedeutet, ein Buch zu verstehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb trinken bedeutet, eine Ware gegen Geld zu bekommen.",
               "ok": false
             }
           ]
@@ -154,18 +398,53 @@
           "title": "",
           "page": 8,
           "question": "sprechen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Wörter mit der Stimme äußern.",
+          "explain": {
+            "entryId": "sprechen",
+            "headword": "sprechen",
+            "pronunciation": {
+              "display": "SCHPRECH-en",
+              "ipaUK": "/ˈʃpʁɛçn̩/",
+              "ipaUS": "/ˈʃpʁɛçn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "sprechen",
+                "inflectionsLine": "ich spreche; du sprichst; er/sie/es spricht",
+                "synonyms": [
+                  "reden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Wörter und Sätze mit der Stimme äußern",
+                    "examples": [
+                      "Sie spricht Deutsch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sprechen – Beispielsatz folgt.",
+              "answer": "In „Sie spricht Deutsch“ bedeutet sprechen, Wörter mit der Stimme zu äußern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb sprechen bedeutet, mit den Augen Bilder wahrzunehmen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb sprechen bedeutet, in einem Bett zu ruhen.",
               "ok": false
             }
           ]
@@ -174,18 +453,53 @@
           "title": "",
           "page": 9,
           "question": "wohnen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An einem Ort sein Zuhause haben.",
+          "explain": {
+            "entryId": "wohnen",
+            "headword": "wohnen",
+            "pronunciation": {
+              "display": "WOO-nen",
+              "ipaUK": "/ˈvoːnən/",
+              "ipaUS": "/ˈvoːnən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "wohnen",
+                "inflectionsLine": "ich wohne; du wohnst; er/sie/es wohnt",
+                "synonyms": [
+                  "leben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an einem bestimmten Ort sein Zuhause haben",
+                    "examples": [
+                      "Wir wohnen in Berlin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wohnen – Beispielsatz folgt.",
+              "answer": "In „Wir wohnen in Berlin“ bedeutet wohnen, dort sein Zuhause zu haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb wohnen bedeutet, eine Flüssigkeit zu trinken.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb wohnen bedeutet, einen Brief zu verfassen.",
               "ok": false
             }
           ]
@@ -194,18 +508,53 @@
           "title": "",
           "page": 10,
           "question": "arbeiten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine berufliche oder andere Aufgabe ausführen.",
+          "explain": {
+            "entryId": "arbeiten",
+            "headword": "arbeiten",
+            "pronunciation": {
+              "display": "AR-bai-ten",
+              "ipaUK": "/ˈaʁbaɪ̯tn̩/",
+              "ipaUS": "/ˈaʁbaɪ̯tn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "arbeiten",
+                "inflectionsLine": "ich arbeite; du arbeitest; er/sie/es arbeitet",
+                "synonyms": [
+                  "tätig sein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine berufliche oder andere zielgerichtete Aufgabe ausführen",
+                    "examples": [
+                      "Meine Mutter arbeitet im Krankenhaus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "arbeiten – Beispielsatz folgt.",
+              "answer": "In „Sie arbeitet im Krankenhaus“ bedeutet arbeiten, beruflich tätig zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Verb arbeiten bedeutet, nachts im Bett zu ruhen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verb arbeiten bedeutet, Wasser aus einem Glas aufzunehmen.",
               "ok": false
             }
           ]

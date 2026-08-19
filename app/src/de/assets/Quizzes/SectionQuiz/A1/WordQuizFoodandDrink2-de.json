@@ -2,130 +2,330 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFoodandDrink2-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Fisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Tier, das im Wasser lebt; auch ein Lebensmittel.",
+          "explain": {
+            "entryId": "Fisch",
+            "headword": "Fisch",
+            "pronunciation": {
+              "display": "FISCH",
+              "ipaUK": "/fɪʃ/",
+              "ipaUS": "/fɪʃ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Fisch",
+                "inflectionsLine": "Plural: die Fische",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Tier, das im Wasser lebt; sein Fleisch wird auch als Lebensmittel bezeichnet",
+                    "examples": [
+                      "Der Fisch schwimmt im Wasser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fisch – Beispielsatz folgt.",
+              "answer": "Ein Fisch ist ein Tier, das im Wasser lebt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Fisch ist eine Frucht, die am Baum wächst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Fisch ist ein heißes Getränk aus Blättern.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Gemüse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Essbare Pflanzenteile wie Karotten oder Brokkoli.",
+          "explain": {
+            "entryId": "Gemüse",
+            "headword": "Gemüse",
+            "pronunciation": {
+              "display": "ge-MÜÜ-ze",
+              "ipaUK": "/ɡəˈmyːzə/",
+              "ipaUS": "/ɡəˈmyːzə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral, Sammelbegriff",
+                "headwordLine": "das Gemüse",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "essbare Teile von Pflanzen, zum Beispiel Karotten, Bohnen oder Brokkoli",
+                    "examples": [
+                      "Karotten sind Gemüse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gemüse – Beispielsatz folgt.",
+              "answer": "Karotten und Brokkoli sind Gemüse.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kaffee und Tee sind Gemüse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Äpfel und Bananen sind immer Gemüse.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Obst",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Essbare Früchte wie Äpfel oder Bananen.",
+          "explain": {
+            "entryId": "Obst",
+            "headword": "Obst",
+            "pronunciation": {
+              "display": "OOPST",
+              "ipaUK": "/oːpst/",
+              "ipaUS": "/oːpst/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral, Sammelbegriff",
+                "headwordLine": "das Obst",
+                "inflectionsLine": "ohne Plural",
+                "synonyms": [
+                  "Früchte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "essbare Früchte von Bäumen und anderen Pflanzen, zum Beispiel Äpfel oder Bananen",
+                    "examples": [
+                      "Äpfel und Bananen sind Obst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Obst – Beispielsatz folgt.",
+              "answer": "Äpfel und Bananen sind Obst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kaffee und Tee sind Obst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Käse und Fleisch sind Obst.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Saft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Getränk aus gepressten Früchten oder Gemüse.",
+          "explain": {
+            "entryId": "Saft",
+            "headword": "Saft",
+            "pronunciation": {
+              "display": "ZAFT",
+              "ipaUK": "/zaft/",
+              "ipaUS": "/zaft/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Saft",
+                "inflectionsLine": "Plural: die Säfte",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Flüssigkeit aus gepressten Früchten oder Gemüse, die man trinkt",
+                    "examples": [
+                      "Zum Frühstück trinke ich Orangensaft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Saft – Beispielsatz folgt.",
+              "answer": "Saft kann aus gepressten Orangen gemacht werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Saft ist ein festes Lebensmittel aus Milch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Saft ist ein Tier, das im Wasser lebt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Zucker",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine süße Zutat für Speisen und Getränke.",
+          "explain": {
+            "entryId": "Zucker",
+            "headword": "Zucker",
+            "pronunciation": {
+              "display": "TSUK-ker",
+              "ipaUK": "/ˈt͡sʊkɐ/",
+              "ipaUS": "/ˈt͡sʊkɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Zucker",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine süße Zutat, die Speisen und Getränken Süße gibt",
+                    "examples": [
+                      "Ich nehme keinen Zucker in den Kaffee."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zucker – Beispielsatz folgt.",
+              "answer": "Zucker macht Kaffee oder Tee süßer.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zucker ist ein salziger Fisch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zucker ist eine Zeiteinheit von 60 Minuten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Suppe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine flüssige oder halbflüssige Speise.",
+          "explain": {
+            "entryId": "Suppe",
+            "headword": "Suppe",
+            "pronunciation": {
+              "display": "ZUP-pe",
+              "ipaUK": "/ˈzʊpə/",
+              "ipaUS": "/ˈzʊpə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Suppe",
+                "inflectionsLine": "Plural: die Suppen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine flüssige oder halbflüssige Speise, oft mit Gemüse, Fleisch oder Fisch",
+                    "examples": [
+                      "Die heiße Suppe ist in einer Schüssel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Suppe – Beispielsatz folgt.",
+              "answer": "Suppe isst man gewöhnlich mit einem Löffel.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Suppe ist eine Frucht, die am Baum wächst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Suppe ist eine Farbe zwischen Schwarz und Weiß.",
               "ok": false
             }
           ]

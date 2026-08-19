@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizExpressions1-de",
-  "title": "",
+  "title": "Häufige Ausdrücke",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Meiner Meinung nach",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine persönliche Ansicht oder Bewertung ein.",
+          "explain": {
+            "entryId": "Meiner Meinung nach",
+            "headword": "Meiner Meinung nach",
+            "pronunciation": {
+              "display": "MAI-ner MAI-nung naach",
+              "ipaUK": "/ˈmaɪ̯nɐ ˈmaɪ̯nʊŋ naːx/",
+              "ipaUS": "/ˈmaɪ̯nɐ ˈmaɪ̯nʊŋ naːx/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Meinungsäußerung",
+                "headwordLine": "Meiner Meinung nach",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ich finde, dass"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "leitet eine persönliche Ansicht oder Bewertung ein",
+                    "examples": [
+                      "Meiner Meinung nach ist der Film zu lang."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Meiner Meinung nach – Beispielsatz folgt.",
+              "answer": "Damit leitet man eine persönliche Ansicht oder Bewertung ein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit sagt man, dass man überhaupt keine Informationen besitzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit fragt man, ob eine andere Person ein Problem hat.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Ich bin der Meinung, dass",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kündigt die eigene Meinung oder Überzeugung an.",
+          "explain": {
+            "entryId": "Ich bin der Meinung, dass",
+            "headword": "Ich bin der Meinung, dass",
+            "pronunciation": {
+              "display": "ich bin der MAI-nung dass",
+              "ipaUK": "/ɪç bɪn deːɐ̯ ˈmaɪ̯nʊŋ das/",
+              "ipaUS": "/ɪç bɪn deːɐ̯ ˈmaɪ̯nʊŋ das/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Meinungsäußerung",
+                "headwordLine": "Ich bin der Meinung, dass",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Meiner Meinung nach"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "kündigt die eigene Meinung oder Überzeugung an",
+                    "examples": [
+                      "Ich bin der Meinung, dass der Plan gut ist."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich bin der Meinung, dass – Beispielsatz folgt.",
+              "answer": "Damit kündigt man die eigene Meinung oder Überzeugung an.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit drückt man aus, dass einem das Thema völlig egal ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit entschuldigt man sich für einen Fehler.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Das kommt darauf an",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Antwort hängt von Bedingungen oder Umständen ab.",
+          "explain": {
+            "entryId": "Das kommt darauf an",
+            "headword": "Das kommt darauf an",
+            "pronunciation": {
+              "display": "das komt da-RAUF an",
+              "ipaUK": "/das kɔmt daˈʁaʊ̯f an/",
+              "ipaUS": "/das kɔmt daˈʁaʊ̯f an/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "bedingte Antwort",
+                "headwordLine": "Das kommt darauf an",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Es hängt davon ab"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Antwort hängt von Bedingungen oder Umständen ab",
+                    "examples": [
+                      "Kommst du morgen? – Das kommt darauf an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Das kommt darauf an – Beispielsatz folgt.",
+              "answer": "Damit sagt man, dass die Antwort von Bedingungen oder Umständen abhängt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit gibt man eine völlig sichere und bedingungslose Zusage.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit wünscht man einer Person Erfolg bei einer Prüfung.",
               "ok": false
             }
           ]
@@ -74,18 +179,54 @@
           "title": "",
           "page": 4,
           "question": "Es tut mir leid",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt Bedauern, Mitgefühl oder eine Entschuldigung aus.",
+          "explain": {
+            "entryId": "Es tut mir leid",
+            "headword": "Es tut mir leid",
+            "pronunciation": {
+              "display": "es tuut miir lait",
+              "ipaUK": "/ɛs tuːt miːɐ̯ laɪ̯t/",
+              "ipaUS": "/ɛs tuːt miːɐ̯ laɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Bedauern",
+                "headwordLine": "Es tut mir leid",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Entschuldigung",
+                  "Ich bedaure es"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt Bedauern, Mitgefühl oder eine Entschuldigung aus",
+                    "examples": [
+                      "Es tut mir leid, dass ich zu spät bin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Es tut mir leid – Beispielsatz folgt.",
+              "answer": "Damit drückt man Bedauern, Mitgefühl oder eine Entschuldigung aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit zeigt man, dass einem eine Sache gleichgültig ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit stimmt man einer Aussage genau zu.",
               "ok": false
             }
           ]
@@ -94,18 +235,54 @@
           "title": "",
           "page": 5,
           "question": "Kein Problem",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas ist in Ordnung oder verursacht keine Schwierigkeit.",
+          "explain": {
+            "entryId": "Kein Problem",
+            "headword": "Kein Problem",
+            "pronunciation": {
+              "display": "kain pro-BLEEM",
+              "ipaUK": "/kaɪ̯n pʁoˈbleːm/",
+              "ipaUS": "/kaɪ̯n pʁoˈbleːm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "beruhigende Antwort",
+                "headwordLine": "Kein Problem",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Macht nichts",
+                  "Gern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "etwas ist in Ordnung oder verursacht keine Schwierigkeit",
+                    "examples": [
+                      "Kannst du mir helfen? – Kein Problem."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kein Problem – Beispielsatz folgt.",
+              "answer": "Damit sagt man, dass etwas in Ordnung ist oder keine Schwierigkeit macht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit sagt man, dass eine Situation sehr schwierig und unmöglich ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit drückt man große Enttäuschung über eine Nachricht aus.",
               "ok": false
             }
           ]
@@ -114,18 +291,53 @@
           "title": "",
           "page": 6,
           "question": "Viel Spaß",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Wunsch, dass jemand eine Aktivität genießt.",
+          "explain": {
+            "entryId": "Viel Spaß",
+            "headword": "Viel Spaß",
+            "pronunciation": {
+              "display": "fiil SCHPAASS",
+              "ipaUK": "/fiːl ʃpaːs/",
+              "ipaUS": "/fiːl ʃpaːs/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wunschformel",
+                "grammarType": "vor einer Aktivität",
+                "headwordLine": "Viel Spaß",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Viel Vergnügen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Wunsch, dass jemand eine Aktivität genießt",
+                    "examples": [
+                      "Ihr geht ins Kino? Viel Spaß!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Viel Spaß – Beispielsatz folgt.",
+              "answer": "Damit wünscht man jemandem Freude und Vergnügen bei einer Aktivität.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit entschuldigt man sich für eine Verspätung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit sagt man, dass man die Antwort nicht kennt.",
               "ok": false
             }
           ]
@@ -134,18 +346,53 @@
           "title": "",
           "page": 7,
           "question": "Das ist mir egal",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Man hat keine Vorliebe oder findet etwas nicht wichtig.",
+          "explain": {
+            "entryId": "Das ist mir egal",
+            "headword": "Das ist mir egal",
+            "pronunciation": {
+              "display": "das ist miir e-GAAL",
+              "ipaUK": "/das ɪst miːɐ̯ eˈɡaːl/",
+              "ipaUS": "/das ɪst miːɐ̯ eˈɡaːl/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Gleichgültigkeit",
+                "headwordLine": "Das ist mir egal",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Das macht für mich keinen Unterschied"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "man hat keine Vorliebe oder findet etwas nicht wichtig",
+                    "examples": [
+                      "Tee oder Kaffee? – Das ist mir egal."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Das ist mir egal – Beispielsatz folgt.",
+              "answer": "Damit sagt man, dass man keine Vorliebe hat oder etwas nicht wichtig findet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit sagt man, dass man eine sehr starke und klare Vorliebe hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit bittet man eine Person, sich keine Sorgen zu machen.",
               "ok": false
             }
           ]
@@ -154,18 +401,53 @@
           "title": "",
           "page": 8,
           "question": "Ich habe keine Ahnung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Man weiß überhaupt nichts über die Antwort.",
+          "explain": {
+            "entryId": "Ich habe keine Ahnung",
+            "headword": "Ich habe keine Ahnung",
+            "pronunciation": {
+              "display": "ich haa-be KAI-ne AA-nung",
+              "ipaUK": "/ɪç ˈhaːbə ˈkaɪ̯nə ˈaːnʊŋ/",
+              "ipaUS": "/ɪç ˈhaːbə ˈkaɪ̯nə ˈaːnʊŋ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "fehlendes Wissen",
+                "headwordLine": "Ich habe keine Ahnung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ich weiß es überhaupt nicht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "man weiß überhaupt nichts über die Antwort",
+                    "examples": [
+                      "Wo ist Paul? – Ich habe keine Ahnung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich habe keine Ahnung – Beispielsatz folgt.",
+              "answer": "Damit sagt man, dass man die Antwort überhaupt nicht weiß.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit sagt man, dass man die Antwort ganz genau kennt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit drückt man eine persönliche Meinung zu einem Thema aus.",
               "ok": false
             }
           ]
@@ -174,18 +456,54 @@
           "title": "",
           "page": 9,
           "question": "auf jeden Fall",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt starke Sicherheit oder eine feste Entscheidung aus.",
+          "explain": {
+            "entryId": "auf jeden Fall",
+            "headword": "auf jeden Fall",
+            "pronunciation": {
+              "display": "auf JEE-den fall",
+              "ipaUK": "/aʊ̯f ˈjeːdn̩ fal/",
+              "ipaUS": "/aʊ̯f ˈjeːdn̩ fal/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Sicherheit",
+                "headwordLine": "auf jeden Fall",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ganz sicher",
+                  "unbedingt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt starke Sicherheit oder eine feste Entscheidung aus",
+                    "examples": [
+                      "Ich komme auf jeden Fall zur Feier."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "auf jeden Fall – Beispielsatz folgt.",
+              "answer": "Damit drückt man starke Sicherheit oder eine feste Entscheidung aus.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit sagt man, dass alles von unbekannten Bedingungen abhängt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit zeigt man, dass einem die Entscheidung völlig egal ist.",
               "ok": false
             }
           ]
@@ -194,18 +512,54 @@
           "title": "",
           "page": 10,
           "question": "Genau",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt präzise Übereinstimmung oder Bestätigung aus.",
+          "explain": {
+            "entryId": "Genau",
+            "headword": "Genau",
+            "pronunciation": {
+              "display": "ge-NAU",
+              "ipaUK": "/ɡəˈnaʊ̯/",
+              "ipaUS": "/ɡəˈnaʊ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb oder Antwortpartikel",
+                "grammarType": "Bestätigung",
+                "headwordLine": "Genau",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "richtig",
+                  "ganz genau"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "drückt präzise Übereinstimmung oder Bestätigung aus",
+                    "examples": [
+                      "Du meinst den roten Bus? – Genau!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Genau – Beispielsatz folgt.",
+              "answer": "Damit bestätigt man, dass etwas präzise richtig ist oder übereinstimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Damit sagt man, dass eine Aussage sicher falsch ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Damit drückt man Bedauern über eine verpasste Chance aus.",
               "ok": false
             }
           ]

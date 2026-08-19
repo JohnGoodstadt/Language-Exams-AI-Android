@@ -2,130 +2,342 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizShopping2-de",
-  "title": "",
+  "title": "Einkaufen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Größe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Maß oder eine Kennzeichnung für die Abmessungen von Kleidung.",
+          "explain": {
+            "entryId": "Größe",
+            "headword": "Größe",
+            "pronunciation": {
+              "display": "GRÖÖ-se",
+              "ipaUK": "/ˈɡʁøːsə/",
+              "ipaUS": "/ˈɡʁøːsə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Größe",
+                "inflectionsLine": "Plural: die Größen",
+                "synonyms": [
+                  "Maß",
+                  "Konfektionsgröße"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Maß oder eine Kennzeichnung, die angibt, wie groß ein Kleidungsstück ist",
+                    "examples": [
+                      "Haben Sie die Hose in Größe 40?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Größe – Beispielsatz folgt.",
+              "answer": "Bei Kleidung gibt die Größe an, welche Abmessungen ein Kleidungsstück hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bei Kleidung gibt die Größe an, wie viel das Kleidungsstück kostet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bei Kleidung gibt die Größe an, wann das Kleidungsstück gekauft wurde.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "anprobieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kleidung kurz anziehen, um Passform und Aussehen zu prüfen.",
+          "explain": {
+            "entryId": "anprobieren",
+            "headword": "anprobieren",
+            "pronunciation": {
+              "display": "AN-pro-bii-ren",
+              "ipaUK": "/ˈanpʁoˌbiːʁən/",
+              "ipaUS": "/ˈanpʁoˌbiːʁən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig, trennbar",
+                "headwordLine": "anprobieren",
+                "inflectionsLine": "ich probiere an; du probierst an; er/sie/es probiert an",
+                "synonyms": [
+                  "zur Probe anziehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Kleidungsstück kurz anziehen, um zu prüfen, ob es passt und gefällt",
+                    "examples": [
+                      "Kann ich diese Jacke anprobieren?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "anprobieren – Beispielsatz folgt.",
+              "answer": "Anprobieren bedeutet, Kleidung kurz anzuziehen und zu prüfen, ob sie passt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Anprobieren bedeutet, eine gekaufte Ware zurückzugeben und eine andere zu erhalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Anprobieren bedeutet, eine Ware an der Kasse vollständig zu bezahlen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "umtauschen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine gekaufte Ware zurückgeben und Ersatz erhalten.",
+          "explain": {
+            "entryId": "umtauschen",
+            "headword": "umtauschen",
+            "pronunciation": {
+              "display": "UM-tau-schen",
+              "ipaUK": "/ˈʊmˌtaʊ̯ʃn̩/",
+              "ipaUS": "/ˈʊmˌtaʊ̯ʃn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig, trennbar",
+                "headwordLine": "umtauschen",
+                "inflectionsLine": "ich tausche um; du tauschst um; er/sie/es tauscht um",
+                "synonyms": [
+                  "zurückgeben und ersetzen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine gekaufte Ware zurückgeben und dafür eine andere Ware oder eine Erstattung erhalten",
+                    "examples": [
+                      "Die Jacke ist zu klein; ich möchte sie umtauschen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "umtauschen – Beispielsatz folgt.",
+              "answer": "Umtauschen bedeutet, eine gekaufte Ware zurückzugeben und Ersatz oder eine Erstattung zu erhalten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Umtauschen bedeutet, Kleidung vor dem Kauf kurz anzuziehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Umtauschen bedeutet, den Preis einer Ware zum ersten Mal zu erfahren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Quittung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Beleg, der eine Zahlung bestätigt.",
+          "explain": {
+            "entryId": "Quittung",
+            "headword": "Quittung",
+            "pronunciation": {
+              "display": "KWIT-tung",
+              "ipaUK": "/ˈkvɪtʊŋ/",
+              "ipaUS": "/ˈkvɪtʊŋ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Quittung",
+                "inflectionsLine": "Plural: die Quittungen",
+                "synonyms": [
+                  "Zahlungsbeleg",
+                  "Kassenbon"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein schriftlicher oder digitaler Beleg, der bestätigt, dass etwas bezahlt wurde",
+                    "examples": [
+                      "Bewahren Sie die Quittung für einen Umtausch auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Quittung – Beispielsatz folgt.",
+              "answer": "Eine Quittung bestätigt, dass eine Ware oder Leistung bezahlt wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Quittung zeigt nur den Preis vor dem Kauf und bestätigt keine Zahlung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Quittung ist das Geld, das man nach einer Barzahlung zurückbekommt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Kunde",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die Waren oder Dienstleistungen kauft.",
+          "explain": {
+            "entryId": "Kunde",
+            "headword": "Kunde",
+            "pronunciation": {
+              "display": "KUN-de",
+              "ipaUK": "/ˈkʊndə/",
+              "ipaUS": "/ˈkʊndə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Kunde",
+                "inflectionsLine": "Plural: die Kunden; feminin: die Kundin",
+                "synonyms": [
+                  "Käufer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Person, die bei einem Geschäft oder Unternehmen Waren oder Dienstleistungen kauft",
+                    "examples": [
+                      "Der Kunde bezahlt an der Kasse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kunde – Beispielsatz folgt.",
+              "answer": "Ein Kunde kauft Waren oder Dienstleistungen bei einem Geschäft oder Unternehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Kunde arbeitet immer als Verkäufer in dem Geschäft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Kunde stellt die Waren her, kauft sie aber grundsätzlich nicht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Kleingeld",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Münzen oder Geld mit kleinem Wert.",
+          "explain": {
+            "entryId": "Kleingeld",
+            "headword": "Kleingeld",
+            "pronunciation": {
+              "display": "KLAIN-gelt",
+              "ipaUK": "/ˈklaɪ̯nˌɡɛlt/",
+              "ipaUS": "/ˈklaɪ̯nˌɡɛlt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Kleingeld",
+                "inflectionsLine": "ohne Plural",
+                "synonyms": [
+                  "Münzen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Münzen und manchmal Geldscheine mit kleinem Wert, die man für kleinere Zahlungen benutzt",
+                    "examples": [
+                      "Haben Sie Kleingeld für den Automaten?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kleingeld – Beispielsatz folgt.",
+              "answer": "Kleingeld sind vor allem Münzen, die man für kleinere Zahlungen verwenden kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kleingeld ist ausschließlich eine Kreditkarte für große Zahlungen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kleingeld ist der schriftliche Beleg, den man nach dem Bezahlen erhält.",
               "ok": false
             }
           ]

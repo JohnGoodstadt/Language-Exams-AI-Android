@@ -2,50 +2,116 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizMonths2-de",
-  "title": "",
+  "title": "Monate",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "November",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der elfte Monat des Jahres.",
+          "explain": {
+            "entryId": "November",
+            "headword": "November",
+            "pronunciation": {
+              "display": "no-WEM-ber",
+              "ipaUK": "/noˈvɛmbɐ/",
+              "ipaUS": "/noˈvɛmbɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der November",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der elfte Monat des Jahres; der Monat nach Oktober und vor Dezember",
+                    "examples": [
+                      "Im November sind die Tage kurz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "November – Beispielsatz folgt.",
+              "answer": "Der November liegt zwischen Oktober und Dezember.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der November liegt zwischen Mai und Juli.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der November ist der dritte Monat des Jahres.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Dezember",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der zwölfte und letzte Monat des Jahres.",
+          "explain": {
+            "entryId": "Dezember",
+            "headword": "Dezember",
+            "pronunciation": {
+              "display": "de-TSEM-ber",
+              "ipaUK": "/deˈt͡sɛmbɐ/",
+              "ipaUS": "/deˈt͡sɛmbɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Dezember",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der zwölfte und letzte Monat des Jahres; der Monat nach November und vor Januar",
+                    "examples": [
+                      "Das Jahr endet im Dezember."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Dezember – Beispielsatz folgt.",
+              "answer": "Der Dezember ist der letzte Monat des Jahres.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Dezember liegt zwischen Juni und August.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Dezember ist der erste Monat des Jahres.",
               "ok": false
             }
           ]

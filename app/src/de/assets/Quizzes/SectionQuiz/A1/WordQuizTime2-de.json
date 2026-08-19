@@ -2,130 +2,339 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTime2-de",
-  "title": "",
+  "title": "Zeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "gestern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An dem Tag vor heute.",
+          "explain": {
+            "entryId": "gestern",
+            "headword": "gestern",
+            "pronunciation": {
+              "display": "GES-tern",
+              "ipaUK": "/ˈɡɛstɐn/",
+              "ipaUS": "/ˈɡɛstɐn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Temporaladverb",
+                "headwordLine": "gestern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "am vorherigen Tag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an dem Tag, der direkt vor heute war",
+                    "examples": [
+                      "Heute ist Dienstag; gestern war Montag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gestern – Beispielsatz folgt.",
+              "answer": "Heute ist Dienstag; gestern war Montag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit gestern meine ich den Tag nach heute.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit gestern meine ich den nächsten Monat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "jetzt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In diesem Moment.",
+          "explain": {
+            "entryId": "jetzt",
+            "headword": "jetzt",
+            "pronunciation": {
+              "display": "JETST",
+              "ipaUK": "/jɛt͡st/",
+              "ipaUS": "/jɛt͡st/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Temporaladverb",
+                "headwordLine": "jetzt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nun",
+                  "in diesem Moment"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "im gegenwärtigen Moment; weder früher noch später",
+                    "examples": [
+                      "Ich esse jetzt zu Mittag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "jetzt – Beispielsatz folgt.",
+              "answer": "Ich rufe dich jetzt an, also in diesem Moment.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit jetzt meine ich ausschließlich das vergangene Jahr.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit jetzt meine ich immer den nächsten Monat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "früh",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zu einer Zeit nahe am Anfang oder vor der üblichen Zeit.",
+          "explain": {
+            "entryId": "früh",
+            "headword": "früh",
+            "pronunciation": {
+              "display": "FRÜÜ",
+              "ipaUK": "/fʁyː/",
+              "ipaUS": "/fʁyː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Temporaladverb",
+                "headwordLine": "früh",
+                "inflectionsLine": "Steigerung: früher, am frühesten",
+                "synonyms": [
+                  "zeitig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nahe am Anfang eines Zeitraums oder vor der normalen oder erwarteten Zeit",
+                    "examples": [
+                      "Ich stehe früh am Morgen auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "früh – Beispielsatz folgt.",
+              "answer": "Wenn ich um fünf Uhr aufstehe, stehe ich früh auf.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wenn ich nach dem Ende komme, komme ich früh.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Wort früh bedeutet immer nach Mitternacht schlafen zu gehen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "spät",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zu einer Zeit nahe am Ende oder nach der erwarteten Zeit.",
+          "explain": {
+            "entryId": "spät",
+            "headword": "spät",
+            "pronunciation": {
+              "display": "SCHPÄÄT",
+              "ipaUK": "/ʃpɛːt/",
+              "ipaUS": "/ʃpɛːt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "Temporaladverb",
+                "headwordLine": "spät",
+                "inflectionsLine": "Steigerung: später, am spätesten",
+                "synonyms": [
+                  "verspätet"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nahe am Ende eines Zeitraums oder nach der normalen oder erwarteten Zeit",
+                    "examples": [
+                      "Der Zug kommt zehn Minuten zu spät."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "spät – Beispielsatz folgt.",
+              "answer": "Der Termin ist um neun Uhr; um zehn Uhr komme ich zu spät.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Termin ist um neun Uhr; um acht Uhr komme ich zu spät.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Wort spät bedeutet immer vor der vereinbarten Zeit.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Morgen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die frühe Tageszeit nach der Nacht.",
+          "explain": {
+            "entryId": "Morgen",
+            "headword": "Morgen",
+            "pronunciation": {
+              "display": "MOR-gen",
+              "ipaUK": "/ˈmɔʁɡn̩/",
+              "ipaUS": "/ˈmɔʁɡn̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Morgen",
+                "inflectionsLine": "Plural: die Morgen; großgeschrieben als Substantiv",
+                "synonyms": [
+                  "Tagesanfang"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die frühe Zeit des Tages nach der Nacht und vor dem Mittag",
+                    "examples": [
+                      "Am Morgen frühstücke ich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Morgen – Beispielsatz folgt.",
+              "answer": "Der Morgen ist die Tageszeit nach der Nacht und vor dem Mittag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Morgen ist die Tageszeit nach dem Abend und direkt vor Mitternacht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Morgen ist ein Zeitraum von zwölf Monaten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Abend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die späte Tageszeit vor der Nacht.",
+          "explain": {
+            "entryId": "Abend",
+            "headword": "Abend",
+            "pronunciation": {
+              "display": "AA-bent",
+              "ipaUK": "/ˈaːbn̩t/",
+              "ipaUS": "/ˈaːbn̩t/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Abend",
+                "inflectionsLine": "Plural: die Abende",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die späte Zeit des Tages nach dem Nachmittag und vor der Nacht",
+                    "examples": [
+                      "Am Abend esse ich zu Abend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abend – Beispielsatz folgt.",
+              "answer": "Der Abend ist die Tageszeit nach dem Nachmittag und vor der Nacht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Abend ist die Tageszeit nach der Nacht und vor dem Morgen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Abend ist ein Zeitraum von sieben Tagen.",
               "ok": false
             }
           ]

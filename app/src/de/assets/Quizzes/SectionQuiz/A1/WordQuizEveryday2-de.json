@@ -2,130 +2,332 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEveryday2-de",
-  "title": "",
+  "title": "Gegenstände & Haushaltsartikel",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Schlüssel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gegenstand zum Öffnen oder Schließen eines Schlosses.",
+          "explain": {
+            "entryId": "Schlüssel",
+            "headword": "Schlüssel",
+            "pronunciation": {
+              "display": "SCHLÜS-sel",
+              "ipaUK": "/ˈʃlʏsl̩/",
+              "ipaUS": "/ˈʃlʏsl̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Schlüssel",
+                "inflectionsLine": "Plural: die Schlüssel",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein kleiner Gegenstand zum Öffnen oder Schließen eines Schlosses",
+                    "examples": [
+                      "Ich öffne die Tür mit dem Schlüssel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Schlüssel – Beispielsatz folgt.",
+              "answer": "Mit einem Schlüssel kann man ein passendes Schloss öffnen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Schlüssel ist ein Gefäß zum Trinken.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Schlüssel ist ein Gerät zum Kühlen von Essen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Tasche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Behälter zum Tragen persönlicher Dinge.",
+          "explain": {
+            "entryId": "Tasche",
+            "headword": "Tasche",
+            "pronunciation": {
+              "display": "TASCH-e",
+              "ipaUK": "/ˈtaʃə/",
+              "ipaUS": "/ˈtaʃə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Tasche",
+                "inflectionsLine": "Plural: die Taschen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein tragbarer Behälter für persönliche Dinge",
+                    "examples": [
+                      "Der Schlüssel ist in meiner Tasche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tasche – Beispielsatz folgt.",
+              "answer": "In einer Tasche kann man Schlüssel und ein Handy tragen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Tasche ist ein Möbelstück zum Schlafen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Tasche ist ein Gerät zum Fernsehen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Teller",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein flaches Gefäß, von dem man isst.",
+          "explain": {
+            "entryId": "Teller",
+            "headword": "Teller",
+            "pronunciation": {
+              "display": "TEL-ler",
+              "ipaUK": "/ˈtɛlɐ/",
+              "ipaUS": "/ˈtɛlɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Teller",
+                "inflectionsLine": "Plural: die Teller",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein flaches rundes Gefäß, auf das man Essen legt",
+                    "examples": [
+                      "Das Essen liegt auf dem Teller."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Teller – Beispielsatz folgt.",
+              "answer": "Auf einen Teller legt man normalerweise Essen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Teller ist ein tragbares Telefon.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Teller ist ein Möbelstück zum Sitzen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Glas",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gefäß, aus dem man trinkt.",
+          "explain": {
+            "entryId": "Glas",
+            "headword": "Glas",
+            "pronunciation": {
+              "display": "GLAAS",
+              "ipaUK": "/ɡlaːs/",
+              "ipaUS": "/ɡlaːs/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Glas",
+                "inflectionsLine": "Plural: die Gläser",
+                "synonyms": [
+                  "Trinkglas"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein meist durchsichtiges Gefäß, aus dem man trinkt",
+                    "examples": [
+                      "Ich trinke ein Glas Wasser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Glas – Beispielsatz folgt.",
+              "answer": "Aus einem Glas kann man Wasser trinken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Glas ist ein Möbelstück zum Schlafen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Glas ist ein elektronisches Gerät zum Schreiben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Kühlschrank",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gerät zum Kühlen von Lebensmitteln.",
+          "explain": {
+            "entryId": "Kühlschrank",
+            "headword": "Kühlschrank",
+            "pronunciation": {
+              "display": "KÜÜL-schrank",
+              "ipaUK": "/ˈkyːlˌʃʁaŋk/",
+              "ipaUS": "/ˈkyːlˌʃʁaŋk/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Kühlschrank",
+                "inflectionsLine": "Plural: die Kühlschränke",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein elektrisches Gerät, das Lebensmittel und Getränke kalt hält",
+                    "examples": [
+                      "Die Milch steht im Kühlschrank."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kühlschrank – Beispielsatz folgt.",
+              "answer": "Ein Kühlschrank hält Lebensmittel und Getränke kalt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Kühlschrank ist ein Werkzeug zum Schreiben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Kühlschrank ist ein Möbelstück zum Sitzen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Fernseher",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gerät zum Ansehen von Fernsehsendungen.",
+          "explain": {
+            "entryId": "Fernseher",
+            "headword": "Fernseher",
+            "pronunciation": {
+              "display": "FERN-zee-er",
+              "ipaUK": "/ˈfɛʁnˌzeːɐ̯/",
+              "ipaUS": "/ˈfɛʁnˌzeːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Fernseher",
+                "inflectionsLine": "Plural: die Fernseher",
+                "synonyms": [
+                  "TV-Gerät"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein elektronisches Gerät, auf dessen Bildschirm man Fernsehsendungen sieht",
+                    "examples": [
+                      "Wir sehen einen Film auf dem Fernseher."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fernseher – Beispielsatz folgt.",
+              "answer": "Auf einem Fernseher kann man Sendungen und Filme ansehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Fernseher ist ein Gefäß für Suppe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Fernseher ist ein Werkzeug zum Öffnen eines Schlosses.",
               "ok": false
             }
           ]

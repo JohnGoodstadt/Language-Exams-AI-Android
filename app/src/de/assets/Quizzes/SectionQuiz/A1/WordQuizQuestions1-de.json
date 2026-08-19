@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizQuestions1-de",
-  "title": "",
+  "title": "Fragewörter",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, der die Bedeutung des Frageworts richtig erklärt.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "wer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einer Person.",
+          "explain": {
+            "entryId": "wer",
+            "headword": "wer",
+            "pronunciation": {
+              "display": "WEER",
+              "ipaUK": "/veːɐ̯/",
+              "ipaUS": "/veːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativpronomen",
+                "grammarType": "Nominativ",
+                "headwordLine": "wer?",
+                "inflectionsLine": "Akkusativ: wen?; Dativ: wem?",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach der Identität einer Person",
+                    "examples": [
+                      "Wer ist das?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wer – Beispielsatz folgt.",
+              "answer": "Mit „wer“ fragt man nach einer Person.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „wer“ fragt man nach einem Zeitpunkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „wer“ fragt man nach einem Ort.",
               "ok": false
             }
           ]
@@ -34,18 +67,51 @@
           "title": "",
           "page": 2,
           "question": "was",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einer Sache, Handlung oder Information.",
+          "explain": {
+            "entryId": "was",
+            "headword": "was",
+            "pronunciation": {
+              "display": "WAS",
+              "ipaUK": "/vas/",
+              "ipaUS": "/vas/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativpronomen",
+                "grammarType": "Nominativ oder Akkusativ",
+                "headwordLine": "was?",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach einer Sache, einer Handlung oder einer Information",
+                    "examples": [
+                      "Was machst du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "was – Beispielsatz folgt.",
+              "answer": "Mit „was“ fragt man nach einer Sache, Handlung oder Information.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „was“ fragt man ausschließlich nach einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „was“ fragt man ausschließlich nach einer Richtung.",
               "ok": false
             }
           ]
@@ -54,18 +120,53 @@
           "title": "",
           "page": 3,
           "question": "wo",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einem Ort oder einer Position.",
+          "explain": {
+            "entryId": "wo",
+            "headword": "wo",
+            "pronunciation": {
+              "display": "WOO",
+              "ipaUK": "/voː/",
+              "ipaUS": "/voː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativadverb",
+                "grammarType": "lokal",
+                "headwordLine": "wo?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "an welchem Ort"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach dem Ort oder der Position einer Person oder Sache",
+                    "examples": [
+                      "Wo wohnst du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wo – Beispielsatz folgt.",
+              "answer": "Mit „wo“ fragt man nach einem Ort oder einer Position.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „wo“ fragt man nach einem Grund.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „wo“ fragt man nach einer Uhrzeit.",
               "ok": false
             }
           ]
@@ -74,18 +175,53 @@
           "title": "",
           "page": 4,
           "question": "wann",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einem Zeitpunkt.",
+          "explain": {
+            "entryId": "wann",
+            "headword": "wann",
+            "pronunciation": {
+              "display": "WAN",
+              "ipaUK": "/van/",
+              "ipaUS": "/van/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativadverb",
+                "grammarType": "temporal",
+                "headwordLine": "wann?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zu welcher Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach einem Zeitpunkt oder einer Zeitspanne",
+                    "examples": [
+                      "Wann beginnt der Kurs?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wann – Beispielsatz folgt.",
+              "answer": "Mit „wann“ fragt man nach einem Zeitpunkt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „wann“ fragt man nach einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „wann“ fragt man nach der Herkunft.",
               "ok": false
             }
           ]
@@ -94,18 +230,53 @@
           "title": "",
           "page": 5,
           "question": "wie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach der Art, Weise oder dem Zustand.",
+          "explain": {
+            "entryId": "wie",
+            "headword": "wie",
+            "pronunciation": {
+              "display": "WII",
+              "ipaUK": "/viː/",
+              "ipaUS": "/viː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativadverb",
+                "grammarType": "modal",
+                "headwordLine": "wie?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auf welche Weise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach der Art und Weise, einem Zustand oder einer Eigenschaft",
+                    "examples": [
+                      "Wie geht es dir?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wie – Beispielsatz folgt.",
+              "answer": "Mit „wie“ fragt man nach der Art, Weise oder einem Zustand.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „wie“ fragt man ausschließlich nach einem Ort.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „wie“ fragt man ausschließlich nach einer Person.",
               "ok": false
             }
           ]
@@ -114,18 +285,54 @@
           "title": "",
           "page": 6,
           "question": "warum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einem Grund oder einer Ursache.",
+          "explain": {
+            "entryId": "warum",
+            "headword": "warum",
+            "pronunciation": {
+              "display": "wa-RUM",
+              "ipaUK": "/vaˈʁʊm/",
+              "ipaUS": "/vaˈʁʊm/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativadverb",
+                "grammarType": "kausal",
+                "headwordLine": "warum?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "weshalb",
+                  "aus welchem Grund"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach dem Grund oder der Ursache für etwas",
+                    "examples": [
+                      "Warum lernst du Deutsch?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "warum – Beispielsatz folgt.",
+              "answer": "Mit „warum“ fragt man nach einem Grund oder einer Ursache.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „warum“ fragt man nach einer Anzahl.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „warum“ fragt man nach einem Zielort.",
               "ok": false
             }
           ]
@@ -134,18 +341,53 @@
           "title": "",
           "page": 7,
           "question": "woher",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach der Herkunft oder dem Ausgangsort.",
+          "explain": {
+            "entryId": "woher",
+            "headword": "woher",
+            "pronunciation": {
+              "display": "wo-HEER",
+              "ipaUK": "/voˈheːɐ̯/",
+              "ipaUS": "/voˈheːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativadverb",
+                "grammarType": "lokal, Herkunft",
+                "headwordLine": "woher?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aus welchem Ort"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach der Herkunft oder dem Ausgangsort einer Person oder Sache",
+                    "examples": [
+                      "Woher kommst du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "woher – Beispielsatz folgt.",
+              "answer": "Mit „woher“ fragt man nach einer Herkunft oder einem Ausgangsort.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „woher“ fragt man nach einem zukünftigen Zielort.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „woher“ fragt man nach einer Uhrzeit.",
               "ok": false
             }
           ]
@@ -154,18 +396,53 @@
           "title": "",
           "page": 8,
           "question": "wohin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach dem Ziel einer Bewegung.",
+          "explain": {
+            "entryId": "wohin",
+            "headword": "wohin",
+            "pronunciation": {
+              "display": "wo-HIN",
+              "ipaUK": "/voˈhɪn/",
+              "ipaUS": "/voˈhɪn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativadverb",
+                "grammarType": "lokal, Richtung",
+                "headwordLine": "wohin?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zu welchem Ort"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach dem Ziel oder der Richtung einer Bewegung",
+                    "examples": [
+                      "Wohin fährst du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wohin – Beispielsatz folgt.",
+              "answer": "Mit „wohin“ fragt man nach dem Ziel oder der Richtung einer Bewegung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „wohin“ fragt man nach der Herkunft einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „wohin“ fragt man nach einem Grund.",
               "ok": false
             }
           ]
@@ -174,18 +451,53 @@
           "title": "",
           "page": 9,
           "question": "wie viel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einer Menge oder einem Preis.",
+          "explain": {
+            "entryId": "wie viel",
+            "headword": "wie viel",
+            "pronunciation": {
+              "display": "wii FIIL",
+              "ipaUK": "/viː fiːl/",
+              "ipaUS": "/viː fiːl/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativphrase",
+                "grammarType": "Mengenfrage",
+                "headwordLine": "wie viel?",
+                "inflectionsLine": "meist bei nicht zählbaren Mengen oder Preisen",
+                "synonyms": [
+                  "welche Menge"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach einer nicht einzeln gezählten Menge oder einem Preis",
+                    "examples": [
+                      "Wie viel Wasser trinkst du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wie viel – Beispielsatz folgt.",
+              "answer": "Mit „wie viel“ fragt man nach einer Menge oder einem Preis.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „wie viel“ fragt man ausschließlich nach einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „wie viel“ fragt man ausschließlich nach einem Grund.",
               "ok": false
             }
           ]
@@ -194,18 +506,53 @@
           "title": "",
           "page": 10,
           "question": "wie viele",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach der Anzahl zählbarer Personen oder Dinge.",
+          "explain": {
+            "entryId": "wie viele",
+            "headword": "wie viele",
+            "pronunciation": {
+              "display": "wii FII-le",
+              "ipaUK": "/viː ˈfiːlə/",
+              "ipaUS": "/viː ˈfiːlə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Interrogativphrase",
+                "grammarType": "Anzahlfrage",
+                "headwordLine": "wie viele?",
+                "inflectionsLine": "vor zählbaren Substantiven im Plural",
+                "synonyms": [
+                  "welche Anzahl"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fragt nach der Anzahl zählbarer Personen oder Dinge",
+                    "examples": [
+                      "Wie viele Bücher hast du?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wie viele – Beispielsatz folgt.",
+              "answer": "Mit „wie viele“ fragt man nach der Anzahl zählbarer Personen oder Dinge.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit „wie viele“ fragt man ausschließlich nach einem Ort.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit „wie viele“ fragt man ausschließlich nach einer Ursache.",
               "ok": false
             }
           ]

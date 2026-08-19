@@ -29,7 +29,7 @@ object SectionQuizKeyMap {
         //   Months, Numbers, Occupations, Personal, Places, Questions, Seasons, Time, Verbs,
         //   WeekDays, upinonatby
         "A1" to mapOf(
-            "Hallo" to "Hello",
+            "Hallo (A1)" to "Hello",
             "Persönliche Informationen" to "Personal",
             "Persönliches" to "Personal",                       // Firebase variant
             "Familie" to "Family",

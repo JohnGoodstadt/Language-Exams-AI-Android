@@ -2,150 +2,397 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPronouns2-de",
-  "title": "",
+  "title": "Pronomen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "dieser",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Weist auf eine bestimmte, nahe oder bereits genannte Person oder Sache hin.",
+          "explain": {
+            "entryId": "dieser",
+            "headword": "dieser",
+            "pronunciation": {
+              "display": "DII-ser",
+              "ipaUK": "/ˈdiːzɐ/",
+              "ipaUS": "/ˈdiːzɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Demonstrativpronomen",
+                "grammarType": "Hinweis",
+                "headwordLine": "dieser",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "der hier"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "weist auf eine bestimmte, nahe oder bereits genannte Person oder Sache hin",
+                    "examples": [
+                      "Dieser Bus fährt zum Bahnhof."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "dieser – Beispielsatz folgt.",
+              "answer": "Weist auf eine bestimmte, nahe oder bereits genannte Person oder Sache hin.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet ausnahmslos jede Person einer Gruppe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine völlig unbekannte Sache ohne nähere Bestimmung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "jeder",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet alle Personen oder Dinge einer Gruppe einzeln und ohne Ausnahme.",
+          "explain": {
+            "entryId": "jeder",
+            "headword": "jeder",
+            "pronunciation": {
+              "display": "JEE-der",
+              "ipaUK": "/ˈjeːdɐ/",
+              "ipaUS": "/ˈjeːdɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen",
+                "grammarType": "Gesamtheit einzeln betrachtet",
+                "headwordLine": "jeder",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "alle einzeln"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet alle Personen oder Dinge einer Gruppe einzeln und ohne Ausnahme",
+                    "examples": [
+                      "Jeder bekommt eine Fahrkarte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "jeder – Beispielsatz folgt.",
+              "answer": "Bezeichnet alle Mitglieder einer Gruppe einzeln und ohne Ausnahme.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet genau eine unbekannte Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet keine einzige Person einer Gruppe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "man",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet Menschen allgemein oder eine nicht näher bestimmte Person.",
+          "explain": {
+            "entryId": "man",
+            "headword": "man",
+            "pronunciation": {
+              "display": "mann",
+              "ipaUK": "/man/",
+              "ipaUS": "/man/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen",
+                "grammarType": "allgemeine Person",
+                "headwordLine": "man",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "die Leute",
+                  "jemand allgemein"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet Menschen allgemein oder eine nicht näher bestimmte Person",
+                    "examples": [
+                      "In Deutschland trinkt man viel Kaffee."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "man – Beispielsatz folgt.",
+              "answer": "Bezeichnet Menschen allgemein oder eine nicht näher bestimmte Person.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet immer die Person, die gerade spricht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet ausschließlich mehrere informell angesprochene Personen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "etwas",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine nicht näher bestimmte Sache oder eine kleine unbestimmte Menge.",
+          "explain": {
+            "entryId": "etwas",
+            "headword": "etwas",
+            "pronunciation": {
+              "display": "ET-vas",
+              "ipaUK": "/ˈɛtvas/",
+              "ipaUS": "/ˈɛtvas/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen",
+                "grammarType": "unbestimmte Sache oder Menge",
+                "headwordLine": "etwas",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ein bisschen",
+                  "irgendetwas"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine nicht näher bestimmte Sache oder eine kleine unbestimmte Menge",
+                    "examples": [
+                      "Ich möchte etwas trinken."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "etwas – Beispielsatz folgt.",
+              "answer": "Bezeichnet eine nicht näher bestimmte Sache oder eine unbestimmte Menge.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bedeutet, dass überhaupt keine Sache vorhanden ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine bestimmte Person, deren Name unbekannt ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "nichts",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bedeutet, dass keine Sache oder kein Teil vorhanden ist.",
+          "explain": {
+            "entryId": "nichts",
+            "headword": "nichts",
+            "pronunciation": {
+              "display": "nichts",
+              "ipaUK": "/nɪçt͡s/",
+              "ipaUS": "/nɪçt͡s/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen",
+                "grammarType": "Verneinung einer Sache",
+                "headwordLine": "nichts",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gar nichts"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bedeutet, dass keine Sache oder kein Teil vorhanden ist",
+                    "examples": [
+                      "Ich habe nichts gehört."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nichts – Beispielsatz folgt.",
+              "answer": "Bedeutet, dass keine Sache oder kein Teil davon vorhanden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet eine kleine, aber vorhandene Menge.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine unbekannte Person.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "jemand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine Person, ohne genau zu sagen, wer sie ist.",
+          "explain": {
+            "entryId": "jemand",
+            "headword": "jemand",
+            "pronunciation": {
+              "display": "JEE-mant",
+              "ipaUK": "/ˈjeːmant/",
+              "ipaUS": "/ˈjeːmant/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen",
+                "grammarType": "unbestimmte Person",
+                "headwordLine": "jemand",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "irgendjemand"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bezeichnet eine Person, ohne genau zu sagen, wer sie ist",
+                    "examples": [
+                      "Jemand wartet vor der Tür."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "jemand – Beispielsatz folgt.",
+              "answer": "Bezeichnet eine Person, ohne genau zu sagen oder zu wissen, wer sie ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bedeutet, dass keine Person vorhanden ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet eine unbekannte Sache statt einer Person.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "niemand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bedeutet, dass keine Person vorhanden oder gemeint ist.",
+          "explain": {
+            "entryId": "niemand",
+            "headword": "niemand",
+            "pronunciation": {
+              "display": "NII-mant",
+              "ipaUK": "/ˈniːmant/",
+              "ipaUS": "/ˈniːmant/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Indefinitpronomen",
+                "grammarType": "Verneinung einer Person",
+                "headwordLine": "niemand",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "keine Person"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bedeutet, dass keine Person vorhanden oder gemeint ist",
+                    "examples": [
+                      "Niemand ist im Büro."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "niemand – Beispielsatz folgt.",
+              "answer": "Bedeutet, dass keine Person vorhanden oder gemeint ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezeichnet eine Person, deren Name nicht bekannt ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet alle Personen einer Gruppe einzeln.",
               "ok": false
             }
           ]

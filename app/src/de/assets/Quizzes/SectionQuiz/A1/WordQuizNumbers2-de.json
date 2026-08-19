@@ -2,130 +2,332 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizNumbers2-de",
-  "title": "",
+  "title": "Zahlen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "zehn",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 10; eine Menge aus zehn Einheiten.",
+          "explain": {
+            "entryId": "zehn",
+            "headword": "zehn",
+            "pronunciation": {
+              "display": "TSEEN",
+              "ipaUK": "/t͡seːn/",
+              "ipaUS": "/t͡seːn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "zehn (10)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 10; eine Menge aus zehn Einheiten",
+                    "examples": [
+                      "Zwei mal fünf ist zehn."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zehn – Beispielsatz folgt.",
+              "answer": "Zwei mal fünf ist zehn.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zwei mal vier ist zehn.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fünf plus vier ist zehn.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "elf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 11; eine Einheit mehr als zehn.",
+          "explain": {
+            "entryId": "elf",
+            "headword": "elf",
+            "pronunciation": {
+              "display": "ELF",
+              "ipaUK": "/ɛlf/",
+              "ipaUS": "/ɛlf/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "elf (11)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 11; eine Einheit mehr als zehn",
+                    "examples": [
+                      "Zehn plus eins ist elf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "elf – Beispielsatz folgt.",
+              "answer": "Zehn plus eins ist elf.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zehn plus zwei ist elf.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fünf plus fünf ist elf.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "zwölf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 12; zwei Einheiten mehr als zehn.",
+          "explain": {
+            "entryId": "zwölf",
+            "headword": "zwölf",
+            "pronunciation": {
+              "display": "TSWÖLF",
+              "ipaUK": "/t͡svœlf/",
+              "ipaUS": "/t͡svœlf/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "zwölf (12)",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ein Dutzend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 12; zwei Einheiten mehr als zehn",
+                    "examples": [
+                      "Ein Dutzend besteht aus zwölf Stück."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zwölf – Beispielsatz folgt.",
+              "answer": "Ein Dutzend besteht aus zwölf Stück.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein halbes Dutzend besteht aus zwölf Stück.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zehn plus eins ist zwölf.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "zwanzig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 20; zweimal zehn.",
+          "explain": {
+            "entryId": "zwanzig",
+            "headword": "zwanzig",
+            "pronunciation": {
+              "display": "TSWAN-tsich",
+              "ipaUK": "/ˈt͡svant͡sɪç/",
+              "ipaUS": "/ˈt͡svant͡sɪç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "zwanzig (20)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 20; zweimal zehn",
+                    "examples": [
+                      "Zehn plus zehn ist zwanzig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zwanzig – Beispielsatz folgt.",
+              "answer": "Zehn plus zehn ist zwanzig.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zehn plus fünf ist zwanzig.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zwei plus zehn ist zwanzig.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "dreißig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 30; dreimal zehn.",
+          "explain": {
+            "entryId": "dreißig",
+            "headword": "dreißig",
+            "pronunciation": {
+              "display": "DRAI-sich",
+              "ipaUK": "/ˈdʁaɪ̯sɪç/",
+              "ipaUS": "/ˈdʁaɪ̯sɪç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "dreißig (30)",
+                "inflectionsLine": null,
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 30; dreimal zehn",
+                    "examples": [
+                      "Zehn plus zehn plus zehn ist dreißig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "dreißig – Beispielsatz folgt.",
+              "answer": "Zehn plus zehn plus zehn ist dreißig.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zehn plus zehn ist dreißig.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Drei plus zehn ist dreißig.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "hundert",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 100; zehnmal zehn.",
+          "explain": {
+            "entryId": "hundert",
+            "headword": "hundert",
+            "pronunciation": {
+              "display": "HUN-dert",
+              "ipaUK": "/ˈhʊndɐt/",
+              "ipaUS": "/ˈhʊndɐt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "hundert (100)",
+                "inflectionsLine": "auch: einhundert",
+                "synonyms": [
+                  "einhundert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 100; zehnmal zehn",
+                    "examples": [
+                      "Zehn mal zehn ist hundert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hundert – Beispielsatz folgt.",
+              "answer": "Zehn mal zehn ist hundert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zehn plus zehn ist hundert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zehn mal zwei ist hundert.",
               "ok": false
             }
           ]

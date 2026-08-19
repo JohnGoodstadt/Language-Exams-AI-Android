@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizQuantities1-de",
-  "title": "",
+  "title": "Zahlen & Mengen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "hundert",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 100.",
+          "explain": {
+            "entryId": "hundert",
+            "headword": "hundert",
+            "pronunciation": {
+              "display": "HUN-dert",
+              "ipaUK": "/ˈhʊndɐt/",
+              "ipaUS": "/ˈhʊndɐt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "hundert (100)",
+                "inflectionsLine": "auch: einhundert",
+                "synonyms": [
+                  "einhundert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 100; zehnmal zehn",
+                    "examples": [
+                      "Zehn mal zehn ist hundert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hundert – Beispielsatz folgt.",
+              "answer": "Hundert ist die Zahl 100 und entspricht zehnmal zehn.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Hundert ist die Zahl 1.000 und entspricht zehnmal hundert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Hundert ist die Hälfte von hundert.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "tausend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 1.000.",
+          "explain": {
+            "entryId": "tausend",
+            "headword": "tausend",
+            "pronunciation": {
+              "display": "TAU-zent",
+              "ipaUK": "/ˈtaʊ̯zn̩t/",
+              "ipaUS": "/ˈtaʊ̯zn̩t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Numerale",
+                "grammarType": "Kardinalzahl",
+                "headwordLine": "tausend (1.000)",
+                "inflectionsLine": "auch: eintausend",
+                "synonyms": [
+                  "eintausend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 1.000; zehnmal hundert",
+                    "examples": [
+                      "Zehn mal hundert ist tausend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "tausend – Beispielsatz folgt.",
+              "answer": "Tausend ist die Zahl 1.000 und entspricht zehnmal hundert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Tausend ist die Zahl 100 und entspricht zehnmal zehn.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Tausend ist die Zahl 1.000.000.",
               "ok": false
             }
           ]
@@ -54,18 +124,51 @@
           "title": "",
           "page": 3,
           "question": "Million",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zahl 1.000.000.",
+          "explain": {
+            "entryId": "Million",
+            "headword": "Million",
+            "pronunciation": {
+              "display": "mil-JOON",
+              "ipaUK": "/mɪlˈjoːn/",
+              "ipaUS": "/mɪlˈjoːn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantivisches Numerale",
+                "grammarType": "feminin",
+                "headwordLine": "die Million",
+                "inflectionsLine": "Plural: die Millionen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zahl 1.000.000; tausendmal tausend",
+                    "examples": [
+                      "Eine Million hat sechs Nullen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Million – Beispielsatz folgt.",
+              "answer": "Eine Million ist die Zahl 1.000.000 und hat sechs Nullen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Million ist die Zahl 1.000 und hat drei Nullen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Million ist die Zahl 100 und hat zwei Nullen.",
               "ok": false
             }
           ]
@@ -74,18 +177,53 @@
           "title": "",
           "page": 4,
           "question": "Hälfte",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einer von zwei gleich großen Teilen.",
+          "explain": {
+            "entryId": "Hälfte",
+            "headword": "Hälfte",
+            "pronunciation": {
+              "display": "HEL-fte",
+              "ipaUK": "/ˈhɛlftə/",
+              "ipaUS": "/ˈhɛlftə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Hälfte",
+                "inflectionsLine": "Plural: die Hälften",
+                "synonyms": [
+                  "ein Halb"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einer von zwei gleich großen Teilen eines Ganzen",
+                    "examples": [
+                      "Ich esse die Hälfte des Kuchens."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Hälfte – Beispielsatz folgt.",
+              "answer": "Die Hälfte ist einer von zwei gleich großen Teilen eines Ganzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Hälfte ist einer von vier gleich großen Teilen eines Ganzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Hälfte ist immer das gesamte ungeteilte Ganze.",
               "ok": false
             }
           ]
@@ -94,18 +232,54 @@
           "title": "",
           "page": 5,
           "question": "Viertel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einer von vier gleich großen Teilen.",
+          "explain": {
+            "entryId": "Viertel",
+            "headword": "Viertel",
+            "pronunciation": {
+              "display": "FIIR-tel",
+              "ipaUK": "/ˈfɪʁtl̩/",
+              "ipaUS": "/ˈfɪʁtl̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Viertel",
+                "inflectionsLine": "Plural: die Viertel",
+                "synonyms": [
+                  "ein Viertel",
+                  "25 Prozent"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einer von vier gleich großen Teilen eines Ganzen",
+                    "examples": [
+                      "Ein Viertel des Kuchens ist 25 Prozent des Kuchens."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Viertel – Beispielsatz folgt.",
+              "answer": "Ein Viertel ist einer von vier gleich großen Teilen eines Ganzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Viertel ist einer von zwei gleich großen Teilen eines Ganzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Viertel ist immer das gesamte ungeteilte Ganze.",
               "ok": false
             }
           ]
@@ -114,18 +288,53 @@
           "title": "",
           "page": 6,
           "question": "Kilo",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kurzform für Kilogramm, also 1.000 Gramm.",
+          "explain": {
+            "entryId": "Kilo",
+            "headword": "Kilo",
+            "pronunciation": {
+              "display": "KII-lo",
+              "ipaUK": "/ˈkiːlo/",
+              "ipaUS": "/ˈkiːlo/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Kilo",
+                "inflectionsLine": "Plural: die Kilo",
+                "synonyms": [
+                  "Kilogramm"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kurzform für Kilogramm; eine Gewichtseinheit von 1.000 Gramm",
+                    "examples": [
+                      "Ich kaufe ein Kilo Äpfel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kilo – Beispielsatz folgt.",
+              "answer": "Ein Kilo ist eine Gewichtseinheit und entspricht 1.000 Gramm.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Kilo ist eine Volumeneinheit und entspricht immer einem Liter.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Kilo ist eine Gewichtseinheit und entspricht genau einem Gramm.",
               "ok": false
             }
           ]
@@ -134,18 +343,53 @@
           "title": "",
           "page": 7,
           "question": "Gramm",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine kleine Gewichtseinheit.",
+          "explain": {
+            "entryId": "Gramm",
+            "headword": "Gramm",
+            "pronunciation": {
+              "display": "GRAM",
+              "ipaUK": "/ɡʁam/",
+              "ipaUS": "/ɡʁam/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Gramm",
+                "inflectionsLine": "Plural: die Gramm",
+                "synonyms": [
+                  "g"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Gewichtseinheit; 1.000 Gramm ergeben ein Kilogramm",
+                    "examples": [
+                      "Die Packung enthält 500 Gramm Reis."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gramm – Beispielsatz folgt.",
+              "answer": "Ein Gramm ist eine Gewichtseinheit; 1.000 Gramm ergeben ein Kilogramm.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Gramm ist eine Volumeneinheit für Getränke.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gramm ist schwerer als ein Kilogramm.",
               "ok": false
             }
           ]
@@ -154,18 +398,53 @@
           "title": "",
           "page": 8,
           "question": "Liter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Einheit für das Volumen von Flüssigkeiten.",
+          "explain": {
+            "entryId": "Liter",
+            "headword": "Liter",
+            "pronunciation": {
+              "display": "LII-ter",
+              "ipaUK": "/ˈliːtɐ/",
+              "ipaUS": "/ˈliːtɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin oder neutral",
+                "headwordLine": "der/das Liter",
+                "inflectionsLine": "Plural: die Liter",
+                "synonyms": [
+                  "l"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Einheit für das Volumen, besonders von Flüssigkeiten",
+                    "examples": [
+                      "Die Flasche enthält einen Liter Wasser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Liter – Beispielsatz folgt.",
+              "answer": "Ein Liter ist eine Einheit für das Volumen, zum Beispiel von Wasser.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Liter ist eine Gewichtseinheit, die genau 1.000 Gramm bedeutet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Liter bezeichnet immer ein einzelnes Stück einer Ware.",
               "ok": false
             }
           ]
@@ -174,18 +453,54 @@
           "title": "",
           "page": 9,
           "question": "Stück",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein einzelnes Teil oder eine einzelne Einheit.",
+          "explain": {
+            "entryId": "Stück",
+            "headword": "Stück",
+            "pronunciation": {
+              "display": "SCHTÜK",
+              "ipaUK": "/ʃtʏk/",
+              "ipaUS": "/ʃtʏk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Stück",
+                "inflectionsLine": "Plural: die Stücke; nach Zahlen oft: Stück",
+                "synonyms": [
+                  "Teil",
+                  "Einheit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein einzelner Teil oder eine einzelne Einheit von mehreren",
+                    "examples": [
+                      "Ich nehme drei Stück Kuchen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Stück – Beispielsatz folgt.",
+              "answer": "Ein Stück ist ein einzelner Teil oder eine einzelne Einheit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Stück besteht immer aus genau zwei zusammengehörenden Dingen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Stück bezeichnet ausschließlich eine unbestimmte große Menge.",
               "ok": false
             }
           ]
@@ -194,18 +509,53 @@
           "title": "",
           "page": 10,
           "question": "Paar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zwei zusammengehörende Personen oder Dinge.",
+          "explain": {
+            "entryId": "Paar",
+            "headword": "Paar",
+            "pronunciation": {
+              "display": "PAAR",
+              "ipaUK": "/paːɐ̯/",
+              "ipaUS": "/paːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Paar",
+                "inflectionsLine": "Plural: die Paare",
+                "synonyms": [
+                  "zwei zusammengehörende Teile"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zwei Personen oder Dinge, die zusammengehören",
+                    "examples": [
+                      "Ein Paar Schuhe besteht aus zwei Schuhen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Paar – Beispielsatz folgt.",
+              "answer": "Ein Paar besteht normalerweise aus zwei zusammengehörenden Personen oder Dingen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Paar ist immer ein einzelnes Teil ohne ein zweites.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Paar bezeichnet genau vier gleich große Teile eines Ganzen.",
               "ok": false
             }
           ]

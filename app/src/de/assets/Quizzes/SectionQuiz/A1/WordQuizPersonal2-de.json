@@ -2,110 +2,283 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal2-de",
-  "title": "",
+  "title": "Persönliche Informationen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort oder der Ausdruck richtig verwendet wird.",
+      "description": "A1",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Nationalität",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zugehörigkeit einer Person zu einem Staat.",
+          "explain": {
+            "entryId": "Nationalität",
+            "headword": "Nationalität",
+            "pronunciation": {
+              "display": "na-tsio-na-li-TÄÄT",
+              "ipaUK": "/nat͡si̯onaliˈtɛːt/",
+              "ipaUS": "/nat͡si̯onaliˈtɛːt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Nationalität",
+                "inflectionsLine": "Plural: die Nationalitäten",
+                "synonyms": [
+                  "Staatsangehörigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die rechtliche oder persönliche Zugehörigkeit einer Person zu einem Land",
+                    "examples": [
+                      "Welche Nationalität haben Sie?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nationalität – Beispielsatz folgt.",
+              "answer": "Welche Nationalität haben Sie?",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Welcher Nationalität haben Sie?",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Welche Nationalität hat Sie?",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "geboren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zur Welt gekommen; meist zusammen mit „sein“ verwendet.",
+          "explain": {
+            "entryId": "geboren",
+            "headword": "geboren",
+            "pronunciation": {
+              "display": "ge-BOO-ren",
+              "ipaUK": "/ɡəˈboːʁən/",
+              "ipaUS": "/ɡəˈboːʁən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Partizip II von gebären",
+                "headwordLine": "geboren",
+                "inflectionsLine": "mit sein: ich bin geboren",
+                "synonyms": [
+                  "zur Welt gekommen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "zur Welt gekommen; verwendet, um Geburtsort oder Geburtsdatum anzugeben",
+                    "examples": [
+                      "Ich bin 2001 in Hamburg geboren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "geboren – Beispielsatz folgt.",
+              "answer": "Ich bin 2001 in Hamburg geboren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ich habe 2001 in Hamburg geboren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich bin 2001 in Hamburg gebort.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "wohnen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An einem Ort sein Zuhause haben.",
+          "explain": {
+            "entryId": "wohnen",
+            "headword": "wohnen",
+            "pronunciation": {
+              "display": "WOO-nen",
+              "ipaUK": "/ˈvoːnən/",
+              "ipaUS": "/ˈvoːnən/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "wohnen",
+                "inflectionsLine": "ich wohne; du wohnst; er/sie/es wohnt",
+                "synonyms": [
+                  "leben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an einem bestimmten Ort sein Zuhause haben",
+                    "examples": [
+                      "Wir wohnen in Köln."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wohnen – Beispielsatz folgt.",
+              "answer": "Wir wohnen in Köln.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wir wohnt in Köln.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wir wohnen aus Köln.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "kommen aus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aus einem bestimmten Ort oder Land stammen.",
+          "explain": {
+            "entryId": "kommen aus",
+            "headword": "kommen aus",
+            "pronunciation": {
+              "display": "KOM-men aus",
+              "ipaUK": "/ˈkɔmən aʊ̯s/",
+              "ipaUS": "/ˈkɔmən aʊ̯s/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "unregelmäßiges Verb mit Präposition",
+                "headwordLine": "aus einem Ort oder Land kommen",
+                "inflectionsLine": "ich komme aus; du kommst aus; er/sie/es kommt aus",
+                "synonyms": [
+                  "stammen aus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "seine Herkunft in einem bestimmten Ort oder Land haben",
+                    "examples": [
+                      "Ich komme aus Spanien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kommen aus – Beispielsatz folgt.",
+              "answer": "Ich komme aus Spanien.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ich kommen aus Spanien.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ich komme von Spanien.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Sprache",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein System aus Wörtern und Regeln zur Verständigung.",
+          "explain": {
+            "entryId": "Sprache",
+            "headword": "Sprache",
+            "pronunciation": {
+              "display": "SCHPRAA-che",
+              "ipaUK": "/ˈʃpʁaːxə/",
+              "ipaUS": "/ˈʃpʁaːxə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Sprache",
+                "inflectionsLine": "Plural: die Sprachen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein System von Wörtern und Regeln, mit dem Menschen miteinander sprechen und schreiben",
+                    "examples": [
+                      "Deutsch ist eine Sprache."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sprache – Beispielsatz folgt.",
+              "answer": "Deutsch ist eine Sprache.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Deutsch ist ein Sprache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Deutsch sind eine Sprache.",
               "ok": false
             }
           ]

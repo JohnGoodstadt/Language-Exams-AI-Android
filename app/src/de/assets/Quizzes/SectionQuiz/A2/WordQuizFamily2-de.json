@@ -2,130 +2,339 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFamily2-de",
-  "title": "",
+  "title": "Familie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Tante",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Schwester eines Elternteils oder die Ehefrau eines Onkels.",
+          "explain": {
+            "entryId": "Tante",
+            "headword": "Tante",
+            "pronunciation": {
+              "display": "TAN-te",
+              "ipaUK": "/ˈtantə/",
+              "ipaUS": "/ˈtantə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Tante",
+                "inflectionsLine": "Plural: die Tanten",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Schwester der Mutter oder des Vaters oder die Ehefrau eines Onkels",
+                    "examples": [
+                      "Meine Tante ist die Schwester meiner Mutter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tante – Beispielsatz folgt.",
+              "answer": "Eine Tante kann die Schwester der eigenen Mutter oder des eigenen Vaters sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Tante ist die Tochter des eigenen Sohnes oder der eigenen Tochter.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Tante ist immer die weibliche Partnerin in der eigenen Ehe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Cousin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Sohn einer Tante oder eines Onkels.",
+          "explain": {
+            "entryId": "Cousin",
+            "headword": "Cousin",
+            "pronunciation": {
+              "display": "ku-SENG",
+              "ipaUK": "/kuˈzɛ̃ː/",
+              "ipaUS": "/kuˈzɛ̃ː/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Cousin",
+                "inflectionsLine": "Plural: die Cousins",
+                "synonyms": [
+                  "Vetter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der Sohn einer Tante oder eines Onkels",
+                    "examples": [
+                      "Mein Cousin ist der Sohn meiner Tante."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Cousin – Beispielsatz folgt.",
+              "answer": "Ein Cousin ist der Sohn einer Tante oder eines Onkels.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Cousin ist der Bruder der eigenen Mutter oder des eigenen Vaters.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Cousin ist der Vater des eigenen Vaters.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Cousine",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Tochter einer Tante oder eines Onkels.",
+          "explain": {
+            "entryId": "Cousine",
+            "headword": "Cousine",
+            "pronunciation": {
+              "display": "ku-ZII-ne",
+              "ipaUK": "/kuˈziːnə/",
+              "ipaUS": "/kuˈziːnə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Cousine",
+                "inflectionsLine": "Plural: die Cousinen",
+                "synonyms": [
+                  "Base"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Tochter einer Tante oder eines Onkels",
+                    "examples": [
+                      "Meine Cousine ist die Tochter meines Onkels."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Cousine – Beispielsatz folgt.",
+              "answer": "Eine Cousine ist die Tochter einer Tante oder eines Onkels.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Cousine ist die Schwester der eigenen Mutter oder des eigenen Vaters.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Cousine ist die Mutter der eigenen Mutter.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Nachbar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person, die in der Nähe wohnt.",
+          "explain": {
+            "entryId": "Nachbar",
+            "headword": "Nachbar",
+            "pronunciation": {
+              "display": "NACH-baar",
+              "ipaUK": "/ˈnaːxˌbaːɐ̯/",
+              "ipaUS": "/ˈnaːxˌbaːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Nachbar",
+                "inflectionsLine": "Plural: die Nachbarn; feminin: die Nachbarin",
+                "synonyms": [
+                  "Anwohner"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Person, die im selben Haus oder in der Nähe wohnt",
+                    "examples": [
+                      "Unser Nachbar wohnt in der Wohnung nebenan."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachbar – Beispielsatz folgt.",
+              "answer": "Ein Nachbar ist eine Person, die im selben Haus oder in der Nähe wohnt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Nachbar ist immer ein naher Verwandter aus der eigenen Familie.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Nachbar ist ausschließlich der Partner in einer Ehe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "heiraten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit einer Person eine Ehe schließen.",
+          "explain": {
+            "entryId": "heiraten",
+            "headword": "heiraten",
+            "pronunciation": {
+              "display": "HAI-raa-ten",
+              "ipaUK": "/ˈhaɪ̯ʁaːtn̩/",
+              "ipaUS": "/ˈhaɪ̯ʁaːtn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "heiraten",
+                "inflectionsLine": "ich heirate; du heiratest; er/sie/es heiratet",
+                "synonyms": [
+                  "die Ehe schließen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit einer anderen Person offiziell eine Ehe schließen",
+                    "examples": [
+                      "Lisa und Ben wollen im Sommer heiraten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "heiraten – Beispielsatz folgt.",
+              "answer": "Heiraten bedeutet, mit einer anderen Person offiziell eine Ehe zu schließen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Heiraten bedeutet, eine bestehende Ehe rechtlich zu beenden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Heiraten bedeutet, in die Wohnung neben einer Person zu ziehen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "sich kümmern um",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Für jemanden oder etwas sorgen.",
+          "explain": {
+            "entryId": "sich kümmern um",
+            "headword": "sich kümmern um",
+            "pronunciation": {
+              "display": "sich KÜM-mern um",
+              "ipaUK": "/zɪç ˈkʏmɐn ʊm/",
+              "ipaUS": "/zɪç ˈkʏmɐn ʊm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexive Verbverbindung",
+                "grammarType": "mit Akkusativ",
+                "headwordLine": "sich um jemanden/etwas kümmern",
+                "inflectionsLine": "ich kümmere mich; du kümmerst dich; er/sie/es kümmert sich",
+                "synonyms": [
+                  "sorgen für",
+                  "betreuen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "für eine Person, ein Tier oder eine Sache sorgen und notwendige Hilfe geben",
+                    "examples": [
+                      "Sie kümmert sich um ihre kranke Mutter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich kümmern um – Beispielsatz folgt.",
+              "answer": "Sich um jemanden kümmern bedeutet, für die Person zu sorgen und ihr zu helfen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich um jemanden kümmern bedeutet, die Person absichtlich allein zu lassen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich um jemanden kümmern bedeutet, mit der Person eine Ehe zu beenden.",
               "ok": false
             }
           ]

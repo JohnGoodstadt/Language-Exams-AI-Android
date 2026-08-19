@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal1-de",
-  "title": "",
+  "title": "Persönliche Informationen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Familienstand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die rechtliche persönliche Situation in Bezug auf eine Ehe.",
+          "explain": {
+            "entryId": "Familienstand",
+            "headword": "Familienstand",
+            "pronunciation": {
+              "display": "fa-MII-li-en-schtant",
+              "ipaUK": "/faˈmiːli̯ənˌʃtant/",
+              "ipaUS": "/faˈmiːli̯ənˌʃtant/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Familienstand",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [
+                  "Personenstand"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die rechtliche persönliche Situation, zum Beispiel ledig, verheiratet oder geschieden",
+                    "examples": [
+                      "Bitte geben Sie Ihren Familienstand an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Familienstand – Beispielsatz folgt.",
+              "answer": "Der Familienstand zeigt, ob jemand zum Beispiel ledig, verheiratet oder geschieden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Familienstand gibt an, wie viele Kinder in einer Familie leben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Familienstand ist der Name des Berufs einer Person.",
               "ok": false
             }
           ]
@@ -34,18 +69,51 @@
           "title": "",
           "page": 2,
           "question": "Geburtsdatum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Kalendertag, an dem eine Person geboren wurde.",
+          "explain": {
+            "entryId": "Geburtsdatum",
+            "headword": "Geburtsdatum",
+            "pronunciation": {
+              "display": "ge-BUURTS-daa-tum",
+              "ipaUK": "/ɡəˈbuːɐ̯t͡sˌdaːtʊm/",
+              "ipaUS": "/ɡəˈbuːɐ̯t͡sˌdaːtʊm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Geburtsdatum",
+                "inflectionsLine": "Plural: die Geburtsdaten",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Tag, Monat und Jahr, an denen eine Person geboren wurde",
+                    "examples": [
+                      "Mein Geburtsdatum ist der 12. Mai 1995."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Geburtsdatum – Beispielsatz folgt.",
+              "answer": "Das Geburtsdatum nennt Tag, Monat und Jahr der Geburt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Geburtsdatum nennt die Stadt, in der jemand geboren wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Geburtsdatum nennt die aktuelle Adresse einer Person.",
               "ok": false
             }
           ]
@@ -54,18 +122,51 @@
           "title": "",
           "page": 3,
           "question": "Geburtsort",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Ort, an dem eine Person geboren wurde.",
+          "explain": {
+            "entryId": "Geburtsort",
+            "headword": "Geburtsort",
+            "pronunciation": {
+              "display": "ge-BUURTS-ort",
+              "ipaUK": "/ɡəˈbuːɐ̯t͡sˌʔɔʁt/",
+              "ipaUS": "/ɡəˈbuːɐ̯t͡sˌʔɔʁt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Geburtsort",
+                "inflectionsLine": "Plural: die Geburtsorte",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Stadt oder der Ort, an dem eine Person geboren wurde",
+                    "examples": [
+                      "Mein Geburtsort ist Hamburg."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Geburtsort – Beispielsatz folgt.",
+              "answer": "Der Geburtsort ist die Stadt oder der Ort, an dem jemand geboren wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Geburtsort ist das genaue Datum, an dem jemand geboren wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Geburtsort ist immer der Ort, an dem jemand heute wohnt.",
               "ok": false
             }
           ]
@@ -74,18 +175,53 @@
           "title": "",
           "page": 4,
           "question": "Staatsangehörigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die rechtliche Zugehörigkeit zu einem Staat.",
+          "explain": {
+            "entryId": "Staatsangehörigkeit",
+            "headword": "Staatsangehörigkeit",
+            "pronunciation": {
+              "display": "SCHTAATS-an-ge-höö-rich-kait",
+              "ipaUK": "/ˈʃtaːt͡sʔanɡəˌhøːʁɪçkaɪ̯t/",
+              "ipaUS": "/ˈʃtaːt͡sʔanɡəˌhøːʁɪçkaɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Staatsangehörigkeit",
+                "inflectionsLine": "Plural: die Staatsangehörigkeiten",
+                "synonyms": [
+                  "Nationalität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die rechtliche Zugehörigkeit einer Person zu einem Staat",
+                    "examples": [
+                      "Im Formular steht die Frage nach der Staatsangehörigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Staatsangehörigkeit – Beispielsatz folgt.",
+              "answer": "Die Staatsangehörigkeit zeigt, zu welchem Staat eine Person rechtlich gehört.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Staatsangehörigkeit ist immer die Sprache, die eine Person am besten spricht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Staatsangehörigkeit ist die Stadt, in der eine Person gerade wohnt.",
               "ok": false
             }
           ]
@@ -94,18 +230,53 @@
           "title": "",
           "page": 5,
           "question": "Postleitzahl",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Code für ein Gebiet bei der Postzustellung.",
+          "explain": {
+            "entryId": "Postleitzahl",
+            "headword": "Postleitzahl",
+            "pronunciation": {
+              "display": "POST-lait-tsaal",
+              "ipaUK": "/ˈpɔstˌlaɪ̯t͡saːl/",
+              "ipaUS": "/ˈpɔstˌlaɪ̯t͡saːl/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Postleitzahl",
+                "inflectionsLine": "Plural: die Postleitzahlen",
+                "synonyms": [
+                  "PLZ"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Zahlen- oder Buchstabenfolge, die ein Gebiet für die Postzustellung kennzeichnet",
+                    "examples": [
+                      "Die Postleitzahl von München beginnt mit 8."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Postleitzahl – Beispielsatz folgt.",
+              "answer": "Die Postleitzahl hilft der Post, einen Ort oder ein Gebiet zu finden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Postleitzahl ist die Nummer, unter der man ein Handy anruft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Postleitzahl ist das Datum der Geburt einer Person.",
               "ok": false
             }
           ]
@@ -114,18 +285,53 @@
           "title": "",
           "page": 6,
           "question": "Wohnort",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Ort, an dem eine Person lebt.",
+          "explain": {
+            "entryId": "Wohnort",
+            "headword": "Wohnort",
+            "pronunciation": {
+              "display": "WOON-ort",
+              "ipaUK": "/ˈvoːnˌʔɔʁt/",
+              "ipaUS": "/ˈvoːnˌʔɔʁt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Wohnort",
+                "inflectionsLine": "Plural: die Wohnorte",
+                "synonyms": [
+                  "Wohnsitz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Stadt oder Gemeinde, in der eine Person lebt",
+                    "examples": [
+                      "Mein Wohnort ist Köln."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wohnort – Beispielsatz folgt.",
+              "answer": "Der Wohnort ist die Stadt oder Gemeinde, in der eine Person lebt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Wohnort ist immer die Stadt, in der eine Person geboren wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Wohnort bezeichnet den Beruf einer Person.",
               "ok": false
             }
           ]
@@ -134,18 +340,53 @@
           "title": "",
           "page": 7,
           "question": "verheiratet",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In einer rechtlich anerkannten Ehe lebend.",
+          "explain": {
+            "entryId": "verheiratet",
+            "headword": "verheiratet",
+            "pronunciation": {
+              "display": "fer-HAI-raa-tet",
+              "ipaUK": "/fɛɐ̯ˈhaɪ̯ʁaːtət/",
+              "ipaUS": "/fɛɐ̯ˈhaɪ̯ʁaːtət/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Familienstand",
+                "headwordLine": "verheiratet",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in einer Ehe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit einer anderen Person in einer rechtlich anerkannten Ehe lebend",
+                    "examples": [
+                      "Laura und Amir sind seit fünf Jahren verheiratet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verheiratet – Beispielsatz folgt.",
+              "answer": "Verheiratet bedeutet, dass eine Person in einer Ehe lebt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Verheiratet bedeutet, dass eine Person noch nie eine Ehe geschlossen hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Verheiratet bedeutet, dass eine Ehe rechtlich beendet wurde.",
               "ok": false
             }
           ]
@@ -154,18 +395,53 @@
           "title": "",
           "page": 8,
           "question": "ledig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht verheiratet und noch nie verheiratet gewesen.",
+          "explain": {
+            "entryId": "ledig",
+            "headword": "ledig",
+            "pronunciation": {
+              "display": "LEE-dich",
+              "ipaUK": "/ˈleːdɪç/",
+              "ipaUS": "/ˈleːdɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Familienstand",
+                "headwordLine": "ledig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "unverheiratet"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nicht verheiratet und in amtlichen Angaben meist noch nie verheiratet gewesen",
+                    "examples": [
+                      "Bei Familienstand kreuzt er ledig an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ledig – Beispielsatz folgt.",
+              "answer": "Ledig bezeichnet eine Person, die nicht verheiratet und noch nie verheiratet war.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ledig bezeichnet eine Person, die gerade in einer Ehe lebt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ledig bezeichnet eine Person, deren Ehe durch Scheidung beendet wurde.",
               "ok": false
             }
           ]
@@ -174,18 +450,53 @@
           "title": "",
           "page": 9,
           "question": "geschieden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nach einer Scheidung nicht mehr verheiratet.",
+          "explain": {
+            "entryId": "geschieden",
+            "headword": "geschieden",
+            "pronunciation": {
+              "display": "ge-SCHII-den",
+              "ipaUK": "/ɡəˈʃiːdn̩/",
+              "ipaUS": "/ɡəˈʃiːdn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Familienstand",
+                "headwordLine": "geschieden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nach einer Scheidung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nicht mehr verheiratet, weil eine Ehe rechtlich durch Scheidung beendet wurde",
+                    "examples": [
+                      "Die beiden sind seit letztem Jahr geschieden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "geschieden – Beispielsatz folgt.",
+              "answer": "Geschieden bedeutet, dass eine frühere Ehe rechtlich beendet wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Geschieden bedeutet, dass eine Person aktuell in einer Ehe lebt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Geschieden bedeutet, dass eine Person noch nie verheiratet war.",
               "ok": false
             }
           ]
@@ -194,18 +505,53 @@
           "title": "",
           "page": 10,
           "question": "Formular",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Dokument mit Feldern für bestimmte Angaben.",
+          "explain": {
+            "entryId": "Formular",
+            "headword": "Formular",
+            "pronunciation": {
+              "display": "for-mu-LAAR",
+              "ipaUK": "/fɔʁmuˈlaːɐ̯/",
+              "ipaUS": "/fɔʁmuˈlaːɐ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Formular",
+                "inflectionsLine": "Plural: die Formulare",
+                "synonyms": [
+                  "Vordruck"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Papier oder digitales Dokument mit Feldern, in die man bestimmte Informationen einträgt",
+                    "examples": [
+                      "Bitte füllen Sie dieses Formular aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Formular – Beispielsatz folgt.",
+              "answer": "Ein Formular ist ein Dokument mit Feldern, in die man Angaben einträgt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Formular ist ein amtlicher Nachweis der eigenen Identität.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Formular ist nur der handgeschriebene Name unter einem Vertrag.",
               "ok": false
             }
           ]

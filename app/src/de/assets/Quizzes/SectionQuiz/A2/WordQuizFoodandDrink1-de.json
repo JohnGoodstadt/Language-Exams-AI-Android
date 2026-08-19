@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFoodandDrink1-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Frühstück",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die erste Mahlzeit am Morgen.",
+          "explain": {
+            "entryId": "Frühstück",
+            "headword": "Frühstück",
+            "pronunciation": {
+              "display": "FRÜÜ-sch-tük",
+              "ipaUK": "/ˈfʁyːˌʃtʏk/",
+              "ipaUS": "/ˈfʁyːˌʃtʏk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Frühstück",
+                "inflectionsLine": "Plural: die Frühstücke",
+                "synonyms": [
+                  "Morgenmahlzeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die erste Mahlzeit des Tages, die man normalerweise am Morgen isst",
+                    "examples": [
+                      "Zum Frühstück esse ich Brot und Obst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Frühstück – Beispielsatz folgt.",
+              "answer": "Das Frühstück ist die erste Mahlzeit, die man normalerweise am Morgen isst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Frühstück ist die Hauptmahlzeit, die man gewöhnlich am Mittag isst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Frühstück ist die letzte Mahlzeit vor dem Schlafengehen.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Mittagessen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Mahlzeit um die Mitte des Tages.",
+          "explain": {
+            "entryId": "Mittagessen",
+            "headword": "Mittagessen",
+            "pronunciation": {
+              "display": "MIT-taak-es-sen",
+              "ipaUK": "/ˈmɪtaːkˌʔɛsn̩/",
+              "ipaUS": "/ˈmɪtaːkˌʔɛsn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Mittagessen",
+                "inflectionsLine": "Plural: die Mittagessen",
+                "synonyms": [
+                  "Mittagsmahlzeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Mahlzeit, die man um die Mitte des Tages isst",
+                    "examples": [
+                      "Das Mittagessen gibt es um zwölf Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mittagessen – Beispielsatz folgt.",
+              "answer": "Das Mittagessen isst man gewöhnlich um die Mitte des Tages.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Mittagessen ist nur die kleine Speise vor dem Hauptgericht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Mittagessen isst man immer direkt nach dem Aufstehen am frühen Morgen.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Abendessen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Mahlzeit am Abend.",
+          "explain": {
+            "entryId": "Abendessen",
+            "headword": "Abendessen",
+            "pronunciation": {
+              "display": "AA-bent-es-sen",
+              "ipaUK": "/ˈaːbn̩tˌʔɛsn̩/",
+              "ipaUS": "/ˈaːbn̩tˌʔɛsn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Abendessen",
+                "inflectionsLine": "Plural: die Abendessen",
+                "synonyms": [
+                  "Abendmahlzeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Mahlzeit, die man am Abend isst",
+                    "examples": [
+                      "Zum Abendessen gibt es Suppe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Abendessen – Beispielsatz folgt.",
+              "answer": "Das Abendessen ist eine Mahlzeit, die man am Abend isst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Abendessen ist ausschließlich die erste Mahlzeit am Morgen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Abendessen ist nur ein Getränk zwischen zwei Mahlzeiten.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Gericht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine zubereitete Speise oder Mahlzeit.",
+          "explain": {
+            "entryId": "Gericht",
+            "headword": "Gericht",
+            "pronunciation": {
+              "display": "ge-RICHT",
+              "ipaUK": "/ɡəˈʁɪçt/",
+              "ipaUS": "/ɡəˈʁɪçt/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Gericht",
+                "inflectionsLine": "Plural: die Gerichte",
+                "synonyms": [
+                  "Speise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine zubereitete Speise, die als Teil einer Mahlzeit gegessen wird",
+                    "examples": [
+                      "Dieses Gericht besteht aus Reis und Gemüse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gericht – Beispielsatz folgt.",
+              "answer": "Ein Gericht ist eine zubereitete Speise, zum Beispiel Reis mit Gemüse.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Gericht ist das Papier, auf dem alle Preise im Restaurant stehen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gericht ist ausschließlich der Teller, auf dem das Essen liegt.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "Vorspeise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein kleiner erster Gang vor dem Hauptgericht.",
+          "explain": {
+            "entryId": "Vorspeise",
+            "headword": "Vorspeise",
+            "pronunciation": {
+              "display": "FOOR-schpai-ze",
+              "ipaUK": "/ˈfoːɐ̯ˌʃpaɪ̯zə/",
+              "ipaUS": "/ˈfoːɐ̯ˌʃpaɪ̯zə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Vorspeise",
+                "inflectionsLine": "Plural: die Vorspeisen",
+                "synonyms": [
+                  "erster Gang"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine meist kleine Speise, die vor dem Hauptgericht serviert wird",
+                    "examples": [
+                      "Als Vorspeise nehme ich einen Salat."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vorspeise – Beispielsatz folgt.",
+              "answer": "Eine Vorspeise ist ein kleiner Gang, den man vor dem Hauptgericht isst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Vorspeise ist ein süßer Gang, den man nach dem Hauptgericht isst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Vorspeise ist die Rechnung, die man nach dem Essen bezahlt.",
               "ok": false
             }
           ]
@@ -114,18 +289,54 @@
           "title": "",
           "page": 6,
           "question": "Nachspeise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein meist süßer Gang nach dem Hauptgericht.",
+          "explain": {
+            "entryId": "Nachspeise",
+            "headword": "Nachspeise",
+            "pronunciation": {
+              "display": "NACH-schpai-ze",
+              "ipaUK": "/ˈnaːxˌʃpaɪ̯zə/",
+              "ipaUS": "/ˈnaːxˌʃpaɪ̯zə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Nachspeise",
+                "inflectionsLine": "Plural: die Nachspeisen",
+                "synonyms": [
+                  "Dessert",
+                  "Nachtisch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine meist süße Speise, die nach dem Hauptgericht gegessen wird",
+                    "examples": [
+                      "Als Nachspeise gibt es Eis."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachspeise – Beispielsatz folgt.",
+              "answer": "Eine Nachspeise wird nach dem Hauptgericht gegessen und ist oft süß.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Nachspeise wird als kleiner erster Gang vor dem Hauptgericht gegessen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Nachspeise ist die Liste aller Getränke im Restaurant.",
               "ok": false
             }
           ]
@@ -134,18 +345,53 @@
           "title": "",
           "page": 7,
           "question": "bestellen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In einem Restaurant um eine Speise oder ein Getränk bitten.",
+          "explain": {
+            "entryId": "bestellen",
+            "headword": "bestellen",
+            "pronunciation": {
+              "display": "be-SCHTEL-len",
+              "ipaUK": "/bəˈʃtɛlən/",
+              "ipaUS": "/bəˈʃtɛlən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig, nicht trennbar",
+                "headwordLine": "bestellen",
+                "inflectionsLine": "ich bestelle; du bestellst; er/sie/es bestellt",
+                "synonyms": [
+                  "ordern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einer Bedienung sagen, welche Speise oder welches Getränk man haben möchte",
+                    "examples": [
+                      "Ich möchte eine Suppe bestellen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bestellen – Beispielsatz folgt.",
+              "answer": "Im Restaurant bedeutet bestellen, der Bedienung zu sagen, was man haben möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Im Restaurant bedeutet bestellen, nach dem Essen den offenen Betrag zu bezahlen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Im Restaurant bedeutet bestellen, das Essen selbst in der Küche zuzubereiten.",
               "ok": false
             }
           ]
@@ -154,18 +400,53 @@
           "title": "",
           "page": 8,
           "question": "Speisekarte",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Liste der angebotenen Speisen und Getränke.",
+          "explain": {
+            "entryId": "Speisekarte",
+            "headword": "Speisekarte",
+            "pronunciation": {
+              "display": "SCHPAI-ze-kar-te",
+              "ipaUK": "/ˈʃpaɪ̯zəˌkaʁtə/",
+              "ipaUS": "/ˈʃpaɪ̯zəˌkaʁtə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Speisekarte",
+                "inflectionsLine": "Plural: die Speisekarten",
+                "synonyms": [
+                  "Menükarte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Liste der Speisen und Getränke, die ein Restaurant anbietet, meist mit Preisen",
+                    "examples": [
+                      "Können wir bitte die Speisekarte bekommen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Speisekarte – Beispielsatz folgt.",
+              "answer": "Auf der Speisekarte stehen die angebotenen Speisen und Getränke, meist mit Preisen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Auf der Speisekarte steht nur der Betrag, den ein bestimmter Gast bezahlen muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Speisekarte ist ein einzelnes zubereitetes Gericht.",
               "ok": false
             }
           ]
@@ -174,18 +455,53 @@
           "title": "",
           "page": 9,
           "question": "schmecken",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen bestimmten Geschmack haben oder angenehm im Geschmack sein.",
+          "explain": {
+            "entryId": "schmecken",
+            "headword": "schmecken",
+            "pronunciation": {
+              "display": "SCHMEK-ken",
+              "ipaUK": "/ˈʃmɛkn̩/",
+              "ipaUS": "/ˈʃmɛkn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "regelmäßig",
+                "headwordLine": "schmecken",
+                "inflectionsLine": "es schmeckt; die Speisen schmecken",
+                "synonyms": [
+                  "einen Geschmack haben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einen bestimmten Geschmack haben oder für jemanden angenehm im Geschmack sein",
+                    "examples": [
+                      "Die Suppe schmeckt sehr gut."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schmecken – Beispielsatz folgt.",
+              "answer": "Schmecken beschreibt, welchen Geschmack eine Speise hat oder ob man ihn angenehm findet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schmecken bedeutet, eine Speise auf der Karte auszuwählen und zu bestellen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schmecken bedeutet, den Preis einer Mahlzeit zu bezahlen.",
               "ok": false
             }
           ]
@@ -194,18 +510,53 @@
           "title": "",
           "page": 10,
           "question": "Getränk",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Flüssigkeit, die man trinkt.",
+          "explain": {
+            "entryId": "Getränk",
+            "headword": "Getränk",
+            "pronunciation": {
+              "display": "ge-TRENK",
+              "ipaUK": "/ɡəˈtʁɛŋk/",
+              "ipaUS": "/ɡəˈtʁɛŋk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Getränk",
+                "inflectionsLine": "Plural: die Getränke",
+                "synonyms": [
+                  "Trank"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Flüssigkeit, die zum Trinken gedacht ist",
+                    "examples": [
+                      "Wasser ist ein gesundes Getränk."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Getränk – Beispielsatz folgt.",
+              "answer": "Ein Getränk ist eine Flüssigkeit, die man trinkt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Getränk ist eine feste Speise, die man mit Messer und Gabel isst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Getränk ist die Liste aller Gerichte eines Restaurants.",
               "ok": false
             }
           ]

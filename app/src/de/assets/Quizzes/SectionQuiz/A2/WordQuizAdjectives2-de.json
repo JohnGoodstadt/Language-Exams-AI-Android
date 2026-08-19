@@ -2,130 +2,343 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives2-de",
-  "title": "",
+  "title": "Adjektive",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Adjektivs passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "krank",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An einer körperlichen oder geistigen Störung leidend.",
+          "explain": {
+            "entryId": "krank",
+            "headword": "krank",
+            "pronunciation": {
+              "display": "KRANGK",
+              "ipaUK": "/kʁaŋk/",
+              "ipaUS": "/kʁaŋk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "krank",
+                "inflectionsLine": "kränker; am kränksten",
+                "synonyms": [
+                  "nicht gesund"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an einer körperlichen oder geistigen Krankheit leidend; nicht gesund",
+                    "examples": [
+                      "Er ist krank und bleibt im Bett."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "krank – Beispielsatz folgt.",
+              "answer": "Krank bedeutet, an einer Krankheit zu leiden und nicht gesund zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Krank bedeutet, vollständig gesund und fit zu sein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Krank bedeutet ausschließlich traurig zu sein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "zufrieden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit einer Situation oder einem Ergebnis einverstanden und glücklich.",
+          "explain": {
+            "entryId": "zufrieden",
+            "headword": "zufrieden",
+            "pronunciation": {
+              "display": "tsu-FRII-den",
+              "ipaUK": "/t͡suˈfʁiːdn̩/",
+              "ipaUS": "/t͡suˈfʁiːdn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "zufrieden",
+                "inflectionsLine": "zufriedener; am zufriedensten",
+                "synonyms": [
+                  "einverstanden",
+                  "ausgeglichen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit einer Situation oder einem Ergebnis einverstanden und innerlich ruhig oder glücklich",
+                    "examples": [
+                      "Die Kundin ist mit dem Service zufrieden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zufrieden – Beispielsatz folgt.",
+              "answer": "Zufrieden ist jemand, der mit einer Situation oder einem Ergebnis einverstanden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zufrieden ist jemand, der mit allem sehr unglücklich und unzufrieden ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zufrieden bedeutet ausschließlich körperlich krank.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "traurig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Unglücklich und voller Kummer.",
+          "explain": {
+            "entryId": "traurig",
+            "headword": "traurig",
+            "pronunciation": {
+              "display": "TRAU-rich",
+              "ipaUK": "/ˈtʁaʊ̯ʁɪç/",
+              "ipaUS": "/ˈtʁaʊ̯ʁɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "traurig",
+                "inflectionsLine": "trauriger; am traurigsten",
+                "synonyms": [
+                  "unglücklich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "unglücklich und von Kummer oder Schmerz erfüllt",
+                    "examples": [
+                      "Sie ist wegen der schlechten Nachricht traurig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "traurig – Beispielsatz folgt.",
+              "answer": "Traurig ist jemand, der unglücklich ist oder Kummer empfindet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Traurig ist jemand, der sich sehr freut und glücklich ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Traurig bedeutet ausschließlich, zu spät zu kommen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "einfach",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leicht zu verstehen oder zu erledigen.",
+          "explain": {
+            "entryId": "einfach",
+            "headword": "einfach",
+            "pronunciation": {
+              "display": "AIN-fach",
+              "ipaUK": "/ˈaɪ̯nfax/",
+              "ipaUS": "/ˈaɪ̯nfax/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "einfach",
+                "inflectionsLine": "einfacher; am einfachsten",
+                "synonyms": [
+                  "leicht",
+                  "unkompliziert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "leicht zu verstehen, zu lösen oder zu erledigen",
+                    "examples": [
+                      "Die erste Aufgabe ist einfach."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einfach – Beispielsatz folgt.",
+              "answer": "Einfach ist etwas, das leicht zu verstehen oder zu erledigen ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einfach ist etwas, das besonders schwer und kompliziert ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einfach bedeutet ausschließlich modern und neu.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "schwierig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht leicht zu verstehen oder zu erledigen.",
+          "explain": {
+            "entryId": "schwierig",
+            "headword": "schwierig",
+            "pronunciation": {
+              "display": "SCHWII-rich",
+              "ipaUK": "/ˈʃviːʁɪç/",
+              "ipaUS": "/ˈʃviːʁɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "schwierig",
+                "inflectionsLine": "schwieriger; am schwierigsten",
+                "synonyms": [
+                  "schwer",
+                  "kompliziert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nicht leicht zu verstehen, zu lösen oder zu erledigen",
+                    "examples": [
+                      "Die letzte Aufgabe ist sehr schwierig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schwierig – Beispielsatz folgt.",
+              "answer": "Schwierig ist etwas, das nicht leicht zu verstehen oder zu erledigen ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schwierig ist etwas, das ohne Mühe sofort gelöst werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schwierig bedeutet ausschließlich ruhig und leise.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "pünktlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Genau zur vereinbarten oder geplanten Zeit.",
+          "explain": {
+            "entryId": "pünktlich",
+            "headword": "pünktlich",
+            "pronunciation": {
+              "display": "PÜNKT-lich",
+              "ipaUK": "/ˈpʏŋktlɪç/",
+              "ipaUS": "/ˈpʏŋktlɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Zeitangabe",
+                "headwordLine": "pünktlich",
+                "inflectionsLine": "pünktlicher; am pünktlichsten",
+                "synonyms": [
+                  "rechtzeitig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "genau zur vereinbarten oder geplanten Zeit; nicht zu spät",
+                    "examples": [
+                      "Der Zug kommt heute pünktlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "pünktlich – Beispielsatz folgt.",
+              "answer": "Pünktlich bedeutet, genau zur vereinbarten oder geplanten Zeit da zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Pünktlich bedeutet, deutlich später als vereinbart anzukommen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Pünktlich bedeutet, einen Termin vollständig zu vergessen.",
               "ok": false
             }
           ]

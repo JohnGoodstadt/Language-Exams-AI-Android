@@ -2,130 +2,340 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizDateTime2-de",
-  "title": "",
+  "title": "Zeit & Datum",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Vergangenheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zeit vor der Gegenwart.",
+          "explain": {
+            "entryId": "Vergangenheit",
+            "headword": "Vergangenheit",
+            "pronunciation": {
+              "display": "fer-GANG-en-hait",
+              "ipaUK": "/fɛɐ̯ˈɡaŋənhaɪ̯t/",
+              "ipaUS": "/fɛɐ̯ˈɡaŋənhaɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Vergangenheit",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [
+                  "frühere Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zeit und die Ereignisse vor dem gegenwärtigen Moment",
+                    "examples": [
+                      "In der Vergangenheit gab es hier keinen Bahnhof."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Vergangenheit – Beispielsatz folgt.",
+              "answer": "Die Vergangenheit ist die Zeit vor dem gegenwärtigen Moment.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Vergangenheit ist die Zeit nach dem gegenwärtigen Moment.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Vergangenheit bezeichnet nur den heutigen Tag.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Zukunft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Zeit nach der Gegenwart.",
+          "explain": {
+            "entryId": "Zukunft",
+            "headword": "Zukunft",
+            "pronunciation": {
+              "display": "TSUU-kunft",
+              "ipaUK": "/ˈt͡suːkʊnft/",
+              "ipaUS": "/ˈt͡suːkʊnft/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Zukunft",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [
+                  "kommende Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Zeit und die Ereignisse nach dem gegenwärtigen Moment",
+                    "examples": [
+                      "In Zukunft möchte ich mehr reisen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zukunft – Beispielsatz folgt.",
+              "answer": "Die Zukunft ist die Zeit nach dem gegenwärtigen Moment.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Zukunft ist die Zeit vor dem gegenwärtigen Moment.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Zukunft bezeichnet ausschließlich den gestrigen Tag.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "gestern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An dem Tag direkt vor heute.",
+          "explain": {
+            "entryId": "gestern",
+            "headword": "gestern",
+            "pronunciation": {
+              "display": "GES-tern",
+              "ipaUK": "/ˈɡɛstɐn/",
+              "ipaUS": "/ˈɡɛstɐn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "temporal",
+                "headwordLine": "gestern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "am vorherigen Tag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an dem Tag, der direkt vor heute war",
+                    "examples": [
+                      "Gestern war Montag, heute ist Dienstag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gestern – Beispielsatz folgt.",
+              "answer": "Gestern bezeichnet den Tag direkt vor heute.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gestern bezeichnet den Tag direkt nach heute.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gestern bezeichnet den Tag zwei Tage vor heute.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "vorgestern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An dem Tag zwei Tage vor heute.",
+          "explain": {
+            "entryId": "vorgestern",
+            "headword": "vorgestern",
+            "pronunciation": {
+              "display": "FOOR-ges-tern",
+              "ipaUK": "/ˈfoːɐ̯ˌɡɛstɐn/",
+              "ipaUS": "/ˈfoːɐ̯ˌɡɛstɐn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "temporal",
+                "headwordLine": "vorgestern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vor zwei Tagen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an dem Tag, der zwei Tage vor heute war",
+                    "examples": [
+                      "Vorgestern war Sonntag, heute ist Dienstag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vorgestern – Beispielsatz folgt.",
+              "answer": "Vorgestern bezeichnet den Tag zwei Tage vor heute.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vorgestern bezeichnet den Tag direkt vor heute.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vorgestern bezeichnet den Tag zwei Tage nach heute.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "übermorgen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An dem Tag zwei Tage nach heute.",
+          "explain": {
+            "entryId": "übermorgen",
+            "headword": "übermorgen",
+            "pronunciation": {
+              "display": "ÜÜ-ber-mor-gen",
+              "ipaUK": "/ˈyːbɐˌmɔʁɡn̩/",
+              "ipaUS": "/ˈyːbɐˌmɔʁɡn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "temporal",
+                "headwordLine": "übermorgen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in zwei Tagen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an dem Tag, der zwei Tage nach heute kommt",
+                    "examples": [
+                      "Heute ist Montag; übermorgen ist Mittwoch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "übermorgen – Beispielsatz folgt.",
+              "answer": "Übermorgen bezeichnet den Tag zwei Tage nach heute.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Übermorgen bezeichnet den Tag direkt nach heute.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Übermorgen bezeichnet den Tag zwei Tage vor heute.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Jahreszeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einer der vier Abschnitte des Jahres: Frühling, Sommer, Herbst oder Winter.",
+          "explain": {
+            "entryId": "Jahreszeit",
+            "headword": "Jahreszeit",
+            "pronunciation": {
+              "display": "JAA-res-tsait",
+              "ipaUK": "/ˈjaːʁəsˌt͡saɪ̯t/",
+              "ipaUS": "/ˈjaːʁəsˌt͡saɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Jahreszeit",
+                "inflectionsLine": "Plural: die Jahreszeiten",
+                "synonyms": [
+                  "Saison"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einer der vier durch Wetter und Tageslänge geprägten Abschnitte des Jahres",
+                    "examples": [
+                      "Der Sommer ist meine liebste Jahreszeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Jahreszeit – Beispielsatz folgt.",
+              "answer": "Eine Jahreszeit ist Frühling, Sommer, Herbst oder Winter.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Jahreszeit ist jeder einzelne Wochentag von Montag bis Sonntag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Jahreszeit ist nur ein vereinbarter Termin an einem bestimmten Datum.",
               "ok": false
             }
           ]

@@ -2,130 +2,340 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizLeisure2-de",
-  "title": "",
+  "title": "Tagesablauf & Freizeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes oder Ausdrucks passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "sich treffen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit einer Person zu einer vereinbarten Zeit zusammenkommen.",
+          "explain": {
+            "entryId": "sich treffen",
+            "headword": "sich treffen",
+            "pronunciation": {
+              "display": "sich TREF-fen",
+              "ipaUK": "/zɪç ˈtʁɛfn̩/",
+              "ipaUS": "/zɪç ˈtʁɛfn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "reflexives Verb",
+                "grammarType": "unregelmäßig",
+                "headwordLine": "sich treffen",
+                "inflectionsLine": "ich treffe mich; du triffst dich; er/sie/es trifft sich",
+                "synonyms": [
+                  "zusammenkommen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit einer oder mehreren Personen zu einer vereinbarten Zeit an einem Ort zusammenkommen",
+                    "examples": [
+                      "Ich treffe mich heute mit Freunden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich treffen – Beispielsatz folgt.",
+              "answer": "Sich treffen bedeutet, mit anderen Personen zu einer Zeit an einem Ort zusammenzukommen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich treffen bedeutet, allein zu Hause zu bleiben und jeden Kontakt zu vermeiden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich treffen bedeutet, einer Person nur eine Nachricht zu schicken, ohne sie zu sehen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "spazieren gehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zum Vergnügen oder zur Erholung langsam zu Fuß gehen.",
+          "explain": {
+            "entryId": "spazieren gehen",
+            "headword": "spazieren gehen",
+            "pronunciation": {
+              "display": "schpa-TSII-ren gee-en",
+              "ipaUK": "/ʃpaˈt͡siːʁən ˈɡeːən/",
+              "ipaUS": "/ʃpaˈt͡siːʁən ˈɡeːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "regelmäßig",
+                "headwordLine": "spazieren gehen",
+                "inflectionsLine": "ich gehe spazieren; du gehst spazieren",
+                "synonyms": [
+                  "einen Spaziergang machen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ohne Eile zum Vergnügen, zur Bewegung oder zur Erholung zu Fuß gehen",
+                    "examples": [
+                      "Am Sonntag gehen wir im Park spazieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "spazieren gehen – Beispielsatz folgt.",
+              "answer": "Spazieren gehen bedeutet, ohne Eile zur Erholung oder zum Vergnügen zu Fuß zu gehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Spazieren gehen bedeutet, möglichst schnell zu einem beruflichen Termin zu laufen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Spazieren gehen bedeutet, mit dem Auto eine lange Strecke zu fahren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Freizeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeit ohne berufliche oder andere feste Pflichten.",
+          "explain": {
+            "entryId": "Freizeit",
+            "headword": "Freizeit",
+            "pronunciation": {
+              "display": "FRAI-tsait",
+              "ipaUK": "/ˈfʁaɪ̯ˌt͡saɪ̯t/",
+              "ipaUS": "/ˈfʁaɪ̯ˌt͡saɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Freizeit",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [
+                  "freie Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zeit, in der man nicht arbeiten muss und keine festen Pflichten hat",
+                    "examples": [
+                      "In meiner Freizeit lese ich gern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Freizeit – Beispielsatz folgt.",
+              "answer": "Freizeit ist die Zeit, in der man nicht arbeiten muss und eigene Aktivitäten wählen kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Freizeit ist nur die Zeit, in der man berufliche Aufgaben erledigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Freizeit ist eine fest geplante Arbeitsstunde im Büro.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Kino",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Ort, an dem Filme auf einer großen Leinwand gezeigt werden.",
+          "explain": {
+            "entryId": "Kino",
+            "headword": "Kino",
+            "pronunciation": {
+              "display": "KII-no",
+              "ipaUK": "/ˈkiːno/",
+              "ipaUS": "/ˈkiːno/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Kino",
+                "inflectionsLine": "Plural: die Kinos",
+                "synonyms": [
+                  "Filmtheater"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Gebäude oder Saal, in dem Filme auf einer großen Leinwand gezeigt werden",
+                    "examples": [
+                      "Wir sehen den neuen Film im Kino."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kino – Beispielsatz folgt.",
+              "answer": "Ein Kino ist ein Ort, an dem Filme auf einer großen Leinwand gezeigt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Kino ist ein Geschäft, in dem man Lebensmittel für zu Hause kauft.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Kino ist ein Raum, der nur zum Schlafen eingerichtet ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "ins Bett gehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich zum Schlafen ins Bett legen.",
+          "explain": {
+            "entryId": "ins Bett gehen",
+            "headword": "ins Bett gehen",
+            "pronunciation": {
+              "display": "ins BETT gee-en",
+              "ipaUK": "/ɪns bɛt ˈɡeːən/",
+              "ipaUS": "/ɪns bɛt ˈɡeːən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "mit Akkusativ",
+                "headwordLine": "ins Bett gehen",
+                "inflectionsLine": "ich gehe ins Bett; du gehst ins Bett",
+                "synonyms": [
+                  "schlafen gehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "am Abend oder bei Müdigkeit zum Schlafen ins Bett gehen und sich hinlegen",
+                    "examples": [
+                      "Ich bin müde und gehe jetzt ins Bett."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ins Bett gehen – Beispielsatz folgt.",
+              "answer": "Ins Bett gehen bedeutet, sich zum Schlafen ins Bett zu legen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ins Bett gehen bedeutet, morgens aufzustehen und das Bett zu verlassen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ins Bett gehen bedeutet, sich kurz auf einen Stuhl zu setzen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Musik hören",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Musik mit den Ohren wahrnehmen und ihr zuhören.",
+          "explain": {
+            "entryId": "Musik hören",
+            "headword": "Musik hören",
+            "pronunciation": {
+              "display": "mu-ZIIK höö-ren",
+              "ipaUK": "/muˈziːk ˈhøːʁən/",
+              "ipaUS": "/muˈziːk ˈhøːʁən/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "mit Akkusativ",
+                "headwordLine": "Musik hören",
+                "inflectionsLine": "ich höre Musik; du hörst Musik",
+                "synonyms": [
+                  "Musik anhören"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Klänge und Lieder mit den Ohren wahrnehmen und ihnen zuhören",
+                    "examples": [
+                      "Beim Kochen höre ich gern Musik."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Musik hören – Beispielsatz folgt.",
+              "answer": "Musik hören bedeutet, Klänge oder Lieder mit den Ohren wahrzunehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Musik hören bedeutet, selbst ein Instrument vor Publikum zu spielen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Musik hören bedeutet, einen Film ohne Ton anzusehen.",
               "ok": false
             }
           ]

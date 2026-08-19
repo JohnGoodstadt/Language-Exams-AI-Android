@@ -2,110 +2,285 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFamily2-de",
-  "title": "",
+  "title": "Familie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Großmutter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Mutter eines Elternteils.",
+          "explain": {
+            "entryId": "Großmutter",
+            "headword": "Großmutter",
+            "pronunciation": {
+              "display": "GROOSS-mut-ter",
+              "ipaUK": "/ˈɡʁoːsˌmʊtɐ/",
+              "ipaUS": "/ˈɡʁoːsˌmʊtɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Großmutter",
+                "inflectionsLine": "Plural: die Großmütter",
+                "synonyms": [
+                  "Oma"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Mutter der eigenen Mutter oder des eigenen Vaters",
+                    "examples": [
+                      "Die Mutter meines Vaters ist meine Großmutter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Großmutter – Beispielsatz folgt.",
+              "answer": "Die Mutter meines Vaters ist meine Großmutter.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Tochter meiner Eltern ist immer meine Großmutter.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Bruder meiner Mutter ist meine Großmutter.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Großvater",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Vater eines Elternteils.",
+          "explain": {
+            "entryId": "Großvater",
+            "headword": "Großvater",
+            "pronunciation": {
+              "display": "GROOSS-faa-ter",
+              "ipaUK": "/ˈɡʁoːsˌfaːtɐ/",
+              "ipaUS": "/ˈɡʁoːsˌfaːtɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Großvater",
+                "inflectionsLine": "Plural: die Großväter",
+                "synonyms": [
+                  "Opa"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der Vater der eigenen Mutter oder des eigenen Vaters",
+                    "examples": [
+                      "Der Vater meiner Mutter ist mein Großvater."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Großvater – Beispielsatz folgt.",
+              "answer": "Der Vater meiner Mutter ist mein Großvater.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Sohn meiner Eltern ist immer mein Großvater.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Schwester meines Vaters ist mein Großvater.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Mann",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein erwachsener männlicher Mensch; auch ein Ehemann.",
+          "explain": {
+            "entryId": "Mann",
+            "headword": "Mann",
+            "pronunciation": {
+              "display": "MANN",
+              "ipaUK": "/man/",
+              "ipaUS": "/man/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Mann",
+                "inflectionsLine": "Plural: die Männer",
+                "synonyms": [
+                  "Ehemann"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein erwachsener männlicher Mensch; in einer Ehe der männliche Partner",
+                    "examples": [
+                      "Thomas ist mein Mann; wir sind verheiratet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mann – Beispielsatz folgt.",
+              "answer": "Thomas ist mein Mann; wir sind verheiratet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Mann ist eine erwachsene weibliche Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Mann ist immer ein neugeborenes Kind.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Frau",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein erwachsener weiblicher Mensch; auch eine Ehefrau.",
+          "explain": {
+            "entryId": "Frau",
+            "headword": "Frau",
+            "pronunciation": {
+              "display": "FRAU",
+              "ipaUK": "/fʁaʊ̯/",
+              "ipaUS": "/fʁaʊ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Frau",
+                "inflectionsLine": "Plural: die Frauen",
+                "synonyms": [
+                  "Ehefrau"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein erwachsener weiblicher Mensch; in einer Ehe die weibliche Partnerin",
+                    "examples": [
+                      "Anna ist meine Frau; wir sind verheiratet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Frau – Beispielsatz folgt.",
+              "answer": "Anna ist meine Frau; wir sind verheiratet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Frau ist ein erwachsener männlicher Mensch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Frau ist immer ein neugeborenes Kind.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Baby",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein sehr junges Kind.",
+          "explain": {
+            "entryId": "Baby",
+            "headword": "Baby",
+            "pronunciation": {
+              "display": "BEE-bi",
+              "ipaUK": "/ˈbeːbi/",
+              "ipaUS": "/ˈbeːbi/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Baby",
+                "inflectionsLine": "Plural: die Babys",
+                "synonyms": [
+                  "Säugling"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein sehr junges Kind, besonders im ersten Lebensjahr",
+                    "examples": [
+                      "Das Baby ist erst drei Monate alt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Baby – Beispielsatz folgt.",
+              "answer": "Das Baby ist erst drei Monate alt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Baby ist ein erwachsener Mann mit einem Beruf.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Baby ist der Vater seiner eigenen Mutter.",
               "ok": false
             }
           ]

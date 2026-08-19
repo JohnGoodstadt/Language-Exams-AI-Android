@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFamily1-de",
-  "title": "",
+  "title": "Familie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Familie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Menschen, die durch Verwandtschaft, Ehe oder enge Beziehungen zusammengehören.",
+          "explain": {
+            "entryId": "Familie",
+            "headword": "Familie",
+            "pronunciation": {
+              "display": "fa-MII-li-e",
+              "ipaUK": "/faˈmiːli̯ə/",
+              "ipaUS": "/faˈmiːli̯ə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Familie",
+                "inflectionsLine": "Plural: die Familien",
+                "synonyms": [
+                  "Angehörige"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Menschen, die durch Verwandtschaft, Ehe oder eine enge familiäre Beziehung zusammengehören",
+                    "examples": [
+                      "Am Sonntag besucht sie ihre Familie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Familie – Beispielsatz folgt.",
+              "answer": "Eine Familie besteht aus Menschen, die familiär miteinander verbunden sind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Familie besteht aus allen Personen, die zufällig im selben Bus sitzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Familie bezeichnet nur die Kollegen am Arbeitsplatz.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Eltern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mutter und Vater oder andere Personen mit dieser Rolle.",
+          "explain": {
+            "entryId": "Eltern",
+            "headword": "Eltern",
+            "pronunciation": {
+              "display": "EL-tern",
+              "ipaUK": "/ˈɛltɐn/",
+              "ipaUS": "/ˈɛltɐn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Pluralwort",
+                "headwordLine": "die Eltern",
+                "inflectionsLine": "nur im Plural",
+                "synonyms": [
+                  "Mutter und Vater"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Mutter und der Vater oder andere Personen, die für ein Kind diese Rolle übernehmen",
+                    "examples": [
+                      "Meine Eltern wohnen in Hamburg."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Eltern – Beispielsatz folgt.",
+              "answer": "Eltern sind die Mutter und der Vater oder Personen mit dieser Rolle für ein Kind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eltern sind die Kinder der eigenen Söhne und Töchter.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eltern sind alle Menschen, die in der Nachbarschaft wohnen.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Großeltern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Eltern der eigenen Eltern.",
+          "explain": {
+            "entryId": "Großeltern",
+            "headword": "Großeltern",
+            "pronunciation": {
+              "display": "GROOSS-el-tern",
+              "ipaUK": "/ˈɡʁoːsˌʔɛltɐn/",
+              "ipaUS": "/ˈɡʁoːsˌʔɛltɐn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "Pluralwort",
+                "headwordLine": "die Großeltern",
+                "inflectionsLine": "nur im Plural",
+                "synonyms": [
+                  "Großmutter und Großvater"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Mutter und der Vater der eigenen Mutter oder des eigenen Vaters",
+                    "examples": [
+                      "Meine Großeltern sind die Eltern meiner Mutter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Großeltern – Beispielsatz folgt.",
+              "answer": "Großeltern sind die Eltern der eigenen Mutter oder des eigenen Vaters.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Großeltern sind die eigenen Brüder und Schwestern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Großeltern sind die Kinder der eigenen Söhne und Töchter.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Verwandten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Personen, die durch Familie oder Ehe miteinander verbunden sind.",
+          "explain": {
+            "entryId": "Verwandten",
+            "headword": "Verwandten",
+            "pronunciation": {
+              "display": "fer-WANT-en",
+              "ipaUK": "/fɛɐ̯ˈvantn̩/",
+              "ipaUS": "/fɛɐ̯ˈvantn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "substantiviertes Adjektiv",
+                "grammarType": "Pluralform",
+                "headwordLine": "der/die Verwandte; die Verwandten",
+                "inflectionsLine": "Dativ Plural: den Verwandten",
+                "synonyms": [
+                  "Angehörige"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Personen, die durch Abstammung, Familie oder Ehe miteinander verbunden sind",
+                    "examples": [
+                      "An Feiertagen besuchen wir unsere Verwandten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verwandten – Beispielsatz folgt.",
+              "answer": "Verwandte sind Personen, die durch Familie oder Ehe miteinander verbunden sind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Verwandte sind ausschließlich Personen, die im gleichen Büro arbeiten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Verwandte sind ausschließlich Menschen, die im selben Haus wohnen.",
               "ok": false
             }
           ]
@@ -94,18 +234,54 @@
           "title": "",
           "page": 5,
           "question": "Ehemann",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der männliche Partner in einer Ehe.",
+          "explain": {
+            "entryId": "Ehemann",
+            "headword": "Ehemann",
+            "pronunciation": {
+              "display": "EE-e-mann",
+              "ipaUK": "/ˈeːəˌman/",
+              "ipaUS": "/ˈeːəˌman/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Ehemann",
+                "inflectionsLine": "Plural: die Ehemänner",
+                "synonyms": [
+                  "Mann",
+                  "Gatte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der männliche Partner einer Person in einer Ehe",
+                    "examples": [
+                      "Ihr Ehemann heißt Daniel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ehemann – Beispielsatz folgt.",
+              "answer": "Ein Ehemann ist der männliche Partner in einer Ehe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Ehemann ist der männliche Sohn einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Ehemann ist immer ein unverheirateter Nachbar.",
               "ok": false
             }
           ]
@@ -114,18 +290,54 @@
           "title": "",
           "page": 6,
           "question": "Ehefrau",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die weibliche Partnerin in einer Ehe.",
+          "explain": {
+            "entryId": "Ehefrau",
+            "headword": "Ehefrau",
+            "pronunciation": {
+              "display": "EE-e-frau",
+              "ipaUK": "/ˈeːəˌfʁaʊ̯/",
+              "ipaUS": "/ˈeːəˌfʁaʊ̯/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Ehefrau",
+                "inflectionsLine": "Plural: die Ehefrauen",
+                "synonyms": [
+                  "Frau",
+                  "Gattin"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die weibliche Partnerin einer Person in einer Ehe",
+                    "examples": [
+                      "Seine Ehefrau arbeitet als Ärztin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ehefrau – Beispielsatz folgt.",
+              "answer": "Eine Ehefrau ist die weibliche Partnerin in einer Ehe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Ehefrau ist die weibliche Tochter einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Ehefrau ist immer eine unverheiratete Nachbarin.",
               "ok": false
             }
           ]
@@ -134,18 +346,53 @@
           "title": "",
           "page": 7,
           "question": "Partner",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Person in einer festen Beziehung oder gemeinsamen Verbindung.",
+          "explain": {
+            "entryId": "Partner",
+            "headword": "Partner",
+            "pronunciation": {
+              "display": "PART-ner",
+              "ipaUK": "/ˈpaʁtnɐ/",
+              "ipaUS": "/ˈpaʁtnɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Partner",
+                "inflectionsLine": "Plural: die Partner; feminin: die Partnerin",
+                "synonyms": [
+                  "Lebensgefährte"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Person, mit der man eine feste persönliche Beziehung oder eine gemeinsame Verbindung hat",
+                    "examples": [
+                      "Sie lebt mit ihrem Partner zusammen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Partner – Beispielsatz folgt.",
+              "answer": "Ein Partner ist eine Person, mit der man eine feste Beziehung oder Verbindung hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Partner ist immer der Vater der eigenen Mutter.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Partner ist ausschließlich eine Person, die nebenan wohnt.",
               "ok": false
             }
           ]
@@ -154,18 +401,53 @@
           "title": "",
           "page": 8,
           "question": "Enkel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Sohn des eigenen Sohnes oder der eigenen Tochter.",
+          "explain": {
+            "entryId": "Enkel",
+            "headword": "Enkel",
+            "pronunciation": {
+              "display": "ENG-kel",
+              "ipaUK": "/ˈɛŋkl̩/",
+              "ipaUS": "/ˈɛŋkl̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Enkel",
+                "inflectionsLine": "Plural: die Enkel",
+                "synonyms": [
+                  "Enkelsohn"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der männliche Nachkomme des eigenen Sohnes oder der eigenen Tochter",
+                    "examples": [
+                      "Mein Enkel ist der Sohn meiner Tochter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Enkel – Beispielsatz folgt.",
+              "answer": "Ein Enkel ist der Sohn des eigenen Sohnes oder der eigenen Tochter.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Enkel ist der Vater der eigenen Mutter oder des eigenen Vaters.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Enkel ist der Bruder der eigenen Mutter oder des eigenen Vaters.",
               "ok": false
             }
           ]
@@ -174,18 +456,53 @@
           "title": "",
           "page": 9,
           "question": "Enkelin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Tochter des eigenen Sohnes oder der eigenen Tochter.",
+          "explain": {
+            "entryId": "Enkelin",
+            "headword": "Enkelin",
+            "pronunciation": {
+              "display": "ENG-ke-lin",
+              "ipaUK": "/ˈɛŋkəlɪn/",
+              "ipaUS": "/ˈɛŋkəlɪn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Enkelin",
+                "inflectionsLine": "Plural: die Enkelinnen",
+                "synonyms": [
+                  "Enkeltochter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die weibliche Nachkommin des eigenen Sohnes oder der eigenen Tochter",
+                    "examples": [
+                      "Meine Enkelin ist die Tochter meines Sohnes."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Enkelin – Beispielsatz folgt.",
+              "answer": "Eine Enkelin ist die Tochter des eigenen Sohnes oder der eigenen Tochter.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Enkelin ist die Mutter der eigenen Mutter oder des eigenen Vaters.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Enkelin ist die Schwester der eigenen Mutter oder des eigenen Vaters.",
               "ok": false
             }
           ]
@@ -194,18 +511,51 @@
           "title": "",
           "page": 10,
           "question": "Onkel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Bruder eines Elternteils oder der Ehemann einer Tante.",
+          "explain": {
+            "entryId": "Onkel",
+            "headword": "Onkel",
+            "pronunciation": {
+              "display": "ONG-kel",
+              "ipaUK": "/ˈɔŋkl̩/",
+              "ipaUS": "/ˈɔŋkl̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Onkel",
+                "inflectionsLine": "Plural: die Onkel",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der Bruder der Mutter oder des Vaters oder der Ehemann einer Tante",
+                    "examples": [
+                      "Mein Onkel ist der Bruder meines Vaters."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Onkel – Beispielsatz folgt.",
+              "answer": "Ein Onkel kann der Bruder der eigenen Mutter oder des eigenen Vaters sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Onkel ist der Sohn des eigenen Sohnes oder der eigenen Tochter.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Onkel ist immer der männliche Partner in der eigenen Ehe.",
               "ok": false
             }
           ]

@@ -2,110 +2,285 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal2-de",
-  "title": "",
+  "title": "Persönliche Informationen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Ausweis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein amtliches Dokument zum Nachweis der Identität.",
+          "explain": {
+            "entryId": "Ausweis",
+            "headword": "Ausweis",
+            "pronunciation": {
+              "display": "AUS-wais",
+              "ipaUK": "/ˈaʊ̯svaɪ̯s/",
+              "ipaUS": "/ˈaʊ̯svaɪ̯s/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Ausweis",
+                "inflectionsLine": "Plural: die Ausweise",
+                "synonyms": [
+                  "Identitätsnachweis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein amtliches Dokument mit persönlichen Daten, das die Identität einer Person nachweist",
+                    "examples": [
+                      "Bitte zeigen Sie Ihren Ausweis."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ausweis – Beispielsatz folgt.",
+              "answer": "Ein Ausweis ist ein amtliches Dokument, das die Identität einer Person nachweist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Ausweis ist ein leeres Dokument, in das man beliebige Angaben einträgt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Ausweis ist nur die handgeschriebene Unterschrift einer Person.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "unterschreiben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Den eigenen Namen oder ein Zeichen unter ein Dokument setzen.",
+          "explain": {
+            "entryId": "unterschreiben",
+            "headword": "unterschreiben",
+            "pronunciation": {
+              "display": "UN-ter-schrai-ben",
+              "ipaUK": "/ˈʊntɐˌʃʁaɪ̯bn̩/",
+              "ipaUS": "/ˈʊntɐˌʃʁaɪ̯bn̩/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "unregelmäßig, nicht trennbar",
+                "headwordLine": "unterschreiben",
+                "inflectionsLine": "ich unterschreibe; du unterschreibst; er/sie/es unterschreibt",
+                "synonyms": [
+                  "signieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "den eigenen Namen oder ein persönliches Zeichen unter ein Dokument setzen, um es zu bestätigen",
+                    "examples": [
+                      "Bitte unterschreiben Sie den Vertrag hier."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unterschreiben – Beispielsatz folgt.",
+              "answer": "Unterschreiben bedeutet, den eigenen Namen oder ein Zeichen zur Bestätigung auf ein Dokument zu setzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Unterschreiben bedeutet, alle Felder eines Formulars mit Informationen auszufüllen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Unterschreiben bedeutet, einen amtlichen Ausweis bei einer Behörde abzuholen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Unterschrift",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der persönliche handschriftliche Name oder das Zeichen auf einem Dokument.",
+          "explain": {
+            "entryId": "Unterschrift",
+            "headword": "Unterschrift",
+            "pronunciation": {
+              "display": "UN-ter-schrift",
+              "ipaUK": "/ˈʊntɐˌʃʁɪft/",
+              "ipaUS": "/ˈʊntɐˌʃʁɪft/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Unterschrift",
+                "inflectionsLine": "Plural: die Unterschriften",
+                "synonyms": [
+                  "Signatur"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der persönliche handschriftliche Name oder ein Zeichen, mit dem man ein Dokument bestätigt",
+                    "examples": [
+                      "Hier fehlt noch Ihre Unterschrift."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unterschrift – Beispielsatz folgt.",
+              "answer": "Eine Unterschrift ist der persönliche Name oder das Zeichen zur Bestätigung eines Dokuments.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Unterschrift ist das gesamte Formular mit allen Fragen und Feldern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Unterschrift ist die Nummer eines Mobiltelefons.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Beruf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine regelmäßige oder erlernte Arbeit.",
+          "explain": {
+            "entryId": "Beruf",
+            "headword": "Beruf",
+            "pronunciation": {
+              "display": "be-RUUF",
+              "ipaUK": "/bəˈʁuːf/",
+              "ipaUS": "/bəˈʁuːf/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Beruf",
+                "inflectionsLine": "Plural: die Berufe",
+                "synonyms": [
+                  "Tätigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine regelmäßige oder erlernte Arbeit, mit der eine Person meist Geld verdient",
+                    "examples": [
+                      "Was sind Sie von Beruf?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Beruf – Beispielsatz folgt.",
+              "answer": "Ein Beruf ist eine regelmäßige oder erlernte Arbeit, mit der man meist Geld verdient.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Beruf ist die rechtliche Zugehörigkeit zu einem Staat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Beruf ist der Ort, an dem eine Person geboren wurde.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Handynummer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Telefonnummer eines Mobiltelefons.",
+          "explain": {
+            "entryId": "Handynummer",
+            "headword": "Handynummer",
+            "pronunciation": {
+              "display": "HEN-di-num-mer",
+              "ipaUK": "/ˈhɛndiˌnʊmɐ/",
+              "ipaUS": "/ˈhɛndiˌnʊmɐ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Handynummer",
+                "inflectionsLine": "Plural: die Handynummern",
+                "synonyms": [
+                  "Mobilnummer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Telefonnummer, unter der ein Mobiltelefon erreichbar ist",
+                    "examples": [
+                      "Kannst du mir deine Handynummer geben?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Handynummer – Beispielsatz folgt.",
+              "answer": "Die Handynummer ist die Telefonnummer, unter der ein Mobiltelefon erreichbar ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Handynummer ist der Code eines Wohngebiets für die Postzustellung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Handynummer ist die Nummer auf einem Formularfeld für das Geburtsdatum.",
               "ok": false
             }
           ]

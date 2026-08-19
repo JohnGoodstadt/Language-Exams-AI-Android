@@ -2,30 +2,63 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFoodandDrink1-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Wort mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Brot",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein gebackenes Lebensmittel aus Mehl und Wasser.",
+          "explain": {
+            "entryId": "Brot",
+            "headword": "Brot",
+            "pronunciation": {
+              "display": "BROOT",
+              "ipaUK": "/bʁoːt/",
+              "ipaUS": "/bʁoːt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Brot",
+                "inflectionsLine": "Plural: die Brote",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein gebackenes Lebensmittel, das meist aus Mehl, Wasser, Salz und Hefe besteht",
+                    "examples": [
+                      "Zum Frühstück esse ich Brot."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Brot – Beispielsatz folgt.",
+              "answer": "Brot wird normalerweise aus Mehl gebacken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Brot ist ein Getränk aus Kaffeebohnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Brot ist eine Frucht, die am Baum wächst.",
               "ok": false
             }
           ]
@@ -34,18 +67,51 @@
           "title": "",
           "page": 2,
           "question": "Wasser",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine klare Flüssigkeit zum Trinken.",
+          "explain": {
+            "entryId": "Wasser",
+            "headword": "Wasser",
+            "pronunciation": {
+              "display": "WAS-ser",
+              "ipaUK": "/ˈvasɐ/",
+              "ipaUS": "/ˈvasɐ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Wasser",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine klare Flüssigkeit, die Menschen, Tiere und Pflanzen zum Leben brauchen",
+                    "examples": [
+                      "Ich trinke ein Glas Wasser."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wasser – Beispielsatz folgt.",
+              "answer": "Wasser ist eine Flüssigkeit, die man trinken kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Wasser ist ein festes Brot aus Mehl.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wasser ist eine gelbe Frucht.",
               "ok": false
             }
           ]
@@ -54,18 +120,51 @@
           "title": "",
           "page": 3,
           "question": "Kaffee",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Getränk aus gerösteten Kaffeebohnen.",
+          "explain": {
+            "entryId": "Kaffee",
+            "headword": "Kaffee",
+            "pronunciation": {
+              "display": "ka-FEE",
+              "ipaUK": "/kaˈfeː/",
+              "ipaUS": "/kaˈfeː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Kaffee",
+                "inflectionsLine": "Plural: die Kaffees",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein meist heißes Getränk aus gemahlenen gerösteten Kaffeebohnen und Wasser",
+                    "examples": [
+                      "Morgens trinke ich eine Tasse Kaffee."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Kaffee – Beispielsatz folgt.",
+              "answer": "Kaffee wird aus gerösteten Kaffeebohnen gemacht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kaffee ist eine Suppe mit Gemüse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kaffee ist eine gelbe Frucht.",
               "ok": false
             }
           ]
@@ -74,18 +173,51 @@
           "title": "",
           "page": 4,
           "question": "Tee",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Getränk aus Blättern oder Kräutern und heißem Wasser.",
+          "explain": {
+            "entryId": "Tee",
+            "headword": "Tee",
+            "pronunciation": {
+              "display": "TEE",
+              "ipaUK": "/teː/",
+              "ipaUS": "/teː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Tee",
+                "inflectionsLine": "Plural: die Tees",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Getränk, das durch Aufgießen von Blättern, Kräutern oder Früchten mit heißem Wasser entsteht",
+                    "examples": [
+                      "Am Abend trinke ich Tee."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Tee – Beispielsatz folgt.",
+              "answer": "Für Tee gießt man oft heißes Wasser über Blätter oder Kräuter.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Tee ist ein Käse aus Milch.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Tee ist ein Stück gebackenes Brot.",
               "ok": false
             }
           ]
@@ -94,18 +226,51 @@
           "title": "",
           "page": 5,
           "question": "Milch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine helle Flüssigkeit, die zum Trinken verwendet wird.",
+          "explain": {
+            "entryId": "Milch",
+            "headword": "Milch",
+            "pronunciation": {
+              "display": "MILCH",
+              "ipaUK": "/mɪlç/",
+              "ipaUS": "/mɪlç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Milch",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine meist weiße Flüssigkeit von Kühen oder aus Pflanzen, die man trinken kann",
+                    "examples": [
+                      "Das Kind trinkt ein Glas Milch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Milch – Beispielsatz folgt.",
+              "answer": "Milch ist eine Flüssigkeit, aus der man Käse machen kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Milch ist ein Fisch aus dem Meer.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Milch ist ein gebackenes Lebensmittel aus Mehl.",
               "ok": false
             }
           ]
@@ -114,18 +279,51 @@
           "title": "",
           "page": 6,
           "question": "Apfel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine runde Frucht, die an einem Baum wächst.",
+          "explain": {
+            "entryId": "Apfel",
+            "headword": "Apfel",
+            "pronunciation": {
+              "display": "AP-fel",
+              "ipaUK": "/ˈapfl̩/",
+              "ipaUS": "/ˈapfl̩/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Apfel",
+                "inflectionsLine": "Plural: die Äpfel",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine runde Frucht mit roter, grüner oder gelber Schale, die an einem Baum wächst",
+                    "examples": [
+                      "Ich esse einen Apfel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Apfel – Beispielsatz folgt.",
+              "answer": "Ein Apfel ist eine Frucht, die an einem Baum wächst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Apfel ist ein heißes Getränk aus Bohnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Apfel ist ein Fisch aus dem Meer.",
               "ok": false
             }
           ]
@@ -134,18 +332,51 @@
           "title": "",
           "page": 7,
           "question": "Banane",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine lange, gebogene Frucht mit gelber Schale.",
+          "explain": {
+            "entryId": "Banane",
+            "headword": "Banane",
+            "pronunciation": {
+              "display": "ba-NAA-ne",
+              "ipaUK": "/baˈnaːnə/",
+              "ipaUS": "/baˈnaːnə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Banane",
+                "inflectionsLine": "Plural: die Bananen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine lange, gebogene Frucht mit gelber Schale",
+                    "examples": [
+                      "Die Banane ist reif und gelb."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Banane – Beispielsatz folgt.",
+              "answer": "Eine Banane ist eine lange, oft gelbe Frucht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Banane ist ein Getränk aus Teeblättern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Banane ist ein Stück Käse.",
               "ok": false
             }
           ]
@@ -154,18 +385,51 @@
           "title": "",
           "page": 8,
           "question": "Ei",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Lebensmittel mit Schale, das zum Beispiel von Hühnern kommt.",
+          "explain": {
+            "entryId": "Ei",
+            "headword": "Ei",
+            "pronunciation": {
+              "display": "AI",
+              "ipaUK": "/aɪ̯/",
+              "ipaUS": "/aɪ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Ei",
+                "inflectionsLine": "Plural: die Eier",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein ovales Lebensmittel mit Schale, das zum Beispiel von einem Huhn gelegt wird",
+                    "examples": [
+                      "Zum Frühstück esse ich ein gekochtes Ei."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ei – Beispielsatz folgt.",
+              "answer": "Ein Huhn kann ein Ei legen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Ei ist ein heißes Getränk aus Kaffeebohnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Ei ist eine Flüssigkeit zum Durstlöschen.",
               "ok": false
             }
           ]
@@ -174,18 +438,51 @@
           "title": "",
           "page": 9,
           "question": "Käse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Lebensmittel, das meist aus Milch hergestellt wird.",
+          "explain": {
+            "entryId": "Käse",
+            "headword": "Käse",
+            "pronunciation": {
+              "display": "KÄÄ-ze",
+              "ipaUK": "/ˈkɛːzə/",
+              "ipaUS": "/ˈkɛːzə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Käse",
+                "inflectionsLine": "Plural: die Käse",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein festes oder weiches Lebensmittel, das meist aus Milch hergestellt wird",
+                    "examples": [
+                      "Auf dem Brot liegt eine Scheibe Käse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Käse – Beispielsatz folgt.",
+              "answer": "Käse wird normalerweise aus Milch hergestellt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Käse ist eine Frucht, die am Baum wächst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Käse ist klares Wasser ohne Geschmack.",
               "ok": false
             }
           ]
@@ -194,18 +491,51 @@
           "title": "",
           "page": 10,
           "question": "Fleisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Lebensmittel vom Körper eines Tieres.",
+          "explain": {
+            "entryId": "Fleisch",
+            "headword": "Fleisch",
+            "pronunciation": {
+              "display": "FLAISCH",
+              "ipaUK": "/flaɪ̯ʃ/",
+              "ipaUS": "/flaɪ̯ʃ/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Fleisch",
+                "inflectionsLine": "meist ohne Plural",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Teile vom Körper eines Tieres, die als Lebensmittel gegessen werden",
+                    "examples": [
+                      "Er isst kein Fleisch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fleisch – Beispielsatz folgt.",
+              "answer": "Fleisch ist ein Lebensmittel, das von einem Tier stammt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fleisch ist ein Getränk aus Früchten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fleisch ist die gemeinsame Bezeichnung für Äpfel und Bananen.",
               "ok": false
             }
           ]

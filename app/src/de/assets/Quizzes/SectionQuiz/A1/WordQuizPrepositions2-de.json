@@ -2,150 +2,396 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPrepositions2-de",
-  "title": "",
+  "title": "Präpositionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, der die Bedeutung der Präposition richtig erklärt.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "für",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bestimmt für eine Person, einen Zweck oder ein Ziel.",
+          "explain": {
+            "entryId": "für",
+            "headword": "für",
+            "pronunciation": {
+              "display": "FÜÜR",
+              "ipaUK": "/fyːɐ̯/",
+              "ipaUS": "/fyːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Akkusativ",
+                "headwordLine": "für",
+                "inflectionsLine": "für + Akkusativ",
+                "synonyms": [
+                  "bestimmt für"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bestimmt für eine Person, einen Zweck oder ein Ziel",
+                    "examples": [
+                      "Das Geschenk ist für meine Mutter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "für – Beispielsatz folgt.",
+              "answer": "Für kann zeigen, für wen etwas bestimmt ist oder welchem Zweck es dient.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Für bedeutet immer, dass etwas an der Rückseite liegt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Für bedeutet immer, dass etwas nicht vorhanden ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "an",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Direkt bei, nahe oder in Kontakt mit etwas.",
+          "explain": {
+            "entryId": "an",
+            "headword": "an",
+            "pronunciation": {
+              "display": "AN",
+              "ipaUK": "/an/",
+              "ipaUS": "/an/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ oder Akkusativ",
+                "headwordLine": "an",
+                "inflectionsLine": "Wo? an + Dativ; Wohin? an + Akkusativ",
+                "synonyms": [
+                  "bei"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "direkt bei, nahe oder in Kontakt mit einer Seite oder Grenze",
+                    "examples": [
+                      "Das Bild hängt an der Wand."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "an – Beispielsatz folgt.",
+              "answer": "An kann ausdrücken, dass etwas eine Fläche berührt oder direkt bei ihr ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "An bedeutet immer, dass etwas weit entfernt ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "An bedeutet immer, dass etwas unterhalb eines anderen Gegenstands liegt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "zu",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In Richtung einer Person oder eines Ziels.",
+          "explain": {
+            "entryId": "zu",
+            "headword": "zu",
+            "pronunciation": {
+              "display": "TSUU",
+              "ipaUK": "/t͡suː/",
+              "ipaUS": "/t͡suː/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ",
+                "headwordLine": "zu",
+                "inflectionsLine": "zu + Dativ; zum = zu dem; zur = zu der",
+                "synonyms": [
+                  "in Richtung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in Richtung einer Person, eines Ortes oder eines Ziels",
+                    "examples": [
+                      "Ich gehe zum Arzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zu – Beispielsatz folgt.",
+              "answer": "Zu kann eine Bewegung in Richtung einer Person oder eines Ziels ausdrücken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zu bedeutet immer eine Bewegung aus einem geschlossenen Raum heraus.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zu bezeichnet ausschließlich eine Position unter einem Gegenstand.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "aus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von innen nach außen oder mit einer Herkunft.",
+          "explain": {
+            "entryId": "aus",
+            "headword": "aus",
+            "pronunciation": {
+              "display": "AUS",
+              "ipaUK": "/aʊ̯s/",
+              "ipaUS": "/aʊ̯s/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ",
+                "headwordLine": "aus",
+                "inflectionsLine": "aus + Dativ",
+                "synonyms": [
+                  "heraus aus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von innen nach außen; auch zur Angabe von Herkunft oder Material",
+                    "examples": [
+                      "Ich komme aus Deutschland."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aus – Beispielsatz folgt.",
+              "answer": "Aus kann eine Herkunft oder eine Bewegung von innen nach außen ausdrücken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Aus bedeutet immer eine Bewegung in einen Raum hinein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aus bezeichnet ausschließlich die Position auf einer Oberfläche.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "bei",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In der Nähe oder zusammen mit einer Person oder Sache.",
+          "explain": {
+            "entryId": "bei",
+            "headword": "bei",
+            "pronunciation": {
+              "display": "BAI",
+              "ipaUK": "/baɪ̯/",
+              "ipaUS": "/baɪ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ",
+                "headwordLine": "bei",
+                "inflectionsLine": "bei + Dativ; beim = bei dem",
+                "synonyms": [
+                  "nahe bei"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in der Nähe, am Ort oder zusammen mit einer Person oder Sache",
+                    "examples": [
+                      "Ich bin heute bei meiner Freundin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bei – Beispielsatz folgt.",
+              "answer": "Bei kann bedeuten, dass man am Ort oder in der Nähe einer Person oder Sache ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bei bedeutet immer, dass etwas weit entfernt und allein ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bei bezeichnet ausschließlich eine Bewegung aus einem Land heraus.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "nach",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In Richtung eines Ortes oder zeitlich später.",
+          "explain": {
+            "entryId": "nach",
+            "headword": "nach",
+            "pronunciation": {
+              "display": "NAACH",
+              "ipaUK": "/naːx/",
+              "ipaUS": "/naːx/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ",
+                "headwordLine": "nach",
+                "inflectionsLine": "nach + Dativ; vor Städten und Ländern meist ohne Artikel",
+                "synonyms": [
+                  "später als",
+                  "in Richtung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in Richtung eines Ortes; auch zeitlich später als etwas",
+                    "examples": [
+                      "Morgen fahre ich nach Berlin."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nach – Beispielsatz folgt.",
+              "answer": "Nach kann eine Richtung zu einer Stadt oder eine spätere Zeit ausdrücken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nach bedeutet immer, dass etwas vor einem Ereignis passiert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nach bezeichnet ausschließlich eine Position unter einem Tisch.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "von",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von einem Ausgangspunkt, einer Person oder einer Quelle.",
+          "explain": {
+            "entryId": "von",
+            "headword": "von",
+            "pronunciation": {
+              "display": "FON",
+              "ipaUK": "/fɔn/",
+              "ipaUS": "/fɔn/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "mit Dativ",
+                "headwordLine": "von",
+                "inflectionsLine": "von + Dativ; vom = von dem",
+                "synonyms": [
+                  "ausgehend von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von einem Ausgangspunkt, einer Person, einer Quelle oder einem Besitzer",
+                    "examples": [
+                      "Das Geschenk ist von meiner Schwester."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "von – Beispielsatz folgt.",
+              "answer": "Von kann einen Ausgangspunkt, eine Quelle oder einen Urheber angeben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von bedeutet immer eine Bewegung in einen Raum hinein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von bezeichnet ausschließlich die Mitte zwischen zwei Dingen.",
               "ok": false
             }
           ]

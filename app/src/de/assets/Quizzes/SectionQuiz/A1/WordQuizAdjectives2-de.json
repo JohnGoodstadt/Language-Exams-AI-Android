@@ -2,170 +2,454 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives2-de",
-  "title": "",
+  "title": "Adjektive (häufig)",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle den Satz, in dem das Adjektiv mit der richtigen Bedeutung verwendet wird.",
+      "description": "A1 – Wortschatz und Wortgebrauch",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "kalt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von einer niedrigen Temperatur.",
+          "explain": {
+            "entryId": "kalt",
+            "headword": "kalt",
+            "pronunciation": {
+              "display": "KALT",
+              "ipaUK": "/kalt/",
+              "ipaUS": "/kalt/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "kalt",
+                "inflectionsLine": "kälter; am kältesten",
+                "synonyms": [
+                  "kühl"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von einer niedrigen Temperatur",
+                    "examples": [
+                      "Das Wasser aus dem Kühlschrank ist kalt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kalt – Beispielsatz folgt.",
+              "answer": "Wasser mit einer niedrigen Temperatur ist kalt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kalt bedeutet immer sehr heiß.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kalt bedeutet ausschließlich sehr freundlich.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "schnell",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit hoher Geschwindigkeit.",
+          "explain": {
+            "entryId": "schnell",
+            "headword": "schnell",
+            "pronunciation": {
+              "display": "SCHNELL",
+              "ipaUK": "/ʃnɛl/",
+              "ipaUS": "/ʃnɛl/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "schnell",
+                "inflectionsLine": "schneller; am schnellsten",
+                "synonyms": [
+                  "rasch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit hoher Geschwindigkeit oder in kurzer Zeit",
+                    "examples": [
+                      "Der Zug fährt schnell."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schnell – Beispielsatz folgt.",
+              "answer": "Ein Zug mit hoher Geschwindigkeit fährt schnell.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schnell bedeutet, sich mit sehr geringer Geschwindigkeit zu bewegen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schnell bedeutet ausschließlich viel Geld zu kosten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "langsam",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit geringer Geschwindigkeit.",
+          "explain": {
+            "entryId": "langsam",
+            "headword": "langsam",
+            "pronunciation": {
+              "display": "LANG-zaam",
+              "ipaUK": "/ˈlaŋzaːm/",
+              "ipaUS": "/ˈlaŋzaːm/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "langsam",
+                "inflectionsLine": "langsamer; am langsamsten",
+                "synonyms": [
+                  "gemächlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "mit geringer Geschwindigkeit oder über längere Zeit",
+                    "examples": [
+                      "Die Schildkröte bewegt sich langsam."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "langsam – Beispielsatz folgt.",
+              "answer": "Wer sich mit geringer Geschwindigkeit bewegt, ist langsam.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Langsam bedeutet, sich mit höchster Geschwindigkeit zu bewegen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Langsam bedeutet ausschließlich sehr glücklich zu sein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "glücklich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Voller Freude und Zufriedenheit.",
+          "explain": {
+            "entryId": "glücklich",
+            "headword": "glücklich",
+            "pronunciation": {
+              "display": "GLÜK-lich",
+              "ipaUK": "/ˈɡlʏklɪç/",
+              "ipaUS": "/ˈɡlʏklɪç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "glücklich",
+                "inflectionsLine": "glücklicher; am glücklichsten",
+                "synonyms": [
+                  "froh",
+                  "zufrieden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "voller Freude oder sehr zufrieden",
+                    "examples": [
+                      "Sie ist über die gute Nachricht glücklich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "glücklich – Beispielsatz folgt.",
+              "answer": "Wer sich sehr freut und zufrieden ist, kann glücklich sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Glücklich bedeutet immer traurig und unzufrieden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Glücklich bedeutet ausschließlich eine niedrige Temperatur zu haben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "müde",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Schlaf oder Ruhe benötigend.",
+          "explain": {
+            "entryId": "müde",
+            "headword": "müde",
+            "pronunciation": {
+              "display": "MÜÜ-de",
+              "ipaUK": "/ˈmyːdə/",
+              "ipaUS": "/ˈmyːdə/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "müde",
+                "inflectionsLine": "müder; am müdesten",
+                "synonyms": [
+                  "schläfrig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Schlaf oder Ruhe benötigend",
+                    "examples": [
+                      "Nach dem langen Tag bin ich müde."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "müde – Beispielsatz folgt.",
+              "answer": "Wer Schlaf braucht, ist müde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Müde bedeutet immer voller Energie und überhaupt nicht schläfrig.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Müde bedeutet ausschließlich wenig Geld zu kosten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "einfach",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leicht zu verstehen oder zu tun.",
+          "explain": {
+            "entryId": "einfach",
+            "headword": "einfach",
+            "pronunciation": {
+              "display": "AIN-fach",
+              "ipaUK": "/ˈaɪ̯nfax/",
+              "ipaUS": "/ˈaɪ̯nfax/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "einfach",
+                "inflectionsLine": "einfacher; am einfachsten",
+                "synonyms": [
+                  "leicht",
+                  "unkompliziert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "leicht zu verstehen, zu lösen oder zu tun",
+                    "examples": [
+                      "Die erste Aufgabe ist einfach."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einfach – Beispielsatz folgt.",
+              "answer": "Eine Aufgabe, die man ohne Probleme löst, ist einfach.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einfach bedeutet immer besonders kompliziert und schwierig.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einfach bedeutet ausschließlich von hohem Preis.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "schwer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von großem Gewicht oder schwierig.",
+          "explain": {
+            "entryId": "schwer",
+            "headword": "schwer",
+            "pronunciation": {
+              "display": "SCHWEER",
+              "ipaUK": "/ʃveːɐ̯/",
+              "ipaUS": "/ʃveːɐ̯/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "schwer",
+                "inflectionsLine": "schwerer; am schwersten",
+                "synonyms": [
+                  "gewichtig",
+                  "schwierig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "von großem Gewicht oder schwierig zu tun",
+                    "examples": [
+                      "Der Koffer ist schwer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schwer – Beispielsatz folgt.",
+              "answer": "Ein Koffer mit großem Gewicht ist schwer.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Schwer bedeutet immer leicht und ohne Gewicht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schwer bedeutet ausschließlich sehr freundlich.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "freundlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nett, höflich und anderen Menschen zugewandt.",
+          "explain": {
+            "entryId": "freundlich",
+            "headword": "freundlich",
+            "pronunciation": {
+              "display": "FROINT-lich",
+              "ipaUK": "/ˈfʁɔɪ̯ntlɪç/",
+              "ipaUS": "/ˈfʁɔɪ̯ntlɪç/"
+            },
+            "labels": [
+              "A1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "regelmäßig",
+                "headwordLine": "freundlich",
+                "inflectionsLine": "freundlicher; am freundlichsten",
+                "synonyms": [
+                  "nett",
+                  "höflich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "nett, höflich und hilfsbereit im Umgang mit anderen Menschen",
+                    "examples": [
+                      "Die Verkäuferin ist sehr freundlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "freundlich – Beispielsatz folgt.",
+              "answer": "Wer andere höflich begrüßt und ihnen hilft, ist freundlich.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Freundlich bedeutet immer unhöflich und böse.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Freundlich bedeutet ausschließlich sehr langsam.",
               "ok": false
             }
           ]

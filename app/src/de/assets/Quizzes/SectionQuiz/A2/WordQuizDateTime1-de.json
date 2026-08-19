@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizDateTime1-de",
-  "title": "",
+  "title": "Zeit & Datum",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung des Wortes passt.",
+      "description": "A2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Uhrzeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die genaue Zeit, die eine Uhr zeigt.",
+          "explain": {
+            "entryId": "Uhrzeit",
+            "headword": "Uhrzeit",
+            "pronunciation": {
+              "display": "UUR-tsait",
+              "ipaUK": "/ˈuːɐ̯ˌt͡saɪ̯t/",
+              "ipaUS": "/ˈuːɐ̯ˌt͡saɪ̯t/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Uhrzeit",
+                "inflectionsLine": "Plural: die Uhrzeiten",
+                "synonyms": [
+                  "Zeitangabe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die genaue Zeit eines Tages, die in Stunden und Minuten angegeben wird",
+                    "examples": [
+                      "Welche Uhrzeit passt Ihnen für den Termin?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Uhrzeit – Beispielsatz folgt.",
+              "answer": "Die Uhrzeit gibt eine genaue Zeit des Tages in Stunden und Minuten an.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Uhrzeit nennt Tag, Monat und Jahr eines Ereignisses.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Uhrzeit beschreibt nur die Dauer eines ganzen Monats.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Datum",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Angabe aus Tag, Monat und Jahr.",
+          "explain": {
+            "entryId": "Datum",
+            "headword": "Datum",
+            "pronunciation": {
+              "display": "DAA-tum",
+              "ipaUK": "/ˈdaːtʊm/",
+              "ipaUS": "/ˈdaːtʊm/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Datum",
+                "inflectionsLine": "Plural: die Daten",
+                "synonyms": [
+                  "Kalenderdatum"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Angabe, die einen bestimmten Tag durch Tag, Monat und oft Jahr bezeichnet",
+                    "examples": [
+                      "Welches Datum haben wir heute?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Datum – Beispielsatz folgt.",
+              "answer": "Ein Datum bezeichnet einen bestimmten Kalendertag mit Tag, Monat und oft Jahr.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Datum ist nur die genaue Stunde und Minute eines Termins.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Datum ist ein Zeitraum von sieben Tagen.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Termin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine vereinbarte Zeit für ein Treffen oder eine Aufgabe.",
+          "explain": {
+            "entryId": "Termin",
+            "headword": "Termin",
+            "pronunciation": {
+              "display": "ter-MIIN",
+              "ipaUK": "/tɛʁˈmiːn/",
+              "ipaUS": "/tɛʁˈmiːn/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Termin",
+                "inflectionsLine": "Plural: die Termine",
+                "synonyms": [
+                  "Verabredung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine fest vereinbarte Zeit für ein Treffen, einen Besuch oder eine Aufgabe",
+                    "examples": [
+                      "Ich habe morgen einen Termin beim Arzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Termin – Beispielsatz folgt.",
+              "answer": "Ein Termin ist eine fest vereinbarte Zeit für ein Treffen oder eine Aufgabe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Termin ist die Zeit, um die man nach einer Vereinbarung zu spät kommt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Termin ist jeder freie Tag ohne eine Vereinbarung.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Verspätung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das spätere Eintreffen als geplant.",
+          "explain": {
+            "entryId": "Verspätung",
+            "headword": "Verspätung",
+            "pronunciation": {
+              "display": "fer-SCHPÄÄ-tung",
+              "ipaUK": "/fɛɐ̯ˈʃpɛːtʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈʃpɛːtʊŋ/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Verspätung",
+                "inflectionsLine": "Plural: die Verspätungen",
+                "synonyms": [
+                  "Verzögerung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "eine Verzögerung, durch die jemand oder etwas später als geplant eintrifft",
+                    "examples": [
+                      "Der Zug hat zehn Minuten Verspätung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verspätung – Beispielsatz folgt.",
+              "answer": "Verspätung bedeutet, dass jemand oder etwas später als geplant kommt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Verspätung bedeutet, dass jemand genau zur vereinbarten Zeit kommt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Verspätung bedeutet, dass jemand deutlich vor der vereinbarten Zeit kommt.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "pünktlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Genau zur vereinbarten oder geplanten Zeit.",
+          "explain": {
+            "entryId": "pünktlich",
+            "headword": "pünktlich",
+            "pronunciation": {
+              "display": "PÜNKT-lich",
+              "ipaUK": "/ˈpʏŋktlɪç/",
+              "ipaUS": "/ˈpʏŋktlɪç/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Zeitsangabe",
+                "headwordLine": "pünktlich",
+                "inflectionsLine": "pünktlicher; am pünktlichsten",
+                "synonyms": [
+                  "rechtzeitig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "genau zur vereinbarten oder geplanten Zeit; nicht zu spät",
+                    "examples": [
+                      "Bitte kommen Sie pünktlich um neun Uhr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "pünktlich – Beispielsatz folgt.",
+              "answer": "Pünktlich bedeutet, genau zur vereinbarten oder geplanten Zeit da zu sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Pünktlich bedeutet, deutlich nach der vereinbarten Zeit anzukommen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Pünktlich bedeutet, einen Termin vollständig abzusagen.",
               "ok": false
             }
           ]
@@ -114,18 +289,51 @@
           "title": "",
           "page": 6,
           "question": "Woche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum von sieben Tagen.",
+          "explain": {
+            "entryId": "Woche",
+            "headword": "Woche",
+            "pronunciation": {
+              "display": "WO-che",
+              "ipaUK": "/ˈvɔxə/",
+              "ipaUS": "/ˈvɔxə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "die Woche",
+                "inflectionsLine": "Plural: die Wochen",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein Zeitraum von sieben aufeinanderfolgenden Tagen",
+                    "examples": [
+                      "Eine Woche hat sieben Tage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Woche – Beispielsatz folgt.",
+              "answer": "Eine Woche ist ein Zeitraum von sieben Tagen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Woche ist ein Zeitraum von zwölf Monaten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Woche besteht nur aus Samstag und Sonntag.",
               "ok": false
             }
           ]
@@ -134,18 +342,51 @@
           "title": "",
           "page": 7,
           "question": "Monat",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einer der zwölf Zeitabschnitte eines Jahres.",
+          "explain": {
+            "entryId": "Monat",
+            "headword": "Monat",
+            "pronunciation": {
+              "display": "MOO-nat",
+              "ipaUK": "/ˈmoːnat/",
+              "ipaUS": "/ˈmoːnat/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Monat",
+                "inflectionsLine": "Plural: die Monate",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "einer der zwölf benannten Zeitabschnitte eines Kalenderjahres",
+                    "examples": [
+                      "Der Februar ist der kürzeste Monat."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Monat – Beispielsatz folgt.",
+              "answer": "Ein Monat ist einer der zwölf Zeitabschnitte eines Kalenderjahres.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Monat ist immer ein Zeitraum von genau sieben Tagen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Monat bezeichnet nur Samstag und Sonntag.",
               "ok": false
             }
           ]
@@ -154,18 +395,51 @@
           "title": "",
           "page": 8,
           "question": "Wochenende",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Tage am Ende der Woche, meist Samstag und Sonntag.",
+          "explain": {
+            "entryId": "Wochenende",
+            "headword": "Wochenende",
+            "pronunciation": {
+              "display": "WO-chen-en-de",
+              "ipaUK": "/ˈvɔxn̩ˌʔɛndə/",
+              "ipaUS": "/ˈvɔxn̩ˌʔɛndə/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "das Wochenende",
+                "inflectionsLine": "Plural: die Wochenenden",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "die Tage am Ende einer Woche, normalerweise Samstag und Sonntag",
+                    "examples": [
+                      "Am Wochenende muss ich nicht arbeiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wochenende – Beispielsatz folgt.",
+              "answer": "Das Wochenende besteht normalerweise aus Samstag und Sonntag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Wochenende bezeichnet normalerweise Montag bis Freitag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Wochenende ist ein vollständiger Kalendermonat.",
               "ok": false
             }
           ]
@@ -174,18 +448,53 @@
           "title": "",
           "page": 9,
           "question": "Feiertag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein gesetzlich oder religiös besonderer Tag, an dem oft nicht gearbeitet wird.",
+          "explain": {
+            "entryId": "Feiertag",
+            "headword": "Feiertag",
+            "pronunciation": {
+              "display": "FAI-er-taak",
+              "ipaUK": "/ˈfaɪ̯ɐˌtaːk/",
+              "ipaUS": "/ˈfaɪ̯ɐˌtaːk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Feiertag",
+                "inflectionsLine": "Plural: die Feiertage",
+                "synonyms": [
+                  "Festtag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "ein gesetzlich, religiös oder kulturell besonderer Tag, an dem viele Menschen nicht arbeiten",
+                    "examples": [
+                      "Am Feiertag bleiben viele Geschäfte geschlossen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Feiertag – Beispielsatz folgt.",
+              "answer": "Ein Feiertag ist ein besonderer Tag, an dem viele Menschen nicht arbeiten müssen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Feiertag ist jeder normale Arbeitstag von Montag bis Freitag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Feiertag ist immer der persönliche Geburtstag einer Person.",
               "ok": false
             }
           ]
@@ -194,18 +503,51 @@
           "title": "",
           "page": 10,
           "question": "Geburtstag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der jährlich wiederkehrende Tag der eigenen Geburt.",
+          "explain": {
+            "entryId": "Geburtstag",
+            "headword": "Geburtstag",
+            "pronunciation": {
+              "display": "ge-BUURTS-taak",
+              "ipaUK": "/ɡəˈbuːɐ̯t͡sˌtaːk/",
+              "ipaUS": "/ɡəˈbuːɐ̯t͡sˌtaːk/"
+            },
+            "labels": [
+              "A2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "der Geburtstag",
+                "inflectionsLine": "Plural: die Geburtstage",
+                "synonyms": [],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "der Tag im Jahr, an dem sich die Geburt einer Person jährlich wiederholt",
+                    "examples": [
+                      "Sie feiert am 12. Mai ihren Geburtstag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Geburtstag – Beispielsatz folgt.",
+              "answer": "Der Geburtstag ist der jährlich wiederkehrende Tag, an dem eine Person geboren wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Geburtstag ist jeder gesetzliche Feiertag eines Landes.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Geburtstag ist der erste Arbeitstag eines neuen Monats.",
               "ok": false
             }
           ]
