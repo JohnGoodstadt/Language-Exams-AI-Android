@@ -43,6 +43,7 @@ import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntr
 import com.goodstadt.john.language.exams.packages.MyProgress.MyProgressScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.packages.Settings.SettingsScreen
+import com.goodstadt.john.language.exams.packages.UploadJson.UploadJsonScreen
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.packages.me.SearchScreen
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
@@ -171,6 +172,9 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                         Timber.e("popBackStack")
                     }
                 )
+            }
+            composable("upload_json") {
+                UploadJsonScreen(onClose = { meTabNavController.popBackStack() })
             }
            // composable(MeScreen..route) { WordQuizScreen() }
 

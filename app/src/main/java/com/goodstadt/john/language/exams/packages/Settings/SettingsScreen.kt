@@ -889,6 +889,16 @@ fun SettingsScreen(
             }
             item {
                 SettingsActionItem(
+                    icon = Icons.Default.CloudSync,
+                    title = "Upload JSON (D)",
+                    currentValue = "Upload bundled quiz JSON to Firestore (D)",
+                    onClick = {
+                        navController.navigate("upload_json")
+                    }
+                )
+            }
+            item {
+                SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Daily IAP",
                     currentValue = "Try out Daily Rate Limiting Screen (D)",
