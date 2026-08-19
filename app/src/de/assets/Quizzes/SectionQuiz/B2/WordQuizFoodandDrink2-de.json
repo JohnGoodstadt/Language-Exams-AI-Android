@@ -2,130 +2,344 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFoodandDrink2-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "kulinarisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Kochkunst, Speisen oder besondere Geschmackserlebnisse betreffend.",
+          "explain": {
+            "entryId": "kulinarisch",
+            "headword": "kulinarisch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kuliˈnaːʁɪʃ/",
+              "ipaUS": "/kuliˈnaːʁɪʃ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Kochkunst",
+                "headwordLine": "kulinarisch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "die Küche betreffend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Kochkunst, Speisen oder besondere Geschmackserlebnisse betreffend.",
+                    "examples": [
+                      "Die Stadt ist für ihre kulinarische Vielfalt bekannt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kulinarisch – Beispielsatz folgt.",
+              "answer": "Die Kochkunst, Speisen oder besondere Geschmackserlebnisse betreffend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die langfristige umweltbewusste Herstellung von Lebensmitteln betreffend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die freundliche Aufnahme und Bewirtung von Gästen betreffend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Gastfreundschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die freundliche und großzügige Aufnahme, Betreuung und Bewirtung von Gästen.",
+          "explain": {
+            "entryId": "Gastfreundschaft",
+            "headword": "Gastfreundschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɡastˌfʁɔɪ̯ntʃaft/",
+              "ipaUS": "/ˈɡastˌfʁɔɪ̯ntʃaft/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gastfreundschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gastlichkeit",
+                  "Hospitalität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die freundliche und großzügige Aufnahme, Betreuung und Bewirtung von Gästen.",
+                    "examples": [
+                      "Die Familie empfing uns mit großer Gastfreundschaft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gastfreundschaft – Beispielsatz folgt.",
+              "answer": "Die freundliche und großzügige Aufnahme, Betreuung und Bewirtung von Gästen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die professionelle Versorgung vieler Menschen mit Mahlzeiten bei einer Veranstaltung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das besondere Geschmackserlebnis durch hochwertige Speisen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "abschmecken",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Gericht probieren und seine Würzung am Ende gezielt anpassen.",
+          "explain": {
+            "entryId": "abschmecken",
+            "headword": "abschmecken",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌʃmɛkn̩/",
+              "ipaUS": "/ˈapˌʃmɛkn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, trennbar",
+                "headwordLine": "abschmecken",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "würzen",
+                  "geschmacklich anpassen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Gericht probieren und seine Würzung am Ende gezielt anpassen.",
+                    "examples": [
+                      "Schmecken Sie die Suppe vor dem Servieren mit Salz und Pfeffer ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abschmecken – Beispielsatz folgt.",
+              "answer": "Ein Gericht probieren und seine Würzung am Ende gezielt anpassen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine fertige Speise in formeller Sprache essen oder konsumieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Alle Zutaten nach einem Rezept zu einem Gericht verarbeiten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Nachhaltigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Prinzip, Ressourcen so zu nutzen, dass Umwelt und Lebensgrundlagen langfristig erhalten bleiben.",
+          "explain": {
+            "entryId": "Nachhaltigkeit",
+            "headword": "Nachhaltigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxhaltɪçkaɪ̯t/",
+              "ipaUS": "/ˈnaːxhaltɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Nachhaltigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zukunftsfähigkeit",
+                  "dauerhafte Umweltverträglichkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Prinzip, Ressourcen so zu nutzen, dass Umwelt und Lebensgrundlagen langfristig erhalten bleiben.",
+                    "examples": [
+                      "Beim Einkauf achtet das Restaurant auf Regionalität und Nachhaltigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachhaltigkeit – Beispielsatz folgt.",
+              "answer": "Das Prinzip, Ressourcen so zu nutzen, dass Umwelt und Lebensgrundlagen langfristig erhalten bleiben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gesundheitlich ausgewogene Zusammensetzung aller Nährstoffe in einer Mahlzeit.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Haltbarkeit eines Lebensmittels über einen besonders langen Zeitraum.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Nahrungsmittel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein verarbeitetes oder unverarbeitetes Produkt, das Menschen zur Ernährung essen oder trinken.",
+          "explain": {
+            "entryId": "Nahrungsmittel",
+            "headword": "Nahrungsmittel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːʁʊŋsˌmɪtl̩/",
+              "ipaUS": "/ˈnaːʁʊŋsˌmɪtl̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Nahrungsmittel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lebensmittel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein verarbeitetes oder unverarbeitetes Produkt, das Menschen zur Ernährung essen oder trinken.",
+                    "examples": [
+                      "Frische Nahrungsmittel sollten richtig gelagert werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nahrungsmittel – Beispielsatz folgt.",
+              "answer": "Ein verarbeitetes oder unverarbeitetes Produkt, das Menschen zur Ernährung essen oder trinken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein einzelner chemischer Bestandteil, den der Körper für seine Funktionen benötigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine besonders feine und seltene Speise mit hohem Ansehen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "bekömmlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Gut verträglich und angenehm zu verdauen, ohne den Körper stark zu belasten.",
+          "explain": {
+            "entryId": "bekömmlich",
+            "headword": "bekömmlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈkœmlɪç/",
+              "ipaUS": "/bəˈkœmlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Verträglichkeit",
+                "headwordLine": "bekömmlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gut verträglich",
+                  "leicht verdaulich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Gut verträglich und angenehm zu verdauen, ohne den Körper stark zu belasten.",
+                    "examples": [
+                      "Das leichte Gemüsegericht ist auch am Abend bekömmlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bekömmlich – Beispielsatz folgt.",
+              "answer": "Gut verträglich und angenehm zu verdauen, ohne den Körper stark zu belasten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So gehaltvoll, dass es den Hunger für viele Stunden stillt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So empfindlich, dass es schnell verdirbt und gekühlt werden muss.",
               "ok": false
             }
           ]

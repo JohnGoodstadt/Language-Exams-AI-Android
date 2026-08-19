@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizExpressions1-de",
-  "title": "",
+  "title": "Häufige Ausdrücke",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder kommunikativen Funktion passt.",
+      "description": "B2 – Wortschatz und kommunikative Funktion",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "in der Tat",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bestätigt nachdrücklich, dass etwas tatsächlich wahr ist, oft wenn es bemerkenswert erscheint.",
+          "explain": {
+            "entryId": "in der Tat",
+            "headword": "in der Tat",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪn deːɐ̯ ˈtaːt/",
+              "ipaUS": "/ɪn deːɐ̯ ˈtaːt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Bestätigung",
+                "headwordLine": "in der Tat",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "tatsächlich",
+                  "wirklich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bestätigt nachdrücklich, dass etwas tatsächlich wahr ist, oft wenn es bemerkenswert erscheint.",
+                    "examples": [
+                      "Die Ergebnisse sind in der Tat besser als erwartet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in der Tat – Beispielsatz folgt.",
+              "answer": "Bestätigt nachdrücklich, dass etwas tatsächlich wahr ist, oft wenn es bemerkenswert erscheint.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Reduziert eine Aussage auf ihren grundlegenden Kern und lässt Einzelheiten weg.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fasst nach einer Abwägung das abschließende Gesamtergebnis zusammen.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "im Grunde genommen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Reduziert eine Aussage auf ihren wesentlichen Kern und lässt weniger wichtige Einzelheiten beiseite.",
+          "explain": {
+            "entryId": "im Grunde genommen",
+            "headword": "im Grunde genommen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪm ˈɡʁʊndə ɡəˌnɔmən/",
+              "ipaUS": "/ɪm ˈɡʁʊndə ɡəˌnɔmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "grundlegende Zusammenfassung",
+                "headwordLine": "im Grunde genommen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Wesentlichen",
+                  "eigentlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Reduziert eine Aussage auf ihren wesentlichen Kern und lässt weniger wichtige Einzelheiten beiseite.",
+                    "examples": [
+                      "Im Grunde genommen verfolgen beide Vorschläge dasselbe Ziel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "im Grunde genommen – Beispielsatz folgt.",
+              "answer": "Reduziert eine Aussage auf ihren wesentlichen Kern und lässt weniger wichtige Einzelheiten beiseite.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bestätigt nachdrücklich eine bemerkenswerte Tatsache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Formuliert eine Aussage besonders exakt und korrigiert eine kleine Ungenauigkeit.",
               "ok": false
             }
           ]
@@ -54,18 +126,54 @@
           "title": "",
           "page": 3,
           "question": "nichtsdestotrotz",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Leitet eine Aussage ein, die trotz eines zuvor genannten Hindernisses oder Gegensatzes gilt.",
+          "explain": {
+            "entryId": "nichtsdestotrotz",
+            "headword": "nichtsdestotrotz",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnɪçt͡sdɛstoˌtʁɔt͡s/",
+              "ipaUS": "/ˈnɪçt͡sdɛstoˌtʁɔt͡s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktionaladverb",
+                "grammarType": "nicht verhindernder Gegensatz",
+                "headwordLine": "nichtsdestotrotz",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "trotzdem",
+                  "dennoch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Leitet eine Aussage ein, die trotz eines zuvor genannten Hindernisses oder Gegensatzes gilt.",
+                    "examples": [
+                      "Die Aufgabe war schwierig; nichtsdestotrotz wurde sie rechtzeitig beendet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nichtsdestotrotz – Beispielsatz folgt.",
+              "answer": "Leitet eine Aussage ein, die trotz eines zuvor genannten Hindernisses oder Gegensatzes gilt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fasst alle positiven und negativen Aspekte zu einem Gesamtergebnis zusammen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zeigt, dass eine Schlussfolgerung offensichtlich und kaum zu bestreiten ist.",
               "ok": false
             }
           ]
@@ -74,18 +182,54 @@
           "title": "",
           "page": 4,
           "question": "unter dem Strich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fasst nach Berücksichtigung aller Vor- und Nachteile das abschließende Gesamtergebnis zusammen.",
+          "explain": {
+            "entryId": "unter dem Strich",
+            "headword": "unter dem Strich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊntɐ deːm ˈʃtʁɪç/",
+              "ipaUS": "/ˈʊntɐ deːm ˈʃtʁɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Gesamtbilanz",
+                "headwordLine": "unter dem Strich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "alles in allem",
+                  "insgesamt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fasst nach Berücksichtigung aller Vor- und Nachteile das abschließende Gesamtergebnis zusammen.",
+                    "examples": [
+                      "Unter dem Strich hat sich die Investition gelohnt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unter dem Strich – Beispielsatz folgt.",
+              "answer": "Fasst nach Berücksichtigung aller Vor- und Nachteile das abschließende Gesamtergebnis zusammen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt die endgültige Folge am Ende einer langen Entwicklung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Reduziert eine komplizierte Aussage auf einen einzigen präzisen Satz.",
               "ok": false
             }
           ]
@@ -94,18 +238,53 @@
           "title": "",
           "page": 5,
           "question": "das lässt sich nicht leugnen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Betont, dass eine Tatsache nicht vernünftig bestritten oder abgestritten werden kann.",
+          "explain": {
+            "entryId": "das lässt sich nicht leugnen",
+            "headword": "das lässt sich nicht leugnen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/das lɛst zɪç nɪçt ˈlɔɪ̯ɡnən/",
+              "ipaUS": "/das lɛst zɪç nɪçt ˈlɔɪ̯ɡnən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "unbestreitbare Feststellung",
+                "headwordLine": "das lässt sich nicht leugnen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "das ist unbestreitbar"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Betont, dass eine Tatsache nicht vernünftig bestritten oder abgestritten werden kann.",
+                    "examples": [
+                      "Die Maßnahme war erfolgreich; das lässt sich nicht leugnen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "das lässt sich nicht leugnen – Beispielsatz folgt.",
+              "answer": "Betont, dass eine Tatsache nicht vernünftig bestritten oder abgestritten werden kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Stellt fest, dass eine Schlussfolgerung unmittelbar offensichtlich ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bestätigt lediglich, dass eine überraschende Information tatsächlich stimmt.",
               "ok": false
             }
           ]
@@ -114,18 +293,53 @@
           "title": "",
           "page": 6,
           "question": "es liegt auf der Hand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass etwas offensichtlich ist und sich ohne ausführliche Erklärung erkennen lässt.",
+          "explain": {
+            "entryId": "es liegt auf der Hand",
+            "headword": "es liegt auf der Hand",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛs liːkt aʊ̯f deːɐ̯ ˈhant/",
+              "ipaUS": "/ɛs liːkt aʊ̯f deːɐ̯ ˈhant/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Offensichtlichkeit",
+                "headwordLine": "es liegt auf der Hand",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "es ist offensichtlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt aus, dass etwas offensichtlich ist und sich ohne ausführliche Erklärung erkennen lässt.",
+                    "examples": [
+                      "Es liegt auf der Hand, dass wir den Energieverbrauch senken müssen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "es liegt auf der Hand – Beispielsatz folgt.",
+              "answer": "Drückt aus, dass etwas offensichtlich ist und sich ohne ausführliche Erklärung erkennen lässt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Betont, dass eine bereits behauptete Tatsache nicht abgestritten werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bestätigt eine bemerkenswerte Aussage mit besonderem Nachdruck.",
               "ok": false
             }
           ]
@@ -134,18 +348,54 @@
           "title": "",
           "page": 7,
           "question": "in Anbetracht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Stellt eine Aussage in den Zusammenhang einer wichtigen Tatsache oder Situation, die berücksichtigt werden muss.",
+          "explain": {
+            "entryId": "in Anbetracht",
+            "headword": "in Anbetracht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪn ˈanbəˌtʁaxt/",
+              "ipaUS": "/ɪn ˈanbəˌtʁaxt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präpositionale Wendung",
+                "grammarType": "Berücksichtigung einer Situation",
+                "headwordLine": "in Anbetracht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "angesichts",
+                  "unter Berücksichtigung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Stellt eine Aussage in den Zusammenhang einer wichtigen Tatsache oder Situation, die berücksichtigt werden muss.",
+                    "examples": [
+                      "In Anbetracht der Kosten sollten wir den Plan überarbeiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in Anbetracht – Beispielsatz folgt.",
+              "answer": "Stellt eine Aussage in den Zusammenhang einer wichtigen Tatsache oder Situation, die berücksichtigt werden muss.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Betrachtet eine Situation ausschließlich aus einer bestimmten persönlichen Perspektive.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bewertet ein Ergebnis erst später mit dem Wissen über seine Folgen.",
               "ok": false
             }
           ]
@@ -154,18 +404,54 @@
           "title": "",
           "page": 8,
           "question": "um es auf den Punkt zu bringen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kündigt eine kurze, klare und auf das Wesentliche reduzierte Aussage an.",
+          "explain": {
+            "entryId": "um es auf den Punkt zu bringen",
+            "headword": "um es auf den Punkt zu bringen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʊm ɛs aʊ̯f deːn ˈpʊŋkt t͡suː ˌbʁɪŋən/",
+              "ipaUS": "/ʊm ɛs aʊ̯f deːn ˈpʊŋkt t͡suː ˌbʁɪŋən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "prägnante Zusammenfassung",
+                "headwordLine": "um es auf den Punkt zu bringen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "kurz gesagt",
+                  "präzise formuliert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kündigt eine kurze, klare und auf das Wesentliche reduzierte Aussage an.",
+                    "examples": [
+                      "Um es auf den Punkt zu bringen: Der Plan ist zu teuer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "um es auf den Punkt zu bringen – Beispielsatz folgt.",
+              "answer": "Kündigt eine kurze, klare und auf das Wesentliche reduzierte Aussage an.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fasst nach Abwägung aller Aspekte lediglich die Gesamtbilanz zusammen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Korrigiert eine kleine sachliche Ungenauigkeit besonders exakt.",
               "ok": false
             }
           ]
@@ -174,18 +460,53 @@
           "title": "",
           "page": 9,
           "question": "so gesehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zeigt, dass eine Aussage gilt, wenn man die Situation aus der gerade genannten Perspektive betrachtet.",
+          "explain": {
+            "entryId": "so gesehen",
+            "headword": "so gesehen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zoː ɡəˈzeːən/",
+              "ipaUS": "/zoː ɡəˈzeːən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Perspektivische Folgerung",
+                "headwordLine": "so gesehen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aus dieser Perspektive"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zeigt, dass eine Aussage gilt, wenn man die Situation aus der gerade genannten Perspektive betrachtet.",
+                    "examples": [
+                      "So gesehen war die Verzögerung sogar hilfreich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "so gesehen – Beispielsatz folgt.",
+              "answer": "Zeigt, dass eine Aussage gilt, wenn man die Situation aus der gerade genannten Perspektive betrachtet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kennzeichnet ausdrücklich die persönliche Meinung des Sprechers.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bewertet eine frühere Entscheidung mit Wissen, das erst später verfügbar wurde.",
               "ok": false
             }
           ]
@@ -194,18 +515,54 @@
           "title": "",
           "page": 10,
           "question": "im Nachhinein",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet eine spätere rückblickende Bewertung, nachdem das Ergebnis oder weitere Informationen bekannt sind.",
+          "explain": {
+            "entryId": "im Nachhinein",
+            "headword": "im Nachhinein",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪm ˈnaːxˌhaɪ̯n/",
+              "ipaUS": "/ɪm ˈnaːxˌhaɪ̯n/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "rückblickende Bewertung",
+                "headwordLine": "im Nachhinein",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "rückblickend",
+                  "nachträglich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bezeichnet eine spätere rückblickende Bewertung, nachdem das Ergebnis oder weitere Informationen bekannt sind.",
+                    "examples": [
+                      "Im Nachhinein hätte ich anders entschieden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "im Nachhinein – Beispielsatz folgt.",
+              "answer": "Bezeichnet eine spätere rückblickende Bewertung, nachdem das Ergebnis oder weitere Informationen bekannt sind.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Betrachtet eine aktuelle Situation aus der zuvor genannten Perspektive.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kündigt die persönliche Meinung des Sprechers zu einem Thema an.",
               "ok": false
             }
           ]

@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFamily1-de",
-  "title": "",
+  "title": "Familie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Zusammenhalt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die enge Verbundenheit und gegenseitige Unterstützung innerhalb einer Gruppe oder Familie.",
+          "explain": {
+            "entryId": "Zusammenhalt",
+            "headword": "Zusammenhalt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/t͡suˈzamənˌhalt/",
+              "ipaUS": "/t͡suˈzamənˌhalt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Zusammenhalt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verbundenheit",
+                  "Solidarität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die enge Verbundenheit und gegenseitige Unterstützung innerhalb einer Gruppe oder Familie.",
+                    "examples": [
+                      "In schwierigen Zeiten zeigte die Familie großen Zusammenhalt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zusammenhalt – Beispielsatz folgt.",
+              "answer": "Die enge Verbundenheit und gegenseitige Unterstützung innerhalb einer Gruppe oder Familie.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine persönliche emotionale Beziehung zu einer einzelnen Bezugsperson.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die rechtliche oder biologische Beziehung zwischen verwandten Personen.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "Erziehung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die langfristige Begleitung und Einflussnahme, durch die Kinder Werte, Verhalten und Fähigkeiten lernen.",
+          "explain": {
+            "entryId": "Erziehung",
+            "headword": "Erziehung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈt͡siːʊŋ/",
+              "ipaUS": "/ɛɐ̯ˈt͡siːʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erziehung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kindererziehung",
+                  "Aufwachsen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die langfristige Begleitung und Einflussnahme, durch die Kinder Werte, Verhalten und Fähigkeiten lernen.",
+                    "examples": [
+                      "Bei der Erziehung legen die Eltern Wert auf Selbstständigkeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erziehung – Beispielsatz folgt.",
+              "answer": "Die langfristige Begleitung und Einflussnahme, durch die Kinder Werte, Verhalten und Fähigkeiten lernen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die praktische Versorgung und der Schutz einer hilfsbedürftigen Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein gesellschaftliches Bild davon, wie sich Eltern oder Kinder verhalten sollen.",
               "ok": false
             }
           ]
@@ -54,18 +126,53 @@
           "title": "",
           "page": 3,
           "question": "Generationenkonflikt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Auseinandersetzung zwischen Altersgruppen aufgrund unterschiedlicher Werte, Erfahrungen oder Erwartungen.",
+          "explain": {
+            "entryId": "Generationenkonflikt",
+            "headword": "Generationenkonflikt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡeneʁat͡si̯oːnənkɔnˌflɪkt/",
+              "ipaUS": "/ɡeneʁat͡si̯oːnənkɔnˌflɪkt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Generationenkonflikt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Konflikt zwischen Generationen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Auseinandersetzung zwischen Altersgruppen aufgrund unterschiedlicher Werte, Erfahrungen oder Erwartungen.",
+                    "examples": [
+                      "Der Streit über soziale Medien führte zu einem Generationenkonflikt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Generationenkonflikt – Beispielsatz folgt.",
+              "answer": "Eine Auseinandersetzung zwischen Altersgruppen aufgrund unterschiedlicher Werte, Erfahrungen oder Erwartungen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine persönliche Distanz, die sich langsam zwischen nahestehenden Menschen entwickelt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Streit über die Verteilung einer Erbschaft innerhalb einer Generation.",
               "ok": false
             }
           ]
@@ -74,18 +181,54 @@
           "title": "",
           "page": 4,
           "question": "Verantwortung übernehmen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich verpflichten, für eine Aufgabe, Entscheidung oder deren Folgen einzustehen.",
+          "explain": {
+            "entryId": "Verantwortung übernehmen",
+            "headword": "Verantwortung übernehmen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʔantvɔʁtʊŋ yːbɐˌneːmən/",
+              "ipaUS": "/fɛɐ̯ˈʔantvɔʁtʊŋ yːbɐˌneːmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "feste Wendung",
+                "headwordLine": "Verantwortung übernehmen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zuständig sein",
+                  "einstehen für"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sich verpflichten, für eine Aufgabe, Entscheidung oder deren Folgen einzustehen.",
+                    "examples": [
+                      "Beide Eltern übernehmen Verantwortung für die Betreuung der Kinder."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verantwortung übernehmen – Beispielsatz folgt.",
+              "answer": "Sich verpflichten, für eine Aufgabe, Entscheidung oder deren Folgen einzustehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einer Person regelmäßig finanzielle Unterstützung zum Lebensunterhalt zahlen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine hilfsbedürftige Person aufmerksam versorgen und schützen.",
               "ok": false
             }
           ]
@@ -94,18 +237,53 @@
           "title": "",
           "page": 5,
           "question": "Bindung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine enge und häufig dauerhafte emotionale Beziehung zu einer Person.",
+          "explain": {
+            "entryId": "Bindung",
+            "headword": "Bindung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈbɪndʊŋ/",
+              "ipaUS": "/ˈbɪndʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Bindung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "emotionale Verbundenheit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine enge und häufig dauerhafte emotionale Beziehung zu einer Person.",
+                    "examples": [
+                      "Das Kind entwickelte eine sichere Bindung zu seinen Eltern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bindung – Beispielsatz folgt.",
+              "answer": "Eine enge und häufig dauerhafte emotionale Beziehung zu einer Person.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gegenseitige Unterstützung und Einheit einer ganzen Familie.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die biologische oder rechtliche Beziehung zwischen allen Verwandten.",
               "ok": false
             }
           ]
@@ -114,18 +292,53 @@
           "title": "",
           "page": 6,
           "question": "Familienmitglied",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine einzelne Person, die durch Geburt, Partnerschaft, Adoption oder Recht zu einer Familie gehört.",
+          "explain": {
+            "entryId": "Familienmitglied",
+            "headword": "Familienmitglied",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/faˈmiːli̯ənˌmɪtɡliːt/",
+              "ipaUS": "/faˈmiːli̯ənˌmɪtɡliːt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Familienmitglied",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Angehöriger"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine einzelne Person, die durch Geburt, Partnerschaft, Adoption oder Recht zu einer Familie gehört.",
+                    "examples": [
+                      "Jedes Familienmitglied wurde zu dem Treffen eingeladen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Familienmitglied – Beispielsatz folgt.",
+              "answer": "Eine einzelne Person, die durch Geburt, Partnerschaft, Adoption oder Recht zu einer Familie gehört.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gesamtheit aller rechtlichen und biologischen Beziehungen einer Familie.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Person, die ausschließlich im selben Haushalt wohnt, ohne verwandt zu sein.",
               "ok": false
             }
           ]
@@ -134,18 +347,54 @@
           "title": "",
           "page": 7,
           "question": "Unterhalt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Finanzielle Mittel, die für den Lebensbedarf einer berechtigten Person regelmäßig gezahlt werden.",
+          "explain": {
+            "entryId": "Unterhalt",
+            "headword": "Unterhalt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊntɐˌhalt/",
+              "ipaUS": "/ˈʊntɐˌhalt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Unterhalt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Unterhaltszahlung",
+                  "Alimente"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Finanzielle Mittel, die für den Lebensbedarf einer berechtigten Person regelmäßig gezahlt werden.",
+                    "examples": [
+                      "Nach der Trennung zahlt er Unterhalt für die Kinder."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unterhalt – Beispielsatz folgt.",
+              "answer": "Finanzielle Mittel, die für den Lebensbedarf einer berechtigten Person regelmäßig gezahlt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Allgemeine emotionale und praktische Unterstützung in einer schwierigen Lage.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vermögen, das nach dem Tod einer Person auf Erben übergeht.",
               "ok": false
             }
           ]
@@ -154,18 +403,53 @@
           "title": "",
           "page": 8,
           "question": "sich entfremden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Allmählich emotionale Nähe und Vertrautheit zu einer Person oder Gruppe verlieren.",
+          "explain": {
+            "entryId": "sich entfremden",
+            "headword": "sich entfremden",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç ɛntˈfʁɛmdn̩/",
+              "ipaUS": "/zɪç ɛntˈfʁɛmdn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "reflexiv",
+                "headwordLine": "sich entfremden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sich voneinander entfernen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Allmählich emotionale Nähe und Vertrautheit zu einer Person oder Gruppe verlieren.",
+                    "examples": [
+                      "Nach Jahren ohne Kontakt hatten sich die Geschwister entfremdet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich entfremden – Beispielsatz folgt.",
+              "answer": "Allmählich emotionale Nähe und Vertrautheit zu einer Person oder Gruppe verlieren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine nahestehende Person im Alltag nicht ausreichend versorgen oder beachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Durch gemeinsame Erfahrungen eine besonders enge Bindung entwickeln.",
               "ok": false
             }
           ]
@@ -174,18 +458,54 @@
           "title": "",
           "page": 9,
           "question": "Fürsorge",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aufmerksame Betreuung, Versorgung und Schutz für das Wohlergehen einer anderen Person.",
+          "explain": {
+            "entryId": "Fürsorge",
+            "headword": "Fürsorge",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfyːɐ̯ˌzɔʁɡə/",
+              "ipaUS": "/ˈfyːɐ̯ˌzɔʁɡə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Fürsorge",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Betreuung",
+                  "Zuwendung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Aufmerksame Betreuung, Versorgung und Schutz für das Wohlergehen einer anderen Person.",
+                    "examples": [
+                      "Das Kind braucht Zuwendung und Fürsorge."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Fürsorge – Beispielsatz folgt.",
+              "answer": "Aufmerksame Betreuung, Versorgung und Schutz für das Wohlergehen einer anderen Person.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Übernahme rechtlicher Verantwortung für alle Folgen einer Entscheidung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Regelmäßige finanzielle Zahlungen für den Lebensbedarf eines Angehörigen.",
               "ok": false
             }
           ]
@@ -194,18 +514,53 @@
           "title": "",
           "page": 10,
           "question": "Rollenbild",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine gesellschaftliche Vorstellung davon, wie sich Menschen in einer bestimmten sozialen Rolle verhalten sollen.",
+          "explain": {
+            "entryId": "Rollenbild",
+            "headword": "Rollenbild",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁɔlənˌbɪlt/",
+              "ipaUS": "/ˈʁɔlənˌbɪlt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Rollenbild",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Rollenvorstellung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine gesellschaftliche Vorstellung davon, wie sich Menschen in einer bestimmten sozialen Rolle verhalten sollen.",
+                    "examples": [
+                      "Moderne Familien stellen traditionelle Rollenbilder infrage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rollenbild – Beispielsatz folgt.",
+              "answer": "Eine gesellschaftliche Vorstellung davon, wie sich Menschen in einer bestimmten sozialen Rolle verhalten sollen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die persönliche emotionale Beziehung zwischen einem Kind und seinen Eltern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der rechtliche Status einer Person als ledig, verheiratet oder geschieden.",
               "ok": false
             }
           ]

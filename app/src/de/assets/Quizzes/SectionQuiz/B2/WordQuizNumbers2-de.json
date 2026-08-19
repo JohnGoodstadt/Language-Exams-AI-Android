@@ -2,130 +2,345 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizNumbers2-de",
-  "title": "",
+  "title": "Zahlen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Summe",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das Ergebnis einer Addition oder der gesamte zusammengefasste Geld- beziehungsweise Zahlenbetrag.",
+          "explain": {
+            "entryId": "Summe",
+            "headword": "Summe",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzʊmə/",
+              "ipaUS": "/ˈzʊmə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Summe",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gesamtbetrag",
+                  "Additionsergebnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das Ergebnis einer Addition oder der gesamte zusammengefasste Geld- beziehungsweise Zahlenbetrag.",
+                    "examples": [
+                      "Die Summe aller Ausgaben beträgt 850 Euro."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Summe – Beispielsatz folgt.",
+              "answer": "Das Ergebnis einer Addition oder der gesamte zusammengefasste Geld- beziehungsweise Zahlenbetrag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der einzelne Anteil, der auf eine Gruppe innerhalb eines Ganzen entfällt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Verhältniswert zwischen einer Teilmenge und einer Gesamtmenge.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "sich belaufen auf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Insgesamt eine bestimmte Summe, Menge oder Höhe erreichen.",
+          "explain": {
+            "entryId": "sich belaufen auf",
+            "headword": "sich belaufen auf",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç bəˈlaʊ̯fn̩ aʊ̯f/",
+              "ipaUS": "/zɪç bəˈlaʊ̯fn̩ aʊ̯f/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "reflexiv mit auf",
+                "headwordLine": "sich belaufen auf",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "betragen",
+                  "ausmachen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Insgesamt eine bestimmte Summe, Menge oder Höhe erreichen.",
+                    "examples": [
+                      "Die Kosten belaufen sich auf etwa 20.000 Euro."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich belaufen auf – Beispielsatz folgt.",
+              "answer": "Insgesamt eine bestimmte Summe, Menge oder Höhe erreichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Aus mehreren Einzelwerten einen rechnerischen Mittelwert bilden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Menge im Vergleich zum Vorjahr geringfügig erhöhen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "geringfügig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nur in sehr kleinem, kaum bedeutendem Umfang.",
+          "explain": {
+            "entryId": "geringfügig",
+            "headword": "geringfügig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈʁɪŋfyːɡɪç/",
+              "ipaUS": "/ɡəˈʁɪŋfyːɡɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "kleines Ausmaß",
+                "headwordLine": "geringfügig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "minimal",
+                  "unwesentlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nur in sehr kleinem, kaum bedeutendem Umfang.",
+                    "examples": [
+                      "Die Preise sind geringfügig gestiegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "geringfügig – Beispielsatz folgt.",
+              "answer": "Nur in sehr kleinem, kaum bedeutendem Umfang.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In großem und deutlich wahrnehmbarem Ausmaß.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ungefähr auf Grundlage einer groben Schätzung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "erheblich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In großem, deutlich wahrnehmbarem oder wichtigem Umfang.",
+          "explain": {
+            "entryId": "erheblich",
+            "headword": "erheblich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈheːplɪç/",
+              "ipaUS": "/ɛɐ̯ˈheːplɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "großes Ausmaß",
+                "headwordLine": "erheblich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beträchtlich",
+                  "deutlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In großem, deutlich wahrnehmbarem oder wichtigem Umfang.",
+                    "examples": [
+                      "Die Wartezeit hat sich erheblich verkürzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erheblich – Beispielsatz folgt.",
+              "answer": "In großem, deutlich wahrnehmbarem oder wichtigem Umfang.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur in sehr kleinem und kaum bedeutendem Umfang.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fast, aber nicht ganz bis zu einem bestimmten Wert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "schätzungsweise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nach einer Schätzung und nicht aufgrund einer vollständig genauen Messung oder Zählung.",
+          "explain": {
+            "entryId": "schätzungsweise",
+            "headword": "schätzungsweise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃɛt͡sʊŋsˌvaɪ̯zə/",
+              "ipaUS": "/ˈʃɛt͡sʊŋsˌvaɪ̯zə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "geschätzter Wert",
+                "headwordLine": "schätzungsweise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "geschätzt",
+                  "ungefähr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nach einer Schätzung und nicht aufgrund einer vollständig genauen Messung oder Zählung.",
+                    "examples": [
+                      "Schätzungsweise 5.000 Menschen nahmen teil."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "schätzungsweise – Beispielsatz folgt.",
+              "answer": "Nach einer Schätzung und nicht aufgrund einer vollständig genauen Messung oder Zählung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Dem exakt berechneten Mittelwert aller vorhandenen Daten entsprechend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fast genau bis zu einem genannten Wert, ohne ihn vollständig zu erreichen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "verdoppeln",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Menge auf das Zweifache erhöhen beziehungsweise zweimal so groß werden.",
+          "explain": {
+            "entryId": "verdoppeln",
+            "headword": "verdoppeln",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈdɔpl̩n/",
+              "ipaUS": "/fɛɐ̯ˈdɔpl̩n/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv oder reflexiv",
+                "headwordLine": "verdoppeln",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "auf das Doppelte erhöhen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Menge auf das Zweifache erhöhen beziehungsweise zweimal so groß werden.",
+                    "examples": [
+                      "Das Unternehmen konnte seinen Umsatz in fünf Jahren verdoppeln."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verdoppeln – Beispielsatz folgt.",
+              "answer": "Eine Menge auf das Zweifache erhöhen beziehungsweise zweimal so groß werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Menge allgemein vergrößern, ohne ein bestimmtes Verhältnis zu erreichen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen neu hinzugekommenen Betrag zu einem Bestand zählen.",
               "ok": false
             }
           ]

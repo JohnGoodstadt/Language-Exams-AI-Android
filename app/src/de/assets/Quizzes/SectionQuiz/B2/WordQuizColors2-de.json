@@ -2,50 +2,122 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizColors2-de",
-  "title": "",
+  "title": "Farben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "verblassen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit der Zeit an Farbintensität, Deutlichkeit oder Wirkung verlieren.",
+          "explain": {
+            "entryId": "verblassen",
+            "headword": "verblassen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈblasn̩/",
+              "ipaUS": "/fɛɐ̯ˈblasn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv",
+                "headwordLine": "verblassen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "ausbleichen",
+                  "schwächer werden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit der Zeit an Farbintensität, Deutlichkeit oder Wirkung verlieren.",
+                    "examples": [
+                      "Durch die Sonne sind die Vorhänge verblasst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verblassen – Beispielsatz folgt.",
+              "answer": "Mit der Zeit an Farbintensität, Deutlichkeit oder Wirkung verlieren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Farbe bewusst mischen, damit sie weniger kräftig wirkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine abstrakte Bedeutung durch eine Farbe oder ein Zeichen ausdrücken.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "abtönen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Farbe durch Beimischen oder Bearbeiten in ihrer Intensität verändern beziehungsweise abschwächen.",
+          "explain": {
+            "entryId": "abtönen",
+            "headword": "abtönen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌtøːnən/",
+              "ipaUS": "/ˈapˌtøːnən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, trennbar",
+                "headwordLine": "abtönen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "dämpfen",
+                  "nuancieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Farbe durch Beimischen oder Bearbeiten in ihrer Intensität verändern beziehungsweise abschwächen.",
+                    "examples": [
+                      "Die Malerin tönte das kräftige Blau mit etwas Grau ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abtönen – Beispielsatz folgt.",
+              "answer": "Eine Farbe durch Beimischen oder Bearbeiten in ihrer Intensität verändern beziehungsweise abschwächen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Durch Licht und Zeit allmählich unbeabsichtigt an Farbe verlieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine abstrakte Idee mithilfe einer bestimmten Farbe darstellen.",
               "ok": false
             }
           ]

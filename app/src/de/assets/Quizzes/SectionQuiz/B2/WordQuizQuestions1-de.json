@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizQuestions1-de",
-  "title": "",
+  "title": "Fragewörter",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder kommunikativen Funktion passt.",
+      "description": "B2 – Wortschatz und kommunikative Funktion",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "inwieweit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt danach, bis zu welchem Grad oder Umfang eine Aussage zutrifft.",
+          "explain": {
+            "entryId": "inwieweit",
+            "headword": "inwieweit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪnviːˈvaɪ̯t/",
+              "ipaUS": "/ɪnviːˈvaɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Frageadverb",
+                "grammarType": "Frage nach dem Grad",
+                "headwordLine": "inwieweit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bis zu welchem Grad"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt danach, bis zu welchem Grad oder Umfang eine Aussage zutrifft.",
+                    "examples": [
+                      "Inwieweit hat die neue Regel die Situation verbessert?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "inwieweit – Beispielsatz folgt.",
+              "answer": "Fragt danach, bis zu welchem Grad oder Umfang eine Aussage zutrifft.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt danach, in welcher Hinsicht oder unter welchem Gesichtspunkt etwas gilt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach dem Grund, aus dem ein Ereignis eingetreten ist.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "inwiefern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt danach, in welcher Hinsicht, auf welche Weise oder mit welcher Relevanz etwas zutrifft.",
+          "explain": {
+            "entryId": "inwiefern",
+            "headword": "inwiefern",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪnviːˈfɛʁn/",
+              "ipaUS": "/ɪnviːˈfɛʁn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Frageadverb",
+                "grammarType": "Frage nach Hinsicht oder Zusammenhang",
+                "headwordLine": "inwiefern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in welcher Hinsicht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt danach, in welcher Hinsicht, auf welche Weise oder mit welcher Relevanz etwas zutrifft.",
+                    "examples": [
+                      "Inwiefern betrifft die Änderung unser Team?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "inwiefern – Beispielsatz folgt.",
+              "answer": "Fragt danach, in welcher Hinsicht, auf welche Weise oder mit welcher Relevanz etwas zutrifft.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt ausschließlich nach dem messbaren Grad oder Umfang einer Veränderung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach dem Mittel, mit dem eine Handlung ausgeführt wird.",
               "ok": false
             }
           ]
@@ -54,18 +124,54 @@
           "title": "",
           "page": 3,
           "question": "weshalb",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach dem Grund oder der Ursache für eine Handlung oder Situation.",
+          "explain": {
+            "entryId": "weshalb",
+            "headword": "weshalb",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/vɛsˈhalp/",
+              "ipaUS": "/vɛsˈhalp/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Frageadverb",
+                "grammarType": "Frage nach dem Grund",
+                "headwordLine": "weshalb",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "warum",
+                  "aus welchem Grund"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt nach dem Grund oder der Ursache für eine Handlung oder Situation.",
+                    "examples": [
+                      "Weshalb wurde der Termin verschoben?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "weshalb – Beispielsatz folgt.",
+              "answer": "Fragt nach dem Grund oder der Ursache für eine Handlung oder Situation.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach dem Mittel oder Vorgang, durch den ein Ergebnis entstand.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach dem Ereignis, auf das eine bestimmte Reaktion folgte.",
               "ok": false
             }
           ]
@@ -74,18 +180,54 @@
           "title": "",
           "page": 4,
           "question": "wodurch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach dem Mittel, Vorgang oder der konkreten Ursache, durch die etwas geschieht.",
+          "explain": {
+            "entryId": "wodurch",
+            "headword": "wodurch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈdʊʁç/",
+              "ipaUS": "/voˈdʊʁç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronominaladverb",
+                "grammarType": "Frage nach Mittel oder Ursache",
+                "headwordLine": "wodurch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "durch was",
+                  "durch welches Mittel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt nach dem Mittel, Vorgang oder der konkreten Ursache, durch die etwas geschieht.",
+                    "examples": [
+                      "Wodurch konnte der Energieverbrauch gesenkt werden?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wodurch – Beispielsatz folgt.",
+              "answer": "Fragt nach dem Mittel, Vorgang oder der konkreten Ursache, durch die etwas geschieht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt allgemein nach der Absicht oder dem Grund einer Entscheidung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt danach, was unmittelbar nach einem Ereignis geschah.",
               "ok": false
             }
           ]
@@ -94,18 +236,53 @@
           "title": "",
           "page": 5,
           "question": "woraufhin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach dem Ereignis, auf das eine Handlung, Folge oder Reaktion unmittelbar folgte.",
+          "explain": {
+            "entryId": "woraufhin",
+            "headword": "woraufhin",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈʁaʊ̯fˌhɪn/",
+              "ipaUS": "/voˈʁaʊ̯fˌhɪn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronominaladverb",
+                "grammarType": "Frage nach Folge oder Reaktion",
+                "headwordLine": "woraufhin",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "als Reaktion worauf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt nach dem Ereignis, auf das eine Handlung, Folge oder Reaktion unmittelbar folgte.",
+                    "examples": [
+                      "Woraufhin änderte die Behörde ihre Entscheidung?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "woraufhin – Beispielsatz folgt.",
+              "answer": "Fragt nach dem Ereignis, auf das eine Handlung, Folge oder Reaktion unmittelbar folgte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach dem Werkzeug oder Mittel, mit dem etwas erreicht wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach dem Gegenstand, den jemand sucht oder um den jemand bittet.",
               "ok": false
             }
           ]
@@ -114,18 +291,53 @@
           "title": "",
           "page": 6,
           "question": "wonach",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach dem Ziel einer Suche, einem gewünschten Gegenstand oder einem Bezug, der mit „nach“ ausgedrückt wird.",
+          "explain": {
+            "entryId": "wonach",
+            "headword": "wonach",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈnaːx/",
+              "ipaUS": "/voˈnaːx/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronominaladverb",
+                "grammarType": "Frage mit nach",
+                "headwordLine": "wonach",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nach was"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt nach dem Ziel einer Suche, einem gewünschten Gegenstand oder einem Bezug, der mit „nach“ ausgedrückt wird.",
+                    "examples": [
+                      "Wonach suchen Sie in den Unterlagen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wonach – Beispielsatz folgt.",
+              "answer": "Fragt nach dem Ziel einer Suche, einem gewünschten Gegenstand oder einem Bezug, der mit „nach“ ausgedrückt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach dem Mittel, das für eine Handlung verwendet wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach einem Gegenstand oder Thema, auf das sich Aufmerksamkeit richtet.",
               "ok": false
             }
           ]
@@ -134,18 +346,54 @@
           "title": "",
           "page": 7,
           "question": "womit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach dem Mittel, Werkzeug oder Gegenstand, mit dem etwas getan wird.",
+          "explain": {
+            "entryId": "womit",
+            "headword": "womit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈmɪt/",
+              "ipaUS": "/voˈmɪt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronominaladverb",
+                "grammarType": "Frage nach Mittel oder Begleitung",
+                "headwordLine": "womit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "mit was",
+                  "mit welchem Mittel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt nach dem Mittel, Werkzeug oder Gegenstand, mit dem etwas getan wird.",
+                    "examples": [
+                      "Womit lässt sich die Datei öffnen?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "womit – Beispielsatz folgt.",
+              "answer": "Fragt nach dem Mittel, Werkzeug oder Gegenstand, mit dem etwas getan wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach dem inneren Inhalt oder dem Bereich, in dem etwas liegt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach der Quelle, Herkunft oder Grundlage einer Information.",
               "ok": false
             }
           ]
@@ -154,18 +402,54 @@
           "title": "",
           "page": 8,
           "question": "worin",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt, in welcher Sache, welchem Bereich oder welcher Hinsicht etwas besteht oder liegt.",
+          "explain": {
+            "entryId": "worin",
+            "headword": "worin",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈʁɪn/",
+              "ipaUS": "/voˈʁɪn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronominaladverb",
+                "grammarType": "Frage nach Inhalt oder Hinsicht",
+                "headwordLine": "worin",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in was",
+                  "in welcher Hinsicht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt, in welcher Sache, welchem Bereich oder welcher Hinsicht etwas besteht oder liegt.",
+                    "examples": [
+                      "Worin besteht der wesentliche Unterschied?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "worin – Beispielsatz folgt.",
+              "answer": "Fragt, in welcher Sache, welchem Bereich oder welcher Hinsicht etwas besteht oder liegt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach dem Werkzeug oder Mittel einer Handlung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach dem Gegenstand, an dem etwas erkannt oder befestigt wird.",
               "ok": false
             }
           ]
@@ -174,18 +458,54 @@
           "title": "",
           "page": 9,
           "question": "weswegen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt, ebenso wie „weshalb“, nach dem Grund oder der Ursache für etwas.",
+          "explain": {
+            "entryId": "weswegen",
+            "headword": "weswegen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/vɛsˈveːɡn̩/",
+              "ipaUS": "/vɛsˈveːɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Frageadverb",
+                "grammarType": "Frage nach Ursache",
+                "headwordLine": "weswegen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "warum",
+                  "weshalb"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt, ebenso wie „weshalb“, nach dem Grund oder der Ursache für etwas.",
+                    "examples": [
+                      "Weswegen wurde der Antrag abgelehnt?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "weswegen – Beispielsatz folgt.",
+              "answer": "Fragt, ebenso wie „weshalb“, nach dem Grund oder der Ursache für etwas.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach dem konkreten Mittel, durch das etwas verursacht wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach der Folge, die unmittelbar auf ein Ereignis eintrat.",
               "ok": false
             }
           ]
@@ -194,18 +514,53 @@
           "title": "",
           "page": 10,
           "question": "woran",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach einem Bezug, Merkmal, Gegenstand oder einer Ursache, die mit „an“ verbunden wird.",
+          "explain": {
+            "entryId": "woran",
+            "headword": "woran",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈʁan/",
+              "ipaUS": "/voˈʁan/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronominaladverb",
+                "grammarType": "Frage mit an",
+                "headwordLine": "woran",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "an was"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt nach einem Bezug, Merkmal, Gegenstand oder einer Ursache, die mit „an“ verbunden wird.",
+                    "examples": [
+                      "Woran erkennt man ein hochwertiges Gerät?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "woran – Beispielsatz folgt.",
+              "answer": "Fragt nach einem Bezug, Merkmal, Gegenstand oder einer Ursache, die mit „an“ verbunden wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach der Quelle, von der eine Information oder Sache stammt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach dem Gegenstand, der gesucht oder gewünscht wird.",
               "ok": false
             }
           ]

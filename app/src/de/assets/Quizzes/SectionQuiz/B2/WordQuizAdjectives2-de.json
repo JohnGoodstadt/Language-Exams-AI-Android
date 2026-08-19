@@ -2,130 +2,346 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives2-de",
-  "title": "",
+  "title": "Adjektive (häufig)",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "hartnäckig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Trotz Widerstand oder Schwierigkeiten dauerhaft nicht nachgebend; je nach Kontext positiv oder negativ.",
+          "explain": {
+            "entryId": "hartnäckig",
+            "headword": "hartnäckig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhaʁtˌnɛkɪç/",
+              "ipaUS": "/ˈhaʁtˌnɛkɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Beharrlichkeit",
+                "headwordLine": "hartnäckig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beharrlich",
+                  "ausdauernd"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Trotz Widerstand oder Schwierigkeiten dauerhaft nicht nachgebend; je nach Kontext positiv oder negativ.",
+                    "examples": [
+                      "Der Journalist stellte hartnäckig weitere Fragen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hartnäckig – Beispielsatz folgt.",
+              "answer": "Trotz Widerstand oder Schwierigkeiten dauerhaft nicht nachgebend; je nach Kontext positiv oder negativ.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Auch unter Belastung ruhig und innerlich ausgeglichen bleibend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Aufgabe mit besonderer Genauigkeit und Vollständigkeit ausführend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "wesentlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Für das Wesen, den Kern oder das Ergebnis einer Sache besonders wichtig.",
+          "explain": {
+            "entryId": "wesentlich",
+            "headword": "wesentlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈveːzn̩tlɪç/",
+              "ipaUS": "/ˈveːzn̩tlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Kern oder große Bedeutung",
+                "headwordLine": "wesentlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "grundlegend",
+                  "entscheidend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Für das Wesen, den Kern oder das Ergebnis einer Sache besonders wichtig.",
+                    "examples": [
+                      "Vertrauen ist ein wesentlicher Bestandteil guter Zusammenarbeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wesentlich – Beispielsatz folgt.",
+              "answer": "Für das Wesen, den Kern oder das Ergebnis einer Sache besonders wichtig.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So notwendig, dass vollständig darauf nicht verzichtet werden kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von großer konkret messbarer Menge oder finanziellem Umfang.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "unmittelbar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Direkt, ohne räumlichen, zeitlichen oder vermittelnden Abstand.",
+          "explain": {
+            "entryId": "unmittelbar",
+            "headword": "unmittelbar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊnmɪtl̩baːɐ̯/",
+              "ipaUS": "/ˈʊnmɪtl̩baːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "direkte Nähe oder Wirkung",
+                "headwordLine": "unmittelbar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "direkt",
+                  "sofortig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Direkt, ohne räumlichen, zeitlichen oder vermittelnden Abstand.",
+                    "examples": [
+                      "Die Entscheidung hatte unmittelbare Folgen für die Beschäftigten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unmittelbar – Beispielsatz folgt.",
+              "answer": "Direkt, ohne räumlichen, zeitlichen oder vermittelnden Abstand.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Für das Ergebnis von grundlegender und entscheidender Bedeutung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In besonders großem und deutlich wahrnehmbarem Ausmaß.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "vielfältig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aus vielen unterschiedlichen Formen, Möglichkeiten oder Merkmalen bestehend.",
+          "explain": {
+            "entryId": "vielfältig",
+            "headword": "vielfältig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfiːlˌfɛltɪç/",
+              "ipaUS": "/ˈfiːlˌfɛltɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Verschiedenheit",
+                "headwordLine": "vielfältig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "abwechslungsreich",
+                  "divers"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Aus vielen unterschiedlichen Formen, Möglichkeiten oder Merkmalen bestehend.",
+                    "examples": [
+                      "Die Region bietet vielfältige Freizeitmöglichkeiten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vielfältig – Beispielsatz folgt.",
+              "answer": "Aus vielen unterschiedlichen Formen, Möglichkeiten oder Merkmalen bestehend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In allen Teilen nach demselben Muster und ohne Unterschiede gestaltet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Sache aus mehreren Perspektiven kritisch und genau bewertend.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "kritisch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sorgfältig prüfend und nicht ungefragt akzeptierend; auch gefährlich oder entscheidend schwierig.",
+          "explain": {
+            "entryId": "kritisch",
+            "headword": "kritisch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkʁiːtɪʃ/",
+              "ipaUS": "/ˈkʁiːtɪʃ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Prüfung oder schwierige Lage",
+                "headwordLine": "kritisch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "prüfend",
+                  "bedenklich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sorgfältig prüfend und nicht ungefragt akzeptierend; auch gefährlich oder entscheidend schwierig.",
+                    "examples": [
+                      "Die Quellen sollten kritisch geprüft werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kritisch – Beispielsatz folgt.",
+              "answer": "Sorgfältig prüfend und nicht ungefragt akzeptierend; auch gefährlich oder entscheidend schwierig.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Mit besonderer Genauigkeit und Vollständigkeit bis ins Detail arbeitend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von einer vorgefassten Meinung einseitig beeinflusst.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "gründlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Mit großer Sorgfalt, Genauigkeit und Vollständigkeit bis in wichtige Einzelheiten.",
+          "explain": {
+            "entryId": "gründlich",
+            "headword": "gründlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɡʁʏntlɪç/",
+              "ipaUS": "/ˈɡʁʏntlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Genauigkeit und Vollständigkeit",
+                "headwordLine": "gründlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sorgfältig",
+                  "genau"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Mit großer Sorgfalt, Genauigkeit und Vollständigkeit bis in wichtige Einzelheiten.",
+                    "examples": [
+                      "Vor dem Kauf informierte sie sich gründlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gründlich – Beispielsatz folgt.",
+              "answer": "Mit großer Sorgfalt, Genauigkeit und Vollständigkeit bis in wichtige Einzelheiten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Informationen prüfend und nicht ohne eigene Bewertung akzeptierend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Trotz Widerstand dauerhaft und ohne Nachgeben handelnd.",
               "ok": false
             }
           ]

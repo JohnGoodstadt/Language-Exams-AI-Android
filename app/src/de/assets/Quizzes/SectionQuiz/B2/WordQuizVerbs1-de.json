@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs1-de",
-  "title": "",
+  "title": "Häufige Verben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "in Betracht ziehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Möglichkeit bei einer Entscheidung ernsthaft berücksichtigen.",
+          "explain": {
+            "entryId": "in Betracht ziehen",
+            "headword": "in Betracht ziehen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪn bəˈtʁaxt ˌt͡siːən/",
+              "ipaUS": "/ɪn bəˈtʁaxt ˌt͡siːən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "feste Wendung",
+                "headwordLine": "in Betracht ziehen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erwägen",
+                  "berücksichtigen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Möglichkeit bei einer Entscheidung ernsthaft berücksichtigen.",
+                    "examples": [
+                      "Wir ziehen einen späteren Termin in Betracht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in Betracht ziehen – Beispielsatz folgt.",
+              "answer": "Eine Möglichkeit bei einer Entscheidung ernsthaft berücksichtigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Möglichkeit in besonders formeller Sprache sorgfältig erwägen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Gültigkeit oder Richtigkeit einer Aussage bezweifeln.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "zur Verfügung stellen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Jemandem etwas zur Nutzung oder zum Gebrauch bereitgeben.",
+          "explain": {
+            "entryId": "zur Verfügung stellen",
+            "headword": "zur Verfügung stellen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/t͡suːɐ̯ fɛɐ̯ˈfyːɡʊŋ ˌʃtɛlən/",
+              "ipaUS": "/t͡suːɐ̯ fɛɐ̯ˈfyːɡʊŋ ˌʃtɛlən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "feste Wendung",
+                "headwordLine": "zur Verfügung stellen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bereitstellen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Jemandem etwas zur Nutzung oder zum Gebrauch bereitgeben.",
+                    "examples": [
+                      "Die Firma stellt allen Beschäftigten Laptops zur Verfügung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zur Verfügung stellen – Beispielsatz folgt.",
+              "answer": "Jemandem etwas zur Nutzung oder zum Gebrauch bereitgeben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Leistung oder Ressource selbst nutzen und dadurch beanspruchen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Etwas als notwendige Bedingung für eine Nutzung verlangen.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "in Frage stellen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Richtigkeit, Gültigkeit oder Zweckmäßigkeit von etwas bezweifeln und kritisch prüfen.",
+          "explain": {
+            "entryId": "in Frage stellen",
+            "headword": "in Frage stellen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪn ˈfʁaːɡə ˌʃtɛlən/",
+              "ipaUS": "/ɪn ˈfʁaːɡə ˌʃtɛlən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "feste Wendung",
+                "headwordLine": "in Frage stellen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bezweifeln",
+                  "hinterfragen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Richtigkeit, Gültigkeit oder Zweckmäßigkeit von etwas bezweifeln und kritisch prüfen.",
+                    "examples": [
+                      "Die neuen Daten stellen die bisherige Theorie in Frage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in Frage stellen – Beispielsatz folgt.",
+              "answer": "Die Richtigkeit, Gültigkeit oder Zweckmäßigkeit von etwas bezweifeln und kritisch prüfen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Möglichkeit ernsthaft als Option für eine Entscheidung prüfen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich ausführlich und kritisch mit einem komplexen Thema beschäftigen.",
               "ok": false
             }
           ]
@@ -74,18 +181,53 @@
           "title": "",
           "page": 4,
           "question": "sich auseinandersetzen mit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sich gründlich, aktiv und häufig kritisch mit einem Thema oder Problem beschäftigen.",
+          "explain": {
+            "entryId": "sich auseinandersetzen mit",
+            "headword": "sich auseinandersetzen mit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç aʊ̯sʔaɪ̯ˈnandɐˌzɛt͡sn̩ mɪt/",
+              "ipaUS": "/zɪç aʊ̯sʔaɪ̯ˈnandɐˌzɛt͡sn̩ mɪt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "reflexiv mit mit",
+                "headwordLine": "sich auseinandersetzen mit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sich befassen mit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sich gründlich, aktiv und häufig kritisch mit einem Thema oder Problem beschäftigen.",
+                    "examples": [
+                      "Im Seminar setzen wir uns mit den Folgen der Digitalisierung auseinander."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich auseinandersetzen mit – Beispielsatz folgt.",
+              "answer": "Sich gründlich, aktiv und häufig kritisch mit einem Thema oder Problem beschäftigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Gültigkeit einer einzelnen Behauptung bezweifeln und prüfen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Information bei einer Entscheidung als relevanten Faktor beachten.",
               "ok": false
             }
           ]
@@ -94,18 +236,54 @@
           "title": "",
           "page": 5,
           "question": "voraussetzen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas als notwendige Bedingung verlangen oder als bereits gegeben annehmen.",
+          "explain": {
+            "entryId": "voraussetzen",
+            "headword": "voraussetzen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/foˈʁaʊ̯sˌzɛt͡sn̩/",
+              "ipaUS": "/foˈʁaʊ̯sˌzɛt͡sn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, trennbar",
+                "headwordLine": "voraussetzen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erfordern",
+                  "annehmen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas als notwendige Bedingung verlangen oder als bereits gegeben annehmen.",
+                    "examples": [
+                      "Die Aufgabe setzt gute Fachkenntnisse voraus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "voraussetzen – Beispielsatz folgt.",
+              "answer": "Etwas als notwendige Bedingung verlangen oder als bereits gegeben annehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bei einer Entscheidung einen relevanten Umstand beachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sicherstellen, dass ein gewünschtes Ergebnis zuverlässig erreicht wird.",
               "ok": false
             }
           ]
@@ -114,18 +292,54 @@
           "title": "",
           "page": 6,
           "question": "berücksichtigen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Information, Person oder Bedingung bei einer Entscheidung oder Handlung beachten.",
+          "explain": {
+            "entryId": "berücksichtigen",
+            "headword": "berücksichtigen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʁʏksɪçtɪɡn̩/",
+              "ipaUS": "/bəˈʁʏksɪçtɪɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "berücksichtigen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beachten",
+                  "einbeziehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Information, Person oder Bedingung bei einer Entscheidung oder Handlung beachten.",
+                    "examples": [
+                      "Bei der Planung müssen wir die Kosten berücksichtigen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "berücksichtigen – Beispielsatz folgt.",
+              "answer": "Eine Information, Person oder Bedingung bei einer Entscheidung oder Handlung beachten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Verschiedene Vor- und Nachteile sorgfältig miteinander vergleichen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Möglichkeit als mögliche Entscheidung grundsätzlich prüfen.",
               "ok": false
             }
           ]
@@ -134,18 +348,54 @@
           "title": "",
           "page": 7,
           "question": "sich beziehen auf",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Auf eine bestimmte Aussage, Quelle, Person oder Sache verweisen beziehungsweise diese betreffen.",
+          "explain": {
+            "entryId": "sich beziehen auf",
+            "headword": "sich beziehen auf",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç bəˈt͡siːən aʊ̯f/",
+              "ipaUS": "/zɪç bəˈt͡siːən aʊ̯f/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "reflexiv mit auf",
+                "headwordLine": "sich beziehen auf",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "referieren auf",
+                  "betreffen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Auf eine bestimmte Aussage, Quelle, Person oder Sache verweisen beziehungsweise diese betreffen.",
+                    "examples": [
+                      "Die Zahlen beziehen sich auf das vergangene Geschäftsjahr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich beziehen auf – Beispielsatz folgt.",
+              "answer": "Auf eine bestimmte Aussage, Quelle, Person oder Sache verweisen beziehungsweise diese betreffen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Information bei der eigenen Entscheidung praktisch beachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen bestimmten Aspekt besonders deutlich betonen.",
               "ok": false
             }
           ]
@@ -154,18 +404,54 @@
           "title": "",
           "page": 8,
           "question": "gewährleisten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch geeignete Maßnahmen sicherstellen, dass etwas zuverlässig funktioniert oder erreicht wird.",
+          "explain": {
+            "entryId": "gewährleisten",
+            "headword": "gewährleisten",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈvɛːɐ̯laɪ̯stn̩/",
+              "ipaUS": "/ɡəˈvɛːɐ̯laɪ̯stn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "gewährleisten",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sicherstellen",
+                  "garantieren"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch geeignete Maßnahmen sicherstellen, dass etwas zuverlässig funktioniert oder erreicht wird.",
+                    "examples": [
+                      "Regelmäßige Kontrollen gewährleisten die Sicherheit der Anlage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gewährleisten – Beispielsatz folgt.",
+              "answer": "Durch geeignete Maßnahmen sicherstellen, dass etwas zuverlässig funktioniert oder erreicht wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einen negativen Einfluss ausüben und die Qualität einer Sache verschlechtern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen teilweisen positiven Beitrag zu einem Ergebnis leisten.",
               "ok": false
             }
           ]
@@ -174,18 +460,54 @@
           "title": "",
           "page": 9,
           "question": "beeinträchtigen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Qualität, Funktion oder Entwicklung von etwas negativ beeinflussen oder einschränken.",
+          "explain": {
+            "entryId": "beeinträchtigen",
+            "headword": "beeinträchtigen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʔaɪ̯ntʁɛçtɪɡn̩/",
+              "ipaUS": "/bəˈʔaɪ̯ntʁɛçtɪɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "beeinträchtigen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "behindern",
+                  "schädigen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Qualität, Funktion oder Entwicklung von etwas negativ beeinflussen oder einschränken.",
+                    "examples": [
+                      "Starker Lärm kann die Konzentration beeinträchtigen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "beeinträchtigen – Beispielsatz folgt.",
+              "answer": "Die Qualität, Funktion oder Entwicklung von etwas negativ beeinflussen oder einschränken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Durch Maßnahmen sicherstellen, dass eine Funktion zuverlässig erhalten bleibt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen positiven Anteil an einer Entwicklung oder einem Ergebnis haben.",
               "ok": false
             }
           ]
@@ -194,18 +516,54 @@
           "title": "",
           "page": 10,
           "question": "in Anspruch nehmen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Leistung, ein Recht, Zeit oder Ressourcen nutzen beziehungsweise beanspruchen.",
+          "explain": {
+            "entryId": "in Anspruch nehmen",
+            "headword": "in Anspruch nehmen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪn ˈanʃpʁʊx ˌneːmən/",
+              "ipaUS": "/ɪn ˈanʃpʁʊx ˌneːmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "feste Wendung",
+                "headwordLine": "in Anspruch nehmen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nutzen",
+                  "beanspruchen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Leistung, ein Recht, Zeit oder Ressourcen nutzen beziehungsweise beanspruchen.",
+                    "examples": [
+                      "Die Beratung können alle Mitglieder kostenlos in Anspruch nehmen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in Anspruch nehmen – Beispielsatz folgt.",
+              "answer": "Eine Leistung, ein Recht, Zeit oder Ressourcen nutzen beziehungsweise beanspruchen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einer anderen Person eine Ressource zur Nutzung bereitgeben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine mögliche negative Folge bewusst akzeptieren.",
               "ok": false
             }
           ]

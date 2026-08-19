@@ -2,110 +2,288 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal2-de",
-  "title": "",
+  "title": "Persönliche Informationen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "sich bewerben um",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Formell mitteilen und mit Unterlagen begründen, dass man eine Stelle, einen Platz oder eine Position erhalten möchte.",
+          "explain": {
+            "entryId": "sich bewerben um",
+            "headword": "sich bewerben um",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç bəˈvɛʁbn̩ ʊm/",
+              "ipaUS": "/zɪç bəˈvɛʁbn̩ ʊm/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "reflexiv mit um",
+                "headwordLine": "sich bewerben um",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "eine Bewerbung einreichen für"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Formell mitteilen und mit Unterlagen begründen, dass man eine Stelle, einen Platz oder eine Position erhalten möchte.",
+                    "examples": [
+                      "Sie möchte sich um ein Stipendium bewerben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich bewerben um – Beispielsatz folgt.",
+              "answer": "Formell mitteilen und mit Unterlagen begründen, dass man eine Stelle, einen Platz oder eine Position erhalten möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bestimmte Kenntnisse oder Bedingungen als notwendig für eine Stelle festlegen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Durch frühere Tätigkeiten praktische Kenntnisse für einen Beruf sammeln.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "voraussetzen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Etwas als notwendige Bedingung verlangen oder als bereits gegeben annehmen.",
+          "explain": {
+            "entryId": "voraussetzen",
+            "headword": "voraussetzen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/foˈʁaʊ̯sˌzɛt͡sn̩/",
+              "ipaUS": "/foˈʁaʊ̯sˌzɛt͡sn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, trennbar",
+                "headwordLine": "voraussetzen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erfordern",
+                  "annehmen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Etwas als notwendige Bedingung verlangen oder als bereits gegeben annehmen.",
+                    "examples": [
+                      "Die Tätigkeit setzt gute Sprachkenntnisse voraus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "voraussetzen – Beispielsatz folgt.",
+              "answer": "Etwas als notwendige Bedingung verlangen oder als bereits gegeben annehmen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich mit Unterlagen offiziell um eine freie Position bemühen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aus einer schriftlichen Quelle als Information erkennbar werden.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Identität",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Gesamtheit der Merkmale, durch die eine Person eindeutig sie selbst und von anderen unterscheidbar ist.",
+          "explain": {
+            "entryId": "Identität",
+            "headword": "Identität",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/identiˈtɛːt/",
+              "ipaUS": "/identiˈtɛːt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Identität",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Personalität",
+                  "Selbstverständnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Gesamtheit der Merkmale, durch die eine Person eindeutig sie selbst und von anderen unterscheidbar ist.",
+                    "examples": [
+                      "Die Behörde prüfte die Identität des Antragstellers."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Identität – Beispielsatz folgt.",
+              "answer": "Die Gesamtheit der Merkmale, durch die eine Person eindeutig sie selbst und von anderen unterscheidbar ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die rechtliche Zugehörigkeit einer Person zu einem bestimmten Staat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein amtliches Dokument, das den Aufenthalt in einem Land erlaubt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "personenbezogen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Auf eine bestimmte oder bestimmbare Person bezogen und mit ihr verknüpfbar.",
+          "explain": {
+            "entryId": "personenbezogen",
+            "headword": "personenbezogen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/pɛʁˈzoːnənbəˌt͡soːɡn̩/",
+              "ipaUS": "/pɛʁˈzoːnənbəˌt͡soːɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Datenschutz",
+                "headwordLine": "personenbezogen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "eine Person betreffend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Auf eine bestimmte oder bestimmbare Person bezogen und mit ihr verknüpfbar.",
+                    "examples": [
+                      "Name und Adresse sind personenbezogene Daten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "personenbezogen – Beispielsatz folgt.",
+              "answer": "Auf eine bestimmte oder bestimmbare Person bezogen und mit ihr verknüpfbar.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur auf die innere Identität und das Selbstverständnis einer Person bezogen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Von einer Behörde offiziell bestätigt und deshalb rechtlich gültig.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Angelegenheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Sache, ein Thema oder ein Problem, das jemanden betrifft und bearbeitet werden muss.",
+          "explain": {
+            "entryId": "Angelegenheit",
+            "headword": "Angelegenheit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanɡəleːɡn̩haɪ̯t/",
+              "ipaUS": "/ˈanɡəleːɡn̩haɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Angelegenheit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Sache",
+                  "Thema"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Sache, ein Thema oder ein Problem, das jemanden betrifft und bearbeitet werden muss.",
+                    "examples": [
+                      "Diese Angelegenheit wird von der Personalabteilung bearbeitet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Angelegenheit – Beispielsatz folgt.",
+              "answer": "Eine Sache, ein Thema oder ein Problem, das jemanden betrifft und bearbeitet werden muss.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne persönliche Information, die rechtlich geschützt werden muss.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein schriftlicher Beleg, der eine Berechtigung offiziell bestätigt.",
               "ok": false
             }
           ]

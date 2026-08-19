@@ -2,130 +2,343 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTime2-de",
-  "title": "",
+  "title": "Zeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Ära",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein größerer Zeitraum, der besonders durch eine Person, Herrschaft oder bedeutende Entwicklung geprägt ist.",
+          "explain": {
+            "entryId": "Ära",
+            "headword": "Ära",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɛːʁa/",
+              "ipaUS": "/ˈɛːʁa/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Ära",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zeitalter"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein größerer Zeitraum, der besonders durch eine Person, Herrschaft oder bedeutende Entwicklung geprägt ist.",
+                    "examples": [
+                      "Mit der neuen Technologie begann eine digitale Ära."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ära – Beispielsatz folgt.",
+              "answer": "Ein größerer Zeitraum, der besonders durch eine Person, Herrschaft oder bedeutende Entwicklung geprägt ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein kulturell oder historisch abgegrenzter Zeitabschnitt mit typischen Stilmerkmalen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die allgemeine geistige Stimmung und Denkweise einer Zeit.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "verstreichen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von Zeit oder einer Frist: vergehen, ohne angehalten werden zu können oder ohne dass etwas geschieht.",
+          "explain": {
+            "entryId": "verstreichen",
+            "headword": "verstreichen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʃtʁaɪ̯çn̩/",
+              "ipaUS": "/fɛɐ̯ˈʃtʁaɪ̯çn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv",
+                "headwordLine": "verstreichen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vergehen",
+                  "ablaufen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von Zeit oder einer Frist: vergehen, ohne angehalten werden zu können oder ohne dass etwas geschieht.",
+                    "examples": [
+                      "Die Frist verstrich, ohne dass ein Antrag einging."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verstreichen – Beispielsatz folgt.",
+              "answer": "Von Zeit oder einer Frist: vergehen, ohne angehalten werden zu können oder ohne dass etwas geschieht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Über einen bestimmten Zeitraum hinweg weiter bestehen oder dauern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine fällige Handlung bewusst auf einen späteren Zeitpunkt verschieben.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "andauern",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Über einen bestimmten Zeitraum hinweg weiter bestehen oder nicht enden.",
+          "explain": {
+            "entryId": "andauern",
+            "headword": "andauern",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌdaʊ̯ɐn/",
+              "ipaUS": "/ˈanˌdaʊ̯ɐn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv, trennbar",
+                "headwordLine": "andauern",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fortdauern",
+                  "anhalten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Über einen bestimmten Zeitraum hinweg weiter bestehen oder nicht enden.",
+                    "examples": [
+                      "Die Verhandlungen dauerten bis spät in die Nacht an."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "andauern – Beispielsatz folgt.",
+              "answer": "Über einen bestimmten Zeitraum hinweg weiter bestehen oder nicht enden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von einer Frist vergehen, ohne dass etwas unternommen wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich gleichzeitig mit einem anderen Ereignis abspielen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Zeitgeist",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die für eine bestimmte Zeit typischen Ideen, Werte, Einstellungen und kulturellen Tendenzen.",
+          "explain": {
+            "entryId": "Zeitgeist",
+            "headword": "Zeitgeist",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡saɪ̯tˌɡaɪ̯st/",
+              "ipaUS": "/ˈt͡saɪ̯tˌɡaɪ̯st/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Zeitgeist",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Geist der Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die für eine bestimmte Zeit typischen Ideen, Werte, Einstellungen und kulturellen Tendenzen.",
+                    "examples": [
+                      "Der Roman spiegelt den Zeitgeist der 1990er-Jahre wider."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zeitgeist – Beispielsatz folgt.",
+              "answer": "Die für eine bestimmte Zeit typischen Ideen, Werte, Einstellungen und kulturellen Tendenzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein längerer kultureller Zeitraum mit klar abgegrenzten Merkmalen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Zeitalter, das besonders durch eine einzelne Person oder Entwicklung geprägt ist.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Muße",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Freie, ungestörte Zeit und innere Ruhe für eine selbst gewählte, oft anspruchsvolle Tätigkeit.",
+          "explain": {
+            "entryId": "Muße",
+            "headword": "Muße",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmuːsə/",
+              "ipaUS": "/ˈmuːsə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Muße",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "freie Zeit",
+                  "Beschaulichkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Freie, ungestörte Zeit und innere Ruhe für eine selbst gewählte, oft anspruchsvolle Tätigkeit.",
+                    "examples": [
+                      "Im Urlaub fand sie Muße, wieder ausführlich zu lesen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Muße – Beispielsatz folgt.",
+              "answer": "Freie, ungestörte Zeit und innere Ruhe für eine selbst gewählte, oft anspruchsvolle Tätigkeit.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeit, die wegen fehlender Planung ungenutzt verstreicht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine kurze Pause, die ausschließlich der körperlichen Erholung dient.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "Übergangszeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein begrenzter Zeitraum zwischen zwei Zuständen oder Phasen, in dem die Veränderung stattfindet.",
+          "explain": {
+            "entryId": "Übergangszeit",
+            "headword": "Übergangszeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈyːbɐɡaŋsˌt͡saɪ̯t/",
+              "ipaUS": "/ˈyːbɐɡaŋsˌt͡saɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Übergangszeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zwischenphase"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein begrenzter Zeitraum zwischen zwei Zuständen oder Phasen, in dem die Veränderung stattfindet.",
+                    "examples": [
+                      "Während der Übergangszeit gelten beide Systeme parallel."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Übergangszeit – Beispielsatz folgt.",
+              "answer": "Ein begrenzter Zeitraum zwischen zwei Zuständen oder Phasen, in dem die Veränderung stattfindet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein langer geschichtlicher Zeitraum mit typischen kulturellen Merkmalen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Zustand, in dem mehrere Ereignisse exakt zur selben Zeit stattfinden.",
               "ok": false
             }
           ]

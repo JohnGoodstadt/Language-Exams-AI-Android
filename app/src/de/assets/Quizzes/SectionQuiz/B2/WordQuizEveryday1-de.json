@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEveryday1-de",
-  "title": "",
+  "title": "Gegenstände & Haushaltsartikel",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Haushaltsgerät",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein technisches Gerät, das typische Arbeiten im Haushalt erleichtert oder übernimmt.",
+          "explain": {
+            "entryId": "Haushaltsgerät",
+            "headword": "Haushaltsgerät",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhaʊ̯shaltsɡəˌʁɛːt/",
+              "ipaUS": "/ˈhaʊ̯shaltsɡəˌʁɛːt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Haushaltsgerät",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Elektrogerät",
+                  "Hausgerät"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein technisches Gerät, das typische Arbeiten im Haushalt erleichtert oder übernimmt.",
+                    "examples": [
+                      "Die Waschmaschine ist eines der wichtigsten Haushaltsgeräte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Haushaltsgerät – Beispielsatz folgt.",
+              "answer": "Ein technisches Gerät, das typische Arbeiten im Haushalt erleichtert oder übernimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein einzelnes Bauteil, das ein defektes Teil eines Geräts ersetzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein langlebiger Gegenstand, den jemand neu für den Haushalt erwirbt.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "Energieverbrauch",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Menge an Energie, die ein Gerät, Haushalt oder Prozess in einem Zeitraum benötigt.",
+          "explain": {
+            "entryId": "Energieverbrauch",
+            "headword": "Energieverbrauch",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛnɛʁˈɡiːfɛɐ̯ˌbʁaʊ̯x/",
+              "ipaUS": "/ɛnɛʁˈɡiːfɛɐ̯ˌbʁaʊ̯x/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Energieverbrauch",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Stromverbrauch",
+                  "Energiebedarf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Menge an Energie, die ein Gerät, Haushalt oder Prozess in einem Zeitraum benötigt.",
+                    "examples": [
+                      "Der Energieverbrauch des neuen Kühlschranks ist deutlich geringer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Energieverbrauch – Beispielsatz folgt.",
+              "answer": "Die Menge an Energie, die ein Gerät, Haushalt oder Prozess in einem Zeitraum benötigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Geldbetrag, den ein Gerät während seiner gesamten Nutzung kostet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Wert, zu dem ein gebrauchtes Gerät später verkauft werden kann.",
               "ok": false
             }
           ]
@@ -54,18 +126,54 @@
           "title": "",
           "page": 3,
           "question": "Bedienungsanleitung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Dokument, das erklärt, wie ein Gerät sicher und richtig bedient wird.",
+          "explain": {
+            "entryId": "Bedienungsanleitung",
+            "headword": "Bedienungsanleitung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈdiːnʊŋsʔanˌlaɪ̯tʊŋ/",
+              "ipaUS": "/bəˈdiːnʊŋsʔanˌlaɪ̯tʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Bedienungsanleitung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gebrauchsanweisung",
+                  "Handbuch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Dokument, das erklärt, wie ein Gerät sicher und richtig bedient wird.",
+                    "examples": [
+                      "Lesen Sie vor der ersten Nutzung die Bedienungsanleitung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bedienungsanleitung – Beispielsatz folgt.",
+              "answer": "Ein Dokument, das erklärt, wie ein Gerät sicher und richtig bedient wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Dokument, das die freiwillige Reparaturzusage des Herstellers beschreibt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Übersicht über regelmäßige Prüfungen und Wartungsarbeiten.",
               "ok": false
             }
           ]
@@ -74,18 +182,54 @@
           "title": "",
           "page": 4,
           "question": "Gebrauchsspur",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine sichtbare kleine Veränderung oder Beschädigung, die durch normale Benutzung entstanden ist.",
+          "explain": {
+            "entryId": "Gebrauchsspur",
+            "headword": "Gebrauchsspur",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈbʁaʊ̯xsˌʃpuːɐ̯/",
+              "ipaUS": "/ɡəˈbʁaʊ̯xsˌʃpuːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gebrauchsspur",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Nutzungsspur",
+                  "Abnutzungsspur"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine sichtbare kleine Veränderung oder Beschädigung, die durch normale Benutzung entstanden ist.",
+                    "examples": [
+                      "Das gebrauchte Handy hat einige Gebrauchsspuren am Gehäuse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gebrauchsspur – Beispielsatz folgt.",
+              "answer": "Eine sichtbare kleine Veränderung oder Beschädigung, die durch normale Benutzung entstanden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der allgemeine technische Materialverlust durch lange oder intensive Nutzung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Defekt, durch den ein Gerät nicht mehr arbeiten kann.",
               "ok": false
             }
           ]
@@ -94,18 +238,54 @@
           "title": "",
           "page": 5,
           "question": "Garantie",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine freiwillige Zusage, dass ein Hersteller oder Verkäufer für bestimmte Mängel in einem Zeitraum einsteht.",
+          "explain": {
+            "entryId": "Garantie",
+            "headword": "Garantie",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡaʁanˈtiː/",
+              "ipaUS": "/ɡaʁanˈtiː/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Garantie",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Herstellergarantie",
+                  "Zusage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine freiwillige Zusage, dass ein Hersteller oder Verkäufer für bestimmte Mängel in einem Zeitraum einsteht.",
+                    "examples": [
+                      "Auf das Gerät gibt der Hersteller drei Jahre Garantie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Garantie – Beispielsatz folgt.",
+              "answer": "Eine freiwillige Zusage, dass ein Hersteller oder Verkäufer für bestimmte Mängel in einem Zeitraum einsteht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die gesetzlich vorgeschriebene Haftung des Verkäufers für bereits vorhandene Mängel.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine regelmäßige technische Prüfung, die Defekte verhindern soll.",
               "ok": false
             }
           ]
@@ -114,18 +294,53 @@
           "title": "",
           "page": 6,
           "question": "Verschleiß",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der allmähliche Verlust von Material, Qualität oder Funktion durch normale oder intensive Nutzung.",
+          "explain": {
+            "entryId": "Verschleiß",
+            "headword": "Verschleiß",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʃlaɪ̯s/",
+              "ipaUS": "/fɛɐ̯ˈʃlaɪ̯s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Verschleiß",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Abnutzung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der allmähliche Verlust von Material, Qualität oder Funktion durch normale oder intensive Nutzung.",
+                    "examples": [
+                      "Die Bremsen zeigen nach vielen Jahren deutlichen Verschleiß."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verschleiß – Beispielsatz folgt.",
+              "answer": "Der allmähliche Verlust von Material, Qualität oder Funktion durch normale oder intensive Nutzung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne sichtbare kleine Spur, die auf frühere Benutzung hinweist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine plötzlich auftretende technische Störung ohne Zusammenhang mit Nutzung.",
               "ok": false
             }
           ]
@@ -134,18 +349,54 @@
           "title": "",
           "page": 7,
           "question": "instand halten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch Pflege, Kontrolle und Reparatur in einem funktionsfähigen Zustand bewahren.",
+          "explain": {
+            "entryId": "instand halten",
+            "headword": "instand halten",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪnˈʃtant ˌhaltn̩/",
+              "ipaUS": "/ɪnˈʃtant ˌhaltn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "feste Wendung",
+                "headwordLine": "instand halten",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erhalten",
+                  "pflegen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch Pflege, Kontrolle und Reparatur in einem funktionsfähigen Zustand bewahren.",
+                    "examples": [
+                      "Regelmäßige Kontrollen helfen, die Heizung instand zu halten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "instand halten – Beispielsatz folgt.",
+              "answer": "Durch Pflege, Kontrolle und Reparatur in einem funktionsfähigen Zustand bewahren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein nicht mehr benötigtes Gerät umweltgerecht beseitigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gerät in festen Abständen technisch prüfen und warten lassen.",
               "ok": false
             }
           ]
@@ -154,18 +405,54 @@
           "title": "",
           "page": 8,
           "question": "entsorgen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Abfälle oder nicht mehr benötigte Gegenstände ordnungsgemäß beseitigen oder verwerten lassen.",
+          "explain": {
+            "entryId": "entsorgen",
+            "headword": "entsorgen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛntˈzɔʁɡn̩/",
+              "ipaUS": "/ɛntˈzɔʁɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "entsorgen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beseitigen",
+                  "wegwerfen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Abfälle oder nicht mehr benötigte Gegenstände ordnungsgemäß beseitigen oder verwerten lassen.",
+                    "examples": [
+                      "Alte Batterien müssen fachgerecht entsorgt werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "entsorgen – Beispielsatz folgt.",
+              "answer": "Abfälle oder nicht mehr benötigte Gegenstände ordnungsgemäß beseitigen oder verwerten lassen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Gerät durch Pflege und Reparaturen funktionsfähig erhalten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein defektes Bauteil durch ein passendes neues Teil ersetzen.",
               "ok": false
             }
           ]
@@ -174,18 +461,53 @@
           "title": "",
           "page": 9,
           "question": "Ersatzteil",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Bauteil, das anstelle eines defekten oder verschlissenen Teils eingebaut wird.",
+          "explain": {
+            "entryId": "Ersatzteil",
+            "headword": "Ersatzteil",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈzat͡sˌtaɪ̯l/",
+              "ipaUS": "/ɛɐ̯ˈzat͡sˌtaɪ̯l/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Ersatzteil",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Austauschteil"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Bauteil, das anstelle eines defekten oder verschlissenen Teils eingebaut wird.",
+                    "examples": [
+                      "Für das ältere Modell ist kein Ersatzteil mehr erhältlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ersatzteil – Beispielsatz folgt.",
+              "answer": "Ein Bauteil, das anstelle eines defekten oder verschlissenen Teils eingebaut wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein vollständiges Gerät, das während einer Reparatur vorübergehend ausgeliehen wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Werkzeug, das ausschließlich für die regelmäßige Wartung benötigt wird.",
               "ok": false
             }
           ]
@@ -194,18 +516,54 @@
           "title": "",
           "page": 10,
           "question": "nachhaltig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So gestaltet, dass Ressourcen langfristig geschont und zukünftige Bedürfnisse nicht gefährdet werden.",
+          "explain": {
+            "entryId": "nachhaltig",
+            "headword": "nachhaltig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxhaltɪç/",
+              "ipaUS": "/ˈnaːxhaltɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "langfristige Wirkung",
+                "headwordLine": "nachhaltig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zukunftsfähig",
+                  "ressourcenschonend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So gestaltet, dass Ressourcen langfristig geschont und zukünftige Bedürfnisse nicht gefährdet werden.",
+                    "examples": [
+                      "Reparierbare Geräte sind häufig nachhaltiger als Wegwerfprodukte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nachhaltig – Beispielsatz folgt.",
+              "answer": "So gestaltet, dass Ressourcen langfristig geschont und zukünftige Bedürfnisse nicht gefährdet werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von besonders hoher Material- und Verarbeitungsqualität.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Technisch vollständig funktionsfähig und sofort einsatzbereit.",
               "ok": false
             }
           ]

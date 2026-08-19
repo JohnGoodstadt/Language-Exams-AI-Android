@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizTime1-de",
-  "title": "",
+  "title": "Zeit",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Zeitdruck",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der psychische oder organisatorische Druck, eine Aufgabe innerhalb sehr begrenzter Zeit erledigen zu müssen.",
+          "explain": {
+            "entryId": "Zeitdruck",
+            "headword": "Zeitdruck",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡saɪ̯tˌdʁʊk/",
+              "ipaUS": "/ˈt͡saɪ̯tˌdʁʊk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Zeitdruck",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Termindruck"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der psychische oder organisatorische Druck, eine Aufgabe innerhalb sehr begrenzter Zeit erledigen zu müssen.",
+                    "examples": [
+                      "Unter starkem Zeitdruck passieren leichter Fehler."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zeitdruck – Beispielsatz folgt.",
+              "answer": "Der psychische oder organisatorische Druck, eine Aufgabe innerhalb sehr begrenzter Zeit erledigen zu müssen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Situation, grundsätzlich nicht genügend Zeit für alle geplanten Aufgaben zu haben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein festgelegter Zeitraum, bis zu dessen Ende etwas erledigt sein muss.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Zeitmangel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Situation, für notwendige oder gewünschte Tätigkeiten nicht genügend Zeit zur Verfügung zu haben.",
+          "explain": {
+            "entryId": "Zeitmangel",
+            "headword": "Zeitmangel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡saɪ̯tˌmaŋl̩/",
+              "ipaUS": "/ˈt͡saɪ̯tˌmaŋl̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Zeitmangel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mangel an Zeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Situation, für notwendige oder gewünschte Tätigkeiten nicht genügend Zeit zur Verfügung zu haben.",
+                    "examples": [
+                      "Aus Zeitmangel konnte sie den Bericht nicht ausführlich prüfen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zeitmangel – Beispielsatz folgt.",
+              "answer": "Die Situation, für notwendige oder gewünschte Tätigkeiten nicht genügend Zeit zur Verfügung zu haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Druck, eine konkrete Aufgabe sehr schnell abschließen zu müssen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine zeitliche Verschiebung gegenüber einem ursprünglich geplanten Ablauf.",
               "ok": false
             }
           ]
@@ -54,18 +124,54 @@
           "title": "",
           "page": 3,
           "question": "Frist",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein festgelegter Zeitraum oder Endtermin, bis zu dem etwas geschehen oder erledigt sein muss.",
+          "explain": {
+            "entryId": "Frist",
+            "headword": "Frist",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fʁɪst/",
+              "ipaUS": "/fʁɪst/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Frist",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Termin",
+                  "Abgabefrist"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein festgelegter Zeitraum oder Endtermin, bis zu dem etwas geschehen oder erledigt sein muss.",
+                    "examples": [
+                      "Die Frist für die Bewerbung endet am Monatsende."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Frist – Beispielsatz folgt.",
+              "answer": "Ein festgelegter Zeitraum oder Endtermin, bis zu dem etwas geschehen oder erledigt sein muss.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine ungeplante Verschiebung, durch die etwas später als vorgesehen geschieht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die bewusste Erlaubnis, eine fällige Handlung auf einen späteren Zeitpunkt zu verschieben.",
               "ok": false
             }
           ]
@@ -74,18 +180,54 @@
           "title": "",
           "page": 4,
           "question": "Verzögerung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Verschiebung oder Verlangsamung, durch die etwas später als geplant geschieht.",
+          "explain": {
+            "entryId": "Verzögerung",
+            "headword": "Verzögerung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈt͡søːɡəʁʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈt͡søːɡəʁʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Verzögerung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verspätung",
+                  "Verzug"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Verschiebung oder Verlangsamung, durch die etwas später als geplant geschieht.",
+                    "examples": [
+                      "Wegen einer technischen Störung kam es zu einer Verzögerung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verzögerung – Beispielsatz folgt.",
+              "answer": "Eine Verschiebung oder Verlangsamung, durch die etwas später als geplant geschieht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine genehmigte Verschiebung einer Aufgabe auf einen späteren Zeitpunkt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der feste Zeitraum, innerhalb dessen etwas abgeschlossen werden muss.",
               "ok": false
             }
           ]
@@ -94,18 +236,53 @@
           "title": "",
           "page": 5,
           "question": "Gleichzeitigkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zustand, dass zwei oder mehr Vorgänge zur selben Zeit stattfinden.",
+          "explain": {
+            "entryId": "Gleichzeitigkeit",
+            "headword": "Gleichzeitigkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɡlaɪ̯çt͡saɪ̯tɪçkaɪ̯t/",
+              "ipaUS": "/ˈɡlaɪ̯çt͡saɪ̯tɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Gleichzeitigkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Simultanität"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zustand, dass zwei oder mehr Vorgänge zur selben Zeit stattfinden.",
+                    "examples": [
+                      "Die Gleichzeitigkeit der beiden Veranstaltungen führte zu einem Problem."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gleichzeitigkeit – Beispielsatz folgt.",
+              "answer": "Der Zustand, dass zwei oder mehr Vorgänge zur selben Zeit stattfinden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Zeitraum zwischen zwei Phasen, in dem sich ein Zustand verändert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das langsame Vergehen einer Frist, ohne dass etwas geschieht.",
               "ok": false
             }
           ]
@@ -114,18 +291,54 @@
           "title": "",
           "page": 6,
           "question": "vergänglich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht dauerhaft, sondern mit der Zeit vergehend oder endend.",
+          "explain": {
+            "entryId": "vergänglich",
+            "headword": "vergänglich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈɡɛŋlɪç/",
+              "ipaUS": "/fɛɐ̯ˈɡɛŋlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "begrenzte Dauer",
+                "headwordLine": "vergänglich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vorübergehend",
+                  "nicht von Dauer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nicht dauerhaft, sondern mit der Zeit vergehend oder endend.",
+                    "examples": [
+                      "Ruhm ist oft vergänglich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vergänglich – Beispielsatz folgt.",
+              "answer": "Nicht dauerhaft, sondern mit der Zeit vergehend oder endend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur für die erste Zeit gültig und später noch zu ersetzen oder zu bestätigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Über einen ungewöhnlich langen Zeitraum ohne Unterbrechung fortbestehend.",
               "ok": false
             }
           ]
@@ -134,18 +347,54 @@
           "title": "",
           "page": 7,
           "question": "Aufschub",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine bewusste oder genehmigte Verschiebung einer fälligen Handlung auf einen späteren Zeitpunkt.",
+          "explain": {
+            "entryId": "Aufschub",
+            "headword": "Aufschub",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fˌʃuːp/",
+              "ipaUS": "/ˈaʊ̯fˌʃuːp/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Aufschub",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verschiebung",
+                  "Stundung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine bewusste oder genehmigte Verschiebung einer fälligen Handlung auf einen späteren Zeitpunkt.",
+                    "examples": [
+                      "Der Kunde erhielt einen Aufschub für die Zahlung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Aufschub – Beispielsatz folgt.",
+              "answer": "Eine bewusste oder genehmigte Verschiebung einer fälligen Handlung auf einen späteren Zeitpunkt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine ungeplante Störung, durch die ein Ablauf später endet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein verbindlicher Zeitraum, bis zu dessen Ende eine Aufgabe fällig ist.",
               "ok": false
             }
           ]
@@ -154,18 +403,54 @@
           "title": "",
           "page": 8,
           "question": "unverzüglich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne unnötige oder schuldhafte Verzögerung, also so schnell wie unter den Umständen möglich.",
+          "explain": {
+            "entryId": "unverzüglich",
+            "headword": "unverzüglich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʊnfɛɐ̯ˈt͡syːklɪç/",
+              "ipaUS": "/ʊnfɛɐ̯ˈt͡syːklɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "ohne schuldhaftes Zögern",
+                "headwordLine": "unverzüglich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "umgehend",
+                  "sofort"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne unnötige oder schuldhafte Verzögerung, also so schnell wie unter den Umständen möglich.",
+                    "examples": [
+                      "Bitte melden Sie den Schaden unverzüglich der Versicherung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unverzüglich – Beispielsatz folgt.",
+              "answer": "Ohne unnötige oder schuldhafte Verzögerung, also so schnell wie unter den Umständen möglich.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nur für eine Übergangsphase gültig, bis eine endgültige Entscheidung fällt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nach einer kurzen, ausdrücklich erlaubten Verschiebung.",
               "ok": false
             }
           ]
@@ -174,18 +459,54 @@
           "title": "",
           "page": 9,
           "question": "vorläufig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zunächst und nur bis zu einer späteren endgültigen Entscheidung oder Bestätigung gültig.",
+          "explain": {
+            "entryId": "vorläufig",
+            "headword": "vorläufig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ˌlɔɪ̯fɪç/",
+              "ipaUS": "/ˈfoːɐ̯ˌlɔɪ̯fɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "provisorische Gültigkeit",
+                "headwordLine": "vorläufig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "provisorisch",
+                  "einstweilig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zunächst und nur bis zu einer späteren endgültigen Entscheidung oder Bestätigung gültig.",
+                    "examples": [
+                      "Das vorläufige Ergebnis wird nächste Woche noch einmal geprüft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vorläufig – Beispielsatz folgt.",
+              "answer": "Zunächst und nur bis zu einer späteren endgültigen Entscheidung oder Bestätigung gültig.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne jede vermeidbare Verzögerung und so schnell wie möglich.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nicht dauerhaft, weil alles grundsätzlich mit der Zeit vergeht.",
               "ok": false
             }
           ]
@@ -194,18 +515,54 @@
           "title": "",
           "page": 10,
           "question": "Epoche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein längerer geschichtlicher oder kultureller Zeitraum mit charakteristischen Merkmalen.",
+          "explain": {
+            "entryId": "Epoche",
+            "headword": "Epoche",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/eˈpɔxə/",
+              "ipaUS": "/eˈpɔxə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Epoche",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zeitalter",
+                  "Zeitabschnitt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein längerer geschichtlicher oder kultureller Zeitraum mit charakteristischen Merkmalen.",
+                    "examples": [
+                      "Die Romantik war eine wichtige Epoche der europäischen Kunst."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Epoche – Beispielsatz folgt.",
+              "answer": "Ein längerer geschichtlicher oder kultureller Zeitraum mit charakteristischen Merkmalen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Zeitraum, der besonders durch eine Person, Herrschaft oder Entwicklung bestimmt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die vorherrschenden Ideen und Einstellungen einer bestimmten Zeit.",
               "ok": false
             }
           ]

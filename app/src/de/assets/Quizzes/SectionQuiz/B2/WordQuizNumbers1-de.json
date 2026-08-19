@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizNumbers1-de",
-  "title": "",
+  "title": "Zahlen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Statistik",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die systematische Erfassung und Auswertung zahlenmäßiger Daten oder eine daraus entstandene Übersicht.",
+          "explain": {
+            "entryId": "Statistik",
+            "headword": "Statistik",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʃtaˈtɪstɪk/",
+              "ipaUS": "/ʃtaˈtɪstɪk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Statistik",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Datenauswertung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die systematische Erfassung und Auswertung zahlenmäßiger Daten oder eine daraus entstandene Übersicht.",
+                    "examples": [
+                      "Die Statistik zeigt einen deutlichen Anstieg der Besucherzahlen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Statistik – Beispielsatz folgt.",
+              "answer": "Die systematische Erfassung und Auswertung zahlenmäßiger Daten oder eine daraus entstandene Übersicht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Teil einer Gesamtmenge, der einer Gruppe oder Sache zukommt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das Verhältnis einer Teilgröße zu einer Bezugsgröße, häufig als Prozentwert angegeben.",
               "ok": false
             }
           ]
@@ -34,18 +69,54 @@
           "title": "",
           "page": 2,
           "question": "Anteil",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Teil einer Gesamtmenge, der auf eine Person, Gruppe oder Kategorie entfällt.",
+          "explain": {
+            "entryId": "Anteil",
+            "headword": "Anteil",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌtaɪ̯l/",
+              "ipaUS": "/ˈanˌtaɪ̯l/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Anteil",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Teil",
+                  "Proportion"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Teil einer Gesamtmenge, der auf eine Person, Gruppe oder Kategorie entfällt.",
+                    "examples": [
+                      "Der Anteil erneuerbarer Energien ist gestiegen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Anteil – Beispielsatz folgt.",
+              "answer": "Der Teil einer Gesamtmenge, der auf eine Person, Gruppe oder Kategorie entfällt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein berechnetes Verhältnis zwischen zwei Größen, häufig als Rate ausgedrückt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Größe oder Bedingung, die ein Ergebnis beeinflusst.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "Quote",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein zahlenmäßig bestimmtes Verhältnis oder ein festgelegter Anteil an einer Gesamtmenge.",
+          "explain": {
+            "entryId": "Quote",
+            "headword": "Quote",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈkvoːtə/",
+              "ipaUS": "/ˈkvoːtə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Quote",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Rate",
+                  "Verhältniszahl"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein zahlenmäßig bestimmtes Verhältnis oder ein festgelegter Anteil an einer Gesamtmenge.",
+                    "examples": [
+                      "Die Arbeitslosenquote ist im letzten Jahr gesunken."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Quote – Beispielsatz folgt.",
+              "answer": "Ein zahlenmäßig bestimmtes Verhältnis oder ein festgelegter Anteil an einer Gesamtmenge.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein beliebiger Teil einer Gesamtmenge ohne berechnetes Verhältnis.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine einzelne Einflussgröße, die ein Ergebnis verändert.",
               "ok": false
             }
           ]
@@ -74,18 +181,53 @@
           "title": "",
           "page": 4,
           "question": "Faktor",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Größe, Bedingung oder Ursache, die ein Ergebnis beeinflusst; in der Mathematik eine Zahl einer Multiplikation.",
+          "explain": {
+            "entryId": "Faktor",
+            "headword": "Faktor",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfaktoːɐ̯/",
+              "ipaUS": "/ˈfaktoːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Faktor",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Einflussgröße"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Größe, Bedingung oder Ursache, die ein Ergebnis beeinflusst; in der Mathematik eine Zahl einer Multiplikation.",
+                    "examples": [
+                      "Die Nachfrage ist ein wichtiger Faktor für den Preis."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Faktor – Beispielsatz folgt.",
+              "answer": "Eine Größe, Bedingung oder Ursache, die ein Ergebnis beeinflusst; in der Mathematik eine Zahl einer Multiplikation.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der prozentuale Anteil einer Gruppe an einer Gesamtzahl.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die gesamte zahlenmäßige Auswertung mehrerer Datenreihen.",
               "ok": false
             }
           ]
@@ -94,18 +236,54 @@
           "title": "",
           "page": 5,
           "question": "zunehmen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An Menge, Zahl, Stärke, Gewicht oder Bedeutung größer werden.",
+          "explain": {
+            "entryId": "zunehmen",
+            "headword": "zunehmen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡suːˌneːmən/",
+              "ipaUS": "/ˈt͡suːˌneːmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv, trennbar",
+                "headwordLine": "zunehmen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "steigen",
+                  "wachsen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "An Menge, Zahl, Stärke, Gewicht oder Bedeutung größer werden.",
+                    "examples": [
+                      "Die Zahl der Fahrgäste hat deutlich zugenommen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zunehmen – Beispielsatz folgt.",
+              "answer": "An Menge, Zahl, Stärke, Gewicht oder Bedeutung größer werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "An Menge, Zahl oder Stärke kleiner werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Größe absichtlich auf genau das Zweifache erhöhen.",
               "ok": false
             }
           ]
@@ -114,18 +292,54 @@
           "title": "",
           "page": 6,
           "question": "abnehmen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "An Menge, Zahl, Stärke oder Gewicht geringer werden.",
+          "explain": {
+            "entryId": "abnehmen",
+            "headword": "abnehmen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌneːmən/",
+              "ipaUS": "/ˈapˌneːmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "intransitiv, trennbar",
+                "headwordLine": "abnehmen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sinken",
+                  "zurückgehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "An Menge, Zahl, Stärke oder Gewicht geringer werden.",
+                    "examples": [
+                      "Der Verkehr hat am Abend abgenommen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abnehmen – Beispielsatz folgt.",
+              "answer": "An Menge, Zahl, Stärke oder Gewicht geringer werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "An Menge, Zahl oder Bedeutung größer werden.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen kleinen zusätzlichen Betrag zu einer bestehenden Menge erhalten.",
               "ok": false
             }
           ]
@@ -134,18 +348,54 @@
           "title": "",
           "page": 7,
           "question": "Rückgang",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Verringerung oder negative Entwicklung einer Menge, Zahl oder Aktivität.",
+          "explain": {
+            "entryId": "Rückgang",
+            "headword": "Rückgang",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁʏkˌɡaŋ/",
+              "ipaUS": "/ˈʁʏkˌɡaŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Rückgang",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Abnahme",
+                  "Senkung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Verringerung oder negative Entwicklung einer Menge, Zahl oder Aktivität.",
+                    "examples": [
+                      "Das Unternehmen meldete einen Rückgang der Verkäufe."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rückgang – Beispielsatz folgt.",
+              "answer": "Eine Verringerung oder negative Entwicklung einer Menge, Zahl oder Aktivität.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine positive Zunahme oder neu hinzugekommene Menge.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der typische Mittelwert aus mehreren unterschiedlichen Werten.",
               "ok": false
             }
           ]
@@ -154,18 +404,54 @@
           "title": "",
           "page": 8,
           "question": "Zuwachs",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Zunahme oder Menge, die zu einem bestehenden Bestand hinzukommt.",
+          "explain": {
+            "entryId": "Zuwachs",
+            "headword": "Zuwachs",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡suːˌvaks/",
+              "ipaUS": "/ˈt͡suːˌvaks/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Zuwachs",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Anstieg",
+                  "Zunahme"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Zunahme oder Menge, die zu einem bestehenden Bestand hinzukommt.",
+                    "examples": [
+                      "Die Stadt verzeichnete einen Zuwachs von zehntausend Einwohnern."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zuwachs – Beispielsatz folgt.",
+              "answer": "Eine Zunahme oder Menge, die zu einem bestehenden Bestand hinzukommt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Verringerung einer Zahl oder Aktivität gegenüber einem früheren Wert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Verdopplung einer Ausgangsmenge auf exakt das Zweifache.",
               "ok": false
             }
           ]
@@ -174,18 +460,54 @@
           "title": "",
           "page": 9,
           "question": "durchschnittlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Dem rechnerischen Mittel oder einem typischen mittleren Wert entsprechend.",
+          "explain": {
+            "entryId": "durchschnittlich",
+            "headword": "durchschnittlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈdʊʁçˌʃnɪtlɪç/",
+              "ipaUS": "/ˈdʊʁçˌʃnɪtlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Mittelwert",
+                "headwordLine": "durchschnittlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Durchschnitt",
+                  "im Mittel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Dem rechnerischen Mittel oder einem typischen mittleren Wert entsprechend.",
+                    "examples": [
+                      "Die Beschäftigten arbeiten durchschnittlich 38 Stunden pro Woche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "durchschnittlich – Beispielsatz folgt.",
+              "answer": "Dem rechnerischen Mittel oder einem typischen mittleren Wert entsprechend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fast, aber nicht vollständig einem genannten Wert entsprechend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur auf einer groben Schätzung ohne genaue Berechnung beruhend.",
               "ok": false
             }
           ]
@@ -194,18 +516,54 @@
           "title": "",
           "page": 10,
           "question": "annähernd",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fast oder ungefähr einem genannten Wert entsprechend, ohne ihn genau zu erreichen.",
+          "explain": {
+            "entryId": "annähernd",
+            "headword": "annähernd",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌnɛːɐ̯nt/",
+              "ipaUS": "/ˈanˌnɛːɐ̯nt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Nähe zu einem Wert",
+                "headwordLine": "annähernd",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nahezu",
+                  "ungefähr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fast oder ungefähr einem genannten Wert entsprechend, ohne ihn genau zu erreichen.",
+                    "examples": [
+                      "Die Reparatur kostete annähernd tausend Euro."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "annähernd – Beispielsatz folgt.",
+              "answer": "Fast oder ungefähr einem genannten Wert entsprechend, ohne ihn genau zu erreichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Dem rechnerischen Mittel mehrerer gemessener Werte entsprechend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Auf einer unsicheren Schätzung ohne genaue Daten beruhend.",
               "ok": false
             }
           ]

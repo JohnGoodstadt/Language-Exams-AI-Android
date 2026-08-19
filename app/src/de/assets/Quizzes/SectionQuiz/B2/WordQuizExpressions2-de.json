@@ -2,110 +2,288 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizExpressions2-de",
-  "title": "",
+  "title": "Häufige Ausdrücke",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder kommunikativen Funktion passt.",
+      "description": "B2 – Wortschatz und kommunikative Funktion",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "geschweige denn",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fügt nach einer negativen Aussage etwas hinzu, das erst recht nicht möglich oder zutreffend ist.",
+          "explain": {
+            "entryId": "geschweige denn",
+            "headword": "geschweige denn",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈʃvaɪ̯ɡə dɛn/",
+              "ipaUS": "/ɡəˈʃvaɪ̯ɡə dɛn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Konjunktionale Wendung",
+                "grammarType": "verstärkte Verneinung",
+                "headwordLine": "geschweige denn",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erst recht nicht",
+                  "ganz zu schweigen von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fügt nach einer negativen Aussage etwas hinzu, das erst recht nicht möglich oder zutreffend ist.",
+                    "examples": [
+                      "Er hat kaum Zeit zum Kochen, geschweige denn für ein großes Festessen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "geschweige denn – Beispielsatz folgt.",
+              "answer": "Fügt nach einer negativen Aussage etwas hinzu, das erst recht nicht möglich oder zutreffend ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Leitet trotz eines Hindernisses eine dennoch gültige Aussage ein.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schränkt eine Aussage auf eine Ausnahme oder Bedingung ein.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "aus meiner Sicht",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kennzeichnet eine Aussage ausdrücklich als persönliche Perspektive oder Beurteilung des Sprechers.",
+          "explain": {
+            "entryId": "aus meiner Sicht",
+            "headword": "aus meiner Sicht",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/aʊ̯s ˈmaɪ̯nɐ zɪçt/",
+              "ipaUS": "/aʊ̯s ˈmaɪ̯nɐ zɪçt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "persönliche Perspektive",
+                "headwordLine": "aus meiner Sicht",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "meiner Meinung nach"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kennzeichnet eine Aussage ausdrücklich als persönliche Perspektive oder Beurteilung des Sprechers.",
+                    "examples": [
+                      "Aus meiner Sicht überwiegen die Vorteile."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aus meiner Sicht – Beispielsatz folgt.",
+              "answer": "Kennzeichnet eine Aussage ausdrücklich als persönliche Perspektive oder Beurteilung des Sprechers.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zeigt, dass eine Aussage nur aus der unmittelbar zuvor erklärten Logik folgt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bewertet eine Entscheidung rückblickend nach Bekanntwerden ihrer Folgen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "letzten Endes",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet die endgültige Folge oder entscheidende Wahrheit nach allen Entwicklungen und Überlegungen.",
+          "explain": {
+            "entryId": "letzten Endes",
+            "headword": "letzten Endes",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈlɛt͡stn̩ ˈʔɛndəs/",
+              "ipaUS": "/ˈlɛt͡stn̩ ˈʔɛndəs/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "endgültiges Ergebnis",
+                "headwordLine": "letzten Endes",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "letztlich",
+                  "schließlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bezeichnet die endgültige Folge oder entscheidende Wahrheit nach allen Entwicklungen und Überlegungen.",
+                    "examples": [
+                      "Letzten Endes müssen die Verantwortlichen eine Entscheidung treffen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "letzten Endes – Beispielsatz folgt.",
+              "answer": "Bezeichnet die endgültige Folge oder entscheidende Wahrheit nach allen Entwicklungen und Überlegungen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fasst rechnerisch oder bewertend alle Vor- und Nachteile zu einer Bilanz zusammen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Reduziert eine komplizierte Erklärung auf ihren grundlegenden Ausgangspunkt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "genau genommen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kündigt eine genauere Formulierung oder die Korrektur einer kleinen Ungenauigkeit an.",
+          "explain": {
+            "entryId": "genau genommen",
+            "headword": "genau genommen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈnaʊ̯ ɡəˌnɔmən/",
+              "ipaUS": "/ɡəˈnaʊ̯ ɡəˌnɔmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "präzise Korrektur",
+                "headwordLine": "genau genommen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "streng genommen",
+                  "präziser gesagt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kündigt eine genauere Formulierung oder die Korrektur einer kleinen Ungenauigkeit an.",
+                    "examples": [
+                      "Genau genommen beginnt das neue Jahrzehnt erst im folgenden Jahr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "genau genommen – Beispielsatz folgt.",
+              "answer": "Kündigt eine genauere Formulierung oder die Korrektur einer kleinen Ungenauigkeit an.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Reduziert eine Aussage auf den allgemeinen Kern, ohne Einzelheiten zu beachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fasst eine Aussage in einem besonders kurzen und klaren Schlusssatz zusammen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "das kommt ganz darauf an",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass eine Antwort oder Entscheidung vollständig von bestimmten Bedingungen oder Umständen abhängt.",
+          "explain": {
+            "entryId": "das kommt ganz darauf an",
+            "headword": "das kommt ganz darauf an",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/das kɔmt ɡant͡s daˈʁaʊ̯f an/",
+              "ipaUS": "/das kɔmt ɡant͡s daˈʁaʊ̯f an/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Abhängigkeit von Bedingungen",
+                "headwordLine": "das kommt ganz darauf an",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "es hängt völlig davon ab"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt aus, dass eine Antwort oder Entscheidung vollständig von bestimmten Bedingungen oder Umständen abhängt.",
+                    "examples": [
+                      "Ist die Reise sinnvoll? Das kommt ganz darauf an, wie hoch die Kosten sind."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "das kommt ganz darauf an – Beispielsatz folgt.",
+              "answer": "Drückt aus, dass eine Antwort oder Entscheidung vollständig von bestimmten Bedingungen oder Umständen abhängt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt aus, dass das abschließende Ergebnis trotz aller Bedingungen bereits feststeht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Leitet eine Tatsache ein, die offensichtlich und nicht bestreitbar ist.",
               "ok": false
             }
           ]

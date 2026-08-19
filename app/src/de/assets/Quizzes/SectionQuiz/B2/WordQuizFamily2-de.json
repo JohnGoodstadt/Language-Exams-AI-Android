@@ -2,110 +2,287 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFamily2-de",
-  "title": "",
+  "title": "Familie",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Verwandtschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die biologische, rechtliche oder durch Heirat entstandene Beziehung zwischen Familienangehörigen.",
+          "explain": {
+            "entryId": "Verwandtschaft",
+            "headword": "Verwandtschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈvantʃaft/",
+              "ipaUS": "/fɛɐ̯ˈvantʃaft/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Verwandtschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Verwandtenbeziehung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die biologische, rechtliche oder durch Heirat entstandene Beziehung zwischen Familienangehörigen.",
+                    "examples": [
+                      "Zwischen den beiden Familien besteht eine entfernte Verwandtschaft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verwandtschaft – Beispielsatz folgt.",
+              "answer": "Die biologische, rechtliche oder durch Heirat entstandene Beziehung zwischen Familienangehörigen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die enge emotionale Beziehung zu einer einzelnen Bezugsperson.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Einheit und gegenseitige Unterstützung einer Familie als Gruppe.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "geprägt sein von",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch eine Person, Erfahrung oder einen Umstand stark beeinflusst und charakterisiert sein.",
+          "explain": {
+            "entryId": "geprägt sein von",
+            "headword": "geprägt sein von",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈpʁɛːkt zaɪ̯n fɔn/",
+              "ipaUS": "/ɡəˈpʁɛːkt zaɪ̯n fɔn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "Passivische Wendung",
+                "headwordLine": "geprägt sein von",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beeinflusst sein von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch eine Person, Erfahrung oder einen Umstand stark beeinflusst und charakterisiert sein.",
+                    "examples": [
+                      "Seine Kindheit war von häufigen Umzügen geprägt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "geprägt sein von – Beispielsatz folgt.",
+              "answer": "Durch eine Person, Erfahrung oder einen Umstand stark beeinflusst und charakterisiert sein.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sich im Laufe der Zeit emotional von einer Person entfernen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein festes gesellschaftliches Rollenbild bewusst ablehnen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Familienstand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der amtliche Status einer Person, etwa ledig, verheiratet, geschieden oder verwitwet.",
+          "explain": {
+            "entryId": "Familienstand",
+            "headword": "Familienstand",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/faˈmiːli̯ənˌʃtant/",
+              "ipaUS": "/faˈmiːli̯ənˌʃtant/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Familienstand",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Personenstand",
+                  "Zivilstand"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der amtliche Status einer Person, etwa ledig, verheiratet, geschieden oder verwitwet.",
+                    "examples": [
+                      "Im Formular wird nach dem Familienstand gefragt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Familienstand – Beispielsatz folgt.",
+              "answer": "Der amtliche Status einer Person, etwa ledig, verheiratet, geschieden oder verwitwet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Position und Aufgabe einer Person innerhalb ihrer Familie.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die rechtliche Beziehung zwischen verschiedenen Familienangehörigen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "vernachlässigen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einer Person oder Aufgabe nicht die notwendige Aufmerksamkeit, Pflege oder Zeit geben.",
+          "explain": {
+            "entryId": "vernachlässigen",
+            "headword": "vernachlässigen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈnaːxlɛsɪɡn̩/",
+              "ipaUS": "/fɛɐ̯ˈnaːxlɛsɪɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "vernachlässigen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nicht ausreichend beachten"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Einer Person oder Aufgabe nicht die notwendige Aufmerksamkeit, Pflege oder Zeit geben.",
+                    "examples": [
+                      "Wegen der vielen Arbeit vernachlässigte er seine sozialen Kontakte."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "vernachlässigen – Beispielsatz folgt.",
+              "answer": "Einer Person oder Aufgabe nicht die notwendige Aufmerksamkeit, Pflege oder Zeit geben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Allmählich die emotionale Nähe zu einer Person verlieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine hilfsbedürftige Person aufmerksam betreuen und schützen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Erbschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Vermögen, Rechte oder Pflichten, die nach dem Tod einer Person auf Erben übergehen.",
+          "explain": {
+            "entryId": "Erbschaft",
+            "headword": "Erbschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈɛʁpʃaft/",
+              "ipaUS": "/ˈɛʁpʃaft/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Erbschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Nachlass",
+                  "Erbe"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Vermögen, Rechte oder Pflichten, die nach dem Tod einer Person auf Erben übergehen.",
+                    "examples": [
+                      "Die Geschwister teilten die Erbschaft gerecht auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Erbschaft – Beispielsatz folgt.",
+              "answer": "Vermögen, Rechte oder Pflichten, die nach dem Tod einer Person auf Erben übergehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Regelmäßige finanzielle Zahlungen für den Lebensbedarf von Angehörigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das kulturelle und soziale Familienbild, das über Generationen weitergegeben wird.",
               "ok": false
             }
           ]

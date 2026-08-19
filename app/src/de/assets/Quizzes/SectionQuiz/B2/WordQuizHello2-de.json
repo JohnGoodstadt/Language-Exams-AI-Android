@@ -2,110 +2,286 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizHello2-de",
-  "title": "",
+  "title": "Hallo",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung und kommunikativen Funktion passt.",
+      "description": "B2 – Wortschatz, Register und kommunikative Funktion",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Richten Sie bitte meine Grüße aus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bittet die angesprochene Person, freundliche Grüße an eine abwesende Person weiterzugeben.",
+          "explain": {
+            "entryId": "Richten Sie bitte meine Grüße aus",
+            "headword": "Richten Sie bitte meine Grüße aus",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁɪçtn̩ ziː ˈbɪtə ˈmaɪ̯nə ˈɡʁyːsə aʊ̯s/",
+              "ipaUS": "/ˈʁɪçtn̩ ziː ˈbɪtə ˈmaɪ̯nə ˈɡʁyːsə aʊ̯s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "indirekte Grüße",
+                "headwordLine": "Richten Sie bitte meine Grüße aus",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bestellen Sie bitte Grüße von mir"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bittet die angesprochene Person, freundliche Grüße an eine abwesende Person weiterzugeben.",
+                    "examples": [
+                      "Richten Sie bitte Ihrer Familie meine Grüße aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Richten Sie bitte meine Grüße aus – Beispielsatz folgt.",
+              "answer": "Bittet die angesprochene Person, freundliche Grüße an eine abwesende Person weiterzugeben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bittet die angesprochene Person, nach dem Treffen weiterhin Kontakt zu halten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wünscht der angesprochenen Person selbst Gesundheit und Wohlergehen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Lassen Sie es sich gut gehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein freundlicher Abschiedswunsch, dass es der angesprochenen Person weiterhin gut gehen möge.",
+          "explain": {
+            "entryId": "Lassen Sie es sich gut gehen",
+            "headword": "Lassen Sie es sich gut gehen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈlasn̩ ziː ɛs zɪç ɡuːt ˈɡeːən/",
+              "ipaUS": "/ˈlasn̩ ziː ɛs zɪç ɡuːt ˈɡeːən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Wohlergehenswunsch",
+                "headwordLine": "Lassen Sie es sich gut gehen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Alles Gute",
+                  "Machen Sie es gut"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein freundlicher Abschiedswunsch, dass es der angesprochenen Person weiterhin gut gehen möge.",
+                    "examples": [
+                      "Vielen Dank für Ihren Besuch. Lassen Sie es sich gut gehen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Lassen Sie es sich gut gehen – Beispielsatz folgt.",
+              "answer": "Ein freundlicher Abschiedswunsch, dass es der angesprochenen Person weiterhin gut gehen möge.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bittet darum, Grüße an eine nicht anwesende Person weiterzugeben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Drückt die Hoffnung auf regelmäßigen weiteren Kontakt aus.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "Es hat mich sehr gefreut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt zum Abschluss aus, dass man sich über eine Begegnung oder ein Gespräch sehr gefreut hat.",
+          "explain": {
+            "entryId": "Es hat mich sehr gefreut",
+            "headword": "Es hat mich sehr gefreut",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛs hat mɪç zeːɐ̯ ɡəˈfʁɔɪ̯t/",
+              "ipaUS": "/ɛs hat mɪç zeːɐ̯ ɡəˈfʁɔɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Freude über Begegnung",
+                "headwordLine": "Es hat mich sehr gefreut",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Es war sehr schön"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt zum Abschluss aus, dass man sich über eine Begegnung oder ein Gespräch sehr gefreut hat.",
+                    "examples": [
+                      "Es hat mich sehr gefreut, Sie persönlich kennenzulernen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Es hat mich sehr gefreut – Beispielsatz folgt.",
+              "answer": "Drückt zum Abschluss aus, dass man sich über eine Begegnung oder ein Gespräch sehr gefreut hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt besonders förmlich aus, dass man eine Aufgabe als große Ehre empfindet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Teilt mit, dass man bereits viele positive Berichte über die Person gehört hat.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Ich verbleibe mit freundlichen Grüßen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine traditionelle, sehr förmliche Schlussformel in schriftlicher Korrespondenz.",
+          "explain": {
+            "entryId": "Ich verbleibe mit freundlichen Grüßen",
+            "headword": "Ich verbleibe mit freundlichen Grüßen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪç fɛɐ̯ˈblaɪ̯bə mɪt ˈfʁɔɪ̯ntlɪçn̩ ˈɡʁyːsn̩/",
+              "ipaUS": "/ɪç fɛɐ̯ˈblaɪ̯bə mɪt ˈfʁɔɪ̯ntlɪçn̩ ˈɡʁyːsn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "förmlicher Briefschluss",
+                "headwordLine": "Ich verbleibe mit freundlichen Grüßen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Mit freundlichen Grüßen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine traditionelle, sehr förmliche Schlussformel in schriftlicher Korrespondenz.",
+                    "examples": [
+                      "Ich danke Ihnen für Ihre Antwort und verbleibe mit freundlichen Grüßen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich verbleibe mit freundlichen Grüßen – Beispielsatz folgt.",
+              "answer": "Eine traditionelle, sehr förmliche Schlussformel in schriftlicher Korrespondenz.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine mündliche Bitte, einer dritten Person freundliche Grüße zu bestellen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein persönlicher Abschiedswunsch für Gesundheit und Wohlergehen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "Sofern Sie einverstanden sind",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Führt eine Bedingung ein: Etwas soll nur geschehen, wenn die angesprochene Person zustimmt.",
+          "explain": {
+            "entryId": "Sofern Sie einverstanden sind",
+            "headword": "Sofern Sie einverstanden sind",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zoˈfɛʁn ziː ˈaɪ̯nfɛɐ̯ʃtandn̩ zɪnt/",
+              "ipaUS": "/zoˈfɛʁn ziː ˈaɪ̯nfɛɐ̯ʃtandn̩ zɪnt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Bedingung durch Zustimmung",
+                "headwordLine": "Sofern Sie einverstanden sind",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Falls Sie zustimmen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Führt eine Bedingung ein: Etwas soll nur geschehen, wenn die angesprochene Person zustimmt.",
+                    "examples": [
+                      "Sofern Sie einverstanden sind, beginnen wir morgen mit der Arbeit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sofern Sie einverstanden sind – Beispielsatz folgt.",
+              "answer": "Führt eine Bedingung ein: Etwas soll nur geschehen, wenn die angesprochene Person zustimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kündigt höflich an, dass eine Entscheidung unabhängig von der Meinung der anderen Person feststeht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bittet allgemein um Erlaubnis, sich einer unbekannten Person vorzustellen.",
               "ok": false
             }
           ]

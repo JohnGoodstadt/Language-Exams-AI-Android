@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizAdjectives1-de",
-  "title": "",
+  "title": "Adjektive (häufig)",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "nachvollziehbar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Logisch verständlich oder in Gedanken und Schritten überprüfbar.",
+          "explain": {
+            "entryId": "nachvollziehbar",
+            "headword": "nachvollziehbar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxfolˌt͡siːbaːɐ̯/",
+              "ipaUS": "/ˈnaːxfolˌt͡siːbaːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Verständlichkeit",
+                "headwordLine": "nachvollziehbar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "verständlich",
+                  "plausibel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Logisch verständlich oder in Gedanken und Schritten überprüfbar.",
+                    "examples": [
+                      "Seine Entscheidung ist angesichts der Situation nachvollziehbar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "nachvollziehbar – Beispielsatz folgt.",
+              "answer": "Logisch verständlich oder in Gedanken und Schritten überprüfbar.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So klar bewiesen, dass niemand die Aussage sinnvoll bestreiten kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ausreichend passend und der Situation oder dem Zweck entsprechend.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "unverzichtbar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So wichtig oder notwendig, dass darauf nicht verzichtet werden kann.",
+          "explain": {
+            "entryId": "unverzichtbar",
+            "headword": "unverzichtbar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʊnfɛɐ̯ˈt͡sɪçtbaːɐ̯/",
+              "ipaUS": "/ʊnfɛɐ̯ˈt͡sɪçtbaːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Notwendigkeit",
+                "headwordLine": "unverzichtbar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "unentbehrlich",
+                  "unerlässlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So wichtig oder notwendig, dass darauf nicht verzichtet werden kann.",
+                    "examples": [
+                      "Sauberes Wasser ist für das Leben unverzichtbar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unverzichtbar – Beispielsatz folgt.",
+              "answer": "So wichtig oder notwendig, dass darauf nicht verzichtet werden kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von zentraler Bedeutung für das Wesen oder Ergebnis einer Sache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In großem und deutlich spürbarem Umfang vorhanden.",
               "ok": false
             }
           ]
@@ -54,18 +126,53 @@
           "title": "",
           "page": 3,
           "question": "umstritten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So beurteilt, dass darüber starke unterschiedliche Meinungen und Auseinandersetzungen bestehen.",
+          "explain": {
+            "entryId": "umstritten",
+            "headword": "umstritten",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʊmˈʃtʁɪtn̩/",
+              "ipaUS": "/ʊmˈʃtʁɪtn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "öffentlicher Widerspruch",
+                "headwordLine": "umstritten",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "kontrovers"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So beurteilt, dass darüber starke unterschiedliche Meinungen und Auseinandersetzungen bestehen.",
+                    "examples": [
+                      "Die geplante Reform ist politisch umstritten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "umstritten – Beispielsatz folgt.",
+              "answer": "So beurteilt, dass darüber starke unterschiedliche Meinungen und Auseinandersetzungen bestehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von einer bereits festgelegten Meinung einseitig beeinflusst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zu schnell und ohne ausreichende Prüfung entschieden.",
               "ok": false
             }
           ]
@@ -74,18 +181,54 @@
           "title": "",
           "page": 4,
           "question": "voreilig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Zu schnell und ohne ausreichende Prüfung oder Überlegung handelnd.",
+          "explain": {
+            "entryId": "voreilig",
+            "headword": "voreilig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfoːɐ̯ˌʔaɪ̯lɪç/",
+              "ipaUS": "/ˈfoːɐ̯ˌʔaɪ̯lɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "unzureichend geprüfte Eile",
+                "headwordLine": "voreilig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "überstürzt",
+                  "vorschnell"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Zu schnell und ohne ausreichende Prüfung oder Überlegung handelnd.",
+                    "examples": [
+                      "Eine voreilige Entscheidung kann später Probleme verursachen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "voreilig – Beispielsatz folgt.",
+              "answer": "Zu schnell und ohne ausreichende Prüfung oder Überlegung handelnd.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von einer einseitigen vorgefassten Haltung beeinflusst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Trotz Schwierigkeiten über längere Zeit nicht nachgebend.",
               "ok": false
             }
           ]
@@ -94,18 +237,54 @@
           "title": "",
           "page": 5,
           "question": "angemessen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Situation, dem Zweck oder dem erforderlichen Maß entsprechend und passend.",
+          "explain": {
+            "entryId": "angemessen",
+            "headword": "angemessen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanɡəˌmɛsn̩/",
+              "ipaUS": "/ˈanɡəˌmɛsn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Passung oder Verhältnismäßigkeit",
+                "headwordLine": "angemessen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "passend",
+                  "verhältnismäßig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Situation, dem Zweck oder dem erforderlichen Maß entsprechend und passend.",
+                    "examples": [
+                      "Die Reaktion war ruhig und angemessen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "angemessen – Beispielsatz folgt.",
+              "answer": "Der Situation, dem Zweck oder dem erforderlichen Maß entsprechend und passend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von zentraler Bedeutung und für das Ergebnis entscheidend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "In großem, deutlich messbarem Umfang vorhanden.",
               "ok": false
             }
           ]
@@ -114,18 +293,54 @@
           "title": "",
           "page": 6,
           "question": "erheblich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In großem, deutlich spürbarem oder wichtigem Umfang.",
+          "explain": {
+            "entryId": "erheblich",
+            "headword": "erheblich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈheːplɪç/",
+              "ipaUS": "/ɛɐ̯ˈheːplɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "deutliches Ausmaß",
+                "headwordLine": "erheblich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "deutlich",
+                  "beträchtlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In großem, deutlich spürbarem oder wichtigem Umfang.",
+                    "examples": [
+                      "Die Verzögerung verursachte erhebliche zusätzliche Kosten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "erheblich – Beispielsatz folgt.",
+              "answer": "In großem, deutlich spürbarem oder wichtigem Umfang.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von großer mengenmäßiger oder finanzieller Größe, oft konkret messbar.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Für das Wesen oder den Kern einer Sache besonders entscheidend.",
               "ok": false
             }
           ]
@@ -134,18 +349,54 @@
           "title": "",
           "page": 7,
           "question": "beträchtlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von beachtlicher, häufig zahlenmäßig oder finanziell großer Menge beziehungsweise Größe.",
+          "explain": {
+            "entryId": "beträchtlich",
+            "headword": "beträchtlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈtʁɛçtlɪç/",
+              "ipaUS": "/bəˈtʁɛçtlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "große Menge oder Größe",
+                "headwordLine": "beträchtlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "beachtlich",
+                  "ansehnlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von beachtlicher, häufig zahlenmäßig oder finanziell großer Menge beziehungsweise Größe.",
+                    "examples": [
+                      "Die Reparatur erforderte einen beträchtlichen Geldbetrag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "beträchtlich – Beispielsatz folgt.",
+              "answer": "Von beachtlicher, häufig zahlenmäßig oder finanziell großer Menge beziehungsweise Größe.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In deutlich spürbarem oder wichtigem Umfang, auch ohne konkrete Menge.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Für den Kern einer Sache unbedingt notwendig und entscheidend.",
               "ok": false
             }
           ]
@@ -154,18 +405,54 @@
           "title": "",
           "page": 8,
           "question": "unbestreitbar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So eindeutig oder gut belegt, dass es vernünftig nicht bestritten werden kann.",
+          "explain": {
+            "entryId": "unbestreitbar",
+            "headword": "unbestreitbar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʊnbəˈʃtʁaɪ̯tbaːɐ̯/",
+              "ipaUS": "/ʊnbəˈʃtʁaɪ̯tbaːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Gewissheit",
+                "headwordLine": "unbestreitbar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zweifellos",
+                  "offenkundig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So eindeutig oder gut belegt, dass es vernünftig nicht bestritten werden kann.",
+                    "examples": [
+                      "Die Vorteile der neuen Methode sind unbestreitbar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "unbestreitbar – Beispielsatz folgt.",
+              "answer": "So eindeutig oder gut belegt, dass es vernünftig nicht bestritten werden kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Logisch verständlich und in einzelnen Schritten überprüfbar.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Öffentlich stark diskutiert und von verschiedenen Seiten abgelehnt.",
               "ok": false
             }
           ]
@@ -174,18 +461,54 @@
           "title": "",
           "page": 9,
           "question": "voreingenommen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch eine bereits bestehende Meinung oder ein Vorurteil einseitig und nicht neutral.",
+          "explain": {
+            "entryId": "voreingenommen",
+            "headword": "voreingenommen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/foːɐ̯ˈaɪ̯nɡənɔmən/",
+              "ipaUS": "/foːɐ̯ˈaɪ̯nɡənɔmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "fehlende Neutralität",
+                "headwordLine": "voreingenommen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "befangen",
+                  "parteiisch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch eine bereits bestehende Meinung oder ein Vorurteil einseitig und nicht neutral.",
+                    "examples": [
+                      "Ein Richter muss unabhängig und darf nicht voreingenommen sein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "voreingenommen – Beispielsatz folgt.",
+              "answer": "Durch eine bereits bestehende Meinung oder ein Vorurteil einseitig und nicht neutral.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zu schnell und ohne genügende Informationen urteilend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Sache kritisch und sorgfältig aus verschiedenen Perspektiven prüfend.",
               "ok": false
             }
           ]
@@ -194,18 +517,54 @@
           "title": "",
           "page": 10,
           "question": "gelassen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Innerlich ausgeglichen und auch bei Schwierigkeiten nicht leicht beunruhigt oder gereizt.",
+          "explain": {
+            "entryId": "gelassen",
+            "headword": "gelassen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈlasn̩/",
+              "ipaUS": "/ɡəˈlasn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "innere Ruhe",
+                "headwordLine": "gelassen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "besonnen",
+                  "ruhig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Innerlich ausgeglichen und auch bei Schwierigkeiten nicht leicht beunruhigt oder gereizt.",
+                    "examples": [
+                      "Sie reagierte gelassen auf die unerwartete Kritik."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gelassen – Beispielsatz folgt.",
+              "answer": "Innerlich ausgeglichen und auch bei Schwierigkeiten nicht leicht beunruhigt oder gereizt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Trotz Widerstand dauerhaft und entschlossen an einem Ziel festhaltend.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Situation sorgfältig auf mögliche Probleme und Schwächen untersuchend.",
               "ok": false
             }
           ]

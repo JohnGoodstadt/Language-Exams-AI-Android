@@ -2,50 +2,120 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizWeekDays2-de",
-  "title": "",
+  "title": "Wochentage",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Arbeitswoche",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Teil einer Woche beziehungsweise die Zahl der Tage und Stunden, an denen regulär gearbeitet wird.",
+          "explain": {
+            "entryId": "Arbeitswoche",
+            "headword": "Arbeitswoche",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʁbaɪ̯t͡sˌvɔxə/",
+              "ipaUS": "/ˈaʁbaɪ̯t͡sˌvɔxə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Arbeitswoche",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wochenarbeitszeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Teil einer Woche beziehungsweise die Zahl der Tage und Stunden, an denen regulär gearbeitet wird.",
+                    "examples": [
+                      "Ihre Arbeitswoche umfasst vier Tage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Arbeitswoche – Beispielsatz folgt.",
+              "answer": "Der Teil einer Woche beziehungsweise die Zahl der Tage und Stunden, an denen regulär gearbeitet wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die arbeitsfreie Zeit am Ende einer Kalenderwoche.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Jeder einzelne Tag, an dem gesetzlich gearbeitet werden darf.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Wochenende",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Zeitraum am Ende der Woche, gewöhnlich Samstag und Sonntag, der häufig arbeitsfrei ist.",
+          "explain": {
+            "entryId": "Wochenende",
+            "headword": "Wochenende",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɔxn̩ˌʔɛndə/",
+              "ipaUS": "/ˈvɔxn̩ˌʔɛndə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Wochenende",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Samstag und Sonntag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Zeitraum am Ende der Woche, gewöhnlich Samstag und Sonntag, der häufig arbeitsfrei ist.",
+                    "examples": [
+                      "Am Wochenende besuchen wir unsere Familie."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wochenende – Beispielsatz folgt.",
+              "answer": "Der Zeitraum am Ende der Woche, gewöhnlich Samstag und Sonntag, der häufig arbeitsfrei ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Folge der regulären Arbeitstage innerhalb einer Woche.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein einzelner gesetzlicher Ruhetag mit besonderem Anlass.",
               "ok": false
             }
           ]

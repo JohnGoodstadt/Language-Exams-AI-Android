@@ -2,130 +2,346 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizEveryday2-de",
-  "title": "",
+  "title": "Gegenstände & Haushaltsartikel",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Wiederverkaufswert",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der voraussichtliche Preis, zu dem ein gebrauchter Gegenstand später weiterverkauft werden kann.",
+          "explain": {
+            "entryId": "Wiederverkaufswert",
+            "headword": "Wiederverkaufswert",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈviːdɐfɛɐ̯kaʊ̯fsˌveːɐ̯t/",
+              "ipaUS": "/ˈviːdɐfɛɐ̯kaʊ̯fsˌveːɐ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Wiederverkaufswert",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Restwert",
+                  "Verkaufswert"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der voraussichtliche Preis, zu dem ein gebrauchter Gegenstand später weiterverkauft werden kann.",
+                    "examples": [
+                      "Hochwertige Möbel haben oft einen guten Wiederverkaufswert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wiederverkaufswert – Beispielsatz folgt.",
+              "answer": "Der voraussichtliche Preis, zu dem ein gebrauchter Gegenstand später weiterverkauft werden kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der ursprüngliche Preis, der bei der Anschaffung eines Gegenstands gezahlt wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Summe aller Reparatur- und Energiekosten während der Nutzung.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Anschaffung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Erwerb einer Sache, besonders eines größeren oder länger genutzten Gegenstands.",
+          "explain": {
+            "entryId": "Anschaffung",
+            "headword": "Anschaffung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌʃafʊŋ/",
+              "ipaUS": "/ˈanˌʃafʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Anschaffung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Kauf",
+                  "Erwerb"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Erwerb einer Sache, besonders eines größeren oder länger genutzten Gegenstands.",
+                    "examples": [
+                      "Die Anschaffung einer neuen Waschmaschine war notwendig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Anschaffung – Beispielsatz folgt.",
+              "answer": "Der Erwerb einer Sache, besonders eines größeren oder länger genutzten Gegenstands.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Preis, den ein gebrauchtes Gerät beim späteren Verkauf erzielt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein einzelnes Teil, das ein beschädigtes Bauteil ersetzt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "funktionsfähig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Technisch in der Lage, die vorgesehene Funktion korrekt auszuführen.",
+          "explain": {
+            "entryId": "funktionsfähig",
+            "headword": "funktionsfähig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fʊŋkˈt͡si̯oːnsˌfɛːɪç/",
+              "ipaUS": "/fʊŋkˈt͡si̯oːnsˌfɛːɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Betriebszustand",
+                "headwordLine": "funktionsfähig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "betriebsbereit",
+                  "funktionierend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Technisch in der Lage, die vorgesehene Funktion korrekt auszuführen.",
+                    "examples": [
+                      "Trotz seines Alters ist das Gerät noch vollständig funktionsfähig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "funktionsfähig – Beispielsatz folgt.",
+              "answer": "Technisch in der Lage, die vorgesehene Funktion korrekt auszuführen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nach heutigen technischen Maßstäben modern und aktuell.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aus besonders guten Materialien sorgfältig hergestellt.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "Wartung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine regelmäßige technische Prüfung und Pflege, die Funktion und Sicherheit erhalten soll.",
+          "explain": {
+            "entryId": "Wartung",
+            "headword": "Wartung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvaʁtʊŋ/",
+              "ipaUS": "/ˈvaʁtʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Wartung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Service",
+                  "technische Pflege"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine regelmäßige technische Prüfung und Pflege, die Funktion und Sicherheit erhalten soll.",
+                    "examples": [
+                      "Die jährliche Wartung der Heizungsanlage ist fällig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wartung – Beispielsatz folgt.",
+              "answer": "Eine regelmäßige technische Prüfung und Pflege, die Funktion und Sicherheit erhalten soll.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die fortlaufende alltägliche Pflege und Reparatur, durch die etwas allgemein erhalten wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Beseitigung eines bereits vollständig ausgefallenen Geräts.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "hochwertig",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von hoher Material-, Herstellungs- oder Leistungsqualität.",
+          "explain": {
+            "entryId": "hochwertig",
+            "headword": "hochwertig",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhoːxˌveːɐ̯tɪç/",
+              "ipaUS": "/ˈhoːxˌveːɐ̯tɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Qualität",
+                "headwordLine": "hochwertig",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "qualitativ hochwertig",
+                  "erstklassig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von hoher Material-, Herstellungs- oder Leistungsqualität.",
+                    "examples": [
+                      "Der Tisch besteht aus hochwertigem Holz."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hochwertig – Beispielsatz folgt.",
+              "answer": "Von hoher Material-, Herstellungs- oder Leistungsqualität.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nach aktuellen technischen Standards nicht mehr zeitgemäß.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Technisch arbeitsfähig, unabhängig von Material und Qualität.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "veraltet",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nicht mehr dem aktuellen Stand von Technik, Wissen oder Gebrauch entsprechend.",
+          "explain": {
+            "entryId": "veraltet",
+            "headword": "veraltet",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈʔaltət/",
+              "ipaUS": "/fɛɐ̯ˈʔaltət/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "fehlende Aktualität",
+                "headwordLine": "veraltet",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "überholt",
+                  "altmodisch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nicht mehr dem aktuellen Stand von Technik, Wissen oder Gebrauch entsprechend.",
+                    "examples": [
+                      "Die veraltete Software erhält keine Sicherheitsupdates mehr."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "veraltet – Beispielsatz folgt.",
+              "answer": "Nicht mehr dem aktuellen Stand von Technik, Wissen oder Gebrauch entsprechend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Durch Nutzung sichtbar beschädigt oder materiell abgenutzt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Technisch defekt und deshalb nicht mehr funktionsfähig.",
               "ok": false
             }
           ]

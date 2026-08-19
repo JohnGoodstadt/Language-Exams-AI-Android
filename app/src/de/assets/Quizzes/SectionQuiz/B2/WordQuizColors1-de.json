@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizColors1-de",
-  "title": "",
+  "title": "Farben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Farbton",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine bestimmte Ausprägung einer Farbe, etwa ein warmes Rot oder ein bläuliches Grün.",
+          "explain": {
+            "entryId": "Farbton",
+            "headword": "Farbton",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfaʁpˌtoːn/",
+              "ipaUS": "/ˈfaʁpˌtoːn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Farbton",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Farbe",
+                  "Schattierung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine bestimmte Ausprägung einer Farbe, etwa ein warmes Rot oder ein bläuliches Grün.",
+                    "examples": [
+                      "Der Farbton der Wand wirkt bei Tageslicht wärmer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Farbton – Beispielsatz folgt.",
+              "answer": "Eine bestimmte Ausprägung einer Farbe, etwa ein warmes Rot oder ein bläuliches Grün.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein sehr feiner Unterschied innerhalb einer Farbe oder Wirkung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die gesamte bewusste Auswahl und Kombination von Farben in einer Gestaltung.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "Nuance",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein sehr feiner Unterschied oder eine leichte Abstufung innerhalb einer Farbe, Bedeutung oder Wirkung.",
+          "explain": {
+            "entryId": "Nuance",
+            "headword": "Nuance",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/nyˈʔãːsə/",
+              "ipaUS": "/nyˈʔãːsə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Nuance",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Feinheit",
+                  "Abstufung"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein sehr feiner Unterschied oder eine leichte Abstufung innerhalb einer Farbe, Bedeutung oder Wirkung.",
+                    "examples": [
+                      "Die beiden Blautöne unterscheiden sich nur in einer kleinen Nuance."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nuance – Beispielsatz folgt.",
+              "answer": "Ein sehr feiner Unterschied oder eine leichte Abstufung innerhalb einer Farbe, Bedeutung oder Wirkung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine klar bestimmbare Grundausprägung einer Farbe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein starker sichtbarer Gegensatz zwischen hellen, dunklen oder verschiedenen Farben.",
               "ok": false
             }
           ]
@@ -54,18 +126,54 @@
           "title": "",
           "page": 3,
           "question": "matt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ohne Glanz oder mit schwacher, wenig leuchtender Farbwirkung.",
+          "explain": {
+            "entryId": "matt",
+            "headword": "matt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/mat/",
+              "ipaUS": "/mat/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Oberfläche oder Farbwirkung",
+                "headwordLine": "matt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "glanzlos",
+                  "stumpf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ohne Glanz oder mit schwacher, wenig leuchtender Farbwirkung.",
+                    "examples": [
+                      "Die matte Oberfläche spiegelt das Licht kaum."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "matt – Beispielsatz folgt.",
+              "answer": "Ohne Glanz oder mit schwacher, wenig leuchtender Farbwirkung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sehr hell, auffällig und für die Augen beinahe unangenehm.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Intensiv, klar und scheinbar Licht ausstrahlend.",
               "ok": false
             }
           ]
@@ -74,18 +182,54 @@
           "title": "",
           "page": 4,
           "question": "grell",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Sehr hell, auffällig und häufig als hart oder unangenehm intensiv empfunden.",
+          "explain": {
+            "entryId": "grell",
+            "headword": "grell",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡʁɛl/",
+              "ipaUS": "/ɡʁɛl/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "starke unangenehme Intensität",
+                "headwordLine": "grell",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "schreiend",
+                  "blendend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Sehr hell, auffällig und häufig als hart oder unangenehm intensiv empfunden.",
+                    "examples": [
+                      "Das grelle Gelb war schon von Weitem sichtbar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "grell – Beispielsatz folgt.",
+              "answer": "Sehr hell, auffällig und häufig als hart oder unangenehm intensiv empfunden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zurückhaltend, wenig gesättigt und nicht auffällig.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Klar, intensiv und positiv strahlend, ohne unbedingt unangenehm zu wirken.",
               "ok": false
             }
           ]
@@ -94,18 +238,54 @@
           "title": "",
           "page": 5,
           "question": "gedeckt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von zurückhaltender, gedämpfter und wenig gesättigter Farbwirkung.",
+          "explain": {
+            "entryId": "gedeckt",
+            "headword": "gedeckt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈdɛkt/",
+              "ipaUS": "/ɡəˈdɛkt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "gedämpfte Farbwirkung",
+                "headwordLine": "gedeckt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gedämpft",
+                  "dezent"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von zurückhaltender, gedämpfter und wenig gesättigter Farbwirkung.",
+                    "examples": [
+                      "Für das Büro wählte sie gedeckte Grün- und Grautöne."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "gedeckt – Beispielsatz folgt.",
+              "answer": "Von zurückhaltender, gedämpfter und wenig gesättigter Farbwirkung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ohne Glanz und Lichtreflexion an der Oberfläche.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sehr hell, hart und auffällig intensiv.",
               "ok": false
             }
           ]
@@ -114,18 +294,54 @@
           "title": "",
           "page": 6,
           "question": "leuchtend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von klarer, intensiver und strahlender Farbwirkung.",
+          "explain": {
+            "entryId": "leuchtend",
+            "headword": "leuchtend",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈlɔɪ̯çtnt/",
+              "ipaUS": "/ˈlɔɪ̯çtnt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "intensive strahlende Farbe",
+                "headwordLine": "leuchtend",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "strahlend",
+                  "kräftig"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von klarer, intensiver und strahlender Farbwirkung.",
+                    "examples": [
+                      "Die leuchtend roten Blüten fallen sofort auf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "leuchtend – Beispielsatz folgt.",
+              "answer": "Von klarer, intensiver und strahlender Farbwirkung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Sehr grell und deshalb zwangsläufig unangenehm für die Augen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Zurückhaltend, gedämpft und mit geringer Farbsättigung.",
               "ok": false
             }
           ]
@@ -134,18 +350,53 @@
           "title": "",
           "page": 7,
           "question": "kontrastreich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Von deutlichen Unterschieden zwischen hellen, dunklen oder verschiedenfarbigen Bereichen geprägt.",
+          "explain": {
+            "entryId": "kontrastreich",
+            "headword": "kontrastreich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kɔnˈtʁastˌʁaɪ̯ç/",
+              "ipaUS": "/kɔnˈtʁastˌʁaɪ̯ç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "starke Gegensätze",
+                "headwordLine": "kontrastreich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gegensatzreich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Von deutlichen Unterschieden zwischen hellen, dunklen oder verschiedenfarbigen Bereichen geprägt.",
+                    "examples": [
+                      "Das kontrastreiche Foto kombiniert tiefes Schwarz mit hellem Weiß."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "kontrastreich – Beispielsatz folgt.",
+              "answer": "Von deutlichen Unterschieden zwischen hellen, dunklen oder verschiedenfarbigen Bereichen geprägt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "In allen Bereichen gleichartig und ohne sichtbare Unterschiede gestaltet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nur aus zurückhaltenden und wenig gesättigten Farbtönen bestehend.",
               "ok": false
             }
           ]
@@ -154,18 +405,54 @@
           "title": "",
           "page": 8,
           "question": "Farbgebung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die bewusste Auswahl, Verteilung und Kombination von Farben in einer Gestaltung.",
+          "explain": {
+            "entryId": "Farbgebung",
+            "headword": "Farbgebung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfaʁpˌɡeːbʊŋ/",
+              "ipaUS": "/ˈfaʁpˌɡeːbʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Farbgebung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Farbauswahl",
+                  "Kolorit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die bewusste Auswahl, Verteilung und Kombination von Farben in einer Gestaltung.",
+                    "examples": [
+                      "Die warme Farbgebung macht den Raum gemütlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Farbgebung – Beispielsatz folgt.",
+              "answer": "Die bewusste Auswahl, Verteilung und Kombination von Farben in einer Gestaltung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne genaue Ausprägung einer bestimmten Farbe.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein sehr feiner Unterschied zwischen zwei ähnlichen Farbtönen.",
               "ok": false
             }
           ]
@@ -174,18 +461,54 @@
           "title": "",
           "page": 9,
           "question": "einheitlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "In allen Teilen nach demselben Muster gestaltet und ohne störende Unterschiede.",
+          "explain": {
+            "entryId": "einheitlich",
+            "headword": "einheitlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nhaɪ̯tlɪç/",
+              "ipaUS": "/ˈaɪ̯nhaɪ̯tlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Übereinstimmung",
+                "headwordLine": "einheitlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gleichartig",
+                  "konsistent"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "In allen Teilen nach demselben Muster gestaltet und ohne störende Unterschiede.",
+                    "examples": [
+                      "Alle Schilder haben eine einheitliche Farbgebung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "einheitlich – Beispielsatz folgt.",
+              "answer": "In allen Teilen nach demselben Muster gestaltet und ohne störende Unterschiede.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Von starken Gegensätzen zwischen hellen und dunklen Bereichen geprägt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Aus mehreren nur leicht unterschiedlichen Farbnuancen zusammengesetzt.",
               "ok": false
             }
           ]
@@ -194,18 +517,54 @@
           "title": "",
           "page": 10,
           "question": "symbolisieren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine abstrakte Idee, Eigenschaft oder Bedeutung durch ein Zeichen, Bild oder eine Farbe darstellen.",
+          "explain": {
+            "entryId": "symbolisieren",
+            "headword": "symbolisieren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zʏmboliˈziːʁən/",
+              "ipaUS": "/zʏmboliˈziːʁən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "symbolisieren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "versinnbildlichen",
+                  "darstellen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine abstrakte Idee, Eigenschaft oder Bedeutung durch ein Zeichen, Bild oder eine Farbe darstellen.",
+                    "examples": [
+                      "Die Farbe Grün kann Hoffnung symbolisieren."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "symbolisieren – Beispielsatz folgt.",
+              "answer": "Eine abstrakte Idee, Eigenschaft oder Bedeutung durch ein Zeichen, Bild oder eine Farbe darstellen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine kräftige Farbe durch Mischung weniger intensiv machen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mit der Zeit an Stärke, Farbe oder Wirkung verlieren.",
               "ok": false
             }
           ]

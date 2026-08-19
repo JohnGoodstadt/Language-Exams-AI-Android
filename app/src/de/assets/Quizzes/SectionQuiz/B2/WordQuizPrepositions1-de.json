@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPrepositions1-de",
-  "title": "",
+  "title": "Präpositionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "angesichts",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Stellt eine Aussage in den Zusammenhang einer deutlich wahrnehmbaren Situation oder Tatsache: in Anbetracht von.",
+          "explain": {
+            "entryId": "angesichts",
+            "headword": "angesichts",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanɡəzɪçt͡s/",
+              "ipaUS": "/ˈanɡəzɪçt͡s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Bezug auf eine Situation",
+                "headwordLine": "angesichts",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in Anbetracht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Stellt eine Aussage in den Zusammenhang einer deutlich wahrnehmbaren Situation oder Tatsache: in Anbetracht von.",
+                    "examples": [
+                      "Angesichts der hohen Kosten wurde das Projekt geändert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "angesichts – Beispielsatz folgt.",
+              "answer": "Stellt eine Aussage in den Zusammenhang einer deutlich wahrnehmbaren Situation oder Tatsache: in Anbetracht von.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt eine direkte Ursache, als deren Folge etwas eingetreten ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Beschränkt eine Aussage auf einen bestimmten thematischen Aspekt.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "infolge",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kennzeichnet eine Ursache, als deren direkte Folge etwas geschieht: als Folge von.",
+          "explain": {
+            "entryId": "infolge",
+            "headword": "infolge",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪnˈfɔlɡə/",
+              "ipaUS": "/ɪnˈfɔlɡə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Folge einer Ursache",
+                "headwordLine": "infolge",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "als Folge von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kennzeichnet eine Ursache, als deren direkte Folge etwas geschieht: als Folge von.",
+                    "examples": [
+                      "Infolge des Sturms fielen mehrere Züge aus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "infolge – Beispielsatz folgt.",
+              "answer": "Kennzeichnet eine Ursache, als deren direkte Folge etwas geschieht: als Folge von.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezieht eine Aussage allgemein auf ein bestimmtes Thema.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nennt den beabsichtigten Zweck einer formellen Handlung.",
               "ok": false
             }
           ]
@@ -54,18 +124,54 @@
           "title": "",
           "page": 3,
           "question": "hinsichtlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Beschränkt oder bezieht eine Aussage auf einen bestimmten Aspekt oder ein Thema.",
+          "explain": {
+            "entryId": "hinsichtlich",
+            "headword": "hinsichtlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhɪnzɪçtlɪç/",
+              "ipaUS": "/ˈhɪnzɪçtlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "thematischer Aspekt",
+                "headwordLine": "hinsichtlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in Bezug auf",
+                  "bezüglich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Beschränkt oder bezieht eine Aussage auf einen bestimmten Aspekt oder ein Thema.",
+                    "examples": [
+                      "Hinsichtlich der Kosten bestehen noch offene Fragen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hinsichtlich – Beispielsatz folgt.",
+              "answer": "Beschränkt oder bezieht eine Aussage auf einen bestimmten Aspekt oder ein Thema.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Begründet eine Aussage mit einer Ursache oder vorhandenen Tatsache.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kennzeichnet das Werkzeug oder Verfahren, mit dem etwas durchgeführt wird.",
               "ok": false
             }
           ]
@@ -74,18 +180,54 @@
           "title": "",
           "page": 4,
           "question": "zwecks",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nennt in formeller Sprache den Zweck oder das Ziel einer Handlung.",
+          "explain": {
+            "entryId": "zwecks",
+            "headword": "zwecks",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/t͡svɛks/",
+              "ipaUS": "/t͡svɛks/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "formeller Zweck",
+                "headwordLine": "zwecks",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zum Zweck",
+                  "für"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nennt in formeller Sprache den Zweck oder das Ziel einer Handlung.",
+                    "examples": [
+                      "Zwecks weiterer Prüfung wurden zusätzliche Unterlagen angefordert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zwecks – Beispielsatz folgt.",
+              "answer": "Nennt in formeller Sprache den Zweck oder das Ziel einer Handlung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt das Mittel oder Werkzeug, mit dem ein Ziel erreicht wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezieht eine Aussage lediglich auf ein bestimmtes Thema.",
               "ok": false
             }
           ]
@@ -94,18 +236,54 @@
           "title": "",
           "page": 5,
           "question": "mittels",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kennzeichnet das Mittel, Werkzeug oder Verfahren, mit dem etwas erreicht wird.",
+          "explain": {
+            "entryId": "mittels",
+            "headword": "mittels",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmɪtl̩s/",
+              "ipaUS": "/ˈmɪtl̩s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Mittel oder Verfahren",
+                "headwordLine": "mittels",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "mithilfe",
+                  "durch"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kennzeichnet das Mittel, Werkzeug oder Verfahren, mit dem etwas erreicht wird.",
+                    "examples": [
+                      "Die Identität wurde mittels eines Ausweises überprüft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "mittels – Beispielsatz folgt.",
+              "answer": "Kennzeichnet das Mittel, Werkzeug oder Verfahren, mit dem etwas erreicht wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt den Zweck, zu dem eine Handlung durchgeführt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Begründet etwas mit einer vorausgehenden Ursache.",
               "ok": false
             }
           ]
@@ -114,18 +292,54 @@
           "title": "",
           "page": 6,
           "question": "ungeachtet",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass ein Umstand nicht berücksichtigt wird oder das Ergebnis nicht verhindert.",
+          "explain": {
+            "entryId": "ungeachtet",
+            "headword": "ungeachtet",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊnɡəˌʔaxtət/",
+              "ipaUS": "/ˈʊnɡəˌʔaxtət/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "nicht verhindernder Umstand",
+                "headwordLine": "ungeachtet",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "trotz",
+                  "ohne Rücksicht auf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt aus, dass ein Umstand nicht berücksichtigt wird oder das Ergebnis nicht verhindert.",
+                    "examples": [
+                      "Ungeachtet der Kritik wurde der Plan umgesetzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "ungeachtet – Beispielsatz folgt.",
+              "answer": "Drückt aus, dass ein Umstand nicht berücksichtigt wird oder das Ergebnis nicht verhindert.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt eine Person oder Sache, die durch eine Entscheidung einen Vorteil erhält.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schließt einen bestimmten Punkt als Ausnahme von einer Aussage aus.",
               "ok": false
             }
           ]
@@ -134,18 +348,53 @@
           "title": "",
           "page": 7,
           "question": "zugunsten",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kennzeichnet die Person oder Sache, die durch eine Entscheidung einen Vorteil erhält.",
+          "explain": {
+            "entryId": "zugunsten",
+            "headword": "zugunsten",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/t͡suˈɡʊnstn̩/",
+              "ipaUS": "/t͡suˈɡʊnstn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Vorteil oder Begünstigung",
+                "headwordLine": "zugunsten",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "zum Vorteil von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kennzeichnet die Person oder Sache, die durch eine Entscheidung einen Vorteil erhält.",
+                    "examples": [
+                      "Das Gericht entschied zugunsten des Kunden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "zugunsten – Beispielsatz folgt.",
+              "answer": "Kennzeichnet die Person oder Sache, die durch eine Entscheidung einen Vorteil erhält.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt aus, dass ein Hindernis keine Wirkung auf das Ergebnis hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet die Seite oder Stelle, von der eine Handlung ausgeht.",
               "ok": false
             }
           ]
@@ -154,18 +403,54 @@
           "title": "",
           "page": 8,
           "question": "anhand",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kennzeichnet Material, Belege oder Beispiele, mit deren Hilfe etwas erklärt, geprüft oder erkannt wird.",
+          "explain": {
+            "entryId": "anhand",
+            "headword": "anhand",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈanˌhant/",
+              "ipaUS": "/ˈanˌhant/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Grundlage oder Beispiel",
+                "headwordLine": "anhand",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "mithilfe von",
+                  "auf Basis von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kennzeichnet Material, Belege oder Beispiele, mit deren Hilfe etwas erklärt, geprüft oder erkannt wird.",
+                    "examples": [
+                      "Anhand der Daten lässt sich die Entwicklung nachvollziehen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "anhand – Beispielsatz folgt.",
+              "answer": "Kennzeichnet Material, Belege oder Beispiele, mit deren Hilfe etwas erklärt, geprüft oder erkannt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt die Ursache, die ein Ereignis ausgelöst hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Gibt eine Quelle wieder, deren Aussage wörtlich oder sinngemäß genannt wird.",
               "ok": false
             }
           ]
@@ -174,18 +459,54 @@
           "title": "",
           "page": 9,
           "question": "aufgrund",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nennt einen Grund, eine Ursache oder die Grundlage für eine Entscheidung.",
+          "explain": {
+            "entryId": "aufgrund",
+            "headword": "aufgrund",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fˌɡʁʊnt/",
+              "ipaUS": "/ˈaʊ̯fˌɡʁʊnt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Grund oder Grundlage",
+                "headwordLine": "aufgrund",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "wegen",
+                  "auf Basis von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nennt einen Grund, eine Ursache oder die Grundlage für eine Entscheidung.",
+                    "examples": [
+                      "Aufgrund neuer Informationen wurde der Termin verschoben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "aufgrund – Beispielsatz folgt.",
+              "answer": "Nennt einen Grund, eine Ursache oder die Grundlage für eine Entscheidung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Bezieht eine Aussage ohne kausale Bedeutung auf ein Thema.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kennzeichnet Beispiele oder Dokumente, mit deren Hilfe etwas gezeigt wird.",
               "ok": false
             }
           ]
@@ -194,18 +515,54 @@
           "title": "",
           "page": 10,
           "question": "bezüglich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Stellt einen allgemeinen Bezug zu einem Thema oder Gegenstand her.",
+          "explain": {
+            "entryId": "bezüglich",
+            "headword": "bezüglich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈt͡syːklɪç/",
+              "ipaUS": "/bəˈt͡syːklɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Themenbezug",
+                "headwordLine": "bezüglich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "in Bezug auf",
+                  "hinsichtlich"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Stellt einen allgemeinen Bezug zu einem Thema oder Gegenstand her.",
+                    "examples": [
+                      "Bezüglich Ihrer Anfrage erhalten Sie morgen eine Antwort."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bezüglich – Beispielsatz folgt.",
+              "answer": "Stellt einen allgemeinen Bezug zu einem Thema oder Gegenstand her.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt den direkten Grund, weshalb ein Ereignis eingetreten ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kennzeichnet eine Übereinstimmung mit einer Regel oder Vorgabe.",
               "ok": false
             }
           ]

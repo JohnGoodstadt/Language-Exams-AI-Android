@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizMonths1-de",
-  "title": "",
+  "title": "Monate",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Januar",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der erste Monat des Kalenderjahres, nach Dezember und vor Februar.",
+          "explain": {
+            "entryId": "Januar",
+            "headword": "Januar",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈjanu̯aːɐ̯/",
+              "ipaUS": "/ˈjanu̯aːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Januar",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erster Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der erste Monat des Kalenderjahres, nach Dezember und vor Februar.",
+                    "examples": [
+                      "Das neue Geschäftsjahr beginnt im Januar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Januar – Beispielsatz folgt.",
+              "answer": "Der erste Monat des Kalenderjahres, nach Dezember und vor Februar.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der dritte Monat des Jahres zwischen Februar und April.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der letzte Monat des Jahres zwischen November und Januar.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "März",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der dritte Monat des Kalenderjahres, nach Februar und vor April.",
+          "explain": {
+            "entryId": "März",
+            "headword": "März",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/mɛʁt͡s/",
+              "ipaUS": "/mɛʁt͡s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "März",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "dritter Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der dritte Monat des Kalenderjahres, nach Februar und vor April.",
+                    "examples": [
+                      "Im März beginnt meteorologisch der Frühling."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "März – Beispielsatz folgt.",
+              "answer": "Der dritte Monat des Kalenderjahres, nach Februar und vor April.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der erste Monat des Jahres zwischen Dezember und Februar.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der fünfte Monat des Jahres zwischen April und Juni.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Mai",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der fünfte Monat des Kalenderjahres, nach April und vor Juni.",
+          "explain": {
+            "entryId": "Mai",
+            "headword": "Mai",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/maɪ̯/",
+              "ipaUS": "/maɪ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Mai",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fünfter Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der fünfte Monat des Kalenderjahres, nach April und vor Juni.",
+                    "examples": [
+                      "Die Konferenz findet im Mai statt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Mai – Beispielsatz folgt.",
+              "answer": "Der fünfte Monat des Kalenderjahres, nach April und vor Juni.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der dritte Monat des Jahres zwischen Februar und April.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der siebte Monat des Jahres zwischen Juni und August.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Juli",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der siebte Monat des Kalenderjahres, nach Juni und vor August.",
+          "explain": {
+            "entryId": "Juli",
+            "headword": "Juli",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈjuːli/",
+              "ipaUS": "/ˈjuːli/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Juli",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "siebter Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der siebte Monat des Kalenderjahres, nach Juni und vor August.",
+                    "examples": [
+                      "Im Juli sind die Tage besonders lang."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Juli – Beispielsatz folgt.",
+              "answer": "Der siebte Monat des Kalenderjahres, nach Juni und vor August.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der fünfte Monat des Jahres zwischen April und Juni.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der neunte Monat des Jahres zwischen August und Oktober.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "September",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der neunte Monat des Kalenderjahres, nach August und vor Oktober.",
+          "explain": {
+            "entryId": "September",
+            "headword": "September",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɛpˈtɛmbɐ/",
+              "ipaUS": "/zɛpˈtɛmbɐ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "September",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "neunter Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der neunte Monat des Kalenderjahres, nach August und vor Oktober.",
+                    "examples": [
+                      "Das neue Semester beginnt im September."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "September – Beispielsatz folgt.",
+              "answer": "Der neunte Monat des Kalenderjahres, nach August und vor Oktober.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der siebte Monat des Jahres zwischen Juni und August.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der elfte Monat des Jahres zwischen Oktober und Dezember.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "November",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der elfte Monat des Kalenderjahres, nach Oktober und vor Dezember.",
+          "explain": {
+            "entryId": "November",
+            "headword": "November",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/noˈvɛmbɐ/",
+              "ipaUS": "/noˈvɛmbɐ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "November",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "elfter Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der elfte Monat des Kalenderjahres, nach Oktober und vor Dezember.",
+                    "examples": [
+                      "Im November werden die Tage deutlich kürzer."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "November – Beispielsatz folgt.",
+              "answer": "Der elfte Monat des Kalenderjahres, nach Oktober und vor Dezember.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der neunte Monat des Jahres zwischen August und Oktober.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der zwölfte und letzte Monat des Jahres.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "Dezember",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der zwölfte und letzte Monat des Kalenderjahres, nach November und vor Januar.",
+          "explain": {
+            "entryId": "Dezember",
+            "headword": "Dezember",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/deˈt͡sɛmbɐ/",
+              "ipaUS": "/deˈt͡sɛmbɐ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Dezember",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "letzter Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der zwölfte und letzte Monat des Kalenderjahres, nach November und vor Januar.",
+                    "examples": [
+                      "Viele Unternehmen schließen ihre Jahresberichte im Dezember ab."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Dezember – Beispielsatz folgt.",
+              "answer": "Der zwölfte und letzte Monat des Kalenderjahres, nach November und vor Januar.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der elfte Monat des Jahres zwischen Oktober und Dezember.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der erste Monat des neuen Jahres zwischen Dezember und Februar.",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "Monatsbeginn",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Anfang beziehungsweise die ersten Tage eines Kalendermonats.",
+          "explain": {
+            "entryId": "Monatsbeginn",
+            "headword": "Monatsbeginn",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmoːnat͡sbəˌɡɪn/",
+              "ipaUS": "/ˈmoːnat͡sbəˌɡɪn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Monatsbeginn",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Anfang des Monats"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Anfang beziehungsweise die ersten Tage eines Kalendermonats.",
+                    "examples": [
+                      "Die Miete wird jeweils zu Monatsbeginn fällig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Monatsbeginn – Beispielsatz folgt.",
+              "answer": "Der Anfang beziehungsweise die ersten Tage eines Kalendermonats.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Übergang vom Ende eines Monats zum Anfang des nächsten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Vorgang, der regelmäßig einmal in jedem Monat stattfindet.",
               "ok": false
             }
           ]
@@ -174,18 +454,53 @@
           "title": "",
           "page": 9,
           "question": "Monatswechsel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Übergang vom Ende eines Monats zum Beginn des folgenden Monats.",
+          "explain": {
+            "entryId": "Monatswechsel",
+            "headword": "Monatswechsel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmoːnat͡sˌvɛksl̩/",
+              "ipaUS": "/ˈmoːnat͡sˌvɛksl̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Monatswechsel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Übergang zum neuen Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Übergang vom Ende eines Monats zum Beginn des folgenden Monats.",
+                    "examples": [
+                      "Zum Monatswechsel werden die neuen Preise eingeführt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Monatswechsel – Beispielsatz folgt.",
+              "answer": "Der Übergang vom Ende eines Monats zum Beginn des folgenden Monats.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die ersten Tage eines einzelnen Monats.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Zeitraum von genau sechs aufeinanderfolgenden Monaten.",
               "ok": false
             }
           ]
@@ -194,18 +509,53 @@
           "title": "",
           "page": 10,
           "question": "monatlich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einmal in jedem Monat oder einen ganzen Monat betreffend.",
+          "explain": {
+            "entryId": "monatlich",
+            "headword": "monatlich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmoːnatlɪç/",
+              "ipaUS": "/ˈmoːnatlɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv oder Adverb",
+                "grammarType": "Häufigkeit",
+                "headwordLine": "monatlich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "jeden Monat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Einmal in jedem Monat oder einen ganzen Monat betreffend.",
+                    "examples": [
+                      "Die Gebühren werden monatlich abgebucht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "monatlich – Beispielsatz folgt.",
+              "answer": "Einmal in jedem Monat oder einen ganzen Monat betreffend.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ausschließlich zu Beginn eines Kalendermonats.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Regelmäßig einmal in jedem Vierteljahr.",
               "ok": false
             }
           ]

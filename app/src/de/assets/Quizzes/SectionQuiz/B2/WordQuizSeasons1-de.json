@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizSeasons1-de",
-  "title": "",
+  "title": "Jahreszeiten",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Frühling",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Jahreszeit nach dem Winter und vor dem Sommer, in der die Natur wieder zu wachsen beginnt.",
+          "explain": {
+            "entryId": "Frühling",
+            "headword": "Frühling",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁyːlɪŋ/",
+              "ipaUS": "/ˈfʁyːlɪŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Frühling",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Frühjahr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Jahreszeit nach dem Winter und vor dem Sommer, in der die Natur wieder zu wachsen beginnt.",
+                    "examples": [
+                      "Im Frühling werden die Tage länger und viele Pflanzen blühen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Frühling – Beispielsatz folgt.",
+              "answer": "Die Jahreszeit nach dem Winter und vor dem Sommer, in der die Natur wieder zu wachsen beginnt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die meist wärmste Jahreszeit zwischen Frühling und Herbst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Jahreszeit zwischen Sommer und Winter, in der viele Blätter fallen.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Sommer",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die meist wärmste Jahreszeit nach dem Frühling und vor dem Herbst.",
+          "explain": {
+            "entryId": "Sommer",
+            "headword": "Sommer",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɔmɐ/",
+              "ipaUS": "/ˈzɔmɐ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Sommer",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "warme Jahreszeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die meist wärmste Jahreszeit nach dem Frühling und vor dem Herbst.",
+                    "examples": [
+                      "Im Sommer bleiben die Abende lange hell."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sommer – Beispielsatz folgt.",
+              "answer": "Die meist wärmste Jahreszeit nach dem Frühling und vor dem Herbst.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Jahreszeit nach dem Winter, in der viele Pflanzen zu wachsen beginnen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die meist kälteste Jahreszeit zwischen Herbst und Frühling.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Herbst",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die Jahreszeit nach dem Sommer und vor dem Winter, die häufig mit Ernte und fallenden Blättern verbunden ist.",
+          "explain": {
+            "entryId": "Herbst",
+            "headword": "Herbst",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/hɛʁpst/",
+              "ipaUS": "/hɛʁpst/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Herbst",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erntezeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die Jahreszeit nach dem Sommer und vor dem Winter, die häufig mit Ernte und fallenden Blättern verbunden ist.",
+                    "examples": [
+                      "Im Herbst färben sich die Blätter gelb und rot."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Herbst – Beispielsatz folgt.",
+              "answer": "Die Jahreszeit nach dem Sommer und vor dem Winter, die häufig mit Ernte und fallenden Blättern verbunden ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die meist wärmste Jahreszeit zwischen Frühling und Herbst.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Jahreszeit nach dem Winter, in der die Vegetation neu beginnt.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Winter",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die meist kälteste Jahreszeit nach dem Herbst und vor dem Frühling.",
+          "explain": {
+            "entryId": "Winter",
+            "headword": "Winter",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɪntɐ/",
+              "ipaUS": "/ˈvɪntɐ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Winter",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "kalte Jahreszeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die meist kälteste Jahreszeit nach dem Herbst und vor dem Frühling.",
+                    "examples": [
+                      "Im Winter kann es in den Bergen stark schneien."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Winter – Beispielsatz folgt.",
+              "answer": "Die meist kälteste Jahreszeit nach dem Herbst und vor dem Frühling.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die Jahreszeit zwischen Sommer und Winter mit Ernte und fallenden Blättern.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die meist wärmste Jahreszeit mit den längsten Tagen.",
               "ok": false
             }
           ]

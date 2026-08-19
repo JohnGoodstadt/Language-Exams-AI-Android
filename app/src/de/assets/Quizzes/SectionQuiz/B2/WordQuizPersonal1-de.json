@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPersonal1-de",
-  "title": "",
+  "title": "Persönliche Informationen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Werdegang",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die zeitliche Entwicklung des Lebens einer Person, besonders ihrer Ausbildung und beruflichen Stationen.",
+          "explain": {
+            "entryId": "Werdegang",
+            "headword": "Werdegang",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈveːɐ̯dəˌɡaŋ/",
+              "ipaUS": "/ˈveːɐ̯dəˌɡaŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Werdegang",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lebenslauf",
+                  "Laufbahn"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die zeitliche Entwicklung des Lebens einer Person, besonders ihrer Ausbildung und beruflichen Stationen.",
+                    "examples": [
+                      "Im Vorstellungsgespräch erläuterte sie ihren beruflichen Werdegang."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Werdegang – Beispielsatz folgt.",
+              "answer": "Die zeitliche Entwicklung des Lebens einer Person, besonders ihrer Ausbildung und beruflichen Stationen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kenntnisse, Fähigkeiten und Abschlüsse, die jemanden für eine Aufgabe geeignet machen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die praktische Erfahrung, die jemand durch frühere berufliche Tätigkeiten gesammelt hat.",
               "ok": false
             }
           ]
@@ -34,18 +70,54 @@
           "title": "",
           "page": 2,
           "question": "Qualifikation",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kenntnisse, Fähigkeiten oder Abschlüsse, die jemanden für eine Aufgabe oder Position geeignet machen.",
+          "explain": {
+            "entryId": "Qualifikation",
+            "headword": "Qualifikation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kvalifikat͡si̯oːn/",
+              "ipaUS": "/kvalifikat͡si̯oːn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Qualifikation",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Befähigung",
+                  "Kompetenz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kenntnisse, Fähigkeiten oder Abschlüsse, die jemanden für eine Aufgabe oder Position geeignet machen.",
+                    "examples": [
+                      "Für die Stelle ist eine technische Qualifikation erforderlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Qualifikation – Beispielsatz folgt.",
+              "answer": "Kenntnisse, Fähigkeiten oder Abschlüsse, die jemanden für eine Aufgabe oder Position geeignet machen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die zeitliche Abfolge aller Ausbildungs- und Berufsstationen einer Person.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Das praktische Wissen, das ausschließlich durch frühere Arbeit entsteht.",
               "ok": false
             }
           ]
@@ -54,18 +126,53 @@
           "title": "",
           "page": 3,
           "question": "Aufenthaltstitel",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine behördliche Erlaubnis, die einer ausländischen Person den Aufenthalt in einem Land gestattet.",
+          "explain": {
+            "entryId": "Aufenthaltstitel",
+            "headword": "Aufenthaltstitel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaʊ̯fn̩thaltsˌtiːtl̩/",
+              "ipaUS": "/ˈaʊ̯fn̩thaltsˌtiːtl̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Aufenthaltstitel",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Aufenthaltserlaubnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine behördliche Erlaubnis, die einer ausländischen Person den Aufenthalt in einem Land gestattet.",
+                    "examples": [
+                      "Ihr Aufenthaltstitel ist noch zwei Jahre gültig."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Aufenthaltstitel – Beispielsatz folgt.",
+              "answer": "Eine behördliche Erlaubnis, die einer ausländischen Person den Aufenthalt in einem Land gestattet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die rechtliche Zugehörigkeit einer Person zu einem Staat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein amtlicher Nachweis, mit dem lediglich die Identität bestätigt wird.",
               "ok": false
             }
           ]
@@ -74,18 +181,53 @@
           "title": "",
           "page": 4,
           "question": "Staatsbürgerschaft",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die rechtliche Zugehörigkeit einer Person zu einem Staat mit entsprechenden Rechten und Pflichten.",
+          "explain": {
+            "entryId": "Staatsbürgerschaft",
+            "headword": "Staatsbürgerschaft",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʃtaːt͡sbʏʁɡɐˌʃaft/",
+              "ipaUS": "/ˈʃtaːt͡sbʏʁɡɐˌʃaft/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Staatsbürgerschaft",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Staatsangehörigkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die rechtliche Zugehörigkeit einer Person zu einem Staat mit entsprechenden Rechten und Pflichten.",
+                    "examples": [
+                      "Nach vielen Jahren beantragte er die deutsche Staatsbürgerschaft."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Staatsbürgerschaft – Beispielsatz folgt.",
+              "answer": "Die rechtliche Zugehörigkeit einer Person zu einem Staat mit entsprechenden Rechten und Pflichten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine zeitlich begrenzte behördliche Erlaubnis, in einem Staat zu leben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der amtliche Nachweis der persönlichen Identität unabhängig von Nationalität.",
               "ok": false
             }
           ]
@@ -94,18 +236,53 @@
           "title": "",
           "page": 5,
           "question": "Datenschutzerklärung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Erklärung darüber, welche personenbezogenen Daten erhoben, genutzt, gespeichert und geschützt werden.",
+          "explain": {
+            "entryId": "Datenschutzerklärung",
+            "headword": "Datenschutzerklärung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈdaːtn̩ʃʊt͡sʔɛɐ̯ˌklɛːʁʊŋ/",
+              "ipaUS": "/ˈdaːtn̩ʃʊt͡sʔɛɐ̯ˌklɛːʁʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Datenschutzerklärung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Datenschutzinformation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Erklärung darüber, welche personenbezogenen Daten erhoben, genutzt, gespeichert und geschützt werden.",
+                    "examples": [
+                      "In der Datenschutzerklärung steht, wie lange die Daten gespeichert werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Datenschutzerklärung – Beispielsatz folgt.",
+              "answer": "Eine Erklärung darüber, welche personenbezogenen Daten erhoben, genutzt, gespeichert und geschützt werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die freiwillige Zustimmung einer Person zu einer bestimmten Datenverarbeitung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein offizieller Beleg dafür, dass bestimmte persönliche Angaben richtig sind.",
               "ok": false
             }
           ]
@@ -114,18 +291,54 @@
           "title": "",
           "page": 6,
           "question": "Einwilligung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine freiwillige und informierte Zustimmung zu einer Handlung oder zur Verarbeitung persönlicher Daten.",
+          "explain": {
+            "entryId": "Einwilligung",
+            "headword": "Einwilligung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaɪ̯nvɪlɪɡʊŋ/",
+              "ipaUS": "/ˈaɪ̯nvɪlɪɡʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Einwilligung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Zustimmung",
+                  "Einverständnis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine freiwillige und informierte Zustimmung zu einer Handlung oder zur Verarbeitung persönlicher Daten.",
+                    "examples": [
+                      "Die Fotos dürfen nur mit Ihrer Einwilligung veröffentlicht werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Einwilligung – Beispielsatz folgt.",
+              "answer": "Eine freiwillige und informierte Zustimmung zu einer Handlung oder zur Verarbeitung persönlicher Daten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Informationstext, der allgemein den Umgang mit persönlichen Daten beschreibt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine amtliche Bestätigung, dass eine Person an einem Verfahren teilgenommen hat.",
               "ok": false
             }
           ]
@@ -134,18 +347,54 @@
           "title": "",
           "page": 7,
           "question": "Nachweis",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Beleg oder eine Information, mit der eine Behauptung, Berechtigung oder Tatsache bewiesen wird.",
+          "explain": {
+            "entryId": "Nachweis",
+            "headword": "Nachweis",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnaːxvaɪ̯s/",
+              "ipaUS": "/ˈnaːxvaɪ̯s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Nachweis",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Beleg",
+                  "Beweis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Beleg oder eine Information, mit der eine Behauptung, Berechtigung oder Tatsache bewiesen wird.",
+                    "examples": [
+                      "Als Nachweis der Berufserfahrung legte sie ein Arbeitszeugnis vor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nachweis – Beispielsatz folgt.",
+              "answer": "Ein Beleg oder eine Information, mit der eine Behauptung, Berechtigung oder Tatsache bewiesen wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein von einer zuständigen Stelle ausgestelltes Dokument, das eine Tatsache offiziell bestätigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine freiwillige Erklärung, mit der eine Person einer Handlung zustimmt.",
               "ok": false
             }
           ]
@@ -154,18 +403,54 @@
           "title": "",
           "page": 8,
           "question": "Bescheinigung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein offizielles Schriftstück, mit dem eine zuständige Stelle eine Tatsache oder Leistung bestätigt.",
+          "explain": {
+            "entryId": "Bescheinigung",
+            "headword": "Bescheinigung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʃaɪ̯nɪɡʊŋ/",
+              "ipaUS": "/bəˈʃaɪ̯nɪɡʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Bescheinigung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Bestätigung",
+                  "Attest"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein offizielles Schriftstück, mit dem eine zuständige Stelle eine Tatsache oder Leistung bestätigt.",
+                    "examples": [
+                      "Die Behörde verlangt eine Bescheinigung des Arbeitgebers."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Bescheinigung – Beispielsatz folgt.",
+              "answer": "Ein offizielles Schriftstück, mit dem eine zuständige Stelle eine Tatsache oder Leistung bestätigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jeder beliebige Beleg, der eine Behauptung oder Berechtigung beweisen kann.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Dokument, das erklärt, wie ein Unternehmen persönliche Daten verarbeitet.",
               "ok": false
             }
           ]
@@ -174,18 +459,54 @@
           "title": "",
           "page": 9,
           "question": "hervorgehen aus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Aus einer Quelle, einem Dokument oder einer Entwicklung erkennbar sein beziehungsweise daraus entstehen.",
+          "explain": {
+            "entryId": "hervorgehen aus",
+            "headword": "hervorgehen aus",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/hɛɐ̯ˈfoːɐ̯ɡeːən aʊ̯s/",
+              "ipaUS": "/hɛɐ̯ˈfoːɐ̯ɡeːən aʊ̯s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "trennbar mit aus",
+                "headwordLine": "hervorgehen aus",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sich ergeben aus",
+                  "ersichtlich sein aus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Aus einer Quelle, einem Dokument oder einer Entwicklung erkennbar sein beziehungsweise daraus entstehen.",
+                    "examples": [
+                      "Aus den Unterlagen geht hervor, dass sie die nötige Erfahrung besitzt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hervorgehen aus – Beispielsatz folgt.",
+              "answer": "Aus einer Quelle, einem Dokument oder einer Entwicklung erkennbar sein beziehungsweise daraus entstehen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Information bewusst in ein offizielles Dokument eintragen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einen Beleg als Beweis für eine Behauptung bei einer Behörde vorlegen.",
               "ok": false
             }
           ]
@@ -194,18 +515,53 @@
           "title": "",
           "page": 10,
           "question": "Berufserfahrung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Praktisches Wissen und Können, das durch frühere berufliche Tätigkeiten erworben wurde.",
+          "explain": {
+            "entryId": "Berufserfahrung",
+            "headword": "Berufserfahrung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈʁuːfsʔɛɐ̯ˌfaːʁʊŋ/",
+              "ipaUS": "/bəˈʁuːfsʔɛɐ̯ˌfaːʁʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Berufserfahrung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "berufliche Praxis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Praktisches Wissen und Können, das durch frühere berufliche Tätigkeiten erworben wurde.",
+                    "examples": [
+                      "Für die Position werden mindestens drei Jahre Berufserfahrung erwartet."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Berufserfahrung – Beispielsatz folgt.",
+              "answer": "Praktisches Wissen und Können, das durch frühere berufliche Tätigkeiten erworben wurde.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Formale Kenntnisse, Fähigkeiten und Abschlüsse, die für eine Tätigkeit erforderlich sind.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die vollständige zeitliche Entwicklung der Ausbildung und Karriere einer Person.",
               "ok": false
             }
           ]

@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizQuestions2-de",
-  "title": "",
+  "title": "Fragewörter",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder kommunikativen Funktion passt.",
+      "description": "B2 – Wortschatz und kommunikative Funktion",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "wovon",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Fragt nach der Quelle, dem Ausgangspunkt, Inhalt oder Bezug, der mit „von“ ausgedrückt wird.",
+          "explain": {
+            "entryId": "wovon",
+            "headword": "wovon",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈfɔn/",
+              "ipaUS": "/voˈfɔn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Pronominaladverb",
+                "grammarType": "Frage nach Quelle oder Bezug",
+                "headwordLine": "wovon",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "von was",
+                  "woraus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Fragt nach der Quelle, dem Ausgangspunkt, Inhalt oder Bezug, der mit „von“ ausgedrückt wird.",
+                    "examples": [
+                      "Wovon hängt der Erfolg des Projekts ab?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wovon – Beispielsatz folgt.",
+              "answer": "Fragt nach der Quelle, dem Ausgangspunkt, Inhalt oder Bezug, der mit „von“ ausgedrückt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Fragt nach dem inneren Bereich, in dem ein Unterschied besteht.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Fragt nach dem Mittel, mit dem eine Aufgabe durchgeführt wird.",
               "ok": false
             }
           ]

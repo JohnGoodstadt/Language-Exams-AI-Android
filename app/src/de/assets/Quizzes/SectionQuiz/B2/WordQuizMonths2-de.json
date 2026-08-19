@@ -2,50 +2,120 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizMonths2-de",
-  "title": "",
+  "title": "Monate",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "Halbjahr",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum von sechs Monaten beziehungsweise die Hälfte eines Jahres.",
+          "explain": {
+            "entryId": "Halbjahr",
+            "headword": "Halbjahr",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈhalpˌjaːɐ̯/",
+              "ipaUS": "/ˈhalpˌjaːɐ̯/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Halbjahr",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sechs Monate"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Zeitraum von sechs Monaten beziehungsweise die Hälfte eines Jahres.",
+                    "examples": [
+                      "Im ersten Halbjahr stieg der Umsatz deutlich."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Halbjahr – Beispielsatz folgt.",
+              "answer": "Ein Zeitraum von sechs Monaten beziehungsweise die Hälfte eines Jahres.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Zeitraum von drei Monaten beziehungsweise ein Viertel eines Jahres.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Übergang zwischen zwei aufeinanderfolgenden Monaten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "Quartal",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Zeitraum von drei Monaten beziehungsweise ein Viertel eines Jahres.",
+          "explain": {
+            "entryId": "Quartal",
+            "headword": "Quartal",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/kvaʁˈtaːl/",
+              "ipaUS": "/kvaʁˈtaːl/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "neutral",
+                "headwordLine": "Quartal",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vierteljahr"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Zeitraum von drei Monaten beziehungsweise ein Viertel eines Jahres.",
+                    "examples": [
+                      "Die Ergebnisse des ersten Quartals werden im April veröffentlicht."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Quartal – Beispielsatz folgt.",
+              "answer": "Ein Zeitraum von drei Monaten beziehungsweise ein Viertel eines Jahres.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Zeitraum von sechs Monaten beziehungsweise die Hälfte eines Jahres.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein einzelner regelmäßig wiederkehrender Monatstermin.",
               "ok": false
             }
           ]

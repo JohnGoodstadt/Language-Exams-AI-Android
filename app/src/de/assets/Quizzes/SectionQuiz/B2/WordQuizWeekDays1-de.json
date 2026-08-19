@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizWeekDays1-de",
-  "title": "",
+  "title": "Wochentage",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Montag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Wochentag nach Sonntag und vor Dienstag, häufig der Beginn der Arbeitswoche.",
+          "explain": {
+            "entryId": "Montag",
+            "headword": "Montag",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈmoːntaːk/",
+              "ipaUS": "/ˈmoːntaːk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Montag",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erster Wochentag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Wochentag nach Sonntag und vor Dienstag, häufig der Beginn der Arbeitswoche.",
+                    "examples": [
+                      "Die neue Arbeitswoche beginnt am Montag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Montag – Beispielsatz folgt.",
+              "answer": "Der Wochentag nach Sonntag und vor Dienstag, häufig der Beginn der Arbeitswoche.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Wochentag nach Donnerstag und vor Samstag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Wochentag nach Samstag und vor Montag.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Freitag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Wochentag nach Donnerstag und vor Samstag, häufig der letzte Tag der üblichen Arbeitswoche.",
+          "explain": {
+            "entryId": "Freitag",
+            "headword": "Freitag",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfʁaɪ̯taːk/",
+              "ipaUS": "/ˈfʁaɪ̯taːk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Freitag",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fünfter Wochentag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Wochentag nach Donnerstag und vor Samstag, häufig der letzte Tag der üblichen Arbeitswoche.",
+                    "examples": [
+                      "Am Freitag endet für viele die Arbeitswoche."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Freitag – Beispielsatz folgt.",
+              "answer": "Der Wochentag nach Donnerstag und vor Samstag, häufig der letzte Tag der üblichen Arbeitswoche.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Wochentag nach Sonntag und vor Dienstag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Wochentag nach Samstag und vor Montag.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Sonntag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Wochentag nach Samstag und vor Montag, in Deutschland grundsätzlich ein gesetzlicher Ruhetag.",
+          "explain": {
+            "entryId": "Sonntag",
+            "headword": "Sonntag",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɔntaːk/",
+              "ipaUS": "/ˈzɔntaːk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Sonntag",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ruhetag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Wochentag nach Samstag und vor Montag, in Deutschland grundsätzlich ein gesetzlicher Ruhetag.",
+                    "examples": [
+                      "Am Sonntag bleiben viele Geschäfte geschlossen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Sonntag – Beispielsatz folgt.",
+              "answer": "Der Wochentag nach Samstag und vor Montag, in Deutschland grundsätzlich ein gesetzlicher Ruhetag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der Wochentag nach Donnerstag und vor Samstag.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Der Wochentag, mit dem die übliche Arbeitswoche beginnt.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Wochentag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einer der sieben benannten Tage einer Kalenderwoche.",
+          "explain": {
+            "entryId": "Wochentag",
+            "headword": "Wochentag",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɔxn̩ˌtaːk/",
+              "ipaUS": "/ˈvɔxn̩ˌtaːk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Wochentag",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Tag der Woche"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Einer der sieben benannten Tage einer Kalenderwoche.",
+                    "examples": [
+                      "Bitte tragen Sie den passenden Wochentag in den Kalender ein."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wochentag – Beispielsatz folgt.",
+              "answer": "Einer der sieben benannten Tage einer Kalenderwoche.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein Tag, an dem nach gesetzlichen Regeln grundsätzlich gearbeitet werden darf.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein gesetzlich bestimmter Tag, an dem aus besonderem Anlass nicht gearbeitet wird.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "Werktag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Tag, der nicht Sonntag oder gesetzlicher Feiertag ist und grundsätzlich als Arbeitstag gilt.",
+          "explain": {
+            "entryId": "Werktag",
+            "headword": "Werktag",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɛʁkˌtaːk/",
+              "ipaUS": "/ˈvɛʁkˌtaːk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Werktag",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Arbeitstag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Tag, der nicht Sonntag oder gesetzlicher Feiertag ist und grundsätzlich als Arbeitstag gilt.",
+                    "examples": [
+                      "Die Lieferung erfolgt innerhalb von drei Werktagen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Werktag – Beispielsatz folgt.",
+              "answer": "Ein Tag, der nicht Sonntag oder gesetzlicher Feiertag ist und grundsätzlich als Arbeitstag gilt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jeder der sieben benannten Tage einer Woche ohne rechtliche Unterscheidung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein staatlich anerkannter Tag, an dem grundsätzlich Arbeitsruhe gilt.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "Feiertag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein gesetzlich oder religiös bestimmter besonderer Tag, an dem häufig nicht gearbeitet wird.",
+          "explain": {
+            "entryId": "Feiertag",
+            "headword": "Feiertag",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈfaɪ̯ɐˌtaːk/",
+              "ipaUS": "/ˈfaɪ̯ɐˌtaːk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Feiertag",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Festtag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein gesetzlich oder religiös bestimmter besonderer Tag, an dem häufig nicht gearbeitet wird.",
+                    "examples": [
+                      "Der 1. Mai ist in Deutschland ein gesetzlicher Feiertag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Feiertag – Beispielsatz folgt.",
+              "answer": "Ein gesetzlich oder religiös bestimmter besonderer Tag, an dem häufig nicht gearbeitet wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jeder normale Tag außer Sonntag, an dem gearbeitet werden darf.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein beliebiger benannter Tag innerhalb einer Kalenderwoche.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "wochentags",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Regelmäßig an den üblichen Wochentagen, meist von Montag bis Freitag.",
+          "explain": {
+            "entryId": "wochentags",
+            "headword": "wochentags",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈvɔxn̩taːks/",
+              "ipaUS": "/ˈvɔxn̩taːks/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adverb",
+                "grammarType": "regelmäßige Zeitangabe",
+                "headwordLine": "wochentags",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "unter der Woche"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Regelmäßig an den üblichen Wochentagen, meist von Montag bis Freitag.",
+                    "examples": [
+                      "Wochentags fährt der Bus alle zehn Minuten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "wochentags – Beispielsatz folgt.",
+              "answer": "Regelmäßig an den üblichen Wochentagen, meist von Montag bis Freitag.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ausschließlich an Samstagen und Sonntagen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Einmal an einem beliebigen, nicht näher bestimmten Tag der Woche.",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "Alltag",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das gewöhnliche tägliche Leben mit seinen regelmäßig wiederkehrenden Aufgaben und Abläufen.",
+          "explain": {
+            "entryId": "Alltag",
+            "headword": "Alltag",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈaltaːk/",
+              "ipaUS": "/ˈaltaːk/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Alltag",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "tägliches Leben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das gewöhnliche tägliche Leben mit seinen regelmäßig wiederkehrenden Aufgaben und Abläufen.",
+                    "examples": [
+                      "Nach dem Urlaub begann wieder der normale Alltag."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Alltag – Beispielsatz folgt.",
+              "answer": "Das gewöhnliche tägliche Leben mit seinen regelmäßig wiederkehrenden Aufgaben und Abläufen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein einzelner fest eingeübter Ablauf, der häufig wiederholt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein regelmäßiges zeitliches Muster von Arbeit, Ruhe und Aktivitäten.",
               "ok": false
             }
           ]
@@ -174,18 +454,54 @@
           "title": "",
           "page": 9,
           "question": "Routine",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein vertrauter Ablauf oder eine Tätigkeit, die regelmäßig auf ähnliche Weise wiederholt wird.",
+          "explain": {
+            "entryId": "Routine",
+            "headword": "Routine",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ʁuˈtiːnə/",
+              "ipaUS": "/ʁuˈtiːnə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Routine",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Gewohnheit",
+                  "fester Ablauf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein vertrauter Ablauf oder eine Tätigkeit, die regelmäßig auf ähnliche Weise wiederholt wird.",
+                    "examples": [
+                      "Das Prüfen der E-Mails gehört zu ihrer morgendlichen Routine."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Routine – Beispielsatz folgt.",
+              "answer": "Ein vertrauter Ablauf oder eine Tätigkeit, die regelmäßig auf ähnliche Weise wiederholt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das gesamte gewöhnliche tägliche Leben mit allen Aufgaben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die zeitliche Gliederung wiederkehrender Phasen innerhalb einer Woche.",
               "ok": false
             }
           ]
@@ -194,18 +510,54 @@
           "title": "",
           "page": 10,
           "question": "Rhythmus",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein regelmäßiges zeitliches Muster, in dem Vorgänge oder Tätigkeiten wiederkehren.",
+          "explain": {
+            "entryId": "Rhythmus",
+            "headword": "Rhythmus",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʁʏtmʊs/",
+              "ipaUS": "/ˈʁʏtmʊs/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Rhythmus",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Takt",
+                  "regelmäßiger Ablauf"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein regelmäßiges zeitliches Muster, in dem Vorgänge oder Tätigkeiten wiederkehren.",
+                    "examples": [
+                      "Nach der Reise musste er seinen Schlafrhythmus wiederfinden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Rhythmus – Beispielsatz folgt.",
+              "answer": "Ein regelmäßiges zeitliches Muster, in dem Vorgänge oder Tätigkeiten wiederkehren.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne vertraute Handlung, die immer gleich ausgeführt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Gesamtheit aller gewöhnlichen Aufgaben des täglichen Lebens.",
               "ok": false
             }
           ]

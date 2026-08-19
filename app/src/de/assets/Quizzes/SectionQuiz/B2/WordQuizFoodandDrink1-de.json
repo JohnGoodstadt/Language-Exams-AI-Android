@@ -2,30 +2,66 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizFoodandDrink1-de",
-  "title": "",
+  "title": "Essen & Trinken",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Ernährungsweise",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die typische Art, wie eine Person oder Gruppe Lebensmittel auswählt, kombiniert und regelmäßig zu sich nimmt.",
+          "explain": {
+            "entryId": "Ernährungsweise",
+            "headword": "Ernährungsweise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛɐ̯ˈnɛːʁʊŋsˌvaɪ̯zə/",
+              "ipaUS": "/ɛɐ̯ˈnɛːʁʊŋsˌvaɪ̯zə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Ernährungsweise",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ernährungsform",
+                  "Kost"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die typische Art, wie eine Person oder Gruppe Lebensmittel auswählt, kombiniert und regelmäßig zu sich nimmt.",
+                    "examples": [
+                      "Eine pflanzenreiche Ernährungsweise kann viele gesundheitliche Vorteile haben."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ernährungsweise – Beispielsatz folgt.",
+              "answer": "Die typische Art, wie eine Person oder Gruppe Lebensmittel auswählt, kombiniert und regelmäßig zu sich nimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein einzelner Stoff in Lebensmitteln, den der Körper für Energie oder Funktionen benötigt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die organisierte Versorgung einer Personengruppe mit Mahlzeiten und Getränken.",
               "ok": false
             }
           ]
@@ -34,18 +70,53 @@
           "title": "",
           "page": 2,
           "question": "Nährstoff",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Ein Bestandteil der Nahrung, den der Körper für Energie, Wachstum oder wichtige Funktionen benötigt.",
+          "explain": {
+            "entryId": "Nährstoff",
+            "headword": "Nährstoff",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈnɛːɐ̯ˌʃtɔf/",
+              "ipaUS": "/ˈnɛːɐ̯ˌʃtɔf/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Nährstoff",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Nahrungssubstanz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Ein Bestandteil der Nahrung, den der Körper für Energie, Wachstum oder wichtige Funktionen benötigt.",
+                    "examples": [
+                      "Eiweiß ist ein wichtiger Nährstoff für den Körper."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Nährstoff – Beispielsatz folgt.",
+              "answer": "Ein Bestandteil der Nahrung, den der Körper für Energie, Wachstum oder wichtige Funktionen benötigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Ein verarbeitetes oder unverarbeitetes Produkt, das Menschen als Nahrung dient.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die allgemeine Art, wie jemand seine tägliche Ernährung gestaltet.",
               "ok": false
             }
           ]
@@ -54,18 +125,54 @@
           "title": "",
           "page": 3,
           "question": "Verpflegung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Die organisierte Versorgung von Personen mit Essen und Getränken, besonders auf Reisen oder bei Veranstaltungen.",
+          "explain": {
+            "entryId": "Verpflegung",
+            "headword": "Verpflegung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈpfleːɡʊŋ/",
+              "ipaUS": "/fɛɐ̯ˈpfleːɡʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Verpflegung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Beköstigung",
+                  "Catering"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Die organisierte Versorgung von Personen mit Essen und Getränken, besonders auf Reisen oder bei Veranstaltungen.",
+                    "examples": [
+                      "Im Preis der Reise sind Unterkunft und Verpflegung enthalten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Verpflegung – Beispielsatz folgt.",
+              "answer": "Die organisierte Versorgung von Personen mit Essen und Getränken, besonders auf Reisen oder bei Veranstaltungen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Der praktische Vorgang, bei dem aus Zutaten ein Gericht hergestellt wird.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die regelmäßige persönliche Auswahl und Kombination von Lebensmitteln.",
               "ok": false
             }
           ]
@@ -74,18 +181,54 @@
           "title": "",
           "page": 4,
           "question": "Zubereitung",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Der Vorgang, bei dem Zutaten bearbeitet und zu einer Speise oder einem Getränk gemacht werden.",
+          "explain": {
+            "entryId": "Zubereitung",
+            "headword": "Zubereitung",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈt͡suːbəˌʁaɪ̯tʊŋ/",
+              "ipaUS": "/ˈt͡suːbəˌʁaɪ̯tʊŋ/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Zubereitung",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Herstellung",
+                  "Kochen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Der Vorgang, bei dem Zutaten bearbeitet und zu einer Speise oder einem Getränk gemacht werden.",
+                    "examples": [
+                      "Die Zubereitung des Gerichts dauert etwa vierzig Minuten."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Zubereitung – Beispielsatz folgt.",
+              "answer": "Der Vorgang, bei dem Zutaten bearbeitet und zu einer Speise oder einem Getränk gemacht werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das formelle Essen oder Trinken eines bereits fertigen Lebensmittels.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Versorgung einer Gruppe mit vollständigen Mahlzeiten.",
               "ok": false
             }
           ]
@@ -94,18 +237,54 @@
           "title": "",
           "page": 5,
           "question": "verzehren",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Speisen oder Getränke zu sich nehmen; eine formellere Bezeichnung für essen oder trinken.",
+          "explain": {
+            "entryId": "verzehren",
+            "headword": "verzehren",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈt͡seːʁən/",
+              "ipaUS": "/fɛɐ̯ˈt͡seːʁən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, formell",
+                "headwordLine": "verzehren",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "konsumieren",
+                  "essen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Speisen oder Getränke zu sich nehmen; eine formellere Bezeichnung für essen oder trinken.",
+                    "examples": [
+                      "Die Lebensmittel sollten innerhalb von zwei Tagen verzehrt werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verzehren – Beispielsatz folgt.",
+              "answer": "Speisen oder Getränke zu sich nehmen; eine formellere Bezeichnung für essen oder trinken.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Zutaten bearbeiten und daraus ein fertiges Gericht herstellen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Ein Gericht probieren und seine Würzung am Ende anpassen.",
               "ok": false
             }
           ]
@@ -114,18 +293,54 @@
           "title": "",
           "page": 6,
           "question": "Delikatesse",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine besonders feine, seltene oder geschätzte Speise.",
+          "explain": {
+            "entryId": "Delikatesse",
+            "headword": "Delikatesse",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/delikaˈtɛsə/",
+              "ipaUS": "/delikaˈtɛsə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Delikatesse",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Feinkost",
+                  "Köstlichkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine besonders feine, seltene oder geschätzte Speise.",
+                    "examples": [
+                      "In der Region gilt der Käse als besondere Delikatesse."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Delikatesse – Beispielsatz folgt.",
+              "answer": "Eine besonders feine, seltene oder geschätzte Speise.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Jedes Produkt, das Menschen grundsätzlich als Nahrung verwenden können.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Mahlzeit, die besonders lange satt macht.",
               "ok": false
             }
           ]
@@ -134,18 +349,54 @@
           "title": "",
           "page": 7,
           "question": "verderblich",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So beschaffen, dass ein Lebensmittel schnell schlecht oder ungenießbar werden kann.",
+          "explain": {
+            "entryId": "verderblich",
+            "headword": "verderblich",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/fɛɐ̯ˈdɛʁplɪç/",
+              "ipaUS": "/fɛɐ̯ˈdɛʁplɪç/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "begrenzte Haltbarkeit",
+                "headwordLine": "verderblich",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "leicht verderbend",
+                  "nicht lange haltbar"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So beschaffen, dass ein Lebensmittel schnell schlecht oder ungenießbar werden kann.",
+                    "examples": [
+                      "Frischer Fisch ist leicht verderblich und muss gekühlt werden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "verderblich – Beispielsatz folgt.",
+              "answer": "So beschaffen, dass ein Lebensmittel schnell schlecht oder ungenießbar werden kann.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Für den Körper schwer verträglich oder unangenehm zu verdauen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So nahrhaft, dass nach dem Essen lange kein Hunger entsteht.",
               "ok": false
             }
           ]
@@ -154,18 +405,54 @@
           "title": "",
           "page": 8,
           "question": "Genuss",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Das angenehme, bewusste Erleben einer Speise, eines Getränks oder einer anderen positiven Erfahrung.",
+          "explain": {
+            "entryId": "Genuss",
+            "headword": "Genuss",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈnʊs/",
+              "ipaUS": "/ɡəˈnʊs/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "maskulin",
+                "headwordLine": "Genuss",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vergnügen",
+                  "Wohlgeschmack"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Das angenehme, bewusste Erleben einer Speise, eines Getränks oder einer anderen positiven Erfahrung.",
+                    "examples": [
+                      "Für sie ist gutes Essen ein besonderer Genuss."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Genuss – Beispielsatz folgt.",
+              "answer": "Das angenehme, bewusste Erleben einer Speise, eines Getränks oder einer anderen positiven Erfahrung.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Das Gefühl, nach einer nahrhaften Mahlzeit keinen Hunger mehr zu haben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine besonders seltene und hochwertige Speise selbst.",
               "ok": false
             }
           ]
@@ -174,18 +461,53 @@
           "title": "",
           "page": 9,
           "question": "sättigend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "So nahrhaft oder gehaltvoll, dass eine Speise den Hunger für längere Zeit stillt.",
+          "explain": {
+            "entryId": "sättigend",
+            "headword": "sättigend",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzɛtɪɡn̩t/",
+              "ipaUS": "/ˈzɛtɪɡn̩t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Adjektiv",
+                "grammarType": "Wirkung auf Hunger",
+                "headwordLine": "sättigend",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "satt machend"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "So nahrhaft oder gehaltvoll, dass eine Speise den Hunger für längere Zeit stillt.",
+                    "examples": [
+                      "Haferflocken sind gesund und sättigend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sättigend – Beispielsatz folgt.",
+              "answer": "So nahrhaft oder gehaltvoll, dass eine Speise den Hunger für längere Zeit stillt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "So leicht verdaulich, dass der Körper die Speise gut verträgt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "So empfindlich, dass das Lebensmittel schnell ungenießbar wird.",
               "ok": false
             }
           ]
@@ -194,18 +516,53 @@
           "title": "",
           "page": 10,
           "question": "Unverträglichkeit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine körperliche Reaktion, bei der bestimmte Lebensmittel oder Stoffe nicht gut vertragen werden.",
+          "explain": {
+            "entryId": "Unverträglichkeit",
+            "headword": "Unverträglichkeit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈʊnfɛɐ̯tʁɛːklɪçkaɪ̯t/",
+              "ipaUS": "/ˈʊnfɛɐ̯tʁɛːklɪçkaɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Substantiv",
+                "grammarType": "feminin",
+                "headwordLine": "Unverträglichkeit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Intoleranz"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine körperliche Reaktion, bei der bestimmte Lebensmittel oder Stoffe nicht gut vertragen werden.",
+                    "examples": [
+                      "Wegen einer Laktoseunverträglichkeit meidet sie normale Milch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Unverträglichkeit – Beispielsatz folgt.",
+              "answer": "Eine körperliche Reaktion, bei der bestimmte Lebensmittel oder Stoffe nicht gut vertragen werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Immunreaktion des Körpers auf einen normalerweise harmlosen Stoff.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine allgemein schwere Verdauung nach besonders reichhaltigem Essen.",
               "ok": false
             }
           ]

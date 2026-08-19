@@ -2,30 +2,65 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizHello1-de",
-  "title": "",
+  "title": "Hallo",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung und kommunikativen Funktion passt.",
+      "description": "B2 – Wortschatz, Register und kommunikative Funktion",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
           "page": 1,
           "question": "Gestatten Sie, dass ich mich vorstelle",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine sehr förmliche Bitte um Erlaubnis, sich selbst vorzustellen.",
+          "explain": {
+            "entryId": "Gestatten Sie, dass ich mich vorstelle",
+            "headword": "Gestatten Sie, dass ich mich vorstelle",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɡəˈʃtatn̩ ziː das ɪç mɪç ˈfoːɐ̯ʃtɛlə/",
+              "ipaUS": "/ɡəˈʃtatn̩ ziː das ɪç mɪç ˈfoːɐ̯ʃtɛlə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "förmliche Selbstvorstellung",
+                "headwordLine": "Gestatten Sie, dass ich mich vorstelle",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Erlauben Sie mir, mich vorzustellen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine sehr förmliche Bitte um Erlaubnis, sich selbst vorzustellen.",
+                    "examples": [
+                      "Gestatten Sie, dass ich mich vorstelle: Mein Name ist Dr. Neumann."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Gestatten Sie, dass ich mich vorstelle – Beispielsatz folgt.",
+              "answer": "Eine sehr förmliche Bitte um Erlaubnis, sich selbst vorzustellen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine förmliche Bitte, eine andere anwesende Person vorstellen zu dürfen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine höfliche Ankündigung, dass man das Gespräch nun verlassen möchte.",
               "ok": false
             }
           ]
@@ -34,18 +69,53 @@
           "title": "",
           "page": 2,
           "question": "Ich freue mich, die Gelegenheit zu haben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt Freude und Wertschätzung darüber aus, eine bestimmte Möglichkeit zu erhalten.",
+          "explain": {
+            "entryId": "Ich freue mich, die Gelegenheit zu haben",
+            "headword": "Ich freue mich, die Gelegenheit zu haben",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪç ˈfʁɔɪ̯ə mɪç diː ɡəˈleːɡn̩haɪ̯t t͡suː ˈhaːbn̩/",
+              "ipaUS": "/ɪç ˈfʁɔɪ̯ə mɪç diː ɡəˈleːɡn̩haɪ̯t t͡suː ˈhaːbn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Wertschätzung einer Möglichkeit",
+                "headwordLine": "Ich freue mich, die Gelegenheit zu haben",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ich bin froh über diese Möglichkeit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt Freude und Wertschätzung darüber aus, eine bestimmte Möglichkeit zu erhalten.",
+                    "examples": [
+                      "Ich freue mich, die Gelegenheit zu haben, unser Projekt heute vorzustellen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich freue mich, die Gelegenheit zu haben – Beispielsatz folgt.",
+              "answer": "Drückt Freude und Wertschätzung darüber aus, eine bestimmte Möglichkeit zu erhalten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt Dank dafür aus, dass eine bestimmte Person persönlich anwesend ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Drückt die Hoffnung aus, nach dem Treffen weiterhin miteinander verbunden zu bleiben.",
               "ok": false
             }
           ]
@@ -54,18 +124,53 @@
           "title": "",
           "page": 3,
           "question": "Wir wurden einander noch nicht vorgestellt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Weist höflich darauf hin, dass zwei Personen noch nicht offiziell miteinander bekannt gemacht wurden.",
+          "explain": {
+            "entryId": "Wir wurden einander noch nicht vorgestellt",
+            "headword": "Wir wurden einander noch nicht vorgestellt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/viːɐ̯ ˈvʊʁdn̩ aɪ̯ˈnandɐ nɔx nɪçt ˈfoːɐ̯ɡəʃtɛlt/",
+              "ipaUS": "/viːɐ̯ ˈvʊʁdn̩ aɪ̯ˈnandɐ nɔx nɪçt ˈfoːɐ̯ɡəʃtɛlt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Hinweis auf fehlende Vorstellung",
+                "headwordLine": "Wir wurden einander noch nicht vorgestellt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wir kennen uns noch nicht offiziell"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Weist höflich darauf hin, dass zwei Personen noch nicht offiziell miteinander bekannt gemacht wurden.",
+                    "examples": [
+                      "Ich glaube, wir wurden einander noch nicht vorgestellt. Ich heiße König."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Wir wurden einander noch nicht vorgestellt – Beispielsatz folgt.",
+              "answer": "Weist höflich darauf hin, dass zwei Personen noch nicht offiziell miteinander bekannt gemacht wurden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Erklärt, dass zwei Personen schon voneinander gehört, aber noch nie miteinander gesprochen haben.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bittet um Erlaubnis, eine dritte Person der anwesenden Gruppe vorzustellen.",
               "ok": false
             }
           ]
@@ -74,18 +179,53 @@
           "title": "",
           "page": 4,
           "question": "Es ist mir eine Ehre",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt sehr förmliche und hohe Wertschätzung dafür aus, jemanden zu treffen oder etwas tun zu dürfen.",
+          "explain": {
+            "entryId": "Es ist mir eine Ehre",
+            "headword": "Es ist mir eine Ehre",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛs ɪst miːɐ̯ ˈaɪ̯nə ˈeːʁə/",
+              "ipaUS": "/ɛs ɪst miːɐ̯ ˈaɪ̯nə ˈeːʁə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "besondere Wertschätzung",
+                "headwordLine": "Es ist mir eine Ehre",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ich fühle mich geehrt"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt sehr förmliche und hohe Wertschätzung dafür aus, jemanden zu treffen oder etwas tun zu dürfen.",
+                    "examples": [
+                      "Es ist mir eine Ehre, heute vor Ihnen sprechen zu dürfen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Es ist mir eine Ehre – Beispielsatz folgt.",
+              "answer": "Drückt sehr förmliche und hohe Wertschätzung dafür aus, jemanden zu treffen oder etwas tun zu dürfen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt höflich aus, dass ein vergangenes Treffen angenehm gewesen ist.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bedankt sich dafür, dass eine eingeladene Person tatsächlich erschienen ist.",
               "ok": false
             }
           ]
@@ -94,18 +234,53 @@
           "title": "",
           "page": 5,
           "question": "Ich schätze Ihre Anwesenheit",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt aus, dass die Anwesenheit einer Person als wertvoll empfunden und anerkannt wird.",
+          "explain": {
+            "entryId": "Ich schätze Ihre Anwesenheit",
+            "headword": "Ich schätze Ihre Anwesenheit",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪç ˈʃɛt͡sə ˈiːʁə ˈanveːzn̩haɪ̯t/",
+              "ipaUS": "/ɪç ˈʃɛt͡sə ˈiːʁə ˈanveːzn̩haɪ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Dank für Anwesenheit",
+                "headwordLine": "Ich schätze Ihre Anwesenheit",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Vielen Dank, dass Sie hier sind"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt aus, dass die Anwesenheit einer Person als wertvoll empfunden und anerkannt wird.",
+                    "examples": [
+                      "Ich schätze Ihre Anwesenheit bei diesem wichtigen Gespräch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich schätze Ihre Anwesenheit – Beispielsatz folgt.",
+              "answer": "Drückt aus, dass die Anwesenheit einer Person als wertvoll empfunden und anerkannt wird.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt große Ehre darüber aus, eine besondere Aufgabe übernehmen zu dürfen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Drückt Freude darüber aus, erstmals von einer bekannten Person gehört zu haben.",
               "ok": false
             }
           ]
@@ -114,18 +289,53 @@
           "title": "",
           "page": 6,
           "question": "Man hat mir viel von Ihnen erzählt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Teilt mit, dass man bereits viele Informationen oder Berichte über die angesprochene Person erhalten hat.",
+          "explain": {
+            "entryId": "Man hat mir viel von Ihnen erzählt",
+            "headword": "Man hat mir viel von Ihnen erzählt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/man hat miːɐ̯ fiːl fɔn ˈiːnən ɛɐ̯ˈt͡sɛːlt/",
+              "ipaUS": "/man hat miːɐ̯ fiːl fɔn ˈiːnən ɛɐ̯ˈt͡sɛːlt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Bezug auf frühere Berichte",
+                "headwordLine": "Man hat mir viel von Ihnen erzählt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ich habe schon viel über Sie gehört"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Teilt mit, dass man bereits viele Informationen oder Berichte über die angesprochene Person erhalten hat.",
+                    "examples": [
+                      "Man hat mir viel von Ihnen erzählt; Ihre Arbeit ist sehr bekannt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Man hat mir viel von Ihnen erzählt – Beispielsatz folgt.",
+              "answer": "Teilt mit, dass man bereits viele Informationen oder Berichte über die angesprochene Person erhalten hat.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Erklärt, dass man einer anderen Person bereits ausführlich vom Gesprächspartner berichtet hat.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sagt, dass zwei Personen zwar anwesend sind, aber noch nicht offiziell vorgestellt wurden.",
               "ok": false
             }
           ]
@@ -134,18 +344,53 @@
           "title": "",
           "page": 7,
           "question": "Womit kann ich Ihnen behilflich sein?",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine förmliche Frage danach, welche Hilfe oder Unterstützung die angesprochene Person benötigt.",
+          "explain": {
+            "entryId": "Womit kann ich Ihnen behilflich sein?",
+            "headword": "Womit kann ich Ihnen behilflich sein?",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/voˈmɪt kan ɪç ˈiːnən bəˈhɪlflɪç zaɪ̯n/",
+              "ipaUS": "/voˈmɪt kan ɪç ˈiːnən bəˈhɪlflɪç zaɪ̯n/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "förmliches Hilfsangebot",
+                "headwordLine": "Womit kann ich Ihnen behilflich sein?",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Wie kann ich Ihnen helfen?"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine förmliche Frage danach, welche Hilfe oder Unterstützung die angesprochene Person benötigt.",
+                    "examples": [
+                      "Guten Morgen. Womit kann ich Ihnen behilflich sein?"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Womit kann ich Ihnen behilflich sein? – Beispielsatz folgt.",
+              "answer": "Eine förmliche Frage danach, welche Hilfe oder Unterstützung die angesprochene Person benötigt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine höfliche Frage danach, warum eine Person zu einem Treffen eingeladen wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine förmliche Bitte, die eigene Unterstützung an eine dritte Person weiterzugeben.",
               "ok": false
             }
           ]
@@ -154,18 +399,53 @@
           "title": "",
           "page": 8,
           "question": "Ich möchte mich verabschieden",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kündigt höflich an, dass man gehen und sich von den Anwesenden verabschieden möchte.",
+          "explain": {
+            "entryId": "Ich möchte mich verabschieden",
+            "headword": "Ich möchte mich verabschieden",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪç ˈmœçtə mɪç fɛɐ̯ˈʔapʃiːdn̩/",
+              "ipaUS": "/ɪç ˈmœçtə mɪç fɛɐ̯ˈʔapʃiːdn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Ankündigung des Abschieds",
+                "headwordLine": "Ich möchte mich verabschieden",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Ich möchte jetzt gehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kündigt höflich an, dass man gehen und sich von den Anwesenden verabschieden möchte.",
+                    "examples": [
+                      "Es ist schon spät, deshalb möchte ich mich verabschieden."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich möchte mich verabschieden – Beispielsatz folgt.",
+              "answer": "Kündigt höflich an, dass man gehen und sich von den Anwesenden verabschieden möchte.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt nach einem beendeten Treffen aus, dass die gemeinsame Zeit angenehm war.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bittet darum, einer abwesenden Person freundliche Grüße zu übermitteln.",
               "ok": false
             }
           ]
@@ -174,18 +454,53 @@
           "title": "",
           "page": 9,
           "question": "Es war mir ein Vergnügen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt höflich aus, dass eine Begegnung, Zusammenarbeit oder Tätigkeit angenehm gewesen ist.",
+          "explain": {
+            "entryId": "Es war mir ein Vergnügen",
+            "headword": "Es war mir ein Vergnügen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛs vaːɐ̯ miːɐ̯ aɪ̯n fɛɐ̯ˈɡnyːɡn̩/",
+              "ipaUS": "/ɛs vaːɐ̯ miːɐ̯ aɪ̯n fɛɐ̯ˈɡnyːɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "höfliche positive Rückschau",
+                "headwordLine": "Es war mir ein Vergnügen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Es hat mir Freude gemacht"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt höflich aus, dass eine Begegnung, Zusammenarbeit oder Tätigkeit angenehm gewesen ist.",
+                    "examples": [
+                      "Vielen Dank für das Gespräch. Es war mir ein Vergnügen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Es war mir ein Vergnügen – Beispielsatz folgt.",
+              "answer": "Drückt höflich aus, dass eine Begegnung, Zusammenarbeit oder Tätigkeit angenehm gewesen ist.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt die Hoffnung aus, eine Person in Zukunft erneut kontaktieren zu können.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kündigt höflich an, dass man das Treffen nun verlassen muss.",
               "ok": false
             }
           ]
@@ -194,18 +509,53 @@
           "title": "",
           "page": 10,
           "question": "Ich hoffe, wir bleiben in Kontakt",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Drückt den Wunsch aus, die Verbindung nach einer Begegnung oder Zusammenarbeit fortzusetzen.",
+          "explain": {
+            "entryId": "Ich hoffe, wir bleiben in Kontakt",
+            "headword": "Ich hoffe, wir bleiben in Kontakt",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪç ˈhɔfə viːɐ̯ ˈblaɪ̯bn̩ ɪn kɔnˈtakt/",
+              "ipaUS": "/ɪç ˈhɔfə viːɐ̯ ˈblaɪ̯bn̩ ɪn kɔnˈtakt/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Wendung",
+                "grammarType": "Wunsch nach weiterem Kontakt",
+                "headwordLine": "Ich hoffe, wir bleiben in Kontakt",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "Lassen Sie uns in Verbindung bleiben"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Drückt den Wunsch aus, die Verbindung nach einer Begegnung oder Zusammenarbeit fortzusetzen.",
+                    "examples": [
+                      "Vielen Dank für den Austausch. Ich hoffe, wir bleiben in Kontakt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "Ich hoffe, wir bleiben in Kontakt – Beispielsatz folgt.",
+              "answer": "Drückt den Wunsch aus, die Verbindung nach einer Begegnung oder Zusammenarbeit fortzusetzen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt den Wunsch aus, einer abwesenden Person Grüße zu übermitteln.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Wünscht einer Person nach dem Abschied allgemein Wohlergehen.",
               "ok": false
             }
           ]

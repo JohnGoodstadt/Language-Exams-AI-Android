@@ -2,170 +2,457 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizVerbs2-de",
-  "title": "",
+  "title": "Häufige Verben",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "sich durchsetzen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Trotz Widerstand erfolgreich werden oder die eigene Position beziehungsweise Interessen behaupten.",
+          "explain": {
+            "entryId": "sich durchsetzen",
+            "headword": "sich durchsetzen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç ˈdʊʁçˌzɛt͡sn̩/",
+              "ipaUS": "/zɪç ˈdʊʁçˌzɛt͡sn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "reflexiv, trennbar",
+                "headwordLine": "sich durchsetzen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sich behaupten",
+                  "siegen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Trotz Widerstand erfolgreich werden oder die eigene Position beziehungsweise Interessen behaupten.",
+                    "examples": [
+                      "Am Ende setzte sich der bessere Vorschlag durch."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich durchsetzen – Beispielsatz folgt.",
+              "answer": "Trotz Widerstand erfolgreich werden oder die eigene Position beziehungsweise Interessen behaupten.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Einen Aspekt in einer Darstellung besonders sichtbar machen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine schwierige Aufgabe trotz Belastung erfolgreich bewältigen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "hervorheben",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen Aspekt besonders deutlich, wichtig oder sichtbar machen.",
+          "explain": {
+            "entryId": "hervorheben",
+            "headword": "hervorheben",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/hɛɐ̯ˈfoːɐ̯ˌheːbn̩/",
+              "ipaUS": "/hɛɐ̯ˈfoːɐ̯ˌheːbn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, trennbar",
+                "headwordLine": "hervorheben",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "betonen",
+                  "unterstreichen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Einen Aspekt besonders deutlich, wichtig oder sichtbar machen.",
+                    "examples": [
+                      "Der Bericht hebt die positiven Ergebnisse hervor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "hervorheben – Beispielsatz folgt.",
+              "answer": "Einen Aspekt besonders deutlich, wichtig oder sichtbar machen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine eigene Position trotz Widerstand erfolgreich behaupten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine negative Folge bewusst als Preis für einen Vorteil akzeptieren.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "in Kauf nehmen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Einen bekannten Nachteil oder ein Risiko bewusst akzeptieren, um ein Ziel zu erreichen.",
+          "explain": {
+            "entryId": "in Kauf nehmen",
+            "headword": "in Kauf nehmen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪn ˈkaʊ̯f ˌneːmən/",
+              "ipaUS": "/ɪn ˈkaʊ̯f ˌneːmən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "feste Wendung",
+                "headwordLine": "in Kauf nehmen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "akzeptieren",
+                  "hinnehmen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Einen bekannten Nachteil oder ein Risiko bewusst akzeptieren, um ein Ziel zu erreichen.",
+                    "examples": [
+                      "Für die bessere Stelle nahm sie einen längeren Arbeitsweg in Kauf."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in Kauf nehmen – Beispielsatz folgt.",
+              "answer": "Einen bekannten Nachteil oder ein Risiko bewusst akzeptieren, um ein Ziel zu erreichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine verfügbare Dienstleistung oder ein Recht tatsächlich nutzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Vor- und Nachteile ohne abschließende Entscheidung gegeneinander prüfen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "abwägen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Verschiedene Argumente, Folgen oder Möglichkeiten sorgfältig miteinander vergleichen.",
+          "explain": {
+            "entryId": "abwägen",
+            "headword": "abwägen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapˌvɛːɡn̩/",
+              "ipaUS": "/ˈapˌvɛːɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv, trennbar",
+                "headwordLine": "abwägen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gegeneinander abwägen",
+                  "prüfen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Verschiedene Argumente, Folgen oder Möglichkeiten sorgfältig miteinander vergleichen.",
+                    "examples": [
+                      "Vor der Entscheidung sollten wir Chancen und Risiken abwägen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abwägen – Beispielsatz folgt.",
+              "answer": "Verschiedene Argumente, Folgen oder Möglichkeiten sorgfältig miteinander vergleichen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine einzelne relevante Information bei einer Planung beachten.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine Möglichkeit lediglich grundsätzlich als Option prüfen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "beitragen zu",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Durch eine Handlung oder einen Faktor einen Anteil an einem Ergebnis oder einer Entwicklung haben.",
+          "explain": {
+            "entryId": "beitragen zu",
+            "headword": "beitragen zu",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈbaɪ̯ˌtʁaːɡn̩ t͡suː/",
+              "ipaUS": "/ˈbaɪ̯ˌtʁaːɡn̩ t͡suː/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "trennbar mit zu",
+                "headwordLine": "beitragen zu",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "mitwirken an",
+                  "fördern"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Durch eine Handlung oder einen Faktor einen Anteil an einem Ergebnis oder einer Entwicklung haben.",
+                    "examples": [
+                      "Regelmäßige Bewegung trägt zur Gesundheit bei."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "beitragen zu – Beispielsatz folgt.",
+              "answer": "Durch eine Handlung oder einen Faktor einen Anteil an einem Ergebnis oder einer Entwicklung haben.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Vollständig sicherstellen, dass ein bestimmtes Ergebnis eintritt.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Die Entwicklung einer Sache negativ behindern oder schwächen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 6,
+          "page": 16,
           "question": "sich herausstellen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Nach einer Prüfung oder Entwicklung als wahr, falsch oder anders als erwartet erkennbar werden.",
+          "explain": {
+            "entryId": "sich herausstellen",
+            "headword": "sich herausstellen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/zɪç hɛˈʁaʊ̯sˌʃtɛlən/",
+              "ipaUS": "/zɪç hɛˈʁaʊ̯sˌʃtɛlən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "reflexiv, trennbar",
+                "headwordLine": "sich herausstellen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sich erweisen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Nach einer Prüfung oder Entwicklung als wahr, falsch oder anders als erwartet erkennbar werden.",
+                    "examples": [
+                      "Die Meldung stellte sich später als falsch heraus."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "sich herausstellen – Beispielsatz folgt.",
+              "answer": "Nach einer Prüfung oder Entwicklung als wahr, falsch oder anders als erwartet erkennbar werden.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Aussage durch besondere Betonung sichtbar und wichtig machen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Sich trotz Widerstand mit der eigenen Meinung erfolgreich behaupten.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 7,
+          "page": 17,
           "question": "in Erwägung ziehen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine Möglichkeit sorgfältig und eher formell als Option für eine Entscheidung prüfen.",
+          "explain": {
+            "entryId": "in Erwägung ziehen",
+            "headword": "in Erwägung ziehen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪn ɛɐ̯ˈvɛːɡʊŋ ˌt͡siːən/",
+              "ipaUS": "/ɪn ɛɐ̯ˈvɛːɡʊŋ ˌt͡siːən/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verbverbindung",
+                "grammarType": "formelle Wendung",
+                "headwordLine": "in Erwägung ziehen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "erwägen",
+                  "in Betracht ziehen"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine Möglichkeit sorgfältig und eher formell als Option für eine Entscheidung prüfen.",
+                    "examples": [
+                      "Die Regierung zieht weitere Maßnahmen in Erwägung."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "in Erwägung ziehen – Beispielsatz folgt.",
+              "answer": "Eine Möglichkeit sorgfältig und eher formell als Option für eine Entscheidung prüfen.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Eine Möglichkeit allgemein und ohne besonderen formellen Ton berücksichtigen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Mehrere konkrete Vor- und Nachteile direkt miteinander vergleichen.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 8,
+          "page": 18,
           "question": "bewältigen",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Eine schwierige Aufgabe, Situation oder Belastung erfolgreich meistern.",
+          "explain": {
+            "entryId": "bewältigen",
+            "headword": "bewältigen",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/bəˈvɛltɪɡn̩/",
+              "ipaUS": "/bəˈvɛltɪɡn̩/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Verb",
+                "grammarType": "transitiv",
+                "headwordLine": "bewältigen",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "meistern",
+                  "überwinden"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Eine schwierige Aufgabe, Situation oder Belastung erfolgreich meistern.",
+                    "examples": [
+                      "Gemeinsam konnten sie die Krise bewältigen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "bewältigen – Beispielsatz folgt.",
+              "answer": "Eine schwierige Aufgabe, Situation oder Belastung erfolgreich meistern.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Die eigene Meinung gegen starken Widerstand durchsetzen.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Eine negative Folge bewusst akzeptieren, um einen Vorteil zu erhalten.",
               "ok": false
             }
           ]

@@ -2,110 +2,290 @@
   "fileformat": 13,
   "location": 0,
   "sheetname": "WordQuizPrepositions2-de",
-  "title": "",
+  "title": "Präpositionen",
   "updatedDate": 0,
   "data": [
     {
-      "title": "Choose the sentence that uses the word correctly.",
-      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "title": "Wähle die Erklärung, die am besten zur Bedeutung oder Verwendung passt.",
+      "description": "B2 – Wortschatz und Wortbedeutung",
       "sortorder": 1,
       "sections": [
         {
           "title": "",
-          "page": 1,
+          "page": 11,
           "question": "entsprechend",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kennzeichnet, dass etwas mit einer Regel, Erwartung oder Vorgabe übereinstimmt.",
+          "explain": {
+            "entryId": "entsprechend",
+            "headword": "entsprechend",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɛntˈʃpʁɛçn̩t/",
+              "ipaUS": "/ɛntˈʃpʁɛçn̩t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Übereinstimmung",
+                "headwordLine": "entsprechend",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gemäß",
+                  "in Übereinstimmung mit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kennzeichnet, dass etwas mit einer Regel, Erwartung oder Vorgabe übereinstimmt.",
+                    "examples": [
+                      "Entsprechend der Vereinbarung wurde der Betrag überwiesen."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "entsprechend – Beispielsatz folgt.",
+              "answer": "Kennzeichnet, dass etwas mit einer Regel, Erwartung oder Vorgabe übereinstimmt.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Gibt wieder, was eine Quelle ausdrücklich behauptet oder berichtet.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Stellt lediglich einen allgemeinen Bezug zu einem Thema her.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 2,
+          "page": 12,
           "question": "laut",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Kennzeichnet die Quelle einer Information oder Aussage: wie dort angegeben oder berichtet.",
+          "explain": {
+            "entryId": "laut",
+            "headword": "laut",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/laʊ̯t/",
+              "ipaUS": "/laʊ̯t/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "Quellenangabe",
+                "headwordLine": "laut",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "gemäß der Aussage von",
+                  "nach"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Kennzeichnet die Quelle einer Information oder Aussage: wie dort angegeben oder berichtet.",
+                    "examples": [
+                      "Laut dem Bericht sind die Emissionen gesunken."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "laut – Beispielsatz folgt.",
+              "answer": "Kennzeichnet die Quelle einer Information oder Aussage: wie dort angegeben oder berichtet.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kennzeichnet die Übereinstimmung mit einer Regel, ohne eine Quelle zu zitieren.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Bezeichnet die Seite, von der eine Handlung oder Initiative ausgeht.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 3,
+          "page": 13,
           "question": "seitens",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bezeichnet die Person, Gruppe oder Institution, von deren Seite eine Handlung oder Haltung ausgeht.",
+          "explain": {
+            "entryId": "seitens",
+            "headword": "seitens",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈzaɪ̯tn̩s/",
+              "ipaUS": "/ˈzaɪ̯tn̩s/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präposition",
+                "grammarType": "ausgehende Seite",
+                "headwordLine": "seitens",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "vonseiten",
+                  "von … aus"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bezeichnet die Person, Gruppe oder Institution, von deren Seite eine Handlung oder Haltung ausgeht.",
+                    "examples": [
+                      "Seitens der Behörde bestehen keine Einwände."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "seitens – Beispielsatz folgt.",
+              "answer": "Bezeichnet die Person, Gruppe oder Institution, von deren Seite eine Handlung oder Haltung ausgeht.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Kennzeichnet die Quelle, in der eine Information veröffentlicht wurde.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Nennt die Person, die von einer Entscheidung besonders profitiert.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 4,
+          "page": 14,
           "question": "im Zuge",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Bedeutet im Verlauf, als Teil oder im Zusammenhang mit einem größeren Vorgang.",
+          "explain": {
+            "entryId": "im Zuge",
+            "headword": "im Zuge",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ɪm ˈt͡suːɡə/",
+              "ipaUS": "/ɪm ˈt͡suːɡə/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präpositionale Wendung",
+                "grammarType": "Verlauf oder Zusammenhang",
+                "headwordLine": "im Zuge",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "im Rahmen",
+                  "während"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Bedeutet im Verlauf, als Teil oder im Zusammenhang mit einem größeren Vorgang.",
+                    "examples": [
+                      "Im Zuge der Renovierung wurde die Heizung erneuert."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "im Zuge – Beispielsatz folgt.",
+              "answer": "Bedeutet im Verlauf, als Teil oder im Zusammenhang mit einem größeren Vorgang.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Nennt den unmittelbaren Zweck einer einzelnen Handlung.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Schließt einen Punkt als Ausnahme von einer allgemeinen Aussage aus.",
               "ok": false
             }
           ]
         },
         {
           "title": "",
-          "page": 5,
+          "page": 15,
           "question": "abgesehen von",
-          "summary": "Platzhalter – Definition folgt.",
+          "summary": "Schließt eine Person, Sache oder einen Aspekt aus beziehungsweise bedeutet außer oder unabhängig von.",
+          "explain": {
+            "entryId": "abgesehen von",
+            "headword": "abgesehen von",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": "/ˈapɡəˌzeːən fɔn/",
+              "ipaUS": "/ˈapɡəˌzeːən fɔn/"
+            },
+            "labels": [
+              "B2"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 von 1",
+                "pos": "Präpositionale Wendung",
+                "grammarType": "Ausnahme",
+                "headwordLine": "abgesehen von",
+                "inflectionsLine": null,
+                "synonyms": [
+                  "außer",
+                  "mit Ausnahme von"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "Schließt eine Person, Sache oder einen Aspekt aus beziehungsweise bedeutet außer oder unabhängig von.",
+                    "examples": [
+                      "Abgesehen von kleinen Gebrauchsspuren ist das Gerät in gutem Zustand."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
           "answers": [
             {
-              "answer": "abgesehen von – Beispielsatz folgt.",
+              "answer": "Schließt eine Person, Sache oder einen Aspekt aus beziehungsweise bedeutet außer oder unabhängig von.",
               "ok": true
             },
             {
-              "answer": "Platzhalter – falsche Option 1.",
+              "answer": "Drückt aus, dass ein Hindernis das Ergebnis nicht verhindert.",
               "ok": false
             },
             {
-              "answer": "Platzhalter – falsche Option 2.",
+              "answer": "Kennzeichnet den größeren Vorgang, in dessen Verlauf etwas geschieht.",
               "ok": false
             }
           ]
