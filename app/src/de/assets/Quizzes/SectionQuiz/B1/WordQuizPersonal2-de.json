@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizPersonal2-de",
-	"title": "Personal",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Interviewer",
-					"summary": "stellt die Fragen",
-					"explain": {
-						"entryId": "Interviewer",
-						"headword": "Interviewer",
-						"pronunciation": {
-							"display": "IN-tuh-vyoo-uh",
-							"ipaUK": "/ˈɪntɐvjuːɐ/",
-							"ipaUS": "/ˈɪntɐvjuːɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Interviewer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Interviewer: die Person, die im Gespräch die Fragen stellt",
-										"examples": [
-											"Der Interviewer stellte schwierige Fragen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Interviewer stellte schwierige Fragen.",
-							"ok": true
-						},
-						{
-							"answer": "Die Interviewer stellte schwierige Fragen.",
-							"ok": false
-						},
-						{
-							"answer": "Der Interviewer schwierige Fragen stellte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Kandidat",
-					"summary": "Person, die sich bewirbt",
-					"explain": {
-						"entryId": "Kandidat",
-						"headword": "Kandidat",
-						"pronunciation": {
-							"display": "kan-di-DAHT",
-							"ipaUK": "/kandiˈdaːt/",
-							"ipaUS": "/kandiˈdaːt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kandidat",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Kandidat: eine Person, die sich um eine Stelle bewirbt",
-										"examples": [
-											"Der Kandidat beantwortet alle Fragen ruhig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Kandidat beantwortet alle Fragen ruhig.",
-							"ok": true
-						},
-						{
-							"answer": "Die Kandidat beantwortet alle Fragen ruhig.",
-							"ok": false
-						},
-						{
-							"answer": "Der Kandidat alle Fragen ruhig beantwortet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Anmeldung",
-					"summary": "Sich-Eintragen für etwas",
-					"explain": {
-						"entryId": "Anmeldung",
-						"headword": "Anmeldung",
-						"pronunciation": {
-							"display": "AN-mel-doong",
-							"ipaUK": "/ˈanˌmɛldʊŋ/",
-							"ipaUS": "/ˈanˌmɛldʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Anmeldung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Anmeldung: das Eintragen des Namens auf einer Liste",
-										"examples": [
-											"Die Anmeldung für den Kurs ist kostenlos."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Anmeldung für den Kurs ist kostenlos.",
-							"ok": true
-						},
-						{
-							"answer": "Der Anmeldung für den Kurs ist kostenlos.",
-							"ok": false
-						},
-						{
-							"answer": "Die Anmeldung für den Kurs kostenlos ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "sich anmelden",
-					"summary": "sich eintragen",
-					"explain": {
-						"entryId": "sich anmelden",
-						"headword": "sich anmelden",
-						"pronunciation": {
-							"display": "AN-mel-dn",
-							"ipaUK": "/ˈanˌmɛldn̩/",
-							"ipaUS": "/ˈanˌmɛldn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "sich anmelden",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sich anmelden: seinen Namen auf eine offizielle Liste setzen",
-										"examples": [
-											"Für den Kurs muss man sich online anmelden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Für den Kurs muss man sich online anmelden.",
-							"ok": true
-						},
-						{
-							"answer": "Für den Kurs muss man sich online anmeldet.",
-							"ok": false
-						},
-						{
-							"answer": "Für den Kurs man muss sich online anmelden.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Bewerbung",
-					"summary": "Antrag auf eine Stelle",
-					"explain": {
-						"entryId": "Bewerbung",
-						"headword": "Bewerbung",
-						"pronunciation": {
-							"display": "buh-VER-boong",
-							"ipaUK": "/bəˈvɛʁbʊŋ/",
-							"ipaUS": "/bəˈvɛʁbʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Bewerbung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Bewerbung: ein förmlicher Antrag auf eine Stelle oder einen Kurs",
-										"examples": [
-											"Ich schicke meine Bewerbung per E-Mail."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich schicke meine Bewerbung per E-Mail.",
-							"ok": true
-						},
-						{
-							"answer": "Ich schicke meinen Bewerbung per E-Mail.",
-							"ok": false
-						},
-						{
-							"answer": "Ich meine Bewerbung per E-Mail schicke.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Unterschrift",
-					"summary": "der selbst geschriebene Name",
-					"explain": {
-						"entryId": "Unterschrift",
-						"headword": "Unterschrift",
-						"pronunciation": {
-							"display": "OON-tuh-shrift",
-							"ipaUK": "/ˈʊntɐˌʃʁɪft/",
-							"ipaUS": "/ˈʊntɐˌʃʁɪft/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Unterschrift",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Unterschrift: der eigene Name, den man selbst schreibt",
-										"examples": [
-											"Auf dem Vertrag fehlt noch Ihre Unterschrift."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Auf dem Vertrag fehlt noch Ihre Unterschrift.",
-							"ok": true
-						},
-						{
-							"answer": "Auf dem Vertrag fehlt noch Ihr Unterschrift.",
-							"ok": false
-						},
-						{
-							"answer": "Auf dem Vertrag noch Ihre Unterschrift fehlt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "unterschreiben",
-					"summary": "seinen Namen daruntersetzen",
-					"explain": {
-						"entryId": "unterschreiben",
-						"headword": "unterschreiben",
-						"pronunciation": {
-							"display": "oon-tuh-SHRY-bn",
-							"ipaUK": "/ʊntɐˈʃʁaɪ̯bn̩/",
-							"ipaUS": "/ʊntɐˈʃʁaɪ̯bn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "unterschreiben",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "unterschreiben: seinen Namen unter ein Dokument schreiben",
-										"examples": [
-											"Bitte unterschreiben Sie hier unten."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Bitte unterschreiben Sie hier unten.",
-							"ok": true
-						},
-						{
-							"answer": "Bitte unterschreibt Sie hier unten.",
-							"ok": false
-						},
-						{
-							"answer": "Bitte Sie unterschreiben hier unten.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "abzeichnen",
-					"summary": "kurz mit Initialen unterschreiben",
-					"explain": {
-						"entryId": "abzeichnen",
-						"headword": "abzeichnen",
-						"pronunciation": {
-							"display": "AP-tsykh-nn",
-							"ipaUK": "/ˈaptsaɪ̯çnən/",
-							"ipaUS": "/ˈaptsaɪ̯çnən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "abzeichnen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "abzeichnen: kurz mit den Anfangsbuchstaben unterschreiben",
-										"examples": [
-											"Bitte zeichnen Sie jede Seite kurz ab."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Bitte zeichnen Sie jede Seite kurz ab.",
-							"ok": true
-						},
-						{
-							"answer": "Bitte zeichnen Sie jede Seite kurz auf.",
-							"ok": false
-						},
-						{
-							"answer": "Bitte Sie zeichnen jede Seite kurz ab.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Umfrage",
-					"summary": "Befragung vieler Menschen",
-					"explain": {
-						"entryId": "Umfrage",
-						"headword": "Umfrage",
-						"pronunciation": {
-							"display": "OOM-frah-guh",
-							"ipaUK": "/ˈʊmˌfʁaːɡə/",
-							"ipaUS": "/ˈʊmˌfʁaːɡə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Umfrage",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Umfrage: eine Reihe von Fragen an viele Menschen",
-										"examples": [
-											"Die Umfrage zeigt ein klares Ergebnis."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Umfrage zeigt ein klares Ergebnis.",
-							"ok": true
-						},
-						{
-							"answer": "Der Umfrage zeigt ein klares Ergebnis.",
-							"ok": false
-						},
-						{
-							"answer": "Die Umfrage ein klares Ergebnis zeigt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Fragebogen",
-					"summary": "Blatt mit vielen Fragen",
-					"explain": {
-						"entryId": "Fragebogen",
-						"headword": "Fragebogen",
-						"pronunciation": {
-							"display": "FRAH-guh-boh-gn",
-							"ipaUK": "/ˈfʁaːɡəˌboːɡn̩/",
-							"ipaUS": "/ˈfʁaːɡəˌboːɡn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Fragebogen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Fragebogen: ein Blatt mit vielen Fragen zum Ausfüllen",
-										"examples": [
-											"Bitte füllen Sie den Fragebogen aus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Bitte füllen Sie den Fragebogen aus.",
-							"ok": true
-						},
-						{
-							"answer": "Bitte füllen Sie das Fragebogen aus.",
-							"ok": false
-						},
-						{
-							"answer": "Bitte Sie füllen den Fragebogen aus.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPersonal2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Interviewer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Interviewer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Kandidat",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kandidat – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Anmeldung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Anmeldung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "sich anmelden",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich anmelden – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Bewerbung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Bewerbung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Unterschrift",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Unterschrift – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "unterschreiben",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "unterschreiben – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "abzeichnen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "abzeichnen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Umfrage",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Umfrage – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Fragebogen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Fragebogen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

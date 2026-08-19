@@ -1,0 +1,864 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTime1-de",
+	"title": "Time",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Uhr",
+					"summary": "Gerät, das die Zeit zeigt",
+					"explain": {
+						"entryId": "Uhr",
+						"headword": "Uhr",
+						"pronunciation": {
+							"display": "oor",
+							"ipaUK": "/uːɐ̯/",
+							"ipaUS": "/uːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Uhr",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gerät, das die Zeit zeigt",
+										"examples": [
+											"Die Uhr zeigt zehn Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Uhr zeigt zehn Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Uhr zeigt zehn Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Die Uhr zehn Uhr zeigt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Zeit",
+					"summary": "was die Uhr misst",
+					"explain": {
+						"entryId": "Zeit",
+						"headword": "Zeit",
+						"pronunciation": {
+							"display": "tsite",
+							"ipaUK": "/tsaɪ̯t/",
+							"ipaUS": "/tsaɪ̯t/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "was man mit der Uhr misst",
+										"examples": [
+											"Ich habe heute keine Zeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe heute keine Zeit.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe heute keinen Zeit.",
+							"ok": false
+						},
+						{
+							"answer": "Ich heute keine Zeit habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Stunde",
+					"summary": "60 Minuten",
+					"explain": {
+						"entryId": "Stunde",
+						"headword": "Stunde",
+						"pronunciation": {
+							"display": "SHTOON-duh",
+							"ipaUK": "/ˈʃtʊndə/",
+							"ipaUS": "/ˈʃtʊndə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Stunde",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sechzig Minuten",
+										"examples": [
+											"Eine Stunde hat sechzig Minuten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine Stunde hat sechzig Minuten.",
+							"ok": true
+						},
+						{
+							"answer": "Ein Stunde hat sechzig Minuten.",
+							"ok": false
+						},
+						{
+							"answer": "Eine Stunde sechzig Minuten hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Minute",
+					"summary": "60 Sekunden",
+					"explain": {
+						"entryId": "Minute",
+						"headword": "Minute",
+						"pronunciation": {
+							"display": "mi-NOO-tuh",
+							"ipaUK": "/miˈnuːtə/",
+							"ipaUS": "/miˈnuːtə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Minute",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sechzig Sekunden",
+										"examples": [
+											"Eine Minute hat sechzig Sekunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine Minute hat sechzig Sekunden.",
+							"ok": true
+						},
+						{
+							"answer": "Ein Minute hat sechzig Sekunden.",
+							"ok": false
+						},
+						{
+							"answer": "Eine Minute sechzig Sekunden hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Tag",
+					"summary": "24 Stunden",
+					"explain": {
+						"entryId": "Tag",
+						"headword": "Tag",
+						"pronunciation": {
+							"display": "tahk",
+							"ipaUK": "/taːk/",
+							"ipaUS": "/taːk/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tag",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "vierundzwanzig Stunden",
+										"examples": [
+											"Ein Tag hat vierundzwanzig Stunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Tag hat vierundzwanzig Stunden.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Tag hat vierundzwanzig Stunden.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Tag vierundzwanzig Stunden hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Woche",
+					"summary": "7 Tage",
+					"explain": {
+						"entryId": "Woche",
+						"headword": "Woche",
+						"pronunciation": {
+							"display": "VO-khuh",
+							"ipaUK": "/ˈvɔxə/",
+							"ipaUS": "/ˈvɔxə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Woche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sieben Tage",
+										"examples": [
+											"Eine Woche hat sieben Tage."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine Woche hat sieben Tage.",
+							"ok": true
+						},
+						{
+							"answer": "Ein Woche hat sieben Tage.",
+							"ok": false
+						},
+						{
+							"answer": "Eine Woche sieben Tage hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Monat",
+					"summary": "etwa 30 Tage",
+					"explain": {
+						"entryId": "Monat",
+						"headword": "Monat",
+						"pronunciation": {
+							"display": "MOH-nat",
+							"ipaUK": "/ˈmoːnat/",
+							"ipaUS": "/ˈmoːnat/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Monat",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwa dreißig Tage; ein Teil des Jahres",
+										"examples": [
+											"Der Februar ist ein kurzer Monat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Februar ist ein kurzer Monat.",
+							"ok": true
+						},
+						{
+							"answer": "Der Februar ist ein kurze Monat.",
+							"ok": false
+						},
+						{
+							"answer": "Der Februar ein kurzer Monat ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Jahr",
+					"summary": "12 Monate",
+					"explain": {
+						"entryId": "Jahr",
+						"headword": "Jahr",
+						"pronunciation": {
+							"display": "yar",
+							"ipaUK": "/jaːɐ̯/",
+							"ipaUS": "/jaːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Jahr",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zwölf Monate",
+										"examples": [
+											"Ein Jahr hat zwölf Monate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Jahr hat zwölf Monate.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Jahr hat zwölf Monate.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Jahr zwölf Monate hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "heute",
+					"summary": "an diesem Tag",
+					"explain": {
+						"entryId": "heute",
+						"headword": "heute",
+						"pronunciation": {
+							"display": "HOY-tuh",
+							"ipaUK": "/ˈhɔɪ̯tə/",
+							"ipaUS": "/ˈhɔɪ̯tə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "heute",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an diesem Tag",
+										"examples": [
+											"Heute gehen wir ins Kino."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute gehen wir ins Kino.",
+							"ok": true
+						},
+						{
+							"answer": "Heute wir gehen ins Kino.",
+							"ok": false
+						},
+						{
+							"answer": "Heute gehen ins Kino wir.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "morgen",
+					"summary": "am Tag nach heute",
+					"explain": {
+						"entryId": "morgen",
+						"headword": "morgen",
+						"pronunciation": {
+							"display": "MOR-gn",
+							"ipaUK": "/ˈmɔʁɡn̩/",
+							"ipaUS": "/ˈmɔʁɡn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "morgen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Tag nach heute",
+										"examples": [
+											"Morgen besuche ich meine Oma."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Morgen besuche ich meine Oma.",
+							"ok": true
+						},
+						{
+							"answer": "Morgen ich besuche meine Oma.",
+							"ok": false
+						},
+						{
+							"answer": "Morgen meine Oma ich besuche.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "gestern",
+					"summary": "am Tag vor heute",
+					"explain": {
+						"entryId": "gestern",
+						"headword": "gestern",
+						"pronunciation": {
+							"display": "GES-tuhn",
+							"ipaUK": "/ˈɡɛstɐn/",
+							"ipaUS": "/ˈɡɛstɐn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "gestern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Tag vor heute",
+										"examples": [
+											"Gestern war ich krank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gestern war ich krank.",
+							"ok": true
+						},
+						{
+							"answer": "Gestern ich war krank.",
+							"ok": false
+						},
+						{
+							"answer": "Gestern krank ich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "jetzt",
+					"summary": "in diesem Moment",
+					"explain": {
+						"entryId": "jetzt",
+						"headword": "jetzt",
+						"pronunciation": {
+							"display": "yetst",
+							"ipaUK": "/jɛtst/",
+							"ipaUS": "/jɛtst/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "jetzt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in diesem Moment",
+										"examples": [
+											"Wir müssen jetzt gehen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir müssen jetzt gehen.",
+							"ok": true
+						},
+						{
+							"answer": "Wir jetzt müssen gehen.",
+							"ok": false
+						},
+						{
+							"answer": "Jetzt wir müssen gehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "früh",
+					"summary": "nicht spät",
+					"explain": {
+						"entryId": "früh",
+						"headword": "früh",
+						"pronunciation": {
+							"display": "frü",
+							"ipaUK": "/fʁyː/",
+							"ipaUS": "/fʁyː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "früh",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Anfang der Zeit; nicht spät",
+										"examples": [
+											"Am Morgen stehe ich früh auf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Morgen stehe ich früh auf.",
+							"ok": true
+						},
+						{
+							"answer": "Am Morgen stehe ich frühe auf.",
+							"ok": false
+						},
+						{
+							"answer": "Am Morgen ich stehe früh auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "spät",
+					"summary": "nicht früh",
+					"explain": {
+						"entryId": "spät",
+						"headword": "spät",
+						"pronunciation": {
+							"display": "shpait",
+							"ipaUK": "/ʃpɛːt/",
+							"ipaUS": "/ʃpɛːt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "spät",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Ende der Zeit; nicht früh",
+										"examples": [
+											"Es ist schon sehr spät."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es ist schon sehr spät.",
+							"ok": true
+						},
+						{
+							"answer": "Es ist schon sehr späte.",
+							"ok": false
+						},
+						{
+							"answer": "Es schon sehr spät ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "Morgen",
+					"summary": "die frühe Tageszeit",
+					"explain": {
+						"entryId": "Morgen",
+						"headword": "Morgen",
+						"pronunciation": {
+							"display": "MOR-gn",
+							"ipaUK": "/ˈmɔʁɡn̩/",
+							"ipaUS": "/ˈmɔʁɡn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Morgen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit früh am Tag",
+										"examples": [
+											"Am Morgen trinke ich Kaffee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Morgen trinke ich Kaffee.",
+							"ok": true
+						},
+						{
+							"answer": "An Morgen trinke ich Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Am Morgen ich trinke Kaffee.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"question": "Abend",
+					"summary": "die späte Tageszeit",
+					"explain": {
+						"entryId": "Abend",
+						"headword": "Abend",
+						"pronunciation": {
+							"display": "AH-bnt",
+							"ipaUK": "/ˈaːbn̩t/",
+							"ipaUS": "/ˈaːbn̩t/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abend",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit am Ende des Tages",
+										"examples": [
+											"Am Abend sehe ich fern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Abend sehe ich fern.",
+							"ok": true
+						},
+						{
+							"answer": "An Abend sehe ich fern.",
+							"ok": false
+						},
+						{
+							"answer": "Am Abend ich sehe fern.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

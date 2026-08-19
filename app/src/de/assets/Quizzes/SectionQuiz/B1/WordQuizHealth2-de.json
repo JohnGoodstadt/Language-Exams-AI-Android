@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizHealth2-de",
-	"title": "Health",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Krankenhaus",
-					"summary": "dort werden Kranke behandelt",
-					"explain": {
-						"entryId": "Krankenhaus",
-						"headword": "Krankenhaus",
-						"pronunciation": {
-							"display": "KRAN-kn-house",
-							"ipaUK": "/ˈkʁaŋkn̩ˌhaʊ̯s/",
-							"ipaUS": "/ˈkʁaŋkn̩ˌhaʊ̯s/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Krankenhaus",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Krankenhaus: ein Ort, an dem Kranke behandelt werden",
-										"examples": [
-											"Nach dem Unfall kam er ins Krankenhaus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nach dem Unfall kam er ins Krankenhaus.",
-							"ok": true
-						},
-						{
-							"answer": "Nach dem Unfall kam er in die Krankenhaus.",
-							"ok": false
-						},
-						{
-							"answer": "Nach dem Unfall er kam ins Krankenhaus.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "dringend",
-					"summary": "sehr eilig",
-					"explain": {
-						"entryId": "dringend",
-						"headword": "dringend",
-						"pronunciation": {
-							"display": "DRING-ent",
-							"ipaUK": "/ˈdʁɪŋənt/",
-							"ipaUS": "/ˈdʁɪŋənt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "dringend",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "dringend: sehr eilig; muss sofort passieren",
-										"examples": [
-											"Der Fall ist wirklich dringend."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Fall ist wirklich dringend.",
-							"ok": true
-						},
-						{
-							"answer": "Der Fall ist wirklich dringende.",
-							"ok": false
-						},
-						{
-							"answer": "Der Fall wirklich dringend ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Bewegung",
-					"summary": "körperliche Aktivität",
-					"explain": {
-						"entryId": "Bewegung",
-						"headword": "Bewegung",
-						"pronunciation": {
-							"display": "buh-VAY-goong",
-							"ipaUK": "/bəˈveːɡʊŋ/",
-							"ipaUS": "/bəˈveːɡʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Bewegung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Bewegung: körperliche Aktivität für die Gesundheit",
-										"examples": [
-											"Regelmäßige Bewegung ist gesund."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Regelmäßige Bewegung ist gesund.",
-							"ok": true
-						},
-						{
-							"answer": "Regelmäßiger Bewegung ist gesund.",
-							"ok": false
-						},
-						{
-							"answer": "Regelmäßige Bewegung gesund ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Training",
-					"summary": "Übungen zum Fitwerden",
-					"explain": {
-						"entryId": "Training",
-						"headword": "Training",
-						"pronunciation": {
-							"display": "TRAY-ning",
-							"ipaUK": "/ˈtʁɛːnɪŋ/",
-							"ipaUS": "/ˈtʁɛːnɪŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Training",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Training: körperliche Übungen, um fit zu werden",
-										"examples": [
-											"Ein hartes Training macht stark."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ein hartes Training macht stark.",
-							"ok": true
-						},
-						{
-							"answer": "Ein harter Training macht stark.",
-							"ok": false
-						},
-						{
-							"answer": "Ein hartes Training stark macht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Routine",
-					"summary": "feste, regelmäßige Gewohnheit",
-					"explain": {
-						"entryId": "Routine",
-						"headword": "Routine",
-						"pronunciation": {
-							"display": "roo-TEE-nuh",
-							"ipaUK": "/ʁuˈtiːnə/",
-							"ipaUS": "/ʁuˈtiːnə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Routine",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Routine: eine feste, regelmäßige Gewohnheit",
-										"examples": [
-											"Sport gehört zu meiner täglichen Routine."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sport gehört zu meiner täglichen Routine.",
-							"ok": true
-						},
-						{
-							"answer": "Sport gehört zu meinem täglichen Routine.",
-							"ok": false
-						},
-						{
-							"answer": "Sport zu meiner täglichen Routine gehört.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Gesundheit",
-					"summary": "der Zustand, gesund zu sein",
-					"explain": {
-						"entryId": "Gesundheit",
-						"headword": "Gesundheit",
-						"pronunciation": {
-							"display": "guh-ZOONT-hite",
-							"ipaUK": "/ɡəˈzʊnthaɪ̯t/",
-							"ipaUS": "/ɡəˈzʊnthaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gesundheit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Gesundheit: der Zustand von Körper und Geist",
-										"examples": [
-											"Die Gesundheit ist das Wichtigste."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Gesundheit ist das Wichtigste.",
-							"ok": true
-						},
-						{
-							"answer": "Der Gesundheit ist das Wichtigste.",
-							"ok": false
-						},
-						{
-							"answer": "Die Gesundheit das Wichtigste ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Wohlbefinden",
-					"summary": "Gefühl, dass es einem gut geht",
-					"explain": {
-						"entryId": "Wohlbefinden",
-						"headword": "Wohlbefinden",
-						"pronunciation": {
-							"display": "VOHL-buh-fin-dn",
-							"ipaUK": "/ˈvoːlbəˌfɪndn̩/",
-							"ipaUS": "/ˈvoːlbəˌfɪndn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Wohlbefinden",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Wohlbefinden: das Gefühl, dass es einem gut geht",
-										"examples": [
-											"Ausreichend Schlaf steigert das Wohlbefinden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ausreichend Schlaf steigert das Wohlbefinden.",
-							"ok": true
-						},
-						{
-							"answer": "Ausreichend Schlaf steigert der Wohlbefinden.",
-							"ok": false
-						},
-						{
-							"answer": "Ausreichend Schlaf das Wohlbefinden steigert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Untersuchung",
-					"summary": "ärztliche Kontrolle",
-					"explain": {
-						"entryId": "Untersuchung",
-						"headword": "Untersuchung",
-						"pronunciation": {
-							"display": "oon-tuh-ZOO-khoong",
-							"ipaUK": "/ʊntɐˈzuːxʊŋ/",
-							"ipaUS": "/ʊntɐˈzuːxʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Untersuchung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Untersuchung: eine ärztliche Kontrolle der Gesundheit",
-										"examples": [
-											"Beim Arzt gab es eine gründliche Untersuchung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Beim Arzt gab es eine gründliche Untersuchung.",
-							"ok": true
-						},
-						{
-							"answer": "Beim Arzt gab es einen gründlichen Untersuchung.",
-							"ok": false
-						},
-						{
-							"answer": "Beim Arzt es gab eine gründliche Untersuchung.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Verletzung",
-					"summary": "Schaden am Körper",
-					"explain": {
-						"entryId": "Verletzung",
-						"headword": "Verletzung",
-						"pronunciation": {
-							"display": "fer-LET-soong",
-							"ipaUK": "/fɛɐ̯ˈlɛtsʊŋ/",
-							"ipaUS": "/fɛɐ̯ˈlɛtsʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Verletzung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Verletzung: ein Schaden am Körper",
-										"examples": [
-											"Die Verletzung am Knie tut sehr weh."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Verletzung am Knie tut sehr weh.",
-							"ok": true
-						},
-						{
-							"answer": "Der Verletzung am Knie tut sehr weh.",
-							"ok": false
-						},
-						{
-							"answer": "Die Verletzung am Knie sehr weh tut.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Wunde",
-					"summary": "Verletzung der Haut",
-					"explain": {
-						"entryId": "Wunde",
-						"headword": "Wunde",
-						"pronunciation": {
-							"display": "VOON-duh",
-							"ipaUK": "/ˈvʊndə/",
-							"ipaUS": "/ˈvʊndə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Wunde",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Wunde: eine Verletzung der Haut",
-										"examples": [
-											"Die Wunde muss sauber bleiben."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Wunde muss sauber bleiben.",
-							"ok": true
-						},
-						{
-							"answer": "Der Wunde muss sauber bleiben.",
-							"ok": false
-						},
-						{
-							"answer": "Die Wunde sauber bleiben muss.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizHealth2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Krankenhaus",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Krankenhaus – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "dringend",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "dringend – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Bewegung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Bewegung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Training",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Training – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Routine",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Routine – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Gesundheit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Gesundheit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Wohlbefinden",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Wohlbefinden – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Untersuchung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Untersuchung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Verletzung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Verletzung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Wunde",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Wunde – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

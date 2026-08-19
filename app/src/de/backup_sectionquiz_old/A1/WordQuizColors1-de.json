@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizColors1-de",
+	"title": "Colors",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "schwarz",
+					"summary": "die Farbe der Nacht",
+					"explain": {
+						"entryId": "schwarz",
+						"headword": "schwarz",
+						"pronunciation": {
+							"display": "shvarts",
+							"ipaUK": "/ʃvaʁts/",
+							"ipaUS": "/ʃvaʁts/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "schwarz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Farbe der Nacht; sehr dunkel",
+										"examples": [
+											"Die Katze ist schwarz."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Katze ist schwarz.",
+							"ok": true
+						},
+						{
+							"answer": "Die Katze ist schwarze.",
+							"ok": false
+						},
+						{
+							"answer": "Schwarz die Katze ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "blau",
+					"summary": "die Farbe des Himmels",
+					"explain": {
+						"entryId": "blau",
+						"headword": "blau",
+						"pronunciation": {
+							"display": "blow",
+							"ipaUK": "/blaʊ̯/",
+							"ipaUS": "/blaʊ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "blau",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Farbe des Himmels",
+										"examples": [
+											"Der Himmel ist blau."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Himmel ist blau.",
+							"ok": true
+						},
+						{
+							"answer": "Der Himmel ist blaue.",
+							"ok": false
+						},
+						{
+							"answer": "Der Himmel blau ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Kreis",
+					"summary": "eine runde Form",
+					"explain": {
+						"entryId": "Kreis",
+						"headword": "Kreis",
+						"pronunciation": {
+							"display": "kryce",
+							"ipaUK": "/kʁaɪ̯s/",
+							"ipaUS": "/kʁaɪ̯s/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kreis",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine runde Form",
+										"examples": [
+											"Das ist ein Kreis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das ist ein Kreis.",
+							"ok": true
+						},
+						{
+							"answer": "Das ist eine Kreis.",
+							"ok": false
+						},
+						{
+							"answer": "Das ist ein Kreise.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "grün",
+					"summary": "die Farbe des Grases",
+					"explain": {
+						"entryId": "grün",
+						"headword": "grün",
+						"pronunciation": {
+							"display": "groon",
+							"ipaUK": "/ɡʁyːn/",
+							"ipaUS": "/ɡʁyːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "grün",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Farbe des Grases",
+										"examples": [
+											"Das Gras ist grün."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Gras ist grün.",
+							"ok": true
+						},
+						{
+							"answer": "Das Gras ist grüne.",
+							"ok": false
+						},
+						{
+							"answer": "Grün das Gras ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Rechteck",
+					"summary": "eine Form mit vier Ecken",
+					"explain": {
+						"entryId": "Rechteck",
+						"headword": "Rechteck",
+						"pronunciation": {
+							"display": "REKHT-ek",
+							"ipaUK": "/ˈʁɛçtˌʔɛk/",
+							"ipaUS": "/ˈʁɛçtˌʔɛk/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rechteck",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Form mit vier Ecken und vier geraden Seiten",
+										"examples": [
+											"Das Fenster ist ein Rechteck."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Fenster ist ein Rechteck.",
+							"ok": true
+						},
+						{
+							"answer": "Das Fenster ist eine Rechteck.",
+							"ok": false
+						},
+						{
+							"answer": "Das Fenster ist ein Rechtecke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "rot",
+					"summary": "die Farbe von Blut",
+					"explain": {
+						"entryId": "rot",
+						"headword": "rot",
+						"pronunciation": {
+							"display": "roht",
+							"ipaUK": "/ʁoːt/",
+							"ipaUS": "/ʁoːt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "rot",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Farbe von Blut oder einer Tomate",
+										"examples": [
+											"Der Apfel ist rot."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Apfel ist rot.",
+							"ok": true
+						},
+						{
+							"answer": "Der Apfel ist rote.",
+							"ok": false
+						},
+						{
+							"answer": "Rot der Apfel ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Quadrat",
+					"summary": "eine Form mit vier gleichen Seiten",
+					"explain": {
+						"entryId": "Quadrat",
+						"headword": "Quadrat",
+						"pronunciation": {
+							"display": "kva-DRAHT",
+							"ipaUK": "/kvaˈdʁaːt/",
+							"ipaUS": "/kvaˈdʁaːt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Quadrat",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Form mit vier gleich langen Seiten",
+										"examples": [
+											"Das ist ein Quadrat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das ist ein Quadrat.",
+							"ok": true
+						},
+						{
+							"answer": "Das ist eine Quadrat.",
+							"ok": false
+						},
+						{
+							"answer": "Das ist ein Quadrate.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Dreieck",
+					"summary": "eine Form mit drei Ecken",
+					"explain": {
+						"entryId": "Dreieck",
+						"headword": "Dreieck",
+						"pronunciation": {
+							"display": "DRY-ek",
+							"ipaUK": "/ˈdʁaɪ̯ˌʔɛk/",
+							"ipaUS": "/ˈdʁaɪ̯ˌʔɛk/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dreieck",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Form mit drei Ecken",
+										"examples": [
+											"Ein Dreieck hat drei Ecken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Dreieck hat drei Ecken.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Dreieck hat drei Ecken.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Dreieck hat drei Ecke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "weiß",
+					"summary": "die Farbe von Schnee",
+					"explain": {
+						"entryId": "weiß",
+						"headword": "weiß",
+						"pronunciation": {
+							"display": "vyce",
+							"ipaUK": "/vaɪ̯s/",
+							"ipaUS": "/vaɪ̯s/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "weiß",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Farbe von Schnee oder Milch",
+										"examples": [
+											"Der Schnee ist weiß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Schnee ist weiß.",
+							"ok": true
+						},
+						{
+							"answer": "Der Schnee ist weiße.",
+							"ok": false
+						},
+						{
+							"answer": "Der Schnee weiß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "gelb",
+					"summary": "die Farbe der Sonne",
+					"explain": {
+						"entryId": "gelb",
+						"headword": "gelb",
+						"pronunciation": {
+							"display": "gelp",
+							"ipaUK": "/ɡɛlp/",
+							"ipaUS": "/ɡɛlp/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "gelb",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Farbe der Sonne oder einer Banane",
+										"examples": [
+											"Die Banane ist gelb."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Banane ist gelb.",
+							"ok": true
+						},
+						{
+							"answer": "Die Banane ist gelbe.",
+							"ok": false
+						},
+						{
+							"answer": "Gelb die Banane ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

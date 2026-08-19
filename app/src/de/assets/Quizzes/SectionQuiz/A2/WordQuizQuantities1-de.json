@@ -1,864 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizQuantities1-de",
-	"title": "Quantities",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "hundert",
-					"summary": "die Zahl 100",
-					"explain": {
-						"entryId": "hundert",
-						"headword": "hundert",
-						"pronunciation": {
-							"display": "HOON-duht",
-							"ipaUK": "/ˈhʊndɐt/",
-							"ipaUS": "/ˈhʊndɐt/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Zahlwort",
-								"grammarType": "Kardinalzahl",
-								"headwordLine": "hundert",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Zahl 100",
-										"examples": [
-											"Ich habe hundert Euro gespart."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich habe hundert Euro gespart.",
-							"ok": true
-						},
-						{
-							"answer": "Ich habe hunderte Euro gespart.",
-							"ok": false
-						},
-						{
-							"answer": "Ich hundert Euro gespart habe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "tausend",
-					"summary": "die Zahl 1000",
-					"explain": {
-						"entryId": "tausend",
-						"headword": "tausend",
-						"pronunciation": {
-							"display": "TOW-znt",
-							"ipaUK": "/ˈtaʊ̯zn̩t/",
-							"ipaUS": "/ˈtaʊ̯zn̩t/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Zahlwort",
-								"grammarType": "Kardinalzahl",
-								"headwordLine": "tausend",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Zahl 1000",
-										"examples": [
-											"Die Stadt hat tausend Einwohner."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Stadt hat tausend Einwohner.",
-							"ok": true
-						},
-						{
-							"answer": "Die Stadt hat tausende Einwohner.",
-							"ok": false
-						},
-						{
-							"answer": "Die Stadt tausend Einwohner hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Million",
-					"summary": "die Zahl 1.000.000",
-					"explain": {
-						"entryId": "Million",
-						"headword": "Million",
-						"pronunciation": {
-							"display": "mi-li-OHN",
-							"ipaUK": "/mɪˈli̯oːn/",
-							"ipaUS": "/mɪˈli̯oːn/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Million",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Zahl 1 000 000",
-										"examples": [
-											"Eine Million ist eine große Zahl."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Eine Million ist eine große Zahl.",
-							"ok": true
-						},
-						{
-							"answer": "Ein Million ist eine große Zahl.",
-							"ok": false
-						},
-						{
-							"answer": "Eine Million eine große Zahl ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Hälfte",
-					"summary": "50 %",
-					"explain": {
-						"entryId": "Hälfte",
-						"headword": "Hälfte",
-						"pronunciation": {
-							"display": "HELF-tuh",
-							"ipaUK": "/ˈhɛlftə/",
-							"ipaUS": "/ˈhɛlftə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Hälfte",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "einer von zwei gleichen Teilen (50 %)",
-										"examples": [
-											"Die Hälfte der Klasse ist krank."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Hälfte der Klasse ist krank.",
-							"ok": true
-						},
-						{
-							"answer": "Der Hälfte der Klasse ist krank.",
-							"ok": false
-						},
-						{
-							"answer": "Die Hälfte der Klasse krank ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Viertel",
-					"summary": "25 %",
-					"explain": {
-						"entryId": "Viertel",
-						"headword": "Viertel",
-						"pronunciation": {
-							"display": "FIR-tl",
-							"ipaUK": "/ˈfɪʁtl̩/",
-							"ipaUS": "/ˈfɪʁtl̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Viertel",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "einer von vier gleichen Teilen (25 %)",
-										"examples": [
-											"Ein Viertel der Pizza ist noch da."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ein Viertel der Pizza ist noch da.",
-							"ok": true
-						},
-						{
-							"answer": "Einen Viertel der Pizza ist noch da.",
-							"ok": false
-						},
-						{
-							"answer": "Ein Viertel der Pizza noch da ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Kilo",
-					"summary": "1000 Gramm",
-					"explain": {
-						"entryId": "Kilo",
-						"headword": "Kilo",
-						"pronunciation": {
-							"display": "KEE-lo",
-							"ipaUK": "/ˈkiːlo/",
-							"ipaUS": "/ˈkiːlo/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kilo",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "1000 Gramm",
-										"examples": [
-											"Ich kaufe ein Kilo Äpfel."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich kaufe ein Kilo Äpfel.",
-							"ok": true
-						},
-						{
-							"answer": "Ich kaufe einen Kilo Äpfel.",
-							"ok": false
-						},
-						{
-							"answer": "Ich ein Kilo Äpfel kaufe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Gramm",
-					"summary": "Maßeinheit für Gewicht",
-					"explain": {
-						"entryId": "Gramm",
-						"headword": "Gramm",
-						"pronunciation": {
-							"display": "gram",
-							"ipaUK": "/ɡʁam/",
-							"ipaUS": "/ɡʁam/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gramm",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine kleine Maßeinheit für Gewicht",
-										"examples": [
-											"Ich brauche zweihundert Gramm Käse."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich brauche zweihundert Gramm Käse.",
-							"ok": true
-						},
-						{
-							"answer": "Ich brauche zweihundert Gramme Käse.",
-							"ok": false
-						},
-						{
-							"answer": "Ich zweihundert Gramm Käse brauche.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Liter",
-					"summary": "Maßeinheit für Flüssigkeit",
-					"explain": {
-						"entryId": "Liter",
-						"headword": "Liter",
-						"pronunciation": {
-							"display": "LEE-tuh",
-							"ipaUK": "/ˈliːtɐ/",
-							"ipaUS": "/ˈliːtɐ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Liter",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Maßeinheit für Flüssigkeit",
-										"examples": [
-											"Ich trinke einen Liter Wasser."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich trinke einen Liter Wasser.",
-							"ok": true
-						},
-						{
-							"answer": "Ich trinke ein Liter Wasser.",
-							"ok": false
-						},
-						{
-							"answer": "Ich einen Liter Wasser trinke.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Stück",
-					"summary": "ein Teil von etwas",
-					"explain": {
-						"entryId": "Stück",
-						"headword": "Stück",
-						"pronunciation": {
-							"display": "shtük",
-							"ipaUK": "/ʃtʏk/",
-							"ipaUS": "/ʃtʏk/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Stück",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein einzelner Teil von etwas",
-										"examples": [
-											"Ich nehme ein Stück Kuchen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich nehme ein Stück Kuchen.",
-							"ok": true
-						},
-						{
-							"answer": "Ich nehme einen Stück Kuchen.",
-							"ok": false
-						},
-						{
-							"answer": "Ich ein Stück Kuchen nehme.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Paar",
-					"summary": "zwei zusammengehörige Dinge",
-					"explain": {
-						"entryId": "Paar",
-						"headword": "Paar",
-						"pronunciation": {
-							"display": "par",
-							"ipaUK": "/paːɐ̯/",
-							"ipaUS": "/paːɐ̯/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Paar",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "zwei Dinge, die zusammengehören",
-										"examples": [
-											"Ich kaufe ein Paar Schuhe."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich kaufe ein Paar Schuhe.",
-							"ok": true
-						},
-						{
-							"answer": "Ich kaufe einen Paar Schuhe.",
-							"ok": false
-						},
-						{
-							"answer": "Ich ein Paar Schuhe kaufe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 11,
-					"question": "viel",
-					"summary": "große Menge",
-					"explain": {
-						"entryId": "viel",
-						"headword": "viel",
-						"pronunciation": {
-							"display": "feel",
-							"ipaUK": "/fiːl/",
-							"ipaUS": "/fiːl/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Mengenwort",
-								"grammarType": "Mengenwort",
-								"headwordLine": "viel",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine große Menge (nicht zählbar)",
-										"examples": [
-											"Ich habe nicht viel Zeit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich habe nicht viel Zeit.",
-							"ok": true
-						},
-						{
-							"answer": "Ich habe nicht viele Zeit.",
-							"ok": false
-						},
-						{
-							"answer": "Ich nicht viel Zeit habe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 12,
-					"question": "wenig",
-					"summary": "kleine Menge",
-					"explain": {
-						"entryId": "wenig",
-						"headword": "wenig",
-						"pronunciation": {
-							"display": "VAY-nikh",
-							"ipaUK": "/ˈveːnɪç/",
-							"ipaUS": "/ˈveːnɪç/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Mengenwort",
-								"grammarType": "Mengenwort",
-								"headwordLine": "wenig",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine kleine Menge",
-										"examples": [
-											"Er hat wenig Geld."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er hat wenig Geld.",
-							"ok": true
-						},
-						{
-							"answer": "Er hat wenige Geld.",
-							"ok": false
-						},
-						{
-							"answer": "Er wenig Geld hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 13,
-					"question": "genug",
-					"summary": "so viel wie nötig",
-					"explain": {
-						"entryId": "genug",
-						"headword": "genug",
-						"pronunciation": {
-							"display": "guh-NOOK",
-							"ipaUK": "/ɡəˈnuːk/",
-							"ipaUS": "/ɡəˈnuːk/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adverb",
-								"grammarType": "Adverb",
-								"headwordLine": "genug",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "so viel, wie man braucht",
-										"examples": [
-											"Wir haben genug Zeit für alles."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir haben genug Zeit für alles.",
-							"ok": true
-						},
-						{
-							"answer": "Wir haben genuge Zeit für alles.",
-							"ok": false
-						},
-						{
-							"answer": "Wir genug Zeit für alles haben.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 14,
-					"question": "Menge",
-					"summary": "wie viel von etwas",
-					"explain": {
-						"entryId": "Menge",
-						"headword": "Menge",
-						"pronunciation": {
-							"display": "MENG-uh",
-							"ipaUK": "/ˈmɛŋə/",
-							"ipaUS": "/ˈmɛŋə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Menge",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wie viel von etwas da ist",
-										"examples": [
-											"Eine große Menge Wasser ist ausgelaufen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Eine große Menge Wasser ist ausgelaufen.",
-							"ok": true
-						},
-						{
-							"answer": "Ein großer Menge Wasser ist ausgelaufen.",
-							"ok": false
-						},
-						{
-							"answer": "Eine große Menge Wasser ausgelaufen ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 15,
-					"question": "ungefähr",
-					"summary": "etwa; nicht genau",
-					"explain": {
-						"entryId": "ungefähr",
-						"headword": "ungefähr",
-						"pronunciation": {
-							"display": "OON-guh-fair",
-							"ipaUK": "/ˈʊnɡəˌfɛːɐ̯/",
-							"ipaUS": "/ˈʊnɡəˌfɛːɐ̯/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adverb",
-								"grammarType": "Adverb",
-								"headwordLine": "ungefähr",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht genau; etwa",
-										"examples": [
-											"Der Weg dauert ungefähr eine Stunde."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Weg dauert ungefähr eine Stunde.",
-							"ok": true
-						},
-						{
-							"answer": "Der Weg dauert ungefähre eine Stunde.",
-							"ok": false
-						},
-						{
-							"answer": "Der Weg ungefähr eine Stunde dauert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 16,
-					"question": "mehr",
-					"summary": "eine größere Menge",
-					"explain": {
-						"entryId": "mehr",
-						"headword": "mehr",
-						"pronunciation": {
-							"display": "mair",
-							"ipaUK": "/meːɐ̯/",
-							"ipaUS": "/meːɐ̯/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Mengenwort",
-								"grammarType": "Mengenwort",
-								"headwordLine": "mehr",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine größere Menge als vorher",
-										"examples": [
-											"Ich möchte mehr Kaffee, bitte."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich möchte mehr Kaffee, bitte.",
-							"ok": true
-						},
-						{
-							"answer": "Ich möchte mehre Kaffee, bitte.",
-							"ok": false
-						},
-						{
-							"answer": "Ich mehr Kaffee möchte, bitte.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizQuantities1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "hundert",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "hundert – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "tausend",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "tausend – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Million",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Million – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Hälfte",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Hälfte – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Viertel",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Viertel – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Kilo",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kilo – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Gramm",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Gramm – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Liter",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Liter – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Stück",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Stück – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Paar",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Paar – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

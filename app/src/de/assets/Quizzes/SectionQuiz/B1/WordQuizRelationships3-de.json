@@ -1,334 +1,136 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizRelationships3-de",
-	"title": "Relationships",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Unterstützung",
-					"summary": "Hilfe, die man gibt",
-					"explain": {
-						"entryId": "Unterstützung",
-						"headword": "Unterstützung",
-						"pronunciation": {
-							"display": "oon-tuh-SHTÜT-soong",
-							"ipaUK": "/ʊntɐˈʃtʏtsʊŋ/",
-							"ipaUS": "/ʊntɐˈʃtʏtsʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Unterstützung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Unterstützung: die Hilfe, die man jemandem gibt",
-										"examples": [
-											"Ich danke dir für deine Unterstützung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich danke dir für deine Unterstützung.",
-							"ok": true
-						},
-						{
-							"answer": "Ich danke dir für deinen Unterstützung.",
-							"ok": false
-						},
-						{
-							"answer": "Ich dir für deine Unterstützung danke.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Beistand",
-					"summary": "Hilfe in schwieriger Lage",
-					"explain": {
-						"entryId": "Beistand",
-						"headword": "Beistand",
-						"pronunciation": {
-							"display": "BY-shtant",
-							"ipaUK": "/ˈbaɪ̯ˌʃtant/",
-							"ipaUS": "/ˈbaɪ̯ˌʃtant/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Beistand",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Beistand: die Hilfe in einer schwierigen Lage",
-										"examples": [
-											"In der Not war sein Beistand eine große Hilfe."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In der Not war sein Beistand eine große Hilfe.",
-							"ok": true
-						},
-						{
-							"answer": "In der Not war seine Beistand eine große Hilfe.",
-							"ok": false
-						},
-						{
-							"answer": "In der Not sein Beistand eine große Hilfe war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Hilfe",
-					"summary": "Unterstützen bei einem Problem",
-					"explain": {
-						"entryId": "Hilfe",
-						"headword": "Hilfe",
-						"pronunciation": {
-							"display": "HIL-fuh",
-							"ipaUK": "/ˈhɪlfə/",
-							"ipaUS": "/ˈhɪlfə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Hilfe",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Hilfe: das Unterstützen bei einem Problem",
-										"examples": [
-											"Ohne deine Hilfe hätte ich es nicht geschafft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ohne deine Hilfe hätte ich es nicht geschafft.",
-							"ok": true
-						},
-						{
-							"answer": "Ohne deiner Hilfe hätte ich es nicht geschafft.",
-							"ok": false
-						},
-						{
-							"answer": "Ohne deine Hilfe ich hätte es nicht geschafft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Vertrauen",
-					"summary": "Glaube an die Zuverlässigkeit",
-					"explain": {
-						"entryId": "Vertrauen",
-						"headword": "Vertrauen",
-						"pronunciation": {
-							"display": "fer-TROW-en",
-							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
-							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vertrauen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Vertrauen: der feste Glaube an die Zuverlässigkeit von jemandem",
-										"examples": [
-											"Ohne Vertrauen funktioniert keine Freundschaft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ohne Vertrauen funktioniert keine Freundschaft.",
-							"ok": true
-						},
-						{
-							"answer": "Ohne Vertrauens funktioniert keine Freundschaft.",
-							"ok": false
-						},
-						{
-							"answer": "Ohne Vertrauen keine Freundschaft funktioniert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Glaube",
-					"summary": "fester Glaube/Vertrauen",
-					"explain": {
-						"entryId": "Glaube",
-						"headword": "Glaube",
-						"pronunciation": {
-							"display": "GLOW-buh",
-							"ipaUK": "/ˈɡlaʊ̯bə/",
-							"ipaUS": "/ˈɡlaʊ̯bə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Glaube",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Glaube: der feste Glaube oder das tiefe Vertrauen",
-										"examples": [
-											"Ihr Glaube an ihn war unerschütterlich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ihr Glaube an ihn war unerschütterlich.",
-							"ok": true
-						},
-						{
-							"answer": "Ihre Glaube an ihn war unerschütterlich.",
-							"ok": false
-						},
-						{
-							"answer": "Ihr Glaube an ihn unerschütterlich war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Zuversicht",
-					"summary": "Vertrauen in die Zukunft",
-					"explain": {
-						"entryId": "Zuversicht",
-						"headword": "Zuversicht",
-						"pronunciation": {
-							"display": "TSOO-fer-zikht",
-							"ipaUK": "/ˈtsuːfɛɐ̯ˌzɪçt/",
-							"ipaUS": "/ˈtsuːfɛɐ̯ˌzɪçt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Zuversicht",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Zuversicht: das feste Vertrauen, dass etwas gut wird",
-										"examples": [
-											"Mit Zuversicht blickt sie in die Zukunft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mit Zuversicht blickt sie in die Zukunft.",
-							"ok": true
-						},
-						{
-							"answer": "Mit Zuversicht blickt sie in der Zukunft.",
-							"ok": false
-						},
-						{
-							"answer": "Mit Zuversicht sie blickt in die Zukunft.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizRelationships3-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Unterstützung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Unterstützung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Beistand",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Beistand – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Hilfe",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Hilfe – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Vertrauen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Vertrauen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Glaube",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Glaube – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Zuversicht",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Zuversicht – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

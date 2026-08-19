@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs1-de",
+	"title": "Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "absolut",
+					"summary": "völlig",
+					"explain": {
+						"entryId": "absolut",
+						"headword": "absolut",
+						"pronunciation": {
+							"display": "ap-zo-LOOT",
+							"ipaUK": "/apzoˈluːt/",
+							"ipaUS": "/apzoˈluːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "absolut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "absolut: völlig; ohne Einschränkung",
+										"examples": [
+											"Da hast du absolut recht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Da hast du absolut recht.",
+							"ok": true
+						},
+						{
+							"answer": "Da hast du absolute recht.",
+							"ok": false
+						},
+						{
+							"answer": "Da du hast absolut recht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "total",
+					"summary": "völlig, komplett",
+					"explain": {
+						"entryId": "total",
+						"headword": "total",
+						"pronunciation": {
+							"display": "to-TAHL",
+							"ipaUK": "/toˈtaːl/",
+							"ipaUS": "/toˈtaːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "total",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "total: völlig; komplett",
+										"examples": [
+											"Ich bin total müde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin total müde.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin totale müde.",
+							"ok": false
+						},
+						{
+							"answer": "Ich total bin müde.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "restlos",
+					"summary": "völlig, ohne Rest",
+					"explain": {
+						"entryId": "restlos",
+						"headword": "restlos",
+						"pronunciation": {
+							"display": "REST-lohs",
+							"ipaUK": "/ˈʁɛstloːs/",
+							"ipaUS": "/ˈʁɛstloːs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "restlos",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "restlos: völlig; ohne Rest",
+										"examples": [
+											"Das Konzert war restlos ausverkauft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Konzert war restlos ausverkauft.",
+							"ok": true
+						},
+						{
+							"answer": "Das Konzert war restlos ausverkaufte.",
+							"ok": false
+						},
+						{
+							"answer": "Das Konzert restlos ausverkauft war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "bestimmt",
+					"summary": "ganz sicher",
+					"explain": {
+						"entryId": "bestimmt",
+						"headword": "bestimmt",
+						"pronunciation": {
+							"display": "buh-SHTIMT",
+							"ipaUK": "/bəˈʃtɪmt/",
+							"ipaUS": "/bəˈʃtɪmt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "bestimmt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "bestimmt: ganz sicher",
+										"examples": [
+											"Morgen kommt sie bestimmt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Morgen kommt sie bestimmt.",
+							"ok": true
+						},
+						{
+							"answer": "Morgen kommt sie bestimmte.",
+							"ok": false
+						},
+						{
+							"answer": "Morgen sie kommt bestimmt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "definitiv",
+					"summary": "auf jeden Fall",
+					"explain": {
+						"entryId": "definitiv",
+						"headword": "definitiv",
+						"pronunciation": {
+							"display": "de-fi-ni-TEEF",
+							"ipaUK": "/definiˈtiːf/",
+							"ipaUS": "/definiˈtiːf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "definitiv",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "definitiv: auf jeden Fall; ohne Zweifel",
+										"examples": [
+											"Das war definitiv ein Fehler."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das war definitiv ein Fehler.",
+							"ok": true
+						},
+						{
+							"answer": "Das war definitive ein Fehler.",
+							"ok": false
+						},
+						{
+							"answer": "Das definitiv war ein Fehler.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "sicherlich",
+					"summary": "mit großer Sicherheit",
+					"explain": {
+						"entryId": "sicherlich",
+						"headword": "sicherlich",
+						"pronunciation": {
+							"display": "ZIKH-uh-likh",
+							"ipaUK": "/ˈzɪçɐlɪç/",
+							"ipaUS": "/ˈzɪçɐlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "sicherlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sicherlich: mit großer Sicherheit",
+										"examples": [
+											"Sie hat sicherlich recht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat sicherlich recht.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat sicherliche recht.",
+							"ok": false
+						},
+						{
+							"answer": "Sie sicherlich hat recht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "komplett",
+					"summary": "ganz und gar",
+					"explain": {
+						"entryId": "komplett",
+						"headword": "komplett",
+						"pronunciation": {
+							"display": "kom-PLET",
+							"ipaUK": "/kɔmˈplɛt/",
+							"ipaUS": "/kɔmˈplɛt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "komplett",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "komplett: ganz und gar",
+										"examples": [
+											"Der Zug war komplett voll."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Zug war komplett voll.",
+							"ok": true
+						},
+						{
+							"answer": "Der Zug war kompletter voll.",
+							"ok": false
+						},
+						{
+							"answer": "Der Zug komplett voll war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "gänzlich",
+					"summary": "vollkommen",
+					"explain": {
+						"entryId": "gänzlich",
+						"headword": "gänzlich",
+						"pronunciation": {
+							"display": "GENTS-likh",
+							"ipaUK": "/ˈɡɛntslɪç/",
+							"ipaUS": "/ˈɡɛntslɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "gänzlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "gänzlich: vollkommen; total",
+										"examples": [
+											"Das war gänzlich unmöglich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das war gänzlich unmöglich.",
+							"ok": true
+						},
+						{
+							"answer": "Das war gänzliche unmöglich.",
+							"ok": false
+						},
+						{
+							"answer": "Das gänzlich unmöglich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "vollständig",
+					"summary": "ganz, komplett",
+					"explain": {
+						"entryId": "vollständig",
+						"headword": "vollständig",
+						"pronunciation": {
+							"display": "FOL-shten-dikh",
+							"ipaUK": "/ˈfɔlˌʃtɛndɪç/",
+							"ipaUS": "/ˈfɔlˌʃtɛndɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "vollständig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "vollständig: ganz; komplett",
+										"examples": [
+											"Der Termin ist vollständig ausgebucht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Termin ist vollständig ausgebucht.",
+							"ok": true
+						},
+						{
+							"answer": "Der Termin ist vollständige ausgebucht.",
+							"ok": false
+						},
+						{
+							"answer": "Der Termin vollständig ausgebucht ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "ziemlich",
+					"summary": "recht, relativ",
+					"explain": {
+						"entryId": "ziemlich",
+						"headword": "ziemlich",
+						"pronunciation": {
+							"display": "TSEEM-likh",
+							"ipaUK": "/ˈtsiːmlɪç/",
+							"ipaUS": "/ˈtsiːmlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "ziemlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ziemlich: recht; relativ stark",
+										"examples": [
+											"Es ist heute ziemlich kalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es ist heute ziemlich kalt.",
+							"ok": true
+						},
+						{
+							"answer": "Es ist heute ziemliche kalt.",
+							"ok": false
+						},
+						{
+							"answer": "Es heute ist ziemlich kalt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

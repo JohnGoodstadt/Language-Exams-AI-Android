@@ -1,124 +1,136 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizLeisure2-de",
-	"title": "Leisure",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Reisen",
-					"summary": "an andere Orte fahren (Hobby)",
-					"explain": {
-						"entryId": "Reisen",
-						"headword": "Reisen",
-						"pronunciation": {
-							"display": "RY-zn",
-							"ipaUK": "/ˈʁaɪ̯zn̩/",
-							"ipaUS": "/ˈʁaɪ̯zn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Reisen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "an andere Orte fahren, um Neues zu sehen",
-										"examples": [
-											"Das Reisen erweitert den Horizont."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Reisen erweitert den Horizont.",
-							"ok": true
-						},
-						{
-							"answer": "Das reisen erweitert den Horizont.",
-							"ok": false
-						},
-						{
-							"answer": "Das Reisen den Horizont erweitert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Filme schauen",
-					"summary": "Filme ansehen (Hobby)",
-					"explain": {
-						"entryId": "Filme schauen",
-						"headword": "Filme schauen",
-						"pronunciation": {
-							"display": "FIL-muh SHOW-uhn",
-							"ipaUK": "/ˈfɪlmə ˈʃaʊ̯ən/",
-							"ipaUS": "/ˈfɪlmə ˈʃaʊ̯ən/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verbphrase",
-								"grammarType": "Freizeit",
-								"headwordLine": "Filme schauen",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Filme gucken"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Filme im Kino oder zu Hause ansehen",
-										"examples": [
-											"Am Abend schaue ich gern Filme."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Abend schaue ich gern Filme.",
-							"ok": true
-						},
-						{
-							"answer": "Am Abend schaue ich gern Filmen.",
-							"ok": false
-						},
-						{
-							"answer": "Am Abend ich schaue gern Filme.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizLeisure2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "sich treffen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich treffen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "spazieren gehen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "spazieren gehen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Freizeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Freizeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Kino",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kino – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "ins Bett gehen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "ins Bett gehen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Musik hören",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Musik hören – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

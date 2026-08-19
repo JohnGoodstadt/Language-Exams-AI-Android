@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizEmotions2-de",
-	"title": "Emotions",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Gefühl",
-					"summary": "was man innerlich empfindet",
-					"explain": {
-						"entryId": "Gefühl",
-						"headword": "Gefühl",
-						"pronunciation": {
-							"display": "guh-FÜL",
-							"ipaUK": "/ɡəˈfyːl/",
-							"ipaUS": "/ɡəˈfyːl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gefühl",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Gefühl: was man innerlich empfindet",
-										"examples": [
-											"Ich hatte ein gutes Gefühl dabei."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich hatte ein gutes Gefühl dabei.",
-							"ok": true
-						},
-						{
-							"answer": "Ich hatte einen guten Gefühl dabei.",
-							"ok": false
-						},
-						{
-							"answer": "Ich ein gutes Gefühl dabei hatte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Empfindung",
-					"summary": "inneres Gefühl, Regung",
-					"explain": {
-						"entryId": "Empfindung",
-						"headword": "Empfindung",
-						"pronunciation": {
-							"display": "emp-FIN-doong",
-							"ipaUK": "/ɛmˈpfɪndʊŋ/",
-							"ipaUS": "/ɛmˈpfɪndʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Empfindung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Empfindung: ein inneres Gefühl oder eine Regung",
-										"examples": [
-											"Wärme ist eine angenehme Empfindung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wärme ist eine angenehme Empfindung.",
-							"ok": true
-						},
-						{
-							"answer": "Wärme ist einen angenehmen Empfindung.",
-							"ok": false
-						},
-						{
-							"answer": "Wärme eine angenehme Empfindung ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Begeisterung",
-					"summary": "große Freude an etwas",
-					"explain": {
-						"entryId": "Begeisterung",
-						"headword": "Begeisterung",
-						"pronunciation": {
-							"display": "buh-GUY-stuh-roong",
-							"ipaUK": "/bəˈɡaɪ̯stəʁʊŋ/",
-							"ipaUS": "/bəˈɡaɪ̯stəʁʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Begeisterung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Begeisterung: die große Freude an etwas",
-										"examples": [
-											"Die Fans zeigten große Begeisterung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Fans zeigten große Begeisterung.",
-							"ok": true
-						},
-						{
-							"answer": "Die Fans zeigten großen Begeisterung.",
-							"ok": false
-						},
-						{
-							"answer": "Die Fans große Begeisterung zeigten.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Aufregung",
-					"summary": "nervöses Gefühl vor etwas",
-					"explain": {
-						"entryId": "Aufregung",
-						"headword": "Aufregung",
-						"pronunciation": {
-							"display": "OWF-ray-goong",
-							"ipaUK": "/ˈaʊ̯fʁeːɡʊŋ/",
-							"ipaUS": "/ˈaʊ̯fʁeːɡʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Aufregung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Aufregung: ein starkes, nervöses Gefühl vor etwas",
-										"examples": [
-											"Vor der Reise herrschte große Aufregung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Vor der Reise herrschte große Aufregung.",
-							"ok": true
-						},
-						{
-							"answer": "Vor der Reise herrschte großen Aufregung.",
-							"ok": false
-						},
-						{
-							"answer": "Vor der Reise große Aufregung herrschte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Eifer",
-					"summary": "starker Wille, etwas zu tun",
-					"explain": {
-						"entryId": "Eifer",
-						"headword": "Eifer",
-						"pronunciation": {
-							"display": "EYE-fuh",
-							"ipaUK": "/ˈaɪ̯fɐ/",
-							"ipaUS": "/ˈaɪ̯fɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Eifer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Eifer: der starke Wille, etwas gut zu machen",
-										"examples": [
-											"Mit großem Eifer lernte er Vokabeln."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mit großem Eifer lernte er Vokabeln.",
-							"ok": true
-						},
-						{
-							"answer": "Mit großer Eifer lernte er Vokabeln.",
-							"ok": false
-						},
-						{
-							"answer": "Mit großem Eifer er lernte Vokabeln.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Erlebnis",
-					"summary": "etwas, das man erlebt hat",
-					"explain": {
-						"entryId": "Erlebnis",
-						"headword": "Erlebnis",
-						"pronunciation": {
-							"display": "er-LAYP-nis",
-							"ipaUK": "/ɛɐ̯ˈleːpnɪs/",
-							"ipaUS": "/ɛɐ̯ˈleːpnɪs/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Erlebnis",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Erlebnis: etwas Besonderes, das man erlebt hat",
-										"examples": [
-											"Die Safari war ein tolles Erlebnis."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Safari war ein tolles Erlebnis.",
-							"ok": true
-						},
-						{
-							"answer": "Die Safari war ein toller Erlebnis.",
-							"ok": false
-						},
-						{
-							"answer": "Die Safari ein tolles Erlebnis war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Herkunft",
-					"summary": "woher jemand kommt",
-					"explain": {
-						"entryId": "Herkunft",
-						"headword": "Herkunft",
-						"pronunciation": {
-							"display": "HAIR-koonft",
-							"ipaUK": "/ˈheːɐ̯kʊnft/",
-							"ipaUS": "/ˈheːɐ̯kʊnft/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Herkunft",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Herkunft: woher jemand kommt (Familie, Land)",
-										"examples": [
-											"Er ist stolz auf seine Herkunft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er ist stolz auf seine Herkunft.",
-							"ok": true
-						},
-						{
-							"answer": "Er ist stolz auf seinen Herkunft.",
-							"ok": false
-						},
-						{
-							"answer": "Er auf seine Herkunft stolz ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Fertigkeit",
-					"summary": "gelernte praktische Fähigkeit",
-					"explain": {
-						"entryId": "Fertigkeit",
-						"headword": "Fertigkeit",
-						"pronunciation": {
-							"display": "FER-tikh-kite",
-							"ipaUK": "/ˈfɛʁtɪçkaɪ̯t/",
-							"ipaUS": "/ˈfɛʁtɪçkaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Fertigkeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Fertigkeit: eine gelernte, praktische Fähigkeit",
-										"examples": [
-											"Kochen ist eine nützliche Fertigkeit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Kochen ist eine nützliche Fertigkeit.",
-							"ok": true
-						},
-						{
-							"answer": "Kochen ist einen nützlichen Fertigkeit.",
-							"ok": false
-						},
-						{
-							"answer": "Kochen eine nützliche Fertigkeit ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Meinung",
-					"summary": "was jemand über etwas denkt",
-					"explain": {
-						"entryId": "Meinung",
-						"headword": "Meinung",
-						"pronunciation": {
-							"display": "MY-noong",
-							"ipaUK": "/ˈmaɪ̯nʊŋ/",
-							"ipaUS": "/ˈmaɪ̯nʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Meinung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Meinung: das, was jemand über etwas denkt",
-										"examples": [
-											"Jeder darf seine Meinung frei sagen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Jeder darf seine Meinung frei sagen.",
-							"ok": true
-						},
-						{
-							"answer": "Jeder darf seinen Meinung frei sagen.",
-							"ok": false
-						},
-						{
-							"answer": "Jeder seine Meinung frei sagen darf.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Ansicht",
-					"summary": "Meinung zu einem Thema",
-					"explain": {
-						"entryId": "Ansicht",
-						"headword": "Ansicht",
-						"pronunciation": {
-							"display": "AN-zikht",
-							"ipaUK": "/ˈanzɪçt/",
-							"ipaUS": "/ˈanzɪçt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ansicht",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Ansicht: die Meinung zu einem Thema",
-										"examples": [
-											"Nach meiner Ansicht sollten wir warten."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nach meiner Ansicht sollten wir warten.",
-							"ok": true
-						},
-						{
-							"answer": "Nach meinem Ansicht sollten wir warten.",
-							"ok": false
-						},
-						{
-							"answer": "Nach meiner Ansicht wir sollten warten.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizEmotions2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Gefühl",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Gefühl – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Empfindung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Empfindung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Begeisterung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Begeisterung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Aufregung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Aufregung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Eifer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Eifer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Erlebnis",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Erlebnis – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Herkunft",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Herkunft – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Fertigkeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Fertigkeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Meinung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Meinung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Ansicht",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ansicht – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

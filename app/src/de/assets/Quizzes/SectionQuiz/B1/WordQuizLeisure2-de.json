@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizLeisure2-de",
-	"title": "Leisure",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Sammlung",
-					"summary": "viele gesammelte Dinge",
-					"explain": {
-						"entryId": "Sammlung",
-						"headword": "Sammlung",
-						"pronunciation": {
-							"display": "ZAM-loong",
-							"ipaUK": "/ˈzamlʊŋ/",
-							"ipaUS": "/ˈzamlʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Sammlung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Sammlung: viele gesammelte Dinge zu einem Thema",
-										"examples": [
-											"Seine Sammlung alter Münzen ist wertvoll."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Seine Sammlung alter Münzen ist wertvoll.",
-							"ok": true
-						},
-						{
-							"answer": "Seinen Sammlung alter Münzen ist wertvoll.",
-							"ok": false
-						},
-						{
-							"answer": "Seine Sammlung alter Münzen wertvoll ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Handwerk",
-					"summary": "kreative Handarbeit",
-					"explain": {
-						"entryId": "Handwerk",
-						"headword": "Handwerk",
-						"pronunciation": {
-							"display": "HANT-verk",
-							"ipaUK": "/ˈhantˌvɛʁk/",
-							"ipaUS": "/ˈhantˌvɛʁk/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Handwerk",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Handwerk: eine Tätigkeit, bei der man mit den Händen etwas herstellt",
-										"examples": [
-											"Töpfern ist ein altes Handwerk."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Töpfern ist ein altes Handwerk.",
-							"ok": true
-						},
-						{
-							"answer": "Töpfern ist ein alter Handwerk.",
-							"ok": false
-						},
-						{
-							"answer": "Töpfern ein altes Handwerk ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Freizeit",
-					"summary": "Zeit ohne Arbeit",
-					"explain": {
-						"entryId": "Freizeit",
-						"headword": "Freizeit",
-						"pronunciation": {
-							"display": "FRY-tsite",
-							"ipaUK": "/ˈfʁaɪ̯ˌtsaɪ̯t/",
-							"ipaUS": "/ˈfʁaɪ̯ˌtsaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Freizeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Freizeit: die Zeit ohne Arbeit oder Pflichten",
-										"examples": [
-											"In meiner Freizeit spiele ich Gitarre."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In meiner Freizeit spiele ich Gitarre.",
-							"ok": true
-						},
-						{
-							"answer": "In meinem Freizeit spiele ich Gitarre.",
-							"ok": false
-						},
-						{
-							"answer": "In meiner Freizeit ich spiele Gitarre.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Entspannung",
-					"summary": "Ausruhen, ruhig werden",
-					"explain": {
-						"entryId": "Entspannung",
-						"headword": "Entspannung",
-						"pronunciation": {
-							"display": "ent-SHPAN-oong",
-							"ipaUK": "/ɛntˈʃpanʊŋ/",
-							"ipaUS": "/ɛntˈʃpanʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Entspannung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Entspannung: das Ausruhen und Ruhigwerden",
-										"examples": [
-											"Musik sorgt bei mir für Entspannung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Musik sorgt bei mir für Entspannung.",
-							"ok": true
-						},
-						{
-							"answer": "Musik sorgt bei mir für Entspannungen.",
-							"ok": false
-						},
-						{
-							"answer": "Musik bei mir für Entspannung sorgt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "freie Zeit",
-					"summary": "Zeit ohne Arbeit/Schule",
-					"explain": {
-						"entryId": "freie Zeit",
-						"headword": "freie Zeit",
-						"pronunciation": {
-							"display": "FRY-uh tsite",
-							"ipaUK": "/ˈfʁaɪ̯ə tsaɪ̯t/",
-							"ipaUS": "/ˈfʁaɪ̯ə tsaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "freie Zeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die freie Zeit: die Zeit, in der man nicht arbeitet oder lernt",
-										"examples": [
-											"In meiner freien Zeit lese ich viel."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In meiner freien Zeit lese ich viel.",
-							"ok": true
-						},
-						{
-							"answer": "In meiner freie Zeit lese ich viel.",
-							"ok": false
-						},
-						{
-							"answer": "In meiner freien Zeit ich lese viel.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Museum",
-					"summary": "Ort mit Kunst und Geschichte",
-					"explain": {
-						"entryId": "Museum",
-						"headword": "Museum",
-						"pronunciation": {
-							"display": "moo-ZAY-oom",
-							"ipaUK": "/muˈzeːʊm/",
-							"ipaUS": "/muˈzeːʊm/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Museum",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Museum: ein Ort mit Kunst und Geschichte",
-										"examples": [
-											"Am Sonntag besuchen wir ein Museum."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Sonntag besuchen wir ein Museum.",
-							"ok": true
-						},
-						{
-							"answer": "Am Sonntag besuchen wir einen Museum.",
-							"ok": false
-						},
-						{
-							"answer": "Am Sonntag wir besuchen ein Museum.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Ausstellung",
-					"summary": "Schau von Kunst/Objekten",
-					"explain": {
-						"entryId": "Ausstellung",
-						"headword": "Ausstellung",
-						"pronunciation": {
-							"display": "OWS-shtel-oong",
-							"ipaUK": "/ˈaʊ̯sˌʃtɛlʊŋ/",
-							"ipaUS": "/ˈaʊ̯sˌʃtɛlʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ausstellung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Ausstellung: eine Schau von Kunst oder Objekten",
-										"examples": [
-											"Die Ausstellung zeigt moderne Bilder."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Ausstellung zeigt moderne Bilder.",
-							"ok": true
-						},
-						{
-							"answer": "Der Ausstellung zeigt moderne Bilder.",
-							"ok": false
-						},
-						{
-							"answer": "Die Ausstellung moderne Bilder zeigt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Galerie",
-					"summary": "Raum, in dem Kunst gezeigt wird",
-					"explain": {
-						"entryId": "Galerie",
-						"headword": "Galerie",
-						"pronunciation": {
-							"display": "ga-luh-REE",
-							"ipaUK": "/ɡaləˈʁiː/",
-							"ipaUS": "/ɡaləˈʁiː/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Galerie",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Galerie: ein Raum, in dem Kunst gezeigt wird",
-										"examples": [
-											"In der Galerie hängen teure Gemälde."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In der Galerie hängen teure Gemälde.",
-							"ok": true
-						},
-						{
-							"answer": "In dem Galerie hängen teure Gemälde.",
-							"ok": false
-						},
-						{
-							"answer": "In der Galerie teure Gemälde hängen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Aufführung",
-					"summary": "Vorstellung auf einer Bühne",
-					"explain": {
-						"entryId": "Aufführung",
-						"headword": "Aufführung",
-						"pronunciation": {
-							"display": "OWF-fü-roong",
-							"ipaUK": "/ˈaʊ̯fˌfyːʁʊŋ/",
-							"ipaUS": "/ˈaʊ̯fˌfyːʁʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Aufführung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Aufführung: eine Vorstellung auf einer Bühne",
-										"examples": [
-											"Die Aufführung dauerte zwei Stunden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Aufführung dauerte zwei Stunden.",
-							"ok": true
-						},
-						{
-							"answer": "Der Aufführung dauerte zwei Stunden.",
-							"ok": false
-						},
-						{
-							"answer": "Die Aufführung zwei Stunden dauerte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Schauspieler",
-					"summary": "spielt in Film/Theater",
-					"explain": {
-						"entryId": "Schauspieler",
-						"headword": "Schauspieler",
-						"pronunciation": {
-							"display": "SHOW-shpee-luh",
-							"ipaUK": "/ˈʃaʊ̯ˌʃpiːlɐ/",
-							"ipaUS": "/ˈʃaʊ̯ˌʃpiːlɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Schauspieler",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Schauspieler: eine Person, die in Filmen oder im Theater spielt",
-										"examples": [
-											"Der Schauspieler bekam viel Applaus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Schauspieler bekam viel Applaus.",
-							"ok": true
-						},
-						{
-							"answer": "Die Schauspieler bekam viel Applaus.",
-							"ok": false
-						},
-						{
-							"answer": "Der Schauspieler viel Applaus bekam.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizLeisure2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Sammlung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Sammlung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Handwerk",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Handwerk – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Freizeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Freizeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Entspannung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Entspannung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "freie Zeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "freie Zeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Museum",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Museum – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Ausstellung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ausstellung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Galerie",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Galerie – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Aufführung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Aufführung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Schauspieler",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Schauspieler – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

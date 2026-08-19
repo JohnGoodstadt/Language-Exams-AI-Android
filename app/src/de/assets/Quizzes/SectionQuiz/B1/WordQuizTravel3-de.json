@@ -1,493 +1,196 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizTravel3-de",
-	"title": "Travel",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Flugsteig",
-					"summary": "Ausgang zum Flugzeug",
-					"explain": {
-						"entryId": "Flugsteig",
-						"headword": "Flugsteig",
-						"pronunciation": {
-							"display": "FLOOK-shtike",
-							"ipaUK": "/ˈfluːkˌʃtaɪ̯k/",
-							"ipaUS": "/ˈfluːkˌʃtaɪ̯k/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Flugsteig",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Flugsteig: der Ausgang zum Flugzeug am Flughafen",
-										"examples": [
-											"Der Flugsteig befindet sich im ersten Stock."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Flugsteig befindet sich im ersten Stock.",
-							"ok": true
-						},
-						{
-							"answer": "Die Flugsteig befindet sich im ersten Stock.",
-							"ok": false
-						},
-						{
-							"answer": "Der Flugsteig sich im ersten Stock befindet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Reiseziel",
-					"summary": "Ort, zu dem man reist",
-					"explain": {
-						"entryId": "Reiseziel",
-						"headword": "Reiseziel",
-						"pronunciation": {
-							"display": "RY-zuh-tseel",
-							"ipaUK": "/ˈʁaɪ̯zəˌtsiːl/",
-							"ipaUS": "/ˈʁaɪ̯zəˌtsiːl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Reiseziel",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Reiseziel: der Ort, zu dem man reist",
-										"examples": [
-											"Unser Reiseziel ist dieses Jahr Italien."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Unser Reiseziel ist dieses Jahr Italien.",
-							"ok": true
-						},
-						{
-							"answer": "Unsere Reiseziel ist dieses Jahr Italien.",
-							"ok": false
-						},
-						{
-							"answer": "Unser Reiseziel dieses Jahr Italien ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Reise",
-					"summary": "Fahrt an einen anderen Ort",
-					"explain": {
-						"entryId": "Reise",
-						"headword": "Reise",
-						"pronunciation": {
-							"display": "RY-zuh",
-							"ipaUK": "/ˈʁaɪ̯zə/",
-							"ipaUS": "/ˈʁaɪ̯zə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Reise",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Reise: eine Fahrt von einem Ort zum anderen",
-										"examples": [
-											"Die lange Reise war sehr anstrengend."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die lange Reise war sehr anstrengend.",
-							"ok": true
-						},
-						{
-							"answer": "Der lange Reise war sehr anstrengend.",
-							"ok": false
-						},
-						{
-							"answer": "Die lange Reise sehr anstrengend war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Reiseplan",
-					"summary": "genauer Plan einer Reise",
-					"explain": {
-						"entryId": "Reiseplan",
-						"headword": "Reiseplan",
-						"pronunciation": {
-							"display": "RY-zuh-plahn",
-							"ipaUK": "/ˈʁaɪ̯zəˌplaːn/",
-							"ipaUS": "/ˈʁaɪ̯zəˌplaːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Reiseplan",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Reiseplan: der genaue Plan einer Reise mit Orten und Zeiten",
-										"examples": [
-											"Unser Reiseplan ist gut durchdacht."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Unser Reiseplan ist gut durchdacht.",
-							"ok": true
-						},
-						{
-							"answer": "Unsere Reiseplan ist gut durchdacht.",
-							"ok": false
-						},
-						{
-							"answer": "Unser Reiseplan gut durchdacht ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Zeitplan",
-					"summary": "Plan, wann was passiert",
-					"explain": {
-						"entryId": "Zeitplan",
-						"headword": "Zeitplan",
-						"pronunciation": {
-							"display": "TSITE-plahn",
-							"ipaUK": "/ˈtsaɪ̯tˌplaːn/",
-							"ipaUS": "/ˈtsaɪ̯tˌplaːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Zeitplan",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Zeitplan: ein Plan, wann etwas passiert",
-										"examples": [
-											"Der Zeitplan für die Tour ist eng."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Zeitplan für die Tour ist eng.",
-							"ok": true
-						},
-						{
-							"answer": "Die Zeitplan für die Tour ist eng.",
-							"ok": false
-						},
-						{
-							"answer": "Der Zeitplan für die Tour eng ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "planen",
-					"summary": "im Voraus überlegen",
-					"explain": {
-						"entryId": "planen",
-						"headword": "planen",
-						"pronunciation": {
-							"display": "PLAH-nn",
-							"ipaUK": "/ˈplaːnən/",
-							"ipaUS": "/ˈplaːnən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "planen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "planen: im Voraus überlegen, was man tun wird",
-										"examples": [
-											"Wir planen unsere Reise sehr genau."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir planen unsere Reise sehr genau.",
-							"ok": true
-						},
-						{
-							"answer": "Wir plant unsere Reise sehr genau.",
-							"ok": false
-						},
-						{
-							"answer": "Wir unsere Reise sehr genau planen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Besichtigung",
-					"summary": "Ansehen von Sehenswürdigkeiten",
-					"explain": {
-						"entryId": "Besichtigung",
-						"headword": "Besichtigung",
-						"pronunciation": {
-							"display": "buh-ZIKH-ti-goong",
-							"ipaUK": "/bəˈzɪçtɪɡʊŋ/",
-							"ipaUS": "/bəˈzɪçtɪɡʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Besichtigung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Besichtigung: das Ansehen von Sehenswürdigkeiten",
-										"examples": [
-											"Die Besichtigung der Altstadt war schön."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Besichtigung der Altstadt war schön.",
-							"ok": true
-						},
-						{
-							"answer": "Der Besichtigung der Altstadt war schön.",
-							"ok": false
-						},
-						{
-							"answer": "Die Besichtigung der Altstadt schön war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Rundreise",
-					"summary": "Reise mit mehreren Stationen",
-					"explain": {
-						"entryId": "Rundreise",
-						"headword": "Rundreise",
-						"pronunciation": {
-							"display": "ROONT-ry-zuh",
-							"ipaUK": "/ˈʁʊntˌʁaɪ̯zə/",
-							"ipaUS": "/ˈʁʊntˌʁaɪ̯zə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Rundreise",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Rundreise: eine Reise mit mehreren Stationen",
-										"examples": [
-											"Die Rundreise führt durch fünf Länder."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Rundreise führt durch fünf Länder.",
-							"ok": true
-						},
-						{
-							"answer": "Der Rundreise führt durch fünf Länder.",
-							"ok": false
-						},
-						{
-							"answer": "Die Rundreise durch fünf Länder führt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Sehenswürdigkeit",
-					"summary": "Ort für Touristen",
-					"explain": {
-						"entryId": "Sehenswürdigkeit",
-						"headword": "Sehenswürdigkeit",
-						"pronunciation": {
-							"display": "ZAY-uhns-vür-dikh-kite",
-							"ipaUK": "/ˈzeːənsvʏʁdɪçkaɪ̯t/",
-							"ipaUS": "/ˈzeːənsvʏʁdɪçkaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Sehenswürdigkeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Sehenswürdigkeit: ein Ort, den Touristen gern besuchen",
-										"examples": [
-											"Der Turm ist eine bekannte Sehenswürdigkeit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Turm ist eine bekannte Sehenswürdigkeit.",
-							"ok": true
-						},
-						{
-							"answer": "Der Turm ist einen bekannten Sehenswürdigkeit.",
-							"ok": false
-						},
-						{
-							"answer": "Der Turm eine bekannte Sehenswürdigkeit ist.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizTravel3-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Flugsteig",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Flugsteig – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Reiseziel",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Reiseziel – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Reise",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Reise – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Reiseplan",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Reiseplan – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Zeitplan",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Zeitplan – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "planen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "planen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Besichtigung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Besichtigung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Rundreise",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Rundreise – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Sehenswürdigkeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Sehenswürdigkeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

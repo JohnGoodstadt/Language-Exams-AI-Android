@@ -1,499 +1,116 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizHello2-de",
-	"title": "Hello",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "anrufen",
-					"summary": "mit dem Telefon sprechen",
-					"explain": {
-						"entryId": "anrufen",
-						"headword": "anrufen",
-						"pronunciation": {
-							"display": "AN-roo-fn",
-							"ipaUK": "/ˈanˌʁuːfn̩/",
-							"ipaUS": "/ˈanˌʁuːfn̩/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "anrufen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "mit dem Telefon mit jemandem sprechen",
-										"examples": [
-											"Ich rufe dich morgen an."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich rufe dich morgen an.",
-							"ok": true
-						},
-						{
-							"answer": "Ich anrufe dich morgen.",
-							"ok": false
-						},
-						{
-							"answer": "Ich rufe dich morgen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "begrüßen",
-					"summary": "jemanden willkommen heißen",
-					"explain": {
-						"entryId": "begrüßen",
-						"headword": "begrüßen",
-						"pronunciation": {
-							"display": "buh-GRÜ-sn",
-							"ipaUK": "/bəˈɡʁyːsn̩/",
-							"ipaUS": "/bəˈɡʁyːsn̩/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "begrüßen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "jemanden willkommen heißen; Hallo sagen",
-										"examples": [
-											"Ich begrüße meine Gäste."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich begrüße meine Gäste.",
-							"ok": true
-						},
-						{
-							"answer": "Ich begrüßt meine Gäste.",
-							"ok": false
-						},
-						{
-							"answer": "Ich meine Gäste begrüße.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Guten Tag",
-					"summary": "ein höflicher Gruß am Tag",
-					"explain": {
-						"entryId": "Guten Tag",
-						"headword": "Guten Tag",
-						"pronunciation": {
-							"display": "GOO-tn tahk",
-							"ipaUK": "/ˈɡuːtn̩ taːk/",
-							"ipaUS": "/ˈɡuːtn̩ taːk/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Gruß",
-								"grammarType": "Grußformel",
-								"headwordLine": "Guten Tag",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Hallo"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein höflicher Gruß am Tag",
-										"examples": [
-											"Guten Tag, Frau Meyer!"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Guten Tag, Frau Meyer!",
-							"ok": true
-						},
-						{
-							"answer": "Guter Tag, Frau Meyer!",
-							"ok": false
-						},
-						{
-							"answer": "Tag Guten, Frau Meyer!",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "letzte",
-					"summary": "am Ende; nicht der erste",
-					"explain": {
-						"entryId": "letzte",
-						"headword": "letzte",
-						"pronunciation": {
-							"display": "LET-stuh",
-							"ipaUK": "/ˈlɛtstə/",
-							"ipaUS": "/ˈlɛtstə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "letzte",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "am Ende einer Reihe; nicht der erste",
-										"examples": [
-											"Das ist die letzte Frage."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das ist die letzte Frage.",
-							"ok": true
-						},
-						{
-							"answer": "Das ist der letzte Frage.",
-							"ok": false
-						},
-						{
-							"answer": "Das ist die letzte Fragen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Name",
-					"summary": "das Wort, mit dem man eine Person ruft",
-					"explain": {
-						"entryId": "Name",
-						"headword": "Name",
-						"pronunciation": {
-							"display": "NAH-muh",
-							"ipaUK": "/ˈnaːmə/",
-							"ipaUS": "/ˈnaːmə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Name",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Wort, mit dem man eine Person ruft",
-										"examples": [
-											"Wie ist dein Name?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wie ist dein Name?",
-							"ok": true
-						},
-						{
-							"answer": "Wie ist deine Name?",
-							"ok": false
-						},
-						{
-							"answer": "Wie dein Name ist?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "nett",
-					"summary": "freundlich und angenehm",
-					"explain": {
-						"entryId": "nett",
-						"headword": "nett",
-						"pronunciation": {
-							"display": "net",
-							"ipaUK": "/nɛt/",
-							"ipaUS": "/nɛt/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "nett",
-								"inflectionsLine": null,
-								"synonyms": [
-									"freundlich"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "freundlich und angenehm",
-										"examples": [
-											"Meine Nachbarin ist sehr nett."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Nachbarin ist sehr nett.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Nachbarin ist sehr nettes.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Nachbarin nett ist sehr.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "froh",
-					"summary": "glücklich; zufrieden",
-					"explain": {
-						"entryId": "froh",
-						"headword": "froh",
-						"pronunciation": {
-							"display": "froh",
-							"ipaUK": "/fʁoː/",
-							"ipaUS": "/fʁoː/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "froh",
-								"inflectionsLine": null,
-								"synonyms": [
-									"glücklich"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "glücklich und zufrieden",
-										"examples": [
-											"Ich bin froh, dich zu sehen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich bin froh, dich zu sehen.",
-							"ok": true
-						},
-						{
-							"answer": "Ich bin froh, dich zu sehe.",
-							"ok": false
-						},
-						{
-							"answer": "Ich froh bin, dich zu sehen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "sie",
-					"summary": "Pronomen für mehrere Personen",
-					"explain": {
-						"entryId": "sie",
-						"headword": "sie",
-						"pronunciation": {
-							"display": "zee",
-							"ipaUK": "/ziː/",
-							"ipaUS": "/ziː/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Pronomen",
-								"grammarType": "Personalpronomen",
-								"headwordLine": "sie",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Pronomen für mehrere Personen (3. Person Plural)",
-										"examples": [
-											"Sie sind meine Freunde."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie sind meine Freunde.",
-							"ok": true
-						},
-						{
-							"answer": "Sie ist meine Freunde.",
-							"ok": false
-						},
-						{
-							"answer": "Sie meine Freunde sind.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "wir",
-					"summary": "Pronomen für sich selbst und andere",
-					"explain": {
-						"entryId": "wir",
-						"headword": "wir",
-						"pronunciation": {
-							"display": "veer",
-							"ipaUK": "/viːɐ̯/",
-							"ipaUS": "/viːɐ̯/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Pronomen",
-								"grammarType": "Personalpronomen",
-								"headwordLine": "wir",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Pronomen für sich selbst und andere zusammen",
-										"examples": [
-											"Wir gehen ins Kino."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir gehen ins Kino.",
-							"ok": true
-						},
-						{
-							"answer": "Wir geht ins Kino.",
-							"ok": false
-						},
-						{
-							"answer": "Wir ins Kino gehen.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizHello2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Mir geht es gut",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Mir geht es gut – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Freut mich",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Freut mich – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Willkommen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Willkommen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Bis bald",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Bis bald – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Bis morgen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Bis morgen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

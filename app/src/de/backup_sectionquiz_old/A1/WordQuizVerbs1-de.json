@@ -1,0 +1,553 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs1-de",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "trinken",
+					"summary": "eine Flüssigkeit zu sich nehmen",
+					"explain": {
+						"entryId": "trinken",
+						"headword": "trinken",
+						"pronunciation": {
+							"display": "TRIN-kn",
+							"ipaUK": "/ˈtʁɪŋkn̩/",
+							"ipaUS": "/ˈtʁɪŋkn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "trinken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Flüssigkeit zu sich nehmen",
+										"examples": [
+											"Ich trinke jeden Morgen Kaffee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich trinke jeden Morgen Kaffee.",
+							"ok": true
+						},
+						{
+							"answer": "Ich trinkt jeden Morgen Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Ich jeden Morgen Kaffee trinke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "essen",
+					"summary": "Nahrung zu sich nehmen",
+					"explain": {
+						"entryId": "essen",
+						"headword": "essen",
+						"pronunciation": {
+							"display": "ES-sn",
+							"ipaUK": "/ˈɛsn̩/",
+							"ipaUS": "/ˈɛsn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "essen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Nahrung zu sich nehmen",
+										"examples": [
+											"Wir essen zu Mittag um eins."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir essen zu Mittag um eins.",
+							"ok": true
+						},
+						{
+							"answer": "Wir isst zu Mittag um eins.",
+							"ok": false
+						},
+						{
+							"answer": "Wir zu Mittag um eins essen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "hören",
+					"summary": "etwas mit den Ohren wahrnehmen",
+					"explain": {
+						"entryId": "hören",
+						"headword": "hören",
+						"pronunciation": {
+							"display": "HÖ-ruhn",
+							"ipaUK": "/ˈhøːʁən/",
+							"ipaUS": "/ˈhøːʁən/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "hören",
+								"inflectionsLine": null,
+								"synonyms": [
+									"zuhören"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas mit den Ohren wahrnehmen",
+										"examples": [
+											"Ich höre gern Musik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich höre gern Musik.",
+							"ok": true
+						},
+						{
+							"answer": "Ich hört gern Musik.",
+							"ok": false
+						},
+						{
+							"answer": "Ich gern Musik höre.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "schauen",
+					"summary": "die Augen auf etwas richten",
+					"explain": {
+						"entryId": "schauen",
+						"headword": "schauen",
+						"pronunciation": {
+							"display": "SHOW-uhn",
+							"ipaUK": "/ˈʃaʊ̯ən/",
+							"ipaUS": "/ˈʃaʊ̯ən/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "schauen",
+								"inflectionsLine": null,
+								"synonyms": [
+									"gucken",
+									"sehen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Augen auf etwas richten",
+										"examples": [
+											"Am Abend schaue ich einen Film."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Abend schaue ich einen Film.",
+							"ok": true
+						},
+						{
+							"answer": "Am Abend schaut ich einen Film.",
+							"ok": false
+						},
+						{
+							"answer": "Am Abend ich schaue einen Film.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "rennen",
+					"summary": "sehr schnell laufen",
+					"explain": {
+						"entryId": "rennen",
+						"headword": "rennen",
+						"pronunciation": {
+							"display": "REN-uhn",
+							"ipaUK": "/ˈʁɛnən/",
+							"ipaUS": "/ˈʁɛnən/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "rennen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sehr schnell laufen",
+										"examples": [
+											"Die Kinder rennen im Garten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder rennen im Garten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder rennt im Garten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder im Garten rennen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "sitzen",
+					"summary": "auf einem Stuhl sein",
+					"explain": {
+						"entryId": "sitzen",
+						"headword": "sitzen",
+						"pronunciation": {
+							"display": "ZIT-sn",
+							"ipaUK": "/ˈzɪtsn̩/",
+							"ipaUS": "/ˈzɪtsn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "sitzen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "auf einem Stuhl oder einer Bank sein",
+										"examples": [
+											"Ich sitze auf dem Stuhl."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich sitze auf dem Stuhl.",
+							"ok": true
+						},
+						{
+							"answer": "Ich sitzt auf dem Stuhl.",
+							"ok": false
+						},
+						{
+							"answer": "Ich auf dem Stuhl sitze.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "schlafen",
+					"summary": "mit geschlossenen Augen ruhen",
+					"explain": {
+						"entryId": "schlafen",
+						"headword": "schlafen",
+						"pronunciation": {
+							"display": "SHLAH-fn",
+							"ipaUK": "/ˈʃlaːfn̩/",
+							"ipaUS": "/ˈʃlaːfn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "schlafen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sich mit geschlossenen Augen ausruhen",
+										"examples": [
+											"Das Baby schläft acht Stunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Baby schläft acht Stunden.",
+							"ok": true
+						},
+						{
+							"answer": "Das Baby schlaft acht Stunden.",
+							"ok": false
+						},
+						{
+							"answer": "Das Baby acht Stunden schläft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "stehen",
+					"summary": "aufrecht auf den Füßen sein",
+					"explain": {
+						"entryId": "stehen",
+						"headword": "stehen",
+						"pronunciation": {
+							"display": "SHTAY-uhn",
+							"ipaUK": "/ˈʃteːən/",
+							"ipaUS": "/ˈʃteːən/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "stehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "aufrecht auf den Füßen sein",
+										"examples": [
+											"Wir stehen an der Haltestelle."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir stehen an der Haltestelle.",
+							"ok": true
+						},
+						{
+							"answer": "Wir steht an der Haltestelle.",
+							"ok": false
+						},
+						{
+							"answer": "Wir an der Haltestelle stehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "sprechen",
+					"summary": "Wörter sagen; reden",
+					"explain": {
+						"entryId": "sprechen",
+						"headword": "sprechen",
+						"pronunciation": {
+							"display": "SHPRE-khn",
+							"ipaUK": "/ˈʃpʁɛçn̩/",
+							"ipaUS": "/ˈʃpʁɛçn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "sprechen",
+								"inflectionsLine": null,
+								"synonyms": [
+									"reden"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Wörter sagen; reden",
+										"examples": [
+											"Er spricht drei Sprachen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er spricht drei Sprachen.",
+							"ok": true
+						},
+						{
+							"answer": "Er sprecht drei Sprachen.",
+							"ok": false
+						},
+						{
+							"answer": "Er drei Sprachen spricht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "gehen",
+					"summary": "sich zu Fuß fortbewegen",
+					"explain": {
+						"entryId": "gehen",
+						"headword": "gehen",
+						"pronunciation": {
+							"display": "GAY-uhn",
+							"ipaUK": "/ˈɡeːən/",
+							"ipaUS": "/ˈɡeːən/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "gehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sich zu Fuß fortbewegen",
+										"examples": [
+											"Ich gehe zu Fuß zur Arbeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich gehe zu Fuß zur Arbeit.",
+							"ok": true
+						},
+						{
+							"answer": "Ich geht zu Fuß zur Arbeit.",
+							"ok": false
+						},
+						{
+							"answer": "Ich zu Fuß zur Arbeit gehe.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

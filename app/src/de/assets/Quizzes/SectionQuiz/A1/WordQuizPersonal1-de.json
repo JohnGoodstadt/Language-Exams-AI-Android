@@ -1,811 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizPersonal1-de",
-	"title": "Personal",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Name",
-					"summary": "wie eine Person heißt",
-					"explain": {
-						"entryId": "Name",
-						"headword": "Name",
-						"pronunciation": {
-							"display": "NAH-muh",
-							"ipaUK": "/ˈnaːmə/",
-							"ipaUS": "/ˈnaːmə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Name",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wie eine Person heißt",
-										"examples": [
-											"Mein Name ist Anna."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Name ist Anna.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Name ist Anna.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Name Anna ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Vorname",
-					"summary": "der erste Name",
-					"explain": {
-						"entryId": "Vorname",
-						"headword": "Vorname",
-						"pronunciation": {
-							"display": "FOR-nah-muh",
-							"ipaUK": "/ˈfoːɐ̯ˌnaːmə/",
-							"ipaUS": "/ˈfoːɐ̯ˌnaːmə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vorname",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der erste Name (nicht der Familienname)",
-										"examples": [
-											"Ihr Vorname ist Maria."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ihr Vorname ist Maria.",
-							"ok": true
-						},
-						{
-							"answer": "Ihre Vorname ist Maria.",
-							"ok": false
-						},
-						{
-							"answer": "Ihr Vorname Maria ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Nachname",
-					"summary": "der Familienname",
-					"explain": {
-						"entryId": "Nachname",
-						"headword": "Nachname",
-						"pronunciation": {
-							"display": "NAHKH-nah-muh",
-							"ipaUK": "/ˈnaːxˌnaːmə/",
-							"ipaUS": "/ˈnaːxˌnaːmə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Nachname",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Familienname",
-										"examples": [
-											"Wie ist Ihr Nachname?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wie ist Ihr Nachname?",
-							"ok": true
-						},
-						{
-							"answer": "Wie ist Ihre Nachname?",
-							"ok": false
-						},
-						{
-							"answer": "Wie Ihr Nachname ist?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Adresse",
-					"summary": "wo man wohnt",
-					"explain": {
-						"entryId": "Adresse",
-						"headword": "Adresse",
-						"pronunciation": {
-							"display": "a-DRES-suh",
-							"ipaUK": "/aˈdʁɛsə/",
-							"ipaUS": "/aˈdʁɛsə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Adresse",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wo man wohnt (Straße und Nummer)",
-										"examples": [
-											"Meine Adresse ist Hauptstraße 5."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Adresse ist Hauptstraße 5.",
-							"ok": true
-						},
-						{
-							"answer": "Mein Adresse ist Hauptstraße 5.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Adresse Hauptstraße 5 ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Stadt",
-					"summary": "ein großer Ort",
-					"explain": {
-						"entryId": "Stadt",
-						"headword": "Stadt",
-						"pronunciation": {
-							"display": "shtat",
-							"ipaUK": "/ʃtat/",
-							"ipaUS": "/ʃtat/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Stadt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein großer Ort mit vielen Menschen",
-										"examples": [
-											"Ich wohne in einer großen Stadt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich wohne in einer großen Stadt.",
-							"ok": true
-						},
-						{
-							"answer": "Ich wohne in einem großen Stadt.",
-							"ok": false
-						},
-						{
-							"answer": "Ich in einer großen Stadt wohne.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Land",
-					"summary": "ein Staat (z. B. Deutschland)",
-					"explain": {
-						"entryId": "Land",
-						"headword": "Land",
-						"pronunciation": {
-							"display": "lant",
-							"ipaUK": "/lant/",
-							"ipaUS": "/lant/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Land",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Staat, z. B. Deutschland",
-										"examples": [
-											"Deutschland ist ein schönes Land."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Deutschland ist ein schönes Land.",
-							"ok": true
-						},
-						{
-							"answer": "Deutschland ist ein schöner Land.",
-							"ok": false
-						},
-						{
-							"answer": "Deutschland ein schönes Land ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Telefonnummer",
-					"summary": "Nummer zum Anrufen",
-					"explain": {
-						"entryId": "Telefonnummer",
-						"headword": "Telefonnummer",
-						"pronunciation": {
-							"display": "te-le-FOHN-noom-uh",
-							"ipaUK": "/teleˈfoːnˌnʊmɐ/",
-							"ipaUS": "/teleˈfoːnˌnʊmɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Telefonnummer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Nummer, unter der man anruft",
-										"examples": [
-											"Wie ist deine Telefonnummer?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wie ist deine Telefonnummer?",
-							"ok": true
-						},
-						{
-							"answer": "Wie ist deinen Telefonnummer?",
-							"ok": false
-						},
-						{
-							"answer": "Wie deine Telefonnummer ist?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "E-Mail-Adresse",
-					"summary": "die Adresse für E-Mails",
-					"explain": {
-						"entryId": "E-Mail-Adresse",
-						"headword": "E-Mail-Adresse",
-						"pronunciation": {
-							"display": "EE-mayl-a-dres-suh",
-							"ipaUK": "/ˈiːmɛɪ̯lʔaˌdʁɛsə/",
-							"ipaUS": "/ˈiːmɛɪ̯lʔaˌdʁɛsə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "E-Mail-Adresse",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Adresse für E-Mails",
-										"examples": [
-											"Ich schreibe dir meine E-Mail-Adresse auf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich schreibe dir meine E-Mail-Adresse auf.",
-							"ok": true
-						},
-						{
-							"answer": "Ich schreibe dir mein E-Mail-Adresse auf.",
-							"ok": false
-						},
-						{
-							"answer": "Ich dir meine E-Mail-Adresse aufschreibe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Alter",
-					"summary": "wie alt man ist",
-					"explain": {
-						"entryId": "Alter",
-						"headword": "Alter",
-						"pronunciation": {
-							"display": "AL-tuh",
-							"ipaUK": "/ˈaltɐ/",
-							"ipaUS": "/ˈaltɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Alter",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wie viele Jahre man alt ist",
-										"examples": [
-											"Mein Alter ist dreißig Jahre."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Alter ist dreißig Jahre.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Alter ist dreißig Jahre.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Alter dreißig Jahre ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Beruf",
-					"summary": "die Arbeit, die man macht",
-					"explain": {
-						"entryId": "Beruf",
-						"headword": "Beruf",
-						"pronunciation": {
-							"display": "buh-ROOF",
-							"ipaUK": "/bəˈʁuːf/",
-							"ipaUS": "/bəˈʁuːf/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Beruf",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Arbeit, die man macht",
-										"examples": [
-											"Was ist dein Beruf?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Was ist dein Beruf?",
-							"ok": true
-						},
-						{
-							"answer": "Was ist deine Beruf?",
-							"ok": false
-						},
-						{
-							"answer": "Was dein Beruf ist?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 11,
-					"question": "Nationalität",
-					"summary": "zu welchem Land man gehört",
-					"explain": {
-						"entryId": "Nationalität",
-						"headword": "Nationalität",
-						"pronunciation": {
-							"display": "nat-si-o-na-li-TAYT",
-							"ipaUK": "/natsi̯onaliˈtɛːt/",
-							"ipaUS": "/natsi̯onaliˈtɛːt/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Nationalität",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "zu welchem Land man gehört",
-										"examples": [
-											"Welche Nationalität hast du?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Welche Nationalität hast du?",
-							"ok": true
-						},
-						{
-							"answer": "Welchen Nationalität hast du?",
-							"ok": false
-						},
-						{
-							"answer": "Welche Nationalität du hast?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 12,
-					"question": "geboren",
-					"summary": "zur Welt gekommen",
-					"explain": {
-						"entryId": "geboren",
-						"headword": "geboren",
-						"pronunciation": {
-							"display": "guh-BOH-run",
-							"ipaUK": "/ɡəˈboːʁən/",
-							"ipaUS": "/ɡəˈboːʁən/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Partizip",
-								"grammarType": "Partizip II",
-								"headwordLine": "geboren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "auf die Welt gekommen (Geburt)",
-										"examples": [
-											"Ich bin in Berlin geboren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich bin in Berlin geboren.",
-							"ok": true
-						},
-						{
-							"answer": "Ich habe in Berlin geboren.",
-							"ok": false
-						},
-						{
-							"answer": "Ich in Berlin geboren bin.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 13,
-					"question": "wohnen",
-					"summary": "an einem Ort leben",
-					"explain": {
-						"entryId": "wohnen",
-						"headword": "wohnen",
-						"pronunciation": {
-							"display": "VOH-nn",
-							"ipaUK": "/ˈvoːnən/",
-							"ipaUS": "/ˈvoːnən/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "wohnen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "an einem Ort leben",
-										"examples": [
-											"Wir wohnen in Hamburg."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir wohnen in Hamburg.",
-							"ok": true
-						},
-						{
-							"answer": "Wir wohnt in Hamburg.",
-							"ok": false
-						},
-						{
-							"answer": "Wir in Hamburg wohnen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 14,
-					"question": "kommen aus",
-					"summary": "die Herkunft nennen",
-					"explain": {
-						"entryId": "kommen aus",
-						"headword": "kommen aus",
-						"pronunciation": {
-							"display": "KOM-mn OWS",
-							"ipaUK": "/ˈkɔmən aʊ̯s/",
-							"ipaUS": "/ˈkɔmən aʊ̯s/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verbphrase",
-								"grammarType": "Verbphrase",
-								"headwordLine": "kommen aus",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "seine Herkunft nennen (Land/Ort)",
-										"examples": [
-											"Ich komme aus Italien."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich komme aus Italien.",
-							"ok": true
-						},
-						{
-							"answer": "Ich kommt aus Italien.",
-							"ok": false
-						},
-						{
-							"answer": "Ich aus Italien komme.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 15,
-					"question": "Sprache",
-					"summary": "womit man spricht",
-					"explain": {
-						"entryId": "Sprache",
-						"headword": "Sprache",
-						"pronunciation": {
-							"display": "SHPRAH-khuh",
-							"ipaUK": "/ˈʃpʁaːxə/",
-							"ipaUS": "/ˈʃpʁaːxə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Sprache",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "womit man spricht (z. B. Deutsch)",
-										"examples": [
-											"Deutsch ist eine schöne Sprache."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Deutsch ist eine schöne Sprache.",
-							"ok": true
-						},
-						{
-							"answer": "Deutsch ist ein schöner Sprache.",
-							"ok": false
-						},
-						{
-							"answer": "Deutsch eine schöne Sprache ist.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPersonal1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Name",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Name – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Vorname",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Vorname – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Nachname",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Nachname – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Adresse",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Adresse – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Stadt",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Stadt – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Land",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Land – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Telefonnummer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Telefonnummer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "E-Mail-Adresse",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "E-Mail-Adresse – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Alter",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Alter – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Beruf",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Beruf – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

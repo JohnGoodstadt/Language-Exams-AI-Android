@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial3-de",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Obdachlosigkeit",
+					"summary": "keine Wohnung haben",
+					"explain": {
+						"entryId": "Obdachlosigkeit",
+						"headword": "Obdachlosigkeit",
+						"pronunciation": {
+							"display": "OP-dakh-loh-zikh-kite",
+							"ipaUK": "/ˈɔpdaxˌloːzɪçkaɪ̯t/",
+							"ipaUS": "/ˈɔpdaxˌloːzɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Obdachlosigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Obdachlosigkeit: der Zustand, keine Wohnung zu haben",
+										"examples": [
+											"Die Stadt bekämpft die Obdachlosigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Stadt bekämpft die Obdachlosigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Die Stadt bekämpft der Obdachlosigkeit.",
+							"ok": false
+						},
+						{
+							"answer": "Die Stadt die Obdachlosigkeit bekämpft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Rassismus",
+					"summary": "Benachteiligung wegen Herkunft",
+					"explain": {
+						"entryId": "Rassismus",
+						"headword": "Rassismus",
+						"pronunciation": {
+							"display": "ra-SIS-moos",
+							"ipaUK": "/ʁaˈsɪsmʊs/",
+							"ipaUS": "/ʁaˈsɪsmʊs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rassismus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Rassismus: die Benachteiligung wegen der Herkunft oder Hautfarbe",
+										"examples": [
+											"Gegen Rassismus muss man etwas tun."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gegen Rassismus muss man etwas tun.",
+							"ok": true
+						},
+						{
+							"answer": "Gegen Rassismen muss man etwas tun.",
+							"ok": false
+						},
+						{
+							"answer": "Gegen Rassismus man muss etwas tun.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Vorurteil",
+					"summary": "negative Meinung ohne Grund",
+					"explain": {
+						"entryId": "Vorurteil",
+						"headword": "Vorurteil",
+						"pronunciation": {
+							"display": "FOR-oor-tile",
+							"ipaUK": "/ˈfoːɐ̯ˌʔʊʁtaɪ̯l/",
+							"ipaUS": "/ˈfoːɐ̯ˌʔʊʁtaɪ̯l/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorurteil",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Vorurteil: eine feste, negative Meinung ohne echten Grund",
+										"examples": [
+											"Er hat ein starkes Vorurteil gegen Fremde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat ein starkes Vorurteil gegen Fremde.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat einen starken Vorurteil gegen Fremde.",
+							"ok": false
+						},
+						{
+							"answer": "Er ein starkes Vorurteil gegen Fremde hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Diskriminierung",
+					"summary": "unfaire Benachteiligung",
+					"explain": {
+						"entryId": "Diskriminierung",
+						"headword": "Diskriminierung",
+						"pronunciation": {
+							"display": "dis-kri-mi-NEE-roong",
+							"ipaUK": "/dɪskʁimiˈniːʁʊŋ/",
+							"ipaUS": "/dɪskʁimiˈniːʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Diskriminierung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Diskriminierung: die unfaire Benachteiligung von Menschen",
+										"examples": [
+											"Diskriminierung am Arbeitsplatz ist verboten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diskriminierung am Arbeitsplatz ist verboten.",
+							"ok": true
+						},
+						{
+							"answer": "Der Diskriminierung am Arbeitsplatz ist verboten.",
+							"ok": false
+						},
+						{
+							"answer": "Diskriminierung am Arbeitsplatz verboten ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Rechte",
+					"summary": "was einem zusteht (Plural)",
+					"explain": {
+						"entryId": "Rechte",
+						"headword": "Rechte",
+						"pronunciation": {
+							"display": "REKH-tuh",
+							"ipaUK": "/ˈʁɛçtə/",
+							"ipaUS": "/ˈʁɛçtə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "Rechte",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Rechte: das, was man tun darf oder was einem zusteht (Plural)",
+										"examples": [
+											"Alle Bürger haben die gleichen Rechte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Alle Bürger haben die gleichen Rechte.",
+							"ok": true
+						},
+						{
+							"answer": "Alle Bürger haben die gleichen Recht.",
+							"ok": false
+						},
+						{
+							"answer": "Alle Bürger die gleichen Rechte haben.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Freiheit",
+					"summary": "Recht, selbst zu entscheiden",
+					"explain": {
+						"entryId": "Freiheit",
+						"headword": "Freiheit",
+						"pronunciation": {
+							"display": "FRY-hite",
+							"ipaUK": "/ˈfʁaɪ̯haɪ̯t/",
+							"ipaUS": "/ˈfʁaɪ̯haɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Freiheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Freiheit: das Recht, selbst zu entscheiden und zu handeln",
+										"examples": [
+											"Die Freiheit der Presse ist wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Freiheit der Presse ist wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Freiheit der Presse ist wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Freiheit der Presse wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Selbstbestimmung",
+					"summary": "frei über sich bestimmen",
+					"explain": {
+						"entryId": "Selbstbestimmung",
+						"headword": "Selbstbestimmung",
+						"pronunciation": {
+							"display": "ZELPST-buh-shtim-oong",
+							"ipaUK": "/ˈzɛlpstbəˌʃtɪmʊŋ/",
+							"ipaUS": "/ˈzɛlpstbəˌʃtɪmʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Selbstbestimmung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Selbstbestimmung: das Recht, frei über sich selbst zu bestimmen",
+										"examples": [
+											"Jeder Mensch hat ein Recht auf Selbstbestimmung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Jeder Mensch hat ein Recht auf Selbstbestimmung.",
+							"ok": true
+						},
+						{
+							"answer": "Jeder Mensch hat ein Recht auf Selbstbestimmungen.",
+							"ok": false
+						},
+						{
+							"answer": "Jeder Mensch ein Recht auf Selbstbestimmung hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Gewalt",
+					"summary": "Kraft anwenden, um zu schaden",
+					"explain": {
+						"entryId": "Gewalt",
+						"headword": "Gewalt",
+						"pronunciation": {
+							"display": "guh-VALT",
+							"ipaUK": "/ɡəˈvalt/",
+							"ipaUS": "/ɡəˈvalt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gewalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gewalt: das Anwenden von Kraft, um zu schaden",
+										"examples": [
+											"Gegen häusliche Gewalt gibt es Hilfe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gegen häusliche Gewalt gibt es Hilfe.",
+							"ok": true
+						},
+						{
+							"answer": "Gegen häuslichen Gewalt gibt es Hilfe.",
+							"ok": false
+						},
+						{
+							"answer": "Gegen häusliche Gewalt es gibt Hilfe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Missbrauch",
+					"summary": "schlechte/grausame Behandlung",
+					"explain": {
+						"entryId": "Missbrauch",
+						"headword": "Missbrauch",
+						"pronunciation": {
+							"display": "MIS-browkh",
+							"ipaUK": "/ˈmɪsˌbʁaʊ̯x/",
+							"ipaUS": "/ˈmɪsˌbʁaʊ̯x/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Missbrauch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Missbrauch: die schlechte oder grausame Behandlung von jemandem",
+										"examples": [
+											"Der Missbrauch von Macht ist gefährlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Missbrauch von Macht ist gefährlich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Missbrauch von Macht ist gefährlich.",
+							"ok": false
+						},
+						{
+							"answer": "Der Missbrauch von Macht gefährlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Verbrechen",
+					"summary": "schwere gesetzeswidrige Tat",
+					"explain": {
+						"entryId": "Verbrechen",
+						"headword": "Verbrechen",
+						"pronunciation": {
+							"display": "fer-BRE-khn",
+							"ipaUK": "/fɛɐ̯ˈbʁɛçn̩/",
+							"ipaUS": "/fɛɐ̯ˈbʁɛçn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verbrechen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verbrechen: eine schwere, gesetzeswidrige Tat",
+										"examples": [
+											"Das Verbrechen wurde schnell aufgeklärt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Verbrechen wurde schnell aufgeklärt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Verbrechen wurde schnell aufgeklärt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Verbrechen schnell aufgeklärt wurde.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

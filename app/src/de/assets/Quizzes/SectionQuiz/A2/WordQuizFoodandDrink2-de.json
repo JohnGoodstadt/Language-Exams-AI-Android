@@ -1,122 +1,136 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizFoodandDrink2-de",
-	"title": "Food and Drink",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Gemüse",
-					"summary": "gesunde Pflanzen zum Essen",
-					"explain": {
-						"entryId": "Gemüse",
-						"headword": "Gemüse",
-						"pronunciation": {
-							"display": "guh-MÜ-zuh",
-							"ipaUK": "/ɡəˈmyːzə/",
-							"ipaUS": "/ɡəˈmyːzə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gemüse",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Pflanzen, die man essen kann (z. B. Karotten)",
-										"examples": [
-											"Ich kaufe frisches Gemüse auf dem Markt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich kaufe frisches Gemüse auf dem Markt.",
-							"ok": true
-						},
-						{
-							"answer": "Ich kaufe frischen Gemüse auf dem Markt.",
-							"ok": false
-						},
-						{
-							"answer": "Ich frisches Gemüse auf dem Markt kaufe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Wasser",
-					"summary": "eine klare Flüssigkeit zum Trinken",
-					"explain": {
-						"entryId": "Wasser",
-						"headword": "Wasser",
-						"pronunciation": {
-							"display": "VA-suh",
-							"ipaUK": "/ˈvasɐ/",
-							"ipaUS": "/ˈvasɐ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Wasser",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine klare Flüssigkeit, die man trinkt",
-										"examples": [
-											"Ich trinke jeden Tag viel Wasser."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich trinke jeden Tag viel Wasser.",
-							"ok": true
-						},
-						{
-							"answer": "Ich trinke jeden Tag viel Wassers.",
-							"ok": false
-						},
-						{
-							"answer": "Ich jeden Tag viel Wasser trinke.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizFoodandDrink2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "die Rechnung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "die Rechnung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "vegetarisch",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "vegetarisch – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Hunger",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Hunger – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Durst",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Durst – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Restaurant",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Restaurant – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "gesund",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "gesund – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

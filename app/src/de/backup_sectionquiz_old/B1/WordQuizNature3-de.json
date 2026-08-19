@@ -1,0 +1,493 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature3-de",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "erneuerbar",
+					"summary": "immer wieder nutzbar",
+					"explain": {
+						"entryId": "erneuerbar",
+						"headword": "erneuerbar",
+						"pronunciation": {
+							"display": "er-NOY-uh-bar",
+							"ipaUK": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/",
+							"ipaUS": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "erneuerbar",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "erneuerbar: immer wieder neu nutzbar (z. B. Energie)",
+										"examples": [
+											"Sonnenenergie ist erneuerbar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sonnenenergie ist erneuerbar.",
+							"ok": true
+						},
+						{
+							"answer": "Sonnenenergie ist erneuerbare.",
+							"ok": false
+						},
+						{
+							"answer": "Sonnenenergie erneuerbar ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "nachhaltig",
+					"summary": "Ressourcen bleiben erhalten",
+					"explain": {
+						"entryId": "nachhaltig",
+						"headword": "nachhaltig",
+						"pronunciation": {
+							"display": "NAHKH-hal-tikh",
+							"ipaUK": "/ˈnaːxˌhaltɪç/",
+							"ipaUS": "/ˈnaːxˌhaltɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "nachhaltig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nachhaltig: so, dass Ressourcen für die Zukunft bleiben",
+										"examples": [
+											"Diese Firma produziert sehr nachhaltig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Firma produziert sehr nachhaltig.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Firma produziert sehr nachhaltige.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Firma sehr nachhaltig produziert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "umweltfreundlich",
+					"summary": "gut für die Umwelt",
+					"explain": {
+						"entryId": "umweltfreundlich",
+						"headword": "umweltfreundlich",
+						"pronunciation": {
+							"display": "OOM-velt-froynt-likh",
+							"ipaUK": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/",
+							"ipaUS": "/ˈʊmvɛltˌfʁɔɪ̯ntlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "umweltfreundlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "umweltfreundlich: gut für die Umwelt; ökologisch",
+										"examples": [
+											"Dieses Auto ist besonders umweltfreundlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Dieses Auto ist besonders umweltfreundlich.",
+							"ok": true
+						},
+						{
+							"answer": "Dieses Auto ist besonders umweltfreundliche.",
+							"ok": false
+						},
+						{
+							"answer": "Dieses Auto besonders umweltfreundlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Wildtiere",
+					"summary": "frei lebende Tiere (Plural)",
+					"explain": {
+						"entryId": "Wildtiere",
+						"headword": "Wildtiere",
+						"pronunciation": {
+							"display": "VILT-tee-ruh",
+							"ipaUK": "/ˈvɪltˌtiːʁə/",
+							"ipaUS": "/ˈvɪltˌtiːʁə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "Wildtiere",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Wildtiere: die frei lebenden Tiere in der Natur",
+										"examples": [
+											"Im Nationalpark leben viele Wildtiere."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Nationalpark leben viele Wildtiere.",
+							"ok": true
+						},
+						{
+							"answer": "Im Nationalpark leben viele Wildtier.",
+							"ok": false
+						},
+						{
+							"answer": "Im Nationalpark viele Wildtiere leben.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Tierwelt",
+					"summary": "alle Tiere eines Gebiets",
+					"explain": {
+						"entryId": "Tierwelt",
+						"headword": "Tierwelt",
+						"pronunciation": {
+							"display": "TEER-velt",
+							"ipaUK": "/ˈtiːɐ̯ˌvɛlt/",
+							"ipaUS": "/ˈtiːɐ̯ˌvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tierwelt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Tierwelt: alle Tiere eines Gebiets",
+										"examples": [
+											"Die Tierwelt Afrikas ist beeindruckend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Tierwelt Afrikas ist beeindruckend.",
+							"ok": true
+						},
+						{
+							"answer": "Der Tierwelt Afrikas ist beeindruckend.",
+							"ok": false
+						},
+						{
+							"answer": "Die Tierwelt Afrikas beeindruckend ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Pflanzenwelt",
+					"summary": "alle Pflanzen eines Gebiets",
+					"explain": {
+						"entryId": "Pflanzenwelt",
+						"headword": "Pflanzenwelt",
+						"pronunciation": {
+							"display": "PFLAN-tsn-velt",
+							"ipaUK": "/ˈpflantsn̩ˌvɛlt/",
+							"ipaUS": "/ˈpflantsn̩ˌvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Pflanzenwelt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Pflanzenwelt: alle Pflanzen eines Gebiets",
+										"examples": [
+											"Die Pflanzenwelt der Alpen ist vielfältig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Pflanzenwelt der Alpen ist vielfältig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Pflanzenwelt der Alpen ist vielfältig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Pflanzenwelt der Alpen vielfältig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Erderwärmung",
+					"summary": "Erwärmung der ganzen Erde",
+					"explain": {
+						"entryId": "Erderwärmung",
+						"headword": "Erderwärmung",
+						"pronunciation": {
+							"display": "AIRT-er-ver-moong",
+							"ipaUK": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/",
+							"ipaUS": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erderwärmung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erderwärmung: die Erwärmung der ganzen Erde",
+										"examples": [
+											"Die Erderwärmung lässt das Eis schmelzen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Erderwärmung lässt das Eis schmelzen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erderwärmung lässt das Eis schmelzen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Erderwärmung das Eis schmelzen lässt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Klimawandel",
+					"summary": "langfristige Veränderung des Klimas",
+					"explain": {
+						"entryId": "Klimawandel",
+						"headword": "Klimawandel",
+						"pronunciation": {
+							"display": "KLEE-ma-van-dl",
+							"ipaUK": "/ˈkliːmaˌvandl̩/",
+							"ipaUS": "/ˈkliːmaˌvandl̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klimawandel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Klimawandel: die langfristige Veränderung des Klimas",
+										"examples": [
+											"Der Klimawandel bedroht viele Arten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Klimawandel bedroht viele Arten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Klimawandel bedroht viele Arten.",
+							"ok": false
+						},
+						{
+							"answer": "Der Klimawandel viele Arten bedroht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Treibhauseffekt",
+					"summary": "Erwärmung durch Gase",
+					"explain": {
+						"entryId": "Treibhauseffekt",
+						"headword": "Treibhauseffekt",
+						"pronunciation": {
+							"display": "TRIPE-house-e-fekt",
+							"ipaUK": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/",
+							"ipaUS": "/ˈtʁaɪ̯phaʊ̯sʔɛˌfɛkt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Treibhauseffekt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Treibhauseffekt: die Erwärmung durch Gase in der Atmosphäre",
+										"examples": [
+											"Der Treibhauseffekt erwärmt die Erde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Treibhauseffekt erwärmt die Erde.",
+							"ok": true
+						},
+						{
+							"answer": "Die Treibhauseffekt erwärmt die Erde.",
+							"ok": false
+						},
+						{
+							"answer": "Der Treibhauseffekt die Erde erwärmt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

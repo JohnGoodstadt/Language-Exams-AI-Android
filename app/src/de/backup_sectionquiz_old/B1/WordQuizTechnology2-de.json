@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology2-de",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "elektronisch",
+					"summary": "mit Elektronik",
+					"explain": {
+						"entryId": "elektronisch",
+						"headword": "elektronisch",
+						"pronunciation": {
+							"display": "e-lek-TROH-nish",
+							"ipaUK": "/elɛkˈtʁoːnɪʃ/",
+							"ipaUS": "/elɛkˈtʁoːnɪʃ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "elektronisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "elektronisch: mit Elektronik arbeitend",
+										"examples": [
+											"Die Rechnung kommt heute elektronisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Rechnung kommt heute elektronisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Rechnung kommt heute elektronische.",
+							"ok": false
+						},
+						{
+							"answer": "Die Rechnung heute elektronisch kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "virtuell",
+					"summary": "nur im Computer",
+					"explain": {
+						"entryId": "virtuell",
+						"headword": "virtuell",
+						"pronunciation": {
+							"display": "vir-too-EL",
+							"ipaUK": "/vɪʁtuˈɛl/",
+							"ipaUS": "/vɪʁtuˈɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "virtuell",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "virtuell: nur im Computer vorhanden; nicht echt",
+										"examples": [
+											"Das Meeting findet virtuell statt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Meeting findet virtuell statt.",
+							"ok": true
+						},
+						{
+							"answer": "Das Meeting findet virtuelle statt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Meeting virtuell stattfindet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "E-Mail",
+					"summary": "Nachricht über das Internet",
+					"explain": {
+						"entryId": "E-Mail",
+						"headword": "E-Mail",
+						"pronunciation": {
+							"display": "EE-mayl",
+							"ipaUK": "/ˈiːmɛɪ̯l/",
+							"ipaUS": "/ˈiːmɛɪ̯l/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "E-Mail",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die E-Mail: eine Nachricht über das Internet",
+										"examples": [
+											"Ich schreibe dir gleich eine E-Mail."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe dir gleich eine E-Mail.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe dir gleich einen E-Mail.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir gleich eine E-Mail schreibe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Nachricht",
+					"summary": "Mitteilung an jemanden",
+					"explain": {
+						"entryId": "Nachricht",
+						"headword": "Nachricht",
+						"pronunciation": {
+							"display": "NAHKH-rikht",
+							"ipaUK": "/ˈnaːxʁɪçt/",
+							"ipaUS": "/ˈnaːxʁɪçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachricht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Nachricht: eine Mitteilung an jemanden",
+										"examples": [
+											"Ich habe dir eine wichtige Nachricht geschickt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe dir eine wichtige Nachricht geschickt.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe dir einen wichtigen Nachricht geschickt.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir eine wichtige Nachricht geschickt habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Posteingang",
+					"summary": "Ordner für neue E-Mails",
+					"explain": {
+						"entryId": "Posteingang",
+						"headword": "Posteingang",
+						"pronunciation": {
+							"display": "POST-ine-gang",
+							"ipaUK": "/ˈpɔstˌʔaɪ̯nɡaŋ/",
+							"ipaUS": "/ˈpɔstˌʔaɪ̯nɡaŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Posteingang",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Posteingang: der Ordner für neue E-Mails",
+										"examples": [
+											"In meinem Posteingang sind zehn neue Mails."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In meinem Posteingang sind zehn neue Mails.",
+							"ok": true
+						},
+						{
+							"answer": "In meiner Posteingang sind zehn neue Mails.",
+							"ok": false
+						},
+						{
+							"answer": "In meinem Posteingang zehn neue Mails sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Datei",
+					"summary": "Sammlung von Daten am Computer",
+					"explain": {
+						"entryId": "Datei",
+						"headword": "Datei",
+						"pronunciation": {
+							"display": "da-TYE",
+							"ipaUK": "/daˈtaɪ̯/",
+							"ipaUS": "/daˈtaɪ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Datei",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Datei: eine Sammlung von Daten am Computer",
+										"examples": [
+											"Die Datei ist zu groß zum Senden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Datei ist zu groß zum Senden.",
+							"ok": true
+						},
+						{
+							"answer": "Der Datei ist zu groß zum Senden.",
+							"ok": false
+						},
+						{
+							"answer": "Die Datei zu groß zum Senden ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Dokument",
+					"summary": "Datei mit Text",
+					"explain": {
+						"entryId": "Dokument",
+						"headword": "Dokument",
+						"pronunciation": {
+							"display": "do-koo-MENT",
+							"ipaUK": "/dokuˈmɛnt/",
+							"ipaUS": "/dokuˈmɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dokument",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Dokument: eine Datei mit Text am Computer",
+										"examples": [
+											"Ich speichere das Dokument auf dem Computer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich speichere das Dokument auf dem Computer.",
+							"ok": true
+						},
+						{
+							"answer": "Ich speichere den Dokument auf dem Computer.",
+							"ok": false
+						},
+						{
+							"answer": "Ich das Dokument auf dem Computer speichere.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Anhang",
+					"summary": "Datei an einer E-Mail",
+					"explain": {
+						"entryId": "Anhang",
+						"headword": "Anhang",
+						"pronunciation": {
+							"display": "AN-hang",
+							"ipaUK": "/ˈanˌhaŋ/",
+							"ipaUS": "/ˈanˌhaŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Anhang",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Anhang: eine Datei, die man an eine E-Mail hängt",
+										"examples": [
+											"Ich sende dir das Foto im Anhang."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich sende dir das Foto im Anhang.",
+							"ok": true
+						},
+						{
+							"answer": "Ich sende dir das Foto in der Anhang.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir das Foto im Anhang sende.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Internet",
+					"summary": "weltweites Computernetz",
+					"explain": {
+						"entryId": "Internet",
+						"headword": "Internet",
+						"pronunciation": {
+							"display": "IN-tuh-net",
+							"ipaUK": "/ˈɪntɐnɛt/",
+							"ipaUS": "/ˈɪntɐnɛt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Internet",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Internet: das weltweite Netz aus Computern",
+										"examples": [
+											"Ohne Internet kann ich nicht arbeiten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ohne Internet kann ich nicht arbeiten.",
+							"ok": true
+						},
+						{
+							"answer": "Ohne Internets kann ich nicht arbeiten.",
+							"ok": false
+						},
+						{
+							"answer": "Ohne Internet ich kann nicht arbeiten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Netz",
+					"summary": "das Web; das Internet",
+					"explain": {
+						"entryId": "Netz",
+						"headword": "Netz",
+						"pronunciation": {
+							"display": "nets",
+							"ipaUK": "/nɛts/",
+							"ipaUS": "/nɛts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Netz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Netz: das World Wide Web; das Internet",
+										"examples": [
+											"Im ganzen Haus gibt es schnelles Netz."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im ganzen Haus gibt es schnelles Netz.",
+							"ok": true
+						},
+						{
+							"answer": "Im ganzen Haus gibt es schneller Netz.",
+							"ok": false
+						},
+						{
+							"answer": "Im ganzen Haus schnelles Netz gibt es.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

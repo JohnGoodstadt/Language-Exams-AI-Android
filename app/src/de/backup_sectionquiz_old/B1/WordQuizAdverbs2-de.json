@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs2-de",
+	"title": "Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "recht",
+					"summary": "ziemlich, relativ",
+					"explain": {
+						"entryId": "recht",
+						"headword": "recht",
+						"pronunciation": {
+							"display": "rekht",
+							"ipaUK": "/ʁɛçt/",
+							"ipaUS": "/ʁɛçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "recht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "recht: ziemlich; relativ",
+										"examples": [
+											"Das war eine recht gute Idee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das war eine recht gute Idee.",
+							"ok": true
+						},
+						{
+							"answer": "Das war eine rechte gute Idee.",
+							"ok": false
+						},
+						{
+							"answer": "Das eine recht gute Idee war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "einigermaßen",
+					"summary": "in akzeptablem Maße",
+					"explain": {
+						"entryId": "einigermaßen",
+						"headword": "einigermaßen",
+						"pronunciation": {
+							"display": "EYE-ni-guh-mah-sn",
+							"ipaUK": "/ˈaɪ̯nɪɡɐˌmaːsn̩/",
+							"ipaUS": "/ˈaɪ̯nɪɡɐˌmaːsn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "einigermaßen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "einigermaßen: recht gut; in akzeptablem Maße",
+										"examples": [
+											"Mir geht es einigermaßen gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mir geht es einigermaßen gut.",
+							"ok": true
+						},
+						{
+							"answer": "Mir geht es einigermaßens gut.",
+							"ok": false
+						},
+						{
+							"answer": "Mir es geht einigermaßen gut.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "kaum",
+					"summary": "fast nicht",
+					"explain": {
+						"entryId": "kaum",
+						"headword": "kaum",
+						"pronunciation": {
+							"display": "kowm",
+							"ipaUK": "/kaʊ̯m/",
+							"ipaUS": "/kaʊ̯m/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "kaum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "kaum: fast nicht",
+										"examples": [
+											"Er hat kaum etwas gegessen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat kaum etwas gegessen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat kaume etwas gegessen.",
+							"ok": false
+						},
+						{
+							"answer": "Er kaum hat etwas gegessen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "knapp",
+					"summary": "gerade noch",
+					"explain": {
+						"entryId": "knapp",
+						"headword": "knapp",
+						"pronunciation": {
+							"display": "knap",
+							"ipaUK": "/knap/",
+							"ipaUS": "/knap/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "knapp",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "knapp: gerade noch; fast nicht",
+										"examples": [
+											"Das Geld reicht knapp bis zum Monatsende."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Geld reicht knapp bis zum Monatsende.",
+							"ok": true
+						},
+						{
+							"answer": "Das Geld reicht knappe bis zum Monatsende.",
+							"ok": false
+						},
+						{
+							"answer": "Das Geld knapp reicht bis zum Monatsende.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "gerade noch",
+					"summary": "mit Mühe; fast nicht",
+					"explain": {
+						"entryId": "gerade noch",
+						"headword": "gerade noch",
+						"pronunciation": {
+							"display": "guh-RAH-duh nokh",
+							"ipaUK": "/ɡəˈʁaːdə nɔx/",
+							"ipaUS": "/ɡəˈʁaːdə nɔx/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "gerade noch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "gerade noch: mit Mühe; fast nicht mehr",
+										"examples": [
+											"Wir haben den Zug gerade noch erreicht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir haben den Zug gerade noch erreicht.",
+							"ok": true
+						},
+						{
+							"answer": "Wir haben den Zug gerade noch erreichte.",
+							"ok": false
+						},
+						{
+							"answer": "Wir den Zug gerade noch erreicht haben.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "höchst",
+					"summary": "in hohem Grad",
+					"explain": {
+						"entryId": "höchst",
+						"headword": "höchst",
+						"pronunciation": {
+							"display": "höxt",
+							"ipaUK": "/høːçst/",
+							"ipaUS": "/høːçst/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "höchst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "höchst: sehr; in hohem Grad",
+										"examples": [
+											"Die Lage ist höchst gefährlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lage ist höchst gefährlich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lage ist höchste gefährlich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lage höchst gefährlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "erheblich",
+					"summary": "in großem Maße",
+					"explain": {
+						"entryId": "erheblich",
+						"headword": "erheblich",
+						"pronunciation": {
+							"display": "er-HAYB-likh",
+							"ipaUK": "/ɛɐ̯ˈheːblɪç/",
+							"ipaUS": "/ɛɐ̯ˈheːblɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "erheblich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "erheblich: in großem Maße; deutlich",
+										"examples": [
+											"Die Preise sind erheblich gestiegen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Preise sind erheblich gestiegen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Preise sind erhebliche gestiegen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Preise erheblich gestiegen sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "äußerst",
+					"summary": "in hohem Maße",
+					"explain": {
+						"entryId": "äußerst",
+						"headword": "äußerst",
+						"pronunciation": {
+							"display": "OY-suhst",
+							"ipaUK": "/ˈɔɪ̯sɐst/",
+							"ipaUS": "/ˈɔɪ̯sɐst/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "äußerst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "äußerst: sehr stark; in hohem Maße",
+										"examples": [
+											"Der Film war äußerst spannend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Film war äußerst spannend.",
+							"ok": true
+						},
+						{
+							"answer": "Der Film war äußerste spannend.",
+							"ok": false
+						},
+						{
+							"answer": "Der Film äußerst spannend war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "möglicherweise",
+					"summary": "unter Umständen",
+					"explain": {
+						"entryId": "möglicherweise",
+						"headword": "möglicherweise",
+						"pronunciation": {
+							"display": "MÖK-likh-uh-vy-zuh",
+							"ipaUK": "/ˈmøːklɪçɐˌvaɪ̯zə/",
+							"ipaUS": "/ˈmøːklɪçɐˌvaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "möglicherweise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "möglicherweise: unter Umständen; vielleicht",
+										"examples": [
+											"Möglicherweise hat er sich verspätet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Möglicherweise hat er sich verspätet.",
+							"ok": true
+						},
+						{
+							"answer": "Möglicherweises hat er sich verspätet.",
+							"ok": false
+						},
+						{
+							"answer": "Möglicherweise er hat sich verspätet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "vielleicht",
+					"summary": "möglicherweise",
+					"explain": {
+						"entryId": "vielleicht",
+						"headword": "vielleicht",
+						"pronunciation": {
+							"display": "fi-LYKHT",
+							"ipaUK": "/fiˈlaɪ̯çt/",
+							"ipaUS": "/fiˈlaɪ̯çt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "vielleicht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "vielleicht: möglicherweise; eventuell",
+										"examples": [
+											"Vielleicht regnet es später."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vielleicht regnet es später.",
+							"ok": true
+						},
+						{
+							"answer": "Vielleichte regnet es später.",
+							"ok": false
+						},
+						{
+							"answer": "Vielleicht es regnet später.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

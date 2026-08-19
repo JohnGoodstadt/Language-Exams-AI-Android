@@ -1,124 +1,136 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizJobs2-de",
-	"title": "Jobs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Lebenslauf",
-					"summary": "Übersicht über Ausbildung und Arbeit",
-					"explain": {
-						"entryId": "Lebenslauf",
-						"headword": "Lebenslauf",
-						"pronunciation": {
-							"display": "LAY-bns-lowf",
-							"ipaUK": "/ˈleːbn̩sˌlaʊ̯f/",
-							"ipaUS": "/ˈleːbn̩sˌlaʊ̯f/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Lebenslauf",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine Übersicht über Ausbildung und Arbeit für eine Bewerbung",
-										"examples": [
-											"Für die Bewerbung brauche ich meinen Lebenslauf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Für die Bewerbung brauche ich meinen Lebenslauf.",
-							"ok": true
-						},
-						{
-							"answer": "Für die Bewerbung brauche ich meine Lebenslauf.",
-							"ok": false
-						},
-						{
-							"answer": "Für die Bewerbung ich brauche meinen Lebenslauf.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Gehalt",
-					"summary": "das Geld für die Arbeit",
-					"explain": {
-						"entryId": "Gehalt",
-						"headword": "Gehalt",
-						"pronunciation": {
-							"display": "guh-HALT",
-							"ipaUK": "/ɡəˈhalt/",
-							"ipaUS": "/ɡəˈhalt/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gehalt",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Lohn"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Geld, das man für die Arbeit bekommt",
-										"examples": [
-											"Am Ende des Monats bekomme ich mein Gehalt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Ende des Monats bekomme ich mein Gehalt.",
-							"ok": true
-						},
-						{
-							"answer": "Am Ende des Monats bekomme ich meinen Gehalt.",
-							"ok": false
-						},
-						{
-							"answer": "Am Ende des Monats ich bekomme mein Gehalt.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizJobs2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Kollege",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kollege – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Chef",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Chef – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Arbeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Arbeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "verdienen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "verdienen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "arbeitslos",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "arbeitslos – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "sich bewerben",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich bewerben – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

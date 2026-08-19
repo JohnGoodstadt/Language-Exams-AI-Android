@@ -1,0 +1,91 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "",
+	"title": "",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Dr.",
+					"summary": "a title used for a doctor",
+					"explain": {
+						"entryId": "Dr.",
+						"headword": "Dr.",
+						"pronunciation": { "display": "DOK-ter", "ipaUK": "/ˈdɒktə/", "ipaUS": "/ˈdɑːktər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "title",
+								"grammarType": "noun",
+								"headwordLine": "Dr.",
+								"inflectionsLine": null,
+								"synonyms": ["Doctor"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a title used before the name of a doctor",
+										"examples": ["Dr. Smith will see you now."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Dr. Brown is my dentist.", "ok": true },
+						{ "answer": "Dr Brown is my dentist.", "ok": false },
+						{ "answer": "Doctor. Brown is my dentist.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "I",
+					"summary": "used when talking about yourself",
+					"explain": {
+						"entryId": "I",
+						"headword": "I",
+						"pronunciation": { "display": "EYE", "ipaUK": "/aɪ/", "ipaUS": "/aɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "pronoun",
+								"grammarType": "subject pronoun",
+								"headwordLine": "I",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used by a person to talk about himself or herself",
+										"examples": ["I am happy to meet you."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I am happy to meet you.", "ok": true },
+						{ "answer": "Me am happy to meet you.", "ok": false },
+						{ "answer": "My am happy to meet you.", "ok": false }
+					]
+				},
+
+			]
+
+
+		}
+	]
+}

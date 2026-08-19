@@ -1,758 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizConjunctions1-de",
-	"title": "Conjunctions",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "und",
-					"summary": "verbindet (kein Verb-Einfluss)",
-					"explain": {
-						"entryId": "und",
-						"headword": "und",
-						"pronunciation": {
-							"display": "oont",
-							"ipaUK": "/ʊnt/",
-							"ipaUS": "/ʊnt/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion",
-								"grammarType": "Konjunktion",
-								"headwordLine": "und",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "verbindet zwei gleiche Teile",
-										"examples": [
-											"Ich kaufe Brot und ich hole Milch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich kaufe Brot und ich hole Milch.",
-							"ok": true
-						},
-						{
-							"answer": "Ich kaufe Brot und hole ich Milch.",
-							"ok": false
-						},
-						{
-							"answer": "Ich kaufe Brot und ich Milch hole.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "oder",
-					"summary": "Alternative (kein Verb-Einfluss)",
-					"explain": {
-						"entryId": "oder",
-						"headword": "oder",
-						"pronunciation": {
-							"display": "OH-duh",
-							"ipaUK": "/ˈoːdɐ/",
-							"ipaUS": "/ˈoːdɐ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion",
-								"grammarType": "Konjunktion",
-								"headwordLine": "oder",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt eine Alternative",
-										"examples": [
-											"Wir gehen ins Kino oder wir bleiben zu Hause."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir gehen ins Kino oder wir bleiben zu Hause.",
-							"ok": true
-						},
-						{
-							"answer": "Wir gehen ins Kino oder bleiben wir zu Hause.",
-							"ok": false
-						},
-						{
-							"answer": "Wir gehen ins Kino oder wir zu Hause bleiben.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "aber",
-					"summary": "Gegensatz (kein Verb-Einfluss)",
-					"explain": {
-						"entryId": "aber",
-						"headword": "aber",
-						"pronunciation": {
-							"display": "AH-buh",
-							"ipaUK": "/ˈaːbɐ/",
-							"ipaUS": "/ˈaːbɐ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion",
-								"grammarType": "Konjunktion",
-								"headwordLine": "aber",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt einen Gegensatz",
-										"examples": [
-											"Ich bin müde, aber ich arbeite weiter."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich bin müde, aber ich arbeite weiter.",
-							"ok": true
-						},
-						{
-							"answer": "Ich bin müde, aber arbeite ich weiter.",
-							"ok": false
-						},
-						{
-							"answer": "Ich bin müde, aber ich weiter arbeite.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "denn",
-					"summary": "Grund, kein Verb am Ende",
-					"explain": {
-						"entryId": "denn",
-						"headword": "denn",
-						"pronunciation": {
-							"display": "den",
-							"ipaUK": "/dɛn/",
-							"ipaUS": "/dɛn/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion",
-								"grammarType": "Konjunktion",
-								"headwordLine": "denn",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt einen Grund (ohne Verb am Ende)",
-										"examples": [
-											"Ich bleibe zu Hause, denn ich bin krank."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich bleibe zu Hause, denn ich bin krank.",
-							"ok": true
-						},
-						{
-							"answer": "Ich bleibe zu Hause, denn bin ich krank.",
-							"ok": false
-						},
-						{
-							"answer": "Ich bleibe zu Hause, denn ich krank bin.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "weil",
-					"summary": "Grund, Verb am Ende",
-					"explain": {
-						"entryId": "weil",
-						"headword": "weil",
-						"pronunciation": {
-							"display": "vile",
-							"ipaUK": "/vaɪ̯l/",
-							"ipaUS": "/vaɪ̯l/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion (Nebensatz)",
-								"grammarType": "Konjunktion (Nebensatz)",
-								"headwordLine": "weil",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt einen Grund (Verb am Ende)",
-										"examples": [
-											"Ich bleibe zu Hause, weil ich krank bin."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich bleibe zu Hause, weil ich krank bin.",
-							"ok": true
-						},
-						{
-							"answer": "Ich bleibe zu Hause, weil ich bin krank.",
-							"ok": false
-						},
-						{
-							"answer": "Ich bleibe zu Hause, weil bin ich krank.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "dass",
-					"summary": "Nebensatz, Verb am Ende",
-					"explain": {
-						"entryId": "dass",
-						"headword": "dass",
-						"pronunciation": {
-							"display": "das",
-							"ipaUK": "/das/",
-							"ipaUS": "/das/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion (Nebensatz)",
-								"grammarType": "Konjunktion (Nebensatz)",
-								"headwordLine": "dass",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "leitet einen Nebensatz ein (Verb am Ende)",
-										"examples": [
-											"Ich glaube, dass er recht hat."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich glaube, dass er recht hat.",
-							"ok": true
-						},
-						{
-							"answer": "Ich glaube, dass er hat recht.",
-							"ok": false
-						},
-						{
-							"answer": "Ich glaube, dass hat er recht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "wenn",
-					"summary": "Bedingung, Verb am Ende",
-					"explain": {
-						"entryId": "wenn",
-						"headword": "wenn",
-						"pronunciation": {
-							"display": "ven",
-							"ipaUK": "/vɛn/",
-							"ipaUS": "/vɛn/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion (Nebensatz)",
-								"grammarType": "Konjunktion (Nebensatz)",
-								"headwordLine": "wenn",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt eine Bedingung (Verb am Ende)",
-										"examples": [
-											"Wenn es regnet, bleiben wir zu Hause."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wenn es regnet, bleiben wir zu Hause.",
-							"ok": true
-						},
-						{
-							"answer": "Wenn es regnet, wir bleiben zu Hause.",
-							"ok": false
-						},
-						{
-							"answer": "Wenn regnet es, bleiben wir zu Hause.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "obwohl",
-					"summary": "Gegensatz, Verb am Ende",
-					"explain": {
-						"entryId": "obwohl",
-						"headword": "obwohl",
-						"pronunciation": {
-							"display": "op-VOHL",
-							"ipaUK": "/ɔpˈvoːl/",
-							"ipaUS": "/ɔpˈvoːl/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion (Nebensatz)",
-								"grammarType": "Konjunktion (Nebensatz)",
-								"headwordLine": "obwohl",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt einen Gegensatz (Verb am Ende)",
-										"examples": [
-											"Obwohl es kalt ist, gehe ich schwimmen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Obwohl es kalt ist, gehe ich schwimmen.",
-							"ok": true
-						},
-						{
-							"answer": "Obwohl es kalt ist, ich gehe schwimmen.",
-							"ok": false
-						},
-						{
-							"answer": "Obwohl es ist kalt, gehe ich schwimmen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "deshalb",
-					"summary": "Folge (Inversion nach deshalb)",
-					"explain": {
-						"entryId": "deshalb",
-						"headword": "deshalb",
-						"pronunciation": {
-							"display": "DES-halp",
-							"ipaUK": "/ˈdɛshalp/",
-							"ipaUS": "/ˈdɛshalp/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adverb (Konnektor)",
-								"grammarType": "Adverb (Konnektor)",
-								"headwordLine": "deshalb",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt eine Folge (Verb kommt direkt nach 'deshalb')",
-										"examples": [
-											"Es regnet, deshalb bleiben wir zu Hause."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Es regnet, deshalb bleiben wir zu Hause.",
-							"ok": true
-						},
-						{
-							"answer": "Es regnet, deshalb wir bleiben zu Hause.",
-							"ok": false
-						},
-						{
-							"answer": "Es regnet, deshalb wir zu Hause bleiben.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "trotzdem",
-					"summary": "Gegensatz (Inversion nach trotzdem)",
-					"explain": {
-						"entryId": "trotzdem",
-						"headword": "trotzdem",
-						"pronunciation": {
-							"display": "TROTS-daym",
-							"ipaUK": "/ˈtʁɔtsdeːm/",
-							"ipaUS": "/ˈtʁɔtsdeːm/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adverb (Konnektor)",
-								"grammarType": "Adverb (Konnektor)",
-								"headwordLine": "trotzdem",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "trotz eines Gegensatzes (Verb nach 'trotzdem')",
-										"examples": [
-											"Es regnet, trotzdem gehen wir spazieren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Es regnet, trotzdem gehen wir spazieren.",
-							"ok": true
-						},
-						{
-							"answer": "Es regnet, trotzdem wir gehen spazieren.",
-							"ok": false
-						},
-						{
-							"answer": "Es regnet, trotzdem wir spazieren gehen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 11,
-					"question": "sondern",
-					"summary": "Korrektur nach 'nicht'",
-					"explain": {
-						"entryId": "sondern",
-						"headword": "sondern",
-						"pronunciation": {
-							"display": "ZON-duhn",
-							"ipaUK": "/ˈzɔndɐn/",
-							"ipaUS": "/ˈzɔndɐn/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion",
-								"grammarType": "Konjunktion",
-								"headwordLine": "sondern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt eine Korrektur nach 'nicht'",
-										"examples": [
-											"Das ist nicht rot, sondern es ist blau."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das ist nicht rot, sondern es ist blau.",
-							"ok": true
-						},
-						{
-							"answer": "Das ist nicht rot, sondern ist es blau.",
-							"ok": false
-						},
-						{
-							"answer": "Das ist nicht rot, sondern es blau ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 12,
-					"question": "damit",
-					"summary": "Zweck, Verb am Ende",
-					"explain": {
-						"entryId": "damit",
-						"headword": "damit",
-						"pronunciation": {
-							"display": "da-MIT",
-							"ipaUK": "/daˈmɪt/",
-							"ipaUS": "/daˈmɪt/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion (Nebensatz)",
-								"grammarType": "Konjunktion (Nebensatz)",
-								"headwordLine": "damit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt einen Zweck (Verb am Ende)",
-										"examples": [
-											"Ich lerne viel, damit ich die Prüfung bestehe."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich lerne viel, damit ich die Prüfung bestehe.",
-							"ok": true
-						},
-						{
-							"answer": "Ich lerne viel, damit ich bestehe die Prüfung.",
-							"ok": false
-						},
-						{
-							"answer": "Ich lerne viel, damit bestehe ich die Prüfung.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 13,
-					"question": "bevor",
-					"summary": "Zeit (vorher), Verb am Ende",
-					"explain": {
-						"entryId": "bevor",
-						"headword": "bevor",
-						"pronunciation": {
-							"display": "buh-FOR",
-							"ipaUK": "/bəˈfoːɐ̯/",
-							"ipaUS": "/bəˈfoːɐ̯/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion (Nebensatz)",
-								"grammarType": "Konjunktion (Nebensatz)",
-								"headwordLine": "bevor",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt: A passiert vor B (Verb am Ende)",
-										"examples": [
-											"Bevor ich schlafe, lese ich ein Buch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Bevor ich schlafe, lese ich ein Buch.",
-							"ok": true
-						},
-						{
-							"answer": "Bevor ich schlafe, ich lese ein Buch.",
-							"ok": false
-						},
-						{
-							"answer": "Bevor schlafe ich, lese ich ein Buch.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 14,
-					"question": "nachdem",
-					"summary": "Zeit (danach), Verb am Ende",
-					"explain": {
-						"entryId": "nachdem",
-						"headword": "nachdem",
-						"pronunciation": {
-							"display": "nakh-DAYM",
-							"ipaUK": "/naːxˈdeːm/",
-							"ipaUS": "/naːxˈdeːm/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Konjunktion (Nebensatz)",
-								"grammarType": "Konjunktion (Nebensatz)",
-								"headwordLine": "nachdem",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nennt: A passiert nach B (Verb am Ende)",
-										"examples": [
-											"Nachdem wir gegessen hatten, gingen wir spazieren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nachdem wir gegessen hatten, gingen wir spazieren.",
-							"ok": true
-						},
-						{
-							"answer": "Nachdem wir hatten gegessen, gingen wir spazieren.",
-							"ok": false
-						},
-						{
-							"answer": "Nachdem wir gegessen hatten, wir gingen spazieren.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizConjunctions1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "und",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "und – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "oder",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "oder – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "aber",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "aber – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "denn",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "denn – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "weil",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "weil – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "dass",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "dass – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "wenn",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "wenn – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "obwohl",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "obwohl – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "deshalb",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "deshalb – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "trotzdem",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "trotzdem – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

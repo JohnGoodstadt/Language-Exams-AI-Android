@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizHealth1-de",
-	"title": "Health",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Allergie",
-					"summary": "Überreaktion auf einen Stoff",
-					"explain": {
-						"entryId": "Allergie",
-						"headword": "Allergie",
-						"pronunciation": {
-							"display": "a-ler-GEE",
-							"ipaUK": "/alɛʁˈɡiː/",
-							"ipaUS": "/alɛʁˈɡiː/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Allergie",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Allergie: eine Überreaktion des Körpers auf einen Stoff",
-										"examples": [
-											"Er hat eine starke Allergie gegen Pollen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er hat eine starke Allergie gegen Pollen.",
-							"ok": true
-						},
-						{
-							"answer": "Er hat einen starken Allergie gegen Pollen.",
-							"ok": false
-						},
-						{
-							"answer": "Er eine starke Allergie gegen Pollen hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Reaktion",
-					"summary": "Antwort des Körpers auf etwas",
-					"explain": {
-						"entryId": "Reaktion",
-						"headword": "Reaktion",
-						"pronunciation": {
-							"display": "re-ak-TSYOHN",
-							"ipaUK": "/ʁeakˈtsi̯oːn/",
-							"ipaUS": "/ʁeakˈtsi̯oːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Reaktion",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Reaktion: eine Veränderung im Körper nach Kontakt mit etwas",
-										"examples": [
-											"Seine Reaktion auf das Mittel war stark."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Seine Reaktion auf das Mittel war stark.",
-							"ok": true
-						},
-						{
-							"answer": "Seinen Reaktion auf das Mittel war stark.",
-							"ok": false
-						},
-						{
-							"answer": "Seine Reaktion auf das Mittel stark war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Symptome",
-					"summary": "Zeichen einer Krankheit (Plural)",
-					"explain": {
-						"entryId": "Symptome",
-						"headword": "Symptome",
-						"pronunciation": {
-							"display": "zümp-TOH-muh",
-							"ipaUK": "/zʏmpˈtoːmə/",
-							"ipaUS": "/zʏmpˈtoːmə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen (Plural)",
-								"grammarType": "Nomen (Plural)",
-								"headwordLine": "Symptome",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Symptome: die körperlichen Zeichen einer Krankheit (Plural)",
-										"examples": [
-											"Die Symptome verschwinden nach zwei Tagen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Symptome verschwinden nach zwei Tagen.",
-							"ok": true
-						},
-						{
-							"answer": "Die Symptom verschwinden nach zwei Tagen.",
-							"ok": false
-						},
-						{
-							"answer": "Die Symptome nach zwei Tagen verschwinden.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Termin",
-					"summary": "feste Verabredung (z. B. beim Arzt)",
-					"explain": {
-						"entryId": "Termin",
-						"headword": "Termin",
-						"pronunciation": {
-							"display": "ter-MEEN",
-							"ipaUK": "/tɛʁˈmiːn/",
-							"ipaUS": "/tɛʁˈmiːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Termin",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Termin: eine feste Verabredung zu einer bestimmten Zeit",
-										"examples": [
-											"Ich habe morgen einen Termin beim Arzt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich habe morgen einen Termin beim Arzt.",
-							"ok": true
-						},
-						{
-							"answer": "Ich habe morgen ein Termin beim Arzt.",
-							"ok": false
-						},
-						{
-							"answer": "Ich morgen einen Termin beim Arzt habe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "vereinbaren",
-					"summary": "eine Zeit festlegen",
-					"explain": {
-						"entryId": "vereinbaren",
-						"headword": "vereinbaren",
-						"pronunciation": {
-							"display": "fer-INE-bah-run",
-							"ipaUK": "/fɛɐ̯ˈʔaɪ̯nˌbaːʁən/",
-							"ipaUS": "/fɛɐ̯ˈʔaɪ̯nˌbaːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "vereinbaren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "vereinbaren: eine Zeit für etwas festlegen",
-										"examples": [
-											"Wir vereinbaren einen Termin für nächste Woche."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir vereinbaren einen Termin für nächste Woche.",
-							"ok": true
-						},
-						{
-							"answer": "Wir vereinbart einen Termin für nächste Woche.",
-							"ok": false
-						},
-						{
-							"answer": "Wir einen Termin für nächste Woche vereinbaren.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Beratung",
-					"summary": "Gespräch, in dem man Rat bekommt",
-					"explain": {
-						"entryId": "Beratung",
-						"headword": "Beratung",
-						"pronunciation": {
-							"display": "buh-RAH-toong",
-							"ipaUK": "/bəˈʁaːtʊŋ/",
-							"ipaUS": "/bəˈʁaːtʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Beratung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Beratung: ein Gespräch mit einem Fachmann, um Rat zu bekommen",
-										"examples": [
-											"Die Beratung beim Arzt war sehr hilfreich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Beratung beim Arzt war sehr hilfreich.",
-							"ok": true
-						},
-						{
-							"answer": "Der Beratung beim Arzt war sehr hilfreich.",
-							"ok": false
-						},
-						{
-							"answer": "Die Beratung beim Arzt sehr hilfreich war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Ernährung",
-					"summary": "die Art, wie man sich ernährt",
-					"explain": {
-						"entryId": "Ernährung",
-						"headword": "Ernährung",
-						"pronunciation": {
-							"display": "er-NAY-roong",
-							"ipaUK": "/ɛɐ̯ˈnɛːʁʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈnɛːʁʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ernährung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Ernährung: das Essen und Trinken, das man normalerweise zu sich nimmt",
-										"examples": [
-											"Eine gesunde Ernährung hält fit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Eine gesunde Ernährung hält fit.",
-							"ok": true
-						},
-						{
-							"answer": "Ein gesundes Ernährung hält fit.",
-							"ok": false
-						},
-						{
-							"answer": "Eine gesunde Ernährung fit hält.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Nahrung",
-					"summary": "das Essen als Nährstoff",
-					"explain": {
-						"entryId": "Nahrung",
-						"headword": "Nahrung",
-						"pronunciation": {
-							"display": "NAH-roong",
-							"ipaUK": "/ˈnaːʁʊŋ/",
-							"ipaUS": "/ˈnaːʁʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Nahrung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Nahrung: alles, was der Körper zum Leben braucht",
-										"examples": [
-											"Der Körper braucht gesunde Nahrung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Körper braucht gesunde Nahrung.",
-							"ok": true
-						},
-						{
-							"answer": "Der Körper braucht gesunden Nahrung.",
-							"ok": false
-						},
-						{
-							"answer": "Der Körper gesunde Nahrung braucht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "ausgewogen",
-					"summary": "im Gleichgewicht",
-					"explain": {
-						"entryId": "ausgewogen",
-						"headword": "ausgewogen",
-						"pronunciation": {
-							"display": "OWS-guh-voh-gn",
-							"ipaUK": "/ˈaʊ̯sɡəˌvoːɡn̩/",
-							"ipaUS": "/ˈaʊ̯sɡəˌvoːɡn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "ausgewogen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ausgewogen: im richtigen Gleichgewicht (z. B. Ernährung)",
-										"examples": [
-											"Eine ausgewogene Ernährung ist wichtig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Eine ausgewogene Ernährung ist wichtig.",
-							"ok": true
-						},
-						{
-							"answer": "Eine ausgewogenen Ernährung ist wichtig.",
-							"ok": false
-						},
-						{
-							"answer": "Eine ausgewogene Ernährung wichtig ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Notfall",
-					"summary": "plötzliche gefährliche Situation",
-					"explain": {
-						"entryId": "Notfall",
-						"headword": "Notfall",
-						"pronunciation": {
-							"display": "NOHT-fal",
-							"ipaUK": "/ˈnoːtˌfal/",
-							"ipaUS": "/ˈnoːtˌfal/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Notfall",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Notfall: eine plötzliche, gefährliche Situation",
-										"examples": [
-											"Im Notfall ruft man die 112."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im Notfall ruft man die 112.",
-							"ok": true
-						},
-						{
-							"answer": "In der Notfall ruft man die 112.",
-							"ok": false
-						},
-						{
-							"answer": "Im Notfall man ruft die 112.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizHealth1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Allergie",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Allergie – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Reaktion",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Reaktion – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Symptome",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Symptome – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Termin",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Termin – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "vereinbaren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "vereinbaren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Beratung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Beratung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Ernährung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ernährung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Nahrung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Nahrung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "ausgewogen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "ausgewogen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Notfall",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Notfall – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

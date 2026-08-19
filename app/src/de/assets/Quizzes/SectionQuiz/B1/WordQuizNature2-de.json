@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizNature2-de",
-	"title": "Nature",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Natur",
-					"summary": "alles ohne den Menschen",
-					"explain": {
-						"entryId": "Natur",
-						"headword": "Natur",
-						"pronunciation": {
-							"display": "na-TOOR",
-							"ipaUK": "/naˈtuːɐ̯/",
-							"ipaUS": "/naˈtuːɐ̯/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Natur",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Natur: alles, was nicht vom Menschen gemacht ist",
-										"examples": [
-											"In der Natur finde ich Ruhe."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In der Natur finde ich Ruhe.",
-							"ok": true
-						},
-						{
-							"answer": "In dem Natur finde ich Ruhe.",
-							"ok": false
-						},
-						{
-							"answer": "In der Natur ich finde Ruhe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Umgebung",
-					"summary": "alles, was um einen herum liegt",
-					"explain": {
-						"entryId": "Umgebung",
-						"headword": "Umgebung",
-						"pronunciation": {
-							"display": "oom-GAY-boong",
-							"ipaUK": "/ʊmˈɡeːbʊŋ/",
-							"ipaUS": "/ʊmˈɡeːbʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Umgebung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Umgebung: alles, was um einen herum liegt",
-										"examples": [
-											"Die Umgebung des Sees ist sehr ruhig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Umgebung des Sees ist sehr ruhig.",
-							"ok": true
-						},
-						{
-							"answer": "Der Umgebung des Sees ist sehr ruhig.",
-							"ok": false
-						},
-						{
-							"answer": "Die Umgebung des Sees sehr ruhig ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Zuhause",
-					"summary": "Ort, an dem man wohnt",
-					"explain": {
-						"entryId": "Zuhause",
-						"headword": "Zuhause",
-						"pronunciation": {
-							"display": "tsoo-HOW-zuh",
-							"ipaUK": "/tsuˈhaʊ̯zə/",
-							"ipaUS": "/tsuˈhaʊ̯zə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Zuhause",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Zuhause: der Ort, an dem man wohnt und sich wohlfühlt",
-										"examples": [
-											"Nach der Reise freue ich mich auf mein Zuhause."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nach der Reise freue ich mich auf mein Zuhause.",
-							"ok": true
-						},
-						{
-							"answer": "Nach der Reise freue ich mich auf meinen Zuhause.",
-							"ok": false
-						},
-						{
-							"answer": "Nach der Reise ich freue mich auf mein Zuhause.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Unterschlupf",
-					"summary": "geschützter Ort",
-					"explain": {
-						"entryId": "Unterschlupf",
-						"headword": "Unterschlupf",
-						"pronunciation": {
-							"display": "OON-tuh-shloopf",
-							"ipaUK": "/ˈʊntɐˌʃlʊpf/",
-							"ipaUS": "/ˈʊntɐˌʃlʊpf/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Unterschlupf",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Unterschlupf: ein geschützter Ort zum Unterkommen",
-										"examples": [
-											"Die Katze suchte einen trockenen Unterschlupf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Katze suchte einen trockenen Unterschlupf.",
-							"ok": true
-						},
-						{
-							"answer": "Die Katze suchte ein trockenes Unterschlupf.",
-							"ok": false
-						},
-						{
-							"answer": "Die Katze einen trockenen Unterschlupf suchte.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Umweltverschmutzung",
-					"summary": "Schmutzigmachen der Umwelt",
-					"explain": {
-						"entryId": "Umweltverschmutzung",
-						"headword": "Umweltverschmutzung",
-						"pronunciation": {
-							"display": "OOM-velt-fer-shmoot-soong",
-							"ipaUK": "/ˈʊmvɛltfɛɐ̯ˌʃmʊtsʊŋ/",
-							"ipaUS": "/ˈʊmvɛltfɛɐ̯ˌʃmʊtsʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Umweltverschmutzung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Umweltverschmutzung: das Schmutzigmachen der Umwelt",
-										"examples": [
-											"Die Umweltverschmutzung schadet der Gesundheit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Umweltverschmutzung schadet der Gesundheit.",
-							"ok": true
-						},
-						{
-							"answer": "Der Umweltverschmutzung schadet der Gesundheit.",
-							"ok": false
-						},
-						{
-							"answer": "Die Umweltverschmutzung der Gesundheit schadet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Verschmutzung",
-					"summary": "Verunreinigen von Wasser/Luft/Boden",
-					"explain": {
-						"entryId": "Verschmutzung",
-						"headword": "Verschmutzung",
-						"pronunciation": {
-							"display": "fer-SHMOOT-soong",
-							"ipaUK": "/fɛɐ̯ˈʃmʊtsʊŋ/",
-							"ipaUS": "/fɛɐ̯ˈʃmʊtsʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Verschmutzung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Verschmutzung: das Verunreinigen von Wasser, Luft oder Boden",
-										"examples": [
-											"Die Verschmutzung der Flüsse nimmt zu."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Verschmutzung der Flüsse nimmt zu.",
-							"ok": true
-						},
-						{
-							"answer": "Der Verschmutzung der Flüsse nimmt zu.",
-							"ok": false
-						},
-						{
-							"answer": "Die Verschmutzung der Flüsse zunimmt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Abfall",
-					"summary": "Dinge, die man wegwirft",
-					"explain": {
-						"entryId": "Abfall",
-						"headword": "Abfall",
-						"pronunciation": {
-							"display": "AP-fal",
-							"ipaUK": "/ˈapfal/",
-							"ipaUS": "/ˈapfal/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Abfall",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Abfall: Dinge, die man wegwirft; Müll",
-										"examples": [
-											"Der Abfall wird jeden Montag abgeholt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Abfall wird jeden Montag abgeholt.",
-							"ok": true
-						},
-						{
-							"answer": "Die Abfall wird jeden Montag abgeholt.",
-							"ok": false
-						},
-						{
-							"answer": "Der Abfall jeden Montag abgeholt wird.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Recycling",
-					"summary": "Wiederverwerten von Abfall",
-					"explain": {
-						"entryId": "Recycling",
-						"headword": "Recycling",
-						"pronunciation": {
-							"display": "ri-SY-kling",
-							"ipaUK": "/ʁiˈsaɪ̯klɪŋ/",
-							"ipaUS": "/ʁiˈsaɪ̯klɪŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Recycling",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Recycling: das Wiederverwerten von Abfall",
-										"examples": [
-											"Durch Recycling sparen wir Rohstoffe."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Durch Recycling sparen wir Rohstoffe.",
-							"ok": true
-						},
-						{
-							"answer": "Durch Recyclings sparen wir Rohstoffe.",
-							"ok": false
-						},
-						{
-							"answer": "Durch Recycling wir sparen Rohstoffe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "wiederverwenden",
-					"summary": "etwas noch einmal benutzen",
-					"explain": {
-						"entryId": "wiederverwenden",
-						"headword": "wiederverwenden",
-						"pronunciation": {
-							"display": "VEE-duh-fer-ven-dn",
-							"ipaUK": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/",
-							"ipaUS": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "wiederverwenden",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wiederverwenden: etwas noch einmal benutzen",
-										"examples": [
-											"Man kann alte Gläser gut wiederverwenden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Man kann alte Gläser gut wiederverwenden.",
-							"ok": true
-						},
-						{
-							"answer": "Man kann alte Gläser gut wiederverwendet.",
-							"ok": false
-						},
-						{
-							"answer": "Man alte Gläser gut wiederverwenden kann.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "reduzieren",
-					"summary": "verringern; weniger machen",
-					"explain": {
-						"entryId": "reduzieren",
-						"headword": "reduzieren",
-						"pronunciation": {
-							"display": "re-doo-TSEE-run",
-							"ipaUK": "/ʁeduˈtsiːʁən/",
-							"ipaUS": "/ʁeduˈtsiːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "reduzieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "reduzieren: weniger machen; verringern",
-										"examples": [
-											"Wir sollten den Müll reduzieren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir sollten den Müll reduzieren.",
-							"ok": true
-						},
-						{
-							"answer": "Wir sollten den Müll reduziert.",
-							"ok": false
-						},
-						{
-							"answer": "Wir den Müll reduzieren sollten.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizNature2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Natur",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Natur – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Umgebung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Umgebung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Zuhause",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Zuhause – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Unterschlupf",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Unterschlupf – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Umweltverschmutzung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Umweltverschmutzung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Verschmutzung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Verschmutzung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Abfall",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Abfall – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Recycling",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Recycling – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "wiederverwenden",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "wiederverwenden – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "reduzieren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "reduzieren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

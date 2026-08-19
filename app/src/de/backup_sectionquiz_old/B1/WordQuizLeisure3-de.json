@@ -1,0 +1,493 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizLeisure3-de",
+	"title": "Leisure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Bühne",
+					"summary": "Ort, auf dem Künstler auftreten",
+					"explain": {
+						"entryId": "Bühne",
+						"headword": "Bühne",
+						"pronunciation": {
+							"display": "BÜ-nuh",
+							"ipaUK": "/ˈbyːnə/",
+							"ipaUS": "/ˈbyːnə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bühne",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Bühne: der erhöhte Ort, auf dem Künstler auftreten",
+										"examples": [
+											"Die Sänger stehen auf der Bühne."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Sänger stehen auf der Bühne.",
+							"ok": true
+						},
+						{
+							"answer": "Die Sänger stehen auf dem Bühne.",
+							"ok": false
+						},
+						{
+							"answer": "Die Sänger auf der Bühne stehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Erholung",
+					"summary": "Ruhe und Entspannung",
+					"explain": {
+						"entryId": "Erholung",
+						"headword": "Erholung",
+						"pronunciation": {
+							"display": "er-HOH-loong",
+							"ipaUK": "/ɛɐ̯ˈhoːlʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈhoːlʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erholung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erholung: das Ausruhen und Entspannen in der Freizeit",
+										"examples": [
+											"Nach dem Stress brauche ich Erholung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Stress brauche ich Erholung.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Stress brauche ich Erholungen.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Stress ich brauche Erholung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Sport",
+					"summary": "körperliche Aktivität",
+					"explain": {
+						"entryId": "Sport",
+						"headword": "Sport",
+						"pronunciation": {
+							"display": "shport",
+							"ipaUK": "/ʃpɔʁt/",
+							"ipaUS": "/ʃpɔʁt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sport",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Sport: körperliche Aktivität mit Regeln",
+										"examples": [
+											"Am Wochenende treibe ich viel Sport."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Wochenende treibe ich viel Sport.",
+							"ok": true
+						},
+						{
+							"answer": "Am Wochenende treibe ich viel Sports.",
+							"ok": false
+						},
+						{
+							"answer": "Am Wochenende ich treibe viel Sport.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Theater",
+					"summary": "Gebäude für Bühnen-Aufführungen",
+					"explain": {
+						"entryId": "Theater",
+						"headword": "Theater",
+						"pronunciation": {
+							"display": "te-AH-tuh",
+							"ipaUK": "/teˈaːtɐ/",
+							"ipaUS": "/teˈaːtɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Theater",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Theater: ein Gebäude für Aufführungen auf der Bühne",
+										"examples": [
+											"Heute Abend gehen wir ins Theater."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute Abend gehen wir ins Theater.",
+							"ok": true
+						},
+						{
+							"answer": "Heute Abend gehen wir in die Theater.",
+							"ok": false
+						},
+						{
+							"answer": "Heute Abend wir gehen ins Theater.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Theaterstück",
+					"summary": "Stück, das im Theater gespielt wird",
+					"explain": {
+						"entryId": "Theaterstück",
+						"headword": "Theaterstück",
+						"pronunciation": {
+							"display": "te-AH-tuh-shtük",
+							"ipaUK": "/teˈaːtɐˌʃtʏk/",
+							"ipaUS": "/teˈaːtɐˌʃtʏk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Theaterstück",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Theaterstück: ein Stück, das im Theater gespielt wird",
+										"examples": [
+											"Das Theaterstück hat mich sehr berührt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Theaterstück hat mich sehr berührt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Theaterstück hat mich sehr berührt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Theaterstück mich sehr berührt hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Drama",
+					"summary": "ernstes Stück / Filmart",
+					"explain": {
+						"entryId": "Drama",
+						"headword": "Drama",
+						"pronunciation": {
+							"display": "DRAH-ma",
+							"ipaUK": "/ˈdʁaːma/",
+							"ipaUS": "/ˈdʁaːma/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Drama",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Drama: ein ernstes Theaterstück oder eine Filmart",
+										"examples": [
+											"Der Film ist ein bewegendes Drama."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Film ist ein bewegendes Drama.",
+							"ok": true
+						},
+						{
+							"answer": "Der Film ist ein bewegender Drama.",
+							"ok": false
+						},
+						{
+							"answer": "Der Film ein bewegendes Drama ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Tourismus",
+					"summary": "Reisen als Wirtschaft",
+					"explain": {
+						"entryId": "Tourismus",
+						"headword": "Tourismus",
+						"pronunciation": {
+							"display": "too-RIS-moos",
+							"ipaUK": "/tuˈʁɪsmʊs/",
+							"ipaUS": "/tuˈʁɪsmʊs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tourismus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Tourismus: das Reisen vieler Menschen als Wirtschaft",
+										"examples": [
+											"Der Tourismus bringt der Stadt viel Geld."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Tourismus bringt der Stadt viel Geld.",
+							"ok": true
+						},
+						{
+							"answer": "Die Tourismus bringt der Stadt viel Geld.",
+							"ok": false
+						},
+						{
+							"answer": "Der Tourismus der Stadt viel Geld bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Tourist",
+					"summary": "Person, die zum Vergnügen reist",
+					"explain": {
+						"entryId": "Tourist",
+						"headword": "Tourist",
+						"pronunciation": {
+							"display": "too-RIST",
+							"ipaUK": "/tuˈʁɪst/",
+							"ipaUS": "/tuˈʁɪst/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tourist",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Tourist: eine Person, die zum Vergnügen reist",
+										"examples": [
+											"Der Tourist fotografiert die Kirche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Tourist fotografiert die Kirche.",
+							"ok": true
+						},
+						{
+							"answer": "Die Tourist fotografiert die Kirche.",
+							"ok": false
+						},
+						{
+							"answer": "Der Tourist die Kirche fotografiert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Besichtigung",
+					"summary": "Ansehen von Sehenswürdigkeiten",
+					"explain": {
+						"entryId": "Besichtigung",
+						"headword": "Besichtigung",
+						"pronunciation": {
+							"display": "buh-ZIKH-ti-goong",
+							"ipaUK": "/bəˈzɪçtɪɡʊŋ/",
+							"ipaUS": "/bəˈzɪçtɪɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Besichtigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Besichtigung: das Ansehen von Sehenswürdigkeiten",
+										"examples": [
+											"Die Besichtigung der Burg war interessant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Besichtigung der Burg war interessant.",
+							"ok": true
+						},
+						{
+							"answer": "Der Besichtigung der Burg war interessant.",
+							"ok": false
+						},
+						{
+							"answer": "Die Besichtigung der Burg interessant war.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

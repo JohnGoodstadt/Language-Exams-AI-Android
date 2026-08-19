@@ -1,0 +1,608 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizShopping1-de",
+	"title": "Shopping",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "kaufen",
+					"summary": "etwas für Geld bekommen",
+					"explain": {
+						"entryId": "kaufen",
+						"headword": "kaufen",
+						"pronunciation": {
+							"display": "KOW-fn",
+							"ipaUK": "/ˈkaʊ̯fn̩/",
+							"ipaUS": "/ˈkaʊ̯fn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "kaufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas für Geld bekommen",
+										"examples": [
+											"Ich möchte ein neues Handy kaufen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich möchte ein neues Handy kaufen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich möchte ein neues Handy kaufe.",
+							"ok": false
+						},
+						{
+							"answer": "Ich ein neues Handy kaufen möchte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Kassierer",
+					"summary": "die Person an der Kasse",
+					"explain": {
+						"entryId": "Kassierer",
+						"headword": "Kassierer",
+						"pronunciation": {
+							"display": "ka-SEE-ruh",
+							"ipaUK": "/kaˈsiːʁɐ/",
+							"ipaUS": "/kaˈsiːʁɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kassierer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Kassiererin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Person an der Kasse im Geschäft",
+										"examples": [
+											"Der Kassierer gibt mir das Wechselgeld."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kassierer gibt mir das Wechselgeld.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kassierer gibt mir das Wechselgeld.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kassierer mir das Wechselgeld gibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Kreditkarte",
+					"summary": "Karte zum bargeldlosen Bezahlen",
+					"explain": {
+						"entryId": "Kreditkarte",
+						"headword": "Kreditkarte",
+						"pronunciation": {
+							"display": "kre-DEET-kar-tuh",
+							"ipaUK": "/kʁeˈdiːtˌkaʁtə/",
+							"ipaUS": "/kʁeˈdiːtˌkaʁtə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kreditkarte",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Karte, mit der man bargeldlos bezahlt",
+										"examples": [
+											"Ich bezahle die Rechnung mit der Kreditkarte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bezahle die Rechnung mit der Kreditkarte.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bezahle die Rechnung mit dem Kreditkarte.",
+							"ok": false
+						},
+						{
+							"answer": "Ich die Rechnung mit der Kreditkarte bezahle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Rabatt",
+					"summary": "Preisnachlass; man zahlt weniger",
+					"explain": {
+						"entryId": "Rabatt",
+						"headword": "Rabatt",
+						"pronunciation": {
+							"display": "ra-BAT",
+							"ipaUK": "/ʁaˈbat/",
+							"ipaUS": "/ʁaˈbat/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rabatt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Preisnachlass"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Preisnachlass; man zahlt weniger",
+										"examples": [
+											"Der Rabatt gilt nur heute."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Rabatt gilt nur heute.",
+							"ok": true
+						},
+						{
+							"answer": "Das Rabatt gilt nur heute.",
+							"ok": false
+						},
+						{
+							"answer": "Der Rabatt nur heute gilt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Einkaufszentrum",
+					"summary": "großes Gebäude mit vielen Läden",
+					"explain": {
+						"entryId": "Einkaufszentrum",
+						"headword": "Einkaufszentrum",
+						"pronunciation": {
+							"display": "INE-kowfs-tsen-troom",
+							"ipaUK": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/",
+							"ipaUS": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einkaufszentrum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes Gebäude mit vielen Geschäften",
+										"examples": [
+											"Im Einkaufszentrum gibt es viele Geschäfte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Einkaufszentrum gibt es viele Geschäfte.",
+							"ok": true
+						},
+						{
+							"answer": "In die Einkaufszentrum gibt es viele Geschäfte.",
+							"ok": false
+						},
+						{
+							"answer": "Im Einkaufszentrum viele Geschäfte gibt es.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Geld",
+					"summary": "Münzen und Scheine zum Bezahlen",
+					"explain": {
+						"entryId": "Geld",
+						"headword": "Geld",
+						"pronunciation": {
+							"display": "gelt",
+							"ipaUK": "/ɡɛlt/",
+							"ipaUS": "/ɡɛlt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Geld",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Münzen und Scheine, mit denen man bezahlt",
+										"examples": [
+											"Ich habe nicht genug Geld dabei."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe nicht genug Geld dabei.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe nicht genug Gelder dabei.",
+							"ok": false
+						},
+						{
+							"answer": "Ich nicht genug Geld dabei habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Preis",
+					"summary": "wie viel etwas kostet",
+					"explain": {
+						"entryId": "Preis",
+						"headword": "Preis",
+						"pronunciation": {
+							"display": "price",
+							"ipaUK": "/pʁaɪ̯s/",
+							"ipaUS": "/pʁaɪ̯s/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Preis",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wie viel etwas kostet",
+										"examples": [
+											"Der Preis für das Buch ist zu hoch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Preis für das Buch ist zu hoch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Preis für das Buch ist zu hoch.",
+							"ok": false
+						},
+						{
+							"answer": "Der Preis für das Buch zu hoch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Kassenbon",
+					"summary": "Zettel über den Einkauf",
+					"explain": {
+						"entryId": "Kassenbon",
+						"headword": "Kassenbon",
+						"pronunciation": {
+							"display": "KA-sn-bong",
+							"ipaUK": "/ˈkasn̩ˌbɔŋ/",
+							"ipaUS": "/ˈkasn̩ˌbɔŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kassenbon",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Quittung",
+									"Beleg"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Zettel, der zeigt, was man bezahlt hat",
+										"examples": [
+											"Bitte nehmen Sie den Kassenbon mit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte nehmen Sie den Kassenbon mit.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte nehmen Sie das Kassenbon mit.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte Sie nehmen den Kassenbon mit.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Angebot",
+					"summary": "Ware zu einem günstigen Preis",
+					"explain": {
+						"entryId": "Angebot",
+						"headword": "Angebot",
+						"pronunciation": {
+							"display": "AN-guh-boht",
+							"ipaUK": "/ˈanɡəˌboːt/",
+							"ipaUS": "/ˈanɡəˌboːt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Angebot",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Sonderangebot"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Ware zu einem günstigen Preis",
+										"examples": [
+											"Diese Schuhe sind heute im Angebot."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Schuhe sind heute im Angebot.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Schuhe sind heute im Angebote.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Schuhe heute im Angebot sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "verkaufen",
+					"summary": "etwas für Geld geben",
+					"explain": {
+						"entryId": "verkaufen",
+						"headword": "verkaufen",
+						"pronunciation": {
+							"display": "fer-KOW-fn",
+							"ipaUK": "/fɛɐ̯ˈkaʊ̯fn̩/",
+							"ipaUS": "/fɛɐ̯ˈkaʊ̯fn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "verkaufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem etwas für Geld geben",
+										"examples": [
+											"Der Bauer verkauft frisches Gemüse."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Bauer verkauft frisches Gemüse.",
+							"ok": true
+						},
+						{
+							"answer": "Der Bauer verkaufen frisches Gemüse.",
+							"ok": false
+						},
+						{
+							"answer": "Der Bauer frisches Gemüse verkauft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Supermarkt",
+					"summary": "großes Geschäft für Lebensmittel",
+					"explain": {
+						"entryId": "Supermarkt",
+						"headword": "Supermarkt",
+						"pronunciation": {
+							"display": "ZOO-puh-markt",
+							"ipaUK": "/ˈzuːpɐˌmaʁkt/",
+							"ipaUS": "/ˈzuːpɐˌmaʁkt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Supermarkt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes Geschäft für Lebensmittel",
+										"examples": [
+											"Im Supermarkt kaufe ich Milch und Brot."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Supermarkt kaufe ich Milch und Brot.",
+							"ok": true
+						},
+						{
+							"answer": "In die Supermarkt kaufe ich Milch und Brot.",
+							"ok": false
+						},
+						{
+							"answer": "Im Supermarkt ich kaufe Milch und Brot.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

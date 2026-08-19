@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizFood1-de",
-	"title": "Food",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Vorspeise",
-					"summary": "kleines Gericht vor dem Hauptgang",
-					"explain": {
-						"entryId": "Vorspeise",
-						"headword": "Vorspeise",
-						"pronunciation": {
-							"display": "FOR-shpy-zuh",
-							"ipaUK": "/ˈfoːɐ̯ˌʃpaɪ̯zə/",
-							"ipaUS": "/ˈfoːɐ̯ˌʃpaɪ̯zə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vorspeise",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Vorspeise: ein kleines Gericht vor dem Hauptgang",
-										"examples": [
-											"Als Vorspeise gab es eine leichte Suppe."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Als Vorspeise gab es eine leichte Suppe.",
-							"ok": true
-						},
-						{
-							"answer": "Als Vorspeise gab es einen leichten Suppe.",
-							"ok": false
-						},
-						{
-							"answer": "Als Vorspeise es gab eine leichte Suppe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "erster Gang",
-					"summary": "das erste Gericht",
-					"explain": {
-						"entryId": "erster Gang",
-						"headword": "erster Gang",
-						"pronunciation": {
-							"display": "ER-stuh gang",
-							"ipaUK": "/ˈeːɐ̯stɐ ɡaŋ/",
-							"ipaUS": "/ˈeːɐ̯stɐ ɡaŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "erster Gang",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der erste Gang: das erste Gericht einer Mahlzeit",
-										"examples": [
-											"Als erster Gang wird ein Salat serviert."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Als erster Gang wird ein Salat serviert.",
-							"ok": true
-						},
-						{
-							"answer": "Als erste Gang wird ein Salat serviert.",
-							"ok": false
-						},
-						{
-							"answer": "Als erster Gang ein Salat serviert wird.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Häppchen",
-					"summary": "kleiner Snack als Vorspeise",
-					"explain": {
-						"entryId": "Häppchen",
-						"headword": "Häppchen",
-						"pronunciation": {
-							"display": "HEP-khn",
-							"ipaUK": "/ˈhɛpçən/",
-							"ipaUS": "/ˈhɛpçən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Häppchen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Häppchen: ein kleiner Snack als Vorspeise",
-										"examples": [
-											"Auf der Party gab es kleine Häppchen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Auf der Party gab es kleine Häppchen.",
-							"ok": true
-						},
-						{
-							"answer": "Auf der Party gab es kleiner Häppchen.",
-							"ok": false
-						},
-						{
-							"answer": "Auf der Party es gab kleine Häppchen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Getränk",
-					"summary": "etwas, das man trinkt",
-					"explain": {
-						"entryId": "Getränk",
-						"headword": "Getränk",
-						"pronunciation": {
-							"display": "guh-TRENK",
-							"ipaUK": "/ɡəˈtʁɛŋk/",
-							"ipaUS": "/ɡəˈtʁɛŋk/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Getränk",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Getränk: etwas, das man trinkt",
-										"examples": [
-											"Zum Essen bestelle ich ein kaltes Getränk."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Zum Essen bestelle ich ein kaltes Getränk.",
-							"ok": true
-						},
-						{
-							"answer": "Zum Essen bestelle ich einen kalten Getränk.",
-							"ok": false
-						},
-						{
-							"answer": "Zum Essen ich bestelle ein kaltes Getränk.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Drink",
-					"summary": "ein (alkoholisches) Getränk",
-					"explain": {
-						"entryId": "Drink",
-						"headword": "Drink",
-						"pronunciation": {
-							"display": "drink",
-							"ipaUK": "/dʁɪŋk/",
-							"ipaUS": "/dʁɪŋk/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Drink",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Drink: ein Getränk, oft mit Alkohol",
-										"examples": [
-											"An der Bar bestellt er einen Drink."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Bar bestellt er einen Drink.",
-							"ok": true
-						},
-						{
-							"answer": "An der Bar bestellt er ein Drink.",
-							"ok": false
-						},
-						{
-							"answer": "An der Bar er bestellt einen Drink.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Erfrischung",
-					"summary": "Getränk/Snack, der erfrischt",
-					"explain": {
-						"entryId": "Erfrischung",
-						"headword": "Erfrischung",
-						"pronunciation": {
-							"display": "er-FRISH-oong",
-							"ipaUK": "/ɛɐ̯ˈfʁɪʃʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈfʁɪʃʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Erfrischung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Erfrischung: ein Getränk oder Snack, der erfrischt",
-										"examples": [
-											"Im Sommer ist Eis eine willkommene Erfrischung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im Sommer ist Eis eine willkommene Erfrischung.",
-							"ok": true
-						},
-						{
-							"answer": "Im Sommer ist Eis ein willkommener Erfrischung.",
-							"ok": false
-						},
-						{
-							"answer": "Im Sommer Eis eine willkommene Erfrischung ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Küche",
-					"summary": "typische Kochart eines Landes",
-					"explain": {
-						"entryId": "Küche",
-						"headword": "Küche",
-						"pronunciation": {
-							"display": "KÜ-khuh",
-							"ipaUK": "/ˈkʏçə/",
-							"ipaUS": "/ˈkʏçə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Küche",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Küche: die typische Art zu kochen eines Landes",
-										"examples": [
-											"Ich liebe die italienische Küche."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich liebe die italienische Küche.",
-							"ok": true
-						},
-						{
-							"answer": "Ich liebe den italienischen Küche.",
-							"ok": false
-						},
-						{
-							"answer": "Ich die italienische Küche liebe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Gericht",
-					"summary": "eine zubereitete Speise",
-					"explain": {
-						"entryId": "Gericht",
-						"headword": "Gericht",
-						"pronunciation": {
-							"display": "guh-RIKHT",
-							"ipaUK": "/ɡəˈʁɪçt/",
-							"ipaUS": "/ɡəˈʁɪçt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gericht",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Gericht: eine zubereitete Speise",
-										"examples": [
-											"Dieses Gericht schmeckt hervorragend."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Dieses Gericht schmeckt hervorragend.",
-							"ok": true
-						},
-						{
-							"answer": "Diese Gericht schmeckt hervorragend.",
-							"ok": false
-						},
-						{
-							"answer": "Dieses Gericht hervorragend schmeckt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Spezialität",
-					"summary": "typisches, besonderes Gericht",
-					"explain": {
-						"entryId": "Spezialität",
-						"headword": "Spezialität",
-						"pronunciation": {
-							"display": "shpe-tsi-a-li-TAYT",
-							"ipaUK": "/ʃpetsi̯aliˈtɛːt/",
-							"ipaUS": "/ʃpetsi̯aliˈtɛːt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Spezialität",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Spezialität: ein typisches, besonderes Gericht",
-										"examples": [
-											"Die Spezialität des Hauses ist Fisch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Spezialität des Hauses ist Fisch.",
-							"ok": true
-						},
-						{
-							"answer": "Der Spezialität des Hauses ist Fisch.",
-							"ok": false
-						},
-						{
-							"answer": "Die Spezialität des Hauses Fisch ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Nachtisch",
-					"summary": "süße Speise am Ende",
-					"explain": {
-						"entryId": "Nachtisch",
-						"headword": "Nachtisch",
-						"pronunciation": {
-							"display": "NAHKH-tish",
-							"ipaUK": "/ˈnaːxˌtɪʃ/",
-							"ipaUS": "/ˈnaːxˌtɪʃ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Nachtisch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Nachtisch: die süße Speise am Ende des Essens",
-										"examples": [
-											"Zum Nachtisch gibt es Eis."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Zum Nachtisch gibt es Eis.",
-							"ok": true
-						},
-						{
-							"answer": "Zur Nachtisch gibt es Eis.",
-							"ok": false
-						},
-						{
-							"answer": "Zum Nachtisch es gibt Eis.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizFood1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Vorspeise",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Vorspeise – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "erster Gang",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "erster Gang – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Häppchen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Häppchen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Getränk",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Getränk – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Drink",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Drink – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Erfrischung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Erfrischung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Küche",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Küche – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Gericht",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Gericht – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Spezialität",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Spezialität – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Nachtisch",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Nachtisch – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

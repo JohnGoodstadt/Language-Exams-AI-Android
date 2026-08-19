@@ -1,389 +1,176 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizDates2-de",
-	"title": "Dates",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Montag",
-					"summary": "der erste Tag der Woche",
-					"explain": {
-						"entryId": "Montag",
-						"headword": "Montag",
-						"pronunciation": {
-							"display": "MOHN-tahk",
-							"ipaUK": "/ˈmoːntaːk/",
-							"ipaUS": "/ˈmoːntaːk/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Wochentag",
-								"headwordLine": "Montag",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der erste Tag der Woche",
-										"examples": [
-											"Am Montag beginnt die Arbeitswoche."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Montag beginnt die Arbeitswoche.",
-							"ok": true
-						},
-						{
-							"answer": "Im Montag beginnt die Arbeitswoche.",
-							"ok": false
-						},
-						{
-							"answer": "Am Montag die Arbeitswoche beginnt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Samstag",
-					"summary": "der sechste Tag der Woche",
-					"explain": {
-						"entryId": "Samstag",
-						"headword": "Samstag",
-						"pronunciation": {
-							"display": "ZAMS-tahk",
-							"ipaUK": "/ˈzamstaːk/",
-							"ipaUS": "/ˈzamstaːk/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Wochentag",
-								"headwordLine": "Samstag",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Sonnabend"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der sechste Tag der Woche",
-										"examples": [
-											"Am Samstag schlafe ich lange."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Samstag schlafe ich lange.",
-							"ok": true
-						},
-						{
-							"answer": "Im Samstag schlafe ich lange.",
-							"ok": false
-						},
-						{
-							"answer": "Am Samstag ich schlafe lange.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Sonntag",
-					"summary": "der siebte Tag der Woche",
-					"explain": {
-						"entryId": "Sonntag",
-						"headword": "Sonntag",
-						"pronunciation": {
-							"display": "ZON-tahk",
-							"ipaUK": "/ˈzɔntaːk/",
-							"ipaUS": "/ˈzɔntaːk/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Wochentag",
-								"headwordLine": "Sonntag",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der siebte Tag der Woche",
-										"examples": [
-											"Am Sonntag ruhen sich viele aus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Sonntag ruhen sich viele aus.",
-							"ok": true
-						},
-						{
-							"answer": "Im Sonntag ruhen sich viele aus.",
-							"ok": false
-						},
-						{
-							"answer": "Am Sonntag viele ruhen sich aus.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Donnerstag",
-					"summary": "der vierte Tag der Woche",
-					"explain": {
-						"entryId": "Donnerstag",
-						"headword": "Donnerstag",
-						"pronunciation": {
-							"display": "DON-uhs-tahk",
-							"ipaUK": "/ˈdɔnɐstaːk/",
-							"ipaUS": "/ˈdɔnɐstaːk/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Wochentag",
-								"headwordLine": "Donnerstag",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der vierte Tag der Woche",
-										"examples": [
-											"Am Donnerstag habe ich einen Termin."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Donnerstag habe ich einen Termin.",
-							"ok": true
-						},
-						{
-							"answer": "Im Donnerstag habe ich einen Termin.",
-							"ok": false
-						},
-						{
-							"answer": "Am Donnerstag ich habe einen Termin.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Dienstag",
-					"summary": "der zweite Tag der Woche",
-					"explain": {
-						"entryId": "Dienstag",
-						"headword": "Dienstag",
-						"pronunciation": {
-							"display": "DEENS-tahk",
-							"ipaUK": "/ˈdiːnstaːk/",
-							"ipaUS": "/ˈdiːnstaːk/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Wochentag",
-								"headwordLine": "Dienstag",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der zweite Tag der Woche",
-										"examples": [
-											"Am Dienstag habe ich Deutschkurs."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Dienstag habe ich Deutschkurs.",
-							"ok": true
-						},
-						{
-							"answer": "Im Dienstag habe ich Deutschkurs.",
-							"ok": false
-						},
-						{
-							"answer": "Am Dienstag ich habe Deutschkurs.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Mittwoch",
-					"summary": "der dritte Tag der Woche",
-					"explain": {
-						"entryId": "Mittwoch",
-						"headword": "Mittwoch",
-						"pronunciation": {
-							"display": "MIT-vokh",
-							"ipaUK": "/ˈmɪtvɔx/",
-							"ipaUS": "/ˈmɪtvɔx/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Wochentag",
-								"headwordLine": "Mittwoch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der dritte Tag der Woche",
-										"examples": [
-											"Am Mittwoch ist Markt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Mittwoch ist Markt.",
-							"ok": true
-						},
-						{
-							"answer": "Im Mittwoch ist Markt.",
-							"ok": false
-						},
-						{
-							"answer": "Am Mittwoch Markt ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Nachmittag",
-					"summary": "die Zeit zwischen Mittag und Abend",
-					"explain": {
-						"entryId": "Nachmittag",
-						"headword": "Nachmittag",
-						"pronunciation": {
-							"display": "NAHKH-mit-tahk",
-							"ipaUK": "/ˈnaːxmɪtaːk/",
-							"ipaUS": "/ˈnaːxmɪtaːk/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Tageszeit",
-								"headwordLine": "Nachmittag",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Zeit zwischen Mittag und Abend",
-										"examples": [
-											"Am Nachmittag trinke ich Kaffee."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Nachmittag trinke ich Kaffee.",
-							"ok": true
-						},
-						{
-							"answer": "Im Nachmittag trinke ich Kaffee.",
-							"ok": false
-						},
-						{
-							"answer": "Am Nachmittag ich trinke Kaffee.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizWeekDays1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Montag",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Montag – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Dienstag",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Dienstag – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Mittwoch",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Mittwoch – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Donnerstag",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Donnerstag – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Freitag",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Freitag – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Samstag",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Samstag – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Sonntag",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Sonntag – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Wochenende",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Wochenende – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

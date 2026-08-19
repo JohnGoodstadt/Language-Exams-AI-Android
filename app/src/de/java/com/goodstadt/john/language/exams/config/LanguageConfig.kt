@@ -101,8 +101,9 @@ object LanguageConfig {
         }
     }
     val prepositionsBundleFileName: String = "prepositions_de"
-    val quizSheetPrepositionsFilename: String = "QuizSheetPrepositions-de"
-    val quizSheetWordPairsFilename: String = "QuizSheetWordPairs-de.json"
+    // Kept in their own Quizzes/QuizSheet/ subfolder for neatness; the readers open "Quizzes/<value>".
+    val quizSheetPrepositionsFilename: String = "QuizSheet/QuizSheetPrepositions-de"
+    val quizSheetWordPairsFilename: String = "QuizSheet/QuizSheetWordPairs-de.json"
 
 //    val prepositionsFirestoreName: String = "prepositions"
     val LLMSystemText: String =

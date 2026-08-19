@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives1-de",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "ehrgeizig",
+					"summary": "Adjektiv: voller Ehrgeiz",
+					"explain": {
+						"entryId": "ehrgeizig",
+						"headword": "ehrgeizig",
+						"pronunciation": {
+							"display": "AIR-guy-tsikh",
+							"ipaUK": "/ˈeːɐ̯ɡaɪ̯tsɪç/",
+							"ipaUS": "/ˈeːɐ̯ɡaɪ̯tsɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "ehrgeizig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Ehrgeiz; will viel erreichen",
+										"examples": [
+											"Der junge Mann ist sehr ehrgeizig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der junge Mann ist sehr ehrgeizig.",
+							"ok": true
+						},
+						{
+							"answer": "Der junge Mann ist sehr ehrgeizige.",
+							"ok": false
+						},
+						{
+							"answer": "Der junge Mann sehr ehrgeizig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "selbstbewusst",
+					"summary": "Adjektiv: sicher von sich selbst",
+					"explain": {
+						"entryId": "selbstbewusst",
+						"headword": "selbstbewusst",
+						"pronunciation": {
+							"display": "ZELPST-buh-voost",
+							"ipaUK": "/ˈzɛlpstbəˌvʊst/",
+							"ipaUS": "/ˈzɛlpstbəˌvʊst/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "selbstbewusst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sicher und überzeugt von sich selbst",
+										"examples": [
+											"Bei der Prüfung war sie sehr selbstbewusst."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bei der Prüfung war sie sehr selbstbewusst.",
+							"ok": true
+						},
+						{
+							"answer": "Bei der Prüfung war sie sehr selbstbewusste.",
+							"ok": false
+						},
+						{
+							"answer": "Bei der Prüfung sie war sehr selbstbewusst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "neugierig",
+					"summary": "Adjektiv: voller Interesse",
+					"explain": {
+						"entryId": "neugierig",
+						"headword": "neugierig",
+						"pronunciation": {
+							"display": "NOY-gee-rikh",
+							"ipaUK": "/ˈnɔɪ̯ˌɡiːʁɪç/",
+							"ipaUS": "/ˈnɔɪ̯ˌɡiːʁɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "neugierig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Interesse an Neuem",
+										"examples": [
+											"Kleine Kinder sind oft sehr neugierig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Kleine Kinder sind oft sehr neugierig.",
+							"ok": true
+						},
+						{
+							"answer": "Kleine Kinder sind oft sehr neugierige.",
+							"ok": false
+						},
+						{
+							"answer": "Kleine Kinder oft sehr neugierig sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "effizient",
+					"summary": "Adjektiv: mit wenig Aufwand",
+					"explain": {
+						"entryId": "effizient",
+						"headword": "effizient",
+						"pronunciation": {
+							"display": "e-fi-TSYENT",
+							"ipaUK": "/ɛfiˈtsi̯ɛnt/",
+							"ipaUS": "/ɛfiˈtsi̯ɛnt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "effizient",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit wenig Aufwand viel erreichend",
+										"examples": [
+											"Die neue Methode ist sehr effizient."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die neue Methode ist sehr effizient.",
+							"ok": true
+						},
+						{
+							"answer": "Die neue Methode ist sehr effiziente.",
+							"ok": false
+						},
+						{
+							"answer": "Die neue Methode sehr effizient ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "begeistert",
+					"summary": "Adjektiv: voller Begeisterung",
+					"explain": {
+						"entryId": "begeistert",
+						"headword": "begeistert",
+						"pronunciation": {
+							"display": "buh-GUY-stuht",
+							"ipaUK": "/bəˈɡaɪ̯stɐt/",
+							"ipaUS": "/bəˈɡaɪ̯stɐt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "begeistert",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Begeisterung",
+										"examples": [
+											"Vom Konzert waren alle begeistert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vom Konzert waren alle begeistert.",
+							"ok": true
+						},
+						{
+							"answer": "Vom Konzert waren alle begeisterte.",
+							"ok": false
+						},
+						{
+							"answer": "Vom Konzert alle begeistert waren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "unabhängig",
+					"summary": "Adjektiv: frei, nicht abhängig",
+					"explain": {
+						"entryId": "unabhängig",
+						"headword": "unabhängig",
+						"pronunciation": {
+							"display": "OON-ap-heng-ikh",
+							"ipaUK": "/ˈʊnʔapˌhɛŋɪç/",
+							"ipaUS": "/ˈʊnʔapˌhɛŋɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "unabhängig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "frei; nicht von anderen abhängig",
+										"examples": [
+											"Nach dem Studium ist sie finanziell unabhängig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Studium ist sie finanziell unabhängig.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Studium ist sie finanziell unabhängige.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Studium sie ist finanziell unabhängig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "geduldig",
+					"summary": "Adjektiv: voller Geduld",
+					"explain": {
+						"entryId": "geduldig",
+						"headword": "geduldig",
+						"pronunciation": {
+							"display": "guh-DOOL-dikh",
+							"ipaUK": "/ɡəˈdʊldɪç/",
+							"ipaUS": "/ɡəˈdʊldɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "geduldig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Geduld; ruhig wartend",
+										"examples": [
+											"Der Lehrer bleibt immer geduldig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Lehrer bleibt immer geduldig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Lehrer bleibt immer geduldige.",
+							"ok": false
+						},
+						{
+							"answer": "Der Lehrer immer geduldig bleibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "widerstandsfähig",
+					"summary": "Adjektiv: belastbar",
+					"explain": {
+						"entryId": "widerstandsfähig",
+						"headword": "widerstandsfähig",
+						"pronunciation": {
+							"display": "VEE-duh-shtants-fay-ikh",
+							"ipaUK": "/ˈviːdɐʃtantsˌfɛːɪç/",
+							"ipaUS": "/ˈviːdɐʃtantsˌfɛːɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "widerstandsfähig",
+								"inflectionsLine": null,
+								"synonyms": [
+									"belastbar"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "belastbar; erholt sich schnell von Problemen",
+										"examples": [
+											"Diese Pflanze ist sehr widerstandsfähig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Pflanze ist sehr widerstandsfähig.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Pflanze ist sehr widerstandsfähige.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Pflanze sehr widerstandsfähig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "erfolgreich",
+					"summary": "Adjektiv: mit viel Erfolg",
+					"explain": {
+						"entryId": "erfolgreich",
+						"headword": "erfolgreich",
+						"pronunciation": {
+							"display": "er-FOLK-rykh",
+							"ipaUK": "/ɛɐ̯ˈfɔlkʁaɪ̯ç/",
+							"ipaUS": "/ɛɐ̯ˈfɔlkʁaɪ̯ç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "erfolgreich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit viel Erfolg",
+										"examples": [
+											"Ihr neues Projekt war sehr erfolgreich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihr neues Projekt war sehr erfolgreich.",
+							"ok": true
+						},
+						{
+							"answer": "Ihr neues Projekt war sehr erfolgreiche.",
+							"ok": false
+						},
+						{
+							"answer": "Ihr neues Projekt sehr erfolgreich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "unterstützend",
+					"summary": "Adjektiv: hilfsbereit",
+					"explain": {
+						"entryId": "unterstützend",
+						"headword": "unterstützend",
+						"pronunciation": {
+							"display": "oon-tuh-SHTÜT-sent",
+							"ipaUK": "/ʊntɐˈʃtʏtsn̩t/",
+							"ipaUS": "/ʊntɐˈʃtʏtsn̩t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "unterstützend",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "hilfsbereit; gibt Rückhalt",
+										"examples": [
+											"Seine Eltern waren immer unterstützend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Seine Eltern waren immer unterstützend.",
+							"ok": true
+						},
+						{
+							"answer": "Seine Eltern waren immer unterstützende.",
+							"ok": false
+						},
+						{
+							"answer": "Seine Eltern immer unterstützend waren.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

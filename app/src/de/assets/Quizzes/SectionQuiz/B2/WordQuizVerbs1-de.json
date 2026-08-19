@@ -1,552 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizVerbs1-de",
-	"title": "Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "analysieren",
-					"summary": "etwas genau untersuchen",
-					"explain": {
-						"entryId": "analysieren",
-						"headword": "analysieren",
-						"pronunciation": {
-							"display": "a-na-lü-ZEE-run",
-							"ipaUK": "/analyˈziːʁən/",
-							"ipaUS": "/analyˈziːʁən/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "analysieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas genau untersuchen",
-										"examples": [
-											"Die Forscher analysieren die Daten genau."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Forscher analysieren die Daten genau.",
-							"ok": true
-						},
-						{
-							"answer": "Die Forscher analysiert die Daten genau.",
-							"ok": false
-						},
-						{
-							"answer": "Die Forscher die Daten genau analysieren.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "kommunizieren",
-					"summary": "Informationen austauschen",
-					"explain": {
-						"entryId": "kommunizieren",
-						"headword": "kommunizieren",
-						"pronunciation": {
-							"display": "ko-moo-ni-TSEE-run",
-							"ipaUK": "/kɔmuniˈtsiːʁən/",
-							"ipaUS": "/kɔmuniˈtsiːʁən/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "kommunizieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Informationen austauschen",
-										"examples": [
-											"Wir kommunizieren meistens per E-Mail."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir kommunizieren meistens per E-Mail.",
-							"ok": true
-						},
-						{
-							"answer": "Wir kommuniziert meistens per E-Mail.",
-							"ok": false
-						},
-						{
-							"answer": "Wir meistens per E-Mail kommunizieren.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "berücksichtigen",
-					"summary": "etwas mit bedenken",
-					"explain": {
-						"entryId": "berücksichtigen",
-						"headword": "berücksichtigen",
-						"pronunciation": {
-							"display": "buh-RÜK-zikh-ti-gn",
-							"ipaUK": "/bəˈʁʏkzɪçtɪɡn̩/",
-							"ipaUS": "/bəˈʁʏkzɪçtɪɡn̩/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "berücksichtigen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas mit bedenken; in Betracht ziehen",
-										"examples": [
-											"Wir berücksichtigen deine Wünsche."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir berücksichtigen deine Wünsche.",
-							"ok": true
-						},
-						{
-							"answer": "Wir berücksichtigt deine Wünsche.",
-							"ok": false
-						},
-						{
-							"answer": "Wir deine Wünsche berücksichtigen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "demonstrieren",
-					"summary": "etwas deutlich zeigen",
-					"explain": {
-						"entryId": "demonstrieren",
-						"headword": "demonstrieren",
-						"pronunciation": {
-							"display": "de-mon-STREE-run",
-							"ipaUK": "/demɔnˈstʁiːʁən/",
-							"ipaUS": "/demɔnˈstʁiːʁən/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "demonstrieren",
-								"inflectionsLine": null,
-								"synonyms": [
-									"zeigen"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "etwas deutlich zeigen oder vorführen",
-										"examples": [
-											"Der Lehrer demonstriert das Experiment."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Lehrer demonstriert das Experiment.",
-							"ok": true
-						},
-						{
-							"answer": "Der Lehrer demonstrieren das Experiment.",
-							"ok": false
-						},
-						{
-							"answer": "Der Lehrer das Experiment demonstriert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "diskutieren",
-					"summary": "ausführlich über etwas sprechen",
-					"explain": {
-						"entryId": "diskutieren",
-						"headword": "diskutieren",
-						"pronunciation": {
-							"display": "dis-koo-TEE-run",
-							"ipaUK": "/dɪskuˈtiːʁən/",
-							"ipaUS": "/dɪskuˈtiːʁən/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "diskutieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "über etwas ausführlich sprechen",
-										"examples": [
-											"Sie diskutieren über das neue Projekt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie diskutieren über das neue Projekt.",
-							"ok": true
-						},
-						{
-							"answer": "Sie diskutiert über das neue Projekt.",
-							"ok": false
-						},
-						{
-							"answer": "Sie über das neue Projekt diskutieren.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "bewerten",
-					"summary": "Wert/Qualität einschätzen",
-					"explain": {
-						"entryId": "bewerten",
-						"headword": "bewerten",
-						"pronunciation": {
-							"display": "buh-VER-tn",
-							"ipaUK": "/bəˈveːɐ̯tn̩/",
-							"ipaUS": "/bəˈveːɐ̯tn̩/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "bewerten",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "den Wert oder die Qualität einschätzen",
-										"examples": [
-											"Der Lehrer bewertet die Prüfungen fair."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Lehrer bewertet die Prüfungen fair.",
-							"ok": true
-						},
-						{
-							"answer": "Der Lehrer bewerten die Prüfungen fair.",
-							"ok": false
-						},
-						{
-							"answer": "Der Lehrer die Prüfungen fair bewertet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "umsetzen",
-					"summary": "einen Plan verwirklichen",
-					"explain": {
-						"entryId": "umsetzen",
-						"headword": "umsetzen",
-						"pronunciation": {
-							"display": "OOM-zets-sn",
-							"ipaUK": "/ˈʊmˌzɛtsn̩/",
-							"ipaUS": "/ˈʊmˌzɛtsn̩/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "umsetzen",
-								"inflectionsLine": null,
-								"synonyms": [
-									"verwirklichen"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "einen Plan in die Tat umsetzen",
-										"examples": [
-											"Wir setzen den Plan sofort um."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir setzen den Plan sofort um.",
-							"ok": true
-						},
-						{
-							"answer": "Wir setzen den Plan sofort auf.",
-							"ok": false
-						},
-						{
-							"answer": "Wir den Plan sofort umsetzen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "verhandeln",
-					"summary": "über eine Einigung sprechen",
-					"explain": {
-						"entryId": "verhandeln",
-						"headword": "verhandeln",
-						"pronunciation": {
-							"display": "fer-HAND-ln",
-							"ipaUK": "/fɛɐ̯ˈhandl̩n/",
-							"ipaUS": "/fɛɐ̯ˈhandl̩n/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "verhandeln",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "über eine Einigung sprechen",
-										"examples": [
-											"Die Firmen verhandeln über den Preis."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Firmen verhandeln über den Preis.",
-							"ok": true
-						},
-						{
-							"answer": "Die Firmen verhandelt über den Preis.",
-							"ok": false
-						},
-						{
-							"answer": "Die Firmen über den Preis verhandeln.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "teilnehmen",
-					"summary": "bei etwas mitmachen",
-					"explain": {
-						"entryId": "teilnehmen",
-						"headword": "teilnehmen",
-						"pronunciation": {
-							"display": "TILE-nay-mn",
-							"ipaUK": "/ˈtaɪ̯lˌneːmən/",
-							"ipaUS": "/ˈtaɪ̯lˌneːmən/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "teilnehmen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "bei etwas mitmachen",
-										"examples": [
-											"Viele Schüler nehmen am Wettbewerb teil."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Viele Schüler nehmen am Wettbewerb teil.",
-							"ok": true
-						},
-						{
-							"answer": "Viele Schüler nehmen am Wettbewerb auf.",
-							"ok": false
-						},
-						{
-							"answer": "Viele Schüler am Wettbewerb teilnehmen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "lösen",
-					"summary": "ein Problem klären",
-					"explain": {
-						"entryId": "lösen",
-						"headword": "lösen",
-						"pronunciation": {
-							"display": "LÖ-zn",
-							"ipaUK": "/ˈløːzn̩/",
-							"ipaUS": "/ˈløːzn̩/"
-						},
-						"labels": [
-							"B2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "lösen",
-								"inflectionsLine": null,
-								"synonyms": [
-									"klären"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Problem klären oder beseitigen",
-										"examples": [
-											"Gemeinsam lösen wir das Problem."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Gemeinsam lösen wir das Problem.",
-							"ok": true
-						},
-						{
-							"answer": "Gemeinsam löst wir das Problem.",
-							"ok": false
-						},
-						{
-							"answer": "Gemeinsam wir lösen das Problem.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizVerbs1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "in Betracht ziehen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "in Betracht ziehen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "zur Verfügung stellen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "zur Verfügung stellen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "in Frage stellen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "in Frage stellen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "sich auseinandersetzen mit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich auseinandersetzen mit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "voraussetzen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "voraussetzen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "berücksichtigen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "berücksichtigen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "sich beziehen auf",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich beziehen auf – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "gewährleisten",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "gewährleisten – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "beeinträchtigen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "beeinträchtigen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "in Anspruch nehmen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "in Anspruch nehmen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

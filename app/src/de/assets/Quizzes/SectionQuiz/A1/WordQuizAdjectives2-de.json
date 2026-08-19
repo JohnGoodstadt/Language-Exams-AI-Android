@@ -1,387 +1,176 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizAdjectives2-de",
-	"title": "Adjectives",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "neu",
-					"summary": "nicht alt; gerade gemacht",
-					"explain": {
-						"entryId": "neu",
-						"headword": "neu",
-						"pronunciation": {
-							"display": "noy",
-							"ipaUK": "/nɔɪ̯/",
-							"ipaUS": "/nɔɪ̯/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "neu",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht alt; gerade erst gemacht oder gekauft",
-										"examples": [
-											"Mein Handy ist neu."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Handy ist neu.",
-							"ok": true
-						},
-						{
-							"answer": "Mein Handy ist neues.",
-							"ok": false
-						},
-						{
-							"answer": "Neu mein Handy ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "alt",
-					"summary": "nicht neu; nicht jung",
-					"explain": {
-						"entryId": "alt",
-						"headword": "alt",
-						"pronunciation": {
-							"display": "alt",
-							"ipaUK": "/alt/",
-							"ipaUS": "/alt/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "alt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht neu; nicht jung",
-										"examples": [
-											"Das Haus ist sehr alt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Haus ist sehr alt.",
-							"ok": true
-						},
-						{
-							"answer": "Das Haus ist sehr altes.",
-							"ok": false
-						},
-						{
-							"answer": "Das Haus alt ist sehr.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "kurz",
-					"summary": "nicht lang",
-					"explain": {
-						"entryId": "kurz",
-						"headword": "kurz",
-						"pronunciation": {
-							"display": "koorts",
-							"ipaUK": "/kʊʁts/",
-							"ipaUS": "/kʊʁts/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "kurz",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht lang",
-										"examples": [
-											"Der Film ist kurz."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Film ist kurz.",
-							"ok": true
-						},
-						{
-							"answer": "Der Film ist kurzes.",
-							"ok": false
-						},
-						{
-							"answer": "Kurz der Film ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "langsam",
-					"summary": "mit niedriger Geschwindigkeit; nicht schnell",
-					"explain": {
-						"entryId": "langsam",
-						"headword": "langsam",
-						"pronunciation": {
-							"display": "LANG-zahm",
-							"ipaUK": "/ˈlaŋzaːm/",
-							"ipaUS": "/ˈlaŋzaːm/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "langsam",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "mit niedriger Geschwindigkeit; nicht schnell",
-										"examples": [
-											"Der Bus ist heute langsam."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Bus ist heute langsam.",
-							"ok": true
-						},
-						{
-							"answer": "Der Bus ist heute langsames.",
-							"ok": false
-						},
-						{
-							"answer": "Der Bus langsam ist heute.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "klein",
-					"summary": "nicht groß",
-					"explain": {
-						"entryId": "klein",
-						"headword": "klein",
-						"pronunciation": {
-							"display": "klyne",
-							"ipaUK": "/klaɪ̯n/",
-							"ipaUS": "/klaɪ̯n/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "klein",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht groß",
-										"examples": [
-											"Die Wohnung ist klein."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Wohnung ist klein.",
-							"ok": true
-						},
-						{
-							"answer": "Die Wohnung ist kleines.",
-							"ok": false
-						},
-						{
-							"answer": "Klein die Wohnung ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "hoch",
-					"summary": "sehr weit nach oben; nicht niedrig",
-					"explain": {
-						"entryId": "hoch",
-						"headword": "hoch",
-						"pronunciation": {
-							"display": "hohkh",
-							"ipaUK": "/hoːx/",
-							"ipaUS": "/hoːx/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "hoch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sehr weit nach oben; nicht niedrig",
-										"examples": [
-											"Der Turm ist sehr hoch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Turm ist sehr hoch.",
-							"ok": true
-						},
-						{
-							"answer": "Der Turm ist sehr hohes.",
-							"ok": false
-						},
-						{
-							"answer": "Der Turm hoch ist sehr.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "jung",
-					"summary": "nicht alt; von geringem Alter",
-					"explain": {
-						"entryId": "jung",
-						"headword": "jung",
-						"pronunciation": {
-							"display": "yoong",
-							"ipaUK": "/jʊŋ/",
-							"ipaUS": "/jʊŋ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "jung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht alt; von geringem Alter",
-										"examples": [
-											"Meine Schwester ist noch jung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Schwester ist noch jung.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Schwester ist noch junges.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Schwester jung ist noch.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizAdjectives2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "kalt",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "kalt – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "schnell",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "schnell – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "langsam",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "langsam – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "glücklich",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "glücklich – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "müde",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "müde – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "einfach",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "einfach – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "schwer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "schwer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "freundlich",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "freundlich – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

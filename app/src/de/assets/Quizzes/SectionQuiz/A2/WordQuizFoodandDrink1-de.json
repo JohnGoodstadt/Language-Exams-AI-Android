@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizFoodandDrink1-de",
-	"title": "Food and Drink",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Brot",
-					"summary": "ein Essen aus Mehl",
-					"explain": {
-						"entryId": "Brot",
-						"headword": "Brot",
-						"pronunciation": {
-							"display": "broht",
-							"ipaUK": "/bʁoːt/",
-							"ipaUS": "/bʁoːt/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Brot",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Grundnahrungsmittel aus Mehl",
-										"examples": [
-											"Zum Frühstück esse ich frisches Brot."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Zum Frühstück esse ich frisches Brot.",
-							"ok": true
-						},
-						{
-							"answer": "Zum Frühstück esse ich frischen Brot.",
-							"ok": false
-						},
-						{
-							"answer": "Zum Frühstück ich esse frisches Brot.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Frühstück",
-					"summary": "die erste Mahlzeit am Morgen",
-					"explain": {
-						"entryId": "Frühstück",
-						"headword": "Frühstück",
-						"pronunciation": {
-							"display": "FRÜ-shtük",
-							"ipaUK": "/ˈfʁyːʃtʏk/",
-							"ipaUS": "/ˈfʁyːʃtʏk/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Frühstück",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die erste Mahlzeit am Morgen",
-										"examples": [
-											"Das Frühstück ist die erste Mahlzeit am Tag."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Frühstück ist die erste Mahlzeit am Tag.",
-							"ok": true
-						},
-						{
-							"answer": "Der Frühstück ist die erste Mahlzeit am Tag.",
-							"ok": false
-						},
-						{
-							"answer": "Das Frühstück die erste Mahlzeit am Tag ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Kaffee",
-					"summary": "ein warmes Getränk",
-					"explain": {
-						"entryId": "Kaffee",
-						"headword": "Kaffee",
-						"pronunciation": {
-							"display": "KA-fay",
-							"ipaUK": "/ˈkafe/",
-							"ipaUS": "/ˈkafe/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kaffee",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein warmes Getränk, das wach macht",
-										"examples": [
-											"Am Morgen trinke ich einen starken Kaffee."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Morgen trinke ich einen starken Kaffee.",
-							"ok": true
-						},
-						{
-							"answer": "Am Morgen trinke ich eine starke Kaffee.",
-							"ok": false
-						},
-						{
-							"answer": "Am Morgen ich trinke einen starken Kaffee.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Abendessen",
-					"summary": "die Mahlzeit am Abend",
-					"explain": {
-						"entryId": "Abendessen",
-						"headword": "Abendessen",
-						"pronunciation": {
-							"display": "AH-bnt-es-sn",
-							"ipaUK": "/ˈaːbn̩tˌʔɛsn̩/",
-							"ipaUS": "/ˈaːbn̩tˌʔɛsn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Abendessen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Mahlzeit am Abend",
-										"examples": [
-											"Zum Abendessen gibt es heute Suppe."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Zum Abendessen gibt es heute Suppe.",
-							"ok": true
-						},
-						{
-							"answer": "Zur Abendessen gibt es heute Suppe.",
-							"ok": false
-						},
-						{
-							"answer": "Zum Abendessen heute Suppe gibt es.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Fisch",
-					"summary": "ein Tier aus dem Wasser zum Essen",
-					"explain": {
-						"entryId": "Fisch",
-						"headword": "Fisch",
-						"pronunciation": {
-							"display": "fish",
-							"ipaUK": "/fɪʃ/",
-							"ipaUS": "/fɪʃ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Fisch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Tier, das im Wasser lebt und das man essen kann",
-										"examples": [
-											"Der Fisch schmeckt sehr frisch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Fisch schmeckt sehr frisch.",
-							"ok": true
-						},
-						{
-							"answer": "Die Fisch schmeckt sehr frisch.",
-							"ok": false
-						},
-						{
-							"answer": "Der Fisch sehr frisch schmeckt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Obst",
-					"summary": "essbare Früchte",
-					"explain": {
-						"entryId": "Obst",
-						"headword": "Obst",
-						"pronunciation": {
-							"display": "ohpst",
-							"ipaUK": "/oːpst/",
-							"ipaUS": "/oːpst/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Obst",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Früchte, die man essen kann (Apfel, Banane)",
-										"examples": [
-											"Ich esse jeden Tag frisches Obst."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich esse jeden Tag frisches Obst.",
-							"ok": true
-						},
-						{
-							"answer": "Ich esse jeden Tag frischen Obst.",
-							"ok": false
-						},
-						{
-							"answer": "Ich jeden Tag frisches Obst esse.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Saft",
-					"summary": "ein Getränk aus Früchten",
-					"explain": {
-						"entryId": "Saft",
-						"headword": "Saft",
-						"pronunciation": {
-							"display": "zaft",
-							"ipaUK": "/zaft/",
-							"ipaUS": "/zaft/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Saft",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Getränk aus Früchten",
-										"examples": [
-											"Ich trinke gern frischen Orangensaft."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich trinke gern frischen Orangensaft.",
-							"ok": true
-						},
-						{
-							"answer": "Ich trinke gern frische Orangensaft.",
-							"ok": false
-						},
-						{
-							"answer": "Ich trinke gern Orangensaft frischen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Mittagessen",
-					"summary": "die Mahlzeit am Mittag",
-					"explain": {
-						"entryId": "Mittagessen",
-						"headword": "Mittagessen",
-						"pronunciation": {
-							"display": "MIT-tahk-es-sn",
-							"ipaUK": "/ˈmɪtaːkˌʔɛsn̩/",
-							"ipaUS": "/ˈmɪtaːkˌʔɛsn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Mittagessen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Mahlzeit am Mittag",
-										"examples": [
-											"Das Mittagessen gibt es um zwölf Uhr."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Mittagessen gibt es um zwölf Uhr.",
-							"ok": true
-						},
-						{
-							"answer": "Der Mittagessen gibt es um zwölf Uhr.",
-							"ok": false
-						},
-						{
-							"answer": "Das Mittagessen um zwölf Uhr gibt es.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Fleisch",
-					"summary": "das Essen vom Tier",
-					"explain": {
-						"entryId": "Fleisch",
-						"headword": "Fleisch",
-						"pronunciation": {
-							"display": "flysh",
-							"ipaUK": "/flaɪ̯ʃ/",
-							"ipaUS": "/flaɪ̯ʃ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Fleisch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Essen, das vom Tier kommt",
-										"examples": [
-											"Ich esse kein Fleisch, ich bin Vegetarier."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich esse kein Fleisch, ich bin Vegetarier.",
-							"ok": true
-						},
-						{
-							"answer": "Ich esse keinen Fleisch, ich bin Vegetarier.",
-							"ok": false
-						},
-						{
-							"answer": "Ich kein Fleisch esse, ich bin Vegetarier.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Milch",
-					"summary": "ein weißes Getränk von der Kuh",
-					"explain": {
-						"entryId": "Milch",
-						"headword": "Milch",
-						"pronunciation": {
-							"display": "milkh",
-							"ipaUK": "/mɪlç/",
-							"ipaUS": "/mɪlç/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Milch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein weißes Getränk, das von der Kuh kommt",
-										"examples": [
-											"Die Milch steht im Kühlschrank."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Milch steht im Kühlschrank.",
-							"ok": true
-						},
-						{
-							"answer": "Der Milch steht im Kühlschrank.",
-							"ok": false
-						},
-						{
-							"answer": "Die Milch im Kühlschrank steht.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizFoodandDrink1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Frühstück",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Frühstück – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Mittagessen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Mittagessen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Abendessen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Abendessen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Gericht",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Gericht – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Vorspeise",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Vorspeise – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Nachspeise",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Nachspeise – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "bestellen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "bestellen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Speisekarte",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Speisekarte – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "schmecken",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "schmecken – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Getränk",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Getränk – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizShopping1-de",
-	"title": "Shopping",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Schnäppchen",
-					"summary": "günstige Ware; guter Kauf",
-					"explain": {
-						"entryId": "Schnäppchen",
-						"headword": "Schnäppchen",
-						"pronunciation": {
-							"display": "SHNEP-khn",
-							"ipaUK": "/ˈʃnɛpçən/",
-							"ipaUS": "/ˈʃnɛpçən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Schnäppchen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Schnäppchen: eine günstige Ware; ein guter Kauf",
-										"examples": [
-											"Im Ausverkauf machte ich ein echtes Schnäppchen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im Ausverkauf machte ich ein echtes Schnäppchen.",
-							"ok": true
-						},
-						{
-							"answer": "Im Ausverkauf machte ich einen echten Schnäppchen.",
-							"ok": false
-						},
-						{
-							"answer": "Im Ausverkauf ich machte ein echtes Schnäppchen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Rabatt",
-					"summary": "Preisnachlass",
-					"explain": {
-						"entryId": "Rabatt",
-						"headword": "Rabatt",
-						"pronunciation": {
-							"display": "ra-BAT",
-							"ipaUK": "/ʁaˈbat/",
-							"ipaUS": "/ʁaˈbat/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Rabatt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Rabatt: ein Preisnachlass; man zahlt weniger",
-										"examples": [
-											"Der Rabatt gilt nur heute."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Rabatt gilt nur heute.",
-							"ok": true
-						},
-						{
-							"answer": "Das Rabatt gilt nur heute.",
-							"ok": false
-						},
-						{
-							"answer": "Der Rabatt nur heute gilt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Angebot",
-					"summary": "Ware zu günstigem Preis",
-					"explain": {
-						"entryId": "Angebot",
-						"headword": "Angebot",
-						"pronunciation": {
-							"display": "AN-guh-boht",
-							"ipaUK": "/ˈanɡəˌboːt/",
-							"ipaUS": "/ˈanɡəˌboːt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Angebot",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Angebot: eine Ware zu einem günstigen Preis",
-										"examples": [
-											"Diese Woche gibt es ein tolles Angebot."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Diese Woche gibt es ein tolles Angebot.",
-							"ok": true
-						},
-						{
-							"answer": "Diese Woche gibt es einen tollen Angebot.",
-							"ok": false
-						},
-						{
-							"answer": "Diese Woche es gibt ein tolles Angebot.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Kassierer",
-					"summary": "Person an der Kasse",
-					"explain": {
-						"entryId": "Kassierer",
-						"headword": "Kassierer",
-						"pronunciation": {
-							"display": "ka-SEE-ruh",
-							"ipaUK": "/kaˈsiːʁɐ/",
-							"ipaUS": "/kaˈsiːʁɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kassierer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Kassierer: die Person an der Kasse im Geschäft",
-										"examples": [
-											"Der Kassierer gibt mir das Wechselgeld."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Kassierer gibt mir das Wechselgeld.",
-							"ok": true
-						},
-						{
-							"answer": "Die Kassierer gibt mir das Wechselgeld.",
-							"ok": false
-						},
-						{
-							"answer": "Der Kassierer mir das Wechselgeld gibt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Verkäufer",
-					"summary": "verkauft im Geschäft",
-					"explain": {
-						"entryId": "Verkäufer",
-						"headword": "Verkäufer",
-						"pronunciation": {
-							"display": "fer-KOY-fuh",
-							"ipaUK": "/fɛɐ̯ˈkɔɪ̯fɐ/",
-							"ipaUS": "/fɛɐ̯ˈkɔɪ̯fɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Verkäufer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Verkäufer: eine Person, die im Geschäft verkauft und berät",
-										"examples": [
-											"Der Verkäufer berät mich sehr freundlich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Verkäufer berät mich sehr freundlich.",
-							"ok": true
-						},
-						{
-							"answer": "Die Verkäufer berät mich sehr freundlich.",
-							"ok": false
-						},
-						{
-							"answer": "Der Verkäufer mich sehr freundlich berät.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Kasse",
-					"summary": "Ort zum Bezahlen",
-					"explain": {
-						"entryId": "Kasse",
-						"headword": "Kasse",
-						"pronunciation": {
-							"display": "KAS-suh",
-							"ipaUK": "/ˈkasə/",
-							"ipaUS": "/ˈkasə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kasse",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Kasse: der Ort im Geschäft, wo man bezahlt",
-										"examples": [
-											"An der Kasse bildet sich eine lange Schlange."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Kasse bildet sich eine lange Schlange.",
-							"ok": true
-						},
-						{
-							"answer": "An dem Kasse bildet sich eine lange Schlange.",
-							"ok": false
-						},
-						{
-							"answer": "An der Kasse eine lange Schlange sich bildet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Kunde",
-					"summary": "Person, die etwas kauft",
-					"explain": {
-						"entryId": "Kunde",
-						"headword": "Kunde",
-						"pronunciation": {
-							"display": "KOON-duh",
-							"ipaUK": "/ˈkʊndə/",
-							"ipaUS": "/ˈkʊndə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kunde",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Kunde: eine Person, die etwas kauft",
-										"examples": [
-											"Der Kunde beschwert sich über die Ware."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Kunde beschwert sich über die Ware.",
-							"ok": true
-						},
-						{
-							"answer": "Die Kunde beschwert sich über die Ware.",
-							"ok": false
-						},
-						{
-							"answer": "Der Kunde sich über die Ware beschwert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Klient",
-					"summary": "Kunde eines Dienstleisters",
-					"explain": {
-						"entryId": "Klient",
-						"headword": "Klient",
-						"pronunciation": {
-							"display": "kli-ENT",
-							"ipaUK": "/kliˈɛnt/",
-							"ipaUS": "/kliˈɛnt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Klient",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Klient: eine Person, die einen Dienst nutzt (z. B. beim Anwalt)",
-										"examples": [
-											"Der Anwalt trifft seinen Klienten um zehn."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Anwalt trifft seinen Klienten um zehn.",
-							"ok": true
-						},
-						{
-							"answer": "Der Anwalt trifft sein Klienten um zehn.",
-							"ok": false
-						},
-						{
-							"answer": "Der Anwalt seinen Klienten um zehn trifft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Käufer",
-					"summary": "Person, die etwas kauft",
-					"explain": {
-						"entryId": "Käufer",
-						"headword": "Käufer",
-						"pronunciation": {
-							"display": "KOY-fuh",
-							"ipaUK": "/ˈkɔɪ̯fɐ/",
-							"ipaUS": "/ˈkɔɪ̯fɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Käufer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Käufer: eine Person, die gerade etwas kauft",
-										"examples": [
-											"Der Käufer prüft die Ware genau."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Käufer prüft die Ware genau.",
-							"ok": true
-						},
-						{
-							"answer": "Die Käufer prüft die Ware genau.",
-							"ok": false
-						},
-						{
-							"answer": "Der Käufer die Ware genau prüft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Lieferung",
-					"summary": "Bringen einer bestellten Ware",
-					"explain": {
-						"entryId": "Lieferung",
-						"headword": "Lieferung",
-						"pronunciation": {
-							"display": "LEE-fuh-roong",
-							"ipaUK": "/ˈliːfəʁʊŋ/",
-							"ipaUS": "/ˈliːfəʁʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Lieferung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Lieferung: das Bringen einer bestellten Ware",
-										"examples": [
-											"Die Lieferung kommt am Dienstag an."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Lieferung kommt am Dienstag an.",
-							"ok": true
-						},
-						{
-							"answer": "Der Lieferung kommt am Dienstag an.",
-							"ok": false
-						},
-						{
-							"answer": "Die Lieferung am Dienstag ankommt.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizShopping1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Schnäppchen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Schnäppchen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Rabatt",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Rabatt – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Angebot",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Angebot – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Kassierer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kassierer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Verkäufer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Verkäufer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Kasse",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kasse – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Kunde",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kunde – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Klient",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Klient – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Käufer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Käufer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Lieferung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Lieferung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

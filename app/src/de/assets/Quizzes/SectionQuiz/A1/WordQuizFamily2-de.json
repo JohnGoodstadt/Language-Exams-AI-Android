@@ -1,285 +1,116 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizFamily2-de",
-	"title": "Family",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Großmutter",
-					"summary": "die Mutter der Eltern",
-					"explain": {
-						"entryId": "Großmutter",
-						"headword": "Großmutter",
-						"pronunciation": {
-							"display": "GROHSS-moo-tuh",
-							"ipaUK": "/ˈɡʁoːsˌmʊtɐ/",
-							"ipaUS": "/ˈɡʁoːsˌmʊtɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Großmutter",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Oma"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Mutter der Mutter oder des Vaters",
-										"examples": [
-											"Meine Großmutter backt einen Kuchen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Großmutter backt einen Kuchen.",
-							"ok": true
-						},
-						{
-							"answer": "Mein Großmutter backt einen Kuchen.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Großmutter einen Kuchen backt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Mutter",
-					"summary": "der weibliche Elternteil",
-					"explain": {
-						"entryId": "Mutter",
-						"headword": "Mutter",
-						"pronunciation": {
-							"display": "MOO-tuh",
-							"ipaUK": "/ˈmʊtɐ/",
-							"ipaUS": "/ˈmʊtɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Mutter",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Mama"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der weibliche Elternteil",
-										"examples": [
-											"Meine Mutter kocht gern."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Mutter kocht gern.",
-							"ok": true
-						},
-						{
-							"answer": "Mein Mutter kocht gern.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Mutter gern kocht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Schwester",
-					"summary": "die Tochter der gleichen Eltern",
-					"explain": {
-						"entryId": "Schwester",
-						"headword": "Schwester",
-						"pronunciation": {
-							"display": "SHVES-tuh",
-							"ipaUK": "/ˈʃvɛstɐ/",
-							"ipaUS": "/ˈʃvɛstɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Schwester",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Tochter der gleichen Eltern",
-										"examples": [
-											"Meine Schwester ist nett."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Schwester ist nett.",
-							"ok": true
-						},
-						{
-							"answer": "Mein Schwester ist nett.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Schwester nett ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Sohn",
-					"summary": "das männliche Kind",
-					"explain": {
-						"entryId": "Sohn",
-						"headword": "Sohn",
-						"pronunciation": {
-							"display": "zohn",
-							"ipaUK": "/zoːn/",
-							"ipaUS": "/zoːn/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Sohn",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das männliche Kind der Eltern",
-										"examples": [
-											"Ihr Sohn ist noch klein."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ihr Sohn ist noch klein.",
-							"ok": true
-						},
-						{
-							"answer": "Ihre Sohn ist noch klein.",
-							"ok": false
-						},
-						{
-							"answer": "Ihr Sohn noch klein ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Onkel",
-					"summary": "der Bruder der Mutter oder des Vaters",
-					"explain": {
-						"entryId": "Onkel",
-						"headword": "Onkel",
-						"pronunciation": {
-							"display": "ON-kl",
-							"ipaUK": "/ˈɔŋkl̩/",
-							"ipaUS": "/ˈɔŋkl̩/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Onkel",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Bruder der Mutter oder des Vaters",
-										"examples": [
-											"Mein Onkel wohnt in Berlin."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Onkel wohnt in Berlin.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Onkel wohnt in Berlin.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Onkel in Berlin wohnt.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizFamily2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Großmutter",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Großmutter – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Großvater",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Großvater – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Mann",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Mann – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Frau",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Frau – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Baby",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Baby – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

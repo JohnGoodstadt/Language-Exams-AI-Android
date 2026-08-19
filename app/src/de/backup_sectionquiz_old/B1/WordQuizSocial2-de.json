@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial2-de",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Gerechtigkeit",
+					"summary": "faires, gerechtes Handeln",
+					"explain": {
+						"entryId": "Gerechtigkeit",
+						"headword": "Gerechtigkeit",
+						"pronunciation": {
+							"display": "guh-REKH-tikh-kite",
+							"ipaUK": "/ɡəˈʁɛçtɪçkaɪ̯t/",
+							"ipaUS": "/ɡəˈʁɛçtɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gerechtigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gerechtigkeit: faires und gerechtes Handeln",
+										"examples": [
+											"Die Menschen kämpfen für mehr Gerechtigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Menschen kämpfen für mehr Gerechtigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Die Menschen kämpfen für mehr Gerechtigkeiten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Menschen für mehr Gerechtigkeit kämpfen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Justiz",
+					"summary": "Rechtssystem und Gerichte",
+					"explain": {
+						"entryId": "Justiz",
+						"headword": "Justiz",
+						"pronunciation": {
+							"display": "yoos-TEETS",
+							"ipaUK": "/jʊsˈtiːts/",
+							"ipaUS": "/jʊsˈtiːts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Justiz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Justiz: das Rechtssystem und die Gerichte",
+										"examples": [
+											"Die Justiz arbeitet unabhängig von der Politik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Justiz arbeitet unabhängig von der Politik.",
+							"ok": true
+						},
+						{
+							"answer": "Der Justiz arbeitet unabhängig von der Politik.",
+							"ok": false
+						},
+						{
+							"answer": "Die Justiz unabhängig von der Politik arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Einwanderung",
+					"summary": "Kommen in ein neues Land",
+					"explain": {
+						"entryId": "Einwanderung",
+						"headword": "Einwanderung",
+						"pronunciation": {
+							"display": "INE-van-duh-roong",
+							"ipaUK": "/ˈaɪ̯nˌvandəʁʊŋ/",
+							"ipaUS": "/ˈaɪ̯nˌvandəʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einwanderung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Einwanderung: das Kommen von Menschen in ein neues Land",
+										"examples": [
+											"Die Einwanderung hat viele Ursachen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Einwanderung hat viele Ursachen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Einwanderung hat viele Ursachen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Einwanderung viele Ursachen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Migrant",
+					"summary": "Person, die ins Land zieht",
+					"explain": {
+						"entryId": "Migrant",
+						"headword": "Migrant",
+						"pronunciation": {
+							"display": "mi-GRANT",
+							"ipaUK": "/miˈɡʁant/",
+							"ipaUS": "/miˈɡʁant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Migrant",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Migrant: eine Person, die in ein anderes Land zieht",
+										"examples": [
+											"Der Migrant lernt schnell die neue Sprache."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Migrant lernt schnell die neue Sprache.",
+							"ok": true
+						},
+						{
+							"answer": "Die Migrant lernt schnell die neue Sprache.",
+							"ok": false
+						},
+						{
+							"answer": "Der Migrant schnell die neue Sprache lernt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Asyl",
+					"summary": "Schutz für Verfolgte",
+					"explain": {
+						"entryId": "Asyl",
+						"headword": "Asyl",
+						"pronunciation": {
+							"display": "a-ZÜL",
+							"ipaUK": "/aˈzyːl/",
+							"ipaUS": "/aˈzyːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Asyl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Asyl: der Schutz für verfolgte Menschen in einem anderen Land",
+										"examples": [
+											"Viele Flüchtlinge bitten um Asyl."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Flüchtlinge bitten um Asyl.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Flüchtlinge bitten um Asyle.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Flüchtlinge um Asyl bitten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Politik",
+					"summary": "Handeln in öffentlichen Fragen",
+					"explain": {
+						"entryId": "Politik",
+						"headword": "Politik",
+						"pronunciation": {
+							"display": "po-li-TEEK",
+							"ipaUK": "/poliˈtiːk/",
+							"ipaUS": "/poliˈtiːk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Politik",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Politik: die Grundsätze und das Handeln in öffentlichen Fragen",
+										"examples": [
+											"Die Politik der Regierung ist umstritten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Politik der Regierung ist umstritten.",
+							"ok": true
+						},
+						{
+							"answer": "Der Politik der Regierung ist umstritten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Politik der Regierung umstritten ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Vorschrift",
+					"summary": "feste Regel",
+					"explain": {
+						"entryId": "Vorschrift",
+						"headword": "Vorschrift",
+						"pronunciation": {
+							"display": "FOR-shrift",
+							"ipaUK": "/ˈfoːɐ̯ˌʃʁɪft/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃʁɪft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorschrift",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Vorschrift: eine feste Regel, an die man sich halten muss",
+										"examples": [
+											"Diese Vorschrift gilt für alle Mitarbeiter."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Vorschrift gilt für alle Mitarbeiter.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Vorschrift gilt für alle Mitarbeiter.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Vorschrift für alle Mitarbeiter gilt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Gesetzgebung",
+					"summary": "das Machen von Gesetzen",
+					"explain": {
+						"entryId": "Gesetzgebung",
+						"headword": "Gesetzgebung",
+						"pronunciation": {
+							"display": "guh-ZETS-gay-boong",
+							"ipaUK": "/ɡəˈzɛtsˌɡeːbʊŋ/",
+							"ipaUS": "/ɡəˈzɛtsˌɡeːbʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesetzgebung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gesetzgebung: das Machen von Gesetzen",
+										"examples": [
+											"Die Gesetzgebung liegt beim Parlament."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gesetzgebung liegt beim Parlament.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gesetzgebung liegt beim Parlament.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gesetzgebung beim Parlament liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Armut",
+					"summary": "sehr wenig Geld haben",
+					"explain": {
+						"entryId": "Armut",
+						"headword": "Armut",
+						"pronunciation": {
+							"display": "AR-moot",
+							"ipaUK": "/ˈaʁmuːt/",
+							"ipaUS": "/ˈaʁmuːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Armut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Armut: der Zustand, sehr wenig Geld zu haben",
+										"examples": [
+											"Viele Familien leben in großer Armut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Familien leben in großer Armut.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Familien leben in großem Armut.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Familien in großer Armut leben.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Arbeitslosigkeit",
+					"summary": "keine Arbeit haben",
+					"explain": {
+						"entryId": "Arbeitslosigkeit",
+						"headword": "Arbeitslosigkeit",
+						"pronunciation": {
+							"display": "AR-byts-loh-zikh-kite",
+							"ipaUK": "/ˈaʁbaɪ̯tsˌloːzɪçkaɪ̯t/",
+							"ipaUS": "/ˈaʁbaɪ̯tsˌloːzɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Arbeitslosigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Arbeitslosigkeit: der Zustand, keine Arbeit zu haben",
+										"examples": [
+											"Die Arbeitslosigkeit ist dieses Jahr gesunken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Arbeitslosigkeit ist dieses Jahr gesunken.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arbeitslosigkeit ist dieses Jahr gesunken.",
+							"ok": false
+						},
+						{
+							"answer": "Die Arbeitslosigkeit dieses Jahr gesunken ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

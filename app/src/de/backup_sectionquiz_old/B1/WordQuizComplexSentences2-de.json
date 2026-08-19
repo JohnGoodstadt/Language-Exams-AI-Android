@@ -1,0 +1,122 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizComplexSentences2-de",
+	"title": "ComplexSentences",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "wohingegen",
+					"summary": "Gegenüberstellung (Verb am Ende)",
+					"explain": {
+						"entryId": "wohingegen",
+						"headword": "wohingegen",
+						"pronunciation": {
+							"display": "vo-HIN-gay-gn",
+							"ipaUK": "/voˈhɪnˌɡeːɡn̩/",
+							"ipaUS": "/voˈhɪnˌɡeːɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "wohingegen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wohingegen: Konjunktion für eine Gegenüberstellung (Verb am Ende)",
+										"examples": [
+											"Er mag Tee, wohingegen sie Kaffee bevorzugt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er mag Tee, wohingegen sie Kaffee bevorzugt.",
+							"ok": true
+						},
+						{
+							"answer": "Er mag Tee, wohingegen sie bevorzugt Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Er mag Tee, wohingegen bevorzugt sie Kaffee.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "auch wenn",
+					"summary": "auch wenn (Verb am Ende)",
+					"explain": {
+						"entryId": "auch wenn",
+						"headword": "auch wenn",
+						"pronunciation": {
+							"display": "owkh ven",
+							"ipaUK": "/aʊ̯x vɛn/",
+							"ipaUS": "/aʊ̯x vɛn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "auch wenn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "auch wenn: Konjunktion für einen Gegensatz oder eine Bedingung (Verb am Ende)",
+										"examples": [
+											"Auch wenn es teuer ist, kaufe ich es."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auch wenn es teuer ist, kaufe ich es.",
+							"ok": true
+						},
+						{
+							"answer": "Auch wenn es teuer ist, ich kaufe es.",
+							"ok": false
+						},
+						{
+							"answer": "Auch wenn es ist teuer, kaufe ich es.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

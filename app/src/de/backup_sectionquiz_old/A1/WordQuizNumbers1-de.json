@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers1-de",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "null",
+					"summary": "die Zahl 0",
+					"explain": {
+						"entryId": "null",
+						"headword": "null",
+						"pronunciation": {
+							"display": "nool",
+							"ipaUK": "/nʊl/",
+							"ipaUS": "/nʊl/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "null",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 0",
+										"examples": [
+											"Das Thermometer zeigt null Grad."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Thermometer zeigt null Grad.",
+							"ok": true
+						},
+						{
+							"answer": "Das Thermometer zeigt nullte Grad.",
+							"ok": false
+						},
+						{
+							"answer": "Das Thermometer null Grad zeigt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "hundert",
+					"summary": "die Zahl 100",
+					"explain": {
+						"entryId": "hundert",
+						"headword": "hundert",
+						"pronunciation": {
+							"display": "HOON-dert",
+							"ipaUK": "/ˈhʊndɐt/",
+							"ipaUS": "/ˈhʊndɐt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "hundert",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 100",
+										"examples": [
+											"Das Buch hat hundert Seiten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Buch hat hundert Seiten.",
+							"ok": true
+						},
+						{
+							"answer": "Das Buch hat hundertste Seiten.",
+							"ok": false
+						},
+						{
+							"answer": "Das Buch hundert Seiten hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "tausend",
+					"summary": "die Zahl 1000",
+					"explain": {
+						"entryId": "tausend",
+						"headword": "tausend",
+						"pronunciation": {
+							"display": "TOW-znt",
+							"ipaUK": "/ˈtaʊ̯znt/",
+							"ipaUS": "/ˈtaʊ̯znt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "tausend",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 1000",
+										"examples": [
+											"Die Stadt hat tausend Einwohner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Stadt hat tausend Einwohner.",
+							"ok": true
+						},
+						{
+							"answer": "Die Stadt hat tausendste Einwohner.",
+							"ok": false
+						},
+						{
+							"answer": "Die Stadt tausend Einwohner hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "hunderteins",
+					"summary": "die Zahl 101",
+					"explain": {
+						"entryId": "hunderteins",
+						"headword": "hunderteins",
+						"pronunciation": {
+							"display": "HOON-dert-ynce",
+							"ipaUK": "/ˈhʊndɐtˌʔaɪ̯ns/",
+							"ipaUS": "/ˈhʊndɐtˌʔaɪ̯ns/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "hunderteins",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 101",
+										"examples": [
+											"Das Hotel hat hunderteins Zimmer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Hotel hat hunderteins Zimmer.",
+							"ok": true
+						},
+						{
+							"answer": "Das Hotel hat hundert eins Zimmer.",
+							"ok": false
+						},
+						{
+							"answer": "Das Hotel hunderteins Zimmer hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "elf",
+					"summary": "die Zahl 11",
+					"explain": {
+						"entryId": "elf",
+						"headword": "elf",
+						"pronunciation": {
+							"display": "elf",
+							"ipaUK": "/ɛlf/",
+							"ipaUS": "/ɛlf/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "elf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 11",
+										"examples": [
+											"Es ist elf Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es ist elf Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Es ist elfte Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Es ist Uhr elf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "zwölf",
+					"summary": "die Zahl 12",
+					"explain": {
+						"entryId": "zwölf",
+						"headword": "zwölf",
+						"pronunciation": {
+							"display": "tsvölf",
+							"ipaUK": "/tsvœlf/",
+							"ipaUS": "/tsvœlf/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "zwölf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 12",
+										"examples": [
+											"Ein Jahr hat zwölf Monate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Jahr hat zwölf Monate.",
+							"ok": true
+						},
+						{
+							"answer": "Ein Jahr hat zwölfte Monate.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Jahr zwölf Monate hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "dreizehn",
+					"summary": "die Zahl 13",
+					"explain": {
+						"entryId": "dreizehn",
+						"headword": "dreizehn",
+						"pronunciation": {
+							"display": "DRY-tsayn",
+							"ipaUK": "/ˈdʁaɪ̯tseːn/",
+							"ipaUS": "/ˈdʁaɪ̯tseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "dreizehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 13",
+										"examples": [
+											"Meine Tochter ist dreizehn Jahre alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Tochter ist dreizehn Jahre alt.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Tochter ist dreizehnte Jahre alt.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Tochter dreizehn Jahre alt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "vierzehn",
+					"summary": "die Zahl 14",
+					"explain": {
+						"entryId": "vierzehn",
+						"headword": "vierzehn",
+						"pronunciation": {
+							"display": "FEER-tsayn",
+							"ipaUK": "/ˈfɪʁtseːn/",
+							"ipaUS": "/ˈfɪʁtseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "vierzehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 14",
+										"examples": [
+											"Der Kurs hat vierzehn Teilnehmer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kurs hat vierzehn Teilnehmer.",
+							"ok": true
+						},
+						{
+							"answer": "Der Kurs hat vierzehnte Teilnehmer.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kurs vierzehn Teilnehmer hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "fünfzehn",
+					"summary": "die Zahl 15",
+					"explain": {
+						"entryId": "fünfzehn",
+						"headword": "fünfzehn",
+						"pronunciation": {
+							"display": "FÜNF-tsayn",
+							"ipaUK": "/ˈfʏnftseːn/",
+							"ipaUS": "/ˈfʏnftseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "fünfzehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 15",
+										"examples": [
+											"Der Bus kommt in fünfzehn Minuten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Bus kommt in fünfzehn Minuten.",
+							"ok": true
+						},
+						{
+							"answer": "Der Bus kommt in fünfzehnte Minuten.",
+							"ok": false
+						},
+						{
+							"answer": "Der Bus in fünfzehn Minuten kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "sechzehn",
+					"summary": "die Zahl 16",
+					"explain": {
+						"entryId": "sechzehn",
+						"headword": "sechzehn",
+						"pronunciation": {
+							"display": "ZEKH-tsayn",
+							"ipaUK": "/ˈzɛçtseːn/",
+							"ipaUS": "/ˈzɛçtseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "sechzehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 16",
+										"examples": [
+											"Sie ist sechzehn Jahre alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie ist sechzehn Jahre alt.",
+							"ok": true
+						},
+						{
+							"answer": "Sie ist sechszehn Jahre alt.",
+							"ok": false
+						},
+						{
+							"answer": "Sie sechzehn Jahre alt ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

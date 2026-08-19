@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizRelationships2-de",
+	"title": "Relationships",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Beziehung",
+					"summary": "Verbindung zwischen zwei Menschen",
+					"explain": {
+						"entryId": "Beziehung",
+						"headword": "Beziehung",
+						"pronunciation": {
+							"display": "buh-TSEE-oong",
+							"ipaUK": "/bəˈtsiːʊŋ/",
+							"ipaUS": "/bəˈtsiːʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beziehung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Beziehung: die Verbindung zwischen zwei Menschen (z. B. Partner)",
+										"examples": [
+											"Die beiden führen eine glückliche Beziehung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die beiden führen eine glückliche Beziehung.",
+							"ok": true
+						},
+						{
+							"answer": "Die beiden führen einen glücklichen Beziehung.",
+							"ok": false
+						},
+						{
+							"answer": "Die beiden eine glückliche Beziehung führen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Verabredung",
+					"summary": "Treffen mit einem Partner",
+					"explain": {
+						"entryId": "Verabredung",
+						"headword": "Verabredung",
+						"pronunciation": {
+							"display": "fer-AHP-ray-doong",
+							"ipaUK": "/fɛɐ̯ˈʔaːpʁeːdʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈʔaːpʁeːdʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verabredung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Verabredung: ein Treffen mit einem möglichen Partner",
+										"examples": [
+											"Am Freitag habe ich eine Verabredung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Freitag habe ich eine Verabredung.",
+							"ok": true
+						},
+						{
+							"answer": "Am Freitag habe ich einen Verabredung.",
+							"ok": false
+						},
+						{
+							"answer": "Am Freitag ich habe eine Verabredung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Romanze",
+					"summary": "romantische Liebesbeziehung",
+					"explain": {
+						"entryId": "Romanze",
+						"headword": "Romanze",
+						"pronunciation": {
+							"display": "ro-MAN-tsuh",
+							"ipaUK": "/ʁoˈmantsə/",
+							"ipaUS": "/ʁoˈmantsə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Romanze",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Romanze: eine romantische Liebesbeziehung",
+										"examples": [
+											"Im Urlaub begann eine kurze Romanze."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Urlaub begann eine kurze Romanze.",
+							"ok": true
+						},
+						{
+							"answer": "Im Urlaub begann einen kurzen Romanze.",
+							"ok": false
+						},
+						{
+							"answer": "Im Urlaub eine kurze Romanze begann.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Werben",
+					"summary": "Umwerben eines Partners",
+					"explain": {
+						"entryId": "Werben",
+						"headword": "Werben",
+						"pronunciation": {
+							"display": "VER-bn",
+							"ipaUK": "/ˈvɛʁbn̩/",
+							"ipaUS": "/ˈvɛʁbn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (nominalisiert)",
+								"grammarType": "Nomen (nominalisiert)",
+								"headwordLine": "Werben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Werben: das Umwerben eines möglichen Partners (nominalisiert)",
+										"examples": [
+											"Das Werben um sie dauerte viele Monate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Werben um sie dauerte viele Monate.",
+							"ok": true
+						},
+						{
+							"answer": "Das werben um sie dauerte viele Monate.",
+							"ok": false
+						},
+						{
+							"answer": "Das Werben um sie viele Monate dauerte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Freundschaft",
+					"summary": "enge Beziehung zwischen Freunden",
+					"explain": {
+						"entryId": "Freundschaft",
+						"headword": "Freundschaft",
+						"pronunciation": {
+							"display": "FROYNT-shaft",
+							"ipaUK": "/ˈfʁɔɪ̯ntʃaft/",
+							"ipaUS": "/ˈfʁɔɪ̯ntʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Freundschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Freundschaft: die enge Beziehung zwischen Freunden",
+										"examples": [
+											"Unsere Freundschaft hält schon zwanzig Jahre."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unsere Freundschaft hält schon zwanzig Jahre.",
+							"ok": true
+						},
+						{
+							"answer": "Unser Freundschaft hält schon zwanzig Jahre.",
+							"ok": false
+						},
+						{
+							"answer": "Unsere Freundschaft schon zwanzig Jahre hält.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Gesellschaft",
+					"summary": "Zusammensein mit anderen",
+					"explain": {
+						"entryId": "Gesellschaft",
+						"headword": "Gesellschaft",
+						"pronunciation": {
+							"display": "guh-ZEL-shaft",
+							"ipaUK": "/ɡəˈzɛlʃaft/",
+							"ipaUS": "/ɡəˈzɛlʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesellschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gesellschaft: das angenehme Zusammensein mit anderen",
+										"examples": [
+											"Ich genieße die Gesellschaft meiner Freunde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich genieße die Gesellschaft meiner Freunde.",
+							"ok": true
+						},
+						{
+							"answer": "Ich genieße den Gesellschaft meiner Freunde.",
+							"ok": false
+						},
+						{
+							"answer": "Ich die Gesellschaft meiner Freunde genieße.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Gemeinschaft",
+					"summary": "Gruppe mit Zusammengehörigkeit",
+					"explain": {
+						"entryId": "Gemeinschaft",
+						"headword": "Gemeinschaft",
+						"pronunciation": {
+							"display": "guh-MINE-shaft",
+							"ipaUK": "/ɡəˈmaɪ̯nʃaft/",
+							"ipaUS": "/ɡəˈmaɪ̯nʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gemeinschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gemeinschaft: eine Gruppe mit Gefühl der Zusammengehörigkeit",
+										"examples": [
+											"In der Gemeinschaft fühlt er sich geborgen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Gemeinschaft fühlt er sich geborgen.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Gemeinschaft fühlt er sich geborgen.",
+							"ok": false
+						},
+						{
+							"answer": "In der Gemeinschaft er fühlt sich geborgen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "soziale Medien",
+					"summary": "Plattformen wie Instagram",
+					"explain": {
+						"entryId": "soziale Medien",
+						"headword": "soziale Medien",
+						"pronunciation": {
+							"display": "zo-tsi-AH-luh MAY-di-en",
+							"ipaUK": "/zoˈtsi̯aːlə ˈmeːdi̯ən/",
+							"ipaUS": "/zoˈtsi̯aːlə ˈmeːdi̯ən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "soziale Medien",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die sozialen Medien: Plattformen im Internet zum Teilen und Chatten",
+										"examples": [
+											"Viele Jugendliche nutzen soziale Medien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Jugendliche nutzen soziale Medien.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Jugendliche nutzen sozialen Medien.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Jugendliche soziale Medien nutzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Vernetzung",
+					"summary": "Knüpfen von Kontakten",
+					"explain": {
+						"entryId": "Vernetzung",
+						"headword": "Vernetzung",
+						"pronunciation": {
+							"display": "fer-NET-soong",
+							"ipaUK": "/fɛɐ̯ˈnɛtsʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈnɛtsʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vernetzung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Vernetzung: das Knüpfen von nützlichen Kontakten",
+										"examples": [
+											"Die Vernetzung mit Kollegen ist nützlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Vernetzung mit Kollegen ist nützlich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Vernetzung mit Kollegen ist nützlich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Vernetzung mit Kollegen nützlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Plattform",
+					"summary": "Internet-Dienst zum Austausch",
+					"explain": {
+						"entryId": "Plattform",
+						"headword": "Plattform",
+						"pronunciation": {
+							"display": "PLAT-form",
+							"ipaUK": "/ˈplatˌfɔʁm/",
+							"ipaUS": "/ˈplatˌfɔʁm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Plattform",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Plattform: ein Dienst im Internet zum Austausch",
+										"examples": [
+											"Diese Plattform verbindet Millionen von Menschen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Plattform verbindet Millionen von Menschen.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Plattform verbindet Millionen von Menschen.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Plattform Millionen von Menschen verbindet.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

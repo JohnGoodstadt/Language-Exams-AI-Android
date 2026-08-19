@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizVerbs2-de",
-	"title": "Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "überreden",
-					"summary": "durch Reden zu etwas bringen",
-					"explain": {
-						"entryId": "überreden",
-						"headword": "überreden",
-						"pronunciation": {
-							"display": "Ü-buh-ray-dn",
-							"ipaUK": "/ˈyːbɐˌʁeːdn̩/",
-							"ipaUS": "/ˈyːbɐˌʁeːdn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "überreden",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "überreden: jemanden durch Reden zu etwas bringen",
-										"examples": [
-											"Sie überredet ihn zu einem Ausflug."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie überredet ihn zu einem Ausflug.",
-							"ok": true
-						},
-						{
-							"answer": "Sie überreden ihn zu einem Ausflug.",
-							"ok": false
-						},
-						{
-							"answer": "Sie ihn zu einem Ausflug überredet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "versichern",
-					"summary": "etwas fest zusagen",
-					"explain": {
-						"entryId": "versichern",
-						"headword": "versichern",
-						"pronunciation": {
-							"display": "fer-ZIKH-uhn",
-							"ipaUK": "/fɛɐ̯ˈzɪçɐn/",
-							"ipaUS": "/fɛɐ̯ˈzɪçɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "versichern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "versichern: jemandem etwas fest zusagen",
-										"examples": [
-											"Ich versichere dir, dass alles klappt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich versichere dir, dass alles klappt.",
-							"ok": true
-						},
-						{
-							"answer": "Ich versichert dir, dass alles klappt.",
-							"ok": false
-						},
-						{
-							"answer": "Ich dir versichere, dass alles klappt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "abhängen",
-					"summary": "von etwas bestimmt werden",
-					"explain": {
-						"entryId": "abhängen",
-						"headword": "abhängen",
-						"pronunciation": {
-							"display": "AP-heng-uhn",
-							"ipaUK": "/ˈapˌhɛŋən/",
-							"ipaUS": "/ˈapˌhɛŋən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "abhängen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "abhängen: von etwas bestimmt werden",
-										"examples": [
-											"Der Erfolg hängt von deinem Fleiß ab."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Erfolg hängt von deinem Fleiß ab.",
-							"ok": true
-						},
-						{
-							"answer": "Der Erfolg hängen von deinem Fleiß ab.",
-							"ok": false
-						},
-						{
-							"answer": "Der Erfolg von deinem Fleiß hängt auf.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "sich verlassen",
-					"summary": "sich auf jemanden verlassen",
-					"explain": {
-						"entryId": "sich verlassen",
-						"headword": "sich verlassen",
-						"pronunciation": {
-							"display": "fer-LAS-sn",
-							"ipaUK": "/fɛɐ̯ˈlasn̩/",
-							"ipaUS": "/fɛɐ̯ˈlasn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (reflexiv)",
-								"grammarType": "Verb (reflexiv)",
-								"headwordLine": "sich verlassen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sich verlassen: sich auf jemanden fest verlassen",
-										"examples": [
-											"Auf ihn kann man sich immer verlassen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Auf ihn kann man sich immer verlassen.",
-							"ok": true
-						},
-						{
-							"answer": "Auf ihn kann man sich immer verlässt.",
-							"ok": false
-						},
-						{
-							"answer": "Auf ihn man kann sich immer verlassen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "vertrauen",
-					"summary": "an die Zuverlässigkeit glauben",
-					"explain": {
-						"entryId": "vertrauen",
-						"headword": "vertrauen",
-						"pronunciation": {
-							"display": "fer-TROW-en",
-							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
-							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "vertrauen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "vertrauen: an die Zuverlässigkeit von jemandem glauben",
-										"examples": [
-											"Ich vertraue meinen Freunden völlig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich vertraue meinen Freunden völlig.",
-							"ok": true
-						},
-						{
-							"answer": "Ich vertraut meinen Freunden völlig.",
-							"ok": false
-						},
-						{
-							"answer": "Ich meinen Freunden völlig vertraue.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "entdecken",
-					"summary": "etwas Neues finden",
-					"explain": {
-						"entryId": "entdecken",
-						"headword": "entdecken",
-						"pronunciation": {
-							"display": "ent-DEK-kn",
-							"ipaUK": "/ɛntˈdɛkn̩/",
-							"ipaUS": "/ɛntˈdɛkn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "entdecken",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "entdecken: etwas Neues finden",
-										"examples": [
-											"Forscher entdecken oft neue Arten."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Forscher entdecken oft neue Arten.",
-							"ok": true
-						},
-						{
-							"answer": "Forscher entdeckt oft neue Arten.",
-							"ok": false
-						},
-						{
-							"answer": "Forscher oft neue Arten entdecken.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "finden",
-					"summary": "etwas Gesuchtes entdecken",
-					"explain": {
-						"entryId": "finden",
-						"headword": "finden",
-						"pronunciation": {
-							"display": "FIN-dn",
-							"ipaUK": "/ˈfɪndn̩/",
-							"ipaUS": "/ˈfɪndn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "finden",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "finden: etwas Gesuchtes entdecken",
-										"examples": [
-											"Ich finde meinen Schlüssel nicht."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich finde meinen Schlüssel nicht.",
-							"ok": true
-						},
-						{
-							"answer": "Ich findet meinen Schlüssel nicht.",
-							"ok": false
-						},
-						{
-							"answer": "Ich meinen Schlüssel nicht finde.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "aufdecken",
-					"summary": "Verborgenes ans Licht bringen",
-					"explain": {
-						"entryId": "aufdecken",
-						"headword": "aufdecken",
-						"pronunciation": {
-							"display": "OWF-dek-kn",
-							"ipaUK": "/ˈaʊ̯fˌdɛkn̩/",
-							"ipaUS": "/ˈaʊ̯fˌdɛkn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "aufdecken",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "aufdecken: etwas Verborgenes ans Licht bringen",
-										"examples": [
-											"Die Zeitung deckt den Skandal auf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Zeitung deckt den Skandal auf.",
-							"ok": true
-						},
-						{
-							"answer": "Die Zeitung deckt den Skandal ab.",
-							"ok": false
-						},
-						{
-							"answer": "Die Zeitung den Skandal aufdeckt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "ausdrücken",
-					"summary": "Gedanken in Worte fassen",
-					"explain": {
-						"entryId": "ausdrücken",
-						"headword": "ausdrücken",
-						"pronunciation": {
-							"display": "OWS-drük-kn",
-							"ipaUK": "/ˈaʊ̯sˌdʁʏkn̩/",
-							"ipaUS": "/ˈaʊ̯sˌdʁʏkn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "ausdrücken",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ausdrücken: Gedanken in Worte fassen",
-										"examples": [
-											"Sie kann ihre Gefühle gut ausdrücken."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie kann ihre Gefühle gut ausdrücken.",
-							"ok": true
-						},
-						{
-							"answer": "Sie kann ihre Gefühle gut ausdrückt.",
-							"ok": false
-						},
-						{
-							"answer": "Sie kann ihre Gefühle gut ausdrucken.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "formulieren",
-					"summary": "klar in Worte fassen",
-					"explain": {
-						"entryId": "formulieren",
-						"headword": "formulieren",
-						"pronunciation": {
-							"display": "for-moo-LEE-run",
-							"ipaUK": "/fɔʁmuˈliːʁən/",
-							"ipaUS": "/fɔʁmuˈliːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "formulieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "formulieren: etwas klar in Worte fassen",
-										"examples": [
-											"Er formuliert seine Kritik sehr höflich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er formuliert seine Kritik sehr höflich.",
-							"ok": true
-						},
-						{
-							"answer": "Er formulieren seine Kritik sehr höflich.",
-							"ok": false
-						},
-						{
-							"answer": "Er seine Kritik sehr höflich formuliert.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizVerbs2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "überreden",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "überreden – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "versichern",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "versichern – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "abhängen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "abhängen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "sich verlassen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich verlassen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "vertrauen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "vertrauen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "entdecken",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "entdecken – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "finden",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "finden – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "aufdecken",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "aufdecken – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "ausdrücken",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "ausdrücken – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "formulieren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "formulieren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

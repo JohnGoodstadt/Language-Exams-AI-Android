@@ -136,19 +136,23 @@ object AuditEngine {
      *
      * The baseline quiz mixes CEFR bands (e.g. 3x A2, 4x B1, 3x B2). Rather than a flat
      * correct-count, we look at each band in isolation: a band is "cleared" when the learner
-     * gets [BAND_PASS_RATIO] of its questions right. The placement is the highest band they
-     * clear (so failing every B2 but clearing B1 lands them at B1; clearing 2 of 3 B2s keeps
-     * them at B2). Questions whose level is null/blank are ignored.
+     * gets [BAND_PASS_RATIO] of its questions right (see [bandCleared]).
+     *
+     * Placement is the learner's "working level": the FIRST band (bottom-up) they have NOT
+     * cleared. A passed higher band can never leapfrog a failed lower one - clearing A2 but
+     * failing B1 places them at B1 (their current level), even if they happened to pass B2. If
+     * every band is cleared they are placed at the top band. Questions whose level is null/blank
+     * are ignored. This keeps placement in step with [baselineUnlockCeiling], which also refuses
+     * to skip a failed lower band.
      *
      * @param results one (level, isCorrect) pair per answered baseline question.
-     * @return "A2" / "B1" / "B2" - defaults to the lowest band when nothing is cleared.
+     * @return "A2" / "B1" / "B2" - the first uncleared band, or the top band when all are cleared.
      */
     fun placeBaselineLevel(results: List<Pair<String?, Boolean>>): String {
-        var placement = BASELINE_BANDS.first()
         for (band in BASELINE_BANDS) {
-            if (bandCleared(results, band)) placement = band
+            if (!bandCleared(results, band)) return band
         }
-        return placement
+        return BASELINE_BANDS.last()
     }
 
     // Maps each baseline band onto the audit "part index" of the level test it gates open.

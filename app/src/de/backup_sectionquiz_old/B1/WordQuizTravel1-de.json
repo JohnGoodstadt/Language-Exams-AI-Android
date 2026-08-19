@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel1-de",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Unterkunft",
+					"summary": "Ort zum Übernachten",
+					"explain": {
+						"entryId": "Unterkunft",
+						"headword": "Unterkunft",
+						"pronunciation": {
+							"display": "OON-tuh-koonft",
+							"ipaUK": "/ˈʊntɐˌkʊnft/",
+							"ipaUS": "/ˈʊntɐˌkʊnft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterkunft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Unterkunft: ein Ort zum Übernachten",
+										"examples": [
+											"Wir suchen eine günstige Unterkunft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir suchen eine günstige Unterkunft.",
+							"ok": true
+						},
+						{
+							"answer": "Wir suchen einen günstigen Unterkunft.",
+							"ok": false
+						},
+						{
+							"answer": "Wir eine günstige Unterkunft suchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Hotel",
+					"summary": "Haus zum Übernachten",
+					"explain": {
+						"entryId": "Hotel",
+						"headword": "Hotel",
+						"pronunciation": {
+							"display": "ho-TEL",
+							"ipaUK": "/hoˈtɛl/",
+							"ipaUS": "/hoˈtɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hotel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Hotel: ein Haus, in dem man gegen Geld übernachtet",
+										"examples": [
+											"Das Hotel liegt direkt am Strand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Hotel liegt direkt am Strand.",
+							"ok": true
+						},
+						{
+							"answer": "Der Hotel liegt direkt am Strand.",
+							"ok": false
+						},
+						{
+							"answer": "Das Hotel direkt am Strand liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Jugendherberge",
+					"summary": "einfache, günstige Unterkunft",
+					"explain": {
+						"entryId": "Jugendherberge",
+						"headword": "Jugendherberge",
+						"pronunciation": {
+							"display": "YOO-gnt-her-ber-guh",
+							"ipaUK": "/ˈjuːɡn̩thɛʁˌbɛʁɡə/",
+							"ipaUS": "/ˈjuːɡn̩thɛʁˌbɛʁɡə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Jugendherberge",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Jugendherberge: eine einfache, günstige Unterkunft für Reisende",
+										"examples": [
+											"In der Jugendherberge ist es sehr günstig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Jugendherberge ist es sehr günstig.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Jugendherberge ist es sehr günstig.",
+							"ok": false
+						},
+						{
+							"answer": "In der Jugendherberge es ist sehr günstig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Ankunft",
+					"summary": "das Ankommen",
+					"explain": {
+						"entryId": "Ankunft",
+						"headword": "Ankunft",
+						"pronunciation": {
+							"display": "AN-koonft",
+							"ipaUK": "/ˈankʊnft/",
+							"ipaUS": "/ˈankʊnft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ankunft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Ankunft: das Ankommen an einem Ort",
+										"examples": [
+											"Die Ankunft des Zuges verzögert sich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Ankunft des Zuges verzögert sich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Ankunft des Zuges verzögert sich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Ankunft des Zuges sich verzögert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Check-in",
+					"summary": "Anmelden am Flughafen/Hotel",
+					"explain": {
+						"entryId": "Check-in",
+						"headword": "Check-in",
+						"pronunciation": {
+							"display": "CHEK-in",
+							"ipaUK": "/ˈtʃɛkˌʔɪn/",
+							"ipaUS": "/ˈtʃɛkˌʔɪn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Check-in",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Check-in: das Anmelden am Flughafen oder im Hotel",
+										"examples": [
+											"Der Check-in beginnt zwei Stunden vorher."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Check-in beginnt zwei Stunden vorher.",
+							"ok": true
+						},
+						{
+							"answer": "Die Check-in beginnt zwei Stunden vorher.",
+							"ok": false
+						},
+						{
+							"answer": "Der Check-in zwei Stunden vorher beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Landung",
+					"summary": "Aufsetzen des Flugzeugs",
+					"explain": {
+						"entryId": "Landung",
+						"headword": "Landung",
+						"pronunciation": {
+							"display": "LAN-doong",
+							"ipaUK": "/ˈlandʊŋ/",
+							"ipaUS": "/ˈlandʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Landung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Landung: das Aufsetzen des Flugzeugs auf dem Boden",
+										"examples": [
+											"Die Landung war sehr sanft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Landung war sehr sanft.",
+							"ok": true
+						},
+						{
+							"answer": "Der Landung war sehr sanft.",
+							"ok": false
+						},
+						{
+							"answer": "Die Landung sehr sanft war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Gepäck",
+					"summary": "Taschen und Koffer",
+					"explain": {
+						"entryId": "Gepäck",
+						"headword": "Gepäck",
+						"pronunciation": {
+							"display": "guh-PEK",
+							"ipaUK": "/ɡəˈpɛk/",
+							"ipaUS": "/ɡəˈpɛk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gepäck",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Gepäck: die Taschen und Koffer, die man mitnimmt",
+										"examples": [
+											"Mein Gepäck ist ziemlich schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Gepäck ist ziemlich schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Gepäck ist ziemlich schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Gepäck ziemlich schwer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Koffer",
+					"summary": "große Reisetasche",
+					"explain": {
+						"entryId": "Koffer",
+						"headword": "Koffer",
+						"pronunciation": {
+							"display": "KOF-fuh",
+							"ipaUK": "/ˈkɔfɐ/",
+							"ipaUS": "/ˈkɔfɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Koffer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Koffer: eine große Tasche für Kleidung auf Reisen",
+										"examples": [
+											"Mein Koffer ist leider zu schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Koffer ist leider zu schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Koffer ist leider zu schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Koffer leider zu schwer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Reisetasche",
+					"summary": "weiche Tasche für die Reise",
+					"explain": {
+						"entryId": "Reisetasche",
+						"headword": "Reisetasche",
+						"pronunciation": {
+							"display": "RY-zuh-tash-uh",
+							"ipaUK": "/ˈʁaɪ̯zəˌtaʃə/",
+							"ipaUS": "/ˈʁaɪ̯zəˌtaʃə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reisetasche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Reisetasche: eine weiche Tasche für die Reise",
+										"examples": [
+											"Ich packe meine Reisetasche am Abend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich packe meine Reisetasche am Abend.",
+							"ok": true
+						},
+						{
+							"answer": "Ich packe meinen Reisetasche am Abend.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meine Reisetasche am Abend packe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Buchung",
+					"summary": "das Reservieren",
+					"explain": {
+						"entryId": "Buchung",
+						"headword": "Buchung",
+						"pronunciation": {
+							"display": "BOO-khoong",
+							"ipaUK": "/ˈbuːxʊŋ/",
+							"ipaUS": "/ˈbuːxʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Buchung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Buchung: das Reservieren einer Reise oder eines Zimmers",
+										"examples": [
+											"Die Buchung des Fluges war einfach."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Buchung des Fluges war einfach.",
+							"ok": true
+						},
+						{
+							"answer": "Der Buchung des Fluges war einfach.",
+							"ok": false
+						},
+						{
+							"answer": "Die Buchung des Fluges einfach war.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

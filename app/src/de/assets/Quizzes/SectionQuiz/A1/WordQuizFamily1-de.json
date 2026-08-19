@@ -1,338 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizFamily1-de",
-	"title": "Family",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Tante",
-					"summary": "die Schwester der Mutter oder des Vaters",
-					"explain": {
-						"entryId": "Tante",
-						"headword": "Tante",
-						"pronunciation": {
-							"display": "TAN-tuh",
-							"ipaUK": "/ˈtantə/",
-							"ipaUS": "/ˈtantə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Tante",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Schwester der Mutter oder des Vaters",
-										"examples": [
-											"Meine Tante wohnt in Köln."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Tante wohnt in Köln.",
-							"ok": true
-						},
-						{
-							"answer": "Mein Tante wohnt in Köln.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Tante in Köln wohnt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Bruder",
-					"summary": "der Sohn der gleichen Eltern",
-					"explain": {
-						"entryId": "Bruder",
-						"headword": "Bruder",
-						"pronunciation": {
-							"display": "BROO-duh",
-							"ipaUK": "/ˈbʁuːdɐ/",
-							"ipaUS": "/ˈbʁuːdɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Bruder",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Sohn der gleichen Eltern",
-										"examples": [
-											"Mein Bruder ist zehn Jahre alt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Bruder ist zehn Jahre alt.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Bruder ist zehn Jahre alt.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Bruder zehn Jahre alt ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Tochter",
-					"summary": "das weibliche Kind",
-					"explain": {
-						"entryId": "Tochter",
-						"headword": "Tochter",
-						"pronunciation": {
-							"display": "TOKH-tuh",
-							"ipaUK": "/ˈtɔxtɐ/",
-							"ipaUS": "/ˈtɔxtɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Tochter",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das weibliche Kind der Eltern",
-										"examples": [
-											"Ihre Tochter geht zur Schule."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ihre Tochter geht zur Schule.",
-							"ok": true
-						},
-						{
-							"answer": "Ihr Tochter geht zur Schule.",
-							"ok": false
-						},
-						{
-							"answer": "Ihre Tochter zur Schule geht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Familie",
-					"summary": "die Eltern und ihre Kinder",
-					"explain": {
-						"entryId": "Familie",
-						"headword": "Familie",
-						"pronunciation": {
-							"display": "fa-MEE-lee-uh",
-							"ipaUK": "/faˈmiːli̯ə/",
-							"ipaUS": "/faˈmiːli̯ə/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Familie",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Eltern und ihre Kinder",
-										"examples": [
-											"Meine Familie ist groß."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Familie ist groß.",
-							"ok": true
-						},
-						{
-							"answer": "Mein Familie ist groß.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Familie groß ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Vater",
-					"summary": "der männliche Elternteil",
-					"explain": {
-						"entryId": "Vater",
-						"headword": "Vater",
-						"pronunciation": {
-							"display": "FAH-tuh",
-							"ipaUK": "/ˈfaːtɐ/",
-							"ipaUS": "/ˈfaːtɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vater",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Papa"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der männliche Elternteil",
-										"examples": [
-											"Mein Vater arbeitet viel."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Vater arbeitet viel.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Vater arbeitet viel.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Vater viel arbeitet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Großvater",
-					"summary": "der Vater der Eltern",
-					"explain": {
-						"entryId": "Großvater",
-						"headword": "Großvater",
-						"pronunciation": {
-							"display": "GROHSS-fah-tuh",
-							"ipaUK": "/ˈɡʁoːsˌfaːtɐ/",
-							"ipaUS": "/ˈɡʁoːsˌfaːtɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Großvater",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Opa"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Vater der Mutter oder des Vaters",
-										"examples": [
-											"Mein Großvater ist schon alt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Großvater ist schon alt.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Großvater ist schon alt.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Großvater schon alt ist.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizFamily1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Familie",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Familie – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Mutter",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Mutter – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Vater",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Vater – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Eltern",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Eltern – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Bruder",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Bruder – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Schwester",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Schwester – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Geschwister",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Geschwister – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Sohn",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Sohn – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Tochter",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Tochter – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Kind",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kind – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

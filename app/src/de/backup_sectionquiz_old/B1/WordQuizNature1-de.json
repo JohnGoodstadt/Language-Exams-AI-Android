@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature1-de",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Klima",
+					"summary": "typisches Wetter über lange Zeit",
+					"explain": {
+						"entryId": "Klima",
+						"headword": "Klima",
+						"pronunciation": {
+							"display": "KLEE-ma",
+							"ipaUK": "/ˈkliːma/",
+							"ipaUS": "/ˈkliːma/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klima",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Klima: das typische Wetter einer Region über lange Zeit",
+										"examples": [
+											"Das Klima wird immer wärmer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Klima wird immer wärmer.",
+							"ok": true
+						},
+						{
+							"answer": "Der Klima wird immer wärmer.",
+							"ok": false
+						},
+						{
+							"answer": "Das Klima immer wärmer wird.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Wetter",
+					"summary": "Zustand der Luft",
+					"explain": {
+						"entryId": "Wetter",
+						"headword": "Wetter",
+						"pronunciation": {
+							"display": "VET-tuh",
+							"ipaUK": "/ˈvɛtɐ/",
+							"ipaUS": "/ˈvɛtɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wetter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Wetter: der Zustand der Luft (Regen, Sonne …)",
+										"examples": [
+											"Das Wetter ist heute sehr wechselhaft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Wetter ist heute sehr wechselhaft.",
+							"ok": true
+						},
+						{
+							"answer": "Der Wetter ist heute sehr wechselhaft.",
+							"ok": false
+						},
+						{
+							"answer": "Das Wetter heute sehr wechselhaft ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Temperatur",
+					"summary": "wie warm oder kalt es ist",
+					"explain": {
+						"entryId": "Temperatur",
+						"headword": "Temperatur",
+						"pronunciation": {
+							"display": "tem-pe-ra-TOOR",
+							"ipaUK": "/tɛmpəʁaˈtuːɐ̯/",
+							"ipaUS": "/tɛmpəʁaˈtuːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Temperatur",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Temperatur: wie warm oder kalt es ist",
+										"examples": [
+											"Die Temperatur steigt im Sommer stark."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Temperatur steigt im Sommer stark.",
+							"ok": true
+						},
+						{
+							"answer": "Der Temperatur steigt im Sommer stark.",
+							"ok": false
+						},
+						{
+							"answer": "Die Temperatur im Sommer stark steigt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Naturschutz",
+					"summary": "Schutz der Natur",
+					"explain": {
+						"entryId": "Naturschutz",
+						"headword": "Naturschutz",
+						"pronunciation": {
+							"display": "na-TOOR-shoots",
+							"ipaUK": "/naˈtuːɐ̯ˌʃʊts/",
+							"ipaUS": "/naˈtuːɐ̯ˌʃʊts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Naturschutz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Naturschutz: der Schutz der Natur und ihrer Arten",
+										"examples": [
+											"Der Naturschutz ist heute sehr wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Naturschutz ist heute sehr wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Naturschutz ist heute sehr wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Der Naturschutz heute sehr wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Erhaltung",
+					"summary": "Bewahren für die Zukunft",
+					"explain": {
+						"entryId": "Erhaltung",
+						"headword": "Erhaltung",
+						"pronunciation": {
+							"display": "er-HAL-toong",
+							"ipaUK": "/ɛɐ̯ˈhaltʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈhaltʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erhaltung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erhaltung: das Bewahren von etwas für die Zukunft",
+										"examples": [
+											"Die Erhaltung der Wälder ist wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Erhaltung der Wälder ist wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erhaltung der Wälder ist wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Erhaltung der Wälder wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Schutz",
+					"summary": "Bewahren vor Gefahr",
+					"explain": {
+						"entryId": "Schutz",
+						"headword": "Schutz",
+						"pronunciation": {
+							"display": "shoots",
+							"ipaUK": "/ʃʊts/",
+							"ipaUS": "/ʃʊts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schutz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Schutz: das Bewahren vor Gefahr oder Schaden",
+										"examples": [
+											"Der Schutz der Tiere hat Priorität."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Schutz der Tiere hat Priorität.",
+							"ok": true
+						},
+						{
+							"answer": "Die Schutz der Tiere hat Priorität.",
+							"ok": false
+						},
+						{
+							"answer": "Der Schutz der Tiere Priorität hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Ökosystem",
+					"summary": "Zusammenspiel von Lebewesen und Umwelt",
+					"explain": {
+						"entryId": "Ökosystem",
+						"headword": "Ökosystem",
+						"pronunciation": {
+							"display": "Ö-ko-züs-taym",
+							"ipaUK": "/ˈøːkozʏsˌteːm/",
+							"ipaUS": "/ˈøːkozʏsˌteːm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ökosystem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Ökosystem: das Zusammenspiel von Lebewesen und Umwelt",
+										"examples": [
+											"Ein Ökosystem ist leicht zu stören."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Ökosystem ist leicht zu stören.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Ökosystem ist leicht zu stören.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Ökosystem leicht zu stören ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Artenvielfalt",
+					"summary": "Vielfalt an Tier- und Pflanzenarten",
+					"explain": {
+						"entryId": "Artenvielfalt",
+						"headword": "Artenvielfalt",
+						"pronunciation": {
+							"display": "AR-tn-feel-falt",
+							"ipaUK": "/ˈaʁtn̩ˌfiːlfalt/",
+							"ipaUS": "/ˈaʁtn̩ˌfiːlfalt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Artenvielfalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Artenvielfalt: die Vielfalt an Tier- und Pflanzenarten",
+										"examples": [
+											"Der Regenwald hat eine große Artenvielfalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Regenwald hat eine große Artenvielfalt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Regenwald hat einen großen Artenvielfalt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Regenwald eine große Artenvielfalt hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Lebensraum",
+					"summary": "Ort, an dem ein Tier lebt",
+					"explain": {
+						"entryId": "Lebensraum",
+						"headword": "Lebensraum",
+						"pronunciation": {
+							"display": "LAY-bns-rowm",
+							"ipaUK": "/ˈleːbn̩sˌʁaʊ̯m/",
+							"ipaUS": "/ˈleːbn̩sˌʁaʊ̯m/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lebensraum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Lebensraum: der natürliche Ort, an dem ein Tier lebt",
+										"examples": [
+											"Der Wald bietet vielen Tieren einen Lebensraum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Wald bietet vielen Tieren einen Lebensraum.",
+							"ok": true
+						},
+						{
+							"answer": "Der Wald bietet vielen Tieren ein Lebensraum.",
+							"ok": false
+						},
+						{
+							"answer": "Der Wald vielen Tieren einen Lebensraum bietet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Umwelt",
+					"summary": "die Natur um uns",
+					"explain": {
+						"entryId": "Umwelt",
+						"headword": "Umwelt",
+						"pronunciation": {
+							"display": "OOM-velt",
+							"ipaUK": "/ˈʊmvɛlt/",
+							"ipaUS": "/ˈʊmvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umwelt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Umwelt: die Natur, die uns umgibt",
+										"examples": [
+											"Wir müssen die Umwelt besser schützen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir müssen die Umwelt besser schützen.",
+							"ok": true
+						},
+						{
+							"answer": "Wir müssen den Umwelt besser schützen.",
+							"ok": false
+						},
+						{
+							"answer": "Wir die Umwelt besser schützen müssen.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

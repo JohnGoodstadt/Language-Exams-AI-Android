@@ -1,444 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizAdjectives1-de",
-	"title": "Adjectives",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "schlecht",
-					"summary": "nicht gut",
-					"explain": {
-						"entryId": "schlecht",
-						"headword": "schlecht",
-						"pronunciation": {
-							"display": "shlekht",
-							"ipaUK": "/ʃlɛçt/",
-							"ipaUS": "/ʃlɛçt/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "schlecht",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht gut; von geringer Qualität",
-										"examples": [
-											"Das Wetter ist heute schlecht."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Wetter ist heute schlecht.",
-							"ok": true
-						},
-						{
-							"answer": "Das Wetter ist heute schlechtes.",
-							"ok": false
-						},
-						{
-							"answer": "Das Wetter schlecht ist heute.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "groß",
-					"summary": "nicht klein; von großer Größe",
-					"explain": {
-						"entryId": "groß",
-						"headword": "groß",
-						"pronunciation": {
-							"display": "grohss",
-							"ipaUK": "/ɡʁoːs/",
-							"ipaUS": "/ɡʁoːs/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "groß",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "von großer Größe; nicht klein",
-										"examples": [
-											"Das Haus ist sehr groß."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Haus ist sehr groß.",
-							"ok": true
-						},
-						{
-							"answer": "Das Haus ist sehr großes.",
-							"ok": false
-						},
-						{
-							"answer": "Groß das Haus ist sehr.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "sauber",
-					"summary": "nicht schmutzig; rein",
-					"explain": {
-						"entryId": "sauber",
-						"headword": "sauber",
-						"pronunciation": {
-							"display": "ZOW-buh",
-							"ipaUK": "/ˈzaʊ̯bɐ/",
-							"ipaUS": "/ˈzaʊ̯bɐ/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "sauber",
-								"inflectionsLine": null,
-								"synonyms": [
-									"rein"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht schmutzig; rein",
-										"examples": [
-											"Die Küche ist jetzt sauber."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Küche ist jetzt sauber.",
-							"ok": true
-						},
-						{
-							"answer": "Die Küche ist jetzt saubere.",
-							"ok": false
-						},
-						{
-							"answer": "Die Küche sauber ist jetzt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "kalt",
-					"summary": "mit niedriger Temperatur; nicht warm",
-					"explain": {
-						"entryId": "kalt",
-						"headword": "kalt",
-						"pronunciation": {
-							"display": "kalt",
-							"ipaUK": "/kalt/",
-							"ipaUS": "/kalt/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "kalt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "mit niedriger Temperatur; nicht warm",
-										"examples": [
-											"Im Winter ist es sehr kalt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Im Winter ist es sehr kalt.",
-							"ok": true
-						},
-						{
-							"answer": "Im Winter ist es sehr kaltes.",
-							"ok": false
-						},
-						{
-							"answer": "Im Winter es ist sehr kalt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "schmutzig",
-					"summary": "nicht sauber; voll Schmutz",
-					"explain": {
-						"entryId": "schmutzig",
-						"headword": "schmutzig",
-						"pronunciation": {
-							"display": "SHMOOT-sikh",
-							"ipaUK": "/ˈʃmʊtsɪç/",
-							"ipaUS": "/ˈʃmʊtsɪç/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "schmutzig",
-								"inflectionsLine": null,
-								"synonyms": [
-									"dreckig"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht sauber; voll Schmutz",
-										"examples": [
-											"Meine Schuhe sind schmutzig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Schuhe sind schmutzig.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Schuhe sind schmutzige.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Schuhe schmutzig sind.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "schnell",
-					"summary": "mit hoher Geschwindigkeit; nicht langsam",
-					"explain": {
-						"entryId": "schnell",
-						"headword": "schnell",
-						"pronunciation": {
-							"display": "shnell",
-							"ipaUK": "/ʃnɛl/",
-							"ipaUS": "/ʃnɛl/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "schnell",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "mit hoher Geschwindigkeit; nicht langsam",
-										"examples": [
-											"Das Auto ist sehr schnell."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Auto ist sehr schnell.",
-							"ok": true
-						},
-						{
-							"answer": "Das Auto ist sehr schnelles.",
-							"ok": false
-						},
-						{
-							"answer": "Schnell das Auto ist sehr.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "gut",
-					"summary": "von hoher Qualität; nicht schlecht",
-					"explain": {
-						"entryId": "gut",
-						"headword": "gut",
-						"pronunciation": {
-							"display": "goot",
-							"ipaUK": "/ɡuːt/",
-							"ipaUS": "/ɡuːt/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "gut",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "von hoher Qualität; nicht schlecht",
-										"examples": [
-											"Das Essen ist wirklich gut."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Essen ist wirklich gut.",
-							"ok": true
-						},
-						{
-							"answer": "Das Essen ist wirklich gutes.",
-							"ok": false
-						},
-						{
-							"answer": "Das Essen gut ist wirklich.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "heiß",
-					"summary": "mit sehr hoher Temperatur",
-					"explain": {
-						"entryId": "heiß",
-						"headword": "heiß",
-						"pronunciation": {
-							"display": "hyss",
-							"ipaUK": "/haɪ̯s/",
-							"ipaUS": "/haɪ̯s/"
-						},
-						"labels": [
-							"A1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "heiß",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "mit sehr hoher Temperatur; sehr warm",
-										"examples": [
-											"Der Kaffee ist noch heiß."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Kaffee ist noch heiß.",
-							"ok": true
-						},
-						{
-							"answer": "Der Kaffee ist noch heißes.",
-							"ok": false
-						},
-						{
-							"answer": "Der Kaffee heiß ist noch.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizAdjectives1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "gut",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "gut – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "schlecht",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "schlecht – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "groß",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "groß – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "klein",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "klein – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "neu",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "neu – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "alt",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "alt – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "schön",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "schön – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "teuer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "teuer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "billig",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "billig – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "warm",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "warm – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

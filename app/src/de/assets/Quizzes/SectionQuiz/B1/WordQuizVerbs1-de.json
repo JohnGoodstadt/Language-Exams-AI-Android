@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizVerbs1-de",
-	"title": "Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "erreichen",
-					"summary": "ein Ziel schaffen",
-					"explain": {
-						"entryId": "erreichen",
-						"headword": "erreichen",
-						"pronunciation": {
-							"display": "er-RY-khn",
-							"ipaUK": "/ɛɐ̯ˈʁaɪ̯çn̩/",
-							"ipaUS": "/ɛɐ̯ˈʁaɪ̯çn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "erreichen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "erreichen: ein Ziel schaffen; vollenden",
-										"examples": [
-											"Mit Fleiß kannst du viel erreichen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mit Fleiß kannst du viel erreichen.",
-							"ok": true
-						},
-						{
-							"answer": "Mit Fleiß kannst du viel erreichst.",
-							"ok": false
-						},
-						{
-							"answer": "Mit Fleiß du kannst viel erreichen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "schaffen",
-					"summary": "etwas erfolgreich vollenden",
-					"explain": {
-						"entryId": "schaffen",
-						"headword": "schaffen",
-						"pronunciation": {
-							"display": "SHAF-fn",
-							"ipaUK": "/ˈʃafn̩/",
-							"ipaUS": "/ˈʃafn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "schaffen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "schaffen: etwas erfolgreich zu Ende bringen",
-										"examples": [
-											"Das Team schafft die Aufgabe rechtzeitig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Team schafft die Aufgabe rechtzeitig.",
-							"ok": true
-						},
-						{
-							"answer": "Das Team schaffen die Aufgabe rechtzeitig.",
-							"ok": false
-						},
-						{
-							"answer": "Das Team die Aufgabe rechtzeitig schafft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "erlangen",
-					"summary": "etwas durch Mühe bekommen",
-					"explain": {
-						"entryId": "erlangen",
-						"headword": "erlangen",
-						"pronunciation": {
-							"display": "er-LANG-uhn",
-							"ipaUK": "/ɛɐ̯ˈlaŋən/",
-							"ipaUS": "/ɛɐ̯ˈlaŋən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "erlangen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "erlangen: etwas durch Anstrengung bekommen",
-										"examples": [
-											"Durch Übung erlangt man Sicherheit."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Durch Übung erlangt man Sicherheit.",
-							"ok": true
-						},
-						{
-							"answer": "Durch Übung erlangen man Sicherheit.",
-							"ok": false
-						},
-						{
-							"answer": "Durch Übung man erlangt Sicherheit.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "bewundern",
-					"summary": "jemanden sehr schätzen",
-					"explain": {
-						"entryId": "bewundern",
-						"headword": "bewundern",
-						"pronunciation": {
-							"display": "buh-VOON-duhn",
-							"ipaUK": "/bəˈvʊndɐn/",
-							"ipaUS": "/bəˈvʊndɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "bewundern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "bewundern: jemanden oder etwas sehr schätzen",
-										"examples": [
-											"Ich bewundere ihren Mut sehr."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich bewundere ihren Mut sehr.",
-							"ok": true
-						},
-						{
-							"answer": "Ich bewundert ihren Mut sehr.",
-							"ok": false
-						},
-						{
-							"answer": "Ich ihren Mut sehr bewundere.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "respektieren",
-					"summary": "jemanden achten",
-					"explain": {
-						"entryId": "respektieren",
-						"headword": "respektieren",
-						"pronunciation": {
-							"display": "res-pek-TEE-run",
-							"ipaUK": "/ʁɛspɛkˈtiːʁən/",
-							"ipaUS": "/ʁɛspɛkˈtiːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "respektieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "respektieren: jemanden achten und ernst nehmen",
-										"examples": [
-											"Wir sollten die Regeln respektieren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir sollten die Regeln respektieren.",
-							"ok": true
-						},
-						{
-							"answer": "Wir sollten die Regeln respektiert.",
-							"ok": false
-						},
-						{
-							"answer": "Wir die Regeln respektieren sollten.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "schätzen",
-					"summary": "den Wert erkennen",
-					"explain": {
-						"entryId": "schätzen",
-						"headword": "schätzen",
-						"pronunciation": {
-							"display": "SHET-sn",
-							"ipaUK": "/ˈʃɛtsn̩/",
-							"ipaUS": "/ˈʃɛtsn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "schätzen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "schätzen: den Wert von etwas erkennen",
-										"examples": [
-											"Ich schätze deine ehrliche Meinung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich schätze deine ehrliche Meinung.",
-							"ok": true
-						},
-						{
-							"answer": "Ich schätzt deine ehrliche Meinung.",
-							"ok": false
-						},
-						{
-							"answer": "Ich deine ehrliche Meinung schätze.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "kommunizieren",
-					"summary": "Informationen austauschen",
-					"explain": {
-						"entryId": "kommunizieren",
-						"headword": "kommunizieren",
-						"pronunciation": {
-							"display": "ko-moo-ni-TSEE-run",
-							"ipaUK": "/kɔmuniˈtsiːʁən/",
-							"ipaUS": "/kɔmuniˈtsiːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "kommunizieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "kommunizieren: Informationen austauschen",
-										"examples": [
-											"Wir kommunizieren meistens per E-Mail."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir kommunizieren meistens per E-Mail.",
-							"ok": true
-						},
-						{
-							"answer": "Wir kommuniziert meistens per E-Mail.",
-							"ok": false
-						},
-						{
-							"answer": "Wir meistens per E-Mail kommunizieren.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "vermitteln",
-					"summary": "etwas weitergeben",
-					"explain": {
-						"entryId": "vermitteln",
-						"headword": "vermitteln",
-						"pronunciation": {
-							"display": "fer-MIT-ln",
-							"ipaUK": "/fɛɐ̯ˈmɪtl̩n/",
-							"ipaUS": "/fɛɐ̯ˈmɪtl̩n/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "vermitteln",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "vermitteln: etwas weitergeben oder übermitteln",
-										"examples": [
-											"Der Lehrer vermittelt das Wissen anschaulich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Lehrer vermittelt das Wissen anschaulich.",
-							"ok": true
-						},
-						{
-							"answer": "Der Lehrer vermitteln das Wissen anschaulich.",
-							"ok": false
-						},
-						{
-							"answer": "Der Lehrer das Wissen anschaulich vermittelt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "interagieren",
-					"summary": "in Kontakt treten",
-					"explain": {
-						"entryId": "interagieren",
-						"headword": "interagieren",
-						"pronunciation": {
-							"display": "in-tuh-ra-GEE-run",
-							"ipaUK": "/ɪntɐʔaˈɡiːʁən/",
-							"ipaUS": "/ɪntɐʔaˈɡiːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "interagieren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "interagieren: miteinander in Kontakt treten",
-										"examples": [
-											"Die Kinder interagieren gern miteinander."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Kinder interagieren gern miteinander.",
-							"ok": true
-						},
-						{
-							"answer": "Die Kinder interagiert gern miteinander.",
-							"ok": false
-						},
-						{
-							"answer": "Die Kinder gern miteinander interagieren.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "überzeugen",
-					"summary": "durch Argumente umstimmen",
-					"explain": {
-						"entryId": "überzeugen",
-						"headword": "überzeugen",
-						"pronunciation": {
-							"display": "Ü-buh-tsoy-gn",
-							"ipaUK": "/ˈyːbɐˌtsɔɪ̯ɡn̩/",
-							"ipaUS": "/ˈyːbɐˌtsɔɪ̯ɡn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "überzeugen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "überzeugen: jemanden durch Argumente umstimmen",
-										"examples": [
-											"Seine Argumente überzeugen mich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Seine Argumente überzeugen mich.",
-							"ok": true
-						},
-						{
-							"answer": "Seine Argumente überzeugt mich.",
-							"ok": false
-						},
-						{
-							"answer": "Seine Argumente mich überzeugen.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizVerbs1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "erreichen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "erreichen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "schaffen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "schaffen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "erlangen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "erlangen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "bewundern",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "bewundern – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "respektieren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "respektieren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "schätzen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "schätzen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "kommunizieren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "kommunizieren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "vermitteln",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "vermitteln – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "interagieren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "interagieren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "überzeugen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "überzeugen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

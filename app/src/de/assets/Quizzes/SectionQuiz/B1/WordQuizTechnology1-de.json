@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizTechnology1-de",
-	"title": "Technology",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Anwendung",
-					"summary": "Programm für eine Aufgabe",
-					"explain": {
-						"entryId": "Anwendung",
-						"headword": "Anwendung",
-						"pronunciation": {
-							"display": "AN-ven-doong",
-							"ipaUK": "/ˈanˌvɛndʊŋ/",
-							"ipaUS": "/ˈanˌvɛndʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Anwendung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Anwendung: ein Programm für eine bestimmte Aufgabe",
-										"examples": [
-											"Die Anwendung stürzt leider oft ab."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Anwendung stürzt leider oft ab.",
-							"ok": true
-						},
-						{
-							"answer": "Der Anwendung stürzt leider oft ab.",
-							"ok": false
-						},
-						{
-							"answer": "Die Anwendung leider oft abstürzt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "App",
-					"summary": "kleines Programm auf dem Handy",
-					"explain": {
-						"entryId": "App",
-						"headword": "App",
-						"pronunciation": {
-							"display": "ep",
-							"ipaUK": "/ɛp/",
-							"ipaUS": "/ɛp/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "App",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die App: ein kleines Programm auf dem Smartphone",
-										"examples": [
-											"Diese App hilft beim Deutschlernen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Diese App hilft beim Deutschlernen.",
-							"ok": true
-						},
-						{
-							"answer": "Dieser App hilft beim Deutschlernen.",
-							"ok": false
-						},
-						{
-							"answer": "Diese App beim Deutschlernen hilft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Programm",
-					"summary": "Software für den Computer",
-					"explain": {
-						"entryId": "Programm",
-						"headword": "Programm",
-						"pronunciation": {
-							"display": "pro-GRAM",
-							"ipaUK": "/pʁoˈɡʁam/",
-							"ipaUS": "/pʁoˈɡʁam/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Programm",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Programm: eine Software für den Computer",
-										"examples": [
-											"Dieses Programm läuft nur auf neuen Geräten."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Dieses Programm läuft nur auf neuen Geräten.",
-							"ok": true
-						},
-						{
-							"answer": "Diese Programm läuft nur auf neuen Geräten.",
-							"ok": false
-						},
-						{
-							"answer": "Dieses Programm nur auf neuen Geräten läuft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Browser",
-					"summary": "Programm zum Surfen",
-					"explain": {
-						"entryId": "Browser",
-						"headword": "Browser",
-						"pronunciation": {
-							"display": "BROW-zuh",
-							"ipaUK": "/ˈbʁaʊ̯zɐ/",
-							"ipaUS": "/ˈbʁaʊ̯zɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Browser",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Browser: ein Programm zum Surfen im Internet",
-										"examples": [
-											"Der Browser öffnet die Seite sofort."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Browser öffnet die Seite sofort.",
-							"ok": true
-						},
-						{
-							"answer": "Die Browser öffnet die Seite sofort.",
-							"ok": false
-						},
-						{
-							"answer": "Der Browser die Seite sofort öffnet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Suchmaschine",
-					"summary": "Dienst zum Suchen im Internet",
-					"explain": {
-						"entryId": "Suchmaschine",
-						"headword": "Suchmaschine",
-						"pronunciation": {
-							"display": "ZOOKH-ma-shee-nuh",
-							"ipaUK": "/ˈzuːxmaˌʃiːnə/",
-							"ipaUS": "/ˈzuːxmaˌʃiːnə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Suchmaschine",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Suchmaschine: ein Dienst zum Suchen im Internet",
-										"examples": [
-											"Die Suchmaschine findet Tausende Ergebnisse."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Suchmaschine findet Tausende Ergebnisse.",
-							"ok": true
-						},
-						{
-							"answer": "Der Suchmaschine findet Tausende Ergebnisse.",
-							"ok": false
-						},
-						{
-							"answer": "Die Suchmaschine Tausende Ergebnisse findet.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Registerkarte",
-					"summary": "Reiter im Browser",
-					"explain": {
-						"entryId": "Registerkarte",
-						"headword": "Registerkarte",
-						"pronunciation": {
-							"display": "re-GIS-tuh-kar-tuh",
-							"ipaUK": "/ʁeˈɡɪstɐˌkaʁtə/",
-							"ipaUS": "/ʁeˈɡɪstɐˌkaʁtə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Registerkarte",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Registerkarte: ein Reiter im Browser für eine Seite",
-										"examples": [
-											"Ich öffne den Link in einer neuen Registerkarte."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich öffne den Link in einer neuen Registerkarte.",
-							"ok": true
-						},
-						{
-							"answer": "Ich öffne den Link in einem neuen Registerkarte.",
-							"ok": false
-						},
-						{
-							"answer": "Ich den Link in einer neuen Registerkarte öffne.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Gerät",
-					"summary": "technischer Apparat",
-					"explain": {
-						"entryId": "Gerät",
-						"headword": "Gerät",
-						"pronunciation": {
-							"display": "guh-RAIT",
-							"ipaUK": "/ɡəˈʁɛːt/",
-							"ipaUS": "/ɡəˈʁɛːt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gerät",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Gerät: ein technischer Apparat wie Handy oder Laptop",
-										"examples": [
-											"Dieses Gerät verbraucht wenig Strom."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Dieses Gerät verbraucht wenig Strom.",
-							"ok": true
-						},
-						{
-							"answer": "Diese Gerät verbraucht wenig Strom.",
-							"ok": false
-						},
-						{
-							"answer": "Dieses Gerät wenig Strom verbraucht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Gadget",
-					"summary": "kleines technisches Gerät",
-					"explain": {
-						"entryId": "Gadget",
-						"headword": "Gadget",
-						"pronunciation": {
-							"display": "GED-zhet",
-							"ipaUK": "/ˈɡɛdʒɛt/",
-							"ipaUS": "/ˈɡɛdʒɛt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Gadget",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Gadget: ein kleines, praktisches technisches Gerät",
-										"examples": [
-											"Er kauft sich jedes neue Gadget."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er kauft sich jedes neue Gadget.",
-							"ok": true
-						},
-						{
-							"answer": "Er kauft sich jeder neue Gadget.",
-							"ok": false
-						},
-						{
-							"answer": "Er sich jedes neue Gadget kauft.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Smartphone",
-					"summary": "modernes Handy mit Internet",
-					"explain": {
-						"entryId": "Smartphone",
-						"headword": "Smartphone",
-						"pronunciation": {
-							"display": "SMART-fohn",
-							"ipaUK": "/ˈsmaːʁtfoːn/",
-							"ipaUS": "/ˈsmaːʁtfoːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Smartphone",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Smartphone: ein modernes Handy mit Internet",
-										"examples": [
-											"Mein Smartphone hat einen leeren Akku."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Smartphone hat einen leeren Akku.",
-							"ok": true
-						},
-						{
-							"answer": "Meinen Smartphone hat einen leeren Akku.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Smartphone einen leeren Akku hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "digital",
-					"summary": "elektronisch, nicht analog",
-					"explain": {
-						"entryId": "digital",
-						"headword": "digital",
-						"pronunciation": {
-							"display": "di-gi-TAHL",
-							"ipaUK": "/diɡiˈtaːl/",
-							"ipaUS": "/diɡiˈtaːl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "digital",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "digital: in elektronischer Form; nicht analog",
-										"examples": [
-											"Heute ist fast alles digital."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Heute ist fast alles digital.",
-							"ok": true
-						},
-						{
-							"answer": "Heute ist fast alles digitale.",
-							"ok": false
-						},
-						{
-							"answer": "Heute fast alles ist digital.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizTechnology1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Anwendung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Anwendung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "App",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "App – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Programm",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Programm – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Browser",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Browser – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Suchmaschine",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Suchmaschine – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Registerkarte",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Registerkarte – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Gerät",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Gerät – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Gadget",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Gadget – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Smartphone",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Smartphone – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "digital",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "digital – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

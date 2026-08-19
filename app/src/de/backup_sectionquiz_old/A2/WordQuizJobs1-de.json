@@ -1,0 +1,559 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizJobs1-de",
+	"title": "Jobs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Karriere",
+					"summary": "die berufliche Entwicklung",
+					"explain": {
+						"entryId": "Karriere",
+						"headword": "Karriere",
+						"pronunciation": {
+							"display": "ka-ri-AY-ruh",
+							"ipaUK": "/kaˈʁi̯eːʁə/",
+							"ipaUS": "/kaˈʁi̯eːʁə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Karriere",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die berufliche Entwicklung im Leben",
+										"examples": [
+											"Sie macht eine erfolgreiche Karriere."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie macht eine erfolgreiche Karriere.",
+							"ok": true
+						},
+						{
+							"answer": "Sie macht einen erfolgreichen Karriere.",
+							"ok": false
+						},
+						{
+							"answer": "Sie eine erfolgreiche Karriere macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Kollege",
+					"summary": "eine Person, mit der man arbeitet",
+					"explain": {
+						"entryId": "Kollege",
+						"headword": "Kollege",
+						"pronunciation": {
+							"display": "ko-LAY-guh",
+							"ipaUK": "/kɔˈleːɡə/",
+							"ipaUS": "/kɔˈleːɡə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kollege",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Kollegin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, mit der man zusammenarbeitet",
+										"examples": [
+											"Mein Kollege hilft mir bei der Arbeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Kollege hilft mir bei der Arbeit.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Kollege hilft mir bei der Arbeit.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Kollege mir bei der Arbeit hilft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Firma",
+					"summary": "ein Unternehmen mit Angestellten",
+					"explain": {
+						"entryId": "Firma",
+						"headword": "Firma",
+						"pronunciation": {
+							"display": "FIR-ma",
+							"ipaUK": "/ˈfɪʁma/",
+							"ipaUS": "/ˈfɪʁma/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Firma",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Unternehmen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Unternehmen, das Menschen beschäftigt",
+										"examples": [
+											"Ich arbeite seit drei Jahren in dieser Firma."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich arbeite seit drei Jahren in dieser Firma.",
+							"ok": true
+						},
+						{
+							"answer": "Ich arbeite seit drei Jahren in diesem Firma.",
+							"ok": false
+						},
+						{
+							"answer": "Ich seit drei Jahren in dieser Firma arbeite.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Anstellung",
+					"summary": "eine feste Stelle bei einer Firma",
+					"explain": {
+						"entryId": "Anstellung",
+						"headword": "Anstellung",
+						"pronunciation": {
+							"display": "AN-shtel-oong",
+							"ipaUK": "/ˈanˌʃtɛlʊŋ/",
+							"ipaUS": "/ˈanˌʃtɛlʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Anstellung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine feste bezahlte Stelle bei einer Firma",
+										"examples": [
+											"Er sucht eine feste Anstellung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er sucht eine feste Anstellung.",
+							"ok": true
+						},
+						{
+							"answer": "Er sucht einen festen Anstellung.",
+							"ok": false
+						},
+						{
+							"answer": "Er eine feste Anstellung sucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Vorstellungsgespräch",
+					"summary": "ein Gespräch für einen Job",
+					"explain": {
+						"entryId": "Vorstellungsgespräch",
+						"headword": "Vorstellungsgespräch",
+						"pronunciation": {
+							"display": "FOR-shtel-oongs-guh-shpraikh",
+							"ipaUK": "/ˈfoːɐ̯ʃtɛlʊŋsɡəˌʃpʁɛːç/",
+							"ipaUS": "/ˈfoːɐ̯ʃtɛlʊŋsɡəˌʃpʁɛːç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorstellungsgespräch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gespräch, um einen Job zu bekommen",
+										"examples": [
+											"Morgen habe ich ein Vorstellungsgespräch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Morgen habe ich ein Vorstellungsgespräch.",
+							"ok": true
+						},
+						{
+							"answer": "Morgen habe ich einen Vorstellungsgespräch.",
+							"ok": false
+						},
+						{
+							"answer": "Morgen ich habe ein Vorstellungsgespräch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Job",
+					"summary": "eine bezahlte Arbeit",
+					"explain": {
+						"entryId": "Job",
+						"headword": "Job",
+						"pronunciation": {
+							"display": "job",
+							"ipaUK": "/dʒɔp/",
+							"ipaUS": "/dʒɔp/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Job",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Stelle",
+									"Arbeit"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine bezahlte Arbeit",
+										"examples": [
+											"Sie hat einen neuen Job gefunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat einen neuen Job gefunden.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat ein neues Job gefunden.",
+							"ok": false
+						},
+						{
+							"answer": "Sie einen neuen Job gefunden hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Chef",
+					"summary": "leitet eine Firma/ein Team",
+					"explain": {
+						"entryId": "Chef",
+						"headword": "Chef",
+						"pronunciation": {
+							"display": "shef",
+							"ipaUK": "/ʃɛf/",
+							"ipaUS": "/ʃɛf/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Chef",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Chefin",
+									"Manager"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Person, die eine Firma oder ein Team leitet",
+										"examples": [
+											"Mein Chef ist heute nicht im Büro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Chef ist heute nicht im Büro.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Chef ist heute nicht im Büro.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Chef heute nicht im Büro ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Besprechung",
+					"summary": "ein Arbeitstreffen",
+					"explain": {
+						"entryId": "Besprechung",
+						"headword": "Besprechung",
+						"pronunciation": {
+							"display": "buh-SHPRE-khoong",
+							"ipaUK": "/bəˈʃpʁɛçʊŋ/",
+							"ipaUS": "/bəˈʃpʁɛçʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Besprechung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Meeting",
+									"Sitzung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Treffen, um über die Arbeit zu sprechen",
+										"examples": [
+											"Um zehn Uhr haben wir eine wichtige Besprechung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Um zehn Uhr haben wir eine wichtige Besprechung.",
+							"ok": true
+						},
+						{
+							"answer": "Um zehn Uhr haben wir einen wichtigen Besprechung.",
+							"ok": false
+						},
+						{
+							"answer": "Um zehn Uhr wir haben eine wichtige Besprechung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Büro",
+					"summary": "dort arbeitet man am Schreibtisch",
+					"explain": {
+						"entryId": "Büro",
+						"headword": "Büro",
+						"pronunciation": {
+							"display": "bü-ROH",
+							"ipaUK": "/byˈʁoː/",
+							"ipaUS": "/byˈʁoː/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Büro",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Raum, in dem man am Schreibtisch arbeitet",
+										"examples": [
+											"Ich arbeite den ganzen Tag im Büro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich arbeite den ganzen Tag im Büro.",
+							"ok": true
+						},
+						{
+							"answer": "Ich arbeite den ganzen Tag in die Büro.",
+							"ok": false
+						},
+						{
+							"answer": "Ich den ganzen Tag im Büro arbeite.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Beruf",
+					"summary": "die gelernte Arbeit",
+					"explain": {
+						"entryId": "Beruf",
+						"headword": "Beruf",
+						"pronunciation": {
+							"display": "buh-ROOF",
+							"ipaUK": "/bəˈʁuːf/",
+							"ipaUS": "/bəˈʁuːf/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beruf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Arbeit, die man gelernt hat",
+										"examples": [
+											"Mein Beruf macht mir viel Spaß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Beruf macht mir viel Spaß.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Beruf macht mir viel Spaß.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Beruf mir viel Spaß macht.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,393 +1,116 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizPersonal2-de",
-	"title": "Personal",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Name",
-					"summary": "wie eine Person heißt",
-					"explain": {
-						"entryId": "Name",
-						"headword": "Name",
-						"pronunciation": {
-							"display": "NAH-muh",
-							"ipaUK": "/ˈnaːmə/",
-							"ipaUS": "/ˈnaːmə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Name",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wie eine Person heißt",
-										"examples": [
-											"Mein Name ist Anna Müller."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mein Name ist Anna Müller.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Name ist Anna Müller.",
-							"ok": false
-						},
-						{
-							"answer": "Mein Name Anna Müller ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Nationalität",
-					"summary": "zu welchem Land man gehört",
-					"explain": {
-						"entryId": "Nationalität",
-						"headword": "Nationalität",
-						"pronunciation": {
-							"display": "nat-si-o-na-li-TAYT",
-							"ipaUK": "/natsi̯onaliˈtɛːt/",
-							"ipaUS": "/natsi̯onaliˈtɛːt/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Nationalität",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Staatsangehörigkeit"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "zu welchem Land eine Person gehört",
-										"examples": [
-											"Welche Nationalität hast du?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Welche Nationalität hast du?",
-							"ok": true
-						},
-						{
-							"answer": "Welchen Nationalität hast du?",
-							"ok": false
-						},
-						{
-							"answer": "Welche Nationalität du hast?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Reisepass",
-					"summary": "Dokument für Auslandsreisen",
-					"explain": {
-						"entryId": "Reisepass",
-						"headword": "Reisepass",
-						"pronunciation": {
-							"display": "RY-zuh-pas",
-							"ipaUK": "/ˈʁaɪ̯zəˌpas/",
-							"ipaUS": "/ˈʁaɪ̯zəˌpas/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Reisepass",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Pass"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ein Dokument für Reisen ins Ausland",
-										"examples": [
-											"Für die Reise brauche ich meinen Reisepass."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Für die Reise brauche ich meinen Reisepass.",
-							"ok": true
-						},
-						{
-							"answer": "Für die Reise brauche ich meine Reisepass.",
-							"ok": false
-						},
-						{
-							"answer": "Für die Reise ich brauche meinen Reisepass.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Telefonnummer",
-					"summary": "Nummer zum Anrufen",
-					"explain": {
-						"entryId": "Telefonnummer",
-						"headword": "Telefonnummer",
-						"pronunciation": {
-							"display": "te-le-FOHN-noom-uh",
-							"ipaUK": "/teleˈfoːnˌnʊmɐ/",
-							"ipaUS": "/teleˈfoːnˌnʊmɐ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Telefonnummer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Nummer, unter der man jemanden anruft",
-										"examples": [
-											"Ich habe deine Telefonnummer verloren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich habe deine Telefonnummer verloren.",
-							"ok": true
-						},
-						{
-							"answer": "Ich habe deinen Telefonnummer verloren.",
-							"ok": false
-						},
-						{
-							"answer": "Ich deine Telefonnummer verloren habe.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "duschen",
-					"summary": "sich unter der Dusche waschen",
-					"explain": {
-						"entryId": "duschen",
-						"headword": "duschen",
-						"pronunciation": {
-							"display": "DOO-shn",
-							"ipaUK": "/ˈduːʃn̩/",
-							"ipaUS": "/ˈduːʃn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "duschen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sich unter der Dusche waschen",
-										"examples": [
-											"Am Morgen dusche ich immer kalt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Morgen dusche ich immer kalt.",
-							"ok": true
-						},
-						{
-							"answer": "Am Morgen duscht ich immer kalt.",
-							"ok": false
-						},
-						{
-							"answer": "Am Morgen ich dusche immer kalt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "aufwachen",
-					"summary": "wach werden",
-					"explain": {
-						"entryId": "aufwachen",
-						"headword": "aufwachen",
-						"pronunciation": {
-							"display": "OWF-va-khn",
-							"ipaUK": "/ˈaʊ̯fˌvaxn̩/",
-							"ipaUS": "/ˈaʊ̯fˌvaxn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "aufwachen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nach dem Schlaf wach werden",
-										"examples": [
-											"Am Wochenende wache ich spät auf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Wochenende wache ich spät auf.",
-							"ok": true
-						},
-						{
-							"answer": "Am Wochenende wache ich spät aus.",
-							"ok": false
-						},
-						{
-							"answer": "Am Wochenende ich wache spät auf.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Beruf",
-					"summary": "die Arbeit, die man macht",
-					"explain": {
-						"entryId": "Beruf",
-						"headword": "Beruf",
-						"pronunciation": {
-							"display": "buh-ROOF",
-							"ipaUK": "/bəˈʁuːf/",
-							"ipaUS": "/bəˈʁuːf/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Beruf",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Tätigkeit"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Arbeit oder der Job einer Person",
-										"examples": [
-											"In welchem Beruf arbeitest du?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In welchem Beruf arbeitest du?",
-							"ok": true
-						},
-						{
-							"answer": "In welchen Beruf arbeitest du?",
-							"ok": false
-						},
-						{
-							"answer": "In welchem Beruf du arbeitest?",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPersonal2-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Ausweis",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ausweis – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "unterschreiben",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "unterschreiben – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Unterschrift",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Unterschrift – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Beruf",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Beruf – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Handynummer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Handynummer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

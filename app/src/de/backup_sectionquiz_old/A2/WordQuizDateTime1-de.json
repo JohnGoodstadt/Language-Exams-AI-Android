@@ -1,0 +1,864 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizDateTime1-de",
+	"title": "DateTime",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Uhrzeit",
+					"summary": "die Zeit auf der Uhr",
+					"explain": {
+						"entryId": "Uhrzeit",
+						"headword": "Uhrzeit",
+						"pronunciation": {
+							"display": "OOR-tsite",
+							"ipaUK": "/ˈuːɐ̯ˌtsaɪ̯t/",
+							"ipaUS": "/ˈuːɐ̯ˌtsaɪ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Uhrzeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit, die die Uhr zeigt",
+										"examples": [
+											"Wie ist die genaue Uhrzeit?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wie ist die genaue Uhrzeit?",
+							"ok": true
+						},
+						{
+							"answer": "Wie ist der genaue Uhrzeit?",
+							"ok": false
+						},
+						{
+							"answer": "Wie die genaue Uhrzeit ist?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Datum",
+					"summary": "der Tag im Kalender",
+					"explain": {
+						"entryId": "Datum",
+						"headword": "Datum",
+						"pronunciation": {
+							"display": "DAH-toom",
+							"ipaUK": "/ˈdaːtʊm/",
+							"ipaUS": "/ˈdaːtʊm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Datum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Tag im Kalender (Tag, Monat, Jahr)",
+										"examples": [
+											"Welches Datum haben wir heute?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Welches Datum haben wir heute?",
+							"ok": true
+						},
+						{
+							"answer": "Welchen Datum haben wir heute?",
+							"ok": false
+						},
+						{
+							"answer": "Welches Datum wir heute haben?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Termin",
+					"summary": "feste Verabredung",
+					"explain": {
+						"entryId": "Termin",
+						"headword": "Termin",
+						"pronunciation": {
+							"display": "ter-MEEN",
+							"ipaUK": "/tɛʁˈmiːn/",
+							"ipaUS": "/tɛʁˈmiːn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Termin",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine feste Verabredung zu einer Zeit",
+										"examples": [
+											"Ich habe morgen einen wichtigen Termin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe morgen einen wichtigen Termin.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe morgen ein wichtiges Termin.",
+							"ok": false
+						},
+						{
+							"answer": "Ich morgen einen wichtigen Termin habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Verspätung",
+					"summary": "später als geplant",
+					"explain": {
+						"entryId": "Verspätung",
+						"headword": "Verspätung",
+						"pronunciation": {
+							"display": "fer-SHPAY-toong",
+							"ipaUK": "/fɛɐ̯ˈʃpɛːtʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈʃpɛːtʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verspätung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wenn etwas später kommt als geplant",
+										"examples": [
+											"Der Zug hat zehn Minuten Verspätung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Zug hat zehn Minuten Verspätung.",
+							"ok": true
+						},
+						{
+							"answer": "Der Zug hat zehn Minuten Verspätungen.",
+							"ok": false
+						},
+						{
+							"answer": "Der Zug zehn Minuten Verspätung hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "pünktlich",
+					"summary": "genau zur richtigen Zeit",
+					"explain": {
+						"entryId": "pünktlich",
+						"headword": "pünktlich",
+						"pronunciation": {
+							"display": "PÜNKT-likh",
+							"ipaUK": "/ˈpʏŋktlɪç/",
+							"ipaUS": "/ˈpʏŋktlɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "pünktlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "genau zur richtigen Zeit",
+										"examples": [
+											"Der Bus kommt immer pünktlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Bus kommt immer pünktlich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Bus kommt immer pünktliche.",
+							"ok": false
+						},
+						{
+							"answer": "Der Bus immer pünktlich kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Woche",
+					"summary": "sieben Tage",
+					"explain": {
+						"entryId": "Woche",
+						"headword": "Woche",
+						"pronunciation": {
+							"display": "VO-khuh",
+							"ipaUK": "/ˈvɔxə/",
+							"ipaUS": "/ˈvɔxə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Woche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sieben Tage",
+										"examples": [
+											"Nächste Woche fahre ich nach Berlin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nächste Woche fahre ich nach Berlin.",
+							"ok": true
+						},
+						{
+							"answer": "Nächsten Woche fahre ich nach Berlin.",
+							"ok": false
+						},
+						{
+							"answer": "Nächste Woche ich fahre nach Berlin.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Monat",
+					"summary": "etwa 30 Tage",
+					"explain": {
+						"entryId": "Monat",
+						"headword": "Monat",
+						"pronunciation": {
+							"display": "MOH-nat",
+							"ipaUK": "/ˈmoːnat/",
+							"ipaUS": "/ˈmoːnat/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Monat",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwa dreißig Tage",
+										"examples": [
+											"Der nächste Monat ist Juli."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der nächste Monat ist Juli.",
+							"ok": true
+						},
+						{
+							"answer": "Das nächste Monat ist Juli.",
+							"ok": false
+						},
+						{
+							"answer": "Der nächste Monat Juli ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Wochenende",
+					"summary": "Samstag und Sonntag",
+					"explain": {
+						"entryId": "Wochenende",
+						"headword": "Wochenende",
+						"pronunciation": {
+							"display": "VO-khn-en-duh",
+							"ipaUK": "/ˈvɔxn̩ˌʔɛndə/",
+							"ipaUS": "/ˈvɔxn̩ˌʔɛndə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wochenende",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Samstag und Sonntag",
+										"examples": [
+											"Das Wochenende war sehr schön."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Wochenende war sehr schön.",
+							"ok": true
+						},
+						{
+							"answer": "Der Wochenende war sehr schön.",
+							"ok": false
+						},
+						{
+							"answer": "Das Wochenende sehr schön war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Feiertag",
+					"summary": "besonderer freier Tag",
+					"explain": {
+						"entryId": "Feiertag",
+						"headword": "Feiertag",
+						"pronunciation": {
+							"display": "FY-uh-tahk",
+							"ipaUK": "/ˈfaɪ̯ɐˌtaːk/",
+							"ipaUS": "/ˈfaɪ̯ɐˌtaːk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Feiertag",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein besonderer freier Tag",
+										"examples": [
+											"Der erste Mai ist ein Feiertag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der erste Mai ist ein Feiertag.",
+							"ok": true
+						},
+						{
+							"answer": "Der erste Mai ist eine Feiertag.",
+							"ok": false
+						},
+						{
+							"answer": "Der erste Mai ein Feiertag ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Geburtstag",
+					"summary": "Tag der Geburt",
+					"explain": {
+						"entryId": "Geburtstag",
+						"headword": "Geburtstag",
+						"pronunciation": {
+							"display": "guh-BOORTS-tahk",
+							"ipaUK": "/ɡəˈbuːɐ̯tsˌtaːk/",
+							"ipaUS": "/ɡəˈbuːɐ̯tsˌtaːk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Geburtstag",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Tag, an dem man geboren wurde",
+										"examples": [
+											"Zu meinem Geburtstag lade ich Freunde ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zu meinem Geburtstag lade ich Freunde ein.",
+							"ok": true
+						},
+						{
+							"answer": "Zu meiner Geburtstag lade ich Freunde ein.",
+							"ok": false
+						},
+						{
+							"answer": "Zu meinem Geburtstag ich lade Freunde ein.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Vergangenheit",
+					"summary": "die Zeit, die vorbei ist",
+					"explain": {
+						"entryId": "Vergangenheit",
+						"headword": "Vergangenheit",
+						"pronunciation": {
+							"display": "fer-GANG-uhn-hite",
+							"ipaUK": "/fɛɐ̯ˈɡaŋənhaɪ̯t/",
+							"ipaUS": "/fɛɐ̯ˈɡaŋənhaɪ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vergangenheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit, die schon vorbei ist",
+										"examples": [
+											"In der Vergangenheit war alles anders."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Vergangenheit war alles anders.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Vergangenheit war alles anders.",
+							"ok": false
+						},
+						{
+							"answer": "In der Vergangenheit alles anders war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "Zukunft",
+					"summary": "die Zeit, die noch kommt",
+					"explain": {
+						"entryId": "Zukunft",
+						"headword": "Zukunft",
+						"pronunciation": {
+							"display": "TSOO-koonft",
+							"ipaUK": "/ˈtsuːkʊnft/",
+							"ipaUS": "/ˈtsuːkʊnft/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zukunft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit, die noch kommt",
+										"examples": [
+											"In der Zukunft möchte ich reisen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Zukunft möchte ich reisen.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Zukunft möchte ich reisen.",
+							"ok": false
+						},
+						{
+							"answer": "In der Zukunft ich möchte reisen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "gestern",
+					"summary": "am Tag vor heute",
+					"explain": {
+						"entryId": "gestern",
+						"headword": "gestern",
+						"pronunciation": {
+							"display": "GES-tuhn",
+							"ipaUK": "/ˈɡɛstɐn/",
+							"ipaUS": "/ˈɡɛstɐn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "gestern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Tag vor heute",
+										"examples": [
+											"Gestern habe ich lange gearbeitet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gestern habe ich lange gearbeitet.",
+							"ok": true
+						},
+						{
+							"answer": "Gestern ich habe lange gearbeitet.",
+							"ok": false
+						},
+						{
+							"answer": "Gestern lange ich habe gearbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "vorgestern",
+					"summary": "am Tag vor gestern",
+					"explain": {
+						"entryId": "vorgestern",
+						"headword": "vorgestern",
+						"pronunciation": {
+							"display": "FOR-ges-tuhn",
+							"ipaUK": "/ˈfoːɐ̯ˌɡɛstɐn/",
+							"ipaUS": "/ˈfoːɐ̯ˌɡɛstɐn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "vorgestern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Tag vor gestern",
+										"examples": [
+											"Vorgestern war ich beim Arzt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vorgestern war ich beim Arzt.",
+							"ok": true
+						},
+						{
+							"answer": "Vorgestern ich war beim Arzt.",
+							"ok": false
+						},
+						{
+							"answer": "Vorgestern beim Arzt ich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "übermorgen",
+					"summary": "am Tag nach morgen",
+					"explain": {
+						"entryId": "übermorgen",
+						"headword": "übermorgen",
+						"pronunciation": {
+							"display": "Ü-buh-mor-gn",
+							"ipaUK": "/ˈyːbɐˌmɔʁɡn̩/",
+							"ipaUS": "/ˈyːbɐˌmɔʁɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "übermorgen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Tag nach morgen",
+										"examples": [
+											"Übermorgen fliegen wir nach Spanien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Übermorgen fliegen wir nach Spanien.",
+							"ok": true
+						},
+						{
+							"answer": "Übermorgen wir fliegen nach Spanien.",
+							"ok": false
+						},
+						{
+							"answer": "Übermorgen nach Spanien wir fliegen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"question": "Jahreszeit",
+					"summary": "z. B. Frühling, Sommer",
+					"explain": {
+						"entryId": "Jahreszeit",
+						"headword": "Jahreszeit",
+						"pronunciation": {
+							"display": "YAH-rus-tsite",
+							"ipaUK": "/ˈjaːʁəsˌtsaɪ̯t/",
+							"ipaUS": "/ˈjaːʁəsˌtsaɪ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Jahreszeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Frühling, Sommer, Herbst oder Winter",
+										"examples": [
+											"Der Herbst ist meine liebste Jahreszeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Herbst ist meine liebste Jahreszeit.",
+							"ok": true
+						},
+						{
+							"answer": "Der Herbst ist mein liebster Jahreszeit.",
+							"ok": false
+						},
+						{
+							"answer": "Der Herbst meine liebste Jahreszeit ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

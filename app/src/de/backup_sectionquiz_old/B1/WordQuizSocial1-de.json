@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial1-de",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Gemeinschaft",
+					"summary": "Gruppe mit Zusammengehörigkeit",
+					"explain": {
+						"entryId": "Gemeinschaft",
+						"headword": "Gemeinschaft",
+						"pronunciation": {
+							"display": "guh-MINE-shaft",
+							"ipaUK": "/ɡəˈmaɪ̯nʃaft/",
+							"ipaUS": "/ɡəˈmaɪ̯nʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gemeinschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gemeinschaft: eine Gruppe mit gemeinsamem Ziel oder Ort",
+										"examples": [
+											"In der Gemeinschaft fühlt er sich wohl."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Gemeinschaft fühlt er sich wohl.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Gemeinschaft fühlt er sich wohl.",
+							"ok": false
+						},
+						{
+							"answer": "In der Gemeinschaft er fühlt sich wohl.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Nachbarschaft",
+					"summary": "die Gegend/die Nachbarn",
+					"explain": {
+						"entryId": "Nachbarschaft",
+						"headword": "Nachbarschaft",
+						"pronunciation": {
+							"display": "NAKH-bar-shaft",
+							"ipaUK": "/ˈnaxbaːɐ̯ʃaft/",
+							"ipaUS": "/ˈnaxbaːɐ̯ʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachbarschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Nachbarschaft: die Gegend, in der man wohnt; die Nachbarn",
+										"examples": [
+											"In unserer Nachbarschaft helfen sich alle."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In unserer Nachbarschaft helfen sich alle.",
+							"ok": true
+						},
+						{
+							"answer": "In unserem Nachbarschaft helfen sich alle.",
+							"ok": false
+						},
+						{
+							"answer": "In unserer Nachbarschaft sich alle helfen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Gesellschaft",
+					"summary": "alle, die zusammenleben",
+					"explain": {
+						"entryId": "Gesellschaft",
+						"headword": "Gesellschaft",
+						"pronunciation": {
+							"display": "guh-ZEL-shaft",
+							"ipaUK": "/ɡəˈzɛlʃaft/",
+							"ipaUS": "/ɡəˈzɛlʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesellschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gesellschaft: alle Menschen, die zusammenleben",
+										"examples": [
+											"Die Gesellschaft verändert sich sehr schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gesellschaft verändert sich sehr schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gesellschaft verändert sich sehr schnell.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gesellschaft sich sehr schnell verändert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Kultur",
+					"summary": "Lebensweise, Kunst, Bräuche",
+					"explain": {
+						"entryId": "Kultur",
+						"headword": "Kultur",
+						"pronunciation": {
+							"display": "kool-TOOR",
+							"ipaUK": "/kʊlˈtuːɐ̯/",
+							"ipaUS": "/kʊlˈtuːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kultur",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Kultur: die Lebensweise, Kunst und Bräuche einer Gruppe",
+										"examples": [
+											"Die japanische Kultur fasziniert mich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die japanische Kultur fasziniert mich.",
+							"ok": true
+						},
+						{
+							"answer": "Der japanische Kultur fasziniert mich.",
+							"ok": false
+						},
+						{
+							"answer": "Die japanische Kultur mich fasziniert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Tradition",
+					"summary": "alter, weitergegebener Brauch",
+					"explain": {
+						"entryId": "Tradition",
+						"headword": "Tradition",
+						"pronunciation": {
+							"display": "tra-di-TSYOHN",
+							"ipaUK": "/tʁadiˈtsi̯oːn/",
+							"ipaUS": "/tʁadiˈtsi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tradition",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Tradition: ein alter Brauch, der weitergegeben wird",
+										"examples": [
+											"Diese Tradition ist mehrere hundert Jahre alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Tradition ist mehrere hundert Jahre alt.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Tradition ist mehrere hundert Jahre alt.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Tradition mehrere hundert Jahre alt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Erbe",
+					"summary": "was von früher bleibt",
+					"explain": {
+						"entryId": "Erbe",
+						"headword": "Erbe",
+						"pronunciation": {
+							"display": "ER-buh",
+							"ipaUK": "/ˈɛʁbə/",
+							"ipaUS": "/ˈɛʁbə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erbe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Erbe: das, was von früheren Generationen bleibt (Kultur, Werte)",
+										"examples": [
+											"Das kulturelle Erbe muss geschützt werden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das kulturelle Erbe muss geschützt werden.",
+							"ok": true
+						},
+						{
+							"answer": "Der kulturelle Erbe muss geschützt werden.",
+							"ok": false
+						},
+						{
+							"answer": "Das kulturelle Erbe geschützt werden muss.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Vielfalt",
+					"summary": "große Verschiedenheit",
+					"explain": {
+						"entryId": "Vielfalt",
+						"headword": "Vielfalt",
+						"pronunciation": {
+							"display": "FEEL-falt",
+							"ipaUK": "/ˈfiːlfalt/",
+							"ipaUS": "/ˈfiːlfalt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vielfalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Vielfalt: eine große Verschiedenheit; viele Arten",
+										"examples": [
+											"Die kulturelle Vielfalt bereichert die Stadt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die kulturelle Vielfalt bereichert die Stadt.",
+							"ok": true
+						},
+						{
+							"answer": "Der kulturelle Vielfalt bereichert die Stadt.",
+							"ok": false
+						},
+						{
+							"answer": "Die kulturelle Vielfalt die Stadt bereichert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Abwechslung",
+					"summary": "Wechsel; Verschiedenheit",
+					"explain": {
+						"entryId": "Abwechslung",
+						"headword": "Abwechslung",
+						"pronunciation": {
+							"display": "AP-vek-sloong",
+							"ipaUK": "/ˈapvɛkslʊŋ/",
+							"ipaUS": "/ˈapvɛkslʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abwechslung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Abwechslung: der Wechsel; die Verschiedenheit",
+										"examples": [
+											"Der neue Job bietet viel Abwechslung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der neue Job bietet viel Abwechslung.",
+							"ok": true
+						},
+						{
+							"answer": "Der neue Job bietet viel Abwechslungen.",
+							"ok": false
+						},
+						{
+							"answer": "Der neue Job viel Abwechslung bietet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Inklusion",
+					"summary": "alle einbeziehen",
+					"explain": {
+						"entryId": "Inklusion",
+						"headword": "Inklusion",
+						"pronunciation": {
+							"display": "in-kloo-ZYOHN",
+							"ipaUK": "/ɪnkluˈzi̯oːn/",
+							"ipaUS": "/ɪnkluˈzi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Inklusion",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Inklusion: das Einbeziehen aller Menschen in die Gesellschaft",
+										"examples": [
+											"Die Schule setzt auf Inklusion."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Schule setzt auf Inklusion.",
+							"ok": true
+						},
+						{
+							"answer": "Die Schule setzt auf Inklusionen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Schule auf Inklusion setzt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Gleichheit",
+					"summary": "alle werden gleich behandelt",
+					"explain": {
+						"entryId": "Gleichheit",
+						"headword": "Gleichheit",
+						"pronunciation": {
+							"display": "GLYKH-hite",
+							"ipaUK": "/ˈɡlaɪ̯çhaɪ̯t/",
+							"ipaUS": "/ˈɡlaɪ̯çhaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gleichheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gleichheit: der Zustand, dass alle gleich behandelt werden",
+										"examples": [
+											"Die Verfassung garantiert die Gleichheit aller."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verfassung garantiert die Gleichheit aller.",
+							"ok": true
+						},
+						{
+							"answer": "Die Verfassung garantiert der Gleichheit aller.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verfassung die Gleichheit aller garantiert.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

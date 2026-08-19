@@ -1,493 +1,196 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizVerbs3-de",
-	"title": "Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "verbessern",
-					"summary": "etwas besser machen",
-					"explain": {
-						"entryId": "verbessern",
-						"headword": "verbessern",
-						"pronunciation": {
-							"display": "fer-BES-suhn",
-							"ipaUK": "/fɛɐ̯ˈbɛsɐn/",
-							"ipaUS": "/fɛɐ̯ˈbɛsɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "verbessern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "verbessern: etwas besser machen",
-										"examples": [
-											"Übung verbessert deine Aussprache."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Übung verbessert deine Aussprache.",
-							"ok": true
-						},
-						{
-							"answer": "Übung verbessern deine Aussprache.",
-							"ok": false
-						},
-						{
-							"answer": "Übung deine Aussprache verbessert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "steigern",
-					"summary": "größer/besser machen",
-					"explain": {
-						"entryId": "steigern",
-						"headword": "steigern",
-						"pronunciation": {
-							"display": "SHTY-guhn",
-							"ipaUK": "/ˈʃtaɪ̯ɡɐn/",
-							"ipaUS": "/ˈʃtaɪ̯ɡɐn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "steigern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "steigern: größer oder besser machen; erhöhen",
-										"examples": [
-											"Sport steigert das Wohlbefinden."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sport steigert das Wohlbefinden.",
-							"ok": true
-						},
-						{
-							"answer": "Sport steigern das Wohlbefinden.",
-							"ok": false
-						},
-						{
-							"answer": "Sport das Wohlbefinden steigert.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "entwickeln",
-					"summary": "nach und nach schaffen",
-					"explain": {
-						"entryId": "entwickeln",
-						"headword": "entwickeln",
-						"pronunciation": {
-							"display": "ent-VIK-ln",
-							"ipaUK": "/ɛntˈvɪkl̩n/",
-							"ipaUS": "/ɛntˈvɪkl̩n/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "entwickeln",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "entwickeln: etwas nach und nach schaffen oder verbessern",
-										"examples": [
-											"Die Firma entwickelt eine neue App."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Firma entwickelt eine neue App.",
-							"ok": true
-						},
-						{
-							"answer": "Die Firma entwickeln eine neue App.",
-							"ok": false
-						},
-						{
-							"answer": "Die Firma eine neue App entwickelt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "einbeziehen",
-					"summary": "jemanden teilhaben lassen",
-					"explain": {
-						"entryId": "einbeziehen",
-						"headword": "einbeziehen",
-						"pronunciation": {
-							"display": "INE-buh-tsee-uhn",
-							"ipaUK": "/ˈaɪ̯nbəˌtsiːən/",
-							"ipaUS": "/ˈaɪ̯nbəˌtsiːən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "einbeziehen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "einbeziehen: jemanden an etwas teilhaben lassen",
-										"examples": [
-											"Der Chef bezieht das Team in die Planung ein."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Chef bezieht das Team in die Planung ein.",
-							"ok": true
-						},
-						{
-							"answer": "Der Chef bezieht das Team in die Planung aus.",
-							"ok": false
-						},
-						{
-							"answer": "Der Chef das Team in die Planung einbezieht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "beteiligen",
-					"summary": "sich aktiv beteiligen",
-					"explain": {
-						"entryId": "beteiligen",
-						"headword": "beteiligen",
-						"pronunciation": {
-							"display": "buh-TY-li-gn",
-							"ipaUK": "/bəˈtaɪ̯lɪɡn̩/",
-							"ipaUS": "/bəˈtaɪ̯lɪɡn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (reflexiv)",
-								"grammarType": "Verb (reflexiv)",
-								"headwordLine": "beteiligen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sich beteiligen: sich an etwas aktiv beteiligen",
-										"examples": [
-											"Viele Bürger beteiligen sich an der Wahl."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Viele Bürger beteiligen sich an der Wahl.",
-							"ok": true
-						},
-						{
-							"answer": "Viele Bürger beteiligt sich an der Wahl.",
-							"ok": false
-						},
-						{
-							"answer": "Viele Bürger sich an der Wahl beteiligen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "einschließen",
-					"summary": "etwas mit dazunehmen",
-					"explain": {
-						"entryId": "einschließen",
-						"headword": "einschließen",
-						"pronunciation": {
-							"display": "INE-shlee-sn",
-							"ipaUK": "/ˈaɪ̯nˌʃliːsn̩/",
-							"ipaUS": "/ˈaɪ̯nˌʃliːsn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "einschließen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "einschließen: etwas mit dazunehmen",
-										"examples": [
-											"Der Preis schließt das Frühstück ein."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Preis schließt das Frühstück ein.",
-							"ok": true
-						},
-						{
-							"answer": "Der Preis schließt das Frühstück aus.",
-							"ok": false
-						},
-						{
-							"answer": "Der Preis das Frühstück einschließt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "empfehlen",
-					"summary": "jemandem etwas raten",
-					"explain": {
-						"entryId": "empfehlen",
-						"headword": "empfehlen",
-						"pronunciation": {
-							"display": "emp-FAY-lun",
-							"ipaUK": "/ɛmˈpfeːlən/",
-							"ipaUS": "/ɛmˈpfeːlən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "empfehlen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "empfehlen: jemandem etwas raten oder vorschlagen",
-										"examples": [
-											"Ich empfehle dir dieses Buch."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich empfehle dir dieses Buch.",
-							"ok": true
-						},
-						{
-							"answer": "Ich empfiehlt dir dieses Buch.",
-							"ok": false
-						},
-						{
-							"answer": "Ich dir dieses Buch empfehle.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "vorschlagen",
-					"summary": "eine Idee nennen",
-					"explain": {
-						"entryId": "vorschlagen",
-						"headword": "vorschlagen",
-						"pronunciation": {
-							"display": "FOR-shlah-gn",
-							"ipaUK": "/ˈfoːɐ̯ˌʃlaːɡn̩/",
-							"ipaUS": "/ˈfoːɐ̯ˌʃlaːɡn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "vorschlagen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "vorschlagen: eine Idee nennen",
-										"examples": [
-											"Ich schlage einen anderen Termin vor."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich schlage einen anderen Termin vor.",
-							"ok": true
-						},
-						{
-							"answer": "Ich schlage einen anderen Termin auf.",
-							"ok": false
-						},
-						{
-							"answer": "Ich vorschlage einen anderen Termin.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "raten",
-					"summary": "jemandem einen Rat geben",
-					"explain": {
-						"entryId": "raten",
-						"headword": "raten",
-						"pronunciation": {
-							"display": "RAH-tn",
-							"ipaUK": "/ˈʁaːtn̩/",
-							"ipaUS": "/ˈʁaːtn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb",
-								"grammarType": "Verb",
-								"headwordLine": "raten",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "raten: jemandem sagen, was er tun soll",
-										"examples": [
-											"Ich rate dir, mehr zu schlafen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich rate dir, mehr zu schlafen.",
-							"ok": true
-						},
-						{
-							"answer": "Ich rate dich, mehr zu schlafen.",
-							"ok": false
-						},
-						{
-							"answer": "Ich dir rate, mehr zu schlafen.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizVerbs3-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "verbessern",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "verbessern – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "steigern",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "steigern – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "entwickeln",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "entwickeln – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "einbeziehen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "einbeziehen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "beteiligen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "beteiligen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "einschließen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "einschließen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "empfehlen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "empfehlen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "vorschlagen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "vorschlagen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "raten",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "raten – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

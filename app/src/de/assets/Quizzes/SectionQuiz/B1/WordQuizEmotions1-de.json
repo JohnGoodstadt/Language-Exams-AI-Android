@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizEmotions1-de",
-	"title": "Emotions",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Ehrgeiz",
-					"summary": "starker Wunsch nach Erfolg",
-					"explain": {
-						"entryId": "Ehrgeiz",
-						"headword": "Ehrgeiz",
-						"pronunciation": {
-							"display": "AIR-guyts",
-							"ipaUK": "/ˈeːɐ̯ɡaɪ̯ts/",
-							"ipaUS": "/ˈeːɐ̯ɡaɪ̯ts/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ehrgeiz",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Ehrgeiz: der starke Wunsch, erfolgreich zu sein",
-										"examples": [
-											"Sein großer Ehrgeiz treibt ihn an."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sein großer Ehrgeiz treibt ihn an.",
-							"ok": true
-						},
-						{
-							"answer": "Seine große Ehrgeiz treibt ihn an.",
-							"ok": false
-						},
-						{
-							"answer": "Sein großer Ehrgeiz ihn antreibt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Ziel",
-					"summary": "etwas, das man erreichen will",
-					"explain": {
-						"entryId": "Ziel",
-						"headword": "Ziel",
-						"pronunciation": {
-							"display": "tseel",
-							"ipaUK": "/tsiːl/",
-							"ipaUS": "/tsiːl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ziel",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Ziel: etwas, das man erreichen möchte",
-										"examples": [
-											"Er hat sein Ziel endlich erreicht."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Er hat sein Ziel endlich erreicht.",
-							"ok": true
-						},
-						{
-							"answer": "Er hat seinen Ziel endlich erreicht.",
-							"ok": false
-						},
-						{
-							"answer": "Er sein Ziel endlich erreicht hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Streben",
-					"summary": "das Bemühen um ein Ziel",
-					"explain": {
-						"entryId": "Streben",
-						"headword": "Streben",
-						"pronunciation": {
-							"display": "SHTRAY-bn",
-							"ipaUK": "/ˈʃtʁeːbn̩/",
-							"ipaUS": "/ˈʃtʁeːbn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Streben",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Streben: das starke Bemühen um ein Ziel",
-										"examples": [
-											"Sein Streben nach Wissen ist bewundernswert."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sein Streben nach Wissen ist bewundernswert.",
-							"ok": true
-						},
-						{
-							"answer": "Seine Streben nach Wissen ist bewundernswert.",
-							"ok": false
-						},
-						{
-							"answer": "Sein Streben nach Wissen bewundernswert ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Verhalten",
-					"summary": "wie sich jemand benimmt",
-					"explain": {
-						"entryId": "Verhalten",
-						"headword": "Verhalten",
-						"pronunciation": {
-							"display": "fer-HAL-tn",
-							"ipaUK": "/fɛɐ̯ˈhaltn̩/",
-							"ipaUS": "/fɛɐ̯ˈhaltn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Verhalten",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Verhalten: die Art, wie sich jemand benimmt",
-										"examples": [
-											"Sein Verhalten hat mich überrascht."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sein Verhalten hat mich überrascht.",
-							"ok": true
-						},
-						{
-							"answer": "Seine Verhalten hat mich überrascht.",
-							"ok": false
-						},
-						{
-							"answer": "Sein Verhalten mich überrascht hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Benehmen",
-					"summary": "gutes/schlechtes Benehmen",
-					"explain": {
-						"entryId": "Benehmen",
-						"headword": "Benehmen",
-						"pronunciation": {
-							"display": "buh-NAY-mn",
-							"ipaUK": "/bəˈneːmən/",
-							"ipaUS": "/bəˈneːmən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Benehmen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Benehmen: die Art, wie man sich in der Gesellschaft benimmt",
-										"examples": [
-											"Sein höfliches Benehmen fällt allen auf."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sein höfliches Benehmen fällt allen auf.",
-							"ok": true
-						},
-						{
-							"answer": "Seine höfliche Benehmen fällt allen auf.",
-							"ok": false
-						},
-						{
-							"answer": "Sein höfliches Benehmen allen auffällt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Art",
-					"summary": "die Weise, wie man etwas tut",
-					"explain": {
-						"entryId": "Art",
-						"headword": "Art",
-						"pronunciation": {
-							"display": "art",
-							"ipaUK": "/aːɐ̯t/",
-							"ipaUS": "/aːɐ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Art",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Art: die Weise, wie jemand etwas tut",
-										"examples": [
-											"Ich mag ihre freundliche Art."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich mag ihre freundliche Art.",
-							"ok": true
-						},
-						{
-							"answer": "Ich mag ihren freundlichen Art.",
-							"ok": false
-						},
-						{
-							"answer": "Ich ihre freundliche Art mag.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Selbstvertrauen",
-					"summary": "Vertrauen in eigene Fähigkeiten",
-					"explain": {
-						"entryId": "Selbstvertrauen",
-						"headword": "Selbstvertrauen",
-						"pronunciation": {
-							"display": "ZELPST-fer-trow-en",
-							"ipaUK": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/",
-							"ipaUS": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Selbstvertrauen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Selbstvertrauen: das Vertrauen in die eigenen Fähigkeiten",
-										"examples": [
-											"Durch Erfolg wächst das Selbstvertrauen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Durch Erfolg wächst das Selbstvertrauen.",
-							"ok": true
-						},
-						{
-							"answer": "Durch Erfolg wächst der Selbstvertrauen.",
-							"ok": false
-						},
-						{
-							"answer": "Durch Erfolg das Selbstvertrauen wächst.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Selbstwertgefühl",
-					"summary": "Gefühl vom eigenen Wert",
-					"explain": {
-						"entryId": "Selbstwertgefühl",
-						"headword": "Selbstwertgefühl",
-						"pronunciation": {
-							"display": "ZELPST-vairt-guh-fül",
-							"ipaUK": "/ˈzɛlpstveːɐ̯tɡəˌfyːl/",
-							"ipaUS": "/ˈzɛlpstveːɐ̯tɡəˌfyːl/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Selbstwertgefühl",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Selbstwertgefühl: das Gefühl vom eigenen Wert",
-										"examples": [
-											"Lob stärkt das Selbstwertgefühl."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Lob stärkt das Selbstwertgefühl.",
-							"ok": true
-						},
-						{
-							"answer": "Lob stärkt der Selbstwertgefühl.",
-							"ok": false
-						},
-						{
-							"answer": "Lob das Selbstwertgefühl stärkt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Selbstsicherheit",
-					"summary": "sicheres Auftreten",
-					"explain": {
-						"entryId": "Selbstsicherheit",
-						"headword": "Selbstsicherheit",
-						"pronunciation": {
-							"display": "ZELPST-zikh-uh-hite",
-							"ipaUK": "/ˈzɛlpstˌzɪçɐhaɪ̯t/",
-							"ipaUS": "/ˈzɛlpstˌzɪçɐhaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Selbstsicherheit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Selbstsicherheit: das sichere Auftreten einer Person",
-										"examples": [
-											"Mit großer Selbstsicherheit hielt sie die Rede."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mit großer Selbstsicherheit hielt sie die Rede.",
-							"ok": true
-						},
-						{
-							"answer": "Mit großem Selbstsicherheit hielt sie die Rede.",
-							"ok": false
-						},
-						{
-							"answer": "Mit großer Selbstsicherheit sie hielt die Rede.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Emotion",
-					"summary": "ein starkes Gefühl",
-					"explain": {
-						"entryId": "Emotion",
-						"headword": "Emotion",
-						"pronunciation": {
-							"display": "e-mo-TSYOHN",
-							"ipaUK": "/emoˈtsi̯oːn/",
-							"ipaUS": "/emoˈtsi̯oːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Emotion",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Emotion: ein starkes Gefühl wie Freude oder Angst",
-										"examples": [
-											"In dem Film steckt viel Emotion."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In dem Film steckt viel Emotion.",
-							"ok": true
-						},
-						{
-							"answer": "In dem Film steckt viel Emotionen.",
-							"ok": false
-						},
-						{
-							"answer": "In dem Film viel Emotion steckt.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizEmotions1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Ehrgeiz",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ehrgeiz – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Ziel",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ziel – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Streben",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Streben – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Verhalten",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Verhalten – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Benehmen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Benehmen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Art",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Art – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Selbstvertrauen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Selbstvertrauen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Selbstwertgefühl",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Selbstwertgefühl – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Selbstsicherheit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Selbstsicherheit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Emotion",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Emotion – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

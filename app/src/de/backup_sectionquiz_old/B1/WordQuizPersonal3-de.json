@@ -1,0 +1,228 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal3-de",
+	"title": "Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Meinungsumfrage",
+					"summary": "kurze Meinungsbefragung",
+					"explain": {
+						"entryId": "Meinungsumfrage",
+						"headword": "Meinungsumfrage",
+						"pronunciation": {
+							"display": "MY-noongs-oom-frah-guh",
+							"ipaUK": "/ˈmaɪ̯nʊŋsˌʔʊmfʁaːɡə/",
+							"ipaUS": "/ˈmaɪ̯nʊŋsˌʔʊmfʁaːɡə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Meinungsumfrage",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Meinungsumfrage: eine kurze Befragung zur Meinung vieler Menschen",
+										"examples": [
+											"Die Meinungsumfrage sieht die Partei vorn."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Meinungsumfrage sieht die Partei vorn.",
+							"ok": true
+						},
+						{
+							"answer": "Der Meinungsumfrage sieht die Partei vorn.",
+							"ok": false
+						},
+						{
+							"answer": "Die Meinungsumfrage die Partei vorn sieht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Titel",
+					"summary": "Wort für Beruf/Rang",
+					"explain": {
+						"entryId": "Titel",
+						"headword": "Titel",
+						"pronunciation": {
+							"display": "TEE-tl",
+							"ipaUK": "/ˈtiːtl̩/",
+							"ipaUS": "/ˈtiːtl̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Titel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Titel: ein Wort für den Beruf oder Rang einer Person",
+										"examples": [
+											"Sein offizieller Titel ist Direktor."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sein offizieller Titel ist Direktor.",
+							"ok": true
+						},
+						{
+							"answer": "Seine offizielle Titel ist Direktor.",
+							"ok": false
+						},
+						{
+							"answer": "Sein offizieller Titel Direktor ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Position",
+					"summary": "Stelle in einer Firma",
+					"explain": {
+						"entryId": "Position",
+						"headword": "Position",
+						"pronunciation": {
+							"display": "po-zi-TSYOHN",
+							"ipaUK": "/poziˈtsi̯oːn/",
+							"ipaUS": "/poziˈtsi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Position",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Position: eine bestimmte Stelle in einer Firma",
+										"examples": [
+											"Sie hat eine hohe Position in der Firma."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat eine hohe Position in der Firma.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat einen hohen Position in der Firma.",
+							"ok": false
+						},
+						{
+							"answer": "Sie eine hohe Position in der Firma hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Rang",
+					"summary": "Stufe in einer Organisation",
+					"explain": {
+						"entryId": "Rang",
+						"headword": "Rang",
+						"pronunciation": {
+							"display": "rang",
+							"ipaUK": "/ʁaŋ/",
+							"ipaUS": "/ʁaŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rang",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Rang: die Stufe, die jemand in einer Organisation hat",
+										"examples": [
+											"Er erreichte einen hohen Rang beim Militär."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er erreichte einen hohen Rang beim Militär.",
+							"ok": true
+						},
+						{
+							"answer": "Er erreichte ein hohes Rang beim Militär.",
+							"ok": false
+						},
+						{
+							"answer": "Er einen hohen Rang beim Militär erreichte.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

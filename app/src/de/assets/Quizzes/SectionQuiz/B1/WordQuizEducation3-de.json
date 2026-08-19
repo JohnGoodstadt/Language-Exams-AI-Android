@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizEducation3-de",
-	"title": "Education",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Lehrer",
-					"summary": "unterrichtet in der Schule",
-					"explain": {
-						"entryId": "Lehrer",
-						"headword": "Lehrer",
-						"pronunciation": {
-							"display": "LAY-ruh",
-							"ipaUK": "/ˈleːʁɐ/",
-							"ipaUS": "/ˈleːʁɐ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Lehrer",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Lehrer: eine Person, die in der Schule unterrichtet",
-										"examples": [
-											"Unser Lehrer erklärt die Aufgabe geduldig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Unser Lehrer erklärt die Aufgabe geduldig.",
-							"ok": true
-						},
-						{
-							"answer": "Unsere Lehrer erklärt die Aufgabe geduldig.",
-							"ok": false
-						},
-						{
-							"answer": "Unser Lehrer die Aufgabe geduldig erklärt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Beruf",
-					"summary": "die gelernte Arbeit",
-					"explain": {
-						"entryId": "Beruf",
-						"headword": "Beruf",
-						"pronunciation": {
-							"display": "buh-ROOF",
-							"ipaUK": "/bəˈʁuːf/",
-							"ipaUS": "/bəˈʁuːf/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Beruf",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Beruf: die Arbeit, die man gelernt hat und ausübt",
-										"examples": [
-											"Sie übt einen interessanten Beruf aus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie übt einen interessanten Beruf aus.",
-							"ok": true
-						},
-						{
-							"answer": "Sie übt ein interessantes Beruf aus.",
-							"ok": false
-						},
-						{
-							"answer": "Sie einen interessanten Beruf ausübt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Karriere",
-					"summary": "berufliche Entwicklung",
-					"explain": {
-						"entryId": "Karriere",
-						"headword": "Karriere",
-						"pronunciation": {
-							"display": "ka-ri-AY-ruh",
-							"ipaUK": "/kaˈʁi̯eːʁə/",
-							"ipaUS": "/kaˈʁi̯eːʁə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Karriere",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Karriere: die berufliche Entwicklung im Leben",
-										"examples": [
-											"Sie hat eine beeindruckende Karriere gemacht."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie hat eine beeindruckende Karriere gemacht.",
-							"ok": true
-						},
-						{
-							"answer": "Sie hat einen beeindruckenden Karriere gemacht.",
-							"ok": false
-						},
-						{
-							"answer": "Sie eine beeindruckende Karriere gemacht hat.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Tätigkeit",
-					"summary": "die ausgeübte Arbeit",
-					"explain": {
-						"entryId": "Tätigkeit",
-						"headword": "Tätigkeit",
-						"pronunciation": {
-							"display": "TAY-tikh-kite",
-							"ipaUK": "/ˈtɛːtɪçkaɪ̯t/",
-							"ipaUS": "/ˈtɛːtɪçkaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Tätigkeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Tätigkeit: die Arbeit oder Aufgabe, die man ausübt",
-										"examples": [
-											"Diese Tätigkeit macht mir großen Spaß."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Diese Tätigkeit macht mir großen Spaß.",
-							"ok": true
-						},
-						{
-							"answer": "Dieser Tätigkeit macht mir großen Spaß.",
-							"ok": false
-						},
-						{
-							"answer": "Diese Tätigkeit mir großen Spaß macht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Qualifikation",
-					"summary": "Fähigkeit/Abschluss für den Beruf",
-					"explain": {
-						"entryId": "Qualifikation",
-						"headword": "Qualifikation",
-						"pronunciation": {
-							"display": "kva-li-fi-ka-TSYOHN",
-							"ipaUK": "/kvalifikaˈtsi̯oːn/",
-							"ipaUS": "/kvalifikaˈtsi̯oːn/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Qualifikation",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Qualifikation: eine Fähigkeit oder ein Abschluss für einen Beruf",
-										"examples": [
-											"Für den Job fehlt ihm die richtige Qualifikation."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Für den Job fehlt ihm die richtige Qualifikation.",
-							"ok": true
-						},
-						{
-							"answer": "Für den Job fehlt ihm der richtige Qualifikation.",
-							"ok": false
-						},
-						{
-							"answer": "Für den Job ihm fehlt die richtige Qualifikation.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Erfahrung",
-					"summary": "Wissen aus der Praxis",
-					"explain": {
-						"entryId": "Erfahrung",
-						"headword": "Erfahrung",
-						"pronunciation": {
-							"display": "er-FAH-roong",
-							"ipaUK": "/ɛɐ̯ˈfaːʁʊŋ/",
-							"ipaUS": "/ɛɐ̯ˈfaːʁʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Erfahrung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Erfahrung: Wissen und Können, das man in der Praxis sammelt",
-										"examples": [
-											"Für die Stelle braucht man viel Erfahrung."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Für die Stelle braucht man viel Erfahrung.",
-							"ok": true
-						},
-						{
-							"answer": "Für die Stelle braucht man viele Erfahrung.",
-							"ok": false
-						},
-						{
-							"answer": "Für die Stelle man braucht viel Erfahrung.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Fähigkeit",
-					"summary": "etwas, das man gut kann",
-					"explain": {
-						"entryId": "Fähigkeit",
-						"headword": "Fähigkeit",
-						"pronunciation": {
-							"display": "FAY-ikh-kite",
-							"ipaUK": "/ˈfɛːɪçkaɪ̯t/",
-							"ipaUS": "/ˈfɛːɪçkaɪ̯t/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Fähigkeit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Fähigkeit: etwas, das man gut kann",
-										"examples": [
-											"Sie hat die Fähigkeit, gut zuzuhören."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie hat die Fähigkeit, gut zuzuhören.",
-							"ok": true
-						},
-						{
-							"answer": "Sie hat der Fähigkeit, gut zuzuhören.",
-							"ok": false
-						},
-						{
-							"answer": "Sie die Fähigkeit hat, gut zuzuhören.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Seminar",
-					"summary": "Uni-Kurs mit Mitarbeit",
-					"explain": {
-						"entryId": "Seminar",
-						"headword": "Seminar",
-						"pronunciation": {
-							"display": "ze-mi-NAR",
-							"ipaUK": "/zemiˈnaːɐ̯/",
-							"ipaUS": "/zemiˈnaːɐ̯/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Seminar",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Seminar: ein Kurs an der Uni mit aktiver Mitarbeit",
-										"examples": [
-											"Das Seminar behandelt moderne Kunst."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Seminar behandelt moderne Kunst.",
-							"ok": true
-						},
-						{
-							"answer": "Der Seminar behandelt moderne Kunst.",
-							"ok": false
-						},
-						{
-							"answer": "Das Seminar moderne Kunst behandelt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Workshop",
-					"summary": "praktischer Kurs in kleiner Gruppe",
-					"explain": {
-						"entryId": "Workshop",
-						"headword": "Workshop",
-						"pronunciation": {
-							"display": "VÖRK-shop",
-							"ipaUK": "/ˈvøːɐ̯kʃɔp/",
-							"ipaUS": "/ˈvøːɐ̯kʃɔp/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Workshop",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Workshop: ein kurzer, praktischer Kurs in kleiner Gruppe",
-										"examples": [
-											"Am Samstag gibt es einen Workshop zur Fotografie."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Samstag gibt es einen Workshop zur Fotografie.",
-							"ok": true
-						},
-						{
-							"answer": "Am Samstag gibt es ein Workshop zur Fotografie.",
-							"ok": false
-						},
-						{
-							"answer": "Am Samstag es gibt einen Workshop zur Fotografie.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Konferenz",
-					"summary": "großes Fachtreffen",
-					"explain": {
-						"entryId": "Konferenz",
-						"headword": "Konferenz",
-						"pronunciation": {
-							"display": "kon-fe-RENTS",
-							"ipaUK": "/kɔnfeˈʁɛnts/",
-							"ipaUS": "/kɔnfeˈʁɛnts/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Konferenz",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Konferenz: ein großes Treffen zu einem Fachthema",
-										"examples": [
-											"Nächste Woche findet eine wichtige Konferenz statt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nächste Woche findet eine wichtige Konferenz statt.",
-							"ok": true
-						},
-						{
-							"answer": "Nächste Woche findet einen wichtigen Konferenz statt.",
-							"ok": false
-						},
-						{
-							"answer": "Nächste Woche eine wichtige Konferenz findet statt.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizEducation3-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Lehrer",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Lehrer – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Beruf",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Beruf – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Karriere",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Karriere – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Tätigkeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Tätigkeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Qualifikation",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Qualifikation – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Erfahrung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Erfahrung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Fähigkeit",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Fähigkeit – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Seminar",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Seminar – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Workshop",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Workshop – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Konferenz",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Konferenz – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

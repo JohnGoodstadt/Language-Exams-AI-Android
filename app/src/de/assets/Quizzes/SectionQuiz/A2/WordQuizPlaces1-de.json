@@ -1,864 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizPlaces1-de",
-	"title": "Places",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Bahnhof",
-					"summary": "dort halten Züge",
-					"explain": {
-						"entryId": "Bahnhof",
-						"headword": "Bahnhof",
-						"pronunciation": {
-							"display": "BAHN-hohf",
-							"ipaUK": "/ˈbaːnˌhoːf/",
-							"ipaUS": "/ˈbaːnˌhoːf/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Bahnhof",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Ort, an dem Züge halten",
-										"examples": [
-											"Der Bahnhof ist gleich um die Ecke."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Bahnhof ist gleich um die Ecke.",
-							"ok": true
-						},
-						{
-							"answer": "Die Bahnhof ist gleich um die Ecke.",
-							"ok": false
-						},
-						{
-							"answer": "Der Bahnhof gleich um die Ecke ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Haltestelle",
-					"summary": "wo Bus/Bahn hält",
-					"explain": {
-						"entryId": "Haltestelle",
-						"headword": "Haltestelle",
-						"pronunciation": {
-							"display": "HAL-tuh-shtel-uh",
-							"ipaUK": "/ˈhaltəˌʃtɛlə/",
-							"ipaUS": "/ˈhaltəˌʃtɛlə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Haltestelle",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wo Bus oder Bahn hält",
-										"examples": [
-											"An der Haltestelle warten viele Leute."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Haltestelle warten viele Leute.",
-							"ok": true
-						},
-						{
-							"answer": "An dem Haltestelle warten viele Leute.",
-							"ok": false
-						},
-						{
-							"answer": "An der Haltestelle viele Leute warten.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Kreuzung",
-					"summary": "wo Straßen sich treffen",
-					"explain": {
-						"entryId": "Kreuzung",
-						"headword": "Kreuzung",
-						"pronunciation": {
-							"display": "KROY-tsoong",
-							"ipaUK": "/ˈkʁɔɪ̯tsʊŋ/",
-							"ipaUS": "/ˈkʁɔɪ̯tsʊŋ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Kreuzung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wo sich zwei Straßen treffen",
-										"examples": [
-											"An der Kreuzung musst du links fahren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Kreuzung musst du links fahren.",
-							"ok": true
-						},
-						{
-							"answer": "An dem Kreuzung musst du links fahren.",
-							"ok": false
-						},
-						{
-							"answer": "An der Kreuzung du musst links fahren.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "geradeaus",
-					"summary": "nach vorne, ohne abzubiegen",
-					"explain": {
-						"entryId": "geradeaus",
-						"headword": "geradeaus",
-						"pronunciation": {
-							"display": "guh-rah-duh-OWS",
-							"ipaUK": "/ɡəˌʁaːdəˈʔaʊ̯s/",
-							"ipaUS": "/ɡəˌʁaːdəˈʔaʊ̯s/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adverb",
-								"grammarType": "Adverb",
-								"headwordLine": "geradeaus",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "in einer geraden Linie nach vorne",
-										"examples": [
-											"Gehen Sie immer geradeaus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Gehen Sie immer geradeaus.",
-							"ok": true
-						},
-						{
-							"answer": "Gehen Sie immer geradeause.",
-							"ok": false
-						},
-						{
-							"answer": "Gehen immer Sie geradeaus.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "links",
-					"summary": "auf der linken Seite",
-					"explain": {
-						"entryId": "links",
-						"headword": "links",
-						"pronunciation": {
-							"display": "links",
-							"ipaUK": "/lɪŋks/",
-							"ipaUS": "/lɪŋks/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adverb",
-								"grammarType": "Adverb",
-								"headwordLine": "links",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "auf der linken Seite",
-										"examples": [
-											"An der Ampel gehst du nach links."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Ampel gehst du nach links.",
-							"ok": true
-						},
-						{
-							"answer": "An der Ampel gehst du nach linke.",
-							"ok": false
-						},
-						{
-							"answer": "An der Ampel du gehst nach links.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "rechts",
-					"summary": "auf der rechten Seite",
-					"explain": {
-						"entryId": "rechts",
-						"headword": "rechts",
-						"pronunciation": {
-							"display": "rekhts",
-							"ipaUK": "/ʁɛçts/",
-							"ipaUS": "/ʁɛçts/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adverb",
-								"grammarType": "Adverb",
-								"headwordLine": "rechts",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "auf der rechten Seite",
-										"examples": [
-											"An der Kreuzung fährst du nach rechts."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Kreuzung fährst du nach rechts.",
-							"ok": true
-						},
-						{
-							"answer": "An der Kreuzung fährst du nach rechte.",
-							"ok": false
-						},
-						{
-							"answer": "An der Kreuzung du fährst nach rechts.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "abbiegen",
-					"summary": "die Richtung ändern",
-					"explain": {
-						"entryId": "abbiegen",
-						"headword": "abbiegen",
-						"pronunciation": {
-							"display": "AP-bee-gn",
-							"ipaUK": "/ˈapˌbiːɡn̩/",
-							"ipaUS": "/ˈapˌbiːɡn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (trennbar)",
-								"grammarType": "Verb (trennbar)",
-								"headwordLine": "abbiegen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Richtung ändern (nach links/rechts)",
-										"examples": [
-											"An der Ampel biegen wir links ab."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Ampel biegen wir links ab.",
-							"ok": true
-						},
-						{
-							"answer": "An der Ampel biegen wir links auf.",
-							"ok": false
-						},
-						{
-							"answer": "An der Ampel wir biegen links ab.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Richtung",
-					"summary": "wohin etwas führt",
-					"explain": {
-						"entryId": "Richtung",
-						"headword": "Richtung",
-						"pronunciation": {
-							"display": "RIKH-toong",
-							"ipaUK": "/ˈʁɪçtʊŋ/",
-							"ipaUS": "/ˈʁɪçtʊŋ/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Richtung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wohin etwas führt oder zeigt",
-										"examples": [
-											"In welche Richtung muss ich gehen?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In welche Richtung muss ich gehen?",
-							"ok": true
-						},
-						{
-							"answer": "In welchen Richtung muss ich gehen?",
-							"ok": false
-						},
-						{
-							"answer": "In welche Richtung ich muss gehen?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "in der Nähe",
-					"summary": "nicht weit weg",
-					"explain": {
-						"entryId": "in der Nähe",
-						"headword": "in der Nähe",
-						"pronunciation": {
-							"display": "in dair NAY-uh",
-							"ipaUK": "/ɪn deːɐ̯ ˈnɛːə/",
-							"ipaUS": "/ɪn deːɐ̯ ˈnɛːə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Redewendung",
-								"grammarType": "Redewendung",
-								"headwordLine": "in der Nähe",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "nicht weit weg; ganz nah",
-										"examples": [
-											"Gibt es ein Café in der Nähe?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Gibt es ein Café in der Nähe?",
-							"ok": true
-						},
-						{
-							"answer": "Gibt es ein Café in die Nähe?",
-							"ok": false
-						},
-						{
-							"answer": "Gibt es ein Café in der Nahe?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Ampel",
-					"summary": "rot-gelb-grün für Verkehr",
-					"explain": {
-						"entryId": "Ampel",
-						"headword": "Ampel",
-						"pronunciation": {
-							"display": "AM-pl",
-							"ipaUK": "/ˈampl̩/",
-							"ipaUS": "/ˈampl̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ampel",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "zeigt rot, gelb, grün für den Verkehr",
-										"examples": [
-											"Die Ampel ist gerade rot."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Ampel ist gerade rot.",
-							"ok": true
-						},
-						{
-							"answer": "Der Ampel ist gerade rot.",
-							"ok": false
-						},
-						{
-							"answer": "Die Ampel gerade rot ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 11,
-					"question": "Ecke",
-					"summary": "wo zwei Seiten zusammentreffen",
-					"explain": {
-						"entryId": "Ecke",
-						"headword": "Ecke",
-						"pronunciation": {
-							"display": "EK-uh",
-							"ipaUK": "/ˈɛkə/",
-							"ipaUS": "/ˈɛkə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ecke",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wo zwei Straßen oder Wände zusammentreffen",
-										"examples": [
-											"Der Laden ist an der nächsten Ecke."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Laden ist an der nächsten Ecke.",
-							"ok": true
-						},
-						{
-							"answer": "Der Laden ist an dem nächsten Ecke.",
-							"ok": false
-						},
-						{
-							"answer": "Der Laden an der nächsten Ecke ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 12,
-					"question": "Brücke",
-					"summary": "führt über Fluss/Straße",
-					"explain": {
-						"entryId": "Brücke",
-						"headword": "Brücke",
-						"pronunciation": {
-							"display": "BRÜ-kuh",
-							"ipaUK": "/ˈbʁʏkə/",
-							"ipaUS": "/ˈbʁʏkə/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Brücke",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "führt über einen Fluss oder eine Straße",
-										"examples": [
-											"Wir gehen über die Brücke."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir gehen über die Brücke.",
-							"ok": true
-						},
-						{
-							"answer": "Wir gehen über der Brücke.",
-							"ok": false
-						},
-						{
-							"answer": "Wir über die Brücke gehen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 13,
-					"question": "Weg",
-					"summary": "wie man irgendwohin kommt",
-					"explain": {
-						"entryId": "Weg",
-						"headword": "Weg",
-						"pronunciation": {
-							"display": "vayk",
-							"ipaUK": "/veːk/",
-							"ipaUS": "/veːk/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Weg",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "wie man zu einem Ort kommt; eine Strecke",
-										"examples": [
-											"Kannst du mir den Weg zeigen?"
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Kannst du mir den Weg zeigen?",
-							"ok": true
-						},
-						{
-							"answer": "Kannst du mir die Weg zeigen?",
-							"ok": false
-						},
-						{
-							"answer": "Kannst du mir den Weg zeige?",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 14,
-					"question": "weit",
-					"summary": "nicht nah; große Entfernung",
-					"explain": {
-						"entryId": "weit",
-						"headword": "weit",
-						"pronunciation": {
-							"display": "vite",
-							"ipaUK": "/vaɪ̯t/",
-							"ipaUS": "/vaɪ̯t/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "weit",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "eine große Entfernung; nicht nah",
-										"examples": [
-											"Der Supermarkt ist nicht weit von hier."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Supermarkt ist nicht weit von hier.",
-							"ok": true
-						},
-						{
-							"answer": "Der Supermarkt ist nicht weite von hier.",
-							"ok": false
-						},
-						{
-							"answer": "Der Supermarkt nicht weit von hier ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 15,
-					"question": "Zentrum",
-					"summary": "die Mitte der Stadt",
-					"explain": {
-						"entryId": "Zentrum",
-						"headword": "Zentrum",
-						"pronunciation": {
-							"display": "TSEN-troom",
-							"ipaUK": "/ˈtsɛntʁʊm/",
-							"ipaUS": "/ˈtsɛntʁʊm/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Zentrum",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Mitte der Stadt",
-										"examples": [
-											"Wir wohnen mitten im Zentrum."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Wir wohnen mitten im Zentrum.",
-							"ok": true
-						},
-						{
-							"answer": "Wir wohnen mitten in der Zentrum.",
-							"ok": false
-						},
-						{
-							"answer": "Wir mitten im Zentrum wohnen.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 16,
-					"question": "sich verlaufen",
-					"summary": "den Weg verlieren",
-					"explain": {
-						"entryId": "sich verlaufen",
-						"headword": "sich verlaufen",
-						"pronunciation": {
-							"display": "zikh fer-LOW-fn",
-							"ipaUK": "/zɪç fɛɐ̯ˈlaʊ̯fn̩/",
-							"ipaUS": "/zɪç fɛɐ̯ˈlaʊ̯fn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Verb (reflexiv)",
-								"grammarType": "Verb (reflexiv)",
-								"headwordLine": "sich verlaufen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "den Weg verlieren; sich verirren",
-										"examples": [
-											"In der großen Stadt habe ich mich verlaufen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "In der großen Stadt habe ich mich verlaufen.",
-							"ok": true
-						},
-						{
-							"answer": "In der großen Stadt habe ich mir verlaufen.",
-							"ok": false
-						},
-						{
-							"answer": "In der großen Stadt ich habe mich verlaufen.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPlaces1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Bahnhof",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Bahnhof – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Haltestelle",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Haltestelle – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Kreuzung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Kreuzung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "geradeaus",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "geradeaus – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "links",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "links – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "rechts",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "rechts – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "abbiegen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "abbiegen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Richtung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Richtung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "in der Nähe",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "in der Nähe – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Ampel",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ampel – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

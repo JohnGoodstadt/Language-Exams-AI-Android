@@ -1,493 +1,196 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizAdjectives3-de",
-	"title": "Adjectives",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "habgierig",
-					"summary": "voller Gier",
-					"explain": {
-						"entryId": "habgierig",
-						"headword": "habgierig",
-						"pronunciation": {
-							"display": "HAHP-gee-rikh",
-							"ipaUK": "/ˈhaːpˌɡiːʁɪç/",
-							"ipaUS": "/ˈhaːpˌɡiːʁɪç/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "habgierig",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "habgierig: voller Gier nach Besitz",
-										"examples": [
-											"Der Händler war unglaublich habgierig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Händler war unglaublich habgierig.",
-							"ok": true
-						},
-						{
-							"answer": "Der Händler war unglaublich habgierige.",
-							"ok": false
-						},
-						{
-							"answer": "Der Händler unglaublich habgierig war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "bange",
-					"summary": "voller Sorge/Angst",
-					"explain": {
-						"entryId": "bange",
-						"headword": "bange",
-						"pronunciation": {
-							"display": "BANG-uh",
-							"ipaUK": "/ˈbaŋə/",
-							"ipaUS": "/ˈbaŋə/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "bange",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "bange: voller Sorge und Angst vor etwas",
-										"examples": [
-											"Vor dem Ergebnis war ihr ganz bange."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Vor dem Ergebnis war ihr ganz bange.",
-							"ok": true
-						},
-						{
-							"answer": "Vor dem Ergebnis war ihr ganz banges.",
-							"ok": false
-						},
-						{
-							"answer": "Vor dem Ergebnis ihr war ganz bange.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "angespannt",
-					"summary": "voller Anspannung",
-					"explain": {
-						"entryId": "angespannt",
-						"headword": "angespannt",
-						"pronunciation": {
-							"display": "AN-guh-shpant",
-							"ipaUK": "/ˈanɡəˌʃpant/",
-							"ipaUS": "/ˈanɡəˌʃpant/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "angespannt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "angespannt: voller Anspannung; nicht locker",
-										"examples": [
-											"Vor dem Ergebnis war die Stimmung angespannt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Vor dem Ergebnis war die Stimmung angespannt.",
-							"ok": true
-						},
-						{
-							"answer": "Vor dem Ergebnis war die Stimmung angespannte.",
-							"ok": false
-						},
-						{
-							"answer": "Vor dem Ergebnis die Stimmung angespannt war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "geduldig",
-					"summary": "voller Geduld",
-					"explain": {
-						"entryId": "geduldig",
-						"headword": "geduldig",
-						"pronunciation": {
-							"display": "guh-DOOL-dikh",
-							"ipaUK": "/ɡəˈdʊldɪç/",
-							"ipaUS": "/ɡəˈdʊldɪç/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "geduldig",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "geduldig: voller Geduld; ruhig wartend",
-										"examples": [
-											"Die Lehrerin blieb immer geduldig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Lehrerin blieb immer geduldig.",
-							"ok": true
-						},
-						{
-							"answer": "Die Lehrerin blieb immer geduldige.",
-							"ok": false
-						},
-						{
-							"answer": "Die Lehrerin immer geduldig blieb.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "tolerant",
-					"summary": "andere akzeptierend",
-					"explain": {
-						"entryId": "tolerant",
-						"headword": "tolerant",
-						"pronunciation": {
-							"display": "to-le-RANT",
-							"ipaUK": "/toləˈʁant/",
-							"ipaUS": "/toləˈʁant/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "tolerant",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "tolerant: andere Meinungen akzeptierend",
-										"examples": [
-											"Gegenüber anderen Kulturen ist sie sehr tolerant."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Gegenüber anderen Kulturen ist sie sehr tolerant.",
-							"ok": true
-						},
-						{
-							"answer": "Gegenüber anderen Kulturen ist sie sehr tolerante.",
-							"ok": false
-						},
-						{
-							"answer": "Gegenüber anderen Kulturen sie ist sehr tolerant.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "ruhig",
-					"summary": "nicht aufgeregt",
-					"explain": {
-						"entryId": "ruhig",
-						"headword": "ruhig",
-						"pronunciation": {
-							"display": "ROO-ikh",
-							"ipaUK": "/ˈʁuːɪç/",
-							"ipaUS": "/ˈʁuːɪç/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "ruhig",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "ruhig: nicht aufgeregt; gelassen",
-										"examples": [
-											"Trotz des Lärms blieb sie ganz ruhig."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Trotz des Lärms blieb sie ganz ruhig.",
-							"ok": true
-						},
-						{
-							"answer": "Trotz des Lärms blieb sie ganz ruhige.",
-							"ok": false
-						},
-						{
-							"answer": "Trotz des Lärms sie blieb ganz ruhig.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "entspannt",
-					"summary": "locker, ruhig",
-					"explain": {
-						"entryId": "entspannt",
-						"headword": "entspannt",
-						"pronunciation": {
-							"display": "ent-SHPANT",
-							"ipaUK": "/ɛntˈʃpant/",
-							"ipaUS": "/ɛntˈʃpant/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "entspannt",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "entspannt: locker und ruhig",
-										"examples": [
-											"Nach dem Urlaub war er ganz entspannt."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Nach dem Urlaub war er ganz entspannt.",
-							"ok": true
-						},
-						{
-							"answer": "Nach dem Urlaub war er ganz entspannte.",
-							"ok": false
-						},
-						{
-							"answer": "Nach dem Urlaub er war ganz entspannt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "friedlich",
-					"summary": "ohne Streit",
-					"explain": {
-						"entryId": "friedlich",
-						"headword": "friedlich",
-						"pronunciation": {
-							"display": "FREET-likh",
-							"ipaUK": "/ˈfʁiːtlɪç/",
-							"ipaUS": "/ˈfʁiːtlɪç/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "friedlich",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "friedlich: ohne Streit; ruhig",
-										"examples": [
-											"Der Abend war ruhig und friedlich."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Abend war ruhig und friedlich.",
-							"ok": true
-						},
-						{
-							"answer": "Der Abend war ruhig und friedliche.",
-							"ok": false
-						},
-						{
-							"answer": "Der Abend ruhig und friedlich war.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "gelassen",
-					"summary": "ruhig, ausgeglichen",
-					"explain": {
-						"entryId": "gelassen",
-						"headword": "gelassen",
-						"pronunciation": {
-							"display": "guh-LAH-sn",
-							"ipaUK": "/ɡəˈlasn̩/",
-							"ipaUS": "/ɡəˈlasn̩/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Adjektiv",
-								"grammarType": "Adjektiv",
-								"headwordLine": "gelassen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "gelassen: ruhig und ausgeglichen",
-										"examples": [
-											"Auch bei Stress bleibt er gelassen."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Auch bei Stress bleibt er gelassen.",
-							"ok": true
-						},
-						{
-							"answer": "Auch bei Stress bleibt er gelassene.",
-							"ok": false
-						},
-						{
-							"answer": "Auch bei Stress er bleibt gelassen.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizAdjectives3-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "habgierig",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "habgierig – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "bange",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "bange – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "angespannt",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "angespannt – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "geduldig",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "geduldig – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "tolerant",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "tolerant – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "ruhig",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "ruhig – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "entspannt",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "entspannt – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "friedlich",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "friedlich – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "gelassen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "gelassen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

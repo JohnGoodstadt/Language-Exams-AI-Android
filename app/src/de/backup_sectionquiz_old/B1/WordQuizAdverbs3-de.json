@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs3-de",
+	"title": "Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "eventuell",
+					"summary": "unter Umständen",
+					"explain": {
+						"entryId": "eventuell",
+						"headword": "eventuell",
+						"pronunciation": {
+							"display": "e-ven-tu-EL",
+							"ipaUK": "/evɛntuˈɛl/",
+							"ipaUS": "/evɛntuˈɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "eventuell",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eventuell: möglicherweise; unter Umständen",
+										"examples": [
+											"Eventuell komme ich etwas später."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eventuell komme ich etwas später.",
+							"ok": true
+						},
+						{
+							"answer": "Eventuelle komme ich etwas später.",
+							"ok": false
+						},
+						{
+							"answer": "Eventuell ich komme etwas später.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "relativ",
+					"summary": "verhältnismäßig",
+					"explain": {
+						"entryId": "relativ",
+						"headword": "relativ",
+						"pronunciation": {
+							"display": "re-la-TEEF",
+							"ipaUK": "/ʁelaˈtiːf/",
+							"ipaUS": "/ʁelaˈtiːf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "relativ",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "relativ: verhältnismäßig; im Vergleich",
+										"examples": [
+											"Die Aufgabe war relativ einfach."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Aufgabe war relativ einfach.",
+							"ok": true
+						},
+						{
+							"answer": "Die Aufgabe war relative einfach.",
+							"ok": false
+						},
+						{
+							"answer": "Die Aufgabe relativ einfach war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "vergleichsweise",
+					"summary": "im Vergleich",
+					"explain": {
+						"entryId": "vergleichsweise",
+						"headword": "vergleichsweise",
+						"pronunciation": {
+							"display": "fer-GLYKHS-vy-zuh",
+							"ipaUK": "/fɛɐ̯ˈɡlaɪ̯çsˌvaɪ̯zə/",
+							"ipaUS": "/fɛɐ̯ˈɡlaɪ̯çsˌvaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "vergleichsweise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "vergleichsweise: im Vergleich; verhältnismäßig",
+										"examples": [
+											"Die Miete ist hier vergleichsweise günstig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Miete ist hier vergleichsweise günstig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Miete ist hier vergleichsweises günstig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Miete hier vergleichsweise günstig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "mäßig",
+					"summary": "in mittlerem Maße",
+					"explain": {
+						"entryId": "mäßig",
+						"headword": "mäßig",
+						"pronunciation": {
+							"display": "MAY-sikh",
+							"ipaUK": "/ˈmɛːsɪç/",
+							"ipaUS": "/ˈmɛːsɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "mäßig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mäßig: in mittlerem Maße; nicht zu stark",
+										"examples": [
+											"Das Konzert war nur mäßig besucht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Konzert war nur mäßig besucht.",
+							"ok": true
+						},
+						{
+							"answer": "Das Konzert war nur mäßige besucht.",
+							"ok": false
+						},
+						{
+							"answer": "Das Konzert nur mäßig besucht war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "plötzlich",
+					"summary": "schnell, unerwartet",
+					"explain": {
+						"entryId": "plötzlich",
+						"headword": "plötzlich",
+						"pronunciation": {
+							"display": "PLÖTS-likh",
+							"ipaUK": "/ˈplœtslɪç/",
+							"ipaUS": "/ˈplœtslɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "plötzlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "plötzlich: ganz schnell und unerwartet",
+										"examples": [
+											"Plötzlich ging das Licht aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Plötzlich ging das Licht aus.",
+							"ok": true
+						},
+						{
+							"answer": "Plötzliche ging das Licht aus.",
+							"ok": false
+						},
+						{
+							"answer": "Plötzlich das Licht ging aus.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "abrupt",
+					"summary": "unvermittelt",
+					"explain": {
+						"entryId": "abrupt",
+						"headword": "abrupt",
+						"pronunciation": {
+							"display": "a-PROOPT",
+							"ipaUK": "/aˈpʁʊpt/",
+							"ipaUS": "/aˈpʁʊpt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "abrupt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "abrupt: unvermittelt und schroff",
+										"examples": [
+											"Das Gespräch endete ganz abrupt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Gespräch endete ganz abrupt.",
+							"ok": true
+						},
+						{
+							"answer": "Das Gespräch endete ganz abrupte.",
+							"ok": false
+						},
+						{
+							"answer": "Das Gespräch ganz abrupt endete.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "unerwartet",
+					"summary": "ohne Vorwarnung",
+					"explain": {
+						"entryId": "unerwartet",
+						"headword": "unerwartet",
+						"pronunciation": {
+							"display": "OON-er-var-tet",
+							"ipaUK": "/ˈʊnʔɛɐ̯ˌvaʁtət/",
+							"ipaUS": "/ˈʊnʔɛɐ̯ˌvaʁtət/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "unerwartet",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "unerwartet: ohne dass man damit rechnet",
+										"examples": [
+											"Unerwartet kam Besuch vorbei."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unerwartet kam Besuch vorbei.",
+							"ok": true
+						},
+						{
+							"answer": "Unerwartete kam Besuch vorbei.",
+							"ok": false
+						},
+						{
+							"answer": "Unerwartet Besuch kam vorbei.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "wirklich",
+					"summary": "tatsächlich",
+					"explain": {
+						"entryId": "wirklich",
+						"headword": "wirklich",
+						"pronunciation": {
+							"display": "VIRK-likh",
+							"ipaUK": "/ˈvɪʁklɪç/",
+							"ipaUS": "/ˈvɪʁklɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "wirklich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wirklich: tatsächlich; echt",
+										"examples": [
+											"Ich bin wirklich froh darüber."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin wirklich froh darüber.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin wirkliche froh darüber.",
+							"ok": false
+						},
+						{
+							"answer": "Ich wirklich bin froh darüber.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "echt",
+					"summary": "wirklich, ehrlich",
+					"explain": {
+						"entryId": "echt",
+						"headword": "echt",
+						"pronunciation": {
+							"display": "ekht",
+							"ipaUK": "/ɛçt/",
+							"ipaUS": "/ɛçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "echt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "echt: wirklich; ehrlich gemeint",
+										"examples": [
+											"Das Essen war echt lecker."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Essen war echt lecker.",
+							"ok": true
+						},
+						{
+							"answer": "Das Essen war echte lecker.",
+							"ok": false
+						},
+						{
+							"answer": "Das Essen echt lecker war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "aufrichtig",
+					"summary": "ehrlich gemeint",
+					"explain": {
+						"entryId": "aufrichtig",
+						"headword": "aufrichtig",
+						"pronunciation": {
+							"display": "OWF-rikh-tikh",
+							"ipaUK": "/ˈaʊ̯fʁɪçtɪç/",
+							"ipaUS": "/ˈaʊ̯fʁɪçtɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "aufrichtig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "aufrichtig: ehrlich und ernst gemeint",
+										"examples": [
+											"Ich bedauere den Fehler aufrichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bedauere den Fehler aufrichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bedauere den Fehler aufrichtige.",
+							"ok": false
+						},
+						{
+							"answer": "Ich den Fehler bedauere aufrichtig.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

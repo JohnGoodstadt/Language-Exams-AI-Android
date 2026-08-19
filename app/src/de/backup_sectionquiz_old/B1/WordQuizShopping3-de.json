@@ -1,0 +1,493 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizShopping3-de",
+	"title": "Shopping",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Rechnung",
+					"summary": "Papier über den zu zahlenden Betrag",
+					"explain": {
+						"entryId": "Rechnung",
+						"headword": "Rechnung",
+						"pronunciation": {
+							"display": "REKH-noong",
+							"ipaUK": "/ˈʁɛçnʊŋ/",
+							"ipaUS": "/ˈʁɛçnʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rechnung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Rechnung: ein Papier, das zeigt, was man zahlen muss",
+										"examples": [
+											"Der Kellner bringt uns die Rechnung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kellner bringt uns die Rechnung.",
+							"ok": true
+						},
+						{
+							"answer": "Der Kellner bringt uns den Rechnung.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kellner uns die Rechnung bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Rückerstattung",
+					"summary": "Zurückzahlen von Geld",
+					"explain": {
+						"entryId": "Rückerstattung",
+						"headword": "Rückerstattung",
+						"pronunciation": {
+							"display": "RÜK-er-shtat-oong",
+							"ipaUK": "/ˈʁʏkʔɛɐ̯ˌʃtatʊŋ/",
+							"ipaUS": "/ˈʁʏkʔɛɐ̯ˌʃtatʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rückerstattung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Rückerstattung: das Zurückzahlen von Geld",
+										"examples": [
+											"Ich bitte um eine volle Rückerstattung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bitte um eine volle Rückerstattung.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bitte um einen vollen Rückerstattung.",
+							"ok": false
+						},
+						{
+							"answer": "Ich um eine volle Rückerstattung bitte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Erstattung",
+					"summary": "Rückzahlung von Geld",
+					"explain": {
+						"entryId": "Erstattung",
+						"headword": "Erstattung",
+						"pronunciation": {
+							"display": "er-SHTAT-oong",
+							"ipaUK": "/ɛɐ̯ˈʃtatʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈʃtatʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erstattung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erstattung: die Rückzahlung von ausgegebenem Geld",
+										"examples": [
+											"Die Erstattung der Kosten dauert zwei Wochen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Erstattung der Kosten dauert zwei Wochen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erstattung der Kosten dauert zwei Wochen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Erstattung der Kosten zwei Wochen dauert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Entschädigung",
+					"summary": "Geld als Ausgleich für Schaden",
+					"explain": {
+						"entryId": "Entschädigung",
+						"headword": "Entschädigung",
+						"pronunciation": {
+							"display": "ent-SHAY-di-goong",
+							"ipaUK": "/ɛntˈʃɛːdɪɡʊŋ/",
+							"ipaUS": "/ɛntˈʃɛːdɪɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Entschädigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Entschädigung: Geld als Ausgleich für einen Schaden",
+										"examples": [
+											"Die Firma zahlt ihm eine Entschädigung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma zahlt ihm eine Entschädigung.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma zahlt ihm einen Entschädigung.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma ihm eine Entschädigung zahlt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Ausverkauf",
+					"summary": "Verkauf zu niedrigen Preisen",
+					"explain": {
+						"entryId": "Ausverkauf",
+						"headword": "Ausverkauf",
+						"pronunciation": {
+							"display": "OWS-fer-kowf",
+							"ipaUK": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/",
+							"ipaUS": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ausverkauf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ausverkauf: der Verkauf von Waren zu niedrigen Preisen",
+										"examples": [
+											"Im Ausverkauf sind alle Jacken reduziert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Ausverkauf sind alle Jacken reduziert.",
+							"ok": true
+						},
+						{
+							"answer": "In der Ausverkauf sind alle Jacken reduziert.",
+							"ok": false
+						},
+						{
+							"answer": "Im Ausverkauf alle Jacken reduziert sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Räumungsverkauf",
+					"summary": "Verkauf, um das Lager zu leeren",
+					"explain": {
+						"entryId": "Räumungsverkauf",
+						"headword": "Räumungsverkauf",
+						"pronunciation": {
+							"display": "ROY-moongs-fer-kowf",
+							"ipaUK": "/ˈʁɔɪ̯mʊŋsfɛɐ̯ˌkaʊ̯f/",
+							"ipaUS": "/ˈʁɔɪ̯mʊŋsfɛɐ̯ˌkaʊ̯f/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Räumungsverkauf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Räumungsverkauf: ein Verkauf, um das Lager zu leeren",
+										"examples": [
+											"Der Räumungsverkauf lockt viele Kunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Räumungsverkauf lockt viele Kunden.",
+							"ok": true
+						},
+						{
+							"answer": "Die Räumungsverkauf lockt viele Kunden.",
+							"ok": false
+						},
+						{
+							"answer": "Der Räumungsverkauf viele Kunden lockt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Einkaufszentrum",
+					"summary": "Gebäude mit vielen Geschäften",
+					"explain": {
+						"entryId": "Einkaufszentrum",
+						"headword": "Einkaufszentrum",
+						"pronunciation": {
+							"display": "INE-kowfs-tsen-troom",
+							"ipaUK": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/",
+							"ipaUS": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einkaufszentrum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Einkaufszentrum: ein großes Gebäude mit vielen Geschäften",
+										"examples": [
+											"Im Einkaufszentrum gibt es hundert Läden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Einkaufszentrum gibt es hundert Läden.",
+							"ok": true
+						},
+						{
+							"answer": "In die Einkaufszentrum gibt es hundert Läden.",
+							"ok": false
+						},
+						{
+							"answer": "Im Einkaufszentrum hundert Läden gibt es.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Shoppingcenter",
+					"summary": "Zentrum mit vielen Läden",
+					"explain": {
+						"entryId": "Shoppingcenter",
+						"headword": "Shoppingcenter",
+						"pronunciation": {
+							"display": "SHOP-ping-sen-tuh",
+							"ipaUK": "/ˈʃɔpɪŋˌsɛntɐ/",
+							"ipaUS": "/ˈʃɔpɪŋˌsɛntɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Shoppingcenter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Shoppingcenter: ein Zentrum mit vielen Läden",
+										"examples": [
+											"Das Shoppingcenter hat sonntags geschlossen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Shoppingcenter hat sonntags geschlossen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Shoppingcenter hat sonntags geschlossen.",
+							"ok": false
+						},
+						{
+							"answer": "Das Shoppingcenter sonntags geschlossen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Einkaufspassage",
+					"summary": "überdachte Ladenstraße",
+					"explain": {
+						"entryId": "Einkaufspassage",
+						"headword": "Einkaufspassage",
+						"pronunciation": {
+							"display": "INE-kowfs-pa-sah-zhuh",
+							"ipaUK": "/ˈaɪ̯nkaʊ̯fspaˌsaːʒə/",
+							"ipaUS": "/ˈaɪ̯nkaʊ̯fspaˌsaːʒə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einkaufspassage",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Einkaufspassage: eine überdachte Straße mit vielen Läden",
+										"examples": [
+											"Die Einkaufspassage verbindet zwei Straßen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Einkaufspassage verbindet zwei Straßen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Einkaufspassage verbindet zwei Straßen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Einkaufspassage zwei Straßen verbindet.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

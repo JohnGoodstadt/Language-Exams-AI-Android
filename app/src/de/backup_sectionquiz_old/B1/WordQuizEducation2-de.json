@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation2-de",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Personal",
+					"summary": "alle Mitarbeiter zusammen",
+					"explain": {
+						"entryId": "Personal",
+						"headword": "Personal",
+						"pronunciation": {
+							"display": "per-zo-NAHL",
+							"ipaUK": "/pɛʁzoˈnaːl/",
+							"ipaUS": "/pɛʁzoˈnaːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Personal",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Personal: alle Mitarbeiter einer Firma zusammen",
+										"examples": [
+											"Das Personal im Hotel ist sehr freundlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Personal im Hotel ist sehr freundlich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Personal im Hotel ist sehr freundlich.",
+							"ok": false
+						},
+						{
+							"answer": "Das Personal im Hotel sehr freundlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Arbeiter",
+					"summary": "arbeitet körperlich",
+					"explain": {
+						"entryId": "Arbeiter",
+						"headword": "Arbeiter",
+						"pronunciation": {
+							"display": "AR-by-tuh",
+							"ipaUK": "/ˈaʁbaɪ̯tɐ/",
+							"ipaUS": "/ˈaʁbaɪ̯tɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Arbeiter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Arbeiter: eine Person, die körperlich arbeitet",
+										"examples": [
+											"Der Arbeiter repariert die Maschine."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arbeiter repariert die Maschine.",
+							"ok": true
+						},
+						{
+							"answer": "Die Arbeiter repariert die Maschine.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arbeiter die Maschine repariert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Arbeitgeber",
+					"summary": "beschäftigt andere",
+					"explain": {
+						"entryId": "Arbeitgeber",
+						"headword": "Arbeitgeber",
+						"pronunciation": {
+							"display": "AR-byte-gay-buh",
+							"ipaUK": "/ˈaʁbaɪ̯tˌɡeːbɐ/",
+							"ipaUS": "/ˈaʁbaɪ̯tˌɡeːbɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Arbeitgeber",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Arbeitgeber: eine Person oder Firma, die andere beschäftigt",
+										"examples": [
+											"Mein Arbeitgeber zahlt ein gutes Gehalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Arbeitgeber zahlt ein gutes Gehalt.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Arbeitgeber zahlt ein gutes Gehalt.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Arbeitgeber ein gutes Gehalt zahlt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Chef",
+					"summary": "der Leiter im Betrieb",
+					"explain": {
+						"entryId": "Chef",
+						"headword": "Chef",
+						"pronunciation": {
+							"display": "shef",
+							"ipaUK": "/ʃɛf/",
+							"ipaUS": "/ʃɛf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Chef",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Chef: die Person, die im Betrieb das Sagen hat",
+										"examples": [
+											"Mein Chef ist heute nicht im Büro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Chef ist heute nicht im Büro.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Chef ist heute nicht im Büro.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Chef heute nicht im Büro ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Manager",
+					"summary": "leitet ein Team/eine Abteilung",
+					"explain": {
+						"entryId": "Manager",
+						"headword": "Manager",
+						"pronunciation": {
+							"display": "MEN-ed-zhuh",
+							"ipaUK": "/ˈmɛnɛdʒɐ/",
+							"ipaUS": "/ˈmɛnɛdʒɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Manager",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Manager: eine Führungskraft, die ein Team oder eine Abteilung leitet",
+										"examples": [
+											"Der Manager leitet ein großes Team."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Manager leitet ein großes Team.",
+							"ok": true
+						},
+						{
+							"answer": "Die Manager leitet ein großes Team.",
+							"ok": false
+						},
+						{
+							"answer": "Der Manager ein großes Team leitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Praktikum",
+					"summary": "Beruf praktisch lernen",
+					"explain": {
+						"entryId": "Praktikum",
+						"headword": "Praktikum",
+						"pronunciation": {
+							"display": "PRAK-ti-koom",
+							"ipaUK": "/ˈpʁaktikʊm/",
+							"ipaUS": "/ˈpʁaktikʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Praktikum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Praktikum: eine Zeit, in der man einen Beruf praktisch lernt",
+										"examples": [
+											"Im Sommer mache ich ein Praktikum bei einer Bank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer mache ich ein Praktikum bei einer Bank.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer mache ich einen Praktikum bei einer Bank.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer ich mache ein Praktikum bei einer Bank.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Lehrling",
+					"summary": "Person in der Ausbildung",
+					"explain": {
+						"entryId": "Lehrling",
+						"headword": "Lehrling",
+						"pronunciation": {
+							"display": "LAYR-ling",
+							"ipaUK": "/ˈleːɐ̯lɪŋ/",
+							"ipaUS": "/ˈleːɐ̯lɪŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lehrling",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Lehrling: eine Person in der Berufsausbildung",
+										"examples": [
+											"Der Lehrling lernt den Beruf des Bäckers."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Lehrling lernt den Beruf des Bäckers.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lehrling lernt den Beruf des Bäckers.",
+							"ok": false
+						},
+						{
+							"answer": "Der Lehrling den Beruf des Bäckers lernt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Ausbildung",
+					"summary": "das Lernen eines Berufs",
+					"explain": {
+						"entryId": "Ausbildung",
+						"headword": "Ausbildung",
+						"pronunciation": {
+							"display": "OWS-bil-doong",
+							"ipaUK": "/ˈaʊ̯sˌbɪldʊŋ/",
+							"ipaUS": "/ˈaʊ̯sˌbɪldʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ausbildung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Ausbildung: das Lernen eines Berufs in Betrieb und Schule",
+										"examples": [
+											"Nach der Schule beginnt sie eine Ausbildung als Köchin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach der Schule beginnt sie eine Ausbildung als Köchin.",
+							"ok": true
+						},
+						{
+							"answer": "Nach der Schule beginnt sie einen Ausbildung als Köchin.",
+							"ok": false
+						},
+						{
+							"answer": "Nach der Schule sie beginnt eine Ausbildung als Köchin.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Dozent",
+					"summary": "unterrichtet an der Uni",
+					"explain": {
+						"entryId": "Dozent",
+						"headword": "Dozent",
+						"pronunciation": {
+							"display": "do-TSENT",
+							"ipaUK": "/doˈtsɛnt/",
+							"ipaUS": "/doˈtsɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dozent",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Dozent: eine Person, die an der Universität unterrichtet",
+										"examples": [
+											"Der Dozent erklärt das Thema sehr klar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Dozent erklärt das Thema sehr klar.",
+							"ok": true
+						},
+						{
+							"answer": "Die Dozent erklärt das Thema sehr klar.",
+							"ok": false
+						},
+						{
+							"answer": "Der Dozent das Thema sehr klar erklärt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Professor",
+					"summary": "höchster Uni-Lehrer",
+					"explain": {
+						"entryId": "Professor",
+						"headword": "Professor",
+						"pronunciation": {
+							"display": "pro-FES-sor",
+							"ipaUK": "/pʁoˈfɛsoːɐ̯/",
+							"ipaUS": "/pʁoˈfɛsoːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Professor",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Professor: der höchste Lehrer an einer Universität",
+										"examples": [
+											"Der Professor hält heute einen Vortrag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Professor hält heute einen Vortrag.",
+							"ok": true
+						},
+						{
+							"answer": "Die Professor hält heute einen Vortrag.",
+							"ok": false
+						},
+						{
+							"answer": "Der Professor heute einen Vortrag hält.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

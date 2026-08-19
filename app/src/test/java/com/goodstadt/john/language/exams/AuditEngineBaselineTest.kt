@@ -10,13 +10,16 @@ import org.junit.Test
  *
  * The baseline mixes CEFR bands - mirroring BaselineAudit-en: 3x A2, 4x B1, 3x B2 (10 questions).
  * Three things are derived from the per-question results and checked here:
- *  - [AuditEngine.placeBaselineLevel]     -> the band the learner is *placed* at (>= 60% per band).
- *  - [AuditEngine.baselineUnlockCeiling]  -> how far the level tests *unlock* (100% per band, bottom-up).
+ *  - [AuditEngine.placeBaselineLevel]     -> the learner's working level: the first band (bottom-up)
+ *                                            they have NOT cleared (>= 60% per band); the top band if all clear.
+ *  - [AuditEngine.baselineUnlockCeiling]  -> how far the level tests *unlock*: the highest band cleared
+ *                                            contiguously from the bottom (same 60% bar).
  *  - [AuditEngine.calculate]              -> the Confidence / Readiness numbers once part 1 is done.
  *
- * Placement is generous (any band clearing 60% counts, highest wins) while the unlock ceiling is
- * strict (a band must be 100% correct, and only counts if every band below it is too) - so the two
- * deliberately diverge, which several cases below pin down.
+ * Both use the same 60% pass bar and both refuse to skip a failed lower band, so a lucky higher-band
+ * answer never leapfrogs a failed lower one. Placement names the first band still to master (the
+ * working level); the ceiling names the last band fully mastered (which tests to open) - so for a
+ * partly-done band the two differ by one, which several cases below pin down.
  */
 class AuditEngineBaselineTest {
 
@@ -64,16 +67,18 @@ class AuditEngineBaselineTest {
     }
 
     @Test
-    fun `only A2 mastered - unlocks the A2 test`() {
+    fun `only A2 mastered - placed at B1, unlocks the A2 test`() {
+        // A2 cleared but B1 not (0/4): the working level is B1, and only the A2 test unlocks.
         val r = baseline(a2Correct = 3, b1Correct = 0, b2Correct = 0)
-        assertEquals("A2", AuditEngine.placeBaselineLevel(r))
+        assertEquals("B1", AuditEngine.placeBaselineLevel(r))
         assertEquals(2, AuditEngine.baselineUnlockCeiling(r))
     }
 
     @Test
-    fun `A2 and B1 mastered but B2 all wrong - unlocks A2 and B1 tests`() {
+    fun `A2 and B1 mastered but B2 all wrong - placed at B2, unlocks A2 and B1 tests`() {
+        // A2 & B1 cleared, B2 failed: the working level is B2, and the A2 + B1 tests unlock.
         val r = baseline(a2Correct = 3, b1Correct = 4, b2Correct = 0)
-        assertEquals("B1", AuditEngine.placeBaselineLevel(r))
+        assertEquals("B2", AuditEngine.placeBaselineLevel(r))
         assertEquals(3, AuditEngine.baselineUnlockCeiling(r))
     }
 
@@ -88,41 +93,51 @@ class AuditEngineBaselineTest {
 
     @Test
     fun `unlock still needs bands cleared contiguously from the bottom`() {
-        // Aces B1 and B2 but only 1/3 A2 (below the 60% bar) - the unlock stops at the A2 gap.
-        // Placement stays generous and reports the highest band cleared.
+        // Aces B1 and B2 but only 1/3 A2 (below the 60% bar) - the unlock stops at the A2 gap, and
+        // placement likewise refuses to leapfrog: the working level is A2 (first band not cleared).
         val r = baseline(a2Correct = 1, b1Correct = 4, b2Correct = 3)
         assertEquals(1, AuditEngine.baselineUnlockCeiling(r))
-        assertEquals("B2", AuditEngine.placeBaselineLevel(r))
+        assertEquals("A2", AuditEngine.placeBaselineLevel(r))
     }
 
     @Test
-    fun `B1 band needs 3 of 4 correct to pass`() {
-        // 2 of 4 = 50% -> fails, placement falls back to A2.
-        assertEquals("A2", AuditEngine.placeBaselineLevel(baseline(a2Correct = 3, b1Correct = 2, b2Correct = 0)))
-        // 3 of 4 = 75% -> passes, placement climbs to B1.
-        assertEquals("B1", AuditEngine.placeBaselineLevel(baseline(a2Correct = 3, b1Correct = 3, b2Correct = 0)))
+    fun `B1 band needs 3 of 4 correct to clear - placement moves up once it does`() {
+        // A2 already cleared. B1 at 2 of 4 = 50% -> not cleared, so B1 is the working level.
+        assertEquals("B1", AuditEngine.placeBaselineLevel(baseline(a2Correct = 3, b1Correct = 2, b2Correct = 0)))
+        // B1 at 3 of 4 = 75% -> cleared, so the working level moves up to B2 (B2 not yet cleared).
+        assertEquals("B2", AuditEngine.placeBaselineLevel(baseline(a2Correct = 3, b1Correct = 3, b2Correct = 0)))
     }
 
     @Test
     fun `A2 band needs 2 of 3 correct to clear`() {
-        // 1 of 3 = 33% -> A2 not cleared; placement defaults to the A2 floor, nothing unlocks.
+        // 1 of 3 = 33% -> A2 not cleared; the working level is A2 and nothing unlocks.
         val oneOfThree = baseline(a2Correct = 1, b1Correct = 0, b2Correct = 0)
         assertEquals("A2", AuditEngine.placeBaselineLevel(oneOfThree))
         assertEquals(1, AuditEngine.baselineUnlockCeiling(oneOfThree))
 
-        // 2 of 3 = 67% -> A2 cleared: placement A2 and the A2 test (ceiling 2) unlocks.
+        // 2 of 3 = 67% -> A2 cleared: the working level moves to B1, and the A2 test (ceiling 2) unlocks.
         val twoOfThree = baseline(a2Correct = 2, b1Correct = 0, b2Correct = 0)
-        assertEquals("A2", AuditEngine.placeBaselineLevel(twoOfThree))
+        assertEquals("B1", AuditEngine.placeBaselineLevel(twoOfThree))
         assertEquals(2, AuditEngine.baselineUnlockCeiling(twoOfThree))
     }
 
     @Test
-    fun `placement takes the highest passed band even when a lower band failed`() {
-        // Non-contiguous: A2 and B1 both fail, B2 aced. Placement is generous (B2); ceiling is
-        // strict and stays at baseline because A2 was not mastered.
+    fun `placement does not leapfrog a failed lower band`() {
+        // A2 and B1 both fail, B2 aced. Placement is the first uncleared band = A2 - a lucky B2
+        // answer cannot promote past a failed A2; the unlock ceiling likewise stays at baseline.
         val r = baseline(a2Correct = 0, b1Correct = 0, b2Correct = 3)
-        assertEquals("B2", AuditEngine.placeBaselineLevel(r))
+        assertEquals("A2", AuditEngine.placeBaselineLevel(r))
         assertEquals(1, AuditEngine.baselineUnlockCeiling(r))
+    }
+
+    @Test
+    fun `placement is the first uncleared band - the learner's working level`() {
+        // A2 aced (3/3), but B1 only 2/4 (50%, below the 60% bar) and B2 1/3. The working level is
+        // B1 (first band not cleared); the lucky B2 answer cannot promote past it. The unlock reaches
+        // the A2 test (ceiling 2, since A2 cleared) then stops at the B1 gap.
+        val r = baseline(a2Correct = 3, b1Correct = 2, b2Correct = 1)
+        assertEquals("B1", AuditEngine.placeBaselineLevel(r))
+        assertEquals(2, AuditEngine.baselineUnlockCeiling(r))
     }
 
     @Test
@@ -176,9 +191,9 @@ class AuditEngineBaselineTest {
     }
 
     @Test
-    fun `end to end - A2 and B1 mastered ties placement, unlock, confidence and readiness together`() {
+    fun `end to end - A2 and B1 mastered, working on B2, A2 and B1 tests unlocked`() {
         val r = baseline(a2Correct = 3, b1Correct = 4, b2Correct = 0) // 7 correct
-        assertEquals("B1", AuditEngine.placeBaselineLevel(r))
+        assertEquals("B2", AuditEngine.placeBaselineLevel(r))         // working level: A2+B1 done, on B2
         assertEquals(3, AuditEngine.baselineUnlockCeiling(r))         // A2 + B1 tests unlocked
         val stats = baselineStats(r)
         assertEquals(40, stats.confidence)

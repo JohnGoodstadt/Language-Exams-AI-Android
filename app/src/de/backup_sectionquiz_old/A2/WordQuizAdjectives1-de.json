@@ -1,0 +1,864 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives1-de",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "wichtig",
+					"summary": "bedeutend",
+					"explain": {
+						"entryId": "wichtig",
+						"headword": "wichtig",
+						"pronunciation": {
+							"display": "VIKH-tikh",
+							"ipaUK": "/ˈvɪçtɪç/",
+							"ipaUS": "/ˈvɪçtɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "wichtig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "man muss darauf achten; bedeutend",
+										"examples": [
+											"Diese Frage ist sehr wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Frage ist sehr wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Frage ist sehr wichtige.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Frage sehr wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "interessant",
+					"summary": "spannend, macht neugierig",
+					"explain": {
+						"entryId": "interessant",
+						"headword": "interessant",
+						"pronunciation": {
+							"display": "in-te-re-SANT",
+							"ipaUK": "/ɪntəʁɛˈsant/",
+							"ipaUS": "/ɪntəʁɛˈsant/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "interessant",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "es macht neugierig; spannend",
+										"examples": [
+											"Das Buch ist wirklich interessant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Buch ist wirklich interessant.",
+							"ok": true
+						},
+						{
+							"answer": "Das Buch ist wirklich interessante.",
+							"ok": false
+						},
+						{
+							"answer": "Das Buch wirklich interessant ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "langweilig",
+					"summary": "nicht interessant",
+					"explain": {
+						"entryId": "langweilig",
+						"headword": "langweilig",
+						"pronunciation": {
+							"display": "LANG-vy-likh",
+							"ipaUK": "/ˈlaŋvaɪ̯lɪç/",
+							"ipaUS": "/ˈlaŋvaɪ̯lɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "langweilig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nicht interessant; man verliert die Lust",
+										"examples": [
+											"Der Film war ziemlich langweilig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Film war ziemlich langweilig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Film war ziemlich langweilige.",
+							"ok": false
+						},
+						{
+							"answer": "Der Film ziemlich langweilig war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "freundlich",
+					"summary": "nett und höflich",
+					"explain": {
+						"entryId": "freundlich",
+						"headword": "freundlich",
+						"pronunciation": {
+							"display": "FROYNT-likh",
+							"ipaUK": "/ˈfʁɔɪ̯ntlɪç/",
+							"ipaUS": "/ˈfʁɔɪ̯ntlɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "freundlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nett und höflich zu anderen",
+										"examples": [
+											"Die Verkäuferin war sehr freundlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verkäuferin war sehr freundlich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Verkäuferin war sehr freundliche.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verkäuferin sehr freundlich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "gefährlich",
+					"summary": "es droht Gefahr",
+					"explain": {
+						"entryId": "gefährlich",
+						"headword": "gefährlich",
+						"pronunciation": {
+							"display": "guh-FAIR-likh",
+							"ipaUK": "/ɡəˈfɛːɐ̯lɪç/",
+							"ipaUS": "/ɡəˈfɛːɐ̯lɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "gefährlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "es kann Schaden oder Verletzung geben",
+										"examples": [
+											"Diese Straße ist nachts gefährlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Straße ist nachts gefährlich.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Straße ist nachts gefährliche.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Straße nachts gefährlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "ruhig",
+					"summary": "ohne Lärm",
+					"explain": {
+						"entryId": "ruhig",
+						"headword": "ruhig",
+						"pronunciation": {
+							"display": "ROO-ikh",
+							"ipaUK": "/ˈʁuːɪç/",
+							"ipaUS": "/ˈʁuːɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "ruhig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ohne Lärm; nicht laut",
+										"examples": [
+											"Das Zimmer ist schön ruhig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Zimmer ist schön ruhig.",
+							"ok": true
+						},
+						{
+							"answer": "Das Zimmer ist schön ruhige.",
+							"ok": false
+						},
+						{
+							"answer": "Das Zimmer schön ruhig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "laut",
+					"summary": "mit viel Lärm",
+					"explain": {
+						"entryId": "laut",
+						"headword": "laut",
+						"pronunciation": {
+							"display": "lowt",
+							"ipaUK": "/laʊ̯t/",
+							"ipaUS": "/laʊ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "laut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit viel Lärm; nicht leise",
+										"examples": [
+											"Die Musik ist mir zu laut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Musik ist mir zu laut.",
+							"ok": true
+						},
+						{
+							"answer": "Die Musik ist mir zu laute.",
+							"ok": false
+						},
+						{
+							"answer": "Die Musik mir zu laut ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "modern",
+					"summary": "neu und aktuell",
+					"explain": {
+						"entryId": "modern",
+						"headword": "modern",
+						"pronunciation": {
+							"display": "mo-DERN",
+							"ipaUK": "/moˈdɛʁn/",
+							"ipaUS": "/moˈdɛʁn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "modern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "neu und aktuell; nicht altmodisch",
+										"examples": [
+											"Die Wohnung ist sehr modern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Wohnung ist sehr modern.",
+							"ok": true
+						},
+						{
+							"answer": "Die Wohnung ist sehr moderne.",
+							"ok": false
+						},
+						{
+							"answer": "Die Wohnung sehr modern ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "bequem",
+					"summary": "angenehm zum Sitzen/Liegen",
+					"explain": {
+						"entryId": "bequem",
+						"headword": "bequem",
+						"pronunciation": {
+							"display": "buh-KVAYM",
+							"ipaUK": "/bəˈkveːm/",
+							"ipaUS": "/bəˈkveːm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "bequem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "angenehm; man sitzt oder liegt gut",
+										"examples": [
+											"Der Sessel ist wirklich bequem."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Sessel ist wirklich bequem.",
+							"ok": true
+						},
+						{
+							"answer": "Der Sessel ist wirklich bequeme.",
+							"ok": false
+						},
+						{
+							"answer": "Der Sessel wirklich bequem ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "gesund",
+					"summary": "gut für den Körper",
+					"explain": {
+						"entryId": "gesund",
+						"headword": "gesund",
+						"pronunciation": {
+							"display": "guh-ZOONT",
+							"ipaUK": "/ɡəˈzʊnt/",
+							"ipaUS": "/ɡəˈzʊnt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "gesund",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "gut für den Körper; nicht krank",
+										"examples": [
+											"Obst und Gemüse sind gesund."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Obst und Gemüse sind gesund.",
+							"ok": true
+						},
+						{
+							"answer": "Obst und Gemüse sind gesunde.",
+							"ok": false
+						},
+						{
+							"answer": "Obst und Gemüse gesund sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "krank",
+					"summary": "nicht gesund",
+					"explain": {
+						"entryId": "krank",
+						"headword": "krank",
+						"pronunciation": {
+							"display": "krank",
+							"ipaUK": "/kʁaŋk/",
+							"ipaUS": "/kʁaŋk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "krank",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nicht gesund; man fühlt sich schlecht",
+										"examples": [
+											"Mein Kollege ist heute krank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Kollege ist heute krank.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Kollege ist heute kranke.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Kollege heute krank ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"question": "zufrieden",
+					"summary": "glücklich mit etwas",
+					"explain": {
+						"entryId": "zufrieden",
+						"headword": "zufrieden",
+						"pronunciation": {
+							"display": "tsoo-FREE-dn",
+							"ipaUK": "/tsuˈfʁiːdn̩/",
+							"ipaUS": "/tsuˈfʁiːdn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "zufrieden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "glücklich mit einer Situation",
+										"examples": [
+											"Ich bin mit dem Ergebnis zufrieden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin mit dem Ergebnis zufrieden.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin mit dem Ergebnis zufriedene.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mit dem Ergebnis zufrieden bin.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"question": "traurig",
+					"summary": "nicht fröhlich",
+					"explain": {
+						"entryId": "traurig",
+						"headword": "traurig",
+						"pronunciation": {
+							"display": "TROW-rikh",
+							"ipaUK": "/ˈtʁaʊ̯ʁɪç/",
+							"ipaUS": "/ˈtʁaʊ̯ʁɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "traurig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nicht fröhlich; man möchte weinen",
+										"examples": [
+											"Nach dem Abschied war sie traurig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Abschied war sie traurig.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Abschied war sie traurige.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Abschied sie traurig war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"question": "einfach",
+					"summary": "leicht; nicht schwierig",
+					"explain": {
+						"entryId": "einfach",
+						"headword": "einfach",
+						"pronunciation": {
+							"display": "INE-fakh",
+							"ipaUK": "/ˈaɪ̯nfax/",
+							"ipaUS": "/ˈaɪ̯nfax/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "einfach",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nicht schwierig; leicht zu machen",
+										"examples": [
+											"Die Prüfung war ziemlich einfach."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Prüfung war ziemlich einfach.",
+							"ok": true
+						},
+						{
+							"answer": "Die Prüfung war ziemlich einfache.",
+							"ok": false
+						},
+						{
+							"answer": "Die Prüfung ziemlich einfach war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"question": "schwierig",
+					"summary": "schwer; nicht einfach",
+					"explain": {
+						"entryId": "schwierig",
+						"headword": "schwierig",
+						"pronunciation": {
+							"display": "SHVEE-rikh",
+							"ipaUK": "/ˈʃviːʁɪç/",
+							"ipaUS": "/ˈʃviːʁɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "schwierig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nicht einfach; schwer zu machen",
+										"examples": [
+											"Diese Aufgabe ist sehr schwierig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Aufgabe ist sehr schwierig.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Aufgabe ist sehr schwierige.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Aufgabe sehr schwierig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"question": "pünktlich",
+					"summary": "genau zur richtigen Zeit",
+					"explain": {
+						"entryId": "pünktlich",
+						"headword": "pünktlich",
+						"pronunciation": {
+							"display": "PÜNKT-likh",
+							"ipaUK": "/ˈpʏŋktlɪç/",
+							"ipaUS": "/ˈpʏŋktlɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "pünktlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "genau zur richtigen Zeit",
+										"examples": [
+											"Bitte sei morgen pünktlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte sei morgen pünktlich.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte sei morgen pünktliche.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte morgen sei pünktlich.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,546 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizPersonal1-de",
-	"title": "Personal",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Biografie",
-					"summary": "Lebensgeschichte einer Person",
-					"explain": {
-						"entryId": "Biografie",
-						"headword": "Biografie",
-						"pronunciation": {
-							"display": "bio-gra-FEE",
-							"ipaUK": "/bioɡʁaˈfiː/",
-							"ipaUS": "/bioɡʁaˈfiː/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Biografie",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Biografie: ein Buch über das Leben einer anderen Person",
-										"examples": [
-											"Die Biografie des Malers ist spannend."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Biografie des Malers ist spannend.",
-							"ok": true
-						},
-						{
-							"answer": "Der Biografie des Malers ist spannend.",
-							"ok": false
-						},
-						{
-							"answer": "Die Biografie des Malers spannend ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Autobiografie",
-					"summary": "selbst geschriebene Lebensgeschichte",
-					"explain": {
-						"entryId": "Autobiografie",
-						"headword": "Autobiografie",
-						"pronunciation": {
-							"display": "ow-to-bio-gra-FEE",
-							"ipaUK": "/aʊ̯tobioɡʁaˈfiː/",
-							"ipaUS": "/aʊ̯tobioɡʁaˈfiː/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Autobiografie",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Autobiografie: ein Buch über das eigene Leben",
-										"examples": [
-											"Der Sänger schreibt gerade seine Autobiografie."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Sänger schreibt gerade seine Autobiografie.",
-							"ok": true
-						},
-						{
-							"answer": "Der Sänger schreibt gerade seinen Autobiografie.",
-							"ok": false
-						},
-						{
-							"answer": "Der Sänger seine Autobiografie gerade schreibt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Memoiren",
-					"summary": "aufgeschriebene Erinnerungen (Plural)",
-					"explain": {
-						"entryId": "Memoiren",
-						"headword": "Memoiren",
-						"pronunciation": {
-							"display": "me-mo-AH-run",
-							"ipaUK": "/meˈmo̯aːʁən/",
-							"ipaUS": "/meˈmo̯aːʁən/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen (Plural)",
-								"grammarType": "Nomen (Plural)",
-								"headwordLine": "Memoiren",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Memoiren: Erinnerungen an einen Teil des eigenen Lebens (Plural)",
-										"examples": [
-											"Sie veröffentlicht bald ihre Memoiren."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Sie veröffentlicht bald ihre Memoiren.",
-							"ok": true
-						},
-						{
-							"answer": "Sie veröffentlicht bald ihr Memoiren.",
-							"ok": false
-						},
-						{
-							"answer": "Sie ihre Memoiren bald veröffentlicht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Dokument",
-					"summary": "amtliches Papier",
-					"explain": {
-						"entryId": "Dokument",
-						"headword": "Dokument",
-						"pronunciation": {
-							"display": "do-koo-MENT",
-							"ipaUK": "/dokuˈmɛnt/",
-							"ipaUS": "/dokuˈmɛnt/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Dokument",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Dokument: ein amtliches Papier mit Informationen",
-										"examples": [
-											"Bitte unterschreiben Sie dieses Dokument."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Bitte unterschreiben Sie dieses Dokument.",
-							"ok": true
-						},
-						{
-							"answer": "Bitte unterschreiben Sie diesen Dokument.",
-							"ok": false
-						},
-						{
-							"answer": "Bitte Sie unterschreiben dieses Dokument.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Formular",
-					"summary": "Blatt zum Ausfüllen",
-					"explain": {
-						"entryId": "Formular",
-						"headword": "Formular",
-						"pronunciation": {
-							"display": "for-moo-LAR",
-							"ipaUK": "/fɔʁmuˈlaːɐ̯/",
-							"ipaUS": "/fɔʁmuˈlaːɐ̯/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Formular",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Formular: ein Blatt mit Feldern für persönliche Angaben",
-										"examples": [
-											"Füllen Sie bitte das Formular aus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Füllen Sie bitte das Formular aus.",
-							"ok": true
-						},
-						{
-							"answer": "Füllen Sie bitte den Formular aus.",
-							"ok": false
-						},
-						{
-							"answer": "Füllen Sie bitte aus das Formular.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Bescheinigung",
-					"summary": "Papier, das etwas bestätigt",
-					"explain": {
-						"entryId": "Bescheinigung",
-						"headword": "Bescheinigung",
-						"pronunciation": {
-							"display": "buh-SHY-ni-goong",
-							"ipaUK": "/bəˈʃaɪ̯nɪɡʊŋ/",
-							"ipaUS": "/bəˈʃaɪ̯nɪɡʊŋ/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Bescheinigung",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "die Bescheinigung: ein Papier, das etwas offiziell bestätigt",
-										"examples": [
-											"Der Arzt stellt mir eine Bescheinigung aus."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Der Arzt stellt mir eine Bescheinigung aus.",
-							"ok": true
-						},
-						{
-							"answer": "Der Arzt stellt mir einen Bescheinigung aus.",
-							"ok": false
-						},
-						{
-							"answer": "Der Arzt mir eine Bescheinigung ausstellt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Ausweis",
-					"summary": "Dokument zur Identität",
-					"explain": {
-						"entryId": "Ausweis",
-						"headword": "Ausweis",
-						"pronunciation": {
-							"display": "OWS-vice",
-							"ipaUK": "/ˈaʊ̯svaɪ̯s/",
-							"ipaUS": "/ˈaʊ̯svaɪ̯s/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Ausweis",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Ausweis: ein Dokument, das zeigt, wer man ist",
-										"examples": [
-											"An der Grenze zeigt man seinen Ausweis."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "An der Grenze zeigt man seinen Ausweis.",
-							"ok": true
-						},
-						{
-							"answer": "An der Grenze zeigt man sein Ausweis.",
-							"ok": false
-						},
-						{
-							"answer": "An der Grenze man zeigt seinen Ausweis.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Reisepass",
-					"summary": "Dokument für Auslandsreisen",
-					"explain": {
-						"entryId": "Reisepass",
-						"headword": "Reisepass",
-						"pronunciation": {
-							"display": "RY-zuh-pas",
-							"ipaUK": "/ˈʁaɪ̯zəˌpas/",
-							"ipaUS": "/ˈʁaɪ̯zəˌpas/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Reisepass",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Reisepass: ein Dokument, das man für Auslandsreisen braucht",
-										"examples": [
-											"Für die Reise brauche ich meinen Reisepass."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Für die Reise brauche ich meinen Reisepass.",
-							"ok": true
-						},
-						{
-							"answer": "Für die Reise brauche ich meine Reisepass.",
-							"ok": false
-						},
-						{
-							"answer": "Für die Reise ich brauche meinen Reisepass.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Führerschein",
-					"summary": "Erlaubnis zum Autofahren",
-					"explain": {
-						"entryId": "Führerschein",
-						"headword": "Führerschein",
-						"pronunciation": {
-							"display": "FÜ-ruh-shine",
-							"ipaUK": "/ˈfyːʁɐˌʃaɪ̯n/",
-							"ipaUS": "/ˈfyːʁɐˌʃaɪ̯n/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Führerschein",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "der Führerschein: die Erlaubnis, ein Auto zu fahren",
-										"examples": [
-											"Mit achtzehn machte er den Führerschein."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Mit achtzehn machte er den Führerschein.",
-							"ok": true
-						},
-						{
-							"answer": "Mit achtzehn machte er die Führerschein.",
-							"ok": false
-						},
-						{
-							"answer": "Mit achtzehn er machte den Führerschein.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Vorstellungsgespräch",
-					"summary": "Gespräch für eine Stelle",
-					"explain": {
-						"entryId": "Vorstellungsgespräch",
-						"headword": "Vorstellungsgespräch",
-						"pronunciation": {
-							"display": "FOR-shtel-oongs-guh-shpraikh",
-							"ipaUK": "/ˈfoːɐ̯ʃtɛlʊŋsɡəˌʃpʁɛːç/",
-							"ipaUS": "/ˈfoːɐ̯ʃtɛlʊŋsɡəˌʃpʁɛːç/"
-						},
-						"labels": [
-							"B1"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Vorstellungsgespräch",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Vorstellungsgespräch: ein Gespräch, um eine Stelle zu bekommen",
-										"examples": [
-											"Das Vorstellungsgespräch verlief sehr gut."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Vorstellungsgespräch verlief sehr gut.",
-							"ok": true
-						},
-						{
-							"answer": "Der Vorstellungsgespräch verlief sehr gut.",
-							"ok": false
-						},
-						{
-							"answer": "Das Vorstellungsgespräch sehr gut verlief.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPersonal1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "Biografie",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Biografie – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "Autobiografie",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Autobiografie – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "Memoiren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Memoiren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "Dokument",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Dokument – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "Formular",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Formular – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "Bescheinigung",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Bescheinigung – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "Ausweis",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Ausweis – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "Reisepass",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Reisepass – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Führerschein",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Führerschein – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Vorstellungsgespräch",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Vorstellungsgespräch – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

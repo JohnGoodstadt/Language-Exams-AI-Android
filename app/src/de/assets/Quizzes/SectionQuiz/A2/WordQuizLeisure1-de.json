@@ -1,548 +1,216 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizLeisure1-de",
-	"title": "Leisure",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "Kochen",
-					"summary": "Essen zubereiten (Hobby)",
-					"explain": {
-						"entryId": "Kochen",
-						"headword": "Kochen",
-						"pronunciation": {
-							"display": "KO-khn",
-							"ipaUK": "/ˈkɔxn̩/",
-							"ipaUS": "/ˈkɔxn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Kochen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Zubereiten von Essen (als Hobby)",
-										"examples": [
-											"Kochen ist mein liebstes Hobby."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Kochen ist mein liebstes Hobby.",
-							"ok": true
-						},
-						{
-							"answer": "kochen ist mein liebstes Hobby.",
-							"ok": false
-						},
-						{
-							"answer": "Kochen mein liebstes Hobby ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "Tanzen",
-					"summary": "sich zur Musik bewegen",
-					"explain": {
-						"entryId": "Tanzen",
-						"headword": "Tanzen",
-						"pronunciation": {
-							"display": "TAN-tsn",
-							"ipaUK": "/ˈtantsn̩/",
-							"ipaUS": "/ˈtantsn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Tanzen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "sich zur Musik bewegen",
-										"examples": [
-											"Beim Tanzen vergesse ich alles."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Beim Tanzen vergesse ich alles.",
-							"ok": true
-						},
-						{
-							"answer": "Beim tanzen vergesse ich alles.",
-							"ok": false
-						},
-						{
-							"answer": "Beim Tanzen ich vergesse alles.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "Angeln",
-					"summary": "Fische fangen (Hobby)",
-					"explain": {
-						"entryId": "Angeln",
-						"headword": "Angeln",
-						"pronunciation": {
-							"display": "ANG-ln",
-							"ipaUK": "/ˈaŋl̩n/",
-							"ipaUS": "/ˈaŋl̩n/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Angeln",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Fische mit einer Angel fangen",
-										"examples": [
-											"Angeln macht mir großen Spaß."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Angeln macht mir großen Spaß.",
-							"ok": true
-						},
-						{
-							"answer": "angeln macht mir großen Spaß.",
-							"ok": false
-						},
-						{
-							"answer": "Angeln mir großen Spaß macht.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "Gärtnern",
-					"summary": "im Garten arbeiten (Hobby)",
-					"explain": {
-						"entryId": "Gärtnern",
-						"headword": "Gärtnern",
-						"pronunciation": {
-							"display": "GERT-nuhn",
-							"ipaUK": "/ˈɡɛʁtnɐn/",
-							"ipaUS": "/ˈɡɛʁtnɐn/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Gärtnern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "im Garten arbeiten und Pflanzen pflegen",
-										"examples": [
-											"Meine Oma liebt das Gärtnern."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Meine Oma liebt das Gärtnern.",
-							"ok": true
-						},
-						{
-							"answer": "Meine Oma liebt das gärtnern.",
-							"ok": false
-						},
-						{
-							"answer": "Meine Oma das Gärtnern liebt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "Wandern",
-					"summary": "lange zu Fuß in der Natur gehen",
-					"explain": {
-						"entryId": "Wandern",
-						"headword": "Wandern",
-						"pronunciation": {
-							"display": "VAN-duhn",
-							"ipaUK": "/ˈvandɐn/",
-							"ipaUS": "/ˈvandɐn/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Wandern",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "lange Strecken zu Fuß in der Natur gehen",
-										"examples": [
-											"Das Wandern in den Bergen ist schön."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Wandern in den Bergen ist schön.",
-							"ok": true
-						},
-						{
-							"answer": "Das wandern in den Bergen ist schön.",
-							"ok": false
-						},
-						{
-							"answer": "Das Wandern in den Bergen schön ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "Musik",
-					"summary": "Töne und Melodien",
-					"explain": {
-						"entryId": "Musik",
-						"headword": "Musik",
-						"pronunciation": {
-							"display": "moo-ZEEK",
-							"ipaUK": "/muˈziːk/",
-							"ipaUS": "/muˈziːk/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Musik",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Töne und Melodien zum Hören",
-										"examples": [
-											"Ich höre gern klassische Musik."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Ich höre gern klassische Musik.",
-							"ok": true
-						},
-						{
-							"answer": "Ich höre gern klassischen Musik.",
-							"ok": false
-						},
-						{
-							"answer": "Ich gern klassische Musik höre.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "Malen",
-					"summary": "mit Farben Bilder machen",
-					"explain": {
-						"entryId": "Malen",
-						"headword": "Malen",
-						"pronunciation": {
-							"display": "MAH-ln",
-							"ipaUK": "/ˈmaːln̩/",
-							"ipaUS": "/ˈmaːln̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Malen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "mit Farben Bilder machen",
-										"examples": [
-											"Das Malen entspannt mich sehr."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Das Malen entspannt mich sehr.",
-							"ok": true
-						},
-						{
-							"answer": "Das malen entspannt mich sehr.",
-							"ok": false
-						},
-						{
-							"answer": "Das Malen mich sehr entspannt.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "Fotografie",
-					"summary": "das Machen von Fotos",
-					"explain": {
-						"entryId": "Fotografie",
-						"headword": "Fotografie",
-						"pronunciation": {
-							"display": "fo-to-gra-FEE",
-							"ipaUK": "/fotoɡʁaˈfiː/",
-							"ipaUS": "/fotoɡʁaˈfiː/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Fotografie",
-								"inflectionsLine": null,
-								"synonyms": [
-									"Fotografieren"
-								],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "das Machen von Fotos",
-										"examples": [
-											"Die Fotografie ist ein schönes Hobby."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Die Fotografie ist ein schönes Hobby.",
-							"ok": true
-						},
-						{
-							"answer": "Der Fotografie ist ein schönes Hobby.",
-							"ok": false
-						},
-						{
-							"answer": "Die Fotografie ein schönes Hobby ist.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "Lesen",
-					"summary": "Bücher/Texte verstehen",
-					"explain": {
-						"entryId": "Lesen",
-						"headword": "Lesen",
-						"pronunciation": {
-							"display": "LAY-zn",
-							"ipaUK": "/ˈleːzn̩/",
-							"ipaUS": "/ˈleːzn̩/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen (nominalisiert)",
-								"headwordLine": "Lesen",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "Texte oder Bücher verstehen",
-										"examples": [
-											"Beim Lesen lerne ich neue Wörter."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Beim Lesen lerne ich neue Wörter.",
-							"ok": true
-						},
-						{
-							"answer": "Beim lesen lerne ich neue Wörter.",
-							"ok": false
-						},
-						{
-							"answer": "Beim Lesen ich lerne neue Wörter.",
-							"ok": false
-						}
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "Sport",
-					"summary": "körperliche Aktivität",
-					"explain": {
-						"entryId": "Sport",
-						"headword": "Sport",
-						"pronunciation": {
-							"display": "shport",
-							"ipaUK": "/ʃpɔʁt/",
-							"ipaUS": "/ʃpɔʁt/"
-						},
-						"labels": [
-							"A2"
-						],
-						"partsOfSpeech": [
-							{
-								"ordinal": "1 of 1",
-								"pos": "Nomen",
-								"grammarType": "Nomen",
-								"headwordLine": "Sport",
-								"inflectionsLine": null,
-								"synonyms": [],
-								"senses": [
-									{
-										"senseNumber": 1,
-										"definition": "körperliche Aktivität wie Fußball oder Laufen",
-										"examples": [
-											"Am Wochenende mache ich viel Sport."
-										]
-									}
-								]
-							}
-						],
-						"version": 1,
-						"updatedDate": 0
-					},
-					"answers": [
-						{
-							"answer": "Am Wochenende mache ich viel Sport.",
-							"ok": true
-						},
-						{
-							"answer": "Am Wochenende mache ich viel Sports.",
-							"ok": false
-						},
-						{
-							"answer": "Am Wochenende ich mache viel Sport.",
-							"ok": false
-						}
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizLeisure1-de",
+  "title": "",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "aufstehen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "aufstehen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "sich duschen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich duschen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "frühstücken",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "frühstücken – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "zur Arbeit fahren",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "zur Arbeit fahren – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "sich ausruhen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "sich ausruhen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "einkaufen gehen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "einkaufen gehen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "kochen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "kochen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "fernsehen",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "fernsehen – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "Hobby",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Hobby – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "Sport",
+          "summary": "Platzhalter – Definition folgt.",
+          "answers": [
+            {
+              "answer": "Sport – Beispielsatz folgt.",
+              "ok": true
+            },
+            {
+              "answer": "Platzhalter – falsche Option 1.",
+              "ok": false
+            },
+            {
+              "answer": "Platzhalter – falsche Option 2.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

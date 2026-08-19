@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives1-de",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "ängstlich",
+					"summary": "voller Angst",
+					"explain": {
+						"entryId": "ängstlich",
+						"headword": "ängstlich",
+						"pronunciation": {
+							"display": "ENGST-likh",
+							"ipaUK": "/ˈɛŋstlɪç/",
+							"ipaUS": "/ˈɛŋstlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "ängstlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ängstlich: voller Angst; besorgt",
+										"examples": [
+											"Vor dem Flug war er sehr ängstlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor dem Flug war er sehr ängstlich.",
+							"ok": true
+						},
+						{
+							"answer": "Vor dem Flug war er sehr ängstliche.",
+							"ok": false
+						},
+						{
+							"answer": "Vor dem Flug er war sehr ängstlich.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "besorgt",
+					"summary": "voller Sorge",
+					"explain": {
+						"entryId": "besorgt",
+						"headword": "besorgt",
+						"pronunciation": {
+							"display": "buh-ZORKT",
+							"ipaUK": "/bəˈzɔʁkt/",
+							"ipaUS": "/bəˈzɔʁkt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "besorgt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "besorgt: voller Sorge",
+										"examples": [
+											"Wegen der Nachricht war sie besorgt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wegen der Nachricht war sie besorgt.",
+							"ok": true
+						},
+						{
+							"answer": "Wegen der Nachricht war sie besorgte.",
+							"ok": false
+						},
+						{
+							"answer": "Wegen der Nachricht sie war besorgt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "nervös",
+					"summary": "unruhig, angespannt",
+					"explain": {
+						"entryId": "nervös",
+						"headword": "nervös",
+						"pronunciation": {
+							"display": "ner-VÖS",
+							"ipaUK": "/nɛʁˈvøːs/",
+							"ipaUS": "/nɛʁˈvøːs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "nervös",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nervös: unruhig und angespannt",
+										"examples": [
+											"Vor der Prüfung war ich sehr nervös."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor der Prüfung war ich sehr nervös.",
+							"ok": true
+						},
+						{
+							"answer": "Vor der Prüfung war ich sehr nervöse.",
+							"ok": false
+						},
+						{
+							"answer": "Vor der Prüfung ich war sehr nervös.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "selbstsicher",
+					"summary": "sicher im Auftreten",
+					"explain": {
+						"entryId": "selbstsicher",
+						"headword": "selbstsicher",
+						"pronunciation": {
+							"display": "ZELPST-zikh-uh",
+							"ipaUK": "/ˈzɛlpstˌzɪçɐ/",
+							"ipaUS": "/ˈzɛlpstˌzɪçɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "selbstsicher",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "selbstsicher: sicher im Auftreten",
+										"examples": [
+											"Bei der Rede wirkte er sehr selbstsicher."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bei der Rede wirkte er sehr selbstsicher.",
+							"ok": true
+						},
+						{
+							"answer": "Bei der Rede wirkte er sehr selbstsichere.",
+							"ok": false
+						},
+						{
+							"answer": "Bei der Rede er wirkte sehr selbstsicher.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "souverän",
+					"summary": "sicher und gelassen",
+					"explain": {
+						"entryId": "souverän",
+						"headword": "souverän",
+						"pronunciation": {
+							"display": "zoo-ve-RAIN",
+							"ipaUK": "/zuvɛˈʁɛːn/",
+							"ipaUS": "/zuvɛˈʁɛːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "souverän",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "souverän: sicher und gelassen im Auftreten",
+										"examples": [
+											"Die Chefin blieb in der Krise souverän."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Chefin blieb in der Krise souverän.",
+							"ok": true
+						},
+						{
+							"answer": "Die Chefin blieb in der Krise souveräne.",
+							"ok": false
+						},
+						{
+							"answer": "Die Chefin in der Krise souverän blieb.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "sicher",
+					"summary": "ohne Zweifel",
+					"explain": {
+						"entryId": "sicher",
+						"headword": "sicher",
+						"pronunciation": {
+							"display": "ZIKH-uh",
+							"ipaUK": "/ˈzɪçɐ/",
+							"ipaUS": "/ˈzɪçɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "sicher",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sicher: ohne Zweifel; überzeugt",
+										"examples": [
+											"Ich bin mir ganz sicher."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin mir ganz sicher.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin mir ganz sichere.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mir bin ganz sicher.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "neugierig",
+					"summary": "voller Interesse an Neuem",
+					"explain": {
+						"entryId": "neugierig",
+						"headword": "neugierig",
+						"pronunciation": {
+							"display": "NOY-gee-rikh",
+							"ipaUK": "/ˈnɔɪ̯ˌɡiːʁɪç/",
+							"ipaUS": "/ˈnɔɪ̯ˌɡiːʁɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "neugierig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "neugierig: voller Interesse an Neuem",
+										"examples": [
+											"Kleine Kinder sind oft sehr neugierig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Kleine Kinder sind oft sehr neugierig.",
+							"ok": true
+						},
+						{
+							"answer": "Kleine Kinder sind oft sehr neugierige.",
+							"ok": false
+						},
+						{
+							"answer": "Kleine Kinder oft sehr neugierig sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "wissbegierig",
+					"summary": "voller Wissensdurst",
+					"explain": {
+						"entryId": "wissbegierig",
+						"headword": "wissbegierig",
+						"pronunciation": {
+							"display": "VISS-buh-gee-rikh",
+							"ipaUK": "/ˈvɪsbəˌɡiːʁɪç/",
+							"ipaUS": "/ˈvɪsbəˌɡiːʁɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "wissbegierig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wissbegierig: voller Wissensdurst",
+										"examples": [
+											"Das Kind ist außergewöhnlich wissbegierig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Kind ist außergewöhnlich wissbegierig.",
+							"ok": true
+						},
+						{
+							"answer": "Das Kind ist außergewöhnlich wissbegierige.",
+							"ok": false
+						},
+						{
+							"answer": "Das Kind außergewöhnlich wissbegierig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "interessiert",
+					"summary": "voller Interesse",
+					"explain": {
+						"entryId": "interessiert",
+						"headword": "interessiert",
+						"pronunciation": {
+							"display": "in-te-re-SEERT",
+							"ipaUK": "/ɪntəʁɛˈsiːɐ̯t/",
+							"ipaUS": "/ɪntəʁɛˈsiːɐ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "interessiert",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "interessiert: voller Interesse",
+										"examples": [
+											"An Geschichte bin ich sehr interessiert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "An Geschichte bin ich sehr interessiert.",
+							"ok": true
+						},
+						{
+							"answer": "An Geschichte bin ich sehr interessierte.",
+							"ok": false
+						},
+						{
+							"answer": "An Geschichte ich bin sehr interessiert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "verlegen",
+					"summary": "unsicher, beschämt",
+					"explain": {
+						"entryId": "verlegen",
+						"headword": "verlegen",
+						"pronunciation": {
+							"display": "fer-LAY-gn",
+							"ipaUK": "/fɛɐ̯ˈleːɡn̩/",
+							"ipaUS": "/fɛɐ̯ˈleːɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "verlegen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "verlegen: unsicher und ein bisschen beschämt",
+										"examples": [
+											"Bei dem Kompliment wurde sie ganz verlegen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bei dem Kompliment wurde sie ganz verlegen.",
+							"ok": true
+						},
+						{
+							"answer": "Bei dem Kompliment wurde sie ganz verlegene.",
+							"ok": false
+						},
+						{
+							"answer": "Bei dem Kompliment sie wurde ganz verlegen.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
