@@ -18,7 +18,7 @@
   "uploaddate": 1748294737.597204,
   "categories": [
     {
-      "sortOrder": 10,
+      "sortOrder": 1,
       "tabNumber": 1,
       "title": "Begrüßungen & Verabschiedungen",
       "words": [
@@ -310,7 +310,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 2,
       "tabNumber": 1,
       "title": "Persönliche Informationen",
       "words": [
@@ -602,7 +602,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 3,
       "tabNumber": 1,
       "title": "Familie",
       "words": [
@@ -913,7 +913,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 4,
       "tabNumber": 1,
       "title": "Tagesablauf & Freizeit",
       "words": [
@@ -1224,7 +1224,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 5,
       "tabNumber": 1,
       "title": "Familie",
       "words": [
@@ -1535,7 +1535,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 6,
       "tabNumber": 1,
       "title": "Essen & Trinken",
       "words": [
@@ -1846,7 +1846,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 7,
       "tabNumber": 1,
       "title": "Einkaufen",
       "words": [
@@ -2157,7 +2157,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 8,
       "tabNumber": 2,
       "title": "Zahlen & Mengen",
       "words": [
@@ -2468,7 +2468,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 9,
       "tabNumber": 2,
       "title": "Zeit & Datum",
       "words": [
@@ -3090,7 +3090,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 11,
       "tabNumber": 2,
       "title": "Berufe & Tätigkeiten",
       "words": [
@@ -3401,7 +3401,7 @@
       ]
     },
     {
-      "sortOrder": 11,
+      "sortOrder": 12,
       "tabNumber": 3,
       "title": "Adjektive",
       "words": [
@@ -3712,7 +3712,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 13,
       "tabNumber": 3,
       "title": "Verben (Auswahl)",
       "words": [
@@ -4061,7 +4061,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 14,
       "tabNumber": 3,
       "title": "Häufige Ausdrücke",
       "words": [
@@ -4353,7 +4353,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 15,
       "tabNumber": 3,
       "title": "Präpositionen",
       "words": [
@@ -4645,7 +4645,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 16,
       "tabNumber": 3,
       "title": "Konjunktionen",
       "words": [
@@ -4918,7 +4918,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 17,
       "tabNumber": 3,
       "title": "Pronomen",
       "words": [

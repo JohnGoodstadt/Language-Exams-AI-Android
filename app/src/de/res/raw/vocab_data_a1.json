@@ -1,7 +1,7 @@
 {
   "name": "",
   "location": 0,
-  "sheetname": "A1WordList-de",
+  "sheetname": "vocab_data_a1",
   "romanized": false,
   "fileformat": 0,
   "tabtitles": [
@@ -18,7 +18,7 @@
   "uploaddate": 1748294737.597204,
   "categories": [
     {
-      "sortOrder": 10,
+      "sortOrder": 1,
       "tabNumber": 1,
       "title": "Hallo (A1)",
       "words": [
@@ -310,7 +310,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 2,
       "tabNumber": 1,
       "title": "Persönliche Informationen",
       "words": [
@@ -602,7 +602,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 3,
       "tabNumber": 1,
       "title": "Familie",
       "words": [
@@ -894,7 +894,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 4,
       "tabNumber": 2,
       "title": "Zahlen",
       "words": [
@@ -1205,7 +1205,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 5,
       "tabNumber": 2,
       "title": "Wochentage",
       "words": [
@@ -1364,7 +1364,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 6,
       "tabNumber": 2,
       "title": "Monate",
       "words": [
@@ -1599,7 +1599,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 7,
       "tabNumber": 2,
       "title": "Jahreszeiten",
       "words": [
@@ -1682,7 +1682,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 8,
       "tabNumber": 2,
       "title": "Zeit",
       "words": [
@@ -1993,7 +1993,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 9,
       "tabNumber": 3,
       "title": "Farben",
       "words": [
@@ -2520,7 +2520,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 11,
       "tabNumber": 3,
       "title": "Häufige Verben",
       "words": [
@@ -2869,7 +2869,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 12,
       "tabNumber": 3,
       "title": "Gegenstände & Haushaltsartikel",
       "words": [
@@ -3180,7 +3180,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 13,
       "tabNumber": 3,
       "title": "Adjektive (häufig)",
       "words": [
@@ -3529,7 +3529,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 14,
       "tabNumber": 3,
       "title": "Präpositionen",
       "words": [
@@ -3859,7 +3859,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 15,
       "tabNumber": 1,
       "title": "Fragewörter",
       "words": [
@@ -4075,7 +4075,7 @@
       ]
     },
     {
-      "sortOrder": 10,
+      "sortOrder": 16,
       "tabNumber": 1,
       "title": "Häufige Ausdrücke",
       "words": [

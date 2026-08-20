@@ -186,12 +186,14 @@ class ContentRepository @Inject constructor(
                     }
 
                     // --- DEBUG bundle-only switch (German flavour only) ---
-                    // German has no Firestore content yet, so getFormat0Sheet() always fails slowly
+                    // German content is still being uploaded, so getFormat0Sheet() often fails slowly
                     // before falling back to the bundle. When DebugFlags.BUNDLE_ONLY_VOCAB is on
                     // (debug builds only) the German flavour goes STRAIGHT to the bundled resource,
-                    // skipping Firestore. English keeps the normal cache -> Firestore -> bundle path
-                    // (all its content is on Firestore). Flip the flag off to restore Firestore for de.
-                    if (BuildConfig.DEBUG && DebugFlags.BUNDLE_ONLY_VOCAB && BuildConfig.FLAVOR == "de") {
+                    // skipping Firestore - EXCEPT for sheets listed in DebugFlags.FIRESTORE_TEST_SHEETS,
+                    // which still load from Firestore so you can test individual just-uploaded files.
+                    // English keeps the normal cache -> Firestore -> bundle path (all content is live).
+                    if (BuildConfig.DEBUG && DebugFlags.BUNDLE_ONLY_VOCAB && BuildConfig.FLAVOR == "de"
+                        && logicalName !in DebugFlags.FIRESTORE_TEST_SHEETS) {
                         val resourceName = mapLogicalToResourceName(logicalName)
                         Timber.w("VocabRepo: BUNDLE_ONLY_VOCAB on -> loading '$logicalName' straight from bundle ('$resourceName'), skipping Firestore.")
                         val bundleResult = loadBundledFormat0Data(resourceName)

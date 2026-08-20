@@ -5,18 +5,22 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 import timber.log.Timber
 import java.util.Optional
 import javax.inject.Inject
 
-/** One JSON asset file that can be uploaded to / read back from Firestore. */
+/** One JSON file that can be uploaded to / read back from Firestore. */
 data class UploadJsonFile(
     val displayName: String, // short label shown in the UI, e.g. "Modal Verbs"
     val fileName: String,    // the REAL filename, kept for uploading, e.g. "GrammarModalVerbs-de.json"
-    val assetPath: String    // e.g. "Quizzes/Grammar/A1/GrammarModalVerbs-de.json"
+    val assetPath: String,   // unique id + source: an asset path, or "raw/<name>.json" for a res/raw file
+    val firestoreDocName: String = "" // target Firestore doc name (set for vocab; TBD for quiz files)
 )
 
 /** Files grouped under one CEFR level within a section. */
@@ -30,6 +34,9 @@ data class UploadJsonSection(
     val title: String,
     val groups: List<UploadJsonLevelGroup>
 )
+
+/** Per-row result flag: NONE (not done, empty), SUCCESS (tick), ERROR (cross). */
+enum class RowStatus { NONE, SUCCESS, ERROR }
 
 /**
  * Backs the DEBUG-only "Upload JSON" screen: enumerates the bundled quiz JSON that should be pushed
@@ -48,9 +55,13 @@ class UploadJsonViewModel @Inject constructor(
     private val _sections = MutableStateFlow<List<UploadJsonSection>>(emptyList())
     val sections = _sections.asStateFlow()
 
-    // Per-file status line (keyed by assetPath), shown under the filename.
-    private val _statuses = MutableStateFlow<Map<String, String>>(emptyMap())
+    // Per-file result flag (keyed by assetPath), shown as a tick / cross / empty in each row.
+    private val _statuses = MutableStateFlow<Map<String, RowStatus>>(emptyMap())
     val statuses = _statuses.asStateFlow()
+
+    // One-shot messages for the UI to show as a long Toast (e.g. upload errors).
+    private val _toast = MutableSharedFlow<String>(extraBufferCapacity = 8)
+    val toast = _toast.asSharedFlow()
 
     // Result of the top-of-screen admin action (read GermanA1Vocab uploadDate).
     private val _adminResult = MutableStateFlow<String?>(null)
@@ -59,8 +70,12 @@ class UploadJsonViewModel @Inject constructor(
     /** True when the admin library is available (German debug build only). */
     val isAdminAvailable: Boolean get() = adminRepository.isPresent
 
+    // Declared BEFORE init so loadStatuses() (called from init) can use it.
+    private val statusPrefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+
     init {
         buildSections()
+        loadStatuses() // restore ticks/crosses saved from a previous run
     }
 
     /** Reads /global/exam_sheets/sheets/GermanA1Vocab.uploadDate via the admin library and shows it. */
@@ -111,6 +126,84 @@ class UploadJsonViewModel @Inject constructor(
         return s.trim().ifEmpty { fileName.removeSuffix(".json") }
     }
 
+    /**
+     * The main vocab lists live in res/raw (vocab_data_<level>.json), not in assets, and each maps to
+     * a fixed Firestore doc name (GermanA1Vocab …) matching the completed English project so the same
+     * Android/iOS code runs. One row per level.
+     */
+    private fun buildVocabSection(): UploadJsonSection {
+        val vocab = listOf(
+            "A1" to "GermanA1Vocab",
+            "A2" to "GermanA2Vocab",
+            "B1" to "GermanB1Vocab",
+            "B2" to "GermanB2Vocab",
+        )
+        val files = vocab.map { (lvl, docName) ->
+            val rawName = "vocab_data_${lvl.lowercase()}" // res/raw resource name
+            UploadJsonFile(
+                displayName = docName,             // e.g. "GermanA1Vocab" (the Firestore target)
+                fileName = "$rawName.json",        // "vocab_data_a1.json"
+                assetPath = "raw/$rawName.json",   // unique id; the "raw/" prefix marks a res/raw source
+                firestoreDocName = docName
+            )
+        }
+        return UploadJsonSection(VOCAB_SECTION_TITLE, listOf(UploadJsonLevelGroup(VOCAB_GROUP_LEVEL, files)))
+    }
+
+    /**
+     * Reference-tab content (res/raw). A mix of fileFormat 1 (adjectives, conjugations, prepositions -
+     * same structure as fileFormat 0) and fileFormat 2 (word pairs). The upload/read routine is picked
+     * from the JSON's fileFormat field. Firestore doc names are regularised (e.g. german_a1_adjectives
+     * -> GermanA1Adjectives).
+     */
+    private fun buildReferenceSection(): UploadJsonSection {
+        fun ref(rawName: String, docName: String) = UploadJsonFile(
+            displayName = docName,
+            fileName = "$rawName.json",
+            assetPath = "raw/$rawName.json",
+            firestoreDocName = docName
+        )
+        val adjectives = UploadJsonLevelGroup(
+            "Adjectives",
+            listOf(
+                ref("german_a1_adjectives", "GermanA1Adjectives"),
+                ref("german_a2_adjectives", "GermanA2Adjectives"),
+                ref("german_b1_adjectives", "GermanB1Adjectives"),
+                ref("german_b2_adjectives", "GermanB2Adjectives")
+            )
+        )
+        val conjugations = UploadJsonLevelGroup(
+            "Conjugations",
+            listOf(
+                ref("conjugations_to_be", "GermanConjugationsToBe"),
+                ref("conjugations_to_do", "GermanConjugationsToDo"),
+                ref("conjugations_to_get", "GermanConjugationsToGet"),
+                ref("conjugations_to_have", "GermanConjugationsToHave")
+            )
+        )
+        val wordPairs = UploadJsonLevelGroup(
+            "Word Pairs",
+            listOf(
+                ref("german_bringen_holen", "GermanBringenHolen"),
+                ref("german_fragen_bitten", "GermanFragenBitten"),
+                ref("german_hoeren_zuhoeren", "GermanHoerenZuhoeren"),
+                ref("german_kennen_wissen", "GermanKennenWissen")
+            )
+        )
+        val prepositions = UploadJsonLevelGroup(
+            "Prepositions",
+            listOf(ref("german_prepositions", "GermanPrepositions"))
+        )
+        return UploadJsonSection("Reference", listOf(adjectives, conjugations, wordPairs, prepositions))
+    }
+
+    companion object {
+        const val VOCAB_SECTION_TITLE = "Main Vocab"
+        const val VOCAB_GROUP_LEVEL = "Files"
+        private const val PREFS_NAME = "upload_json_status"
+        private const val PREFS_STATUSES_KEY = "statuses"
+    }
+
     private fun buildSections() {
         // Grammar and Section Sheet are nested per level: Quizzes/<root>/<level>/*.json
         val grammar = UploadJsonSection(
@@ -133,24 +226,150 @@ class UploadJsonViewModel @Inject constructor(
                 UploadJsonLevelGroup(lvl, usageAll.filter { it.fileName.contains(lvl) })
             }
         )
-        _sections.value = listOf(grammar, sectionSheet, usageQuiz)
+        _sections.value = listOf(buildVocabSection(), buildReferenceSection(), grammar, sectionSheet, usageQuiz)
     }
 
-    // --- Placeholder actions (real Firestore logic to be filled in later) ---
+    // --- Row actions. Each returns a Result; a tick on success, a cross + log + long Toast on error. ---
 
-    /** Upload this file's JSON to the German Firestore project. Placeholder for now. */
+    /** Upload this file's JSON to the German Firestore project. */
     fun uploadFile(file: UploadJsonFile) {
-        Timber.i("UploadJSON: TODO upload '${file.assetPath}' to Firestore")
-        setStatus(file, "Upload:    not implemented yet")
+        viewModelScope.launch {
+            val repo = adminRepository.orElse(null)
+            if (repo == null) {
+                fail(file, "Upload", IllegalStateException("Admin library unavailable (German debug only)"))
+                return@launch
+            }
+            if (file.firestoreDocName.isBlank()) {
+                fail(file, "Upload", IllegalStateException("No Firestore sheet name set for ${file.fileName}"))
+                return@launch
+            }
+
+            // Guard against a SECOND upload (there is no Delete yet): if the sheet already exists, block.
+            val alreadyExists = repo.sheetExists(file.firestoreDocName).getOrElse { e ->
+                fail(file, "Upload", e) // couldn't even check -> treat as an error
+                return@launch
+            }
+            if (alreadyExists) {
+                Timber.w("UploadJSON: '${file.firestoreDocName}' already exists - upload blocked (no Delete yet)")
+                _toast.tryEmit(
+                    "Already uploaded: ${file.fileName}\nDelete '${file.firestoreDocName}' in Firestore first (Delete not implemented yet)."
+                )
+                return@launch // leave the existing flag unchanged
+            }
+
+            applyResult(file, action = "Upload", result = performUpload(file))
+        }
     }
 
-    /** Check the doc exists in Firestore and decode it back into memory to confirm validity. Placeholder. */
+    /**
+     * Read the sheet back from Firestore. Distinguishes three outcomes:
+     *  - not present (never uploaded) -> blank flag (NONE), no toast;
+     *  - exists + reads cleanly       -> tick (SUCCESS);
+     *  - real error (permission, bad format at a lower level, …) -> cross (ERROR) + toast.
+     */
     fun readFile(file: UploadJsonFile) {
-        Timber.i("UploadJSON: TODO read + verify '${file.assetPath}' from Firestore")
-        setStatus(file, "Read: not implemented yet")
+        viewModelScope.launch {
+            val repo = adminRepository.orElse(null)
+            if (repo == null) {
+                fail(file, "Read", IllegalStateException("Admin library unavailable (German debug only)"))
+                return@launch
+            }
+            if (file.firestoreDocName.isBlank()) {
+                fail(file, "Read", IllegalStateException("No Firestore sheet name set for ${file.fileName}"))
+                return@launch
+            }
+            repo.readSheet(file.firestoreDocName).fold(
+                onSuccess = { summary ->
+                    if (summary == null) {
+                        Timber.i("UploadJSON: '${file.firestoreDocName}' not present -> blank")
+                        setStatus(file, RowStatus.NONE)
+                    } else {
+                        Timber.i("UploadJSON: read OK - $summary")
+                        setStatus(file, RowStatus.SUCCESS)
+                    }
+                },
+                onFailure = { e -> fail(file, "Read", e) }
+            )
+        }
     }
 
-    private fun setStatus(file: UploadJsonFile, status: String) {
-        _statuses.value = _statuses.value.toMutableMap().apply { put(file.assetPath, status) }
+    // Upload goes through the admin library (German debug only), targeting the sheet document
+    // /global/exam_sheets/sheets/<firestoreDocName>.
+    private suspend fun performUpload(file: UploadJsonFile): Result<Unit> {
+        val repo = adminRepository.orElse(null)
+            ?: return Result.failure(IllegalStateException("Admin library unavailable (German debug only)"))
+        if (file.firestoreDocName.isBlank())
+            return Result.failure(IllegalStateException("No Firestore sheet name set for ${file.fileName}"))
+        val json = readFileContent(file)
+            ?: return Result.failure(IllegalStateException("Could not read ${file.fileName} from the app bundle"))
+        return repo.uploadSheet(file.firestoreDocName, json)
+    }
+
+    /** Reads a bundled file's JSON: from res/raw when assetPath starts with "raw/", else from assets. */
+    private fun readFileContent(file: UploadJsonFile): String? = try {
+        if (file.assetPath.startsWith("raw/")) {
+            val resName = file.fileName.removeSuffix(".json")
+            val resId = context.resources.getIdentifier(resName, "raw", context.packageName)
+            if (resId == 0) {
+                Timber.e("UploadJSON: raw resource '$resName' not found")
+                null
+            } else {
+                context.resources.openRawResource(resId).bufferedReader().use { it.readText() }
+            }
+        } else {
+            context.assets.open(file.assetPath).bufferedReader().use { it.readText() }
+        }
+    } catch (e: Exception) {
+        Timber.e(e, "UploadJSON: failed to read content for '${file.assetPath}'")
+        null
+    }
+
+    /** Turn a Result into the row's tick/cross, logging + toasting on error. */
+    private fun applyResult(file: UploadJsonFile, action: String, result: Result<Unit>) {
+        result.fold(
+            onSuccess = { setStatus(file, RowStatus.SUCCESS) },
+            onFailure = { e -> fail(file, action, e) }
+        )
+    }
+
+    /** Cross the row, log the error, and show a long Toast. */
+    private fun fail(file: UploadJsonFile, action: String, e: Throwable) {
+        Timber.e(e, "UploadJSON: $action failed for '${file.assetPath}'")
+        setStatus(file, RowStatus.ERROR)
+        _toast.tryEmit("$action failed: ${file.fileName}\n${e.localizedMessage ?: e.toString()}")
+    }
+
+    private fun setStatus(file: UploadJsonFile, status: RowStatus) {
+        _statuses.value = _statuses.value.toMutableMap().apply {
+            // NONE = blank; don't persist it, just clear the row so a blank survives a restart too.
+            if (status == RowStatus.NONE) remove(file.assetPath) else put(file.assetPath, status)
+        }
+        persistStatuses()
+    }
+
+    // --- Persistence: remember each row's tick/cross across app restarts (SharedPreferences). ---
+
+    private fun loadStatuses() {
+        val stored = statusPrefs.getString(PREFS_STATUSES_KEY, null) ?: return
+        try {
+            val obj = JSONObject(stored)
+            val restored = mutableMapOf<String, RowStatus>()
+            obj.keys().forEach { key ->
+                runCatching { RowStatus.valueOf(obj.getString(key)) }.getOrNull()?.let { restored[key] = it }
+            }
+            _statuses.value = restored
+        } catch (e: Exception) {
+            Timber.e(e, "UploadJSON: failed to load saved statuses")
+        }
+    }
+
+    private fun persistStatuses() {
+        try {
+            val obj = JSONObject()
+            _statuses.value.forEach { (key, status) -> obj.put(key, status.name) }
+            statusPrefs.edit().putString(PREFS_STATUSES_KEY, obj.toString()).apply()
+        } catch (e: Exception) {
+            Timber.e(e, "UploadJSON: failed to save statuses")
+        }
     }
 }

@@ -603,7 +603,7 @@
 		{
 			"title": "Bildung",
 			"tabNumber": 1,
-			"sortOrder": 1,
+			"sortOrder": 2,
 			"words": [
 				{
 					"group": "Bildung",
@@ -1330,7 +1330,7 @@
 		{
 			"title": "Reisen",
 			"tabNumber": 2,
-			"sortOrder": 1,
+			"sortOrder": 3,
 			"words": [
 				{
 					"group": "Reisen",
@@ -2033,7 +2033,7 @@
 		{
 			"title": "Gesundheit",
 			"tabNumber": 1,
-			"sortOrder": 1,
+			"sortOrder": 4,
 			"words": [
 				{
 					"group": "Gesundheit",
@@ -2760,7 +2760,7 @@
 		{
 			"title": "Freizeit",
 			"tabNumber": 1,
-			"sortOrder": 1,
+			"sortOrder": 5,
 			"words": [
 				{
 					"group": "Freizeit",
@@ -3463,7 +3463,7 @@
 		{
 			"title": "Essen & Trinken",
 			"tabNumber": 1,
-			"sortOrder": 1,
+			"sortOrder": 6,
 			"words": [
 				{
 					"group": "Essen & Trinken",
@@ -4190,7 +4190,7 @@
 		{
 			"title": "Einkaufen",
 			"tabNumber": 2,
-			"sortOrder": 1,
+			"sortOrder": 7,
 			"words": [
 				{
 					"group": "Einkaufen",
@@ -4893,7 +4893,7 @@
 		{
 			"title": "Technologie",
 			"tabNumber": 1,
-			"sortOrder": 1,
+			"sortOrder": 8,
 			"words": [
 				{
 					"group": "Technologie",
@@ -5572,7 +5572,7 @@
 		{
 			"title": "Natur",
 			"tabNumber": 2,
-			"sortOrder": 1,
+			"sortOrder": 9,
 			"words": [
 				{
 					"group": "Natur",
@@ -6275,7 +6275,7 @@
 		{
 			"title": "Gesellschaft",
 			"tabNumber": 1,
-			"sortOrder": 1,
+			"sortOrder": 10,
 			"words": [
 				{
 					"group": "Gesellschaft",
@@ -7002,7 +7002,7 @@
 		{
 			"title": "Beziehungen",
 			"tabNumber": 2,
-			"sortOrder": 1,
+			"sortOrder": 11,
 			"words": [
 				{
 					"group": "Beziehungen",
@@ -7633,7 +7633,7 @@
 		{
 			"title": "Emotionen",
 			"tabNumber": 2,
-			"sortOrder": 1,
+			"sortOrder": 12,
 			"words": [
 				{
 					"group": "Emotionen",
@@ -8360,7 +8360,7 @@
 		{
 			"title": "Verben",
 			"tabNumber": 3,
-			"sortOrder": 1,
+			"sortOrder": 13,
 			"words": [
 				{
 					"group": "Verben",
@@ -9063,7 +9063,7 @@
 		{
 			"title": "Adjektive",
 			"tabNumber": 1,
-			"sortOrder": 1,
+			"sortOrder": 14,
 			"words": [
 				{
 					"group": "Adjektive",
@@ -9766,7 +9766,7 @@
 		{
 			"title": "Adverbien",
 			"tabNumber": 3,
-			"sortOrder": 1,
+			"sortOrder": 15,
 			"words": [
 				{
 					"group": "Adverbien",
@@ -10493,7 +10493,7 @@
 		{
 			"title": "Komplexe Sätze",
 			"tabNumber": 3,
-			"sortOrder": 1,
+			"sortOrder": 16,
 			"words": [
 				{
 					"group": "Komplexe Sätze",

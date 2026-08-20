@@ -37,10 +37,10 @@ object LanguageConfig {
     }
     fun getConjugationFirestoreSheetName(title: String): String {
         val jsonFileName = when (title) {
-            "To Have" -> "GermanConjugationsToHave"
-            "To Be" -> "GermanConjugationsToBe"
-            "To Do" -> "GermanConjugationsToDo"
-            "To Get" -> "GermanConjugationsToGet"
+            "Haben" -> "GermanConjugationsToHave"
+            "Sein" -> "GermanConjugationsToBe"
+            "Machen" -> "GermanConjugationsToDo"
+            "Bekommen" -> "GermanConjugationsToGet"
             else -> "GermanConjugationsToHave" // Default option
         }
         return jsonFileName
