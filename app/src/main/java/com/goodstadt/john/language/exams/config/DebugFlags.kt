@@ -37,6 +37,11 @@ object DebugFlags {
         "GermanConjugationsToHave",
         "GermanConjugationsToGet",
         "GermanConjugationsToBe",
+        "GermanFragenBitten",
+        "GermanHoerenZuhoeren",
+        "GermanKennenWissen",
+        "GermanBringenHolen",
+        "GermanPrepositions",
 
     )
 }
