@@ -57,6 +57,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
         when (val fileFormat = root.optInt(FIELD_FILE_FORMAT, 0)) {
             0, 1 -> uploadFormat0(docName, root) // fileFormat 1 has the SAME structure as 0 -> reuse
             2 -> uploadFormat2(docName, root)
+            7, 10 -> uploadFormat7or10(docName, root) // 7 & 10 share the same JSON structure
             else -> Result.failure(UnsupportedOperationException("Upload for fileFormat $fileFormat not implemented yet"))
         }
     } catch (e: Exception) {
@@ -81,6 +82,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
             when (val fileFormat = (snapshot.get(FIELD_FILE_FORMAT) as? Number)?.toInt() ?: 0) {
                 0, 1 -> readFormat0(docName, snapshot)
                 2 -> readFormat2(docName, snapshot)
+                7, 10 -> readFormat7or10(docName, snapshot)
                 else -> Result.failure(UnsupportedOperationException("Read for fileFormat $fileFormat not implemented yet"))
             }
         }
@@ -304,6 +306,99 @@ class FirestoreUploadAdminRepository @Inject constructor(
         Result.failure(e)
     }
 
+    // ---------------------------------------------------------------- fileFormat 7 (grammar quizzes)
+
+    /**
+     * Uploads a fileFormat-7 sheet (grammar quiz). The nested JSON (data[] levels -> sections[]) is
+     * FLATTENED into a single `sections` subcollection; each section doc carries its level's metadata
+     * (sortorder, learningTitle, learningPoints, …) so the app can regroup by `sortorder`. Each
+     * section's answer options are stored as a `words` array of {ok, word} maps.
+     */
+    private suspend fun uploadFormat7or10(docName: String, root: JSONObject): Result<Unit> = try {
+        val sheetRef = sheetDoc(docName)
+
+        clearSubcollection(sheetRef, SECTIONS)
+
+        val meta = hashMapOf<String, Any>(
+            "fileformat" to root.optInt("fileformat", 7),
+            "sheetname" to docName,
+            "title" to root.optString("title", ""),
+            "location" to root.optInt("location", 0),
+            "updatedDate" to FieldValue.serverTimestamp(),
+            FIELD_UPLOAD_DATE to FieldValue.serverTimestamp()
+        )
+        sheetRef.set(meta).await()
+
+        val data = root.optJSONArray("data") ?: JSONArray()
+        var batch = firestore.batch()
+        var ops = 0
+        var totalSections = 0
+        for (li in 0 until data.length()) {
+            val level = data.getJSONObject(li)
+            val levelTitle = level.optString("title", "")
+            val levelDesc = level.optString("description", "")
+            val sortorder = level.optInt("sortorder", li + 1)
+            val learningTitle = level.optString("learningTitle", "")
+            val learningPoints = jsonStringArray(level.optJSONArray("learningPoints"))
+            val sections = level.optJSONArray("sections") ?: JSONArray()
+            for (si in 0 until sections.length()) {
+                val sec = sections.getJSONObject(si)
+                val wordsJson = sec.optJSONArray("words") ?: JSONArray()
+                val words = ArrayList<Map<String, Any>>()
+                for (wi in 0 until wordsJson.length()) {
+                    val w = wordsJson.getJSONObject(wi)
+                    words.add(mapOf("ok" to w.optBoolean("ok", false), "word" to w.optString("word", "")))
+                }
+                val entryRef = sheetRef.collection(SECTIONS).document("section_%04d".format(totalSections))
+                batch.set(
+                    entryRef,
+                    hashMapOf(
+                        // level metadata (repeated per section; regrouped by sortorder on read)
+                        "levelTitle" to levelTitle,
+                        "description" to levelDesc,
+                        "sortorder" to sortorder,
+                        "learningTitle" to learningTitle,
+                        "learningPoints" to learningPoints,
+                        // section fields
+                        "title" to sec.optString("title", ""),
+                        "page" to sec.optInt("page", si + 1),
+                        "summary" to sec.optString("summary", ""),
+                        "level" to sec.optString("level", ""),
+                        "category" to sec.optString("category", ""),
+                        "explain" to sec.optString("explain", ""),
+                        "sentence" to sec.optString("sentence", ""),
+                        "words" to words
+                    )
+                )
+                totalSections++
+                if (++ops >= BATCH_LIMIT) { batch.commit().await(); batch = firestore.batch(); ops = 0 }
+            }
+        }
+        if (ops > 0) batch.commit().await()
+
+        Timber.i("UploadAdmin: uploaded '$docName' (fileFormat 7/10): ${data.length()} levels, $totalSections sections")
+        Result.success(Unit)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: uploadFormat7or10 '$docName' failed")
+        Result.failure(e)
+    }
+
+    /** Reads back a fileFormat-7 sheet's flat sections subcollection for a sanity check. */
+    private suspend fun readFormat7or10(
+        docName: String,
+        sheetSnap: com.google.firebase.firestore.DocumentSnapshot
+    ): Result<String> = try {
+        val sections = sheetDoc(docName).collection(SECTIONS).get().await()
+        val levelCount = sections.documents.mapNotNull { (it.get("sortorder") as? Number)?.toInt() }.toSet().size
+        val title = sheetSnap.getString("title") ?: docName
+        val summary = "'$docName' OK (fileFormat 7/10): title='$title', $levelCount levels, ${sections.size()} sections"
+        Timber.i("UploadAdmin: readFormat7or10 -> $summary")
+        Result.success(summary)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: readFormat7or10 '$docName' failed")
+        Result.failure(e)
+    }
+
     /** Deletes every doc in a single (flat) subcollection under [sheetRef] (batched). */
     private suspend fun clearSubcollection(sheetRef: DocumentReference, name: String) {
         val docs = sheetRef.collection(name).get().await()
@@ -360,6 +455,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val CATEGORIES = "categories"
         private const val WORDS = "words"
         private const val WORDS_AND_SENTENCES = "wordsAndSentences"
+        private const val SECTIONS = "sections"
         private const val FIELD_FILE_FORMAT = "fileformat"
         private const val FIELD_UPLOAD_DATE = "uploadDate"
         private const val GERMAN_A1_VOCAB = "GermanA1Vocab"

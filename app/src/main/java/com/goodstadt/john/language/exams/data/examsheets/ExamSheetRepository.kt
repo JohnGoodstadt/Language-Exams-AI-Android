@@ -48,7 +48,7 @@ import javax.inject.Singleton
  *     2. **L2 (Disk):** Checks internal storage for previously downloaded JSON files.
  *     3. **L3 (Network):** Fetches fresh data from **Firestore** if local data is missing or stale.
  * - **Version Control:** Compares local file versions against **Remote Config** or Firestore metadata to determine if a "Force Refresh" is required to download content updates.
- * - **Data Parsing:** Handles the deserialization of raw JSON into typed data models (`VocabFile`, `Format1File`, `Format2File`, `TestMyselfListRoot`).
+ * - **Data Parsing:** Handles the deserialization of raw JSON into typed data models (`VocabFile`, `Format1File`, `Format2File`, `Format7or10File`).
  *
  * **Inputs:**
  * - Sheet Identifiers (e.g., "EnglishB1Vocab", "EnglishPrepositions").

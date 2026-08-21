@@ -33,7 +33,7 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
-import com.goodstadt.john.language.exams.models.TestMyselfListRoot
+import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
@@ -176,7 +176,7 @@ class GrammarQuizViewModel @Inject constructor(
 
             val testData = try {
                 appContext.assets.open("$dir/$fileName").bufferedReader().use {
-                    jsonParser.decodeFromString<TestMyselfListRoot>(it.readText())
+                    jsonParser.decodeFromString<Format7or10File>(it.readText())
                 }
             } catch (e: Exception) {
                 Timber.e(e, "GrammarQuiz: failed to parse $dir/$fileName")
@@ -193,7 +193,7 @@ class GrammarQuizViewModel @Inject constructor(
             quizStatistics.value = quizStatistics.value.copy(
                 title = category, filename = baseName, skillLevel = level, page = 1
             )
-            _uiState.update { it.copy(testMyselfListRoot = testData) }
+            _uiState.update { it.copy(format7or10ListRoot = testData) }
 
             _allQuestions = generateQuestionsFromData(testData)
             applyFilters()
@@ -231,7 +231,7 @@ class GrammarQuizViewModel @Inject constructor(
         }
     }
 
-    private fun generateQuestionsFromData(testData: TestMyselfListRoot): List<QuizQuestion> {
+    private fun generateQuestionsFromData(testData: Format7or10File): List<QuizQuestion> {
         currentFileFormat.value = when (testData.fileFormat) {
             quizQandA -> quizQandA
             quizDefinitions -> quizDefinitions

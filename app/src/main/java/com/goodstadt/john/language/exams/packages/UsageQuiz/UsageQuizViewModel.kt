@@ -41,11 +41,11 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
-import com.goodstadt.john.language.exams.models.TestMyselfListRoot
+import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
-import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import com.goodstadt.john.language.exams.packages.reference.shared.QuizDetail
+import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -252,7 +252,7 @@ sealed interface QuizUiState {
     object NotAvailable : QuizUiState // For flavors like 'zh'
 }
 data class UsageQuizUiState(
-    val testMyselfListRoot:TestMyselfListRoot? = null
+    val format7or10ListRoot:Format7or10File? = null
 )
 @HiltViewModel
 class UsageQuizViewModel @Inject constructor(
@@ -458,7 +458,7 @@ class UsageQuizViewModel @Inject constructor(
             Timber.v("filename $finalFilename")
             //val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
 
-            val testData = readTestMyselfDataFromAssets(appContext, finalFilename)
+            val testData = readFormat7or10DataFromAssets(appContext, finalFilename)
 
             if (testData == null) {
                 Timber.wtf("Failed to parse JSON file: $finalFilename")
@@ -477,7 +477,7 @@ class UsageQuizViewModel @Inject constructor(
                 title = quizDetail.title, filename = baseName,page = 1
             )
 
-            _uiState.update { it.copy(testMyselfListRoot = testData)}
+            _uiState.update { it.copy(format7or10ListRoot = testData)}
 
             _allQuestions = generateQuestionsFromData(testData)
             applyFilters()
@@ -512,7 +512,7 @@ class UsageQuizViewModel @Inject constructor(
         selectedQuiz.value = quizDetail
         loadQuestions()
     }
-    private fun generateQuestionsFromData(testData: TestMyselfListRoot): List<QuizQuestion> {
+    private fun generateQuestionsFromData(testData: Format7or10File): List<QuizQuestion> {
 
         if (testData.fileFormat == quizQandA) {
             currentFileFormat.value = quizQandA
@@ -786,7 +786,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
     }
 
-    fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
+    private fun readFormat7or10DataFromAssets(context: Context, fileName: String): Format7or10File? {
         return try {
 
 
@@ -794,7 +794,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                 .bufferedReader()
                 .use { it.readText() }
 
-            return jsonParser.decodeFromString<TestMyselfListRoot>(jsonString)
+            return jsonParser.decodeFromString<Format7or10File>(jsonString)
 
         } catch (e: Exception) {
             e.printStackTrace()
@@ -823,9 +823,9 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     private fun peekTitleFromJsonObsolete(filename: String): String? {
         return try {
             // Reusing your existing reader logic, but maybe we can optimize later
-            val data = readTestMyselfDataFromAssets(appContext, filename)
+            val data = readFormat7or10DataFromAssets(appContext, filename)
             // Get the title from the root object if you added it there, or the first section
-            data?.title // Assuming you added 'val title: String' to TestMyselfListRoot
+            data?.title // Assuming you added 'val title: String' to Format7or10File
         } catch (e: Exception) {
             null
         }
@@ -836,10 +836,10 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         // If cache is ready, use it. If not (still loading), use default English list.
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
     }
-    fun TestMyselfListRoot.shuffleLists() {
-        data.forEach { testMyselfList ->
-            testMyselfList.sections = testMyselfList.sections.shuffled() // Shuffle sections
-            testMyselfList.sections.forEach { section ->
+    fun Format7or10File.shuffleLists() {
+        data.forEach { format7or10 ->
+            format7or10.sections = format7or10.sections.shuffled() // Shuffle sections
+            format7or10.sections.forEach { section ->
                 section.words = section.words.shuffled() // Shuffle words within each section
             }
         }

@@ -94,7 +94,11 @@ class UploadJsonViewModel @Inject constructor(
         }
     }
 
-    private fun listJsonAssets(folder: String, stripPrefix: String): List<UploadJsonFile> =
+    private fun listJsonAssets(
+        folder: String,
+        stripPrefix: String,
+        docNameFor: (String) -> String = { "" }
+    ): List<UploadJsonFile> =
         try {
             context.assets.list(folder)
                 ?.filter { it.endsWith(".json") }
@@ -103,7 +107,8 @@ class UploadJsonViewModel @Inject constructor(
                     UploadJsonFile(
                         displayName = shortDisplayName(fileName, stripPrefix),
                         fileName = fileName,
-                        assetPath = "$folder/$fileName"
+                        assetPath = "$folder/$fileName",
+                        firestoreDocName = docNameFor(fileName)
                     )
                 }
                 ?: emptyList()
@@ -111,6 +116,10 @@ class UploadJsonViewModel @Inject constructor(
             Timber.e(e, "UploadJSON: failed to list assets in '$folder'")
             emptyList()
         }
+
+    /** "GrammarDefiniteIndefiniteArticles-de.json" -> "GermanDefiniteIndefiniteArticles". */
+    private fun grammarDocName(fileName: String): String =
+        com.goodstadt.john.language.exams.data.GrammarSheetMapping.normalizeToLogicalName(fileName)
 
     /**
      * Turns a raw quiz filename into a short, human label: drop the section prefix (e.g. "Grammar"),
@@ -209,7 +218,10 @@ class UploadJsonViewModel @Inject constructor(
         val grammar = UploadJsonSection(
             title = "Grammar",
             groups = levels.map { lvl ->
-                UploadJsonLevelGroup(lvl, listJsonAssets("Quizzes/Grammar/$lvl", stripPrefix = "Grammar"))
+                UploadJsonLevelGroup(
+                    lvl,
+                    listJsonAssets("Quizzes/Grammar/$lvl", stripPrefix = "Grammar", docNameFor = ::grammarDocName)
+                )
             }
         )
         val sectionSheet = UploadJsonSection(

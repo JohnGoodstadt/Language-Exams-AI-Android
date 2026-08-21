@@ -236,7 +236,7 @@ fun UsageQuizScreen(
 //        val fred = selectedQuiz
 //        print(fred)
 
-        val learningTitleData = uiState.testMyselfListRoot?.data?.first()
+        val learningTitleData = uiState.format7or10ListRoot?.data?.first()
         val learningTitle = learningTitleData?.learningTitle ?: "Why this quiz works"
         val learningPoints = learningTitleData?.learningPoints.orEmpty()
 

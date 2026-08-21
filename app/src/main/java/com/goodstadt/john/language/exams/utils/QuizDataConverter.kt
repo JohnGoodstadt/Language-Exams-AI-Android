@@ -2,9 +2,9 @@ package com.goodstadt.john.language.exams.utils
 
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
-import com.goodstadt.john.language.exams.models.TestMyselfListRoot
-import com.goodstadt.john.language.exams.models.TestMyselfSections
-import com.goodstadt.john.language.exams.models.TestMyselfWordsState
+import com.goodstadt.john.language.exams.models.Format7or10File
+import com.goodstadt.john.language.exams.models.Format7or10Section
+import com.goodstadt.john.language.exams.models.Format7or10Word
 import kotlin.random.Random
 import android.content.Context
 
@@ -17,9 +17,9 @@ object QuizDataConverter {
     fun generateHomophoneSwapQuiz(
         sourceData: List<HeaderWordsSentencesList>,
         limit: Int = 10
-    ): List<TestMyselfSections> {
+    ): List<Format7or10Section> {
 
-        val generatedQuestions = mutableListOf<TestMyselfSections>()
+        val generatedQuestions = mutableListOf<Format7or10Section>()
         var pageCounter = 0
 
         // 1. Flatten all entries and shuffle
@@ -68,11 +68,11 @@ object QuizDataConverter {
             if (wrongSentence == sentence) continue
 
             // 4. Build Options
-            val quizOptions = mutableListOf<TestMyselfWordsState>()
+            val quizOptions = mutableListOf<Format7or10Word>()
 
             // Correct Answer (Original Sentence)
             quizOptions.add(
-                TestMyselfWordsState(
+                Format7or10Word(
                     word = sentence, // The sentence goes in the 'word' field as requested
                     ok = true
                 )
@@ -80,14 +80,14 @@ object QuizDataConverter {
 
             // Incorrect Answer (Swapped Sentence)
             quizOptions.add(
-                TestMyselfWordsState(
+                Format7or10Word(
                     word = wrongSentence,
                     ok = false
                 )
             )
 
             // 5. Build Section
-            val section = TestMyselfSections(
+            val section = Format7or10Section(
                 title = entry.word,       // "hoard, horde"
                 page = pageCounter,
                 sentence = "",            // Empty as requested
@@ -103,16 +103,16 @@ object QuizDataConverter {
         return generatedQuestions
     }
     /**
-     * Transforms a list of Categories into an array of TestMyselfSections for a multiple-choice quiz.
+     * Transforms a list of Categories into an array of Format7or10Section for a multiple-choice quiz.
      *
      * This quiz presents a word and its definition, and asks the user to choose
      * between a "correct" sentence (`lockedClause`) and an "incorrect" sentence (`weakenedClause`).
      *
      * @param sourceData The list of Categories containing the adjective data.
      * @param limit The maximum number of questions to generate.
-     * @return A list of `TestMyselfSections` ready to be used by the Quiz UI.
+     * @return A list of `Format7or10Section` ready to be used by the Quiz UI.
      */
-    fun generateAdjectivesQuiz(sourceData: List<Category>, limit: Int = 10): List<TestMyselfSections> {
+    fun generateAdjectivesQuiz(sourceData: List<Category>, limit: Int = 10): List<Format7or10Section> {
 
         // 1. Flatten all `Format0Word` objects from all categories into a single list.
         val allWords = sourceData.flatMap { it.words }
@@ -130,19 +130,19 @@ object QuizDataConverter {
                 // a) Build the answer options.
                 val quizOptions = listOf(
                     // The Correct Answer (the lockedClause)
-                    TestMyselfWordsState(
+                    Format7or10Word(
                         word = entry.lockedClause,
                         ok = true
                     ),
                     // The Incorrect Answer (the weakenedClause)
-                    TestMyselfWordsState(
+                    Format7or10Word(
                         word = entry.weakenedClause,
                         ok = false
                     )
                 ).shuffled() // Shuffle the "correct" and "incorrect" options
 
-                // b) Build the final `TestMyselfSections` object for this question.
-                TestMyselfSections(
+                // b) Build the final `Format7or10Section` object for this question.
+                Format7or10Section(
                     title = "Choose the sentence most closely described by ${entry.word}.",
                     page = index,       // A zero-based page index
                     sentence = entry.word,
@@ -157,11 +157,11 @@ object QuizDataConverter {
 
 
     fun randomSectionsFromAllLists(
-        root: TestMyselfListRoot,
+        root: Format7or10File,
         count: Int = 10,
         random: Random = Random.Default
-    ): List<TestMyselfSections> {
-        val allSections: List<TestMyselfSections> =
+    ): List<Format7or10Section> {
+        val allSections: List<Format7or10Section> =
             root.data.flatMap { it.sections }
 
         if (allSections.isEmpty()) return emptyList()
@@ -175,10 +175,10 @@ object QuizDataConverter {
         context: Context,
         filename: String,
         count: Int = 10
-    ): List<TestMyselfSections> {
+    ): List<Format7or10Section> {
 
        // val fileName = "QuizSheetWordPairs-en.json" // stored under assets/Quizzes/
-        val root: TestMyselfListRoot = readTestMyselfDataFromAssets(context, filename)
+        val root: Format7or10File = readFormat7or10fDataFromAssets(context, filename)
             ?: return emptyList()
 
         return randomSectionsFromAllLists(root, count)
@@ -206,10 +206,10 @@ object QuizDataConverter {
         context: Context,
         fileName: String,
         count: Int = 10
-    ): List<TestMyselfSections> {
+    ): List<Format7or10Section> {
 
         val jsonFileName = "$fileName.json" // assets/Quizzes/QuizSheetPrepositions-en.json
-        val root: TestMyselfListRoot = readTestMyselfDataFromAssets(context, jsonFileName) ?: return emptyList()
+        val root: Format7or10File = readFormat7or10fDataFromAssets(context, jsonFileName) ?: return emptyList()
 
         return pickRandomQuizSections(
             root = root,
@@ -221,20 +221,20 @@ object QuizDataConverter {
 
 
     fun pickRandomQuizSections(
-        root: TestMyselfListRoot,
+        root: Format7or10File,
         count: Int = 10,
         renumberPagesFrom1: Boolean = true,
         shuffleAnswers: Boolean = true,
         random: Random = Random.Default
-    ): List<TestMyselfSections> {
+    ): List<Format7or10Section> {
 
-        // 1) Flatten all sections from all TestMyselfList blocks
-        val allSections: List<TestMyselfSections> = root.data.flatMap { it.sections }
+        // 1) Flatten all sections from all Format7or10List blocks
+        val allSections: List<Format7or10Section> = root.data.flatMap { it.sections }
         if (allSections.isEmpty()) return emptyList()
 
         // 2) Shuffle + take N (no duplicates within a single call)
         val n = minOf(count, allSections.size)
-        val picked: List<TestMyselfSections> = allSections.shuffled(random).take(n)
+        val picked: List<Format7or10Section> = allSections.shuffled(random).take(n)
 
         // 3) Optionally renumber pages and shuffle answer options
         return picked.mapIndexed { index, section ->

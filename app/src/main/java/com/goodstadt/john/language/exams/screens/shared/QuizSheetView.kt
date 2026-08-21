@@ -19,7 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.models.TestMyselfSections
+import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.ui.theme.Orange
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.QuizSheetViewModel
@@ -27,7 +27,7 @@ import com.goodstadt.john.language.exams.viewmodels.QuizSheetViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun QuizSheetView(
-    questions: List<TestMyselfSections>,
+    questions: List<Format7or10Section>,
     title: String,
     onDismiss: () -> Unit,
     viewModel: QuizSheetViewModel = hiltViewModel()

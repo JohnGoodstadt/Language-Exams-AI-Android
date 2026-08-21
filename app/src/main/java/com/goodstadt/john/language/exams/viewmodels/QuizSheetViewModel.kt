@@ -7,8 +7,8 @@ import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
-import com.goodstadt.john.language.exams.models.TestMyselfSections
-import com.goodstadt.john.language.exams.models.TestMyselfWordsState
+import com.goodstadt.john.language.exams.models.Format7or10Section
+import com.goodstadt.john.language.exams.models.Format7or10Word
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,12 +17,12 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 data class QuizSheetUiState(
-    val questions: List<TestMyselfSections> = emptyList(),
+    val questions: List<Format7or10Section> = emptyList(),
     val title: String = "",
     val currentIndex: Int = 0,
     val scores: Map<Int, Boolean> = emptyMap(), // Index -> IsCorrect
     val totalTries: Int = 0,
-    val userAnswers: Map<Int, TestMyselfWordsState> = emptyMap(),
+    val userAnswers: Map<Int, Format7or10Word> = emptyMap(),
     val isComplete: Boolean = false,
     val showInfoSheet: Boolean = false
 )
@@ -38,13 +38,13 @@ class QuizSheetViewModel @Inject constructor(
     val uiState = _uiState.asStateFlow()
 
     // Initialize with data passed from the View
-    fun setup(questions: List<TestMyselfSections>, title: String) {
+    fun setup(questions: List<Format7or10Section>, title: String) {
         if (_uiState.value.questions.isEmpty()) {
             _uiState.update { it.copy(questions = questions, title = title) }
         }
     }
 
-    fun onAnswerSelected(option: TestMyselfWordsState) {
+    fun onAnswerSelected(option: Format7or10Word) {
         val state = _uiState.value
         val index = state.currentIndex
         val question = state.questions[index]

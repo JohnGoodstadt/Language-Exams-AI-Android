@@ -7,25 +7,25 @@ import kotlinx.serialization.Serializable
 //import kotlinx.serialization.Serializable
 
 @Serializable
-data class TestMyselfListRoot(
+data class Format7or10File(
     @SerialName("fileformat") val fileFormat: Int, //case sensitive
     @SerialName("sheetname") var sheetName: String,
     val title: String? = null,//"", //read title for localised versions
     val updatedDate: Long,
     val location: Int,
-    val data: List<TestMyselfList>
+    val data: List<Format7or10List>
 )
 @Serializable
-data class TestMyselfList(
+data class Format7or10List(
     val title: String,
     val description: String,
     val sortorder: Int,
     val learningTitle: String? = null,
     val learningPoints: List<String> = emptyList(),
-    var sections: List<TestMyselfSections>
+    var sections: List<Format7or10Section>
 )
 @Serializable
-data class TestMyselfSections(
+data class Format7or10Section(
     val title: String,
     var page: Int,
     val sentence: String,
@@ -37,10 +37,10 @@ data class TestMyselfSections(
     // Grammar area this question tests (e.g. "Present Perfect", "Conditionals"). Used to tally
     // strengths/weaknesses across the audit tests; null/absent for non-audit content.
     val category: String? = null,
-    var words: List<TestMyselfWordsState>
+    var words: List<Format7or10Word>
 )
 @Serializable
-data class TestMyselfWordsState(
+data class Format7or10Word(
     val word: String,
     val ok: Boolean
 )

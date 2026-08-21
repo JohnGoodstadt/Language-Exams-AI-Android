@@ -372,7 +372,7 @@ fun ReadinessAuditScreen(
 
             // --- Quiz-level learning points (stays the same for all 10 questions) ---
 
-            val learningTitleData = uiState.testMyselfListRoot?.data?.first()
+            val learningTitleData = uiState.format7or10ListRoot?.data?.first()
             val learningTitle = learningTitleData?.learningTitle ?: "Why this quiz works"
             val learningPoints = learningTitleData?.learningPoints.orEmpty()
 

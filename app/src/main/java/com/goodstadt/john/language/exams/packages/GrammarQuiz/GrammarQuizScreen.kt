@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -162,7 +161,7 @@ fun GrammarQuizScreen(
         }
 
         // --- Quiz-level learning points (stays the same for all questions) ---
-        val learningTitleData = uiState.testMyselfListRoot?.data?.firstOrNull()
+        val learningTitleData = uiState.format7or10ListRoot?.data?.firstOrNull()
         val learningTitle = learningTitleData?.learningTitle ?: "Why this quiz works"
         val learningPoints = learningTitleData?.learningPoints.orEmpty()
 

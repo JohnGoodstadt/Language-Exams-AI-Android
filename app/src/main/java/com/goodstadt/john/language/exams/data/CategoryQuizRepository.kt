@@ -1,7 +1,7 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.Context
-import com.goodstadt.john.language.exams.models.TestMyselfListRoot
+import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -35,7 +35,7 @@ class CategoryQuizRepository @Inject constructor(
             for (file in files) {
                 val root = runCatching {
                     context.assets.open("$dir/$file").bufferedReader().use {
-                        json.decodeFromString<TestMyselfListRoot>(it.readText())
+                        json.decodeFromString<Format7or10File>(it.readText())
                     }
                 }.getOrNull() ?: continue
 
@@ -105,7 +105,7 @@ class CategoryQuizRepository @Inject constructor(
             ?: return emptyList()
         val root = runCatching {
             context.assets.open("$dir/$file").bufferedReader().use {
-                json.decodeFromString<TestMyselfListRoot>(it.readText())
+                json.decodeFromString<Format7or10File>(it.readText())
             }
         }.getOrNull() ?: return emptyList()
 

@@ -1,11 +1,10 @@
 package com.goodstadt.john.language.exams.utils
 
 import android.content.Context
-import com.goodstadt.john.language.exams.models.TestMyselfListRoot
+import com.goodstadt.john.language.exams.models.Format7or10File
 import kotlinx.serialization.json.Json
-import timber.log.Timber
 
-fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
+fun readFormat7or10fDataFromAssets(context: Context, fileName: String): Format7or10File? {
     return try {
      //   Timber.v("reading json: $fileName")
 
@@ -18,7 +17,7 @@ fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyself
             .bufferedReader()
             .use { it.readText() }
 
-        return jsonParser.decodeFromString<TestMyselfListRoot>(jsonString)
+        return jsonParser.decodeFromString<Format7or10File>(jsonString)
 
     } catch (e: Exception) {
         e.printStackTrace()

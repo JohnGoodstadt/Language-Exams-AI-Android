@@ -1073,7 +1073,7 @@ class VocabSectionQuizViewModel @Inject constructor(
 
             val data = readWordQuizDataFromAssets(appContext, filename,level)
             // Get the title from the root object if you added it there, or the first section
-            data?.title // Assuming you added 'val title: String' to TestMyselfListRoot
+            data?.title // Assuming you added 'val title: String' to Format7or10File
         } catch (e: Exception) {
             null
         }
