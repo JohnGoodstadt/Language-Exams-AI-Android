@@ -20,6 +20,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -40,7 +41,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
@@ -57,6 +60,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
 
     val practiceTarget by viewModel.practiceTarget.collectAsState()
     val grammarCatalog by viewModel.grammarCatalog.collectAsState()
+    val downloadStatus by viewModel.downloadStatus.collectAsState()
 
     var showAuditSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -124,6 +128,50 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
                                 CategoryProgressBarRow(
                                     entry = entry,
                                     onClick = { viewModel.practiceGrammar(entry.row) }
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- DEBUG: one Download button per grammar sheet, in A1..B2 sections. Tests the new
+        // Format7/10 download code (result is cached to disk, not displayed). ---
+        if (DEBUG && grammarCatalog.isNotEmpty()) {
+            Spacer(Modifier.height(24.dp))
+            Text(
+                "DEBUG — Download grammar sheet (Format 7/10)",
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFFB0B0B0)
+            )
+            val byLevel = grammarCatalog.groupBy { it.row.level }
+            listOf("A1", "A2", "B1", "B2").forEach { level ->
+                val rows = byLevel[level].orEmpty()
+                if (rows.isNotEmpty()) {
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        level,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = orangeLight
+                    )
+                    Spacer(Modifier.height(6.dp))
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+                        shape = RoundedCornerShape(16.dp),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(12.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            rows.forEach { entry ->
+                                DebugGrammarDownloadRow(
+                                    label = entry.row.category,
+                                    status = downloadStatus[viewModel.grammarLogicalName(entry.row)],
+                                    onDownload = { viewModel.debugDownloadGrammarSheet(entry.row) }
                                 )
                             }
                         }
@@ -274,5 +322,30 @@ private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Un
             if (redFrac > 0f) Box(Modifier.fillMaxHeight().weight(redFrac).background(Color(0xFFE53935)))
             if (greyFrac > 0f) Box(Modifier.fillMaxHeight().weight(greyFrac))
         }
+    }
+}
+
+/** DEBUG row: a grammar sheet name + Download button + last download status (OK/ERROR). */
+@Composable
+private fun DebugGrammarDownloadRow(label: String, status: String?, onDownload: () -> Unit) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(text = label, style = MaterialTheme.typography.bodyMedium, color = Color.White)
+            if (status != null) {
+                Text(
+                    text = status,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = if (status.startsWith("ERROR")) Color(0xFFE53935) else Color(0xFF9E9E9E)
+                )
+            }
+        }
+        Spacer(Modifier.width(8.dp))
+        OutlinedButton(
+            onClick = onDownload,
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+        ) { Text("Download") }
     }
 }

@@ -15,8 +15,10 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format7or10File
+import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.data.GrammarSheetMapping
 import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
+import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
 import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
@@ -132,6 +134,7 @@ class ContentRepository @Inject constructor(
     private val format2Cache = mutableMapOf<String, Format2File>()
     private val format3Cache = mutableMapOf<String, Format3File>()
     private val format7or10Cache = mutableMapOf<String, Format7or10File>()
+    private val format13Cache = mutableMapOf<String, WordQuizRoot>()
 
     //Problem was getVocabData() called twice sub millisecond
     // ✅ ADDED: A map to store ongoing fetch operations.
@@ -495,6 +498,63 @@ class ContentRepository @Inject constructor(
             Timber.e(e, "ContentRepo: CRITICAL error in getFormat7or10Data for '$logicalName'.")
             FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat7or10Data() failed for $name", e))
             return@withContext Result.failure(e)
+        }
+    }
+
+    /**
+     * Downloads a fileFormat-13 section-quiz sheet as a [WordQuizRoot]. [name] is the logical Firestore
+     * doc name, e.g. "GermanSectionSheetA1Adjectives1". Mirrors getFormat7or10Data: version check ->
+     * memory cache -> ExamSheetRepository (disk/Firestore) -> bundle asset fallback.
+     */
+    suspend fun getFormat13Data(name: String): Result<WordQuizRoot> = withContext(Dispatchers.IO) {
+        val logicalName = name
+        try {
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("ContentRepo: Sheet '$logicalName' (Format13) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+            if (!forceRefresh) {
+                format13Cache[logicalName]?.let {
+                    Timber.d("ContentRepo: Returning '$logicalName' (Format13) from MEMORY CACHE.")
+                    return@withContext Result.success(it)
+                }
+            }
+
+            val result = examSheetRepository.getFormat13Sheet(logicalName, forceRefresh = forceRefresh)
+            if (result.isSuccess) {
+                val file = result.getOrThrow()
+                format13Cache[logicalName] = file
+                if (forceRefresh) appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                return@withContext result
+            }
+
+            // Bundle fallback (section-quiz bundles live under assets/Quizzes/SectionQuiz/…).
+            Timber.w(result.exceptionOrNull(), "ContentRepo: Firestore failed for '$logicalName' (Format13); trying bundle.")
+            val assetPath = SectionQuizSheetMapping.mapLogicalToResourceName(logicalName)
+                ?: return@withContext Result.failure(Exception("No bundle mapping for Format13 sheet '$logicalName'"))
+            val bundleResult = _loadFromBundleFormat13(assetPath)
+            bundleResult.getOrNull()?.let { format13Cache[logicalName] = it }
+            return@withContext bundleResult
+
+        } catch (e: Exception) {
+            Timber.e(e, "ContentRepo: CRITICAL error in getFormat13Data for '$logicalName'.")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat13Data() failed for $name", e))
+            return@withContext Result.failure(e)
+        }
+    }
+
+    /** fileFormat 13 bundles are ASSETS (Quizzes/SectionQuiz/…), so read via assets, not res/raw. */
+    private fun _loadFromBundleFormat13(assetPath: String): Result<WordQuizRoot> {
+        return try {
+            Timber.v("Format13: Loading '$assetPath' from assets.")
+            val jsonString = context.assets.open(assetPath).bufferedReader().use { it.readText() }
+            Result.success(jsonParser.decodeFromString<WordQuizRoot>(jsonString))
+        } catch (e: Exception) {
+            Timber.e(e, "Format13: Failed to load from bundle asset: $assetPath")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundleFormat13() failed for $assetPath"))
+            Result.failure(e)
         }
     }
 

@@ -23,6 +23,12 @@ import com.goodstadt.john.language.exams.models.Format7or10List
 import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.models.Format7or10SectionDTO
 import com.goodstadt.john.language.exams.models.Format7or10Word
+import com.goodstadt.john.language.exams.models.WordQuizRoot
+import com.goodstadt.john.language.exams.models.WordQuizList
+import com.goodstadt.john.language.exams.models.WordQuizSections
+import com.goodstadt.john.language.exams.models.WordQuizSWordsState
+import com.goodstadt.john.language.exams.models.Format13SectionDTO
+import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
 import com.goodstadt.john.language.exams.models.WordAndSentenceForFirestore
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
@@ -546,6 +552,94 @@ class ExamSheetRepository @Inject constructor(
             location = (header.get("location") as? Number)?.toInt() ?: 0,
             data = lists
         )
+    }
+
+    // ---------------- fileFormat 13 (section quizzes -> WordQuizRoot) ----------------
+
+    suspend fun getFormat13Sheet(sheet_name: String, forceRefresh: Boolean): Result<WordQuizRoot> {
+        return try {
+            if (!forceRefresh) {
+                readFormat13SheetFromCache(sheet_name)?.let { cachedFile ->
+                    Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format13) from disk cache.")
+                    return Result.success(cachedFile)
+                }
+            }
+            val file = downloadAndAssembleFormat13(sheet_name)
+            val cacheFile = getCacheFilePointer(sheet_name)
+            cacheFile.writeText(jsonParser.encodeToString(WordQuizRoot.serializer(), file))
+            Timber.i("ExamSheetRepo: Fetched and cached '$sheet_name' (Format13).")
+            Result.success(file)
+        } catch (e: Exception) {
+            Timber.w(e, "ExamSheetRepo: getFormat13Sheet failed for '$sheet_name'.")
+            Result.failure(e)
+        }
+    }
+
+    private suspend fun readFormat13SheetFromCache(logicalName: String): WordQuizRoot? =
+        withContext(Dispatchers.IO) {
+            val file = getCacheFilePointer(logicalName)
+            if (!file.exists()) return@withContext null
+            return@withContext try {
+                jsonParser.decodeFromString<WordQuizRoot>(file.readText())
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to read Format13 from disk cache for '$logicalName'")
+                null
+            }
+        }
+
+    /** Reads the flattened `sections` subcollection and regroups by `sortorder` into a WordQuizRoot. */
+    private suspend fun downloadAndAssembleFormat13(examName: String): WordQuizRoot = coroutineScope {
+        val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
+            .collection("sheets").document(examName)
+
+        val headerDeferred = async(Dispatchers.IO) {
+            examDocRef.get().await().also {
+                if (!it.exists()) throw Exception("Root document '$examName' (Format13) not found.")
+            }
+        }
+        val sectionsDeferred = async(Dispatchers.IO) {
+            examDocRef.collection("sections").get().await().toObjects(Format13SectionDTO::class.java)
+        }
+        val header = headerDeferred.await()
+        val allSections = sectionsDeferred.await()
+
+        val lists = allSections.groupBy { it.sortorder }.entries.mapNotNull { (sortorder, dtos) ->
+            val first = dtos.firstOrNull() ?: return@mapNotNull null
+            val sections = dtos.sortedBy { it.page }.map { dto ->
+                WordQuizSections(
+                    title = dto.title,
+                    page = dto.page,
+                    question = dto.question,
+                    explain = dto.explain?.let { mapToDictionaryEntry(it) },
+                    summary = dto.summary,
+                    answers = dto.answers.map { WordQuizSWordsState(answer = it.answer, ok = it.ok) }
+                )
+            }
+            WordQuizList(
+                title = first.listTitle,
+                description = first.description,
+                sortorder = sortorder,
+                sections = sections
+            )
+        }.sortedBy { it.sortorder }
+
+        return@coroutineScope WordQuizRoot(
+            fileFormat = (header.get("fileformat") as? Number)?.toInt() ?: 13,
+            sheetName = header.getString("sheetname") ?: examName,
+            title = header.getString("title"),
+            updatedDate = (header.get("updatedDate") as? com.google.firebase.Timestamp)?.toDate()?.time ?: 0L,
+            location = (header.get("location") as? Number)?.toInt() ?: 0,
+            data = lists
+        )
+    }
+
+    /** Rebuilds a DictionaryEntry from the Firestore-stored nested map (map -> JSON -> kotlinx decode). */
+    private fun mapToDictionaryEntry(map: Map<String, Any?>): DictionaryEntry? = try {
+        val json = org.json.JSONObject(map).toString()
+        jsonParser.decodeFromString<DictionaryEntry>(json)
+    } catch (e: Exception) {
+        Timber.w(e, "ExamSheetRepo: failed to decode explain (Format13); using null")
+        null
     }
 
     suspend fun getFormat3Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format3File>{

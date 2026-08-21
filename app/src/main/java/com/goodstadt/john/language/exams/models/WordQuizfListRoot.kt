@@ -37,3 +37,25 @@ data class WordQuizSWordsState(
     val answer: String,
     val ok: Boolean
 )
+
+// --- Firestore read DTOs for fileFormat 13 (section quizzes) ---
+// The flattened `sections` subcollection docs the admin upload writes: each carries its list's
+// metadata (listTitle/description/sortorder) plus the question, answers[{answer, ok}] and the nested
+// `explain` dictionary (kept as a raw map; reconstructed into DictionaryEntry on read).
+// Plain data classes with all defaults so Firestore's toObject() can instantiate them.
+data class Format13SectionDTO(
+    val listTitle: String = "",
+    val description: String = "",
+    val sortorder: Int = 0,
+    val title: String = "",
+    val page: Int = 0,
+    val question: String = "",
+    val summary: String = "",
+    val answers: List<Format13AnswerDTO> = emptyList(),
+    val explain: Map<String, Any?>? = null
+)
+
+data class Format13AnswerDTO(
+    val answer: String = "",
+    val ok: Boolean = false
+)

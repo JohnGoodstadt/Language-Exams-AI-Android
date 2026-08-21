@@ -20,6 +20,7 @@ import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizTotalCount
@@ -225,6 +226,11 @@ class VocabSectionQuizViewModel @Inject constructor(
 
     private val _isSectionMode = MutableStateFlow(false)
     val isSectionMode = _isSectionMode.asStateFlow()
+
+    // True while a section quiz is being loaded (downloaded). The UI shows a spinner only if this
+    // stays true for a couple of seconds (cache/asset loads finish faster; a Firestore fetch may not).
+    private val _isSectionLoading = MutableStateFlow(false)
+    val isSectionLoading = _isSectionLoading.asStateFlow()
     private val _availableSectionIndices = MutableStateFlow<List<Int>>(emptyList())
     val availableSectionIndices = _availableSectionIndices.asStateFlow()
 
@@ -340,61 +346,66 @@ class VocabSectionQuizViewModel @Inject constructor(
     fun loadSectionQuiz(categoryTitle: String) {
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true
-
-            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-
-            // 1. Resolve the language-independent quiz key via the per-flavour resolver.
-            //    Each flavour ships its own SectionQuizKeyMap (title -> key, keyed by level);
-            //    a null result means this category has no quiz at this level, so show nothing.
-            //    currentSectionTitle uses the key so stats land in the same bucket in any language.
-            val quizKey = SectionQuizKeyMap.keyFor(currentSkillLevel, categoryTitle)
-            if (quizKey.isNullOrBlank()) {
-                _questions.value = emptyList()
-                _availableSectionIndices.value = emptyList()
-                return@launch
-            }
-            currentSectionTitle = quizKey
-            val baseFilenamePrefix = "WordQuiz$quizKey" // e.g. "WordQuizFood"
-            currentSectionBaseName = baseFilenamePrefix
-
-            // 2. Load ALL JSON files into a single combined list
-            val allQuestions = mutableListOf<WordQuizQuestion>()
-
+            _isSectionLoading.value = true
             try {
+                currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
-                val assetFolder = "${QUIZ_PATH}/$currentSkillLevel"
-                val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
+                // 1. Resolve the language-independent quiz key via the per-flavour resolver.
+                //    Each flavour ships its own SectionQuizKeyMap (title -> key, keyed by level);
+                //    a null result means this category has no quiz at this level, so show nothing.
+                //    currentSectionTitle uses the key so stats land in the same bucket in any language.
+                val quizKey = SectionQuizKeyMap.keyFor(currentSkillLevel, categoryTitle)
+                if (quizKey.isNullOrBlank()) {
+                    _questions.value = emptyList()
+                    _availableSectionIndices.value = emptyList()
+                    return@launch
+                }
+                currentSectionTitle = quizKey
+                val baseFilenamePrefix = "WordQuiz$quizKey" // e.g. "WordQuizFood"
+                currentSectionBaseName = baseFilenamePrefix
 
-                for (i in 1..10) {
-                    // Match whichever language suffix this flavour actually ships (-en / -de …)
-                    val match = filesInFolder.firstOrNull {
-                        it.startsWith("$baseFilenamePrefix$i-") && it.endsWith(".json")
-                    } ?: break
-                    val filename = match.removeSuffix(".json")
-                    val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
-                    if (testData != null) {
-                        allQuestions.addAll(generateQuestionsFromData(testData))
+                // 2. JUST-IN-TIME DOWNLOAD: the bundled asset list tells us which numbered sheets exist
+                //    for this (key, level); for each we download the Firestore sheet via getFormat13Data
+                //    (cached after the first fetch, and falling back to the same bundled asset if the
+                //    sheet hasn't been uploaded yet). e.g. WordQuizAdjectives1-de.json @ A1 ->
+                //    "GermanSectionSheetA1Adjectives1".
+                val allQuestions = mutableListOf<WordQuizQuestion>()
+                try {
+                    val assetFolder = "${QUIZ_PATH}/$currentSkillLevel"
+                    val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
+
+                    for (i in 1..10) {
+                        val match = filesInFolder.firstOrNull {
+                            it.startsWith("$baseFilenamePrefix$i-") && it.endsWith(".json")
+                        } ?: break
+                        val logicalName = SectionQuizSheetMapping.normalizeToLogicalName(match, currentSkillLevel)
+                        val testData = vocabRepository.getFormat13Data(logicalName).getOrNull()
+                        if (testData != null) {
+                            allQuestions.addAll(generateQuestionsFromData(testData))
+                        }
                     }
+                } catch (e: Exception) {
+                    Timber.e(e, "Error downloading/loading section quizzes (Format13)")
                 }
-            } catch (e: Exception) {
-                Timber.e("Error scanning/loading assets for section quizzes")
-            }
 
-            _allSectionQuestions = allQuestions
+                _allSectionQuestions = allQuestions
 
-            // 3. Paginate and display
-            if (allQuestions.isNotEmpty()) {
-                withContext(Dispatchers.Main) {
-                    applyFiltersAndPaginate()
+                // 3. Paginate and display
+                if (allQuestions.isNotEmpty()) {
+                    withContext(Dispatchers.Main) {
+                        applyFiltersAndPaginate()
 
-                    quizStatistics.value = quizStatistics.value.copy(
-                        title = "Quiz 1",
-                        skillLevel = "Section Practice"
-                    )
+                        quizStatistics.value = quizStatistics.value.copy(
+                            title = "Quiz 1",
+                            skillLevel = "Section Practice"
+                        )
+                    }
+                } else {
+                    _questions.value = emptyList()
+                    _availableSectionIndices.value = emptyList()
                 }
-            } else {
-                _questions.value = emptyList()
-                _availableSectionIndices.value = emptyList()
+            } finally {
+                _isSectionLoading.value = false
             }
         }
     }

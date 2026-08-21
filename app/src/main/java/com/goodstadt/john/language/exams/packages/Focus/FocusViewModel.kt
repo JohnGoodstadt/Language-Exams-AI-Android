@@ -6,6 +6,8 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.CategoryQuizRepository
 import com.goodstadt.john.language.exams.data.CategoryScore
 import com.goodstadt.john.language.exams.data.GrammarRow
+import com.goodstadt.john.language.exams.data.GrammarSheetMapping
+import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.managers.AuditEngine
@@ -66,7 +68,8 @@ data class GrammarCatalogEntry(val row: GrammarRow, val score: CategoryScore)
 class FocusViewModel @Inject constructor(
     private val auditRepository: ReadinessAuditRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val categoryQuizRepository: CategoryQuizRepository
+    private val categoryQuizRepository: CategoryQuizRepository,
+    private val contentRepository: ContentRepository
 ) : ViewModel() {
 
     /** The (category, level) whose quiz sheet is open, or null when none is. */
@@ -99,6 +102,35 @@ class FocusViewModel @Inject constructor(
 
     fun dismissPractice() {
         _practiceTarget.value = null
+    }
+
+    // --- DEBUG: exercise the new Format7/10 download for a grammar sheet (result cached, not shown) ---
+
+    /** Logical Firestore doc name for a grammar row, e.g. A1 "ModalVerbs" -> "GermanA1ModalVerbs". */
+    fun grammarLogicalName(row: GrammarRow): String =
+        GrammarSheetMapping.normalizeToLogicalName(row.fileKey, row.level)
+
+    // Per-sheet download status (keyed by logical name) shown on the debug rows.
+    private val _downloadStatus = MutableStateFlow<Map<String, String>>(emptyMap())
+    val downloadStatus: StateFlow<Map<String, String>> = _downloadStatus.asStateFlow()
+
+    fun debugDownloadGrammarSheet(row: GrammarRow) {
+        val logicalName = grammarLogicalName(row)
+        _downloadStatus.value = _downloadStatus.value + (logicalName to "Downloading…")
+        viewModelScope.launch {
+            val msg = contentRepository.getFormat7or10Data(logicalName).fold(
+                onSuccess = { f ->
+                    val qs = f.data.sumOf { it.sections.size }
+                    Timber.i("Focus DEBUG: downloaded '$logicalName' -> ${f.data.size} list(s), $qs questions")
+                    "OK: ${f.data.size} list(s), $qs q (cached)"
+                },
+                onFailure = { e ->
+                    Timber.e(e, "Focus DEBUG: download '$logicalName' failed")
+                    "ERROR: ${e.localizedMessage ?: e.toString()}"
+                }
+            )
+            _downloadStatus.value = _downloadStatus.value + (logicalName to msg)
+        }
     }
 
     val currentLevel: StateFlow<String> = userPreferencesRepository.selectedSkillLevelFlow
