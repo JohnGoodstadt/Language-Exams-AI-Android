@@ -54,6 +54,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
@@ -176,6 +177,7 @@ class VocabSectionQuizViewModel @Inject constructor(
     private val vocabQuizRepository: VocabQuizRepository,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val bannerManager: BannerManager,
+    private val globalLoadingManager: com.goodstadt.john.language.exams.managers.GlobalLoadingManager,
 
     ) : ViewModel() {
     private val appContext: Context = application.applicationContext
@@ -347,6 +349,20 @@ class VocabSectionQuizViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true
             _isSectionLoading.value = true
+
+            // Clear the previous section's questions IMMEDIATELY so stale content never shows while the
+            // new sheet downloads.
+            _questions.value = emptyList()
+            _availableSectionIndices.value = emptyList()
+            _allSectionQuestions = emptyList()
+
+            // Show the global loading overlay only if the load is still running after 2s - so cached /
+            // in-memory / bundle loads (the common case) don't flash it; only a real Firestore fetch does.
+            val spinnerJob = launch {
+                delay(2000)
+                if (_isSectionLoading.value) globalLoadingManager.show()
+            }
+
             try {
                 currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
@@ -406,6 +422,8 @@ class VocabSectionQuizViewModel @Inject constructor(
                 }
             } finally {
                 _isSectionLoading.value = false
+                spinnerJob.cancel()          // if the load beat the 2s mark, never show the overlay
+                globalLoadingManager.hide()  // and always clear it once done
             }
         }
     }
