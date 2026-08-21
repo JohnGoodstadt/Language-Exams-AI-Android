@@ -18,6 +18,11 @@ import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
+import com.goodstadt.john.language.exams.models.Format7or10File
+import com.goodstadt.john.language.exams.models.Format7or10List
+import com.goodstadt.john.language.exams.models.Format7or10Section
+import com.goodstadt.john.language.exams.models.Format7or10SectionDTO
+import com.goodstadt.john.language.exams.models.Format7or10Word
 import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
 import com.goodstadt.john.language.exams.models.WordAndSentenceForFirestore
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
@@ -458,6 +463,91 @@ class ExamSheetRepository @Inject constructor(
             return Result.failure(e)
         }
     }
+    // ---------------- fileFormat 7 / 10 (grammar & usage quizzes; same structure) ----------------
+
+    suspend fun getFormat7or10Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format7or10File> {
+        return try {
+            // a. Disk cache first (unless forcing a refresh)
+            if (!forceRefresh) {
+                readFormat7or10SheetFromCache(sheet_name)?.let { cachedFile ->
+                    Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format7/10) from disk cache.")
+                    return Result.success(cachedFile)
+                }
+            }
+            // b. Assemble from Firestore, then cache to disk.
+            val file = downloadAndAssembleFormat7or10(sheet_name)
+            val cacheFile = getCacheFilePointer(sheet_name)
+            cacheFile.writeText(jsonParser.encodeToString(Format7or10File.serializer(), file))
+            Timber.i("ExamSheetRepo: Fetched and cached '$sheet_name' (Format7/10).")
+            Result.success(file)
+        } catch (e: Exception) {
+            Timber.w(e, "ExamSheetRepo: getFormat7or10Sheet failed for '$sheet_name'.")
+            Result.failure(e)
+        }
+    }
+
+    private suspend fun readFormat7or10SheetFromCache(logicalName: String): Format7or10File? =
+        withContext(Dispatchers.IO) {
+            val file = getCacheFilePointer(logicalName)
+            if (!file.exists()) return@withContext null
+            return@withContext try {
+                jsonParser.decodeFromString<Format7or10File>(file.readText())
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to read Format7/10 from disk cache for '$logicalName'")
+                null
+            }
+        }
+
+    /** Reads the flattened `sections` subcollection and regroups by `sortorder` into levels. */
+    private suspend fun downloadAndAssembleFormat7or10(examName: String): Format7or10File = coroutineScope {
+        val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
+            .collection("sheets").document(examName)
+
+        val headerDeferred = async(Dispatchers.IO) {
+            examDocRef.get().await().also {
+                if (!it.exists()) throw Exception("Root document '$examName' (Format7/10) not found.")
+            }
+        }
+        val sectionsDeferred = async(Dispatchers.IO) {
+            examDocRef.collection("sections").get().await().toObjects(Format7or10SectionDTO::class.java)
+        }
+        val header = headerDeferred.await()
+        val allSections = sectionsDeferred.await()
+
+        val lists = allSections.groupBy { it.sortorder }.entries.mapNotNull { (sortorder, dtos) ->
+            val first = dtos.firstOrNull() ?: return@mapNotNull null
+            val sections = dtos.sortedBy { it.page }.map { dto ->
+                Format7or10Section(
+                    title = dto.title,
+                    page = dto.page,
+                    sentence = dto.sentence,
+                    explain = dto.explain,
+                    summary = dto.summary,
+                    level = dto.level,
+                    category = dto.category,
+                    words = dto.words.map { Format7or10Word(word = it.word, ok = it.ok) }
+                )
+            }
+            Format7or10List(
+                title = first.levelTitle,
+                description = first.description,
+                sortorder = sortorder,
+                learningTitle = first.learningTitle,
+                learningPoints = first.learningPoints,
+                sections = sections
+            )
+        }.sortedBy { it.sortorder }
+
+        return@coroutineScope Format7or10File(
+            fileFormat = (header.get("fileformat") as? Number)?.toInt() ?: 7,
+            sheetName = header.getString("sheetname") ?: examName,
+            title = header.getString("title"),
+            updatedDate = (header.get("updatedDate") as? com.google.firebase.Timestamp)?.toDate()?.time ?: 0L,
+            location = (header.get("location") as? Number)?.toInt() ?: 0,
+            data = lists
+        )
+    }
+
     suspend fun getFormat3Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format3File>{
         return try {
             // a. Check disk cache first (unless forcing a refresh)

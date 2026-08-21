@@ -44,3 +44,29 @@ data class Format7or10Word(
     val word: String,
     val ok: Boolean
 )
+
+// --- Firestore read DTOs (the FLATTENED `sections` subcollection docs the admin upload writes) ---
+// Each section doc carries its list's metadata (levelTitle/description/sortorder/learningTitle/
+// learningPoints) plus the section fields; the reader regroups by `sortorder` into Format7or10List.
+// Plain data classes with all defaults so Firestore's toObject() can instantiate them.
+
+data class Format7or10SectionDTO(
+    val levelTitle: String = "",
+    val description: String = "",
+    val sortorder: Int = 0,
+    val learningTitle: String = "",
+    val learningPoints: List<String> = emptyList(),
+    val title: String = "",
+    val page: Int = 0,
+    val summary: String = "",
+    val level: String = "",
+    val category: String = "",
+    val explain: String = "",
+    val sentence: String = "",
+    val words: List<Format7or10WordDTO> = emptyList()
+)
+
+data class Format7or10WordDTO(
+    val ok: Boolean = false,
+    val word: String = ""
+)

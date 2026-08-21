@@ -14,6 +14,9 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format2File
+import com.goodstadt.john.language.exams.models.Format7or10File
+import com.goodstadt.john.language.exams.data.GrammarSheetMapping
+import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
 import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
@@ -128,6 +131,7 @@ class ContentRepository @Inject constructor(
     private val format1Cache = mutableMapOf<String, HeaderWordsSentencesListRoot>()
     private val format2Cache = mutableMapOf<String, Format2File>()
     private val format3Cache = mutableMapOf<String, Format3File>()
+    private val format7or10Cache = mutableMapOf<String, Format7or10File>()
 
     //Problem was getVocabData() called twice sub millisecond
     // ✅ ADDED: A map to store ongoing fetch operations.
@@ -446,6 +450,82 @@ class ContentRepository @Inject constructor(
             Result.failure(e)
         }
     }
+    /**
+     * Downloads a fileFormat-7/10 sheet (grammar / usage quiz). The [name] is the logical Firestore doc
+     * name, e.g. "GermanA1ModalVerbs" (grammar) or "GermanUsageQuiz1A1" (usage). Mirrors getFormat2Data:
+     * version check -> memory cache -> ExamSheetRepository (disk/Firestore) -> bundle asset fallback.
+     */
+    suspend fun getFormat7or10Data(name: String): Result<Format7or10File> = withContext(Dispatchers.IO) {
+        val logicalName = name // already the logical Firestore doc name
+        try {
+            // 1. Version check
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("ContentRepo: Sheet '$logicalName' (Format7/10) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+            // 2. In-memory cache
+            if (!forceRefresh) {
+                format7or10Cache[logicalName]?.let { cachedFile ->
+                    Timber.d("ContentRepo: Returning '$logicalName' (Format7/10) from MEMORY CACHE.")
+                    return@withContext Result.success(cachedFile)
+                }
+            }
+
+            // 3. Delegate to ExamSheetRepository (disk cache -> Firestore -> cache to disk)
+            val result = examSheetRepository.getFormat7or10Sheet(logicalName, forceRefresh = forceRefresh)
+
+            if (result.isSuccess) {
+                val file = result.getOrThrow()
+                format7or10Cache[logicalName] = file
+                if (forceRefresh) appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                return@withContext result
+            }
+
+            // 4. Bundle fallback (grammar/usage bundles live under assets/Quizzes/…, not res/raw)
+            Timber.w(result.exceptionOrNull(), "ContentRepo: Firestore failed for '$logicalName' (Format7/10); trying bundle.")
+            val assetPath = format7or10BundleAssetPath(logicalName)
+                ?: return@withContext Result.failure(Exception("No bundle mapping for Format7/10 sheet '$logicalName'"))
+            val bundleResult = loadBundledFormat7or10Data(logicalName, assetPath)
+            bundleResult.getOrNull()?.let { format7or10Cache[logicalName] = it }
+            return@withContext bundleResult
+
+        } catch (e: Exception) {
+            Timber.e(e, "ContentRepo: CRITICAL error in getFormat7or10Data for '$logicalName'.")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat7or10Data() failed for $name", e))
+            return@withContext Result.failure(e)
+        }
+    }
+
+    /** Grammar names carry the level (GermanA1ModalVerbs); usage names carry a UsageQuiz area. */
+    private fun format7or10BundleAssetPath(logicalName: String): String? =
+        if (logicalName.startsWith("GermanUsageQuiz")) {
+            UsageQuizSheetMapping.mapLogicalToResourceName(logicalName)
+        } else {
+            GrammarSheetMapping.mapLogicalToResourceName(logicalName)
+        }
+
+    private fun loadBundledFormat7or10Data(logicalName: String, assetPath: String): Result<Format7or10File> {
+        format7or10Cache[logicalName]?.let { return Result.success(it) }
+        val result = _loadFromBundleFormat7or10(assetPath)
+        result.getOrNull()?.let { format7or10Cache[logicalName] = it }
+        return result
+    }
+
+    /** fileFormat 7/10 bundles are ASSETS (Quizzes/…), so read via assets, not res/raw. */
+    private fun _loadFromBundleFormat7or10(assetPath: String): Result<Format7or10File> {
+        return try {
+            Timber.v("Format7/10: Loading '$assetPath' from assets.")
+            val jsonString = context.assets.open(assetPath).bufferedReader().use { it.readText() }
+            Result.success(jsonParser.decodeFromString<Format7or10File>(jsonString))
+        } catch (e: Exception) {
+            Timber.e(e, "Format7/10: Failed to load from bundle asset: $assetPath")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundleFormat7or10() failed for $assetPath"))
+            Result.failure(e)
+        }
+    }
+
     suspend fun getFormat3Data(name: String): Result<Format3File> = withContext(Dispatchers.IO) {
         val logicalName = normalizeToLogicalName(name)
         try {
