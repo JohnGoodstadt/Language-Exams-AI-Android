@@ -575,15 +575,24 @@ class ContentRepository @Inject constructor(
 
     /** fileFormat 7/10 bundles are ASSETS (Quizzes/…), so read via assets, not res/raw. */
     private fun _loadFromBundleFormat7or10(assetPath: String): Result<Format7or10File> {
-        return try {
-            Timber.v("Format7/10: Loading '$assetPath' from assets.")
-            val jsonString = context.assets.open(assetPath).bufferedReader().use { it.readText() }
-            Result.success(jsonParser.decodeFromString<Format7or10File>(jsonString))
-        } catch (e: Exception) {
-            Timber.e(e, "Format7/10: Failed to load from bundle asset: $assetPath")
-            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundleFormat7or10() failed for $assetPath"))
-            Result.failure(e)
+        // Try the given (-de) path first, then the -en variant: some de usage sheets ship as -en.
+        val candidates = buildList {
+            add(assetPath)
+            if (assetPath.endsWith("-de.json")) add(assetPath.removeSuffix("-de.json") + "-en.json")
         }
+        for (path in candidates) {
+            try {
+                Timber.v("Format7/10: Loading '$path' from assets.")
+                val jsonString = context.assets.open(path).bufferedReader().use { it.readText() }
+                return Result.success(jsonParser.decodeFromString<Format7or10File>(jsonString))
+            } catch (e: Exception) {
+                Timber.v("Format7/10: bundle asset not found: $path")
+            }
+        }
+        val error = Exception("Format7/10 bundle asset not found for any of: $candidates")
+        Timber.e(error)
+        FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundleFormat7or10() failed for $assetPath"))
+        return Result.failure(error)
     }
 
     suspend fun getFormat3Data(name: String): Result<Format3File> = withContext(Dispatchers.IO) {

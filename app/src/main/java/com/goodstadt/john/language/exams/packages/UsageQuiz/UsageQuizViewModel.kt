@@ -28,6 +28,7 @@ import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
@@ -453,15 +454,17 @@ class UsageQuizViewModel @Inject constructor(
             val baseName = quizDetail.baseName//(selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
 //            val regionCode = "IN"//Locale.getDefault().country
             val localizedBaseName = resolveLocalizedBaseName(baseName)
-            val finalFilename = "$localizedBaseName.json"
 
-            Timber.v("filename $finalFilename")
-            //val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
+            // Just-in-time download: fetch the usage-quiz sheet (fileFormat 7/10) from Firestore
+            // (cached after the first fetch), falling back to the bundled asset if not uploaded.
+            // e.g. "UsageQuiz1A1-de" -> "GermanUsageQuiz1A1".
+            val logicalName = UsageQuizSheetMapping.normalizeToLogicalName(localizedBaseName)
+            Timber.v("UsageQuiz: loading '$logicalName' (from $localizedBaseName)")
 
-            val testData = readFormat7or10DataFromAssets(appContext, finalFilename)
+            val testData = vocabRepository.getFormat7or10Data(logicalName).getOrNull()
 
             if (testData == null) {
-                Timber.wtf("Failed to parse JSON file: $finalFilename")
+                Timber.wtf("Failed to load usage quiz sheet: $logicalName")
                 return@launch
             }
 
