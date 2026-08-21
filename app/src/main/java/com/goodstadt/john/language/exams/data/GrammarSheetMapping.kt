@@ -6,29 +6,39 @@ import com.goodstadt.john.language.exams.BuildConfig
  * Translates a grammar sheet between its bundled ASSET filename and its logical FIRESTORE doc name, so
  * the app's download path can fall back to the bundled JSON when a sheet isn't (yet) on Firestore.
  *
- *   asset   : Quizzes/Grammar/<level>/Grammar<Key>-<lang>.json   (e.g. .../A1/GrammarModalVerbs-de.json)
- *   logical : German<Key>                                         (e.g. GermanModalVerbs)
+ *   asset   : Quizzes/Grammar/<level>/Grammar<Key>-<lang>.json  (e.g. .../A1/GrammarModalVerbs-de.json)
+ *   logical : German<Level><Key>                                (e.g. GermanA1ModalVerbs)
  *
- * The level (A1/A2/B1/B2) is not encoded in the logical name, so [mapLogicalToResourceName] recovers it
- * from [GrammarCatalog]. This is the fileFormat-7/10 equivalent of LanguageConfig.normalizeToLogicalName /
- * mapLogicalToResourceName (which serve the res/raw vocab files). NB: German naming reflects the current
- * de content; generalise the "German" prefix if other flavours publish grammar sheets.
+ * The LEVEL is embedded in the logical name (German**A1**ModalVerbs) so grammar sheets stay in the flat
+ * `sheets/<name>` collection with the same read code as every other sheet, an A1/A2/B1/B2 title can't
+ * clash across levels, and same-level names sort together in the console. This is the fileFormat-7/10
+ * equivalent of LanguageConfig.normalizeToLogicalName / mapLogicalToResourceName (which serve res/raw
+ * vocab). NB: "German" reflects the current de content; generalise the prefix if other flavours publish.
  */
 object GrammarSheetMapping {
 
-    /** "GrammarModalVerbs-de.json" (or bare "GrammarModalVerbs-de") -> "GermanModalVerbs". */
-    fun normalizeToLogicalName(fileNameOrKey: String): String {
-        val s = fileNameOrKey.removeSuffix(".json").replace(Regex("-[a-z]{2}$"), "") // drop .json + -de/-en
-        return if (s.startsWith("Grammar")) "German" + s.removePrefix("Grammar") else s
-    }
+    private val LEVELS = listOf("A1", "A2", "B1", "B2")
 
     /**
-     * "GermanModalVerbs" -> the bundled asset path, e.g. "Quizzes/Grammar/A1/GrammarModalVerbs-de.json",
-     * or null if the key is not in [GrammarCatalog] (level unknown). Used as the download bundle fallback.
+     * "GrammarModalVerbs-de.json" (or bare key) + level "A1" -> "GermanA1ModalVerbs".
+     */
+    fun normalizeToLogicalName(fileNameOrKey: String, level: String): String =
+        "German$level${grammarKey(fileNameOrKey)}"
+
+    /**
+     * "GermanA1ModalVerbs" -> the bundled asset path "Quizzes/Grammar/A1/GrammarModalVerbs-de.json",
+     * or null if the level prefix is missing/unrecognised. Used as the download bundle fallback.
      */
     fun mapLogicalToResourceName(logicalName: String): String? {
-        val fileKey = logicalName.removePrefix("German")
-        val level = GrammarCatalog.rows.firstOrNull { it.fileKey == fileKey }?.level ?: return null
-        return "Quizzes/Grammar/$level/Grammar$fileKey-${BuildConfig.FLAVOR}.json"
+        val rest = logicalName.removePrefix("German")     // "A1ModalVerbs"
+        val level = LEVELS.firstOrNull { rest.startsWith(it) } ?: return null
+        val key = rest.removePrefix(level)                // "ModalVerbs"
+        return "Quizzes/Grammar/$level/Grammar$key-${BuildConfig.FLAVOR}.json"
+    }
+
+    /** "GrammarModalVerbs-de.json" -> "ModalVerbs" (drop .json, -de/-en suffix and the "Grammar" prefix). */
+    private fun grammarKey(fileNameOrKey: String): String {
+        val s = fileNameOrKey.removeSuffix(".json").replace(Regex("-[a-z]{2}$"), "")
+        return if (s.startsWith("Grammar")) s.removePrefix("Grammar") else s
     }
 }

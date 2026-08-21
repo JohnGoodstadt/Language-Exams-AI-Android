@@ -117,9 +117,6 @@ class UploadJsonViewModel @Inject constructor(
             emptyList()
         }
 
-    /** "GrammarDefiniteIndefiniteArticles-de.json" -> "GermanDefiniteIndefiniteArticles". */
-    private fun grammarDocName(fileName: String): String =
-        com.goodstadt.john.language.exams.data.GrammarSheetMapping.normalizeToLogicalName(fileName)
 
     /**
      * Turns a raw quiz filename into a short, human label: drop the section prefix (e.g. "Grammar"),
@@ -220,18 +217,44 @@ class UploadJsonViewModel @Inject constructor(
             groups = levels.map { lvl ->
                 UploadJsonLevelGroup(
                     lvl,
-                    listJsonAssets("Quizzes/Grammar/$lvl", stripPrefix = "Grammar", docNameFor = ::grammarDocName)
+                    // Firestore doc name embeds the level: GrammarModalVerbs-de.json (A1) -> GermanA1ModalVerbs
+                    listJsonAssets(
+                        "Quizzes/Grammar/$lvl",
+                        stripPrefix = "Grammar",
+                        docNameFor = { fileName ->
+                            com.goodstadt.john.language.exams.data.GrammarSheetMapping
+                                .normalizeToLogicalName(fileName, lvl)
+                        }
+                    )
                 )
             }
         )
         val sectionSheet = UploadJsonSection(
             title = "Section Sheet",
             groups = levels.map { lvl ->
-                UploadJsonLevelGroup(lvl, listJsonAssets("Quizzes/SectionQuiz/$lvl", stripPrefix = "WordQuiz"))
+                UploadJsonLevelGroup(
+                    lvl,
+                    // Firestore doc name embeds the level: WordQuizAdjectives1-de.json (A1) -> GermanA1Adjectives1
+                    listJsonAssets(
+                        "Quizzes/SectionQuiz/$lvl",
+                        stripPrefix = "WordQuiz",
+                        docNameFor = { fileName ->
+                            com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
+                                .normalizeToLogicalName(fileName, lvl)
+                        }
+                    )
+                )
             }
         )
         // UsageQuiz is a flat folder; group by the level token in the real filename (e.g. UsageQuiz1A2-de.json).
-        val usageAll = listJsonAssets("Quizzes/UsageQuiz", stripPrefix = "UsageQuiz")
+        // Firestore doc name = German + the base filename: UsageQuiz1A1-de.json -> GermanUsageQuiz1A1.
+        val usageAll = listJsonAssets(
+            "Quizzes/UsageQuiz",
+            stripPrefix = "UsageQuiz",
+            docNameFor = { fileName ->
+                com.goodstadt.john.language.exams.data.UsageQuizSheetMapping.normalizeToLogicalName(fileName)
+            }
+        )
         val usageQuiz = UploadJsonSection(
             title = "UsageQuiz",
             groups = levels.map { lvl ->

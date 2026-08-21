@@ -58,6 +58,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
             0, 1 -> uploadFormat0(docName, root) // fileFormat 1 has the SAME structure as 0 -> reuse
             2 -> uploadFormat2(docName, root)
             7, 10 -> uploadFormat7or10(docName, root) // 7 & 10 share the same JSON structure
+            13 -> uploadFormat13(docName, root)
             else -> Result.failure(UnsupportedOperationException("Upload for fileFormat $fileFormat not implemented yet"))
         }
     } catch (e: Exception) {
@@ -83,6 +84,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                 0, 1 -> readFormat0(docName, snapshot)
                 2 -> readFormat2(docName, snapshot)
                 7, 10 -> readFormat7or10(docName, snapshot)
+                13 -> readFormat13(docName, snapshot)
                 else -> Result.failure(UnsupportedOperationException("Read for fileFormat $fileFormat not implemented yet"))
             }
         }
@@ -397,6 +399,110 @@ class FirestoreUploadAdminRepository @Inject constructor(
     } catch (e: Exception) {
         Timber.e(e, "UploadAdmin: readFormat7or10 '$docName' failed")
         Result.failure(e)
+    }
+
+    // ---------------------------------------------------------------- fileFormat 13 (section quizzes)
+
+    /**
+     * Uploads a fileFormat-13 sheet (WordQuiz section quiz). The nested JSON (data[] lists ->
+     * sections[]) is FLATTENED into a `sections` subcollection; each section doc carries its list's
+     * metadata (sortorder, title, description) plus the question, answers[{answer, ok}] and the nested
+     * `explain` dictionary object (stored faithfully as a map), grouped by `sortorder` on read.
+     */
+    private suspend fun uploadFormat13(docName: String, root: JSONObject): Result<Unit> = try {
+        val sheetRef = sheetDoc(docName)
+
+        clearSubcollection(sheetRef, SECTIONS)
+
+        val meta = hashMapOf<String, Any>(
+            "fileformat" to root.optInt("fileformat", 13),
+            "sheetname" to docName,
+            "title" to root.optString("title", ""),
+            "location" to root.optInt("location", 0),
+            "updatedDate" to FieldValue.serverTimestamp(),
+            FIELD_UPLOAD_DATE to FieldValue.serverTimestamp()
+        )
+        sheetRef.set(meta).await()
+
+        val data = root.optJSONArray("data") ?: JSONArray()
+        var batch = firestore.batch()
+        var ops = 0
+        var totalSections = 0
+        for (li in 0 until data.length()) {
+            val list = data.getJSONObject(li)
+            val listTitle = list.optString("title", "")
+            val listDesc = list.optString("description", "")
+            val sortorder = list.optInt("sortorder", li + 1)
+            val sections = list.optJSONArray("sections") ?: JSONArray()
+            for (si in 0 until sections.length()) {
+                val sec = sections.getJSONObject(si)
+                val answersJson = sec.optJSONArray("answers") ?: JSONArray()
+                val answers = ArrayList<Map<String, Any>>()
+                for (ai in 0 until answersJson.length()) {
+                    val a = answersJson.getJSONObject(ai)
+                    answers.add(mapOf("answer" to a.optString("answer", ""), "ok" to a.optBoolean("ok", false)))
+                }
+                val explain = sec.optJSONObject("explain")?.let { jsonObjectToMap(it) } ?: emptyMap<String, Any?>()
+                val entryRef = sheetRef.collection(SECTIONS).document("section_%04d".format(totalSections))
+                batch.set(
+                    entryRef,
+                    hashMapOf(
+                        "listTitle" to listTitle,
+                        "description" to listDesc,
+                        "sortorder" to sortorder,
+                        "title" to sec.optString("title", ""),
+                        "page" to sec.optInt("page", si + 1),
+                        "question" to sec.optString("question", ""),
+                        "summary" to sec.optString("summary", ""),
+                        "answers" to answers,
+                        "explain" to explain
+                    )
+                )
+                totalSections++
+                if (++ops >= BATCH_LIMIT) { batch.commit().await(); batch = firestore.batch(); ops = 0 }
+            }
+        }
+        if (ops > 0) batch.commit().await()
+
+        Timber.i("UploadAdmin: uploaded '$docName' (fileFormat 13): ${data.length()} lists, $totalSections questions")
+        Result.success(Unit)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: uploadFormat13 '$docName' failed")
+        Result.failure(e)
+    }
+
+    /** Reads back a fileFormat-13 sheet's flat sections subcollection for a sanity check. */
+    private suspend fun readFormat13(
+        docName: String,
+        sheetSnap: com.google.firebase.firestore.DocumentSnapshot
+    ): Result<String> = try {
+        val sections = sheetDoc(docName).collection(SECTIONS).get().await()
+        val listCount = sections.documents.mapNotNull { (it.get("sortorder") as? Number)?.toInt() }.toSet().size
+        val title = sheetSnap.getString("title") ?: docName
+        val summary = "'$docName' OK (fileFormat 13): title='$title', $listCount lists, ${sections.size()} questions"
+        Timber.i("UploadAdmin: readFormat13 -> $summary")
+        Result.success(summary)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: readFormat13 '$docName' failed")
+        Result.failure(e)
+    }
+
+    /** Recursively converts a JSONObject into a Firestore-storable Map (nested objects/arrays kept). */
+    private fun jsonObjectToMap(obj: JSONObject): Map<String, Any?> {
+        val map = HashMap<String, Any?>()
+        val keys = obj.keys()
+        while (keys.hasNext()) {
+            val k = keys.next()
+            map[k] = jsonToStorable(obj.get(k))
+        }
+        return map
+    }
+
+    private fun jsonToStorable(value: Any?): Any? = when (value) {
+        null, JSONObject.NULL -> null
+        is JSONObject -> jsonObjectToMap(value)
+        is JSONArray -> (0 until value.length()).map { jsonToStorable(value.get(it)) }
+        else -> value // String / Boolean / Int / Long / Double
     }
 
     /** Deletes every doc in a single (flat) subcollection under [sheetRef] (batched). */
