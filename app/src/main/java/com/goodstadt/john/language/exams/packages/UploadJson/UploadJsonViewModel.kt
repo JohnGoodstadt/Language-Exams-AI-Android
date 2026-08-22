@@ -204,7 +204,14 @@ class UploadJsonViewModel @Inject constructor(
             "Sounds the Same",
             listOf(ref("german_sounds_the_same", "GermanSoundsTheSame")) // fileFormat 1
         )
-        return UploadJsonSection("Reference", listOf(adjectives, conjugations, wordPairs, prepositions, soundsTheSame))
+        val wordOfTheDay = UploadJsonLevelGroup(
+            "Word of the Day",
+            listOf(ref("daily_word_dictionary_pool_v1", "DailyWordDictionary"))
+        )
+        return UploadJsonSection(
+            "Reference",
+            listOf(adjectives, conjugations, wordPairs, prepositions, soundsTheSame, wordOfTheDay)
+        )
     }
 
     companion object {

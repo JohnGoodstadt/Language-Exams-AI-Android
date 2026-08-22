@@ -54,13 +54,17 @@ class FirestoreUploadAdminRepository @Inject constructor(
 
     override suspend fun uploadSheet(docName: String, json: String): Result<Unit> = try {
         val root = JSONObject(json)
-        when (val fileFormat = root.optInt(FIELD_FILE_FORMAT, 0)) {
-            0 -> uploadFormat0(docName, root)
-            1 -> uploadFormat1(docName, root) // data[]->wordsAndSentences[]: written as tabs + wordsAndSentences
-            2 -> uploadFormat2(docName, root)
-            7, 10 -> uploadFormat7or10(docName, root) // 7 & 10 share the same JSON structure
-            13 -> uploadFormat13(docName, root)
-            else -> Result.failure(UnsupportedOperationException("Upload for fileFormat $fileFormat not implemented yet"))
+        if (docName == DAILY_WORD_DICTIONARY) {
+            uploadDailyWordDictionary(docName, root)
+        } else {
+            when (val fileFormat = root.optInt(FIELD_FILE_FORMAT, 0)) {
+                0 -> uploadFormat0(docName, root)
+                1 -> uploadFormat1(docName, root) // data[]->wordsAndSentences[]: written as tabs + wordsAndSentences
+                2 -> uploadFormat2(docName, root)
+                7, 10 -> uploadFormat7or10(docName, root) // 7 & 10 share the same JSON structure
+                13 -> uploadFormat13(docName, root)
+                else -> Result.failure(UnsupportedOperationException("Upload for fileFormat $fileFormat not implemented yet"))
+            }
         }
     } catch (e: Exception) {
         Timber.e(e, "UploadAdmin: upload '$docName' failed")
@@ -68,32 +72,179 @@ class FirestoreUploadAdminRepository @Inject constructor(
     }
 
     override suspend fun sheetExists(docName: String): Result<Boolean> = try {
-        Result.success(sheetDoc(docName).get().await().exists())
+        val exists = if (docName == DAILY_WORD_DICTIONARY) {
+            sheetDoc(docName).collection(POOL).document(CURRENT).get().await().exists()
+        } else {
+            sheetDoc(docName).get().await().exists()
+        }
+        Result.success(exists)
     } catch (e: Exception) {
         Timber.e(e, "UploadAdmin: existence check for '$docName' failed")
         Result.failure(e)
     }
 
     override suspend fun readSheet(docName: String): Result<String?> = try {
-        val snapshot = sheetDoc(docName).get().await()
-        if (!snapshot.exists()) {
-            // Top-level document simply not present (never uploaded) - NOT an error; caller shows blank.
-            Timber.i("UploadAdmin: '$docName' top-level doc not present -> blank")
-            Result.success(null)
+        if (docName == DAILY_WORD_DICTIONARY) {
+            readDailyWordDictionary(docName)
         } else {
-            when (val fileFormat = (snapshot.get(FIELD_FILE_FORMAT) as? Number)?.toInt() ?: 0) {
-                0 -> readFormat0(docName, snapshot)
-                1 -> readFormat1(docName, snapshot)
-                2 -> readFormat2(docName, snapshot)
-                7, 10 -> readFormat7or10(docName, snapshot)
-                13 -> readFormat13(docName, snapshot)
-                else -> Result.failure(UnsupportedOperationException("Read for fileFormat $fileFormat not implemented yet"))
+            val snapshot = sheetDoc(docName).get().await()
+            if (!snapshot.exists()) {
+                // Top-level document simply not present (never uploaded) - NOT an error; caller shows blank.
+                Timber.i("UploadAdmin: '$docName' top-level doc not present -> blank")
+                Result.success(null)
+            } else {
+                when (val fileFormat = (snapshot.get(FIELD_FILE_FORMAT) as? Number)?.toInt() ?: 0) {
+                    0 -> readFormat0(docName, snapshot)
+                    1 -> readFormat1(docName, snapshot)
+                    2 -> readFormat2(docName, snapshot)
+                    7, 10 -> readFormat7or10(docName, snapshot)
+                    13 -> readFormat13(docName, snapshot)
+                    else -> Result.failure(UnsupportedOperationException("Read for fileFormat $fileFormat not implemented yet"))
+                }
             }
         }
     } catch (e: Exception) {
         // A real error (permission denied, network, …) reading the top-level document.
         Timber.e(e, "UploadAdmin: read '$docName' failed")
         Result.failure(e)
+    }
+
+    // ---------------------------------------------------------------- Daily Word Dictionary
+
+    /**
+     * Uploads the pool JSON into the shape consumed by both Android and iOS:
+     *
+     * /global/exam_sheets/sheets/DailyWordDictionary
+     *    /entries/{entryId}
+     *    /pool/current
+     *
+     * The JSON deliberately has no `fileformat`, so this sheet is dispatched by its document name.
+     */
+    private suspend fun uploadDailyWordDictionary(
+        docName: String,
+        root: JSONObject
+    ): Result<Unit> = try {
+        val poolConfig = root.optJSONObject(POOL)
+            ?: throw IllegalArgumentException("Daily Word JSON is missing '$POOL'")
+        val poolId = poolConfig.optString("poolId", CURRENT)
+        require(poolId == CURRENT) { "Daily Word poolId must be '$CURRENT', found '$poolId'" }
+
+        val orderedJson = poolConfig.optJSONArray("orderedEntryIds")
+            ?: throw IllegalArgumentException("Daily Word JSON is missing 'pool.orderedEntryIds'")
+        val orderedIds = (0 until orderedJson.length()).map { orderedJson.getString(it) }
+        require(orderedIds.isNotEmpty()) { "Daily Word pool is empty" }
+        require(orderedIds.none { it.isBlank() }) { "Daily Word pool contains a blank entryId" }
+        require(orderedIds.none { '/' in it }) { "Daily Word entryIds cannot contain '/'" }
+        require(orderedIds.distinct().size == orderedIds.size) { "Daily Word pool contains duplicate entryIds" }
+
+        val entriesJson = root.optJSONArray(ENTRIES)
+            ?: throw IllegalArgumentException("Daily Word JSON is missing '$ENTRIES'")
+        val entryById = LinkedHashMap<String, JSONObject>()
+        for (index in 0 until entriesJson.length()) {
+            val entry = entriesJson.getJSONObject(index)
+            val entryId = entry.optString("entryId")
+            require(entryId.isNotBlank()) { "Daily Word entry at index $index has no entryId" }
+            require('/' !in entryId) { "Daily Word entryId '$entryId' cannot contain '/'" }
+            require(entryById.put(entryId, entry) == null) { "Duplicate Daily Word entryId '$entryId'" }
+        }
+
+        val missing = orderedIds.filterNot(entryById::containsKey)
+        require(missing.isEmpty()) { "Pool references missing entries: $missing" }
+        val notInPool = entryById.keys.filterNot(orderedIds::contains)
+        require(notInPool.isEmpty()) { "Entries are not referenced by the pool: $notInPool" }
+
+        val sheetRef = sheetDoc(docName)
+        var batch = firestore.batch()
+        var ops = 0
+        for (entryId in orderedIds) {
+            val entryRef = sheetRef.collection(ENTRIES).document(entryId)
+            batch.set(entryRef, jsonObjectToFirestoreMap(entryById.getValue(entryId)))
+            if (++ops >= BATCH_LIMIT) {
+                batch.commit().await()
+                batch = firestore.batch()
+                ops = 0
+            }
+        }
+        if (ops > 0) batch.commit().await()
+
+        val now = System.currentTimeMillis() / 1000L
+        val batchId = root.optString("batchId", "")
+        val timezoneRule = root.optString("timezoneRule", "UTC")
+        val uiPolicyJson = root.optJSONObject("uiPolicy") ?: JSONObject()
+        val uiPolicy = hashMapOf<String, Any>(
+            "maxBrowseDaysBack" to uiPolicyJson.optInt("maxBrowseDaysBack", 7),
+            "lockForwardAtToday" to uiPolicyJson.optBoolean("lockForwardAtToday", true)
+        )
+
+        // Write the root metadata and the live pool only after all referenced entries exist.
+        val indexBatch = firestore.batch()
+        indexBatch.set(
+            sheetRef,
+            hashMapOf(
+                "sheetName" to docName,
+                "batchId" to batchId,
+                "timezoneRule" to timezoneRule,
+                "entryCount" to orderedIds.size,
+                FIELD_UPLOAD_DATE to now,
+                "updatedDate" to now
+            )
+        )
+        indexBatch.set(
+            sheetRef.collection(POOL).document(CURRENT),
+            hashMapOf(
+                "batchId" to batchId,
+                "timezoneRule" to timezoneRule,
+                "updatedDate" to now,
+                "uiPolicy" to uiPolicy,
+                "orderedEntryIds" to orderedIds
+            )
+        )
+        indexBatch.commit().await()
+
+        Timber.i("UploadAdmin: uploaded '$docName': ${orderedIds.size} entries and pool/$CURRENT")
+        Result.success(Unit)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: Daily Word upload '$docName' failed")
+        Result.failure(e)
+    }
+
+    /** Reads the pool and verifies that every referenced entry document exists. */
+    private suspend fun readDailyWordDictionary(docName: String): Result<String?> = try {
+        val sheetRef = sheetDoc(docName)
+        val poolSnapshot = sheetRef.collection(POOL).document(CURRENT).get().await()
+        if (!poolSnapshot.exists()) {
+            Timber.i("UploadAdmin: '$docName/$POOL/$CURRENT' not present -> blank")
+            Result.success(null)
+        } else {
+            val orderedIds = (poolSnapshot.get("orderedEntryIds") as? List<*>)
+                ?.mapNotNull { it as? String }
+                .orEmpty()
+            val entriesSnapshot = sheetRef.collection(ENTRIES).get().await()
+            val uploadedIds = entriesSnapshot.documents.map { it.id }.toSet()
+            val missing = orderedIds.filterNot(uploadedIds::contains)
+            if (orderedIds.isEmpty()) {
+                Result.failure(IllegalStateException("'$docName' pool/current is empty"))
+            } else if (missing.isNotEmpty()) {
+                Result.failure(IllegalStateException("'$docName' is missing entry documents: $missing"))
+            } else {
+                val summary = "'$docName' OK: ${entriesSnapshot.size()} entries, " +
+                    "${orderedIds.size} pool IDs, pool/$CURRENT verified"
+                Timber.i("UploadAdmin: readDailyWordDictionary -> $summary")
+                Result.success(summary)
+            }
+        }
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: Daily Word read '$docName' failed")
+        Result.failure(e)
+    }
+
+    /** Converts JSON into Firestore values while omitting only top-level JSON null fields. */
+    private fun jsonObjectToFirestoreMap(obj: JSONObject): Map<String, Any> = buildMap {
+        val keys = obj.keys()
+        while (keys.hasNext()) {
+            val key = keys.next()
+            jsonToStorable(obj.get(key))?.let { put(key, it) }
+        }
     }
 
     // ---------------------------------------------------------------- fileFormat 0 (vocab)
@@ -658,6 +809,9 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val EXAM_SHEETS = "exam_sheets"
         private const val SHEETS = "sheets"
         private const val CATEGORIES = "categories"
+        private const val ENTRIES = "entries"
+        private const val POOL = "pool"
+        private const val CURRENT = "current"
         private const val WORDS = "words"
         private const val WORDS_AND_SENTENCES = "wordsAndSentences"
         private const val TABS = "tabs"
@@ -665,6 +819,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val FIELD_FILE_FORMAT = "fileformat"
         private const val FIELD_UPLOAD_DATE = "uploadDate"
         private const val GERMAN_A1_VOCAB = "GermanA1Vocab"
+        private const val DAILY_WORD_DICTIONARY = "DailyWordDictionary"
         private const val BATCH_LIMIT = 400 // Firestore hard limit is 500 ops per batch
     }
 }
