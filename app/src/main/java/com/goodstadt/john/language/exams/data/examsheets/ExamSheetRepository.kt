@@ -13,9 +13,9 @@ import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.models.Format2Sentence
 import com.goodstadt.john.language.exams.models.Format2WordAndSentenceDTO
 import com.goodstadt.john.language.exams.models.Format3File
-import com.goodstadt.john.language.exams.models.HeaderWordAndSentence
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
+import com.goodstadt.john.language.exams.models.Format1Entry
+import com.goodstadt.john.language.exams.models.Format1Level
+import com.goodstadt.john.language.exams.models.Format1File
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
 import com.goodstadt.john.language.exams.models.Format7or10File
@@ -139,7 +139,7 @@ class ExamSheetRepository @Inject constructor(
     suspend fun getFormat1Sheet(
         name: String,
         forceRefresh: Boolean
-    ): Result<HeaderWordsSentencesListRoot> {
+    ): Result<Format1File> {
         try {
             // a. Check disk cache first (unless forcing a refresh)
             if (!forceRefresh) {
@@ -159,7 +159,7 @@ class ExamSheetRepository @Inject constructor(
     }
 
 
-    private suspend fun  fetchFormat1FromNetworkAndCache(examName: String): Result<HeaderWordsSentencesListRoot> {
+    private suspend fun  fetchFormat1FromNetworkAndCache(examName: String): Result<Format1File> {
         Timber.d("ExamSheetRepo: Fetching '$examName' (Format1) from network...")
         return try {
             // This function calls the specific logic to download and assemble a Format1 object.
@@ -176,7 +176,7 @@ class ExamSheetRepository @Inject constructor(
 
             val cacheFile = getCacheFilePointer(examName)
             // Use the correct serializer for this type
-            val jsonString = jsonParser.encodeToString(HeaderWordsSentencesListRoot.serializer(), format1File)
+            val jsonString = jsonParser.encodeToString(Format1File.serializer(), format1File)
             cacheFile.writeText(jsonString)
 
             Timber.i("ExamSheetRepo: Successfully fetched and cached '$examName' (Format1).")
@@ -197,7 +197,7 @@ class ExamSheetRepository @Inject constructor(
     /**
      * A type-safe function for reading a `HeaderWordsSentencesListRoot` from the disk cache.
      */
-    private suspend fun readFormat1SheetFromCache(logicalName: String): HeaderWordsSentencesListRoot? =
+    private suspend fun readFormat1SheetFromCache(logicalName: String): Format1File? =
         withContext(Dispatchers.IO) {
             val file = getCacheFilePointer(logicalName)
             if (!file.exists()) return@withContext null
@@ -205,7 +205,7 @@ class ExamSheetRepository @Inject constructor(
             return@withContext try {
                 val jsonString = file.readText()
                 // Use the correct decoder for this type
-                val decoded = jsonParser.decodeFromString<HeaderWordsSentencesListRoot>(jsonString)
+                val decoded = jsonParser.decodeFromString<Format1File>(jsonString)
                 // Ignore an empty cached file (a stale artefact from before the sheet was populated):
                 // returning null forces a fresh network fetch instead of serving empty data forever.
                 if (decoded.data.isEmpty()) {
@@ -373,7 +373,7 @@ class ExamSheetRepository @Inject constructor(
 
     // --- 4. PRIVATE, GENERIC CACHING HELPERS ---
 
-    private suspend fun downloadAndAssembleFormat1(examName: String): HeaderWordsSentencesListRoot = coroutineScope {
+    private suspend fun downloadAndAssembleFormat1(examName: String): Format1File = coroutineScope {
         Timber.d("ExamSheetRepo: Assembling Format1 sheet for '$examName' from sub-collections.")
 
         // Define the base path to the specific exam sheet document
@@ -417,7 +417,7 @@ class ExamSheetRepository @Inject constructor(
                 .filter { it.parentID == header.tabID }
                 .map { row ->
                     // Map the Firestore DTO to your final, clean app model
-                    HeaderWordAndSentence(
+                    Format1Entry(
                         word = row.word,
                         sentence = row.sentence,
                         translation = row.translation,
@@ -426,7 +426,7 @@ class ExamSheetRepository @Inject constructor(
                 }
 
             // Create the final section object
-            HeaderWordsSentencesList(
+            Format1Level(
                 title = header.title,
                 description = header.description,
                 sortOrder = header.sortorder,
@@ -434,7 +434,7 @@ class ExamSheetRepository @Inject constructor(
             )
         }
 
-        return@coroutineScope HeaderWordsSentencesListRoot(
+        return@coroutineScope Format1File(
             fileformat = 1,
             sheetName = examName,
             location = "remote",//TODO: what to go in here?

@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
  * Equivalent to the Swift `HeaderWordsSentencesListRoot` struct.
  */
 @kotlinx.serialization.Serializable
-data class HeaderWordsSentencesListRoot(
+data class Format1File(
     val fileformat: Int,
     // Using @SerialName to map the JSON key "sheetname" to the Kotlin-conventional property "sheetName".
     @SerialName("sheetname")
@@ -17,7 +17,7 @@ data class HeaderWordsSentencesListRoot(
     // Assuming 'location' is a simple string in the JSON. If it's a complex object,
     // you would need to create a separate data class for it.
     val location: String,
-    val data: List<HeaderWordsSentencesList>
+    val data: List<Format1Level>
 )
 
 /**
@@ -25,21 +25,21 @@ data class HeaderWordsSentencesListRoot(
  * Equivalent to the Swift `HeaderWordsSentencƒesList` struct.
  */
 @Serializable
-data class HeaderWordsSentencesList(
+data class Format1Level(
     val title: String,
     val description: String,
     @SerialName("sortorder")
     val sortOrder: Int,
     @SerialName("wordsAndSentences")
-    val wordsAndSentences: List<HeaderWordAndSentence>
+    val wordsAndSentences: List<Format1Entry>
 )
 
 /**
  * Represents a single word/sentence pair within a section.
  * Equivalent to the Swift `HeaderWordAndSentence` struct.
  */
-@kotlinx.serialization.Serializable
-data class HeaderWordAndSentence(
+@Serializable
+data class Format1Entry(
     val word: String,
     val sentence: String,
 

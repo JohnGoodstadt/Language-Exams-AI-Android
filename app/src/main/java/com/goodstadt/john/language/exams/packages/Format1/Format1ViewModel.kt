@@ -12,13 +12,11 @@ import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statSideQuestCount
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
+import com.goodstadt.john.language.exams.models.Format1Level
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,7 +29,7 @@ import javax.inject.Inject
 sealed interface Format1UiState {
     object Loading : Format1UiState
     data class Success(
-        val data: List<HeaderWordsSentencesList>,
+        val data: List<Format1Level>,
         val playbackState: PlaybackState = PlaybackState.Idle,
         val lastUpdate: Long = System.currentTimeMillis()
     ) : Format1UiState

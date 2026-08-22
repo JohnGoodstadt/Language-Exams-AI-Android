@@ -20,7 +20,7 @@ import com.goodstadt.john.language.exams.data.GrammarSheetMapping
 import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
 import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
 import com.goodstadt.john.language.exams.models.Format3File
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
+import com.goodstadt.john.language.exams.models.Format1File
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
@@ -130,7 +130,7 @@ class ContentRepository @Inject constructor(
 ) {
     // Cache the result in memory after the first successful load
     private val vocabCache = mutableMapOf<String, Format0File>()
-    private val format1Cache = mutableMapOf<String, HeaderWordsSentencesListRoot>()
+    private val format1Cache = mutableMapOf<String, Format1File>()
     private val format2Cache = mutableMapOf<String, Format2File>()
     private val format3Cache = mutableMapOf<String, Format3File>()
     private val format7or10Cache = mutableMapOf<String, Format7or10File>()
@@ -267,7 +267,7 @@ class ContentRepository @Inject constructor(
 
     } //end
 
-    suspend fun getFormat1Data(name: String): Result<HeaderWordsSentencesListRoot> = withContext(Dispatchers.IO) {
+    suspend fun getFormat1Data(name: String): Result<Format1File> = withContext(Dispatchers.IO) {
         val logicalName = normalizeToLogicalName(name)
         try {
             // --- 1. VERSION CHECK ---
@@ -321,7 +321,7 @@ class ContentRepository @Inject constructor(
         }
     }
 
-    fun loadBundledFormat1Data(resourceName: String): Result<HeaderWordsSentencesListRoot> {
+    fun loadBundledFormat1Data(resourceName: String): Result<Format1File> {
         // 1. Check the in-memory cache first.
         format1Cache[resourceName]?.let { cachedFile ->
             Timber.d("Format 2: Returning '$resourceName' from MEMORY CACHE. Yippee!")
@@ -339,7 +339,7 @@ class ContentRepository @Inject constructor(
 
         return result
     }
-    private fun _loadFromBundleFormat1(resourceName: String): Result<HeaderWordsSentencesListRoot> {
+    private fun _loadFromBundleFormat1(resourceName: String): Result<Format1File> {
         return try {
             val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
             if (resourceId == 0) {
@@ -348,7 +348,7 @@ class ContentRepository @Inject constructor(
             Timber.v("Format 2: Loading '$resourceName' from res/raw.")
             val inputStream = context.resources.openRawResource(resourceId)
             val jsonString = inputStream.bufferedReader().use { it.readText() }
-            val format1File = jsonParser.decodeFromString<HeaderWordsSentencesListRoot>(jsonString)
+            val format1File = jsonParser.decodeFromString<Format1File>(jsonString)
             Result.success(format1File)
         } catch (e: Exception) {
             Timber.e(e, "Format 2: Failed to load from bundle: $resourceName")

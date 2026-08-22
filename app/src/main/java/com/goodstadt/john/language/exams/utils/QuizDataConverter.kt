@@ -1,7 +1,7 @@
 package com.goodstadt.john.language.exams.utils
 
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
+import com.goodstadt.john.language.exams.models.Format1Level
 import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.models.Format7or10Word
@@ -15,7 +15,7 @@ object QuizDataConverter {
      * Logic: Creates a distractor sentence by swapping the homophone pairs.
      */
     fun generateHomophoneSwapQuiz(
-        sourceData: List<HeaderWordsSentencesList>,
+        sourceData: List<Format1Level>,
         limit: Int = 10
     ): List<Format7or10Section> {
 

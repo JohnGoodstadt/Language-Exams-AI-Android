@@ -9,7 +9,7 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format2File
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
+import com.goodstadt.john.language.exams.models.Format1File
 import com.goodstadt.john.language.exams.models.SheetDataType
 import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
@@ -34,7 +34,7 @@ data class ReferenceUiState(
 
     // Data caches (add one for each data type)
     val vocabFileCache: Map<String, Format0File> = emptyMap(),
-    val format1Cache: Map<String, HeaderWordsSentencesListRoot> = emptyMap(),
+    val format1Cache: Map<String, Format1File> = emptyMap(),
     val format2Cache: Map<String, Format2File> = emptyMap(),
 
     // Loading/Error state for data fetching

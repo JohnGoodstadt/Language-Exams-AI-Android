@@ -1,0 +1,2141 @@
+{
+	"batchId": "de-pool-58-v1",
+	"timezoneRule": "UTC",
+	"uiPolicy": {
+		"maxBrowseDaysBack": 7,
+		"lockForwardAtToday": true
+	},
+	"pool": {
+		"poolId": "current",
+		"orderedEntryIds": [
+			"ängstlich",
+			"nachvollziehbar",
+			"neugierig",
+			"unverzichtbar",
+			"begeistert",
+			"umstritten",
+			"geduldig",
+			"voreilig",
+			"gelassen",
+			"angemessen",
+			"möglicherweise",
+			"unbestreitbar",
+			"unerwartet",
+			"voreingenommen",
+			"Abschluss",
+			"hartnäckig",
+			"Qualifikation",
+			"wesentlich",
+			"Erfahrung",
+			"gründlich",
+			"Fähigkeit",
+			"Nuance",
+			"Selbstvertrauen",
+			"nichtsdestotrotz",
+			"Einsicht",
+			"im Nachhinein",
+			"Ernährung",
+			"Zusammenhalt",
+			"Wohlbefinden",
+			"vernachlässigen",
+			"Klimawandel",
+			"Nachhaltigkeit",
+			"Artenvielfalt",
+			"Nachweis",
+			"Umweltverschmutzung",
+			"sich bewerben um",
+			"erneuerbar",
+			"voraussetzen",
+			"nachhaltig",
+			"angesichts",
+			"Bewerbung",
+			"hinsichtlich",
+			"Kommunikation",
+			"ungeachtet",
+			"Unterstützung",
+			"inwieweit",
+			"Vertrauen",
+			"Zeitdruck",
+			"Vielfalt",
+			"unverzüglich",
+			"Gerechtigkeit",
+			"abwägen",
+			"erreichen",
+			"gewährleisten",
+			"verbessern",
+			"beeinträchtigen",
+			"empfehlen",
+			"bewältigen"
+		]
+	},
+	"entries": [
+		{
+			"entryId": "ängstlich",
+			"headword": "ängstlich",
+			"pronunciation": {
+				"display": "/ˈɛŋstlɪç/",
+				"ipaUK": "/ˈɛŋstlɪç/",
+				"ipaUS": "/ˈɛŋstlɪç/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Gefühlszustand oder Eigenschaft",
+					"headwordLine": "ängstlich",
+					"inflectionsLine": null,
+					"synonyms": [
+						"furchtsam"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Von Angst geprägt oder leicht dazu neigend, Angst zu bekommen.",
+							"examples": [
+								"Das ängstliche Kind wollte nicht allein bleiben."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "neugierig",
+			"headword": "neugierig",
+			"pronunciation": {
+				"display": "/ˈnɔɪ̯ˌɡiːʁɪç/",
+				"ipaUK": "/ˈnɔɪ̯ˌɡiːʁɪç/",
+				"ipaUS": "/ˈnɔɪ̯ˌɡiːʁɪç/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Interesse",
+					"headwordLine": "neugierig",
+					"inflectionsLine": null,
+					"synonyms": [
+						"gespannt",
+						"interessiert"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Mit dem Wunsch, etwas Neues, Unbekanntes oder Persönliches zu erfahren.",
+							"examples": [
+								"Die Kinder waren neugierig auf das Experiment."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "begeistert",
+			"headword": "begeistert",
+			"pronunciation": {
+				"display": "/bəˈɡaɪ̯stɐt/",
+				"ipaUK": "/bəˈɡaɪ̯stɐt/",
+				"ipaUS": "/bəˈɡaɪ̯stɐt/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "stark positive Emotion",
+					"headwordLine": "begeistert",
+					"inflectionsLine": null,
+					"synonyms": [
+						"enthusiastisch"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Von großer Freude und starkem positivem Interesse erfüllt.",
+							"examples": [
+								"Das Publikum war von dem Konzert begeistert."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "geduldig",
+			"headword": "geduldig",
+			"pronunciation": {
+				"display": "/ɡəˈdʊldɪç/",
+				"ipaUK": "/ɡəˈdʊldɪç/",
+				"ipaUS": "/ɡəˈdʊldɪç/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Umgang mit Dauer",
+					"headwordLine": "geduldig",
+					"inflectionsLine": null,
+					"synonyms": [
+						"langmütig"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Bereit, ruhig zu warten oder Schwierigkeiten auszuhalten, ohne schnell unruhig zu werden.",
+							"examples": [
+								"Die Lehrerin erklärte die Aufgabe geduldig ein zweites Mal."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "gelassen",
+			"headword": "gelassen",
+			"pronunciation": {
+				"display": "/ɡəˈlasn̩/",
+				"ipaUK": "/ɡəˈlasn̩/",
+				"ipaUS": "/ɡəˈlasn̩/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "innere Ausgeglichenheit",
+					"headwordLine": "gelassen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"besonnen",
+						"ruhig"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Innerlich ausgeglichen und auch bei Problemen nicht leicht beunruhigt oder gestört.",
+							"examples": [
+								"Sie reagierte gelassen auf die Verspätung."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "möglicherweise",
+			"headword": "möglicherweise",
+			"pronunciation": {
+				"display": "/ˈmøːklɪçɐˌvaɪ̯zə/",
+				"ipaUK": "/ˈmøːklɪçɐˌvaɪ̯zə/",
+				"ipaUS": "/ˈmøːklɪçɐˌvaɪ̯zə/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adverb",
+					"grammarType": "Möglichkeit",
+					"headwordLine": "möglicherweise",
+					"inflectionsLine": null,
+					"synonyms": [
+						"unter Umständen",
+						"eventuell"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "So, dass etwas möglich ist, aber nicht sicher feststeht.",
+							"examples": [
+								"Der Termin wird möglicherweise verschoben."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "unerwartet",
+			"headword": "unerwartet",
+			"pronunciation": {
+				"display": "/ʊnʔɛɐ̯ˈvaʁtət/",
+				"ipaUK": "/ʊnʔɛɐ̯ˈvaʁtət/",
+				"ipaUS": "/ʊnʔɛɐ̯ˈvaʁtət/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adverb",
+					"grammarType": "fehlende Erwartung",
+					"headwordLine": "unerwartet",
+					"inflectionsLine": null,
+					"synonyms": [
+						"überraschend"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "So, dass etwas nicht erwartet oder vorhergesehen wurde.",
+							"examples": [
+								"Unerwartet erhielt sie ein neues Angebot."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Abschluss",
+			"headword": "Abschluss",
+			"pronunciation": {
+				"display": "/ˈapˌʃlʊs/",
+				"ipaUK": "/ˈapˌʃlʊs/",
+				"ipaUS": "/ˈapˌʃlʊs/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "maskulin",
+					"headwordLine": "Abschluss",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Schulabschluss",
+						"Studienabschluss"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Das erfolgreiche Ende einer Ausbildung oder die dabei erworbene Qualifikation.",
+							"examples": [
+								"Für diese Stelle braucht man einen technischen Abschluss."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Qualifikation",
+			"headword": "Qualifikation",
+			"pronunciation": {
+				"display": "/kvalifikat͡si̯oːn/",
+				"ipaUK": "/kvalifikat͡si̯oːn/",
+				"ipaUS": "/kvalifikat͡si̯oːn/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Qualifikation",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Befähigung",
+						"Kompetenz"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Kenntnisse, Fähigkeiten oder Abschlüsse, die jemanden für eine Aufgabe geeignet machen.",
+							"examples": [
+								"Für diese Stelle ist eine technische Qualifikation erforderlich."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Erfahrung",
+			"headword": "Erfahrung",
+			"pronunciation": {
+				"display": "/ɛɐ̯ˈfaːʁʊŋ/",
+				"ipaUK": "/ɛɐ̯ˈfaːʁʊŋ/",
+				"ipaUS": "/ɛɐ̯ˈfaːʁʊŋ/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Erfahrung",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Praxis",
+						"Kenntnis"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Wissen und Können, das durch Erleben und praktische Tätigkeit entsteht.",
+							"examples": [
+								"Sie hat fünf Jahre Erfahrung im Kundenservice."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Fähigkeit",
+			"headword": "Fähigkeit",
+			"pronunciation": {
+				"display": "/ˈfɛːɪçkaɪ̯t/",
+				"ipaUK": "/ˈfɛːɪçkaɪ̯t/",
+				"ipaUS": "/ˈfɛːɪçkaɪ̯t/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Fähigkeit",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Können",
+						"Kompetenz"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die Möglichkeit oder das Können, etwas erfolgreich zu tun.",
+							"examples": [
+								"Teamarbeit ist eine wichtige Fähigkeit in diesem Beruf."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Selbstvertrauen",
+			"headword": "Selbstvertrauen",
+			"pronunciation": {
+				"display": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/",
+				"ipaUK": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/",
+				"ipaUS": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "neutral",
+					"headwordLine": "Selbstvertrauen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Vertrauen in sich selbst"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Das Vertrauen in die eigenen Fähigkeiten und die eigene Handlungsfähigkeit.",
+							"examples": [
+								"Durch die Übung gewann er mehr Selbstvertrauen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Einsicht",
+			"headword": "Einsicht",
+			"pronunciation": {
+				"display": "/ˈaɪ̯nˌzɪçt/",
+				"ipaUK": "/ˈaɪ̯nˌzɪçt/",
+				"ipaUS": "/ˈaɪ̯nˌzɪçt/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Einsicht",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Erkenntnis",
+						"Verständnis"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Ein tieferes Verstehen eines Zusammenhangs oder die Anerkennung, dass etwas richtig oder notwendig ist.",
+							"examples": [
+								"Nach dem Gespräch kam er zu der Einsicht, dass er sich geirrt hatte."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Ernährung",
+			"headword": "Ernährung",
+			"pronunciation": {
+				"display": "/ɛɐ̯ˈnɛːʁʊŋ/",
+				"ipaUK": "/ɛɐ̯ˈnɛːʁʊŋ/",
+				"ipaUS": "/ɛɐ̯ˈnɛːʁʊŋ/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Ernährung",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Kost",
+						"Nahrungsweise"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die Art und Weise, wie ein Mensch Lebensmittel auswählt und zu sich nimmt.",
+							"examples": [
+								"Eine ausgewogene Ernährung ist wichtig für die Gesundheit."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Wohlbefinden",
+			"headword": "Wohlbefinden",
+			"pronunciation": {
+				"display": "/ˈvoːlbəˌfɪndn̩/",
+				"ipaUK": "/ˈvoːlbəˌfɪndn̩/",
+				"ipaUS": "/ˈvoːlbəˌfɪndn̩/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "neutral",
+					"headwordLine": "Wohlbefinden",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Wohlergehen"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Das angenehme Gefühl, sich körperlich und seelisch gut zu fühlen.",
+							"examples": [
+								"Genügend Pausen verbessern das Wohlbefinden."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Klimawandel",
+			"headword": "Klimawandel",
+			"pronunciation": {
+				"display": "/ˈkliːmaˌvandl̩/",
+				"ipaUK": "/ˈkliːmaˌvandl̩/",
+				"ipaUS": "/ˈkliːmaˌvandl̩/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "maskulin",
+					"headwordLine": "Klimawandel",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Klimaänderung"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Eine langfristige Veränderung des Klimas, heute besonders durch menschliche Treibhausgase verursacht.",
+							"examples": [
+								"Der Klimawandel verändert Niederschläge und Temperaturen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Artenvielfalt",
+			"headword": "Artenvielfalt",
+			"pronunciation": {
+				"display": "/ˈaːɐ̯tn̩fiːlˌfalt/",
+				"ipaUK": "/ˈaːɐ̯tn̩fiːlˌfalt/",
+				"ipaUS": "/ˈaːɐ̯tn̩fiːlˌfalt/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Artenvielfalt",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Biodiversität"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die Verschiedenheit und Zahl von Tier-, Pflanzen- und anderen Arten in einem Gebiet.",
+							"examples": [
+								"Im Regenwald gibt es eine besonders große Artenvielfalt."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Umweltverschmutzung",
+			"headword": "Umweltverschmutzung",
+			"pronunciation": {
+				"display": "/ˈʊmvɛltfɛɐ̯ˌʃmʊt͡sʊŋ/",
+				"ipaUK": "/ˈʊmvɛltfɛɐ̯ˌʃmʊt͡sʊŋ/",
+				"ipaUS": "/ˈʊmvɛltfɛɐ̯ˌʃmʊt͡sʊŋ/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Umweltverschmutzung",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Umweltbelastung"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die schädliche Belastung von Luft, Wasser oder Boden durch Abfälle und Schadstoffe.",
+							"examples": [
+								"Verkehr und Industrie tragen zur Umweltverschmutzung bei."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "erneuerbar",
+			"headword": "erneuerbar",
+			"pronunciation": {
+				"display": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/",
+				"ipaUK": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/",
+				"ipaUS": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Ressourcen",
+					"headwordLine": "erneuerbar",
+					"inflectionsLine": null,
+					"synonyms": [
+						"regenerativ"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "So beschaffen, dass sich eine natürliche Ressource in überschaubarer Zeit wieder bildet.",
+							"examples": [
+								"Wind und Sonne liefern erneuerbare Energie."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "nachhaltig",
+			"headword": "nachhaltig",
+			"pronunciation": {
+				"display": "/ˈnaːxhaltɪç/",
+				"ipaUK": "/ˈnaːxhaltɪç/",
+				"ipaUS": "/ˈnaːxhaltɪç/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "langfristige Wirkung",
+					"headwordLine": "nachhaltig",
+					"inflectionsLine": null,
+					"synonyms": [
+						"zukunftsfähig",
+						"dauerhaft"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "So gestaltet, dass Ressourcen langfristig erhalten und zukünftige Bedürfnisse nicht gefährdet werden.",
+							"examples": [
+								"Das Unternehmen möchte nachhaltiger produzieren."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Bewerbung",
+			"headword": "Bewerbung",
+			"pronunciation": {
+				"display": "/bəˈvɛʁbʊŋ/",
+				"ipaUK": "/bəˈvɛʁbʊŋ/",
+				"ipaUS": "/bəˈvɛʁbʊŋ/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Bewerbung",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Bewerbungsunterlagen"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Unterlagen oder ein Verfahren, mit denen man sich um eine Stelle oder einen Platz bemüht.",
+							"examples": [
+								"Seine Bewerbung für das Praktikum war erfolgreich."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Kommunikation",
+			"headword": "Kommunikation",
+			"pronunciation": {
+				"display": "/komunikaˈt͡si̯oːn/",
+				"ipaUK": "/komunikaˈt͡si̯oːn/",
+				"ipaUS": "/komunikaˈt͡si̯oːn/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Kommunikation",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Informationsaustausch",
+						"Verständigung"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Der Austausch von Informationen, Gedanken oder Gefühlen durch Sprache, Zeichen oder Medien.",
+							"examples": [
+								"Offene Kommunikation ist in einem Team sehr wichtig."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Unterstützung",
+			"headword": "Unterstützung",
+			"pronunciation": {
+				"display": "/ˌʊntɐˈʃtʏt͡sʊŋ/",
+				"ipaUK": "/ˌʊntɐˈʃtʏt͡sʊŋ/",
+				"ipaUS": "/ˌʊntɐˈʃtʏt͡sʊŋ/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Unterstützung",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Förderung",
+						"Hilfe"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Materielle, praktische oder emotionale Hilfe, die jemanden bei einem Ziel oder Problem stärkt.",
+							"examples": [
+								"Sie erhielt viel Unterstützung von ihrer Familie."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Vertrauen",
+			"headword": "Vertrauen",
+			"pronunciation": {
+				"display": "/fɛɐ̯ˈtʁaʊ̯ən/",
+				"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
+				"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "neutral",
+					"headwordLine": "Vertrauen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Zutrauen",
+						"Sicherheit"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die sichere Erwartung, dass eine Person ehrlich, zuverlässig oder fähig ist.",
+							"examples": [
+								"Gegenseitiges Vertrauen ist für eine Beziehung wichtig."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Vielfalt",
+			"headword": "Vielfalt",
+			"pronunciation": {
+				"display": "/ˈfiːlˌfalt/",
+				"ipaUK": "/ˈfiːlˌfalt/",
+				"ipaUS": "/ˈfiːlˌfalt/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Vielfalt",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Diversität",
+						"Verschiedenheit"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Das gleichzeitige Vorhandensein vieler unterschiedlicher Menschen, Formen oder Möglichkeiten.",
+							"examples": [
+								"Die kulturelle Vielfalt bereichert die Stadt."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Gerechtigkeit",
+			"headword": "Gerechtigkeit",
+			"pronunciation": {
+				"display": "/ɡəˈʁɛçtɪçkaɪ̯t/",
+				"ipaUK": "/ɡəˈʁɛçtɪçkaɪ̯t/",
+				"ipaUS": "/ɡəˈʁɛçtɪçkaɪ̯t/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Gerechtigkeit",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Fairness"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Das Prinzip, Menschen fair zu behandeln und Rechte, Chancen oder Lasten angemessen zu verteilen.",
+							"examples": [
+								"Viele Menschen fordern mehr soziale Gerechtigkeit."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "erreichen",
+			"headword": "erreichen",
+			"pronunciation": {
+				"display": "/ɛɐ̯ˈʁaɪ̯çn̩/",
+				"ipaUK": "/ɛɐ̯ˈʁaɪ̯çn̩/",
+				"ipaUS": "/ɛɐ̯ˈʁaɪ̯çn̩/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv",
+					"headwordLine": "erreichen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"erzielen",
+						"gelangen zu"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "An ein Ziel gelangen oder ein gewünschtes Ergebnis erfolgreich erzielen.",
+							"examples": [
+								"Nach vielen Versuchen erreichte sie ihr Ziel."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "verbessern",
+			"headword": "verbessern",
+			"pronunciation": {
+				"display": "/fɛɐ̯ˈbɛsɐn/",
+				"ipaUK": "/fɛɐ̯ˈbɛsɐn/",
+				"ipaUS": "/fɛɐ̯ˈbɛsɐn/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv oder reflexiv",
+					"headwordLine": "verbessern",
+					"inflectionsLine": null,
+					"synonyms": [
+						"optimieren"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die Qualität, Leistung oder Situation besser machen beziehungsweise besser werden.",
+							"examples": [
+								"Der Kurs hilft mir, mein Deutsch zu verbessern."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "empfehlen",
+			"headword": "empfehlen",
+			"pronunciation": {
+				"display": "/ɛmˈpfeːlən/",
+				"ipaUK": "/ɛmˈpfeːlən/",
+				"ipaUS": "/ɛmˈpfeːlən/"
+			},
+			"labels": [
+				"B1"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv",
+					"headwordLine": "empfehlen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"anraten"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Aufgrund eigener Einschätzung zu einer Person, Sache oder Handlung raten.",
+							"examples": [
+								"Ich kann dieses Restaurant sehr empfehlen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "nachvollziehbar",
+			"headword": "nachvollziehbar",
+			"pronunciation": {
+				"display": "/ˈnaːxfolˌt͡siːbaːɐ̯/",
+				"ipaUK": "/ˈnaːxfolˌt͡siːbaːɐ̯/",
+				"ipaUS": "/ˈnaːxfolˌt͡siːbaːɐ̯/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Verständlichkeit",
+					"headwordLine": "nachvollziehbar",
+					"inflectionsLine": null,
+					"synonyms": [
+						"verständlich",
+						"plausibel"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Logisch verständlich oder in Gedanken und Schritten überprüfbar.",
+							"examples": [
+								"Seine Entscheidung ist angesichts der Situation nachvollziehbar."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "unverzichtbar",
+			"headword": "unverzichtbar",
+			"pronunciation": {
+				"display": "/ʊnfɛɐ̯ˈt͡sɪçtbaːɐ̯/",
+				"ipaUK": "/ʊnfɛɐ̯ˈt͡sɪçtbaːɐ̯/",
+				"ipaUS": "/ʊnfɛɐ̯ˈt͡sɪçtbaːɐ̯/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Notwendigkeit",
+					"headwordLine": "unverzichtbar",
+					"inflectionsLine": null,
+					"synonyms": [
+						"unentbehrlich",
+						"unerlässlich"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "So wichtig oder notwendig, dass darauf nicht verzichtet werden kann.",
+							"examples": [
+								"Sauberes Wasser ist für das Leben unverzichtbar."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "umstritten",
+			"headword": "umstritten",
+			"pronunciation": {
+				"display": "/ʊmˈʃtʁɪtn̩/",
+				"ipaUK": "/ʊmˈʃtʁɪtn̩/",
+				"ipaUS": "/ʊmˈʃtʁɪtn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "öffentlicher Widerspruch",
+					"headwordLine": "umstritten",
+					"inflectionsLine": null,
+					"synonyms": [
+						"kontrovers"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "So beurteilt, dass darüber starke unterschiedliche Meinungen und Auseinandersetzungen bestehen.",
+							"examples": [
+								"Die geplante Reform ist politisch umstritten."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "voreilig",
+			"headword": "voreilig",
+			"pronunciation": {
+				"display": "/ˈfoːɐ̯ˌʔaɪ̯lɪç/",
+				"ipaUK": "/ˈfoːɐ̯ˌʔaɪ̯lɪç/",
+				"ipaUS": "/ˈfoːɐ̯ˌʔaɪ̯lɪç/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "unzureichend geprüfte Eile",
+					"headwordLine": "voreilig",
+					"inflectionsLine": null,
+					"synonyms": [
+						"überstürzt",
+						"vorschnell"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Zu schnell und ohne ausreichende Prüfung oder Überlegung handelnd.",
+							"examples": [
+								"Eine voreilige Entscheidung kann später Probleme verursachen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "angemessen",
+			"headword": "angemessen",
+			"pronunciation": {
+				"display": "/ˈanɡəˌmɛsn̩/",
+				"ipaUK": "/ˈanɡəˌmɛsn̩/",
+				"ipaUS": "/ˈanɡəˌmɛsn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Passung oder Verhältnismäßigkeit",
+					"headwordLine": "angemessen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"passend",
+						"verhältnismäßig"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Der Situation, dem Zweck oder dem erforderlichen Maß entsprechend und passend.",
+							"examples": [
+								"Die Reaktion war ruhig und angemessen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "unbestreitbar",
+			"headword": "unbestreitbar",
+			"pronunciation": {
+				"display": "/ʊnbəˈʃtʁaɪ̯tbaːɐ̯/",
+				"ipaUK": "/ʊnbəˈʃtʁaɪ̯tbaːɐ̯/",
+				"ipaUS": "/ʊnbəˈʃtʁaɪ̯tbaːɐ̯/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Gewissheit",
+					"headwordLine": "unbestreitbar",
+					"inflectionsLine": null,
+					"synonyms": [
+						"zweifellos",
+						"offenkundig"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "So eindeutig oder gut belegt, dass es vernünftig nicht bestritten werden kann.",
+							"examples": [
+								"Die Vorteile der neuen Methode sind unbestreitbar."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "voreingenommen",
+			"headword": "voreingenommen",
+			"pronunciation": {
+				"display": "/foːɐ̯ˈaɪ̯nɡənɔmən/",
+				"ipaUK": "/foːɐ̯ˈaɪ̯nɡənɔmən/",
+				"ipaUS": "/foːɐ̯ˈaɪ̯nɡənɔmən/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "fehlende Neutralität",
+					"headwordLine": "voreingenommen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"befangen",
+						"parteiisch"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Durch eine bereits bestehende Meinung oder ein Vorurteil einseitig und nicht neutral.",
+							"examples": [
+								"Ein Richter muss unabhängig und darf nicht voreingenommen sein."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "hartnäckig",
+			"headword": "hartnäckig",
+			"pronunciation": {
+				"display": "/ˈhaʁtˌnɛkɪç/",
+				"ipaUK": "/ˈhaʁtˌnɛkɪç/",
+				"ipaUS": "/ˈhaʁtˌnɛkɪç/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Beharrlichkeit",
+					"headwordLine": "hartnäckig",
+					"inflectionsLine": null,
+					"synonyms": [
+						"beharrlich",
+						"ausdauernd"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Trotz Widerstand oder Schwierigkeiten dauerhaft nicht nachgebend; je nach Kontext positiv oder negativ.",
+							"examples": [
+								"Der Journalist stellte hartnäckig weitere Fragen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "wesentlich",
+			"headword": "wesentlich",
+			"pronunciation": {
+				"display": "/ˈveːzn̩tlɪç/",
+				"ipaUK": "/ˈveːzn̩tlɪç/",
+				"ipaUS": "/ˈveːzn̩tlɪç/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv",
+					"grammarType": "Kern oder große Bedeutung",
+					"headwordLine": "wesentlich",
+					"inflectionsLine": null,
+					"synonyms": [
+						"grundlegend",
+						"entscheidend"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Für das Wesen, den Kern oder das Ergebnis einer Sache besonders wichtig.",
+							"examples": [
+								"Vertrauen ist ein wesentlicher Bestandteil guter Zusammenarbeit."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "gründlich",
+			"headword": "gründlich",
+			"pronunciation": {
+				"display": "/ˈɡʁʏntlɪç/",
+				"ipaUK": "/ˈɡʁʏntlɪç/",
+				"ipaUS": "/ˈɡʁʏntlɪç/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv oder Adverb",
+					"grammarType": "Genauigkeit und Vollständigkeit",
+					"headwordLine": "gründlich",
+					"inflectionsLine": null,
+					"synonyms": [
+						"sorgfältig",
+						"genau"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Mit großer Sorgfalt, Genauigkeit und Vollständigkeit bis in wichtige Einzelheiten.",
+							"examples": [
+								"Vor dem Kauf informierte sie sich gründlich."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Nuance",
+			"headword": "Nuance",
+			"pronunciation": {
+				"display": "/nyˈʔãːsə/",
+				"ipaUK": "/nyˈʔãːsə/",
+				"ipaUS": "/nyˈʔãːsə/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Nuance",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Feinheit",
+						"Abstufung"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Ein sehr feiner Unterschied oder eine leichte Abstufung innerhalb einer Farbe, Bedeutung oder Wirkung.",
+							"examples": [
+								"Die beiden Blautöne unterscheiden sich nur in einer kleinen Nuance."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "nichtsdestotrotz",
+			"headword": "nichtsdestotrotz",
+			"pronunciation": {
+				"display": "/ˈnɪçt͡sdɛstoˌtʁɔt͡s/",
+				"ipaUK": "/ˈnɪçt͡sdɛstoˌtʁɔt͡s/",
+				"ipaUS": "/ˈnɪçt͡sdɛstoˌtʁɔt͡s/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Konjunktionaladverb",
+					"grammarType": "nicht verhindernder Gegensatz",
+					"headwordLine": "nichtsdestotrotz",
+					"inflectionsLine": null,
+					"synonyms": [
+						"trotzdem",
+						"dennoch"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Leitet eine Aussage ein, die trotz eines zuvor genannten Hindernisses oder Gegensatzes gilt.",
+							"examples": [
+								"Die Aufgabe war schwierig; nichtsdestotrotz wurde sie rechtzeitig beendet."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "im Nachhinein",
+			"headword": "im Nachhinein",
+			"pronunciation": {
+				"display": "/ɪm ˈnaːxˌhaɪ̯n/",
+				"ipaUK": "/ɪm ˈnaːxˌhaɪ̯n/",
+				"ipaUS": "/ɪm ˈnaːxˌhaɪ̯n/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Wendung",
+					"grammarType": "rückblickende Bewertung",
+					"headwordLine": "im Nachhinein",
+					"inflectionsLine": null,
+					"synonyms": [
+						"rückblickend",
+						"nachträglich"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Bezeichnet eine spätere rückblickende Bewertung, nachdem das Ergebnis oder weitere Informationen bekannt sind.",
+							"examples": [
+								"Im Nachhinein hätte ich anders entschieden."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Zusammenhalt",
+			"headword": "Zusammenhalt",
+			"pronunciation": {
+				"display": "/t͡suˈzamənˌhalt/",
+				"ipaUK": "/t͡suˈzamənˌhalt/",
+				"ipaUS": "/t͡suˈzamənˌhalt/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "maskulin",
+					"headwordLine": "Zusammenhalt",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Verbundenheit",
+						"Solidarität"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die enge Verbundenheit und gegenseitige Unterstützung innerhalb einer Gruppe oder Familie.",
+							"examples": [
+								"In schwierigen Zeiten zeigte die Familie großen Zusammenhalt."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "vernachlässigen",
+			"headword": "vernachlässigen",
+			"pronunciation": {
+				"display": "/fɛɐ̯ˈnaːxlɛsɪɡn̩/",
+				"ipaUK": "/fɛɐ̯ˈnaːxlɛsɪɡn̩/",
+				"ipaUS": "/fɛɐ̯ˈnaːxlɛsɪɡn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv",
+					"headwordLine": "vernachlässigen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"nicht ausreichend beachten"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Einer Person oder Aufgabe nicht die notwendige Aufmerksamkeit, Pflege oder Zeit geben.",
+							"examples": [
+								"Wegen der vielen Arbeit vernachlässigte er seine sozialen Kontakte."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Nachhaltigkeit",
+			"headword": "Nachhaltigkeit",
+			"pronunciation": {
+				"display": "/ˈnaːxhaltɪçkaɪ̯t/",
+				"ipaUK": "/ˈnaːxhaltɪçkaɪ̯t/",
+				"ipaUS": "/ˈnaːxhaltɪçkaɪ̯t/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "feminin",
+					"headwordLine": "Nachhaltigkeit",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Zukunftsfähigkeit",
+						"dauerhafte Umweltverträglichkeit"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Das Prinzip, Ressourcen so zu nutzen, dass Umwelt und Lebensgrundlagen langfristig erhalten bleiben.",
+							"examples": [
+								"Beim Einkauf achtet das Restaurant auf Regionalität und Nachhaltigkeit."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Nachweis",
+			"headword": "Nachweis",
+			"pronunciation": {
+				"display": "/ˈnaːxvaɪ̯s/",
+				"ipaUK": "/ˈnaːxvaɪ̯s/",
+				"ipaUS": "/ˈnaːxvaɪ̯s/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "maskulin",
+					"headwordLine": "Nachweis",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Beleg",
+						"Beweis"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Ein Beleg oder eine Information, mit der eine Behauptung, Berechtigung oder Tatsache bewiesen wird.",
+							"examples": [
+								"Als Nachweis der Berufserfahrung legte sie ein Arbeitszeugnis vor."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "sich bewerben um",
+			"headword": "sich bewerben um",
+			"pronunciation": {
+				"display": "/zɪç bəˈvɛʁbn̩ ʊm/",
+				"ipaUK": "/zɪç bəˈvɛʁbn̩ ʊm/",
+				"ipaUS": "/zɪç bəˈvɛʁbn̩ ʊm/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verbverbindung",
+					"grammarType": "reflexiv mit um",
+					"headwordLine": "sich bewerben um",
+					"inflectionsLine": null,
+					"synonyms": [
+						"eine Bewerbung einreichen für"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Formell mitteilen und mit Unterlagen begründen, dass man eine Stelle, einen Platz oder eine Position erhalten möchte.",
+							"examples": [
+								"Sie möchte sich um ein Stipendium bewerben."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "voraussetzen",
+			"headword": "voraussetzen",
+			"pronunciation": {
+				"display": "/foˈʁaʊ̯sˌzɛt͡sn̩/",
+				"ipaUK": "/foˈʁaʊ̯sˌzɛt͡sn̩/",
+				"ipaUS": "/foˈʁaʊ̯sˌzɛt͡sn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv, trennbar",
+					"headwordLine": "voraussetzen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"erfordern",
+						"annehmen"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Etwas als notwendige Bedingung verlangen oder als bereits gegeben annehmen.",
+							"examples": [
+								"Die Tätigkeit setzt gute Sprachkenntnisse voraus."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "angesichts",
+			"headword": "angesichts",
+			"pronunciation": {
+				"display": "/ˈanɡəzɪçt͡s/",
+				"ipaUK": "/ˈanɡəzɪçt͡s/",
+				"ipaUS": "/ˈanɡəzɪçt͡s/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Präposition",
+					"grammarType": "Bezug auf eine Situation",
+					"headwordLine": "angesichts",
+					"inflectionsLine": null,
+					"synonyms": [
+						"in Anbetracht"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Stellt eine Aussage in den Zusammenhang einer deutlich wahrnehmbaren Situation oder Tatsache: in Anbetracht von.",
+							"examples": [
+								"Angesichts der hohen Kosten wurde das Projekt geändert."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "hinsichtlich",
+			"headword": "hinsichtlich",
+			"pronunciation": {
+				"display": "/ˈhɪnzɪçtlɪç/",
+				"ipaUK": "/ˈhɪnzɪçtlɪç/",
+				"ipaUS": "/ˈhɪnzɪçtlɪç/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Präposition",
+					"grammarType": "thematischer Aspekt",
+					"headwordLine": "hinsichtlich",
+					"inflectionsLine": null,
+					"synonyms": [
+						"in Bezug auf",
+						"bezüglich"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Beschränkt oder bezieht eine Aussage auf einen bestimmten Aspekt oder ein Thema.",
+							"examples": [
+								"Hinsichtlich der Kosten bestehen noch offene Fragen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "ungeachtet",
+			"headword": "ungeachtet",
+			"pronunciation": {
+				"display": "/ˈʊnɡəˌʔaxtət/",
+				"ipaUK": "/ˈʊnɡəˌʔaxtət/",
+				"ipaUS": "/ˈʊnɡəˌʔaxtət/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Präposition",
+					"grammarType": "nicht verhindernder Umstand",
+					"headwordLine": "ungeachtet",
+					"inflectionsLine": null,
+					"synonyms": [
+						"trotz",
+						"ohne Rücksicht auf"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Drückt aus, dass ein Umstand nicht berücksichtigt wird oder das Ergebnis nicht verhindert.",
+							"examples": [
+								"Ungeachtet der Kritik wurde der Plan umgesetzt."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "inwieweit",
+			"headword": "inwieweit",
+			"pronunciation": {
+				"display": "/ɪnviːˈvaɪ̯t/",
+				"ipaUK": "/ɪnviːˈvaɪ̯t/",
+				"ipaUS": "/ɪnviːˈvaɪ̯t/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Frageadverb",
+					"grammarType": "Frage nach dem Grad",
+					"headwordLine": "inwieweit",
+					"inflectionsLine": null,
+					"synonyms": [
+						"bis zu welchem Grad"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Fragt danach, bis zu welchem Grad oder Umfang eine Aussage zutrifft.",
+							"examples": [
+								"Inwieweit hat die neue Regel die Situation verbessert?"
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "Zeitdruck",
+			"headword": "Zeitdruck",
+			"pronunciation": {
+				"display": "/ˈt͡saɪ̯tˌdʁʊk/",
+				"ipaUK": "/ˈt͡saɪ̯tˌdʁʊk/",
+				"ipaUS": "/ˈt͡saɪ̯tˌdʁʊk/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Substantiv",
+					"grammarType": "maskulin",
+					"headwordLine": "Zeitdruck",
+					"inflectionsLine": null,
+					"synonyms": [
+						"Termindruck"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Der psychische oder organisatorische Druck, eine Aufgabe innerhalb sehr begrenzter Zeit erledigen zu müssen.",
+							"examples": [
+								"Unter starkem Zeitdruck passieren leichter Fehler."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "unverzüglich",
+			"headword": "unverzüglich",
+			"pronunciation": {
+				"display": "/ʊnfɛɐ̯ˈt͡syːklɪç/",
+				"ipaUK": "/ʊnfɛɐ̯ˈt͡syːklɪç/",
+				"ipaUS": "/ʊnfɛɐ̯ˈt͡syːklɪç/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Adjektiv oder Adverb",
+					"grammarType": "ohne schuldhaftes Zögern",
+					"headwordLine": "unverzüglich",
+					"inflectionsLine": null,
+					"synonyms": [
+						"umgehend",
+						"sofort"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Ohne unnötige oder schuldhafte Verzögerung, also so schnell wie unter den Umständen möglich.",
+							"examples": [
+								"Bitte melden Sie den Schaden unverzüglich der Versicherung."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "abwägen",
+			"headword": "abwägen",
+			"pronunciation": {
+				"display": "/ˈapˌvɛːɡn̩/",
+				"ipaUK": "/ˈapˌvɛːɡn̩/",
+				"ipaUS": "/ˈapˌvɛːɡn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv, trennbar",
+					"headwordLine": "abwägen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"gegeneinander abwägen",
+						"prüfen"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Verschiedene Argumente, Folgen oder Möglichkeiten sorgfältig miteinander vergleichen.",
+							"examples": [
+								"Vor der Entscheidung sollten wir Chancen und Risiken abwägen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "gewährleisten",
+			"headword": "gewährleisten",
+			"pronunciation": {
+				"display": "/ɡəˈvɛːɐ̯laɪ̯stn̩/",
+				"ipaUK": "/ɡəˈvɛːɐ̯laɪ̯stn̩/",
+				"ipaUS": "/ɡəˈvɛːɐ̯laɪ̯stn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv",
+					"headwordLine": "gewährleisten",
+					"inflectionsLine": null,
+					"synonyms": [
+						"sicherstellen",
+						"garantieren"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Durch geeignete Maßnahmen sicherstellen, dass etwas zuverlässig funktioniert oder erreicht wird.",
+							"examples": [
+								"Regelmäßige Kontrollen gewährleisten die Sicherheit der Anlage."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "beeinträchtigen",
+			"headword": "beeinträchtigen",
+			"pronunciation": {
+				"display": "/bəˈʔaɪ̯ntʁɛçtɪɡn̩/",
+				"ipaUK": "/bəˈʔaɪ̯ntʁɛçtɪɡn̩/",
+				"ipaUS": "/bəˈʔaɪ̯ntʁɛçtɪɡn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv",
+					"headwordLine": "beeinträchtigen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"behindern",
+						"schädigen"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Die Qualität, Funktion oder Entwicklung von etwas negativ beeinflussen oder einschränken.",
+							"examples": [
+								"Starker Lärm kann die Konzentration beeinträchtigen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		},
+		{
+			"entryId": "bewältigen",
+			"headword": "bewältigen",
+			"pronunciation": {
+				"display": "/bəˈvɛltɪɡn̩/",
+				"ipaUK": "/bəˈvɛltɪɡn̩/",
+				"ipaUS": "/bəˈvɛltɪɡn̩/"
+			},
+			"labels": [
+				"B2"
+			],
+			"partsOfSpeech": [
+				{
+					"ordinal": "1 von 1",
+					"pos": "Verb",
+					"grammarType": "transitiv",
+					"headwordLine": "bewältigen",
+					"inflectionsLine": null,
+					"synonyms": [
+						"meistern",
+						"überwinden"
+					],
+					"senses": [
+						{
+							"senseNumber": 1,
+							"definition": "Eine schwierige Aufgabe, Situation oder Belastung erfolgreich meistern.",
+							"examples": [
+								"Gemeinsam konnten sie die Krise bewältigen."
+							]
+						}
+					]
+				}
+			],
+			"version": 1,
+			"updatedDate": 1787356800
+		}
+	]
+}
