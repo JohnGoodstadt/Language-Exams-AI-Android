@@ -49,7 +49,7 @@
 			]
 		},
 		"GermanSoundsTheSame": {
-			"title": "Gleich klingende Wörter",
+			"title": "Gleich klingende Wörter.",
 			"sheetDataType": "Format1",
 			"screenType": "Format1Screen",
 			"firestoreDocumentId": "GermanSoundsTheSame"

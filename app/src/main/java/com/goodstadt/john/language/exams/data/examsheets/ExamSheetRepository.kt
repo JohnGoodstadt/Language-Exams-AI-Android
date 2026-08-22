@@ -165,6 +165,15 @@ class ExamSheetRepository @Inject constructor(
             // This function calls the specific logic to download and assemble a Format1 object.
             val format1File = downloadAndAssembleFormat1(examName)
 
+            // Guard: an empty assembly means the sub-collections aren't there yet (e.g. sheet doc
+            // exists but tabs/wordsAndSentences weren't written, or a join produced nothing). Do NOT
+            // cache an empty result - that would poison the cache. Fail so the caller falls back to
+            // the bundle and re-attempts the network next time.
+            if (format1File.data.isEmpty()) {
+                Timber.w("ExamSheetRepo: Format1 '$examName' assembled EMPTY - not caching, returning failure for fallback.")
+                return Result.failure(Exception("Format1 sheet '$examName' assembled with no data (empty sub-collections)."))
+            }
+
             val cacheFile = getCacheFilePointer(examName)
             // Use the correct serializer for this type
             val jsonString = jsonParser.encodeToString(HeaderWordsSentencesListRoot.serializer(), format1File)
@@ -196,7 +205,15 @@ class ExamSheetRepository @Inject constructor(
             return@withContext try {
                 val jsonString = file.readText()
                 // Use the correct decoder for this type
-                jsonParser.decodeFromString<HeaderWordsSentencesListRoot>(jsonString)
+                val decoded = jsonParser.decodeFromString<HeaderWordsSentencesListRoot>(jsonString)
+                // Ignore an empty cached file (a stale artefact from before the sheet was populated):
+                // returning null forces a fresh network fetch instead of serving empty data forever.
+                if (decoded.data.isEmpty()) {
+                    Timber.w("ExamSheetRepo: cached Format1 '$logicalName' is EMPTY - ignoring cache, will re-fetch.")
+                    null
+                } else {
+                    decoded
+                }
             } catch (e: Exception) {
                 Timber.e(e, "Failed to read Format1 from disk cache for '$logicalName'")
                 null

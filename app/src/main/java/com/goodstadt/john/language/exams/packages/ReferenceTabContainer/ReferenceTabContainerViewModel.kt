@@ -192,7 +192,7 @@ class ReferenceTabContainerViewModel @Inject constructor(
                         //val result = examSheetRepository.getVocabSheet(name = docId, forceRefresh = false) // Assuming versioning happens inside
                         val result = vocabRepository.getFormat0Data(docId)
                         result.onSuccess { file ->
-                            _uiState.update { it.copy(vocabFileCache = it.vocabFileCache + (docId to file)) }
+                            _uiState.update { it.copy( vocabFileCache = it.vocabFileCache + (docId to file)) }
                         }
                         result.onFailure { throw it }
                     }

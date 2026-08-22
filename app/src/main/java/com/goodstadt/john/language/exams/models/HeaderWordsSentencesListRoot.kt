@@ -22,7 +22,7 @@ data class HeaderWordsSentencesListRoot(
 
 /**
  * Represents a single section within the "Format1" sheet.
- * Equivalent to the Swift `HeaderWordsSentencesList` struct.
+ * Equivalent to the Swift `HeaderWordsSentencƒesList` struct.
  */
 @Serializable
 data class HeaderWordsSentencesList(

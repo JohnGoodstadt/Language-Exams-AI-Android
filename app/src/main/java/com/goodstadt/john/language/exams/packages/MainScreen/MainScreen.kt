@@ -410,7 +410,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                     showCloseWarning = false
                     reopenIntroSheet()
                 },
-                title = { Text("Skip the English check?") },
+                title = { Text("Skip the Language check?") },
                 text = { Text("Completing the first quiz helps me set up the app accurately for you. Are you sure you want to close before finishing it?") },
                 confirmButton = {
                     TextButton(onClick = {

@@ -55,7 +55,8 @@ class FirestoreUploadAdminRepository @Inject constructor(
     override suspend fun uploadSheet(docName: String, json: String): Result<Unit> = try {
         val root = JSONObject(json)
         when (val fileFormat = root.optInt(FIELD_FILE_FORMAT, 0)) {
-            0, 1 -> uploadFormat0(docName, root) // fileFormat 1 has the SAME structure as 0 -> reuse
+            0 -> uploadFormat0(docName, root)
+            1 -> uploadFormat1(docName, root) // data[]->wordsAndSentences[]: written as tabs + wordsAndSentences
             2 -> uploadFormat2(docName, root)
             7, 10 -> uploadFormat7or10(docName, root) // 7 & 10 share the same JSON structure
             13 -> uploadFormat13(docName, root)
@@ -81,7 +82,8 @@ class FirestoreUploadAdminRepository @Inject constructor(
             Result.success(null)
         } else {
             when (val fileFormat = (snapshot.get(FIELD_FILE_FORMAT) as? Number)?.toInt() ?: 0) {
-                0, 1 -> readFormat0(docName, snapshot)
+                0 -> readFormat0(docName, snapshot)
+                1 -> readFormat1(docName, snapshot)
                 2 -> readFormat2(docName, snapshot)
                 7, 10 -> readFormat7or10(docName, snapshot)
                 13 -> readFormat13(docName, snapshot)
@@ -217,6 +219,103 @@ class FirestoreUploadAdminRepository @Inject constructor(
         Result.success(summary)
     } catch (e: Exception) {
         Timber.e(e, "UploadAdmin: readFormat0 '$docName' failed")
+        Result.failure(e)
+    }
+
+    // ---------------------------------------------------------------- fileFormat 1 (sounds-the-same etc.)
+
+    /**
+     * Uploads a fileFormat-1 sheet. The JSON shape is `data[]` sections, each
+     * `{ title, description, sortorder, wordsAndSentences[] { word, sentence, definition } }`.
+     * This is NOT the fileFormat-0 (categories/words) shape: the app reads it via
+     * `downloadAndAssembleFormat1`, which expects a `tabs` subcollection (TabHeaderForFirestore:
+     * title, description, tabID, sortorder) and a flat `wordsAndSentences` subcollection
+     * (WordAndSentenceForFirestore: parentID, word, sentence, translation, definition), joined on
+     * `parentID == tabID`. The source JSON has no tabID/parentID, so we synthesise the section index
+     * as the tabID and stamp it onto each word's parentID.
+     */
+    private suspend fun uploadFormat1(docName: String, root: JSONObject): Result<Unit> = try {
+        val sheetRef = sheetDoc(docName)
+
+        // 1. Wipe any previous tabs/wordsAndSentences so a re-upload is clean.
+        clearSubcollection(sheetRef, TABS)
+        clearSubcollection(sheetRef, WORDS_AND_SENTENCES)
+
+        // 2. Sheet header.
+        val meta = hashMapOf<String, Any>(
+            "fileformat" to root.optInt("fileformat", 1),
+            "sheetname" to docName,
+            "location" to root.optInt("location", 0),
+            "updatedDate" to FieldValue.serverTimestamp(),
+            FIELD_UPLOAD_DATE to FieldValue.serverTimestamp()
+        )
+        sheetRef.set(meta).await()
+
+        // 3. data[] sections -> tabs docs; their words -> flat wordsAndSentences docs (parentID = tab index).
+        val data = root.optJSONArray("data") ?: JSONArray()
+        var batch = firestore.batch()
+        var ops = 0
+        var totalWords = 0
+        for (ti in 0 until data.length()) {
+            val section = data.getJSONObject(ti)
+            val tabID = ti // synthesised, unique per section, matched by each word's parentID
+            val sortorder = section.optInt("sortorder", ti + 1)
+
+            val tabRef = sheetRef.collection(TABS).document("tab_%04d".format(tabID))
+            batch.set(
+                tabRef,
+                hashMapOf(
+                    "title" to section.optString("title", ""),
+                    "description" to section.optString("description", ""),
+                    "tabID" to tabID,
+                    "sortorder" to sortorder
+                )
+            )
+            if (++ops >= BATCH_LIMIT) { batch.commit().await(); batch = firestore.batch(); ops = 0 }
+
+            val entries = section.optJSONArray("wordsAndSentences") ?: JSONArray()
+            for (wi in 0 until entries.length()) {
+                val entry = entries.getJSONObject(wi)
+                val word = entry.optString("word", "")
+                // Flat subcollection, so make the id unique across sections: "<tabID>_<word>".
+                val docId = ("${tabID}_${word.ifBlank { "entry_%04d".format(totalWords) }}").replace("/", "-")
+                val entryRef = sheetRef.collection(WORDS_AND_SENTENCES).document(docId)
+                batch.set(
+                    entryRef,
+                    hashMapOf(
+                        "parentID" to tabID,
+                        "word" to word,
+                        "sentence" to entry.optString("sentence", ""),
+                        "translation" to entry.optString("translation", ""),
+                        "definition" to entry.optString("definition", "")
+                    )
+                )
+                totalWords++
+                if (++ops >= BATCH_LIMIT) { batch.commit().await(); batch = firestore.batch(); ops = 0 }
+            }
+        }
+        if (ops > 0) batch.commit().await()
+
+        Timber.i("UploadAdmin: uploaded '$docName' (fileFormat 1): ${data.length()} tabs, $totalWords words")
+        Result.success(Unit)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: uploadFormat1 '$docName' failed")
+        Result.failure(e)
+    }
+
+    /** Reads back a fileFormat-1 sheet's tabs + wordsAndSentences subcollections for a sanity check. */
+    private suspend fun readFormat1(
+        docName: String,
+        sheetSnap: com.google.firebase.firestore.DocumentSnapshot
+    ): Result<String> = try {
+        val tabs = sheetDoc(docName).collection(TABS).get().await()
+        val words = sheetDoc(docName).collection(WORDS_AND_SENTENCES).get().await()
+        val uploaded = formatUploadDate(sheetSnap.get(FIELD_UPLOAD_DATE)) ?: "?"
+        val summary = "'$docName' OK (fileFormat 1): ${tabs.size()} tabs, ${words.size()} words, uploaded $uploaded"
+        Timber.i("UploadAdmin: readFormat1 -> $summary")
+        Result.success(summary)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: readFormat1 '$docName' failed")
         Result.failure(e)
     }
 
@@ -561,6 +660,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val CATEGORIES = "categories"
         private const val WORDS = "words"
         private const val WORDS_AND_SENTENCES = "wordsAndSentences"
+        private const val TABS = "tabs"
         private const val SECTIONS = "sections"
         private const val FIELD_FILE_FORMAT = "fileformat"
         private const val FIELD_UPLOAD_DATE = "uploadDate"
