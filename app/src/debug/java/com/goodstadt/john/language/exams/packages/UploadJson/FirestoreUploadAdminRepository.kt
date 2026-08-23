@@ -13,11 +13,13 @@ import java.util.Date
 import javax.inject.Inject
 
 /**
- * DEBUG + `de` ONLY (lives in `src/deDebug`, so it is compiled solely into the German debug variant).
+ * DEBUG builds ONLY (lives in `src/debug`, so it compiles into every flavour's debug variant -
+ * enDebug / deDebug / zhDebug - but never staging or release).
  *
- * Administers the German Firestore quiz-content project. Every sheet is a document that hangs off the
- * `global/exam_sheets/sheets` collection, e.g. sheet "GermanA1Vocab" is the document
- * `/global/exam_sheets/sheets/GermanA1Vocab`.
+ * Administers the current flavour's Firestore quiz-content project (the `de` build points at the German
+ * project, `en` at the English one, and so on - it always writes to whichever project this build's
+ * google-services.json selects). Every sheet is a document that hangs off the `global/exam_sheets/sheets`
+ * collection, e.g. sheet "GermanA1Vocab" is the document `/global/exam_sheets/sheets/GermanA1Vocab`.
  *
  * Uploads/reads are dispatched by the sheet's `fileFormat` so there is ONE upload routine and ONE
  * read routine per format. fileFormat 0 = a vocab list, written as STRICT SUBCOLLECTIONS to match the
@@ -37,10 +39,10 @@ class FirestoreUploadAdminRepository @Inject constructor(
 
     // ---------------------------------------------------------------- top-button convenience
 
-    override suspend fun readUploadDate(): Result<String?> = try {
-        val snapshot = sheetDoc(GERMAN_A1_VOCAB).get().await()
+    override suspend fun readUploadDate(docName: String): Result<String?> = try {
+        val snapshot = sheetDoc(docName).get().await()
         if (!snapshot.exists()) {
-            Timber.w("UploadAdmin: /$GLOBAL/$EXAM_SHEETS/$SHEETS/$GERMAN_A1_VOCAB does not exist")
+            Timber.w("UploadAdmin: /$GLOBAL/$EXAM_SHEETS/$SHEETS/$docName does not exist")
             Result.success(null)
         } else {
             Result.success(formatUploadDate(snapshot.get(FIELD_UPLOAD_DATE)))
@@ -818,7 +820,6 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val SECTIONS = "sections"
         private const val FIELD_FILE_FORMAT = "fileformat"
         private const val FIELD_UPLOAD_DATE = "uploadDate"
-        private const val GERMAN_A1_VOCAB = "GermanA1Vocab"
         private const val DAILY_WORD_DICTIONARY = "DailyWordDictionary"
         private const val BATCH_LIMIT = 400 // Firestore hard limit is 500 ops per batch
     }

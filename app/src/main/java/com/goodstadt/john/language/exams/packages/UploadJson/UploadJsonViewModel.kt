@@ -1,6 +1,9 @@
 package com.goodstadt.john.language.exams.packages.UploadJson
 
 import android.content.Context
+import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
+import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -52,6 +55,18 @@ class UploadJsonViewModel @Inject constructor(
 
     private val levels = listOf("A1", "A2", "B1", "B2")
 
+    // Firestore logical-name language prefix for the current flavour (matches the *SheetMapping helpers
+    // and each flavour's Firestore project: GermanA1Vocab / EnglishA1Vocab, …).
+    private val languagePrefix: String = when (BuildConfig.FLAVOR) {
+        "de" -> "German"
+        "en" -> "English"
+        "zh" -> "Chinese"
+        else -> "German"
+    }
+
+    /** The current flavour's A1 vocab sheet doc name (e.g. "GermanA1Vocab" / "EnglishA1Vocab"). */
+    val a1VocabDocName: String get() = "${languagePrefix}A1Vocab"
+
     private val _sections = MutableStateFlow<List<UploadJsonSection>>(emptyList())
     val sections = _sections.asStateFlow()
 
@@ -78,21 +93,39 @@ class UploadJsonViewModel @Inject constructor(
         loadStatuses() // restore ticks/crosses saved from a previous run
     }
 
-    /** Reads /global/exam_sheets/sheets/GermanA1Vocab.uploadDate via the admin library and shows it. */
-    fun readGermanA1UploadDate() {
+    /** Reads /global/exam_sheets/sheets/<flavour>A1Vocab.uploadDate via the admin library and shows it. */
+    fun readVocabUploadDate() {
         val repo = adminRepository.orElse(null)
         if (repo == null) {
-            _adminResult.value = "Admin library not available in this build (German debug only)."
+            _adminResult.value = "Admin library not available in this build (debug only)."
             return
         }
+        val docName = a1VocabDocName
         _adminResult.value = "Reading uploadDate…"
         viewModelScope.launch {
-            _adminResult.value = repo.readUploadDate().fold(
-                onSuccess = { date -> "GermanA1Vocab uploadDate: ${date ?: "(no value / document not found)"}" },
+            _adminResult.value = repo.readUploadDate(docName).fold(
+                onSuccess = { date -> "$docName uploadDate: ${date ?: "(no value / document not found)"}" },
                 onFailure = { e -> "Error: ${e.localizedMessage ?: e.toString()}" }
             )
         }
     }
+
+    /**
+     * The bundled UsageQuiz file for an enum baseName, tolerating the enum's language suffix being wrong
+     * (some `de` B2 entries are listed as "-de" but ship as "-en"). Prefers the exact suffix; otherwise
+     * falls back to the canonical "-en" file. Never returns the regional variants (-in/-vn/-tr/-eg/-enAI)
+     * - those are runtime, region-selected overrides, not upload targets. Null if nothing is bundled.
+     */
+    private fun resolveUsageQuizAsset(baseName: String): String? {
+        val exact = "$baseName.json"
+        if (assetExists("Quizzes/UsageQuiz/$exact")) return exact
+        val stem = baseName.replace(Regex("-[a-z]{2}$"), "") // "UsageQuiz1B2"
+        val enFallback = "$stem-en.json"
+        return if (assetExists("Quizzes/UsageQuiz/$enFallback")) enFallback else null
+    }
+
+    private fun assetExists(assetPath: String): Boolean =
+        try { context.assets.open(assetPath).close(); true } catch (e: Exception) { false }
 
     private fun listJsonAssets(
         folder: String,
@@ -133,23 +166,19 @@ class UploadJsonViewModel @Inject constructor(
     }
 
     /**
-     * The main vocab lists live in res/raw (vocab_data_<level>.json), not in assets, and each maps to
-     * a fixed Firestore doc name (GermanA1Vocab …) matching the completed English project so the same
-     * Android/iOS code runs. One row per level.
+     * The main vocab lists live in res/raw (vocab_data_<level>.json), each mapping to the flavour's
+     * Firestore doc name ("$languagePrefix" + level + "Vocab", e.g. GermanA1Vocab / EnglishA1Vocab). One
+     * row per level that this flavour actually bundles.
      */
     private fun buildVocabSection(): UploadJsonSection {
-        val vocab = listOf(
-            "A1" to "GermanA1Vocab",
-            "A2" to "GermanA2Vocab",
-            "B1" to "GermanB1Vocab",
-            "B2" to "GermanB2Vocab",
-        )
-        val files = vocab.map { (lvl, docName) ->
+        val files = levels.mapNotNull { lvl ->
             val rawName = "vocab_data_${lvl.lowercase()}" // res/raw resource name
+            if (!rawResourceExists(rawName)) return@mapNotNull null
+            val docName = "$languagePrefix${lvl}Vocab"    // e.g. "EnglishA1Vocab" (the Firestore target)
             UploadJsonFile(
-                displayName = docName,             // e.g. "GermanA1Vocab" (the Firestore target)
-                fileName = "$rawName.json",        // "vocab_data_a1.json"
-                assetPath = "raw/$rawName.json",   // unique id; the "raw/" prefix marks a res/raw source
+                displayName = docName,
+                fileName = "$rawName.json",               // "vocab_data_a1.json"
+                assetPath = "raw/$rawName.json",          // unique id; the "raw/" prefix marks a res/raw source
                 firestoreDocName = docName
             )
         }
@@ -157,62 +186,62 @@ class UploadJsonViewModel @Inject constructor(
     }
 
     /**
-     * Reference-tab content (res/raw). A mix of fileFormat 1 (adjectives, conjugations, prepositions -
-     * same structure as fileFormat 0) and fileFormat 2 (word pairs). The upload/read routine is picked
-     * from the JSON's fileFormat field. Firestore doc names are regularised (e.g. german_a1_adjectives
-     * -> GermanA1Adjectives).
+     * Reference-tab content (res/raw). The bundled set differs per flavour (e.g. `en` ships only
+     * conjugations + prepositions; the other English reference sheets already live on Firestore), so we
+     * probe res/raw for what THIS flavour actually bundles and skip the rest. Doc names are the
+     * language-independent key with the flavour prefix ("$languagePrefix" + "ConjugationsToBe" …),
+     * except shared sheets like DailyWordDictionary which have no prefix. Groups with no bundled file are
+     * dropped. The upload/read routine is picked from each JSON's fileFormat field.
      */
     private fun buildReferenceSection(): UploadJsonSection {
-        fun ref(rawName: String, docName: String) = UploadJsonFile(
-            displayName = docName,
-            fileName = "$rawName.json",
-            assetPath = "raw/$rawName.json",
-            firestoreDocName = docName
-        )
-        val adjectives = UploadJsonLevelGroup(
-            "Adjectives",
-            listOf(
-                ref("german_a1_adjectives", "GermanA1Adjectives"),
-                ref("german_a2_adjectives", "GermanA2Adjectives"),
-                ref("german_b1_adjectives", "GermanB1Adjectives"),
-                ref("german_b2_adjectives", "GermanB2Adjectives")
+        // First candidate raw name that exists in this flavour wins; null -> not bundled here, skip row.
+        fun ref(candidates: List<String>, docName: String): UploadJsonFile? {
+            val rawName = candidates.firstOrNull { rawResourceExists(it) } ?: return null
+            return UploadJsonFile(
+                displayName = docName,
+                fileName = "$rawName.json",
+                assetPath = "raw/$rawName.json",
+                firestoreDocName = docName
             )
-        )
-        val conjugations = UploadJsonLevelGroup(
-            "Conjugations",
-            listOf(
-                ref("conjugations_to_be", "GermanConjugationsToBe"),
-                ref("conjugations_to_do", "GermanConjugationsToDo"),
-                ref("conjugations_to_get", "GermanConjugationsToGet"),
-                ref("conjugations_to_have", "GermanConjugationsToHave")
-            )
-        )
-        val wordPairs = UploadJsonLevelGroup(
-            "Word Pairs",
-            listOf(
-                ref("german_bringen_holen", "GermanBringenHolen"),
-                ref("german_fragen_bitten", "GermanFragenBitten"),
-                ref("german_hoeren_zuhoeren", "GermanHoerenZuhoeren"),
-                ref("german_kennen_wissen", "GermanKennenWissen")
-            )
-        )
-        val prepositions = UploadJsonLevelGroup(
-            "Prepositions",
-            listOf(ref("german_prepositions", "GermanPrepositions"))
-        )
-        val soundsTheSame = UploadJsonLevelGroup(
-            "Sounds the Same",
-            listOf(ref("german_sounds_the_same", "GermanSoundsTheSame")) // fileFormat 1
-        )
-        val wordOfTheDay = UploadJsonLevelGroup(
-            "Word of the Day",
-            listOf(ref("daily_word_dictionary_pool_v1", "DailyWordDictionary"))
-        )
-        return UploadJsonSection(
-            "Reference",
-            listOf(adjectives, conjugations, wordPairs, prepositions, soundsTheSame, wordOfTheDay)
-        )
+        }
+        fun grp(title: String, rows: List<UploadJsonFile?>) = UploadJsonLevelGroup(title, rows.filterNotNull())
+
+        val groups = listOf(
+            grp("Adjectives", listOf(
+                ref(listOf("german_a1_adjectives"), "${languagePrefix}A1Adjectives"),
+                ref(listOf("german_a2_adjectives"), "${languagePrefix}A2Adjectives"),
+                ref(listOf("german_b1_adjectives"), "${languagePrefix}B1Adjectives"),
+                ref(listOf("german_b2_adjectives"), "${languagePrefix}B2Adjectives"),
+            )),
+            grp("Conjugations", listOf(
+                ref(listOf("conjugations_to_be"), "${languagePrefix}ConjugationsToBe"),
+                ref(listOf("conjugations_to_do"), "${languagePrefix}ConjugationsToDo"),
+                ref(listOf("conjugations_to_get"), "${languagePrefix}ConjugationsToGet"),
+                ref(listOf("conjugations_to_have"), "${languagePrefix}ConjugationsToHave"),
+            )),
+            grp("Word Pairs", listOf(
+                ref(listOf("german_bringen_holen"), "${languagePrefix}BringenHolen"),
+                ref(listOf("german_fragen_bitten"), "${languagePrefix}FragenBitten"),
+                ref(listOf("german_hoeren_zuhoeren"), "${languagePrefix}HoerenZuhoeren"),
+                ref(listOf("german_kennen_wissen"), "${languagePrefix}KennenWissen"),
+            )),
+            grp("Prepositions", listOf(
+                ref(listOf("german_prepositions", "prepositions_en"), "${languagePrefix}Prepositions"),
+            )),
+            grp("Sounds the Same", listOf(
+                ref(listOf("german_sounds_the_same"), "${languagePrefix}SoundsTheSame"), // fileFormat 1
+            )),
+            grp("Word of the Day", listOf(
+                ref(listOf("daily_word_dictionary_pool_v1"), "DailyWordDictionary"), // shared, no prefix
+            )),
+        ).filter { it.files.isNotEmpty() } // drop groups this flavour doesn't bundle
+
+        return UploadJsonSection("Reference", groups)
     }
+
+    /** True if a res/raw resource with this base name exists in the current flavour's build. */
+    private fun rawResourceExists(rawName: String): Boolean =
+        context.resources.getIdentifier(rawName, "raw", context.packageName) != 0
 
     companion object {
         const val VOCAB_SECTION_TITLE = "Main Vocab"
@@ -257,19 +286,35 @@ class UploadJsonViewModel @Inject constructor(
                 )
             }
         )
-        // UsageQuiz is a flat folder; group by the level token in the real filename (e.g. UsageQuiz1A2-de.json).
-        // Firestore doc name = German + the base filename: UsageQuiz1A1-de.json -> GermanUsageQuiz1A1.
-        val usageAll = listJsonAssets(
-            "Quizzes/UsageQuiz",
-            stripPrefix = "UsageQuiz",
-            docNameFor = { fileName ->
-                com.goodstadt.john.language.exams.data.UsageQuizSheetMapping.normalizeToLogicalName(fileName)
-            }
-        )
+        // UsageQuiz: drive the rows from the flavour's authoritative UsageQuizLevelsFilename enum, NOT a
+        // folder listing. The en folder ships extra language/AI variants of each quiz (-eg, -in, -tr, -vn,
+        // -enAI) that must NOT be uploaded, and a crude "filename contains level" filter also duplicated
+        // rows (e.g. every *B1* variant landed in B1). Each enum entry pins the exact baseName the app
+        // actually uses (e.g. "UsageQuiz1B1-en") and its ESOL level. Firestore doc name =
+        // <Lang>UsageQuiz<n><Level> via UsageQuizSheetMapping (e.g. -> "EnglishUsageQuiz1B1").
         val usageQuiz = UploadJsonSection(
             title = "UsageQuiz",
             groups = levels.map { lvl ->
-                UploadJsonLevelGroup(lvl, usageAll.filter { it.fileName.contains(lvl) })
+                val quizzes = UsageQuizLevelsFilename.entries
+                    .firstOrNull { it.ESOL == lvl }?.quizzes.orEmpty()
+                UploadJsonLevelGroup(
+                    level = lvl,
+                    files = quizzes.mapNotNull { quiz ->
+                        // Resolve the enum baseName to the real asset (some de B2 entries say -de but ship
+                        // as -en). Skip if no bundled file exists.
+                        val fileName = resolveUsageQuizAsset(quiz.baseName) ?: run {
+                            Timber.w("UploadJSON: no UsageQuiz asset for '${quiz.baseName}'")
+                            return@mapNotNull null
+                        }
+                        val docName = UsageQuizSheetMapping.normalizeToLogicalName(quiz.baseName)
+                        UploadJsonFile(
+                            displayName = docName,   // e.g. "EnglishUsageQuiz1A1" (the Firestore target)
+                            fileName = fileName,
+                            assetPath = "Quizzes/UsageQuiz/$fileName",
+                            firestoreDocName = docName
+                        )
+                    }
+                )
             }
         )
         _sections.value = listOf(buildVocabSection(), buildReferenceSection(), grammar, sectionSheet, usageQuiz)

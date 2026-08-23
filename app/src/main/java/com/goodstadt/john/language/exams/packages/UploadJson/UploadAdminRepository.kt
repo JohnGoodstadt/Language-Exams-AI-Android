@@ -1,22 +1,23 @@
 package com.goodstadt.john.language.exams.packages.UploadJson
 
 /**
- * Administrative Firestore operations for the German quiz-content project (uploading / verifying the
- * bundled JSON). This is the abstraction that lives in `main`; the concrete implementation lives ONLY
- * in the `src/deDebug` source set (see FirestoreUploadAdminRepository), so the admin code is compiled
- * into the German DEBUG variant and nothing else - never release, never the `en`/`zh` flavours.
+ * Administrative Firestore operations for the current flavour's quiz-content project (uploading /
+ * verifying the bundled JSON). This is the abstraction that lives in `main`; the concrete implementation
+ * lives ONLY in the `src/debug` source set (see FirestoreUploadAdminRepository), so the admin code is
+ * compiled into every flavour's DEBUG variant (enDebug / deDebug / zhDebug) and nothing else - never
+ * staging, never release.
  *
  * It is injected as `Optional<UploadAdminRepository>` (via [UploadAdminModule]'s @BindsOptionalOf):
- * present in `deDebug`, empty everywhere else.
+ * present in any debug build, empty in staging/release.
  */
 interface UploadAdminRepository {
 
     /**
-     * Reads the `uploadDate` field from the document
-     * `/global/exam_sheets/sheets/GermanA1Vocab` in the German Firestore project.
+     * Reads the `uploadDate` field from the document `/global/exam_sheets/sheets/<docName>` in the
+     * current flavour's Firestore project (e.g. [docName] = "EnglishA1Vocab").
      * @return a human-readable date string, or null if the document has no such field / does not exist.
      */
-    suspend fun readUploadDate(): Result<String?>
+    suspend fun readUploadDate(docName: String): Result<String?>
 
     /**
      * Uploads a sheet's JSON to `/global/exam_sheets/sheets/<docName>`.

@@ -95,11 +95,11 @@ fun UploadJsonScreen(
                 .padding(innerPadding),
             contentPadding = PaddingValues(bottom = 24.dp)
         ) {
-            // Top admin action: read GermanA1Vocab.uploadDate from the German Firestore project.
+            // Top admin action: read <flavour>A1Vocab.uploadDate from the current flavour's Firestore project.
             item(key = "admin_actions") {
                 Column(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
-                    Button(onClick = { viewModel.readGermanA1UploadDate() }) {
-                        Text("Read GermanA1Vocab uploadDate")
+                    Button(onClick = { viewModel.readVocabUploadDate() }) {
+                        Text("Read ${viewModel.a1VocabDocName} uploadDate")
                     }
                     adminResult?.let { result ->
                         Spacer(modifier = Modifier.height(8.dp))
