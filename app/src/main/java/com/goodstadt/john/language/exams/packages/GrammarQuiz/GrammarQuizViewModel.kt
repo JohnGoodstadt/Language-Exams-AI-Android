@@ -16,10 +16,12 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.GrammarCatalog
+import com.goodstadt.john.language.exams.data.GrammarSheetMapping
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
+import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
@@ -29,6 +31,7 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
 import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
 import com.goodstadt.john.language.exams.managers.BannerManager
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
@@ -46,6 +49,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
@@ -73,7 +77,9 @@ class GrammarQuizViewModel @Inject constructor(
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val usageQuizRepository: UsageQuizRepository,
     private val bannerManager: BannerManager,
-    private val auditRepository: ReadinessAuditRepository
+    private val auditRepository: ReadinessAuditRepository,
+    private val vocabRepository: ContentRepository,
+    private val globalLoadingManager: GlobalLoadingManager
 ) : ViewModel() {
 
     private val appContext: Context = application.applicationContext
@@ -114,6 +120,10 @@ class GrammarQuizViewModel @Inject constructor(
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
+    // True while a grammar sheet is being loaded; also gates the 2s-delayed global loading overlay.
+    private val _isGrammarLoading = MutableStateFlow(false)
+    val isGrammarLoading = _isGrammarLoading.asStateFlow()
+
     private val jsonParser = Json {
         ignoreUnknownKeys = true
         coerceInputValues = true
@@ -153,10 +163,81 @@ class GrammarQuizViewModel @Inject constructor(
 
     /**
      * Load the one grammar file for [category] at [level]. Resolves the language-independent filename
-     * key from [GrammarCatalog] and finds the file by prefix so the flavour's language suffix
-     * (-en / -de) doesn't need hard-coding.
+     * key from [GrammarCatalog], then downloads the sheet (fileFormat 7/10) via [ContentRepository]:
+     * memory cache -> disk cache -> Firestore, with the bundled asset as the final fallback. This
+     * replaces the direct bundle read in [loadGrammarQuizObsolete] so grammar quizzes pick up Firestore
+     * content just like the section and usage quizzes.
+     *
+     * The bundled filename is still resolved first, purely to keep [baseName] (the stats/mastery key)
+     * identical to the old behaviour so existing progress continues to line up.
      */
     fun loadGrammarQuiz(category: String, level: String) {
+        viewModelScope.launch {
+            val fileKey = GrammarCatalog.fileKeyFor(category)
+            if (fileKey == null) {
+                Timber.w("GrammarQuiz: no catalogue mapping for category=\"$category\"")
+                _questions.value = emptyList()
+                return@launch
+            }
+
+            val dir = "Quizzes/Grammar/$level"
+            val fileName = appContext.assets.list(dir).orEmpty()
+                .firstOrNull { it.startsWith("Grammar$fileKey-") && it.endsWith(".json") }
+            if (fileName == null) {
+                Timber.w("GrammarQuiz: no file for key=$fileKey under $dir")
+                _questions.value = emptyList()
+                return@launch
+            }
+
+            val baseName = fileName.removeSuffix(".json") // e.g. "GrammarPresentSimple-en"
+
+            // Download instead of reading the asset directly. e.g. "GrammarModalVerbs-de.json" + "A1"
+            // -> "GermanA1ModalVerbs"; getFormat7or10Data falls back to the bundled asset if not on Firestore.
+            val logicalName = GrammarSheetMapping.normalizeToLogicalName(fileName, level)
+
+            _isGrammarLoading.value = true
+            // Show the global overlay only if the load is still running after 2s - so cached / in-memory /
+            // bundle loads (the common case) don't flash it; only a real Firestore fetch does.
+            val spinnerJob = launch {
+                delay(2000)
+                if (_isGrammarLoading.value) globalLoadingManager.show()
+            }
+
+            try {
+                Timber.v("GrammarQuiz: loading '$logicalName' (from $fileName)")
+                val testData = vocabRepository.getFormat7or10Data(logicalName).getOrNull()
+                if (testData == null) {
+                    Timber.e("GrammarQuiz: failed to load '$logicalName' from Firestore or bundle")
+                    _questions.value = emptyList()
+                    return@launch
+                }
+
+                currentCategory = category
+                currentLevel = level
+
+                _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
+
+                quizStatistics.value = quizStatistics.value.copy(
+                    title = category, filename = baseName, skillLevel = level, page = 1
+                )
+                _uiState.update { it.copy(format7or10ListRoot = testData) }
+
+                _allQuestions = generateQuestionsFromData(testData)
+                applyFilters()
+                resetQuiz()
+            } finally {
+                _isGrammarLoading.value = false
+                spinnerJob.cancel()          // if the load beat the 2s mark, never show the overlay
+                globalLoadingManager.hide()  // and always clear it once done
+            }
+        }
+    }
+
+    /**
+     * ORIGINAL bundle-only loader, kept for reference. Reads the grammar JSON directly from the app's
+     * assets folder with no Firestore/cache path. Superseded by [loadGrammarQuiz].
+     */
+    fun loadGrammarQuizObsolete(category: String, level: String) {
         viewModelScope.launch {
             val fileKey = GrammarCatalog.fileKeyFor(category)
             if (fileKey == null) {

@@ -171,7 +171,8 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
                                 DebugGrammarDownloadRow(
                                     label = entry.row.category,
                                     status = downloadStatus[viewModel.grammarLogicalName(entry.row)],
-                                    onDownload = { viewModel.debugDownloadGrammarSheet(entry.row) }
+                                    onDownload = { viewModel.debugDownloadGrammarSheet(entry.row) },
+                                    onQuiz = { viewModel.practiceGrammar(entry.row) }
                                 )
                             }
                         }
@@ -325,9 +326,15 @@ private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Un
     }
 }
 
-/** DEBUG row: a grammar sheet name + Download button + last download status (OK/ERROR). */
+/** DEBUG row: a grammar sheet name + Download button + a Quiz button (opens the quiz, same as the
+ *  rows above) + last download status (OK/ERROR). */
 @Composable
-private fun DebugGrammarDownloadRow(label: String, status: String?, onDownload: () -> Unit) {
+private fun DebugGrammarDownloadRow(
+    label: String,
+    status: String?,
+    onDownload: () -> Unit,
+    onQuiz: () -> Unit
+) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
@@ -347,5 +354,10 @@ private fun DebugGrammarDownloadRow(label: String, status: String?, onDownload: 
             onClick = onDownload,
             contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
         ) { Text("Download") }
+        Spacer(Modifier.width(8.dp))
+        OutlinedButton(
+            onClick = onQuiz,
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+        ) { Text("Quiz") }
     }
 }
