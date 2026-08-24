@@ -57,6 +57,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.packages.UsageQuiz.InfoButtonRow
 import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageMasteryFilterChips
+import com.goodstadt.john.language.exams.packages.UsageQuiz.usageMasteryExplanation
 import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
 import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
@@ -235,6 +236,13 @@ fun GrammarQuizScreen(
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(text = "No $filterNames questions to show.", style = MaterialTheme.typography.bodyLarge, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                // Explain what the tapped filter(s) actually mean.
+                Text(
+                    text = activeFilters.joinToString("\n") { usageMasteryExplanation(it) },
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
                 Text(text = "Select All to see more.", style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f))
             }
         } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {

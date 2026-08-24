@@ -355,9 +355,9 @@ class GrammarQuizViewModel @Inject constructor(
     // MARK: - Mastery Filter
 
     fun toggleFilter(level: UsageMastery) {
-        val current = _activeFilters.value.toMutableSet()
-        if (current.contains(level)) current.remove(level) else current.add(level)
-        _activeFilters.value = current
+        // Single-select: a chip shows ONLY its own category's questions (not additive). Tapping the
+        // already-selected chip clears back to All (empty set). The "All" chip uses selectAllFilters().
+        _activeFilters.value = if (_activeFilters.value == setOf(level)) emptySet() else setOf(level)
         applyFilters()
     }
 
