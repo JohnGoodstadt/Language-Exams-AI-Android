@@ -50,6 +50,7 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishExamLevelSheet
+import com.goodstadt.john.language.exams.packages.me.ChooseEnglishViewModel
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
 import com.goodstadt.john.language.exams.screens.shared.gamification.AIWriterCard
 import com.goodstadt.john.language.exams.screens.shared.gamification.AuditDashboardHeader
@@ -69,6 +70,7 @@ import com.goodstadt.john.language.exams.viewmodels.LifetimeStatsGrid
 fun MyProgressScreen(
     xpManager: XPManager,
     viewModel: MyProgressViewModel = hiltViewModel(),
+    chooseEnglishViewModel: ChooseEnglishViewModel = hiltViewModel(),
     onNavigate: (SideQuestNavTarget) -> Unit,
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -133,6 +135,11 @@ fun MyProgressScreen(
                     },
                     onAdjustLevel = {
                         showLanguageExamSheet = true
+                    },
+                    // "Switch App Vocab to <level> Mastery": apply the audit's suggested level directly,
+                    // no picker sheet. currentSkillLevel is a flow, so the verdict card updates itself.
+                    onApplySuggestedLevel = { level ->
+                        chooseEnglishViewModel.applyLevelDirectly(level)
                     },
                     onNewAudit = {
                         // Advance to the next version (persisted, ratcheted - no score reset).

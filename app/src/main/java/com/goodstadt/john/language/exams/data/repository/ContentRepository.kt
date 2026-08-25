@@ -17,6 +17,7 @@ import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.data.GrammarSheetMapping
+import com.goodstadt.john.language.exams.data.ReadinessAuditSheetMapping
 import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
 import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
 import com.goodstadt.john.language.exams.models.Format3File
@@ -560,10 +561,12 @@ class ContentRepository @Inject constructor(
 
     /** Grammar names carry the level (GermanA1ModalVerbs); usage names carry a UsageQuiz area. */
     private fun format7or10BundleAssetPath(logicalName: String): String? =
-        if (logicalName.startsWith("GermanUsageQuiz")) {
-            UsageQuizSheetMapping.mapLogicalToResourceName(logicalName)
-        } else {
-            GrammarSheetMapping.mapLogicalToResourceName(logicalName)
+        when {
+            // Flavour-agnostic (matches German/English/… prefixes), and routes ReadinessAudit sheets to
+            // their own folder so getFormat7or10Data can fall back to the bundle for them too.
+            logicalName.contains("UsageQuiz") -> UsageQuizSheetMapping.mapLogicalToResourceName(logicalName)
+            logicalName.contains("Audit")     -> ReadinessAuditSheetMapping.mapLogicalToResourceName(logicalName)
+            else -> GrammarSheetMapping.mapLogicalToResourceName(logicalName)
         }
 
     private fun loadBundledFormat7or10Data(logicalName: String, assetPath: String): Result<Format7or10File> {

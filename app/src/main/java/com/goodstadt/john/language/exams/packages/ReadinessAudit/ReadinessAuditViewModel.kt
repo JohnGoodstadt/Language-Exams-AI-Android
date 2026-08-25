@@ -23,6 +23,7 @@ import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
+import com.goodstadt.john.language.exams.data.ReadinessAuditSheetMapping
 import com.goodstadt.john.language.exams.data.ReadinessQuizAttemptState
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -55,6 +56,7 @@ import com.goodstadt.john.language.exams.packages.reference.shared.ReadinessAudi
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -413,7 +415,12 @@ class ReadinessAuditViewModel @Inject constructor(
             Timber.v("filename $finalFilename")
             //val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
 
-            val testData = readFormat7or10DataFromAssets(appContext, finalFilename)
+            // Read cache-first: memory / disk cache -> Firestore -> (if the sheet isn't uploaded) the
+            // bundled asset. This lets the preload warm the cache so advancing past Baseline is instant.
+            // e.g. "AuditA2-1-de" -> "GermanAuditA2-1". Fall back to the bundled reader if all else fails.
+            val logicalName = ReadinessAuditSheetMapping.normalizeToLogicalName(localizedBaseName)
+            val testData = vocabRepository.getFormat7or10Data(logicalName).getOrNull()
+                ?: readFormat7or10DataFromAssets(appContext, finalFilename)
 
             if (testData == null) {
                 Timber.wtf("Failed to parse JSON file: $finalFilename")
@@ -448,6 +455,32 @@ class ReadinessAuditViewModel @Inject constructor(
             // part, even ones not currently loaded.
             auditRepository.saveTotalQuestions(quizAttemptKey(selectedLevel.value, quizDetail), _allQuestions.size)
             loadCurrentAuditStats()
+        }
+    }
+
+    /**
+     * Warm the disk/memory cache for every audit sheet (Baseline + Verify A2 / B1 / B2) from Firestore so
+     * that whichever sheet the learner reaches next is already local - and stays cached across
+     * exits/re-entries. Baseline is included because it is shown first: the first Baseline quiz caches on
+     * open anyway, but the second only caches if the learner advances, so preloading covers both.
+     * Fire-and-forget on a background thread; each fetch also disk-caches itself inside getFormat7or10Data.
+     * Failures (e.g. a sheet not uploaded yet) are harmless: loadQuestions still falls back to the bundled
+     * asset. Safe to call repeatedly - a cached sheet returns immediately.
+     */
+    fun preloadAuditSheets() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val toPreload = ReadinessAuditLevels.entries.flatMap { it.quizzes }
+
+            toPreload.forEach { quiz ->
+                val localizedBaseName = resolveLocalizedBaseName(quiz.baseName)
+                val logicalName = ReadinessAuditSheetMapping.normalizeToLogicalName(localizedBaseName)
+                val result = vocabRepository.getFormat7or10Data(logicalName)
+                if (result.isSuccess) {
+                    Timber.d("Audit preload: cached '$logicalName'")
+                } else {
+                    Timber.w(result.exceptionOrNull(), "Audit preload: could not fetch '$logicalName' (will use bundle at read time)")
+                }
+            }
         }
     }
 

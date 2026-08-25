@@ -90,6 +90,33 @@ Fix: Add onFailure handlers at each level, or restructure with try/catch + a sin
         _showOnBoardingSheet.value = false
     }
 
+    /**
+     * Directly switch the app's vocab to [level] (e.g. "B2") WITHOUT showing the picker sheet: find the
+     * exam whose skillLevel matches [level] and apply it exactly as [saveSelection] does. Used by the
+     * audit's "Switch App Vocab to <level> Mastery" button, which already knows the suggested level.
+     * (The "Change Level" button still opens the sheet for a free choice.)
+     */
+    fun applyLevelDirectly(level: String) {
+        viewModelScope.launch {
+            // The exam list loads asynchronously in init; if the VM was just created it may be empty, so
+            // fetch on demand before mapping the level to its exam.
+            var exams = _uiState.value.availableExams
+            if (exams.isEmpty()) {
+                controlRepository.getActiveLanguageDetails().getOrNull()?.let { details ->
+                    exams = details.exams
+                    _uiState.update { it.copy(availableExams = details.exams) }
+                }
+            }
+            val exam = exams.firstOrNull { it.skillLevel.equals(level, ignoreCase = true) }
+            if (exam == null) {
+                Timber.w("applyLevelDirectly: no exam for level '$level' in ${exams.map { it.skillLevel }}")
+                return@launch
+            }
+            onPendingExamSelect(exam) // set the pending exam, then reuse the existing save path
+            saveSelection()
+        }
+    }
+
     fun saveSelection() {
         Timber.e("BothSelection")
         viewModelScope.launch {

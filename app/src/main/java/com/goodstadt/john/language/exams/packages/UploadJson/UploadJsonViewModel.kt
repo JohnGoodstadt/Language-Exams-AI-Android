@@ -317,7 +317,30 @@ class UploadJsonViewModel @Inject constructor(
                 )
             }
         )
-        _sections.value = listOf(buildVocabSection(), buildReferenceSection(), grammar, sectionSheet, usageQuiz)
+        // Baseline / Readiness Audit sheets (Quizzes/ReadinessAudit, flat folder, fileFormat 10). 8 files
+        // per flavour. Firestore doc name = languagePrefix + base filename (minus -de/-en), e.g.
+        // "AuditA2-1-de.json" -> "GermanAuditA2-1", "BaselineAuditA2-1-en.json" -> "EnglishBaselineAuditA2-1".
+        val baselineFiles = (context.assets.list("Quizzes/ReadinessAudit") ?: emptyArray())
+            .filter { it.endsWith(".json") }
+            .sorted()
+            .map { fileName ->
+                val base = fileName.removeSuffix(".json").replace(Regex("-[a-z]{2}$"), "") // "AuditA2-1"
+                val docName = "$languagePrefix$base"                                        // "GermanAuditA2-1"
+                UploadJsonFile(
+                    displayName = docName,
+                    fileName = fileName,
+                    assetPath = "Quizzes/ReadinessAudit/$fileName",
+                    firestoreDocName = docName
+                )
+            }
+        val baselineQuiz = UploadJsonSection(
+            title = "Baseline Quiz",
+            groups = listOf(UploadJsonLevelGroup("Files", baselineFiles))
+        )
+
+        _sections.value = listOf(
+            buildVocabSection(), buildReferenceSection(), grammar, sectionSheet, usageQuiz, baselineQuiz
+        )
     }
 
     // --- Row actions. Each returns a Result; a tick on success, a cross + log + long Toast on error. ---

@@ -173,6 +173,13 @@ fun ReadinessAuditScreen(
         }
     }
 
+    // Preload the A2/B1/B2 audit sheets from Firestore into the local cache as soon as the audit opens,
+    // so advancing past the Baseline is instant and re-entering finds them cached. Runs once, in the
+    // background; harmless if the sheets aren't uploaded yet (the read falls back to the bundle).
+    LaunchedEffect(Unit) {
+        viewModel.preloadAuditSheets()
+    }
+
     // Load whichever audit version we were opened for (1 = original, 2 = New Audit fresh set).
     LaunchedEffect(initialVersion) {
         viewModel.startAtVersion(initialVersion)

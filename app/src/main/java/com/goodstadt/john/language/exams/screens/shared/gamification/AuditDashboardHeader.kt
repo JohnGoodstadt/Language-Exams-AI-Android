@@ -49,6 +49,7 @@ fun AuditDashboardHeader(
     newAuditEnabled: Boolean,
     onNavigateToAudit: () -> Unit,
     onAdjustLevel: () -> Unit,
+    onApplySuggestedLevel: (String) -> Unit,
     onNewAudit: () -> Unit,
     onGoToTest: (ReadinessAuditLevels) -> Unit
 ) {
@@ -104,7 +105,9 @@ fun AuditDashboardHeader(
             baselineComplete = baselineComplete,
             // The unlocked test to point them at, or null if their baseline didn't master A2.
             recommendedTest = recommendedTest,
-            onSwitchLevel = { onAdjustLevel() }
+            // "Switch App Vocab to <level> Mastery" applies the suggested level directly (no picker sheet);
+            // the "Change Level" button below still opens the sheet for a free choice.
+            onSwitchLevel = onApplySuggestedLevel
         )
 
         Spacer(Modifier.height(24.dp))
