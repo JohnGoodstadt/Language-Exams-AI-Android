@@ -2,15 +2,12 @@ package com.goodstadt.john.language.exams.managers
 
 import android.content.Context
 import com.goodstadt.john.language.exams.BuildConfig
-import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.BuildConfig.TEST_RATE_LIMITING
-
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Singleton
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 /* AI reccomend smaller numbers + no day 1 free
 const val HOURLY_LIMIT = 40
@@ -32,8 +29,8 @@ object RateLimiterModule {
 
 
 
-//      if (BuildConfig.DEBUG){ //Test IAP Purchase
-        if (false){
+      if (BuildConfig.DEBUG){ //Test IAP Purchase
+//        if (false){
             return SimpleRateLimiter(
                 context = context,
                 hourlyLimit = 6,
