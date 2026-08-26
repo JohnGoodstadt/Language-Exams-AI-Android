@@ -56,8 +56,21 @@ class ConjugationsViewModel @Inject constructor(
     private val audioCacheManager: AudioCacheManager,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val historyManager: HistorySyncManager,
+    private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
 
     ) : ViewModel() {
+
+    /**
+     * Freemium gate for this conjugation sheet's collapsible headers: is the header (category) at [index]
+     * (0-based) locked? Locked headers stay visible but their content is hidden behind the paywall; premium
+     * sees everything. Centralised in [com.goodstadt.john.language.exams.managers.AccessPolicy].
+     */
+    fun isCategoryLocked(index: Int): Boolean =
+        accessPolicy.isSectionLocked(
+            com.goodstadt.john.language.exams.managers.ContentArea.REFERENCE,
+            level = null,
+            index = index
+        )
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
     val uiState = _uiState.asStateFlow()

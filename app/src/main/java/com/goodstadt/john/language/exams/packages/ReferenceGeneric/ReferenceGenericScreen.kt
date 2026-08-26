@@ -39,6 +39,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.packages.reference.SimpleSectionedVocabList
+import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
@@ -67,6 +68,9 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
+    // Freemium: tapping a locked teaser word opens the Premium upgrade sheet.
+    var showUpgradeSheet by remember { mutableStateOf(false) }
+    val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     val showCelebration by viewModel.showCelebration.collectAsStateWithLifecycle()
     val bannerTitle by viewModel.celebrationTitle.collectAsStateWithLifecycle()
@@ -114,6 +118,10 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                     playCount = { sentence -> viewModel.playCount(sentence) },
                     listState = lazyListState,
                     contentPadding = PaddingValues(bottom = 80.dp),
+
+                    // Freemium: lock words past the free preview; tapping a locked word opens the paywall.
+                    isWordLocked = { index -> viewModel.isReferenceRowLocked(index) },
+                    onLockedTapped = { showUpgradeSheet = true },
 
                     // ACTIONS
                     onRowTapped = { _, sentence, _ ->
@@ -251,6 +259,17 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
             )
+        }
+    }
+    // Freemium content lock: shown when the user taps a locked teaser word.
+    if (showUpgradeSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showUpgradeSheet = false },
+            sheetState = upgradeSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
         }
     }
 

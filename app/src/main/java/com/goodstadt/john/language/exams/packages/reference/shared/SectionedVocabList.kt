@@ -48,6 +48,12 @@ fun SectionedVocabList(
     isHeard: (String) -> Boolean,
     playCount: (String) -> Int,
 
+    // Freemium gating (opt-in; defaults keep every existing caller unchanged). [isCategoryLocked] receives
+    // a 0-based header index; a locked header stays visible but shows a lock and, on tap, routes to
+    // [onLockedTapped] (the paywall) instead of expanding to reveal its content.
+    isCategoryLocked: (Int) -> Boolean = { false },
+    onLockedTapped: () -> Unit = {},
+
     onRowTapped: (Format0Word, Sentence) -> Unit
 ) {
 
@@ -60,7 +66,10 @@ fun SectionedVocabList(
         contentPadding = PaddingValues(horizontal = 16.dp)
     ) {
 
-        categories.forEach { category ->
+        categories.forEachIndexed { catIndex, category ->
+            // Freemium gate: headers past the free preview stay visible but their content is locked.
+            val locked = isCategoryLocked(catIndex)
+
             stickyHeader {
                 val isExpanded = expandedCategories.value.contains(category.title)
 //                CategoryHeader(title = category.title)
@@ -69,14 +78,19 @@ fun SectionedVocabList(
                         .fillMaxWidth()
                         .background(MaterialTheme.colorScheme.surface) // Important for sticky headers
                         .clickable {
-                            // The toggle logic is the same
-                            val currentSet = expandedCategories.value.toMutableSet()
-                            if (isExpanded) {
-                                currentSet.remove(category.title)
+                            if (locked) {
+                                // Locked header: don't expand, drive to the paywall instead.
+                                onLockedTapped()
                             } else {
-                                currentSet.add(category.title)
+                                // The toggle logic is the same
+                                val currentSet = expandedCategories.value.toMutableSet()
+                                if (isExpanded) {
+                                    currentSet.remove(category.title)
+                                } else {
+                                    currentSet.add(category.title)
+                                }
+                                expandedCategories.value = currentSet
                             }
-                            expandedCategories.value = currentSet
                         }
                         .padding(vertical = 16.dp),
                     verticalAlignment = Alignment.CenterVertically
@@ -90,15 +104,20 @@ fun SectionedVocabList(
                         modifier = Modifier.weight(1f) // Text takes up most of the space
                     )
 
-                    // Add the expand/collapse icon
-                    Icon(
-                        imageVector = if (isExpanded) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
-                        contentDescription = if (isExpanded) "Collapse" else "Expand"
-                    )
+                    if (locked) {
+                        // Lock instead of the expand/collapse chevron.
+                        Text(text = "🔒", fontSize = 16.sp)
+                    } else {
+                        // Add the expand/collapse icon
+                        Icon(
+                            imageVector = if (isExpanded) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
+                            contentDescription = if (isExpanded) "Collapse" else "Expand"
+                        )
+                    }
                 }
             } //: StickyHeader
 
-            if (expandedCategories.value.contains(category.title)) {
+            if (!locked && expandedCategories.value.contains(category.title)) {
                 // 1. Create a new, flat list where each element is a pairing of a word and one of its sentences.
 //                val wordSentencePairs = category.words.flatMap { word ->
 //                    // For each word, create a list of pairs, then flatMap will merge all these lists together.

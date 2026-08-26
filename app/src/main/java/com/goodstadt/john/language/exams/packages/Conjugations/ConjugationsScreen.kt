@@ -4,11 +4,19 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -26,6 +34,7 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 
 //import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     val context = LocalContext.current
@@ -36,6 +45,10 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+
+    // Freemium: tapping a locked header opens the Premium upgrade sheet.
+    var showUpgradeSheet by remember { mutableStateOf(false) }
+    val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     when (val state = uiState) {
         is ConjugationsUiState.Loading -> {
@@ -71,6 +84,9 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                     googleVoice = state.selectedVoiceName,
                     isHeard = { sentence -> viewModel.isHeard(sentence) },
                     playCount = { sentence -> viewModel.playCount(sentence) },
+                    // Freemium: lock headers past the free preview; tapping a locked header opens the paywall.
+                    isCategoryLocked = { index -> viewModel.isCategoryLocked(index) },
+                    onLockedTapped = { showUpgradeSheet = true },
                     onRowTapped = { _, sentence ->
                         viewModel.handleTap(sentence.sentence)
                     }
@@ -97,6 +113,17 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
             )
+        }
+    }
+    // Freemium content lock: shown when the user taps a locked header.
+    if (showUpgradeSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showUpgradeSheet = false },
+            sheetState = upgradeSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
         }
     }
 

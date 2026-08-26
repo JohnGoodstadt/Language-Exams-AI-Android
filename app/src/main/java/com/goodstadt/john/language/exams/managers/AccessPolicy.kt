@@ -117,6 +117,23 @@ class AccessPolicy @Inject constructor(
     fun isRowLocked(area: ContentArea, level: String?, index: Int): Boolean =
         !isDetailVisible(area, level, index)
 
+    // ---------------------------------------------------------------- per-section gates (index is 0-based)
+
+    /**
+     * Section-level gate, for lists with collapsible headers (e.g. Conjugations) where the teaser is whole
+     * sections rather than individual rows: all headers stay visible, but only the first few sections'
+     * CONTENT is unlocked. [index] is the 0-based section/header position. Uses a smaller preview than the
+     * per-row count because a sheet usually has only a handful of sections.
+     */
+    fun isSectionLocked(area: ContentArea, level: String? = null, index: Int): Boolean =
+        !isFullyUnlocked(area, level) && index >= sectionPreviewCount(area)
+
+    /** How many sections/headers are shown in full before the teaser begins. */
+    fun sectionPreviewCount(area: ContentArea): Int = when (area) {
+        ContentArea.VOCAB -> FREE_VOCAB_SECTION_PREVIEW
+        ContentArea.REFERENCE -> FREE_REFERENCE_SECTION_PREVIEW
+    }
+
     companion object {
         /** Vocab levels that are entirely free. */
         val FREE_VOCAB_LEVELS = setOf("A1", "A2")
@@ -126,5 +143,10 @@ class AccessPolicy @Inject constructor(
         // can be A/B tested and tuned against actual TTS spend without shipping a build.
         const val FREE_VOCAB_PREVIEW = 15
         const val FREE_REFERENCE_PREVIEW = 10
+
+        // Sections/headers shown in full (collapsible-header lists like Conjugations). Smaller than the
+        // per-row counts: a sheet has only a few headers, so 2 gives a "top few" teaser. TODO: remote config.
+        const val FREE_VOCAB_SECTION_PREVIEW = 2
+        const val FREE_REFERENCE_SECTION_PREVIEW = 2
     }
 }

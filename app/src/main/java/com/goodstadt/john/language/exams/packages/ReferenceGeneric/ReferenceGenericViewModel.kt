@@ -76,7 +76,20 @@ class ReferenceGenericViewModel @Inject constructor(
 //    private val examSheetRepository: ExamSheetRepository,
     private val appConfigRepository: AppConfigRepository,
     private val globalLoadingManager: GlobalLoadingManager,
+    private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
 ) : ViewModel() {
+
+    /**
+     * Freemium gate for this reference vocab list (e.g. Prepositions): is the word at [index] (0-based,
+     * running across all categories) a locked teaser? Locked words show the word only; premium sees
+     * everything. Centralised in [com.goodstadt.john.language.exams.managers.AccessPolicy].
+     */
+    fun isReferenceRowLocked(index: Int): Boolean =
+        accessPolicy.isRowLocked(
+            com.goodstadt.john.language.exams.managers.ContentArea.REFERENCE,
+            level = null,
+            index = index
+        )
 
 
     private val _uiState = MutableStateFlow<GenericVocabUiState>(GenericVocabUiState.Loading)
