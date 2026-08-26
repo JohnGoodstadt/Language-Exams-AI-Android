@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.filled.Check
@@ -41,12 +40,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Text
-import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -68,18 +67,18 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.config.PremiumOverride
-import com.goodstadt.john.language.exams.managers.DebugPremiumOverride
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.config.PremiumOverride
 import com.goodstadt.john.language.exams.data.Gender
+import com.goodstadt.john.language.exams.managers.DebugPremiumOverride
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
-import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.packages.me.SignInBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
@@ -470,111 +469,6 @@ fun SettingsScreen(
         }
     }
 
-    // if (uiState.showIAPBottomSheet) {
-    if (false) {
-        ModalBottomSheet(
-            onDismissRequest = { viewModel.onBottomSheetDismissed() },
-            sheetState = sheetStateIAP,
-            containerColor = MaterialTheme.colorScheme.surface, // Clean background
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 24.dp)
-                    .padding(bottom = 32.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                // 1. Visual "Premium" Header
-                Icon(
-                    imageVector = Icons.Default.Stars, // A "Gold Star" or "Crown" icon
-                    contentDescription = null,
-                    tint = Color(0xFFFFD700), // Gold Color
-                    modifier = Modifier.size(48.dp)
-                )
-
-                Spacer(modifier = Modifier.height(12.dp))
-
-                Text(
-                    text = "Unlock Full Exam Mastery",
-                    style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
-                    textAlign = TextAlign.Center
-                )
-
-                Text(
-                    text = "Master the official 3,000+ word bank",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.secondary,
-                    textAlign = TextAlign.Center
-                )
-
-                Spacer(modifier = Modifier.height(24.dp))
-
-//                // 2. Value Proposition (Instead of just limits)
-//                Column(
-//                    verticalArrangement = Arrangement.spacedBy(12.dp),
-//                    modifier = Modifier.fillMaxWidth()
-//                ) {
-//                    BenefitRow("Unlimited AI Pronunciation", "No more ${uiState.hourlyLimit} per hour limits")
-//                    BenefitRow("Complete A1-B2 Vocabulary", "All 3,000+ official exam words")
-//                    BenefitRow("Lifetime Access", "One-time payment. No subscriptions.")
-//                    BenefitRow("Pass Your Exam", "Focus on the words that actually matter")
-//                }
-
-                Spacer(modifier = Modifier.height(32.dp))
-
-                // 3. Action Buttons
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    // Main CTA Button
-                    Button(
-                        modifier = Modifier.weight(1.5f).height(56.dp),
-                        shape = RoundedCornerShape(12.dp),
-                        onClick = {
-                            if (context is ComponentActivity) {
-                                AnalyticsHelper.logPaywallResponse(context, "accepted", "limit_sheet")
-                                viewModel.buyPremiumButtonPressed(context)
-                                viewModel.onBottomSheetDismissed()
-                            }
-                        }
-                    ) {
-                        productDetails?.let { details ->
-                            details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-                                Text(
-                                    "Upgrade: ${offerDetails.formattedPrice}",
-                                    style = MaterialTheme.typography.titleMedium
-                                )
-                            }
-                        }
-                    }
-
-                    // Secondary Cancel Button
-                    OutlinedButton(
-                        modifier = Modifier.weight(1f).height(56.dp),
-                        shape = RoundedCornerShape(12.dp),
-                        onClick = {
-                            AnalyticsHelper.logPaywallResponse(context, "rejected", "limit_sheet")
-                            viewModel.IAPCancelled()
-                            viewModel.onBottomSheetDismissed()
-                        }
-                    ) {
-                        Text("Not Now")
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(16.dp))
-
-                Text(
-                    text = "Secure your success in IELTS, TOEFL & Cambridge",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.outline,
-                    textAlign = TextAlign.Center
-                )
-            }
-        }
-    }
-
     if (uiState.showIAPBottomSheet) {
         PremiumUpgradeSheet(
             onDismiss = {
@@ -796,44 +690,66 @@ fun SettingsScreen(
         }
 
 
+
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
         item { SectionHeader("About") }
+
         item {
-            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
-                Text(
-                    text = "Our aim",
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = "Built for people preparing for official language exams — especially Citizenship tests. " +
+            SettingsInfoItem(
+                icon = Icons.Default.School,
+                title = "Our aim",
+                value = "Built for people preparing for official language exams — especially Citizenship tests. " +
                         "It helps you learn the everyday vocabulary and sentences these exams expect, through " +
-                        "native-voice audio, quizzes and spaced repetition.",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+                        "native-voice audio, quizzes and spaced repetition."
+            )
         }
+
         item {
-            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
-                Text(
-                    text = "Free to download",
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = "Levels A1 and A2 are completely free. B1 and B2 are largely open too, with some " +
+            SettingsInfoItem(
+                icon = Icons.Default.WorkspacePremium,
+                title = "Free to download",
+                value = "Levels A1 and A2 are completely free. B1 and B2 are largely open too, with some " +
                         "sections locked as a preview. Upgrade any time for entirely unrestricted access to " +
-                        "every level and feature.",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+                        "every level and feature."
+            )
         }
+
+//        item {
+//            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
+//                Text(
+//                    text = "Our aim",
+//                    style = MaterialTheme.typography.titleSmall,
+//                    fontWeight = FontWeight.Bold,
+//                    color = MaterialTheme.colorScheme.onSurface
+//                )
+//                Spacer(modifier = Modifier.height(4.dp))
+//                Text(
+//                    text = "Built for people preparing for official language exams — especially Citizenship tests. " +
+//                        "It helps you learn the everyday vocabulary and sentences these exams expect, through " +
+//                        "native-voice audio, quizzes and spaced repetition.",
+//                    style = MaterialTheme.typography.bodyMedium,
+//                    color = MaterialTheme.colorScheme.onSurfaceVariant
+//                )
+//            }
+//        }
+//        item {
+//            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
+//                Text(
+//                    text = "Free to download",
+//                    style = MaterialTheme.typography.titleSmall,
+//                    fontWeight = FontWeight.Bold,
+//                    color = MaterialTheme.colorScheme.onSurface
+//                )
+//                Spacer(modifier = Modifier.height(4.dp))
+//                Text(
+//                    text = "Levels A1 and A2 are completely free. B1 and B2 are largely open too, with some " +
+//                        "sections locked as a preview. Upgrade any time for entirely unrestricted access to " +
+//                        "every level and feature.",
+//                    style = MaterialTheme.typography.bodyMedium,
+//                    color = MaterialTheme.colorScheme.onSurfaceVariant
+//                )
+//            }
+//        }
         item {
             SettingsInfoItem(
                 icon = Icons.Default.Info,
@@ -1147,7 +1063,7 @@ private fun SettingsInfoItem(icon: ImageVector, title: String, value: String,ico
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge)
+            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = accentColor)
             Text(
                 text = value,
                 style = MaterialTheme.typography.bodyMedium,
