@@ -1,11 +1,25 @@
 package com.goodstadt.john.language.exams.managers
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.DebugFlags
 import com.goodstadt.john.language.exams.config.PremiumOverride
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import javax.inject.Inject
 import javax.inject.Singleton
+
+/**
+ * DEBUG-only runtime premium override, flippable at runtime (e.g. from a Settings button) so the
+ * lock/unlock UI can be tested WITHOUT restarting the app. Backed by Compose snapshot state, so any gated
+ * screen that reads it during composition recomposes when it changes. Seeded from the compile-time
+ * [DebugFlags.PREMIUM_OVERRIDE]; only honoured in debug builds (AccessPolicy applies it behind a
+ * `BuildConfig.DEBUG` check, so it can never affect release).
+ */
+object DebugPremiumOverride {
+    var value: PremiumOverride by mutableStateOf(DebugFlags.PREMIUM_OVERRIDE)
+}
 
 /**
  * **AccessPolicy** - the single source of truth for the app's freemium gating.
@@ -64,7 +78,9 @@ class AccessPolicy @Inject constructor(
     val isPremium: Boolean
         get() {
             if (BuildConfig.DEBUG) {
-                when (DebugFlags.PREMIUM_OVERRIDE) {
+                // Read the RUNTIME override (snapshot state) so a Settings flip recomposes gated screens
+                // without a restart. Seeded from DebugFlags.PREMIUM_OVERRIDE at startup.
+                when (DebugPremiumOverride.value) {
                     PremiumOverride.FORCE_PREMIUM -> return true
                     PremiumOverride.FORCE_FREE -> return false
                     PremiumOverride.USE_REAL -> Unit // fall through to the real status
@@ -144,9 +160,11 @@ class AccessPolicy @Inject constructor(
         const val FREE_VOCAB_PREVIEW = 15
         const val FREE_REFERENCE_PREVIEW = 10
 
-        // Sections/headers shown in full (collapsible-header lists like Conjugations). Smaller than the
-        // per-row counts: a sheet has only a few headers, so 2 gives a "top few" teaser. TODO: remote config.
+        // Sections/headers shown in full before the teaser begins. Per content area:
+        //  - VOCAB: top 2 sections of each vocab tab (B1/B2 only; A1/A2 are fully free).
+        //  - REFERENCE: top 6 collapsible headers (e.g. Conjugations).
+        // TODO: source from remote config.
         const val FREE_VOCAB_SECTION_PREVIEW = 2
-        const val FREE_REFERENCE_SECTION_PREVIEW = 2
+        const val FREE_REFERENCE_SECTION_PREVIEW = 6
     }
 }

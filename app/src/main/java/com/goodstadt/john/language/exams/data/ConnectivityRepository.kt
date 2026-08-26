@@ -4,7 +4,6 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
-import android.net.NetworkCapabilities.NET_CAPABILITY_INTERNET
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
@@ -60,6 +59,9 @@ Fix: Use connectivityManager.getNetworkCapabilities(connectivityManager.activeNe
     fun isCurrentlyOnlineObsolete(): Boolean {
         val activeNetwork = connectivityManager.activeNetworkInfo
         return activeNetwork?.isConnectedOrConnecting == true
+    }
+    fun isCurrentlyOffline(): Boolean {
+        return !isCurrentlyOnline()
     }
     fun isCurrentlyOnline(): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

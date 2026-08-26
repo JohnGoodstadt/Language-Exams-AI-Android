@@ -26,4 +26,18 @@ object DebugFlags {
      * Leave as [PremiumOverride.USE_REAL] for normal runs.
      */
     val PREMIUM_OVERRIDE: PremiumOverride = PremiumOverride.USE_REAL
+
+    /**
+     * Rate-limit testing. Only honoured in DEBUG builds (RateLimiterModule applies it behind a
+     * `BuildConfig.DEBUG` check, so release ALWAYS uses the live HOURLY_LIMIT / DAILY_LIMIT).
+     *   true  -> use the low [RATE_LIMIT_TEST_HOURLY] / [RATE_LIMIT_TEST_DAILY] limits so the paywall
+     *            triggers after just a few plays;
+     *   false -> use the live limits even in debug (test normal behaviour).
+     * Flip this instead of editing RateLimiterModule.
+     */
+    const val RATE_LIMIT_TEST = false
+
+    /** Low limits used when [RATE_LIMIT_TEST] is on (debug only). Tune to taste. */
+    const val RATE_LIMIT_TEST_HOURLY = 2
+    const val RATE_LIMIT_TEST_DAILY = 4
 }

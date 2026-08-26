@@ -43,6 +43,10 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -64,6 +68,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.config.PremiumOverride
+import com.goodstadt.john.language.exams.managers.DebugPremiumOverride
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.models.ExamDetails
@@ -132,6 +138,30 @@ fun SettingsScreen(
         } else {
             if (sheetState.isVisible) {
                 sheetState.hide()
+            }
+        }
+    }
+
+    // Snackbar host + collector for SettingsUiEvent (e.g. the offline "No internet connection" message).
+    // Previously nothing collected viewModel.uiEvent, so every emit() suspended with no collector and the
+    // snackbar never showed.
+    val snackbarHostState = remember { SnackbarHostState() }
+    LaunchedEffect(Unit) {
+        viewModel.uiEvent.collect { event ->
+            when (event) {
+                is SettingsUiEvent.ShowSnackbar -> {
+                    val result = snackbarHostState.showSnackbar(
+                        message = event.message,
+                        actionLabel = event.actionLabel,
+                        // Give actionable snackbars (e.g. offline "Retry") longer so there's time to tap.
+                        duration = if (event.actionLabel != null) SnackbarDuration.Long else SnackbarDuration.Short
+                    )
+                    if (result == SnackbarResult.ActionPerformed) {
+                        // The only actionable snackbar is the offline "Retry" for the Upgrade to Exam
+                        // Mastery (IAP) sheet - retry opening it (re-checks connectivity).
+                        viewModel.onShowBottomSheetClicked()
+                    }
+                }
             }
         }
     }
@@ -653,7 +683,8 @@ fun SettingsScreen(
             )
         }
     }
-    // Main Screen Content
+    // Main Screen Content (wrapped in a Box so the SnackbarHost can overlay the bottom).
+    Box(modifier = Modifier.fillMaxSize()) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(vertical = 16.dp)
@@ -898,6 +929,18 @@ fun SettingsScreen(
                 )
             }
             item {
+                // DEBUG: flip the freemium override to FORCE_PREMIUM at runtime, so gated screens unlock
+                // live (no app restart). One-way for testing; reading the value keeps this label in sync.
+                SettingsActionItem(
+                    icon = Icons.Default.Stars,
+                    title = "Force Premium (D)",
+                    currentValue = "Override: ${DebugPremiumOverride.value} — tap to unlock gated screens (D)",
+                    onClick = {
+                        DebugPremiumOverride.value = PremiumOverride.FORCE_PREMIUM
+                    }
+                )
+            }
+            item {
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Daily IAP",
@@ -976,7 +1019,13 @@ fun SettingsScreen(
                 )
             }
         } //:DEBUG
-    }
+    } //: LazyColumn
+
+        SnackbarHost(
+            hostState = snackbarHostState,
+            modifier = Modifier.align(Alignment.BottomCenter)
+        )
+    } //: Box
 
 }
 

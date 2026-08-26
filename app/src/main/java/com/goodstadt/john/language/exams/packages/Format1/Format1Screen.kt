@@ -330,14 +330,14 @@ fun Format1Screen(
             }
             // Freemium content lock: shown when the user taps a locked teaser row.
             if (showUpgradeSheet) {
-                ModalBottomSheet(
-                    onDismissRequest = { showUpgradeSheet = false },
-                    sheetState = upgradeSheetState,
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    contentColor = MaterialTheme.colorScheme.onSurface
-                ) {
+//                ModalBottomSheet(
+//                    onDismissRequest = { showUpgradeSheet = false },
+//                    sheetState = upgradeSheetState,
+//                    containerColor = MaterialTheme.colorScheme.surface,
+//                    contentColor = MaterialTheme.colorScheme.onSurface
+//                ) {
                     PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
-                }
+//                }
             }
 
         }

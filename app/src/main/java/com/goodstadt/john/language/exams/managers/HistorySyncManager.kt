@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.managers
 
 import android.content.Context
 import android.util.Log
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.models.HistoryData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -48,7 +49,8 @@ import javax.inject.Singleton
 class HistorySyncManager @Inject constructor(
     @ApplicationContext private val context: Context,
     private val db: FirebaseFirestore,
-    private val auth: FirebaseAuth
+    private val auth: FirebaseAuth,
+    private val connectivityRepository: ConnectivityRepository
 ) {
 
     companion object {
@@ -170,6 +172,9 @@ class HistorySyncManager @Inject constructor(
     }
 
     private suspend fun syncLevel(uid: String, level: String) {
+
+        if (connectivityRepository.isCurrentlyOffline()) { return } //No point in calling if offline
+
         try {
             val docRef = db.collection("users").document(uid).collection("history").document(level)
             val snapshot = docRef.get().await()

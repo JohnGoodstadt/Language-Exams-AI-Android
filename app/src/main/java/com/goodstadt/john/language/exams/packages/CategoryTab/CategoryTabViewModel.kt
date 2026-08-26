@@ -89,7 +89,21 @@ class CategoryTabViewModel @Inject constructor(
     private val playbackEventBus: PlaybackEventBus,
     private val globalLoadingManager: GlobalLoadingManager,
     private val bannerManager: BannerManager,
+    private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
 ) : ViewModel() {
+
+    /**
+     * Freemium gate for the main vocab tabs: is the section at [indexWithinTab] (0-based rank within the
+     * currently loaded tab, ordered by sortOrder) a locked teaser? Only the top few sections of B1/B2 tabs
+     * are free; A1/A2 are fully free (AccessPolicy's VOCAB level rule), and premium unlocks everything.
+     * Centralised in [com.goodstadt.john.language.exams.managers.AccessPolicy].
+     */
+    fun isCategoryLocked(indexWithinTab: Int): Boolean =
+        accessPolicy.isSectionLocked(
+            com.goodstadt.john.language.exams.managers.ContentArea.VOCAB,
+            level = currentLoadedLevel,
+            index = indexWithinTab
+        )
 
     private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
     val uiState = _uiState.asStateFlow()

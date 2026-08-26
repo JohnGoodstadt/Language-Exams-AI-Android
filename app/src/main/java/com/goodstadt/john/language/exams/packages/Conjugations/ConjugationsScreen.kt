@@ -117,14 +117,14 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     }
     // Freemium content lock: shown when the user taps a locked header.
     if (showUpgradeSheet) {
-        ModalBottomSheet(
-            onDismissRequest = { showUpgradeSheet = false },
-            sheetState = upgradeSheetState,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.onSurface
-        ) {
+//        ModalBottomSheet(
+//            onDismissRequest = { showUpgradeSheet = false },
+//            sheetState = upgradeSheetState,
+//            containerColor = MaterialTheme.colorScheme.surface,
+//            contentColor = MaterialTheme.colorScheme.onSurface
+//        ) {
             PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
-        }
+//        }
     }
 
     val lifecycleOwner = LocalLifecycleOwner.current

@@ -36,7 +36,8 @@ class AppConfigRepository @Inject constructor(
     private val remoteConfig: FirebaseRemoteConfig,
     private val prefs: SharedPreferences,
     private val jsonParser: Json,
-    @ApplicationContext private val context: Context // 2. Add this parameter
+    @ApplicationContext private val context: Context, // 2. Add this parameter
+    private val connectivityRepository: ConnectivityRepository
 ) {
 
     //A key for storing our local versions map
@@ -127,13 +128,27 @@ class AppConfigRepository @Inject constructor(
             }
         }
     }
-    suspend fun getAvailableOpenAIModels(): List<LlmModelInfo> {
-        // Ensure the latest values are fetched and activated
+    /**
+     * Fetch + activate remote config, but ONLY when online. `fetchAndActivate()` does not fail fast when
+     * offline - it blocks up to the Remote Config fetch timeout (~60s by default) before throwing - so with
+     * no connection we skip it and let callers read the last-activated cached values. Errors are swallowed
+     * (callers fall back to cached / default values).
+     */
+    private suspend fun fetchAndActivateIfOnline() {
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            Timber.d("AppConfig: offline - skipping remote config fetch, using cached values.")
+            return
+        }
         try {
             remoteConfig.fetchAndActivate().await()
         } catch (e: Exception) {
-            e.printStackTrace() // Log the error, but proceed with cached/default values
+            Timber.e(e, "AppConfig: remote config fetch failed")
         }
+    }
+
+    suspend fun getAvailableOpenAIModels(): List<LlmModelInfo> {
+        // Ensure the latest values are fetched and activated
+        fetchAndActivateIfOnline()
 
         val jsonString = remoteConfig.getString("llm_models_config")
 
@@ -159,11 +174,7 @@ class AppConfigRepository @Inject constructor(
     }
     suspend fun getAvailableGeminiModels(): List<LlmModelInfo> {
         // Ensure the latest values are fetched and activated
-        try {
-            remoteConfig.fetchAndActivate().await()
-        } catch (e: Exception) {
-            e.printStackTrace() // Log the error, but proceed with cached/default values
-        }
+        fetchAndActivateIfOnline()
 
         val jsonString = remoteConfig.getString("gemini_models_config")
 
@@ -189,11 +200,7 @@ class AppConfigRepository @Inject constructor(
     }
     suspend fun getAvailableDeepSeekModels(): List<LlmModelInfo> {
         // Ensure the latest values are fetched and activated
-        try {
-            remoteConfig.fetchAndActivate().await()
-        } catch (e: Exception) {
-            e.printStackTrace() // Log the error, but proceed with cached/default values
-        }
+        fetchAndActivateIfOnline()
 
         val jsonString = remoteConfig.getString("deepseek_models_config")
 
@@ -260,10 +267,18 @@ class AppConfigRepository @Inject constructor(
      * This function should be suspend to ensure latest values are fetched.
      */
     suspend fun getRemoteSheetVersions(): Map<String, Int> {
-        try {
-            remoteConfig.fetchAndActivate().await()
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to fetch remote config for sheet versions")
+        // Offline: skip the network fetch entirely. fetchAndActivate() does NOT fail fast when offline -
+        // it blocks up to the Remote Config fetch timeout (~60s by default) before throwing, which stalls
+        // every sheet load even though the last-activated 'sheet_versions' is already cached locally. Read
+        // that cached value directly. (Online path is unchanged.)
+        if (connectivityRepository.isCurrentlyOnline()) {
+            try {
+                remoteConfig.fetchAndActivate().await()
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to fetch remote config for sheet versions")
+            }
+        } else {
+            Timber.d("AppConfig: offline - skipping remote config fetch, using cached sheet_versions.")
         }
 
         val versionsJson = remoteConfig.getString("sheet_versions")

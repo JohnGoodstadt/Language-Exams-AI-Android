@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
@@ -26,6 +27,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.ButtonDefaults
@@ -71,9 +73,10 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabQuizScreen
+import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
@@ -129,6 +132,10 @@ fun CategoryTabScreen(
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val showHelpSheet by viewModel.showHelpSheet.collectAsState()
     val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Freemium: tapping a locked section (header or teaser) opens the Premium upgrade sheet.
+    var showUpgradeSheet by remember { mutableStateOf(false) }
+    val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // --- Rate Limit Sheets ---
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
@@ -354,7 +361,10 @@ fun CategoryTabScreen(
                             state = lazyListState,
                             contentPadding = PaddingValues(horizontal = 16.dp)
                         ) {
-                            categories.forEach { category ->
+                            categories.forEachIndexed { catIdx, category ->
+                                // Freemium gate: sections past the free preview (B1/B2 only) are locked.
+                                val locked = viewModel.isCategoryLocked(catIdx)
+
                                 stickyHeader {
 
 
@@ -377,7 +387,16 @@ fun CategoryTabScreen(
                                             modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
                                         )
 
-                                        if (state.isQuizAvailable) {
+                                        if (locked) {
+                                            // Locked section: a lock replaces the game-console (Quiz) icon.
+                                            IconButton(onClick = { showUpgradeSheet = true }) {
+                                                Icon(
+                                                    imageVector = Icons.Default.Lock,
+                                                    contentDescription = "Locked - unlock with Premium",
+                                                    tint = orangeLight
+                                                )
+                                            }
+                                        } else if (state.isQuizAvailable) {
                                             val isFirstCategory = category == categories.first()
                                             if (isFirstCategory) {
                                                 OutlinedButton(
@@ -431,7 +450,26 @@ fun CategoryTabScreen(
 
                                 }
 
-                                itemsIndexed(
+                                if (locked) {
+                                    // Locked section: hide the words behind a single Premium teaser row.
+                                    item(key = "locked-teaser-${category.title}") {
+                                        Row(
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .clickable { showUpgradeSheet = true }
+                                                .padding(horizontal = 16.dp, vertical = 16.dp),
+                                            verticalAlignment = Alignment.CenterVertically
+                                        ) {
+                                            Text(text = "🔒", fontSize = 16.sp)
+                                            Spacer(Modifier.width(8.dp))
+                                            Text(
+                                                text = "Unlock with Premium to see these words",
+                                                style = MaterialTheme.typography.bodyMedium,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                            )
+                                        }
+                                    }
+                                } else itemsIndexed(
                                     category.words,
                                     // Add 'index' to the key to guarantee uniqueness
                                     key = { index, word -> "${word.id}-${word.word}-$index" }
@@ -526,6 +564,17 @@ fun CategoryTabScreen(
 
 
             // --- Sheets & Overlays ---
+            // Freemium content lock: shown when the user taps a locked section header or teaser.
+            if (showUpgradeSheet) {
+//                ModalBottomSheet(
+//                    onDismissRequest = { showUpgradeSheet = false },
+//                    sheetState = upgradeSheetState,
+//                    containerColor = MaterialTheme.colorScheme.surface,
+//                    contentColor = MaterialTheme.colorScheme.onSurface
+//                ) {
+                    PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
+//                }
+            }
             if (isRateLimitingSheetVisible) {
                 RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
             }
