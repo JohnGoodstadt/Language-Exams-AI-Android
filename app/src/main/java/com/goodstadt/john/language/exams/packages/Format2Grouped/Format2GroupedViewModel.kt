@@ -252,7 +252,7 @@ class Format2GroupedViewModel @Inject constructor(
                 sentence = sentence,
                 level = "Reference",
                 sheetName = sheetName, // Important: Pass this so Graph Stats update!
-                isPremiumUser = false //TODO: fix this to live
+                isPremiumUser = billingRepository.isPurchased.value
             )
 
             when (status) {

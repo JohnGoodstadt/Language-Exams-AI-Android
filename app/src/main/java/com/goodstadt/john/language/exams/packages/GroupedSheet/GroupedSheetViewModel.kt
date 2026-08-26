@@ -287,7 +287,7 @@ class GroupedSheetViewModel @Inject constructor(
                 sentence = sentence,
                 level = "Reference",
                 sheetName = _uiState.value.currentSheetName, // Important: Pass this so Graph Stats update!
-                isPremiumUser = false
+                isPremiumUser = billingRepository.isPurchased.value
             )
 
             when (status) {

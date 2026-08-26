@@ -187,7 +187,7 @@ class Format2ViewModel @Inject constructor(
                 sentence = sentence,
                 level = "Reference",
                 sheetName = sheetName, // Important: Pass this so Graph Stats update!
-                isPremiumUser = false
+                isPremiumUser = billingRepository.isPurchased.value
             )
 
             when (status) {

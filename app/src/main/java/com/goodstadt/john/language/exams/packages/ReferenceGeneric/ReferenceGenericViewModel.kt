@@ -224,7 +224,7 @@ class ReferenceGenericViewModel @Inject constructor(
                 sentence = sentence,
                 level = "Reference",
                 sheetName = sheetName, // Important: Pass this so Graph Stats update!
-                isPremiumUser = false
+                isPremiumUser = isPremiumUser.value
             )
 
             when (status) {

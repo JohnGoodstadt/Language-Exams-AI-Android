@@ -409,7 +409,7 @@ class UsageQuizViewModel @Inject constructor(
             val result = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,
                 level = "Quiz",
-                isPremiumUser = false
+                isPremiumUser = isPremiumUser.value
             )
 
             when (result) {
