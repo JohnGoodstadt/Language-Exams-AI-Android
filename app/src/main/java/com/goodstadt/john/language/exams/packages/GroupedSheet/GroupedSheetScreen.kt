@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.packages.CategoryTab.StatsSheetEntryPoint
+import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
@@ -59,6 +60,10 @@ fun GroupedSheetScreen(
 
     var showQuizSheet by remember { mutableStateOf(false) }
     val sheetStateQuiz = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Freemium: tapping a locked teaser word opens the Premium upgrade sheet.
+    var showUpgradeSheet by remember { mutableStateOf(false) }
+    val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
 
 
@@ -127,6 +132,10 @@ fun GroupedSheetScreen(
                     listState = lazyListState,
                     contentPadding = PaddingValues(bottom = 80.dp),
 
+                    // Freemium: lock words past the free preview; tapping a locked word opens the paywall.
+                    isWordLocked = { index -> viewModel.isReferenceRowLocked(index) },
+                    onLockedTapped = { showUpgradeSheet = true },
+
                     // ACTIONS
                     onRowTapped = { word, sentence, category ->
                         viewModel.handleTap(sentence.sentence)
@@ -169,6 +178,17 @@ fun GroupedSheetScreen(
                     onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                     onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                 )
+            }
+        }
+        // Freemium content lock: shown when the user taps a locked teaser word.
+        if (showUpgradeSheet) {
+            ModalBottomSheet(
+                onDismissRequest = { showUpgradeSheet = false },
+                sheetState = upgradeSheetState,
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
             }
         }
         if (showSideQuestSheet) {

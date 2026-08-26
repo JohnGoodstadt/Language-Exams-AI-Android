@@ -60,8 +60,22 @@ class GroupedSheetViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val audioCacheManager: AudioCacheManager,
+    private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
+
+    /**
+     * Freemium gate for this grouped reference list (e.g. Adjectives): is the word at [index] (0-based,
+     * running across all categories in the selected sub-tab) a locked teaser? Locked words show the word
+     * only; premium sees everything. Centralised in
+     * [com.goodstadt.john.language.exams.managers.AccessPolicy] - see it to tune the free preview count.
+     */
+    fun isReferenceRowLocked(index: Int): Boolean =
+        accessPolicy.isRowLocked(
+            com.goodstadt.john.language.exams.managers.ContentArea.REFERENCE,
+            level = null,
+            index = index
+        )
 
     private val _uiState = MutableStateFlow(GroupedSheetUiState())
     val uiState = _uiState.asStateFlow()

@@ -1,5 +1,17 @@
 package com.goodstadt.john.language.exams.config
 
+/** Debug override for the freemium premium check (see [DebugFlags.PREMIUM_OVERRIDE]). */
+enum class PremiumOverride {
+    /** Use the real in-app-purchase status (normal behaviour). */
+    USE_REAL,
+
+    /** Pretend the user IS premium - everything unlocked. */
+    FORCE_PREMIUM,
+
+    /** Pretend the user is NOT premium - teasers/locks visible even if the IAP is actually owned. */
+    FORCE_FREE
+}
+
 /**
  * Developer-only switches. Every flag here MUST be used behind a `BuildConfig.DEBUG` check at the
  * call site, so it can never affect a release build.
@@ -7,41 +19,11 @@ package com.goodstadt.john.language.exams.config
 object DebugFlags {
 
     /**
-     * When true (debug builds AND the German `de` flavour only), vocab Format0 sheets load STRAIGHT
-     * from the bundled resource, skipping the Firestore round-trip. German has no Firestore content
-     * yet, so the network fetch otherwise always fails slowly before falling back to the bundle.
-     * English is unaffected (all its content is on Firestore). Set to false to restore the normal
-     * cache -> Firestore -> bundle path for German too.
+     * Test the lock / unlock UI without crossing the real in-app-purchase boundary (which is slow and
+     * clumsy on Android). Only honoured in DEBUG builds - [com.goodstadt.john.language.exams.managers.AccessPolicy]
+     * applies it behind a `BuildConfig.DEBUG` check, so it can never affect release. Set the value,
+     * rebuild, and every gated screen behaves as if premium is USE_REAL / FORCE_PREMIUM / FORCE_FREE.
+     * Leave as [PremiumOverride.USE_REAL] for normal runs.
      */
-    const val BUNDLE_ONLY_VOCAB = true
-
-    /**
-     * Exception list to [BUNDLE_ONLY_VOCAB]: vocab sheet logical names that should STILL be fetched
-     * from Firestore even while bundle-only is on. Add a sheet here once you've uploaded it and want
-     * to test the live copy; every other sheet keeps loading from the bundle. Names are the logical
-     * sheet names, e.g. "GermanA1Vocab". de debug builds only. Empty = all sheets from the bundle.
-     *
-     * Typical flow: upload GermanA2Vocab -> add "GermanA2Vocab" here -> rebuild -> only that sheet
-     * loads from Firestore (and caches to files/GermanA2Vocab_cache.json) while the rest stay bundled.
-     */
-    val FIRESTORE_TEST_SHEETS: Set<String> = setOf(
-         "GermanA1Vocab",
-         "GermanA2Vocab",
-         "GermanB1Vocab",
-         "GermanB2Vocab",
-        "GermanA1Adjectives",
-        "GermanA2Adjectives",
-        "GermanB1Adjectives",
-        "GermanB2Adjectives",
-        "GermanConjugationsToDo",
-        "GermanConjugationsToHave",
-        "GermanConjugationsToGet",
-        "GermanConjugationsToBe",
-        "GermanFragenBitten",
-        "GermanHoerenZuhoeren",
-        "GermanKennenWissen",
-        "GermanBringenHolen",
-        "GermanPrepositions",
-
-    )
+    val PREMIUM_OVERRIDE: PremiumOverride = PremiumOverride.USE_REAL
 }

@@ -46,8 +46,21 @@ class Format1ViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
+    private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
+
+    /**
+     * Freemium gate for this reference list: is the row at [index] (0-based, running across sections) a
+     * locked teaser? Locked rows show the word/title only; premium sees everything. Centralised in
+     * [com.goodstadt.john.language.exams.managers.AccessPolicy] - see it to tune the free preview count.
+     */
+    fun isReferenceRowLocked(index: Int): Boolean =
+        accessPolicy.isRowLocked(
+            com.goodstadt.john.language.exams.managers.ContentArea.REFERENCE,
+            level = null,
+            index = index
+        )
 
     private val sheetName: String = savedStateHandle.get<String>("documentId")!!
     private val _uiState = MutableStateFlow<Format1UiState>(Format1UiState.Loading)

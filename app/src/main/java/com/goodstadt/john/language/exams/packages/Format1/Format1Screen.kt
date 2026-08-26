@@ -37,6 +37,7 @@ import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import dagger.hilt.android.EntryPointAccessors
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
@@ -65,6 +66,9 @@ fun Format1Screen(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
+    // Freemium: tapping a locked teaser row opens the Premium upgrade sheet.
+    var showUpgradeSheet by remember { mutableStateOf(false) }
+    val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
@@ -86,7 +90,10 @@ fun Format1Screen(
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 contentPadding = PaddingValues(vertical = 16.dp)
             ) {
-                state.data.forEach { section ->
+                state.data.forEachIndexed { sectionIdx, section ->
+
+                    // Running 0-based row index across ALL sections, for the freemium preview gate.
+                    val sectionBase = state.data.take(sectionIdx).sumOf { it.wordsAndSentences.size }
 
                     // 1. Sticky Header
                     stickyHeader {
@@ -134,24 +141,20 @@ fun Format1Screen(
                         key = { index, item -> "${item.word}_${item.sentence}_$index" }
                     ) { index, item ->
 
-                        // ✅ CHECK HISTORY FOR RED DOT
-//                        val contentID = FirebaseAudioService.generateContentID(item.sentence)
-                        val isHeard = viewModel.isHeard(item.sentence)
-                        val playCount = viewModel.getPlayCount(item.sentence)
-                        // Check Playback State (Optional visual cue)
-                       // val isPlaying = (state.playbackState is PlaybackState.Playing) &&
-                         //       (state.playbackState.id.contains(FirebaseAudioService.generateUnifiedFilename(item.sentence, ""))) // simplified check
-                        val styledSentence = annotatedSentenceByWords(
-                            sentence = item.sentence,
-                            wordsToHighlight = item.word
-                        )
+                        // Freemium gate: rows past the free preview become title-only teasers.
+                        val globalIndex = sectionBase + index
+                        val locked = viewModel.isReferenceRowLocked(globalIndex)
+
+                        // Red dot only matters for rows the user can actually play.
+                        val isHeard = !locked && viewModel.isHeard(item.sentence)
+
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(horizontal = 16.dp, vertical = 12.dp)
                                 .clickable {
-                                    // ✅ Simple Action
-                                    viewModel.handleTap(item.sentence)
+                                    // Locked teaser -> paywall; unlocked -> play audio.
+                                    if (locked) showUpgradeSheet = true else viewModel.handleTap(item.sentence)
                                 }
                         ) {
                             Row(
@@ -162,31 +165,40 @@ fun Format1Screen(
                                     text = item.word,
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color.Cyan,//if(isPlaying) Color.Green else Color.Cyan, // Visual feedback
+                                    color = if (locked) MaterialTheme.colorScheme.onSurfaceVariant else Color.Cyan,
                                     modifier = Modifier.weight(1f)
                                 )
 
-                                // ✅ THE RED DOT
                                 if (isHeard) {
                                     Text(text = "🔴", fontSize = 12.sp)
                                 }
-                                if (false && playCount > 0) {
-//                                if (playCount > 0) {
-                                    Text(text = "$playCount", fontSize = 12.sp)
+                                if (locked) {
+                                    Text(text = "🔒", fontSize = 14.sp)
                                 }
-
                             }
 
-                            // ... (Your Sentence Parts UI) ...
-                            Text(text = styledSentence, style = MaterialTheme.typography.bodyLarge)
-
-                            if (item.definition.isNotBlank()) {
+                            if (locked) {
+                                // Title only: hide the example + definition behind Premium.
                                 Text(
-                                    text = item.definition,
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+                                    text = "Unlock with Premium to see the example",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                                 )
+                            } else {
+                                val styledSentence = annotatedSentenceByWords(
+                                    sentence = item.sentence,
+                                    wordsToHighlight = item.word
+                                )
+                                Text(text = styledSentence, style = MaterialTheme.typography.bodyLarge)
+
+                                if (item.definition.isNotBlank()) {
+                                    Text(
+                                        text = item.definition,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+                                    )
+                                }
                             }
                         }
                         HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
@@ -314,6 +326,17 @@ fun Format1Screen(
                         onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                         onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                     )
+                }
+            }
+            // Freemium content lock: shown when the user taps a locked teaser row.
+            if (showUpgradeSheet) {
+                ModalBottomSheet(
+                    onDismissRequest = { showUpgradeSheet = false },
+                    sheetState = upgradeSheetState,
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.onSurface
+                ) {
+                    PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
                 }
             }
 

@@ -51,8 +51,21 @@ class Format2ViewModel @Inject constructor(
     private val audioCacheManager: AudioCacheManager,
     private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
+    private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
+
+    /**
+     * Freemium gate for this reference list: is the entry at [index] (0-based, running across levels) a
+     * locked teaser? Locked entries show the word/title only; premium sees everything. Centralised in
+     * [com.goodstadt.john.language.exams.managers.AccessPolicy] - see it to tune the free preview count.
+     */
+    fun isReferenceRowLocked(index: Int): Boolean =
+        accessPolicy.isRowLocked(
+            com.goodstadt.john.language.exams.managers.ContentArea.REFERENCE,
+            level = null,
+            index = index
+        )
 
     private val _uiState = MutableStateFlow<Format2UiState>(Format2UiState.Loading)
     val uiState = _uiState.asStateFlow()

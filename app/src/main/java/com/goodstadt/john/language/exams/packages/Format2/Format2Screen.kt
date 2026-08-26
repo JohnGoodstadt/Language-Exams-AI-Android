@@ -8,6 +8,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.ui.text.font.FontWeight
+import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SportsEsports
@@ -72,6 +75,9 @@ fun Format2Screen(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
+    // Freemium: tapping a locked teaser entry opens the Premium upgrade sheet.
+    var showUpgradeSheet by remember { mutableStateOf(false) }
+    val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
   //  val uiState by viewModel.uiState.collectAsState()
 
@@ -140,7 +146,10 @@ fun Format2Screen(
         }
 
         // --- 2. Loop through each 'level' to create the sections ---
-        levels.forEach { level ->
+        levels.forEachIndexed { levelIdx, level ->
+
+            // Running 0-based entry index across ALL levels, for the freemium preview gate.
+            val levelBase = levels.take(levelIdx).sumOf { it.wordsAndSentences.size }
 
             // a) Create a sticky header for the level's information
             stickyHeader {
@@ -161,41 +170,67 @@ fun Format2Screen(
             }
 
             // b) Add the items (the word entries) for the current level
-            items(
+            itemsIndexed(
                 items = level.wordsAndSentences,
-                key = { entry -> "${entry.word}-${entry.definition}" } // unique within a level
-            ) { entry ->
+                key = { _, entry -> "${entry.word}-${entry.definition}" } // unique within a level
+            ) { localIdx, entry ->
+                // Freemium gate: entries past the free preview become title-only teasers.
+                val entryIndex = levelBase + localIdx
+                val locked = viewModel.isReferenceRowLocked(entryIndex)
+
                 // This Column represents a single row block for a Format2Entry
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 12.dp)
                         .clip(RoundedCornerShape(12.dp))
-                        .background(MaterialTheme.colorScheme.surfaceContainerHigh),
+                        .background(MaterialTheme.colorScheme.surfaceContainerHigh)
+                        .then(
+                            // Locked entries are tappable to the paywall; unlocked ones let each row play.
+                            if (locked) Modifier.clickable { showUpgradeSheet = true } else Modifier
+                        ),
 
                     verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
-                    // Loop through the sentences for this entry
-                    entry.sentences.forEachIndexed { index, item ->
-                        // Your Format2RowView or a similar composable would go here.
-                        // For now, let's build it directly.
-                        val isHeard = viewModel.isHeard(item.sentence)
-                        val playCount = viewModel.getPlayCount(item.sentence)
+                    if (locked) {
+                        // Title only: the word plus a lock hint; hide the example sentences behind Premium.
+                        Row(
+                            modifier = Modifier.fillMaxWidth().padding(16.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = entry.word,
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                                Text(
+                                    text = "Unlock with Premium to see examples",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                                )
+                            }
+                            Text(text = "🔒", fontSize = 14.sp)
+                        }
+                    } else {
+                        // Loop through the sentences for this entry
+                        entry.sentences.forEachIndexed { index, item ->
+                            val isHeard = viewModel.isHeard(item.sentence)
+                            val playCount = viewModel.getPlayCount(item.sentence)
 
+                            Format2Row(
+                                word = entry.word,
+                                sentence = item.sentence,
+                                isHeard,
+                                playCount,
+                                onTapped = {
+                                    viewModel.handleTap(item.sentence)
+                                },
 
-
-                        Format2Row(
-                            word = entry.word,
-                            sentence = item.sentence,
-                            isHeard,
-                            playCount,
-//                            onTapped = { onRowTapped(sentence.sentence) },
-                            onTapped = {
-                                viewModel.handleTap(item.sentence)
-                            },
-
-                            modifier = Modifier.padding(start = 16 .dp)
-                        )
+                                modifier = Modifier.padding(start = 16 .dp)
+                            )
+                        }
                     }
                 }
                 HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp))
@@ -219,6 +254,17 @@ fun Format2Screen(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
             )
+        }
+    }
+    // Freemium content lock: shown when the user taps a locked teaser entry.
+    if (showUpgradeSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showUpgradeSheet = false },
+            sheetState = upgradeSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
         }
     }
     if (showSideQuestSheet) {

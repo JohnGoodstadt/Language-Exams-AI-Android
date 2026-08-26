@@ -43,6 +43,12 @@ fun SimpleSectionedVocabList(
     listState: LazyListState = rememberLazyListState(),
     contentPadding: PaddingValues = PaddingValues(0.dp),
 
+    // Freemium gating (opt-in; defaults keep every existing caller unchanged). [isWordLocked] receives a
+    // 0-based word index running across ALL categories; a locked word shows its title only and taps route
+    // to [onLockedTapped] (the paywall) instead of playing.
+    isWordLocked: (Int) -> Boolean = { false },
+    onLockedTapped: () -> Unit = {},
+
     // Actions
     onRowTapped: (Format0Word, Sentence, Category) -> Unit,
     onSideQuestTapped: () -> Unit,
@@ -55,7 +61,10 @@ fun SimpleSectionedVocabList(
         contentPadding = contentPadding,
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        data.forEach { category ->
+        data.forEachIndexed { catIdx, category ->
+
+            // Running 0-based word index across ALL categories, for the freemium preview gate.
+            val categoryBase = data.take(catIdx).sumOf { it.words.size }
 
             // 1. STICKY HEADER
             stickyHeader {
@@ -99,64 +108,88 @@ fun SimpleSectionedVocabList(
                 items = category.words,
                 key = { index, word -> "word-block-${word.id}-$index" }
             ) { index, word ->
-                // This Column acts as a container for the definition and the sentence box.
-                Column(
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    // 1. The Definition Sub-Header (remains the same)
-                    if (word.definition.isNotBlank()) {
-                        Text(
-                            text = word.definition,
-                            style = MaterialTheme.typography.bodyMedium,
-//                            fontStyle = FontStyle.no,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(top = 0.dp, bottom = 16.dp, start = 12.dp)
-                        )
-                    }
 
-                    val backgroundColor = if (isSystemInDarkTheme()) {
-                        // Use the specific dark gray for Dark Mode
-                        Color(red = 28, green = 28, blue = 30)
-                    } else {
-                        // Use a theme-appropriate light gray for Light Mode
-//                        MaterialTheme.colorScheme.surfaceVariant
-                        MaterialTheme.colorScheme.surfaceContainerHigh
+                // Freemium gate: words past the free preview become title-only teasers.
+                val locked = isWordLocked(categoryBase + index)
 
-                    }
+                val backgroundColor = if (isSystemInDarkTheme()) {
+                    // Use the specific dark gray for Dark Mode
+                    Color(red = 28, green = 28, blue = 30)
+                } else {
+                    // Use a theme-appropriate light gray for Light Mode
+                    MaterialTheme.colorScheme.surfaceContainerHigh
+                }
 
-                    // 2. ✅ THE FIX: The Grouped Sentences Box
-                    // This Column is the visual container for the sentences.
+                if (locked) {
+                    // Title only: the word plus a lock hint; hide the definition + example sentences.
                     Column(
                         modifier = Modifier
+                            .fillMaxWidth()
                             .clip(RoundedCornerShape(12.dp))
                             .background(backgroundColor)
+                            .clickable { onLockedTapped() }
+                            .padding(horizontal = 16.dp, vertical = 12.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
-                        // 3. Loop through the sentences INSIDE the styled Column
-                        word.sentences.forEachIndexed { index, sentence ->
-                            val displayData = buildSentenceParts(entry = word, sentence = sentence)
-                           // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
-
-                            val isSentenceAlreadyHeard = isHeard(displayData.sentence)
-                            val playCount = playCount(displayData.sentence)
-
-//                            val playCount = viewModel.getPlayCount(item.sentence)
-                            // Your existing row composable goes here
-                            HighlightedWordInSentenceRow(
-                                word = word.word,
-                                parts = displayData.parts,
-                                sentence = displayData.sentence,
-                                isRecalling = false,
-                                displayDot = isSentenceAlreadyHeard,
-                                playCount = playCount,
-                                isDownloading = false,
-                                modifier = Modifier
-                                    .clickable {
-                                        onRowTapped(word, sentence,category)
-                                    }
-                                    // Add some padding inside the box
-                                    .padding(horizontal = 16.dp, vertical = 12.dp)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                text = word.word,
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.weight(1f)
                             )
+                            Text(text = "🔒")
+                        }
+                        Text(
+                            text = "Unlock with Premium to see examples",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                        )
+                    }
+                } else {
+                    // This Column acts as a container for the definition and the sentence box.
+                    Column(
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        // 1. The Definition Sub-Header (remains the same)
+                        if (word.definition.isNotBlank()) {
+                            Text(
+                                text = word.definition,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(top = 0.dp, bottom = 16.dp, start = 12.dp)
+                            )
+                        }
 
+                        // 2. The Grouped Sentences Box - visual container for the sentences.
+                        Column(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(backgroundColor)
+                        ) {
+                            // 3. Loop through the sentences INSIDE the styled Column
+                            word.sentences.forEachIndexed { index, sentence ->
+                                val displayData = buildSentenceParts(entry = word, sentence = sentence)
+
+                                val isSentenceAlreadyHeard = isHeard(displayData.sentence)
+                                val playCount = playCount(displayData.sentence)
+
+                                HighlightedWordInSentenceRow(
+                                    word = word.word,
+                                    parts = displayData.parts,
+                                    sentence = displayData.sentence,
+                                    isRecalling = false,
+                                    displayDot = isSentenceAlreadyHeard,
+                                    playCount = playCount,
+                                    isDownloading = false,
+                                    modifier = Modifier
+                                        .clickable {
+                                            onRowTapped(word, sentence, category)
+                                        }
+                                        // Add some padding inside the box
+                                        .padding(horizontal = 16.dp, vertical = 12.dp)
+                                )
+                            }
                         }
                     }
                 }

@@ -1,8 +1,6 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
-import com.goodstadt.john.language.exams.BuildConfig
-import com.goodstadt.john.language.exams.config.DebugFlags
 import com.goodstadt.john.language.exams.config.LanguageConfig.mapLogicalToResourceName
 import com.goodstadt.john.language.exams.config.LanguageConfig.normalizeToLogicalName
 import com.goodstadt.john.language.exams.data.AppConfigRepository
@@ -191,22 +189,6 @@ class ContentRepository @Inject constructor(
                             Timber.d("VocabRepo: Returning '$logicalName' from MEMORY CACHE.")
                             return@async Result.success(cachedFile)
                         }
-                    }
-
-                    // --- DEBUG bundle-only switch (German flavour only) ---
-                    // German content is still being uploaded, so getFormat0Sheet() often fails slowly
-                    // before falling back to the bundle. When DebugFlags.BUNDLE_ONLY_VOCAB is on
-                    // (debug builds only) the German flavour goes STRAIGHT to the bundled resource,
-                    // skipping Firestore - EXCEPT for sheets listed in DebugFlags.FIRESTORE_TEST_SHEETS,
-                    // which still load from Firestore so you can test individual just-uploaded files.
-                    // English keeps the normal cache -> Firestore -> bundle path (all content is live).
-                    if (BuildConfig.DEBUG && DebugFlags.BUNDLE_ONLY_VOCAB && BuildConfig.FLAVOR == "de"
-                        && logicalName !in DebugFlags.FIRESTORE_TEST_SHEETS) {
-                        val resourceName = mapLogicalToResourceName(logicalName)
-                        Timber.w("VocabRepo: BUNDLE_ONLY_VOCAB on -> loading '$logicalName' straight from bundle ('$resourceName'), skipping Firestore.")
-                        val bundleResult = loadBundledFormat0Data(resourceName)
-                        bundleResult.getOrNull()?.let { vocabCache[logicalName] = it }
-                        return@async bundleResult
                     }
 
                     // --- 3. Delegate to ExamSheetRepository (Disk/Network) ---
