@@ -799,6 +799,42 @@ fun SettingsScreen(
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
         item { SectionHeader("About") }
         item {
+            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
+                Text(
+                    text = "Our aim",
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = "Built for people preparing for official language exams — especially Citizenship tests. " +
+                        "It helps you learn the everyday vocabulary and sentences these exams expect, through " +
+                        "native-voice audio, quizzes and spaced repetition.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+        item {
+            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
+                Text(
+                    text = "Free to download",
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = "Levels A1 and A2 are completely free. B1 and B2 are largely open too, with some " +
+                        "sections locked as a preview. Upgrade any time for entirely unrestricted access to " +
+                        "every level and feature.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+        item {
             SettingsInfoItem(
                 icon = Icons.Default.Info,
                 title = "Version",
