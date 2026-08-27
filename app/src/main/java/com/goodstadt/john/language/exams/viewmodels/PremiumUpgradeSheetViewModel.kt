@@ -26,19 +26,19 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-data class RateLimitUiState(
+data class PremiumUpgradeSheetUiState(
     val hourlyLimit: Int = 0,
     val dailyLimit: Int = 0
 )
 
 @HiltViewModel
-class RateLimitSheetViewModel  @Inject constructor(
+class PremiumUpgradeSheetViewModel  @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val billingRepository: BillingRepository
 ): ViewModel(), DefaultLifecycleObserver {
 
-    private val _uiState = MutableStateFlow(RateLimitUiState())
+    private val _uiState = MutableStateFlow(PremiumUpgradeSheetUiState())
     val uiState = _uiState.asStateFlow()
     private val _isPremiumUser = MutableStateFlow(false)
     val isPremiumUser = _isPremiumUser.asStateFlow()

@@ -38,13 +38,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
-import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
+import com.goodstadt.john.language.exams.viewmodels.PremiumUpgradeSheetViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PremiumUpgradeSheet(
     // We use the ViewModel here so the parent doesn't have to pass everything
-    viewModel: RateLimitSheetViewModel = hiltViewModel(),
+    viewModel: PremiumUpgradeSheetViewModel = hiltViewModel(),
     onDismiss: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()

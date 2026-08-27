@@ -321,7 +321,6 @@ fun CategoryTabScreen(
                                                 lazyListState = lazyListState,
                                                 indexMap = categoryIndexMap
                                             )
-//                                        scrollToCategory(title, coroutineScope, lazyListState, categoryIndexMap)
                                         }
                                     )
                                 }
@@ -497,6 +496,9 @@ fun CategoryTabScreen(
                                             isSentenceAlreadyHeard = playCount > 0,
                                             isDownloading = false,//isDownloading,
                                             playCount = playCount,
+                                            // Spaced-repetition dot: red -> amber -> green as the sentence
+                                            // is heard on 1/2/3 separate occasions (>= gap apart).
+                                            masteryLevel = viewModel.getSpacedCount(sentenceEntry.sentence),
                                             recalledWordKeys = state.recalledWordKeys,
 
                                             // ✅ TAP HANDLER (Delegate to ViewModel)

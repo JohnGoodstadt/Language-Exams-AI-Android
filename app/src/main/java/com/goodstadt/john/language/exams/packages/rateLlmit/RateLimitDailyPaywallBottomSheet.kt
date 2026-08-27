@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.screens
 
-import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -17,7 +16,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -36,7 +34,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -46,8 +43,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.packages.rateLlmit.LimitRow
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
-import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
+import com.goodstadt.john.language.exams.viewmodels.PremiumUpgradeSheetViewModel
 //import com.johngoodstadt.memorize.language.storage.firebase.fb
 //import com.johngoodstadt.memorize.language.storage.firebase.fsUpdateStatsPropertyCount
 //import com.johngoodstadt.memorize.language.storage.firebase.fsUpdateUserPropertyCount
@@ -59,7 +55,7 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RateLimitDailyPaywallBottomSheet (
-    viewModel: RateLimitSheetViewModel = hiltViewModel(),
+    viewModel: PremiumUpgradeSheetViewModel = hiltViewModel(),
     onBuyPremiumButtonPressed: () -> Unit,
     onCloseSheet: () -> Unit
 ) {

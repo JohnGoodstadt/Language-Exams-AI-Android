@@ -17,8 +17,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -26,13 +24,13 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
+import com.goodstadt.john.language.exams.viewmodels.PremiumUpgradeSheetViewModel
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RateLimitOKReasonsBottomSheet(
-    viewModel: RateLimitSheetViewModel = hiltViewModel(),
+    viewModel: PremiumUpgradeSheetViewModel = hiltViewModel(),
     onCloseSheet: () -> Unit
 ) {
 

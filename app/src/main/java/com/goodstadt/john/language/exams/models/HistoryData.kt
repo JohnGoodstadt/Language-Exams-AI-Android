@@ -17,5 +17,22 @@ data class HistoryData(
     // A map of Sentence Hashes (CID_...) to Play Counts.
     // Example: "CID_Hello_a1b2..." : 5
     @SerializedName("data")
-    var items: MutableMap<String, Int> = mutableMapOf()
+    var items: MutableMap<String, Int> = mutableMapOf(),
+
+    // LOCAL-ONLY (not synced to Firestore): spaced-repetition progress per sentence, driving the
+    // red -> amber -> green dot. One entry per HEARD sentence (not per tap). Left out of the Firestore
+    // flush payload on purpose; cloud sync of this is a possible future extension.
+    @SerializedName("spaced")
+    var spaced: MutableMap<String, SpacedPlay> = mutableMapOf()
+)
+
+/**
+ * Spaced-repetition record for a single sentence. [count] is capped at 3 (1=red, 2=amber, 3=green) and
+ * only advances when at least the configured gap has passed since [lastAt], so the colour reflects plays
+ * spread over time (a forgetting curve), not raw taps.
+ */
+@Keep
+data class SpacedPlay(
+    @SerializedName("c") var count: Int = 0,   // 0..3 -> dot colour
+    @SerializedName("t") var lastAt: Long = 0  // epoch SECONDS of the last counted play
 )

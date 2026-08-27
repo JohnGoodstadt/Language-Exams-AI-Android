@@ -2,8 +2,10 @@ package com.goodstadt.john.language.exams.managers
 
 import android.content.Context
 import android.util.Log
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.models.HistoryData
+import com.goodstadt.john.language.exams.models.SpacedPlay
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
@@ -59,6 +61,21 @@ class HistorySyncManager @Inject constructor(
 
         // Known Levels
         private val LEVELS = listOf("A1", "A2", "B1", "B2", "Reference")
+
+        // Spaced-repetition dot: max colour stage (1=red, 2=amber, 3=green).
+        const val SPACED_MAX = 3
+
+        // Required gap (seconds) BEFORE advancing FROM each stage, indexed by the CURRENT stage:
+        //   [0] stage 0 -> 1 (first hearing): immediate,
+        //   [1] stage 1 -> 2 (red -> amber),
+        //   [2] stage 2 -> 3 (amber -> green).
+        // Intervals INCREASE (forgetting curve): the amber->green wait is longer than red->amber, and the
+        // user can only advance one stage per hearing, so both gaps can't be skipped in a single play.
+        // DEBUG uses short gaps so the progression is testable in a couple of minutes.
+        val SPACED_GAP_SECONDS: List<Long> = if (BuildConfig.DEBUG)
+            listOf(0L, 30L, 90L)                 // immediate, 30s, then 90s
+        else
+            listOf(0L, 60L * 60L, 3L * 60L * 60L) // immediate, 1 hour, then 3 hours
     }
 
     // In-memory store: [Level : HistoryData]
@@ -146,6 +163,43 @@ class HistorySyncManager @Inject constructor(
 
     fun isHeard(level: String, sentenceHash: String): Boolean {
         return getPlayCount(level, sentenceHash) > 0
+    }
+
+    // MARK: - Spaced repetition (LOCAL-ONLY, not synced)
+
+    /**
+     * Record a play for the spaced-repetition dot. The audio always plays; this only advances the
+     * red -> amber -> green stage, and ONLY when at least [SPACED_GAP_SECONDS] have elapsed since the last
+     * counted play for this sentence (and while below [SPACED_MAX]). So playing the same sentence many
+     * times in one sitting keeps the same colour. Persisted locally; deliberately NOT sent to Firestore.
+     * Reusable for any level (vocab tabs now; could extend to reference sheets later). Returns the current
+     * stage (0..3).
+     */
+    fun recordSpacedPlay(level: String, sentenceHash: String): Int {
+        val data = history.getOrPut(level) { HistoryData() }
+        val entry = data.spaced.getOrPut(sentenceHash) { SpacedPlay() }
+        val now = System.currentTimeMillis() / 1000 // seconds
+
+        // Advance at most ONE stage per play (so a long wait can't skip red->green in one go), and only
+        // once the gap required to leave the CURRENT stage has elapsed. Gaps increase per stage.
+        val stage = entry.count
+        if (stage < SPACED_MAX) {
+            val requiredGap = SPACED_GAP_SECONDS[stage] // gap to advance FROM this stage
+            if ((now - entry.lastAt) >= requiredGap) {
+                entry.count += 1
+                entry.lastAt = now
+                // Persist + notify UI, but do NOT set isDirty: this is local-only, so it must not trigger a
+                // Firestore flush of the (unrelated) synced play counts.
+                saveToLocalDisk()
+                emitState()
+            }
+        }
+        return entry.count
+    }
+
+    /** Current spaced-repetition stage for a sentence (0 = none, 1 = red, 2 = amber, 3 = green). */
+    fun getSpacedCount(level: String, sentenceHash: String): Int {
+        return history[level]?.spaced?.get(sentenceHash)?.count ?: 0
     }
 
     /**

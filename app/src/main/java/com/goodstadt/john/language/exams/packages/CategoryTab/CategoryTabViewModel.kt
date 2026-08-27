@@ -347,6 +347,12 @@ class CategoryTabViewModel @Inject constructor(
         return historyManager.getPlayCount(currentLoadedLevel, contentID)
     }
 
+    /** Spaced-repetition stage for the sentence's dot: 0 = none, 1 = red, 2 = amber, 3 = green. */
+    fun getSpacedCount(sentence: String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getSpacedCount(currentLoadedLevel, contentID)
+    }
+
     // MARK: - Playback Logic
     fun handleTap(sentence: String, category: Category) {
 
@@ -529,6 +535,11 @@ class CategoryTabViewModel @Inject constructor(
                     tabNumber = categoryTabNumber
                 )
             }
+
+            // 4. Spaced-repetition dot (red -> amber -> green over time). Advances at most once per gap;
+            //    a replay within the gap is a no-op. Uses currentLoadedLevel to match getSpacedCount().
+            historyManager.recordSpacedPlay(currentLoadedLevel, contentID)
+
             refreshUI()
         }
     }

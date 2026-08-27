@@ -64,6 +64,8 @@ fun SwipeableVocabRow(
     isSentenceAlreadyHeard: Boolean, // ✅ Driven by HistorySyncManager
     isDownloading: Boolean = false,
     playCount:Int = 0,
+    // Spaced-repetition stage (0 none, 1 red, 2 amber, 3 green). When non-null it drives the row's dot.
+    masteryLevel: Int? = null,
     recalledWordKeys: Set<String>,
     onRowTapped: (Format0Word, Sentence) -> Unit,
     onFocus: () -> Unit,
@@ -155,7 +157,8 @@ fun SwipeableVocabRow(
                 isRecalling = isRecalling,
                 displayDot = isSentenceAlreadyHeard,
                 playCount = playCount,
-                isDownloading = isDownloading
+                isDownloading = isDownloading,
+                masteryLevel = masteryLevel
             )
         }
     }

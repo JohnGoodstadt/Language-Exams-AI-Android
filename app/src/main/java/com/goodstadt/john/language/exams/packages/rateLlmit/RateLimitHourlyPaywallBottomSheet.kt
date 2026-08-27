@@ -22,7 +22,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -47,15 +46,14 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.packages.rateLlmit.LimitRow
-import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.formatTimeInterval
-import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
+import com.goodstadt.john.language.exams.viewmodels.PremiumUpgradeSheetViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RateLimitHourlyPaywallBottomSheet(
-    viewModel: RateLimitSheetViewModel = hiltViewModel(),
+    viewModel: PremiumUpgradeSheetViewModel = hiltViewModel(),
     onBuyPremiumButtonPressed: () -> Unit,
     onCloseSheet: () -> Unit
 ) {
