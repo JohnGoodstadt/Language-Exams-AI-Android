@@ -519,6 +519,15 @@ fun CategoryTabScreen(
                                                 selectedWordForSheet = wordEntry
                                                 selectedCategoryForSheet = category
                                                 showMoreSheet = true
+                                            },
+                                            // Swipe LEFT -> Save (toggle) into the level-aware practice list.
+                                            isSaved = viewModel.isSentenceSaved(sentenceEntry.sentence),
+                                            onSave = {
+                                                viewModel.onSaveSentence(
+                                                    sentence = sentenceEntry.sentence,
+                                                    word = wordEntry.word,
+                                                    categoryTitle = category.title
+                                                )
                                             }
                                         )
                                     } else {

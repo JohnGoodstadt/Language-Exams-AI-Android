@@ -23,6 +23,7 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.SavedSentence
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.goodstadt.john.language.exams.utils.PlaybackEvent
 import com.goodstadt.john.language.exams.utils.PlaybackEventBus
@@ -90,7 +91,31 @@ class CategoryTabViewModel @Inject constructor(
     private val globalLoadingManager: GlobalLoadingManager,
     private val bannerManager: BannerManager,
     private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
+    private val savedPracticeManager: com.goodstadt.john.language.exams.managers.SavedPracticeManager,
 ) : ViewModel() {
+
+    /**
+     * Swipe-left "Save": toggle this sentence in the user's level-aware practice list (a future Me-tab
+     * screen lists them). Stored under the currently loaded level, so B1 and B2 keep separate lists.
+     */
+    fun onSaveSentence(sentence: String, word: String, categoryTitle: String) {
+        val id = FirebaseAudioService.generateContentID(sentence)
+        savedPracticeManager.toggle(
+            SavedSentence(
+                id = id,
+                level = currentLoadedLevel,
+                word = word,
+                sentence = sentence,
+                categoryTitle = categoryTitle,
+                savedAt = System.currentTimeMillis() / 1000
+            )
+        )
+        refreshUI() // so the row's saved/unsaved state redraws
+    }
+
+    /** True if this sentence is in the saved practice list for the current level. */
+    fun isSentenceSaved(sentence: String): Boolean =
+        savedPracticeManager.isSaved(currentLoadedLevel, FirebaseAudioService.generateContentID(sentence))
 
     /**
      * Freemium gate for the main vocab tabs: is the section at [indexWithinTab] (0-based rank within the

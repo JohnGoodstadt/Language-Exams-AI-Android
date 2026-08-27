@@ -25,6 +25,8 @@ import androidx.compose.material3.MaterialTheme
 
 // --- Material Icons ---
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.MoreHoriz
@@ -71,6 +73,9 @@ fun SwipeableVocabRow(
     onFocus: () -> Unit,
     onCancel: () -> Unit,
     onMore: () -> Unit,
+    // Swipe-left "Save" (toggle) for the practice list. [isSaved] shows the current state on the swipe bg.
+    isSaved: Boolean = false,
+    onSave: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
 
@@ -83,19 +88,15 @@ fun SwipeableVocabRow(
     val currentOnFocus by rememberUpdatedState(onFocus)
     val currentOnCancel by rememberUpdatedState(onCancel)
     val currentOnMore by rememberUpdatedState(onMore)
+    val currentOnSave by rememberUpdatedState(onSave)
     // --- CHANGE 1: Use the new state remember function ---
 
     val dismissState = rememberSwipeToDismissBoxState(
         confirmValueChange = { dismissValue ->
             when (dismissValue) {
-                // Swiped from right-to-left
+                // Swiped from right-to-left (swipe LEFT) -> Save (toggle) for practice.
                 SwipeToDismissBoxValue.EndToStart -> {
-                    Timber.e("isRecalling $isRecalling currentIsRecalling $currentIsRecalling")
-                    if (currentIsRecalling) {
-                        currentOnCancel()
-                    } else {
-                        currentOnFocus()
-                    }
+                    currentOnSave()
                 }
                 // ADDED: Swiped from left-to-right
                 SwipeToDismissBoxValue.StartToEnd -> {
@@ -123,18 +124,18 @@ fun SwipeableVocabRow(
         state = dismissState,
         modifier = modifier,
         // The directions logic is now part of the component itself
-        enableDismissFromEndToStart = false, //TODO: temp disable
-        enableDismissFromStartToEnd = true,
+        enableDismissFromEndToStart = true,  // swipe LEFT -> Save
+        enableDismissFromStartToEnd = true,  // swipe RIGHT -> More
         // --- CHANGE 4: 'background' is renamed to 'backgroundContent' ---
         backgroundContent = {
             val direction = dismissState.dismissDirection
 
             if (direction == SwipeToDismissBoxValue.StartToEnd) {
-                // This is the new background for the "More" action (swipe right)
+                // The "More" action (swipe right)
                 MoreSwipeBackground()
             } else if (direction == SwipeToDismissBoxValue.EndToStart) {
-                // This is your existing background for "Focus/Cancel" (swipe left)
-                FocusCancelSwipeBackground(isRecalling = isRecalling)
+                // The "Save" action (swipe left) for the practice list
+                SaveSwipeBackground(isSaved = isSaved)
             }
         }
     ) { // --- CHANGE 5: 'dismissContent' is now the main content lambda ---
@@ -246,6 +247,30 @@ fun FocusCancelSwipeBackground(isRecalling: Boolean, modifier: Modifier = Modifi
         }
     }
 }
+@Composable
+fun SaveSwipeBackground(isSaved: Boolean, modifier: Modifier = Modifier) {
+    // Blue "Save" when not yet saved; grey "Saved" (swipe again removes) when already saved.
+    val color = if (isSaved) Color(0xFF616161) else Color(0xFF1976D2)
+    val text = if (isSaved) "Saved" else "Save"
+    val icon = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder
+
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(color)
+            .padding(horizontal = 24.dp),
+        contentAlignment = Alignment.CenterEnd // swipe-left reveals the trailing (right) edge
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Text(text, color = Color.White, fontWeight = FontWeight.Bold)
+            Icon(imageVector = icon, contentDescription = text, tint = Color.White)
+        }
+    }
+}
+
 @Composable
 fun MoreSwipeBackground(modifier: Modifier = Modifier) {
     Box(
