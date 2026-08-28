@@ -1,7 +1,7 @@
 {
 	"name": "",
 	"location": 0,
-	"sheetname": "B1WordList-de",
+	"sheetname": "vocab_data_b1",
 	"romanized": false,
 	"fileformat": 0,
 	"tabtitles": [
@@ -31,7 +31,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Biografie: ein Buch über das Leben einer anderen Person",
-					"IPA": "",
+					"IPA": "bioɡʁaˈfiː",
+					"pronounce": "bee-oh-gra-fee",
 					"sentences": [
 						{
 							"translation": "",
@@ -56,7 +57,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Autobiografie: ein Buch über das eigene Leben",
-					"IPA": "",
+					"IPA": "aʊ̯tobioɡʁaˈfiː",
+					"pronounce": "ow-to-bee-oh-gra-fee",
 					"sentences": [
 						{
 							"translation": "",
@@ -81,7 +83,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Memoiren: Erinnerungen an einen Teil des eigenen Lebens (Plural)",
-					"IPA": "",
+					"IPA": "memoˈiːʁən",
+					"pronounce": "meh-mo-ah-ren",
 					"sentences": [
 						{
 							"translation": "",
@@ -106,7 +109,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Dokument: ein amtliches Papier mit Informationen",
-					"IPA": "",
+					"IPA": "dokuˈmɛnt",
+					"pronounce": "do-ku-ment",
 					"sentences": [
 						{
 							"translation": "",
@@ -131,7 +135,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Formular: ein Blatt mit Feldern für persönliche Angaben",
-					"IPA": "",
+					"IPA": "fɔʁmuˈlaːɐ̯",
+					"pronounce": "for-moo-lahr",
 					"sentences": [
 						{
 							"translation": "",
@@ -156,7 +161,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bescheinigung: ein Papier, das etwas offiziell bestätigt",
-					"IPA": "",
+					"IPA": "bəʃˈaɪ̯nɪɡˌʊŋ",
+					"pronounce": "beh-shai-ni-gung",
 					"sentences": [
 						{
 							"translation": "",
@@ -181,7 +187,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Ausweis: ein Dokument, das zeigt, wer man ist",
-					"IPA": "",
+					"IPA": "ˈaʊ̯svaɪ̯s",
+					"pronounce": "ows-vais",
 					"sentences": [
 						{
 							"translation": "",
@@ -206,7 +213,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Reisepass: ein Dokument, das man für Auslandsreisen braucht",
-					"IPA": "",
+					"IPA": "ˈʁaɪ̯zəˌpas",
+					"pronounce": "rai-seh-pass",
 					"sentences": [
 						{
 							"translation": "",
@@ -231,7 +239,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Führerschein: die Erlaubnis, ein Auto zu fahren",
-					"IPA": "",
+					"IPA": "fˈyːʁɐʃˌaɪ̯n",
+					"pronounce": "fueh-rer-shain",
 					"sentences": [
 						{
 							"translation": "",
@@ -256,7 +265,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Vorstellungsgespräch: ein Gespräch, um eine Stelle zu bekommen",
-					"IPA": "",
+					"IPA": "fˈoːʁʃtˌɛlʊŋsɡəʃpʁˌɛːç",
+					"pronounce": "for-shtel-lungs-geh-shpraekh",
 					"sentences": [
 						{
 							"translation": "",
@@ -281,7 +291,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Interviewer: die Person, die im Gespräch die Fragen stellt",
-					"IPA": "",
+					"IPA": "ˈɪntɐvjuːɐ̯",
+					"pronounce": "in-ter-vyoo-er",
 					"sentences": [
 						{
 							"translation": "",
@@ -306,7 +317,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kandidat: eine Person, die sich um eine Stelle bewirbt",
-					"IPA": "",
+					"IPA": "kˌandiːdˈaːt",
+					"pronounce": "kan-di-dat",
 					"sentences": [
 						{
 							"translation": "",
@@ -331,7 +343,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anmeldung: das Eintragen des Namens auf einer Liste",
-					"IPA": "",
+					"IPA": "ˈanmˌɛldʊŋ",
+					"pronounce": "an-mel-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -356,7 +369,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "sich anmelden: seinen Namen auf eine offizielle Liste setzen",
-					"IPA": "",
+					"IPA": "zɪç ˈanmˌɛldən",
+					"pronounce": "sikh an-mel-den",
 					"sentences": [
 						{
 							"translation": "",
@@ -381,7 +395,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bewerbung: ein förmlicher Antrag auf eine Stelle oder einen Kurs",
-					"IPA": "",
+					"IPA": "bəvˈɛʁbʊŋ",
+					"pronounce": "beh-ver-bung",
 					"sentences": [
 						{
 							"translation": "",
@@ -406,7 +421,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterschrift: der eigene Name, den man selbst schreibt",
-					"IPA": "",
+					"IPA": "ˈʊntɐˌʃʁɪft",
+					"pronounce": "un-ter-shrift",
 					"sentences": [
 						{
 							"translation": "",
@@ -431,7 +447,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "unterschreiben: seinen Namen unter ein Dokument schreiben",
-					"IPA": "",
+					"IPA": "ˈʊntɐˌʃʁaɪ̯bn̩",
+					"pronounce": "un-ter-shrai-ben",
 					"sentences": [
 						{
 							"translation": "",
@@ -456,7 +473,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "abzeichnen: kurz mit den Anfangsbuchstaben unterschreiben",
-					"IPA": "",
+					"IPA": "ˈapt͡sˌaɪ̯çnən",
+					"pronounce": "ab-tsaikh-nen",
 					"sentences": [
 						{
 							"translation": "",
@@ -481,7 +499,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umfrage: eine Reihe von Fragen an viele Menschen",
-					"IPA": "",
+					"IPA": "ˈʊmfʁˌaːɡə",
+					"pronounce": "um-fra-geh",
 					"sentences": [
 						{
 							"translation": "",
@@ -506,7 +525,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Fragebogen: ein Blatt mit vielen Fragen zum Ausfüllen",
-					"IPA": "",
+					"IPA": "fʁˌaɡeːbˈoːɡən",
+					"pronounce": "fra-geh-bo-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -531,7 +551,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Meinungsumfrage: eine kurze Befragung zur Meinung vieler Menschen",
-					"IPA": "",
+					"IPA": "mˈaɪ̯nʊŋsˌʊmfʁaːɡə",
+					"pronounce": "mai-nungs-um-fra-geh",
 					"sentences": [
 						{
 							"translation": "",
@@ -556,7 +577,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Titel: ein Wort für den Beruf oder Rang einer Person",
-					"IPA": "",
+					"IPA": "tˈiːtəl",
+					"pronounce": "ti-tel",
 					"sentences": [
 						{
 							"translation": "",
@@ -581,7 +603,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Position: eine bestimmte Stelle in einer Firma",
-					"IPA": "",
+					"IPA": "pˌoːziːt͡sjˈoːn",
+					"pronounce": "po-si-tsi-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -606,7 +629,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Rang: die Stufe, die jemand in einer Organisation hat",
-					"IPA": "",
+					"IPA": "ʁˈaŋ",
+					"pronounce": "rang",
 					"sentences": [
 						{
 							"translation": "",
@@ -638,7 +662,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aufgabe: eine Arbeit, die man erledigen muss",
-					"IPA": "",
+					"IPA": "ˈaʊ̯fɡˌaːbə",
+					"pronounce": "owf-ga-beh",
 					"sentences": [
 						{
 							"translation": "",
@@ -663,7 +688,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Hausaufgabe: Aufgaben, die man zu Hause für die Schule macht",
-					"IPA": "",
+					"IPA": "hˈaʊ̯sˌaʊ̯fɡˌaːbə",
+					"pronounce": "hows-owf-ga-beh",
 					"sentences": [
 						{
 							"translation": "",
@@ -688,7 +714,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Projekt: eine geplante Arbeit mit einem Ziel",
-					"IPA": "",
+					"IPA": "pʁoˈjɛkt",
+					"pronounce": "pro-yekt",
 					"sentences": [
 						{
 							"translation": "",
@@ -713,7 +740,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kurs: eine Reihe von Unterrichtsstunden zu einem Thema",
-					"IPA": "",
+					"IPA": "kˈuːʁs",
+					"pronounce": "kurs",
 					"sentences": [
 						{
 							"translation": "",
@@ -738,7 +766,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Klasse: eine Gruppe von Schülern; auch: eine Unterrichtsstunde",
-					"IPA": "",
+					"IPA": "klˈasə",
+					"pronounce": "klas-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -763,7 +792,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vorlesung: ein Vortrag an der Universität",
-					"IPA": "",
+					"IPA": "fˈoːʁlˌeːzʊŋ",
+					"pronounce": "for-leh-sung",
 					"sentences": [
 						{
 							"translation": "",
@@ -788,7 +818,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Diplom: ein Dokument über einen Studienabschluss",
-					"IPA": "",
+					"IPA": "dɪplˈoːm",
+					"pronounce": "di-plom",
 					"sentences": [
 						{
 							"translation": "",
@@ -813,7 +844,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Zeugnis: ein amtliches Papier über Leistungen oder Noten",
-					"IPA": "",
+					"IPA": "t͡sˈɔʏ̯ɡnɪs",
+					"pronounce": "tsoyg-nis",
 					"sentences": [
 						{
 							"translation": "",
@@ -838,7 +870,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Abschluss: ein Universitätsgrad am Ende des Studiums",
-					"IPA": "",
+					"IPA": "ˈapʃlˌʊs",
+					"pronounce": "ab-shluss",
 					"sentences": [
 						{
 							"translation": "",
@@ -863,7 +896,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Mitarbeiter: eine Person, die in einer Firma angestellt ist",
-					"IPA": "",
+					"IPA": "mˈɪtˌaʁbaɪ̯tɐ",
+					"pronounce": "mit-ar-bai-ter",
 					"sentences": [
 						{
 							"translation": "",
@@ -888,7 +922,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Personal: alle Mitarbeiter einer Firma zusammen",
-					"IPA": "",
+					"IPA": "pɛʁzoːnˈaːl",
+					"pronounce": "per-so-nal",
 					"sentences": [
 						{
 							"translation": "",
@@ -913,7 +948,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Arbeiter: eine Person, die körperlich arbeitet",
-					"IPA": "",
+					"IPA": "ˈaʁbaɪ̯tɐ",
+					"pronounce": "ar-bai-ter",
 					"sentences": [
 						{
 							"translation": "",
@@ -938,7 +974,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Arbeitgeber: eine Person oder Firma, die andere beschäftigt",
-					"IPA": "",
+					"IPA": "ˈaʁbaɪ̯tɡˌeːbɐ",
+					"pronounce": "ar-bait-geh-ber",
 					"sentences": [
 						{
 							"translation": "",
@@ -963,7 +1000,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Chef: die Person, die im Betrieb das Sagen hat",
-					"IPA": "",
+					"IPA": "ʃɛf",
+					"pronounce": "shef",
 					"sentences": [
 						{
 							"translation": "",
@@ -988,7 +1026,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Manager: eine Führungskraft, die ein Team oder eine Abteilung leitet",
-					"IPA": "",
+					"IPA": "ˈmɛnɪd͡ʒɐ",
+					"pronounce": "men-i-jer",
 					"sentences": [
 						{
 							"translation": "",
@@ -1013,7 +1052,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Praktikum: eine Zeit, in der man einen Beruf praktisch lernt",
-					"IPA": "",
+					"IPA": "pʁˈaktiːkˌʊm",
+					"pronounce": "prak-ti-kum",
 					"sentences": [
 						{
 							"translation": "",
@@ -1038,7 +1078,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Lehrling: eine Person in der Berufsausbildung",
-					"IPA": "",
+					"IPA": "lˈeːʁlˌɪŋ",
+					"pronounce": "lehr-ling",
 					"sentences": [
 						{
 							"translation": "",
@@ -1063,7 +1104,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ausbildung: das Lernen eines Berufs in Betrieb und Schule",
-					"IPA": "",
+					"IPA": "ˈaʊ̯sbˌɪldʊŋ",
+					"pronounce": "ows-bil-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -1088,7 +1130,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Dozent: eine Person, die an der Universität unterrichtet",
-					"IPA": "",
+					"IPA": "doːt͡sˈɛnt",
+					"pronounce": "do-tsent",
 					"sentences": [
 						{
 							"translation": "",
@@ -1113,7 +1156,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Professor: der höchste Lehrer an einer Universität",
-					"IPA": "",
+					"IPA": "pʁoˈfɛsoːɐ̯",
+					"pronounce": "pro-fes-sor",
 					"sentences": [
 						{
 							"translation": "",
@@ -1138,7 +1182,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Lehrer: eine Person, die in der Schule unterrichtet",
-					"IPA": "",
+					"IPA": "lˈeːʁɐ",
+					"pronounce": "leh-rer",
 					"sentences": [
 						{
 							"translation": "",
@@ -1163,7 +1208,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Beruf: die Arbeit, die man gelernt hat und ausübt",
-					"IPA": "",
+					"IPA": "bəˈʁuːf",
+					"pronounce": "beh-roof",
 					"sentences": [
 						{
 							"translation": "",
@@ -1188,7 +1234,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Karriere: die berufliche Entwicklung im Leben",
-					"IPA": "",
+					"IPA": "kˌaʁɪˈeːʁə",
+					"pronounce": "kar-ree-reh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1213,7 +1260,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Tätigkeit: die Arbeit oder Aufgabe, die man ausübt",
-					"IPA": "",
+					"IPA": "tˈɛːtɪçkˌaɪ̯t",
+					"pronounce": "taeh-tikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -1238,7 +1286,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Qualifikation: eine Fähigkeit oder ein Abschluss für einen Beruf",
-					"IPA": "",
+					"IPA": "kvalifikaˈt͡sioːn",
+					"pronounce": "kva-li-fi-ka-tsi-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -1263,7 +1312,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erfahrung: Wissen und Können, das man in der Praxis sammelt",
-					"IPA": "",
+					"IPA": "ɛʁfˈaːʁʊŋ",
+					"pronounce": "er-fah-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -1288,7 +1338,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Fähigkeit: etwas, das man gut kann",
-					"IPA": "",
+					"IPA": "fˈɛːɪçkˌaɪ̯t",
+					"pronounce": "faeh-hikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -1313,7 +1364,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Seminar: ein Kurs an der Uni mit aktiver Mitarbeit",
-					"IPA": "",
+					"IPA": "zemiˈnaːʁ",
+					"pronounce": "seh-mi-nar",
 					"sentences": [
 						{
 							"translation": "",
@@ -1338,7 +1390,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Workshop: ein kurzer, praktischer Kurs in kleiner Gruppe",
-					"IPA": "",
+					"IPA": "ˈwœːɐ̯kˌʃɔp",
+					"pronounce": "work-shop",
 					"sentences": [
 						{
 							"translation": "",
@@ -1363,7 +1416,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Konferenz: ein großes Treffen zu einem Fachthema",
-					"IPA": "",
+					"IPA": "kɔnfeːʁˈɛnt͡s",
+					"pronounce": "kon-feh-rents",
 					"sentences": [
 						{
 							"translation": "",
@@ -1395,7 +1449,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterkunft: ein Ort zum Übernachten",
-					"IPA": "",
+					"IPA": "ˌʊntɐkˈʊnft",
+					"pronounce": "un-ter-kunft",
 					"sentences": [
 						{
 							"translation": "",
@@ -1420,7 +1475,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Hotel: ein Haus, in dem man gegen Geld übernachtet",
-					"IPA": "",
+					"IPA": "hoˈtɛl",
+					"pronounce": "ho-tel",
 					"sentences": [
 						{
 							"translation": "",
@@ -1445,7 +1501,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Jugendherberge: eine einfache, günstige Unterkunft für Reisende",
-					"IPA": "",
+					"IPA": "jˈuːɡənthɐbˌɛʁɡə",
+					"pronounce": "yu-gend-her-ber-geh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1470,7 +1527,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ankunft: das Ankommen an einem Ort",
-					"IPA": "",
+					"IPA": "ˈankˌʊnft",
+					"pronounce": "an-kunft",
 					"sentences": [
 						{
 							"translation": "",
@@ -1495,7 +1553,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Check-in: das Anmelden am Flughafen oder im Hotel",
-					"IPA": "",
+					"IPA": "ˈtʃɛkˌʔɪn",
+					"pronounce": "check-in",
 					"sentences": [
 						{
 							"translation": "",
@@ -1520,7 +1579,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Landung: das Aufsetzen des Flugzeugs auf dem Boden",
-					"IPA": "",
+					"IPA": "lˈandʊŋ",
+					"pronounce": "lan-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -1545,7 +1605,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gepäck: die Taschen und Koffer, die man mitnimmt",
-					"IPA": "",
+					"IPA": "ɡəpˈɛk",
+					"pronounce": "geh-paek",
 					"sentences": [
 						{
 							"translation": "",
@@ -1570,7 +1631,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Koffer: eine große Tasche für Kleidung auf Reisen",
-					"IPA": "",
+					"IPA": "kˈɔfɐ",
+					"pronounce": "kof-fer",
 					"sentences": [
 						{
 							"translation": "",
@@ -1595,7 +1657,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reisetasche: eine weiche Tasche für die Reise",
-					"IPA": "",
+					"IPA": "ʁˈaɪ̯zeːtˌaʃə",
+					"pronounce": "rai-seh-ta-sheh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1620,7 +1683,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Buchung: das Reservieren einer Reise oder eines Zimmers",
-					"IPA": "",
+					"IPA": "ˈbuːxʊŋ",
+					"pronounce": "bu-khung",
 					"sentences": [
 						{
 							"translation": "",
@@ -1645,7 +1709,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reservierung: das feste Vorbestellen von Tisch oder Zimmer",
-					"IPA": "",
+					"IPA": "ʁezɛʁˈviːʁʊŋ",
+					"pronounce": "reh-ser-vee-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -1670,7 +1735,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Ticket: eine Karte für eine Fahrt oder einen Flug",
-					"IPA": "",
+					"IPA": "tˈɪkət",
+					"pronounce": "tik-ket",
 					"sentences": [
 						{
 							"translation": "",
@@ -1695,7 +1761,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kreuzfahrt: eine Urlaubsreise mit einem großen Schiff",
-					"IPA": "",
+					"IPA": "kʁˈɔʏ̯t͡sfaːʁt",
+					"pronounce": "kroyts-fahrt",
 					"sentences": [
 						{
 							"translation": "",
@@ -1720,7 +1787,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Schiff: ein großes Fahrzeug für das Wasser",
-					"IPA": "",
+					"IPA": "ʃˈɪf",
+					"pronounce": "shiff",
 					"sentences": [
 						{
 							"translation": "",
@@ -1745,7 +1813,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Seereise: eine lange Reise über das Meer",
-					"IPA": "",
+					"IPA": "zˈeːʁaɪ̯zə",
+					"pronounce": "seeh-rai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1770,7 +1839,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Zoll: die Kontrolle von Waren an der Grenze",
-					"IPA": "",
+					"IPA": "t͡sˈɔl",
+					"pronounce": "tsoll",
 					"sentences": [
 						{
 							"translation": "",
@@ -1795,7 +1865,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Passkontrolle: die Kontrolle des Reisepasses an der Grenze",
-					"IPA": "",
+					"IPA": "pˈaskɔntʁˌɔlə",
+					"pronounce": "pass-kon-trol-leh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1820,7 +1891,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einreise: das offizielle Ankommen in einem anderen Land",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nʁˌaɪ̯zə",
+					"pronounce": "ain-rai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1845,7 +1917,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Abfahrt: das Losfahren von einem Ort",
-					"IPA": "",
+					"IPA": "ˈapfˌaːʁt",
+					"pronounce": "ab-fahrt",
 					"sentences": [
 						{
 							"translation": "",
@@ -1870,7 +1943,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Abflug: das Starten des Flugzeugs in die Luft",
-					"IPA": "",
+					"IPA": "ˈapflˌuːk",
+					"pronounce": "ab-flug",
 					"sentences": [
 						{
 							"translation": "",
@@ -1895,7 +1969,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Flugsteig: der Ausgang zum Flugzeug am Flughafen",
-					"IPA": "",
+					"IPA": "flˈuːɡstaɪ̯k",
+					"pronounce": "flug-shtaikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1920,7 +1995,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Reiseziel: der Ort, zu dem man reist",
-					"IPA": "",
+					"IPA": "ʁˈaɪ̯zeːt͡sˌiːl",
+					"pronounce": "rai-seh-tseel",
 					"sentences": [
 						{
 							"translation": "",
@@ -1945,7 +2021,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reise: eine Fahrt von einem Ort zum anderen",
-					"IPA": "",
+					"IPA": "ʁˈaɪ̯zə",
+					"pronounce": "rai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -1970,7 +2047,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Reiseplan: der genaue Plan einer Reise mit Orten und Zeiten",
-					"IPA": "",
+					"IPA": "ʁˌaɪ̯zɛplˈaːn",
+					"pronounce": "rai-seh-plan",
 					"sentences": [
 						{
 							"translation": "",
@@ -1995,7 +2073,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Zeitplan: ein Plan, wann etwas passiert",
-					"IPA": "",
+					"IPA": "t͡sˈaɪ̯tplˌaːn",
+					"pronounce": "tsait-plan",
 					"sentences": [
 						{
 							"translation": "",
@@ -2020,7 +2099,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "planen: im Voraus überlegen, was man tun wird",
-					"IPA": "",
+					"IPA": "plˈaːnən",
+					"pronounce": "pla-nen",
 					"sentences": [
 						{
 							"translation": "",
@@ -2045,7 +2125,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Besichtigung: das Ansehen von Sehenswürdigkeiten",
-					"IPA": "",
+					"IPA": "bəzˈɪçtɪɡˌʊŋ",
+					"pronounce": "beh-sikh-ti-gung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2070,7 +2151,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rundreise: eine Reise mit mehreren Stationen",
-					"IPA": "",
+					"IPA": "ʁˈʊndʁaɪ̯zə",
+					"pronounce": "rund-rai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -2095,7 +2177,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Sehenswürdigkeit: ein Ort, den Touristen gern besuchen",
-					"IPA": "",
+					"IPA": "zˈeːənsvˌʏʁdɪçkˌaɪ̯t",
+					"pronounce": "seh-hens-vuer-dikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -2127,7 +2210,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Allergie: eine Überreaktion des Körpers auf einen Stoff",
-					"IPA": "",
+					"IPA": "alɛʁˈɡiː",
+					"pronounce": "al-ler-gee",
 					"sentences": [
 						{
 							"translation": "",
@@ -2152,7 +2236,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reaktion: eine Veränderung im Körper nach Kontakt mit etwas",
-					"IPA": "",
+					"IPA": "ʁˌeːakt͡sjˈoːn",
+					"pronounce": "reh-ak-tsi-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -2177,7 +2262,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Symptome: die körperlichen Zeichen einer Krankheit (Plural)",
-					"IPA": "",
+					"IPA": "zʏmptˈoːmə",
+					"pronounce": "suem-pto-meh",
 					"sentences": [
 						{
 							"translation": "",
@@ -2202,7 +2288,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Termin: eine feste Verabredung zu einer bestimmten Zeit",
-					"IPA": "",
+					"IPA": "tɛʁˈmiːn",
+					"pronounce": "ter-meen",
 					"sentences": [
 						{
 							"translation": "",
@@ -2227,7 +2314,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vereinbaren: eine Zeit für etwas festlegen",
-					"IPA": "",
+					"IPA": "fɛʁˈaɪ̯nbaːʁən",
+					"pronounce": "fer-ain-ba-ren",
 					"sentences": [
 						{
 							"translation": "",
@@ -2252,7 +2340,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Beratung: ein Gespräch mit einem Fachmann, um Rat zu bekommen",
-					"IPA": "",
+					"IPA": "bəʁˈatʊŋ",
+					"pronounce": "beh-ra-tung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2277,7 +2366,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ernährung: das Essen und Trinken, das man normalerweise zu sich nimmt",
-					"IPA": "",
+					"IPA": "ɛʁnˈɛːʁʊŋ",
+					"pronounce": "er-naeh-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2302,7 +2392,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Nahrung: alles, was der Körper zum Leben braucht",
-					"IPA": "",
+					"IPA": "nˈaːʁʊŋ",
+					"pronounce": "nah-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2327,7 +2418,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "ausgewogen: im richtigen Gleichgewicht (z. B. Ernährung)",
-					"IPA": "",
+					"IPA": "ˈaʊ̯sɡəvˌoːɡən",
+					"pronounce": "ows-geh-vo-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -2352,7 +2444,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Notfall: eine plötzliche, gefährliche Situation",
-					"IPA": "",
+					"IPA": "nˈɔtfal",
+					"pronounce": "not-fall",
 					"sentences": [
 						{
 							"translation": "",
@@ -2377,7 +2470,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Krankenhaus: ein Ort, an dem Kranke behandelt werden",
-					"IPA": "",
+					"IPA": "kʁˈankənhˌaʊ̯s",
+					"pronounce": "kran-ken-hows",
 					"sentences": [
 						{
 							"translation": "",
@@ -2402,7 +2496,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "dringend: sehr eilig; muss sofort passieren",
-					"IPA": "",
+					"IPA": "dʁˈɪŋənt",
+					"pronounce": "drin-gend",
 					"sentences": [
 						{
 							"translation": "",
@@ -2427,7 +2522,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bewegung: körperliche Aktivität für die Gesundheit",
-					"IPA": "",
+					"IPA": "bəvˈeːɡʊŋ",
+					"pronounce": "beh-veh-gung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2452,7 +2548,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Training: körperliche Übungen, um fit zu werden",
-					"IPA": "",
+					"IPA": "ˈtʁɛːnɪŋ",
+					"pronounce": "tray-ning",
 					"sentences": [
 						{
 							"translation": "",
@@ -2477,7 +2574,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Routine: eine feste, regelmäßige Gewohnheit",
-					"IPA": "",
+					"IPA": "ʁuːtˈiːnə",
+					"pronounce": "rou-ti-neh",
 					"sentences": [
 						{
 							"translation": "",
@@ -2502,7 +2600,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesundheit: der Zustand von Körper und Geist",
-					"IPA": "",
+					"IPA": "ɡəzˈʊnthaɪ̯t",
+					"pronounce": "geh-sund-hait",
 					"sentences": [
 						{
 							"translation": "",
@@ -2527,7 +2626,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Wohlbefinden: das Gefühl, dass es einem gut geht",
-					"IPA": "",
+					"IPA": "vˈoːlbəfˌɪndən",
+					"pronounce": "vohl-beh-fin-den",
 					"sentences": [
 						{
 							"translation": "",
@@ -2552,7 +2652,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Untersuchung: eine ärztliche Kontrolle der Gesundheit",
-					"IPA": "",
+					"IPA": "ˌʊntɐzˈuːxʊŋ",
+					"pronounce": "un-ter-su-khung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2577,7 +2678,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verletzung: ein Schaden am Körper",
-					"IPA": "",
+					"IPA": "fɛʁlˈɛt͡sʊŋ",
+					"pronounce": "fer-let-tsung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2602,7 +2704,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Wunde: eine Verletzung der Haut",
-					"IPA": "",
+					"IPA": "vˈʊndə",
+					"pronounce": "vun-deh",
 					"sentences": [
 						{
 							"translation": "",
@@ -2627,7 +2730,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Genesung: das Gesundwerden nach einer Krankheit",
-					"IPA": "",
+					"IPA": "ɡənˈeːzʊŋ",
+					"pronounce": "geh-neh-sung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2652,7 +2756,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Versicherung: ein Vertrag, der bei Schäden zahlt",
-					"IPA": "",
+					"IPA": "fɛʁzˈɪçəʁˌʊŋ",
+					"pronounce": "fer-si-kheh-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2677,7 +2782,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Police: der Vertrag einer Versicherung",
-					"IPA": "",
+					"IPA": "poˈliːt͡sə",
+					"pronounce": "po-lee-tseh",
 					"sentences": [
 						{
 							"translation": "",
@@ -2702,7 +2808,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Versicherungsschutz: der Schutz durch eine Versicherung",
-					"IPA": "",
+					"IPA": "fɛʁˈzɪçəʁʊŋsˌʃʊt͡s",
+					"pronounce": "fer-si-kheh-rungs-shutts",
 					"sentences": [
 						{
 							"translation": "",
@@ -2727,7 +2834,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Medikament: ein Mittel gegen eine Krankheit",
-					"IPA": "",
+					"IPA": "medikaˈmɛnt",
+					"pronounce": "meh-di-ka-ment",
 					"sentences": [
 						{
 							"translation": "",
@@ -2752,7 +2860,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Rezept: ein Zettel vom Arzt für ein Medikament",
-					"IPA": "",
+					"IPA": "ʁeːt͡sˈɛpt",
+					"pronounce": "reh-tsept",
 					"sentences": [
 						{
 							"translation": "",
@@ -2777,7 +2886,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Dosis: die Menge eines Medikaments, die man nimmt",
-					"IPA": "",
+					"IPA": "dˈoːzɪs",
+					"pronounce": "do-sis",
 					"sentences": [
 						{
 							"translation": "",
@@ -2802,7 +2912,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Behandlung: die ärztliche Hilfe bei einer Krankheit",
-					"IPA": "",
+					"IPA": "bəhˈandlʊŋ",
+					"pronounce": "beh-hand-lung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2827,7 +2938,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Therapie: eine Behandlung, um gesund zu werden",
-					"IPA": "",
+					"IPA": "teʁaˈpiː",
+					"pronounce": "teh-ra-pee",
 					"sentences": [
 						{
 							"translation": "",
@@ -2852,7 +2964,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Heilung: das Verschwinden einer Krankheit",
-					"IPA": "",
+					"IPA": "hˈaɪ̯lʊŋ",
+					"pronounce": "hai-lung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2884,7 +2997,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aktivität: etwas, das man in der Freizeit tut",
-					"IPA": "",
+					"IPA": "aktiviˈtɛːt",
+					"pronounce": "ak-ti-vi-taet",
 					"sentences": [
 						{
 							"translation": "",
@@ -2909,7 +3023,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Spiel: eine Tätigkeit zum Spaß mit Regeln",
-					"IPA": "",
+					"IPA": "ʃpˈiːl",
+					"pronounce": "shpeel",
 					"sentences": [
 						{
 							"translation": "",
@@ -2934,7 +3049,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Veranstaltung: ein geplantes öffentliches Ereignis",
-					"IPA": "",
+					"IPA": "fɛʁˈanʃtˌaltʊŋ",
+					"pronounce": "fer-an-shtal-tung",
 					"sentences": [
 						{
 							"translation": "",
@@ -2959,7 +3075,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Konzert: eine Musikveranstaltung",
-					"IPA": "",
+					"IPA": "kɔnt͡sˈɛʁt",
+					"pronounce": "kon-tsert",
 					"sentences": [
 						{
 							"translation": "",
@@ -2984,7 +3101,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Band: eine Gruppe von Musikern",
-					"IPA": "",
+					"IPA": "bɛnt",
+					"pronounce": "bent",
 					"sentences": [
 						{
 							"translation": "",
@@ -3009,7 +3127,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Publikum: die Zuschauer bei einer Vorstellung",
-					"IPA": "",
+					"IPA": "pˈʊbliːkˌʊm",
+					"pronounce": "pu-bli-kum",
 					"sentences": [
 						{
 							"translation": "",
@@ -3034,7 +3153,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterhaltung: etwas, das Freude und Spaß bringt",
-					"IPA": "",
+					"IPA": "ˌʊntɐhˈaltʊŋ",
+					"pronounce": "un-ter-hal-tung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3059,7 +3179,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Show: eine unterhaltsame Vorstellung",
-					"IPA": "",
+					"IPA": "ʃoʊ̯",
+					"pronounce": "shoh",
 					"sentences": [
 						{
 							"translation": "",
@@ -3084,7 +3205,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Film: ein Werk, das man im Kino sieht",
-					"IPA": "",
+					"IPA": "fˈɪlm",
+					"pronounce": "film",
 					"sentences": [
 						{
 							"translation": "",
@@ -3109,7 +3231,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Hobby: eine Lieblingsbeschäftigung in der Freizeit",
-					"IPA": "",
+					"IPA": "ˈhɔbi",
+					"pronounce": "hob-bee",
 					"sentences": [
 						{
 							"translation": "",
@@ -3134,7 +3257,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Sammlung: viele gesammelte Dinge zu einem Thema",
-					"IPA": "",
+					"IPA": "zˈamlʊŋ",
+					"pronounce": "samm-lung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3159,7 +3283,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Handwerk: eine Tätigkeit, bei der man mit den Händen etwas herstellt",
-					"IPA": "",
+					"IPA": "hˈantvˌɛʁk",
+					"pronounce": "hand-verk",
 					"sentences": [
 						{
 							"translation": "",
@@ -3184,7 +3309,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Freizeit: die Zeit ohne Arbeit oder Pflichten",
-					"IPA": "",
+					"IPA": "ˈfʁaɪ̯ˌt͡saɪ̯t",
+					"pronounce": "frai-tsait",
 					"sentences": [
 						{
 							"translation": "",
@@ -3209,7 +3335,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Entspannung: das Ausruhen und Ruhigwerden",
-					"IPA": "",
+					"IPA": "ɛntʃpˈanʊŋ",
+					"pronounce": "ent-shpan-nung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3234,7 +3361,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die freie Zeit: die Zeit, in der man nicht arbeitet oder lernt",
-					"IPA": "",
+					"IPA": "fʁˈaɪ̯ə t͡sˈaɪ̯t",
+					"pronounce": "frai-eh tsait",
 					"sentences": [
 						{
 							"translation": "",
@@ -3259,7 +3387,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Museum: ein Ort mit Kunst und Geschichte",
-					"IPA": "",
+					"IPA": "muːzˈeːʊm",
+					"pronounce": "mu-seh-um",
 					"sentences": [
 						{
 							"translation": "",
@@ -3284,7 +3413,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ausstellung: eine Schau von Kunst oder Objekten",
-					"IPA": "",
+					"IPA": "ˈaʊ̯sʃtˌɛlʊŋ",
+					"pronounce": "ows-shtel-lung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3309,7 +3439,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Galerie: ein Raum, in dem Kunst gezeigt wird",
-					"IPA": "",
+					"IPA": "ɡaləˈʁiː",
+					"pronounce": "ga-leh-ree",
 					"sentences": [
 						{
 							"translation": "",
@@ -3334,7 +3465,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aufführung: eine Vorstellung auf einer Bühne",
-					"IPA": "",
+					"IPA": "ˈaʊ̯ffˌyːʁʊŋ",
+					"pronounce": "owf-fueh-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3359,7 +3491,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Schauspieler: eine Person, die in Filmen oder im Theater spielt",
-					"IPA": "",
+					"IPA": "ʃˈaʊ̯ʃpiːlɐ",
+					"pronounce": "show-shpee-ler",
 					"sentences": [
 						{
 							"translation": "",
@@ -3384,7 +3517,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bühne: der erhöhte Ort, auf dem Künstler auftreten",
-					"IPA": "",
+					"IPA": "bˈyːnə",
+					"pronounce": "bueh-neh",
 					"sentences": [
 						{
 							"translation": "",
@@ -3409,7 +3543,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erholung: das Ausruhen und Entspannen in der Freizeit",
-					"IPA": "",
+					"IPA": "ɛʁhˈoːlʊŋ",
+					"pronounce": "er-ho-lung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3434,7 +3569,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Sport: körperliche Aktivität mit Regeln",
-					"IPA": "",
+					"IPA": "ʃpɔʁt",
+					"pronounce": "shport",
 					"sentences": [
 						{
 							"translation": "",
@@ -3459,7 +3595,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Theater: ein Gebäude für Aufführungen auf der Bühne",
-					"IPA": "",
+					"IPA": "teːˈaːtɐ",
+					"pronounce": "teh-ah-ter",
 					"sentences": [
 						{
 							"translation": "",
@@ -3484,7 +3621,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Theaterstück: ein Stück, das im Theater gespielt wird",
-					"IPA": "",
+					"IPA": "tˈeːatɐʃtˌʏk",
+					"pronounce": "teh-ah-ter-shtuek",
 					"sentences": [
 						{
 							"translation": "",
@@ -3509,7 +3647,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Drama: ein ernstes Theaterstück oder eine Filmart",
-					"IPA": "",
+					"IPA": "ˈdʁaːma",
+					"pronounce": "dra-ma",
 					"sentences": [
 						{
 							"translation": "",
@@ -3534,7 +3673,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Tourismus: das Reisen vieler Menschen als Wirtschaft",
-					"IPA": "",
+					"IPA": "tuˈʁɪsmʊs",
+					"pronounce": "too-ris-moos",
 					"sentences": [
 						{
 							"translation": "",
@@ -3559,7 +3699,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Tourist: eine Person, die zum Vergnügen reist",
-					"IPA": "",
+					"IPA": "tuˈʁɪst",
+					"pronounce": "too-rist",
 					"sentences": [
 						{
 							"translation": "",
@@ -3584,7 +3725,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Besichtigung: das Ansehen von Sehenswürdigkeiten",
-					"IPA": "",
+					"IPA": "bəzˈɪçtɪɡˌʊŋ",
+					"pronounce": "beh-sikh-ti-gung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3616,7 +3758,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vorspeise: ein kleines Gericht vor dem Hauptgang",
-					"IPA": "",
+					"IPA": "ˈfoːɐ̯ˌʃpaɪ̯zə",
+					"pronounce": "fohr-shpai-zeh",
 					"sentences": [
 						{
 							"translation": "",
@@ -3641,7 +3784,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der erste Gang: das erste Gericht einer Mahlzeit",
-					"IPA": "",
+					"IPA": "ˈeːʁstɐ ɡˈaŋ",
+					"pronounce": "ers-ter gang",
 					"sentences": [
 						{
 							"translation": "",
@@ -3666,7 +3810,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Häppchen: ein kleiner Snack als Vorspeise",
-					"IPA": "",
+					"IPA": "hˈɛpçən",
+					"pronounce": "haepp-khen",
 					"sentences": [
 						{
 							"translation": "",
@@ -3691,7 +3836,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Getränk: etwas, das man trinkt",
-					"IPA": "",
+					"IPA": "ɡəˈtʁɛŋk",
+					"pronounce": "geh-trenk",
 					"sentences": [
 						{
 							"translation": "",
@@ -3716,7 +3862,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Drink: ein Getränk, oft mit Alkohol",
-					"IPA": "",
+					"IPA": "dʁˈɪŋk",
+					"pronounce": "drink",
 					"sentences": [
 						{
 							"translation": "",
@@ -3741,7 +3888,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erfrischung: ein Getränk oder Snack, der erfrischt",
-					"IPA": "",
+					"IPA": "ɛʁfʁˈɪʃʊŋ",
+					"pronounce": "er-fri-shung",
 					"sentences": [
 						{
 							"translation": "",
@@ -3766,7 +3914,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Küche: die typische Art zu kochen eines Landes",
-					"IPA": "",
+					"IPA": "kˈʏçə",
+					"pronounce": "kueh-kheh",
 					"sentences": [
 						{
 							"translation": "",
@@ -3791,7 +3940,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gericht: eine zubereitete Speise",
-					"IPA": "",
+					"IPA": "ɡəˈʁɪçt",
+					"pronounce": "geh-rikht",
 					"sentences": [
 						{
 							"translation": "",
@@ -3816,7 +3966,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Spezialität: ein typisches, besonderes Gericht",
-					"IPA": "",
+					"IPA": "ʃpet͡sialiˈtɛːt",
+					"pronounce": "shpeh-tsya-li-taet",
 					"sentences": [
 						{
 							"translation": "",
@@ -3841,7 +3992,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Nachtisch: die süße Speise am Ende des Essens",
-					"IPA": "",
+					"IPA": "nˈaxtɪʃ",
+					"pronounce": "nakh-tish",
 					"sentences": [
 						{
 							"translation": "",
@@ -3866,7 +4018,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Süßspeise: eine süße Speise",
-					"IPA": "",
+					"IPA": "ˈzyːsˌʃpaɪ̯zə",
+					"pronounce": "suess-shpai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -3891,7 +4044,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Pudding: eine süße, weiche Nachspeise",
-					"IPA": "",
+					"IPA": "pˈʊdɪŋ",
+					"pronounce": "pud-ding",
 					"sentences": [
 						{
 							"translation": "",
@@ -3916,7 +4070,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Speisen: das Essen in feierlichem Rahmen (nominalisiert)",
-					"IPA": "",
+					"IPA": "ʃpˈaɪ̯zən",
+					"pronounce": "shpai-sen",
 					"sentences": [
 						{
 							"translation": "",
@@ -3941,7 +4096,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "speisen: in gehobenem Rahmen essen",
-					"IPA": "",
+					"IPA": "ʃpˈaɪ̯zən",
+					"pronounce": "shpai-sen",
 					"sentences": [
 						{
 							"translation": "",
@@ -3966,7 +4122,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Abendessen: die Hauptmahlzeit am Abend",
-					"IPA": "",
+					"IPA": "ˈaːbn̩tˌʔɛsən",
+					"pronounce": "ah-bent-es-sen",
 					"sentences": [
 						{
 							"translation": "",
@@ -3991,7 +4148,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Zutat: eine Sache, die man zum Kochen braucht",
-					"IPA": "",
+					"IPA": "t͡suːtˈaːt",
+					"pronounce": "tsu-tat",
 					"sentences": [
 						{
 							"translation": "",
@@ -4016,7 +4174,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Bestandteil: ein Teil von etwas Größerem",
-					"IPA": "",
+					"IPA": "bəʃtˈantaɪ̯l",
+					"pronounce": "beh-shtand-tail",
 					"sentences": [
 						{
 							"translation": "",
@@ -4041,7 +4200,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Element: ein einzelner Teil eines Ganzen",
-					"IPA": "",
+					"IPA": "ˌeːleːmˈɛnt",
+					"pronounce": "eleh-ment",
 					"sentences": [
 						{
 							"translation": "",
@@ -4066,7 +4226,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Speisekarte: die Liste der Gerichte im Restaurant",
-					"IPA": "",
+					"IPA": "ˈʃpaɪ̯zəˌkaʁtə",
+					"pronounce": "shpai-zeh-kar-teh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4091,7 +4252,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Auswahl: eine Menge Dinge, aus denen man wählen kann",
-					"IPA": "",
+					"IPA": "ˈaʊ̯svˌaːl",
+					"pronounce": "ows-vahl",
 					"sentences": [
 						{
 							"translation": "",
@@ -4116,7 +4278,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Liste: eine geordnete Aufzählung",
-					"IPA": "",
+					"IPA": "lˈɪstə",
+					"pronounce": "lis-teh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4141,7 +4304,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Rezept: eine Anleitung zum Kochen eines Gerichts",
-					"IPA": "",
+					"IPA": "ʁeːt͡sˈɛpt",
+					"pronounce": "reh-tsept",
 					"sentences": [
 						{
 							"translation": "",
@@ -4166,7 +4330,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anleitung: eine Erklärung, wie man etwas macht",
-					"IPA": "",
+					"IPA": "ˈanlˌaɪ̯tʊŋ",
+					"pronounce": "an-lai-tung",
 					"sentences": [
 						{
 							"translation": "",
@@ -4191,7 +4356,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Methode: eine bestimmte Art, etwas zu tun",
-					"IPA": "",
+					"IPA": "meːtˈoːdə",
+					"pronounce": "meh-to-deh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4216,7 +4382,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Snack: eine kleine Mahlzeit zwischendurch",
-					"IPA": "",
+					"IPA": "snˈak",
+					"pronounce": "snak",
 					"sentences": [
 						{
 							"translation": "",
@@ -4241,7 +4408,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Leckerei: etwas Besonderes zum Genießen",
-					"IPA": "",
+					"IPA": "lˌɛkeːʁˈaɪ̯",
+					"pronounce": "leh-keh-rai",
 					"sentences": [
 						{
 							"translation": "",
@@ -4266,7 +4434,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "knabbern: in kleinen Bissen essen",
-					"IPA": "",
+					"IPA": "knˈabɐn",
+					"pronounce": "knab-bern",
 					"sentences": [
 						{
 							"translation": "",
@@ -4291,7 +4460,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Vegetarier: eine Person, die kein Fleisch isst",
-					"IPA": "",
+					"IPA": "veɡetaˈʁiːɐ̯",
+					"pronounce": "veh-geh-ta-ree-er",
 					"sentences": [
 						{
 							"translation": "",
@@ -4316,7 +4486,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vegan: ohne Produkte von Tieren",
-					"IPA": "",
+					"IPA": "veˈɡaːn",
+					"pronounce": "veh-gan",
 					"sentences": [
 						{
 							"translation": "",
@@ -4341,7 +4512,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "fleischlos: ohne Fleisch",
-					"IPA": "",
+					"IPA": "flˈaɪ̯ʃloːs",
+					"pronounce": "flaish-los",
 					"sentences": [
 						{
 							"translation": "",
@@ -4373,7 +4545,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Schnäppchen: eine günstige Ware; ein guter Kauf",
-					"IPA": "",
+					"IPA": "ʃnˈɛpçən",
+					"pronounce": "shnaepp-khen",
 					"sentences": [
 						{
 							"translation": "",
@@ -4398,7 +4571,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Rabatt: ein Preisnachlass; man zahlt weniger",
-					"IPA": "",
+					"IPA": "ʁaˈbat",
+					"pronounce": "ra-batt",
 					"sentences": [
 						{
 							"translation": "",
@@ -4423,7 +4597,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Angebot: eine Ware zu einem günstigen Preis",
-					"IPA": "",
+					"IPA": "ˈanɡəˌboːt",
+					"pronounce": "an-geh-boht",
 					"sentences": [
 						{
 							"translation": "",
@@ -4448,7 +4623,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kassierer: die Person an der Kasse im Geschäft",
-					"IPA": "",
+					"IPA": "kasˈiːʁɐ",
+					"pronounce": "kas-see-rer",
 					"sentences": [
 						{
 							"translation": "",
@@ -4473,7 +4649,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Verkäufer: eine Person, die im Geschäft verkauft und berät",
-					"IPA": "",
+					"IPA": "fɛɐ̯ˈkɔʏ̯fɐ",
+					"pronounce": "fer-koy-fer",
 					"sentences": [
 						{
 							"translation": "",
@@ -4498,7 +4675,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kasse: der Ort im Geschäft, wo man bezahlt",
-					"IPA": "",
+					"IPA": "ˈkasə",
+					"pronounce": "kas-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4523,7 +4701,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kunde: eine Person, die etwas kauft",
-					"IPA": "",
+					"IPA": "ˈkʊndə",
+					"pronounce": "kun-deh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4548,7 +4727,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Klient: eine Person, die einen Dienst nutzt (z. B. beim Anwalt)",
-					"IPA": "",
+					"IPA": "klɪˈɛnt",
+					"pronounce": "kli-ent",
 					"sentences": [
 						{
 							"translation": "",
@@ -4573,7 +4753,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Käufer: eine Person, die gerade etwas kauft",
-					"IPA": "",
+					"IPA": "kˈɔʏ̯fɐ",
+					"pronounce": "koy-fer",
 					"sentences": [
 						{
 							"translation": "",
@@ -4598,7 +4779,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Lieferung: das Bringen einer bestellten Ware",
-					"IPA": "",
+					"IPA": "lˈiːfəʁˌʊŋ",
+					"pronounce": "lee-feh-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -4623,7 +4805,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Versand: das Verschicken von Waren",
-					"IPA": "",
+					"IPA": "fɛʁzˈant",
+					"pronounce": "fer-sand",
 					"sentences": [
 						{
 							"translation": "",
@@ -4648,7 +4831,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kurier: eine Person, die Pakete schnell liefert",
-					"IPA": "",
+					"IPA": "kuˈʁiːɐ̯",
+					"pronounce": "koo-reer",
 					"sentences": [
 						{
 							"translation": "",
@@ -4673,7 +4857,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Umtausch: das Zurückgeben und Tauschen einer Ware",
-					"IPA": "",
+					"IPA": "ˈʊmtˌaʊ̯ʃ",
+					"pronounce": "um-towsh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4698,7 +4883,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rückgabe: das Zurückbringen einer gekauften Ware",
-					"IPA": "",
+					"IPA": "ʁˈʏkɡaːbə",
+					"pronounce": "rueh-k-ga-beh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4723,7 +4909,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Tausch: das Geben einer Sache gegen eine andere",
-					"IPA": "",
+					"IPA": "tˈaʊ̯ʃ",
+					"pronounce": "towsh",
 					"sentences": [
 						{
 							"translation": "",
@@ -4748,7 +4935,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anschaffung: der Kauf von etwas (meist Teurem)",
-					"IPA": "",
+					"IPA": "ˈanʃˌafʊŋ",
+					"pronounce": "an-shaf-fung",
 					"sentences": [
 						{
 							"translation": "",
@@ -4773,7 +4961,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "kaufen: etwas für Geld bekommen",
-					"IPA": "",
+					"IPA": "ˈkaʊ̯fn̩",
+					"pronounce": "kow-fen",
 					"sentences": [
 						{
 							"translation": "",
@@ -4798,7 +4987,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "erwerben: etwas kaufen oder bekommen",
-					"IPA": "",
+					"IPA": "ɛʁvˈɛʁbən",
+					"pronounce": "er-ver-ben",
 					"sentences": [
 						{
 							"translation": "",
@@ -4823,7 +5013,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kassenbon: ein Zettel, der zeigt, was man bezahlt hat",
-					"IPA": "",
+					"IPA": "kˈasənbˌoːn",
+					"pronounce": "kas-sen-bon",
 					"sentences": [
 						{
 							"translation": "",
@@ -4848,7 +5039,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kaufbeleg: ein Nachweis, dass man etwas gekauft hat",
-					"IPA": "",
+					"IPA": "kˌaʊ̯fbəlˈeːk",
+					"pronounce": "kowf-beh-leg",
 					"sentences": [
 						{
 							"translation": "",
@@ -4873,7 +5065,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rechnung: ein Papier, das zeigt, was man zahlen muss",
-					"IPA": "",
+					"IPA": "ʁˈɛçnʊŋ",
+					"pronounce": "rekh-nung",
 					"sentences": [
 						{
 							"translation": "",
@@ -4898,7 +5091,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rückerstattung: das Zurückzahlen von Geld",
-					"IPA": "",
+					"IPA": "ʁˈʏkɐstˌatʊŋ",
+					"pronounce": "ruek-er-shtat-tung",
 					"sentences": [
 						{
 							"translation": "",
@@ -4923,7 +5117,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erstattung: die Rückzahlung von ausgegebenem Geld",
-					"IPA": "",
+					"IPA": "ɛʁʃtˈatʊŋ",
+					"pronounce": "er-shtat-tung",
 					"sentences": [
 						{
 							"translation": "",
@@ -4948,7 +5143,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Entschädigung: Geld als Ausgleich für einen Schaden",
-					"IPA": "",
+					"IPA": "ɛntʃˈɛːdɪɡˌʊŋ",
+					"pronounce": "ent-shaeh-di-gung",
 					"sentences": [
 						{
 							"translation": "",
@@ -4973,7 +5169,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Ausverkauf: der Verkauf von Waren zu niedrigen Preisen",
-					"IPA": "",
+					"IPA": "ˈaʊ̯sfɛʁkˌaʊ̯f",
+					"pronounce": "ows-fer-kowf",
 					"sentences": [
 						{
 							"translation": "",
@@ -4998,7 +5195,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Räumungsverkauf: ein Verkauf, um das Lager zu leeren",
-					"IPA": "",
+					"IPA": "ʁˈɔʏ̯mʊŋsfɐkˌaʊ̯f",
+					"pronounce": "roy-mungs-fer-kowf",
 					"sentences": [
 						{
 							"translation": "",
@@ -5023,7 +5221,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Einkaufszentrum: ein großes Gebäude mit vielen Geschäften",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nkˌaʊ̯fst͡səntʁˌʊm",
+					"pronounce": "ain-kowfs-tsen-trum",
 					"sentences": [
 						{
 							"translation": "",
@@ -5048,7 +5247,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Shoppingcenter: ein Zentrum mit vielen Läden",
-					"IPA": "",
+					"IPA": "ˈʃɔpɪŋˌsɛntɐ",
+					"pronounce": "shop-ping-sen-ter",
 					"sentences": [
 						{
 							"translation": "",
@@ -5073,7 +5273,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einkaufspassage: eine überdachte Straße mit vielen Läden",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nkaʊ̯fsˌpasaːʒə",
+					"pronounce": "ain-kowfs-pas-sa-jeh",
 					"sentences": [
 						{
 							"translation": "",
@@ -5105,7 +5306,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anwendung: ein Programm für eine bestimmte Aufgabe",
-					"IPA": "",
+					"IPA": "ˈanvˌɛndʊŋ",
+					"pronounce": "an-ven-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -5130,7 +5332,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die App: ein kleines Programm auf dem Smartphone",
-					"IPA": "",
+					"IPA": "ɛp",
+					"pronounce": "ep",
 					"sentences": [
 						{
 							"translation": "",
@@ -5155,7 +5358,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Programm: eine Software für den Computer",
-					"IPA": "",
+					"IPA": "pʁoˈɡʁam",
+					"pronounce": "pro-gram",
 					"sentences": [
 						{
 							"translation": "",
@@ -5180,7 +5384,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Browser: ein Programm zum Surfen im Internet",
-					"IPA": "",
+					"IPA": "ˈbʁaʊ̯zɐ",
+					"pronounce": "brow-zer",
 					"sentences": [
 						{
 							"translation": "",
@@ -5205,7 +5410,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Suchmaschine: ein Dienst zum Suchen im Internet",
-					"IPA": "",
+					"IPA": "zˌuːxmaʃˈiːnə",
+					"pronounce": "sukh-ma-shi-neh",
 					"sentences": [
 						{
 							"translation": "",
@@ -5230,7 +5436,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Registerkarte: ein Reiter im Browser für eine Seite",
-					"IPA": "",
+					"IPA": "ʁeːɡˈɪstɐkˌaʁtə",
+					"pronounce": "reh-gis-ter-kar-teh",
 					"sentences": [
 						{
 							"translation": "",
@@ -5255,7 +5462,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gerät: ein technischer Apparat wie Handy oder Laptop",
-					"IPA": "",
+					"IPA": "ɡəʁˈɛːt",
+					"pronounce": "geh-raet",
 					"sentences": [
 						{
 							"translation": "",
@@ -5280,7 +5488,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gadget: ein kleines, praktisches technisches Gerät",
-					"IPA": "",
+					"IPA": "ˈɡɛd͡ʒət",
+					"pronounce": "ged-jet",
 					"sentences": [
 						{
 							"translation": "",
@@ -5305,7 +5514,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Smartphone: ein modernes Handy mit Internet",
-					"IPA": "",
+					"IPA": "ˈsmaːɐ̯tˌfoʊ̯n",
+					"pronounce": "smart-fohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -5330,7 +5540,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "digital: in elektronischer Form; nicht analog",
-					"IPA": "",
+					"IPA": "diɡiˈtaːl",
+					"pronounce": "di-gi-tal",
 					"sentences": [
 						{
 							"translation": "",
@@ -5355,7 +5566,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "elektronisch: mit Elektronik arbeitend",
-					"IPA": "",
+					"IPA": "ˌeːlɛktʁˈoːnɪʃ",
+					"pronounce": "elek-tro-nish",
 					"sentences": [
 						{
 							"translation": "",
@@ -5380,7 +5592,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "virtuell: nur im Computer vorhanden; nicht echt",
-					"IPA": "",
+					"IPA": "vɪʁtuˈɛl",
+					"pronounce": "vir-tu-ell",
 					"sentences": [
 						{
 							"translation": "",
@@ -5405,7 +5618,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die E-Mail: eine Nachricht über das Internet",
-					"IPA": "",
+					"IPA": "ˈiːˌmeɪ̯l",
+					"pronounce": "ee-mail",
 					"sentences": [
 						{
 							"translation": "",
@@ -5430,7 +5644,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Nachricht: eine Mitteilung an jemanden",
-					"IPA": "",
+					"IPA": "nˈaxʁɪçt",
+					"pronounce": "nakh-rikht",
 					"sentences": [
 						{
 							"translation": "",
@@ -5455,7 +5670,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Posteingang: der Ordner für neue E-Mails",
-					"IPA": "",
+					"IPA": "pˈɔstaɪ̯ŋˌaŋ",
+					"pronounce": "post-ain-gang",
 					"sentences": [
 						{
 							"translation": "",
@@ -5480,7 +5696,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Datei: eine Sammlung von Daten am Computer",
-					"IPA": "",
+					"IPA": "datˈaɪ̯",
+					"pronounce": "da-tai",
 					"sentences": [
 						{
 							"translation": "",
@@ -5505,7 +5722,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Dokument: eine Datei mit Text am Computer",
-					"IPA": "",
+					"IPA": "dokuˈmɛnt",
+					"pronounce": "do-ku-ment",
 					"sentences": [
 						{
 							"translation": "",
@@ -5530,7 +5748,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Anhang: eine Datei, die man an eine E-Mail hängt",
-					"IPA": "",
+					"IPA": "ˈanhˌaŋ",
+					"pronounce": "an-hang",
 					"sentences": [
 						{
 							"translation": "",
@@ -5555,7 +5774,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Internet: das weltweite Netz aus Computern",
-					"IPA": "",
+					"IPA": "ˈɪntɐnɛt",
+					"pronounce": "in-ter-net",
 					"sentences": [
 						{
 							"translation": "",
@@ -5580,7 +5800,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Netz: das World Wide Web; das Internet",
-					"IPA": "",
+					"IPA": "nˈɛt͡s",
+					"pronounce": "netts",
 					"sentences": [
 						{
 							"translation": "",
@@ -5605,7 +5826,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "online: mit dem Internet verbunden",
-					"IPA": "",
+					"IPA": "ˈɔnlaɪ̯n",
+					"pronounce": "on-line",
 					"sentences": [
 						{
 							"translation": "",
@@ -5630,7 +5852,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Netzwerk: mehrere verbundene Computer oder Menschen",
-					"IPA": "",
+					"IPA": "nˈɛt͡svɛʁk",
+					"pronounce": "netts-verk",
 					"sentences": [
 						{
 							"translation": "",
@@ -5655,7 +5878,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verbindung: die Verbindung zum Internet oder Netzwerk",
-					"IPA": "",
+					"IPA": "fɛʁbˈɪndʊŋ",
+					"pronounce": "fer-bin-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -5680,7 +5904,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das WLAN: das drahtlose Internet zu Hause",
-					"IPA": "",
+					"IPA": "ˈveːˌlaːn",
+					"pronounce": "veh-lahn",
 					"sentences": [
 						{
 							"translation": "",
@@ -5705,7 +5930,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Software: die Programme auf einem Computer",
-					"IPA": "",
+					"IPA": "ˈsɔftˌvɛːɐ̯",
+					"pronounce": "soft-vair",
 					"sentences": [
 						{
 							"translation": "",
@@ -5730,7 +5956,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Webseite: eine Seite im Internet",
-					"IPA": "",
+					"IPA": "vˈɛbzaɪ̯tə",
+					"pronounce": "veb-sai-teh",
 					"sentences": [
 						{
 							"translation": "",
@@ -5755,7 +5982,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Startseite: die erste Seite einer Webseite",
-					"IPA": "",
+					"IPA": "ʃtˈaʁtzaɪ̯tə",
+					"pronounce": "shtart-sai-teh",
 					"sentences": [
 						{
 							"translation": "",
@@ -5780,7 +6008,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die URL: die Adresse einer Webseite im Internet",
-					"IPA": "",
+					"IPA": "uːʔɛʁˈʔɛl",
+					"pronounce": "oo-er-el",
 					"sentences": [
 						{
 							"translation": "",
@@ -5812,7 +6041,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Klima: das typische Wetter einer Region über lange Zeit",
-					"IPA": "",
+					"IPA": "klˈiːmaː",
+					"pronounce": "kli-ma",
 					"sentences": [
 						{
 							"translation": "",
@@ -5837,7 +6067,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Wetter: der Zustand der Luft (Regen, Sonne …)",
-					"IPA": "",
+					"IPA": "vˈɛtɐ",
+					"pronounce": "vet-ter",
 					"sentences": [
 						{
 							"translation": "",
@@ -5862,7 +6093,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Temperatur: wie warm oder kalt es ist",
-					"IPA": "",
+					"IPA": "tɛmpəʁaˈtuːɐ̯",
+					"pronounce": "tem-peh-ra-tur",
 					"sentences": [
 						{
 							"translation": "",
@@ -5887,7 +6119,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Naturschutz: der Schutz der Natur und ihrer Arten",
-					"IPA": "",
+					"IPA": "naːtˈuːʁʃˌʊt͡s",
+					"pronounce": "na-tur-shutts",
 					"sentences": [
 						{
 							"translation": "",
@@ -5912,7 +6145,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erhaltung: das Bewahren von etwas für die Zukunft",
-					"IPA": "",
+					"IPA": "ɛʁhˈaltʊŋ",
+					"pronounce": "er-hal-tung",
 					"sentences": [
 						{
 							"translation": "",
@@ -5937,7 +6171,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Schutz: das Bewahren vor Gefahr oder Schaden",
-					"IPA": "",
+					"IPA": "ʃˈʊt͡s",
+					"pronounce": "shutts",
 					"sentences": [
 						{
 							"translation": "",
@@ -5962,7 +6197,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Ökosystem: das Zusammenspiel von Lebewesen und Umwelt",
-					"IPA": "",
+					"IPA": "ˈøːkoːzʏstˌeːm",
+					"pronounce": "oeko-sues-tem",
 					"sentences": [
 						{
 							"translation": "",
@@ -5987,7 +6223,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Artenvielfalt: die Vielfalt an Tier- und Pflanzenarten",
-					"IPA": "",
+					"IPA": "ˈaʁtənvˌiːlfalt",
+					"pronounce": "ar-ten-feel-falt",
 					"sentences": [
 						{
 							"translation": "",
@@ -6012,7 +6249,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Lebensraum: der natürliche Ort, an dem ein Tier lebt",
-					"IPA": "",
+					"IPA": "lˈeːbənsʁˌaʊ̯m",
+					"pronounce": "leh-bens-rowm",
 					"sentences": [
 						{
 							"translation": "",
@@ -6037,7 +6275,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umwelt: die Natur, die uns umgibt",
-					"IPA": "",
+					"IPA": "ˈʊmvˌɛlt",
+					"pronounce": "um-velt",
 					"sentences": [
 						{
 							"translation": "",
@@ -6062,7 +6301,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Natur: alles, was nicht vom Menschen gemacht ist",
-					"IPA": "",
+					"IPA": "natˈuːʁ",
+					"pronounce": "na-tur",
 					"sentences": [
 						{
 							"translation": "",
@@ -6087,7 +6327,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umgebung: alles, was um einen herum liegt",
-					"IPA": "",
+					"IPA": "ʊmɡˈeːbʊŋ",
+					"pronounce": "um-geh-bung",
 					"sentences": [
 						{
 							"translation": "",
@@ -6112,7 +6353,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Zuhause: der Ort, an dem man wohnt und sich wohlfühlt",
-					"IPA": "",
+					"IPA": "t͡suːhˈaʊ̯zə",
+					"pronounce": "tsu-how-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -6137,7 +6379,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Unterschlupf: ein geschützter Ort zum Unterkommen",
-					"IPA": "",
+					"IPA": "ˌʊntɐʃlˈʊpf",
+					"pronounce": "un-ter-shlupf",
 					"sentences": [
 						{
 							"translation": "",
@@ -6162,7 +6405,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umweltverschmutzung: das Schmutzigmachen der Umwelt",
-					"IPA": "",
+					"IPA": "ˈʊmvˌɛltfɐʃmˌʊt͡sʊŋ",
+					"pronounce": "um-velt-fer-shmut-tsung",
 					"sentences": [
 						{
 							"translation": "",
@@ -6187,7 +6431,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verschmutzung: das Verunreinigen von Wasser, Luft oder Boden",
-					"IPA": "",
+					"IPA": "fɛʁʃmˈʊt͡sʊŋ",
+					"pronounce": "fer-shmut-tsung",
 					"sentences": [
 						{
 							"translation": "",
@@ -6212,7 +6457,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Abfall: Dinge, die man wegwirft; Müll",
-					"IPA": "",
+					"IPA": "ˈapfˌal",
+					"pronounce": "ab-fall",
 					"sentences": [
 						{
 							"translation": "",
@@ -6237,7 +6483,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Recycling: das Wiederverwerten von Abfall",
-					"IPA": "",
+					"IPA": "ʁiˈsaɪ̯klɪŋ",
+					"pronounce": "ree-sai-kling",
 					"sentences": [
 						{
 							"translation": "",
@@ -6262,7 +6509,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "wiederverwenden: etwas noch einmal benutzen",
-					"IPA": "",
+					"IPA": "viːdɐfɛʁvˈɛndən",
+					"pronounce": "vee-der-fer-ven-den",
 					"sentences": [
 						{
 							"translation": "",
@@ -6287,7 +6535,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "reduzieren: weniger machen; verringern",
-					"IPA": "",
+					"IPA": "ʁˌeːduːt͡sˈiːʁən",
+					"pronounce": "reh-du-tsee-ren",
 					"sentences": [
 						{
 							"translation": "",
@@ -6312,7 +6561,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "erneuerbar: immer wieder neu nutzbar (z. B. Energie)",
-					"IPA": "",
+					"IPA": "ɛʁnˈɔʏ̯ɐbˌaːʁ",
+					"pronounce": "er-noy-er-bar",
 					"sentences": [
 						{
 							"translation": "",
@@ -6337,7 +6587,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "nachhaltig: so, dass Ressourcen für die Zukunft bleiben",
-					"IPA": "",
+					"IPA": "nˈaxhaltˌɪç",
+					"pronounce": "nakh-hal-tikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -6362,7 +6613,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "umweltfreundlich: gut für die Umwelt; ökologisch",
-					"IPA": "",
+					"IPA": "ˈʊmvˌɛltfʁɔʏ̯ntlˌɪç",
+					"pronounce": "um-velt-froynd-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -6387,7 +6639,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Wildtiere: die frei lebenden Tiere in der Natur",
-					"IPA": "",
+					"IPA": "vɪltˈiːʁə",
+					"pronounce": "vild-tee-reh",
 					"sentences": [
 						{
 							"translation": "",
@@ -6412,7 +6665,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Tierwelt: alle Tiere eines Gebiets",
-					"IPA": "",
+					"IPA": "tˈiːʁvəlt",
+					"pronounce": "teer-velt",
 					"sentences": [
 						{
 							"translation": "",
@@ -6437,7 +6691,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Pflanzenwelt: alle Pflanzen eines Gebiets",
-					"IPA": "",
+					"IPA": "pflˈant͡sɛnvəlt",
+					"pronounce": "pflan-tsen-velt",
 					"sentences": [
 						{
 							"translation": "",
@@ -6462,7 +6717,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erderwärmung: die Erwärmung der ganzen Erde",
-					"IPA": "",
+					"IPA": "ɛʁdˈɛʁvɛʁmˌʊŋ",
+					"pronounce": "er-d-er-vaer-mung",
 					"sentences": [
 						{
 							"translation": "",
@@ -6487,7 +6743,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Klimawandel: die langfristige Veränderung des Klimas",
-					"IPA": "",
+					"IPA": "klˈiːmavˌandəl",
+					"pronounce": "kli-ma-van-del",
 					"sentences": [
 						{
 							"translation": "",
@@ -6512,7 +6769,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Treibhauseffekt: die Erwärmung durch Gase in der Atmosphäre",
-					"IPA": "",
+					"IPA": "tʁˈaɪ̯phaʊ̯zˌɛfɛkt",
+					"pronounce": "traib-hows-ef-fekt",
 					"sentences": [
 						{
 							"translation": "",
@@ -6544,7 +6802,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gemeinschaft: eine Gruppe mit gemeinsamem Ziel oder Ort",
-					"IPA": "",
+					"IPA": "ɡəmˈaɪ̯nʃaft",
+					"pronounce": "geh-main-shaft",
 					"sentences": [
 						{
 							"translation": "",
@@ -6569,7 +6828,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Nachbarschaft: die Gegend, in der man wohnt; die Nachbarn",
-					"IPA": "",
+					"IPA": "nˈaxbaːʁʃˌaft",
+					"pronounce": "nakh-bar-shaft",
 					"sentences": [
 						{
 							"translation": "",
@@ -6594,7 +6854,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesellschaft: alle Menschen, die zusammenleben",
-					"IPA": "",
+					"IPA": "ɡəzˈɛlʃaft",
+					"pronounce": "geh-sell-shaft",
 					"sentences": [
 						{
 							"translation": "",
@@ -6619,7 +6880,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kultur: die Lebensweise, Kunst und Bräuche einer Gruppe",
-					"IPA": "",
+					"IPA": "kʊltˈuːʁ",
+					"pronounce": "kul-tur",
 					"sentences": [
 						{
 							"translation": "",
@@ -6644,7 +6906,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Tradition: ein alter Brauch, der weitergegeben wird",
-					"IPA": "",
+					"IPA": "tʁˌadiːt͡sjˈoːn",
+					"pronounce": "tra-di-tsi-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -6669,7 +6932,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Erbe: das, was von früheren Generationen bleibt (Kultur, Werte)",
-					"IPA": "",
+					"IPA": "ˈɛʁbə",
+					"pronounce": "er-beh",
 					"sentences": [
 						{
 							"translation": "",
@@ -6694,7 +6958,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vielfalt: eine große Verschiedenheit; viele Arten",
-					"IPA": "",
+					"IPA": "fˈiːlfˌalt",
+					"pronounce": "feel-falt",
 					"sentences": [
 						{
 							"translation": "",
@@ -6719,7 +6984,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Abwechslung: der Wechsel; die Verschiedenheit",
-					"IPA": "",
+					"IPA": "ˈapvˌɛkslʊŋ",
+					"pronounce": "ab-vekhs-lung",
 					"sentences": [
 						{
 							"translation": "",
@@ -6744,7 +7010,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Inklusion: das Einbeziehen aller Menschen in die Gesellschaft",
-					"IPA": "",
+					"IPA": "ɪnkluˈzioːn",
+					"pronounce": "in-kloo-zee-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -6769,7 +7036,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gleichheit: der Zustand, dass alle gleich behandelt werden",
-					"IPA": "",
+					"IPA": "ɡlˈaɪ̯çhaɪ̯t",
+					"pronounce": "glaikh-hait",
 					"sentences": [
 						{
 							"translation": "",
@@ -6794,7 +7062,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gerechtigkeit: faires und gerechtes Handeln",
-					"IPA": "",
+					"IPA": "ɡəʁˈɛçtɪçkˌaɪ̯t",
+					"pronounce": "geh-rekh-tikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -6819,7 +7088,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Justiz: das Rechtssystem und die Gerichte",
-					"IPA": "",
+					"IPA": "jˈʊstiːt͡s",
+					"pronounce": "yus-tits",
 					"sentences": [
 						{
 							"translation": "",
@@ -6844,7 +7114,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einwanderung: das Kommen von Menschen in ein neues Land",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nvˌandəʁˌʊŋ",
+					"pronounce": "ain-van-deh-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -6869,7 +7140,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Migrant: eine Person, die in ein anderes Land zieht",
-					"IPA": "",
+					"IPA": "mɪɡʁˈant",
+					"pronounce": "mi-grant",
 					"sentences": [
 						{
 							"translation": "",
@@ -6894,7 +7166,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Asyl: der Schutz für verfolgte Menschen in einem anderen Land",
-					"IPA": "",
+					"IPA": "ˈazyːl",
+					"pronounce": "asuel",
 					"sentences": [
 						{
 							"translation": "",
@@ -6919,7 +7192,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Politik: die Grundsätze und das Handeln in öffentlichen Fragen",
-					"IPA": "",
+					"IPA": "poliˈtiːk",
+					"pronounce": "po-li-tik",
 					"sentences": [
 						{
 							"translation": "",
@@ -6944,7 +7218,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vorschrift: eine feste Regel, an die man sich halten muss",
-					"IPA": "",
+					"IPA": "fˈoːʁʃʁˌɪft",
+					"pronounce": "for-shrift",
 					"sentences": [
 						{
 							"translation": "",
@@ -6969,7 +7244,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesetzgebung: das Machen von Gesetzen",
-					"IPA": "",
+					"IPA": "ɡəzˈɛt͡sɡeːbˌʊŋ",
+					"pronounce": "geh-setts-geh-bung",
 					"sentences": [
 						{
 							"translation": "",
@@ -6994,7 +7270,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Armut: der Zustand, sehr wenig Geld zu haben",
-					"IPA": "",
+					"IPA": "ˈaʁmuːt",
+					"pronounce": "ar-mut",
 					"sentences": [
 						{
 							"translation": "",
@@ -7019,7 +7296,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Arbeitslosigkeit: der Zustand, keine Arbeit zu haben",
-					"IPA": "",
+					"IPA": "ˈaʁbaɪ̯t͡slˌoːzɪçkˌaɪ̯t",
+					"pronounce": "ar-baits-lo-sikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -7044,7 +7322,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Obdachlosigkeit: der Zustand, keine Wohnung zu haben",
-					"IPA": "",
+					"IPA": "ˈɔpdaxlˌoːzɪçkˌaɪ̯t",
+					"pronounce": "ob-da-kh-lo-sikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -7069,7 +7348,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Rassismus: die Benachteiligung wegen der Herkunft oder Hautfarbe",
-					"IPA": "",
+					"IPA": "ʁasˈɪsmʊs",
+					"pronounce": "ras-sis-mus",
 					"sentences": [
 						{
 							"translation": "",
@@ -7094,7 +7374,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Vorurteil: eine feste, negative Meinung ohne echten Grund",
-					"IPA": "",
+					"IPA": "fˈoːʁˌʊɐtaɪ̯l",
+					"pronounce": "for-ur-tail",
 					"sentences": [
 						{
 							"translation": "",
@@ -7119,7 +7400,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Diskriminierung: die unfaire Benachteiligung von Menschen",
-					"IPA": "",
+					"IPA": "dˌɪskʁiːmiːnˈiːʁʊŋ",
+					"pronounce": "dis-kri-mi-nee-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7144,7 +7426,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rechte: das, was man tun darf oder was einem zusteht (Plural)",
-					"IPA": "",
+					"IPA": "ʁˈɛçtə",
+					"pronounce": "rekh-teh",
 					"sentences": [
 						{
 							"translation": "",
@@ -7169,7 +7452,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Freiheit: das Recht, selbst zu entscheiden und zu handeln",
-					"IPA": "",
+					"IPA": "fʁˈaɪ̯haɪ̯t",
+					"pronounce": "frai-hait",
 					"sentences": [
 						{
 							"translation": "",
@@ -7194,7 +7478,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Selbstbestimmung: das Recht, frei über sich selbst zu bestimmen",
-					"IPA": "",
+					"IPA": "zˈɛlpstbəʃtˌɪmʊŋ",
+					"pronounce": "selbst-beh-shtim-mung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7219,7 +7504,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gewalt: das Anwenden von Kraft, um zu schaden",
-					"IPA": "",
+					"IPA": "ɡəvˈalt",
+					"pronounce": "geh-valt",
 					"sentences": [
 						{
 							"translation": "",
@@ -7244,7 +7530,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Missbrauch: die schlechte oder grausame Behandlung von jemandem",
-					"IPA": "",
+					"IPA": "mˈɪsbʁaʊ̯x",
+					"pronounce": "miss-browkh",
 					"sentences": [
 						{
 							"translation": "",
@@ -7269,7 +7556,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Verbrechen: eine schwere, gesetzeswidrige Tat",
-					"IPA": "",
+					"IPA": "fɛʁbʁˈɛçən",
+					"pronounce": "fer-breh-khen",
 					"sentences": [
 						{
 							"translation": "",
@@ -7301,7 +7589,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bekanntschaft: eine Person, die man kennt, aber kein enger Freund",
-					"IPA": "",
+					"IPA": "bəkˈantʃaft",
+					"pronounce": "beh-kannt-shaft",
 					"sentences": [
 						{
 							"translation": "",
@@ -7326,7 +7615,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kollege: eine Person, mit der man zusammenarbeitet",
-					"IPA": "",
+					"IPA": "kɔˈleːɡə",
+					"pronounce": "ko-lay-geh",
 					"sentences": [
 						{
 							"translation": "",
@@ -7351,7 +7641,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Nachbar: eine Person, die nebenan wohnt",
-					"IPA": "",
+					"IPA": "ˈnaxbaːɐ̯",
+					"pronounce": "nakh-bahr",
 					"sentences": [
 						{
 							"translation": "",
@@ -7376,7 +7667,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bindung: eine enge Verbindung zwischen Menschen",
-					"IPA": "",
+					"IPA": "bˈɪndʊŋ",
+					"pronounce": "bin-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7401,7 +7693,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verbindung: eine Beziehung zwischen zwei Menschen oder Dingen",
-					"IPA": "",
+					"IPA": "fɛʁbˈɪndʊŋ",
+					"pronounce": "fer-bin-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7426,7 +7719,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Band: eine enge, gefühlsmäßige Verbindung",
-					"IPA": "",
+					"IPA": "bɛnt",
+					"pronounce": "bent",
 					"sentences": [
 						{
 							"translation": "",
@@ -7451,7 +7745,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kommunikation: der Austausch von Informationen",
-					"IPA": "",
+					"IPA": "kˌɔmuːnˌiːkat͡sjˈoːn",
+					"pronounce": "kom-mu-ni-ka-tsi-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -7476,7 +7771,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gespräch: ein Austausch von Worten; eine Unterhaltung",
-					"IPA": "",
+					"IPA": "ɡəʃpʁˈɛːç",
+					"pronounce": "geh-shpraekh",
 					"sentences": [
 						{
 							"translation": "",
@@ -7501,7 +7797,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Interaktion: das gegenseitige Aufeinander-Reagieren",
-					"IPA": "",
+					"IPA": "ˌɪntəʁakt͡sjˈoːn",
+					"pronounce": "in-ter-ak-tsi-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -7526,7 +7823,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verknüpfung: eine Verbindung zwischen zwei Dingen",
-					"IPA": "",
+					"IPA": "fɛʁknˈʏpfʊŋ",
+					"pronounce": "fer-knuep-fung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7551,7 +7849,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Beziehung: die Verbindung zwischen zwei Menschen (z. B. Partner)",
-					"IPA": "",
+					"IPA": "bət͡sˈiːʊŋ",
+					"pronounce": "beh-tsee-hung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7576,7 +7875,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verabredung: ein Treffen mit einem möglichen Partner",
-					"IPA": "",
+					"IPA": "fɛʁˈapʁˌeːdʊŋ",
+					"pronounce": "fer-ab-reh-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7601,7 +7901,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Romanze: eine romantische Liebesbeziehung",
-					"IPA": "",
+					"IPA": "ʁoˈmant͡sə",
+					"pronounce": "ro-man-tseh",
 					"sentences": [
 						{
 							"translation": "",
@@ -7626,7 +7927,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Werben: das Umwerben eines möglichen Partners (nominalisiert)",
-					"IPA": "",
+					"IPA": "vˈɛʁbən",
+					"pronounce": "ver-ben",
 					"sentences": [
 						{
 							"translation": "",
@@ -7651,7 +7953,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Freundschaft: die enge Beziehung zwischen Freunden",
-					"IPA": "",
+					"IPA": "fʁˈɔʏ̯ndʃaft",
+					"pronounce": "froynd-shaft",
 					"sentences": [
 						{
 							"translation": "",
@@ -7676,7 +7979,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesellschaft: das angenehme Zusammensein mit anderen",
-					"IPA": "",
+					"IPA": "ɡəzˈɛlʃaft",
+					"pronounce": "geh-sell-shaft",
 					"sentences": [
 						{
 							"translation": "",
@@ -7701,7 +8005,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gemeinschaft: eine Gruppe mit Gefühl der Zusammengehörigkeit",
-					"IPA": "",
+					"IPA": "ɡəmˈaɪ̯nʃaft",
+					"pronounce": "geh-main-shaft",
 					"sentences": [
 						{
 							"translation": "",
@@ -7726,7 +8031,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die sozialen Medien: Plattformen im Internet zum Teilen und Chatten",
-					"IPA": "",
+					"IPA": "zˌoːt͡siːˈaːlə mˈeːdɪən",
+					"pronounce": "so-tsi-ah-leh meh-di-en",
 					"sentences": [
 						{
 							"translation": "",
@@ -7751,7 +8057,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vernetzung: das Knüpfen von nützlichen Kontakten",
-					"IPA": "",
+					"IPA": "fɛʁnˈɛt͡sʊŋ",
+					"pronounce": "fer-net-tsung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7776,7 +8083,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Plattform: ein Dienst im Internet zum Austausch",
-					"IPA": "",
+					"IPA": "plˈatfɔʁm",
+					"pronounce": "platt-form",
 					"sentences": [
 						{
 							"translation": "",
@@ -7801,7 +8109,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterstützung: die Hilfe, die man jemandem gibt",
-					"IPA": "",
+					"IPA": "ˌʊntɐʃtˈʏt͡sʊŋ",
+					"pronounce": "un-ter-shtuet-tsung",
 					"sentences": [
 						{
 							"translation": "",
@@ -7826,7 +8135,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Beistand: die Hilfe in einer schwierigen Lage",
-					"IPA": "",
+					"IPA": "bˈaɪ̯stant",
+					"pronounce": "bai-shtand",
 					"sentences": [
 						{
 							"translation": "",
@@ -7851,7 +8161,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Hilfe: das Unterstützen bei einem Problem",
-					"IPA": "",
+					"IPA": "hˈɪlfə",
+					"pronounce": "hil-feh",
 					"sentences": [
 						{
 							"translation": "",
@@ -7876,7 +8187,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Vertrauen: der feste Glaube an die Zuverlässigkeit von jemandem",
-					"IPA": "",
+					"IPA": "fɛʁtʁˈaʊ̯ən",
+					"pronounce": "fer-trow-en",
 					"sentences": [
 						{
 							"translation": "",
@@ -7901,7 +8213,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Glaube: der feste Glaube oder das tiefe Vertrauen",
-					"IPA": "",
+					"IPA": "ɡlˈaʊ̯bə",
+					"pronounce": "glow-beh",
 					"sentences": [
 						{
 							"translation": "",
@@ -7926,7 +8239,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Zuversicht: das feste Vertrauen, dass etwas gut wird",
-					"IPA": "",
+					"IPA": "t͡suːfɛʁzˈɪçt",
+					"pronounce": "tsu-fer-sikht",
 					"sentences": [
 						{
 							"translation": "",
@@ -7958,7 +8272,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Ehrgeiz: der starke Wunsch, erfolgreich zu sein",
-					"IPA": "",
+					"IPA": "ˈeːʁɡaɪ̯t͡s",
+					"pronounce": "ehr-gaits",
 					"sentences": [
 						{
 							"translation": "",
@@ -7983,7 +8298,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Ziel: etwas, das man erreichen möchte",
-					"IPA": "",
+					"IPA": "t͡sˈiːl",
+					"pronounce": "tseel",
 					"sentences": [
 						{
 							"translation": "",
@@ -8008,7 +8324,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Streben: das starke Bemühen um ein Ziel",
-					"IPA": "",
+					"IPA": "ʃtʁˈeːbən",
+					"pronounce": "shtreh-ben",
 					"sentences": [
 						{
 							"translation": "",
@@ -8033,7 +8350,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Verhalten: die Art, wie sich jemand benimmt",
-					"IPA": "",
+					"IPA": "fɛʁhˈaltən",
+					"pronounce": "fer-hal-ten",
 					"sentences": [
 						{
 							"translation": "",
@@ -8058,7 +8376,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Benehmen: die Art, wie man sich in der Gesellschaft benimmt",
-					"IPA": "",
+					"IPA": "bənˈeːmən",
+					"pronounce": "beh-neh-men",
 					"sentences": [
 						{
 							"translation": "",
@@ -8083,7 +8402,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Art: die Weise, wie jemand etwas tut",
-					"IPA": "",
+					"IPA": "ˈaːʁt",
+					"pronounce": "art",
 					"sentences": [
 						{
 							"translation": "",
@@ -8108,7 +8428,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Selbstvertrauen: das Vertrauen in die eigenen Fähigkeiten",
-					"IPA": "",
+					"IPA": "zˈɛlpstfɛʁtʁˌaʊ̯ən",
+					"pronounce": "selbst-fer-trow-en",
 					"sentences": [
 						{
 							"translation": "",
@@ -8133,7 +8454,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Selbstwertgefühl: das Gefühl vom eigenen Wert",
-					"IPA": "",
+					"IPA": "zˈɛlpstvˌɛʁtɡeːfˌyːl",
+					"pronounce": "selbst-vert-geh-fuehl",
 					"sentences": [
 						{
 							"translation": "",
@@ -8158,7 +8480,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Selbstsicherheit: das sichere Auftreten einer Person",
-					"IPA": "",
+					"IPA": "zˈɛlpstzˌɪçɐhˌaɪ̯t",
+					"pronounce": "selbst-si-kher-hait",
 					"sentences": [
 						{
 							"translation": "",
@@ -8183,7 +8506,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Emotion: ein starkes Gefühl wie Freude oder Angst",
-					"IPA": "",
+					"IPA": "emoˈt͡sioːn",
+					"pronounce": "eh-mo-tsi-ohn",
 					"sentences": [
 						{
 							"translation": "",
@@ -8208,7 +8532,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gefühl: was man innerlich empfindet",
-					"IPA": "",
+					"IPA": "ɡəfˈyːl",
+					"pronounce": "geh-fuehl",
 					"sentences": [
 						{
 							"translation": "",
@@ -8233,7 +8558,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Empfindung: ein inneres Gefühl oder eine Regung",
-					"IPA": "",
+					"IPA": "ɛmpfˈɪndʊŋ",
+					"pronounce": "emp-fin-dung",
 					"sentences": [
 						{
 							"translation": "",
@@ -8258,7 +8584,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Begeisterung: die große Freude an etwas",
-					"IPA": "",
+					"IPA": "bəɡˈaɪ̯stəʁˌʊŋ",
+					"pronounce": "beh-gais-teh-rung",
 					"sentences": [
 						{
 							"translation": "",
@@ -8283,7 +8610,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aufregung: ein starkes, nervöses Gefühl vor etwas",
-					"IPA": "",
+					"IPA": "ˈaʊ̯fʁˌeːɡʊŋ",
+					"pronounce": "owf-reh-gung",
 					"sentences": [
 						{
 							"translation": "",
@@ -8308,7 +8636,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Eifer: der starke Wille, etwas gut zu machen",
-					"IPA": "",
+					"IPA": "ˈaɪ̯fɐ",
+					"pronounce": "ai-fer",
 					"sentences": [
 						{
 							"translation": "",
@@ -8333,7 +8662,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Erlebnis: etwas Besonderes, das man erlebt hat",
-					"IPA": "",
+					"IPA": "ɛʁlˈeːpnɪs",
+					"pronounce": "er-leb-nis",
 					"sentences": [
 						{
 							"translation": "",
@@ -8358,7 +8688,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Herkunft: woher jemand kommt (Familie, Land)",
-					"IPA": "",
+					"IPA": "hˈɛʁkʊnft",
+					"pronounce": "her-kunft",
 					"sentences": [
 						{
 							"translation": "",
@@ -8383,7 +8714,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Fertigkeit: eine gelernte, praktische Fähigkeit",
-					"IPA": "",
+					"IPA": "fˈɛʁtɪçkˌaɪ̯t",
+					"pronounce": "fer-tikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -8408,7 +8740,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Meinung: das, was jemand über etwas denkt",
-					"IPA": "",
+					"IPA": "mˈaɪ̯nʊŋ",
+					"pronounce": "mai-nung",
 					"sentences": [
 						{
 							"translation": "",
@@ -8433,7 +8766,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ansicht: die Meinung zu einem Thema",
-					"IPA": "",
+					"IPA": "ˈanzˌɪçt",
+					"pronounce": "an-sikht",
 					"sentences": [
 						{
 							"translation": "",
@@ -8458,7 +8792,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Sichtweise: die Art, wie man etwas sieht",
-					"IPA": "",
+					"IPA": "zˈɪçtvaɪ̯zə",
+					"pronounce": "sikht-vai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -8483,7 +8818,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Persönlichkeit: der ganze Charakter eines Menschen",
-					"IPA": "",
+					"IPA": "pɛʁzˈøːnlɪçkˌaɪ̯t",
+					"pronounce": "per-soen-likh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -8508,7 +8844,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Charakter: die typischen Eigenschaften eines Menschen",
-					"IPA": "",
+					"IPA": "kaʁˈaktɐ",
+					"pronounce": "kha-rak-ter",
 					"sentences": [
 						{
 							"translation": "",
@@ -8533,7 +8870,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Eigenschaften: die Merkmale des Charakters (Plural)",
-					"IPA": "",
+					"IPA": "ˈaɪ̯ɡənʃˌaftən",
+					"pronounce": "ai-gen-shaf-ten",
 					"sentences": [
 						{
 							"translation": "",
@@ -8558,7 +8896,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Talent: eine natürliche Begabung",
-					"IPA": "",
+					"IPA": "talˈɛnt",
+					"pronounce": "ta-lent",
 					"sentences": [
 						{
 							"translation": "",
@@ -8583,7 +8922,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Fähigkeit: etwas, das man kann",
-					"IPA": "",
+					"IPA": "fˈɛːɪçkˌaɪ̯t",
+					"pronounce": "faeh-hikh-kait",
 					"sentences": [
 						{
 							"translation": "",
@@ -8608,7 +8948,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Begabung: ein besonderes, angeborenes Talent",
-					"IPA": "",
+					"IPA": "bəɡˈabʊŋ",
+					"pronounce": "beh-ga-bung",
 					"sentences": [
 						{
 							"translation": "",
@@ -8633,7 +8974,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Weisheit: kluges Wissen aus viel Erfahrung",
-					"IPA": "",
+					"IPA": "vˈaɪ̯shaɪ̯t",
+					"pronounce": "vais-hait",
 					"sentences": [
 						{
 							"translation": "",
@@ -8658,7 +9000,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Wissen: alles, was man gelernt hat und kennt",
-					"IPA": "",
+					"IPA": "vˈɪsən",
+					"pronounce": "vis-sen",
 					"sentences": [
 						{
 							"translation": "",
@@ -8683,7 +9026,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einsicht: ein tieferes Verständnis von etwas",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nzˌɪçt",
+					"pronounce": "ain-sikht",
 					"sentences": [
 						{
 							"translation": "",
@@ -8715,7 +9059,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "erreichen: ein Ziel schaffen; vollenden",
-					"IPA": "",
+					"IPA": "ɛʁʁˈaɪ̯çən",
+					"pronounce": "er-rai-khen",
 					"sentences": [
 						{
 							"translation": "",
@@ -8740,7 +9085,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "schaffen: etwas erfolgreich zu Ende bringen",
-					"IPA": "",
+					"IPA": "ʃˈafən",
+					"pronounce": "shaf-fen",
 					"sentences": [
 						{
 							"translation": "",
@@ -8765,7 +9111,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "erlangen: etwas durch Anstrengung bekommen",
-					"IPA": "",
+					"IPA": "ɛʁlˈaŋən",
+					"pronounce": "er-lan-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -8790,7 +9137,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "bewundern: jemanden oder etwas sehr schätzen",
-					"IPA": "",
+					"IPA": "bəvˈʊndɐn",
+					"pronounce": "beh-vun-dern",
 					"sentences": [
 						{
 							"translation": "",
@@ -8815,7 +9163,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "respektieren: jemanden achten und ernst nehmen",
-					"IPA": "",
+					"IPA": "ʁˌɛspɛktˈiːʁən",
+					"pronounce": "reh-shpek-tee-ren",
 					"sentences": [
 						{
 							"translation": "",
@@ -8840,7 +9189,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "schätzen: den Wert von etwas erkennen",
-					"IPA": "",
+					"IPA": "ʃˈɛt͡sən",
+					"pronounce": "shaet-tsen",
 					"sentences": [
 						{
 							"translation": "",
@@ -8865,7 +9215,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "kommunizieren: Informationen austauschen",
-					"IPA": "",
+					"IPA": "kˌɔmuːniːt͡sˈiːʁən",
+					"pronounce": "kom-mu-ni-tsee-ren",
 					"sentences": [
 						{
 							"translation": "",
@@ -8890,7 +9241,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vermitteln: etwas weitergeben oder übermitteln",
-					"IPA": "",
+					"IPA": "fɛʁmˈɪtəln",
+					"pronounce": "fer-mit-teln",
 					"sentences": [
 						{
 							"translation": "",
@@ -8915,7 +9267,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "interagieren: miteinander in Kontakt treten",
-					"IPA": "",
+					"IPA": "ˌɪntəʁaɡˈiːʁən",
+					"pronounce": "in-ter-a-gee-ren",
 					"sentences": [
 						{
 							"translation": "",
@@ -8940,7 +9293,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "überzeugen: jemanden durch Argumente umstimmen",
-					"IPA": "",
+					"IPA": "ˌyːbɐt͡sˈɔʏ̯ɡən",
+					"pronounce": "ueber-tsoy-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -8965,7 +9319,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "überreden: jemanden durch Reden zu etwas bringen",
-					"IPA": "",
+					"IPA": "ˌyːbɐʁˈeːdən",
+					"pronounce": "ueber-reh-den",
 					"sentences": [
 						{
 							"translation": "",
@@ -8990,7 +9345,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "versichern: jemandem etwas fest zusagen",
-					"IPA": "",
+					"IPA": "fɛʁzˈɪçɐn",
+					"pronounce": "fer-si-khern",
 					"sentences": [
 						{
 							"translation": "",
@@ -9015,7 +9371,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "abhängen: von etwas bestimmt werden",
-					"IPA": "",
+					"IPA": "ˈaphˌɛŋən",
+					"pronounce": "ab-haen-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9040,7 +9397,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "sich verlassen: sich auf jemanden fest verlassen",
-					"IPA": "",
+					"IPA": "zɪç fɛʁlˈasən",
+					"pronounce": "sikh fer-las-sen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9065,7 +9423,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vertrauen: an die Zuverlässigkeit von jemandem glauben",
-					"IPA": "",
+					"IPA": "fɛʁtʁˈaʊ̯ən",
+					"pronounce": "fer-trow-en",
 					"sentences": [
 						{
 							"translation": "",
@@ -9090,7 +9449,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "entdecken: etwas Neues finden",
-					"IPA": "",
+					"IPA": "ɛntdˈɛkən",
+					"pronounce": "ent-deh-ken",
 					"sentences": [
 						{
 							"translation": "",
@@ -9115,7 +9475,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "finden: etwas Gesuchtes entdecken",
-					"IPA": "",
+					"IPA": "fˈɪndən",
+					"pronounce": "fin-den",
 					"sentences": [
 						{
 							"translation": "",
@@ -9140,7 +9501,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "aufdecken: etwas Verborgenes ans Licht bringen",
-					"IPA": "",
+					"IPA": "ˈaʊ̯fdˌɛkən",
+					"pronounce": "owf-deh-ken",
 					"sentences": [
 						{
 							"translation": "",
@@ -9165,7 +9527,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "ausdrücken: Gedanken in Worte fassen",
-					"IPA": "",
+					"IPA": "ˈaʊ̯sdʁˌʏkən",
+					"pronounce": "ows-drueh-ken",
 					"sentences": [
 						{
 							"translation": "",
@@ -9190,7 +9553,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "formulieren: etwas klar in Worte fassen",
-					"IPA": "",
+					"IPA": "fˌɔʁmuːlˈiːʁən",
+					"pronounce": "for-mu-lee-ren",
 					"sentences": [
 						{
 							"translation": "",
@@ -9215,7 +9579,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "verbessern: etwas besser machen",
-					"IPA": "",
+					"IPA": "fɛʁbˈɛsɐn",
+					"pronounce": "fer-bes-sern",
 					"sentences": [
 						{
 							"translation": "",
@@ -9240,7 +9605,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "steigern: größer oder besser machen; erhöhen",
-					"IPA": "",
+					"IPA": "ʃtˈaɪ̯ɡɐn",
+					"pronounce": "shtai-gern",
 					"sentences": [
 						{
 							"translation": "",
@@ -9265,7 +9631,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "entwickeln: etwas nach und nach schaffen oder verbessern",
-					"IPA": "",
+					"IPA": "ɛntvˈɪkəln",
+					"pronounce": "ent-vi-keln",
 					"sentences": [
 						{
 							"translation": "",
@@ -9290,7 +9657,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "einbeziehen: jemanden an etwas teilhaben lassen",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nbət͡sˌiːən",
+					"pronounce": "ain-beh-tsee-hen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9315,7 +9683,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "sich beteiligen: sich an etwas aktiv beteiligen",
-					"IPA": "",
+					"IPA": "bətˈaɪ̯lɪɡən",
+					"pronounce": "beh-tai-li-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9340,7 +9709,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "einschließen: etwas mit dazunehmen",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nʃlˌiːsən",
+					"pronounce": "ain-shlee-ssen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9365,7 +9735,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "empfehlen: jemandem etwas raten oder vorschlagen",
-					"IPA": "",
+					"IPA": "ɛmpfˈeːlən",
+					"pronounce": "emp-feh-len",
 					"sentences": [
 						{
 							"translation": "",
@@ -9390,7 +9761,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vorschlagen: eine Idee nennen",
-					"IPA": "",
+					"IPA": "fˈoːʁʃlˌaːɡən",
+					"pronounce": "for-shla-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9415,7 +9787,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "raten: jemandem sagen, was er tun soll",
-					"IPA": "",
+					"IPA": "ʁˈaːtən",
+					"pronounce": "ra-ten",
 					"sentences": [
 						{
 							"translation": "",
@@ -9447,7 +9820,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "ängstlich: voller Angst; besorgt",
-					"IPA": "",
+					"IPA": "ˈɛŋstlɪç",
+					"pronounce": "aengst-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9472,7 +9846,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "besorgt: voller Sorge",
-					"IPA": "",
+					"IPA": "bəzˈɔʁkt",
+					"pronounce": "beh-sorgt",
 					"sentences": [
 						{
 							"translation": "",
@@ -9497,7 +9872,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "nervös: unruhig und angespannt",
-					"IPA": "",
+					"IPA": "nɛʁˈvøːs",
+					"pronounce": "ner-voes",
 					"sentences": [
 						{
 							"translation": "",
@@ -9522,7 +9898,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "selbstsicher: sicher im Auftreten",
-					"IPA": "",
+					"IPA": "zˈɛlpst͡sɪçɐ",
+					"pronounce": "selbst-si-kher",
 					"sentences": [
 						{
 							"translation": "",
@@ -9547,7 +9924,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "souverän: sicher und gelassen im Auftreten",
-					"IPA": "",
+					"IPA": "zuvəˈʁɛːn",
+					"pronounce": "soo-veh-raen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9572,7 +9950,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "sicher: ohne Zweifel; überzeugt",
-					"IPA": "",
+					"IPA": "zˈɪçɐ",
+					"pronounce": "si-kher",
 					"sentences": [
 						{
 							"translation": "",
@@ -9597,7 +9976,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "neugierig: voller Interesse an Neuem",
-					"IPA": "",
+					"IPA": "nˈɔʏ̯ɡiːʁˌɪç",
+					"pronounce": "noy-gee-rikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9622,7 +10002,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "wissbegierig: voller Wissensdurst",
-					"IPA": "",
+					"IPA": "vˈɪsbeːɡˌiːʁɪç",
+					"pronounce": "viss-beh-gee-rikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9647,7 +10028,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "interessiert: voller Interesse",
-					"IPA": "",
+					"IPA": "ˌɪntəʁɛsˈiːʁt",
+					"pronounce": "in-ter-es-seert",
 					"sentences": [
 						{
 							"translation": "",
@@ -9672,7 +10054,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "verlegen: unsicher und ein bisschen beschämt",
-					"IPA": "",
+					"IPA": "fɛʁlˈeːɡən",
+					"pronounce": "fer-leh-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -9697,7 +10080,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "beschämt: voller Scham",
-					"IPA": "",
+					"IPA": "bəʃˈɛmt",
+					"pronounce": "beh-shaemt",
 					"sentences": [
 						{
 							"translation": "",
@@ -9722,7 +10106,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "gedemütigt: in der Würde verletzt",
-					"IPA": "",
+					"IPA": "ɡədˈeːmyːtˌɪçt",
+					"pronounce": "geh-deh-mueh-tikht",
 					"sentences": [
 						{
 							"translation": "",
@@ -9747,7 +10132,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "begeistert: voller Begeisterung",
-					"IPA": "",
+					"IPA": "bəɡˈaɪ̯stɐt",
+					"pronounce": "beh-gais-tert",
 					"sentences": [
 						{
 							"translation": "",
@@ -9772,7 +10158,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "aufgeregt: voller Aufregung; nervös-freudig",
-					"IPA": "",
+					"IPA": "ˈaʊ̯fɡəʁˌeːkt",
+					"pronounce": "owf-geh-regt",
 					"sentences": [
 						{
 							"translation": "",
@@ -9797,7 +10184,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "eifrig: voller Eifer; sehr motiviert",
-					"IPA": "",
+					"IPA": "ˈaɪ̯fʁɪç",
+					"pronounce": "aif-rikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9822,7 +10210,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "dankbar: voller Dank",
-					"IPA": "",
+					"IPA": "dˈaŋkbaːʁ",
+					"pronounce": "dank-bar",
 					"sentences": [
 						{
 							"translation": "",
@@ -9847,7 +10236,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "erkenntlich: dankbar; man zeigt seinen Dank",
-					"IPA": "",
+					"IPA": "ɛʁkˈɛntlɪç",
+					"pronounce": "er-kennt-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9872,7 +10262,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "anerkennend: Wertschätzung zeigend; lobend",
-					"IPA": "",
+					"IPA": "ˈanɛʁkˌɛnənt",
+					"pronounce": "an-er-ken-nend",
 					"sentences": [
 						{
 							"translation": "",
@@ -9897,7 +10288,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "eifersüchtig: voller Angst, den Partner zu verlieren",
-					"IPA": "",
+					"IPA": "ˈaɪ̯fɐzˌʏçtɪç",
+					"pronounce": "ai-fer-suekh-tikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9922,7 +10314,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "neidisch: voller Neid auf andere",
-					"IPA": "",
+					"IPA": "nˈaɪ̯dɪʃ",
+					"pronounce": "nai-dish",
 					"sentences": [
 						{
 							"translation": "",
@@ -9947,7 +10340,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "habgierig: voller Gier nach Besitz",
-					"IPA": "",
+					"IPA": "hˈabɡiːʁˌɪç",
+					"pronounce": "hab-gee-rikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9972,7 +10366,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "bange: voller Sorge und Angst vor etwas",
-					"IPA": "",
+					"IPA": "bˈaŋə",
+					"pronounce": "ban-geh",
 					"sentences": [
 						{
 							"translation": "",
@@ -9997,7 +10392,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "angespannt: voller Anspannung; nicht locker",
-					"IPA": "",
+					"IPA": "ˈanɡəʃpˌant",
+					"pronounce": "an-geh-shpannt",
 					"sentences": [
 						{
 							"translation": "",
@@ -10022,7 +10418,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "geduldig: voller Geduld; ruhig wartend",
-					"IPA": "",
+					"IPA": "ɡədˈʊldɪç",
+					"pronounce": "geh-dul-dikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10047,7 +10444,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "tolerant: andere Meinungen akzeptierend",
-					"IPA": "",
+					"IPA": "tˌoːleːʁˈant",
+					"pronounce": "to-leh-rant",
 					"sentences": [
 						{
 							"translation": "",
@@ -10072,7 +10470,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "ruhig: nicht aufgeregt; gelassen",
-					"IPA": "",
+					"IPA": "ˈʁuːɪç",
+					"pronounce": "roo-ikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10097,7 +10496,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "entspannt: locker und ruhig",
-					"IPA": "",
+					"IPA": "ɛntʃpˈant",
+					"pronounce": "ent-shpannt",
 					"sentences": [
 						{
 							"translation": "",
@@ -10122,7 +10522,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "friedlich: ohne Streit; ruhig",
-					"IPA": "",
+					"IPA": "fʁˈiːtlɪç",
+					"pronounce": "freed-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10147,7 +10548,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "gelassen: ruhig und ausgeglichen",
-					"IPA": "",
+					"IPA": "ɡəlˈasən",
+					"pronounce": "geh-las-sen",
 					"sentences": [
 						{
 							"translation": "",
@@ -10179,7 +10581,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "absolut: völlig; ohne Einschränkung",
-					"IPA": "",
+					"IPA": "apzoːlˈuːt",
+					"pronounce": "ab-so-lut",
 					"sentences": [
 						{
 							"translation": "",
@@ -10204,7 +10607,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "total: völlig; komplett",
-					"IPA": "",
+					"IPA": "toːtˈaːl",
+					"pronounce": "to-tal",
 					"sentences": [
 						{
 							"translation": "",
@@ -10229,7 +10633,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "restlos: völlig; ohne Rest",
-					"IPA": "",
+					"IPA": "ʁˈɛstloːs",
+					"pronounce": "rest-los",
 					"sentences": [
 						{
 							"translation": "",
@@ -10254,7 +10659,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "bestimmt: ganz sicher",
-					"IPA": "",
+					"IPA": "bəʃtˈɪmt",
+					"pronounce": "beh-shtimmt",
 					"sentences": [
 						{
 							"translation": "",
@@ -10279,7 +10685,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "definitiv: auf jeden Fall; ohne Zweifel",
-					"IPA": "",
+					"IPA": "definiˈtiːf",
+					"pronounce": "deh-fi-ni-tif",
 					"sentences": [
 						{
 							"translation": "",
@@ -10304,7 +10711,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "sicherlich: mit großer Sicherheit",
-					"IPA": "",
+					"IPA": "zˈɪçɐlˌɪç",
+					"pronounce": "si-kher-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10329,7 +10737,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "komplett: ganz und gar",
-					"IPA": "",
+					"IPA": "kɔmplˈɛt",
+					"pronounce": "kom-plett",
 					"sentences": [
 						{
 							"translation": "",
@@ -10354,7 +10763,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "gänzlich: vollkommen; total",
-					"IPA": "",
+					"IPA": "ɡˈɛnt͡slɪç",
+					"pronounce": "gaents-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10379,7 +10789,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vollständig: ganz; komplett",
-					"IPA": "",
+					"IPA": "fˈɔlʃtˌɛndɪç",
+					"pronounce": "foll-shtaen-dikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10404,7 +10815,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "ziemlich: recht; relativ stark",
-					"IPA": "",
+					"IPA": "t͡sˈiːmlɪç",
+					"pronounce": "tseem-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10429,7 +10841,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "recht: ziemlich; relativ",
-					"IPA": "",
+					"IPA": "ʁˈɛçt",
+					"pronounce": "rekht",
 					"sentences": [
 						{
 							"translation": "",
@@ -10454,7 +10867,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "einigermaßen: recht gut; in akzeptablem Maße",
-					"IPA": "",
+					"IPA": "ˈaɪ̯nɪɡɐmˌaːsən",
+					"pronounce": "ai-ni-ger-ma-ssen",
 					"sentences": [
 						{
 							"translation": "",
@@ -10479,7 +10893,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "kaum: fast nicht",
-					"IPA": "",
+					"IPA": "kˈaʊ̯m",
+					"pronounce": "kowm",
 					"sentences": [
 						{
 							"translation": "",
@@ -10504,7 +10919,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "knapp: gerade noch; fast nicht",
-					"IPA": "",
+					"IPA": "knˈap",
+					"pronounce": "knapp",
 					"sentences": [
 						{
 							"translation": "",
@@ -10529,7 +10945,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "gerade noch: mit Mühe; fast nicht mehr",
-					"IPA": "",
+					"IPA": "ɡəʁˈaːdə nɔx",
+					"pronounce": "geh-ra-deh nokh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10554,7 +10971,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "höchst: sehr; in hohem Grad",
-					"IPA": "",
+					"IPA": "hˈœkst",
+					"pronounce": "hoekhst",
 					"sentences": [
 						{
 							"translation": "",
@@ -10579,7 +10997,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "erheblich: in großem Maße; deutlich",
-					"IPA": "",
+					"IPA": "ɛʁhˈeːplɪç",
+					"pronounce": "er-heb-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10604,7 +11023,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "äußerst: sehr stark; in hohem Maße",
-					"IPA": "",
+					"IPA": "ˈɔʏ̯sɐst",
+					"pronounce": "oy-sserst",
 					"sentences": [
 						{
 							"translation": "",
@@ -10629,7 +11049,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "möglicherweise: unter Umständen; vielleicht",
-					"IPA": "",
+					"IPA": "mˈœɡlɪçɐvˌaɪ̯zə",
+					"pronounce": "moeg-li-kher-vai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10654,7 +11075,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vielleicht: möglicherweise; eventuell",
-					"IPA": "",
+					"IPA": "fɪlˈaɪ̯çt",
+					"pronounce": "feel-laikht",
 					"sentences": [
 						{
 							"translation": "",
@@ -10679,7 +11101,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "eventuell: möglicherweise; unter Umständen",
-					"IPA": "",
+					"IPA": "evɛntuˈɛl",
+					"pronounce": "eh-ven-tu-ell",
 					"sentences": [
 						{
 							"translation": "",
@@ -10704,7 +11127,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "relativ: verhältnismäßig; im Vergleich",
-					"IPA": "",
+					"IPA": "ʁelaˈtiːf",
+					"pronounce": "reh-la-tif",
 					"sentences": [
 						{
 							"translation": "",
@@ -10729,7 +11153,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "vergleichsweise: im Vergleich; verhältnismäßig",
-					"IPA": "",
+					"IPA": "fɛʁɡlˈaɪ̯çsvaɪ̯zə",
+					"pronounce": "fer-glaikhs-vai-seh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10754,7 +11179,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "mäßig: in mittlerem Maße; nicht zu stark",
-					"IPA": "",
+					"IPA": "mˈɛːsɪç",
+					"pronounce": "maeh-ssikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10779,7 +11205,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "plötzlich: ganz schnell und unerwartet",
-					"IPA": "",
+					"IPA": "plˈœt͡slɪç",
+					"pronounce": "ploetts-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10804,7 +11231,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "abrupt: unvermittelt und schroff",
-					"IPA": "",
+					"IPA": "ˈapʁˌʊpt",
+					"pronounce": "ab-rupt",
 					"sentences": [
 						{
 							"translation": "",
@@ -10829,7 +11257,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "unerwartet: ohne dass man damit rechnet",
-					"IPA": "",
+					"IPA": "ˈʊnɛʁvˌaʁtət",
+					"pronounce": "un-er-var-tet",
 					"sentences": [
 						{
 							"translation": "",
@@ -10854,7 +11283,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "wirklich: tatsächlich; echt",
-					"IPA": "",
+					"IPA": "vˈɪʁklɪç",
+					"pronounce": "virk-likh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10879,7 +11309,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "echt: wirklich; ehrlich gemeint",
-					"IPA": "",
+					"IPA": "ˈɛçt",
+					"pronounce": "ekht",
 					"sentences": [
 						{
 							"translation": "",
@@ -10904,7 +11335,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "aufrichtig: ehrlich und ernst gemeint",
-					"IPA": "",
+					"IPA": "ˈaʊ̯fʁˌɪçtɪç",
+					"pronounce": "owf-rikh-tikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -10936,7 +11368,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "weil: Konjunktion für einen Grund (Verb am Ende)",
-					"IPA": "",
+					"IPA": "vaɪ̯l",
+					"pronounce": "vail",
 					"sentences": [
 						{
 							"translation": "",
@@ -10961,7 +11394,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "obwohl: Konjunktion für einen Gegensatz (Verb am Ende)",
-					"IPA": "",
+					"IPA": "ɔpˈvoːl",
+					"pronounce": "op-vohl",
 					"sentences": [
 						{
 							"translation": "",
@@ -10986,7 +11420,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "da: Konjunktion für einen bekannten Grund (Verb am Ende)",
-					"IPA": "",
+					"IPA": "dˈaː",
+					"pronounce": "da",
 					"sentences": [
 						{
 							"translation": "",
@@ -11011,7 +11446,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "wenn: Konjunktion für eine Bedingung (Verb am Ende)",
-					"IPA": "",
+					"IPA": "vɛn",
+					"pronounce": "ven",
 					"sentences": [
 						{
 							"translation": "",
@@ -11036,7 +11472,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "es sei denn: außer wenn; nur bei einer Ausnahme",
-					"IPA": "",
+					"IPA": "ɛs zˈaɪ̯ dˈɛn",
+					"pronounce": "es sai denn",
 					"sentences": [
 						{
 							"translation": "",
@@ -11061,7 +11498,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "während: Konjunktion für Gleichzeitigkeit (Verb am Ende)",
-					"IPA": "",
+					"IPA": "ˈvɛːʁənt",
+					"pronounce": "vair-ent",
 					"sentences": [
 						{
 							"translation": "",
@@ -11086,7 +11524,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "nachdem: Konjunktion für die Zeit danach (Verb am Ende)",
-					"IPA": "",
+					"IPA": "naːxˈdeːm",
+					"pronounce": "nahkh-daym",
 					"sentences": [
 						{
 							"translation": "",
@@ -11111,7 +11550,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "bevor: Konjunktion für die Zeit davor (Verb am Ende)",
-					"IPA": "",
+					"IPA": "bəˈfoːɐ̯",
+					"pronounce": "beh-fohr",
 					"sentences": [
 						{
 							"translation": "",
@@ -11136,7 +11576,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "obgleich: Konjunktion für einen Gegensatz (gehoben; Verb am Ende)",
-					"IPA": "",
+					"IPA": "ɔpɡlˈaɪ̯ç",
+					"pronounce": "ob-glaikh",
 					"sentences": [
 						{
 							"translation": "",
@@ -11161,7 +11602,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "damit: Konjunktion für einen Zweck (Verb am Ende)",
-					"IPA": "",
+					"IPA": "daˈmɪt",
+					"pronounce": "dah-mit",
 					"sentences": [
 						{
 							"translation": "",
@@ -11186,7 +11628,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "wohingegen: Konjunktion für eine Gegenüberstellung (Verb am Ende)",
-					"IPA": "",
+					"IPA": "voːhˈɪŋeːɡən",
+					"pronounce": "vo-hin-geh-gen",
 					"sentences": [
 						{
 							"translation": "",
@@ -11211,7 +11654,8 @@
 					"romanisation": "",
 					"translation": "",
 					"definition": "auch wenn: Konjunktion für einen Gegensatz oder eine Bedingung (Verb am Ende)",
-					"IPA": "",
+					"IPA": "ˌaʊ̯x vˈɛn",
+					"pronounce": "owkh venn",
 					"sentences": [
 						{
 							"translation": "",
