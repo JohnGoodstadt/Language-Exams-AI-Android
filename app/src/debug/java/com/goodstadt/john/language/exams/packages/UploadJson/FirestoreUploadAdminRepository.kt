@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.UploadJson
 
+import com.goodstadt.john.language.exams.BuildConfig
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FieldValue
@@ -108,6 +109,115 @@ class FirestoreUploadAdminRepository @Inject constructor(
     } catch (e: Exception) {
         // A real error (permission denied, network, …) reading the top-level document.
         Timber.e(e, "UploadAdmin: read '$docName' failed")
+        Result.failure(e)
+    }
+
+    // ---------------------------------------------------------------- targeted German vocab update
+
+    /**
+     * Patches the fields enriched in the bundled German vocab JSON without replacing documents or
+     * touching unrelated Firestore fields. Document ids deliberately use the exact same title/word
+     * rules as [uploadFormat0]. Batch.update() fails when a target is missing, preventing accidental
+     * creation or duplication.
+     */
+    override suspend fun updateVocabFields(
+        docName: String,
+        json: String,
+        stopAfterFirstWord: Boolean
+    ): Result<String> = try {
+        require(BuildConfig.FLAVOR == "de") {
+            "Vocab field updates are restricted to the German variant"
+        }
+
+        val root = JSONObject(json)
+        require(root.optInt(FIELD_FILE_FORMAT, 0) == 0) {
+            "Field update requires a fileFormat-0 vocab JSON"
+        }
+        val sourceSheetName = root.optString("sheetname", "").trim()
+        require(sourceSheetName.isNotEmpty()) { "Source JSON has no sheetname" }
+
+        data class WordUpdate(
+            val reference: DocumentReference,
+            val categoryTitle: String,
+            val wordText: String,
+            val fields: Map<String, Any>
+        )
+
+        val sheetRef = sheetDoc(docName)
+        val updates = ArrayList<WordUpdate>()
+        val categories = root.optJSONArray(CATEGORIES) ?: JSONArray()
+        for (ci in 0 until categories.length()) {
+            val category = categories.getJSONObject(ci)
+            val categoryTitle = category.optString("title", "")
+            val categoryId = categoryTitle
+                .ifBlank { "category_%04d".format(ci) }
+                .replace("/", "-")
+            val categoryRef = sheetRef.collection(CATEGORIES).document(categoryId)
+            val words = category.optJSONArray(WORDS) ?: JSONArray()
+
+            for (wi in 0 until words.length()) {
+                val word = words.getJSONObject(wi)
+                val wordText = word.optString("word", "")
+                val wordId = wordText
+                    .ifBlank { "word_%04d".format(wi) }
+                    .replace("/", "-")
+                val sentenceObjects = word.optJSONArray("sentences") ?: JSONArray()
+                val sentences = ArrayList<String>(sentenceObjects.length())
+                val translations = ArrayList<String>(sentenceObjects.length())
+                for (si in 0 until sentenceObjects.length()) {
+                    val sentence = sentenceObjects.getJSONObject(si)
+                    sentences.add(sentence.optString("sentence", ""))
+                    translations.add(sentence.optString("translation", ""))
+                }
+
+                updates += WordUpdate(
+                    reference = categoryRef.collection(WORDS).document(wordId),
+                    categoryTitle = categoryTitle,
+                    wordText = wordText,
+                    fields = hashMapOf(
+                        "definition" to word.optString("definition", ""),
+                        "partOfSpeech" to word.optString("partOfSpeech", ""),
+                        "IPA" to word.optString("IPA", ""),
+                        "pronounce" to word.optString("pronounce", ""),
+                        "sentences" to sentences,
+                        "translations" to translations
+                    )
+                )
+            }
+        }
+        require(updates.isNotEmpty()) { "Source JSON contains no words" }
+
+        if (stopAfterFirstWord) {
+            val first = updates.first()
+            val batch = firestore.batch()
+            // Source JSON `sheetname` -> VocabFileDTO/Firestore field `sheetName`.
+            batch.update(sheetRef, mapOf("sheetName" to sourceSheetName))
+            batch.update(first.reference, first.fields)
+            batch.commit().await()
+            val summary = "TEST MODE: $docName sheetName='$sourceSheetName'; updated 1/${updates.size} " +
+                "word (${first.categoryTitle} / ${first.wordText})"
+            Timber.w("UploadAdmin: $summary; exited after the first word update")
+            Result.success(summary)
+        } else {
+            var batch = firestore.batch()
+            var operations = 0
+            batch.update(sheetRef, mapOf("sheetName" to sourceSheetName))
+            operations++
+            for (update in updates) {
+                batch.update(update.reference, update.fields)
+                if (++operations >= BATCH_LIMIT) {
+                    batch.commit().await()
+                    batch = firestore.batch()
+                    operations = 0
+                }
+            }
+            if (operations > 0) batch.commit().await()
+            val summary = "$docName sheetName='$sourceSheetName'; updated ${updates.size} words"
+            Timber.i("UploadAdmin: $summary")
+            Result.success(summary)
+        }
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: targeted vocab update '$docName' failed")
         Result.failure(e)
     }
 

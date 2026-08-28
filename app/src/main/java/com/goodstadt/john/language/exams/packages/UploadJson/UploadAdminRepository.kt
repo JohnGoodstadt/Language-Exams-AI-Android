@@ -43,4 +43,20 @@ interface UploadAdminRepository {
      *  - `Result.failure(e)` for a real error (permission denied, bad format at a lower level, …).
      */
     suspend fun readSheet(docName: String): Result<String?>
+
+    /**
+     * Updates only the enriched fields of an existing fileFormat-0 vocab sheet. The JSON
+     * `sheetname` value is written to Firestore's `sheetName` field, and existing word documents
+     * receive their definition, part of speech, IPA, learner pronunciation, sentences and matching
+     * translations. This must use Firestore update operations so a missing category/word fails
+     * instead of creating duplicates.
+     *
+     * [stopAfterFirstWord] is a temporary verification switch: the sheet metadata and only the first
+     * source word are committed atomically, then the operation returns.
+     */
+    suspend fun updateVocabFields(
+        docName: String,
+        json: String,
+        stopAfterFirstWord: Boolean
+    ): Result<String>
 }

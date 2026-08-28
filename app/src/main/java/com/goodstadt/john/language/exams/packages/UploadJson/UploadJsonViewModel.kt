@@ -1,11 +1,11 @@
 package com.goodstadt.john.language.exams.packages.UploadJson
 
 import android.content.Context
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
 import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -25,6 +25,15 @@ data class UploadJsonFile(
     val assetPath: String,   // unique id + source: an asset path, or "raw/<name>.json" for a res/raw file
     val firestoreDocName: String = "" // target Firestore doc name (set for vocab; TBD for quiz files)
 )
+
+/** One German vocab source exposed by the targeted field-update debug UI. */
+data class UpdateFieldsFile(
+    val displayName: String,
+    val rawResourceName: String,
+    val firestoreDocName: String
+) {
+    val statusKey: String get() = "update_fields/$firestoreDocName"
+}
 
 /** Files grouped under one CEFR level within a section. */
 data class UploadJsonLevelGroup(
@@ -66,6 +75,23 @@ class UploadJsonViewModel @Inject constructor(
 
     /** The current flavour's A1 vocab sheet doc name (e.g. "GermanA1Vocab" / "EnglishA1Vocab"). */
     val a1VocabDocName: String get() = "${languagePrefix}A1Vocab"
+
+    /** The targeted updater is intentionally invisible and unusable outside the German variant. */
+    val isGermanVariant: Boolean = BuildConfig.FLAVOR == "de"
+
+    val updateFieldsFiles: List<UpdateFieldsFile> = if (isGermanVariant) {
+        levels.mapNotNull { level ->
+            val rawName = "vocab_data_${level.lowercase()}"
+            if (!rawResourceExists(rawName)) return@mapNotNull null
+            UpdateFieldsFile(
+                displayName = "German${level}Vocab",
+                rawResourceName = rawName,
+                firestoreDocName = "German${level}Vocab"
+            )
+        }
+    } else {
+        emptyList()
+    }
 
     private val _sections = MutableStateFlow<List<UploadJsonSection>>(emptyList())
     val sections = _sections.asStateFlow()
@@ -246,6 +272,12 @@ class UploadJsonViewModel @Inject constructor(
     companion object {
         const val VOCAB_SECTION_TITLE = "Main Vocab"
         const val VOCAB_GROUP_LEVEL = "Files"
+        const val UPDATE_FIELDS_SECTION_TITLE = "Update DE Fields"
+        const val UPDATE_FIELDS_GROUP_TITLE = "Sheets"
+
+        // TEMPORARY TEST GUARD: true commits sheetName + the first word atomically, then exits.
+        // Change to false only after the first Firestore document has been checked.
+        const val UPDATE_FIELDS_TEST_STOP_AFTER_FIRST_WORD = false
         private const val PREFS_NAME = "upload_json_status"
         private const val PREFS_STATUSES_KEY = "statuses"
     }
@@ -407,6 +439,40 @@ class UploadJsonViewModel @Inject constructor(
         }
     }
 
+    /** Updates one existing German vocab sheet from its bundled res/raw source. */
+    @Suppress("FunctionName")
+    fun UpdateFields(file: UpdateFieldsFile) {
+        if (!isGermanVariant) {
+            failUpdate(file, IllegalStateException("Update DE Fields is available only in the de variant"))
+            return
+        }
+
+        viewModelScope.launch {
+            val repo = adminRepository.orElse(null)
+            if (repo == null) {
+                failUpdate(file, IllegalStateException("Admin library unavailable (debug only)"))
+                return@launch
+            }
+            val json = readRawResourceContent(file.rawResourceName)
+            if (json == null) {
+                failUpdate(file, IllegalStateException("Could not read ${file.rawResourceName}.json"))
+                return@launch
+            }
+
+            repo.updateVocabFields(
+                docName = file.firestoreDocName,
+                json = json,
+                stopAfterFirstWord = UPDATE_FIELDS_TEST_STOP_AFTER_FIRST_WORD
+            ).fold(
+                onSuccess = { summary ->
+                    setStatus(file.statusKey, RowStatus.SUCCESS)
+                    _toast.tryEmit(summary)
+                },
+                onFailure = { error -> failUpdate(file, error) }
+            )
+        }
+    }
+
     // Upload goes through the admin library (German debug only), targeting the sheet document
     // /global/exam_sheets/sheets/<firestoreDocName>.
     private suspend fun performUpload(file: UploadJsonFile): Result<Unit> {
@@ -438,6 +504,19 @@ class UploadJsonViewModel @Inject constructor(
         null
     }
 
+    private fun readRawResourceContent(rawResourceName: String): String? = try {
+        val resourceId = context.resources.getIdentifier(rawResourceName, "raw", context.packageName)
+        if (resourceId == 0) {
+            Timber.e("UploadJSON: raw resource '$rawResourceName' not found")
+            null
+        } else {
+            context.resources.openRawResource(resourceId).bufferedReader().use { it.readText() }
+        }
+    } catch (e: Exception) {
+        Timber.e(e, "UploadJSON: failed to read raw resource '$rawResourceName'")
+        null
+    }
+
     /** Turn a Result into the row's tick/cross, logging + toasting on error. */
     private fun applyResult(file: UploadJsonFile, action: String, result: Result<Unit>) {
         result.fold(
@@ -453,10 +532,22 @@ class UploadJsonViewModel @Inject constructor(
         _toast.tryEmit("$action failed: ${file.fileName}\n${e.localizedMessage ?: e.toString()}")
     }
 
+    private fun failUpdate(file: UpdateFieldsFile, error: Throwable) {
+        Timber.e(error, "UploadJSON: UpdateFields failed for '${file.firestoreDocName}'")
+        setStatus(file.statusKey, RowStatus.ERROR)
+        _toast.tryEmit(
+            "Update failed: ${file.firestoreDocName}\n${error.localizedMessage ?: error.toString()}"
+        )
+    }
+
     private fun setStatus(file: UploadJsonFile, status: RowStatus) {
+        setStatus(file.assetPath, status)
+    }
+
+    private fun setStatus(statusKey: String, status: RowStatus) {
         _statuses.value = _statuses.value.toMutableMap().apply {
             // NONE = blank; don't persist it, just clear the row so a blank survives a restart too.
-            if (status == RowStatus.NONE) remove(file.assetPath) else put(file.assetPath, status)
+            if (status == RowStatus.NONE) remove(statusKey) else put(statusKey, status)
         }
         persistStatuses()
     }

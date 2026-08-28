@@ -159,6 +159,47 @@ fun UploadJsonScreen(
                     }
                 }
             }
+
+            // German-only targeted updater. It remains absent from en/zh even in debug builds.
+            if (viewModel.isGermanVariant) {
+                val updateSectionTitle = UploadJsonViewModel.UPDATE_FIELDS_SECTION_TITLE
+                val updateFiles = viewModel.updateFieldsFiles
+                val updateSectionExpanded = expandedSections[updateSectionTitle] == true
+
+                item(key = "section_update_de_fields") {
+                    SectionHeader(
+                        title = updateSectionTitle,
+                        count = updateFiles.size,
+                        expanded = updateSectionExpanded,
+                        onClick = {
+                            expandedSections[updateSectionTitle] = !updateSectionExpanded
+                        }
+                    )
+                }
+
+                if (updateSectionExpanded) {
+                    val groupTitle = UploadJsonViewModel.UPDATE_FIELDS_GROUP_TITLE
+                    val groupKey = "$updateSectionTitle|$groupTitle"
+                    val groupExpanded = expandedGroups[groupKey] == true
+                    item(key = "group_update_de_fields") {
+                        GroupHeader(
+                            level = groupTitle,
+                            count = updateFiles.size,
+                            expanded = groupExpanded,
+                            onClick = { expandedGroups[groupKey] = !groupExpanded }
+                        )
+                    }
+                    if (groupExpanded) {
+                        items(updateFiles, key = { it.statusKey }) { file ->
+                            UpdateFieldsRow(
+                                file = file,
+                                status = statuses[file.statusKey] ?: RowStatus.NONE,
+                                onUpdate = { viewModel.UpdateFields(file) }
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -249,6 +290,32 @@ private fun UploadJsonRow(
             onClick = onRead,
             contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
         ) { Text("Read") }
+    }
+}
+
+@Composable
+private fun UpdateFieldsRow(
+    file: UpdateFieldsFile,
+    status: RowStatus,
+    onUpdate: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(
+            text = file.displayName,
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.weight(1f)
+        )
+        StatusIcon(status)
+        OutlinedButton(
+            onClick = onUpdate,
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+        ) { Text("Update") }
     }
 }
 

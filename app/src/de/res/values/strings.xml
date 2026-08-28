@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Exam Words AI</string>
+    <string name="app_name">Exam Ready</string>
     <string name="facebook_app_id">1605775513747047</string>
     <string name="facebook_client_token">e4017ae5a1841e6cef7b6c68db771119</string>
     <string name="welcome_greeting">Hallo, ich bin %1$s. Willkommen bei \\\'English Exam Words\\\'.</string>
