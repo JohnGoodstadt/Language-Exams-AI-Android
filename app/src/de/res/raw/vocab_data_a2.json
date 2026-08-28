@@ -26,7 +26,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 1,
           "word": "Guten Tag",
-          "partOfSpeech": "",
+          "definition": "Höflicher Gruß, den man tagsüber benutzt.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 1,
           "romanisation": "",
           "translation": "",
@@ -38,6 +40,10 @@
             {
               "sentence": "Guten Tag, ich hätte gern einen Termin.",
               "translation": ""
+            },
+            {
+              "sentence": "Sagen Sie im Büro immer „Guten Tag“?",
+              "translation": ""
             }
           ]
         },
@@ -45,7 +51,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 2,
           "word": "Grüß dich",
-          "partOfSpeech": "",
+          "definition": "Informeller Gruß für eine Person, die man duzt.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 2,
           "romanisation": "",
           "translation": "",
@@ -57,6 +65,10 @@
             {
               "sentence": "Grüß dich, lange nicht gesehen!",
               "translation": ""
+            },
+            {
+              "sentence": "Sagst du zu deinen Freunden „Grüß dich“?",
+              "translation": ""
             }
           ]
         },
@@ -64,7 +76,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 3,
           "word": "Herzlich willkommen",
-          "partOfSpeech": "",
+          "definition": "Sehr freundlicher Empfang für Gäste oder neue Personen.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 3,
           "romanisation": "",
           "translation": "",
@@ -76,6 +90,10 @@
             {
               "sentence": "Herzlich willkommen, treten Sie bitte ein.",
               "translation": ""
+            },
+            {
+              "sentence": "Heißt du deine Gäste herzlich willkommen?",
+              "translation": ""
             }
           ]
         },
@@ -83,7 +101,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 4,
           "word": "Wie geht es Ihnen?",
-          "partOfSpeech": "",
+          "definition": "Höfliche Frage nach dem Befinden einer Person.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 4,
           "romanisation": "",
           "translation": "",
@@ -95,6 +115,10 @@
             {
               "sentence": "Wie geht es Ihnen nach dem Urlaub?",
               "translation": ""
+            },
+            {
+              "sentence": "Fragen Sie Ihren Chef manchmal: „Wie geht es Ihnen?“",
+              "translation": ""
             }
           ]
         },
@@ -102,7 +126,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 5,
           "word": "Schön, Sie kennenzulernen",
-          "partOfSpeech": "",
+          "definition": "Höflicher Ausdruck beim ersten Treffen.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 5,
           "romanisation": "",
           "translation": "",
@@ -114,6 +140,10 @@
             {
               "sentence": "Es freut mich, Sie kennenzulernen.",
               "translation": ""
+            },
+            {
+              "sentence": "Sagen Sie beim ersten Treffen „Schön, Sie kennenzulernen“?",
+              "translation": ""
             }
           ]
         },
@@ -121,7 +151,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 6,
           "word": "Auf Wiedersehen",
-          "partOfSpeech": "",
+          "definition": "Höfliche Formel beim Abschied.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 6,
           "romanisation": "",
           "translation": "",
@@ -133,6 +165,10 @@
             {
               "sentence": "Vielen Dank für alles, auf Wiedersehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Sagen Sie beim Verlassen des Geschäfts „Auf Wiedersehen“?",
+              "translation": ""
             }
           ]
         },
@@ -140,7 +176,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 7,
           "word": "Bis später",
-          "partOfSpeech": "",
+          "definition": "Informeller Abschied, wenn man sich später wieder sieht.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 7,
           "romanisation": "",
           "translation": "",
@@ -152,6 +190,10 @@
             {
               "sentence": "Wir sehen uns heute Abend, bis später.",
               "translation": ""
+            },
+            {
+              "sentence": "Sagst du beim Abschied „Bis später“?",
+              "translation": ""
             }
           ]
         },
@@ -159,7 +201,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 8,
           "word": "Bis bald",
-          "partOfSpeech": "",
+          "definition": "Informeller Abschied bis zu einem nahen Zeitpunkt.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 8,
           "romanisation": "",
           "translation": "",
@@ -171,6 +215,10 @@
             {
               "sentence": "Bis bald, melde dich mal wieder.",
               "translation": ""
+            },
+            {
+              "sentence": "Kommst du bald wieder?",
+              "translation": ""
             }
           ]
         },
@@ -178,7 +226,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 9,
           "word": "Mach's gut",
-          "partOfSpeech": "",
+          "definition": "Informeller Wunsch beim Abschied.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 9,
           "romanisation": "",
           "translation": "",
@@ -190,6 +240,10 @@
             {
               "sentence": "Tschüss, mach's gut!",
               "translation": ""
+            },
+            {
+              "sentence": "Sagst du zu deinem Freund „Mach's gut“?",
+              "translation": ""
             }
           ]
         },
@@ -197,7 +251,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 10,
           "word": "Schönen Tag noch",
-          "partOfSpeech": "",
+          "definition": "Höflicher Wunsch beim Abschied während des Tages.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 10,
           "romanisation": "",
           "translation": "",
@@ -209,6 +265,10 @@
             {
               "sentence": "Schönen Tag noch, bis morgen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wünschst du der Verkäuferin einen schönen Tag noch?",
+              "translation": ""
             }
           ]
         },
@@ -216,7 +276,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 11,
           "word": "Gute Reise",
-          "partOfSpeech": "",
+          "definition": "Wunsch für eine sichere und angenehme Reise.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 11,
           "romanisation": "",
           "translation": "",
@@ -228,6 +290,10 @@
             {
               "sentence": "Wir wünschen dir eine gute Reise.",
               "translation": ""
+            },
+            {
+              "sentence": "Wünschst du deinen Freunden eine gute Reise?",
+              "translation": ""
             }
           ]
         },
@@ -235,7 +301,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 12,
           "word": "Viel Erfolg",
-          "partOfSpeech": "",
+          "definition": "Wunsch, dass etwas gut gelingt.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 12,
           "romanisation": "",
           "translation": "",
@@ -247,6 +315,10 @@
             {
               "sentence": "Ich wünsche dir viel Erfolg im neuen Job.",
               "translation": ""
+            },
+            {
+              "sentence": "Wünschst du ihr viel Erfolg bei der Prüfung?",
+              "translation": ""
             }
           ]
         },
@@ -254,7 +326,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 13,
           "word": "Gute Besserung",
-          "partOfSpeech": "",
+          "definition": "Wunsch, dass eine kranke Person bald gesund wird.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 13,
           "romanisation": "",
           "translation": "",
@@ -266,6 +340,10 @@
             {
               "sentence": "Gute Besserung, ruh dich gut aus.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du ihm gute Besserung gewünscht?",
+              "translation": ""
             }
           ]
         },
@@ -273,7 +351,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 14,
           "word": "Willkommen zurück",
-          "partOfSpeech": "",
+          "definition": "Freundlicher Empfang nach einer Abwesenheit.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 14,
           "romanisation": "",
           "translation": "",
@@ -285,6 +365,10 @@
             {
               "sentence": "Schön, dass du wieder da bist. Willkommen zurück!",
               "translation": ""
+            },
+            {
+              "sentence": "Sagst du zu deiner Kollegin „Willkommen zurück“?",
+              "translation": ""
             }
           ]
         },
@@ -292,7 +376,9 @@
           "group": "Begrüßungen & Verabschiedungen",
           "sortOrder": 15,
           "word": "Alles Gute",
-          "partOfSpeech": "",
+          "definition": "Allgemeiner Wunsch für Glück und Erfolg.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 15,
           "romanisation": "",
           "translation": "",
@@ -303,6 +389,10 @@
             },
             {
               "sentence": "Ich wünsche dir alles Gute für die Zukunft.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wünschst du ihm alles Gute zum Geburtstag?",
               "translation": ""
             }
           ]
@@ -318,7 +408,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 1,
           "word": "Familienstand",
-          "partOfSpeech": "",
+          "definition": "Angabe, ob jemand zum Beispiel ledig, verheiratet oder geschieden ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 16,
           "romanisation": "",
           "translation": "",
@@ -330,6 +422,10 @@
             {
               "sentence": "Bitte geben Sie Ihren Familienstand an.",
               "translation": ""
+            },
+            {
+              "sentence": "Welchen Familienstand tragen Sie in das Formular ein?",
+              "translation": ""
             }
           ]
         },
@@ -337,7 +433,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 2,
           "word": "Geburtsdatum",
-          "partOfSpeech": "",
+          "definition": "Tag, Monat und Jahr, an denen jemand geboren wurde.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 17,
           "romanisation": "",
           "translation": "",
@@ -349,6 +447,10 @@
             {
               "sentence": "Wie ist Ihr Geburtsdatum?",
               "translation": ""
+            },
+            {
+              "sentence": "Welches Geburtsdatum steht in Ihrem Pass?",
+              "translation": ""
             }
           ]
         },
@@ -356,7 +458,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 3,
           "word": "Geburtsort",
-          "partOfSpeech": "",
+          "definition": "Ort, an dem eine Person geboren wurde.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 18,
           "romanisation": "",
           "translation": "",
@@ -368,6 +472,10 @@
             {
               "sentence": "Als Geburtsort habe ich Wien angegeben.",
               "translation": ""
+            },
+            {
+              "sentence": "Welchen Geburtsort haben Sie angegeben?",
+              "translation": ""
             }
           ]
         },
@@ -375,13 +483,19 @@
           "group": "Persönliche Informationen",
           "sortOrder": 4,
           "word": "Staatsangehörigkeit",
-          "partOfSpeech": "",
+          "definition": "Rechtliche Zugehörigkeit zu einem Staat.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 19,
           "romanisation": "",
           "translation": "",
           "sentences": [
             {
               "sentence": "Ich habe die deutsche Staatsangehörigkeit.",
+              "translation": ""
+            },
+            {
+              "sentence": "Welche Staatsangehörigkeit haben Sie?",
               "translation": ""
             },
             {
@@ -394,7 +508,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 5,
           "word": "Postleitzahl",
-          "partOfSpeech": "",
+          "definition": "Zahlenfolge für einen Ort oder ein Gebiet in einer Adresse.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 20,
           "romanisation": "",
           "translation": "",
@@ -406,6 +522,10 @@
             {
               "sentence": "Bitte vergessen Sie die Postleitzahl nicht.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lautet die Postleitzahl Ihres Wohnorts?",
+              "translation": ""
             }
           ]
         },
@@ -413,7 +533,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 6,
           "word": "Wohnort",
-          "partOfSpeech": "",
+          "definition": "Ort, an dem jemand wohnt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 21,
           "romanisation": "",
           "translation": "",
@@ -425,6 +547,10 @@
             {
               "sentence": "Wie lange leben Sie schon an diesem Wohnort?",
               "translation": ""
+            },
+            {
+              "sentence": "Ist Berlin noch Ihr Wohnort?",
+              "translation": ""
             }
           ]
         },
@@ -432,7 +558,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 7,
           "word": "verheiratet",
-          "partOfSpeech": "",
+          "definition": "In einer Ehe lebend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 22,
           "romanisation": "",
           "translation": "",
@@ -444,6 +572,10 @@
             {
               "sentence": "Sind Sie verheiratet oder ledig?",
               "translation": ""
+            },
+            {
+              "sentence": "Seit wann sind Sie verheiratet?",
+              "translation": ""
             }
           ]
         },
@@ -451,7 +583,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 8,
           "word": "ledig",
-          "partOfSpeech": "",
+          "definition": "Nicht verheiratet.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 23,
           "romanisation": "",
           "translation": "",
@@ -463,6 +597,10 @@
             {
               "sentence": "Er ist noch ledig.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind Sie ledig?",
+              "translation": ""
             }
           ]
         },
@@ -470,7 +608,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 9,
           "word": "geschieden",
-          "partOfSpeech": "",
+          "definition": "Nach einer beendeten Ehe nicht mehr verheiratet.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 24,
           "romanisation": "",
           "translation": "",
@@ -482,6 +622,10 @@
             {
               "sentence": "Er ist geschieden und lebt allein.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lange ist er schon geschieden?",
+              "translation": ""
             }
           ]
         },
@@ -489,7 +633,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 10,
           "word": "Formular",
-          "partOfSpeech": "",
+          "definition": "Dokument mit Feldern, in die man Informationen einträgt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 25,
           "romanisation": "",
           "translation": "",
@@ -501,6 +647,10 @@
             {
               "sentence": "Bitte unterschreiben Sie das Formular.",
               "translation": ""
+            },
+            {
+              "sentence": "Haben Sie das Formular vollständig ausgefüllt?",
+              "translation": ""
             }
           ]
         },
@@ -508,7 +658,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 11,
           "word": "Ausweis",
-          "partOfSpeech": "",
+          "definition": "Offizielles Dokument, das die Identität einer Person zeigt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 26,
           "romanisation": "",
           "translation": "",
@@ -520,6 +672,10 @@
             {
               "sentence": "Ich habe meinen Ausweis zu Hause vergessen.",
               "translation": ""
+            },
+            {
+              "sentence": "Können Sie bitte Ihren Ausweis zeigen?",
+              "translation": ""
             }
           ]
         },
@@ -527,7 +683,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 12,
           "word": "unterschreiben",
-          "partOfSpeech": "",
+          "definition": "Seinen Namen unter ein Dokument schreiben.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 27,
           "romanisation": "",
           "translation": "",
@@ -539,6 +697,10 @@
             {
               "sentence": "Ich habe den Vertrag schon unterschrieben.",
               "translation": ""
+            },
+            {
+              "sentence": "Wo muss ich unterschreiben?",
+              "translation": ""
             }
           ]
         },
@@ -546,7 +708,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 13,
           "word": "Unterschrift",
-          "partOfSpeech": "",
+          "definition": "Mit der Hand geschriebener Name unter einem Dokument.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 28,
           "romanisation": "",
           "translation": "",
@@ -558,6 +722,10 @@
             {
               "sentence": "Unter das Formular kommt die Unterschrift.",
               "translation": ""
+            },
+            {
+              "sentence": "Fehlt auf dem Vertrag noch Ihre Unterschrift?",
+              "translation": ""
             }
           ]
         },
@@ -565,7 +733,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 14,
           "word": "Beruf",
-          "partOfSpeech": "",
+          "definition": "Arbeit, die jemand regelmäßig ausübt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 29,
           "romanisation": "",
           "translation": "",
@@ -577,6 +747,10 @@
             {
               "sentence": "Welchen Beruf üben Sie aus?",
               "translation": ""
+            },
+            {
+              "sentence": "Welchen Beruf möchten Sie später haben?",
+              "translation": ""
             }
           ]
         },
@@ -584,7 +758,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 15,
           "word": "Handynummer",
-          "partOfSpeech": "",
+          "definition": "Telefonnummer eines Mobiltelefons.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 30,
           "romanisation": "",
           "translation": "",
@@ -595,6 +771,10 @@
             },
             {
               "sentence": "Meine Handynummer hat sich geändert.",
+              "translation": ""
+            },
+            {
+              "sentence": "Kannst du mir deine neue Handynummer schicken?",
               "translation": ""
             }
           ]
@@ -610,7 +790,9 @@
           "group": "Familie",
           "sortOrder": 1,
           "word": "Familie",
-          "partOfSpeech": "",
+          "definition": "Gruppe aus Eltern, Kindern und anderen Verwandten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 31,
           "romanisation": "",
           "translation": "",
@@ -622,6 +804,10 @@
             {
               "sentence": "Am Wochenende besuche ich meine Familie.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie oft besuchst du deine Familie?",
+              "translation": ""
             }
           ]
         },
@@ -629,7 +815,9 @@
           "group": "Familie",
           "sortOrder": 2,
           "word": "Eltern",
-          "partOfSpeech": "",
+          "definition": "Mutter und Vater zusammen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 32,
           "romanisation": "",
           "translation": "",
@@ -641,6 +829,10 @@
             {
               "sentence": "Ich telefoniere jeden Sonntag mit meinen Eltern.",
               "translation": ""
+            },
+            {
+              "sentence": "Wohnen deine Eltern noch im Dorf?",
+              "translation": ""
             }
           ]
         },
@@ -648,7 +840,9 @@
           "group": "Familie",
           "sortOrder": 3,
           "word": "Großeltern",
-          "partOfSpeech": "",
+          "definition": "Großmutter und Großvater zusammen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 33,
           "romanisation": "",
           "translation": "",
@@ -660,6 +854,10 @@
             {
               "sentence": "Als Kind war ich oft bei meinen Großeltern.",
               "translation": ""
+            },
+            {
+              "sentence": "Besuchst du deine Großeltern am Wochenende?",
+              "translation": ""
             }
           ]
         },
@@ -667,7 +865,9 @@
           "group": "Familie",
           "sortOrder": 4,
           "word": "Verwandten",
-          "partOfSpeech": "",
+          "definition": "Menschen, die zur gleichen Familie gehören.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 34,
           "romanisation": "",
           "translation": "",
@@ -679,6 +879,10 @@
             {
               "sentence": "Ich habe viele Verwandte im Ausland.",
               "translation": ""
+            },
+            {
+              "sentence": "Leben viele deiner Verwandten im Ausland?",
+              "translation": ""
             }
           ]
         },
@@ -686,7 +890,9 @@
           "group": "Familie",
           "sortOrder": 5,
           "word": "Ehemann",
-          "partOfSpeech": "",
+          "definition": "Mann, mit dem eine Person verheiratet ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 35,
           "romanisation": "",
           "translation": "",
@@ -698,6 +904,10 @@
             {
               "sentence": "Mein Ehemann kocht am Wochenende.",
               "translation": ""
+            },
+            {
+              "sentence": "Was arbeitet ihr Ehemann?",
+              "translation": ""
             }
           ]
         },
@@ -705,7 +915,9 @@
           "group": "Familie",
           "sortOrder": 6,
           "word": "Ehefrau",
-          "partOfSpeech": "",
+          "definition": "Frau, mit der eine Person verheiratet ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 36,
           "romanisation": "",
           "translation": "",
@@ -717,6 +929,10 @@
             {
               "sentence": "Meine Ehefrau und ich reisen gern.",
               "translation": ""
+            },
+            {
+              "sentence": "Reist seine Ehefrau gern?",
+              "translation": ""
             }
           ]
         },
@@ -724,7 +940,9 @@
           "group": "Familie",
           "sortOrder": 7,
           "word": "Partner",
-          "partOfSpeech": "",
+          "definition": "Person, mit der man eine Beziehung führt oder zusammenarbeitet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 37,
           "romanisation": "",
           "translation": "",
@@ -736,6 +954,10 @@
             {
               "sentence": "Sie hat ihren Partner bei der Arbeit kennengelernt.",
               "translation": ""
+            },
+            {
+              "sentence": "Wohnst du mit deinem Partner zusammen?",
+              "translation": ""
             }
           ]
         },
@@ -743,7 +965,9 @@
           "group": "Familie",
           "sortOrder": 8,
           "word": "Enkel",
-          "partOfSpeech": "",
+          "definition": "Sohn eines eigenen Kindes.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 38,
           "romanisation": "",
           "translation": "",
@@ -755,6 +979,10 @@
             {
               "sentence": "Ihr Enkel geht seit einem Jahr zur Schule.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie alt ist ihr Enkel?",
+              "translation": ""
             }
           ]
         },
@@ -762,7 +990,9 @@
           "group": "Familie",
           "sortOrder": 9,
           "word": "Enkelin",
-          "partOfSpeech": "",
+          "definition": "Tochter eines eigenen Kindes.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 39,
           "romanisation": "",
           "translation": "",
@@ -774,6 +1004,10 @@
             {
               "sentence": "Der Großvater holt seine Enkelin ab.",
               "translation": ""
+            },
+            {
+              "sentence": "Geht ihre Enkelin schon in den Kindergarten?",
+              "translation": ""
             }
           ]
         },
@@ -781,7 +1015,9 @@
           "group": "Familie",
           "sortOrder": 10,
           "word": "Onkel",
-          "partOfSpeech": "",
+          "definition": "Bruder eines Elternteils oder Ehemann einer Tante.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 40,
           "romanisation": "",
           "translation": "",
@@ -793,6 +1029,10 @@
             {
               "sentence": "Nächste Woche besucht uns mein Onkel.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann besucht dich dein Onkel?",
+              "translation": ""
             }
           ]
         },
@@ -800,7 +1040,9 @@
           "group": "Familie",
           "sortOrder": 11,
           "word": "Tante",
-          "partOfSpeech": "",
+          "definition": "Schwester eines Elternteils oder Ehefrau eines Onkels.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 41,
           "romanisation": "",
           "translation": "",
@@ -812,6 +1054,10 @@
             {
               "sentence": "Ich habe meiner Tante eine Karte geschrieben.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat deine Tante Kinder?",
+              "translation": ""
             }
           ]
         },
@@ -819,7 +1065,9 @@
           "group": "Familie",
           "sortOrder": 12,
           "word": "Cousin",
-          "partOfSpeech": "",
+          "definition": "Sohn einer Tante oder eines Onkels.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 42,
           "romanisation": "",
           "translation": "",
@@ -831,6 +1079,10 @@
             {
               "sentence": "Ich verstehe mich gut mit meinem Cousin.",
               "translation": ""
+            },
+            {
+              "sentence": "Studiert dein Cousin noch in Berlin?",
+              "translation": ""
             }
           ]
         },
@@ -838,7 +1090,9 @@
           "group": "Familie",
           "sortOrder": 13,
           "word": "Cousine",
-          "partOfSpeech": "",
+          "definition": "Tochter einer Tante oder eines Onkels.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 43,
           "romanisation": "",
           "translation": "",
@@ -850,6 +1104,10 @@
             {
               "sentence": "Ich habe meine Cousine lange nicht gesehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann heiratet deine Cousine?",
+              "translation": ""
             }
           ]
         },
@@ -857,7 +1115,9 @@
           "group": "Familie",
           "sortOrder": 14,
           "word": "Nachbar",
-          "partOfSpeech": "",
+          "definition": "Person, die in der Nähe oder direkt nebenan wohnt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 44,
           "romanisation": "",
           "translation": "",
@@ -869,6 +1129,10 @@
             {
               "sentence": "Der Nachbar hilft mir manchmal im Garten.",
               "translation": ""
+            },
+            {
+              "sentence": "Hilft dir dein Nachbar manchmal?",
+              "translation": ""
             }
           ]
         },
@@ -876,7 +1140,9 @@
           "group": "Familie",
           "sortOrder": 15,
           "word": "heiraten",
-          "partOfSpeech": "",
+          "definition": "Eine Ehe mit jemandem schließen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 45,
           "romanisation": "",
           "translation": "",
@@ -888,6 +1154,10 @@
             {
               "sentence": "Sie haben letzten Sommer geheiratet.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchtet ihr nächstes Jahr heiraten?",
+              "translation": ""
             }
           ]
         },
@@ -895,7 +1165,9 @@
           "group": "Familie",
           "sortOrder": 16,
           "word": "sich kümmern um",
-          "partOfSpeech": "",
+          "definition": "Für eine Person oder Sache sorgen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 46,
           "romanisation": "",
           "translation": "",
@@ -906,6 +1178,10 @@
             },
             {
               "sentence": "Wer kümmert sich am Wochenende um die Kinder?",
+              "translation": ""
+            },
+            {
+              "sentence": "Wer kümmert sich um den Hund?",
               "translation": ""
             }
           ]
@@ -921,7 +1197,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 1,
           "word": "aufstehen",
-          "partOfSpeech": "",
+          "definition": "Das Bett verlassen und den Tag beginnen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 47,
           "romanisation": "",
           "translation": "",
@@ -933,6 +1211,10 @@
             {
               "sentence": "Am Samstag bin ich erst um zehn aufgestanden.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann musst du morgen aufstehen?",
+              "translation": ""
             }
           ]
         },
@@ -940,7 +1222,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 2,
           "word": "sich duschen",
-          "partOfSpeech": "",
+          "definition": "Den Körper unter einer Dusche waschen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 48,
           "romanisation": "",
           "translation": "",
@@ -952,6 +1236,10 @@
             {
               "sentence": "Nach dem Sport habe ich mich geduscht.",
               "translation": ""
+            },
+            {
+              "sentence": "Duschst du dich morgens oder abends?",
+              "translation": ""
             }
           ]
         },
@@ -959,7 +1247,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 3,
           "word": "frühstücken",
-          "partOfSpeech": "",
+          "definition": "Am Morgen die erste Mahlzeit essen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 49,
           "romanisation": "",
           "translation": "",
@@ -971,6 +1261,10 @@
             {
               "sentence": "Heute haben wir zusammen gefrühstückt.",
               "translation": ""
+            },
+            {
+              "sentence": "Was frühstückst du normalerweise?",
+              "translation": ""
             }
           ]
         },
@@ -978,7 +1272,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 4,
           "word": "zur Arbeit fahren",
-          "partOfSpeech": "",
+          "definition": "Mit einem Verkehrsmittel zum Arbeitsplatz fahren.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 50,
           "romanisation": "",
           "translation": "",
@@ -990,6 +1286,10 @@
             {
               "sentence": "Wie lange fährst du zur Arbeit?",
               "translation": ""
+            },
+            {
+              "sentence": "Fährst du jeden Tag mit dem Bus zur Arbeit?",
+              "translation": ""
             }
           ]
         },
@@ -997,7 +1297,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 5,
           "word": "sich ausruhen",
-          "partOfSpeech": "",
+          "definition": "Eine Pause machen, um wieder Kraft zu bekommen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 51,
           "romanisation": "",
           "translation": "",
@@ -1009,6 +1311,10 @@
             {
               "sentence": "Am Sonntag habe ich mich den ganzen Tag ausgeruht.",
               "translation": ""
+            },
+            {
+              "sentence": "Ruhst du dich nach der Arbeit aus?",
+              "translation": ""
             }
           ]
         },
@@ -1016,7 +1322,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 6,
           "word": "einkaufen gehen",
-          "partOfSpeech": "",
+          "definition": "In ein Geschäft gehen, um Dinge zu kaufen.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 52,
           "romanisation": "",
           "translation": "",
@@ -1028,6 +1336,10 @@
             {
               "sentence": "Gestern bin ich mit meiner Freundin einkaufen gegangen.",
               "translation": ""
+            },
+            {
+              "sentence": "Gehst du heute noch einkaufen?",
+              "translation": ""
             }
           ]
         },
@@ -1035,7 +1347,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 7,
           "word": "kochen",
-          "partOfSpeech": "",
+          "definition": "Eine Mahlzeit mit Wärme zubereiten.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 53,
           "romanisation": "",
           "translation": "",
@@ -1047,6 +1361,10 @@
             {
               "sentence": "Ich habe heute eine Suppe gekocht.",
               "translation": ""
+            },
+            {
+              "sentence": "Was kochst du heute Abend?",
+              "translation": ""
             }
           ]
         },
@@ -1054,7 +1372,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 8,
           "word": "fernsehen",
-          "partOfSpeech": "",
+          "definition": "Programme oder Filme auf einem Fernseher ansehen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 54,
           "romanisation": "",
           "translation": "",
@@ -1066,6 +1386,10 @@
             {
               "sentence": "Gestern Abend haben wir einen Film gesehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Siehst du abends gern fern?",
+              "translation": ""
             }
           ]
         },
@@ -1073,7 +1397,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 9,
           "word": "Hobby",
-          "partOfSpeech": "",
+          "definition": "Tätigkeit, die man regelmäßig in der Freizeit macht.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 55,
           "romanisation": "",
           "translation": "",
@@ -1085,6 +1411,10 @@
             {
               "sentence": "Welche Hobbys hast du?",
               "translation": ""
+            },
+            {
+              "sentence": "Welches Hobby möchtest du ausprobieren?",
+              "translation": ""
             }
           ]
         },
@@ -1092,7 +1422,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 10,
           "word": "Sport",
-          "partOfSpeech": "",
+          "definition": "Körperliche Tätigkeit für Bewegung, Training oder Wettbewerb.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 56,
           "romanisation": "",
           "translation": "",
@@ -1104,6 +1436,10 @@
             {
               "sentence": "Sport ist gut für die Gesundheit.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie oft machst du Sport?",
+              "translation": ""
             }
           ]
         },
@@ -1111,7 +1447,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 11,
           "word": "sich treffen",
-          "partOfSpeech": "",
+          "definition": "Mit einer oder mehreren Personen zusammenkommen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 57,
           "romanisation": "",
           "translation": "",
@@ -1123,6 +1461,10 @@
             {
               "sentence": "Wir haben uns im Café getroffen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wo trefft ihr euch heute Abend?",
+              "translation": ""
             }
           ]
         },
@@ -1130,7 +1472,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 12,
           "word": "spazieren gehen",
-          "partOfSpeech": "",
+          "definition": "Zur Erholung langsam zu Fuß gehen.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 58,
           "romanisation": "",
           "translation": "",
@@ -1142,6 +1486,10 @@
             {
               "sentence": "Nach dem Essen sind wir spazieren gegangen.",
               "translation": ""
+            },
+            {
+              "sentence": "Gehst du nach dem Essen spazieren?",
+              "translation": ""
             }
           ]
         },
@@ -1149,7 +1497,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 13,
           "word": "Freizeit",
-          "partOfSpeech": "",
+          "definition": "Zeit, in der man nicht arbeiten oder lernen muss.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 59,
           "romanisation": "",
           "translation": "",
@@ -1161,6 +1511,10 @@
             {
               "sentence": "Was machst du in deiner Freizeit?",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du am Wochenende viel Freizeit?",
+              "translation": ""
             }
           ]
         },
@@ -1168,7 +1522,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 14,
           "word": "Kino",
-          "partOfSpeech": "",
+          "definition": "Ort, an dem Filme auf einer großen Leinwand gezeigt werden.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 60,
           "romanisation": "",
           "translation": "",
@@ -1180,6 +1536,10 @@
             {
               "sentence": "Im Kino läuft ein neuer Film.",
               "translation": ""
+            },
+            {
+              "sentence": "Welcher Film läuft heute im Kino?",
+              "translation": ""
             }
           ]
         },
@@ -1187,7 +1547,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 15,
           "word": "ins Bett gehen",
-          "partOfSpeech": "",
+          "definition": "Sich zum Schlafen in das Bett legen.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 61,
           "romanisation": "",
           "translation": "",
@@ -1199,6 +1561,10 @@
             {
               "sentence": "Gestern bin ich sehr spät ins Bett gegangen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann gehst du normalerweise ins Bett?",
+              "translation": ""
             }
           ]
         },
@@ -1206,7 +1572,9 @@
           "group": "Tagesablauf & Freizeit",
           "sortOrder": 16,
           "word": "Musik hören",
-          "partOfSpeech": "",
+          "definition": "Musik mit den Ohren wahrnehmen und ihr zuhören.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 62,
           "romanisation": "",
           "translation": "",
@@ -1217,6 +1585,10 @@
             },
             {
               "sentence": "Ich habe den ganzen Tag Musik gehört.",
+              "translation": ""
+            },
+            {
+              "sentence": "Hörst du beim Lernen Musik?",
               "translation": ""
             }
           ]
@@ -1232,7 +1604,9 @@
           "group": "Familie",
           "sortOrder": 1,
           "word": "Familie",
-          "partOfSpeech": "",
+          "definition": "Gruppe aus Eltern, Kindern und anderen Verwandten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 63,
           "romanisation": "",
           "translation": "",
@@ -1244,6 +1618,10 @@
             {
               "sentence": "Am Wochenende besuche ich meine Familie.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie oft besuchst du deine Familie?",
+              "translation": ""
             }
           ]
         },
@@ -1251,7 +1629,9 @@
           "group": "Familie",
           "sortOrder": 2,
           "word": "Eltern",
-          "partOfSpeech": "",
+          "definition": "Mutter und Vater zusammen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 64,
           "romanisation": "",
           "translation": "",
@@ -1263,6 +1643,10 @@
             {
               "sentence": "Ich telefoniere jeden Sonntag mit meinen Eltern.",
               "translation": ""
+            },
+            {
+              "sentence": "Wohnen deine Eltern noch im Dorf?",
+              "translation": ""
             }
           ]
         },
@@ -1270,7 +1654,9 @@
           "group": "Familie",
           "sortOrder": 3,
           "word": "Großeltern",
-          "partOfSpeech": "",
+          "definition": "Großmutter und Großvater zusammen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 65,
           "romanisation": "",
           "translation": "",
@@ -1282,6 +1668,10 @@
             {
               "sentence": "Als Kind war ich oft bei meinen Großeltern.",
               "translation": ""
+            },
+            {
+              "sentence": "Besuchst du deine Großeltern am Wochenende?",
+              "translation": ""
             }
           ]
         },
@@ -1289,7 +1679,9 @@
           "group": "Familie",
           "sortOrder": 4,
           "word": "Verwandten",
-          "partOfSpeech": "",
+          "definition": "Menschen, die zur gleichen Familie gehören.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 66,
           "romanisation": "",
           "translation": "",
@@ -1301,6 +1693,10 @@
             {
               "sentence": "Ich habe viele Verwandte im Ausland.",
               "translation": ""
+            },
+            {
+              "sentence": "Leben viele deiner Verwandten im Ausland?",
+              "translation": ""
             }
           ]
         },
@@ -1308,7 +1704,9 @@
           "group": "Familie",
           "sortOrder": 5,
           "word": "Ehemann",
-          "partOfSpeech": "",
+          "definition": "Mann, mit dem eine Person verheiratet ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 67,
           "romanisation": "",
           "translation": "",
@@ -1320,6 +1718,10 @@
             {
               "sentence": "Mein Ehemann kocht am Wochenende.",
               "translation": ""
+            },
+            {
+              "sentence": "Was arbeitet ihr Ehemann?",
+              "translation": ""
             }
           ]
         },
@@ -1327,7 +1729,9 @@
           "group": "Familie",
           "sortOrder": 6,
           "word": "Ehefrau",
-          "partOfSpeech": "",
+          "definition": "Frau, mit der eine Person verheiratet ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 68,
           "romanisation": "",
           "translation": "",
@@ -1339,6 +1743,10 @@
             {
               "sentence": "Meine Ehefrau und ich reisen gern.",
               "translation": ""
+            },
+            {
+              "sentence": "Reist seine Ehefrau gern?",
+              "translation": ""
             }
           ]
         },
@@ -1346,7 +1754,9 @@
           "group": "Familie",
           "sortOrder": 7,
           "word": "Partner",
-          "partOfSpeech": "",
+          "definition": "Person, mit der man eine Beziehung führt oder zusammenarbeitet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 69,
           "romanisation": "",
           "translation": "",
@@ -1358,6 +1768,10 @@
             {
               "sentence": "Sie hat ihren Partner bei der Arbeit kennengelernt.",
               "translation": ""
+            },
+            {
+              "sentence": "Wohnst du mit deinem Partner zusammen?",
+              "translation": ""
             }
           ]
         },
@@ -1365,7 +1779,9 @@
           "group": "Familie",
           "sortOrder": 8,
           "word": "Enkel",
-          "partOfSpeech": "",
+          "definition": "Sohn eines eigenen Kindes.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 70,
           "romanisation": "",
           "translation": "",
@@ -1377,6 +1793,10 @@
             {
               "sentence": "Ihr Enkel geht seit einem Jahr zur Schule.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie alt ist ihr Enkel?",
+              "translation": ""
             }
           ]
         },
@@ -1384,7 +1804,9 @@
           "group": "Familie",
           "sortOrder": 9,
           "word": "Enkelin",
-          "partOfSpeech": "",
+          "definition": "Tochter eines eigenen Kindes.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 71,
           "romanisation": "",
           "translation": "",
@@ -1396,6 +1818,10 @@
             {
               "sentence": "Der Großvater holt seine Enkelin ab.",
               "translation": ""
+            },
+            {
+              "sentence": "Geht ihre Enkelin schon in den Kindergarten?",
+              "translation": ""
             }
           ]
         },
@@ -1403,7 +1829,9 @@
           "group": "Familie",
           "sortOrder": 10,
           "word": "Onkel",
-          "partOfSpeech": "",
+          "definition": "Bruder eines Elternteils oder Ehemann einer Tante.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 72,
           "romanisation": "",
           "translation": "",
@@ -1415,6 +1843,10 @@
             {
               "sentence": "Nächste Woche besucht uns mein Onkel.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann besucht dich dein Onkel?",
+              "translation": ""
             }
           ]
         },
@@ -1422,7 +1854,9 @@
           "group": "Familie",
           "sortOrder": 11,
           "word": "Tante",
-          "partOfSpeech": "",
+          "definition": "Schwester eines Elternteils oder Ehefrau eines Onkels.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 73,
           "romanisation": "",
           "translation": "",
@@ -1434,6 +1868,10 @@
             {
               "sentence": "Ich habe meiner Tante eine Karte geschrieben.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat deine Tante Kinder?",
+              "translation": ""
             }
           ]
         },
@@ -1441,7 +1879,9 @@
           "group": "Familie",
           "sortOrder": 12,
           "word": "Cousin",
-          "partOfSpeech": "",
+          "definition": "Sohn einer Tante oder eines Onkels.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 74,
           "romanisation": "",
           "translation": "",
@@ -1453,6 +1893,10 @@
             {
               "sentence": "Ich verstehe mich gut mit meinem Cousin.",
               "translation": ""
+            },
+            {
+              "sentence": "Studiert dein Cousin noch in Berlin?",
+              "translation": ""
             }
           ]
         },
@@ -1460,7 +1904,9 @@
           "group": "Familie",
           "sortOrder": 13,
           "word": "Cousine",
-          "partOfSpeech": "",
+          "definition": "Tochter einer Tante oder eines Onkels.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 75,
           "romanisation": "",
           "translation": "",
@@ -1472,6 +1918,10 @@
             {
               "sentence": "Ich habe meine Cousine lange nicht gesehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann heiratet deine Cousine?",
+              "translation": ""
             }
           ]
         },
@@ -1479,7 +1929,9 @@
           "group": "Familie",
           "sortOrder": 14,
           "word": "Nachbar",
-          "partOfSpeech": "",
+          "definition": "Person, die in der Nähe oder direkt nebenan wohnt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 76,
           "romanisation": "",
           "translation": "",
@@ -1491,6 +1943,10 @@
             {
               "sentence": "Der Nachbar hilft mir manchmal im Garten.",
               "translation": ""
+            },
+            {
+              "sentence": "Hilft dir dein Nachbar manchmal?",
+              "translation": ""
             }
           ]
         },
@@ -1498,7 +1954,9 @@
           "group": "Familie",
           "sortOrder": 15,
           "word": "heiraten",
-          "partOfSpeech": "",
+          "definition": "Eine Ehe mit jemandem schließen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 77,
           "romanisation": "",
           "translation": "",
@@ -1510,6 +1968,10 @@
             {
               "sentence": "Sie haben letzten Sommer geheiratet.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchtet ihr nächstes Jahr heiraten?",
+              "translation": ""
             }
           ]
         },
@@ -1517,7 +1979,9 @@
           "group": "Familie",
           "sortOrder": 16,
           "word": "sich kümmern um",
-          "partOfSpeech": "",
+          "definition": "Für eine Person oder Sache sorgen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 78,
           "romanisation": "",
           "translation": "",
@@ -1528,6 +1992,10 @@
             },
             {
               "sentence": "Wer kümmert sich am Wochenende um die Kinder?",
+              "translation": ""
+            },
+            {
+              "sentence": "Wer kümmert sich um den Hund?",
               "translation": ""
             }
           ]
@@ -1543,7 +2011,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 1,
           "word": "Frühstück",
-          "partOfSpeech": "",
+          "definition": "Erste Mahlzeit am Morgen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 79,
           "romanisation": "",
           "translation": "",
@@ -1555,6 +2025,10 @@
             {
               "sentence": "Zum Frühstück esse ich Müsli mit Obst.",
               "translation": ""
+            },
+            {
+              "sentence": "Was isst du zum Frühstück?",
+              "translation": ""
             }
           ]
         },
@@ -1562,7 +2036,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 2,
           "word": "Mittagessen",
-          "partOfSpeech": "",
+          "definition": "Mahlzeit um die Mitte des Tages.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 80,
           "romanisation": "",
           "translation": "",
@@ -1574,6 +2050,10 @@
             {
               "sentence": "Wir haben gemeinsam zu Mittag gegessen.",
               "translation": ""
+            },
+            {
+              "sentence": "Was gibt es heute zum Mittagessen?",
+              "translation": ""
             }
           ]
         },
@@ -1581,7 +2061,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 3,
           "word": "Abendessen",
-          "partOfSpeech": "",
+          "definition": "Mahlzeit am Abend.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 81,
           "romanisation": "",
           "translation": "",
@@ -1593,6 +2075,10 @@
             {
               "sentence": "Das Abendessen war sehr lecker.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann esst ihr normalerweise Abendessen?",
+              "translation": ""
             }
           ]
         },
@@ -1600,7 +2086,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 4,
           "word": "Gericht",
-          "partOfSpeech": "",
+          "definition": "Zubereitete Speise oder Mahlzeit.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 82,
           "romanisation": "",
           "translation": "",
@@ -1612,6 +2100,10 @@
             {
               "sentence": "Hier gibt es viele vegetarische Gerichte.",
               "translation": ""
+            },
+            {
+              "sentence": "Welches Gericht bestellst du am liebsten?",
+              "translation": ""
             }
           ]
         },
@@ -1619,13 +2111,19 @@
           "group": "Essen & Trinken",
           "sortOrder": 5,
           "word": "Vorspeise",
-          "partOfSpeech": "",
+          "definition": "Kleines Gericht vor dem Hauptgericht.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 83,
           "romanisation": "",
           "translation": "",
           "sentences": [
             {
               "sentence": "Als Vorspeise nehme ich einen Salat.",
+              "translation": ""
+            },
+            {
+              "sentence": "Möchten Sie eine Vorspeise bestellen?",
               "translation": ""
             },
             {
@@ -1638,7 +2136,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 6,
           "word": "Nachspeise",
-          "partOfSpeech": "",
+          "definition": "Süßes oder anderes Gericht nach dem Hauptgericht.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 84,
           "romanisation": "",
           "translation": "",
@@ -1650,6 +2150,10 @@
             {
               "sentence": "Ich habe keinen Platz mehr für eine Nachspeise.",
               "translation": ""
+            },
+            {
+              "sentence": "Gibt es heute eine Nachspeise?",
+              "translation": ""
             }
           ]
         },
@@ -1657,7 +2161,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 7,
           "word": "bestellen",
-          "partOfSpeech": "",
+          "definition": "In einem Restaurant oder Geschäft sagen, was man haben möchte.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 85,
           "romanisation": "",
           "translation": "",
@@ -1669,6 +2175,10 @@
             {
               "sentence": "Wir haben schon vor zehn Minuten bestellt.",
               "translation": ""
+            },
+            {
+              "sentence": "Was möchten Sie bestellen?",
+              "translation": ""
             }
           ]
         },
@@ -1676,7 +2186,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 8,
           "word": "Speisekarte",
-          "partOfSpeech": "",
+          "definition": "Liste der Speisen und Getränke in einem Restaurant.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 86,
           "romanisation": "",
           "translation": "",
@@ -1688,6 +2200,10 @@
             {
               "sentence": "Auf der Speisekarte steht auch Fisch.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann ich bitte die Speisekarte sehen?",
+              "translation": ""
             }
           ]
         },
@@ -1695,7 +2211,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 9,
           "word": "schmecken",
-          "partOfSpeech": "",
+          "definition": "Einen bestimmten Geschmack haben oder gut gefallen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 87,
           "romanisation": "",
           "translation": "",
@@ -1707,6 +2225,10 @@
             {
               "sentence": "Hat dir der Kuchen geschmeckt?",
               "translation": ""
+            },
+            {
+              "sentence": "Wie schmeckt dir die Suppe?",
+              "translation": ""
             }
           ]
         },
@@ -1714,7 +2236,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 10,
           "word": "Getränk",
-          "partOfSpeech": "",
+          "definition": "Flüssigkeit, die man trinkt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 88,
           "romanisation": "",
           "translation": "",
@@ -1726,6 +2250,10 @@
             {
               "sentence": "Die Getränke sind im Preis inbegriffen.",
               "translation": ""
+            },
+            {
+              "sentence": "Welches kalte Getränk möchten Sie?",
+              "translation": ""
             }
           ]
         },
@@ -1733,7 +2261,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 11,
           "word": "die Rechnung",
-          "partOfSpeech": "",
+          "definition": "Dokument mit dem Betrag, den man bezahlen muss.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 89,
           "romanisation": "",
           "translation": "",
@@ -1745,6 +2275,10 @@
             {
               "sentence": "Ich habe die Rechnung schon bezahlt.",
               "translation": ""
+            },
+            {
+              "sentence": "Können wir bitte die Rechnung bekommen?",
+              "translation": ""
             }
           ]
         },
@@ -1752,7 +2286,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 12,
           "word": "vegetarisch",
-          "partOfSpeech": "",
+          "definition": "Ohne Fleisch oder Fisch.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 90,
           "romanisation": "",
           "translation": "",
@@ -1764,6 +2300,10 @@
             {
               "sentence": "Gibt es auch ein vegetarisches Gericht?",
               "translation": ""
+            },
+            {
+              "sentence": "Ist dieses Gericht vegetarisch?",
+              "translation": ""
             }
           ]
         },
@@ -1771,7 +2311,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 13,
           "word": "Hunger",
-          "partOfSpeech": "",
+          "definition": "Gefühl, dass man etwas essen möchte.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 91,
           "romanisation": "",
           "translation": "",
@@ -1783,6 +2325,10 @@
             {
               "sentence": "Nach dem Sport hatte ich richtig Hunger.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du nach dem Sport Hunger?",
+              "translation": ""
             }
           ]
         },
@@ -1790,7 +2336,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 14,
           "word": "Durst",
-          "partOfSpeech": "",
+          "definition": "Gefühl, dass man etwas trinken möchte.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 92,
           "romanisation": "",
           "translation": "",
@@ -1802,6 +2350,10 @@
             {
               "sentence": "Hast du Durst? Ich hole dir ein Wasser.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du bei der Hitze großen Durst?",
+              "translation": ""
             }
           ]
         },
@@ -1809,7 +2361,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 15,
           "word": "Restaurant",
-          "partOfSpeech": "",
+          "definition": "Ort, an dem man gegen Bezahlung Essen und Getränke bekommt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 93,
           "romanisation": "",
           "translation": "",
@@ -1821,6 +2375,10 @@
             {
               "sentence": "Das Restaurant war leider schon voll.",
               "translation": ""
+            },
+            {
+              "sentence": "Kennst du ein gutes Restaurant in der Nähe?",
+              "translation": ""
             }
           ]
         },
@@ -1828,7 +2386,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 16,
           "word": "gesund",
-          "partOfSpeech": "",
+          "definition": "Gut für den Körper oder nicht krank.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 94,
           "romanisation": "",
           "translation": "",
@@ -1839,6 +2399,10 @@
             },
             {
               "sentence": "Ich versuche, mich gesund zu ernähren.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ist dieses Frühstück gesund?",
               "translation": ""
             }
           ]
@@ -1854,7 +2418,9 @@
           "group": "Einkaufen",
           "sortOrder": 1,
           "word": "einkaufen",
-          "partOfSpeech": "",
+          "definition": "Waren in einem Geschäft kaufen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 95,
           "romanisation": "",
           "translation": "",
@@ -1866,6 +2432,10 @@
             {
               "sentence": "Wir müssen noch für das Wochenende einkaufen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wo kaufst du normalerweise ein?",
+              "translation": ""
             }
           ]
         },
@@ -1873,7 +2443,9 @@
           "group": "Einkaufen",
           "sortOrder": 2,
           "word": "Supermarkt",
-          "partOfSpeech": "",
+          "definition": "Großes Geschäft für Lebensmittel und Dinge des täglichen Bedarfs.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 96,
           "romanisation": "",
           "translation": "",
@@ -1885,6 +2457,10 @@
             {
               "sentence": "Im Supermarkt gibt es alles, was ich brauche.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat der Supermarkt heute lange geöffnet?",
+              "translation": ""
             }
           ]
         },
@@ -1892,7 +2468,9 @@
           "group": "Einkaufen",
           "sortOrder": 3,
           "word": "Geschäft",
-          "partOfSpeech": "",
+          "definition": "Ort, an dem Waren verkauft werden.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 97,
           "romanisation": "",
           "translation": "",
@@ -1904,6 +2482,10 @@
             {
               "sentence": "Die Geschäfte sind am Sonntag geschlossen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann schließt das Geschäft?",
+              "translation": ""
             }
           ]
         },
@@ -1911,7 +2493,9 @@
           "group": "Einkaufen",
           "sortOrder": 4,
           "word": "Preis",
-          "partOfSpeech": "",
+          "definition": "Geldbetrag, den eine Ware oder Dienstleistung kostet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 98,
           "romanisation": "",
           "translation": "",
@@ -1923,6 +2507,10 @@
             {
               "sentence": "Die Preise sind dieses Jahr gestiegen.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist der Preis schon niedriger geworden?",
+              "translation": ""
             }
           ]
         },
@@ -1930,7 +2518,9 @@
           "group": "Einkaufen",
           "sortOrder": 5,
           "word": "kosten",
-          "partOfSpeech": "",
+          "definition": "Einen bestimmten Preis haben.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 99,
           "romanisation": "",
           "translation": "",
@@ -1942,6 +2532,10 @@
             {
               "sentence": "Das Ticket hat nur zehn Euro gekostet.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viel kostet das blaue Hemd?",
+              "translation": ""
             }
           ]
         },
@@ -1949,7 +2543,9 @@
           "group": "Einkaufen",
           "sortOrder": 6,
           "word": "bezahlen",
-          "partOfSpeech": "",
+          "definition": "Geld für eine Ware oder Dienstleistung geben.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 100,
           "romanisation": "",
           "translation": "",
@@ -1961,6 +2557,10 @@
             {
               "sentence": "Ich habe schon an der Kasse bezahlt.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchten Sie bar oder mit Karte bezahlen?",
+              "translation": ""
             }
           ]
         },
@@ -1968,7 +2568,9 @@
           "group": "Einkaufen",
           "sortOrder": 7,
           "word": "Kasse",
-          "partOfSpeech": "",
+          "definition": "Ort in einem Geschäft, an dem man bezahlt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 101,
           "romanisation": "",
           "translation": "",
@@ -1980,6 +2582,10 @@
             {
               "sentence": "Bitte bezahlen Sie an der Kasse.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist an dieser Kasse weniger los?",
+              "translation": ""
             }
           ]
         },
@@ -1987,7 +2593,9 @@
           "group": "Einkaufen",
           "sortOrder": 8,
           "word": "Angebot",
-          "partOfSpeech": "",
+          "definition": "Ware oder Leistung zu einem besonderen, oft niedrigeren Preis.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 102,
           "romanisation": "",
           "translation": "",
@@ -1999,6 +2607,10 @@
             {
               "sentence": "Diese Schuhe sind im Angebot.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist der Kaffee noch im Angebot?",
+              "translation": ""
             }
           ]
         },
@@ -2006,7 +2618,9 @@
           "group": "Einkaufen",
           "sortOrder": 9,
           "word": "billig",
-          "partOfSpeech": "",
+          "definition": "Mit einem niedrigen Preis.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 103,
           "romanisation": "",
           "translation": "",
@@ -2018,6 +2632,10 @@
             {
               "sentence": "Das war ein sehr billiges Handy.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum ist dieses Handy so billig?",
+              "translation": ""
             }
           ]
         },
@@ -2025,7 +2643,9 @@
           "group": "Einkaufen",
           "sortOrder": 10,
           "word": "teuer",
-          "partOfSpeech": "",
+          "definition": "Mit einem hohen Preis.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 104,
           "romanisation": "",
           "translation": "",
@@ -2037,6 +2657,10 @@
             {
               "sentence": "In der Stadt ist das Wohnen teuer.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Wohnung für dich zu teuer?",
+              "translation": ""
             }
           ]
         },
@@ -2044,7 +2668,9 @@
           "group": "Einkaufen",
           "sortOrder": 11,
           "word": "Größe",
-          "partOfSpeech": "",
+          "definition": "Maß dafür, wie groß etwas ist; auch Kleidermaß.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 105,
           "romanisation": "",
           "translation": "",
@@ -2056,6 +2682,10 @@
             {
               "sentence": "Diese Größe passt mir leider nicht.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Größe brauchen Sie bei dieser Jacke?",
+              "translation": ""
             }
           ]
         },
@@ -2063,7 +2693,9 @@
           "group": "Einkaufen",
           "sortOrder": 12,
           "word": "anprobieren",
-          "partOfSpeech": "",
+          "definition": "Ein Kleidungsstück anziehen, um zu prüfen, ob es passt.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 106,
           "romanisation": "",
           "translation": "",
@@ -2075,6 +2707,10 @@
             {
               "sentence": "Ich habe drei Jacken anprobiert.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann ich diese Schuhe anprobieren?",
+              "translation": ""
             }
           ]
         },
@@ -2082,7 +2718,9 @@
           "group": "Einkaufen",
           "sortOrder": 13,
           "word": "umtauschen",
-          "partOfSpeech": "",
+          "definition": "Eine gekaufte Ware zurückgeben und eine andere bekommen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 107,
           "romanisation": "",
           "translation": "",
@@ -2094,6 +2732,10 @@
             {
               "sentence": "Ich habe die Schuhe letzte Woche umgetauscht.",
               "translation": ""
+            },
+            {
+              "sentence": "Bis wann kann ich die Hose umtauschen?",
+              "translation": ""
             }
           ]
         },
@@ -2101,7 +2743,9 @@
           "group": "Einkaufen",
           "sortOrder": 14,
           "word": "Quittung",
-          "partOfSpeech": "",
+          "definition": "Schriftlicher Beleg für eine Zahlung.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 108,
           "romanisation": "",
           "translation": "",
@@ -2113,6 +2757,10 @@
             {
               "sentence": "Ohne Quittung kann ich nichts umtauschen.",
               "translation": ""
+            },
+            {
+              "sentence": "Haben Sie die Quittung noch?",
+              "translation": ""
             }
           ]
         },
@@ -2120,7 +2768,9 @@
           "group": "Einkaufen",
           "sortOrder": 15,
           "word": "Kunde",
-          "partOfSpeech": "",
+          "definition": "Person, die in einem Geschäft etwas kauft oder eine Dienstleistung nutzt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 109,
           "romanisation": "",
           "translation": "",
@@ -2132,6 +2782,10 @@
             {
               "sentence": "An der Kasse warten viele Kunden.",
               "translation": ""
+            },
+            {
+              "sentence": "Wartet der Kunde schon lange?",
+              "translation": ""
             }
           ]
         },
@@ -2139,7 +2793,9 @@
           "group": "Einkaufen",
           "sortOrder": 16,
           "word": "Kleingeld",
-          "partOfSpeech": "",
+          "definition": "Münzen mit kleinem Wert.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 110,
           "romanisation": "",
           "translation": "",
@@ -2150,6 +2806,10 @@
             },
             {
               "sentence": "Ich habe leider kein Kleingeld dabei.",
+              "translation": ""
+            },
+            {
+              "sentence": "Haben Sie genug Kleingeld für den Automaten?",
               "translation": ""
             }
           ]
@@ -2165,7 +2825,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 1,
           "word": "hundert",
-          "partOfSpeech": "",
+          "definition": "Zahl 100; zehn Zehner.",
+          "IPA": "",
+          "partOfSpeech": "Zahlwort",
           "id": 111,
           "romanisation": "",
           "translation": "",
@@ -2177,6 +2839,10 @@
             {
               "sentence": "Im Saal waren hundert Personen.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind wirklich hundert Gäste gekommen?",
+              "translation": ""
             }
           ]
         },
@@ -2184,7 +2850,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 2,
           "word": "tausend",
-          "partOfSpeech": "",
+          "definition": "Zahl 1000; zehn Hunderter.",
+          "IPA": "",
+          "partOfSpeech": "Zahlwort",
           "id": 112,
           "romanisation": "",
           "translation": "",
@@ -2196,6 +2864,10 @@
             {
               "sentence": "In der Stadt leben tausende Menschen.",
               "translation": ""
+            },
+            {
+              "sentence": "Kostet die Reise mehr als tausend Euro?",
+              "translation": ""
             }
           ]
         },
@@ -2203,7 +2875,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 3,
           "word": "Million",
-          "partOfSpeech": "",
+          "definition": "Zahl 1.000.000; tausend mal tausend.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 113,
           "romanisation": "",
           "translation": "",
@@ -2215,6 +2889,10 @@
             {
               "sentence": "Er möchte eine Million gewinnen.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat die Stadt eine Million Einwohner?",
+              "translation": ""
             }
           ]
         },
@@ -2222,7 +2900,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 4,
           "word": "Hälfte",
-          "partOfSpeech": "",
+          "definition": "Einer von zwei gleich großen Teilen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 114,
           "romanisation": "",
           "translation": "",
@@ -2234,6 +2914,10 @@
             {
               "sentence": "Die Hälfte der Klasse war krank.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du schon die Hälfte gelesen?",
+              "translation": ""
             }
           ]
         },
@@ -2241,7 +2925,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 5,
           "word": "Viertel",
-          "partOfSpeech": "",
+          "definition": "Einer von vier gleichen Teilen; auch eine Zeitangabe von 15 Minuten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 115,
           "romanisation": "",
           "translation": "",
@@ -2253,6 +2939,10 @@
             {
               "sentence": "Ich hätte gern ein Viertel Wein.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist es schon Viertel nach vier?",
+              "translation": ""
             }
           ]
         },
@@ -2260,7 +2950,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 6,
           "word": "Kilo",
-          "partOfSpeech": "",
+          "definition": "Kurzform für Kilogramm; Maßeinheit für Gewicht.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 116,
           "romanisation": "",
           "translation": "",
@@ -2272,6 +2964,10 @@
             {
               "sentence": "Ein Kilo Äpfel kostet zwei Euro.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viel kostet ein Kilo Kartoffeln?",
+              "translation": ""
             }
           ]
         },
@@ -2279,7 +2975,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 7,
           "word": "Gramm",
-          "partOfSpeech": "",
+          "definition": "Maßeinheit für Gewicht; ein Tausendstel Kilogramm.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 117,
           "romanisation": "",
           "translation": "",
@@ -2291,6 +2989,10 @@
             {
               "sentence": "Das Paket wiegt nur wenige Gramm.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchten Sie zweihundert Gramm Käse?",
+              "translation": ""
             }
           ]
         },
@@ -2298,7 +3000,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 8,
           "word": "Liter",
-          "partOfSpeech": "",
+          "definition": "Maßeinheit für Flüssigkeiten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 118,
           "romanisation": "",
           "translation": "",
@@ -2310,6 +3014,10 @@
             {
               "sentence": "Das Auto braucht sieben Liter auf hundert Kilometer.",
               "translation": ""
+            },
+            {
+              "sentence": "Brauchen wir noch einen Liter Milch?",
+              "translation": ""
             }
           ]
         },
@@ -2317,7 +3025,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 9,
           "word": "Stück",
-          "partOfSpeech": "",
+          "definition": "Ein einzelner Teil oder ein einzelner Gegenstand.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 119,
           "romanisation": "",
           "translation": "",
@@ -2329,6 +3039,10 @@
             {
               "sentence": "Wie viel kostet ein Stück?",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viele Stück Kuchen möchten Sie?",
+              "translation": ""
             }
           ]
         },
@@ -2336,7 +3050,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 10,
           "word": "Paar",
-          "partOfSpeech": "",
+          "definition": "Zwei zusammengehörende Personen oder Dinge.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 120,
           "romanisation": "",
           "translation": "",
@@ -2348,6 +3064,10 @@
             {
               "sentence": "Ein Paar Socken kostet fünf Euro.",
               "translation": ""
+            },
+            {
+              "sentence": "Brauchst du ein neues Paar Schuhe?",
+              "translation": ""
             }
           ]
         },
@@ -2355,7 +3075,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 11,
           "word": "viel",
-          "partOfSpeech": "",
+          "definition": "Eine große Menge oder Anzahl.",
+          "IPA": "",
+          "partOfSpeech": "Mengenwort",
           "id": 121,
           "romanisation": "",
           "translation": "",
@@ -2367,6 +3089,10 @@
             {
               "sentence": "Er trinkt zu viel Kaffee.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du heute viel Arbeit?",
+              "translation": ""
             }
           ]
         },
@@ -2374,7 +3100,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 12,
           "word": "wenig",
-          "partOfSpeech": "",
+          "definition": "Eine kleine Menge oder Anzahl.",
+          "IPA": "",
+          "partOfSpeech": "Mengenwort",
           "id": 122,
           "romanisation": "",
           "translation": "",
@@ -2386,6 +3114,10 @@
             {
               "sentence": "Ich habe wenig Geld dabei.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum hast du so wenig Zeit?",
+              "translation": ""
             }
           ]
         },
@@ -2393,7 +3125,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 13,
           "word": "genug",
-          "partOfSpeech": "",
+          "definition": "So viel, wie nötig ist.",
+          "IPA": "",
+          "partOfSpeech": "Mengenwort",
           "id": 123,
           "romanisation": "",
           "translation": "",
@@ -2405,6 +3139,10 @@
             {
               "sentence": "Ich habe für heute genug gearbeitet.",
               "translation": ""
+            },
+            {
+              "sentence": "Haben wir genug Getränke für alle?",
+              "translation": ""
             }
           ]
         },
@@ -2412,7 +3150,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 14,
           "word": "Menge",
-          "partOfSpeech": "",
+          "definition": "Bestimmte Anzahl oder bestimmter Umfang von etwas.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 124,
           "romanisation": "",
           "translation": "",
@@ -2424,6 +3164,10 @@
             {
               "sentence": "Nimm nur eine kleine Menge Salz.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist diese Menge Reis genug?",
+              "translation": ""
             }
           ]
         },
@@ -2431,7 +3175,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 15,
           "word": "ungefähr",
-          "partOfSpeech": "",
+          "definition": "Nicht genau, sondern nur geschätzt.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 125,
           "romanisation": "",
           "translation": "",
@@ -2443,6 +3189,10 @@
             {
               "sentence": "Ich brauche ungefähr fünfzig Euro.",
               "translation": ""
+            },
+            {
+              "sentence": "Dauert der Weg ungefähr eine Stunde?",
+              "translation": ""
             }
           ]
         },
@@ -2450,7 +3200,9 @@
           "group": "Zahlen & Mengen",
           "sortOrder": 16,
           "word": "mehr",
-          "partOfSpeech": "",
+          "definition": "Eine größere Menge oder Anzahl.",
+          "IPA": "",
+          "partOfSpeech": "Mengenwort",
           "id": 126,
           "romanisation": "",
           "translation": "",
@@ -2461,6 +3213,10 @@
             },
             {
               "sentence": "Er verdient mehr als ich.",
+              "translation": ""
+            },
+            {
+              "sentence": "Möchtest du noch mehr Kaffee?",
               "translation": ""
             }
           ]
@@ -2476,7 +3232,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 1,
           "word": "Uhrzeit",
-          "partOfSpeech": "",
+          "definition": "Zeitangabe in Stunden und Minuten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 127,
           "romanisation": "",
           "translation": "",
@@ -2488,6 +3246,10 @@
             {
               "sentence": "Um welche Uhrzeit beginnt der Film?",
               "translation": ""
+            },
+            {
+              "sentence": "Zu welcher Uhrzeit fährt dein Zug?",
+              "translation": ""
             }
           ]
         },
@@ -2495,7 +3257,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 2,
           "word": "Datum",
-          "partOfSpeech": "",
+          "definition": "Angabe von Tag, Monat und Jahr.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 128,
           "romanisation": "",
           "translation": "",
@@ -2507,6 +3271,10 @@
             {
               "sentence": "Bitte schreiben Sie das Datum oben rechts.",
               "translation": ""
+            },
+            {
+              "sentence": "Welches Datum steht auf dem Brief?",
+              "translation": ""
             }
           ]
         },
@@ -2514,7 +3282,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 3,
           "word": "Termin",
-          "partOfSpeech": "",
+          "definition": "Fest vereinbarter Zeitpunkt für ein Treffen oder eine Behandlung.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 129,
           "romanisation": "",
           "translation": "",
@@ -2526,6 +3296,10 @@
             {
               "sentence": "Können wir den Termin verschieben?",
               "translation": ""
+            },
+            {
+              "sentence": "Können wir einen neuen Termin vereinbaren?",
+              "translation": ""
             }
           ]
         },
@@ -2533,7 +3307,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 4,
           "word": "Verspätung",
-          "partOfSpeech": "",
+          "definition": "Späteres Kommen als geplant.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 130,
           "romanisation": "",
           "translation": "",
@@ -2545,6 +3321,10 @@
             {
               "sentence": "Entschuldigen Sie die Verspätung.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viele Minuten Verspätung hat der Zug?",
+              "translation": ""
             }
           ]
         },
@@ -2552,7 +3332,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 5,
           "word": "pünktlich",
-          "partOfSpeech": "",
+          "definition": "Genau zur vereinbarten oder geplanten Zeit.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 131,
           "romanisation": "",
           "translation": "",
@@ -2564,6 +3346,10 @@
             {
               "sentence": "Der Bus ist heute pünktlich gekommen.",
               "translation": ""
+            },
+            {
+              "sentence": "Bist du normalerweise pünktlich?",
+              "translation": ""
             }
           ]
         },
@@ -2571,7 +3357,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 6,
           "word": "Woche",
-          "partOfSpeech": "",
+          "definition": "Zeitraum von sieben Tagen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 132,
           "romanisation": "",
           "translation": "",
@@ -2583,6 +3371,10 @@
             {
               "sentence": "Ich arbeite fünf Tage in der Woche.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viele Tage arbeitest du diese Woche?",
+              "translation": ""
             }
           ]
         },
@@ -2590,7 +3382,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 7,
           "word": "Monat",
-          "partOfSpeech": "",
+          "definition": "Einer der zwölf Teile eines Jahres.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 133,
           "romanisation": "",
           "translation": "",
@@ -2602,6 +3396,10 @@
             {
               "sentence": "Die Miete zahle ich jeden Monat.",
               "translation": ""
+            },
+            {
+              "sentence": "Welcher Monat gefällt dir am besten?",
+              "translation": ""
             }
           ]
         },
@@ -2609,7 +3407,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 8,
           "word": "Wochenende",
-          "partOfSpeech": "",
+          "definition": "Samstag und Sonntag zusammen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 134,
           "romanisation": "",
           "translation": "",
@@ -2621,6 +3421,10 @@
             {
               "sentence": "Hast du am Wochenende schon etwas vor?",
               "translation": ""
+            },
+            {
+              "sentence": "Was hast du am Wochenende vor?",
+              "translation": ""
             }
           ]
         },
@@ -2628,7 +3432,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 9,
           "word": "Feiertag",
-          "partOfSpeech": "",
+          "definition": "Tag, an dem wegen eines besonderen Ereignisses nicht gearbeitet wird.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 135,
           "romanisation": "",
           "translation": "",
@@ -2640,6 +3446,10 @@
             {
               "sentence": "Nächsten Montag ist ein Feiertag.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind die Geschäfte am Feiertag geschlossen?",
+              "translation": ""
             }
           ]
         },
@@ -2647,7 +3457,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 10,
           "word": "Geburtstag",
-          "partOfSpeech": "",
+          "definition": "Jährlicher Tag, an dem man seine Geburt feiert.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 136,
           "romanisation": "",
           "translation": "",
@@ -2659,6 +3471,10 @@
             {
               "sentence": "Zum Geburtstag habe ich ein Buch bekommen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann hast du Geburtstag?",
+              "translation": ""
             }
           ]
         },
@@ -2666,7 +3482,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 11,
           "word": "Vergangenheit",
-          "partOfSpeech": "",
+          "definition": "Zeit, die schon vorbei ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 137,
           "romanisation": "",
           "translation": "",
@@ -2678,6 +3496,10 @@
             {
               "sentence": "Denk nicht so viel an die Vergangenheit.",
               "translation": ""
+            },
+            {
+              "sentence": "Denkst du manchmal an die Vergangenheit?",
+              "translation": ""
             }
           ]
         },
@@ -2685,7 +3507,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 12,
           "word": "Zukunft",
-          "partOfSpeech": "",
+          "definition": "Zeit, die noch kommen wird.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 138,
           "romanisation": "",
           "translation": "",
@@ -2697,6 +3521,10 @@
             {
               "sentence": "Niemand kennt die Zukunft.",
               "translation": ""
+            },
+            {
+              "sentence": "Was möchtest du in Zukunft machen?",
+              "translation": ""
             }
           ]
         },
@@ -2704,7 +3532,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 13,
           "word": "gestern",
-          "partOfSpeech": "",
+          "definition": "Am Tag vor heute.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 139,
           "romanisation": "",
           "translation": "",
@@ -2716,6 +3546,10 @@
             {
               "sentence": "Gestern Abend hat es stark geregnet.",
               "translation": ""
+            },
+            {
+              "sentence": "Was hast du gestern Abend gemacht?",
+              "translation": ""
             }
           ]
         },
@@ -2723,7 +3557,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 14,
           "word": "vorgestern",
-          "partOfSpeech": "",
+          "definition": "Zwei Tage vor heute.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 140,
           "romanisation": "",
           "translation": "",
@@ -2735,6 +3571,10 @@
             {
               "sentence": "Der Brief ist vorgestern angekommen.",
               "translation": ""
+            },
+            {
+              "sentence": "Warst du vorgestern bei deiner Oma?",
+              "translation": ""
             }
           ]
         },
@@ -2742,7 +3582,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 15,
           "word": "übermorgen",
-          "partOfSpeech": "",
+          "definition": "Zwei Tage nach heute.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 141,
           "romanisation": "",
           "translation": "",
@@ -2754,6 +3596,10 @@
             {
               "sentence": "Wir sehen uns übermorgen wieder.",
               "translation": ""
+            },
+            {
+              "sentence": "Beginnt dein Urlaub übermorgen?",
+              "translation": ""
             }
           ]
         },
@@ -2761,7 +3607,9 @@
           "group": "Zeit & Datum",
           "sortOrder": 16,
           "word": "Jahreszeit",
-          "partOfSpeech": "",
+          "definition": "Einer der vier Abschnitte Frühling, Sommer, Herbst und Winter.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 142,
           "romanisation": "",
           "translation": "",
@@ -2772,6 +3620,10 @@
             },
             {
               "sentence": "In dieser Jahreszeit regnet es oft.",
+              "translation": ""
+            },
+            {
+              "sentence": "Welche Jahreszeit magst du am liebsten?",
               "translation": ""
             }
           ]
@@ -2787,7 +3639,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 1,
           "word": "Bahnhof",
-          "partOfSpeech": "",
+          "definition": "Ort, an dem Züge ankommen und abfahren.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 143,
           "romanisation": "",
           "translation": "",
@@ -2799,6 +3653,10 @@
             {
               "sentence": "Wie komme ich am schnellsten zum Bahnhof?",
               "translation": ""
+            },
+            {
+              "sentence": "Wie komme ich von hier zum Bahnhof?",
+              "translation": ""
             }
           ]
         },
@@ -2806,7 +3664,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 2,
           "word": "Haltestelle",
-          "partOfSpeech": "",
+          "definition": "Ort, an dem Busse oder Straßenbahnen halten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 144,
           "romanisation": "",
           "translation": "",
@@ -2818,6 +3678,10 @@
             {
               "sentence": "An der nächsten Haltestelle müssen wir aussteigen.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das die richtige Haltestelle?",
+              "translation": ""
             }
           ]
         },
@@ -2825,7 +3689,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 3,
           "word": "Kreuzung",
-          "partOfSpeech": "",
+          "definition": "Stelle, an der sich Straßen treffen oder kreuzen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 145,
           "romanisation": "",
           "translation": "",
@@ -2837,6 +3703,10 @@
             {
               "sentence": "Vor der Kreuzung ist eine Ampel.",
               "translation": ""
+            },
+            {
+              "sentence": "Muss ich an der nächsten Kreuzung abbiegen?",
+              "translation": ""
             }
           ]
         },
@@ -2844,7 +3714,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 4,
           "word": "geradeaus",
-          "partOfSpeech": "",
+          "definition": "Ohne nach links oder rechts abzubiegen.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 146,
           "romanisation": "",
           "translation": "",
@@ -2856,6 +3728,10 @@
             {
               "sentence": "Fahren Sie geradeaus bis zur Kirche.",
               "translation": ""
+            },
+            {
+              "sentence": "Muss ich noch lange geradeaus gehen?",
+              "translation": ""
             }
           ]
         },
@@ -2863,7 +3739,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 5,
           "word": "links",
-          "partOfSpeech": "",
+          "definition": "Auf der Seite, die bei den meisten Menschen nicht die Schreibhand ist.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 147,
           "romanisation": "",
           "translation": "",
@@ -2875,6 +3753,10 @@
             {
               "sentence": "Das Rathaus ist auf der linken Seite.",
               "translation": ""
+            },
+            {
+              "sentence": "Liegt das Rathaus links von der Bank?",
+              "translation": ""
             }
           ]
         },
@@ -2882,7 +3764,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 6,
           "word": "rechts",
-          "partOfSpeech": "",
+          "definition": "Auf der Seite, die bei den meisten Menschen die Schreibhand ist.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 148,
           "romanisation": "",
           "translation": "",
@@ -2894,6 +3778,10 @@
             {
               "sentence": "Biegen Sie die zweite Straße rechts ab.",
               "translation": ""
+            },
+            {
+              "sentence": "Muss ich hier rechts abbiegen?",
+              "translation": ""
             }
           ]
         },
@@ -2901,7 +3789,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 7,
           "word": "abbiegen",
-          "partOfSpeech": "",
+          "definition": "Die Richtung ändern und in eine andere Straße fahren oder gehen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 149,
           "romanisation": "",
           "translation": "",
@@ -2913,6 +3803,10 @@
             {
               "sentence": "Wir sind an der falschen Kreuzung abgebogen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wo sollen wir abbiegen?",
+              "translation": ""
             }
           ]
         },
@@ -2920,7 +3814,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 8,
           "word": "Richtung",
-          "partOfSpeech": "",
+          "definition": "Seite oder Weg, in die oder den man sich bewegt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 150,
           "romanisation": "",
           "translation": "",
@@ -2932,6 +3828,10 @@
             {
               "sentence": "Wir fahren in die falsche Richtung.",
               "translation": ""
+            },
+            {
+              "sentence": "In welche Richtung fährt der Bus?",
+              "translation": ""
             }
           ]
         },
@@ -2939,7 +3839,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 9,
           "word": "in der Nähe",
-          "partOfSpeech": "",
+          "definition": "Nicht weit von einem Ort entfernt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 151,
           "romanisation": "",
           "translation": "",
@@ -2951,6 +3853,10 @@
             {
               "sentence": "Ich wohne ganz in der Nähe des Parks.",
               "translation": ""
+            },
+            {
+              "sentence": "Gibt es in der Nähe eine Apotheke?",
+              "translation": ""
             }
           ]
         },
@@ -2958,7 +3864,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 10,
           "word": "Ampel",
-          "partOfSpeech": "",
+          "definition": "Lichtanlage, die den Verkehr mit Rot, Gelb und Grün regelt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 152,
           "romanisation": "",
           "translation": "",
@@ -2970,6 +3878,10 @@
             {
               "sentence": "Nach der Ampel ist es nicht mehr weit.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Ampel schon grün?",
+              "translation": ""
             }
           ]
         },
@@ -2977,7 +3889,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 11,
           "word": "Ecke",
-          "partOfSpeech": "",
+          "definition": "Stelle, an der zwei Seiten oder Straßen zusammentreffen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 153,
           "romanisation": "",
           "translation": "",
@@ -2989,6 +3903,10 @@
             {
               "sentence": "An der nächsten Ecke ist ein Supermarkt.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das Café an der nächsten Ecke?",
+              "translation": ""
             }
           ]
         },
@@ -2996,7 +3914,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 12,
           "word": "Brücke",
-          "partOfSpeech": "",
+          "definition": "Bauwerk, das über einen Fluss, eine Straße oder ein Tal führt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 154,
           "romanisation": "",
           "translation": "",
@@ -3008,6 +3928,10 @@
             {
               "sentence": "Die alte Brücke ist sehr schön.",
               "translation": ""
+            },
+            {
+              "sentence": "Müssen wir über diese Brücke gehen?",
+              "translation": ""
             }
           ]
         },
@@ -3015,7 +3939,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 13,
           "word": "Weg",
-          "partOfSpeech": "",
+          "definition": "Strecke oder Verbindung von einem Ort zu einem anderen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 155,
           "romanisation": "",
           "translation": "",
@@ -3027,6 +3953,10 @@
             {
               "sentence": "Der Weg zum Strand ist lang.",
               "translation": ""
+            },
+            {
+              "sentence": "Kennst du den Weg zum Museum?",
+              "translation": ""
             }
           ]
         },
@@ -3034,7 +3964,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 14,
           "word": "weit",
-          "partOfSpeech": "",
+          "definition": "In großer Entfernung.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 156,
           "romanisation": "",
           "translation": "",
@@ -3046,6 +3978,10 @@
             {
               "sentence": "Der Bahnhof ist nicht weit von hier.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist dein Arbeitsplatz weit von hier?",
+              "translation": ""
             }
           ]
         },
@@ -3053,7 +3989,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 15,
           "word": "Zentrum",
-          "partOfSpeech": "",
+          "definition": "Mittlerer oder wichtiger Teil eines Ortes.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 157,
           "romanisation": "",
           "translation": "",
@@ -3065,6 +4003,10 @@
             {
               "sentence": "Wir wohnen mitten im Zentrum.",
               "translation": ""
+            },
+            {
+              "sentence": "Fährt dieser Bus ins Zentrum?",
+              "translation": ""
             }
           ]
         },
@@ -3072,7 +4014,9 @@
           "group": "Orte & Richtungen",
           "sortOrder": 16,
           "word": "sich verlaufen",
-          "partOfSpeech": "",
+          "definition": "Den richtigen Weg nicht mehr wissen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 158,
           "romanisation": "",
           "translation": "",
@@ -3083,6 +4027,10 @@
             },
             {
               "sentence": "Pass auf, dass du dich nicht verläufst.",
+              "translation": ""
+            },
+            {
+              "sentence": "Hast du dich in dieser Stadt schon einmal verlaufen?",
               "translation": ""
             }
           ]
@@ -3098,7 +4046,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 1,
           "word": "Arzt",
-          "partOfSpeech": "",
+          "definition": "Person, die Krankheiten untersucht und behandelt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 159,
           "romanisation": "",
           "translation": "",
@@ -3110,6 +4060,10 @@
             {
               "sentence": "Ich muss morgen zum Arzt gehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann musst du zum Arzt?",
+              "translation": ""
             }
           ]
         },
@@ -3117,7 +4071,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 2,
           "word": "Lehrerin",
-          "partOfSpeech": "",
+          "definition": "Frau, die Schülerinnen und Schüler unterrichtet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 160,
           "romanisation": "",
           "translation": "",
@@ -3129,6 +4085,10 @@
             {
               "sentence": "Die Lehrerin erklärt die Grammatik.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie erklärt die Lehrerin dieses Wort?",
+              "translation": ""
             }
           ]
         },
@@ -3136,7 +4096,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 3,
           "word": "Verkäufer",
-          "partOfSpeech": "",
+          "definition": "Person, die Waren verkauft und Kunden berät.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 161,
           "romanisation": "",
           "translation": "",
@@ -3148,6 +4110,10 @@
             {
               "sentence": "Er arbeitet als Verkäufer in einem Kaufhaus.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann der Verkäufer mir helfen?",
+              "translation": ""
             }
           ]
         },
@@ -3155,7 +4121,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 4,
           "word": "Krankenschwester",
-          "partOfSpeech": "",
+          "definition": "Frau, die kranke Menschen pflegt und medizinisches Personal unterstützt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 162,
           "romanisation": "",
           "translation": "",
@@ -3167,6 +4135,10 @@
             {
               "sentence": "Die Krankenschwester hilft den Patienten.",
               "translation": ""
+            },
+            {
+              "sentence": "Arbeitet deine Tante als Krankenschwester?",
+              "translation": ""
             }
           ]
         },
@@ -3174,7 +4146,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 5,
           "word": "Ingenieur",
-          "partOfSpeech": "",
+          "definition": "Fachperson, die technische Dinge plant oder entwickelt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 163,
           "romanisation": "",
           "translation": "",
@@ -3186,6 +4160,10 @@
             {
               "sentence": "Mein Vater ist Ingenieur bei einer Autofirma.",
               "translation": ""
+            },
+            {
+              "sentence": "Bei welcher Firma arbeitet der Ingenieur?",
+              "translation": ""
             }
           ]
         },
@@ -3193,7 +4171,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 6,
           "word": "Koch",
-          "partOfSpeech": "",
+          "definition": "Person, die beruflich Speisen zubereitet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 164,
           "romanisation": "",
           "translation": "",
@@ -3205,6 +4185,10 @@
             {
               "sentence": "Er möchte später Koch werden.",
               "translation": ""
+            },
+            {
+              "sentence": "Wer ist der Koch in diesem Restaurant?",
+              "translation": ""
             }
           ]
         },
@@ -3212,7 +4196,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 7,
           "word": "Polizist",
-          "partOfSpeech": "",
+          "definition": "Männliche Person, die bei der Polizei arbeitet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 165,
           "romanisation": "",
           "translation": "",
@@ -3224,6 +4210,10 @@
             {
               "sentence": "Als Kind wollte ich Polizist werden.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat der Polizist den Verkehr geregelt?",
+              "translation": ""
             }
           ]
         },
@@ -3231,7 +4221,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 8,
           "word": "Sekretärin",
-          "partOfSpeech": "",
+          "definition": "Frau, die organisatorische Aufgaben in einem Büro erledigt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 166,
           "romanisation": "",
           "translation": "",
@@ -3243,6 +4235,10 @@
             {
               "sentence": "Sie arbeitet als Sekretärin in einem Büro.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat die Sekretärin den Termin notiert?",
+              "translation": ""
             }
           ]
         },
@@ -3250,7 +4246,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 9,
           "word": "Firma",
-          "partOfSpeech": "",
+          "definition": "Unternehmen, das Waren herstellt oder Dienstleistungen anbietet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 167,
           "romanisation": "",
           "translation": "",
@@ -3262,6 +4260,10 @@
             {
               "sentence": "Die Firma hat mehr als hundert Mitarbeiter.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viele Mitarbeiter hat deine Firma?",
+              "translation": ""
             }
           ]
         },
@@ -3269,7 +4271,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 10,
           "word": "Büro",
-          "partOfSpeech": "",
+          "definition": "Raum oder Arbeitsplatz für Verwaltungs- und Schreibtischarbeit.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 168,
           "romanisation": "",
           "translation": "",
@@ -3281,6 +4285,10 @@
             {
               "sentence": "Ich fahre jeden Morgen ins Büro.",
               "translation": ""
+            },
+            {
+              "sentence": "In welchem Stock ist dein Büro?",
+              "translation": ""
             }
           ]
         },
@@ -3288,7 +4296,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 11,
           "word": "Kollege",
-          "partOfSpeech": "",
+          "definition": "Männliche Person, mit der man zusammenarbeitet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 169,
           "romanisation": "",
           "translation": "",
@@ -3300,6 +4310,10 @@
             {
               "sentence": "Nach der Arbeit gehe ich mit Kollegen essen.",
               "translation": ""
+            },
+            {
+              "sentence": "Hilft dir dein Kollege bei der Aufgabe?",
+              "translation": ""
             }
           ]
         },
@@ -3307,7 +4321,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 12,
           "word": "Chef",
-          "partOfSpeech": "",
+          "definition": "Person, die eine Firma oder eine Gruppe von Mitarbeitern leitet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 170,
           "romanisation": "",
           "translation": "",
@@ -3319,6 +4335,10 @@
             {
               "sentence": "Ich habe mit dem Chef über meinen Urlaub gesprochen.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist dein Chef heute im Büro?",
+              "translation": ""
             }
           ]
         },
@@ -3326,7 +4346,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 13,
           "word": "Arbeit",
-          "partOfSpeech": "",
+          "definition": "Berufliche Tätigkeit oder Arbeitsplatz.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 171,
           "romanisation": "",
           "translation": "",
@@ -3338,6 +4360,10 @@
             {
               "sentence": "Ich fahre mit dem Zug zur Arbeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Macht dir deine Arbeit Spaß?",
+              "translation": ""
             }
           ]
         },
@@ -3345,7 +4371,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 14,
           "word": "verdienen",
-          "partOfSpeech": "",
+          "definition": "Geld für geleistete Arbeit bekommen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 172,
           "romanisation": "",
           "translation": "",
@@ -3357,6 +4385,10 @@
             {
               "sentence": "Sie verdient mehr als ihr Mann.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viel kann man in diesem Beruf verdienen?",
+              "translation": ""
             }
           ]
         },
@@ -3364,7 +4396,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 15,
           "word": "arbeitslos",
-          "partOfSpeech": "",
+          "definition": "Ohne bezahlte Arbeit.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 173,
           "romanisation": "",
           "translation": "",
@@ -3376,6 +4410,10 @@
             {
               "sentence": "Nach der Firmenschließung wurde sie arbeitslos.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lange ist er schon arbeitslos?",
+              "translation": ""
             }
           ]
         },
@@ -3383,7 +4421,9 @@
           "group": "Berufe & Tätigkeiten",
           "sortOrder": 16,
           "word": "sich bewerben",
-          "partOfSpeech": "",
+          "definition": "Schriftlich oder persönlich um eine Stelle bitten.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 174,
           "romanisation": "",
           "translation": "",
@@ -3394,6 +4434,10 @@
             },
             {
               "sentence": "Er hat sich bei drei Firmen beworben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Bei welcher Firma möchtest du dich bewerben?",
               "translation": ""
             }
           ]
@@ -3409,7 +4453,9 @@
           "group": "Adjektive",
           "sortOrder": 1,
           "word": "wichtig",
-          "partOfSpeech": "",
+          "definition": "Von großer Bedeutung.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 175,
           "romanisation": "",
           "translation": "",
@@ -3421,6 +4467,10 @@
             {
               "sentence": "Es ist wichtig, jeden Tag zu üben.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum ist dieser Termin so wichtig?",
+              "translation": ""
             }
           ]
         },
@@ -3428,7 +4478,9 @@
           "group": "Adjektive",
           "sortOrder": 2,
           "word": "interessant",
-          "partOfSpeech": "",
+          "definition": "So, dass man mehr darüber wissen oder sehen möchte.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 176,
           "romanisation": "",
           "translation": "",
@@ -3440,6 +4492,10 @@
             {
               "sentence": "Sie hat eine interessante Arbeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Findest du den neuen Kurs interessant?",
+              "translation": ""
             }
           ]
         },
@@ -3447,7 +4503,9 @@
           "group": "Adjektive",
           "sortOrder": 3,
           "word": "langweilig",
-          "partOfSpeech": "",
+          "definition": "Nicht interessant oder ohne Abwechslung.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 177,
           "romanisation": "",
           "translation": "",
@@ -3459,6 +4517,10 @@
             {
               "sentence": "Mir ist langweilig, lass uns rausgehen.",
               "translation": ""
+            },
+            {
+              "sentence": "War der Vortrag wirklich so langweilig?",
+              "translation": ""
             }
           ]
         },
@@ -3466,7 +4528,9 @@
           "group": "Adjektive",
           "sortOrder": 4,
           "word": "freundlich",
-          "partOfSpeech": "",
+          "definition": "Nett und höflich zu anderen Menschen.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 178,
           "romanisation": "",
           "translation": "",
@@ -3478,6 +4542,10 @@
             {
               "sentence": "Unsere neuen Nachbarn sind freundlich.",
               "translation": ""
+            },
+            {
+              "sentence": "War die Verkäuferin freundlich zu dir?",
+              "translation": ""
             }
           ]
         },
@@ -3485,7 +4553,9 @@
           "group": "Adjektive",
           "sortOrder": 5,
           "word": "gefährlich",
-          "partOfSpeech": "",
+          "definition": "So, dass jemand verletzt werden oder etwas Schlimmes passieren kann.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 179,
           "romanisation": "",
           "translation": "",
@@ -3497,6 +4567,10 @@
             {
               "sentence": "Rauchen ist gefährlich für die Gesundheit.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist diese Straße nachts gefährlich?",
+              "translation": ""
             }
           ]
         },
@@ -3504,7 +4578,9 @@
           "group": "Adjektive",
           "sortOrder": 6,
           "word": "ruhig",
-          "partOfSpeech": "",
+          "definition": "Mit wenig Lärm oder Bewegung.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 180,
           "romanisation": "",
           "translation": "",
@@ -3516,6 +4592,10 @@
             {
               "sentence": "Bitte sei einen Moment ruhig.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist es in deiner Wohnung ruhig?",
+              "translation": ""
             }
           ]
         },
@@ -3523,7 +4603,9 @@
           "group": "Adjektive",
           "sortOrder": 7,
           "word": "laut",
-          "partOfSpeech": "",
+          "definition": "Mit starkem oder viel hörbarem Geräusch.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 181,
           "romanisation": "",
           "translation": "",
@@ -3535,6 +4617,10 @@
             {
               "sentence": "Die Kinder sind heute sehr laut.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Musik für dich zu laut?",
+              "translation": ""
             }
           ]
         },
@@ -3542,7 +4628,9 @@
           "group": "Adjektive",
           "sortOrder": 8,
           "word": "modern",
-          "partOfSpeech": "",
+          "definition": "Neu und der heutigen Zeit entsprechend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 182,
           "romanisation": "",
           "translation": "",
@@ -3554,6 +4642,10 @@
             {
               "sentence": "Das Museum ist sehr modern.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das neue Museum modern?",
+              "translation": ""
             }
           ]
         },
@@ -3561,7 +4653,9 @@
           "group": "Adjektive",
           "sortOrder": 9,
           "word": "bequem",
-          "partOfSpeech": "",
+          "definition": "Angenehm und komfortabel.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 183,
           "romanisation": "",
           "translation": "",
@@ -3573,6 +4667,10 @@
             {
               "sentence": "Mit dem Zug reist man bequem.",
               "translation": ""
+            },
+            {
+              "sentence": "Findest du diesen Sessel bequem?",
+              "translation": ""
             }
           ]
         },
@@ -3580,7 +4678,9 @@
           "group": "Adjektive",
           "sortOrder": 10,
           "word": "gesund",
-          "partOfSpeech": "",
+          "definition": "Gut für den Körper oder nicht krank.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 184,
           "romanisation": "",
           "translation": "",
@@ -3592,6 +4692,10 @@
             {
               "sentence": "Nach der Erkältung ist er wieder gesund.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist dieses Frühstück gesund?",
+              "translation": ""
             }
           ]
         },
@@ -3599,7 +4703,9 @@
           "group": "Adjektive",
           "sortOrder": 11,
           "word": "krank",
-          "partOfSpeech": "",
+          "definition": "Nicht gesund.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 185,
           "romanisation": "",
           "translation": "",
@@ -3611,6 +4717,10 @@
             {
               "sentence": "Mein Kind war letzte Woche krank.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum bist du diese Woche krank?",
+              "translation": ""
             }
           ]
         },
@@ -3618,7 +4728,9 @@
           "group": "Adjektive",
           "sortOrder": 12,
           "word": "zufrieden",
-          "partOfSpeech": "",
+          "definition": "Mit einer Situation oder einem Ergebnis einverstanden und glücklich.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 186,
           "romanisation": "",
           "translation": "",
@@ -3630,6 +4742,10 @@
             {
               "sentence": "Der Chef war mit dem Ergebnis zufrieden.",
               "translation": ""
+            },
+            {
+              "sentence": "Bist du mit deiner Arbeit zufrieden?",
+              "translation": ""
             }
           ]
         },
@@ -3637,7 +4753,9 @@
           "group": "Adjektive",
           "sortOrder": 13,
           "word": "traurig",
-          "partOfSpeech": "",
+          "definition": "Unglücklich und ohne Freude.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 187,
           "romanisation": "",
           "translation": "",
@@ -3649,6 +4767,10 @@
             {
               "sentence": "Sie war traurig, weil ihr Freund weggezogen ist.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum sieht sie so traurig aus?",
+              "translation": ""
             }
           ]
         },
@@ -3656,7 +4778,9 @@
           "group": "Adjektive",
           "sortOrder": 14,
           "word": "einfach",
-          "partOfSpeech": "",
+          "definition": "Nicht schwierig und leicht zu verstehen oder zu machen.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 188,
           "romanisation": "",
           "translation": "",
@@ -3668,6 +4792,10 @@
             {
               "sentence": "Es ist nicht einfach, eine Wohnung zu finden.",
               "translation": ""
+            },
+            {
+              "sentence": "War die Aufgabe für dich einfach?",
+              "translation": ""
             }
           ]
         },
@@ -3675,7 +4803,9 @@
           "group": "Adjektive",
           "sortOrder": 15,
           "word": "schwierig",
-          "partOfSpeech": "",
+          "definition": "Nicht leicht zu verstehen oder zu machen.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 189,
           "romanisation": "",
           "translation": "",
@@ -3687,6 +4817,10 @@
             {
               "sentence": "Es war eine schwierige Entscheidung.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Frage war besonders schwierig?",
+              "translation": ""
             }
           ]
         },
@@ -3694,7 +4828,9 @@
           "group": "Adjektive",
           "sortOrder": 16,
           "word": "pünktlich",
-          "partOfSpeech": "",
+          "definition": "Genau zur vereinbarten oder geplanten Zeit.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 190,
           "romanisation": "",
           "translation": "",
@@ -3705,6 +4841,10 @@
             },
             {
               "sentence": "Bitte komm pünktlich zum Termin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Bist du normalerweise pünktlich?",
               "translation": ""
             }
           ]
@@ -3720,7 +4860,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 1,
           "word": "können",
-          "partOfSpeech": "",
+          "definition": "Die Fähigkeit oder Möglichkeit haben, etwas zu tun.",
+          "IPA": "",
+          "partOfSpeech": "Modalverb",
           "id": 191,
           "romanisation": "",
           "translation": "",
@@ -3732,6 +4874,10 @@
             {
               "sentence": "Kannst du mir bitte helfen?",
               "translation": ""
+            },
+            {
+              "sentence": "Kannst du morgen länger bleiben?",
+              "translation": ""
             }
           ]
         },
@@ -3739,7 +4885,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 2,
           "word": "müssen",
-          "partOfSpeech": "",
+          "definition": "Etwas tun, weil es notwendig oder vorgeschrieben ist.",
+          "IPA": "",
+          "partOfSpeech": "Modalverb",
           "id": 192,
           "romanisation": "",
           "translation": "",
@@ -3751,6 +4899,10 @@
             {
               "sentence": "Du musst nicht kommen, wenn du keine Zeit hast.",
               "translation": ""
+            },
+            {
+              "sentence": "Musst du am Samstag arbeiten?",
+              "translation": ""
             }
           ]
         },
@@ -3758,7 +4910,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 3,
           "word": "dürfen",
-          "partOfSpeech": "",
+          "definition": "Die Erlaubnis haben, etwas zu tun.",
+          "IPA": "",
+          "partOfSpeech": "Modalverb",
           "id": 193,
           "romanisation": "",
           "translation": "",
@@ -3770,6 +4924,10 @@
             {
               "sentence": "Darf ich Sie etwas fragen?",
               "translation": ""
+            },
+            {
+              "sentence": "Dürfen wir hier fotografieren?",
+              "translation": ""
             }
           ]
         },
@@ -3777,7 +4935,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 4,
           "word": "wollen",
-          "partOfSpeech": "",
+          "definition": "Den Wunsch oder die Absicht haben, etwas zu tun.",
+          "IPA": "",
+          "partOfSpeech": "Modalverb",
           "id": 194,
           "romanisation": "",
           "translation": "",
@@ -3789,6 +4949,10 @@
             {
               "sentence": "Was willst du am Wochenende machen?",
               "translation": ""
+            },
+            {
+              "sentence": "Wollt ihr im Sommer verreisen?",
+              "translation": ""
             }
           ]
         },
@@ -3796,7 +4960,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 5,
           "word": "sollen",
-          "partOfSpeech": "",
+          "definition": "Einen Auftrag, Rat oder eine Erwartung ausdrücken.",
+          "IPA": "",
+          "partOfSpeech": "Modalverb",
           "id": 195,
           "romanisation": "",
           "translation": "",
@@ -3808,6 +4974,10 @@
             {
               "sentence": "Soll ich das Fenster öffnen?",
               "translation": ""
+            },
+            {
+              "sentence": "Soll ich dich später anrufen?",
+              "translation": ""
             }
           ]
         },
@@ -3815,7 +4985,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 6,
           "word": "mögen",
-          "partOfSpeech": "",
+          "definition": "Etwas oder jemanden gernhaben.",
+          "IPA": "",
+          "partOfSpeech": "Modalverb",
           "id": 196,
           "romanisation": "",
           "translation": "",
@@ -3827,6 +4999,10 @@
             {
               "sentence": "Magst du Kaffee oder lieber Tee?",
               "translation": ""
+            },
+            {
+              "sentence": "Magst du lieber Tee oder Kaffee?",
+              "translation": ""
             }
           ]
         },
@@ -3834,7 +5010,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 7,
           "word": "brauchen",
-          "partOfSpeech": "",
+          "definition": "Etwas benötigen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 197,
           "romanisation": "",
           "translation": "",
@@ -3846,6 +5024,10 @@
             {
               "sentence": "Wir brauchen Milch und Brot.",
               "translation": ""
+            },
+            {
+              "sentence": "Brauchst du Hilfe bei der Aufgabe?",
+              "translation": ""
             }
           ]
         },
@@ -3853,7 +5035,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 8,
           "word": "verstehen",
-          "partOfSpeech": "",
+          "definition": "Den Sinn von etwas erkennen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 198,
           "romanisation": "",
           "translation": "",
@@ -3865,6 +5049,10 @@
             {
               "sentence": "Verstehst du Deutsch?",
               "translation": ""
+            },
+            {
+              "sentence": "Verstehst du diese Erklärung?",
+              "translation": ""
             }
           ]
         },
@@ -3872,7 +5060,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 9,
           "word": "wissen",
-          "partOfSpeech": "",
+          "definition": "Eine Information oder Tatsache kennen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 199,
           "romanisation": "",
           "translation": "",
@@ -3884,6 +5074,10 @@
             {
               "sentence": "Weißt du, wo der Bahnhof ist?",
               "translation": ""
+            },
+            {
+              "sentence": "Weißt du, wann der Zug kommt?",
+              "translation": ""
             }
           ]
         },
@@ -3891,7 +5085,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 10,
           "word": "kennen",
-          "partOfSpeech": "",
+          "definition": "Mit einer Person, einem Ort oder einer Sache vertraut sein.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 200,
           "romanisation": "",
           "translation": "",
@@ -3903,6 +5099,10 @@
             {
               "sentence": "Kennst du meinen Bruder?",
               "translation": ""
+            },
+            {
+              "sentence": "Kennst du ein gutes Café hier?",
+              "translation": ""
             }
           ]
         },
@@ -3910,7 +5110,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 11,
           "word": "anrufen",
-          "partOfSpeech": "",
+          "definition": "Mit dem Telefon Kontakt zu jemandem aufnehmen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 201,
           "romanisation": "",
           "translation": "",
@@ -3922,6 +5124,10 @@
             {
               "sentence": "Er hat gestern zweimal angerufen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann soll ich dich anrufen?",
+              "translation": ""
             }
           ]
         },
@@ -3929,7 +5135,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 12,
           "word": "aufräumen",
-          "partOfSpeech": "",
+          "definition": "Dinge an ihren richtigen Platz bringen und Ordnung machen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 202,
           "romanisation": "",
           "translation": "",
@@ -3941,6 +5149,10 @@
             {
               "sentence": "Hast du die Küche schon aufgeräumt?",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du dein Zimmer schon aufgeräumt?",
+              "translation": ""
             }
           ]
         },
@@ -3948,7 +5160,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 13,
           "word": "sich freuen",
-          "partOfSpeech": "",
+          "definition": "Glücklich über etwas sein oder etwas Positives erwarten.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 203,
           "romanisation": "",
           "translation": "",
@@ -3960,6 +5174,10 @@
             {
               "sentence": "Sie hat sich über das Geschenk gefreut.",
               "translation": ""
+            },
+            {
+              "sentence": "Freust du dich auf den Urlaub?",
+              "translation": ""
             }
           ]
         },
@@ -3967,7 +5185,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 14,
           "word": "sich interessieren",
-          "partOfSpeech": "",
+          "definition": "Mehr über ein Thema wissen wollen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 204,
           "romanisation": "",
           "translation": "",
@@ -3979,6 +5199,10 @@
             {
               "sentence": "Er interessiert sich sehr für Autos.",
               "translation": ""
+            },
+            {
+              "sentence": "Interessierst du dich für Kunst?",
+              "translation": ""
             }
           ]
         },
@@ -3986,7 +5210,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 15,
           "word": "reisen",
-          "partOfSpeech": "",
+          "definition": "Für längere Zeit an einen anderen Ort oder in ein anderes Land fahren.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 205,
           "romanisation": "",
           "translation": "",
@@ -3998,6 +5224,10 @@
             {
               "sentence": "Sie ist schon durch ganz Europa gereist.",
               "translation": ""
+            },
+            {
+              "sentence": "In welches Land möchtest du reisen?",
+              "translation": ""
             }
           ]
         },
@@ -4005,7 +5235,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 16,
           "word": "bleiben",
-          "partOfSpeech": "",
+          "definition": "Einen Ort nicht verlassen oder einen Zustand behalten.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 206,
           "romanisation": "",
           "translation": "",
@@ -4017,6 +5249,10 @@
             {
               "sentence": "Wir sind bis Mitternacht geblieben.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lange möchtest du hier bleiben?",
+              "translation": ""
             }
           ]
         },
@@ -4024,7 +5260,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 17,
           "word": "vergessen",
-          "partOfSpeech": "",
+          "definition": "Sich nicht mehr an etwas erinnern oder etwas nicht mitnehmen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 207,
           "romanisation": "",
           "translation": "",
@@ -4036,6 +5274,10 @@
             {
               "sentence": "Vergiss nicht, Milch zu kaufen!",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du deinen Termin vergessen?",
+              "translation": ""
             }
           ]
         },
@@ -4043,7 +5285,9 @@
           "group": "Verben (Auswahl)",
           "sortOrder": 18,
           "word": "helfen",
-          "partOfSpeech": "",
+          "definition": "Jemanden bei einer Aufgabe oder in einer schwierigen Situation unterstützen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 208,
           "romanisation": "",
           "translation": "",
@@ -4054,6 +5298,10 @@
             },
             {
               "sentence": "Er hat mir bei den Hausaufgaben geholfen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Kannst du mir morgen helfen?",
               "translation": ""
             }
           ]
@@ -4069,7 +5317,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 1,
           "word": "Meiner Meinung nach",
-          "partOfSpeech": "",
+          "definition": "Ausdruck, mit dem man die eigene Ansicht nennt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 209,
           "romanisation": "",
           "translation": "",
@@ -4081,6 +5331,10 @@
             {
               "sentence": "Meiner Meinung nach sollten wir früher losfahren.",
               "translation": ""
+            },
+            {
+              "sentence": "Was ist deiner Meinung nach besonders wichtig?",
+              "translation": ""
             }
           ]
         },
@@ -4088,7 +5342,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 2,
           "word": "Ich bin der Meinung, dass",
-          "partOfSpeech": "",
+          "definition": "Einleitung für eine persönliche Ansicht.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 210,
           "romanisation": "",
           "translation": "",
@@ -4100,6 +5356,10 @@
             {
               "sentence": "Ich bin der Meinung, dass er recht hat.",
               "translation": ""
+            },
+            {
+              "sentence": "Bist du der Meinung, dass der Kurs gut ist?",
+              "translation": ""
             }
           ]
         },
@@ -4107,7 +5367,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 3,
           "word": "Das kommt darauf an",
-          "partOfSpeech": "",
+          "definition": "Antwort, dass eine Entscheidung von weiteren Bedingungen abhängt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 211,
           "romanisation": "",
           "translation": "",
@@ -4119,6 +5381,10 @@
             {
               "sentence": "Das kommt darauf an, wie viel Zeit ich habe.",
               "translation": ""
+            },
+            {
+              "sentence": "Kommt es darauf an, wann wir losfahren?",
+              "translation": ""
             }
           ]
         },
@@ -4126,7 +5392,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 4,
           "word": "Es tut mir leid",
-          "partOfSpeech": "",
+          "definition": "Ausdruck für Bedauern oder eine Entschuldigung.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 212,
           "romanisation": "",
           "translation": "",
@@ -4138,6 +5406,10 @@
             {
               "sentence": "Es tut mir wirklich leid für dich.",
               "translation": ""
+            },
+            {
+              "sentence": "Tut es dir leid, dass du zu spät gekommen bist?",
+              "translation": ""
             }
           ]
         },
@@ -4145,7 +5417,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 5,
           "word": "Kein Problem",
-          "partOfSpeech": "",
+          "definition": "Ausdruck, dass etwas in Ordnung oder nicht schwierig ist.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 213,
           "romanisation": "",
           "translation": "",
@@ -4157,6 +5431,10 @@
             {
               "sentence": "Danke! – Kein Problem, gern geschehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist es wirklich kein Problem, wenn ich später komme?",
+              "translation": ""
             }
           ]
         },
@@ -4164,7 +5442,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 6,
           "word": "Viel Spaß",
-          "partOfSpeech": "",
+          "definition": "Wunsch, dass jemand etwas genießt.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 214,
           "romanisation": "",
           "translation": "",
@@ -4176,6 +5456,10 @@
             {
               "sentence": "Wir gehen ins Kino. – Viel Spaß!",
               "translation": ""
+            },
+            {
+              "sentence": "Wünschst du ihnen viel Spaß im Urlaub?",
+              "translation": ""
             }
           ]
         },
@@ -4183,7 +5467,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 7,
           "word": "Das ist mir egal",
-          "partOfSpeech": "",
+          "definition": "Ausdruck, dass man keine bestimmte Wahl oder Meinung hat.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 215,
           "romanisation": "",
           "translation": "",
@@ -4195,6 +5481,10 @@
             {
               "sentence": "Ob Tee oder Kaffee, das ist mir egal.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist dir wirklich egal, welchen Film wir sehen?",
+              "translation": ""
             }
           ]
         },
@@ -4202,7 +5492,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 8,
           "word": "Ich habe keine Ahnung",
-          "partOfSpeech": "",
+          "definition": "Ausdruck, dass man etwas überhaupt nicht weiß.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 216,
           "romanisation": "",
           "translation": "",
@@ -4214,6 +5506,10 @@
             {
               "sentence": "Ich habe keine Ahnung, wo er ist.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du keine Ahnung, wann der Bus kommt?",
+              "translation": ""
             }
           ]
         },
@@ -4221,7 +5517,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 9,
           "word": "auf jeden Fall",
-          "partOfSpeech": "",
+          "definition": "Sicher und ohne Zweifel.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 217,
           "romanisation": "",
           "translation": "",
@@ -4233,6 +5531,10 @@
             {
               "sentence": "Wir sollten auf jeden Fall früher losfahren.",
               "translation": ""
+            },
+            {
+              "sentence": "Kommst du auf jeden Fall zur Feier?",
+              "translation": ""
             }
           ]
         },
@@ -4240,7 +5542,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 10,
           "word": "Genau",
-          "partOfSpeech": "",
+          "definition": "Kurze Bestätigung, dass etwas vollständig richtig ist.",
+          "IPA": "",
+          "partOfSpeech": "Interjektion",
           "id": 218,
           "romanisation": "",
           "translation": "",
@@ -4252,6 +5556,10 @@
             {
               "sentence": "Genau das wollte ich sagen.",
               "translation": ""
+            },
+            {
+              "sentence": "Meinst du genau dieses Haus?",
+              "translation": ""
             }
           ]
         },
@@ -4259,7 +5567,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 11,
           "word": "Schade",
-          "partOfSpeech": "",
+          "definition": "Ausdruck von Bedauern oder Enttäuschung.",
+          "IPA": "",
+          "partOfSpeech": "Interjektion",
           "id": 219,
           "romanisation": "",
           "translation": "",
@@ -4271,6 +5581,10 @@
             {
               "sentence": "Wie schade, dass es schon vorbei ist.",
               "translation": ""
+            },
+            {
+              "sentence": "Findest du es auch schade, dass sie nicht kommt?",
+              "translation": ""
             }
           ]
         },
@@ -4278,7 +5592,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 12,
           "word": "Stimmt",
-          "partOfSpeech": "",
+          "definition": "Kurze Bestätigung, dass eine Aussage richtig ist.",
+          "IPA": "",
+          "partOfSpeech": "Interjektion",
           "id": 220,
           "romanisation": "",
           "translation": "",
@@ -4290,6 +5606,10 @@
             {
               "sentence": "Stimmt, daran habe ich nicht gedacht.",
               "translation": ""
+            },
+            {
+              "sentence": "Stimmt es, dass der Laden geschlossen ist?",
+              "translation": ""
             }
           ]
         },
@@ -4297,7 +5617,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 13,
           "word": "Was ist los?",
-          "partOfSpeech": "",
+          "definition": "Frage, was passiert ist oder warum jemand ein Problem hat.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 221,
           "romanisation": "",
           "translation": "",
@@ -4309,6 +5631,10 @@
             {
               "sentence": "Was ist los? Warum bist du so spät?",
               "translation": ""
+            },
+            {
+              "sentence": "Du bist so still – was ist los?",
+              "translation": ""
             }
           ]
         },
@@ -4316,7 +5642,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 14,
           "word": "Mach dir keine Sorgen",
-          "partOfSpeech": "",
+          "definition": "Aufforderung, ruhig zu bleiben und keine Angst zu haben.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 222,
           "romanisation": "",
           "translation": "",
@@ -4328,6 +5656,10 @@
             {
               "sentence": "Mach dir keine Sorgen, ich helfe dir.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum sagst du zu mir: „Mach dir keine Sorgen“?",
+              "translation": ""
             }
           ]
         },
@@ -4335,7 +5667,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 15,
           "word": "Viel Glück",
-          "partOfSpeech": "",
+          "definition": "Wunsch, dass etwas gut ausgeht.",
+          "IPA": "",
+          "partOfSpeech": "Grußformel",
           "id": 223,
           "romanisation": "",
           "translation": "",
@@ -4346,6 +5680,10 @@
             },
             {
               "sentence": "Morgen ist die Prüfung. – Viel Glück!",
+              "translation": ""
+            },
+            {
+              "sentence": "Wünschst du mir viel Glück für das Gespräch?",
               "translation": ""
             }
           ]
@@ -4361,7 +5699,9 @@
           "group": "Präpositionen",
           "sortOrder": 1,
           "word": "während",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet einen Zeitraum, in dem etwas passiert.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 224,
           "romanisation": "",
           "translation": "",
@@ -4373,6 +5713,10 @@
             {
               "sentence": "Während der Woche habe ich wenig Zeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du während des Films geschlafen?",
+              "translation": ""
             }
           ]
         },
@@ -4380,7 +5724,9 @@
           "group": "Präpositionen",
           "sortOrder": 2,
           "word": "wegen",
-          "partOfSpeech": "",
+          "definition": "Nennt den Grund für etwas.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 225,
           "romanisation": "",
           "translation": "",
@@ -4392,6 +5738,10 @@
             {
               "sentence": "Der Zug hatte wegen eines Unfalls Verspätung.",
               "translation": ""
+            },
+            {
+              "sentence": "Bleibt ihr wegen des Regens zu Hause?",
+              "translation": ""
             }
           ]
         },
@@ -4399,7 +5749,9 @@
           "group": "Präpositionen",
           "sortOrder": 3,
           "word": "trotz",
-          "partOfSpeech": "",
+          "definition": "Zeigt, dass etwas ein Hindernis ist, aber etwas anderes trotzdem geschieht.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 226,
           "romanisation": "",
           "translation": "",
@@ -4411,6 +5763,10 @@
             {
               "sentence": "Trotz der Erkältung ist er zur Arbeit gegangen.",
               "translation": ""
+            },
+            {
+              "sentence": "Gehst du trotz des Regens spazieren?",
+              "translation": ""
             }
           ]
         },
@@ -4418,7 +5774,9 @@
           "group": "Präpositionen",
           "sortOrder": 4,
           "word": "seit",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet den Beginn eines Zeitraums, der bis jetzt dauert.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 227,
           "romanisation": "",
           "translation": "",
@@ -4430,6 +5788,10 @@
             {
               "sentence": "Seit dem Umzug wohnt sie in Berlin.",
               "translation": ""
+            },
+            {
+              "sentence": "Seit wann lernst du Deutsch?",
+              "translation": ""
             }
           ]
         },
@@ -4437,7 +5799,9 @@
           "group": "Präpositionen",
           "sortOrder": 5,
           "word": "bis",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet das Ende eines Zeitraums oder einer Strecke.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 228,
           "romanisation": "",
           "translation": "",
@@ -4449,6 +5813,10 @@
             {
               "sentence": "Bis zum Bahnhof sind es zehn Minuten.",
               "translation": ""
+            },
+            {
+              "sentence": "Arbeitest du heute bis achtzehn Uhr?",
+              "translation": ""
             }
           ]
         },
@@ -4456,7 +5824,9 @@
           "group": "Präpositionen",
           "sortOrder": 6,
           "word": "gegen",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine ungefähre Zeit, Richtung oder Ablehnung.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 229,
           "romanisation": "",
           "translation": "",
@@ -4468,6 +5838,10 @@
             {
               "sentence": "Er hat etwas gegen Kaffee.",
               "translation": ""
+            },
+            {
+              "sentence": "Kommst du gegen acht Uhr?",
+              "translation": ""
             }
           ]
         },
@@ -4475,7 +5849,9 @@
           "group": "Präpositionen",
           "sortOrder": 7,
           "word": "durch",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine Bewegung von einer Seite zur anderen oder eine Ursache.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 230,
           "romanisation": "",
           "translation": "",
@@ -4487,6 +5863,10 @@
             {
               "sentence": "Durch das offene Fenster kommt frische Luft.",
               "translation": ""
+            },
+            {
+              "sentence": "Gehen wir durch den Park?",
+              "translation": ""
             }
           ]
         },
@@ -4494,7 +5874,9 @@
           "group": "Präpositionen",
           "sortOrder": 8,
           "word": "um",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine genaue Uhrzeit oder eine Position rund um etwas.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 231,
           "romanisation": "",
           "translation": "",
@@ -4506,6 +5888,10 @@
             {
               "sentence": "Wir sitzen um den Tisch.",
               "translation": ""
+            },
+            {
+              "sentence": "Beginnt der Film um zwanzig Uhr?",
+              "translation": ""
             }
           ]
         },
@@ -4513,7 +5899,9 @@
           "group": "Präpositionen",
           "sortOrder": 9,
           "word": "zwischen",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine Position oder Zeit in der Mitte von zwei Punkten.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 232,
           "romanisation": "",
           "translation": "",
@@ -4525,6 +5913,10 @@
             {
               "sentence": "Zwischen zwei und drei habe ich Zeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Liegt das Café zwischen der Bank und der Post?",
+              "translation": ""
             }
           ]
         },
@@ -4532,7 +5924,9 @@
           "group": "Präpositionen",
           "sortOrder": 10,
           "word": "gegenüber",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine Position auf der anderen Seite.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 233,
           "romanisation": "",
           "translation": "",
@@ -4544,6 +5938,10 @@
             {
               "sentence": "Mir gegenüber saß ein alter Mann.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Apotheke dem Bahnhof gegenüber?",
+              "translation": ""
             }
           ]
         },
@@ -4551,7 +5949,9 @@
           "group": "Präpositionen",
           "sortOrder": 11,
           "word": "innerhalb",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet einen Ort oder Zeitraum in bestimmten Grenzen.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 234,
           "romanisation": "",
           "translation": "",
@@ -4563,6 +5963,10 @@
             {
               "sentence": "Das Paket kommt innerhalb von drei Tagen.",
               "translation": ""
+            },
+            {
+              "sentence": "Bekommen wir innerhalb einer Woche eine Antwort?",
+              "translation": ""
             }
           ]
         },
@@ -4570,7 +5974,9 @@
           "group": "Präpositionen",
           "sortOrder": 12,
           "word": "außerhalb",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet einen Ort oder Zeitraum jenseits bestimmter Grenzen.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 235,
           "romanisation": "",
           "translation": "",
@@ -4582,6 +5988,10 @@
             {
               "sentence": "Außerhalb der Öffnungszeiten ist geschlossen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wohnt ihr außerhalb der Stadt?",
+              "translation": ""
             }
           ]
         },
@@ -4589,7 +5999,9 @@
           "group": "Präpositionen",
           "sortOrder": 13,
           "word": "ab",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet einen Startpunkt in der Zeit oder an einem Ort.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 236,
           "romanisation": "",
           "translation": "",
@@ -4601,6 +6013,10 @@
             {
               "sentence": "Der Zug fährt ab Gleis drei.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du ab Montag Urlaub?",
+              "translation": ""
             }
           ]
         },
@@ -4608,7 +6024,9 @@
           "group": "Präpositionen",
           "sortOrder": 14,
           "word": "nach",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine spätere Zeit oder eine Richtung zu einem Ort.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 237,
           "romanisation": "",
           "translation": "",
@@ -4620,6 +6038,10 @@
             {
               "sentence": "Nach der Arbeit gehe ich ins Fitnessstudio.",
               "translation": ""
+            },
+            {
+              "sentence": "Was machst du nach der Arbeit?",
+              "translation": ""
             }
           ]
         },
@@ -4627,7 +6049,9 @@
           "group": "Präpositionen",
           "sortOrder": 15,
           "word": "vor",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine frühere Zeit oder eine Position an der Vorderseite.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 238,
           "romanisation": "",
           "translation": "",
@@ -4638,6 +6062,10 @@
             },
             {
               "sentence": "Wir treffen uns vor dem Kino.",
+              "translation": ""
+            },
+            {
+              "sentence": "Treffen wir uns vor dem Kino?",
               "translation": ""
             }
           ]
@@ -4653,7 +6081,9 @@
           "group": "Konjunktionen",
           "sortOrder": 1,
           "word": "und",
-          "partOfSpeech": "",
+          "definition": "Verbindet Wörter oder Sätze, die zusammengehören.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 239,
           "romanisation": "",
           "translation": "",
@@ -4665,6 +6095,10 @@
             {
               "sentence": "Er spricht Deutsch und Englisch.",
               "translation": ""
+            },
+            {
+              "sentence": "Trinkst du Kaffee und liest dabei die Zeitung?",
+              "translation": ""
             }
           ]
         },
@@ -4672,7 +6106,9 @@
           "group": "Konjunktionen",
           "sortOrder": 2,
           "word": "oder",
-          "partOfSpeech": "",
+          "definition": "Verbindet zwei oder mehr Möglichkeiten.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 240,
           "romanisation": "",
           "translation": "",
@@ -4684,6 +6120,10 @@
             {
               "sentence": "Wir können heute oder morgen gehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchtest du Tee oder Kaffee?",
+              "translation": ""
             }
           ]
         },
@@ -4691,7 +6131,9 @@
           "group": "Konjunktionen",
           "sortOrder": 3,
           "word": "aber",
-          "partOfSpeech": "",
+          "definition": "Verbindet Aussagen mit einem Gegensatz.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 241,
           "romanisation": "",
           "translation": "",
@@ -4703,6 +6145,10 @@
             {
               "sentence": "Das Hotel war schön, aber teuer.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das Hotel schön, aber teuer?",
+              "translation": ""
             }
           ]
         },
@@ -4710,7 +6156,9 @@
           "group": "Konjunktionen",
           "sortOrder": 4,
           "word": "denn",
-          "partOfSpeech": "",
+          "definition": "Verbindet eine Aussage mit ihrem Grund.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 242,
           "romanisation": "",
           "translation": "",
@@ -4722,6 +6170,10 @@
             {
               "sentence": "Sie freut sich, denn sie hat die Prüfung bestanden.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist „denn“ hier richtig: „Ich bleibe zu Hause, denn ich bin krank“?",
+              "translation": ""
             }
           ]
         },
@@ -4729,7 +6181,9 @@
           "group": "Konjunktionen",
           "sortOrder": 5,
           "word": "weil",
-          "partOfSpeech": "",
+          "definition": "Leitet einen Nebensatz mit einem Grund ein.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 243,
           "romanisation": "",
           "translation": "",
@@ -4741,6 +6195,10 @@
             {
               "sentence": "Er kommt nicht, weil er keine Zeit hat.",
               "translation": ""
+            },
+            {
+              "sentence": "Bleibst du zu Hause, weil du krank bist?",
+              "translation": ""
             }
           ]
         },
@@ -4748,7 +6206,9 @@
           "group": "Konjunktionen",
           "sortOrder": 6,
           "word": "dass",
-          "partOfSpeech": "",
+          "definition": "Leitet einen Nebensatz mit einer Aussage oder Information ein.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 244,
           "romanisation": "",
           "translation": "",
@@ -4760,6 +6220,10 @@
             {
               "sentence": "Es ist gut, dass du gekommen bist.",
               "translation": ""
+            },
+            {
+              "sentence": "Glaubst du, dass es morgen regnet?",
+              "translation": ""
             }
           ]
         },
@@ -4767,7 +6231,9 @@
           "group": "Konjunktionen",
           "sortOrder": 7,
           "word": "wenn",
-          "partOfSpeech": "",
+          "definition": "Leitet eine Bedingung oder eine wiederholte Zeitangabe ein.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 245,
           "romanisation": "",
           "translation": "",
@@ -4779,6 +6245,10 @@
             {
               "sentence": "Ruf mich an, wenn du Zeit hast.",
               "translation": ""
+            },
+            {
+              "sentence": "Rufst du mich an, wenn du Zeit hast?",
+              "translation": ""
             }
           ]
         },
@@ -4786,7 +6256,9 @@
           "group": "Konjunktionen",
           "sortOrder": 8,
           "word": "obwohl",
-          "partOfSpeech": "",
+          "definition": "Leitet einen Gegensatz ein, der etwas nicht verhindert.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 246,
           "romanisation": "",
           "translation": "",
@@ -4798,6 +6270,10 @@
             {
               "sentence": "Obwohl es kalt war, sind wir schwimmen gegangen.",
               "translation": ""
+            },
+            {
+              "sentence": "Gehst du arbeiten, obwohl du krank bist?",
+              "translation": ""
             }
           ]
         },
@@ -4805,7 +6281,9 @@
           "group": "Konjunktionen",
           "sortOrder": 9,
           "word": "deshalb",
-          "partOfSpeech": "",
+          "definition": "Verbindet eine Ursache mit ihrer Folge.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktionaladverb",
           "id": 247,
           "romanisation": "",
           "translation": "",
@@ -4817,6 +6295,10 @@
             {
               "sentence": "Es hat geregnet, deshalb sind wir zu Hause geblieben.",
               "translation": ""
+            },
+            {
+              "sentence": "Warst du müde und bist deshalb früh gegangen?",
+              "translation": ""
             }
           ]
         },
@@ -4824,7 +6306,9 @@
           "group": "Konjunktionen",
           "sortOrder": 10,
           "word": "trotzdem",
-          "partOfSpeech": "",
+          "definition": "Zeigt, dass etwas trotz eines Hindernisses geschieht.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktionaladverb",
           "id": 248,
           "romanisation": "",
           "translation": "",
@@ -4836,6 +6320,10 @@
             {
               "sentence": "Er hat wenig geübt, trotzdem hat er bestanden.",
               "translation": ""
+            },
+            {
+              "sentence": "War es kalt und seid ihr trotzdem spazieren gegangen?",
+              "translation": ""
             }
           ]
         },
@@ -4843,7 +6331,9 @@
           "group": "Konjunktionen",
           "sortOrder": 11,
           "word": "sondern",
-          "partOfSpeech": "",
+          "definition": "Nennt nach einer Verneinung die richtige Alternative.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 249,
           "romanisation": "",
           "translation": "",
@@ -4855,6 +6345,10 @@
             {
               "sentence": "Er kommt nicht heute, sondern morgen.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchtest du nicht Tee, sondern Kaffee?",
+              "translation": ""
             }
           ]
         },
@@ -4862,7 +6356,9 @@
           "group": "Konjunktionen",
           "sortOrder": 12,
           "word": "damit",
-          "partOfSpeech": "",
+          "definition": "Leitet einen Nebensatz mit einem Ziel oder Zweck ein.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 250,
           "romanisation": "",
           "translation": "",
@@ -4874,6 +6370,10 @@
             {
               "sentence": "Sprich lauter, damit dich alle hören.",
               "translation": ""
+            },
+            {
+              "sentence": "Sprichst du laut, damit alle dich hören?",
+              "translation": ""
             }
           ]
         },
@@ -4881,7 +6381,9 @@
           "group": "Konjunktionen",
           "sortOrder": 13,
           "word": "bevor",
-          "partOfSpeech": "",
+          "definition": "Leitet einen Nebensatz mit einer früheren Handlung ein.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 251,
           "romanisation": "",
           "translation": "",
@@ -4893,6 +6395,10 @@
             {
               "sentence": "Wasch dir die Hände, bevor du isst.",
               "translation": ""
+            },
+            {
+              "sentence": "Liest du, bevor du schlafen gehst?",
+              "translation": ""
             }
           ]
         },
@@ -4900,7 +6406,9 @@
           "group": "Konjunktionen",
           "sortOrder": 14,
           "word": "nachdem",
-          "partOfSpeech": "",
+          "definition": "Leitet einen Nebensatz mit einer bereits beendeten Handlung ein.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 252,
           "romanisation": "",
           "translation": "",
@@ -4911,6 +6419,10 @@
             },
             {
               "sentence": "Nachdem der Film zu Ende war, gingen wir nach Hause.",
+              "translation": ""
+            },
+            {
+              "sentence": "Rufst du mich an, nachdem du angekommen bist?",
               "translation": ""
             }
           ]
@@ -4926,7 +6438,9 @@
           "group": "Pronomen",
           "sortOrder": 1,
           "word": "ich",
-          "partOfSpeech": "",
+          "definition": "Personalpronomen für die sprechende Person.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 253,
           "romanisation": "",
           "translation": "",
@@ -4938,6 +6452,10 @@
             {
               "sentence": "Ich habe morgen frei.",
               "translation": ""
+            },
+            {
+              "sentence": "Soll ich dir helfen?",
+              "translation": ""
             }
           ]
         },
@@ -4945,7 +6463,9 @@
           "group": "Pronomen",
           "sortOrder": 2,
           "word": "du",
-          "partOfSpeech": "",
+          "definition": "Informelles Personalpronomen für eine angesprochene Person.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 254,
           "romanisation": "",
           "translation": "",
@@ -4957,6 +6477,10 @@
             {
               "sentence": "Hast du meinen Schlüssel gesehen?",
               "translation": ""
+            },
+            {
+              "sentence": "Kommst du heute mit?",
+              "translation": ""
             }
           ]
         },
@@ -4964,7 +6488,9 @@
           "group": "Pronomen",
           "sortOrder": 3,
           "word": "er",
-          "partOfSpeech": "",
+          "definition": "Personalpronomen für eine männliche Person.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 255,
           "romanisation": "",
           "translation": "",
@@ -4976,6 +6502,10 @@
             {
               "sentence": "Ich kenne ihn seit vielen Jahren.",
               "translation": ""
+            },
+            {
+              "sentence": "Arbeitet er noch bei dieser Firma?",
+              "translation": ""
             }
           ]
         },
@@ -4983,7 +6513,9 @@
           "group": "Pronomen",
           "sortOrder": 4,
           "word": "sie",
-          "partOfSpeech": "",
+          "definition": "Personalpronomen für eine weibliche Person.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 256,
           "romanisation": "",
           "translation": "",
@@ -4995,6 +6527,10 @@
             {
               "sentence": "Ich habe sie gestern getroffen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wohnt sie noch in der Nähe?",
+              "translation": ""
             }
           ]
         },
@@ -5002,7 +6538,9 @@
           "group": "Pronomen",
           "sortOrder": 5,
           "word": "wir",
-          "partOfSpeech": "",
+          "definition": "Personalpronomen für die sprechende Person und weitere Personen.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 257,
           "romanisation": "",
           "translation": "",
@@ -5014,6 +6552,10 @@
             {
               "sentence": "Uns gefällt die neue Wohnung.",
               "translation": ""
+            },
+            {
+              "sentence": "Fahren wir im Sommer ans Meer?",
+              "translation": ""
             }
           ]
         },
@@ -5021,7 +6563,9 @@
           "group": "Pronomen",
           "sortOrder": 6,
           "word": "ihr",
-          "partOfSpeech": "",
+          "definition": "Informelles Personalpronomen für mehrere angesprochene Personen.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 258,
           "romanisation": "",
           "translation": "",
@@ -5033,6 +6577,10 @@
             {
               "sentence": "Ich habe euch eine E-Mail geschickt.",
               "translation": ""
+            },
+            {
+              "sentence": "Habt ihr morgen Zeit?",
+              "translation": ""
             }
           ]
         },
@@ -5040,7 +6588,9 @@
           "group": "Pronomen",
           "sortOrder": 7,
           "word": "mein",
-          "partOfSpeech": "",
+          "definition": "Zeigt, dass etwas zur sprechenden Person gehört.",
+          "IPA": "",
+          "partOfSpeech": "Possessivartikel",
           "id": 259,
           "romanisation": "",
           "translation": "",
@@ -5052,6 +6602,10 @@
             {
               "sentence": "Mein Bruder wohnt in Köln.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das mein Platz?",
+              "translation": ""
             }
           ]
         },
@@ -5059,7 +6613,9 @@
           "group": "Pronomen",
           "sortOrder": 8,
           "word": "dein",
-          "partOfSpeech": "",
+          "definition": "Zeigt, dass etwas zur angesprochenen Person gehört.",
+          "IPA": "",
+          "partOfSpeech": "Possessivartikel",
           "id": 260,
           "romanisation": "",
           "translation": "",
@@ -5071,6 +6627,10 @@
             {
               "sentence": "Wie war dein Wochenende?",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das dein Handy?",
+              "translation": ""
             }
           ]
         },
@@ -5078,7 +6638,9 @@
           "group": "Pronomen",
           "sortOrder": 9,
           "word": "sein",
-          "partOfSpeech": "",
+          "definition": "Zeigt, dass etwas zu einer männlichen oder neutralen Person gehört.",
+          "IPA": "",
+          "partOfSpeech": "Possessivartikel",
           "id": 261,
           "romanisation": "",
           "translation": "",
@@ -5090,6 +6652,10 @@
             {
               "sentence": "Ich habe seinen Namen vergessen.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das sein Fahrrad?",
+              "translation": ""
             }
           ]
         },
@@ -5097,7 +6663,9 @@
           "group": "Pronomen",
           "sortOrder": 10,
           "word": "unser",
-          "partOfSpeech": "",
+          "definition": "Zeigt, dass etwas zur sprechenden Gruppe gehört.",
+          "IPA": "",
+          "partOfSpeech": "Possessivartikel",
           "id": 262,
           "romanisation": "",
           "translation": "",
@@ -5109,6 +6677,10 @@
             {
               "sentence": "Das ist unsere neue Nachbarin.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das unser Zug?",
+              "translation": ""
             }
           ]
         },
@@ -5116,7 +6688,9 @@
           "group": "Pronomen",
           "sortOrder": 11,
           "word": "dieser",
-          "partOfSpeech": "",
+          "definition": "Weist auf eine bestimmte Person oder Sache hin.",
+          "IPA": "",
+          "partOfSpeech": "Demonstrativartikel",
           "id": 263,
           "romanisation": "",
           "translation": "",
@@ -5128,6 +6702,10 @@
             {
               "sentence": "Diese Frage ist schwierig.",
               "translation": ""
+            },
+            {
+              "sentence": "Gefällt dir dieser Mantel?",
+              "translation": ""
             }
           ]
         },
@@ -5135,7 +6713,9 @@
           "group": "Pronomen",
           "sortOrder": 12,
           "word": "jeder",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet alle einzelnen Personen oder Dinge einer Gruppe.",
+          "IPA": "",
+          "partOfSpeech": "Indefinitartikel",
           "id": 264,
           "romanisation": "",
           "translation": "",
@@ -5147,6 +6727,10 @@
             {
               "sentence": "Jeden Morgen trinke ich Kaffee.",
               "translation": ""
+            },
+            {
+              "sentence": "Muss jeder das Formular ausfüllen?",
+              "translation": ""
             }
           ]
         },
@@ -5154,7 +6738,9 @@
           "group": "Pronomen",
           "sortOrder": 13,
           "word": "man",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet Menschen allgemein, ohne eine bestimmte Person zu nennen.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 265,
           "romanisation": "",
           "translation": "",
@@ -5166,6 +6752,10 @@
             {
               "sentence": "Man muss viel üben.",
               "translation": ""
+            },
+            {
+              "sentence": "Darf man hier parken?",
+              "translation": ""
             }
           ]
         },
@@ -5173,7 +6763,9 @@
           "group": "Pronomen",
           "sortOrder": 14,
           "word": "etwas",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine unbestimmte Sache oder eine kleine Menge.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 266,
           "romanisation": "",
           "translation": "",
@@ -5185,6 +6777,10 @@
             {
               "sentence": "Ich muss dir etwas sagen.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchtest du etwas essen?",
+              "translation": ""
             }
           ]
         },
@@ -5192,7 +6788,9 @@
           "group": "Pronomen",
           "sortOrder": 15,
           "word": "nichts",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet keine Sache oder keine Menge.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 267,
           "romanisation": "",
           "translation": "",
@@ -5204,6 +6802,10 @@
             {
               "sentence": "Im Kühlschrank ist nichts mehr.",
               "translation": ""
+            },
+            {
+              "sentence": "Hast du wirklich nichts gehört?",
+              "translation": ""
             }
           ]
         },
@@ -5211,7 +6813,9 @@
           "group": "Pronomen",
           "sortOrder": 16,
           "word": "jemand",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet eine nicht näher bekannte Person.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 268,
           "romanisation": "",
           "translation": "",
@@ -5223,6 +6827,10 @@
             {
               "sentence": "Jemand hat deinen Schlüssel gefunden.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist jemand im Büro?",
+              "translation": ""
             }
           ]
         },
@@ -5230,7 +6838,9 @@
           "group": "Pronomen",
           "sortOrder": 17,
           "word": "niemand",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet keine Person.",
+          "IPA": "",
+          "partOfSpeech": "Pronomen",
           "id": 269,
           "romanisation": "",
           "translation": "",
@@ -5241,6 +6851,10 @@
             },
             {
               "sentence": "Niemand kennt die Antwort.",
+              "translation": ""
+            },
+            {
+              "sentence": "Warum ist niemand zu Hause?",
               "translation": ""
             }
           ]

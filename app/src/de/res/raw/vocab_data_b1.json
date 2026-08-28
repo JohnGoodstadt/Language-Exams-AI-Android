@@ -26,11 +26,12 @@
 					"group": "Persönliches",
 					"sortOrder": 1,
 					"word": "Biografie",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Biografie: ein Buch über das Leben einer anderen Person",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -50,11 +51,12 @@
 					"group": "Persönliches",
 					"sortOrder": 2,
 					"word": "Autobiografie",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Autobiografie: ein Buch über das eigene Leben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -74,11 +76,12 @@
 					"group": "Persönliches",
 					"sortOrder": 3,
 					"word": "Memoiren",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Memoiren: Erinnerungen an einen Teil des eigenen Lebens (Plural)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -98,11 +101,12 @@
 					"group": "Persönliches",
 					"sortOrder": 4,
 					"word": "Dokument",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Dokument: ein amtliches Papier mit Informationen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -122,11 +126,12 @@
 					"group": "Persönliches",
 					"sortOrder": 5,
 					"word": "Formular",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Formular: ein Blatt mit Feldern für persönliche Angaben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -146,11 +151,12 @@
 					"group": "Persönliches",
 					"sortOrder": 6,
 					"word": "Bescheinigung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bescheinigung: ein Papier, das etwas offiziell bestätigt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -170,11 +176,12 @@
 					"group": "Persönliches",
 					"sortOrder": 7,
 					"word": "Ausweis",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Ausweis: ein Dokument, das zeigt, wer man ist",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -194,11 +201,12 @@
 					"group": "Persönliches",
 					"sortOrder": 8,
 					"word": "Reisepass",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Reisepass: ein Dokument, das man für Auslandsreisen braucht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -218,11 +226,12 @@
 					"group": "Persönliches",
 					"sortOrder": 9,
 					"word": "Führerschein",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Führerschein: die Erlaubnis, ein Auto zu fahren",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -242,11 +251,12 @@
 					"group": "Persönliches",
 					"sortOrder": 10,
 					"word": "Vorstellungsgespräch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Vorstellungsgespräch: ein Gespräch, um eine Stelle zu bekommen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -266,11 +276,12 @@
 					"group": "Persönliches",
 					"sortOrder": 11,
 					"word": "Interviewer",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Interviewer: die Person, die im Gespräch die Fragen stellt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -290,11 +301,12 @@
 					"group": "Persönliches",
 					"sortOrder": 12,
 					"word": "Kandidat",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kandidat: eine Person, die sich um eine Stelle bewirbt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -314,11 +326,12 @@
 					"group": "Persönliches",
 					"sortOrder": 13,
 					"word": "Anmeldung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anmeldung: das Eintragen des Namens auf einer Liste",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -338,11 +351,12 @@
 					"group": "Persönliches",
 					"sortOrder": 14,
 					"word": "sich anmelden",
-					"partOfSpeech": "",
+					"partOfSpeech": "Reflexives Verb",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "sich anmelden: seinen Namen auf eine offizielle Liste setzen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -362,11 +376,12 @@
 					"group": "Persönliches",
 					"sortOrder": 15,
 					"word": "Bewerbung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bewerbung: ein förmlicher Antrag auf eine Stelle oder einen Kurs",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -386,11 +401,12 @@
 					"group": "Persönliches",
 					"sortOrder": 16,
 					"word": "Unterschrift",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterschrift: der eigene Name, den man selbst schreibt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -410,11 +426,12 @@
 					"group": "Persönliches",
 					"sortOrder": 17,
 					"word": "unterschreiben",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "unterschreiben: seinen Namen unter ein Dokument schreiben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -434,11 +451,12 @@
 					"group": "Persönliches",
 					"sortOrder": 18,
 					"word": "abzeichnen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "abzeichnen: kurz mit den Anfangsbuchstaben unterschreiben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -458,11 +476,12 @@
 					"group": "Persönliches",
 					"sortOrder": 19,
 					"word": "Umfrage",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umfrage: eine Reihe von Fragen an viele Menschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -482,11 +501,12 @@
 					"group": "Persönliches",
 					"sortOrder": 20,
 					"word": "Fragebogen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Fragebogen: ein Blatt mit vielen Fragen zum Ausfüllen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -506,11 +526,12 @@
 					"group": "Persönliches",
 					"sortOrder": 21,
 					"word": "Meinungsumfrage",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Meinungsumfrage: eine kurze Befragung zur Meinung vieler Menschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -530,11 +551,12 @@
 					"group": "Persönliches",
 					"sortOrder": 22,
 					"word": "Titel",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Titel: ein Wort für den Beruf oder Rang einer Person",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -554,11 +576,12 @@
 					"group": "Persönliches",
 					"sortOrder": 23,
 					"word": "Position",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Position: eine bestimmte Stelle in einer Firma",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -578,11 +601,12 @@
 					"group": "Persönliches",
 					"sortOrder": 24,
 					"word": "Rang",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Rang: die Stufe, die jemand in einer Organisation hat",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -609,11 +633,12 @@
 					"group": "Bildung",
 					"sortOrder": 1,
 					"word": "Aufgabe",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aufgabe: eine Arbeit, die man erledigen muss",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -633,11 +658,12 @@
 					"group": "Bildung",
 					"sortOrder": 2,
 					"word": "Hausaufgabe",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Hausaufgabe: Aufgaben, die man zu Hause für die Schule macht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -657,11 +683,12 @@
 					"group": "Bildung",
 					"sortOrder": 3,
 					"word": "Projekt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Projekt: eine geplante Arbeit mit einem Ziel",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -681,11 +708,12 @@
 					"group": "Bildung",
 					"sortOrder": 4,
 					"word": "Kurs",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kurs: eine Reihe von Unterrichtsstunden zu einem Thema",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -705,11 +733,12 @@
 					"group": "Bildung",
 					"sortOrder": 5,
 					"word": "Klasse",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Klasse: eine Gruppe von Schülern; auch: eine Unterrichtsstunde",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -729,11 +758,12 @@
 					"group": "Bildung",
 					"sortOrder": 6,
 					"word": "Vorlesung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vorlesung: ein Vortrag an der Universität",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -753,11 +783,12 @@
 					"group": "Bildung",
 					"sortOrder": 7,
 					"word": "Diplom",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Diplom: ein Dokument über einen Studienabschluss",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -777,11 +808,12 @@
 					"group": "Bildung",
 					"sortOrder": 8,
 					"word": "Zeugnis",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Zeugnis: ein amtliches Papier über Leistungen oder Noten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -801,11 +833,12 @@
 					"group": "Bildung",
 					"sortOrder": 9,
 					"word": "Abschluss",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Abschluss: ein Universitätsgrad am Ende des Studiums",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -825,11 +858,12 @@
 					"group": "Bildung",
 					"sortOrder": 10,
 					"word": "Mitarbeiter",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Mitarbeiter: eine Person, die in einer Firma angestellt ist",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -849,11 +883,12 @@
 					"group": "Bildung",
 					"sortOrder": 11,
 					"word": "Personal",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Personal: alle Mitarbeiter einer Firma zusammen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -873,11 +908,12 @@
 					"group": "Bildung",
 					"sortOrder": 12,
 					"word": "Arbeiter",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Arbeiter: eine Person, die körperlich arbeitet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -897,11 +933,12 @@
 					"group": "Bildung",
 					"sortOrder": 13,
 					"word": "Arbeitgeber",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Arbeitgeber: eine Person oder Firma, die andere beschäftigt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -921,11 +958,12 @@
 					"group": "Bildung",
 					"sortOrder": 14,
 					"word": "Chef",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Chef: die Person, die im Betrieb das Sagen hat",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -945,11 +983,12 @@
 					"group": "Bildung",
 					"sortOrder": 15,
 					"word": "Manager",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Manager: eine Führungskraft, die ein Team oder eine Abteilung leitet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -969,11 +1008,12 @@
 					"group": "Bildung",
 					"sortOrder": 16,
 					"word": "Praktikum",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Praktikum: eine Zeit, in der man einen Beruf praktisch lernt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -993,11 +1033,12 @@
 					"group": "Bildung",
 					"sortOrder": 17,
 					"word": "Lehrling",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Lehrling: eine Person in der Berufsausbildung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1017,11 +1058,12 @@
 					"group": "Bildung",
 					"sortOrder": 18,
 					"word": "Ausbildung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ausbildung: das Lernen eines Berufs in Betrieb und Schule",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1041,11 +1083,12 @@
 					"group": "Bildung",
 					"sortOrder": 19,
 					"word": "Dozent",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Dozent: eine Person, die an der Universität unterrichtet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1065,11 +1108,12 @@
 					"group": "Bildung",
 					"sortOrder": 20,
 					"word": "Professor",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Professor: der höchste Lehrer an einer Universität",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1089,11 +1133,12 @@
 					"group": "Bildung",
 					"sortOrder": 21,
 					"word": "Lehrer",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Lehrer: eine Person, die in der Schule unterrichtet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1113,11 +1158,12 @@
 					"group": "Bildung",
 					"sortOrder": 22,
 					"word": "Beruf",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Beruf: die Arbeit, die man gelernt hat und ausübt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1137,11 +1183,12 @@
 					"group": "Bildung",
 					"sortOrder": 23,
 					"word": "Karriere",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Karriere: die berufliche Entwicklung im Leben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1161,11 +1208,12 @@
 					"group": "Bildung",
 					"sortOrder": 24,
 					"word": "Tätigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Tätigkeit: die Arbeit oder Aufgabe, die man ausübt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1185,11 +1233,12 @@
 					"group": "Bildung",
 					"sortOrder": 25,
 					"word": "Qualifikation",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Qualifikation: eine Fähigkeit oder ein Abschluss für einen Beruf",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1209,11 +1258,12 @@
 					"group": "Bildung",
 					"sortOrder": 26,
 					"word": "Erfahrung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erfahrung: Wissen und Können, das man in der Praxis sammelt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1233,11 +1283,12 @@
 					"group": "Bildung",
 					"sortOrder": 27,
 					"word": "Fähigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Fähigkeit: etwas, das man gut kann",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1257,11 +1308,12 @@
 					"group": "Bildung",
 					"sortOrder": 28,
 					"word": "Seminar",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Seminar: ein Kurs an der Uni mit aktiver Mitarbeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1281,11 +1333,12 @@
 					"group": "Bildung",
 					"sortOrder": 29,
 					"word": "Workshop",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Workshop: ein kurzer, praktischer Kurs in kleiner Gruppe",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1305,11 +1358,12 @@
 					"group": "Bildung",
 					"sortOrder": 30,
 					"word": "Konferenz",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 30,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Konferenz: ein großes Treffen zu einem Fachthema",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1336,11 +1390,12 @@
 					"group": "Reisen",
 					"sortOrder": 1,
 					"word": "Unterkunft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterkunft: ein Ort zum Übernachten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1360,11 +1415,12 @@
 					"group": "Reisen",
 					"sortOrder": 2,
 					"word": "Hotel",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Hotel: ein Haus, in dem man gegen Geld übernachtet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1384,11 +1440,12 @@
 					"group": "Reisen",
 					"sortOrder": 3,
 					"word": "Jugendherberge",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Jugendherberge: eine einfache, günstige Unterkunft für Reisende",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1408,11 +1465,12 @@
 					"group": "Reisen",
 					"sortOrder": 4,
 					"word": "Ankunft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ankunft: das Ankommen an einem Ort",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1432,11 +1490,12 @@
 					"group": "Reisen",
 					"sortOrder": 5,
 					"word": "Check-in",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Check-in: das Anmelden am Flughafen oder im Hotel",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1456,11 +1515,12 @@
 					"group": "Reisen",
 					"sortOrder": 6,
 					"word": "Landung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Landung: das Aufsetzen des Flugzeugs auf dem Boden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1480,11 +1540,12 @@
 					"group": "Reisen",
 					"sortOrder": 7,
 					"word": "Gepäck",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gepäck: die Taschen und Koffer, die man mitnimmt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1504,11 +1565,12 @@
 					"group": "Reisen",
 					"sortOrder": 8,
 					"word": "Koffer",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Koffer: eine große Tasche für Kleidung auf Reisen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1528,11 +1590,12 @@
 					"group": "Reisen",
 					"sortOrder": 9,
 					"word": "Reisetasche",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reisetasche: eine weiche Tasche für die Reise",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1552,11 +1615,12 @@
 					"group": "Reisen",
 					"sortOrder": 10,
 					"word": "Buchung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Buchung: das Reservieren einer Reise oder eines Zimmers",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1576,11 +1640,12 @@
 					"group": "Reisen",
 					"sortOrder": 11,
 					"word": "Reservierung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reservierung: das feste Vorbestellen von Tisch oder Zimmer",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1600,11 +1665,12 @@
 					"group": "Reisen",
 					"sortOrder": 12,
 					"word": "Ticket",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Ticket: eine Karte für eine Fahrt oder einen Flug",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1624,11 +1690,12 @@
 					"group": "Reisen",
 					"sortOrder": 13,
 					"word": "Kreuzfahrt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kreuzfahrt: eine Urlaubsreise mit einem großen Schiff",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1648,11 +1715,12 @@
 					"group": "Reisen",
 					"sortOrder": 14,
 					"word": "Schiff",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Schiff: ein großes Fahrzeug für das Wasser",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1672,11 +1740,12 @@
 					"group": "Reisen",
 					"sortOrder": 15,
 					"word": "Seereise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Seereise: eine lange Reise über das Meer",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1696,11 +1765,12 @@
 					"group": "Reisen",
 					"sortOrder": 16,
 					"word": "Zoll",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Zoll: die Kontrolle von Waren an der Grenze",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1720,11 +1790,12 @@
 					"group": "Reisen",
 					"sortOrder": 17,
 					"word": "Passkontrolle",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Passkontrolle: die Kontrolle des Reisepasses an der Grenze",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1744,11 +1815,12 @@
 					"group": "Reisen",
 					"sortOrder": 18,
 					"word": "Einreise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einreise: das offizielle Ankommen in einem anderen Land",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1768,11 +1840,12 @@
 					"group": "Reisen",
 					"sortOrder": 19,
 					"word": "Abfahrt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Abfahrt: das Losfahren von einem Ort",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1792,11 +1865,12 @@
 					"group": "Reisen",
 					"sortOrder": 20,
 					"word": "Abflug",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Abflug: das Starten des Flugzeugs in die Luft",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1816,11 +1890,12 @@
 					"group": "Reisen",
 					"sortOrder": 21,
 					"word": "Flugsteig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Flugsteig: der Ausgang zum Flugzeug am Flughafen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1840,11 +1915,12 @@
 					"group": "Reisen",
 					"sortOrder": 22,
 					"word": "Reiseziel",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Reiseziel: der Ort, zu dem man reist",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1864,11 +1940,12 @@
 					"group": "Reisen",
 					"sortOrder": 23,
 					"word": "Reise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reise: eine Fahrt von einem Ort zum anderen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1888,11 +1965,12 @@
 					"group": "Reisen",
 					"sortOrder": 24,
 					"word": "Reiseplan",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Reiseplan: der genaue Plan einer Reise mit Orten und Zeiten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1912,11 +1990,12 @@
 					"group": "Reisen",
 					"sortOrder": 25,
 					"word": "Zeitplan",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Zeitplan: ein Plan, wann etwas passiert",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1936,11 +2015,12 @@
 					"group": "Reisen",
 					"sortOrder": 26,
 					"word": "planen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "planen: im Voraus überlegen, was man tun wird",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1960,11 +2040,12 @@
 					"group": "Reisen",
 					"sortOrder": 27,
 					"word": "Besichtigung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Besichtigung: das Ansehen von Sehenswürdigkeiten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -1984,11 +2065,12 @@
 					"group": "Reisen",
 					"sortOrder": 28,
 					"word": "Rundreise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rundreise: eine Reise mit mehreren Stationen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2008,11 +2090,12 @@
 					"group": "Reisen",
 					"sortOrder": 29,
 					"word": "Sehenswürdigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Sehenswürdigkeit: ein Ort, den Touristen gern besuchen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2039,11 +2122,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 1,
 					"word": "Allergie",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Allergie: eine Überreaktion des Körpers auf einen Stoff",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2063,11 +2147,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 2,
 					"word": "Reaktion",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Reaktion: eine Veränderung im Körper nach Kontakt mit etwas",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2087,11 +2172,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 3,
 					"word": "Symptome",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Symptome: die körperlichen Zeichen einer Krankheit (Plural)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2111,11 +2197,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 4,
 					"word": "Termin",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Termin: eine feste Verabredung zu einer bestimmten Zeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2135,11 +2222,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 5,
 					"word": "vereinbaren",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vereinbaren: eine Zeit für etwas festlegen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2159,11 +2247,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 6,
 					"word": "Beratung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Beratung: ein Gespräch mit einem Fachmann, um Rat zu bekommen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2183,11 +2272,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 7,
 					"word": "Ernährung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ernährung: das Essen und Trinken, das man normalerweise zu sich nimmt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2207,11 +2297,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 8,
 					"word": "Nahrung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Nahrung: alles, was der Körper zum Leben braucht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2231,11 +2322,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 9,
 					"word": "ausgewogen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "ausgewogen: im richtigen Gleichgewicht (z. B. Ernährung)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2255,11 +2347,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 10,
 					"word": "Notfall",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Notfall: eine plötzliche, gefährliche Situation",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2279,11 +2372,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 11,
 					"word": "Krankenhaus",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Krankenhaus: ein Ort, an dem Kranke behandelt werden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2303,11 +2397,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 12,
 					"word": "dringend",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "dringend: sehr eilig; muss sofort passieren",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2327,11 +2422,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 13,
 					"word": "Bewegung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bewegung: körperliche Aktivität für die Gesundheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2351,11 +2447,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 14,
 					"word": "Training",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Training: körperliche Übungen, um fit zu werden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2375,11 +2472,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 15,
 					"word": "Routine",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Routine: eine feste, regelmäßige Gewohnheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2399,11 +2497,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 16,
 					"word": "Gesundheit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesundheit: der Zustand von Körper und Geist",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2423,11 +2522,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 17,
 					"word": "Wohlbefinden",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Wohlbefinden: das Gefühl, dass es einem gut geht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2447,11 +2547,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 18,
 					"word": "Untersuchung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Untersuchung: eine ärztliche Kontrolle der Gesundheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2471,11 +2572,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 19,
 					"word": "Verletzung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verletzung: ein Schaden am Körper",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2495,11 +2597,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 20,
 					"word": "Wunde",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Wunde: eine Verletzung der Haut",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2519,11 +2622,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 21,
 					"word": "Genesung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Genesung: das Gesundwerden nach einer Krankheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2543,11 +2647,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 22,
 					"word": "Versicherung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Versicherung: ein Vertrag, der bei Schäden zahlt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2567,11 +2672,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 23,
 					"word": "Police",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Police: der Vertrag einer Versicherung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2591,11 +2697,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 24,
 					"word": "Versicherungsschutz",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Versicherungsschutz: der Schutz durch eine Versicherung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2615,11 +2722,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 25,
 					"word": "Medikament",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Medikament: ein Mittel gegen eine Krankheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2639,11 +2747,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 26,
 					"word": "Rezept",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Rezept: ein Zettel vom Arzt für ein Medikament",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2663,11 +2772,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 27,
 					"word": "Dosis",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Dosis: die Menge eines Medikaments, die man nimmt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2687,11 +2797,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 28,
 					"word": "Behandlung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Behandlung: die ärztliche Hilfe bei einer Krankheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2711,11 +2822,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 29,
 					"word": "Therapie",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Therapie: eine Behandlung, um gesund zu werden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2735,11 +2847,12 @@
 					"group": "Gesundheit",
 					"sortOrder": 30,
 					"word": "Heilung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 30,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Heilung: das Verschwinden einer Krankheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2766,11 +2879,12 @@
 					"group": "Freizeit",
 					"sortOrder": 1,
 					"word": "Aktivität",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aktivität: etwas, das man in der Freizeit tut",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2790,11 +2904,12 @@
 					"group": "Freizeit",
 					"sortOrder": 2,
 					"word": "Spiel",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Spiel: eine Tätigkeit zum Spaß mit Regeln",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2814,11 +2929,12 @@
 					"group": "Freizeit",
 					"sortOrder": 3,
 					"word": "Veranstaltung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Veranstaltung: ein geplantes öffentliches Ereignis",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2838,11 +2954,12 @@
 					"group": "Freizeit",
 					"sortOrder": 4,
 					"word": "Konzert",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Konzert: eine Musikveranstaltung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2862,11 +2979,12 @@
 					"group": "Freizeit",
 					"sortOrder": 5,
 					"word": "Band",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Band: eine Gruppe von Musikern",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2886,11 +3004,12 @@
 					"group": "Freizeit",
 					"sortOrder": 6,
 					"word": "Publikum",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Publikum: die Zuschauer bei einer Vorstellung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2910,11 +3029,12 @@
 					"group": "Freizeit",
 					"sortOrder": 7,
 					"word": "Unterhaltung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterhaltung: etwas, das Freude und Spaß bringt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2934,11 +3054,12 @@
 					"group": "Freizeit",
 					"sortOrder": 8,
 					"word": "Show",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Show: eine unterhaltsame Vorstellung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2958,11 +3079,12 @@
 					"group": "Freizeit",
 					"sortOrder": 9,
 					"word": "Film",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Film: ein Werk, das man im Kino sieht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -2982,11 +3104,12 @@
 					"group": "Freizeit",
 					"sortOrder": 10,
 					"word": "Hobby",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Hobby: eine Lieblingsbeschäftigung in der Freizeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3006,11 +3129,12 @@
 					"group": "Freizeit",
 					"sortOrder": 11,
 					"word": "Sammlung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Sammlung: viele gesammelte Dinge zu einem Thema",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3030,11 +3154,12 @@
 					"group": "Freizeit",
 					"sortOrder": 12,
 					"word": "Handwerk",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Handwerk: eine Tätigkeit, bei der man mit den Händen etwas herstellt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3054,11 +3179,12 @@
 					"group": "Freizeit",
 					"sortOrder": 13,
 					"word": "Freizeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Freizeit: die Zeit ohne Arbeit oder Pflichten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3078,11 +3204,12 @@
 					"group": "Freizeit",
 					"sortOrder": 14,
 					"word": "Entspannung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Entspannung: das Ausruhen und Ruhigwerden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3102,11 +3229,12 @@
 					"group": "Freizeit",
 					"sortOrder": 15,
 					"word": "freie Zeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die freie Zeit: die Zeit, in der man nicht arbeitet oder lernt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3126,11 +3254,12 @@
 					"group": "Freizeit",
 					"sortOrder": 16,
 					"word": "Museum",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Museum: ein Ort mit Kunst und Geschichte",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3150,11 +3279,12 @@
 					"group": "Freizeit",
 					"sortOrder": 17,
 					"word": "Ausstellung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ausstellung: eine Schau von Kunst oder Objekten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3174,11 +3304,12 @@
 					"group": "Freizeit",
 					"sortOrder": 18,
 					"word": "Galerie",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Galerie: ein Raum, in dem Kunst gezeigt wird",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3198,11 +3329,12 @@
 					"group": "Freizeit",
 					"sortOrder": 19,
 					"word": "Aufführung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aufführung: eine Vorstellung auf einer Bühne",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3222,11 +3354,12 @@
 					"group": "Freizeit",
 					"sortOrder": 20,
 					"word": "Schauspieler",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Schauspieler: eine Person, die in Filmen oder im Theater spielt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3246,11 +3379,12 @@
 					"group": "Freizeit",
 					"sortOrder": 21,
 					"word": "Bühne",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bühne: der erhöhte Ort, auf dem Künstler auftreten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3270,11 +3404,12 @@
 					"group": "Freizeit",
 					"sortOrder": 22,
 					"word": "Erholung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erholung: das Ausruhen und Entspannen in der Freizeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3294,11 +3429,12 @@
 					"group": "Freizeit",
 					"sortOrder": 23,
 					"word": "Sport",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Sport: körperliche Aktivität mit Regeln",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3318,11 +3454,12 @@
 					"group": "Freizeit",
 					"sortOrder": 24,
 					"word": "Theater",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Theater: ein Gebäude für Aufführungen auf der Bühne",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3342,11 +3479,12 @@
 					"group": "Freizeit",
 					"sortOrder": 25,
 					"word": "Theaterstück",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Theaterstück: ein Stück, das im Theater gespielt wird",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3366,11 +3504,12 @@
 					"group": "Freizeit",
 					"sortOrder": 26,
 					"word": "Drama",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Drama: ein ernstes Theaterstück oder eine Filmart",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3390,11 +3529,12 @@
 					"group": "Freizeit",
 					"sortOrder": 27,
 					"word": "Tourismus",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Tourismus: das Reisen vieler Menschen als Wirtschaft",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3414,11 +3554,12 @@
 					"group": "Freizeit",
 					"sortOrder": 28,
 					"word": "Tourist",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Tourist: eine Person, die zum Vergnügen reist",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3438,11 +3579,12 @@
 					"group": "Freizeit",
 					"sortOrder": 29,
 					"word": "Besichtigung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Besichtigung: das Ansehen von Sehenswürdigkeiten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3469,11 +3611,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 1,
 					"word": "Vorspeise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vorspeise: ein kleines Gericht vor dem Hauptgang",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3493,11 +3636,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 2,
 					"word": "erster Gang",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der erste Gang: das erste Gericht einer Mahlzeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3517,11 +3661,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 3,
 					"word": "Häppchen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Häppchen: ein kleiner Snack als Vorspeise",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3541,11 +3686,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 4,
 					"word": "Getränk",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Getränk: etwas, das man trinkt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3565,11 +3711,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 5,
 					"word": "Drink",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Drink: ein Getränk, oft mit Alkohol",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3589,11 +3736,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 6,
 					"word": "Erfrischung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erfrischung: ein Getränk oder Snack, der erfrischt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3613,11 +3761,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 7,
 					"word": "Küche",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Küche: die typische Art zu kochen eines Landes",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3637,11 +3786,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 8,
 					"word": "Gericht",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gericht: eine zubereitete Speise",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3661,11 +3811,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 9,
 					"word": "Spezialität",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Spezialität: ein typisches, besonderes Gericht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3685,11 +3836,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 10,
 					"word": "Nachtisch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Nachtisch: die süße Speise am Ende des Essens",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3709,11 +3861,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 11,
 					"word": "Süßspeise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Süßspeise: eine süße Speise",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3733,11 +3886,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 12,
 					"word": "Pudding",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Pudding: eine süße, weiche Nachspeise",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3757,11 +3911,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 13,
 					"word": "Speisen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Speisen: das Essen in feierlichem Rahmen (nominalisiert)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3781,11 +3936,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 14,
 					"word": "speisen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "speisen: in gehobenem Rahmen essen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3805,11 +3961,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 15,
 					"word": "Abendessen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Abendessen: die Hauptmahlzeit am Abend",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3829,11 +3986,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 16,
 					"word": "Zutat",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Zutat: eine Sache, die man zum Kochen braucht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3853,11 +4011,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 17,
 					"word": "Bestandteil",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Bestandteil: ein Teil von etwas Größerem",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3877,11 +4036,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 18,
 					"word": "Element",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Element: ein einzelner Teil eines Ganzen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3901,11 +4061,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 19,
 					"word": "Speisekarte",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Speisekarte: die Liste der Gerichte im Restaurant",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3925,11 +4086,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 20,
 					"word": "Auswahl",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Auswahl: eine Menge Dinge, aus denen man wählen kann",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3949,11 +4111,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 21,
 					"word": "Liste",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Liste: eine geordnete Aufzählung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3973,11 +4136,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 22,
 					"word": "Rezept",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Rezept: eine Anleitung zum Kochen eines Gerichts",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -3997,11 +4161,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 23,
 					"word": "Anleitung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anleitung: eine Erklärung, wie man etwas macht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4021,11 +4186,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 24,
 					"word": "Methode",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Methode: eine bestimmte Art, etwas zu tun",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4045,11 +4211,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 25,
 					"word": "Snack",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Snack: eine kleine Mahlzeit zwischendurch",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4069,11 +4236,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 26,
 					"word": "Leckerei",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Leckerei: etwas Besonderes zum Genießen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4093,11 +4261,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 27,
 					"word": "knabbern",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "knabbern: in kleinen Bissen essen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4117,11 +4286,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 28,
 					"word": "Vegetarier",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Vegetarier: eine Person, die kein Fleisch isst",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4141,11 +4311,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 29,
 					"word": "vegan",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vegan: ohne Produkte von Tieren",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4165,11 +4336,12 @@
 					"group": "Essen & Trinken",
 					"sortOrder": 30,
 					"word": "fleischlos",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 30,
 					"romanisation": "",
 					"translation": "",
 					"definition": "fleischlos: ohne Fleisch",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4196,11 +4368,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 1,
 					"word": "Schnäppchen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Schnäppchen: eine günstige Ware; ein guter Kauf",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4220,11 +4393,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 2,
 					"word": "Rabatt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Rabatt: ein Preisnachlass; man zahlt weniger",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4244,11 +4418,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 3,
 					"word": "Angebot",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Angebot: eine Ware zu einem günstigen Preis",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4268,11 +4443,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 4,
 					"word": "Kassierer",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kassierer: die Person an der Kasse im Geschäft",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4292,11 +4468,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 5,
 					"word": "Verkäufer",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Verkäufer: eine Person, die im Geschäft verkauft und berät",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4316,11 +4493,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 6,
 					"word": "Kasse",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kasse: der Ort im Geschäft, wo man bezahlt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4340,11 +4518,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 7,
 					"word": "Kunde",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kunde: eine Person, die etwas kauft",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4364,11 +4543,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 8,
 					"word": "Klient",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Klient: eine Person, die einen Dienst nutzt (z. B. beim Anwalt)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4388,11 +4568,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 9,
 					"word": "Käufer",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Käufer: eine Person, die gerade etwas kauft",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4412,11 +4593,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 10,
 					"word": "Lieferung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Lieferung: das Bringen einer bestellten Ware",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4436,11 +4618,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 11,
 					"word": "Versand",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Versand: das Verschicken von Waren",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4460,11 +4643,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 12,
 					"word": "Kurier",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kurier: eine Person, die Pakete schnell liefert",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4484,11 +4668,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 13,
 					"word": "Umtausch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Umtausch: das Zurückgeben und Tauschen einer Ware",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4508,11 +4693,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 14,
 					"word": "Rückgabe",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rückgabe: das Zurückbringen einer gekauften Ware",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4532,11 +4718,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 15,
 					"word": "Tausch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Tausch: das Geben einer Sache gegen eine andere",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4556,11 +4743,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 16,
 					"word": "Anschaffung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anschaffung: der Kauf von etwas (meist Teurem)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4580,11 +4768,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 17,
 					"word": "kaufen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "kaufen: etwas für Geld bekommen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4604,11 +4793,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 18,
 					"word": "erwerben",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "erwerben: etwas kaufen oder bekommen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4628,11 +4818,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 19,
 					"word": "Kassenbon",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kassenbon: ein Zettel, der zeigt, was man bezahlt hat",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4652,11 +4843,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 20,
 					"word": "Kaufbeleg",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kaufbeleg: ein Nachweis, dass man etwas gekauft hat",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4676,11 +4868,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 21,
 					"word": "Rechnung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rechnung: ein Papier, das zeigt, was man zahlen muss",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4700,11 +4893,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 22,
 					"word": "Rückerstattung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rückerstattung: das Zurückzahlen von Geld",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4724,11 +4918,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 23,
 					"word": "Erstattung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erstattung: die Rückzahlung von ausgegebenem Geld",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4748,11 +4943,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 24,
 					"word": "Entschädigung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Entschädigung: Geld als Ausgleich für einen Schaden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4772,11 +4968,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 25,
 					"word": "Ausverkauf",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Ausverkauf: der Verkauf von Waren zu niedrigen Preisen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4796,11 +4993,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 26,
 					"word": "Räumungsverkauf",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Räumungsverkauf: ein Verkauf, um das Lager zu leeren",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4820,11 +5018,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 27,
 					"word": "Einkaufszentrum",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Einkaufszentrum: ein großes Gebäude mit vielen Geschäften",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4844,11 +5043,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 28,
 					"word": "Shoppingcenter",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Shoppingcenter: ein Zentrum mit vielen Läden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4868,11 +5068,12 @@
 					"group": "Einkaufen",
 					"sortOrder": 29,
 					"word": "Einkaufspassage",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einkaufspassage: eine überdachte Straße mit vielen Läden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4899,11 +5100,12 @@
 					"group": "Technologie",
 					"sortOrder": 1,
 					"word": "Anwendung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Anwendung: ein Programm für eine bestimmte Aufgabe",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4923,11 +5125,12 @@
 					"group": "Technologie",
 					"sortOrder": 2,
 					"word": "App",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die App: ein kleines Programm auf dem Smartphone",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4947,11 +5150,12 @@
 					"group": "Technologie",
 					"sortOrder": 3,
 					"word": "Programm",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Programm: eine Software für den Computer",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4971,11 +5175,12 @@
 					"group": "Technologie",
 					"sortOrder": 4,
 					"word": "Browser",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Browser: ein Programm zum Surfen im Internet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -4995,11 +5200,12 @@
 					"group": "Technologie",
 					"sortOrder": 5,
 					"word": "Suchmaschine",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Suchmaschine: ein Dienst zum Suchen im Internet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5019,11 +5225,12 @@
 					"group": "Technologie",
 					"sortOrder": 6,
 					"word": "Registerkarte",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Registerkarte: ein Reiter im Browser für eine Seite",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5043,11 +5250,12 @@
 					"group": "Technologie",
 					"sortOrder": 7,
 					"word": "Gerät",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gerät: ein technischer Apparat wie Handy oder Laptop",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5067,11 +5275,12 @@
 					"group": "Technologie",
 					"sortOrder": 8,
 					"word": "Gadget",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gadget: ein kleines, praktisches technisches Gerät",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5091,11 +5300,12 @@
 					"group": "Technologie",
 					"sortOrder": 9,
 					"word": "Smartphone",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Smartphone: ein modernes Handy mit Internet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5115,11 +5325,12 @@
 					"group": "Technologie",
 					"sortOrder": 10,
 					"word": "digital",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "digital: in elektronischer Form; nicht analog",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5139,11 +5350,12 @@
 					"group": "Technologie",
 					"sortOrder": 11,
 					"word": "elektronisch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "elektronisch: mit Elektronik arbeitend",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5163,11 +5375,12 @@
 					"group": "Technologie",
 					"sortOrder": 12,
 					"word": "virtuell",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "virtuell: nur im Computer vorhanden; nicht echt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5187,11 +5400,12 @@
 					"group": "Technologie",
 					"sortOrder": 13,
 					"word": "E-Mail",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die E-Mail: eine Nachricht über das Internet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5211,11 +5425,12 @@
 					"group": "Technologie",
 					"sortOrder": 14,
 					"word": "Nachricht",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Nachricht: eine Mitteilung an jemanden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5235,11 +5450,12 @@
 					"group": "Technologie",
 					"sortOrder": 15,
 					"word": "Posteingang",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Posteingang: der Ordner für neue E-Mails",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5259,11 +5475,12 @@
 					"group": "Technologie",
 					"sortOrder": 16,
 					"word": "Datei",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Datei: eine Sammlung von Daten am Computer",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5283,11 +5500,12 @@
 					"group": "Technologie",
 					"sortOrder": 17,
 					"word": "Dokument",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Dokument: eine Datei mit Text am Computer",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5307,11 +5525,12 @@
 					"group": "Technologie",
 					"sortOrder": 18,
 					"word": "Anhang",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Anhang: eine Datei, die man an eine E-Mail hängt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5331,11 +5550,12 @@
 					"group": "Technologie",
 					"sortOrder": 19,
 					"word": "Internet",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Internet: das weltweite Netz aus Computern",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5355,11 +5575,12 @@
 					"group": "Technologie",
 					"sortOrder": 20,
 					"word": "Netz",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Netz: das World Wide Web; das Internet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5379,11 +5600,12 @@
 					"group": "Technologie",
 					"sortOrder": 21,
 					"word": "online",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "online: mit dem Internet verbunden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5403,11 +5625,12 @@
 					"group": "Technologie",
 					"sortOrder": 22,
 					"word": "Netzwerk",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Netzwerk: mehrere verbundene Computer oder Menschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5427,11 +5650,12 @@
 					"group": "Technologie",
 					"sortOrder": 23,
 					"word": "Verbindung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verbindung: die Verbindung zum Internet oder Netzwerk",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5451,11 +5675,12 @@
 					"group": "Technologie",
 					"sortOrder": 24,
 					"word": "WLAN",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das WLAN: das drahtlose Internet zu Hause",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5475,11 +5700,12 @@
 					"group": "Technologie",
 					"sortOrder": 25,
 					"word": "Software",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Software: die Programme auf einem Computer",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5499,11 +5725,12 @@
 					"group": "Technologie",
 					"sortOrder": 26,
 					"word": "Webseite",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Webseite: eine Seite im Internet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5523,11 +5750,12 @@
 					"group": "Technologie",
 					"sortOrder": 27,
 					"word": "Startseite",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Startseite: die erste Seite einer Webseite",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5547,11 +5775,12 @@
 					"group": "Technologie",
 					"sortOrder": 28,
 					"word": "URL",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die URL: die Adresse einer Webseite im Internet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5578,11 +5807,12 @@
 					"group": "Natur",
 					"sortOrder": 1,
 					"word": "Klima",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Klima: das typische Wetter einer Region über lange Zeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5602,11 +5832,12 @@
 					"group": "Natur",
 					"sortOrder": 2,
 					"word": "Wetter",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Wetter: der Zustand der Luft (Regen, Sonne …)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5626,11 +5857,12 @@
 					"group": "Natur",
 					"sortOrder": 3,
 					"word": "Temperatur",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Temperatur: wie warm oder kalt es ist",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5650,11 +5882,12 @@
 					"group": "Natur",
 					"sortOrder": 4,
 					"word": "Naturschutz",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Naturschutz: der Schutz der Natur und ihrer Arten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5674,11 +5907,12 @@
 					"group": "Natur",
 					"sortOrder": 5,
 					"word": "Erhaltung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erhaltung: das Bewahren von etwas für die Zukunft",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5698,11 +5932,12 @@
 					"group": "Natur",
 					"sortOrder": 6,
 					"word": "Schutz",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Schutz: das Bewahren vor Gefahr oder Schaden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5722,11 +5957,12 @@
 					"group": "Natur",
 					"sortOrder": 7,
 					"word": "Ökosystem",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Ökosystem: das Zusammenspiel von Lebewesen und Umwelt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5746,11 +5982,12 @@
 					"group": "Natur",
 					"sortOrder": 8,
 					"word": "Artenvielfalt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Artenvielfalt: die Vielfalt an Tier- und Pflanzenarten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5770,11 +6007,12 @@
 					"group": "Natur",
 					"sortOrder": 9,
 					"word": "Lebensraum",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Lebensraum: der natürliche Ort, an dem ein Tier lebt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5794,11 +6032,12 @@
 					"group": "Natur",
 					"sortOrder": 10,
 					"word": "Umwelt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umwelt: die Natur, die uns umgibt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5818,11 +6057,12 @@
 					"group": "Natur",
 					"sortOrder": 11,
 					"word": "Natur",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Natur: alles, was nicht vom Menschen gemacht ist",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5842,11 +6082,12 @@
 					"group": "Natur",
 					"sortOrder": 12,
 					"word": "Umgebung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umgebung: alles, was um einen herum liegt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5866,11 +6107,12 @@
 					"group": "Natur",
 					"sortOrder": 13,
 					"word": "Zuhause",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Zuhause: der Ort, an dem man wohnt und sich wohlfühlt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5890,11 +6132,12 @@
 					"group": "Natur",
 					"sortOrder": 14,
 					"word": "Unterschlupf",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Unterschlupf: ein geschützter Ort zum Unterkommen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5914,11 +6157,12 @@
 					"group": "Natur",
 					"sortOrder": 15,
 					"word": "Umweltverschmutzung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Umweltverschmutzung: das Schmutzigmachen der Umwelt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5938,11 +6182,12 @@
 					"group": "Natur",
 					"sortOrder": 16,
 					"word": "Verschmutzung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verschmutzung: das Verunreinigen von Wasser, Luft oder Boden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5962,11 +6207,12 @@
 					"group": "Natur",
 					"sortOrder": 17,
 					"word": "Abfall",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Abfall: Dinge, die man wegwirft; Müll",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -5986,11 +6232,12 @@
 					"group": "Natur",
 					"sortOrder": 18,
 					"word": "Recycling",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Recycling: das Wiederverwerten von Abfall",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6010,11 +6257,12 @@
 					"group": "Natur",
 					"sortOrder": 19,
 					"word": "wiederverwenden",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "wiederverwenden: etwas noch einmal benutzen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6034,11 +6282,12 @@
 					"group": "Natur",
 					"sortOrder": 20,
 					"word": "reduzieren",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "reduzieren: weniger machen; verringern",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6058,11 +6307,12 @@
 					"group": "Natur",
 					"sortOrder": 21,
 					"word": "erneuerbar",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "erneuerbar: immer wieder neu nutzbar (z. B. Energie)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6082,11 +6332,12 @@
 					"group": "Natur",
 					"sortOrder": 22,
 					"word": "nachhaltig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "nachhaltig: so, dass Ressourcen für die Zukunft bleiben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6106,11 +6357,12 @@
 					"group": "Natur",
 					"sortOrder": 23,
 					"word": "umweltfreundlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "umweltfreundlich: gut für die Umwelt; ökologisch",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6130,11 +6382,12 @@
 					"group": "Natur",
 					"sortOrder": 24,
 					"word": "Wildtiere",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Wildtiere: die frei lebenden Tiere in der Natur",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6154,11 +6407,12 @@
 					"group": "Natur",
 					"sortOrder": 25,
 					"word": "Tierwelt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Tierwelt: alle Tiere eines Gebiets",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6178,11 +6432,12 @@
 					"group": "Natur",
 					"sortOrder": 26,
 					"word": "Pflanzenwelt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Pflanzenwelt: alle Pflanzen eines Gebiets",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6202,11 +6457,12 @@
 					"group": "Natur",
 					"sortOrder": 27,
 					"word": "Erderwärmung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Erderwärmung: die Erwärmung der ganzen Erde",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6226,11 +6482,12 @@
 					"group": "Natur",
 					"sortOrder": 28,
 					"word": "Klimawandel",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Klimawandel: die langfristige Veränderung des Klimas",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6250,11 +6507,12 @@
 					"group": "Natur",
 					"sortOrder": 29,
 					"word": "Treibhauseffekt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Treibhauseffekt: die Erwärmung durch Gase in der Atmosphäre",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6281,11 +6539,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 1,
 					"word": "Gemeinschaft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gemeinschaft: eine Gruppe mit gemeinsamem Ziel oder Ort",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6305,11 +6564,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 2,
 					"word": "Nachbarschaft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Nachbarschaft: die Gegend, in der man wohnt; die Nachbarn",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6329,11 +6589,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 3,
 					"word": "Gesellschaft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesellschaft: alle Menschen, die zusammenleben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6353,11 +6614,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 4,
 					"word": "Kultur",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kultur: die Lebensweise, Kunst und Bräuche einer Gruppe",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6377,11 +6639,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 5,
 					"word": "Tradition",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Tradition: ein alter Brauch, der weitergegeben wird",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6401,11 +6664,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 6,
 					"word": "Erbe",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Erbe: das, was von früheren Generationen bleibt (Kultur, Werte)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6425,11 +6689,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 7,
 					"word": "Vielfalt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vielfalt: eine große Verschiedenheit; viele Arten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6449,11 +6714,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 8,
 					"word": "Abwechslung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Abwechslung: der Wechsel; die Verschiedenheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6473,11 +6739,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 9,
 					"word": "Inklusion",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Inklusion: das Einbeziehen aller Menschen in die Gesellschaft",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6497,11 +6764,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 10,
 					"word": "Gleichheit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gleichheit: der Zustand, dass alle gleich behandelt werden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6521,11 +6789,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 11,
 					"word": "Gerechtigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gerechtigkeit: faires und gerechtes Handeln",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6545,11 +6814,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 12,
 					"word": "Justiz",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Justiz: das Rechtssystem und die Gerichte",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6569,11 +6839,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 13,
 					"word": "Einwanderung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einwanderung: das Kommen von Menschen in ein neues Land",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6593,11 +6864,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 14,
 					"word": "Migrant",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Migrant: eine Person, die in ein anderes Land zieht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6617,11 +6889,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 15,
 					"word": "Asyl",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Asyl: der Schutz für verfolgte Menschen in einem anderen Land",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6641,11 +6914,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 16,
 					"word": "Politik",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Politik: die Grundsätze und das Handeln in öffentlichen Fragen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6665,11 +6939,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 17,
 					"word": "Vorschrift",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vorschrift: eine feste Regel, an die man sich halten muss",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6689,11 +6964,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 18,
 					"word": "Gesetzgebung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesetzgebung: das Machen von Gesetzen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6713,11 +6989,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 19,
 					"word": "Armut",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Armut: der Zustand, sehr wenig Geld zu haben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6737,11 +7014,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 20,
 					"word": "Arbeitslosigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Arbeitslosigkeit: der Zustand, keine Arbeit zu haben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6761,11 +7039,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 21,
 					"word": "Obdachlosigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Obdachlosigkeit: der Zustand, keine Wohnung zu haben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6785,11 +7064,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 22,
 					"word": "Rassismus",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Rassismus: die Benachteiligung wegen der Herkunft oder Hautfarbe",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6809,11 +7089,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 23,
 					"word": "Vorurteil",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Vorurteil: eine feste, negative Meinung ohne echten Grund",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6833,11 +7114,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 24,
 					"word": "Diskriminierung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Diskriminierung: die unfaire Benachteiligung von Menschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6857,11 +7139,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 25,
 					"word": "Rechte",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Rechte: das, was man tun darf oder was einem zusteht (Plural)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6881,11 +7164,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 26,
 					"word": "Freiheit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Freiheit: das Recht, selbst zu entscheiden und zu handeln",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6905,11 +7189,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 27,
 					"word": "Selbstbestimmung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Selbstbestimmung: das Recht, frei über sich selbst zu bestimmen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6929,11 +7214,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 28,
 					"word": "Gewalt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gewalt: das Anwenden von Kraft, um zu schaden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6953,11 +7239,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 29,
 					"word": "Missbrauch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Missbrauch: die schlechte oder grausame Behandlung von jemandem",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -6977,11 +7264,12 @@
 					"group": "Gesellschaft",
 					"sortOrder": 30,
 					"word": "Verbrechen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 30,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Verbrechen: eine schwere, gesetzeswidrige Tat",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7008,11 +7296,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 1,
 					"word": "Bekanntschaft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bekanntschaft: eine Person, die man kennt, aber kein enger Freund",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7032,11 +7321,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 2,
 					"word": "Kollege",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Kollege: eine Person, mit der man zusammenarbeitet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7056,11 +7346,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 3,
 					"word": "Nachbar",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Nachbar: eine Person, die nebenan wohnt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7080,11 +7371,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 4,
 					"word": "Bindung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Bindung: eine enge Verbindung zwischen Menschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7104,11 +7396,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 5,
 					"word": "Verbindung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verbindung: eine Beziehung zwischen zwei Menschen oder Dingen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7128,11 +7421,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 6,
 					"word": "Band",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Band: eine enge, gefühlsmäßige Verbindung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7152,11 +7446,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 7,
 					"word": "Kommunikation",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Kommunikation: der Austausch von Informationen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7176,11 +7471,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 8,
 					"word": "Gespräch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gespräch: ein Austausch von Worten; eine Unterhaltung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7200,11 +7496,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 9,
 					"word": "Interaktion",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Interaktion: das gegenseitige Aufeinander-Reagieren",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7224,11 +7521,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 10,
 					"word": "Verknüpfung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verknüpfung: eine Verbindung zwischen zwei Dingen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7248,11 +7546,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 11,
 					"word": "Beziehung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Beziehung: die Verbindung zwischen zwei Menschen (z. B. Partner)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7272,11 +7571,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 12,
 					"word": "Verabredung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Verabredung: ein Treffen mit einem möglichen Partner",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7296,11 +7596,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 13,
 					"word": "Romanze",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Romanze: eine romantische Liebesbeziehung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7320,11 +7621,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 14,
 					"word": "Werben",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Werben: das Umwerben eines möglichen Partners (nominalisiert)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7344,11 +7646,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 15,
 					"word": "Freundschaft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Freundschaft: die enge Beziehung zwischen Freunden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7368,11 +7671,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 16,
 					"word": "Gesellschaft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gesellschaft: das angenehme Zusammensein mit anderen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7392,11 +7696,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 17,
 					"word": "Gemeinschaft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Gemeinschaft: eine Gruppe mit Gefühl der Zusammengehörigkeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7416,11 +7721,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 18,
 					"word": "soziale Medien",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die sozialen Medien: Plattformen im Internet zum Teilen und Chatten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7440,11 +7746,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 19,
 					"word": "Vernetzung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Vernetzung: das Knüpfen von nützlichen Kontakten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7464,11 +7771,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 20,
 					"word": "Plattform",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Plattform: ein Dienst im Internet zum Austausch",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7488,11 +7796,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 21,
 					"word": "Unterstützung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Unterstützung: die Hilfe, die man jemandem gibt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7512,11 +7821,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 22,
 					"word": "Beistand",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Beistand: die Hilfe in einer schwierigen Lage",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7536,11 +7846,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 23,
 					"word": "Hilfe",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Hilfe: das Unterstützen bei einem Problem",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7560,11 +7871,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 24,
 					"word": "Vertrauen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Vertrauen: der feste Glaube an die Zuverlässigkeit von jemandem",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7584,11 +7896,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 25,
 					"word": "Glaube",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Glaube: der feste Glaube oder das tiefe Vertrauen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7608,11 +7921,12 @@
 					"group": "Beziehungen",
 					"sortOrder": 26,
 					"word": "Zuversicht",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Zuversicht: das feste Vertrauen, dass etwas gut wird",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7639,11 +7953,12 @@
 					"group": "Emotionen",
 					"sortOrder": 1,
 					"word": "Ehrgeiz",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Ehrgeiz: der starke Wunsch, erfolgreich zu sein",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7663,11 +7978,12 @@
 					"group": "Emotionen",
 					"sortOrder": 2,
 					"word": "Ziel",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Ziel: etwas, das man erreichen möchte",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7687,11 +8003,12 @@
 					"group": "Emotionen",
 					"sortOrder": 3,
 					"word": "Streben",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Streben: das starke Bemühen um ein Ziel",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7711,11 +8028,12 @@
 					"group": "Emotionen",
 					"sortOrder": 4,
 					"word": "Verhalten",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Verhalten: die Art, wie sich jemand benimmt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7735,11 +8053,12 @@
 					"group": "Emotionen",
 					"sortOrder": 5,
 					"word": "Benehmen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Benehmen: die Art, wie man sich in der Gesellschaft benimmt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7759,11 +8078,12 @@
 					"group": "Emotionen",
 					"sortOrder": 6,
 					"word": "Art",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Art: die Weise, wie jemand etwas tut",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7783,11 +8103,12 @@
 					"group": "Emotionen",
 					"sortOrder": 7,
 					"word": "Selbstvertrauen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Selbstvertrauen: das Vertrauen in die eigenen Fähigkeiten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7807,11 +8128,12 @@
 					"group": "Emotionen",
 					"sortOrder": 8,
 					"word": "Selbstwertgefühl",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Selbstwertgefühl: das Gefühl vom eigenen Wert",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7831,11 +8153,12 @@
 					"group": "Emotionen",
 					"sortOrder": 9,
 					"word": "Selbstsicherheit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Selbstsicherheit: das sichere Auftreten einer Person",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7855,11 +8178,12 @@
 					"group": "Emotionen",
 					"sortOrder": 10,
 					"word": "Emotion",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Emotion: ein starkes Gefühl wie Freude oder Angst",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7879,11 +8203,12 @@
 					"group": "Emotionen",
 					"sortOrder": 11,
 					"word": "Gefühl",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Gefühl: was man innerlich empfindet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7903,11 +8228,12 @@
 					"group": "Emotionen",
 					"sortOrder": 12,
 					"word": "Empfindung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Empfindung: ein inneres Gefühl oder eine Regung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7927,11 +8253,12 @@
 					"group": "Emotionen",
 					"sortOrder": 13,
 					"word": "Begeisterung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Begeisterung: die große Freude an etwas",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7951,11 +8278,12 @@
 					"group": "Emotionen",
 					"sortOrder": 14,
 					"word": "Aufregung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Aufregung: ein starkes, nervöses Gefühl vor etwas",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7975,11 +8303,12 @@
 					"group": "Emotionen",
 					"sortOrder": 15,
 					"word": "Eifer",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Eifer: der starke Wille, etwas gut zu machen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -7999,11 +8328,12 @@
 					"group": "Emotionen",
 					"sortOrder": 16,
 					"word": "Erlebnis",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Erlebnis: etwas Besonderes, das man erlebt hat",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8023,11 +8353,12 @@
 					"group": "Emotionen",
 					"sortOrder": 17,
 					"word": "Herkunft",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Herkunft: woher jemand kommt (Familie, Land)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8047,11 +8378,12 @@
 					"group": "Emotionen",
 					"sortOrder": 18,
 					"word": "Fertigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Fertigkeit: eine gelernte, praktische Fähigkeit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8071,11 +8403,12 @@
 					"group": "Emotionen",
 					"sortOrder": 19,
 					"word": "Meinung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Meinung: das, was jemand über etwas denkt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8095,11 +8428,12 @@
 					"group": "Emotionen",
 					"sortOrder": 20,
 					"word": "Ansicht",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Ansicht: die Meinung zu einem Thema",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8119,11 +8453,12 @@
 					"group": "Emotionen",
 					"sortOrder": 21,
 					"word": "Sichtweise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Sichtweise: die Art, wie man etwas sieht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8143,11 +8478,12 @@
 					"group": "Emotionen",
 					"sortOrder": 22,
 					"word": "Persönlichkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Persönlichkeit: der ganze Charakter eines Menschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8167,11 +8503,12 @@
 					"group": "Emotionen",
 					"sortOrder": 23,
 					"word": "Charakter",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "der Charakter: die typischen Eigenschaften eines Menschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8191,11 +8528,12 @@
 					"group": "Emotionen",
 					"sortOrder": 24,
 					"word": "Eigenschaften",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Eigenschaften: die Merkmale des Charakters (Plural)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8215,11 +8553,12 @@
 					"group": "Emotionen",
 					"sortOrder": 25,
 					"word": "Talent",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Talent: eine natürliche Begabung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8239,11 +8578,12 @@
 					"group": "Emotionen",
 					"sortOrder": 26,
 					"word": "Fähigkeit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Fähigkeit: etwas, das man kann",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8263,11 +8603,12 @@
 					"group": "Emotionen",
 					"sortOrder": 27,
 					"word": "Begabung",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Begabung: ein besonderes, angeborenes Talent",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8287,11 +8628,12 @@
 					"group": "Emotionen",
 					"sortOrder": 28,
 					"word": "Weisheit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Weisheit: kluges Wissen aus viel Erfahrung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8311,11 +8653,12 @@
 					"group": "Emotionen",
 					"sortOrder": 29,
 					"word": "Wissen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "das Wissen: alles, was man gelernt hat und kennt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8335,11 +8678,12 @@
 					"group": "Emotionen",
 					"sortOrder": 30,
 					"word": "Einsicht",
-					"partOfSpeech": "",
+					"partOfSpeech": "Nomen",
 					"id": 30,
 					"romanisation": "",
 					"translation": "",
 					"definition": "die Einsicht: ein tieferes Verständnis von etwas",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8366,11 +8710,12 @@
 					"group": "Verben",
 					"sortOrder": 1,
 					"word": "erreichen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "erreichen: ein Ziel schaffen; vollenden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8390,11 +8735,12 @@
 					"group": "Verben",
 					"sortOrder": 2,
 					"word": "schaffen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "schaffen: etwas erfolgreich zu Ende bringen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8414,11 +8760,12 @@
 					"group": "Verben",
 					"sortOrder": 3,
 					"word": "erlangen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "erlangen: etwas durch Anstrengung bekommen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8438,11 +8785,12 @@
 					"group": "Verben",
 					"sortOrder": 4,
 					"word": "bewundern",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "bewundern: jemanden oder etwas sehr schätzen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8462,11 +8810,12 @@
 					"group": "Verben",
 					"sortOrder": 5,
 					"word": "respektieren",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "respektieren: jemanden achten und ernst nehmen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8486,11 +8835,12 @@
 					"group": "Verben",
 					"sortOrder": 6,
 					"word": "schätzen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "schätzen: den Wert von etwas erkennen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8510,11 +8860,12 @@
 					"group": "Verben",
 					"sortOrder": 7,
 					"word": "kommunizieren",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "kommunizieren: Informationen austauschen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8534,11 +8885,12 @@
 					"group": "Verben",
 					"sortOrder": 8,
 					"word": "vermitteln",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vermitteln: etwas weitergeben oder übermitteln",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8558,11 +8910,12 @@
 					"group": "Verben",
 					"sortOrder": 9,
 					"word": "interagieren",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "interagieren: miteinander in Kontakt treten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8582,11 +8935,12 @@
 					"group": "Verben",
 					"sortOrder": 10,
 					"word": "überzeugen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "überzeugen: jemanden durch Argumente umstimmen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8606,11 +8960,12 @@
 					"group": "Verben",
 					"sortOrder": 11,
 					"word": "überreden",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "überreden: jemanden durch Reden zu etwas bringen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8630,11 +8985,12 @@
 					"group": "Verben",
 					"sortOrder": 12,
 					"word": "versichern",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "versichern: jemandem etwas fest zusagen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8654,11 +9010,12 @@
 					"group": "Verben",
 					"sortOrder": 13,
 					"word": "abhängen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "abhängen: von etwas bestimmt werden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8678,11 +9035,12 @@
 					"group": "Verben",
 					"sortOrder": 14,
 					"word": "sich verlassen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Reflexives Verb",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "sich verlassen: sich auf jemanden fest verlassen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8702,11 +9060,12 @@
 					"group": "Verben",
 					"sortOrder": 15,
 					"word": "vertrauen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vertrauen: an die Zuverlässigkeit von jemandem glauben",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8726,11 +9085,12 @@
 					"group": "Verben",
 					"sortOrder": 16,
 					"word": "entdecken",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "entdecken: etwas Neues finden",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8750,11 +9110,12 @@
 					"group": "Verben",
 					"sortOrder": 17,
 					"word": "finden",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "finden: etwas Gesuchtes entdecken",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8774,11 +9135,12 @@
 					"group": "Verben",
 					"sortOrder": 18,
 					"word": "aufdecken",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "aufdecken: etwas Verborgenes ans Licht bringen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8798,11 +9160,12 @@
 					"group": "Verben",
 					"sortOrder": 19,
 					"word": "ausdrücken",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "ausdrücken: Gedanken in Worte fassen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8822,11 +9185,12 @@
 					"group": "Verben",
 					"sortOrder": 20,
 					"word": "formulieren",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "formulieren: etwas klar in Worte fassen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8846,11 +9210,12 @@
 					"group": "Verben",
 					"sortOrder": 21,
 					"word": "verbessern",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "verbessern: etwas besser machen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8870,11 +9235,12 @@
 					"group": "Verben",
 					"sortOrder": 22,
 					"word": "steigern",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "steigern: größer oder besser machen; erhöhen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8894,11 +9260,12 @@
 					"group": "Verben",
 					"sortOrder": 23,
 					"word": "entwickeln",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "entwickeln: etwas nach und nach schaffen oder verbessern",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8918,11 +9285,12 @@
 					"group": "Verben",
 					"sortOrder": 24,
 					"word": "einbeziehen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "einbeziehen: jemanden an etwas teilhaben lassen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8942,11 +9310,12 @@
 					"group": "Verben",
 					"sortOrder": 25,
 					"word": "beteiligen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Reflexives Verb",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "sich beteiligen: sich an etwas aktiv beteiligen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8966,11 +9335,12 @@
 					"group": "Verben",
 					"sortOrder": 26,
 					"word": "einschließen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "einschließen: etwas mit dazunehmen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -8990,11 +9360,12 @@
 					"group": "Verben",
 					"sortOrder": 27,
 					"word": "empfehlen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "empfehlen: jemandem etwas raten oder vorschlagen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9014,11 +9385,12 @@
 					"group": "Verben",
 					"sortOrder": 28,
 					"word": "vorschlagen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Trennbares Verb",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vorschlagen: eine Idee nennen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9038,11 +9410,12 @@
 					"group": "Verben",
 					"sortOrder": 29,
 					"word": "raten",
-					"partOfSpeech": "",
+					"partOfSpeech": "Verb",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "raten: jemandem sagen, was er tun soll",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9069,11 +9442,12 @@
 					"group": "Adjektive",
 					"sortOrder": 1,
 					"word": "ängstlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "ängstlich: voller Angst; besorgt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9093,11 +9467,12 @@
 					"group": "Adjektive",
 					"sortOrder": 2,
 					"word": "besorgt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "besorgt: voller Sorge",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9117,11 +9492,12 @@
 					"group": "Adjektive",
 					"sortOrder": 3,
 					"word": "nervös",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "nervös: unruhig und angespannt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9141,11 +9517,12 @@
 					"group": "Adjektive",
 					"sortOrder": 4,
 					"word": "selbstsicher",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "selbstsicher: sicher im Auftreten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9165,11 +9542,12 @@
 					"group": "Adjektive",
 					"sortOrder": 5,
 					"word": "souverän",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "souverän: sicher und gelassen im Auftreten",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9189,11 +9567,12 @@
 					"group": "Adjektive",
 					"sortOrder": 6,
 					"word": "sicher",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "sicher: ohne Zweifel; überzeugt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9213,11 +9592,12 @@
 					"group": "Adjektive",
 					"sortOrder": 7,
 					"word": "neugierig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "neugierig: voller Interesse an Neuem",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9237,11 +9617,12 @@
 					"group": "Adjektive",
 					"sortOrder": 8,
 					"word": "wissbegierig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "wissbegierig: voller Wissensdurst",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9261,11 +9642,12 @@
 					"group": "Adjektive",
 					"sortOrder": 9,
 					"word": "interessiert",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "interessiert: voller Interesse",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9285,11 +9667,12 @@
 					"group": "Adjektive",
 					"sortOrder": 10,
 					"word": "verlegen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "verlegen: unsicher und ein bisschen beschämt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9309,11 +9692,12 @@
 					"group": "Adjektive",
 					"sortOrder": 11,
 					"word": "beschämt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "beschämt: voller Scham",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9333,11 +9717,12 @@
 					"group": "Adjektive",
 					"sortOrder": 12,
 					"word": "gedemütigt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "gedemütigt: in der Würde verletzt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9357,11 +9742,12 @@
 					"group": "Adjektive",
 					"sortOrder": 13,
 					"word": "begeistert",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "begeistert: voller Begeisterung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9381,11 +9767,12 @@
 					"group": "Adjektive",
 					"sortOrder": 14,
 					"word": "aufgeregt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "aufgeregt: voller Aufregung; nervös-freudig",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9405,11 +9792,12 @@
 					"group": "Adjektive",
 					"sortOrder": 15,
 					"word": "eifrig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "eifrig: voller Eifer; sehr motiviert",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9429,11 +9817,12 @@
 					"group": "Adjektive",
 					"sortOrder": 16,
 					"word": "dankbar",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "dankbar: voller Dank",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9453,11 +9842,12 @@
 					"group": "Adjektive",
 					"sortOrder": 17,
 					"word": "erkenntlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "erkenntlich: dankbar; man zeigt seinen Dank",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9477,11 +9867,12 @@
 					"group": "Adjektive",
 					"sortOrder": 18,
 					"word": "anerkennend",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "anerkennend: Wertschätzung zeigend; lobend",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9501,11 +9892,12 @@
 					"group": "Adjektive",
 					"sortOrder": 19,
 					"word": "eifersüchtig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "eifersüchtig: voller Angst, den Partner zu verlieren",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9525,11 +9917,12 @@
 					"group": "Adjektive",
 					"sortOrder": 20,
 					"word": "neidisch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "neidisch: voller Neid auf andere",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9549,11 +9942,12 @@
 					"group": "Adjektive",
 					"sortOrder": 21,
 					"word": "habgierig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "habgierig: voller Gier nach Besitz",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9573,11 +9967,12 @@
 					"group": "Adjektive",
 					"sortOrder": 22,
 					"word": "bange",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "bange: voller Sorge und Angst vor etwas",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9597,11 +9992,12 @@
 					"group": "Adjektive",
 					"sortOrder": 23,
 					"word": "angespannt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "angespannt: voller Anspannung; nicht locker",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9621,11 +10017,12 @@
 					"group": "Adjektive",
 					"sortOrder": 24,
 					"word": "geduldig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "geduldig: voller Geduld; ruhig wartend",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9645,11 +10042,12 @@
 					"group": "Adjektive",
 					"sortOrder": 25,
 					"word": "tolerant",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "tolerant: andere Meinungen akzeptierend",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9669,11 +10067,12 @@
 					"group": "Adjektive",
 					"sortOrder": 26,
 					"word": "ruhig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "ruhig: nicht aufgeregt; gelassen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9693,11 +10092,12 @@
 					"group": "Adjektive",
 					"sortOrder": 27,
 					"word": "entspannt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "entspannt: locker und ruhig",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9717,11 +10117,12 @@
 					"group": "Adjektive",
 					"sortOrder": 28,
 					"word": "friedlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "friedlich: ohne Streit; ruhig",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9741,11 +10142,12 @@
 					"group": "Adjektive",
 					"sortOrder": 29,
 					"word": "gelassen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adjektiv",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "gelassen: ruhig und ausgeglichen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9772,11 +10174,12 @@
 					"group": "Adverbien",
 					"sortOrder": 1,
 					"word": "absolut",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "absolut: völlig; ohne Einschränkung",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9796,11 +10199,12 @@
 					"group": "Adverbien",
 					"sortOrder": 2,
 					"word": "total",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "total: völlig; komplett",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9820,11 +10224,12 @@
 					"group": "Adverbien",
 					"sortOrder": 3,
 					"word": "restlos",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "restlos: völlig; ohne Rest",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9844,11 +10249,12 @@
 					"group": "Adverbien",
 					"sortOrder": 4,
 					"word": "bestimmt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "bestimmt: ganz sicher",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9868,11 +10274,12 @@
 					"group": "Adverbien",
 					"sortOrder": 5,
 					"word": "definitiv",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "definitiv: auf jeden Fall; ohne Zweifel",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9892,11 +10299,12 @@
 					"group": "Adverbien",
 					"sortOrder": 6,
 					"word": "sicherlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "sicherlich: mit großer Sicherheit",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9916,11 +10324,12 @@
 					"group": "Adverbien",
 					"sortOrder": 7,
 					"word": "komplett",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "komplett: ganz und gar",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9940,11 +10349,12 @@
 					"group": "Adverbien",
 					"sortOrder": 8,
 					"word": "gänzlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "gänzlich: vollkommen; total",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9964,11 +10374,12 @@
 					"group": "Adverbien",
 					"sortOrder": 9,
 					"word": "vollständig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vollständig: ganz; komplett",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -9988,11 +10399,12 @@
 					"group": "Adverbien",
 					"sortOrder": 10,
 					"word": "ziemlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "ziemlich: recht; relativ stark",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10012,11 +10424,12 @@
 					"group": "Adverbien",
 					"sortOrder": 11,
 					"word": "recht",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "recht: ziemlich; relativ",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10036,11 +10449,12 @@
 					"group": "Adverbien",
 					"sortOrder": 12,
 					"word": "einigermaßen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "einigermaßen: recht gut; in akzeptablem Maße",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10060,11 +10474,12 @@
 					"group": "Adverbien",
 					"sortOrder": 13,
 					"word": "kaum",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 13,
 					"romanisation": "",
 					"translation": "",
 					"definition": "kaum: fast nicht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10084,11 +10499,12 @@
 					"group": "Adverbien",
 					"sortOrder": 14,
 					"word": "knapp",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 14,
 					"romanisation": "",
 					"translation": "",
 					"definition": "knapp: gerade noch; fast nicht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10108,11 +10524,12 @@
 					"group": "Adverbien",
 					"sortOrder": 15,
 					"word": "gerade noch",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 15,
 					"romanisation": "",
 					"translation": "",
 					"definition": "gerade noch: mit Mühe; fast nicht mehr",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10132,11 +10549,12 @@
 					"group": "Adverbien",
 					"sortOrder": 16,
 					"word": "höchst",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 16,
 					"romanisation": "",
 					"translation": "",
 					"definition": "höchst: sehr; in hohem Grad",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10156,11 +10574,12 @@
 					"group": "Adverbien",
 					"sortOrder": 17,
 					"word": "erheblich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 17,
 					"romanisation": "",
 					"translation": "",
 					"definition": "erheblich: in großem Maße; deutlich",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10180,11 +10599,12 @@
 					"group": "Adverbien",
 					"sortOrder": 18,
 					"word": "äußerst",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 18,
 					"romanisation": "",
 					"translation": "",
 					"definition": "äußerst: sehr stark; in hohem Maße",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10204,11 +10624,12 @@
 					"group": "Adverbien",
 					"sortOrder": 19,
 					"word": "möglicherweise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 19,
 					"romanisation": "",
 					"translation": "",
 					"definition": "möglicherweise: unter Umständen; vielleicht",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10228,11 +10649,12 @@
 					"group": "Adverbien",
 					"sortOrder": 20,
 					"word": "vielleicht",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 20,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vielleicht: möglicherweise; eventuell",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10252,11 +10674,12 @@
 					"group": "Adverbien",
 					"sortOrder": 21,
 					"word": "eventuell",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 21,
 					"romanisation": "",
 					"translation": "",
 					"definition": "eventuell: möglicherweise; unter Umständen",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10276,11 +10699,12 @@
 					"group": "Adverbien",
 					"sortOrder": 22,
 					"word": "relativ",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 22,
 					"romanisation": "",
 					"translation": "",
 					"definition": "relativ: verhältnismäßig; im Vergleich",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10300,11 +10724,12 @@
 					"group": "Adverbien",
 					"sortOrder": 23,
 					"word": "vergleichsweise",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 23,
 					"romanisation": "",
 					"translation": "",
 					"definition": "vergleichsweise: im Vergleich; verhältnismäßig",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10324,11 +10749,12 @@
 					"group": "Adverbien",
 					"sortOrder": 24,
 					"word": "mäßig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 24,
 					"romanisation": "",
 					"translation": "",
 					"definition": "mäßig: in mittlerem Maße; nicht zu stark",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10348,11 +10774,12 @@
 					"group": "Adverbien",
 					"sortOrder": 25,
 					"word": "plötzlich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 25,
 					"romanisation": "",
 					"translation": "",
 					"definition": "plötzlich: ganz schnell und unerwartet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10372,11 +10799,12 @@
 					"group": "Adverbien",
 					"sortOrder": 26,
 					"word": "abrupt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 26,
 					"romanisation": "",
 					"translation": "",
 					"definition": "abrupt: unvermittelt und schroff",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10396,11 +10824,12 @@
 					"group": "Adverbien",
 					"sortOrder": 27,
 					"word": "unerwartet",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 27,
 					"romanisation": "",
 					"translation": "",
 					"definition": "unerwartet: ohne dass man damit rechnet",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10420,11 +10849,12 @@
 					"group": "Adverbien",
 					"sortOrder": 28,
 					"word": "wirklich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 28,
 					"romanisation": "",
 					"translation": "",
 					"definition": "wirklich: tatsächlich; echt",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10444,11 +10874,12 @@
 					"group": "Adverbien",
 					"sortOrder": 29,
 					"word": "echt",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 29,
 					"romanisation": "",
 					"translation": "",
 					"definition": "echt: wirklich; ehrlich gemeint",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10468,11 +10899,12 @@
 					"group": "Adverbien",
 					"sortOrder": 30,
 					"word": "aufrichtig",
-					"partOfSpeech": "",
+					"partOfSpeech": "Adverb",
 					"id": 30,
 					"romanisation": "",
 					"translation": "",
 					"definition": "aufrichtig: ehrlich und ernst gemeint",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10499,11 +10931,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 1,
 					"word": "weil",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 1,
 					"romanisation": "",
 					"translation": "",
 					"definition": "weil: Konjunktion für einen Grund (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10523,11 +10956,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 2,
 					"word": "obwohl",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
 					"definition": "obwohl: Konjunktion für einen Gegensatz (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10547,11 +10981,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 3,
 					"word": "da",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 3,
 					"romanisation": "",
 					"translation": "",
 					"definition": "da: Konjunktion für einen bekannten Grund (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10571,11 +11006,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 4,
 					"word": "wenn",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 4,
 					"romanisation": "",
 					"translation": "",
 					"definition": "wenn: Konjunktion für eine Bedingung (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10595,11 +11031,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 5,
 					"word": "es sei denn",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 5,
 					"romanisation": "",
 					"translation": "",
 					"definition": "es sei denn: außer wenn; nur bei einer Ausnahme",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10619,11 +11056,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 6,
 					"word": "während",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
 					"definition": "während: Konjunktion für Gleichzeitigkeit (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10643,11 +11081,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 7,
 					"word": "nachdem",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 7,
 					"romanisation": "",
 					"translation": "",
 					"definition": "nachdem: Konjunktion für die Zeit danach (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10667,11 +11106,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 8,
 					"word": "bevor",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 8,
 					"romanisation": "",
 					"translation": "",
 					"definition": "bevor: Konjunktion für die Zeit davor (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10691,11 +11131,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 9,
 					"word": "obgleich",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 9,
 					"romanisation": "",
 					"translation": "",
 					"definition": "obgleich: Konjunktion für einen Gegensatz (gehoben; Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10715,11 +11156,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 10,
 					"word": "damit",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 10,
 					"romanisation": "",
 					"translation": "",
 					"definition": "damit: Konjunktion für einen Zweck (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10739,11 +11181,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 11,
 					"word": "wohingegen",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
 					"definition": "wohingegen: Konjunktion für eine Gegenüberstellung (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",
@@ -10763,11 +11206,12 @@
 					"group": "Komplexe Sätze",
 					"sortOrder": 12,
 					"word": "auch wenn",
-					"partOfSpeech": "",
+					"partOfSpeech": "Konjunktion",
 					"id": 12,
 					"romanisation": "",
 					"translation": "",
 					"definition": "auch wenn: Konjunktion für einen Gegensatz oder eine Bedingung (Verb am Ende)",
+					"IPA": "",
 					"sentences": [
 						{
 							"translation": "",

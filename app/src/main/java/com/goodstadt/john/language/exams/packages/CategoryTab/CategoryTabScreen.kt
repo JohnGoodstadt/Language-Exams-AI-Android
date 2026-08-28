@@ -73,6 +73,7 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.packages.SavedPractice.SavedInfoSheetContent
 import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabQuizScreen
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
@@ -136,6 +137,11 @@ fun CategoryTabScreen(
     // Freemium: tapping a locked section (header or teaser) opens the Premium upgrade sheet.
     var showUpgradeSheet by remember { mutableStateOf(false) }
     val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Shown after swipe-left Save: confirms the save + offers practice reminders.
+    var showSavedSheet by remember { mutableStateOf(false) }
+    var savedWordText by remember { mutableStateOf("") }
+    val savedSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // --- Rate Limit Sheets ---
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
@@ -520,14 +526,17 @@ fun CategoryTabScreen(
                                                 selectedCategoryForSheet = category
                                                 showMoreSheet = true
                                             },
-                                            // Swipe LEFT -> Save (toggle) into the level-aware practice list.
-                                            isSaved = viewModel.isSentenceSaved(sentenceEntry.sentence),
+                                            // Swipe LEFT -> Save (toggle) the whole word into the level-aware practice list.
+                                            isSaved = viewModel.isWordSaved(wordEntry),
                                             onSave = {
-                                                viewModel.onSaveSentence(
-                                                    sentence = sentenceEntry.sentence,
-                                                    word = wordEntry.word,
+                                                val nowSaved = viewModel.onSaveWord(
+                                                    word = wordEntry,
                                                     categoryTitle = category.title
                                                 )
+                                                if (nowSaved) {
+                                                    savedWordText = wordEntry.word
+                                                    showSavedSheet = true
+                                                }
                                             }
                                         )
                                     } else {
@@ -585,6 +594,23 @@ fun CategoryTabScreen(
 //                ) {
                     PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
 //                }
+            }
+            // Post-Save info + reminder choices.
+            if (showSavedSheet) {
+                ModalBottomSheet(
+                    onDismissRequest = { showSavedSheet = false },
+                    sheetState = savedSheetState,
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.onSurface
+                ) {
+                    SavedInfoSheetContent(
+                        wordText = savedWordText,
+                        onReminderSelected = { reminder ->
+                            viewModel.scheduleReminder(reminder, savedWordText)
+                        },
+                        onDismiss = { showSavedSheet = false }
+                    )
+                }
             }
             if (isRateLimitingSheetVisible) {
                 RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })

@@ -92,30 +92,42 @@ class CategoryTabViewModel @Inject constructor(
     private val bannerManager: BannerManager,
     private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
     private val savedPracticeManager: com.goodstadt.john.language.exams.managers.SavedPracticeManager,
+    private val practiceReminderScheduler: com.goodstadt.john.language.exams.managers.PracticeReminderScheduler,
 ) : ViewModel() {
 
     /**
-     * Swipe-left "Save": toggle this sentence in the user's level-aware practice list (a future Me-tab
-     * screen lists them). Stored under the currently loaded level, so B1 and B2 keep separate lists.
+     * Schedule a local practice-reminder notification for [word] at the time implied by [reminder], and
+     * record the due-time on the saved entry so the "Saved" screen can show the REMIND ME label / re-sort
+     * once it passes. [SaveReminder.NONE] clears any existing reminder on the entry.
      */
-    fun onSaveSentence(sentence: String, word: String, categoryTitle: String) {
-        val id = FirebaseAudioService.generateContentID(sentence)
-        savedPracticeManager.toggle(
+    fun scheduleReminder(reminder: com.goodstadt.john.language.exams.models.SaveReminder, word: String) {
+        val dueAt = practiceReminderScheduler.schedule(reminder, word) ?: 0L
+        savedPracticeManager.setReminder(currentLoadedLevel, word, dueAt)
+    }
+
+    /**
+     * Swipe-left "Save": toggle this vocab entry in the user's level-aware practice list (the Me-tab
+     * "Saved" screen lists them). The FULL word is stored (definition, pronunciation, all its sentences)
+     * so the read screen can display it richly. Keyed by word text under the current level, so B1 and B2
+     * keep separate lists.
+     */
+    fun onSaveWord(word: Format0Word, categoryTitle: String): Boolean {
+        val nowSaved = savedPracticeManager.toggle(
             SavedSentence(
-                id = id,
+                id = word.word,
                 level = currentLoadedLevel,
-                word = word,
-                sentence = sentence,
                 categoryTitle = categoryTitle,
-                savedAt = System.currentTimeMillis() / 1000
+                savedAt = System.currentTimeMillis() / 1000,
+                word = word
             )
         )
         refreshUI() // so the row's saved/unsaved state redraws
+        return nowSaved
     }
 
-    /** True if this sentence is in the saved practice list for the current level. */
-    fun isSentenceSaved(sentence: String): Boolean =
-        savedPracticeManager.isSaved(currentLoadedLevel, FirebaseAudioService.generateContentID(sentence))
+    /** True if this word is in the saved practice list for the current level. */
+    fun isWordSaved(word: Format0Word): Boolean =
+        savedPracticeManager.isSaved(currentLoadedLevel, word.word)
 
     /**
      * Freemium gate for the main vocab tabs: is the section at [indexWithinTab] (0-based rank within the

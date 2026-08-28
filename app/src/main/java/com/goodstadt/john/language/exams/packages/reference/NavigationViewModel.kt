@@ -18,6 +18,10 @@ class NavigationViewModel @Inject constructor() : ViewModel() {
     val navigationEvent = _navigationEvent.receiveAsFlow()
     var pendingReferenceTabId: String? = null
 
+    // Sub-tab title to auto-select on the Me tab (e.g. from a notification deep link, "Saved").
+    // MeTabContainerScreen consumes and clears it.
+    var pendingMeSubTabTitle: String? = null
+
     fun requestNavigation(target: SideQuestNavTarget) {
         viewModelScope.launch {
             // 1. If it's a Reference/Quiz target, save the ID

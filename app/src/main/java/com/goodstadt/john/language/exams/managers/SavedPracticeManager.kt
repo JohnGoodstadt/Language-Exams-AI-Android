@@ -72,6 +72,20 @@ class SavedPracticeManager @Inject constructor(
         emit()
     }
 
+    /**
+     * Record when a practice reminder is due for a saved entry (epoch millis; 0 clears it). Once this time
+     * has passed the read screen shows the "REMIND ME" label and floats the entry to the top.
+     */
+    fun setReminder(level: String, id: String, reminderAt: Long) {
+        val existing = saved[level]?.get(id) ?: return
+        saved[level]!![id] = existing.copy(reminderAt = reminderAt)
+        persist()
+        emit()
+    }
+
+    /** Clear the reminder on a saved entry (e.g. the user played it — acknowledged). No-op if unknown. */
+    fun clearReminder(level: String, id: String) = setReminder(level, id, 0L)
+
     /** Saved sentences for a level, newest first — for the future practice list screen. */
     fun getForLevel(level: String): List<SavedSentence> =
         saved[level]?.values?.sortedByDescending { it.savedAt } ?: emptyList()

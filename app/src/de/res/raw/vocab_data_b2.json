@@ -26,7 +26,9 @@
           "group": "Hallo",
           "sortOrder": 1,
           "word": "Gestatten Sie, dass ich mich vorstelle",
-          "partOfSpeech": "",
+          "definition": "Sehr höfliche Formulierung, mit der man sich einer Person vorstellt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 1,
           "romanisation": "",
           "translation": "",
@@ -38,6 +40,10 @@
             {
               "sentence": "Bevor ich zur Sache komme, gestatten Sie, dass ich mich vorstelle.",
               "translation": ""
+            },
+            {
+              "sentence": "Gestatten Sie, dass ich mich vorstelle, bevor die Sitzung beginnt?",
+              "translation": ""
             }
           ]
         },
@@ -45,7 +51,9 @@
           "group": "Hallo",
           "sortOrder": 2,
           "word": "Ich freue mich, die Gelegenheit zu haben",
-          "partOfSpeech": "",
+          "definition": "Höfliche Formulierung, mit der man Freude über eine Möglichkeit ausdrückt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 2,
           "romanisation": "",
           "translation": "",
@@ -57,6 +65,10 @@
             {
               "sentence": "Es freut mich, endlich die Gelegenheit zu haben, mit Ihnen zu sprechen.",
               "translation": ""
+            },
+            {
+              "sentence": "Freuen Sie sich, die Gelegenheit zu haben, das Team kennenzulernen?",
+              "translation": ""
             }
           ]
         },
@@ -64,7 +76,9 @@
           "group": "Hallo",
           "sortOrder": 3,
           "word": "Wir wurden einander noch nicht vorgestellt",
-          "partOfSpeech": "",
+          "definition": "Höflicher Hinweis darauf, dass zwei Personen sich noch nicht kennen.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 3,
           "romanisation": "",
           "translation": "",
@@ -76,6 +90,10 @@
             {
               "sentence": "Wir wurden einander noch nicht vorgestellt – mein Name ist Krause.",
               "translation": ""
+            },
+            {
+              "sentence": "Wurden wir einander tatsächlich noch nicht vorgestellt?",
+              "translation": ""
             }
           ]
         },
@@ -83,7 +101,9 @@
           "group": "Hallo",
           "sortOrder": 4,
           "word": "Es ist mir eine Ehre",
-          "partOfSpeech": "",
+          "definition": "Sehr höfliche Formulierung, die besondere Wertschätzung ausdrückt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 4,
           "romanisation": "",
           "translation": "",
@@ -95,6 +115,10 @@
             {
               "sentence": "Sie persönlich kennenzulernen, ist mir eine große Ehre.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist es Ihnen eine Ehre, die Gäste begrüßen zu dürfen?",
+              "translation": ""
             }
           ]
         },
@@ -102,7 +126,9 @@
           "group": "Hallo",
           "sortOrder": 5,
           "word": "Ich schätze Ihre Anwesenheit",
-          "partOfSpeech": "",
+          "definition": "Förmliche Formulierung, mit der man jemandem für sein Kommen dankt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 5,
           "romanisation": "",
           "translation": "",
@@ -114,6 +140,10 @@
             {
               "sentence": "Wir schätzen Ihre Anwesenheit außerordentlich.",
               "translation": ""
+            },
+            {
+              "sentence": "Darf ich Ihnen sagen, wie sehr ich Ihre Anwesenheit schätze?",
+              "translation": ""
             }
           ]
         },
@@ -121,7 +151,9 @@
           "group": "Hallo",
           "sortOrder": 6,
           "word": "Man hat mir viel von Ihnen erzählt",
-          "partOfSpeech": "",
+          "definition": "Höflicher Hinweis darauf, dass man bereits einiges über eine Person gehört hat.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 6,
           "romanisation": "",
           "translation": "",
@@ -133,6 +165,10 @@
             {
               "sentence": "Ihr Ruf eilt Ihnen voraus – man hat mir viel von Ihnen erzählt.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat man Ihnen auch schon viel von mir erzählt?",
+              "translation": ""
             }
           ]
         },
@@ -140,7 +176,9 @@
           "group": "Hallo",
           "sortOrder": 7,
           "word": "Womit kann ich Ihnen behilflich sein?",
-          "partOfSpeech": "",
+          "definition": "Förmliche Frage, mit der man einer Person Hilfe anbietet.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 7,
           "romanisation": "",
           "translation": "",
@@ -152,6 +190,10 @@
             {
               "sentence": "Falls Sie Fragen haben: Womit kann ich Ihnen behilflich sein?",
               "translation": ""
+            },
+            {
+              "sentence": "Womit kann ich Ihnen heute behilflich sein?",
+              "translation": ""
             }
           ]
         },
@@ -159,7 +201,9 @@
           "group": "Hallo",
           "sortOrder": 8,
           "word": "Ich möchte mich verabschieden",
-          "partOfSpeech": "",
+          "definition": "Höfliche Ankündigung, dass man gehen und ein Gespräch beenden möchte.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 8,
           "romanisation": "",
           "translation": "",
@@ -171,6 +215,10 @@
             {
               "sentence": "Bevor ich mich verabschiede, möchte ich mich noch bedanken.",
               "translation": ""
+            },
+            {
+              "sentence": "Möchten Sie sich noch von den anderen Gästen verabschieden?",
+              "translation": ""
             }
           ]
         },
@@ -178,7 +226,9 @@
           "group": "Hallo",
           "sortOrder": 9,
           "word": "Es war mir ein Vergnügen",
-          "partOfSpeech": "",
+          "definition": "Förmliche Formulierung, mit der man Freude über eine Begegnung ausdrückt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 9,
           "romanisation": "",
           "translation": "",
@@ -190,6 +240,10 @@
             {
               "sentence": "Vielen Dank für das Gespräch, es war mir ein Vergnügen.",
               "translation": ""
+            },
+            {
+              "sentence": "War es Ihnen ebenfalls ein Vergnügen, mit uns zu arbeiten?",
+              "translation": ""
             }
           ]
         },
@@ -197,7 +251,9 @@
           "group": "Hallo",
           "sortOrder": 10,
           "word": "Ich hoffe, wir bleiben in Kontakt",
-          "partOfSpeech": "",
+          "definition": "Höflicher Wunsch, auch nach einer Begegnung weiter miteinander zu kommunizieren.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 10,
           "romanisation": "",
           "translation": "",
@@ -209,6 +265,10 @@
             {
               "sentence": "Hier ist meine Karte – ich hoffe, wir bleiben in Kontakt.",
               "translation": ""
+            },
+            {
+              "sentence": "Hoffen Sie auch, dass wir in Kontakt bleiben?",
+              "translation": ""
             }
           ]
         },
@@ -216,7 +276,9 @@
           "group": "Hallo",
           "sortOrder": 11,
           "word": "Richten Sie bitte meine Grüße aus",
-          "partOfSpeech": "",
+          "definition": "Höfliche Bitte, einer anderen Person Grüße zu übermitteln.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 11,
           "romanisation": "",
           "translation": "",
@@ -228,6 +290,10 @@
             {
               "sentence": "Falls Sie ihn sehen, richten Sie ihm bitte meine Grüße aus.",
               "translation": ""
+            },
+            {
+              "sentence": "Können Sie Ihrer Familie bitte meine Grüße ausrichten?",
+              "translation": ""
             }
           ]
         },
@@ -235,7 +301,9 @@
           "group": "Hallo",
           "sortOrder": 12,
           "word": "Lassen Sie es sich gut gehen",
-          "partOfSpeech": "",
+          "definition": "Höflicher Abschiedsgruß mit dem Wunsch, dass es jemandem gut geht.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 12,
           "romanisation": "",
           "translation": "",
@@ -247,6 +315,10 @@
             {
               "sentence": "Bis zum nächsten Mal – lassen Sie es sich gut gehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Werden Sie es sich im Urlaub gut gehen lassen?",
+              "translation": ""
             }
           ]
         },
@@ -254,7 +326,9 @@
           "group": "Hallo",
           "sortOrder": 13,
           "word": "Es hat mich sehr gefreut",
-          "partOfSpeech": "",
+          "definition": "Höfliche Formulierung, die Freude über eine Begegnung ausdrückt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 13,
           "romanisation": "",
           "translation": "",
@@ -266,6 +340,10 @@
             {
               "sentence": "Das Gespräch hat mich sehr gefreut, vielen Dank.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat es Sie auch sehr gefreut, alle wiederzusehen?",
+              "translation": ""
             }
           ]
         },
@@ -273,7 +351,9 @@
           "group": "Hallo",
           "sortOrder": 14,
           "word": "Ich verbleibe mit freundlichen Grüßen",
-          "partOfSpeech": "",
+          "definition": "Förmliche Schlussformel in einem Brief oder einer E-Mail.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 14,
           "romanisation": "",
           "translation": "",
@@ -285,6 +365,10 @@
             {
               "sentence": "In Erwartung Ihrer Antwort verbleibe ich mit freundlichen Grüßen.",
               "translation": ""
+            },
+            {
+              "sentence": "Soll ich den Brief mit „Ich verbleibe mit freundlichen Grüßen“ beenden?",
+              "translation": ""
             }
           ]
         },
@@ -292,7 +376,9 @@
           "group": "Hallo",
           "sortOrder": 15,
           "word": "Sofern Sie einverstanden sind",
-          "partOfSpeech": "",
+          "definition": "Förmliche Formulierung für einen Vorschlag, der die Zustimmung des anderen verlangt.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 15,
           "romanisation": "",
           "translation": "",
@@ -303,6 +389,10 @@
             },
             {
               "sentence": "Wir könnten uns, sofern Sie einverstanden sind, kommende Woche treffen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Können wir, sofern Sie einverstanden sind, morgen beginnen?",
               "translation": ""
             }
           ]
@@ -318,7 +408,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 1,
           "word": "Werdegang",
-          "partOfSpeech": "",
+          "definition": "Die persönliche, schulische und berufliche Entwicklung eines Menschen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 16,
           "romanisation": "",
           "translation": "",
@@ -330,6 +422,10 @@
             {
               "sentence": "Ihr Werdegang ist beeindruckend und außergewöhnlich vielseitig.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Station Ihres Werdegangs war besonders wichtig?",
+              "translation": ""
             }
           ]
         },
@@ -337,7 +433,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 2,
           "word": "Qualifikation",
-          "partOfSpeech": "",
+          "definition": "Kenntnisse, Fähigkeiten oder Abschlüsse, die für eine Aufgabe nötig sind.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 17,
           "romanisation": "",
           "translation": "",
@@ -349,6 +447,10 @@
             {
               "sentence": "Ihre Qualifikationen übertreffen unsere Erwartungen bei Weitem.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Qualifikation wird für diese Stelle verlangt?",
+              "translation": ""
             }
           ]
         },
@@ -356,7 +458,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 3,
           "word": "Aufenthaltstitel",
-          "partOfSpeech": "",
+          "definition": "Offizielle Erlaubnis für eine ausländische Person, in einem Land zu leben.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 18,
           "romanisation": "",
           "translation": "",
@@ -368,6 +472,10 @@
             {
               "sentence": "Der Aufenthaltstitel muss rechtzeitig verlängert werden.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lange ist Ihr Aufenthaltstitel noch gültig?",
+              "translation": ""
             }
           ]
         },
@@ -375,7 +483,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 4,
           "word": "Staatsbürgerschaft",
-          "partOfSpeech": "",
+          "definition": "Die rechtliche Zugehörigkeit einer Person zu einem Staat.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 19,
           "romanisation": "",
           "translation": "",
@@ -387,6 +497,10 @@
             {
               "sentence": "Die doppelte Staatsbürgerschaft ist nicht in jedem Fall möglich.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann man in diesem Land eine doppelte Staatsbürgerschaft besitzen?",
+              "translation": ""
             }
           ]
         },
@@ -394,7 +508,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 5,
           "word": "Datenschutzerklärung",
-          "partOfSpeech": "",
+          "definition": "Text, der erklärt, wie persönliche Daten erhoben und verwendet werden.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 20,
           "romanisation": "",
           "translation": "",
@@ -406,6 +522,10 @@
             {
               "sentence": "Laut Datenschutzerklärung werden Ihre Daten nicht weitergegeben.",
               "translation": ""
+            },
+            {
+              "sentence": "Haben Sie die Datenschutzerklärung vollständig gelesen?",
+              "translation": ""
             }
           ]
         },
@@ -413,7 +533,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 6,
           "word": "Einwilligung",
-          "partOfSpeech": "",
+          "definition": "Freiwillige und ausdrückliche Zustimmung zu einer Handlung.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 21,
           "romanisation": "",
           "translation": "",
@@ -425,6 +547,10 @@
             {
               "sentence": "Die Einwilligung kann jederzeit widerrufen werden.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann ich meine Einwilligung später zurückziehen?",
+              "translation": ""
             }
           ]
         },
@@ -432,7 +558,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 7,
           "word": "Nachweis",
-          "partOfSpeech": "",
+          "definition": "Dokument oder Information, die etwas beweist oder bestätigt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 22,
           "romanisation": "",
           "translation": "",
@@ -444,6 +572,10 @@
             {
               "sentence": "Über seine Sprachkenntnisse konnte er keinen Nachweis erbringen.",
               "translation": ""
+            },
+            {
+              "sentence": "Welchen Nachweis müssen Bewerber vorlegen?",
+              "translation": ""
             }
           ]
         },
@@ -451,7 +583,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 8,
           "word": "Bescheinigung",
-          "partOfSpeech": "",
+          "definition": "Offizielles Dokument, das eine Tatsache schriftlich bestätigt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 23,
           "romanisation": "",
           "translation": "",
@@ -463,6 +597,10 @@
             {
               "sentence": "Die Bescheinigung wird Ihnen per Post zugestellt.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann erhalte ich die Bescheinigung über meine Teilnahme?",
+              "translation": ""
             }
           ]
         },
@@ -470,7 +608,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 9,
           "word": "hervorgehen aus",
-          "partOfSpeech": "",
+          "definition": "Aus Informationen oder Dokumenten deutlich erkennbar sein.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 24,
           "romanisation": "",
           "translation": "",
@@ -482,6 +622,10 @@
             {
               "sentence": "Wie aus den Unterlagen hervorgeht, fehlt noch eine Unterschrift.",
               "translation": ""
+            },
+            {
+              "sentence": "Geht aus dem Zeugnis hervor, wann sie den Abschluss gemacht hat?",
+              "translation": ""
             }
           ]
         },
@@ -489,7 +633,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 10,
           "word": "Berufserfahrung",
-          "partOfSpeech": "",
+          "definition": "Kenntnisse und Fähigkeiten, die man durch berufliche Arbeit erworben hat.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 25,
           "romanisation": "",
           "translation": "",
@@ -501,6 +647,10 @@
             {
               "sentence": "Ohne einschlägige Berufserfahrung ist der Einstieg schwierig.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viel Berufserfahrung bringen Sie für die Position mit?",
+              "translation": ""
             }
           ]
         },
@@ -508,7 +658,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 11,
           "word": "sich bewerben um",
-          "partOfSpeech": "",
+          "definition": "Offiziell erklären, dass man eine Stelle oder Möglichkeit erhalten möchte.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 26,
           "romanisation": "",
           "translation": "",
@@ -520,6 +672,10 @@
             {
               "sentence": "Er bewarb sich um ein Stipendium, obwohl die Chancen gering waren.",
               "translation": ""
+            },
+            {
+              "sentence": "Haben Sie sich schon um die freie Stelle beworben?",
+              "translation": ""
             }
           ]
         },
@@ -527,7 +683,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 12,
           "word": "voraussetzen",
-          "partOfSpeech": "",
+          "definition": "Etwas als notwendige Bedingung verlangen oder als gegeben annehmen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 27,
           "romanisation": "",
           "translation": "",
@@ -539,6 +697,10 @@
             {
               "sentence": "Man sollte nicht voraussetzen, dass alle Bescheid wissen.",
               "translation": ""
+            },
+            {
+              "sentence": "Setzt der Kurs gute Deutschkenntnisse voraus?",
+              "translation": ""
             }
           ]
         },
@@ -546,7 +708,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 13,
           "word": "Identität",
-          "partOfSpeech": "",
+          "definition": "Die persönlichen Merkmale, durch die jemand eindeutig bestimmt ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 28,
           "romanisation": "",
           "translation": "",
@@ -558,6 +722,10 @@
             {
               "sentence": "Er wollte seine wahre Identität nicht preisgeben.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie konnte die Polizei seine Identität feststellen?",
+              "translation": ""
             }
           ]
         },
@@ -565,7 +733,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 14,
           "word": "personenbezogen",
-          "partOfSpeech": "",
+          "definition": "Auf eine bestimmte oder bestimmbare Person bezogen.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 29,
           "romanisation": "",
           "translation": "",
@@ -577,6 +747,10 @@
             {
               "sentence": "Es werden ausschließlich personenbezogene Angaben verlangt, die notwendig sind.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche personenbezogenen Daten speichert das Unternehmen?",
+              "translation": ""
             }
           ]
         },
@@ -584,7 +758,9 @@
           "group": "Persönliche Informationen",
           "sortOrder": 15,
           "word": "Angelegenheit",
-          "partOfSpeech": "",
+          "definition": "Eine Sache oder ein Thema, das geklärt oder bearbeitet werden muss.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 30,
           "romanisation": "",
           "translation": "",
@@ -595,6 +771,10 @@
             },
             {
               "sentence": "Die Angelegenheit ist inzwischen geklärt.",
+              "translation": ""
+            },
+            {
+              "sentence": "An wen kann ich mich in dieser Angelegenheit wenden?",
               "translation": ""
             }
           ]
@@ -610,7 +790,9 @@
           "group": "Familie",
           "sortOrder": 1,
           "word": "Zusammenhalt",
-          "partOfSpeech": "",
+          "definition": "Die enge Verbindung und gegenseitige Unterstützung in einer Gruppe.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 31,
           "romanisation": "",
           "translation": "",
@@ -622,6 +804,10 @@
             {
               "sentence": "Ohne Zusammenhalt zerbricht selbst die stabilste Gemeinschaft.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie kann man den Zusammenhalt in einer Familie stärken?",
+              "translation": ""
             }
           ]
         },
@@ -629,7 +815,9 @@
           "group": "Familie",
           "sortOrder": 2,
           "word": "Erziehung",
-          "partOfSpeech": "",
+          "definition": "Die Begleitung und Bildung eines Kindes durch Eltern oder andere Personen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 32,
           "romanisation": "",
           "translation": "",
@@ -641,6 +829,10 @@
             {
               "sentence": "Über die richtige Erziehung gehen die Meinungen weit auseinander.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Rolle spielt die Schule bei der Erziehung?",
+              "translation": ""
             }
           ]
         },
@@ -648,7 +840,9 @@
           "group": "Familie",
           "sortOrder": 3,
           "word": "Generationenkonflikt",
-          "partOfSpeech": "",
+          "definition": "Streit zwischen jüngeren und älteren Menschen wegen unterschiedlicher Werte.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 33,
           "romanisation": "",
           "translation": "",
@@ -660,6 +854,10 @@
             {
               "sentence": "Der Generationenkonflikt zeigt sich besonders in der Wahl der Werte.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lässt sich ein Generationenkonflikt friedlich lösen?",
+              "translation": ""
             }
           ]
         },
@@ -667,7 +865,9 @@
           "group": "Familie",
           "sortOrder": 4,
           "word": "Verantwortung übernehmen",
-          "partOfSpeech": "",
+          "definition": "Für eine Aufgabe oder die Folgen des eigenen Handelns einstehen.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 34,
           "romanisation": "",
           "translation": "",
@@ -679,6 +879,10 @@
             {
               "sentence": "Wer Verantwortung übernimmt, muss auch mit Kritik rechnen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wer soll für diesen Fehler Verantwortung übernehmen?",
+              "translation": ""
             }
           ]
         },
@@ -686,7 +890,9 @@
           "group": "Familie",
           "sortOrder": 5,
           "word": "Bindung",
-          "partOfSpeech": "",
+          "definition": "Eine enge emotionale Beziehung zwischen Menschen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 35,
           "romanisation": "",
           "translation": "",
@@ -698,6 +904,10 @@
             {
               "sentence": "Die emotionale Bindung bleibt oft ein Leben lang bestehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie entsteht eine sichere Bindung zwischen Eltern und Kind?",
+              "translation": ""
             }
           ]
         },
@@ -705,7 +915,9 @@
           "group": "Familie",
           "sortOrder": 6,
           "word": "Familienmitglied",
-          "partOfSpeech": "",
+          "definition": "Eine Person, die zu einer Familie gehört.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 36,
           "romanisation": "",
           "translation": "",
@@ -717,6 +929,10 @@
             {
               "sentence": "Ein entferntes Familienmitglied meldete sich nach Jahren wieder.",
               "translation": ""
+            },
+            {
+              "sentence": "Welches Familienmitglied wohnt am weitesten entfernt?",
+              "translation": ""
             }
           ]
         },
@@ -724,7 +940,9 @@
           "group": "Familie",
           "sortOrder": 7,
           "word": "Unterhalt",
-          "partOfSpeech": "",
+          "definition": "Geld, das regelmäßig für den Lebensbedarf einer Person gezahlt wird.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 37,
           "romanisation": "",
           "translation": "",
@@ -736,6 +954,10 @@
             {
               "sentence": "Der Unterhalt richtet sich nach dem Einkommen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie wird die Höhe des Unterhalts berechnet?",
+              "translation": ""
             }
           ]
         },
@@ -743,7 +965,9 @@
           "group": "Familie",
           "sortOrder": 8,
           "word": "sich entfremden",
-          "partOfSpeech": "",
+          "definition": "Innerlich Abstand voneinander gewinnen und sich immer weniger verbunden fühlen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 38,
           "romanisation": "",
           "translation": "",
@@ -755,6 +979,10 @@
             {
               "sentence": "Nach dem Streit entfremdeten sich die beiden immer mehr.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum haben sich die Geschwister voneinander entfremdet?",
+              "translation": ""
             }
           ]
         },
@@ -762,7 +990,9 @@
           "group": "Familie",
           "sortOrder": 9,
           "word": "Fürsorge",
-          "partOfSpeech": "",
+          "definition": "Aufmerksame Betreuung und Hilfe für jemanden, der Unterstützung braucht.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 39,
           "romanisation": "",
           "translation": "",
@@ -774,6 +1004,10 @@
             {
               "sentence": "Kinder brauchen neben Grenzen vor allem Fürsorge.",
               "translation": ""
+            },
+            {
+              "sentence": "Wer übernimmt die Fürsorge für den kranken Großvater?",
+              "translation": ""
             }
           ]
         },
@@ -781,7 +1015,9 @@
           "group": "Familie",
           "sortOrder": 10,
           "word": "Rollenbild",
-          "partOfSpeech": "",
+          "definition": "Vorstellung davon, wie sich Menschen in einer bestimmten Rolle verhalten sollen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 40,
           "romanisation": "",
           "translation": "",
@@ -793,6 +1029,10 @@
             {
               "sentence": "In dieser Familie werden klassische Rollenbilder bewusst hinterfragt.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat sich das traditionelle Rollenbild in Familien verändert?",
+              "translation": ""
             }
           ]
         },
@@ -800,7 +1040,9 @@
           "group": "Familie",
           "sortOrder": 11,
           "word": "Verwandtschaft",
-          "partOfSpeech": "",
+          "definition": "Alle Personen, mit denen jemand familiär verbunden ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 41,
           "romanisation": "",
           "translation": "",
@@ -812,6 +1054,10 @@
             {
               "sentence": "Mit einem Teil der Verwandtschaft hat sie kaum noch Kontakt.",
               "translation": ""
+            },
+            {
+              "sentence": "Kommt die ganze Verwandtschaft zu der Hochzeit?",
+              "translation": ""
             }
           ]
         },
@@ -819,7 +1065,9 @@
           "group": "Familie",
           "sortOrder": 12,
           "word": "geprägt sein von",
-          "partOfSpeech": "",
+          "definition": "Durch etwas stark beeinflusst oder geformt worden sein.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 42,
           "romanisation": "",
           "translation": "",
@@ -831,6 +1079,10 @@
             {
               "sentence": "Ihre Werte sind stark von der Erziehung geprägt.",
               "translation": ""
+            },
+            {
+              "sentence": "War seine Kindheit von häufigen Umzügen geprägt?",
+              "translation": ""
             }
           ]
         },
@@ -838,7 +1090,9 @@
           "group": "Familie",
           "sortOrder": 13,
           "word": "Familienstand",
-          "partOfSpeech": "",
+          "definition": "Offizielle Angabe dazu, ob jemand etwa ledig, verheiratet oder geschieden ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 43,
           "romanisation": "",
           "translation": "",
@@ -850,6 +1104,10 @@
             {
               "sentence": "Der Familienstand spielt bei der Besteuerung eine Rolle.",
               "translation": ""
+            },
+            {
+              "sentence": "Muss der Familienstand in diesem Formular angegeben werden?",
+              "translation": ""
             }
           ]
         },
@@ -857,7 +1115,9 @@
           "group": "Familie",
           "sortOrder": 14,
           "word": "vernachlässigen",
-          "partOfSpeech": "",
+          "definition": "Sich nicht ausreichend um eine Person, Aufgabe oder Sache kümmern.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 44,
           "romanisation": "",
           "translation": "",
@@ -869,6 +1129,10 @@
             {
               "sentence": "Man sollte alte Freundschaften nicht vernachlässigen.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum hat er seine Freunde so lange vernachlässigt?",
+              "translation": ""
             }
           ]
         },
@@ -876,7 +1140,9 @@
           "group": "Familie",
           "sortOrder": 15,
           "word": "Erbschaft",
-          "partOfSpeech": "",
+          "definition": "Vermögen oder Besitz, den jemand nach dem Tod einer Person erhält.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 45,
           "romanisation": "",
           "translation": "",
@@ -887,6 +1153,10 @@
             },
             {
               "sentence": "Die Erbschaft ermöglichte ihr ein sorgenfreies Studium.",
+              "translation": ""
+            },
+            {
+              "sentence": "Hat die Familie wegen der Erbschaft gestritten?",
               "translation": ""
             }
           ]
@@ -902,7 +1172,9 @@
           "group": "Zahlen",
           "sortOrder": 1,
           "word": "Statistik",
-          "partOfSpeech": "",
+          "definition": "Geordnete Sammlung und Auswertung von Zahlen zu einem Thema.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 46,
           "romanisation": "",
           "translation": "",
@@ -914,6 +1186,10 @@
             {
               "sentence": "Statistiken lassen sich je nach Interesse unterschiedlich deuten.",
               "translation": ""
+            },
+            {
+              "sentence": "Was zeigt die aktuelle Statistik über die Arbeitslosigkeit?",
+              "translation": ""
             }
           ]
         },
@@ -921,7 +1197,9 @@
           "group": "Zahlen",
           "sortOrder": 2,
           "word": "Anteil",
-          "partOfSpeech": "",
+          "definition": "Ein bestimmter Teil einer gesamten Menge.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 47,
           "romanisation": "",
           "translation": "",
@@ -933,6 +1211,10 @@
             {
               "sentence": "Frauen sind in Führungspositionen nur zu einem geringen Anteil vertreten.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie hoch ist der Anteil erneuerbarer Energie am Stromverbrauch?",
+              "translation": ""
             }
           ]
         },
@@ -940,7 +1222,9 @@
           "group": "Zahlen",
           "sortOrder": 3,
           "word": "Quote",
-          "partOfSpeech": "",
+          "definition": "Zahlenwert, der einen Anteil oder ein Verhältnis ausdrückt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 48,
           "romanisation": "",
           "translation": "",
@@ -952,6 +1236,10 @@
             {
               "sentence": "Über eine feste Quote wird seit Jahren gestritten.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Arbeitslosenquote im letzten Jahr gesunken?",
+              "translation": ""
             }
           ]
         },
@@ -959,7 +1247,9 @@
           "group": "Zahlen",
           "sortOrder": 4,
           "word": "Faktor",
-          "partOfSpeech": "",
+          "definition": "Ein Umstand, der ein Ergebnis beeinflusst.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 49,
           "romanisation": "",
           "translation": "",
@@ -971,6 +1261,10 @@
             {
               "sentence": "Ein entscheidender Faktor ist die Verfügbarkeit von Fachkräften.",
               "translation": ""
+            },
+            {
+              "sentence": "Welcher Faktor hatte den größten Einfluss auf die Entscheidung?",
+              "translation": ""
             }
           ]
         },
@@ -978,7 +1272,9 @@
           "group": "Zahlen",
           "sortOrder": 5,
           "word": "zunehmen",
-          "partOfSpeech": "",
+          "definition": "Größer, stärker oder zahlreicher werden.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 50,
           "romanisation": "",
           "translation": "",
@@ -990,6 +1286,10 @@
             {
               "sentence": "In dem Maße, wie die Nachfrage zunimmt, steigen die Preise.",
               "translation": ""
+            },
+            {
+              "sentence": "Wird die Nachfrage im nächsten Jahr weiter zunehmen?",
+              "translation": ""
             }
           ]
         },
@@ -997,7 +1297,9 @@
           "group": "Zahlen",
           "sortOrder": 6,
           "word": "abnehmen",
-          "partOfSpeech": "",
+          "definition": "Kleiner, schwächer oder weniger werden.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 51,
           "romanisation": "",
           "translation": "",
@@ -1009,6 +1311,10 @@
             {
               "sentence": "Mit zunehmendem Alter nimmt die Konzentrationsfähigkeit oft ab.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum hat das Interesse an dem Angebot abgenommen?",
+              "translation": ""
             }
           ]
         },
@@ -1016,7 +1322,9 @@
           "group": "Zahlen",
           "sortOrder": 7,
           "word": "Rückgang",
-          "partOfSpeech": "",
+          "definition": "Deutliche Verringerung einer Menge oder eines Wertes.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 52,
           "romanisation": "",
           "translation": "",
@@ -1028,6 +1336,10 @@
             {
               "sentence": "Der Rückgang der Umsätze bereitet dem Unternehmen Sorgen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wodurch erklärt sich der Rückgang der Verkaufszahlen?",
+              "translation": ""
             }
           ]
         },
@@ -1035,7 +1347,9 @@
           "group": "Zahlen",
           "sortOrder": 8,
           "word": "Zuwachs",
-          "partOfSpeech": "",
+          "definition": "Zunahme einer Menge, Zahl oder Leistung.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 53,
           "romanisation": "",
           "translation": "",
@@ -1047,6 +1361,10 @@
             {
               "sentence": "Ein Zuwachs von fünf Prozent gilt als beachtlich.",
               "translation": ""
+            },
+            {
+              "sentence": "Mit welchem Zuwachs rechnet das Unternehmen?",
+              "translation": ""
             }
           ]
         },
@@ -1054,7 +1372,9 @@
           "group": "Zahlen",
           "sortOrder": 9,
           "word": "durchschnittlich",
-          "partOfSpeech": "",
+          "definition": "Im Mittel aus mehreren Werten berechnet oder üblich.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 54,
           "romanisation": "",
           "translation": "",
@@ -1066,6 +1386,10 @@
             {
               "sentence": "Die Werte liegen durchschnittlich über dem Vorjahr.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viele Stunden arbeiten die Beschäftigten durchschnittlich?",
+              "translation": ""
             }
           ]
         },
@@ -1073,7 +1397,9 @@
           "group": "Zahlen",
           "sortOrder": 10,
           "word": "annähernd",
-          "partOfSpeech": "",
+          "definition": "Fast, aber nicht ganz genau.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 55,
           "romanisation": "",
           "translation": "",
@@ -1085,6 +1411,10 @@
             {
               "sentence": "Es kamen annähernd tausend Besucher.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind die beiden Ergebnisse annähernd gleich?",
+              "translation": ""
             }
           ]
         },
@@ -1092,7 +1422,9 @@
           "group": "Zahlen",
           "sortOrder": 11,
           "word": "Summe",
-          "partOfSpeech": "",
+          "definition": "Ergebnis einer Addition oder ein bestimmter Geldbetrag.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 56,
           "romanisation": "",
           "translation": "",
@@ -1104,6 +1436,10 @@
             {
               "sentence": "Eine derartige Summe kann sich kaum jemand leisten.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Summe müssen wir insgesamt bezahlen?",
+              "translation": ""
             }
           ]
         },
@@ -1111,7 +1447,9 @@
           "group": "Zahlen",
           "sortOrder": 12,
           "word": "sich belaufen auf",
-          "partOfSpeech": "",
+          "definition": "Eine bestimmte Höhe oder Menge erreichen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 57,
           "romanisation": "",
           "translation": "",
@@ -1123,6 +1461,10 @@
             {
               "sentence": "Der Schaden beläuft sich schätzungsweise auf zehntausend Euro.",
               "translation": ""
+            },
+            {
+              "sentence": "Auf welche Summe belaufen sich die Reparaturkosten?",
+              "translation": ""
             }
           ]
         },
@@ -1130,7 +1472,9 @@
           "group": "Zahlen",
           "sortOrder": 13,
           "word": "geringfügig",
-          "partOfSpeech": "",
+          "definition": "Nur sehr klein oder wenig bedeutend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 58,
           "romanisation": "",
           "translation": "",
@@ -1142,6 +1486,10 @@
             {
               "sentence": "Die Löhne stiegen lediglich geringfügig.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Abweichung wirklich nur geringfügig?",
+              "translation": ""
             }
           ]
         },
@@ -1149,7 +1497,9 @@
           "group": "Zahlen",
           "sortOrder": 14,
           "word": "erheblich",
-          "partOfSpeech": "",
+          "definition": "Deutlich groß, stark oder wichtig.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 59,
           "romanisation": "",
           "translation": "",
@@ -1161,6 +1511,10 @@
             {
               "sentence": "Das bedeutet einen erheblichen Mehraufwand.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind die Kosten seit dem Vorjahr erheblich gestiegen?",
+              "translation": ""
             }
           ]
         },
@@ -1168,7 +1522,9 @@
           "group": "Zahlen",
           "sortOrder": 15,
           "word": "schätzungsweise",
-          "partOfSpeech": "",
+          "definition": "Nach einer ungefähren Berechnung oder Vermutung.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 60,
           "romanisation": "",
           "translation": "",
@@ -1180,6 +1536,10 @@
             {
               "sentence": "Der Umbau wird schätzungsweise ein Jahr dauern.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viele Menschen waren schätzungsweise anwesend?",
+              "translation": ""
             }
           ]
         },
@@ -1187,7 +1547,9 @@
           "group": "Zahlen",
           "sortOrder": 16,
           "word": "verdoppeln",
-          "partOfSpeech": "",
+          "definition": "Eine Menge zweimal so groß machen oder werden lassen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 61,
           "romanisation": "",
           "translation": "",
@@ -1198,6 +1560,10 @@
             },
             {
               "sentence": "Das Unternehmen konnte seinen Gewinn verdoppeln.",
+              "translation": ""
+            },
+            {
+              "sentence": "Konnte das Unternehmen seinen Umsatz tatsächlich verdoppeln?",
               "translation": ""
             }
           ]
@@ -1213,7 +1579,9 @@
           "group": "Wochentage",
           "sortOrder": 1,
           "word": "Montag",
-          "partOfSpeech": "",
+          "definition": "Der erste Wochentag nach dem Wochenende.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 62,
           "romanisation": "",
           "translation": "",
@@ -1225,6 +1593,10 @@
             {
               "sentence": "Der berüchtigte Montagmorgen fällt vielen schwer.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum fällt vielen Menschen der Montag besonders schwer?",
+              "translation": ""
             }
           ]
         },
@@ -1232,7 +1604,9 @@
           "group": "Wochentage",
           "sortOrder": 2,
           "word": "Freitag",
-          "partOfSpeech": "",
+          "definition": "Der Wochentag zwischen Donnerstag und Samstag.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 63,
           "romanisation": "",
           "translation": "",
@@ -1244,6 +1618,10 @@
             {
               "sentence": "Am Freitag werden erfahrungsgemäß kaum noch Entscheidungen getroffen.",
               "translation": ""
+            },
+            {
+              "sentence": "Endet Ihre Arbeitswoche bereits am Freitag?",
+              "translation": ""
             }
           ]
         },
@@ -1251,7 +1629,9 @@
           "group": "Wochentage",
           "sortOrder": 3,
           "word": "Sonntag",
-          "partOfSpeech": "",
+          "definition": "Der Wochentag nach Samstag, der oft ein Ruhetag ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 64,
           "romanisation": "",
           "translation": "",
@@ -1263,6 +1643,10 @@
             {
               "sentence": "Sonntags einzukaufen ist hierzulande kaum möglich.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie verbringen Sie normalerweise den Sonntag?",
+              "translation": ""
             }
           ]
         },
@@ -1270,7 +1654,9 @@
           "group": "Wochentage",
           "sortOrder": 4,
           "word": "Wochentag",
-          "partOfSpeech": "",
+          "definition": "Einer der sieben Tage einer Woche.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 65,
           "romanisation": "",
           "translation": "",
@@ -1282,6 +1668,10 @@
             {
               "sentence": "Je nach Wochentag variieren die Öffnungszeiten.",
               "translation": ""
+            },
+            {
+              "sentence": "An welchem Wochentag findet der Kurs statt?",
+              "translation": ""
             }
           ]
         },
@@ -1289,7 +1679,9 @@
           "group": "Wochentage",
           "sortOrder": 5,
           "word": "Werktag",
-          "partOfSpeech": "",
+          "definition": "Ein Tag, an dem üblicherweise gearbeitet wird.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 66,
           "romanisation": "",
           "translation": "",
@@ -1301,6 +1693,10 @@
             {
               "sentence": "An Werktagen gilt eine andere Regelung als am Wochenende.",
               "translation": ""
+            },
+            {
+              "sentence": "Wird das Paket innerhalb von drei Werktagen geliefert?",
+              "translation": ""
             }
           ]
         },
@@ -1308,7 +1704,9 @@
           "group": "Wochentage",
           "sortOrder": 6,
           "word": "Feiertag",
-          "partOfSpeech": "",
+          "definition": "Gesetzlich oder religiös festgelegter arbeitsfreier Gedenk- oder Festtag.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 67,
           "romanisation": "",
           "translation": "",
@@ -1320,6 +1718,10 @@
             {
               "sentence": "An gesetzlichen Feiertagen ruht die Arbeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist der kommende Montag ein gesetzlicher Feiertag?",
+              "translation": ""
             }
           ]
         },
@@ -1327,7 +1729,9 @@
           "group": "Wochentage",
           "sortOrder": 7,
           "word": "wochentags",
-          "partOfSpeech": "",
+          "definition": "An den normalen Arbeitstagen der Woche.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 68,
           "romanisation": "",
           "translation": "",
@@ -1339,6 +1743,10 @@
             {
               "sentence": "Der Kurs findet ausschließlich wochentags statt.",
               "translation": ""
+            },
+            {
+              "sentence": "Fährt dieser Bus auch wochentags nur einmal pro Stunde?",
+              "translation": ""
             }
           ]
         },
@@ -1346,7 +1754,9 @@
           "group": "Wochentage",
           "sortOrder": 8,
           "word": "Alltag",
-          "partOfSpeech": "",
+          "definition": "Das gewöhnliche tägliche Leben mit seinen regelmäßigen Aufgaben.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 69,
           "romanisation": "",
           "translation": "",
@@ -1358,6 +1768,10 @@
             {
               "sentence": "Feste Rituale geben dem Alltag Struktur.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie sorgen Sie im Alltag für genügend Bewegung?",
+              "translation": ""
             }
           ]
         },
@@ -1365,7 +1779,9 @@
           "group": "Wochentage",
           "sortOrder": 9,
           "word": "Routine",
-          "partOfSpeech": "",
+          "definition": "Regelmäßiger und vertrauter Ablauf einer Tätigkeit.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 70,
           "romanisation": "",
           "translation": "",
@@ -1377,6 +1793,10 @@
             {
               "sentence": "Um der Routine zu entkommen, reist sie oft übers Wochenende weg.",
               "translation": ""
+            },
+            {
+              "sentence": "Hilft Ihnen eine feste Routine bei der Arbeit?",
+              "translation": ""
             }
           ]
         },
@@ -1384,7 +1804,9 @@
           "group": "Wochentage",
           "sortOrder": 10,
           "word": "Rhythmus",
-          "partOfSpeech": "",
+          "definition": "Regelmäßige zeitliche Folge von Tätigkeiten oder Ereignissen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 71,
           "romanisation": "",
           "translation": "",
@@ -1396,6 +1818,10 @@
             {
               "sentence": "Ein regelmäßiger Rhythmus ist gut für den Schlaf.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie finden Sie nach dem Urlaub wieder in Ihren Rhythmus?",
+              "translation": ""
             }
           ]
         },
@@ -1403,7 +1829,9 @@
           "group": "Wochentage",
           "sortOrder": 11,
           "word": "Arbeitswoche",
-          "partOfSpeech": "",
+          "definition": "Zeitraum der Wochentage, an denen jemand arbeitet.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 72,
           "romanisation": "",
           "translation": "",
@@ -1415,6 +1843,10 @@
             {
               "sentence": "Nach einer langen Arbeitswoche freut man sich auf das Wochenende.",
               "translation": ""
+            },
+            {
+              "sentence": "Würden Sie eine kürzere Arbeitswoche bevorzugen?",
+              "translation": ""
             }
           ]
         },
@@ -1422,7 +1854,9 @@
           "group": "Wochentage",
           "sortOrder": 12,
           "word": "Wochenende",
-          "partOfSpeech": "",
+          "definition": "Die arbeitsfreie Zeit am Ende der Woche.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 73,
           "romanisation": "",
           "translation": "",
@@ -1433,6 +1867,10 @@
             },
             {
               "sentence": "Wäre das Wochenende länger, käme man mehr zur Ruhe.",
+              "translation": ""
+            },
+            {
+              "sentence": "Was haben Sie für das kommende Wochenende geplant?",
               "translation": ""
             }
           ]
@@ -1448,7 +1886,9 @@
           "group": "Monate",
           "sortOrder": 1,
           "word": "Januar",
-          "partOfSpeech": "",
+          "definition": "Der erste Monat des Jahres.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 74,
           "romanisation": "",
           "translation": "",
@@ -1460,6 +1900,10 @@
             {
               "sentence": "Der Januar gilt vielen als der trübste Monat des Jahres.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche guten Vorsätze haben Sie für den Januar?",
+              "translation": ""
             }
           ]
         },
@@ -1467,7 +1911,9 @@
           "group": "Monate",
           "sortOrder": 2,
           "word": "März",
-          "partOfSpeech": "",
+          "definition": "Der dritte Monat des Jahres, in dem der Frühling beginnt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 75,
           "romanisation": "",
           "translation": "",
@@ -1479,6 +1925,10 @@
             {
               "sentence": "Im März werden die Uhren auf Sommerzeit umgestellt.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist es im März bei Ihnen schon deutlich wärmer?",
+              "translation": ""
             }
           ]
         },
@@ -1486,7 +1936,9 @@
           "group": "Monate",
           "sortOrder": 3,
           "word": "Mai",
-          "partOfSpeech": "",
+          "definition": "Der fünfte Monat des Jahres.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 76,
           "romanisation": "",
           "translation": "",
@@ -1498,6 +1950,10 @@
             {
               "sentence": "Nicht umsonst spricht man vom Wonnemonat Mai.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum wird der Mai oft als besonders schöner Monat beschrieben?",
+              "translation": ""
             }
           ]
         },
@@ -1505,7 +1961,9 @@
           "group": "Monate",
           "sortOrder": 4,
           "word": "Juli",
-          "partOfSpeech": "",
+          "definition": "Der siebte Monat des Jahres, der in Europa meist im Sommer liegt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 77,
           "romanisation": "",
           "translation": "",
@@ -1517,6 +1975,10 @@
             {
               "sentence": "Der Juli fällt meist mitten in die Ferienzeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Fahren Sie im Juli in den Urlaub?",
+              "translation": ""
             }
           ]
         },
@@ -1524,7 +1986,9 @@
           "group": "Monate",
           "sortOrder": 5,
           "word": "September",
-          "partOfSpeech": "",
+          "definition": "Der neunte Monat des Jahres, in dem der Herbst beginnt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 78,
           "romanisation": "",
           "translation": "",
@@ -1536,6 +2000,10 @@
             {
               "sentence": "Ein sonniger September wird gern als Altweibersommer bezeichnet.",
               "translation": ""
+            },
+            {
+              "sentence": "Beginnt das neue Schuljahr bei Ihnen im September?",
+              "translation": ""
             }
           ]
         },
@@ -1543,7 +2011,9 @@
           "group": "Monate",
           "sortOrder": 6,
           "word": "November",
-          "partOfSpeech": "",
+          "definition": "Der elfte Monat des Jahres.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 79,
           "romanisation": "",
           "translation": "",
@@ -1555,6 +2025,10 @@
             {
               "sentence": "Kaum ein Monat wirkt so grau wie der November.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum wirkt der November auf viele Menschen so grau?",
+              "translation": ""
             }
           ]
         },
@@ -1562,7 +2036,9 @@
           "group": "Monate",
           "sortOrder": 7,
           "word": "Dezember",
-          "partOfSpeech": "",
+          "definition": "Der zwölfte und letzte Monat des Jahres.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 80,
           "romanisation": "",
           "translation": "",
@@ -1574,6 +2050,10 @@
             {
               "sentence": "Zum Ende des Dezembers zieht man Bilanz über das Jahr.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie verbringen Sie gewöhnlich den Dezember?",
+              "translation": ""
             }
           ]
         },
@@ -1581,7 +2061,9 @@
           "group": "Monate",
           "sortOrder": 8,
           "word": "Monatsbeginn",
-          "partOfSpeech": "",
+          "definition": "Der Anfang eines Kalendermonats.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 81,
           "romanisation": "",
           "translation": "",
@@ -1593,6 +2075,10 @@
             {
               "sentence": "Der Monatsbeginn ist bei uns immer besonders stressig.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Rechnungen werden bei Ihnen zum Monatsbeginn fällig?",
+              "translation": ""
             }
           ]
         },
@@ -1600,7 +2086,9 @@
           "group": "Monate",
           "sortOrder": 9,
           "word": "Monatswechsel",
-          "partOfSpeech": "",
+          "definition": "Der Übergang vom Ende eines Monats zum Anfang des nächsten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 82,
           "romanisation": "",
           "translation": "",
@@ -1612,6 +2100,10 @@
             {
               "sentence": "Zum Monatswechsel steigen erfahrungsgemäß die Anfragen.",
               "translation": ""
+            },
+            {
+              "sentence": "Ändern sich die Preise zum Monatswechsel?",
+              "translation": ""
             }
           ]
         },
@@ -1619,7 +2111,9 @@
           "group": "Monate",
           "sortOrder": 10,
           "word": "monatlich",
-          "partOfSpeech": "",
+          "definition": "Einmal in jedem Monat oder auf einen Monat bezogen.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 83,
           "romanisation": "",
           "translation": "",
@@ -1631,6 +2125,10 @@
             {
               "sentence": "Wir treffen uns monatlich zu einer Besprechung.",
               "translation": ""
+            },
+            {
+              "sentence": "Wird der Beitrag monatlich oder jährlich bezahlt?",
+              "translation": ""
             }
           ]
         },
@@ -1638,7 +2136,9 @@
           "group": "Monate",
           "sortOrder": 11,
           "word": "Halbjahr",
-          "partOfSpeech": "",
+          "definition": "Zeitraum von sechs Monaten.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 84,
           "romanisation": "",
           "translation": "",
@@ -1650,6 +2150,10 @@
             {
               "sentence": "Die Zahlen werden halbjährlich veröffentlicht.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Ziele haben Sie im ersten Halbjahr erreicht?",
+              "translation": ""
             }
           ]
         },
@@ -1657,7 +2161,9 @@
           "group": "Monate",
           "sortOrder": 12,
           "word": "Quartal",
-          "partOfSpeech": "",
+          "definition": "Zeitraum von drei Monaten beziehungsweise einem Vierteljahr.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 85,
           "romanisation": "",
           "translation": "",
@@ -1668,6 +2174,10 @@
             },
             {
               "sentence": "Jedes Quartal wird ein Bericht erstellt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie hat sich der Umsatz im letzten Quartal entwickelt?",
               "translation": ""
             }
           ]
@@ -1683,7 +2193,9 @@
           "group": "Jahreszeiten",
           "sortOrder": 1,
           "word": "Frühling",
-          "partOfSpeech": "",
+          "definition": "Jahreszeit zwischen Winter und Sommer.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 86,
           "romanisation": "",
           "translation": "",
@@ -1695,6 +2207,10 @@
             {
               "sentence": "Mit dem Frühling steigt bei den meisten die Stimmung spürbar.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Veränderungen in der Natur bemerken Sie im Frühling?",
+              "translation": ""
             }
           ]
         },
@@ -1702,7 +2218,9 @@
           "group": "Jahreszeiten",
           "sortOrder": 2,
           "word": "Sommer",
-          "partOfSpeech": "",
+          "definition": "Wärmste Jahreszeit zwischen Frühling und Herbst.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 87,
           "romanisation": "",
           "translation": "",
@@ -1714,6 +2232,10 @@
             {
               "sentence": "Der vergangene Sommer brach mehrere Temperaturrekorde.",
               "translation": ""
+            },
+            {
+              "sentence": "Werden die Sommer durch den Klimawandel immer heißer?",
+              "translation": ""
             }
           ]
         },
@@ -1721,7 +2243,9 @@
           "group": "Jahreszeiten",
           "sortOrder": 3,
           "word": "Herbst",
-          "partOfSpeech": "",
+          "definition": "Jahreszeit zwischen Sommer und Winter.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 88,
           "romanisation": "",
           "translation": "",
@@ -1733,6 +2257,10 @@
             {
               "sentence": "So sehr ich den Herbst mag, so ungern ertrage ich den früh einsetzenden Regen.",
               "translation": ""
+            },
+            {
+              "sentence": "Was gefällt Ihnen am Herbst besonders gut?",
+              "translation": ""
             }
           ]
         },
@@ -1740,7 +2268,9 @@
           "group": "Jahreszeiten",
           "sortOrder": 4,
           "word": "Winter",
-          "partOfSpeech": "",
+          "definition": "Kälteste Jahreszeit zwischen Herbst und Frühling.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 89,
           "romanisation": "",
           "translation": "",
@@ -1751,6 +2281,10 @@
             },
             {
               "sentence": "Wären die Winter milder, würden viele weniger heizen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie bereiten Sie sich auf einen kalten Winter vor?",
               "translation": ""
             }
           ]
@@ -1766,7 +2300,9 @@
           "group": "Zeit",
           "sortOrder": 1,
           "word": "Zeitdruck",
-          "partOfSpeech": "",
+          "definition": "Belastung, die entsteht, wenn für eine Aufgabe nur wenig Zeit bleibt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 90,
           "romanisation": "",
           "translation": "",
@@ -1778,6 +2314,10 @@
             {
               "sentence": "Entscheidungen, die unter Zeitdruck fallen, bereut man oft.",
               "translation": ""
+            },
+            {
+              "sentence": "Machen Sie unter Zeitdruck häufiger Fehler?",
+              "translation": ""
             }
           ]
         },
@@ -1785,7 +2325,9 @@
           "group": "Zeit",
           "sortOrder": 2,
           "word": "Zeitmangel",
-          "partOfSpeech": "",
+          "definition": "Situation, in der nicht genug Zeit zur Verfügung steht.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 91,
           "romanisation": "",
           "translation": "",
@@ -1797,6 +2339,10 @@
             {
               "sentence": "Zeitmangel wird häufig als Ausrede benutzt.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Aufgaben bleiben bei Zeitmangel zuerst liegen?",
+              "translation": ""
             }
           ]
         },
@@ -1804,7 +2350,9 @@
           "group": "Zeit",
           "sortOrder": 3,
           "word": "Frist",
-          "partOfSpeech": "",
+          "definition": "Festgelegter Zeitraum, innerhalb dessen etwas erledigt werden muss.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 92,
           "romanisation": "",
           "translation": "",
@@ -1816,6 +2364,10 @@
             {
               "sentence": "Sollte die Frist verstreichen, verfällt der Anspruch.",
               "translation": ""
+            },
+            {
+              "sentence": "Können wir die Frist um eine Woche verlängern?",
+              "translation": ""
             }
           ]
         },
@@ -1823,7 +2375,9 @@
           "group": "Zeit",
           "sortOrder": 4,
           "word": "Verzögerung",
-          "partOfSpeech": "",
+          "definition": "Späterer Beginn oder Abschluss als ursprünglich geplant.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 93,
           "romanisation": "",
           "translation": "",
@@ -1835,6 +2389,10 @@
             {
               "sentence": "Trotz der Verzögerung wurde der Termin schließlich eingehalten.",
               "translation": ""
+            },
+            {
+              "sentence": "Was war der Grund für die lange Verzögerung?",
+              "translation": ""
             }
           ]
         },
@@ -1842,7 +2400,9 @@
           "group": "Zeit",
           "sortOrder": 5,
           "word": "Gleichzeitigkeit",
-          "partOfSpeech": "",
+          "definition": "Das Geschehen mehrerer Dinge zur selben Zeit.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 94,
           "romanisation": "",
           "translation": "",
@@ -1854,6 +2414,10 @@
             {
               "sentence": "Digitale Medien verlangen eine ständige Gleichzeitigkeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Führt die Gleichzeitigkeit so vieler Aufgaben zu Stress?",
+              "translation": ""
             }
           ]
         },
@@ -1861,7 +2425,9 @@
           "group": "Zeit",
           "sortOrder": 6,
           "word": "vergänglich",
-          "partOfSpeech": "",
+          "definition": "Nicht von Dauer und mit der Zeit verschwindend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 95,
           "romanisation": "",
           "translation": "",
@@ -1873,6 +2439,10 @@
             {
               "sentence": "Alles Materielle ist letztlich vergänglich.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum ist öffentlicher Ruhm häufig vergänglich?",
+              "translation": ""
             }
           ]
         },
@@ -1880,7 +2450,9 @@
           "group": "Zeit",
           "sortOrder": 7,
           "word": "Aufschub",
-          "partOfSpeech": "",
+          "definition": "Verschiebung einer Aufgabe oder Entscheidung auf einen späteren Zeitpunkt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 96,
           "romanisation": "",
           "translation": "",
@@ -1892,6 +2464,10 @@
             {
               "sentence": "Man gewährte ihm einen letzten Aufschub.",
               "translation": ""
+            },
+            {
+              "sentence": "Duldet diese Entscheidung noch einen weiteren Aufschub?",
+              "translation": ""
             }
           ]
         },
@@ -1899,7 +2475,9 @@
           "group": "Zeit",
           "sortOrder": 8,
           "word": "unverzüglich",
-          "partOfSpeech": "",
+          "definition": "Sofort und ohne vermeidbare Verzögerung.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 97,
           "romanisation": "",
           "translation": "",
@@ -1911,6 +2489,10 @@
             {
               "sentence": "Bitte antworten Sie unverzüglich, die Sache ist dringend.",
               "translation": ""
+            },
+            {
+              "sentence": "Müssen wir den Schaden unverzüglich melden?",
+              "translation": ""
             }
           ]
         },
@@ -1918,7 +2500,9 @@
           "group": "Zeit",
           "sortOrder": 9,
           "word": "vorläufig",
-          "partOfSpeech": "",
+          "definition": "Nur für eine begrenzte Zeit gültig und noch nicht endgültig.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 98,
           "romanisation": "",
           "translation": "",
@@ -1930,6 +2514,10 @@
             {
               "sentence": "Er wurde vorläufig vom Dienst freigestellt.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind diese Zahlen noch vorläufig?",
+              "translation": ""
             }
           ]
         },
@@ -1937,7 +2525,9 @@
           "group": "Zeit",
           "sortOrder": 10,
           "word": "Epoche",
-          "partOfSpeech": "",
+          "definition": "Längerer geschichtlicher Zeitraum mit typischen Merkmalen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 99,
           "romanisation": "",
           "translation": "",
@@ -1949,6 +2539,10 @@
             {
               "sentence": "Jede Epoche bringt ihre eigenen Herausforderungen hervor.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Epoche der Geschichte interessiert Sie am meisten?",
+              "translation": ""
             }
           ]
         },
@@ -1956,7 +2550,9 @@
           "group": "Zeit",
           "sortOrder": 11,
           "word": "Ära",
-          "partOfSpeech": "",
+          "definition": "Längerer Zeitabschnitt, der durch bestimmte Personen oder Entwicklungen geprägt ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 100,
           "romanisation": "",
           "translation": "",
@@ -1968,6 +2564,10 @@
             {
               "sentence": "Wir stehen am Beginn einer digitalen Ära.",
               "translation": ""
+            },
+            {
+              "sentence": "Beginnt mit dieser Erfindung eine neue Ära?",
+              "translation": ""
             }
           ]
         },
@@ -1975,7 +2575,9 @@
           "group": "Zeit",
           "sortOrder": 12,
           "word": "verstreichen",
-          "partOfSpeech": "",
+          "definition": "Vorübergehen, ohne dass die Zeit genutzt oder etwas getan wird.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 101,
           "romanisation": "",
           "translation": "",
@@ -1987,6 +2589,10 @@
             {
               "sentence": "Es dürfen keine weiteren Wochen verstreichen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viel Zeit darf noch verstreichen, bevor wir handeln?",
+              "translation": ""
             }
           ]
         },
@@ -1994,7 +2600,9 @@
           "group": "Zeit",
           "sortOrder": 13,
           "word": "andauern",
-          "partOfSpeech": "",
+          "definition": "Über einen längeren Zeitraum fortbestehen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 102,
           "romanisation": "",
           "translation": "",
@@ -2006,6 +2614,10 @@
             {
               "sentence": "Die Diskussion dauerte bis tief in die Nacht an.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lange wird der Streik voraussichtlich andauern?",
+              "translation": ""
             }
           ]
         },
@@ -2013,7 +2625,9 @@
           "group": "Zeit",
           "sortOrder": 14,
           "word": "Zeitgeist",
-          "partOfSpeech": "",
+          "definition": "Typische Ideen, Werte und Einstellungen einer bestimmten Zeit.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 103,
           "romanisation": "",
           "translation": "",
@@ -2025,6 +2639,10 @@
             {
               "sentence": "Mode ist immer auch ein Spiegel des Zeitgeists.",
               "translation": ""
+            },
+            {
+              "sentence": "Spiegelt der Film den Zeitgeist der neunziger Jahre wider?",
+              "translation": ""
             }
           ]
         },
@@ -2032,7 +2650,9 @@
           "group": "Zeit",
           "sortOrder": 15,
           "word": "Muße",
-          "partOfSpeech": "",
+          "definition": "Freie, ruhige Zeit für eine Tätigkeit ohne Druck.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 104,
           "romanisation": "",
           "translation": "",
@@ -2044,6 +2664,10 @@
             {
               "sentence": "In aller Muße las er das Buch zu Ende.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann finden Sie die Muße, ein langes Buch zu lesen?",
+              "translation": ""
             }
           ]
         },
@@ -2051,7 +2675,9 @@
           "group": "Zeit",
           "sortOrder": 16,
           "word": "Übergangszeit",
-          "partOfSpeech": "",
+          "definition": "Begrenzter Zeitraum zwischen zwei Zuständen oder Regelungen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 105,
           "romanisation": "",
           "translation": "",
@@ -2062,6 +2688,10 @@
             },
             {
               "sentence": "Die Übergangszeit zwischen den Jobs nutzte sie für eine Reise.",
+              "translation": ""
+            },
+            {
+              "sentence": "Welche Vorschriften gelten während der Übergangszeit?",
               "translation": ""
             }
           ]
@@ -2077,7 +2707,9 @@
           "group": "Farben",
           "sortOrder": 1,
           "word": "Farbton",
-          "partOfSpeech": "",
+          "definition": "Bestimmte Variante oder Abstufung einer Farbe.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 106,
           "romanisation": "",
           "translation": "",
@@ -2089,6 +2721,10 @@
             {
               "sentence": "Wir konnten uns lange nicht auf einen Farbton einigen.",
               "translation": ""
+            },
+            {
+              "sentence": "Welcher Farbton passt am besten zu den Möbeln?",
+              "translation": ""
             }
           ]
         },
@@ -2096,7 +2732,9 @@
           "group": "Farben",
           "sortOrder": 2,
           "word": "Nuance",
-          "partOfSpeech": "",
+          "definition": "Sehr feiner Unterschied in Farbe, Bedeutung oder Ausdruck.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 107,
           "romanisation": "",
           "translation": "",
@@ -2108,6 +2746,10 @@
             {
               "sentence": "Erst im direkten Vergleich erkennt man die Nuancen.",
               "translation": ""
+            },
+            {
+              "sentence": "Erkennen Sie die Nuance zwischen diesen beiden Blautönen?",
+              "translation": ""
             }
           ]
         },
@@ -2115,7 +2757,9 @@
           "group": "Farben",
           "sortOrder": 3,
           "word": "matt",
-          "partOfSpeech": "",
+          "definition": "Ohne Glanz und nur wenig Licht reflektierend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 108,
           "romanisation": "",
           "translation": "",
@@ -2127,6 +2771,10 @@
             {
               "sentence": "Mattes Papier reflektiert das Licht weniger stark.",
               "translation": ""
+            },
+            {
+              "sentence": "Soll die Oberfläche matt oder glänzend sein?",
+              "translation": ""
             }
           ]
         },
@@ -2134,7 +2782,9 @@
           "group": "Farben",
           "sortOrder": 4,
           "word": "grell",
-          "partOfSpeech": "",
+          "definition": "Sehr hell, stark und oft unangenehm auffällig.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 109,
           "romanisation": "",
           "translation": "",
@@ -2146,6 +2796,10 @@
             {
               "sentence": "Bei grellem Licht ermüden die Augen schneller.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist dieses grelle Licht nicht anstrengend für die Augen?",
+              "translation": ""
             }
           ]
         },
@@ -2153,7 +2807,9 @@
           "group": "Farben",
           "sortOrder": 5,
           "word": "gedeckt",
-          "partOfSpeech": "",
+          "definition": "Bei Farben ruhig, wenig leuchtend und nicht auffällig.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 110,
           "romanisation": "",
           "translation": "",
@@ -2165,6 +2821,10 @@
             {
               "sentence": "Sie bevorzugt gedeckte Töne wie Beige und Grau.",
               "translation": ""
+            },
+            {
+              "sentence": "Bevorzugen Sie gedeckte oder kräftige Farben?",
+              "translation": ""
             }
           ]
         },
@@ -2172,7 +2832,9 @@
           "group": "Farben",
           "sortOrder": 6,
           "word": "leuchtend",
-          "partOfSpeech": "",
+          "definition": "Sehr hell, klar und intensiv in der Farbe.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 111,
           "romanisation": "",
           "translation": "",
@@ -2184,6 +2846,10 @@
             {
               "sentence": "Im Frühling erstrahlt die Wiese in leuchtendem Gelb.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum wirkt das Rot auf diesem Bild so leuchtend?",
+              "translation": ""
             }
           ]
         },
@@ -2191,7 +2857,9 @@
           "group": "Farben",
           "sortOrder": 7,
           "word": "kontrastreich",
-          "partOfSpeech": "",
+          "definition": "Mit starken und deutlich sichtbaren Unterschieden.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 112,
           "romanisation": "",
           "translation": "",
@@ -2203,6 +2871,10 @@
             {
               "sentence": "Ein kontrastreiches Bild wirkt oft dynamischer.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das kontrastreiche Design gut lesbar?",
+              "translation": ""
             }
           ]
         },
@@ -2210,7 +2882,9 @@
           "group": "Farben",
           "sortOrder": 8,
           "word": "Farbgebung",
-          "partOfSpeech": "",
+          "definition": "Auswahl und Kombination der Farben bei einer Gestaltung.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 113,
           "romanisation": "",
           "translation": "",
@@ -2222,6 +2896,10 @@
             {
               "sentence": "Über die Farbgebung entscheidet letztlich der Kunde.",
               "translation": ""
+            },
+            {
+              "sentence": "Wer entscheidet über die Farbgebung des neuen Büros?",
+              "translation": ""
             }
           ]
         },
@@ -2229,7 +2907,9 @@
           "group": "Farben",
           "sortOrder": 9,
           "word": "einheitlich",
-          "partOfSpeech": "",
+          "definition": "Überall gleich oder nach demselben Muster gestaltet.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 114,
           "romanisation": "",
           "translation": "",
@@ -2241,6 +2921,10 @@
             {
               "sentence": "Alle Uniformen sind einheitlich blau gehalten.",
               "translation": ""
+            },
+            {
+              "sentence": "Soll die Beschriftung im ganzen Gebäude einheitlich sein?",
+              "translation": ""
             }
           ]
         },
@@ -2248,7 +2932,9 @@
           "group": "Farben",
           "sortOrder": 10,
           "word": "symbolisieren",
-          "partOfSpeech": "",
+          "definition": "Als Zeichen für eine Idee, Eigenschaft oder Bedeutung stehen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 115,
           "romanisation": "",
           "translation": "",
@@ -2260,6 +2946,10 @@
             {
               "sentence": "Die Farbe Grün symbolisiert häufig Hoffnung.",
               "translation": ""
+            },
+            {
+              "sentence": "Was symbolisiert die Farbe Weiß in dieser Kultur?",
+              "translation": ""
             }
           ]
         },
@@ -2267,7 +2957,9 @@
           "group": "Farben",
           "sortOrder": 11,
           "word": "verblassen",
-          "partOfSpeech": "",
+          "definition": "Nach und nach Farbe oder Stärke verlieren.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 116,
           "romanisation": "",
           "translation": "",
@@ -2279,6 +2971,10 @@
             {
               "sentence": "Auch der einst grelle Anstrich ist längst verblasst.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie verhindert man, dass die Fotos in der Sonne verblassen?",
+              "translation": ""
             }
           ]
         },
@@ -2286,7 +2982,9 @@
           "group": "Farben",
           "sortOrder": 12,
           "word": "abtönen",
-          "partOfSpeech": "",
+          "definition": "Eine Farbe durch Beimischen verändern oder weniger kräftig machen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 117,
           "romanisation": "",
           "translation": "",
@@ -2297,6 +2995,10 @@
             },
             {
               "sentence": "Er tönte das Weiß mit einem Hauch Grau ab.",
+              "translation": ""
+            },
+            {
+              "sentence": "Können wir das kräftige Blau mit etwas Grau abtönen?",
               "translation": ""
             }
           ]
@@ -2312,7 +3014,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 1,
           "word": "Ernährungsweise",
-          "partOfSpeech": "",
+          "definition": "Typische Art, wie und welche Lebensmittel jemand regelmäßig isst.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 118,
           "romanisation": "",
           "translation": "",
@@ -2324,6 +3028,10 @@
             {
               "sentence": "Über die ideale Ernährungsweise wird kontrovers diskutiert.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Ernährungsweise ist langfristig gesund?",
+              "translation": ""
             }
           ]
         },
@@ -2331,7 +3039,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 2,
           "word": "Nährstoff",
-          "partOfSpeech": "",
+          "definition": "Stoff in der Nahrung, den der Körper für Leben und Gesundheit braucht.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 119,
           "romanisation": "",
           "translation": "",
@@ -2343,6 +3053,10 @@
             {
               "sentence": "Durch zu langes Kochen gehen viele Nährstoffe verloren.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Nährstoffe enthält dieses Gemüse?",
+              "translation": ""
             }
           ]
         },
@@ -2350,7 +3064,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 3,
           "word": "Verpflegung",
-          "partOfSpeech": "",
+          "definition": "Versorgung von Personen mit Essen und Getränken.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 120,
           "romanisation": "",
           "translation": "",
@@ -2362,6 +3078,10 @@
             {
               "sentence": "Für die Verpflegung der Gäste ist gesorgt.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Verpflegung im Preis der Reise enthalten?",
+              "translation": ""
             }
           ]
         },
@@ -2369,7 +3089,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 4,
           "word": "Zubereitung",
-          "partOfSpeech": "",
+          "definition": "Vorgang, bei dem Speisen zum Essen vorbereitet werden.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 121,
           "romanisation": "",
           "translation": "",
@@ -2381,6 +3103,10 @@
             {
               "sentence": "Bei der Zubereitung kommt es auf die richtige Temperatur an.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lange dauert die Zubereitung dieses Gerichts?",
+              "translation": ""
             }
           ]
         },
@@ -2388,7 +3114,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 5,
           "word": "verzehren",
-          "partOfSpeech": "",
+          "definition": "Essen oder trinken; meist in formeller Sprache.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 122,
           "romanisation": "",
           "translation": "",
@@ -2400,6 +3128,10 @@
             {
               "sentence": "Vor Ort dürfen keine Speisen verzehrt werden.",
               "translation": ""
+            },
+            {
+              "sentence": "Darf man mitgebrachte Speisen in diesem Raum verzehren?",
+              "translation": ""
             }
           ]
         },
@@ -2407,7 +3139,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 6,
           "word": "Delikatesse",
-          "partOfSpeech": "",
+          "definition": "Besonders feines oder seltenes Lebensmittel.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 123,
           "romanisation": "",
           "translation": "",
@@ -2419,6 +3153,10 @@
             {
               "sentence": "Was für die einen eine Delikatesse ist, lehnen andere ab.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche regionale Delikatesse sollten Besucher unbedingt probieren?",
+              "translation": ""
             }
           ]
         },
@@ -2426,7 +3164,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 7,
           "word": "verderblich",
-          "partOfSpeech": "",
+          "definition": "Nur kurze Zeit haltbar und schnell ungenießbar werdend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 124,
           "romanisation": "",
           "translation": "",
@@ -2438,6 +3178,10 @@
             {
               "sentence": "Fisch ist besonders verderblich.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie müssen leicht verderbliche Waren gelagert werden?",
+              "translation": ""
             }
           ]
         },
@@ -2445,7 +3189,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 8,
           "word": "Genuss",
-          "partOfSpeech": "",
+          "definition": "Angenehmes Gefühl beim Erleben, Essen oder Trinken.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 125,
           "romanisation": "",
           "translation": "",
@@ -2457,6 +3203,10 @@
             {
               "sentence": "Sie isst mit sichtlichem Genuss.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist ein gutes Essen für Sie ein besonderer Genuss?",
+              "translation": ""
             }
           ]
         },
@@ -2464,7 +3214,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 9,
           "word": "sättigend",
-          "partOfSpeech": "",
+          "definition": "So nahrhaft, dass man danach lange keinen Hunger hat.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 126,
           "romanisation": "",
           "translation": "",
@@ -2476,6 +3228,10 @@
             {
               "sentence": "Eine sättigende Mahlzeit hält lange vor.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche gesunden Lebensmittel sind besonders sättigend?",
+              "translation": ""
             }
           ]
         },
@@ -2483,7 +3239,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 10,
           "word": "Unverträglichkeit",
-          "partOfSpeech": "",
+          "definition": "Körperliche Reaktion, weil ein bestimmtes Lebensmittel nicht vertragen wird.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 127,
           "romanisation": "",
           "translation": "",
@@ -2495,6 +3253,10 @@
             {
               "sentence": "Bei einer Unverträglichkeit sollte man einen Arzt aufsuchen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie wurde Ihre Unverträglichkeit festgestellt?",
+              "translation": ""
             }
           ]
         },
@@ -2502,7 +3264,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 11,
           "word": "kulinarisch",
-          "partOfSpeech": "",
+          "definition": "Die Kochkunst, Speisen oder besondere Geschmackserlebnisse betreffend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 128,
           "romanisation": "",
           "translation": "",
@@ -2514,6 +3278,10 @@
             {
               "sentence": "Die Stadt hat kulinarisch einiges zu bieten.",
               "translation": ""
+            },
+            {
+              "sentence": "Was hat die Region kulinarisch zu bieten?",
+              "translation": ""
             }
           ]
         },
@@ -2521,7 +3289,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 12,
           "word": "Gastfreundschaft",
-          "partOfSpeech": "",
+          "definition": "Freundliche und großzügige Aufnahme und Bewirtung von Gästen.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 129,
           "romanisation": "",
           "translation": "",
@@ -2533,6 +3303,10 @@
             {
               "sentence": "In vielen Ländern gilt Gastfreundschaft als heilige Pflicht.",
               "translation": ""
+            },
+            {
+              "sentence": "Wodurch zeigt sich die Gastfreundschaft einer Familie?",
+              "translation": ""
             }
           ]
         },
@@ -2540,7 +3314,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 13,
           "word": "abschmecken",
-          "partOfSpeech": "",
+          "definition": "Den Geschmack einer Speise prüfen und mit Gewürzen verbessern.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 130,
           "romanisation": "",
           "translation": "",
@@ -2552,6 +3328,10 @@
             {
               "sentence": "Vor dem Servieren solltest du das Gericht noch einmal abschmecken.",
               "translation": ""
+            },
+            {
+              "sentence": "Soll ich die Suppe noch mit etwas Salz abschmecken?",
+              "translation": ""
             }
           ]
         },
@@ -2559,7 +3339,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 14,
           "word": "Nachhaltigkeit",
-          "partOfSpeech": "",
+          "definition": "Handeln, das Umwelt und Ressourcen langfristig schützt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 131,
           "romanisation": "",
           "translation": "",
@@ -2571,6 +3353,10 @@
             {
               "sentence": "Regionale Produkte stehen für Nachhaltigkeit.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Rolle spielt Nachhaltigkeit bei Ihrem Einkauf?",
+              "translation": ""
             }
           ]
         },
@@ -2578,7 +3364,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 15,
           "word": "Nahrungsmittel",
-          "partOfSpeech": "",
+          "definition": "Produkt, das Menschen essen oder trinken können.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 132,
           "romanisation": "",
           "translation": "",
@@ -2590,6 +3378,10 @@
             {
               "sentence": "Die Verschwendung von Nahrungsmitteln ist ein großes Problem.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Nahrungsmittel sollten kühl gelagert werden?",
+              "translation": ""
             }
           ]
         },
@@ -2597,7 +3389,9 @@
           "group": "Essen & Trinken",
           "sortOrder": 16,
           "word": "bekömmlich",
-          "partOfSpeech": "",
+          "definition": "Gut verträglich und leicht zu verdauen.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 133,
           "romanisation": "",
           "translation": "",
@@ -2608,6 +3402,10 @@
             },
             {
               "sentence": "Nicht jedes Gericht ist für jeden gleich bekömmlich.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ist diese Mahlzeit auch am späten Abend bekömmlich?",
               "translation": ""
             }
           ]
@@ -2623,7 +3421,9 @@
           "group": "Häufige Verben",
           "sortOrder": 1,
           "word": "in Betracht ziehen",
-          "partOfSpeech": "",
+          "definition": "Als mögliche Wahl oder Lösung berücksichtigen.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 134,
           "romanisation": "",
           "translation": "",
@@ -2635,6 +3435,10 @@
             {
               "sentence": "Auch unkonventionelle Lösungen werden in Betracht gezogen.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Alternative sollten wir noch in Betracht ziehen?",
+              "translation": ""
             }
           ]
         },
@@ -2642,7 +3446,9 @@
           "group": "Häufige Verben",
           "sortOrder": 2,
           "word": "zur Verfügung stellen",
-          "partOfSpeech": "",
+          "definition": "Jemandem etwas zum Benutzen oder Verwenden geben.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 135,
           "romanisation": "",
           "translation": "",
@@ -2654,6 +3460,10 @@
             {
               "sentence": "Die Unterlagen wurden uns rechtzeitig zur Verfügung gestellt.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann die Firma uns zusätzliche Räume zur Verfügung stellen?",
+              "translation": ""
             }
           ]
         },
@@ -2661,7 +3471,9 @@
           "group": "Häufige Verben",
           "sortOrder": 3,
           "word": "in Frage stellen",
-          "partOfSpeech": "",
+          "definition": "An der Richtigkeit oder Gültigkeit von etwas zweifeln.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 136,
           "romanisation": "",
           "translation": "",
@@ -2673,6 +3485,10 @@
             {
               "sentence": "Die neuen Zahlen stellen das bisherige Konzept in Frage.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum stellen Sie die Ergebnisse der Studie in Frage?",
+              "translation": ""
             }
           ]
         },
@@ -2680,7 +3496,9 @@
           "group": "Häufige Verben",
           "sortOrder": 4,
           "word": "sich auseinandersetzen mit",
-          "partOfSpeech": "",
+          "definition": "Sich gründlich und kritisch mit einem Thema beschäftigen.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 137,
           "romanisation": "",
           "translation": "",
@@ -2692,6 +3510,10 @@
             {
               "sentence": "Sie hat sich intensiv mit der Materie auseinandergesetzt.",
               "translation": ""
+            },
+            {
+              "sentence": "Haben Sie sich bereits mit den Gegenargumenten auseinandergesetzt?",
+              "translation": ""
             }
           ]
         },
@@ -2699,7 +3521,9 @@
           "group": "Häufige Verben",
           "sortOrder": 5,
           "word": "voraussetzen",
-          "partOfSpeech": "",
+          "definition": "Etwas als notwendige Bedingung verlangen oder als gegeben annehmen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 138,
           "romanisation": "",
           "translation": "",
@@ -2711,6 +3535,10 @@
             {
               "sentence": "Wir sollten nichts als selbstverständlich voraussetzen.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Kenntnisse setzt diese Aufgabe voraus?",
+              "translation": ""
             }
           ]
         },
@@ -2718,7 +3546,9 @@
           "group": "Häufige Verben",
           "sortOrder": 6,
           "word": "berücksichtigen",
-          "partOfSpeech": "",
+          "definition": "Bei einer Entscheidung beachten und in die Überlegungen einbeziehen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 139,
           "romanisation": "",
           "translation": "",
@@ -2730,6 +3560,10 @@
             {
               "sentence": "Ihre Einwände wurden durchaus berücksichtigt.",
               "translation": ""
+            },
+            {
+              "sentence": "Wurden bei der Planung alle Kosten berücksichtigt?",
+              "translation": ""
             }
           ]
         },
@@ -2737,7 +3571,9 @@
           "group": "Häufige Verben",
           "sortOrder": 7,
           "word": "sich beziehen auf",
-          "partOfSpeech": "",
+          "definition": "Einen Zusammenhang mit einer Person, Sache oder Aussage haben.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 140,
           "romanisation": "",
           "translation": "",
@@ -2749,6 +3585,10 @@
             {
               "sentence": "Worauf beziehen Sie sich mit dieser Aussage?",
               "translation": ""
+            },
+            {
+              "sentence": "Auf welchen Abschnitt bezieht sich Ihre Frage?",
+              "translation": ""
             }
           ]
         },
@@ -2756,7 +3596,9 @@
           "group": "Häufige Verben",
           "sortOrder": 8,
           "word": "gewährleisten",
-          "partOfSpeech": "",
+          "definition": "Dafür sorgen oder garantieren, dass etwas sicher möglich ist.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 141,
           "romanisation": "",
           "translation": "",
@@ -2768,6 +3610,10 @@
             {
               "sentence": "Eine reibungslose Abwicklung wird gewährleistet.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie können wir den Schutz der Daten gewährleisten?",
+              "translation": ""
             }
           ]
         },
@@ -2775,7 +3621,9 @@
           "group": "Häufige Verben",
           "sortOrder": 9,
           "word": "beeinträchtigen",
-          "partOfSpeech": "",
+          "definition": "Eine Person oder Sache in ihrer Leistung oder Qualität negativ beeinflussen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 142,
           "romanisation": "",
           "translation": "",
@@ -2787,6 +3635,10 @@
             {
               "sentence": "Die Qualität wurde durch die Eile beeinträchtigt.",
               "translation": ""
+            },
+            {
+              "sentence": "Beeinträchtigt der Lärm Ihre Konzentration?",
+              "translation": ""
             }
           ]
         },
@@ -2794,7 +3646,9 @@
           "group": "Häufige Verben",
           "sortOrder": 10,
           "word": "in Anspruch nehmen",
-          "partOfSpeech": "",
+          "definition": "Etwas nutzen oder Zeit beziehungsweise Hilfe benötigen.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 143,
           "romanisation": "",
           "translation": "",
@@ -2806,6 +3660,10 @@
             {
               "sentence": "Er nahm die Hilfe eines Anwalts in Anspruch.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie viel Zeit wird die Reparatur in Anspruch nehmen?",
+              "translation": ""
             }
           ]
         },
@@ -2813,7 +3671,9 @@
           "group": "Häufige Verben",
           "sortOrder": 11,
           "word": "sich durchsetzen",
-          "partOfSpeech": "",
+          "definition": "Trotz Widerstand Erfolg haben oder die eigene Position behaupten.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 144,
           "romanisation": "",
           "translation": "",
@@ -2825,6 +3685,10 @@
             {
               "sentence": "Sie musste sich gegen viele Widerstände durchsetzen.",
               "translation": ""
+            },
+            {
+              "sentence": "Konnte sie sich mit ihrem Vorschlag durchsetzen?",
+              "translation": ""
             }
           ]
         },
@@ -2832,7 +3696,9 @@
           "group": "Häufige Verben",
           "sortOrder": 12,
           "word": "hervorheben",
-          "partOfSpeech": "",
+          "definition": "Etwas besonders deutlich oder wichtig erscheinen lassen.",
+          "IPA": "",
+          "partOfSpeech": "Trennbares Verb",
           "id": 145,
           "romanisation": "",
           "translation": "",
@@ -2844,6 +3710,10 @@
             {
               "sentence": "Besonders hervorzuheben ist der große Einsatz des Teams.",
               "translation": ""
+            },
+            {
+              "sentence": "Welchen Punkt möchten Sie besonders hervorheben?",
+              "translation": ""
             }
           ]
         },
@@ -2851,7 +3721,9 @@
           "group": "Häufige Verben",
           "sortOrder": 13,
           "word": "in Kauf nehmen",
-          "partOfSpeech": "",
+          "definition": "Einen Nachteil bewusst akzeptieren, um ein Ziel zu erreichen.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 146,
           "romanisation": "",
           "translation": "",
@@ -2863,6 +3735,10 @@
             {
               "sentence": "Gewisse Nachteile muss man wohl in Kauf nehmen.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Nachteile würden Sie für die neue Stelle in Kauf nehmen?",
+              "translation": ""
             }
           ]
         },
@@ -2870,7 +3746,9 @@
           "group": "Häufige Verben",
           "sortOrder": 14,
           "word": "abwägen",
-          "partOfSpeech": "",
+          "definition": "Verschiedene Möglichkeiten oder Argumente sorgfältig miteinander vergleichen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 147,
           "romanisation": "",
           "translation": "",
@@ -2882,6 +3760,10 @@
             {
               "sentence": "Nach reiflichem Abwägen entschied er sich dagegen.",
               "translation": ""
+            },
+            {
+              "sentence": "Haben Sie die Vor- und Nachteile gründlich abgewogen?",
+              "translation": ""
             }
           ]
         },
@@ -2889,7 +3771,9 @@
           "group": "Häufige Verben",
           "sortOrder": 15,
           "word": "beitragen zu",
-          "partOfSpeech": "",
+          "definition": "Bei etwas mithelfen oder einen Anteil an einem Ergebnis haben.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 148,
           "romanisation": "",
           "translation": "",
@@ -2901,6 +3785,10 @@
             {
               "sentence": "Ihre Ideen haben wesentlich zum Erfolg beigetragen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie kann jeder Einzelne zum Klimaschutz beitragen?",
+              "translation": ""
             }
           ]
         },
@@ -2908,7 +3796,9 @@
           "group": "Häufige Verben",
           "sortOrder": 16,
           "word": "sich herausstellen",
-          "partOfSpeech": "",
+          "definition": "Nach einiger Zeit als wahr oder tatsächlich vorhanden erkannt werden.",
+          "IPA": "",
+          "partOfSpeech": "Reflexives Verb",
           "id": 149,
           "romanisation": "",
           "translation": "",
@@ -2920,6 +3810,10 @@
             {
               "sentence": "Es stellte sich als schwieriger heraus als gedacht.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat sich die erste Vermutung als richtig herausgestellt?",
+              "translation": ""
             }
           ]
         },
@@ -2927,7 +3821,9 @@
           "group": "Häufige Verben",
           "sortOrder": 17,
           "word": "in Erwägung ziehen",
-          "partOfSpeech": "",
+          "definition": "Eine Möglichkeit ernsthaft prüfen und darüber nachdenken.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 150,
           "romanisation": "",
           "translation": "",
@@ -2939,6 +3835,10 @@
             {
               "sentence": "Alle Optionen werden in Erwägung gezogen.",
               "translation": ""
+            },
+            {
+              "sentence": "Ziehen Sie einen Wechsel des Arbeitsplatzes in Erwägung?",
+              "translation": ""
             }
           ]
         },
@@ -2946,7 +3846,9 @@
           "group": "Häufige Verben",
           "sortOrder": 18,
           "word": "bewältigen",
-          "partOfSpeech": "",
+          "definition": "Eine schwierige Aufgabe oder Situation erfolgreich meistern.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 151,
           "romanisation": "",
           "translation": "",
@@ -2957,6 +3859,10 @@
             },
             {
               "sentence": "Gemeinsam haben wir die Krise bewältigt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wie hat das Team diese Krise bewältigt?",
               "translation": ""
             }
           ]
@@ -2972,7 +3878,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 1,
           "word": "Haushaltsgerät",
-          "partOfSpeech": "",
+          "definition": "Technisches Gerät, das bei Arbeiten im Haushalt verwendet wird.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 152,
           "romanisation": "",
           "translation": "",
@@ -2984,6 +3892,10 @@
             {
               "sentence": "Defekte Haushaltsgeräte lohnen sich oft nicht mehr zu reparieren.",
               "translation": ""
+            },
+            {
+              "sentence": "Welches Haushaltsgerät verbraucht bei Ihnen am meisten Strom?",
+              "translation": ""
             }
           ]
         },
@@ -2991,7 +3903,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 2,
           "word": "Energieverbrauch",
-          "partOfSpeech": "",
+          "definition": "Menge an Energie, die eine Person oder ein Gerät benötigt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 153,
           "romanisation": "",
           "translation": "",
@@ -3003,6 +3917,10 @@
             {
               "sentence": "Auf dem Etikett ist der Energieverbrauch angegeben.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lässt sich der Energieverbrauch dieses Geräts senken?",
+              "translation": ""
             }
           ]
         },
@@ -3010,7 +3928,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 3,
           "word": "Bedienungsanleitung",
-          "partOfSpeech": "",
+          "definition": "Schriftliche Erklärung zur richtigen Nutzung eines Geräts.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 154,
           "romanisation": "",
           "translation": "",
@@ -3022,6 +3942,10 @@
             {
               "sentence": "Ohne Bedienungsanleitung ist die Einrichtung mühsam.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Bedienungsanleitung auch auf Deutsch verfügbar?",
+              "translation": ""
             }
           ]
         },
@@ -3029,7 +3953,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 4,
           "word": "Gebrauchsspur",
-          "partOfSpeech": "",
+          "definition": "Sichtbares Zeichen dafür, dass ein Gegenstand bereits benutzt wurde.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 155,
           "romanisation": "",
           "translation": "",
@@ -3041,6 +3967,10 @@
             {
               "sentence": "Gebrauchsspuren mindern den Wiederverkaufswert.",
               "translation": ""
+            },
+            {
+              "sentence": "Hat das gebrauchte Gerät deutliche Gebrauchsspuren?",
+              "translation": ""
             }
           ]
         },
@@ -3048,7 +3978,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 5,
           "word": "Garantie",
-          "partOfSpeech": "",
+          "definition": "Zusage des Herstellers, bestimmte Mängel innerhalb einer Frist zu beheben.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 156,
           "romanisation": "",
           "translation": "",
@@ -3060,6 +3992,10 @@
             {
               "sentence": "Die Garantie erlischt bei unsachgemäßer Nutzung.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie lange gilt die Garantie für diesen Kühlschrank?",
+              "translation": ""
             }
           ]
         },
@@ -3067,7 +4003,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 6,
           "word": "Verschleiß",
-          "partOfSpeech": "",
+          "definition": "Allmähliche Abnutzung durch regelmäßigen Gebrauch.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 157,
           "romanisation": "",
           "translation": "",
@@ -3079,6 +4017,10 @@
             {
               "sentence": "Um den Verschleiß zu verringern, sollte man das Gerät regelmäßig warten.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie kann man den Verschleiß der Teile verringern?",
+              "translation": ""
             }
           ]
         },
@@ -3086,7 +4028,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 7,
           "word": "instand halten",
-          "partOfSpeech": "",
+          "definition": "Durch Pflege und Reparaturen in einem guten Zustand bewahren.",
+          "IPA": "",
+          "partOfSpeech": "Verbgruppe",
           "id": 158,
           "romanisation": "",
           "translation": "",
@@ -3098,6 +4042,10 @@
             {
               "sentence": "Das Gebäude wird vorbildlich instand gehalten.",
               "translation": ""
+            },
+            {
+              "sentence": "Was kostet es, das alte Gebäude instand zu halten?",
+              "translation": ""
             }
           ]
         },
@@ -3105,7 +4053,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 8,
           "word": "entsorgen",
-          "partOfSpeech": "",
+          "definition": "Etwas nicht mehr Benötigtes ordnungsgemäß wegwerfen oder beseitigen.",
+          "IPA": "",
+          "partOfSpeech": "Verb",
           "id": 159,
           "romanisation": "",
           "translation": "",
@@ -3117,6 +4067,10 @@
             {
               "sentence": "Batterien dürfen nicht im Hausmüll entsorgt werden.",
               "translation": ""
+            },
+            {
+              "sentence": "Wo kann ich alte Batterien sicher entsorgen?",
+              "translation": ""
             }
           ]
         },
@@ -3124,7 +4078,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 9,
           "word": "Ersatzteil",
-          "partOfSpeech": "",
+          "definition": "Einzelnes Teil, das ein beschädigtes Teil eines Geräts ersetzt.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 160,
           "romanisation": "",
           "translation": "",
@@ -3136,6 +4092,10 @@
             {
               "sentence": "Das passende Ersatzteil war schnell bestellt.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist für dieses alte Modell noch ein Ersatzteil erhältlich?",
+              "translation": ""
             }
           ]
         },
@@ -3143,7 +4103,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 10,
           "word": "nachhaltig",
-          "partOfSpeech": "",
+          "definition": "So gestaltet, dass Umwelt und Ressourcen langfristig geschont werden.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 161,
           "romanisation": "",
           "translation": "",
@@ -3155,6 +4117,10 @@
             {
               "sentence": "Wir versuchen, möglichst nachhaltig zu konsumieren.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie können wir im Haushalt nachhaltiger leben?",
+              "translation": ""
             }
           ]
         },
@@ -3162,7 +4128,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 11,
           "word": "Wiederverkaufswert",
-          "partOfSpeech": "",
+          "definition": "Preis, den man beim späteren Verkauf eines gebrauchten Gegenstands erzielen kann.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 162,
           "romanisation": "",
           "translation": "",
@@ -3174,6 +4142,10 @@
             {
               "sentence": "Der Wiederverkaufswert sinkt mit jedem Jahr.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie hoch ist der Wiederverkaufswert des Autos nach fünf Jahren?",
+              "translation": ""
             }
           ]
         },
@@ -3181,7 +4153,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 12,
           "word": "Anschaffung",
-          "partOfSpeech": "",
+          "definition": "Kauf eines Gegenstands, besonders wenn er teuer oder wichtig ist.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 163,
           "romanisation": "",
           "translation": "",
@@ -3193,6 +4167,10 @@
             {
               "sentence": "Vor jeder größeren Anschaffung vergleicht sie die Preise.",
               "translation": ""
+            },
+            {
+              "sentence": "Lohnt sich die Anschaffung eines neuen Geräts?",
+              "translation": ""
             }
           ]
         },
@@ -3200,7 +4178,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 13,
           "word": "funktionsfähig",
-          "partOfSpeech": "",
+          "definition": "In einem Zustand, in dem etwas richtig funktioniert.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 164,
           "romanisation": "",
           "translation": "",
@@ -3212,6 +4192,10 @@
             {
               "sentence": "Bitte geben Sie das Gerät nur funktionsfähig zurück.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist der gebrauchte Drucker noch vollständig funktionsfähig?",
+              "translation": ""
             }
           ]
         },
@@ -3219,7 +4203,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 14,
           "word": "Wartung",
-          "partOfSpeech": "",
+          "definition": "Regelmäßige Prüfung und Pflege, damit ein Gerät zuverlässig funktioniert.",
+          "IPA": "",
+          "partOfSpeech": "Nomen",
           "id": 165,
           "romanisation": "",
           "translation": "",
@@ -3231,6 +4217,10 @@
             {
               "sentence": "Die Wartung übernimmt eine Fachfirma.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann ist die nächste Wartung der Heizung fällig?",
+              "translation": ""
             }
           ]
         },
@@ -3238,7 +4228,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 15,
           "word": "hochwertig",
-          "partOfSpeech": "",
+          "definition": "Von sehr guter Qualität und sorgfältig hergestellt.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 166,
           "romanisation": "",
           "translation": "",
@@ -3250,6 +4242,10 @@
             {
               "sentence": "Die Verarbeitung wirkt ausgesprochen hochwertig.",
               "translation": ""
+            },
+            {
+              "sentence": "Woran erkennt man hochwertige Materialien?",
+              "translation": ""
             }
           ]
         },
@@ -3257,7 +4253,9 @@
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 16,
           "word": "veraltet",
-          "partOfSpeech": "",
+          "definition": "Nicht mehr modern oder technisch nicht mehr auf dem neuesten Stand.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 167,
           "romanisation": "",
           "translation": "",
@@ -3268,6 +4266,10 @@
             },
             {
               "sentence": "Veraltete Geräte lassen sich oft nicht mehr aktualisieren.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ist dieses Betriebssystem inzwischen veraltet?",
               "translation": ""
             }
           ]
@@ -3283,7 +4285,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 1,
           "word": "nachvollziehbar",
-          "partOfSpeech": "",
+          "definition": "So klar und logisch, dass man es verstehen kann.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 168,
           "romanisation": "",
           "translation": "",
@@ -3295,6 +4299,10 @@
             {
               "sentence": "Bitte erklären Sie es so, dass es für alle nachvollziehbar ist.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist die Entscheidung für alle Beteiligten nachvollziehbar?",
+              "translation": ""
             }
           ]
         },
@@ -3302,7 +4310,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 2,
           "word": "unverzichtbar",
-          "partOfSpeech": "",
+          "definition": "So wichtig, dass man nicht darauf verzichten kann.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 169,
           "romanisation": "",
           "translation": "",
@@ -3314,6 +4324,10 @@
             {
               "sentence": "Ihre Erfahrung ist für das Projekt schlicht unverzichtbar.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Fähigkeit ist in Ihrem Beruf unverzichtbar?",
+              "translation": ""
             }
           ]
         },
@@ -3321,7 +4335,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 3,
           "word": "umstritten",
-          "partOfSpeech": "",
+          "definition": "Von vielen Menschen unterschiedlich und kontrovers beurteilt.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 170,
           "romanisation": "",
           "translation": "",
@@ -3333,6 +4349,10 @@
             {
               "sentence": "Der Kandidat gilt als ebenso beliebt wie umstritten.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum ist diese politische Maßnahme so umstritten?",
+              "translation": ""
             }
           ]
         },
@@ -3340,7 +4360,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 4,
           "word": "voreilig",
-          "partOfSpeech": "",
+          "definition": "Zu schnell und ohne ausreichende Prüfung entschieden.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 171,
           "romanisation": "",
           "translation": "",
@@ -3352,6 +4374,10 @@
             {
               "sentence": "Sein voreiliges Urteil erwies sich als falsch.",
               "translation": ""
+            },
+            {
+              "sentence": "War es voreilig, das Angebot sofort abzulehnen?",
+              "translation": ""
             }
           ]
         },
@@ -3359,7 +4385,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 5,
           "word": "angemessen",
-          "partOfSpeech": "",
+          "definition": "Für eine Situation passend, richtig und nicht übertrieben.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 172,
           "romanisation": "",
           "translation": "",
@@ -3371,6 +4399,10 @@
             {
               "sentence": "Der Preis erscheint mir durchaus angemessen.",
               "translation": ""
+            },
+            {
+              "sentence": "Halten Sie diese Reaktion für angemessen?",
+              "translation": ""
             }
           ]
         },
@@ -3378,7 +4410,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 6,
           "word": "erheblich",
-          "partOfSpeech": "",
+          "definition": "Deutlich groß, stark oder wichtig.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 173,
           "romanisation": "",
           "translation": "",
@@ -3390,6 +4424,10 @@
             {
               "sentence": "Der Aufwand ist erheblich, das Ergebnis aber überzeugend.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist der finanzielle Aufwand wirklich so erheblich?",
+              "translation": ""
             }
           ]
         },
@@ -3397,7 +4435,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 7,
           "word": "beträchtlich",
-          "partOfSpeech": "",
+          "definition": "Ungewöhnlich groß oder bedeutend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 174,
           "romanisation": "",
           "translation": "",
@@ -3409,6 +4449,10 @@
             {
               "sentence": "Sie besitzt ein beträchtliches Vermögen.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind durch die Verzögerung beträchtliche Kosten entstanden?",
+              "translation": ""
             }
           ]
         },
@@ -3416,7 +4460,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 8,
           "word": "unbestreitbar",
-          "partOfSpeech": "",
+          "definition": "So eindeutig, dass man vernünftigerweise nicht widersprechen kann.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 175,
           "romanisation": "",
           "translation": "",
@@ -3428,6 +4474,10 @@
             {
               "sentence": "Es ist unbestreitbar, dass sich die Lage verbessert hat.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist ihr Anteil am Erfolg unbestreitbar?",
+              "translation": ""
             }
           ]
         },
@@ -3435,7 +4485,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 9,
           "word": "voreingenommen",
-          "partOfSpeech": "",
+          "definition": "Nicht neutral, weil eine feste Meinung schon vorher besteht.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 176,
           "romanisation": "",
           "translation": "",
@@ -3447,6 +4499,10 @@
             {
               "sentence": "Sie beurteilte den Vorschlag völlig voreingenommen.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann ein voreingenommener Beobachter fair urteilen?",
+              "translation": ""
             }
           ]
         },
@@ -3454,7 +4510,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 10,
           "word": "gelassen",
-          "partOfSpeech": "",
+          "definition": "Ruhig und sicher, obwohl eine Situation schwierig ist.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 177,
           "romanisation": "",
           "translation": "",
@@ -3466,6 +4524,10 @@
             {
               "sentence": "Man sollte solchen Rückschlägen gelassen begegnen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie schaffen Sie es, unter Druck gelassen zu bleiben?",
+              "translation": ""
             }
           ]
         },
@@ -3473,7 +4535,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 11,
           "word": "hartnäckig",
-          "partOfSpeech": "",
+          "definition": "Ausdauernd und trotz Schwierigkeiten nicht nachgebend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 178,
           "romanisation": "",
           "translation": "",
@@ -3485,6 +4549,10 @@
             {
               "sentence": "Das Gerücht hält sich hartnäckig.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum hält sich dieses Gerücht so hartnäckig?",
+              "translation": ""
             }
           ]
         },
@@ -3492,7 +4560,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 12,
           "word": "wesentlich",
-          "partOfSpeech": "",
+          "definition": "Sehr wichtig oder den Kern einer Sache betreffend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 179,
           "romanisation": "",
           "translation": "",
@@ -3504,6 +4574,10 @@
             {
               "sentence": "Ein wesentlicher Punkt wurde bislang übersehen.",
               "translation": ""
+            },
+            {
+              "sentence": "Was ist der wesentliche Unterschied zwischen den Angeboten?",
+              "translation": ""
             }
           ]
         },
@@ -3511,7 +4585,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 13,
           "word": "unmittelbar",
-          "partOfSpeech": "",
+          "definition": "Ohne Abstand, Umweg oder zeitliche Verzögerung.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 180,
           "romanisation": "",
           "translation": "",
@@ -3523,6 +4599,10 @@
             {
               "sentence": "In unmittelbarer Nähe des Bahnhofs entsteht ein Hotel.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Folgen waren unmittelbar nach der Änderung spürbar?",
+              "translation": ""
             }
           ]
         },
@@ -3530,7 +4610,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 14,
           "word": "vielfältig",
-          "partOfSpeech": "",
+          "definition": "Aus vielen unterschiedlichen Arten oder Möglichkeiten bestehend.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 181,
           "romanisation": "",
           "translation": "",
@@ -3542,6 +4624,10 @@
             {
               "sentence": "Die Stadt bietet ein vielfältiges Kulturangebot.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind die beruflichen Möglichkeiten in dieser Branche vielfältig?",
+              "translation": ""
             }
           ]
         },
@@ -3549,7 +4635,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 15,
           "word": "kritisch",
-          "partOfSpeech": "",
+          "definition": "Prüfend und nicht sofort glaubend; auch schwierig oder gefährlich.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 182,
           "romanisation": "",
           "translation": "",
@@ -3561,6 +4649,10 @@
             {
               "sentence": "Die Lage bleibt weiterhin kritisch.",
               "translation": ""
+            },
+            {
+              "sentence": "Warum sollte man Nachrichten kritisch prüfen?",
+              "translation": ""
             }
           ]
         },
@@ -3568,7 +4660,9 @@
           "group": "Adjektive (häufig)",
           "sortOrder": 16,
           "word": "gründlich",
-          "partOfSpeech": "",
+          "definition": "Sorgfältig, vollständig und genau.",
+          "IPA": "",
+          "partOfSpeech": "Adjektiv",
           "id": 183,
           "romanisation": "",
           "translation": "",
@@ -3579,6 +4673,10 @@
             },
             {
               "sentence": "Bereite dich gründlich auf das Gespräch vor.",
+              "translation": ""
+            },
+            {
+              "sentence": "Haben Sie alle Unterlagen gründlich geprüft?",
               "translation": ""
             }
           ]
@@ -3594,7 +4692,9 @@
           "group": "Präpositionen",
           "sortOrder": 1,
           "word": "angesichts",
-          "partOfSpeech": "",
+          "definition": "Wegen oder beim Betrachten einer bestimmten Situation.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 184,
           "romanisation": "",
           "translation": "",
@@ -3606,6 +4706,10 @@
             {
               "sentence": "Angesichts der Lage bleibt uns keine andere Wahl.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Maßnahmen sind angesichts der hohen Kosten noch möglich?",
+              "translation": ""
             }
           ]
         },
@@ -3613,7 +4717,9 @@
           "group": "Präpositionen",
           "sortOrder": 2,
           "word": "infolge",
-          "partOfSpeech": "",
+          "definition": "Als direkte Folge eines Ereignisses oder Zustands.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 185,
           "romanisation": "",
           "translation": "",
@@ -3625,6 +4731,10 @@
             {
               "sentence": "Infolge der Reform änderten sich zahlreiche Vorschriften.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Schäden entstanden infolge des Sturms?",
+              "translation": ""
             }
           ]
         },
@@ -3632,7 +4742,9 @@
           "group": "Präpositionen",
           "sortOrder": 3,
           "word": "hinsichtlich",
-          "partOfSpeech": "",
+          "definition": "In Bezug auf ein bestimmtes Thema.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 186,
           "romanisation": "",
           "translation": "",
@@ -3644,6 +4756,10 @@
             {
               "sentence": "Es bestehen Zweifel hinsichtlich der Finanzierung.",
               "translation": ""
+            },
+            {
+              "sentence": "Gibt es hinsichtlich des Termins noch Fragen?",
+              "translation": ""
             }
           ]
         },
@@ -3651,7 +4767,9 @@
           "group": "Präpositionen",
           "sortOrder": 4,
           "word": "zwecks",
-          "partOfSpeech": "",
+          "definition": "Mit dem Ziel oder Zweck einer bestimmten Handlung.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 187,
           "romanisation": "",
           "translation": "",
@@ -3663,6 +4781,10 @@
             {
               "sentence": "Zwecks Anmeldung wenden Sie sich bitte an das Sekretariat.",
               "translation": ""
+            },
+            {
+              "sentence": "Müssen wir zwecks Anmeldung persönlich erscheinen?",
+              "translation": ""
             }
           ]
         },
@@ -3670,7 +4792,9 @@
           "group": "Präpositionen",
           "sortOrder": 5,
           "word": "mittels",
-          "partOfSpeech": "",
+          "definition": "Mithilfe eines Werkzeugs, Verfahrens oder Mittels.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 188,
           "romanisation": "",
           "translation": "",
@@ -3682,6 +4806,10 @@
             {
               "sentence": "Mittels moderner Verfahren lässt sich der Fehler beheben.",
               "translation": ""
+            },
+            {
+              "sentence": "Kann der Fehler mittels dieser Software gefunden werden?",
+              "translation": ""
             }
           ]
         },
@@ -3689,7 +4817,9 @@
           "group": "Präpositionen",
           "sortOrder": 6,
           "word": "ungeachtet",
-          "partOfSpeech": "",
+          "definition": "Ohne Rücksicht auf etwas oder obwohl etwas dagegen spricht.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 189,
           "romanisation": "",
           "translation": "",
@@ -3701,6 +4831,10 @@
             {
               "sentence": "Ungeachtet der Kritik hielt sie an ihrem Plan fest.",
               "translation": ""
+            },
+            {
+              "sentence": "Setzte sie ihren Plan ungeachtet aller Warnungen fort?",
+              "translation": ""
             }
           ]
         },
@@ -3708,7 +4842,9 @@
           "group": "Präpositionen",
           "sortOrder": 7,
           "word": "zugunsten",
-          "partOfSpeech": "",
+          "definition": "Zum Vorteil oder Nutzen einer Person oder Sache.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 190,
           "romanisation": "",
           "translation": "",
@@ -3720,6 +4856,10 @@
             {
               "sentence": "Die Entscheidung fiel zugunsten der Anwohner aus.",
               "translation": ""
+            },
+            {
+              "sentence": "Wurde die Entscheidung zugunsten der Beschäftigten geändert?",
+              "translation": ""
             }
           ]
         },
@@ -3727,7 +4867,9 @@
           "group": "Präpositionen",
           "sortOrder": 8,
           "word": "anhand",
-          "partOfSpeech": "",
+          "definition": "Mithilfe von etwas, das als Beispiel oder Beleg dient.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 191,
           "romanisation": "",
           "translation": "",
@@ -3739,6 +4881,10 @@
             {
               "sentence": "Die Identität wird anhand des Ausweises überprüft.",
               "translation": ""
+            },
+            {
+              "sentence": "Können Sie die Regel anhand eines Beispiels erklären?",
+              "translation": ""
             }
           ]
         },
@@ -3746,7 +4892,9 @@
           "group": "Präpositionen",
           "sortOrder": 9,
           "word": "aufgrund",
-          "partOfSpeech": "",
+          "definition": "Wegen einer Ursache oder eines Grundes.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 192,
           "romanisation": "",
           "translation": "",
@@ -3758,6 +4906,10 @@
             {
               "sentence": "Aufgrund fehlender Beweise wurde er freigesprochen.",
               "translation": ""
+            },
+            {
+              "sentence": "Wurde der Flug aufgrund des Wetters abgesagt?",
+              "translation": ""
             }
           ]
         },
@@ -3765,7 +4917,9 @@
           "group": "Präpositionen",
           "sortOrder": 10,
           "word": "bezüglich",
-          "partOfSpeech": "",
+          "definition": "In Bezug auf eine bestimmte Sache.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 193,
           "romanisation": "",
           "translation": "",
@@ -3777,6 +4931,10 @@
             {
               "sentence": "Es gibt Unklarheiten bezüglich der Zuständigkeit.",
               "translation": ""
+            },
+            {
+              "sentence": "An wen kann ich mich bezüglich meiner Rechnung wenden?",
+              "translation": ""
             }
           ]
         },
@@ -3784,7 +4942,9 @@
           "group": "Präpositionen",
           "sortOrder": 11,
           "word": "entsprechend",
-          "partOfSpeech": "",
+          "definition": "Gemäß einer Regel, Leistung oder Erwartung.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 194,
           "romanisation": "",
           "translation": "",
@@ -3796,6 +4956,10 @@
             {
               "sentence": "Entsprechend den Vorgaben wurde alles dokumentiert.",
               "translation": ""
+            },
+            {
+              "sentence": "Wurde er seiner Erfahrung entsprechend eingesetzt?",
+              "translation": ""
             }
           ]
         },
@@ -3803,7 +4967,9 @@
           "group": "Präpositionen",
           "sortOrder": 12,
           "word": "laut",
-          "partOfSpeech": "",
+          "definition": "Nach den Angaben einer Person, Quelle oder Vorschrift.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 195,
           "romanisation": "",
           "translation": "",
@@ -3815,6 +4981,10 @@
             {
               "sentence": "Laut Aussage der Zeugen war niemand verletzt.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann beginnt die Veranstaltung laut Programm?",
+              "translation": ""
             }
           ]
         },
@@ -3822,7 +4992,9 @@
           "group": "Präpositionen",
           "sortOrder": 13,
           "word": "seitens",
-          "partOfSpeech": "",
+          "definition": "Von einer genannten Person, Gruppe oder Institution ausgehend.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 196,
           "romanisation": "",
           "translation": "",
@@ -3834,6 +5006,10 @@
             {
               "sentence": "Seitens der Firma wurde eine Entschädigung angeboten.",
               "translation": ""
+            },
+            {
+              "sentence": "Gab es seitens der Behörde weitere Einwände?",
+              "translation": ""
             }
           ]
         },
@@ -3841,7 +5017,9 @@
           "group": "Präpositionen",
           "sortOrder": 14,
           "word": "im Zuge",
-          "partOfSpeech": "",
+          "definition": "Im Verlauf oder als Teil einer Entwicklung oder Maßnahme.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 197,
           "romanisation": "",
           "translation": "",
@@ -3853,6 +5031,10 @@
             {
               "sentence": "Im Zuge der Ermittlungen kamen neue Details ans Licht.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Stellen wurden im Zuge der Reform geschaffen?",
+              "translation": ""
             }
           ]
         },
@@ -3860,7 +5042,9 @@
           "group": "Präpositionen",
           "sortOrder": 15,
           "word": "abgesehen von",
-          "partOfSpeech": "",
+          "definition": "Wenn man eine Person oder Sache nicht berücksichtigt.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 198,
           "romanisation": "",
           "translation": "",
@@ -3871,6 +5055,10 @@
             },
             {
               "sentence": "Abgesehen vom Preis überzeugt das Angebot völlig.",
+              "translation": ""
+            },
+            {
+              "sentence": "War die Reise, abgesehen vom Wetter, erfolgreich?",
               "translation": ""
             }
           ]
@@ -3886,7 +5074,9 @@
           "group": "Fragewörter",
           "sortOrder": 1,
           "word": "inwieweit",
-          "partOfSpeech": "",
+          "definition": "Fragt nach dem Grad oder Umfang, in dem etwas gilt.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 199,
           "romanisation": "",
           "translation": "",
@@ -3898,6 +5088,10 @@
             {
               "sentence": "Inwieweit die Maßnahme wirkt, wird sich zeigen.",
               "translation": ""
+            },
+            {
+              "sentence": "Inwieweit hat die neue Regel Ihren Alltag verändert?",
+              "translation": ""
             }
           ]
         },
@@ -3905,7 +5099,9 @@
           "group": "Fragewörter",
           "sortOrder": 2,
           "word": "inwiefern",
-          "partOfSpeech": "",
+          "definition": "Fragt danach, auf welche Weise oder in welchem Punkt etwas zutrifft.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 200,
           "romanisation": "",
           "translation": "",
@@ -3917,6 +5113,10 @@
             {
               "sentence": "Man fragt sich, inwiefern das gerechtfertigt ist.",
               "translation": ""
+            },
+            {
+              "sentence": "Inwiefern unterscheidet sich Ihr Vorschlag vom bisherigen Plan?",
+              "translation": ""
             }
           ]
         },
@@ -3924,7 +5124,9 @@
           "group": "Fragewörter",
           "sortOrder": 3,
           "word": "weshalb",
-          "partOfSpeech": "",
+          "definition": "Fragt nach dem Grund für etwas.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 201,
           "romanisation": "",
           "translation": "",
@@ -3936,6 +5138,10 @@
             {
               "sentence": "Weshalb die Entscheidung so ausfiel, blieb unklar.",
               "translation": ""
+            },
+            {
+              "sentence": "Weshalb wurde die Sitzung so kurzfristig verschoben?",
+              "translation": ""
             }
           ]
         },
@@ -3943,7 +5149,9 @@
           "group": "Fragewörter",
           "sortOrder": 4,
           "word": "wodurch",
-          "partOfSpeech": "",
+          "definition": "Fragt nach der Ursache oder dem Mittel einer Handlung.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 202,
           "romanisation": "",
           "translation": "",
@@ -3955,6 +5163,10 @@
             {
               "sentence": "Es ist unklar, wodurch der Schaden entstanden ist.",
               "translation": ""
+            },
+            {
+              "sentence": "Wodurch konnte das Problem schließlich gelöst werden?",
+              "translation": ""
             }
           ]
         },
@@ -3962,7 +5174,9 @@
           "group": "Fragewörter",
           "sortOrder": 5,
           "word": "woraufhin",
-          "partOfSpeech": "",
+          "definition": "Bezeichnet das Ereignis, das als Reaktion auf etwas folgt.",
+          "IPA": "",
+          "partOfSpeech": "Pronominaladverb",
           "id": 203,
           "romanisation": "",
           "translation": "",
@@ -3974,6 +5188,10 @@
             {
               "sentence": "Die Preise stiegen, woraufhin die Nachfrage einbrach.",
               "translation": ""
+            },
+            {
+              "sentence": "Was geschah, woraufhin die Verhandlungen abgebrochen wurden?",
+              "translation": ""
             }
           ]
         },
@@ -3981,7 +5199,9 @@
           "group": "Fragewörter",
           "sortOrder": 6,
           "word": "wonach",
-          "partOfSpeech": "",
+          "definition": "Fragt nach einem Ziel, Maßstab oder Gegenstand mit „nach“.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 204,
           "romanisation": "",
           "translation": "",
@@ -3993,6 +5213,10 @@
             {
               "sentence": "Wonach richtet sich eigentlich die Bewertung?",
               "translation": ""
+            },
+            {
+              "sentence": "Wonach richtet sich die endgültige Bewertung?",
+              "translation": ""
             }
           ]
         },
@@ -4000,7 +5224,9 @@
           "group": "Fragewörter",
           "sortOrder": 7,
           "word": "womit",
-          "partOfSpeech": "",
+          "definition": "Fragt nach einem Mittel oder Gegenstand mit „mit“.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 205,
           "romanisation": "",
           "translation": "",
@@ -4012,6 +5238,10 @@
             {
               "sentence": "Er wusste nicht, womit er die Reaktion verdient hatte.",
               "translation": ""
+            },
+            {
+              "sentence": "Womit begründen Sie Ihre Entscheidung?",
+              "translation": ""
             }
           ]
         },
@@ -4019,7 +5249,9 @@
           "group": "Fragewörter",
           "sortOrder": 8,
           "word": "worin",
-          "partOfSpeech": "",
+          "definition": "Fragt nach einem Inhalt oder Zusammenhang mit „in“.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 206,
           "romanisation": "",
           "translation": "",
@@ -4031,6 +5263,10 @@
             {
               "sentence": "Man sollte klären, worin das Problem genau liegt.",
               "translation": ""
+            },
+            {
+              "sentence": "Worin besteht der Vorteil dieser Methode?",
+              "translation": ""
             }
           ]
         },
@@ -4038,7 +5274,9 @@
           "group": "Fragewörter",
           "sortOrder": 9,
           "word": "weswegen",
-          "partOfSpeech": "",
+          "definition": "Fragt nach dem Grund für eine Handlung oder Situation.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 207,
           "romanisation": "",
           "translation": "",
@@ -4050,6 +5288,10 @@
             {
               "sentence": "Er nannte keinen Grund, weswegen wir alle irritiert waren.",
               "translation": ""
+            },
+            {
+              "sentence": "Weswegen haben Sie gegen den Beschluss gestimmt?",
+              "translation": ""
             }
           ]
         },
@@ -4057,7 +5299,9 @@
           "group": "Fragewörter",
           "sortOrder": 10,
           "word": "woran",
-          "partOfSpeech": "",
+          "definition": "Fragt nach einem Bezug, Merkmal oder Grund mit „an“.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 208,
           "romanisation": "",
           "translation": "",
@@ -4069,6 +5313,10 @@
             {
               "sentence": "Woran erkennt man ein seriöses Angebot?",
               "translation": ""
+            },
+            {
+              "sentence": "Woran lässt sich die Qualität des Produkts erkennen?",
+              "translation": ""
             }
           ]
         },
@@ -4076,7 +5324,9 @@
           "group": "Fragewörter",
           "sortOrder": 11,
           "word": "wovon",
-          "partOfSpeech": "",
+          "definition": "Fragt nach einem Bezug oder einer Ursache mit „von“.",
+          "IPA": "",
+          "partOfSpeech": "Frageadverb",
           "id": 209,
           "romanisation": "",
           "translation": "",
@@ -4087,6 +5337,10 @@
             },
             {
               "sentence": "Es ist fraglich, wovon er eigentlich lebt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wovon hängt der Erfolg des Projekts ab?",
               "translation": ""
             }
           ]
@@ -4102,7 +5356,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 1,
           "word": "in der Tat",
-          "partOfSpeech": "",
+          "definition": "Tatsächlich oder wirklich; bestätigt eine vorherige Aussage.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 210,
           "romanisation": "",
           "translation": "",
@@ -4114,6 +5370,10 @@
             {
               "sentence": "Er hat in der Tat recht behalten.",
               "translation": ""
+            },
+            {
+              "sentence": "Ist das Ergebnis in der Tat besser als erwartet?",
+              "translation": ""
             }
           ]
         },
@@ -4121,7 +5381,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 2,
           "word": "im Grunde genommen",
-          "partOfSpeech": "",
+          "definition": "Wenn man nur den wesentlichen Kern einer Sache betrachtet.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 211,
           "romanisation": "",
           "translation": "",
@@ -4133,6 +5395,10 @@
             {
               "sentence": "Im Grunde genommen geht es nur ums Geld.",
               "translation": ""
+            },
+            {
+              "sentence": "Sind wir im Grunde genommen nicht derselben Meinung?",
+              "translation": ""
             }
           ]
         },
@@ -4140,7 +5406,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 3,
           "word": "nichtsdestotrotz",
-          "partOfSpeech": "",
+          "definition": "Trotzdem; zeigt, dass etwas trotz eines Gegengrundes gilt.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktionaladverb",
           "id": 212,
           "romanisation": "",
           "translation": "",
@@ -4152,6 +5420,10 @@
             {
               "sentence": "Es war anstrengend, nichtsdestotrotz hat es sich gelohnt.",
               "translation": ""
+            },
+            {
+              "sentence": "War die Aufgabe schwierig und nichtsdestotrotz interessant?",
+              "translation": ""
             }
           ]
         },
@@ -4159,7 +5431,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 4,
           "word": "unter dem Strich",
-          "partOfSpeech": "",
+          "definition": "Wenn alle Vor- und Nachteile zusammen betrachtet werden.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 213,
           "romanisation": "",
           "translation": "",
@@ -4171,6 +5445,10 @@
             {
               "sentence": "Unter dem Strich zählt nur das Ergebnis.",
               "translation": ""
+            },
+            {
+              "sentence": "War das Projekt unter dem Strich erfolgreich?",
+              "translation": ""
             }
           ]
         },
@@ -4178,7 +5456,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 5,
           "word": "das lässt sich nicht leugnen",
-          "partOfSpeech": "",
+          "definition": "Damit erkennt man an, dass eine Tatsache offensichtlich wahr ist.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 214,
           "romanisation": "",
           "translation": "",
@@ -4190,6 +5470,10 @@
             {
               "sentence": "Sein Talent lässt sich nicht leugnen.",
               "translation": ""
+            },
+            {
+              "sentence": "Die Lage hat sich verbessert, das lässt sich nicht leugnen, oder?",
+              "translation": ""
             }
           ]
         },
@@ -4197,7 +5481,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 6,
           "word": "es liegt auf der Hand",
-          "partOfSpeech": "",
+          "definition": "Etwas ist offensichtlich und leicht zu erkennen.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 215,
           "romanisation": "",
           "translation": "",
@@ -4209,6 +5495,10 @@
             {
               "sentence": "Die Lösung liegt eigentlich auf der Hand.",
               "translation": ""
+            },
+            {
+              "sentence": "Liegt es nicht auf der Hand, dass wir handeln müssen?",
+              "translation": ""
             }
           ]
         },
@@ -4216,7 +5506,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 7,
           "word": "in Anbetracht",
-          "partOfSpeech": "",
+          "definition": "Unter Berücksichtigung einer bestimmten Situation oder Tatsache.",
+          "IPA": "",
+          "partOfSpeech": "Präposition",
           "id": 216,
           "romanisation": "",
           "translation": "",
@@ -4228,6 +5520,10 @@
             {
               "sentence": "In Anbetracht der Zeit sollten wir zum Schluss kommen.",
               "translation": ""
+            },
+            {
+              "sentence": "War die Leistung in Anbetracht der Umstände gut?",
+              "translation": ""
             }
           ]
         },
@@ -4235,7 +5531,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 8,
           "word": "um es auf den Punkt zu bringen",
-          "partOfSpeech": "",
+          "definition": "Formulierung, mit der man das Wichtigste kurz zusammenfasst.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 217,
           "romanisation": "",
           "translation": "",
@@ -4247,6 +5545,10 @@
             {
               "sentence": "Um es auf den Punkt zu bringen, fehlt uns schlicht das Geld.",
               "translation": ""
+            },
+            {
+              "sentence": "Wie würden Sie das Problem, um es auf den Punkt zu bringen, beschreiben?",
+              "translation": ""
             }
           ]
         },
@@ -4254,7 +5556,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 9,
           "word": "so gesehen",
-          "partOfSpeech": "",
+          "definition": "Aus dieser bestimmten Perspektive betrachtet.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 218,
           "romanisation": "",
           "translation": "",
@@ -4266,6 +5570,10 @@
             {
               "sentence": "So gesehen war die Verspätung sogar ein Glück.",
               "translation": ""
+            },
+            {
+              "sentence": "War die Verzögerung so gesehen vielleicht sogar hilfreich?",
+              "translation": ""
             }
           ]
         },
@@ -4273,7 +5581,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 10,
           "word": "im Nachhinein",
-          "partOfSpeech": "",
+          "definition": "Bei einer späteren Betrachtung eines vergangenen Ereignisses.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 219,
           "romanisation": "",
           "translation": "",
@@ -4285,6 +5595,10 @@
             {
               "sentence": "Im Nachhinein ist man immer klüger.",
               "translation": ""
+            },
+            {
+              "sentence": "Was würden Sie im Nachhinein anders machen?",
+              "translation": ""
             }
           ]
         },
@@ -4292,7 +5606,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 11,
           "word": "geschweige denn",
-          "partOfSpeech": "",
+          "definition": "Betont, dass etwas Schwierigeres noch viel weniger möglich ist.",
+          "IPA": "",
+          "partOfSpeech": "Konjunktion",
           "id": 220,
           "romanisation": "",
           "translation": "",
@@ -4304,6 +5620,10 @@
             {
               "sentence": "Ich habe keine Zeit für Hobbys, geschweige denn für Urlaub.",
               "translation": ""
+            },
+            {
+              "sentence": "Er kann kaum stehen, geschweige denn laufen, nicht wahr?",
+              "translation": ""
             }
           ]
         },
@@ -4311,7 +5631,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 12,
           "word": "aus meiner Sicht",
-          "partOfSpeech": "",
+          "definition": "Nach meiner persönlichen Meinung oder Perspektive.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 221,
           "romanisation": "",
           "translation": "",
@@ -4323,6 +5645,10 @@
             {
               "sentence": "Aus meiner Sicht war das die richtige Entscheidung.",
               "translation": ""
+            },
+            {
+              "sentence": "Welche Lösung ist aus Ihrer Sicht am besten?",
+              "translation": ""
             }
           ]
         },
@@ -4330,7 +5656,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 13,
           "word": "letzten Endes",
-          "partOfSpeech": "",
+          "definition": "Nach Betrachtung aller Umstände; schließlich.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 222,
           "romanisation": "",
           "translation": "",
@@ -4342,6 +5670,10 @@
             {
               "sentence": "Letzten Endes muss jeder selbst entscheiden.",
               "translation": ""
+            },
+            {
+              "sentence": "Wer trägt letzten Endes die Verantwortung?",
+              "translation": ""
             }
           ]
         },
@@ -4349,7 +5681,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 14,
           "word": "genau genommen",
-          "partOfSpeech": "",
+          "definition": "Wenn man eine Sache ganz genau und korrekt betrachtet.",
+          "IPA": "",
+          "partOfSpeech": "Adverb",
           "id": 223,
           "romanisation": "",
           "translation": "",
@@ -4361,6 +5695,10 @@
             {
               "sentence": "Genau genommen begann alles schon viel früher.",
               "translation": ""
+            },
+            {
+              "sentence": "Wann hat das Projekt genau genommen begonnen?",
+              "translation": ""
             }
           ]
         },
@@ -4368,7 +5706,9 @@
           "group": "Häufige Ausdrücke",
           "sortOrder": 15,
           "word": "das kommt ganz darauf an",
-          "partOfSpeech": "",
+          "definition": "Die Antwort hängt von weiteren Bedingungen oder Umständen ab.",
+          "IPA": "",
+          "partOfSpeech": "Redewendung",
           "id": 224,
           "romanisation": "",
           "translation": "",
@@ -4379,6 +5719,10 @@
             },
             {
               "sentence": "Das kommt ganz darauf an, wie man es betrachtet.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ist die Aufgabe einfach, oder kommt das ganz darauf an?",
               "translation": ""
             }
           ]

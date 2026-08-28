@@ -17,6 +17,7 @@ object LanguageConfig {
         "Progress",
         "Settings",
         "Focus",
+        "Saved",
         "Vocab",
         "Word of the Day",
         "Paragraph",

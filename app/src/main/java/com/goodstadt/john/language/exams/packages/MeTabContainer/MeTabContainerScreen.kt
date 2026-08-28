@@ -38,15 +38,16 @@ import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabScreen
 import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabViewModel
 import com.goodstadt.john.language.exams.packages.CategoryTab.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.packages.Focus.FocusScreen
-import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
-import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.packages.MyProgress.MyProgressScreen
-import com.goodstadt.john.language.exams.screens.ParagraphScreen
+import com.goodstadt.john.language.exams.packages.SavedPractice.SavedPracticeScreen
 import com.goodstadt.john.language.exams.packages.Settings.SettingsScreen
 import com.goodstadt.john.language.exams.packages.UploadJson.UploadJsonScreen
+import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
+import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.packages.me.SearchScreen
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
+import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
@@ -60,7 +61,7 @@ import timber.log.Timber
  */
 @OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
+fun MeTabContainerScreen(viewModel: MeTabContainerTabViewModel = hiltViewModel()) {
 
 
     val meTabNavController = rememberNavController()
@@ -92,6 +93,17 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
 
     var selectedChipTitle by remember(menuItems) {
         mutableStateOf(menuItems.firstOrNull() ?: "")
+    }
+
+    // Deep link (e.g. from a practice-reminder notification): auto-select a Me sub-tab, once.
+    LaunchedEffect(Unit) {
+        navViewModel.pendingMeSubTabTitle?.let { title ->
+            selectedChipTitle = title
+            getMeScreenRouteFromTitle(title)?.let { route ->
+                meTabNavController.navigate(route) { launchSingleTop = true }
+            }
+            navViewModel.pendingMeSubTabTitle = null
+        }
     }
 
     val entryPoint = remember(key1 = context) {
@@ -146,6 +158,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             }
             // All the screen destinations remain the same
             composable(MeScreen.Focus.route) { FocusScreen() }
+            composable(MeScreen.Saved.route) { SavedPracticeScreen() }
             composable(MeScreen.Settings.route) { SettingsScreen(navController = meTabNavController) }
             composable(MeScreen.Search.route) { SearchScreen() }
             composable(MeScreen.Progress.route) {

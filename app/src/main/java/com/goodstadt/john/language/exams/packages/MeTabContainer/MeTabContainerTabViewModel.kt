@@ -20,7 +20,7 @@ data class ReferenceTabUiState(
 )
 
 @HiltViewModel
-class ReferenceTabViewModel @Inject constructor(
+class MeTabContainerTabViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val refreshTrigger: RefreshTrigger
 ) : ViewModel() {

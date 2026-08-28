@@ -7,6 +7,7 @@ sealed class MeScreen(val route: String, val title: String) {
 
     // Routes for each of the possible menu items
     object Focus : MeScreen("me_focus", "Focus")
+    object Saved : MeScreen("me_saved", "Saved")
     object Settings : MeScreen("me_settings", "Settings")
     object Search : MeScreen("me_search", "Vocab")
     object Progress : MeScreen("me_progress", "Progress")
@@ -19,6 +20,7 @@ sealed class MeScreen(val route: String, val title: String) {
 fun getMeScreenRouteFromTitle(title: String): String? {
     return when (title) {
         MeScreen.Focus.title -> MeScreen.Focus.route
+        MeScreen.Saved.title -> MeScreen.Saved.route
         MeScreen.Settings.title -> MeScreen.Settings.route
         MeScreen.Search.title -> MeScreen.Search.route
         MeScreen.Progress.title -> MeScreen.Progress.route
