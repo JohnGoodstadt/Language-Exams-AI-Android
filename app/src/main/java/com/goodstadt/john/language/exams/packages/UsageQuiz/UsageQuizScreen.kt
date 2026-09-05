@@ -442,29 +442,81 @@ fun UsageQuizScreen(
                 question.words.forEach { option ->
                     val isOptionCorrect = option == question.correctOption
 
+                    // Format-aware sentence for the loudspeaker preview (and for replaying a solved question).
+                    val previewSentence =
+                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                            question.sentence.replace("_", option)
+                        } else {
+                            if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()
+                            } else {
+                                option
+                            }
+                        }
+
+                    // Answering the question: used by BOTH the radio button AND tapping the answer sentence,
+                    // so they score identically. The loudspeaker does NOT call this - it only previews.
+                    // Marking finishes once the correct answer is chosen: after that, a tap just replays a
+                    // preview and never changes Correct/Tries again.
+                    val submitAnswer: () -> Unit = {
+                        if (isCurrentAnswerCorrect == true) {
+                            // Already solved -> preview only, no scoring.
+                            viewModel.handleTap(previewSentence)
+                        } else {
+                            selectedOption = option
+                            isCurrentAnswerCorrect = isOptionCorrect
+                            viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
+
+                            if (isOptionCorrect) {
+                                var sentenceToSpeak = ""
+                                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                    val sentence = question.sentence.replace(Regex("_+"), option)
+                                    displayedSentence = viewModel.highlightWordInSentence(
+                                        sentence = sentence,
+                                        wordToHighlight = option,
+                                        highlightColor = Color.Green
+                                    )
+                                    sentenceToSpeak = sentence
+                                } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                                    displayedSentence = AnnotatedString(question.title)
+                                    sentenceToSpeak =
+                                        "${question.title}:${option}:${question.sentence}"
+                                } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                    displayedSentence = AnnotatedString(option)
+                                    val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                        .trim()
+                                    sentenceToSpeak = cleaned
+                                } else {
+                                    sentenceToSpeak = option
+                                    displayedSentence = viewModel.highlightWordInSentence(
+                                        sentence = option,
+                                        wordToHighlight = option,
+                                        highlightColor = Color.Green
+                                    )
+                                }
+
+                                viewModel.handleTap(sentenceToSpeak)
+                                viewModel.incQuizStat()
+                            } else {
+                                viewModel.incQuizStat(false)
+                            }
+                        }
+                    }
+
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
+                        // Left cell: takes all remaining width so a long sentence WRAPS instead of
+                        // shoving the radio button off the edge.
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.weight(1f)
+                        ) {
                             Icon(
+                                // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
                                 modifier = Modifier.clickable {
-                                    val isCorrect = option == question.correctOption
-                                    viewModel.updateAnswer(isCorrect)
-
-                                    val fullSentence =
-                                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                            question.sentence.replace("_", option)
-                                        } else {
-                                            if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                                    .trim()
-                                            } else {
-                                                option
-                                            }
-                                        }
-                                    viewModel.handleTap(fullSentence)
+                                    viewModel.handleTap(previewSentence)
                                 },
                                 imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                                 contentDescription = "Speak ${question.sentence.replace("_", option)}",
@@ -472,79 +524,33 @@ fun UsageQuizScreen(
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
+                                // Tapping the answer sentence marks it, exactly like the radio button.
                                 text = option,
                                 color = orangeLight,
                                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
                                 modifier = Modifier
+                                    .weight(1f)
                                     .padding(vertical = 2.dp)
-                                    .clickable {
-                                        val fullSentence =
-                                            if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                                question.sentence.replace("_", option)
-                                            } else {
-                                                if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                                    option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                                        .trim()
-                                                } else {
-                                                    option
-                                                }
-                                            }
-
-                                        val isCorrect = option == question.correctOption
-                                        viewModel.updateAnswer(isCorrect)
-                                        viewModel.handleTap(fullSentence)
-                                    }
+                                    .clickable { submitAnswer() }
                             )
                         }
 
-                        // Radio button on the far right
-                        RadioButton(
-                            selected = selectedOption == option && isOptionCorrect,
-                            onClick = {
-                                selectedOption = option
-                                isCurrentAnswerCorrect = isOptionCorrect
-                                viewModel.updateAnswer(isOptionCorrect)
-
-                                if (isOptionCorrect) {
-                                    var sentenceToSpeak = ""
-                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                        val sentence = question.sentence.replace(Regex("_+"), option)
-                                        displayedSentence = viewModel.highlightWordInSentence(
-                                            sentence = sentence,
-                                            wordToHighlight = option,
-                                            highlightColor = Color.Green
-                                        )
-                                        sentenceToSpeak = sentence
-                                    } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                        displayedSentence = AnnotatedString(question.title)
-                                        sentenceToSpeak =
-                                            "${question.title}:${option}:${question.sentence}"
-                                    } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                        displayedSentence = AnnotatedString(option)
-                                        val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                            .trim()
-                                        sentenceToSpeak = cleaned
-                                    } else {
-                                        sentenceToSpeak = option
-                                        displayedSentence = viewModel.highlightWordInSentence(
-                                            sentence = option,
-                                            wordToHighlight = option,
-                                            highlightColor = Color.Green
-                                        )
-                                    }
-
-                                    viewModel.handleTap(sentenceToSpeak)
-                                    viewModel.incQuizStat()
-                                } else {
-                                    viewModel.incQuizStat(false)
-                                }
-                            },
-                            colors = RadioButtonDefaults.colors(
-                                selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
-                                unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
-                            ),
-                            modifier = Modifier.semantics { contentDescription = option }
-                        )
+                        // Reserved fixed-width cell so the radio button always sits in the SAME place
+                        // under the user's finger, regardless of sentence length.
+                        Box(
+                            modifier = Modifier.width(48.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            RadioButton(
+                                selected = selectedOption == option && isOptionCorrect,
+                                onClick = { submitAnswer() },
+                                colors = RadioButtonDefaults.colors(
+                                    selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
+                                    unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
+                                ),
+                                modifier = Modifier.semantics { contentDescription = option }
+                            )
+                        }
                     } // Row
                 }
             } // Scrollable Column

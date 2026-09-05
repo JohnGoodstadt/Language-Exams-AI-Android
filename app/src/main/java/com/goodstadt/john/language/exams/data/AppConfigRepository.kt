@@ -354,6 +354,58 @@ class AppConfigRepository @Inject constructor(
             emptyMap()
         }
     }
+    suspend fun getRemoteSheetVersionsGermanDEBUG(): Map<String, Int> {
+        // 1. Fetch from network (We keep this for Prod, but it doesn't hurt in Debug)
+        try {
+            remoteConfig.fetchAndActivate().await()
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to fetch remote config for sheet versions")
+        }
+
+        // 2. DECIDE: Real JSON or Fake JSON?
+        val versionsJson = if (BuildConfig.DEBUG) {
+            Timber.w("⚠️ DEV MODE: Using Local Sheet Versions Override")
+            // Paste your Full JSON here (Existing sheets + New Spanish ones)
+            """
+        {
+            "GermanA1Adjectives": 1,
+            "GermanA2Adjectives": 1,
+            "GermanB1Adjectives": 1,
+            "GermanB2Adjectives": 1,
+            "GermanA1Vocab": 1,
+            "GermanA2Vocab": 1,
+            "GermanB1Vocab": 1,
+            "GermanB2Vocab": 1,
+            "GermanSoundsTheSame": 1,
+            "GermanKennenWissen": 1,
+            "GermanBringenHolen": 1,
+            "GermanHoerenZuhoeren": 1,
+            "GermanFragenBitten": 1,
+            "GermanPrepositions": 1,
+            "GermanConjugationsToBe": 1,
+            "GermanConjugationsToHave": 1,
+            "GermanConjugationsToDo": 1,
+            "GermanConjugationsToGet": 1,
+        }
+        """.trimIndent()
+        } else {
+            // Production: Get from Firebase
+            remoteConfig.getString("sheet_versions")
+        }
+
+        // 3. Decode whatever string we got (Local or Remote)
+        return if (versionsJson.isNotBlank()) {
+            try {
+                Json.decodeFromString<Map<String, Int>>(versionsJson)
+            } catch (e: Exception) {
+                Timber.e(e, "Could not parse remote sheet versions JSON")
+                emptyMap()
+            }
+        } else {
+            Timber.e("Could not parse remote sheet versions JSON (Empty)")
+            emptyMap()
+        }
+    }
     /**
      * Fetches and parses the entire UI manifest from Remote Config.
      * This function is the single source of truth for UI structure.
@@ -406,7 +458,7 @@ class AppConfigRepository @Inject constructor(
             // Hardcoded JSON for testing
             """
        {
-         "sheetRegistry": {
+         §: {
            "quiz": {
              "title": "Usage Quiz",
              "sheetDataType": "fixed",

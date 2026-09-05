@@ -273,6 +273,12 @@ class VocabSectionQuizViewModel @Inject constructor(
     val currentQuestionIndex = mutableStateOf(0)
     val userAnswers = mutableStateOf(mutableMapOf<Int, Boolean>())
 
+    // Section-wide answer record keyed by the WORD being tested, so the "Correct" count accumulates across
+    // ALL sub-tab pages (10 per page) instead of resetting to 0 when the page changes. userAnswers above
+    // stays page-local (0..9) because the bottom paging dots index into it per page. Cleared only when a
+    // fresh quiz/section starts (same point tries resets to 0).
+    private val _sectionAnswersByWord = mutableMapOf<String, Boolean>()
+
     //Constants
     val quizFillInTheBlanks = 7 //in iOS these are ENUMs
     val quizQandA = 10
@@ -548,6 +554,58 @@ class VocabSectionQuizViewModel @Inject constructor(
         } else {
             // Fallback to file-based loading (non-section mode)
             loadSpecificSectionIndex(index)
+        }
+    }
+
+    // --- Continuous Next/Previous navigation that flows across sub-tab pages ------------------------
+    // A section quiz's questions are chunked into pages of [pageSize] (the numbered '1','2','3' sub-tabs).
+    // These let the arrows run past a page boundary: reaching question 10 and tapping Next auto-selects
+    // sub-tab '2' at its first question; tapping Previous on the first question of a page steps back into
+    // the previous page's LAST question. onSectionIndexSelected updates _questions synchronously here
+    // (in-memory paginated data), so landing on the previous page's last index is safe.
+
+    /** True when Next can move (another question on this page, or another sub-tab page after this one). */
+    fun canGoNext(): Boolean =
+        currentQuestionIndex.value < _questions.value.lastIndex ||
+            (_currentSectionIndex.value + 1) in _availableSectionIndices.value
+
+    /** True when Previous can move (an earlier question on this page, or an earlier sub-tab page). */
+    fun canGoPrevious(): Boolean =
+        currentQuestionIndex.value > 0 ||
+            (_currentSectionIndex.value - 1) in _availableSectionIndices.value
+
+    /**
+     * Move to the NEXT question. If on the last question of the current sub-tab page, auto-select the next
+     * page and land on its FIRST question. No-op past the very last question of the last page.
+     */
+    fun goToNextQuestion() {
+        if (currentQuestionIndex.value < _questions.value.lastIndex) {
+            resetCurrentQuestionAttempts()
+            currentQuestionIndex.value += 1
+            return
+        }
+        val nextSection = _currentSectionIndex.value + 1
+        if (nextSection in _availableSectionIndices.value) {
+            resetCurrentQuestionAttempts()
+            onSectionIndexSelected(nextSection) // sets _questions to next page, currentQuestionIndex = 0
+        }
+    }
+
+    /**
+     * Move to the PREVIOUS question. If on the first question of the current sub-tab page, auto-select the
+     * previous page and land on its LAST question. No-op before the first question of the first page.
+     */
+    fun goToPreviousQuestion() {
+        if (currentQuestionIndex.value > 0) {
+            resetCurrentQuestionAttempts()
+            currentQuestionIndex.value -= 1
+            return
+        }
+        val prevSection = _currentSectionIndex.value - 1
+        if (prevSection in _availableSectionIndices.value) {
+            resetCurrentQuestionAttempts()
+            onSectionIndexSelected(prevSection) // sets _questions to prev page, currentQuestionIndex = 0
+            currentQuestionIndex.value = _questions.value.lastIndex.coerceAtLeast(0)
         }
     }
 
@@ -840,6 +898,7 @@ class VocabSectionQuizViewModel @Inject constructor(
 
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
+        _sectionAnswersByWord.clear() // reset section-wide Correct total together with Tries
         _activeFilters.value = emptySet()
         _paginatedQuestions = emptyList()
 
@@ -990,9 +1049,16 @@ class VocabSectionQuizViewModel @Inject constructor(
     fun updateAnswer(isCorrect: Boolean) {
         _isDirty.value = true
         userAnswers.value[currentQuestionIndex.value] = isCorrect
+
+        // Count Correct/answered per-WORD across the whole section (all sub-tab pages) so moving from
+        // page 1 to page 2 no longer resets Correct to 0. Tries stays a running total (unchanged).
+        _questions.value.getOrNull(currentQuestionIndex.value)?.let { q ->
+            _sectionAnswersByWord[q.question] = isCorrect
+        }
+
         quizStatistics.value = quizStatistics.value.copy(
-            answered = userAnswers.value.size,
-            correct = userAnswers.value.count { it.value },
+            answered = _sectionAnswersByWord.size,
+            correct = _sectionAnswersByWord.count { it.value },
             tries = quizStatistics.value.tries + 1
         )
         if (quizStatistics.value.state == QuizState.NOT_STARTED) {

@@ -22,17 +22,17 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 117   //for remote config versioning.  localised quizzes
-val VERSION_NAME = "4.0.117" //go live
+val VERSION_CODE = 120   //for remote config versioning.  localised quizzes
+val VERSION_NAME = "4.0.120" //go live
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
-    compileSdk = 35 //was 34
+    compileSdk = 36 //Sept 2026 --Your app currently targets API level 35 and must target at least API level 36 to ensure it is built on the latest APIs optimized for security
 
     defaultConfig {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 28 //Perplexity recommended //30 for IAP testing //26 originally// Covers over 90% of devices
-        targetSdk = 35
+        targetSdk = 36
         versionCode = VERSION_CODE
         versionName = VERSION_NAME
 

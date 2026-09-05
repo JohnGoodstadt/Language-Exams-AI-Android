@@ -411,109 +411,96 @@ fun VocabQuizScreen(
                 val isOptionCorrect =
                     option == question.correctOption // Determine if option is correct
 
+                // Format-aware sentence for the loudspeaker preview (and for replaying a solved question).
+                val previewSentence =
+                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                        question.question.replace("_", option)
+                    } else {
+                        if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                            option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim() // remove ()
+                        } else {
+                            option
+                        }
+                    }
+
+                // Answering the question: used by BOTH the radio button AND tapping the answer sentence,
+                // so they score identically. The loudspeaker does NOT call this - it only previews.
+                // Marking finishes once the correct answer is chosen: after that, a tap just replays the
+                // option as a preview and never changes Correct/Tries again.
+                val submitAnswer: () -> Unit = {
+                    if (isCurrentAnswerCorrect == true) {
+                        // Already solved -> preview only, no scoring.
+                        viewModel.handleTap(option)
+                    } else {
+                        selectedOption = option
+                        isCurrentAnswerCorrect = isOptionCorrect
+                        viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
+                        viewModel.vocabQuizAttemptStats(isOptionCorrect, question.question)
+
+                        if (isOptionCorrect) {
+                            displayedSentence = viewModel.highlightWordInSentence(
+                                sentence = option,
+                                wordToHighlight = question.question,
+                                highlightColor = Color.Green
+                            )
+                            viewModel.handleTap(option)
+                            viewModel.incQuizStat()
+                        } else { // incorrect
+                            viewModel.incQuizStat(false)
+                        }
+
+                        viewModel.markAnswerSelected(question.question, isOptionCorrect)
+                    }
+                }
+
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween,
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
+                    // Left cell: takes all remaining width so a long sentence WRAPS instead of
+                    // shoving the radio button off the edge.
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.weight(1f)
+                    ) {
                         Icon(
+                            // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
                             modifier = Modifier.clickable {
-                                //Timber.v(" ${ question.sentence.replace("_", option)}")
-                                val isCorrect = option == question.correctOption
-                                viewModel.updateAnswer(isCorrect)
-
-                                val fullSentence =
-                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                        question.question.replace("_", option)
-                                    } else {
-                                        if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                            option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                                .trim()//remove ()
-                                        } else {
-                                            option
-                                        }
-                                    }
-//                                viewModel.playTrack(fullSentence)
-                                viewModel.handleTap(fullSentence)
+                                viewModel.handleTap(previewSentence)
                             },
-//                            painter = painterResource(R.drawable.ic_speaker),
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                             contentDescription = "Speak ${question.question.replace("_", option)}",
                             tint = Color.White
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
+                            // Tapping the answer sentence marks it, exactly like the radio button.
                             text = option,
                             color = orangeLight,
                             style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
                             modifier = Modifier
+                                .weight(1f)
                                 .padding(vertical = 4.dp)
-                                .clickable {
-                                    // val fullSentence = question.sentence.replace("_", option)
-                                    // Timber.v(fullSentence)
-                                    val fullSentence =
-                                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                            question.question.replace("_", option)
-                                        } else {
-                                            if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                                    .trim()//remove ()
-                                            } else {
-                                                option
-                                            }
-                                        }
-
-                                    val isCorrect = option == question.correctOption
-                                    viewModel.updateAnswer(isCorrect)
-                                    viewModel.vocabQuizAttemptStats(isOptionCorrect,question.question)
-
-//                                    viewModel.playTrack(fullSentence)
-                                    viewModel.handleTap(fullSentence)
-
-                                }
+                                .clickable { submitAnswer() }
                         )
                     }
 
-                    // Radio button on the far right
-                    RadioButton(
-                        selected = selectedOption == option && isOptionCorrect, // Select only if correct
-                        onClick = {
-                            selectedOption = option
-                            isCurrentAnswerCorrect = isOptionCorrect
-                            viewModel.updateAnswer(isOptionCorrect)
-                            viewModel.vocabQuizAttemptStats(isOptionCorrect,question.question)
-
-
-                            if (isOptionCorrect) {
-
-                                var sentenceToSpeak = ""
-                                displayedSentence = viewModel.highlightWordInSentence(
-                                    sentence = option,
-                                    wordToHighlight = question.question,
-                                    highlightColor = Color.Green
-                                )
-                                sentenceToSpeak = option
-
-//                                viewModel.playTrack(sentenceToSpeak)
-                                viewModel.handleTap(sentenceToSpeak)
-
-                                viewModel.incQuizStat()
-
-                            } else { //incorrect
-                                viewModel.incQuizStat(false)
-                            }
-
-                            viewModel.markAnswerSelected(question.question,isOptionCorrect)
-
-
-                        },
-                        colors = RadioButtonDefaults.colors(
-                            selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red, // Conditional color
-                            unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified // Conditional color
-                        ),
-                        modifier = Modifier.semantics { contentDescription = option }
-                    )
+                    // Reserved fixed-width cell so the radio button always sits in the SAME place
+                    // under the user's finger, regardless of sentence length.
+                    Box(
+                        modifier = Modifier.width(48.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        RadioButton(
+                            selected = selectedOption == option && isOptionCorrect, // Select only if correct
+                            onClick = { submitAnswer() },
+                            colors = RadioButtonDefaults.colors(
+                                selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red, // Conditional color
+                                unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified // Conditional color
+                            ),
+                            modifier = Modifier.semantics { contentDescription = option }
+                        )
+                    }
                 } // Row
             }
 
@@ -521,28 +508,28 @@ fun VocabQuizScreen(
             Spacer(modifier = Modifier.weight(1f))//push the reset to teh bottom
 
 
+            // Next/Previous flow across sub-tab pages: at the last question of a page, Next auto-selects
+            // the next sub-tab (first question); at the first question of a page, Previous steps back into
+            // the previous sub-tab (last question). Computed from observed state so the arrows enable/grey
+            // correctly across page boundaries.
+            val canGoPrevious = currentQuestionIndex > 0 || (currentIndex - 1) in availableIndices
+            val canGoNext = currentQuestionIndex < questions.lastIndex || (currentIndex + 1) in availableIndices
+
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 IconButton(
                     onClick = {
-                        if (currentQuestionIndex > 0) {
-                            viewModel.resetCurrentQuestionAttempts()
-                            viewModel.currentQuestionIndex.value -= 1
-                            if (viewModel.doIHaveCurrentQuestionInfo()) {
-                                infoDisabled = false
-                            } else {
-                                infoDisabled = true
-                            }
-                        }
+                        viewModel.goToPreviousQuestion()
+                        infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
                     },
-                    enabled = currentQuestionIndex > 0
+                    enabled = canGoPrevious
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Previous",
-                        tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor, // Conditional color
+                        tint = if (!canGoPrevious) Color.Gray else buttonColor, // Conditional color
                         modifier = Modifier.size(36.dp)
                     )
                 }
@@ -558,23 +545,15 @@ fun VocabQuizScreen(
 
                 IconButton(
                     onClick = {
-                        if (currentQuestionIndex < questions.lastIndex) {
-                            viewModel.resetCurrentQuestionAttempts()
-                            viewModel.currentQuestionIndex.value += 1
-                            if (viewModel.doIHaveCurrentQuestionInfo()) {
-                                infoDisabled = false
-                            } else {
-                                infoDisabled = true
-                            }
-                        }
+                        viewModel.goToNextQuestion()
+                        infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
                     },
-                    enabled = currentQuestionIndex < questions.lastIndex
-
+                    enabled = canGoNext
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                         contentDescription = "Next",
-                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor, // Conditional color
+                        tint = if (!canGoNext) Color.Gray else buttonColor, // Conditional color
                         modifier = Modifier.size(36.dp)
                     )
                 }
