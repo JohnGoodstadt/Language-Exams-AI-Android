@@ -78,6 +78,8 @@ import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
+import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.packages.reference.UsageDashboardScreen
@@ -102,6 +104,7 @@ fun UsageQuizScreen(
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
     val questions by viewModel.questions.collectAsState()
+    val autoAdvance by viewModel.autoAdvance.collectAsState()
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
@@ -375,6 +378,8 @@ fun UsageQuizScreen(
             // Reset scroll when question changes
             LaunchedEffect(currentQuestionIndex) {
                 scrollState.scrollTo(0)
+                // Keep the info button correct after any move, including auto-advance.
+                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
             }
 
             Column(
@@ -497,6 +502,8 @@ fun UsageQuizScreen(
 
                                 viewModel.handleTap(sentenceToSpeak)
                                 viewModel.incQuizStat()
+                                // Auto-advance (if on): move to the next question once the audio finishes.
+                                viewModel.onCorrectAnswered()
                             } else {
                                 viewModel.incQuizStat(false)
                             }
@@ -594,16 +601,23 @@ fun UsageQuizScreen(
                 // 🔹 Expanding space left
                 Spacer(modifier = Modifier.weight(1f))
 
-                // 🔹 Info Button (centered)
-                InfoButtonRow(
-                    infoDisabled = infoDisabled,
-                    onClick = {
-                        if (!infoDisabled) {
-                            showInfoBottomSheet = true
-                            viewModel.onInfoButtonTapped() //mark user getting help
+                // 🔹 Info + Auto-advance buttons (centered)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    InfoCircleButton(
+                        infoDisabled = infoDisabled,
+                        onClick = {
+                            if (!infoDisabled) {
+                                showInfoBottomSheet = true
+                                viewModel.onInfoButtonTapped() //mark user getting help
+                            }
                         }
-                    }
-                )
+                    )
+                    // Auto-advance toggle: grey = off, blue = on. Shared setting across all quiz types.
+                    AutoAdvanceToggleButton(
+                        enabled = autoAdvance,
+                        onClick = { viewModel.toggleAutoAdvance() }
+                    )
+                }
 
                 // 🔹 Expanding space right
                 Spacer(modifier = Modifier.weight(1f))

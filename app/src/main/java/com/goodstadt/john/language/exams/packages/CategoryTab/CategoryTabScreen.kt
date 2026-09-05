@@ -4,6 +4,9 @@ import androidx.activity.ComponentActivity
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.clip
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -148,6 +151,8 @@ fun CategoryTabScreen(
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
     val currentQuizCategory by viewModel.currentQuizCategory.collectAsStateWithLifecycle()
+    // Bumps when quiz progress changes, so each section's status dots recompute.
+    val quizStatusVersion by viewModel.quizStatusVersion.collectAsStateWithLifecycle()
     val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // ✅ Watch for celebration trigger
@@ -391,6 +396,13 @@ fun CategoryTabScreen(
                                             color = accentColor, // Or MaterialTheme.colorScheme.primary
                                             modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
                                         )
+
+                                        // Whole-quiz status summary: coloured dots for this section's quiz
+                                        // (blank if never taken, one green dot if fully mastered).
+                                        val quizStatus = remember(quizStatusVersion, category.title) {
+                                            viewModel.quizStatusFor(category.title)
+                                        }
+                                        QuizStatusDots(quizStatus)
 
                                         if (locked) {
                                             // Locked section: a lock replaces the game-console (Quiz) icon.
@@ -857,6 +869,50 @@ fun CategoryHeader(title: String) {
 // Helper extension for strings (placeholder)
 fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?\\)"), "").trim()
 
+/**
+ * Whole-quiz status summary for a section, shown as small coloured dots before the Quiz button:
+ *   - never taken (all words New / no status)        -> nothing,
+ *   - fully mastered (every word Mastered)           -> one green dot,
+ *   - otherwise one dot per present state            -> red (struggling), orange (learning),
+ *     blue (review), green (some mastered), grey (still some New / not finished).
+ * Colours match the quiz's own mastery dots.
+ */
+@Composable
+private fun QuizStatusDots(status: com.goodstadt.john.language.exams.models.CategoryMasteryState?) {
+    if (status == null || status.total == 0 || status.newCount == status.total) return // not taken -> blank
+
+    val red = Color.Red
+    val orange = Color(0xFFFF9800)
+    val blue = Color(0xFF2196F3)
+    val green = Color(0xFF4CAF50)
+    val grey = Color.Gray
+
+    val dots: List<Color> = if (status.mastered == status.total) {
+        listOf(green) // fully mastered
+    } else buildList {
+        if (status.struggling > 0) add(red)
+        if (status.learning > 0) add(orange)
+        if (status.review > 0) add(blue)
+        if (status.mastered > 0) add(green)
+        if (status.newCount > 0) add(grey)
+    }
+
+    Row(
+        horizontalArrangement = Arrangement.spacedBy(3.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.padding(end = 6.dp)
+    ) {
+        dots.forEach { c ->
+            Box(
+                modifier = Modifier
+                    .size(9.dp)
+                    .clip(CircleShape)
+                    .background(c)
+            )
+        }
+    }
+}
+
 //✅ 4. HELPER COMPOSABLE
 // This ensures we get a fresh ViewModel and trigger the load
 @Composable
@@ -875,6 +931,13 @@ fun SectionQuizContainer(
     val isDirty by viewModel.isDirty.collectAsStateWithLifecycle()
     LaunchedEffect(isDirty) {
         onInteraction(isDirty)
+    }
+
+    // When the quiz bottom sheet closes (this container leaves composition), record this go as a dated
+    // attempt and (DEBUG only) log the whole-quiz status plus every attempt, to validate and inform a
+    // future dashboard UI.
+    DisposableEffect(Unit) {
+        onDispose { viewModel.recordAndLogCategoryAttempt() }
     }
     // Render the existing screen
     Box(modifier = Modifier.fillMaxHeight(0.9f)) {

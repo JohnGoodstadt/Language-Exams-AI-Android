@@ -93,7 +93,23 @@ class CategoryTabViewModel @Inject constructor(
     private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
     private val savedPracticeManager: com.goodstadt.john.language.exams.managers.SavedPracticeManager,
     private val practiceReminderScheduler: com.goodstadt.john.language.exams.managers.PracticeReminderScheduler,
+    private val vocabQuizRepository: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository,
 ) : ViewModel() {
+
+    // Bumps whenever quiz progress changes, so the section rows recompute their whole-quiz status dots.
+    private val _quizStatusVersion = MutableStateFlow(0L)
+    val quizStatusVersion = _quizStatusVersion.asStateFlow()
+
+    /**
+     * Whole-quiz (category) status for a section, looked up by its DISPLAY [categoryTitle] at the current
+     * level. Returns null if the quiz has never been taken. The section-quiz progress is keyed by the quiz
+     * KEY (not the display title), so map title -> key via SectionQuizKeyMap first.
+     */
+    fun quizStatusFor(categoryTitle: String): com.goodstadt.john.language.exams.models.CategoryMasteryState? {
+        val key = com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
+            .keyFor(currentLoadedLevel, categoryTitle)
+        return vocabQuizRepository.getCategoryMasteryState(key, currentLoadedLevel)
+    }
 
     /**
      * Schedule a local practice-reminder notification for [word] at the time implied by [reminder], and
@@ -224,6 +240,13 @@ class CategoryTabViewModel @Inject constructor(
         observeHistoryChanges() //do I need this now?
         observeRecallingChanges()
         initializeBilling()
+        // Refresh the section status dots when quiz progress changes or the level changes.
+        viewModelScope.launch {
+            vocabQuizRepository.dataUpdateEvents.collect { _quizStatusVersion.value++ }
+        }
+        viewModelScope.launch {
+            userPreferencesRepository.selectedSkillLevelFlow.collect { _quizStatusVersion.value++ }
+        }
         viewModelScope.launch {
             hasSeenHelp = userPreferencesRepository.hasSeenHelpSheetFlow.first()
 

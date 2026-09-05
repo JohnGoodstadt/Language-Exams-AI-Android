@@ -25,6 +25,55 @@ enum class WordMasteryLevel {
     Mastered    // Correct first time 3+ times in a row (Don't show again)
 }
 
+// 2b. The Whole-Quiz (Category) Status
+// A single rolled-up status for an entire quiz/category, derived from its words' [WordMasteryLevel]s, so a
+// future dashboard can show one dot per quiz. "Worst-attention wins", except Mastered needs ALL words:
+//   New        - nothing attempted yet
+//   Struggling - at least one word is Struggling (a problem to flag)   -> e.g. red dot
+//   Learning   - some word still Learning, none Struggling             -> e.g. orange dot
+//   Review     - some word in Review, none Struggling/Learning         -> e.g. blue dot
+//   Mastered   - EVERY word is Mastered (3 correct-first-time sessions) -> e.g. green dot
+@Keep
+enum class CategoryMasteryLevel {
+    New,
+    Struggling,
+    Learning,
+    Review,
+    Mastered
+}
+
+// 2c. Persisted whole-quiz status + the counts behind it, keyed by (level, category). Written whenever a
+// word in the category is answered, so a dashboard can enumerate quizzes and their status without having to
+// reload every quiz's word list.
+@Keep
+data class CategoryMasteryState(
+    @SerializedName("cat") val category: String = "",
+    @SerializedName("lvl") val level: String = "",
+    @SerializedName("status") var status: CategoryMasteryLevel = CategoryMasteryLevel.New,
+    @SerializedName("total") var total: Int = 0,
+    @SerializedName("new") var newCount: Int = 0,
+    @SerializedName("struggling") var struggling: Int = 0,
+    @SerializedName("learning") var learning: Int = 0,
+    @SerializedName("review") var review: Int = 0,
+    @SerializedName("mastered") var mastered: Int = 0,
+    @SerializedName("updated") var updatedAt: Long = 0
+)
+
+// 2d. One dated ATTEMPT at a whole quiz (a single go from opening the quiz to closing it). Multiple goes at
+// the same quiz are kept as separate records (separated by [attemptedAt]), so progress over repeated goes
+// can be reported. "completed" means every question was answered at least once (answered >= total).
+@Keep
+data class CategoryQuizAttempt(
+    @SerializedName("cat") val category: String = "",
+    @SerializedName("lvl") val level: String = "",
+    @SerializedName("at") val attemptedAt: Long = 0,     // epoch millis - the date/time of this go
+    @SerializedName("total") val total: Int = 0,         // questions in the quiz
+    @SerializedName("answered") val answered: Int = 0,   // distinct questions answered (right or wrong)
+    @SerializedName("correct") val correct: Int = 0,     // distinct questions answered correctly
+    @SerializedName("tries") val tries: Int = 0,         // total answer taps this go
+    @SerializedName("completed") val completed: Boolean = false // answered every question (answered >= total)
+)
+
 // 3. The Transaction (History Log)
 // (Kept inside the State object for debugging/analytics)
 @Keep

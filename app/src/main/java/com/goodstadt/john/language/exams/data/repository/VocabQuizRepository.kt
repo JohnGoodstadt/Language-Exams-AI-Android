@@ -3,6 +3,9 @@ package com.goodstadt.john.language.exams.data.repository
 import android.content.Context
 import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.models.CategoryMasteryLevel
+import com.goodstadt.john.language.exams.models.CategoryMasteryState
+import com.goodstadt.john.language.exams.models.CategoryQuizAttempt
 import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
@@ -38,6 +41,20 @@ class VocabQuizRepository @Inject constructor(
 
     // In-Memory Store: Map<Word, State>
     private var wordStates: MutableMap<String, VocabLearningState> = mutableMapOf()
+
+    // Whole-quiz (category) rolled-up status, keyed by "$level|$category". Persisted so a future dashboard
+    // can list quizzes and their status/counts. Updated whenever a word in the category is answered.
+    private val categoryFileName = "vocab_category_progress.json"
+    private var categoryStates: MutableMap<String, CategoryMasteryState> = mutableMapOf()
+
+    // The full word list of each registered quiz (in-memory), so the whole-quiz status can tell "all
+    // Mastered" vs "some words never attempted". Registered when a quiz loads (see registerCategoryWords).
+    private val categoryWordLists: MutableMap<String, MutableList<String>> = mutableMapOf()
+
+    // Dated history of every whole-quiz go, keyed by "$level|$category" -> list of attempts (oldest first).
+    // Persisted so repeated goes at the same quiz can be reported over time.
+    private val categoryAttemptsFileName = "vocab_category_attempts.json"
+    private var categoryAttempts: MutableMap<String, MutableList<CategoryQuizAttempt>> = mutableMapOf()
 
     // Observable State for UI
     private val _quizDataLoaded = MutableStateFlow(false)
@@ -86,6 +103,9 @@ class VocabQuizRepository @Inject constructor(
 
             // 3. Save
             saveToDisk()
+
+            // 3b. Roll the word's new status up into the whole-quiz (category) status.
+            recomputeCategoryStatus(categoryTitle, level)
 
             // 4. Notify listeners (e.g. dashboard) so they refresh
             _dataUpdateEvents.tryEmit(Unit)
@@ -162,6 +182,21 @@ class VocabQuizRepository @Inject constructor(
                     val jsonString = file.readText()
                     val type = object : TypeToken<MutableMap<String, VocabLearningState>>() {}.type
                     wordStates = gson.fromJson(jsonString, type)
+                }
+
+                // Whole-quiz (category) statuses.
+                val catFile = File(context.filesDir, categoryFileName)
+                if (catFile.exists()) {
+                    val catType = object : TypeToken<MutableMap<String, CategoryMasteryState>>() {}.type
+                    categoryStates = gson.fromJson(catFile.readText(), catType) ?: mutableMapOf()
+                }
+
+                // Dated whole-quiz attempt history.
+                val attemptsFile = File(context.filesDir, categoryAttemptsFileName)
+                if (attemptsFile.exists()) {
+                    val attemptsType =
+                        object : TypeToken<MutableMap<String, MutableList<CategoryQuizAttempt>>>() {}.type
+                    categoryAttempts = gson.fromJson(attemptsFile.readText(), attemptsType) ?: mutableMapOf()
                 }
                 _quizDataLoaded.value = true
             } catch (e: Exception) {
@@ -272,13 +307,114 @@ class VocabQuizRepository @Inject constructor(
         // Return a copy (.toMap) to prevent external modification
         return wordStates.toMap()
     }
+
+    // MARK: - Whole-quiz (Category) status
+
+    private fun categoryKey(category: String, level: String) = "$level|$category"
+
+    /**
+     * Roll a set of per-word [WordMasteryLevel]s up into ONE whole-quiz status. "Worst-attention wins",
+     * except Mastered which requires EVERY word. Unattempted words should be included as New by the caller.
+     */
+    private fun aggregateCategory(levels: List<WordMasteryLevel>): CategoryMasteryLevel = when {
+        levels.isEmpty() -> CategoryMasteryLevel.New
+        levels.all { it == WordMasteryLevel.Mastered } -> CategoryMasteryLevel.Mastered
+        levels.any { it == WordMasteryLevel.Struggling } -> CategoryMasteryLevel.Struggling
+        levels.any { it == WordMasteryLevel.Learning } -> CategoryMasteryLevel.Learning
+        levels.any { it == WordMasteryLevel.Review } -> CategoryMasteryLevel.Review
+        else -> CategoryMasteryLevel.New
+    }
+
+    /** A word's current mastery level (New if unattempted), via the case-tolerant [getWordStats] lookup. */
+    private fun masteryLevelFor(word: String): WordMasteryLevel = getWordStats(word).masteryLevel
+
+    /**
+     * Pure aggregation for callers that already hold the full word list (e.g. a live screen). Reads each
+     * word's current status (defaults to New if unattempted) and rolls them up.
+     */
+    fun getCategoryMastery(allWords: List<String>): CategoryMasteryLevel =
+        aggregateCategory(allWords.map { masteryLevelFor(it) })
+
+    /**
+     * Register the FULL word list of a quiz so its whole-quiz status (and totals) can be computed
+     * accurately - including "all Mastered" and "how many still New". Call this when a section quiz loads.
+     * Computing here also establishes the category's status/counts before the user answers anything.
+     */
+    fun registerCategoryWords(category: String, level: String, words: List<String>) {
+        if (category.isBlank() || words.isEmpty()) return
+        categoryWordLists[categoryKey(category, level)] = words.toMutableList()
+        recomputeCategoryStatus(category, level)
+    }
+
+    /** Recompute + persist the rolled-up status (and counts) for one category from its registered words. */
+    private fun recomputeCategoryStatus(category: String, level: String) {
+        val words = categoryWordLists[categoryKey(category, level)] ?: return
+        val levels = words.map { masteryLevelFor(it) }
+        categoryStates[categoryKey(category, level)] = CategoryMasteryState(
+            category = category,
+            level = level,
+            status = aggregateCategory(levels),
+            total = words.size,
+            newCount = levels.count { it == WordMasteryLevel.New },
+            struggling = levels.count { it == WordMasteryLevel.Struggling },
+            learning = levels.count { it == WordMasteryLevel.Learning },
+            review = levels.count { it == WordMasteryLevel.Review },
+            mastered = levels.count { it == WordMasteryLevel.Mastered },
+            updatedAt = System.currentTimeMillis()
+        )
+        saveCategoriesToDisk()
+    }
+
+    /** Persisted whole-quiz status for one quiz, or null if it has never been registered/played. */
+    fun getCategoryMasteryState(category: String, level: String): CategoryMasteryState? =
+        categoryStates[categoryKey(category, level)]
+
+    /** All persisted whole-quiz statuses - for a future dashboard listing every quiz with a status dot. */
+    fun getAllCategoryMasteryStates(): List<CategoryMasteryState> = categoryStates.values.toList()
+
+    // MARK: - Whole-quiz attempts (dated history of each go)
+
+    /** Append one dated whole-quiz attempt (a single go) and persist it. Kept separate per go. */
+    fun recordCategoryAttempt(attempt: CategoryQuizAttempt) {
+        if (attempt.category.isBlank()) return
+        categoryAttempts.getOrPut(categoryKey(attempt.category, attempt.level)) { mutableListOf() }
+            .add(attempt)
+        saveCategoryAttemptsToDisk()
+        _dataUpdateEvents.tryEmit(Unit)
+    }
+
+    /** Every dated attempt at one quiz, oldest first. */
+    fun getCategoryAttempts(category: String, level: String): List<CategoryQuizAttempt> =
+        categoryAttempts[categoryKey(category, level)]?.toList() ?: emptyList()
+
+    /** All attempts across all quizzes (keyed by "$level|$category") - for a future dashboard. */
+    fun getAllCategoryAttempts(): Map<String, List<CategoryQuizAttempt>> =
+        categoryAttempts.mapValues { it.value.toList() }
+
+    private fun saveCategoryAttemptsToDisk() {
+        try {
+            File(context.filesDir, categoryAttemptsFileName).writeText(gson.toJson(categoryAttempts))
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to save vocab category attempts")
+        }
+    }
+
+    private fun saveCategoriesToDisk() {
+        try {
+            File(context.filesDir, categoryFileName).writeText(gson.toJson(categoryStates))
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to save vocab category progress")
+        }
+    }
     // MARK: - Debug / Reset
 // In VocabQuizRepository.kt
 
     fun getWordStats(word: String): VocabLearningState {
-        // Return the existing state if we have it,
-        // otherwise return a 'New' state so the UI has something to show
-        return wordStates[word.lowercase()] ?: VocabLearningState(
+        // recordResult stores under the RAW word, so look that up first; fall back to a lowercase key for any
+        // legacy lowercase-stored entries. (Looking up only the lowercase key missed every capitalised word -
+        // e.g. German nouns - so they always read back as New and the mastery filter chips saw nothing.)
+        // Otherwise return a 'New' state so the UI has something to show.
+        return wordStates[word] ?: wordStates[word.lowercase()] ?: VocabLearningState(
             word = word,
             masteryLevel = WordMasteryLevel.New
         )

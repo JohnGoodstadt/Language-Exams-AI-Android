@@ -18,6 +18,9 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.flow.MutableStateFlow
+import java.time.Instant
+import java.time.LocalDate
+import java.time.ZoneId
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
@@ -65,17 +68,15 @@ class HistorySyncManager @Inject constructor(
         // Spaced-repetition dot: max colour stage (1=red, 2=amber, 3=green).
         const val SPACED_MAX = 3
 
-        // Required gap (seconds) BEFORE advancing FROM each stage, indexed by the CURRENT stage:
-        //   [0] stage 0 -> 1 (first hearing): immediate,
-        //   [1] stage 1 -> 2 (red -> amber),
-        //   [2] stage 2 -> 3 (amber -> green).
-        // Intervals INCREASE (forgetting curve): the amber->green wait is longer than red->amber, and the
-        // user can only advance one stage per hearing, so both gaps can't be skipped in a single play.
-        // DEBUG uses short gaps so the progression is testable in a couple of minutes.
-        val SPACED_GAP_SECONDS: List<Long> = if (BuildConfig.DEBUG)
-            listOf(0L, 30L, 90L)                 // immediate, 30s, then 90s
-        else
-            listOf(0L, 60L * 60L, 3L * 60L * 60L) // immediate, 1 hour, then 3 hours
+        // Spaced-repetition rule (RELEASE): the three colours must land on THREE SEPARATE CALENDAR DAYS.
+        //   red   = 1st hearing (any day),
+        //   amber = a hearing on a LATER day than the red day,
+        //   green = a hearing on a LATER day than the amber day.
+        // So each stage advances at most once per day and only one stage per hearing.
+        //
+        // DEBUG can't wait for real days, so it stands in a short seconds gap for "a later day" - allowing
+        // the red -> amber -> green progression to be tested in a couple of minutes.
+        const val DEBUG_SPACED_GAP_SECONDS = 30L
     }
 
     // In-memory store: [Level : HistoryData]
@@ -169,32 +170,46 @@ class HistorySyncManager @Inject constructor(
 
     /**
      * Record a play for the spaced-repetition dot. The audio always plays; this only advances the
-     * red -> amber -> green stage, and ONLY when at least [SPACED_GAP_SECONDS] have elapsed since the last
-     * counted play for this sentence (and while below [SPACED_MAX]). So playing the same sentence many
-     * times in one sitting keeps the same colour. Persisted locally; deliberately NOT sent to Firestore.
-     * Reusable for any level (vocab tabs now; could extend to reference sheets later). Returns the current
-     * stage (0..3).
+     * red -> amber -> green stage, and ONLY when the hearing falls on a LATER CALENDAR DAY than the last
+     * counted play for this sentence (and while below [SPACED_MAX]). So the three colours are earned on
+     * three separate days, and playing the same sentence many times in one day keeps the same colour.
+     * (DEBUG substitutes a short seconds gap for "a later day" so it can be tested quickly.)
+     * Persisted locally; deliberately NOT sent to Firestore. Reusable for any level (vocab tabs now; could
+     * extend to reference sheets later). Returns the current stage (0..3).
      */
     fun recordSpacedPlay(level: String, sentenceHash: String): Int {
         val data = history.getOrPut(level) { HistoryData() }
         val entry = data.spaced.getOrPut(sentenceHash) { SpacedPlay() }
         val now = System.currentTimeMillis() / 1000 // seconds
 
-        // Advance at most ONE stage per play (so a long wait can't skip red->green in one go), and only
-        // once the gap required to leave the CURRENT stage has elapsed. Gaps increase per stage.
+        // Advance at most ONE stage per play (so a gap can't skip red->green in one go), and only once we've
+        // reached a later day than the last counted play (DEBUG: a short seconds gap stands in for a day).
         val stage = entry.count
-        if (stage < SPACED_MAX) {
-            val requiredGap = SPACED_GAP_SECONDS[stage] // gap to advance FROM this stage
-            if ((now - entry.lastAt) >= requiredGap) {
-                entry.count += 1
-                entry.lastAt = now
-                // Persist + notify UI, but do NOT set isDirty: this is local-only, so it must not trigger a
-                // Firestore flush of the (unrelated) synced play counts.
-                saveToLocalDisk()
-                emitState()
-            }
+        if (stage < SPACED_MAX && canAdvanceSpacedStage(entry.lastAt, now)) {
+            entry.count += 1
+            entry.lastAt = now
+            // Persist + notify UI, but do NOT set isDirty: this is local-only, so it must not trigger a
+            // Firestore flush of the (unrelated) synced play counts.
+            saveToLocalDisk()
+            emitState()
         }
         return entry.count
+    }
+
+    /**
+     * True when a hearing at [nowSeconds] may advance the spaced dot by one stage, given the last counted
+     * play at [lastAtSeconds] (epoch seconds). RELEASE: [nowSeconds] must be on a strictly later local
+     * calendar day. DEBUG: at least [DEBUG_SPACED_GAP_SECONDS] must have elapsed. The first hearing always
+     * qualifies (lastAt is 0 -> 1970, always an earlier day / long-ago).
+     */
+    private fun canAdvanceSpacedStage(lastAtSeconds: Long, nowSeconds: Long): Boolean {
+        if (BuildConfig.DEBUG) {
+            return (nowSeconds - lastAtSeconds) >= DEBUG_SPACED_GAP_SECONDS
+        }
+        val zone = ZoneId.systemDefault()
+        val lastDay = Instant.ofEpochSecond(lastAtSeconds).atZone(zone).toLocalDate()
+        val nowDay: LocalDate = Instant.ofEpochSecond(nowSeconds).atZone(zone).toLocalDate()
+        return nowDay.isAfter(lastDay)
     }
 
     /** Current spaced-repetition stage for a sentence (0 = none, 1 = red, 2 = amber, 3 = green). */

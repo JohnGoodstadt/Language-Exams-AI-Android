@@ -49,6 +49,7 @@ class UserPreferencesRepository @Inject constructor(
         val HAS_SEEN_HELP_SHEET = booleanPreferencesKey("has_seen_help_sheet_v1")
         val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
         val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
+        val VOCAB_QUIZ_AUTO_ADVANCE = booleanPreferencesKey("vocab_quiz_auto_advance")
     }
 
     /**
@@ -84,6 +85,20 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setHasSeenReadinessAuditIntro(hasSeen: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.HAS_SEEN_READINESS_AUDIT_INTRO] = hasSeen
+        }
+    }
+
+    // Vocab quiz "auto-advance": when ON, a correct answer automatically moves to the next question.
+    // Persisted so it sticks across quizzes (default OFF). Later extendable to the other quiz types.
+    val vocabQuizAutoAdvanceFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.VOCAB_QUIZ_AUTO_ADVANCE] ?: false
+        }
+
+    suspend fun setVocabQuizAutoAdvance(enabled: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.VOCAB_QUIZ_AUTO_ADVANCE] = enabled
         }
     }
 

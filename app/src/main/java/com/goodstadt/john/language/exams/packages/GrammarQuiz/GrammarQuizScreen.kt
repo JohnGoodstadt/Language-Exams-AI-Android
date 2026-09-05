@@ -55,7 +55,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
-import com.goodstadt.john.language.exams.packages.UsageQuiz.InfoButtonRow
+import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
+import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageMasteryFilterChips
 import com.goodstadt.john.language.exams.packages.UsageQuiz.usageMasteryExplanation
 import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
@@ -89,6 +90,7 @@ fun GrammarQuizScreen(
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
     val questions by viewModel.questions.collectAsState()
+    val autoAdvance by viewModel.autoAdvance.collectAsState()
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
@@ -261,7 +263,11 @@ fun GrammarQuizScreen(
             val question = questions[currentQuestionIndex]
             val scrollState = rememberScrollState()
 
-            LaunchedEffect(currentQuestionIndex) { scrollState.scrollTo(0) }
+            LaunchedEffect(currentQuestionIndex) {
+                scrollState.scrollTo(0)
+                // Keep the info button correct after any move, including auto-advance.
+                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+            }
 
             Column(
                 modifier = Modifier
@@ -362,6 +368,8 @@ fun GrammarQuizScreen(
                                 }
                                 viewModel.handleTap(sentenceToSpeak)
                                 viewModel.incQuizStat()
+                                // Auto-advance (if on): move to the next question once the audio finishes.
+                                viewModel.onCorrectAnswered()
                             } else {
                                 viewModel.incQuizStat(false)
                             }
@@ -444,15 +452,22 @@ fun GrammarQuizScreen(
 
                 Spacer(modifier = Modifier.weight(1f))
 
-                InfoButtonRow(
-                    infoDisabled = infoDisabled,
-                    onClick = {
-                        if (!infoDisabled) {
-                            showInfoBottomSheet = true
-                            viewModel.onInfoButtonTapped()
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    InfoCircleButton(
+                        infoDisabled = infoDisabled,
+                        onClick = {
+                            if (!infoDisabled) {
+                                showInfoBottomSheet = true
+                                viewModel.onInfoButtonTapped()
+                            }
                         }
-                    }
-                )
+                    )
+                    // Auto-advance toggle: grey = off, blue = on. Shared setting across all quiz types.
+                    AutoAdvanceToggleButton(
+                        enabled = autoAdvance,
+                        onClick = { viewModel.toggleAutoAdvance() }
+                    )
+                }
 
                 Spacer(modifier = Modifier.weight(1f))
 

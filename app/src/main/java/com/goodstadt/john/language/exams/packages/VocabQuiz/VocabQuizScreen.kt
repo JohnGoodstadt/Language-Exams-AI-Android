@@ -69,8 +69,8 @@ import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.packages.UsageQuiz.InfoButtonRow
-import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
+import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
+import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.packages.reference.WordQuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
@@ -102,7 +102,6 @@ fun VocabQuizScreen(
     val selectedLevel by viewModel.selectedLevel
     val selectedQuizNumber by viewModel.selectedQuizNumber
     val currentQuestionIndex by viewModel.currentQuestionIndex
-    val userAnswers by viewModel.userAnswers
     val quizStatistics by viewModel.quizStatistics
     var selectedOption by remember { mutableStateOf<String?>(null) }
     var isCurrentAnswerCorrect by remember { mutableStateOf<Boolean?>(null) } // Track answer correctness
@@ -139,14 +138,14 @@ fun VocabQuizScreen(
     val availableIndices by viewModel.availableSectionIndices.collectAsState()
     val currentIndex by viewModel.currentSectionIndex.collectAsState()
     val activeFilters by viewModel.activeFilters.collectAsState()
+    val autoAdvance by viewModel.autoAdvance.collectAsState()
     //val showInfoSheet by viewModel.showInfoSheet.collectAsState()
 
 
 
     LaunchedEffect(currentQuestionIndex, questions) {
-        if (questions.isNotEmpty()) {
-            val question = questions[currentQuestionIndex]
-
+        val question = questions.getOrNull(currentQuestionIndex)
+        if (question != null) {
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                     question.question.replace("_", "___")
@@ -155,10 +154,22 @@ fun VocabQuizScreen(
                 } else {
                     ""//question.sentence
                 }
-            displayedSentence = AnnotatedString(questionText)
-            // Reset the selection state for the new question
-            selectedOption = null
-            isCurrentAnswerCorrect = null
+
+            // Restore any previous answer for this question so navigating back (auto or manual) re-shows
+            // the radio selection for checking. Answers persist until the quiz is exited/restarted.
+            val prevOption = viewModel.selectedOptionFor(question.question)
+            val prevCorrect = viewModel.answerCorrectFor(question.question)
+            selectedOption = prevOption
+            isCurrentAnswerCorrect = prevCorrect
+            displayedSentence = if (prevCorrect == true && prevOption != null) {
+                viewModel.highlightWordInSentence(
+                    sentence = prevOption,
+                    wordToHighlight = question.question,
+                    highlightColor = Color.Green
+                )
+            } else {
+                AnnotatedString(questionText)
+            }
         }
     }
 
@@ -434,6 +445,8 @@ fun VocabQuizScreen(
                     } else {
                         selectedOption = option
                         isCurrentAnswerCorrect = isOptionCorrect
+                        // Remember this selection so navigating back re-shows it (until the quiz restarts).
+                        viewModel.rememberSelection(question.question, option)
                         viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
                         viewModel.vocabQuizAttemptStats(isOptionCorrect, question.question)
 
@@ -450,6 +463,9 @@ fun VocabQuizScreen(
                         }
 
                         viewModel.markAnswerSelected(question.question, isOptionCorrect)
+
+                        // If auto-advance is ON, a correct answer moves to the next question automatically.
+                        if (isOptionCorrect) viewModel.onCorrectAnswered()
                     }
                 }
 
@@ -534,14 +550,23 @@ fun VocabQuizScreen(
                     )
                 }
 
-                InfoButtonRow(infoDisabled = infoDisabled,
-                    onClick = {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    InfoCircleButton(infoDisabled = infoDisabled,
+                        onClick = {
 
-                        if (infoDisabled == false) {
-                            showInfoBottomSheet = true
-                            viewModel.onInfoClicked()
-                        }
-                    })
+                            if (infoDisabled == false) {
+                                showInfoBottomSheet = true
+                                viewModel.onInfoClicked()
+                            }
+                        })
+
+                    // Auto-advance toggle: grey = off, blue = on. When on, a correct answer jumps to the
+                    // next question automatically (saves a tap). Persisted across quizzes.
+                    AutoAdvanceToggleButton(
+                        enabled = autoAdvance,
+                        onClick = { viewModel.toggleAutoAdvance() }
+                    )
+                }
 
                 IconButton(
                     onClick = {
@@ -600,16 +625,20 @@ fun VocabQuizScreen(
             horizontalArrangement = Arrangement.Center // Center the dots horizontally
         ) {
             for (index in 0 until questions.size) { // Iterate through the questions
+                // Colour each dot from the persisted per-WORD answer, so answered dots survive sub-tab
+                // switches (green = correct, red = wrong, grey = unanswered), until the quiz is exited.
+                val answered = viewModel.answerCorrectFor(questions[index].question)
+                val dotBg = when {
+                    index == currentQuestionIndex -> blueBright2
+                    answered == true -> Color.Green
+                    answered == false -> Color.Red
+                    else -> Color.LightGray
+                }
                 Box(
                     modifier = Modifier
                         .size(10.dp) // Set size of the dot
                         .clip(CircleShape) // Make it a circle
-                        .background(
-                            if (index == currentQuestionIndex) blueBright2 else dotColor(
-                                index,
-                                userAnswers
-                            )
-                        ) // Set color based on current page
+                        .background(dotBg)
                 )
                 Spacer(modifier = Modifier.width(4.dp)) // Add spacing between dots
             }

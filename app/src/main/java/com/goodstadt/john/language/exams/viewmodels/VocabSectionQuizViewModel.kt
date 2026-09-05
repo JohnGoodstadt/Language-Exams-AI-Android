@@ -16,11 +16,11 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
+import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
-import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizTotalCount
@@ -36,27 +36,31 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
+import com.goodstadt.john.language.exams.models.CategoryMasteryLevel
+import com.goodstadt.john.language.exams.models.CategoryQuizAttempt
 import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.models.WordQuizRoot
-import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
-import com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
+import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.packages.reference.shared.QuizDetail
+import com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.File
@@ -64,6 +68,7 @@ import java.io.FileNotFoundException
 import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
+
 /*
 Note this file is used on TABS 1,2,3 for each section and the reference TAB Vocab Quiz Screen - for both Section quiz and Review Now quiz
  */
@@ -178,6 +183,7 @@ class VocabSectionQuizViewModel @Inject constructor(
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val bannerManager: BannerManager,
     private val globalLoadingManager: com.goodstadt.john.language.exams.managers.GlobalLoadingManager,
+    private val playbackEventBus: com.goodstadt.john.language.exams.utils.PlaybackEventBus,
 
     ) : ViewModel() {
     private val appContext: Context = application.applicationContext
@@ -239,6 +245,138 @@ class VocabSectionQuizViewModel @Inject constructor(
     private val _currentSectionIndex = MutableStateFlow(1)
     val currentSectionIndex = _currentSectionIndex.asStateFlow()
 
+    // Whole-quiz (category) rolled-up status for the CURRENTLY loaded section quiz, so a future UI can show
+    // one status dot for the whole set. Recomputed when the quiz loads and after every answer is recorded.
+    private val _categoryMastery = MutableStateFlow(CategoryMasteryLevel.New)
+    val categoryMastery = _categoryMastery.asStateFlow()
+
+    // "Auto-advance": when ON, answering a question correctly automatically moves to the next question after
+    // a short beat (so the green highlight/audio still register), saving the user a tap on the Next arrow.
+    // Persisted across quizzes via UserPreferencesRepository (default OFF).
+    private val _autoAdvance = MutableStateFlow(false)
+    val autoAdvance = _autoAdvance.asStateFlow()
+    // Safety cap: if no playback-finished event arrives (e.g. audio was rate-limited), advance anyway.
+    private val autoAdvanceMaxWaitMs = 8000L
+    private var autoAdvanceJob: Job? = null
+
+    init {
+        // The repo signals after each recorded answer; refresh the current quiz's whole-quiz status then.
+        viewModelScope.launch {
+            vocabQuizRepository.dataUpdateEvents.collect { refreshCategoryMastery() }
+        }
+        // Keep the auto-advance toggle in sync with the saved preference (sticks across quizzes).
+        viewModelScope.launch {
+            userPreferencesRepository.vocabQuizAutoAdvanceFlow.collect { _autoAdvance.value = it }
+        }
+    }
+
+    /** Flip the auto-advance toggle and persist it. */
+    fun toggleAutoAdvance() {
+        val newValue = !_autoAdvance.value
+        _autoAdvance.value = newValue // immediate UI feedback
+        viewModelScope.launch { userPreferencesRepository.setVocabQuizAutoAdvance(newValue) }
+    }
+
+    /**
+     * Call when the user has answered the current question CORRECTLY. If auto-advance is on, wait for the
+     * answer's audio to FINISH (so the user can hear and read it together), then move to the next question -
+     * as though the Next arrow had been tapped. No-op when off or already on the last question. If no
+     * playback-finished event arrives within [autoAdvanceMaxWaitMs] (e.g. audio was rate-limited), it
+     * advances anyway. Skips advancing if the user has already navigated away during playback.
+     */
+    fun onCorrectAnswered() {
+        if (!_autoAdvance.value) return
+        autoAdvanceJob?.cancel()
+        val fromIndex = currentQuestionIndex.value
+        val fromSection = _currentSectionIndex.value
+        autoAdvanceJob = viewModelScope.launch {
+            // Wait for natural completion (or a playback failure); ignore the Stopped event that the new
+            // playback's own stop-previous step emits.
+            withTimeoutOrNull(autoAdvanceMaxWaitMs) {
+                playbackEventBus.events.first {
+                    it is com.goodstadt.john.language.exams.utils.PlaybackEvent.Completed ||
+                        it is com.goodstadt.john.language.exams.utils.PlaybackEvent.Failed
+                }
+            }
+            if (currentQuestionIndex.value == fromIndex &&
+                _currentSectionIndex.value == fromSection &&
+                canGoNext()
+            ) {
+                goToNextQuestion()
+            }
+        }
+    }
+
+    /**
+     * DEBUG-only: dump the whole-quiz (category) status of the quiz just attempted to logcat - the rolled-up
+     * status plus the per-state counts behind it - so it can be validated and to inform a future dashboard
+     * UI. Called when the quiz bottom sheet closes. No-op in release builds.
+     */
+    fun logCategoryStatus() {
+        if (!DEBUG) return
+        val state = vocabQuizRepository.getCategoryMasteryState(currentSectionTitle, currentSkillLevel)
+        if (state == null) {
+            Timber.tag("VocabCategory")
+                .d("Quiz '%s' (%s): no status recorded", currentSectionTitle, currentSkillLevel)
+            return
+        }
+        Timber.tag("VocabCategory").d(
+            "Quiz '%s' (%s) -> %s | total=%d new=%d struggling=%d learning=%d review=%d mastered=%d",
+            state.category, state.level, state.status,
+            state.total, state.newCount, state.struggling, state.learning, state.review, state.mastered
+        )
+    }
+
+    /**
+     * Called when the quiz bottom sheet closes. Records THIS go as one dated attempt (so repeated goes at
+     * the same section are kept separately, distinguished by date), then - DEBUG only - dumps the current
+     * whole-quiz status and EVERY recorded attempt for this quiz to logcat. Nothing is recorded if the user
+     * opened and closed the sheet without answering anything.
+     */
+    fun recordAndLogCategoryAttempt() {
+        val total = _allSectionQuestions.size
+        val answered = _sectionAnswersByWord.size
+
+        // Only save a real go (ignore just opening + closing the sheet). Saved regardless of completion.
+        if (answered > 0 && currentSectionTitle.isNotBlank()) {
+            vocabQuizRepository.recordCategoryAttempt(
+                CategoryQuizAttempt(
+                    category = currentSectionTitle,
+                    level = currentSkillLevel,
+                    attemptedAt = System.currentTimeMillis(),
+                    total = total,
+                    answered = answered,
+                    correct = _sectionAnswersByWord.count { it.value },
+                    tries = quizStatistics.value.tries,
+                    completed = total > 0 && answered >= total
+                )
+            )
+        }
+
+        if (!DEBUG) return
+        logCategoryStatus()
+        val attempts = vocabQuizRepository.getCategoryAttempts(currentSectionTitle, currentSkillLevel)
+        Timber.tag("VocabCategory")
+            .d("Attempts for '%s' (%s): %d total", currentSectionTitle, currentSkillLevel, attempts.size)
+        val fmt = java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.getDefault())
+        attempts.forEachIndexed { i, a ->
+            Timber.tag("VocabCategory").d(
+                "  #%d %s | correct=%d tries=%d answered=%d/%d %s",
+                i + 1, fmt.format(java.util.Date(a.attemptedAt)),
+                a.correct, a.tries, a.answered, a.total,
+                if (a.completed) "COMPLETED" else "partial"
+            )
+        }
+    }
+
+    /** Recompute the current section quiz's whole-quiz (category) status from its words. */
+    private fun refreshCategoryMastery() {
+        val words = _allSectionQuestions.map { it.question }
+        _categoryMastery.value =
+            if (words.isEmpty()) CategoryMasteryLevel.New
+            else vocabQuizRepository.getCategoryMastery(words)
+    }
+
     // Store the cleaned base name (e.g. "WordQuizTravel") so we can switch numbers easily
     private var currentSectionBaseName: String = ""
     private var currentSectionTitle: String = ""
@@ -278,6 +416,22 @@ class VocabSectionQuizViewModel @Inject constructor(
     // stays page-local (0..9) because the bottom paging dots index into it per page. Cleared only when a
     // fresh quiz/section starts (same point tries resets to 0).
     private val _sectionAnswersByWord = mutableMapOf<String, Boolean>()
+
+    // Remembers the option the user last selected for each answered word, so navigating back to a question
+    // re-shows its radio selection (for checking) until the quiz is exited. Cleared together with
+    // _sectionAnswersByWord on a fresh quiz load.
+    private val _selectedOptionByWord = mutableMapOf<String, String>()
+
+    /** Record the user's selection for a question so it can be restored when they navigate back to it. */
+    fun rememberSelection(word: String, option: String) {
+        _selectedOptionByWord[word] = option
+    }
+
+    /** The option last selected for [word] this session, or null if it hasn't been answered yet. */
+    fun selectedOptionFor(word: String): String? = _selectedOptionByWord[word]
+
+    /** Whether [word] was last answered correctly this session, or null if not yet answered. */
+    fun answerCorrectFor(word: String): Boolean? = _sectionAnswersByWord[word]
 
     //Constants
     val quizFillInTheBlanks = 7 //in iOS these are ENUMs
@@ -362,6 +516,22 @@ class VocabSectionQuizViewModel @Inject constructor(
             _availableSectionIndices.value = emptyList()
             _allSectionQuestions = emptyList()
 
+            // Reset the score/progress so a DIFFERENT section starts fresh (Correct/Tries were carrying
+            // over from the previous section). Covers the on-screen counters, the cumulative-correct map,
+            // the paging dots, the question/section position, and the whole-quiz status dot.
+            quizStatistics.value = quizStatistics.value.copy(
+                state = QuizState.NOT_STARTED,
+                answered = 0,
+                correct = 0,
+                tries = 0
+            )
+            _sectionAnswersByWord.clear()
+            _selectedOptionByWord.clear()
+            userAnswers.value.clear()
+            currentQuestionIndex.value = 0
+            _currentSectionIndex.value = 1
+            _categoryMastery.value = CategoryMasteryLevel.New
+
             // Show the global loading overlay only if the load is still running after 2s - so cached /
             // in-memory / bundle loads (the common case) don't flash it; only a real Firestore fetch does.
             val spinnerJob = launch {
@@ -412,6 +582,14 @@ class VocabSectionQuizViewModel @Inject constructor(
 
                 _allSectionQuestions = allQuestions
 
+                // Register the full quiz word list so the whole-quiz (category) status can be computed
+                // accurately (all-mastered vs some still New) and persisted for a future dashboard.
+                if (allQuestions.isNotEmpty()) {
+                    vocabQuizRepository.registerCategoryWords(
+                        currentSectionTitle, currentSkillLevel, allQuestions.map { it.question }
+                    )
+                }
+
                 // 3. Paginate and display
                 if (allQuestions.isNotEmpty()) {
                     withContext(Dispatchers.Main) {
@@ -421,6 +599,7 @@ class VocabSectionQuizViewModel @Inject constructor(
                             title = "Quiz 1",
                             skillLevel = "Section Practice"
                         )
+                        refreshCategoryMastery() // establish the whole-quiz status dot on load
                     }
                 } else {
                     _questions.value = emptyList()
@@ -899,6 +1078,7 @@ class VocabSectionQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
         _sectionAnswersByWord.clear() // reset section-wide Correct total together with Tries
+        _selectedOptionByWord.clear()
         _activeFilters.value = emptySet()
         _paginatedQuestions = emptyList()
 
@@ -1440,7 +1620,6 @@ class VocabSectionQuizViewModel @Inject constructor(
     }
 
     fun onInfoClicked() {
-//        _showInfoSheet.value = true
         infoUsedForCurrentQuestion = true
     }
 
