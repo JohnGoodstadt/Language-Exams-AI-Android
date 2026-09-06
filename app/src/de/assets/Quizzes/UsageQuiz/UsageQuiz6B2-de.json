@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz6B2-de",
+	"title": "Präzision & Nuancen",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"description": "Präzise und nuancierte Ausdrucksweise auf dem Niveau B2",
+			"sortorder": 1,
+			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningPoints": [
+				"Du unterscheidest Wörter mit ähnlicher, aber nicht identischer Bedeutung.",
+				"Du drückst Wahrscheinlichkeit, Einschränkung und Umfang genau aus.",
+				"Du unterscheidest zwischen Zusammenhang und Ursache.",
+				"Du vermeidest mehrdeutige Bezüge und unklare Verallgemeinerungen.",
+				"Du beschreibst Zahlen, Veränderungen und zeitliche Nuancen präzise.",
+				"Die Aufgaben entsprechen dem GER-Niveau B2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Bedeutungsunterschied zwischen „anscheinend“ und „scheinbar“.",
+					"explain": "„Anscheinend“ bedeutet, dass etwas den verfügbaren Hinweisen zufolge wahrscheinlich wirklich so ist. „Scheinbar“ bezeichnet einen Eindruck, der täuscht.",
+					"sentence": "Mehrere verlässliche Messungen zeigen, dass das Gerät zu viel Energie verbraucht. Welche Ergänzung passt? Das Gerät verbraucht ___ mehr Energie als erwartet.",
+					"words": [
+						{
+							"ok": true,
+							"word": "anscheinend"
+						},
+						{
+							"ok": false,
+							"word": "scheinbar"
+						},
+						{
+							"ok": false,
+							"word": "zum Schein nach"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Transitive und intransitive Beschreibung einer Veränderung.",
+					"explain": "„Erhöhen“ braucht ein Akkusativobjekt: Jemand erhöht etwas. „Steigen“ beschreibt dagegen, dass etwas selbst zunimmt.",
+					"sentence": "Welche Formulierung ist grammatisch und inhaltlich korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Unternehmen erhöhte die Preise; dadurch stiegen die monatlichen Ausgaben vieler Kunden."
+						},
+						{
+							"ok": false,
+							"word": "Das Unternehmen stieg die Preise; dadurch erhöhten die Ausgaben."
+						},
+						{
+							"ok": false,
+							"word": "Die Preise erhöhten das Unternehmen, wodurch die Ausgaben gestiegen wurden."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Zusammenhang ohne unbelegten Kausalschluss.",
+					"explain": "Wenn Daten nur zeigen, dass zwei Merkmale gemeinsam auftreten, darf daraus nicht automatisch eine Ursache-Wirkungs-Beziehung abgeleitet werden.",
+					"sentence": "Die Daten zeigen eine Korrelation, aber keine nachgewiesene Ursache. Welche Aussage ist präzise?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Zwischen Bildschirmzeit und Schlafdauer besteht in dieser Untersuchung ein Zusammenhang."
+						},
+						{
+							"ok": false,
+							"word": "Die Untersuchung beweist, dass Bildschirmzeit in jedem Fall Schlafmangel verursacht."
+						},
+						{
+							"ok": false,
+							"word": "Bildschirmzeit ist die einzige mögliche Ursache jeder kurzen Schlafdauer."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Präzise Angabe eines Anteils.",
+					"explain": "Eine genaue Prozentangabe ist aussagekräftiger als unbestimmte Mengenwörter wie „viele“ oder „einige“.",
+					"sentence": "Von 500 Befragten stimmten 145 zu. Welche Beschreibung ist am präzisesten?",
+					"words": [
+						{
+							"ok": true,
+							"word": "29 Prozent der Befragten stimmten zu."
+						},
+						{
+							"ok": false,
+							"word": "Fast alle Befragten stimmten zu."
+						},
+						{
+							"ok": false,
+							"word": "Ungefähr die Hälfte der Befragten stimmte zu."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Zeitliche Nuance von „bereits“ und „erst“.",
+					"explain": "„Bereits“ betont, dass etwas früher als erwartet geschieht. „Erst“ hebt einen späten Zeitpunkt hervor.",
+					"sentence": "Die Abgabefrist war Freitag, aber Mia reichte ihre Arbeit schon am Montag ein. Welche Formulierung passt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Mia reichte ihre Arbeit bereits am Montag ein."
+						},
+						{
+							"ok": false,
+							"word": "Mia reichte ihre Arbeit erst am Montag ein."
+						},
+						{
+							"ok": false,
+							"word": "Mia reichte ihre Arbeit spätestens nach dem Freitag am Montag ein."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Genauigkeit von „nahezu“.",
+					"explain": "„Nahezu“ bedeutet „fast, aber nicht ganz“ und eignet sich für Werte, die knapp unter einer genannten Grenze liegen.",
+					"sentence": "98 von 100 Aufgaben wurden korrekt gelöst. Welche Aussage gibt das Ergebnis angemessen wieder?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nahezu alle Aufgaben wurden korrekt gelöst."
+						},
+						{
+							"ok": false,
+							"word": "Höchstens die Hälfte der Aufgaben wurde korrekt gelöst."
+						},
+						{
+							"ok": false,
+							"word": "Sämtliche Aufgaben wurden ohne Ausnahme korrekt gelöst."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Geltungsbereich einer Verneinung.",
+					"explain": "„Nicht alle“ bedeutet, dass nur ein Teil ausgeschlossen wird. Die Formulierung behauptet nicht, dass niemand zugestimmt hat.",
+					"sentence": "Einige Teilnehmende stimmten zu, andere nicht. Welcher Satz beschreibt das eindeutig?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nicht alle Teilnehmenden stimmten dem Vorschlag zu."
+						},
+						{
+							"ok": false,
+							"word": "Kein Teilnehmender stimmte dem Vorschlag zu."
+						},
+						{
+							"ok": false,
+							"word": "Alle Teilnehmenden lehnten den Vorschlag ab."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Abgestufte Wahrscheinlichkeit mit „dürfte“.",
+					"explain": "„Dürfte“ kann eine begründete, aber nicht sichere Vermutung ausdrücken. Es ist vorsichtiger als eine Feststellung mit „muss“.",
+					"sentence": "Die Prognose ist wahrscheinlich, aber nicht sicher. Welche Formulierung passt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Nachfrage dürfte im kommenden Jahr leicht steigen."
+						},
+						{
+							"ok": false,
+							"word": "Die Nachfrage muss im kommenden Jahr unter allen Umständen steigen."
+						},
+						{
+							"ok": false,
+							"word": "Die Nachfrage steigt im kommenden Jahr zweifellos exakt gleich stark."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Unterschied zwischen „beeinflussen“ und „verursachen“.",
+					"explain": "„Beeinflussen“ bezeichnet einen möglichen oder teilweisen Effekt. „Verursachen“ behauptet einen direkten ursächlichen Zusammenhang.",
+					"sentence": "Mehrere Faktoren wirken auf das Ergebnis ein; keiner ist allein verantwortlich. Welches Verb passt? Verschiedene Bedingungen ___ das Ergebnis.",
+					"words": [
+						{
+							"ok": true,
+							"word": "beeinflussen"
+						},
+						{
+							"ok": false,
+							"word": "verursacht allein"
+						},
+						{
+							"ok": false,
+							"word": "ist die einzige Ursache für"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Eindeutiger Bezug statt mehrdeutiger Pronomen.",
+					"explain": "Wenn sich ein Pronomen auf mehrere Personen beziehen könnte, sollte das gemeinte Nomen wiederholt werden. Dadurch wird der Satz eindeutig.",
+					"sentence": "Laura sprach mit Miriam und überarbeitete danach ihren eigenen Bericht. Welcher Satz vermeidet einen unklaren Bezug?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nachdem Laura mit Miriam gesprochen hatte, überarbeitete Laura ihren eigenen Bericht."
+						},
+						{
+							"ok": false,
+							"word": "Nachdem sie mit ihr gesprochen hatte, überarbeitete sie ihren Bericht."
+						},
+						{
+							"ok": false,
+							"word": "Nachdem Laura mit Miriam gesprochen hatte, überarbeitete sie ihren Bericht."
+						}
+					]
+				}
+			]
+		}
+	]
+}

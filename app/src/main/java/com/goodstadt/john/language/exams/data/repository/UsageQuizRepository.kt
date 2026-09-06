@@ -2,11 +2,15 @@ package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.models.CategoryMasteryLevel
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.UsageQuestionStat
+import com.goodstadt.john.language.exams.models.UsageQuizAttempt
 import com.goodstadt.john.language.exams.models.UsageQuizStat
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
+import java.time.Instant
+import java.time.ZoneId
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -82,6 +86,73 @@ class UsageQuizRepository @Inject constructor(
 
             saveToDisk()
             _dataUpdateEvents.emit(Unit)
+        }
+    }
+
+    // MARK: - Whole-quiz attempts + flawless-on-3-days award
+
+    /**
+     * Record one dated attempt at a whole quiz set (a single go), update the high-level stats, and report
+     * whether this go just earned the "flawless on 3 separate days" award. A go is **flawless** when the
+     * set was completed with no errors: correct == tries == total (every question right, one tap each).
+     * Mutates the in-memory store synchronously (so the returned award flag is accurate) and persists async.
+     */
+    fun recordAttempt(quizId: String, correct: Int, tries: Int, total: Int): Boolean {
+        val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
+        val flawless = total > 0 && correct == total && tries == total
+        quizStat.attempts.add(
+            UsageQuizAttempt(
+                attemptedAt = System.currentTimeMillis(),
+                total = total,
+                correct = correct,
+                tries = tries,
+                flawless = flawless
+            )
+        )
+        quizStat.timesCompleted += 1
+        quizStat.bestScore = max(quizStat.bestScore, correct)
+
+        val justEarnedAward =
+            flawless && flawlessDistinctDays(quizId) >= 3 && !quizStat.threeDayAwardGiven
+        if (justEarnedAward) quizStat.threeDayAwardGiven = true
+
+        scope.launch {
+            saveToDisk()
+            _dataUpdateEvents.emit(Unit)
+        }
+        return justEarnedAward
+    }
+
+    /** Every dated attempt at one quiz, oldest first. */
+    fun getQuizAttempts(quizId: String): List<UsageQuizAttempt> =
+        quizStates[quizId]?.attempts?.toList() ?: emptyList()
+
+    /** Number of DISTINCT local calendar days on which this quiz was completed flawlessly (no errors). */
+    fun flawlessDistinctDays(quizId: String): Int {
+        val zone = ZoneId.systemDefault()
+        return quizStates[quizId]?.attempts
+            ?.filter { it.flawless }
+            ?.map { Instant.ofEpochMilli(it.attemptedAt).atZone(zone).toLocalDate() }
+            ?.toSet()?.size ?: 0
+    }
+
+    /** True once the user has completed this quiz flawlessly on 3 separate days. */
+    fun isThreeDayFlawlessAwardEarned(quizId: String): Boolean = flawlessDistinctDays(quizId) >= 3
+
+    /**
+     * Roll the [total] questions' mastery up into ONE whole-quiz status (for reporting / a future dot).
+     * "Worst-attention wins, except Mastered needs every question." Unanswered pages count as New.
+     */
+    fun getQuizMastery(quizId: String, total: Int): CategoryMasteryLevel {
+        if (total <= 0) return CategoryMasteryLevel.New
+        val qmap = quizStates[quizId]?.questions
+        val levels = (1..total).map { page -> qmap?.get(page)?.masteryLevel ?: WordMasteryLevel.New }
+        return when {
+            levels.all { it == WordMasteryLevel.Mastered } -> CategoryMasteryLevel.Mastered
+            levels.any { it == WordMasteryLevel.Struggling } -> CategoryMasteryLevel.Struggling
+            levels.any { it == WordMasteryLevel.Learning } -> CategoryMasteryLevel.Learning
+            levels.any { it == WordMasteryLevel.Review } -> CategoryMasteryLevel.Review
+            else -> CategoryMasteryLevel.New
         }
     }
 

@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz1B2-de",
+	"title": "Zeitformen & Aspekte",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"description": "Zeitformen und Aspekte auf dem Niveau B2",
+			"sortorder": 1,
+			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningPoints": [
+				"Du unterscheidest sicher zwischen Präsens, Perfekt, Präteritum, Plusquamperfekt und Futur II.",
+				"Du drückst Dauer, Verlauf und Abschluss einer Handlung präzise aus.",
+				"Du stellst die zeitliche Reihenfolge vergangener Ereignisse eindeutig dar.",
+				"Du beschreibst zukünftige Ergebnisse und Vermutungen über Vergangenes.",
+				"Du erkennst typische Zeitangaben und verwendest die dazu passende Zeitform.",
+				"Die Aufgaben entsprechen dem GER-Niveau B2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Präsens mit „seit“ für eine andauernde Handlung.",
+					"explain": "Eine Handlung, die in der Vergangenheit begonnen hat und bis heute andauert, steht im Deutschen mit „seit“ im Präsens.",
+					"sentence": "Mara begann vor zwei Jahren bei dieser Firma und arbeitet noch immer dort. Welcher Satz passt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Mara arbeitet seit zwei Jahren bei dieser Firma."
+						},
+						{
+							"ok": false,
+							"word": "Mara arbeitete seit zwei Jahren bei dieser Firma."
+						},
+						{
+							"ok": false,
+							"word": "Mara wird seit zwei Jahren bei dieser Firma arbeiten."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Plusquamperfekt für das frühere von zwei vergangenen Ereignissen.",
+					"explain": "Das Plusquamperfekt kennzeichnet eine Handlung, die bereits vor einem anderen Ereignis in der Vergangenheit abgeschlossen war.",
+					"sentence": "Welche Ergänzung zeigt die zeitliche Reihenfolge korrekt? Nachdem Jonas alle Daten ___, schrieb er den Bericht.",
+					"words": [
+						{
+							"ok": true,
+							"word": "ausgewertet hatte"
+						},
+						{
+							"ok": false,
+							"word": "ausgewertet hat"
+						},
+						{
+							"ok": false,
+							"word": "auswerten wird"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Präteritum für Verlauf und Unterbrechung in einer Erzählung.",
+					"explain": "Eine länger dauernde Hintergrundhandlung kann im Präteritum stehen; ein plötzliches Ereignis unterbricht sie.",
+					"sentence": "Welche Formulierung beschreibt eine laufende Handlung, die plötzlich unterbrochen wurde?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich telefonierte gerade, als plötzlich die Verbindung abbrach."
+						},
+						{
+							"ok": false,
+							"word": "Ich hatte gerade telefoniert, als plötzlich die Verbindung abbrechen wird."
+						},
+						{
+							"ok": false,
+							"word": "Ich werde gerade telefonieren, als plötzlich die Verbindung abbrach."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Perfekt für ein abgeschlossenes Ergebnis mit Gegenwartsbezug.",
+					"explain": "Das Perfekt stellt hier das abgeschlossene Ergebnis in den Vordergrund, das für die Gegenwart wichtig ist.",
+					"sentence": "Der Bericht ist jetzt fertig und kann verschickt werden. Welcher Satz drückt das korrekt aus?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nora hat den Bericht bereits abgeschlossen."
+						},
+						{
+							"ok": false,
+							"word": "Nora wird den Bericht gestern abschließen."
+						},
+						{
+							"ok": false,
+							"word": "Nora hat den Bericht bereits abschließen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Futur II für einen Abschluss vor einem zukünftigen Zeitpunkt.",
+					"explain": "Das Futur II bezeichnet eine Handlung, die zu einem bestimmten Zeitpunkt in der Zukunft abgeschlossen sein wird.",
+					"sentence": "Welche Ergänzung ist richtig? Bis Ende der Woche ___ das Team die neue Webseite ___.",
+					"words": [
+						{
+							"ok": true,
+							"word": "wird … fertiggestellt haben"
+						},
+						{
+							"ok": false,
+							"word": "hat … fertigstellen werden"
+						},
+						{
+							"ok": false,
+							"word": "wird … fertiggestellt hatte"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Futur II für eine Vermutung über die Vergangenheit.",
+					"explain": "Das Futur II kann auch eine Vermutung über ein bereits vergangenes Ereignis ausdrücken.",
+					"sentence": "Paul ist noch nicht da. Vielleicht hat er den Zug verpasst. Welche Vermutung passt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er wird den Zug verpasst haben."
+						},
+						{
+							"ok": false,
+							"word": "Er wird den Zug verpassen hatte."
+						},
+						{
+							"ok": false,
+							"word": "Er hat den Zug verpassen werden."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Verlaufsaspekt mit „gerade dabei sein“.",
+					"explain": "Die Wendung „gerade dabei sein, etwas zu tun“ betont, dass eine Handlung im Moment des Sprechens verläuft.",
+					"sentence": "Welche Aussage betont, dass die Handlung im Moment noch läuft?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Technikerin ist gerade dabei, das System zu prüfen."
+						},
+						{
+							"ok": false,
+							"word": "Die Technikerin ist gerade dabei, das System geprüft zu haben."
+						},
+						{
+							"ok": false,
+							"word": "Die Technikerin war morgen dabei, das System zu prüfen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Perfekt für wiederholte abgeschlossene Handlungen in einem noch andauernden Zeitraum.",
+					"explain": "Das Perfekt passt zu mehreren abgeschlossenen Handlungen, wenn der genannte Zeitraum bis in die Gegenwart reicht.",
+					"sentence": "Das Projekt läuft noch. Welche Ergänzung ist richtig? Seit Projektbeginn ___ wir bereits fünf Sicherheitstests ___.",
+					"words": [
+						{
+							"ok": true,
+							"word": "haben … durchgeführt"
+						},
+						{
+							"ok": false,
+							"word": "hatten … durchführen"
+						},
+						{
+							"ok": false,
+							"word": "werden … durchgeführt hatte"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Plusquamperfekt für die Dauer bis zu einem vergangenen Zeitpunkt.",
+					"explain": "Das Plusquamperfekt zeigt, dass eine längere Handlung vor einem späteren Zeitpunkt in der Vergangenheit lag und damals endete.",
+					"sentence": "Welche Form ist richtig? Bevor Elena nach Hamburg zog, ___ sie sechs Jahre in Köln ___.",
+					"words": [
+						{
+							"ok": true,
+							"word": "hatte … gearbeitet"
+						},
+						{
+							"ok": false,
+							"word": "wird … gearbeitet haben"
+						},
+						{
+							"ok": false,
+							"word": "hat … arbeiten hatte"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Präsens für ein fest geplantes zukünftiges Ereignis.",
+					"explain": "Bei festen Terminen oder Fahrplänen kann das Präsens zusammen mit einer zukünftigen Zeitangabe verwendet werden.",
+					"sentence": "Der Termin steht bereits fest. Welcher Satz ist korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Konferenz beginnt morgen um neun Uhr."
+						},
+						{
+							"ok": false,
+							"word": "Die Konferenz begann morgen um neun Uhr."
+						},
+						{
+							"ok": false,
+							"word": "Die Konferenz hat morgen um neun Uhr beginnen."
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz5B2-de",
+	"title": "Argumentation",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"description": "Argumentieren und Begründen auf dem Niveau B2",
+			"sortorder": 1,
+			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningPoints": [
+				"Du formulierst eine klare und diskutierbare These.",
+				"Du unterscheidest zwischen Behauptung, Begründung und Beleg.",
+				"Du verknüpfst Argumente logisch mit passenden Konnektoren.",
+				"Du berücksichtigst Gegenargumente und gewichtest unterschiedliche Positionen.",
+				"Du vermeidest unbelegte Verallgemeinerungen und formulierst nachvollziehbare Schlussfolgerungen.",
+				"Die Aufgaben entsprechen dem GER-Niveau B2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Klare und diskutierbare These.",
+					"explain": "Eine gute These nimmt eindeutig zu einer Frage Stellung und lässt sich im weiteren Text begründen und diskutieren.",
+					"sentence": "Welche These eignet sich am besten für eine Erörterung über den öffentlichen Nahverkehr?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Städte sollten den öffentlichen Nahverkehr stärker fördern, da er Verkehr und Emissionen verringern kann."
+						},
+						{
+							"ok": false,
+							"word": "In vielen Städten gibt es Busse, Bahnen und Haltestellen."
+						},
+						{
+							"ok": false,
+							"word": "Nahverkehr ist ein Thema, zu dem man verschiedene Dinge sagen kann."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Unterscheidung zwischen Behauptung und Begründung.",
+					"explain": "Eine Begründung erklärt, warum eine Behauptung gelten soll. Sie beantwortet die Frage „Warum?“.",
+					"sentence": "Behauptung: Flexible Arbeitszeiten können die Zufriedenheit erhöhen. Welche Aussage ist eine passende Begründung?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Beschäftigte können ihre Arbeitszeit dadurch besser an familiäre und persönliche Verpflichtungen anpassen."
+						},
+						{
+							"ok": false,
+							"word": "Flexible Arbeitszeiten sind flexible Zeiten bei der Arbeit."
+						},
+						{
+							"ok": false,
+							"word": "Das Thema Arbeitszeit wird seit vielen Jahren diskutiert."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Beleg für ein Argument.",
+					"explain": "Ein geeigneter Beleg stützt ein Argument mit relevanten, nachvollziehbaren Daten oder einer zuverlässigen Quelle.",
+					"sentence": "Argument: Regelmäßiges Lesen erweitert den Wortschatz. Welcher Beleg stützt das Argument am besten?",
+					"words": [
+						{
+							"ok": true,
+							"word": "In einer Untersuchung erzielten Jugendliche, die täglich lasen, nach sechs Monaten deutlich höhere Werte im Wortschatztest."
+						},
+						{
+							"ok": false,
+							"word": "Viele Menschen finden Lesen angenehm und besitzen mehrere Bücher."
+						},
+						{
+							"ok": false,
+							"word": "Ein Freund von mir liest selten und kennt trotzdem ein schwieriges Wort."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Gegenargument mit „zwar … jedoch“.",
+					"explain": "Mit „zwar … jedoch“ erkennt man einen Einwand an und stellt ihm anschließend das stärkere Argument gegenüber.",
+					"sentence": "Welche Satzverbindung ist korrekt? Onlinekurse sind flexibel. Der persönliche Austausch ist dort oft begrenzt.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Onlinekurse sind zwar flexibel, jedoch ist der persönliche Austausch dort oft begrenzt."
+						},
+						{
+							"ok": false,
+							"word": "Onlinekurse sind zwar flexibel, deshalb ist der persönliche Austausch dort oft begrenzt."
+						},
+						{
+							"ok": false,
+							"word": "Onlinekurse jedoch zwar flexibel sind, der persönliche Austausch ist begrenzt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Kausale Verknüpfung mit „da“.",
+					"explain": "Ein Nebensatz mit „da“ nennt einen Grund. Das finite Verb steht am Ende des Nebensatzes.",
+					"sentence": "Welche Formulierung begründet die Entscheidung grammatisch korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Da die bisherigen Maßnahmen kaum Wirkung gezeigt haben, ist eine neue Strategie erforderlich."
+						},
+						{
+							"ok": false,
+							"word": "Da haben die bisherigen Maßnahmen kaum Wirkung gezeigt, eine neue Strategie ist erforderlich."
+						},
+						{
+							"ok": false,
+							"word": "Da die bisherigen Maßnahmen haben kaum Wirkung gezeigt, ist eine neue Strategie erforderlich."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Folgerung mit einem passenden Konnektor.",
+					"explain": "„Folglich“ leitet eine logische Konsequenz aus der vorherigen Aussage ein.",
+					"sentence": "Welche Ergänzung passt? Die Nachfrage ist deutlich gestiegen. ___ muss die Produktion ausgeweitet werden.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Folglich"
+						},
+						{
+							"ok": false,
+							"word": "Dennoch"
+						},
+						{
+							"ok": false,
+							"word": "Beispielsweise"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Funktion eines Beispiels.",
+					"explain": "Ein Beispiel veranschaulicht ein allgemeines Argument. Es ersetzt jedoch weder eine Begründung noch einen repräsentativen Beleg.",
+					"sentence": "Argument: Digitale Behördendienste können Wege und Wartezeiten reduzieren. Welche Aussage ist ein passendes Beispiel?",
+					"words": [
+						{
+							"ok": true,
+							"word": "So kann etwa ein Wohnsitzwechsel in vielen Gemeinden vollständig online gemeldet werden."
+						},
+						{
+							"ok": false,
+							"word": "Digitale Behördendienste sind grundsätzlich immer besser als persönliche Beratung."
+						},
+						{
+							"ok": false,
+							"word": "Behörden sind Einrichtungen, die verschiedene Verwaltungsaufgaben erfüllen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Vermeidung unbelegter Verallgemeinerungen.",
+					"explain": "Aus einer begrenzten Untersuchung darf nicht ohne Weiteres auf alle Menschen geschlossen werden. Eine vorsichtige Formulierung zeigt die Reichweite der Daten.",
+					"sentence": "Eine Befragung von 200 Studierenden zeigt eine hohe Zustimmung. Welche Schlussfolgerung ist angemessen?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Befragung deutet darauf hin, dass die untersuchten Studierenden die Maßnahme mehrheitlich befürworten."
+						},
+						{
+							"ok": false,
+							"word": "Die Befragung beweist, dass ausnahmslos alle Studierenden die Maßnahme befürworten."
+						},
+						{
+							"ok": false,
+							"word": "Die Befragung zeigt mit Sicherheit die Meinung der gesamten Bevölkerung."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Abwägung mit „einerseits … andererseits“.",
+					"explain": "Mit „einerseits … andererseits“ werden zwei unterschiedliche Seiten eines Themas ausgewogen gegenübergestellt.",
+					"sentence": "Welche Formulierung wägt Vor- und Nachteile des Homeoffice ab?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Einerseits spart Homeoffice Pendelzeit, andererseits kann der direkte Austausch im Team schwieriger werden."
+						},
+						{
+							"ok": false,
+							"word": "Einerseits spart Homeoffice Pendelzeit, deshalb spart es auf jeden Fall noch mehr Zeit."
+						},
+						{
+							"ok": false,
+							"word": "Andererseits Homeoffice Pendelzeit spart, einerseits der Austausch schwieriger."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Begründete Schlussfolgerung.",
+					"explain": "Eine Schlussfolgerung fasst die vorherige Argumentation zusammen und leitet daraus eine nachvollziehbare Gesamtbewertung ab.",
+					"sentence": "Welche Formulierung eignet sich für den Schluss einer ausgewogenen Argumentation?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Zusammenfassend überwiegen die Vorteile, sofern zugleich geeignete Maßnahmen gegen die genannten Risiken ergriffen werden."
+						},
+						{
+							"ok": false,
+							"word": "Am Ende ist meine Meinung richtig, weil die anderen Argumente einfach schlechter sind."
+						},
+						{
+							"ok": false,
+							"word": "Zusammenfassend beginnt nun ein neues Thema, das mit der bisherigen Frage nichts zu tun hat."
+						}
+					]
+				}
+			]
+		}
+	]
+}

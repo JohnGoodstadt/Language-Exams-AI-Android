@@ -146,19 +146,40 @@ fun UsageQuizScreen(
     val activeFilters by viewModel.activeFilters.collectAsState()
 
     LaunchedEffect(currentQuestionIndex, questions) {
-        if (questions.isNotEmpty()) {
-            val question = questions[currentQuestionIndex]
-
+        val question = questions.getOrNull(currentQuestionIndex)
+        if (question != null) {
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                     question.sentence.replace("_", "___")
                 } else {
                     ""//question.sentence
                 }
-            displayedSentence = AnnotatedString(questionText)
-            // Reset the selection state for the new question
-            selectedOption = null
-            isCurrentAnswerCorrect = null
+
+            // Restore any previous answer for this question so navigating back (manual or auto-advance)
+            // re-shows the radio selection for review. Answers persist until the quiz is exited/restarted.
+            val prevOption = viewModel.selectedOptionFor(question.page)
+            val prevCorrect = viewModel.answerCorrectFor(question.page)
+            selectedOption = prevOption
+            isCurrentAnswerCorrect = prevCorrect
+            displayedSentence = if (prevCorrect == true && prevOption != null) {
+                // Rebuild the filled-in sentence exactly as answering does, per file format.
+                when (viewModel.currentFileFormat.value) {
+                    viewModel.quizFillInTheBlanks -> viewModel.highlightWordInSentence(
+                        sentence = question.sentence.replace(Regex("_+"), prevOption),
+                        wordToHighlight = prevOption,
+                        highlightColor = Color.Green
+                    )
+                    viewModel.quizDefinitions -> AnnotatedString(question.title)
+                    viewModel.quizMultipleChoice -> AnnotatedString(prevOption)
+                    else -> viewModel.highlightWordInSentence(
+                        sentence = prevOption,
+                        wordToHighlight = prevOption,
+                        highlightColor = Color.Green
+                    )
+                }
+            } else {
+                AnnotatedString(questionText)
+            }
         }
     }
 
@@ -470,6 +491,8 @@ fun UsageQuizScreen(
                         } else {
                             selectedOption = option
                             isCurrentAnswerCorrect = isOptionCorrect
+                            // Remember this selection so navigating back re-shows it (until the quiz restarts).
+                            viewModel.rememberSelection(question.page, option, isOptionCorrect)
                             viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
 
                             if (isOptionCorrect) {

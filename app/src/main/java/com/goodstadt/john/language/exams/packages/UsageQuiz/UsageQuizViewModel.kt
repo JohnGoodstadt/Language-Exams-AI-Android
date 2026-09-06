@@ -367,6 +367,23 @@ class UsageQuizViewModel @Inject constructor(
     private val questionTapCounts = mutableMapOf<Int, Int>()
     private val questionResolved = mutableSetOf<Int>()
 
+    // Remembers the user's selection per question (keyed by the question's page id) so navigating back
+    // re-shows the radio selection for review, until the quiz restarts. Cleared in resetQuiz.
+    private val _selectedOptionByPage = mutableMapOf<Int, String>()
+    private val _answerCorrectByPage = mutableMapOf<Int, Boolean>()
+
+    /** Record the user's selection for a question (by page id) so it can be restored on back-navigation. */
+    fun rememberSelection(page: Int, option: String, isCorrect: Boolean) {
+        _selectedOptionByPage[page] = option
+        _answerCorrectByPage[page] = isCorrect
+    }
+
+    /** The option last selected for the question at [page] this session, or null if unanswered. */
+    fun selectedOptionFor(page: Int): String? = _selectedOptionByPage[page]
+
+    /** Whether the question at [page] was last answered correctly this session, or null if unanswered. */
+    fun answerCorrectFor(page: Int): Boolean? = _answerCorrectByPage[page]
+
 //    private val _quizFluency = mutableStateOf(UsageQuizRepository.QuizFluency.NEVER_DONE)
 //    val quizFluency: State<UsageQuizRepository.QuizFluency> = _quizFluency
 
@@ -623,6 +640,8 @@ class UsageQuizViewModel @Inject constructor(
         categoryRecordedIndices.clear()
         questionTapCounts.clear()
         questionResolved.clear()
+        _selectedOptionByPage.clear()
+        _answerCorrectByPage.clear()
         _activeFilters.value = emptySet()
 
     }
@@ -755,11 +774,41 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             }
 
             val currentQuizFileName = quizStatistics.value.filename
-            usageQuizRepository.finishQuiz(
+            // Record this go as a dated attempt (subsumes finishQuiz's completion/best-score bookkeeping)
+            // and check the "flawless on 3 separate days" award.
+            val justEarnedAward = usageQuizRepository.recordAttempt(
                 quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
-                finalScore = qs.value.correct
-
+                correct = qs.value.correct,
+                tries = qs.value.tries,
+                total = questionCount
             )
+            if (justEarnedAward) {
+                xpManager.registerAction(XpActionType.MemoryBoost)
+                bannerManager.showBanner(
+                    title = "Three-Day Master!",
+                    subtitle = "You've completed this quiz perfectly on 3 separate days.",
+                    seconds = 8
+                )
+            }
+
+            // DEBUG: report the whole-quiz status + attempt history so it can be validated in logcat.
+            if (DEBUG) {
+                val mastery = usageQuizRepository.getQuizMastery(currentQuizFileName, questionCount)
+                val attempts = usageQuizRepository.getQuizAttempts(currentQuizFileName)
+                val flawlessDays = usageQuizRepository.flawlessDistinctDays(currentQuizFileName)
+                Timber.tag("UsageQuiz").d(
+                    "Quiz '%s' -> %s | this go: correct=%d tries=%d of %d | attempts=%d flawlessDays=%d",
+                    currentQuizFileName, mastery, qs.value.correct, qs.value.tries, questionCount,
+                    attempts.size, flawlessDays
+                )
+                attempts.forEachIndexed { i, a ->
+                    Timber.tag("UsageQuiz").d(
+                        "  #%d %tF %tT | correct=%d tries=%d %s",
+                        i + 1, a.attemptedAt, a.attemptedAt, a.correct, a.tries,
+                        if (a.flawless) "FLAWLESS" else "with errors"
+                    )
+                }
+            }
         }
     }
 

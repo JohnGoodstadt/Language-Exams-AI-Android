@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz3B2-de",
+	"title": "Formale Satzstrukturen",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"description": "Formale Satzstrukturen auf dem Niveau B2",
+			"sortorder": 1,
+			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningPoints": [
+				"Du verwendest Passivformen in formellen und sachlichen Texten.",
+				"Du verdichtest Informationen mithilfe von Nominalisierungen und Partizipialattributen.",
+				"Du bildest komplexe Relativ-, Infinitiv- und Nebensätze korrekt.",
+				"Du gibst fremde Aussagen mit dem Konjunktiv I wieder.",
+				"Du verknüpfst Argumente mit formellen Konnektoren und korrekter Wortstellung.",
+				"Die Aufgaben entsprechen dem GER-Niveau B2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Vorgangspassiv im Präteritum.",
+					"explain": "Das Vorgangspassiv wird mit einer Form von „werden“ und dem Partizip II gebildet. Es betont den Vorgang und nicht die handelnde Person.",
+					"sentence": "Der Ausschuss prüfte den Antrag gestern. Welche Passivform ist korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Antrag wurde gestern vom Ausschuss geprüft."
+						},
+						{
+							"ok": false,
+							"word": "Der Antrag ist gestern vom Ausschuss prüfen worden."
+						},
+						{
+							"ok": false,
+							"word": "Der Antrag wurde gestern vom Ausschuss geprüfen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Passiv mit einem Modalverb.",
+					"explain": "Bei einem Modalverb steht der Infinitiv Passiv am Satzende: Partizip II plus „werden“.",
+					"sentence": "Welche Formulierung eignet sich für eine formelle Anweisung?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Unterlagen müssen bis Freitag eingereicht werden."
+						},
+						{
+							"ok": false,
+							"word": "Die Unterlagen müssen bis Freitag werden eingereicht."
+						},
+						{
+							"ok": false,
+							"word": "Die Unterlagen werden bis Freitag einreichen müssen worden."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Unpersönliche Passivkonstruktion.",
+					"explain": "Unpersönliche Wendungen wie „es wird davon ausgegangen, dass“ lassen Aussagen sachlich und distanziert wirken.",
+					"sentence": "Welche Variante formuliert die Annahme sachlich und formal?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Es wird davon ausgegangen, dass die Nachfrage weiter steigt."
+						},
+						{
+							"ok": false,
+							"word": "Es wird davon ausgehen, dass die Nachfrage weiter steigt."
+						},
+						{
+							"ok": false,
+							"word": "Es davon wird ausgegangen, die Nachfrage dass weiter steigt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Nominalisierung eines Nebensatzes.",
+					"explain": "In formellen Texten kann ein Nebensatz durch eine Präposition und ein Nomen ersetzt werden. Nach „aufgrund“ steht in der Standardsprache der Genitiv.",
+					"sentence": "Formuliere sachlicher: Weil sich die Lieferung verspätete, musste die Produktion warten.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Aufgrund der verspäteten Lieferung musste die Produktion warten."
+						},
+						{
+							"ok": false,
+							"word": "Aufgrund die verspätete Lieferung musste die Produktion warten."
+						},
+						{
+							"ok": false,
+							"word": "Aufgrund dass die Lieferung verspätet, musste die Produktion warten."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Partizipialattribut zur Verdichtung von Informationen.",
+					"explain": "Ein Partizipialattribut kann einen Relativsatz verkürzen. Wie ein Adjektiv erhält das Partizip dabei eine passende Endung.",
+					"sentence": "Ersetze den Relativsatz: Die Ergebnisse, die gestern veröffentlicht wurden, bestätigen die Annahme.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die gestern veröffentlichten Ergebnisse bestätigen die Annahme."
+						},
+						{
+							"ok": false,
+							"word": "Die gestern veröffentlichte Ergebnisse bestätigen die Annahme."
+						},
+						{
+							"ok": false,
+							"word": "Die gestern veröffentlichen Ergebnisse bestätigen die Annahme."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Genitivisches Relativpronomen.",
+					"explain": "„Dessen“ und „deren“ zeigen in einem Relativsatz Besitz oder Zugehörigkeit an. „Dessen“ bezieht sich hier auf ein sächliches Nomen.",
+					"sentence": "Welche Ergänzung ist korrekt? Das Unternehmen, ___ Umsatz deutlich gestiegen ist, stellt neue Mitarbeitende ein.",
+					"words": [
+						{
+							"ok": true,
+							"word": "dessen"
+						},
+						{
+							"ok": false,
+							"word": "deren"
+						},
+						{
+							"ok": false,
+							"word": "dem sein"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Indirekte Rede mit dem Konjunktiv I.",
+					"explain": "In formellen Berichten kennzeichnet der Konjunktiv I eine Aussage, die von einer anderen Person stammt.",
+					"sentence": "Die Sprecherin sagte: „Die Verhandlungen sind abgeschlossen.“ Welche indirekte Rede ist korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Sprecherin erklärte, die Verhandlungen seien abgeschlossen."
+						},
+						{
+							"ok": false,
+							"word": "Die Sprecherin erklärte, die Verhandlungen sind abgeschlossen seien."
+						},
+						{
+							"ok": false,
+							"word": "Die Sprecherin erklärte, seien die Verhandlungen abgeschlossen sind."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Finalsatz mit „um … zu“.",
+					"explain": "Wenn Hauptsatz und Zwecksatz dasselbe Subjekt haben, kann der Zweck mit „um … zu“ und einem Infinitiv ausgedrückt werden.",
+					"sentence": "Verbinde die Aussagen: Die Behörde vereinfacht das Verfahren. Sie möchte die Bearbeitungszeit verkürzen.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Behörde vereinfacht das Verfahren, um die Bearbeitungszeit zu verkürzen."
+						},
+						{
+							"ok": false,
+							"word": "Die Behörde vereinfacht das Verfahren, um die Bearbeitungszeit verkürzt."
+						},
+						{
+							"ok": false,
+							"word": "Die Behörde vereinfacht das Verfahren, damit die Bearbeitungszeit zu verkürzen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Zweiteiliger Konnektor „je … desto“.",
+					"explain": "Mit „je … desto“ beschreibt man zwei Entwicklungen, die voneinander abhängen. Im je-Satz steht das finite Verb am Ende.",
+					"sentence": "Welche Satzstruktur ist korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Je genauer die Daten ausgewertet werden, desto zuverlässiger ist das Ergebnis."
+						},
+						{
+							"ok": false,
+							"word": "Je genauer werden die Daten ausgewertet, desto das Ergebnis zuverlässiger ist."
+						},
+						{
+							"ok": false,
+							"word": "Je die Daten genauer ausgewertet, desto ist zuverlässig das Ergebnis werden."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Konzessive Verknüpfung mit „obwohl“.",
+					"explain": "Ein Nebensatz mit „obwohl“ nennt einen Gegengrund. Das finite Verb steht am Ende des Nebensatzes.",
+					"sentence": "Verbinde die Aussagen: Die Kosten sind gestiegen. Das Projekt wird fortgesetzt.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Obwohl die Kosten gestiegen sind, wird das Projekt fortgesetzt."
+						},
+						{
+							"ok": false,
+							"word": "Obwohl sind die Kosten gestiegen, das Projekt wird fortgesetzt."
+						},
+						{
+							"ok": false,
+							"word": "Obwohl die Kosten sind gestiegen, wird fortgesetzt das Projekt."
+						}
+					]
+				}
+			]
+		}
+	]
+}

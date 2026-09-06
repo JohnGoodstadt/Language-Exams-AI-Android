@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz2B2-de",
+	"title": "Hypothetisches Denken",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"description": "Hypothetische Aussagen und Bedingungen auf dem Niveau B2",
+			"sortorder": 1,
+			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningPoints": [
+				"Du formulierst irreale Bedingungen in der Gegenwart und Vergangenheit.",
+				"Du verwendest den Konjunktiv II, um Folgen hypothetischer Situationen auszudrücken.",
+				"Du sprichst angemessen über Wünsche, Bedauern und verpasste Möglichkeiten.",
+				"Du formulierst höfliche Ratschläge und vorsichtige Annahmen.",
+				"Du bildest irreale Vergleiche mit „als ob“.",
+				"Die Aufgaben entsprechen dem GER-Niveau B2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Irreale Bedingung in der Gegenwart.",
+					"explain": "Bei einer unwahrscheinlichen oder nur vorgestellten Situation in der Gegenwart steht im wenn-Satz der Konjunktiv II. Die Folge wird häufig mit „würde“ und Infinitiv gebildet.",
+					"sentence": "Ich habe kaum Freizeit. Welcher Satz beschreibt eine nur vorgestellte Situation?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn ich mehr Zeit hätte, würde ich häufiger kochen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich mehr Zeit gehabt, würde ich häufiger kochen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich mehr Zeit hätte, ich häufiger kochen werde."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Irreale Bedingung in der Vergangenheit.",
+					"explain": "Vergangene Situationen, die nicht mehr geändert werden können, stehen im Konjunktiv II der Vergangenheit: „wäre“ oder „hätte“ plus Partizip II.",
+					"sentence": "Sofia fuhr zu spät los und verpasste den Zug. Welcher Satz ist korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn Sofia früher losgefahren wäre, hätte sie den Zug erreicht."
+						},
+						{
+							"ok": false,
+							"word": "Wenn Sofia früher losgefahren hätte, wäre sie den Zug erreicht."
+						},
+						{
+							"ok": false,
+							"word": "Wenn Sofia früher losfahren würde, hatte sie den Zug erreicht."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Ratschlag mit „an deiner Stelle“.",
+					"explain": "Mit „an deiner Stelle“ und dem Konjunktiv II formuliert man einen höflichen oder vorsichtigen Ratschlag.",
+					"sentence": "Ein Freund ist vor einem Vorstellungsgespräch sehr nervös. Welcher Ratschlag passt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "An deiner Stelle würde ich das Gespräch vorher üben."
+						},
+						{
+							"ok": false,
+							"word": "An deiner Stelle werde ich das Gespräch vorher geübt."
+						},
+						{
+							"ok": false,
+							"word": "An deiner Stelle hätte ich das Gespräch vorher üben."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Hypothetische Folge mit einem Modalverb.",
+					"explain": "Die Konjunktiv-II-Form eines Modalverbs drückt aus, was unter einer vorgestellten Bedingung möglich oder unmöglich wäre.",
+					"sentence": "Die Hilfe ist vorhanden. Denke sie dir weg: Ohne deine Unterstützung ___ ich diese Aufgabe nicht lösen.",
+					"words": [
+						{
+							"ok": true,
+							"word": "könnte"
+						},
+						{
+							"ok": false,
+							"word": "konnte geworden"
+						},
+						{
+							"ok": false,
+							"word": "würde gekonnt"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Unerfüllbarer Wunsch in der Gegenwart.",
+					"explain": "Ein Wunsch, der im Moment nicht der Wirklichkeit entspricht, wird mit dem Konjunktiv II der Gegenwart ausgedrückt.",
+					"sentence": "Lina spricht noch nicht fließend Spanisch. Welcher Satz drückt ihren gegenwärtigen Wunsch aus?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Lina wünschte, sie könnte fließend Spanisch sprechen."
+						},
+						{
+							"ok": false,
+							"word": "Lina wünschte, sie kann fließend Spanisch gesprochen."
+						},
+						{
+							"ok": false,
+							"word": "Lina wünschte, sie fließend Spanisch können wird."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Bedauern über eine vergangene Entscheidung.",
+					"explain": "Bedauern über Vergangenes steht im Konjunktiv II der Vergangenheit, weil die Situation nicht mehr verändert werden kann.",
+					"sentence": "Ben hatte ein gutes Stellenangebot, lehnte es aber ab. Was kann er heute sagen?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich wünschte, ich hätte das Angebot angenommen."
+						},
+						{
+							"ok": false,
+							"word": "Ich wünschte, ich würde das Angebot gestern annehmen."
+						},
+						{
+							"ok": false,
+							"word": "Ich wünschte, ich habe das Angebot angenommen hätte."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Irrealer Vergleich mit „als ob“.",
+					"explain": "Nach „als ob“ verwendet man den Konjunktiv II, wenn der Vergleich nicht der Wirklichkeit entspricht oder stark bezweifelt wird.",
+					"sentence": "Leon kennt nur wenige Einzelheiten, spricht aber sehr selbstsicher. Welcher Satz passt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Leon tut so, als ob er alles wüsste."
+						},
+						{
+							"ok": false,
+							"word": "Leon tut so, als ob er alles wissen würde hatte."
+						},
+						{
+							"ok": false,
+							"word": "Leon tut so, als ob wüsste er alles hat."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Irreale Bedingung ohne „wenn“.",
+					"explain": "Ein irrealer Bedingungssatz kann ohne „wenn“ beginnen. Dann steht die finite Verbform an erster Stelle.",
+					"sentence": "Der Techniker erkannte das Problem zu spät. Welche Alternative ist grammatisch korrekt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Hätte der Techniker das Problem früher erkannt, wäre der Ausfall verhindert worden."
+						},
+						{
+							"ok": false,
+							"word": "Hatte der Techniker das Problem früher erkennen, würde der Ausfall verhindert gewesen."
+						},
+						{
+							"ok": false,
+							"word": "Der Techniker hätte das Problem früher erkannt, wäre wenn der Ausfall verhindert."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Beinahe eingetretenes Ereignis.",
+					"explain": "Mit „beinahe“ und dem Konjunktiv II der Vergangenheit beschreibt man ein Ereignis, das fast, aber nicht tatsächlich eingetreten ist.",
+					"sentence": "Ich erinnerte mich im letzten Moment an den Termin. Welcher Satz gibt die Situation richtig wieder?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Beinahe hätte ich den Termin vergessen."
+						},
+						{
+							"ok": false,
+							"word": "Beinahe würde ich den Termin gestern vergessen."
+						},
+						{
+							"ok": false,
+							"word": "Beinahe hatte ich den Termin vergessen würde."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Vorsichtige Bedingung mit „sollte“.",
+					"explain": "Mit „sollte“ am Satzanfang formuliert man eine mögliche, aber nicht sichere Bedingung. Der Bedingungssatz kommt dabei ohne „wenn“ aus.",
+					"sentence": "Eine Verspätung ist möglich, aber nicht sicher. Welche Formulierung passt?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sollte der Zug Verspätung haben, ruf mich bitte an."
+						},
+						{
+							"ok": false,
+							"word": "Sollte der Zug Verspätung hat, ruf mich bitte an."
+						},
+						{
+							"ok": false,
+							"word": "Der Zug sollte Verspätung haben wenn, rief mich bitte an."
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -21,6 +21,18 @@ data class UsageQuestionStat(
     val mastery: UsageMastery get() = masteryLevel
 }
 
+// One dated ATTEMPT at a whole Usage quiz set (a single go through its 10 questions), so repeated goes are
+// kept separately (by [attemptedAt]) and we can report completions over time. "flawless" means the whole
+// set was completed with NO errors (every question right, one tap each: correct == tries == total).
+@Keep
+data class UsageQuizAttempt(
+    @SerializedName("at") val attemptedAt: Long = 0,   // epoch millis of this go
+    @SerializedName("total") val total: Int = 0,       // questions in the set (always 10)
+    @SerializedName("correct") val correct: Int = 0,   // correct answers this go
+    @SerializedName("tries") val tries: Int = 0,       // total answer taps this go
+    @SerializedName("flawless") val flawless: Boolean = false // completed with no errors
+)
+
 @Keep
 data class UsageQuizStat(
     val quizId: String, // e.g. "UsageQuiz1A1"
@@ -29,7 +41,14 @@ data class UsageQuizStat(
 
     // Aggregate High-Level Stats
     var timesCompleted: Int = 0,
-    var bestScore: Int = 0
+    var bestScore: Int = 0,
+
+    // Dated history of each go (oldest first), so completions - and flawless completions on separate days -
+    // can be reported. Backward compatible: absent in old saved files -> empty list.
+    @SerializedName("attempts") val attempts: MutableList<UsageQuizAttempt> = mutableListOf(),
+
+    // Set once the "flawless on 3 separate days" award has been given, so it isn't awarded again.
+    @SerializedName("award3day") var threeDayAwardGiven: Boolean = false
 )
 
 data class UsageLevelSummary(

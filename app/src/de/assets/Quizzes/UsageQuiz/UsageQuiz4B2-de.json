@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz4B2-de",
+	"title": "Akademisches Schreiben",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wähle bei jeder Frage die richtige Antwort.",
+			"description": "Akademisches Schreiben auf dem Niveau B2",
+			"sortorder": 1,
+			"learningTitle": "Warum dieses Quiz wichtig ist",
+			"learningPoints": [
+				"Du formulierst sachlich, präzise und in einem angemessenen formellen Register.",
+				"Du strukturierst Argumente und stellst logische Beziehungen zwischen Aussagen her.",
+				"Du integrierst Quellen und fremde Positionen sprachlich korrekt.",
+				"Du beschreibst Ergebnisse und Entwicklungen differenziert.",
+				"Du formulierst vorsichtige Schlussfolgerungen, ohne unbelegte Gewissheiten auszudrücken.",
+				"Die Aufgaben entsprechen dem GER-Niveau B2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Sachlicher und formeller Stil.",
+					"explain": "Akademische Texte verwenden eine sachliche, präzise Sprache und vermeiden umgangssprachliche oder wertende Formulierungen.",
+					"sentence": "Welche Formulierung eignet sich am besten für einen akademischen Text?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Ergebnisse weisen auf einen Zusammenhang zwischen Schlafdauer und Konzentrationsfähigkeit hin."
+						},
+						{
+							"ok": false,
+							"word": "Die Ergebnisse zeigen total klar, dass Schlaf einfach superwichtig ist."
+						},
+						{
+							"ok": false,
+							"word": "Man sieht halt, dass Leute mit mehr Schlaf viel besser drauf sind."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Klare Formulierung der Fragestellung.",
+					"explain": "Eine wissenschaftliche Fragestellung benennt präzise, was untersucht wird, und grenzt das Thema sinnvoll ein.",
+					"sentence": "Welche Forschungsfrage ist am klarsten und präzisesten formuliert?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Welchen Einfluss hat die tägliche Nutzung sozialer Medien auf die Schlafdauer von Jugendlichen zwischen 14 und 17 Jahren?"
+						},
+						{
+							"ok": false,
+							"word": "Was ist eigentlich mit sozialen Medien und Jugendlichen?"
+						},
+						{
+							"ok": false,
+							"word": "Warum ist das Internet gut oder schlecht und was passiert sonst noch?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Logische Verknüpfung von Gegensatz und Einschränkung.",
+					"explain": "Mit „allerdings“ kann eine vorherige Aussage eingeschränkt oder ihr ein Gegenargument gegenübergestellt werden.",
+					"sentence": "Welche Ergänzung passt? Die Methode liefert schnell Ergebnisse. ___ ist ihre Genauigkeit begrenzt.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Allerdings"
+						},
+						{
+							"ok": false,
+							"word": "Deshalb"
+						},
+						{
+							"ok": false,
+							"word": "Beispielsweise"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Vorsichtige wissenschaftliche Aussage.",
+					"explain": "Wenn Daten keine eindeutige Ursache beweisen, sollte eine Schlussfolgerung vorsichtig formuliert werden, etwa mit „deutet darauf hin“.",
+					"sentence": "Die Untersuchung zeigt einen möglichen, aber nicht endgültig bewiesenen Zusammenhang. Welche Aussage ist angemessen?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Untersuchung deutet darauf hin, dass regelmäßige Bewegung das Wohlbefinden verbessern kann."
+						},
+						{
+							"ok": false,
+							"word": "Die Untersuchung beweist ohne jeden Zweifel, dass Bewegung alle Menschen glücklich macht."
+						},
+						{
+							"ok": false,
+							"word": "Wegen dieser Untersuchung steht für immer fest, dass Bewegung jedes Problem löst."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Neutrale Wiedergabe einer Quelle.",
+					"explain": "Bei der Wiedergabe fremder Positionen muss deutlich werden, wer die Aussage gemacht hat. Formulierungen wie „laut der Studie“ schaffen diese Distanz.",
+					"sentence": "Welche Formulierung gibt eine fremde Aussage sachlich wieder?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Laut der Studie von Keller (2024) sank der Energieverbrauch im untersuchten Zeitraum um acht Prozent."
+						},
+						{
+							"ok": false,
+							"word": "Keller findet den Energieverbrauch irgendwie niedriger, und das stimmt bestimmt."
+						},
+						{
+							"ok": false,
+							"word": "Der Energieverbrauch sank, weil Keller das 2024 einfach so gesagt hat."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Paraphrase statt wörtlicher Übernahme.",
+					"explain": "Eine Paraphrase gibt den Inhalt einer Quelle in eigenen Worten wieder, ohne die Bedeutung zu verändern. Die Quelle muss trotzdem genannt werden.",
+					"sentence": "Originalaussage: „Digitale Werkzeuge verändern die Zusammenarbeit in internationalen Teams.“ Welche Variante ist eine passende Paraphrase?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nach Weber (2023) beeinflussen digitale Technologien die Art, wie internationale Teams zusammenarbeiten."
+						},
+						{
+							"ok": false,
+							"word": "Digitale Werkzeuge verändern die Zusammenarbeit in internationalen Teams."
+						},
+						{
+							"ok": false,
+							"word": "Weber sagt, internationale Teams brauchen keine Zusammenarbeit mehr."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Präzise Beschreibung einer Entwicklung.",
+					"explain": "Bei der Beschreibung von Daten sollten Richtung, Umfang und Zeitraum einer Veränderung möglichst genau genannt werden.",
+					"sentence": "Eine Quote stieg zwischen 2020 und 2024 von 40 auf 55 Prozent. Welche Beschreibung ist am präzisesten?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Zwischen 2020 und 2024 stieg die Quote um 15 Prozentpunkte auf 55 Prozent."
+						},
+						{
+							"ok": false,
+							"word": "Die Quote wurde in einigen Jahren irgendwie ziemlich viel größer."
+						},
+						{
+							"ok": false,
+							"word": "Die Quote stieg zwischen 2020 und 2024 um 55 Prozentpunkte."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Begründung mit Beleg.",
+					"explain": "Eine akademische Begründung verbindet eine Behauptung mit nachvollziehbaren Daten oder einem geeigneten Beleg.",
+					"sentence": "Welche Aussage verbindet eine Schlussfolgerung nachvollziehbar mit einem Beleg?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Maßnahme war wirksam, da die Fehlerquote nach ihrer Einführung von zwölf auf fünf Prozent sank."
+						},
+						{
+							"ok": false,
+							"word": "Die Maßnahme war wirksam, denn sie war offensichtlich eine sehr gute Idee."
+						},
+						{
+							"ok": false,
+							"word": "Die Maßnahme war wirksam, obwohl keine Daten dazu betrachtet wurden."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Angemessene Absatzstruktur.",
+					"explain": "Ein klarer akademischer Absatz beginnt mit einer Kernaussage, entwickelt sie durch Erklärung oder Belege und endet gegebenenfalls mit einer Folgerung.",
+					"sentence": "Welche Reihenfolge ergibt einen logisch aufgebauten Absatz?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Kernaussage – Erklärung – Beleg – Schlussfolgerung"
+						},
+						{
+							"ok": false,
+							"word": "Beleg – neues Thema – unbegründete Meinung – Kernaussage"
+						},
+						{
+							"ok": false,
+							"word": "Schlussfolgerung – Abschweifung – Kernaussage – Themenwechsel"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Differenzierte Schlussfolgerung.",
+					"explain": "Eine gute Schlussfolgerung fasst das wichtigste Ergebnis zusammen, berücksichtigt Grenzen und behauptet nicht mehr, als die Untersuchung belegen kann.",
+					"sentence": "Die Stichprobe war klein und umfasste nur eine Altersgruppe. Welche Schlussfolgerung ist angemessen?",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Ergebnisse liefern erste Hinweise, lassen sich jedoch wegen der kleinen Stichprobe nur eingeschränkt verallgemeinern."
+						},
+						{
+							"ok": false,
+							"word": "Die Ergebnisse gelten zweifellos für alle Menschen und unter allen Bedingungen."
+						},
+						{
+							"ok": false,
+							"word": "Da die Stichprobe klein war, haben die Ergebnisse keinerlei Bedeutung und müssen nicht erwähnt werden."
+						}
+					]
+				}
+			]
+		}
+	]
+}
