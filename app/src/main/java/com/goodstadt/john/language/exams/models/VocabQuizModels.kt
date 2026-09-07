@@ -71,7 +71,9 @@ data class CategoryQuizAttempt(
     @SerializedName("answered") val answered: Int = 0,   // distinct questions answered (right or wrong)
     @SerializedName("correct") val correct: Int = 0,     // distinct questions answered correctly
     @SerializedName("tries") val tries: Int = 0,         // total answer taps this go
-    @SerializedName("completed") val completed: Boolean = false // answered every question (answered >= total)
+    @SerializedName("completed") val completed: Boolean = false, // answered every question (answered >= total)
+    // "No errors": every question answered correctly with exactly one tap each (correct == tries == total).
+    @SerializedName("flawless") val flawless: Boolean = false
 )
 
 // 3. The Transaction (History Log)

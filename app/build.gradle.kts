@@ -22,8 +22,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 120   //for remote config versioning.  localised quizzes
-val VERSION_NAME = "4.0.120" //go live
+val VERSION_CODE = 121   //for remote config versioning.  localised quizzes
+val VERSION_NAME = "4.0.121" //go live
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -39,11 +39,14 @@ android {
         testInstrumentationRunner =
             "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
 
-        buildConfigField(
-            "String",
-            "TTS_API_KEY",
-            secretsProperties.getProperty("TTS_API_KEY")
-        )
+        // Previous single shared key (Pronounce AI project). Replaced by a per-flavour GOOGLE_API_KEY
+        // below so 'en' and 'de' each use their own language project's key for BOTH TTS and Translation.
+        // Kept commented in case a rollback is needed while the new keys are being set up.
+//        buildConfigField(
+//            "String",
+//            "TTS_API_KEY",
+//            secretsProperties.getProperty("TTS_API_KEY")
+//        )
 /*
 🔵 SECURITY / BUILD CONCERNS
 19. API keys in BuildConfig are extractable
@@ -88,6 +91,8 @@ Fix: For production, proxy these API calls through your own backend server so ke
             versionCode = VERSION_CODE
             versionName = VERSION_NAME
             buildConfigField("String", "LANGUAGE_ID", "\"en\"")
+            // Google Cloud key for the English project (TTS + Translation).
+            buildConfigField("String", "GOOGLE_API_KEY", secretsProperties.getProperty("GOOGLE_API_KEY_EN"))
         }
         create("de") {
             dimension = "language"
@@ -96,6 +101,8 @@ Fix: For production, proxy these API calls through your own backend server so ke
             versionCode = VERSION_CODE
             versionName = VERSION_NAME
             buildConfigField("String", "LANGUAGE_ID", "\"de\"")
+            // Google Cloud key for the German project (TTS + Translation).
+            buildConfigField("String", "GOOGLE_API_KEY", secretsProperties.getProperty("GOOGLE_API_KEY_DE"))
         }
         create("zh") {
             dimension = "language"
@@ -104,6 +111,8 @@ Fix: For production, proxy these API calls through your own backend server so ke
             versionCode = VERSION_CODE
             versionName = VERSION_NAME
             buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
+            // Google Cloud key for the Chinese project (TTS + Translation).
+            buildConfigField("String", "GOOGLE_API_KEY", secretsProperties.getProperty("GOOGLE_API_KEY_ZH"))
         }
     }
 

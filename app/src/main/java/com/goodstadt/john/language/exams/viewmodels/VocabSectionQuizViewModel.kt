@@ -336,6 +336,10 @@ class VocabSectionQuizViewModel @Inject constructor(
     fun recordAndLogCategoryAttempt() {
         val total = _allSectionQuestions.size
         val answered = _sectionAnswersByWord.size
+        val correct = _sectionAnswersByWord.count { it.value }
+        val tries = quizStatistics.value.tries
+        // "No errors" streak: every question right with one tap each.
+        val flawless = total > 0 && correct == total && tries == total
 
         // Only save a real go (ignore just opening + closing the sheet). Saved regardless of completion.
         if (answered > 0 && currentSectionTitle.isNotBlank()) {
@@ -346,11 +350,18 @@ class VocabSectionQuizViewModel @Inject constructor(
                     attemptedAt = System.currentTimeMillis(),
                     total = total,
                     answered = answered,
-                    correct = _sectionAnswersByWord.count { it.value },
-                    tries = quizStatistics.value.tries,
-                    completed = total > 0 && answered >= total
+                    correct = correct,
+                    tries = tries,
+                    completed = total > 0 && answered >= total,
+                    flawless = flawless
                 )
             )
+            if (DEBUG) {
+                Timber.tag("VocabCategory").d(
+                    "Recorded attempt '%s' (%s): correct=%d tries=%d answered=%d total=%d -> flawless=%b",
+                    currentSectionTitle, currentSkillLevel, correct, tries, answered, total, flawless
+                )
+            }
         }
 
         if (!DEBUG) return

@@ -112,6 +112,16 @@ class CategoryTabViewModel @Inject constructor(
     }
 
     /**
+     * Number of gold "streak" stars for a section quiz (by display title) at the current level: one per
+     * flawless (no-error) completion spaced ~a day apart, up to 3. See [VocabQuizRepository.flawlessStreakStars].
+     */
+    fun quizStarsFor(categoryTitle: String): Int {
+        val key = com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
+            .keyFor(currentLoadedLevel, categoryTitle)
+        return vocabQuizRepository.flawlessStreakStars(key, currentLoadedLevel)
+    }
+
+    /**
      * Schedule a local practice-reminder notification for [word] at the time implied by [reminder], and
      * record the due-time on the saved entry so the "Saved" screen can show the REMIND ME label / re-sort
      * once it passes. [SaveReminder.NONE] clears any existing reminder on the entry.

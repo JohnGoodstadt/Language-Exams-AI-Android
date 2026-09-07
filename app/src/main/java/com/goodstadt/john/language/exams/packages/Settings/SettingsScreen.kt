@@ -24,6 +24,7 @@ import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudSync
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.School
@@ -75,6 +76,7 @@ import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.packages.me.SignInBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
@@ -118,6 +120,7 @@ fun SettingsScreen(
 
 
     var showDebugSheet by remember { mutableStateOf(false) }
+    var showTranslateSheet by remember { mutableStateOf(false) }
     val vm: DictionaryEntryBrowserViewModel = viewModel()
 
 //    var showTryOutVoicesSheet by remember { mutableStateOf(false) }
@@ -537,6 +540,10 @@ fun SettingsScreen(
         )
     }
 
+    if (showTranslateSheet) {
+        TranslateSheet(onDismiss = { showTranslateSheet = false })
+    }
+
     if (showDebugSheet) {
         ModalBottomSheet(
             onDismissRequest = { showDebugSheet = false },
@@ -877,6 +884,16 @@ fun SettingsScreen(
                     currentValue = "Upload bundled quiz JSON to Firestore (D)",
                     onClick = {
                         navController.navigate("upload_json")
+                    }
+                )
+            }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Translate,
+                    title = "Translate (D)",
+                    currentValue = "Try out German <-> English translation (D)",
+                    onClick = {
+                        showTranslateSheet = true
                     }
                 )
             }

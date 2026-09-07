@@ -32,6 +32,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.SportsEsports
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -145,6 +146,10 @@ fun CategoryTabScreen(
     var showSavedSheet by remember { mutableStateOf(false) }
     var savedWordText by remember { mutableStateOf("") }
     val savedSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Legend sheet explaining the section status dots + streak stars (opened by tapping them).
+    var showQuizLegendSheet by remember { mutableStateOf(false) }
+    val quizLegendSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // --- Rate Limit Sheets ---
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
@@ -402,7 +407,14 @@ fun CategoryTabScreen(
                                         val quizStatus = remember(quizStatusVersion, category.title) {
                                             viewModel.quizStatusFor(category.title)
                                         }
-                                        QuizStatusDots(quizStatus)
+                                        val quizStars = remember(quizStatusVersion, category.title) {
+                                            viewModel.quizStarsFor(category.title)
+                                        }
+                                        QuizStatusDots(
+                                            status = quizStatus,
+                                            stars = quizStars,
+                                            onClick = { showQuizLegendSheet = true }
+                                        )
 
                                         if (locked) {
                                             // Locked section: a lock replaces the game-console (Quiz) icon.
@@ -750,7 +762,133 @@ fun CategoryTabScreen(
             }
         }
 
+        // Legend explaining the status dots + streak stars (opened by tapping them on a section row).
+        if (showQuizLegendSheet) {
+            ModalBottomSheet(
+                onDismissRequest = { showQuizLegendSheet = false },
+                sheetState = quizLegendSheetState,
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                QuizStatusLegendSheet()
+            }
+        }
+
     } //: Box
+}
+
+/**
+ * Explains the section-row quiz indicators: the gold streak stars and the coloured mastery dots. Rendered
+ * as a title followed by one row per symbol (the symbol on the left, its meaning on the right).
+ */
+@Composable
+private fun QuizStatusLegendSheet() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .verticalScroll(rememberScrollState())
+            .padding(horizontal = 20.dp)
+            .padding(bottom = 32.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
+    ) {
+        Text(
+            text = "What the marks mean",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
+        )
+
+        // --- Stars (the achievement) ---
+        LegendRow(
+            leading = {
+                Icon(
+                    imageVector = Icons.Default.Star,
+                    contentDescription = null,
+                    tint = Color(0xFFFFC107),
+                    modifier = Modifier.size(22.dp)
+                )
+            },
+            title = "Gold star — a flawless run",
+            body = "You completed the whole section with no errors: every question right, first tap. " +
+                "Each star must be earned on a separate day (at least a day apart)."
+        )
+        LegendRow(
+            leading = {
+                Row(horizontalArrangement = Arrangement.spacedBy(2.dp)) {
+                    repeat(3) {
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = null,
+                            tint = Color(0xFFFFC107),
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                }
+            },
+            title = "Three stars — section mastered",
+            body = "Three flawless runs on three separate days masters the section."
+        )
+
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
+
+        Text(
+            text = "If your last run had a mistake, coloured dots show its make-up instead of stars:",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+
+        // --- Dots (mastery breakdown) ---
+        LegendRow(leadingDot = Color(0xFF4CAF50), title = "Green — Mastered",
+            body = "Answered correctly, first try, across 3 spaced sessions.")
+        LegendRow(leadingDot = Color(0xFF2196F3), title = "Blue — Review",
+            body = "Right first time — building towards mastery.")
+        LegendRow(leadingDot = Color(0xFFFF9800), title = "Orange — Learning",
+            body = "Got it right, but it took more than one try.")
+        LegendRow(leadingDot = Color.Red, title = "Red — Struggling",
+            body = "Answered incorrectly — worth another look.")
+        LegendRow(leadingDot = Color.Gray, title = "Grey — New / not finished",
+            body = "Not attempted yet, or the section isn't complete.")
+    }
+}
+
+/** One legend line: a leading symbol (a coloured dot, or a custom [leading] composable) then title + body. */
+@Composable
+private fun LegendRow(
+    title: String,
+    body: String,
+    leadingDot: Color? = null,
+    leading: (@Composable () -> Unit)? = null
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.Top,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .width(30.dp)
+                .padding(top = 3.dp),
+            contentAlignment = Alignment.CenterStart
+        ) {
+            when {
+                leading != null -> leading()
+                leadingDot != null -> Box(
+                    modifier = Modifier
+                        .size(14.dp)
+                        .clip(CircleShape)
+                        .background(leadingDot)
+                )
+            }
+        }
+        Column(modifier = Modifier.weight(1f)) {
+            Text(text = title, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.SemiBold)
+            Text(
+                text = body,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+    }
 }
 
 private fun scrollToCategory(
@@ -878,37 +1016,61 @@ fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?
  * Colours match the quiz's own mastery dots.
  */
 @Composable
-private fun QuizStatusDots(status: com.goodstadt.john.language.exams.models.CategoryMasteryState?) {
-    if (status == null || status.total == 0 || status.newCount == status.total) return // not taken -> blank
-
+private fun QuizStatusDots(
+    status: com.goodstadt.john.language.exams.models.CategoryMasteryState?,
+    stars: Int,
+    onClick: () -> Unit = {}
+) {
     val red = Color.Red
     val orange = Color(0xFFFF9800)
     val blue = Color(0xFF2196F3)
     val green = Color(0xFF4CAF50)
     val grey = Color.Gray
 
-    val dots: List<Color> = if (status.mastered == status.total) {
-        listOf(green) // fully mastered
-    } else buildList {
-        if (status.struggling > 0) add(red)
-        if (status.learning > 0) add(orange)
-        if (status.review > 0) add(blue)
-        if (status.mastered > 0) add(green)
-        if (status.newCount > 0) add(grey)
+    // Status dots (blank if never taken).
+    val dots: List<Color> = when {
+        status == null || status.total == 0 || status.newCount == status.total -> emptyList()
+        status.mastered == status.total -> listOf(green) // fully mastered
+        else -> buildList {
+            if (status.struggling > 0) add(red)
+            if (status.learning > 0) add(orange)
+            if (status.review > 0) add(blue)
+            if (status.mastered > 0) add(green)
+            if (status.newCount > 0) add(grey)
+        }
     }
+
+    val starCount = stars.coerceIn(0, 3)
+    if (dots.isEmpty() && starCount == 0) return // never taken -> nothing to show
 
     Row(
         horizontalArrangement = Arrangement.spacedBy(3.dp),
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.padding(end = 6.dp)
+        modifier = Modifier
+            .clip(RoundedCornerShape(6.dp))
+            .clickable { onClick() } // tap the dots/stars to explain them
+            .padding(end = 6.dp, start = 2.dp, top = 4.dp, bottom = 4.dp)
     ) {
-        dots.forEach { c ->
-            Box(
-                modifier = Modifier
-                    .size(9.dp)
-                    .clip(CircleShape)
-                    .background(c)
-            )
+        if (starCount > 0) {
+            // Current flawless streak: show ONLY gold stars (a completed no-error run).
+            repeat(starCount) {
+                Icon(
+                    imageVector = Icons.Default.Star,
+                    contentDescription = "streak star",
+                    tint = Color(0xFFFFC107), // gold/yellow
+                    modifier = Modifier.size(16.dp)
+                )
+            }
+        } else {
+            // Latest go had errors (or in progress): show ONLY the mastery status dots.
+            dots.forEach { c ->
+                Box(
+                    modifier = Modifier
+                        .size(9.dp)
+                        .clip(CircleShape)
+                        .background(c)
+                )
+            }
         }
     }
 }

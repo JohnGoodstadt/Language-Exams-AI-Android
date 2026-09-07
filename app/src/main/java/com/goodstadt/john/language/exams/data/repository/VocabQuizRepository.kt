@@ -391,6 +391,34 @@ class VocabQuizRepository @Inject constructor(
     fun getAllCategoryAttempts(): Map<String, List<CategoryQuizAttempt>> =
         categoryAttempts.mapValues { it.value.toList() }
 
+    // Star streak: one gold star per flawless (no-error) whole-quiz completion, each counted completion at
+    // least a "day" apart from the previous one, up to 3. RELEASE: a real day (24h). DEBUG: 30s stands in
+    // for a day so the stars can be earned and tested within a couple of minutes.
+    private val streakGapMs: Long = if (BuildConfig.DEBUG) 30_000L else 24L * 60L * 60L * 1000L
+
+    /**
+     * The CURRENT flawless streak for a section quiz, as a star count (0..3): consecutive flawless
+     * completions from the most recent attempt backwards, each counted only when ~a day apart
+     * ([streakGapMs]). Returns 0 the moment the latest attempt has an error, so the row shows the status
+     * dots instead of stars (they're mutually exclusive). "flawless" = every question right, one tap each.
+     */
+    fun flawlessStreakStars(category: String, level: String): Int {
+        val attempts = getCategoryAttempts(category, level).sortedBy { it.attemptedAt }
+        if (attempts.isEmpty() || !attempts.last().flawless) return 0 // never taken, or last go had errors
+
+        var stars = 0
+        var nextCountedAt = Long.MAX_VALUE
+        for (a in attempts.asReversed()) {
+            if (!a.flawless) break // a faulty go breaks the streak
+            if (stars == 0 || nextCountedAt - a.attemptedAt >= streakGapMs) {
+                stars++
+                nextCountedAt = a.attemptedAt
+                if (stars >= 3) break
+            }
+        }
+        return stars
+    }
+
     private fun saveCategoryAttemptsToDisk() {
         try {
             File(context.filesDir, categoryAttemptsFileName).writeText(gson.toJson(categoryAttempts))

@@ -44,8 +44,9 @@ data class UsageQuizStat(
     var bestScore: Int = 0,
 
     // Dated history of each go (oldest first), so completions - and flawless completions on separate days -
-    // can be reported. Backward compatible: absent in old saved files -> empty list.
-    @SerializedName("attempts") val attempts: MutableList<UsageQuizAttempt> = mutableListOf(),
+    // can be reported. `var` + normalised on load because Gson leaves it null for files saved before this
+    // field existed (it bypasses the constructor, so the default isn't applied).
+    @SerializedName("attempts") var attempts: MutableList<UsageQuizAttempt> = mutableListOf(),
 
     // Set once the "flawless on 3 separate days" award has been given, so it isn't awarded again.
     @SerializedName("award3day") var threeDayAwardGiven: Boolean = false

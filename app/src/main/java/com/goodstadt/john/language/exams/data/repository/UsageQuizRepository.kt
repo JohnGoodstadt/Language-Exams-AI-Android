@@ -99,6 +99,9 @@ class UsageQuizRepository @Inject constructor(
      */
     fun recordAttempt(quizId: String, correct: Int, tries: Int, total: Int): Boolean {
         val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
+        // Guard against a null list from a legacy save that pre-dates the `attempts` field.
+        @Suppress("SENSELESS_COMPARISON")
+        if (quizStat.attempts == null) quizStat.attempts = mutableListOf()
         val flawless = total > 0 && correct == total && tries == total
         quizStat.attempts.add(
             UsageQuizAttempt(
@@ -202,7 +205,13 @@ class UsageQuizRepository @Inject constructor(
             val file = File(context.filesDir, fileName)
             if (file.exists()) {
                 val type = object : TypeToken<MutableMap<String, UsageQuizStat>>() {}.type
-                quizStates = gson.fromJson(file.readText(), type)
+                quizStates = gson.fromJson(file.readText(), type) ?: mutableMapOf()
+                // Files saved before `attempts` existed deserialize it as null (Gson bypasses the
+                // constructor, so the default isn't applied) - normalise so recordAttempt can add to it.
+                quizStates.values.forEach { stat ->
+                    @Suppress("SENSELESS_COMPARISON")
+                    if (stat.attempts == null) stat.attempts = mutableListOf()
+                }
             }
         } catch (e: Exception) {
             Timber.e(e, "Failed to load usage quiz stats")

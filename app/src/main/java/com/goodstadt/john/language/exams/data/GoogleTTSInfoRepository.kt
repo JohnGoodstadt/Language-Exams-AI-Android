@@ -40,7 +40,7 @@ class GoogleTTSInfoRepository @Inject constructor(
             val response: VoicesResponse = client.get("https://texttospeech.googleapis.com/v1/voices") {
                 // The API key is passed as a URL query parameter
                 url {
-                    parameters.append("key", BuildConfig.TTS_API_KEY)
+                    parameters.append("key", BuildConfig.GOOGLE_API_KEY)
                 }
             }.body()
             Result.success(response)

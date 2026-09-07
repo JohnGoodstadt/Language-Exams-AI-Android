@@ -42,7 +42,7 @@ class GoogleCloudTTS @Inject constructor() {
     private data class TtsResponse(val audioContent: String)
 
 
-    private val apiKey = BuildConfig.TTS_API_KEY
+    private val apiKey = BuildConfig.GOOGLE_API_KEY // per-flavour key (language project): TTS + Translation
     private val json = Json { ignoreUnknownKeys = true }
 
     suspend fun getAudioData(

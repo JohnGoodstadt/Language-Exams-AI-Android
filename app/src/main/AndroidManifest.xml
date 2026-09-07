@@ -18,6 +18,14 @@
 
     <queries>
         <package android:name="com.facebook.katana" />
+        <!-- So SpeechRecognizer.isRecognitionAvailable() and the RECOGNIZE_SPEECH intent resolve on API 30+
+             (the Translate sheet's optional microphone input). -->
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH" />
+        </intent>
     </queries>
 
     <application
