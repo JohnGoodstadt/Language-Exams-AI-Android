@@ -1,9 +1,11 @@
 package com.goodstadt.john.language.exams.data.api
 
+import android.content.Context
 import android.util.Base64
-import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.utils.AppSignature
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
@@ -17,7 +19,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class GoogleCloudTTS @Inject constructor() {
+class GoogleCloudTTS @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
 
     private val TAG = "GoogleCloudTTS"
 
@@ -72,6 +76,10 @@ class GoogleCloudTTS @Inject constructor() {
             connection = url.openConnection() as HttpURLConnection
             connection.requestMethod = "POST"
             connection.setRequestProperty("Content-Type", "application/json; charset=utf-8")
+            // Identify the app so an API key restricted to "Android apps" accepts the call. Harmless if the
+            // key isn't app-restricted.
+            connection.setRequestProperty("X-Android-Package", context.packageName)
+            AppSignature.certSha1NoColons(context)?.let { connection.setRequestProperty("X-Android-Cert", it) }
             connection.doOutput = true
 
             OutputStreamWriter(connection.outputStream).use {

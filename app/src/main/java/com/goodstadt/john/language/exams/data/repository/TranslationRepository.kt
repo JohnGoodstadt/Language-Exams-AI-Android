@@ -1,6 +1,9 @@
 package com.goodstadt.john.language.exams.data.repository
 
+import android.content.Context
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.utils.AppSignature
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
@@ -28,7 +31,9 @@ enum class TranslateLang(val code: String, val display: String) {
  * Kept UI-agnostic so it can back the Translate sheet now and anything else later.
  */
 @Singleton
-class TranslationRepository @Inject constructor() {
+class TranslationRepository @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
 
     private val apiKey = BuildConfig.GOOGLE_API_KEY
     private val json = Json { ignoreUnknownKeys = true }
@@ -67,6 +72,10 @@ class TranslationRepository @Inject constructor() {
             connection = (url.openConnection() as HttpURLConnection).apply {
                 requestMethod = "POST"
                 setRequestProperty("Content-Type", "application/json; charset=utf-8")
+                // Identify the app so an API key restricted to "Android apps" accepts the call. Harmless if
+                // the key isn't app-restricted.
+                setRequestProperty("X-Android-Package", context.packageName)
+                AppSignature.certSha1NoColons(context)?.let { setRequestProperty("X-Android-Cert", it) }
                 doOutput = true
             }
             OutputStreamWriter(connection.outputStream).use { it.write(requestBody) }

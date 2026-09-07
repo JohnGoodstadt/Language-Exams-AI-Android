@@ -107,6 +107,17 @@ class LanguageExamsApp : Application() {
             Timber.d("Crashlytics collection is ENABLED for this release build.")
         }
 
+        if (BuildConfig.DEBUG) {
+            // For locking a Google Cloud API key to "Android apps": copy these exact values into the key's
+            // Application restrictions in the Cloud Console. This prints whatever cert signed THIS build,
+            // so run each variant you want to allow (debug now, release later) and register each pair.
+            Timber.tag("ApiKeyRestriction").d("X-Android-Package = %s", packageName)
+            Timber.tag("ApiKeyRestriction").d(
+                "X-Android-Cert (SHA-1) = %s",
+                com.goodstadt.john.language.exams.utils.AppSignature.certSha1(this) ?: "unavailable"
+            )
+        }
+
         // ✅ BEST PRACTICE: Only enable automatic crash reporting for release builds.
         // This prevents your development crashes from polluting your Crashlytics dashboard.
 //        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)

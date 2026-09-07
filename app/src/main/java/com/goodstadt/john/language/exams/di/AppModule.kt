@@ -29,8 +29,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideGoogleCloudTTS(): GoogleCloudTTS {
-        return GoogleCloudTTS()
+    fun provideGoogleCloudTTS(@ApplicationContext context: Context): GoogleCloudTTS {
+        return GoogleCloudTTS(context)
     }
 
 //    @Provides

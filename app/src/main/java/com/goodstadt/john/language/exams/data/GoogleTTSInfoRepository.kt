@@ -42,6 +42,11 @@ class GoogleTTSInfoRepository @Inject constructor(
                 url {
                     parameters.append("key", BuildConfig.GOOGLE_API_KEY)
                 }
+                // Identify the app so an API key restricted to "Android apps" accepts the call.
+                header("X-Android-Package", context.packageName)
+                com.goodstadt.john.language.exams.utils.AppSignature.certSha1NoColons(context)?.let {
+                    header("X-Android-Cert", it)
+                }
             }.body()
             Result.success(response)
         } catch (e: Exception) {
