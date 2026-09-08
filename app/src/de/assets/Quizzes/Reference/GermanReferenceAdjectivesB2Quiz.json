@@ -1,0 +1,478 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GermanReferenceAdjectivesB2Quiz",
+  "title": "Adjektive B2 – Lückentext",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Wähle die passende Formulierung.",
+      "description": "Übe differenzierte deutsche Adjektive auf dem Niveau B2. Ergänze jede Situation mit dem passenden Adjektiv oder einer natürlichen Adjektivverbindung.",
+      "sortorder": 1,
+      "learningTitle": "Nuancierte Bewertungen, Gefühle und Haltungen ausdrücken",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 1,
+          "summary": "„ehrgeizig“ beschreibt anspruchsvolle Ziele und großen persönlichen Einsatz.",
+          "level": "B2",
+          "category": "Ziele und Arbeitsweise",
+          "explain": "Die Forscherin setzt sich anspruchsvolle Ziele und arbeitet intensiv daran, sie zu erreichen. Deshalb ist sie äußerst ehrgeizig.",
+          "sentence": "Die Forscherin setzt sich stets anspruchsvolle Ziele und arbeitet hart, um sie zu erreichen. Sie ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "äußerst ehrgeizig"
+            },
+            {
+              "ok": false,
+              "word": "kaum engagiert"
+            },
+            {
+              "ok": false,
+              "word": "wenig konsequent"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 2,
+          "summary": "„effizient“ bedeutet, mit möglichst wenig Aufwand ein gutes Ergebnis zu erzielen.",
+          "level": "B2",
+          "category": "Ziele und Arbeitsweise",
+          "explain": "Die neue Organisation spart Zeit, ohne die Qualität zu verringern. Der Ablauf ist deshalb besonders effizient.",
+          "sentence": "Seit der Umstellung benötigt das Team nur halb so viel Zeit und erreicht dieselbe Qualität. Der Ablauf ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "unnötig kompliziert"
+            },
+            {
+              "ok": true,
+              "word": "besonders effizient"
+            },
+            {
+              "ok": false,
+              "word": "wenig glaubwürdig"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 3,
+          "summary": "„frustriert“ beschreibt Enttäuschung und Ärger wegen ausbleibenden Erfolgs.",
+          "level": "B2",
+          "category": "Gefühle und Haltung",
+          "explain": "Mehrere Bewerbungen ohne Erfolg führen dazu, dass Nora zunehmend enttäuscht und verärgert ist. Sie ist frustriert.",
+          "sentence": "Nach zwölf Bewerbungen erhielt Nora nur Absagen, obwohl sie viel Zeit investiert hatte. Sie war _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "vorsichtig optimistisch"
+            },
+            {
+              "ok": false,
+              "word": "sichtlich begeistert"
+            },
+            {
+              "ok": true,
+              "word": "zunehmend frustriert"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 4,
+          "summary": "„vorsichtig optimistisch“ drückt eine positive, aber noch zurückhaltende Erwartung aus.",
+          "level": "B2",
+          "category": "Gefühle und Haltung",
+          "explain": "Die ersten Zahlen sind positiv, doch das Endergebnis steht noch nicht fest. Daher ist eine vorsichtig optimistische Einschätzung passend.",
+          "sentence": "Die ersten Ergebnisse sind positiv, aber für eine endgültige Bewertung fehlen noch Daten. Die Expertin bleibt _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "vorsichtig optimistisch"
+            },
+            {
+              "ok": false,
+              "word": "äußerst pessimistisch"
+            },
+            {
+              "ok": false,
+              "word": "vollkommen überzeugt"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 5,
+          "summary": "„pessimistisch“ beschreibt die Erwartung einer eher negativen Entwicklung.",
+          "level": "B2",
+          "category": "Gefühle und Haltung",
+          "explain": "Obwohl es erste Verbesserungen gibt, erwartet der Analyst weiterhin eine deutliche Verschlechterung. Seine Einschätzung ist pessimistisch.",
+          "sentence": "Trotz erster Verbesserungen erwartet der Analyst einen starken Rückgang der Wirtschaft. Er äußert sich _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "vorsichtig optimistisch"
+            },
+            {
+              "ok": true,
+              "word": "äußerst pessimistisch"
+            },
+            {
+              "ok": false,
+              "word": "deutlich begeistert"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 6,
+          "summary": "Die Verbindung lautet „unabhängig von“ + Dativ.",
+          "level": "B2",
+          "category": "Gesellschaft und Entwicklung",
+          "explain": "Die Organisation erhält kein staatliches Geld und kann deshalb unabhängig von staatlicher Unterstützung handeln.",
+          "sentence": "Die Organisation finanziert sich nur durch private Spenden und handelt deshalb _ staatlicher Unterstützung.",
+          "words": [
+            {
+              "ok": false,
+              "word": "abhängig von"
+            },
+            {
+              "ok": false,
+              "word": "skeptisch gegenüber"
+            },
+            {
+              "ok": true,
+              "word": "unabhängig von"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 7,
+          "summary": "„ängstlich“ beschreibt ein Verhalten, das deutlich von Angst geprägt ist.",
+          "level": "B2",
+          "category": "Gefühle und Haltung",
+          "explain": "Der Hund versteckt sich, zittert und wagt sich nicht aus seiner Ecke. Er reagiert ungewöhnlich ängstlich.",
+          "sentence": "In der fremden Wohnung versteckt sich der Hund zitternd unter dem Tisch. Er verhält sich _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ungewöhnlich ängstlich"
+            },
+            {
+              "ok": false,
+              "word": "äußerst entschlossen"
+            },
+            {
+              "ok": false,
+              "word": "sichtlich begeistert"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 8,
+          "summary": "Die Verbindung lautet „dankbar für“ + Akkusativ.",
+          "level": "B2",
+          "category": "Gefühle und Haltung",
+          "explain": "Die Kolleginnen haben Lea in einer schwierigen Zeit unterstützt. Lea empfindet dafür Anerkennung und ist dankbar für die Hilfe.",
+          "sentence": "Ihre Kolleginnen unterstützten Lea während der gesamten Krise. Sie ist _ diese Hilfe.",
+          "words": [
+            {
+              "ok": false,
+              "word": "völlig enttäuscht über"
+            },
+            {
+              "ok": true,
+              "word": "sehr dankbar für"
+            },
+            {
+              "ok": false,
+              "word": "kaum begeistert über"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 9,
+          "summary": "Die Verbindung „begeistert von“ drückt große Freude und starkes Interesse aus.",
+          "level": "B2",
+          "category": "Gefühle und Haltung",
+          "explain": "Das Publikum reagiert mit langem Applaus und großer Freude. Es ist begeistert von der Inszenierung.",
+          "sentence": "Nach der ungewöhnlichen Inszenierung applaudiert das Publikum minutenlang. Es ist _ der Aufführung.",
+          "words": [
+            {
+              "ok": false,
+              "word": "deutlich enttäuscht von"
+            },
+            {
+              "ok": false,
+              "word": "weiterhin skeptisch gegenüber"
+            },
+            {
+              "ok": true,
+              "word": "vollkommen begeistert von"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 10,
+          "summary": "„flexibel“ beschreibt die Fähigkeit, sich schnell an neue Bedingungen anzupassen.",
+          "level": "B2",
+          "category": "Ziele und Arbeitsweise",
+          "explain": "Das Team verändert seinen Zeitplan sofort, ohne dass die Qualität leidet. Es reagiert äußerst flexibel.",
+          "sentence": "Als der Termin vorverlegt wird, passt das Team sofort alle Aufgaben an. Es reagiert _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "äußerst flexibel"
+            },
+            {
+              "ok": false,
+              "word": "wenig effizient"
+            },
+            {
+              "ok": false,
+              "word": "völlig unvorbereitet"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 11,
+          "summary": "„entschlossen“ beschreibt eine feste Haltung ohne Zögern.",
+          "level": "B2",
+          "category": "Ziele und Arbeitsweise",
+          "explain": "Die Ministerin erklärt eindeutig, dass sie ihre Entscheidung trotz der Kritik nicht ändern wird. Sie wirkt fest entschlossen.",
+          "sentence": "Die Ministerin erklärt, dass sie ihren Plan trotz aller Kritik nicht ändern wird. Sie wirkt _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "deutlich frustriert"
+            },
+            {
+              "ok": true,
+              "word": "fest entschlossen"
+            },
+            {
+              "ok": false,
+              "word": "vorsichtig optimistisch"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 12,
+          "summary": "„peinlich“ beschreibt eine Situation, die Scham oder starkes Unbehagen verursacht.",
+          "level": "B2",
+          "category": "Bewertung und Wirkung",
+          "explain": "Der Redner nennt vor allen Gästen den falschen Namen und bemerkt seinen Fehler sofort. Die Situation ist äußerst peinlich.",
+          "sentence": "Der Redner nennt vor allen Gästen den falschen Namen und muss sich sofort entschuldigen. Die Situation ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "völlig angemessen"
+            },
+            {
+              "ok": false,
+              "word": "besonders beeindruckend"
+            },
+            {
+              "ok": true,
+              "word": "äußerst peinlich"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 13,
+          "summary": "„angemessen“ bedeutet passend und vernünftig für eine bestimmte Situation.",
+          "level": "B2",
+          "category": "Bewertung und Wirkung",
+          "explain": "Die Entschädigung entspricht genau dem entstandenen Schaden. Sie erscheint deshalb durchaus angemessen.",
+          "sentence": "Die angebotene Entschädigung deckt den entstandenen Schaden vollständig. Sie erscheint _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "durchaus angemessen"
+            },
+            {
+              "ok": false,
+              "word": "völlig überzogen"
+            },
+            {
+              "ok": false,
+              "word": "wenig glaubwürdig"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 14,
+          "summary": "„beeindruckend“ beschreibt eine außergewöhnlich starke positive Wirkung.",
+          "level": "B2",
+          "category": "Bewertung und Wirkung",
+          "explain": "Die Präsentation überzeugt durch sichere Antworten und klare Belege. Die Leistung ist besonders beeindruckend.",
+          "sentence": "Ohne lange Vorbereitung beantwortet sie jede schwierige Frage und belegt alle Aussagen. Ihre Leistung ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "kaum glaubwürdig"
+            },
+            {
+              "ok": true,
+              "word": "besonders beeindruckend"
+            },
+            {
+              "ok": false,
+              "word": "eher peinlich"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 15,
+          "summary": "„anspruchsvoll“ beschreibt etwas, das hohe Anforderungen an Wissen oder Können stellt.",
+          "level": "B2",
+          "category": "Ziele und Arbeitsweise",
+          "explain": "Der Kurs verlangt umfangreiche Vorkenntnisse und viel zusätzliche Arbeit. Er ist äußerst anspruchsvoll.",
+          "sentence": "Für den Kurs braucht man umfangreiche Vorkenntnisse und muss jede Woche komplexe Aufgaben lösen. Er ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "problemlos machbar"
+            },
+            {
+              "ok": false,
+              "word": "wenig nachhaltig"
+            },
+            {
+              "ok": true,
+              "word": "äußerst anspruchsvoll"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 16,
+          "summary": "Die Verbindung lautet „skeptisch gegenüber“ + Dativ.",
+          "level": "B2",
+          "category": "Gefühle und Haltung",
+          "explain": "Weil verlässliche Belege fehlen, zweifelt die Wissenschaftlerin an der Methode und bleibt ihr gegenüber skeptisch.",
+          "sentence": "Da bisher verlässliche Belege fehlen, bleibt die Wissenschaftlerin _ der neuen Methode.",
+          "words": [
+            {
+              "ok": true,
+              "word": "skeptisch gegenüber"
+            },
+            {
+              "ok": false,
+              "word": "begeistert von"
+            },
+            {
+              "ok": false,
+              "word": "überzeugt von"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 17,
+          "summary": "„glaubwürdig“ beschreibt eine Aussage, die ehrlich und überzeugend wirkt.",
+          "level": "B2",
+          "category": "Bewertung und Wirkung",
+          "explain": "Die Zeugin nennt überprüfbare Einzelheiten, die von mehreren Quellen bestätigt werden. Ihre Aussage ist vollkommen glaubwürdig.",
+          "sentence": "Die Zeugin nennt überprüfbare Details, die mehrere unabhängige Quellen bestätigen. Ihre Aussage ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "deutlich widersprüchlich"
+            },
+            {
+              "ok": true,
+              "word": "vollkommen glaubwürdig"
+            },
+            {
+              "ok": false,
+              "word": "äußerst peinlich"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 18,
+          "summary": "„entscheidend“ beschreibt einen Faktor, der das Ergebnis wesentlich bestimmt.",
+          "level": "B2",
+          "category": "Bewertung und Wirkung",
+          "explain": "Erst dieser Schritt ermöglicht den erfolgreichen Abschluss. Er ist daher für den Erfolg entscheidend.",
+          "sentence": "Erst die letzte Verhandlung ermöglicht den erfolgreichen Abschluss des Projekts. Dieser Schritt war _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "nur teilweise wichtig"
+            },
+            {
+              "ok": false,
+              "word": "vollkommen wirkungslos"
+            },
+            {
+              "ok": true,
+              "word": "letztlich entscheidend"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 19,
+          "summary": "„nachhaltig“ beschreibt eine langfristige Wirkung, die Ressourcen schont.",
+          "level": "B2",
+          "category": "Gesellschaft und Entwicklung",
+          "explain": "Das Konzept senkt dauerhaft den Energieverbrauch und schützt natürliche Ressourcen. Es ist ökologisch nachhaltig.",
+          "sentence": "Das neue Konzept senkt den Energieverbrauch dauerhaft und schont natürliche Ressourcen. Es ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ökologisch nachhaltig"
+            },
+            {
+              "ok": false,
+              "word": "nur kurzfristig effizient"
+            },
+            {
+              "ok": false,
+              "word": "wirtschaftlich anspruchsvoll"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 20,
+          "summary": "„widersprüchlich“ beschreibt Aussagen, die nicht miteinander vereinbar sind.",
+          "level": "B2",
+          "category": "Bewertung und Wirkung",
+          "explain": "Die beiden Aussagen schließen sich gegenseitig aus. Die Darstellung ist deshalb deutlich widersprüchlich.",
+          "sentence": "Im ersten Interview bestreitet er das Treffen, im zweiten bestätigt er es. Seine Aussagen sind _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "vollkommen glaubwürdig"
+            },
+            {
+              "ok": true,
+              "word": "deutlich widersprüchlich"
+            },
+            {
+              "ok": false,
+              "word": "logisch aufgebaut"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

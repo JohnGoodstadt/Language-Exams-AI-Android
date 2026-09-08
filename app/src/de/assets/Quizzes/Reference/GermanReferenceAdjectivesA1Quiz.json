@@ -1,0 +1,478 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GermanReferenceAdjectivesA1Quiz",
+  "title": "Adjektive A1 – Lückentext",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Wähle das passende Adjektiv.",
+      "description": "Übe häufige deutsche Adjektive auf dem Niveau A1. Wähle für jede Lücke das Adjektiv, das am besten zum Satz passt.",
+      "sortorder": 1,
+      "learningTitle": "Adjektive im Alltag verwenden",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 1,
+          "summary": "„gut“ beschreibt eine positive Leistung oder Qualität.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Mia hat alles richtig gemacht. Deshalb ist ihre Arbeit gut.",
+          "sentence": "Mia hat alle Aufgaben richtig. Ihre Arbeit ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "gut"
+            },
+            {
+              "ok": false,
+              "word": "schlecht"
+            },
+            {
+              "ok": false,
+              "word": "krank"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 2,
+          "summary": "„schlecht“ bedeutet hier: nicht gut oder nicht mehr genießbar.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Der Fisch ist nicht frisch und riecht unangenehm. Deshalb ist er schlecht.",
+          "sentence": "Der Fisch ist nicht mehr frisch und riecht unangenehm. Er ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "gut"
+            },
+            {
+              "ok": true,
+              "word": "schlecht"
+            },
+            {
+              "ok": false,
+              "word": "schön"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 3,
+          "summary": "„groß“ ist das Gegenteil von „klein“.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Ein Elefant ist ein sehr großes Tier. Nach „ist“ bleibt das Adjektiv unverändert.",
+          "sentence": "Der Elefant ist nicht klein. Er ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "klein"
+            },
+            {
+              "ok": false,
+              "word": "jung"
+            },
+            {
+              "ok": true,
+              "word": "groß"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 4,
+          "summary": "„klein“ ist das Gegenteil von „groß“.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Eine Maus ist ein kleines Tier. Nach „ist“ benutzen wir die Grundform klein.",
+          "sentence": "Die Maus ist nicht groß. Sie ist sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "klein"
+            },
+            {
+              "ok": false,
+              "word": "groß"
+            },
+            {
+              "ok": false,
+              "word": "alt"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 5,
+          "summary": "„alt“ kann das Gegenteil von „neu“ sein.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Das Fahrrad ist schon viele Jahre da und nicht neu. Deshalb ist es alt.",
+          "sentence": "Dieses Fahrrad ist nicht neu. Es ist schon sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "neu"
+            },
+            {
+              "ok": true,
+              "word": "alt"
+            },
+            {
+              "ok": false,
+              "word": "jung"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 6,
+          "summary": "„jung“ beschreibt eine Person oder ein Tier, das noch nicht alt ist.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Das Kind ist noch nicht alt. Das passende Gegenteil ist jung.",
+          "sentence": "Das Kind ist nicht alt. Es ist noch sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "alt"
+            },
+            {
+              "ok": false,
+              "word": "müde"
+            },
+            {
+              "ok": true,
+              "word": "jung"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 7,
+          "summary": "„neu“ beschreibt etwas, das erst seit kurzer Zeit da ist.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Das Handy wurde heute gekauft. Deshalb ist es neu.",
+          "sentence": "Ich habe das Handy heute gekauft. Es ist ganz _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "neu"
+            },
+            {
+              "ok": false,
+              "word": "alt"
+            },
+            {
+              "ok": false,
+              "word": "krank"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 8,
+          "summary": "„schön“ beschreibt etwas, das angenehm anzusehen ist.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Viele bunte Blumen machen den Garten angenehm und schön.",
+          "sentence": "Der Garten hat viele bunte Blumen. Er ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "hässlich"
+            },
+            {
+              "ok": true,
+              "word": "schön"
+            },
+            {
+              "ok": false,
+              "word": "hungrig"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 9,
+          "summary": "„hässlich“ ist das Gegenteil von „schön“.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Das Bild gefällt niemandem. In diesem Zusammenhang finden die Personen es hässlich.",
+          "sentence": "Das Bild gefällt niemandem. Alle finden es _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "schön"
+            },
+            {
+              "ok": false,
+              "word": "freundlich"
+            },
+            {
+              "ok": true,
+              "word": "hässlich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 10,
+          "summary": "„teuer“ bedeutet, dass etwas viel Geld kostet.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "900 Euro sind für eine Jacke sehr viel Geld. Deshalb ist die Jacke teuer.",
+          "sentence": "Die Jacke kostet 900 Euro. Sie ist sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "teuer"
+            },
+            {
+              "ok": false,
+              "word": "billig"
+            },
+            {
+              "ok": false,
+              "word": "klein"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 11,
+          "summary": "„billig“ bedeutet, dass etwas wenig Geld kostet.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Zehn Cent sind sehr wenig Geld. Deshalb ist der Stift billig.",
+          "sentence": "Der Stift kostet nur zehn Cent. Er ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "teuer"
+            },
+            {
+              "ok": true,
+              "word": "billig"
+            },
+            {
+              "ok": false,
+              "word": "alt"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 12,
+          "summary": "„schnell“ beschreibt eine hohe Geschwindigkeit.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "300 Kilometer pro Stunde sind eine hohe Geschwindigkeit. Das Rennauto ist schnell.",
+          "sentence": "Das Rennauto fährt 300 Kilometer pro Stunde. Es ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "langsam"
+            },
+            {
+              "ok": false,
+              "word": "müde"
+            },
+            {
+              "ok": true,
+              "word": "schnell"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 13,
+          "summary": "„langsam“ ist das Gegenteil von „schnell“.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Ein Meter in einer Stunde ist eine sehr niedrige Geschwindigkeit. Die Schnecke ist langsam.",
+          "sentence": "Die Schnecke braucht eine Stunde für einen Meter. Sie ist sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "langsam"
+            },
+            {
+              "ok": false,
+              "word": "schnell"
+            },
+            {
+              "ok": false,
+              "word": "jung"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 14,
+          "summary": "„warm“ beschreibt eine angenehme oder erhöhte Temperatur.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Die Suppe kommt gerade aus dem Topf und hat noch eine erhöhte Temperatur. Sie ist warm.",
+          "sentence": "Die Suppe kommt gerade aus dem Topf. Sie ist noch _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "kalt"
+            },
+            {
+              "ok": true,
+              "word": "warm"
+            },
+            {
+              "ok": false,
+              "word": "müde"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 15,
+          "summary": "„kalt“ beschreibt eine niedrige Temperatur.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Minus zehn Grad sind eine sehr niedrige Temperatur. Deshalb ist es draußen kalt.",
+          "sentence": "Im Winter sind es minus zehn Grad. Draußen ist es sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "warm"
+            },
+            {
+              "ok": false,
+              "word": "schön"
+            },
+            {
+              "ok": true,
+              "word": "kalt"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 16,
+          "summary": "„müde“ bedeutet, dass jemand Schlaf oder Ruhe braucht.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Es ist sehr spät und Ben möchte schlafen. Deshalb ist er müde.",
+          "sentence": "Es ist Mitternacht und Ben möchte schlafen. Er ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "müde"
+            },
+            {
+              "ok": false,
+              "word": "hungrig"
+            },
+            {
+              "ok": false,
+              "word": "freundlich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 17,
+          "summary": "„hungrig“ bedeutet, dass jemand etwas essen möchte.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Lea hat lange nichts gegessen. Deshalb ist sie hungrig.",
+          "sentence": "Lea hat den ganzen Tag nichts gegessen. Sie ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "durstig"
+            },
+            {
+              "ok": true,
+              "word": "hungrig"
+            },
+            {
+              "ok": false,
+              "word": "müde"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 18,
+          "summary": "„durstig“ bedeutet, dass jemand etwas trinken möchte.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Tim möchte nach dem Sport viel Wasser trinken. Deshalb ist er durstig.",
+          "sentence": "Nach dem Sport möchte Tim viel Wasser trinken. Er ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "hungrig"
+            },
+            {
+              "ok": false,
+              "word": "krank"
+            },
+            {
+              "ok": true,
+              "word": "durstig"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 19,
+          "summary": "„freundlich“ beschreibt eine nette und hilfsbereite Person.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Die Verkäuferin lächelt und hilft allen. Dieses Verhalten ist freundlich.",
+          "sentence": "Die Verkäuferin lächelt und hilft jedem Kunden. Sie ist sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "freundlich"
+            },
+            {
+              "ok": false,
+              "word": "hässlich"
+            },
+            {
+              "ok": false,
+              "word": "müde"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 20,
+          "summary": "„krank“ bedeutet, dass jemand nicht gesund ist.",
+          "level": "A1",
+          "category": "Adjektive",
+          "explain": "Fieber ist ein Zeichen dafür, dass Nina nicht gesund, sondern krank ist.",
+          "sentence": "Nina hat Fieber und liegt im Bett. Sie ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "hungrig"
+            },
+            {
+              "ok": true,
+              "word": "krank"
+            },
+            {
+              "ok": false,
+              "word": "freundlich"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GermanReferenceAdjectivesB1Quiz",
+  "title": "Adjektive B1 – Lückentext",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Wähle die passende Formulierung.",
+      "description": "Übe deutsche Adjektive auf dem Niveau B1. Ergänze jede Situation mit dem passenden Adjektiv oder der passenden Adjektiv-Präposition-Verbindung.",
+      "sortorder": 1,
+      "learningTitle": "Eigenschaften und Gefühle genauer beschreiben",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 1,
+          "summary": "„selbstbewusst“ beschreibt eine Person, die an ihre Fähigkeiten glaubt.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Lara spricht klar über ihre Stärken und hält Blickkontakt. Dadurch wirkt sie sehr selbstbewusst.",
+          "sentence": "Im Vorstellungsgespräch nennt Lara klar ihre Stärken und hält Blickkontakt. Sie wirkt _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sehr selbstbewusst"
+            },
+            {
+              "ok": false,
+              "word": "ziemlich nervös"
+            },
+            {
+              "ok": false,
+              "word": "eher schüchtern"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 2,
+          "summary": "„nervös“ bedeutet unruhig oder angespannt.",
+          "level": "B1",
+          "category": "Gefühle",
+          "explain": "Zitternde Hände und ständiges Laufen vor einer Prüfung sind typische Zeichen dafür, dass jemand sehr nervös ist.",
+          "sentence": "Kurz vor der mündlichen Prüfung zittern Pauls Hände und er läuft ständig hin und her. Er ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "völlig ruhig"
+            },
+            {
+              "ok": true,
+              "word": "sehr nervös"
+            },
+            {
+              "ok": false,
+              "word": "besonders geduldig"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 3,
+          "summary": "„zuverlässig“ beschreibt jemanden, der Zusagen einhält.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Wer immer pünktlich arbeitet und keine Zusage vergisst, ist absolut zuverlässig.",
+          "sentence": "Meine Kollegin hält jede Zusage ein und erledigt ihre Aufgaben immer pünktlich. Sie ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "oft unpünktlich"
+            },
+            {
+              "ok": false,
+              "word": "sehr kreativ"
+            },
+            {
+              "ok": true,
+              "word": "absolut zuverlässig"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 4,
+          "summary": "„höflich“ beschreibt respektvolles Verhalten.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Der Mitarbeiter reagiert trotz der Beschwerde respektvoll und ruhig. Seine Antwort ist höflich.",
+          "sentence": "Obwohl der Kunde sich beschwert, antwortet der Mitarbeiter _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "höflich und ruhig"
+            },
+            {
+              "ok": false,
+              "word": "unhöflich und laut"
+            },
+            {
+              "ok": false,
+              "word": "nervös und unsicher"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 5,
+          "summary": "„unhöflich“ beschreibt respektloses Verhalten.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Wer während eines Gesprächs ständig auf das Handy schaut, zeigt der anderen Person wenig Respekt und wirkt unhöflich.",
+          "sentence": "Während eines Gesprächs ständig auf das Handy zu schauen, wirkt _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "besonders höflich"
+            },
+            {
+              "ok": true,
+              "word": "äußerst unhöflich"
+            },
+            {
+              "ok": false,
+              "word": "völlig verständlich"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 6,
+          "summary": "„mutig“ beschreibt Handeln trotz Angst oder Gefahr.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Die Nachbarin hat Angst, handelt aber trotzdem und rettet den Hund. Das ist wirklich mutig.",
+          "sentence": "Obwohl sie Angst hat, springt die Nachbarin ins Wasser und rettet den Hund. Das ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "ziemlich egoistisch"
+            },
+            {
+              "ok": false,
+              "word": "sehr unhöflich"
+            },
+            {
+              "ok": true,
+              "word": "wirklich mutig"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 7,
+          "summary": "„schüchtern“ beschreibt Zurückhaltung gegenüber anderen Menschen.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Wer bei unbekannten Personen kaum spricht und Blickkontakt vermeidet, wirkt eher schüchtern.",
+          "sentence": "Bei fremden Menschen spricht Jonas kaum und vermeidet Blickkontakt. Er wirkt _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "eher schüchtern"
+            },
+            {
+              "ok": false,
+              "word": "sehr selbstbewusst"
+            },
+            {
+              "ok": false,
+              "word": "offen und direkt"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 8,
+          "summary": "Die Verbindung lautet „eifersüchtig auf“ + Akkusativ.",
+          "level": "B1",
+          "category": "Gefühle",
+          "explain": "Paul fürchtet, die Aufmerksamkeit seiner Freundin zu verlieren. Deshalb ist er eifersüchtig auf ihren Kollegen.",
+          "sentence": "Weil seine Freundin oft mit ihrem neuen Kollegen spricht, ist Paul _ ihn.",
+          "words": [
+            {
+              "ok": false,
+              "word": "stolz auf"
+            },
+            {
+              "ok": true,
+              "word": "eifersüchtig auf"
+            },
+            {
+              "ok": false,
+              "word": "besorgt um"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 9,
+          "summary": "Die Verbindung lautet „stolz auf“ + Akkusativ.",
+          "level": "B1",
+          "category": "Gefühle",
+          "explain": "Die Eltern freuen sich sehr über die Leistung ihrer Tochter. Sie sind stolz auf sie.",
+          "sentence": "Ihre Tochter hat die schwierige Prüfung bestanden. Die Eltern sind _ ihre Tochter.",
+          "words": [
+            {
+              "ok": false,
+              "word": "besorgt um"
+            },
+            {
+              "ok": false,
+              "word": "enttäuscht von"
+            },
+            {
+              "ok": true,
+              "word": "stolz auf"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 10,
+          "summary": "„enttäuscht von“ beschreibt eine nicht erfüllte Erwartung.",
+          "level": "B1",
+          "category": "Gefühle",
+          "explain": "Das Zimmer war schmutzig, obwohl die Gäste ein gutes Hotel erwartet hatten. Daher waren sie enttäuscht von dem Zimmer.",
+          "sentence": "Das Hotel hatte gute Bewertungen, aber das Zimmer war schmutzig. Wir waren _ dem Zimmer.",
+          "words": [
+            {
+              "ok": true,
+              "word": "enttäuscht von"
+            },
+            {
+              "ok": false,
+              "word": "überrascht von"
+            },
+            {
+              "ok": false,
+              "word": "stolz auf"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 11,
+          "summary": "„überrascht von“ beschreibt eine Reaktion auf etwas Unerwartetes.",
+          "level": "B1",
+          "category": "Gefühle",
+          "explain": "Niemand hatte mit der schnellen Unterstützung gerechnet. Deshalb waren alle überrascht von der Hilfe.",
+          "sentence": "Niemand hatte mit so schneller Hilfe gerechnet. Alle waren _ der Unterstützung.",
+          "words": [
+            {
+              "ok": false,
+              "word": "enttäuscht von"
+            },
+            {
+              "ok": true,
+              "word": "überrascht von"
+            },
+            {
+              "ok": false,
+              "word": "verantwortlich für"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 12,
+          "summary": "Die Verbindung „wütend auf“ nennt die Person, über die man sich stark ärgert.",
+          "level": "B1",
+          "category": "Gefühle",
+          "explain": "Der Nachbar hat Toms Fahrrad beschädigt. Deshalb ist Tom wütend auf ihn.",
+          "sentence": "Der Nachbar hat Toms Fahrrad absichtlich beschädigt. Tom ist _ ihn.",
+          "words": [
+            {
+              "ok": false,
+              "word": "stolz auf"
+            },
+            {
+              "ok": false,
+              "word": "besorgt um"
+            },
+            {
+              "ok": true,
+              "word": "wütend auf"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 13,
+          "summary": "Die Verbindung lautet „besorgt um“ + Akkusativ.",
+          "level": "B1",
+          "category": "Gefühle",
+          "explain": "Die Eltern machen sich Sorgen, weil ihr Sohn sich nicht gemeldet hat. Sie sind besorgt um ihn.",
+          "sentence": "Ihr Sohn hat sich seit zwei Tagen nicht gemeldet. Seine Eltern sind _ ihn.",
+          "words": [
+            {
+              "ok": true,
+              "word": "besorgt um"
+            },
+            {
+              "ok": false,
+              "word": "stolz auf"
+            },
+            {
+              "ok": false,
+              "word": "eifersüchtig auf"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 14,
+          "summary": "„ehrlich“ beschreibt jemanden, der die Wahrheit sagt.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Sie verschweigt ihren Fehler nicht und sagt offen die Wahrheit. Damit ist sie ganz ehrlich.",
+          "sentence": "Sie gibt ihren Fehler zu und sagt genau, was passiert ist. Dabei ist sie _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "sehr höflich"
+            },
+            {
+              "ok": true,
+              "word": "ganz ehrlich"
+            },
+            {
+              "ok": false,
+              "word": "ziemlich nervös"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 15,
+          "summary": "„kreativ“ beschreibt neue und originelle Ideen.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Die ungewöhnliche Lösung ist neu, originell und erfolgreich. Das Team war besonders kreativ.",
+          "sentence": "Das Team löst das Problem mit einer völlig neuen Idee. Es war _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "völlig unhöflich"
+            },
+            {
+              "ok": false,
+              "word": "sehr zuverlässig"
+            },
+            {
+              "ok": true,
+              "word": "besonders kreativ"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 16,
+          "summary": "„vernünftig“ beschreibt eine praktische und sinnvolle Entscheidung.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Er spart zuerst genug Geld und vermeidet dadurch neue Schulden. Dieser Plan ist vernünftig.",
+          "sentence": "Er spart erst genug Geld, bevor er das Auto kauft. Dieser Plan ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sehr vernünftig"
+            },
+            {
+              "ok": false,
+              "word": "ziemlich egoistisch"
+            },
+            {
+              "ok": false,
+              "word": "völlig unmöglich"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 17,
+          "summary": "„egoistisch“ beschreibt Verhalten, das nur den eigenen Vorteil beachtet.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Er denkt nur an sich und teilt nichts mit den anderen. Dieses Verhalten ist egoistisch.",
+          "sentence": "Obwohl alle Hunger haben, behält er das ganze Essen für sich. Das ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "wirklich großzügig"
+            },
+            {
+              "ok": true,
+              "word": "ziemlich egoistisch"
+            },
+            {
+              "ok": false,
+              "word": "besonders höflich"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 18,
+          "summary": "„großzügig“ beschreibt jemanden, der anderen gern viel gibt.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Sie gibt die Hälfte ihres Gewinns an Menschen, die Hilfe brauchen. Das ist sehr großzügig.",
+          "sentence": "Sie spendet die Hälfte ihres Gewinns für soziale Projekte. Das ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "eher egoistisch"
+            },
+            {
+              "ok": false,
+              "word": "wenig hilfreich"
+            },
+            {
+              "ok": true,
+              "word": "sehr großzügig"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 19,
+          "summary": "Die Verbindung lautet „verantwortlich für“ + Akkusativ.",
+          "level": "B1",
+          "category": "Verantwortung",
+          "explain": "Die Abteilungsleiterin plant und kontrolliert das Projekt. Deshalb ist sie verantwortlich für das gesamte Projekt.",
+          "sentence": "Die Abteilungsleiterin plant alle Aufgaben und kontrolliert die Ergebnisse. Sie ist _ das gesamte Projekt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "verantwortlich für"
+            },
+            {
+              "ok": false,
+              "word": "stolz auf"
+            },
+            {
+              "ok": false,
+              "word": "besorgt um"
+            }
+          ]
+        },
+        {
+          "title": "Welche Formulierung passt?",
+          "page": 20,
+          "summary": "„geduldig“ beschreibt jemanden, der ruhig bleibt und nicht schnell aufgibt.",
+          "level": "B1",
+          "category": "Persönlichkeit",
+          "explain": "Der Lehrer erklärt dasselbe Thema noch einmal, ohne sich zu ärgern. Er bleibt sehr geduldig.",
+          "sentence": "Der Lehrer erklärt das Thema zum dritten Mal, ohne sich zu ärgern. Er bleibt _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "immer wütend"
+            },
+            {
+              "ok": true,
+              "word": "sehr geduldig"
+            },
+            {
+              "ok": false,
+              "word": "deutlich enttäuscht"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

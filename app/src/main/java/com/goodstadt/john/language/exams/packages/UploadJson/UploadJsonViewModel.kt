@@ -232,6 +232,22 @@ class UploadJsonViewModel @Inject constructor(
         }
         fun grp(title: String, rows: List<UploadJsonFile?>) = UploadJsonLevelGroup(title, rows.filterNotNull())
 
+        // "Reference Quiz": fileFormat-7 quiz sheets bundled in assets at Quizzes/Reference (de only, e.g.
+        // GermanReferenceAdjectivesA1Quiz..B2Quiz). The Firestore doc name is the filename stem (upload sets
+        // the sheet's `sheetname` field to it). Empty on flavours that don't bundle them (group dropped below).
+        val referenceQuizFiles = (context.assets.list("Quizzes/Reference") ?: emptyArray())
+            .filter { it.endsWith(".json") }
+            .sorted()
+            .map { fileName ->
+                val docName = fileName.removeSuffix(".json") // e.g. "GermanReferenceAdjectivesA1"
+                UploadJsonFile(
+                    displayName = docName,
+                    fileName = fileName,
+                    assetPath = "Quizzes/Reference/$fileName",
+                    firestoreDocName = docName
+                )
+            }
+
         val groups = listOf(
             grp("Adjectives", listOf(
                 ref(listOf("german_a1_adjectives"), "${languagePrefix}A1Adjectives"),
@@ -260,6 +276,7 @@ class UploadJsonViewModel @Inject constructor(
             grp("Word of the Day", listOf(
                 ref(listOf("daily_word_dictionary_pool_v1"), "DailyWordDictionary"), // shared, no prefix
             )),
+            UploadJsonLevelGroup("Reference Quiz", referenceQuizFiles),
         ).filter { it.files.isNotEmpty() } // drop groups this flavour doesn't bundle
 
         return UploadJsonSection("Reference", groups)

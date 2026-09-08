@@ -1,0 +1,524 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GermanReferenceAdjectivesA2Quiz",
+  "title": "Adjektive A2 – Lückentext",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Wähle das passende Adjektiv.",
+      "description": "Übe häufige deutsche Adjektive auf dem Niveau A2. Wähle für jede Lücke das Adjektiv, das am besten zur beschriebenen Situation passt.",
+      "sortorder": 1,
+      "learningTitle": "Adjektive in Alltagssituationen verwenden",
+      "learningPoints": [],
+      "sections": [
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 1,
+          "summary": "„interessant“ beschreibt etwas, das neugierig macht.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Der Film weckt Leons Interesse und er möchte mehr über das Thema wissen. Deshalb ist er interessant.",
+          "sentence": "Leon stellt nach dem Film viele Fragen. Er findet den Film sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "interessant"
+            },
+            {
+              "ok": false,
+              "word": "langweilig"
+            },
+            {
+              "ok": false,
+              "word": "fertig"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 2,
+          "summary": "„langweilig“ beschreibt etwas, das kein Interesse weckt.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Der Vortrag bietet nichts Neues und die Zuhörer verlieren ihr Interesse. Deshalb ist er langweilig.",
+          "sentence": "Der Vortrag wiederholt immer dieselben Informationen. Er ist wirklich _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "interessant"
+            },
+            {
+              "ok": true,
+              "word": "langweilig"
+            },
+            {
+              "ok": false,
+              "word": "nützlich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 3,
+          "summary": "„bequem“ bedeutet angenehm und komfortabel.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Ein weicher Sessel, in dem man gut sitzen kann, ist bequem.",
+          "sentence": "In diesem weichen Sessel kann ich stundenlang sitzen. Er ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "gefährlich"
+            },
+            {
+              "ok": false,
+              "word": "laut"
+            },
+            {
+              "ok": true,
+              "word": "bequem"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 4,
+          "summary": "„schwierig“ bedeutet, dass etwas nicht leicht zu lösen ist.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Wenn niemand die Aufgabe lösen kann, ist sie schwierig.",
+          "sentence": "Niemand in der Klasse kann die letzte Aufgabe lösen. Sie ist zu _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "schwierig"
+            },
+            {
+              "ok": false,
+              "word": "einfach"
+            },
+            {
+              "ok": false,
+              "word": "fertig"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 5,
+          "summary": "„einfach“ beschreibt etwas, das leicht zu machen oder zu verstehen ist.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Nur drei Zutaten und zwei Arbeitsschritte machen das Rezept einfach.",
+          "sentence": "Das Rezept hat nur drei Zutaten und zwei Schritte. Es ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "schwierig"
+            },
+            {
+              "ok": true,
+              "word": "einfach"
+            },
+            {
+              "ok": false,
+              "word": "unmöglich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 6,
+          "summary": "„nützlich“ beschreibt etwas, das im Alltag hilft.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Die App zeigt die richtige Verbindung und hilft damit bei der Reise. Sie ist nützlich.",
+          "sentence": "Diese App zeigt mir immer den richtigen Bus. Sie ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "laut"
+            },
+            {
+              "ok": false,
+              "word": "besetzt"
+            },
+            {
+              "ok": true,
+              "word": "nützlich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 7,
+          "summary": "„fertig“ bedeutet vollständig gemacht und bereit.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Lisa hat den Bericht beendet. Deshalb ist er fertig und kann abgeschickt werden.",
+          "sentence": "Lisa hat den Bericht vollständig geschrieben und kann ihn jetzt senden. Er ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "fertig"
+            },
+            {
+              "ok": false,
+              "word": "wichtig"
+            },
+            {
+              "ok": false,
+              "word": "besetzt"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 8,
+          "summary": "„gesund“ kann etwas beschreiben, das gut für den Körper ist.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Regelmäßige Bewegung und viel Gemüse unterstützen den Körper. Dieser Lebensstil ist gesund.",
+          "sentence": "Mara bewegt sich täglich und isst viel Gemüse. Ihr Lebensstil ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "gefährlich"
+            },
+            {
+              "ok": true,
+              "word": "gesund"
+            },
+            {
+              "ok": false,
+              "word": "modern"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 9,
+          "summary": "„gefährlich“ beschreibt eine Situation, in der leicht ein Schaden entstehen kann.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Eine vereiste Straße ohne Licht kann einen Unfall verursachen. Deshalb ist sie gefährlich.",
+          "sentence": "Die Straße ist vereist und nicht beleuchtet. Das Fahren dort ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "sicher"
+            },
+            {
+              "ok": false,
+              "word": "bequem"
+            },
+            {
+              "ok": true,
+              "word": "gefährlich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 10,
+          "summary": "„sicher“ bedeutet, dass nur eine geringe Gefahr besteht.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Der geprüfte Spielplatz und der weiche Boden schützen die Kinder. Der Ort ist sicher.",
+          "sentence": "Der Spielplatz wurde geprüft und hat einen weichen Boden. Er ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sicher"
+            },
+            {
+              "ok": false,
+              "word": "gefährlich"
+            },
+            {
+              "ok": false,
+              "word": "schwierig"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 11,
+          "summary": "„laut“ beschreibt ein starkes Geräusch.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Wenn die Nachbarn wegen der Musik nicht schlafen können, ist die Musik zu laut.",
+          "sentence": "Die Nachbarn können wegen der Musik nicht schlafen. Sie ist viel zu _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "leise"
+            },
+            {
+              "ok": true,
+              "word": "laut"
+            },
+            {
+              "ok": false,
+              "word": "bequem"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 12,
+          "summary": "„leise“ bedeutet mit wenig Geräusch.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "In der Bibliothek sollen die anderen Personen nicht gestört werden. Deshalb spricht man leise.",
+          "sentence": "In der Bibliothek flüstert Nora, damit sie niemanden stört. Sie spricht sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "laut"
+            },
+            {
+              "ok": false,
+              "word": "beliebt"
+            },
+            {
+              "ok": true,
+              "word": "leise"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 13,
+          "summary": "„modern“ beschreibt etwas, das zur heutigen Zeit passt.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Neue Technik und ein aktuelles Design machen das Gebäude modern.",
+          "sentence": "Das neue Gebäude hat aktuelle Technik und ein klares Design. Es wirkt sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "modern"
+            },
+            {
+              "ok": false,
+              "word": "traditionell"
+            },
+            {
+              "ok": false,
+              "word": "bekannt"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 14,
+          "summary": "„traditionell“ beschreibt etwas nach alten Bräuchen oder Gewohnheiten.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Ein Fest, das seit Jahrhunderten auf dieselbe Weise gefeiert wird, ist traditionell.",
+          "sentence": "Das Dorf feiert dieses Fest seit Jahrhunderten auf dieselbe Weise. Es ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "modern"
+            },
+            {
+              "ok": true,
+              "word": "traditionell"
+            },
+            {
+              "ok": false,
+              "word": "möglich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 15,
+          "summary": "„wichtig“ beschreibt etwas mit großer Bedeutung.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Ohne Reisepass ist die Flugreise nicht erlaubt. Deshalb ist der Pass wichtig.",
+          "sentence": "Ohne Reisepass darfst du nicht fliegen. Dieses Dokument ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "frei"
+            },
+            {
+              "ok": false,
+              "word": "beliebt"
+            },
+            {
+              "ok": true,
+              "word": "wichtig"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 16,
+          "summary": "„möglich“ bedeutet, dass etwas gemacht werden oder passieren kann.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Es gibt einen direkten Zug und genug Zeit. Die Reise kann also heute stattfinden und ist möglich.",
+          "sentence": "Es gibt noch einen direkten Zug und wir haben genug Zeit. Die Reise ist heute _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "möglich"
+            },
+            {
+              "ok": false,
+              "word": "unmöglich"
+            },
+            {
+              "ok": false,
+              "word": "schwierig"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 17,
+          "summary": "„unmöglich“ bedeutet, dass etwas nicht gemacht werden kann.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Einhundert Kilometer kann man nicht in zehn Minuten zu Fuß gehen. Das ist unmöglich.",
+          "sentence": "Einhundert Kilometer in zehn Minuten zu Fuß zu gehen, ist _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "möglich"
+            },
+            {
+              "ok": true,
+              "word": "unmöglich"
+            },
+            {
+              "ok": false,
+              "word": "einfach"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 18,
+          "summary": "„bekannt“ beschreibt eine Person oder Sache, die viele Menschen kennen.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Wenn fast alle Menschen den Namen einer Sängerin kennen, ist sie bekannt.",
+          "sentence": "Fast jeder kennt den Namen dieser Sängerin. Sie ist sehr _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "frei"
+            },
+            {
+              "ok": false,
+              "word": "leise"
+            },
+            {
+              "ok": true,
+              "word": "bekannt"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 19,
+          "summary": "„beliebt“ beschreibt jemanden oder etwas, das viele Menschen mögen.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Viele Gäste besuchen das Café gern und empfehlen es weiter. Deshalb ist es beliebt.",
+          "sentence": "Viele Gäste mögen dieses Café und kommen jede Woche wieder. Es ist sehr _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "beliebt"
+            },
+            {
+              "ok": false,
+              "word": "bekannt"
+            },
+            {
+              "ok": false,
+              "word": "frei"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 20,
+          "summary": "„frei“ kann bedeuten, dass ein Platz nicht benutzt wird.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Auf dem Sitzplatz sitzt niemand. Deshalb ist er frei.",
+          "sentence": "Auf diesem Sitzplatz sitzt niemand. Er ist noch _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "besetzt"
+            },
+            {
+              "ok": true,
+              "word": "frei"
+            },
+            {
+              "ok": false,
+              "word": "gefährlich"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 21,
+          "summary": "„besetzt“ bedeutet, dass ein Platz bereits benutzt wird.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Wenn bereits jemand auf dem Platz sitzt, ist er besetzt und nicht frei.",
+          "sentence": "Auf diesem Platz sitzt schon jemand. Er ist leider _.",
+          "words": [
+            {
+              "ok": false,
+              "word": "frei"
+            },
+            {
+              "ok": false,
+              "word": "bequem"
+            },
+            {
+              "ok": true,
+              "word": "besetzt"
+            }
+          ]
+        },
+        {
+          "title": "Welches Adjektiv passt?",
+          "page": 22,
+          "summary": "„pünktlich“ bedeutet genau zur vereinbarten Zeit.",
+          "level": "A2",
+          "category": "Adjektive",
+          "explain": "Anna kommt fünf Minuten vor Beginn und ist damit pünktlich.",
+          "sentence": "Das Treffen beginnt um neun Uhr und Anna kommt um fünf vor neun. Sie ist _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "pünktlich"
+            },
+            {
+              "ok": false,
+              "word": "fertig"
+            },
+            {
+              "ok": false,
+              "word": "bekannt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
