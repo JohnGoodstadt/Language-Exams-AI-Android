@@ -1,12 +1,12 @@
 package com.goodstadt.john.language.exams.utils
 
+import android.content.Context
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format1Level
 import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.models.Format7or10Word
 import kotlin.random.Random
-import android.content.Context
 
 object QuizDataConverter {
 
@@ -120,7 +120,9 @@ object QuizDataConverter {
         // 2. Filter for valid quiz entries and shuffle them for randomness.
         //    A valid entry must have a non-empty lockedClause and weakenedClause.
         val generatedQuestions = allWords
-            .filter { it.lockedClause.isNotBlank() && it.weakenedClause.isNotBlank() }
+            .filter {
+                it.lockedClause.isNotBlank() && it.weakenedClause.isNotBlank()
+            }
             .shuffled()
             // 3. Take up to the specified limit of questions.
             .take(limit)

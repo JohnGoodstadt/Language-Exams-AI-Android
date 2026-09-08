@@ -12,12 +12,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.zIndex
+import androidx.compose.ui.window.Popup
+import androidx.compose.ui.window.PopupProperties
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -51,25 +54,35 @@ fun GlobalBannerWrapper(
     val state by bannerManager.bannerState.collectAsState()
     val context = LocalContext.current
 
+    // 1. Your actual App Screens (NavHost, etc.)
     Box(modifier = Modifier.fillMaxSize()) {
-        // 1. Your actual App Screens (NavHost, etc.)
         content()
+    }
 
-        // 2. The Global Banner Overlay
-        AnimatedVisibility(
-            visible = state != null,
-            enter = slideInVertically { -it } + fadeIn(),
-            exit = slideOutVertically { -it } + fadeOut(),
-            modifier = Modifier.align(Alignment.TopCenter).padding(top = 100.dp).zIndex(99f)
+    // 2. The Global Banner Overlay - shown in a Popup so it renders ABOVE everything, including modal
+    //    bottom sheets and dialogs (which live in their own windows; an in-window z-index can't beat them).
+    state?.let { data ->
+        Popup(
+            alignment = Alignment.TopCenter,
+            // Don't steal focus/touches from the screen underneath; let it overflow its bounds.
+            properties = PopupProperties(focusable = false, clippingEnabled = false)
         ) {
-            state?.let { data ->
-                LaunchedEffect(data) {
-                    globalLoadingManager.playSuccessSound(context)
-                    val milliSecondsDelay = data.seconds.toLong() * 1000L
-                    delay(milliSecondsDelay)
-                    bannerManager.dismiss()
-                }
+            LaunchedEffect(data) {
+                globalLoadingManager.playSuccessSound(context)
+                delay(data.seconds.toLong() * 1000L)
+                bannerManager.dismiss()
+            }
 
+            // Animate the entrance (start hidden, then reveal) so it still slides/fades in.
+            var visible by remember(data) { mutableStateOf(false) }
+            LaunchedEffect(data) { visible = true }
+
+            AnimatedVisibility(
+                visible = visible,
+                enter = slideInVertically { -it } + fadeIn(),
+                exit = slideOutVertically { -it } + fadeOut(),
+                modifier = Modifier.padding(top = 100.dp)
+            ) {
                 AchievementBanner(
                     isVisible = true,
                     title = data.title,

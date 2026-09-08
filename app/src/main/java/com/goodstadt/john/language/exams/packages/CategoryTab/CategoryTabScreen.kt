@@ -1,6 +1,13 @@
 package com.goodstadt.john.language.exams.packages.CategoryTab
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
+import com.goodstadt.john.language.exams.models.SaveReminder
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -82,7 +89,9 @@ import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabQuizScreen
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
+import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
@@ -123,6 +132,11 @@ fun CategoryTabScreen(
 
 
     val context = LocalContext.current
+    // Notification permission (Android 13+) is requested lazily, on first save‑for‑practice below. The
+    // reminder still schedules if denied; it just can't post a notification.
+    val notificationPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { /* result ignored: scheduling proceeds regardless */ }
     val snackbarHostState = remember { SnackbarHostState() }
     val uiState by viewModel.uiState.collectAsState()
 
@@ -150,6 +164,14 @@ fun CategoryTabScreen(
     // Legend sheet explaining the section status dots + streak stars (opened by tapping them).
     var showQuizLegendSheet by remember { mutableStateOf(false) }
     val quizLegendSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Global Translate sheet, opened from the "T" button in the stats row.
+    var showTranslateSheet by remember { mutableStateOf(false) }
+
+    // Forget the last-played sentence when the user leaves this tab, so the Translate prefill starts blank.
+    DisposableEffect(Unit) {
+        onDispose { viewModel.clearLastPlayedSentence() }
+    }
 
     // --- Rate Limit Sheets ---
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
@@ -356,6 +378,16 @@ fun CategoryTabScreen(
                                     .fillMaxWidth()
                                     .padding(horizontal = 64.dp, vertical = 8.dp)
                             )
+                            // Translate: mirrors the stats button on the far left. Opens the global
+                            // Translate sheet, pre-filled with the last sentence played on this tab.
+                            IconButton(
+                                onClick = { showTranslateSheet = true },
+                                modifier = Modifier
+                                    .align(Alignment.CenterStart)
+                                    .padding(start = 8.dp)
+                            ) {
+                                LetterInCircle(letter = "T", tint = Color(0xFFFF9800))
+                            }
                             IconButton(
                                 onClick = { showGamificationSheet = true },
                                 modifier = Modifier
@@ -631,6 +663,17 @@ fun CategoryTabScreen(
                         wordText = savedWordText,
                         onReminderSelected = { reminder ->
                             viewModel.scheduleReminder(reminder, savedWordText)
+                            // First real use of notifications: ask now (Android 13+) when the user actually
+                            // chooses a reminder, so it can appear. "Don't remind me" schedules nothing.
+                            if (reminder != SaveReminder.NONE &&
+                                Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                                ContextCompat.checkSelfPermission(
+                                    context,
+                                    Manifest.permission.POST_NOTIFICATIONS
+                                ) != PackageManager.PERMISSION_GRANTED
+                            ) {
+                                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                            }
                         },
                         onDismiss = { showSavedSheet = false }
                     )
@@ -760,6 +803,14 @@ fun CategoryTabScreen(
                 // Wrapper to initialize the specific quiz
                 SectionQuizContainer(categoryTitle = currentQuizCategory!!.title)
             }
+        }
+
+        // Global Translate sheet, pre-filled with the last sentence played on this tab (blank if none).
+        if (showTranslateSheet) {
+            TranslateSheet(
+                onDismiss = { showTranslateSheet = false },
+                initialText = viewModel.getLatestSentence()
+            )
         }
 
         // Legend explaining the status dots + streak stars (opened by tapping them on a section row).

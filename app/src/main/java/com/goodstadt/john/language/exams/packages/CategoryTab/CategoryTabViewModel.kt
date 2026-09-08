@@ -1046,6 +1046,12 @@ Fix: Remove the duplicate calls at lines 856 and 859.
     fun getLatestSentence(): String {
         return lastPlayedSentence
     }
+
+    /** Forget the last-played sentence (so the Translate prefill is blank next time). Called when the user
+     *  leaves the tab. */
+    fun clearLastPlayedSentence() {
+        lastPlayedSentence = ""
+    }
     // Combine the totals logic with the "seen" state
 
     fun markVoiceHelpAsSeen() {

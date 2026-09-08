@@ -56,18 +56,8 @@ class MainActivity : ComponentActivity() {
         handleNavIntent(intent) // e.g. launched from a practice-reminder notification
 
         setContent {
-            // Ask for notification permission (Android 13+) so practice reminders can appear.
-            val notificationPermissionLauncher =
-                rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { }
-            LaunchedEffect(Unit) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-                    ContextCompat.checkSelfPermission(
-                        this@MainActivity, Manifest.permission.POST_NOTIFICATIONS
-                    ) != PackageManager.PERMISSION_GRANTED
-                ) {
-                    notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-                }
-            }
+            // Notification permission is requested lazily, at first use (saving a word for practice on the
+            // vocab tabs), rather than up front here - see CategoryTabScreen's swipe-to-save.
 
             val mainViewModel: MainViewModel = hiltViewModel()
             mainViewModel.registerLifecycleObserver(this.lifecycle) // Register the observer with the activity's lifecycle

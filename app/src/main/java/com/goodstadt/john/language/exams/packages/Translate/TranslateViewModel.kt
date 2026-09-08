@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.TranslateLang
@@ -43,6 +44,18 @@ class TranslateViewModel @Inject constructor(
     fun onSourceChange(text: String) {
         sourceText = text
         errorMessage = null
+    }
+
+    /**
+     * Pre-fill the source box when the sheet opens - e.g. with the last sentence the user played on the
+     * vocab tabs (blank if none). Resets the result and points the source at the app's own language, since
+     * played sentences are in that language. Called each time the sheet is shown.
+     */
+    fun prefillSource(text: String) {
+        sourceText = text
+        targetText = ""
+        errorMessage = null
+        sourceLang = if (BuildConfig.LANGUAGE_ID == "en") TranslateLang.ENGLISH else TranslateLang.GERMAN
     }
 
     /** Swap direction, carrying the texts across too (like Google Translate's swap). */

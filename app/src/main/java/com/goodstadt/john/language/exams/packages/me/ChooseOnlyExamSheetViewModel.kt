@@ -1,0 +1,161 @@
+package com.goodstadt.john.language.exams.packages.me
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.RecallingItems
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.VoiceRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.models.ExamDetails
+import com.goodstadt.john.language.exams.models.LanguageCodeDetails
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import timber.log.Timber
+import javax.inject.Inject
+
+//}
+@HiltViewModel
+class ChooseOnlyExamSheetViewModel  @Inject constructor(
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val controlRepository: ControlRepository,
+    private val ttsStatsRepository: TTSStatsRepository,
+    private val recallingItemsManager: RecallingItems,
+    private val voiceRepository: VoiceRepository,
+): ViewModel() {
+
+    private val _uiState = MutableStateFlow(  ChooseEnglishUIState())
+    val uiState = _uiState.asStateFlow()
+
+    private val _showOnBoardingSheet = MutableStateFlow(false)
+    val showOnboardingSheet = _showOnBoardingSheet.asStateFlow()
+
+    data class ChooseEnglishUIState(
+        val currentLanguage: String = "",
+        val currentExamName: String = "",
+        val availableExams: List<ExamDetails> = emptyList(),
+        val availableLanguages: List<LanguageCodeDetails> = emptyList(),
+        val pendingSelectedExam: ExamDetails? = null,
+        val pendingSelectedLanguage: LanguageCodeDetails? = null
+    )
+    init
+    {
+        loadInitialData()
+    }
+
+    private fun loadInitialData() {
+        viewModelScope.launch {
+            // We start with the first result
+            controlRepository.getCurrentLanguageCode()
+                .mapCatching {
+                    // Zip the two subsequent requests together
+                    val details = controlRepository.getActiveLanguageDetails().getOrThrow()
+                    val languages = controlRepository.getAllEnglishLanguageList().getOrThrow()
+                    details to languages
+                }
+                .onSuccess { (details, languages) ->
+                    _uiState.update {
+                        it.copy(
+                            availableExams = details.exams,
+                            availableLanguages = languages
+                        )
+                    }
+                }
+                .onFailure { error ->
+                    // This will catch an error from ANY of the 3 repository calls
+                   // _uiState.update { it.copy(availableExams = details.exams, errorMessage = error.message) }
+                    Timber.e("Data Load Failed", error)
+                }
+        }
+    }
+/*
+8. ChooseEnglishViewModel.loadInitialData() silently swallows errors
+File: ChooseEnglishViewModel.kt lines 49–68
+Deeply nested onSuccess calls with zero onFailure handlers. If any of the three chained calls fail, the UI shows empty lists with no error message to the user.
+
+Fix: Add onFailure handlers at each level, or restructure with try/catch + a single error state.
+ */
+    fun onPendingLanguageSelect(language: LanguageCodeDetails) {
+        _uiState.update { it.copy(pendingSelectedLanguage = language) }
+    }
+
+    fun onPendingExamSelect(exam: ExamDetails) {
+        _uiState.update { it.copy(pendingSelectedExam = exam) }
+    }
+
+    fun hideBottomSheet() {
+        _showOnBoardingSheet.value = false
+    }
+
+    /**
+     * Directly switch the app's vocab to [level] (e.g. "B2") WITHOUT showing the picker sheet: find the
+     * exam whose skillLevel matches [level] and apply it exactly as [saveSelection] does. Used by the
+     * audit's "Switch App Vocab to <level> Mastery" button, which already knows the suggested level.
+     * (The "Change Level" button still opens the sheet for a free choice.)
+     */
+    fun applyLevelDirectly(level: String) {
+        viewModelScope.launch {
+            // The exam list loads asynchronously in init; if the VM was just created it may be empty, so
+            // fetch on demand before mapping the level to its exam.
+            var exams = _uiState.value.availableExams
+            if (exams.isEmpty()) {
+                controlRepository.getActiveLanguageDetails().getOrNull()?.let { details ->
+                    exams = details.exams
+                    _uiState.update { it.copy(availableExams = details.exams) }
+                }
+            }
+            val exam = exams.firstOrNull { it.skillLevel.equals(level, ignoreCase = true) }
+            if (exam == null) {
+                Timber.w("applyLevelDirectly: no exam for level '$level' in ${exams.map { it.skillLevel }}")
+                return@launch
+            }
+            onPendingExamSelect(exam) // set the pending exam, then reuse the existing save path
+            saveSelection()
+        }
+    }
+
+    fun saveSelection() {
+        Timber.e("BothSelection")
+        viewModelScope.launch {
+            val pendingExam = _uiState.value.pendingSelectedExam
+            val pendingLanguage = _uiState.value.pendingSelectedLanguage
+
+            ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exam has correct stat
+            pendingExam?.let { selectedExam ->
+                // 1. Save the user's preference (already here)
+                userPreferencesRepository.saveSelectedFileName(selectedExam.json)
+                userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
+                userPreferencesRepository.updateExamName(selectedExam.json) //this will be used on TAB1,2,3
+                // --- THIS IS THE NEW, CRITICAL PART ---
+                // 2. Tell the shared manager to load the recalled items for the NEW exam
+                Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
+               // recallingItemsManager.load(selectedExam.json)
+
+            }
+
+            pendingLanguage?.let { selectedLanguage ->
+                voiceRepository.clearCache() //all voice will change
+                controlRepository.clearCache() //stpred language details will change
+
+                Timber.d(selectedLanguage.name)
+                //1. default voice
+                val voiceName = selectedLanguage.defaultFemaleVoice
+                userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                userPreferencesRepository.saveSelectedLanguageCode(selectedLanguage.code)
+
+                _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
+
+                // 1. Save the user's preference (already here)
+                //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)
+//                        userPreferencesRepository.saveSelectedSkillLevel(selectedLanguage.skillLevel)
+                // --- THIS IS THE NEW, CRITICAL PART ---
+                // 2. Tell the shared manager to load the recalled items for the NEW exam
+                Timber.d("New exam selected. Reloading recalled items for key: ${selectedLanguage.code}")
+
+            }
+        }
+    }
+}

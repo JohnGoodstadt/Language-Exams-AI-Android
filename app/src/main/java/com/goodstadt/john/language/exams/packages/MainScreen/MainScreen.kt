@@ -70,7 +70,7 @@ import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditS
 import com.goodstadt.john.language.exams.packages.ReferenceTabContainer.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishAndExamSheet
-import com.goodstadt.john.language.exams.packages.me.ChooseExamLevelSheet
+import com.goodstadt.john.language.exams.packages.me.ChooseOnlyExamSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
@@ -358,7 +358,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             // The user MUST make a choice.
             onDismissRequest = { },
             sheetState = sheetState,
-            modifier = Modifier.fillMaxHeight(0.80f) //NOTE: if too low then button off screen
+            modifier = Modifier.fillMaxHeight(0.50f) //NOTE: if too low then button off screen
         ) {
             if (LanguageConfig.hasDialectSelection) {
                 // English: the combined 2-choice sheet (Dialect + Exam Level).
@@ -367,7 +367,10 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                 )
             } else {
                 // Other flavours (de, zh): no dialect to pick, so just the Exam Level sheet.
-                ChooseExamLevelSheet(
+//                ChooseExamLevelSheet(
+//                    onClose = { mainViewModel.onLanguageChoiceDismissed() }
+//                )
+                ChooseOnlyExamSheet(
                     onClose = { mainViewModel.onLanguageChoiceDismissed() }
                 )
             }

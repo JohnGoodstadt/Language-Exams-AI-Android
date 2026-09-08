@@ -1257,8 +1257,13 @@ class VocabSectionQuizViewModel @Inject constructor(
         }
 
 
-        val currentQuestion = currentQuestionIndex.value + 1 // one based
-        if (currentQuestion >= _questions.value.count()) { //completed
+        // Completion = last question of the LAST sub-tab page. _questions holds only the CURRENT page (≤10),
+        // so a 12-question quiz has pages [1,2]; finishing page 1 at Q10 must NOT count as finished - only
+        // Q12 on the last page. onQuizFinished (banner + sound + save) then fires once, at the very end.
+        val onLastQuestionOfPage = (currentQuestionIndex.value + 1) >= _questions.value.count()
+        val maxPage = _availableSectionIndices.value.maxOrNull() ?: _currentSectionIndex.value
+        val onLastPage = _currentSectionIndex.value >= maxPage
+        if (onLastQuestionOfPage && onLastPage) { // whole quiz completed
             quizStatistics.value = quizStatistics.value.copy(
                 state = QuizState.COMPLETED,
                 title = quizStatistics.value.title

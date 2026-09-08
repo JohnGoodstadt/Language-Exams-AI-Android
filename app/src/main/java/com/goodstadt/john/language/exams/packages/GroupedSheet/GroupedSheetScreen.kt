@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.CircularProgressIndicator
@@ -239,48 +240,61 @@ fun GroupedSheetScreen(
         if (showQuizSheet) {
             val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-            when (val contentState = uiState.contentState) {
-                is ContentState.Success -> {
-                    val categories = contentState.categories
-                    val questions = remember(uiState.contentState) {
-                        QuizDataConverter.generateAdjectivesQuiz(categories, limit = 10)
-                    }
+            // Build the quiz from the loaded categories (empty until content is Success). The quiz only
+            // includes words that carry BOTH lockedClause and weakenedClause (adjective-style), so a sheet
+            // whose words lack them yields no questions.
+            val categories = (uiState.contentState as? ContentState.Success)?.categories ?: emptyList()
+            val questions = remember(uiState.contentState) {
+                QuizDataConverter.generateAdjectivesQuiz(categories, limit = 10)
+            }
+            val pageTitle = uiState.title
 
-                    viewModel.incQuizSheetStat()
+            // Record the stat once (side effects must not run inline during composition).
+            LaunchedEffect(Unit) {
+                viewModel.incQuizSheetStat()
+                Timber.i(
+                    "Quiz sheet: categories=%d words=%d eligible/questions=%d",
+                    categories.size, categories.sumOf { it.words.size }, questions.size
+                )
+            }
 
-                    val pageTitle = uiState.title
+            ModalBottomSheet(
+                onDismissRequest = { showQuizSheet = false },
+                sheetState = quizSheetState,
+                modifier = Modifier.fillMaxHeight(0.80f),
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        // Add padding for the Android Gesture Bar / Navigation Bar
+                        .padding(bottom = 40.dp)
+                ) {
                     if (questions.isNotEmpty()) {
-                        ModalBottomSheet(
-                            onDismissRequest = { showQuizSheet = false },
-                            sheetState = quizSheetState,
-                            // ✅ FIX 1: Force the sheet to take up 95% of the screen height
-                            modifier = Modifier.fillMaxHeight(0.80f),
-                            // ✅ FIX 2: Ensure it respects system colors
-                            containerColor = MaterialTheme.colorScheme.surface,
-                            contentColor = MaterialTheme.colorScheme.onSurface
+                        QuizSheetView(
+                            questions = questions,
+                            title = "Quiz: $pageTitle",
+                            onDismiss = { showQuizSheet = false }
+                        )
+                    } else {
+                        // No quiz data for this sheet (words have no lockedClause/weakenedClause) - show
+                        // visible feedback instead of a silent no-op.
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(24.dp),
+                            contentAlignment = Alignment.Center
                         ) {
-                            // ✅ FIX 3: Container that fills the sheet AND adds bottom padding
-                            // We use a Box with fillMaxSize so the QuizView's Spacers work correctly.
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxSize()
-                                    // Add padding for the Android Gesture Bar / Navigation Bar
-                                    .padding(bottom = 40.dp)
-                            ) {
-                                QuizSheetView(
-                                    questions = questions,
-                                    title = "Quiz: $pageTitle",
-                                    onDismiss = { showQuizSheet = false }
-                                )
-                            }
+                            Text(
+                                text = "No quiz is available for this sheet yet.",
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
                         }
                     }
                 }
-                else -> {}
             }
-
-
-
         } //: show sheet
     } //: Column
 
