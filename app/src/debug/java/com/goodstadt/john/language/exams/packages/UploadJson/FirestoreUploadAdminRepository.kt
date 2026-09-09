@@ -415,6 +415,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
             val words = cat.optJSONArray("words") ?: JSONArray()
             var batch = firestore.batch()
             var ops = 0
+            val usedWordIds = HashSet<String>() // guarantee unique doc ids within this category
             for (wi in 0 until words.length()) {
                 val w = words.getJSONObject(wi)
                 val sentencesJson = w.optJSONArray("sentences") ?: JSONArray()
@@ -425,10 +426,16 @@ class FirestoreUploadAdminRepository @Inject constructor(
                     sentences.add(s.optString("sentence", ""))
                     translations.add(s.optString("translation", ""))
                 }
-                // The word document id IS the 'word' field (unique within the category's words).
-                // Fall back to an index if blank, and swap any "/" (illegal in a doc id) for a dash.
+                // The word document id is normally the 'word' field. But some sheets (e.g. Prepositions)
+                // legitimately repeat the same 'word' within a category with different sentences, so a bare
+                // word-as-id would collide and silently overwrite. Keep the word as the base id (readable,
+                // idempotent for the common unique case) and only disambiguate on collision by suffixing.
+                // Reads never use the doc id (they read fields and sort by sortOrder), so this is safe.
                 val wordText = w.optString("word", "")
-                val wordId = wordText.ifBlank { "word_%04d".format(wi) }.replace("/", "-")
+                val baseId = wordText.ifBlank { "word_%04d".format(wi) }.replace("/", "-")
+                var wordId = baseId
+                var dupSuffix = 1
+                while (!usedWordIds.add(wordId)) { wordId = "${baseId}_${dupSuffix++}" }
                 val wordRef = catRef.collection(WORDS).document(wordId)
                 batch.set(
                     wordRef,
