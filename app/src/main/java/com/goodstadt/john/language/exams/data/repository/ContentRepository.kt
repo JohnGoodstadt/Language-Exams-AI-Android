@@ -1242,6 +1242,49 @@ class ContentRepository @Inject constructor(
             }
         )
     }
+    /**
+     * Ensure the mp3 for [uniqueSentenceId] is on local disk WITHOUT playing it - the same waterfall as
+     * [generateAndPlayTTS] minus playback: disk hit -> Cloud Storage download -> Google TTS (save to disk +
+     * upload to cloud). Used to prefetch a section's tracks so they can then be played gaplessly from cache.
+     * Returns true if the file is cached afterwards.
+     */
+    suspend fun ensureAudioCached(
+        text: String,
+        uniqueSentenceId: String,
+        voiceName: String,
+        languageCode: String
+    ): Boolean {
+        val localFile = File(context.filesDir, uniqueSentenceId)
+
+        // 1. Already on disk.
+        if (localFile.exists()) return true
+
+        // 2. Cloud Storage -> download to disk (no play).
+        try {
+            if (FirebaseAudioService.downloadAudio(uniqueSentenceId, localFile)) return true
+        } catch (e: Exception) {
+            Timber.e(e, "ensureAudioCached: cloud download failed for ${uniqueSentenceId}")
+        }
+
+        // 3. Google TTS -> save to disk + upload to cloud (no play).
+        return googleCloudTts.getAudioData(text, voiceName, languageCode).fold(
+            onSuccess = { audioData ->
+                try {
+                    localFile.writeBytes(audioData)
+                    FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
+                    true
+                } catch (e: Exception) {
+                    Timber.e(e, "ensureAudioCached: failed to save/upload ${uniqueSentenceId}")
+                    false
+                }
+            },
+            onFailure = { e ->
+                Timber.e(e, "ensureAudioCached: TTS failed for ${uniqueSentenceId}")
+                false
+            }
+        )
+    }
+
     // --- HELPER FUNCTIONS ---
 
 

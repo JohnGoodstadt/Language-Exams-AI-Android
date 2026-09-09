@@ -94,6 +94,7 @@ class CategoryTabViewModel @Inject constructor(
     private val savedPracticeManager: com.goodstadt.john.language.exams.managers.SavedPracticeManager,
     private val practiceReminderScheduler: com.goodstadt.john.language.exams.managers.PracticeReminderScheduler,
     private val vocabQuizRepository: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository,
+    private val sequencePlayer: com.goodstadt.john.language.exams.managers.SequencePlayer,
 ) : ViewModel() {
 
     // Bumps whenever quiz progress changes, so the section rows recompute their whole-quiz status dots.
@@ -1051,6 +1052,49 @@ Fix: Remove the duplicate calls at lines 856 and 859.
      *  leaves the tab. */
     fun clearLastPlayedSentence() {
         lastPlayedSentence = ""
+    }
+
+    // --- Sequential section playback -----------------------------------------------------------------
+    // Delegates to the reusable SequencePlayer so other screens (e.g. Reference) can play sentence lists
+    // with the same pipeline. This VM only owns the rate-limit gate and the section-specific bits.
+
+    /** The section (category title) currently playing, or null. The header shows Pause for it, Play elsewhere. */
+    val playingSectionTitle = sequencePlayer.playingKey
+
+    /**
+     * Toggle sequential playback of [sentences] for [category]. Tapping the same section again stops it;
+     * tapping a different one stops the first and starts the new.
+     */
+    fun playSection(category: Category, sentences: List<String>) {
+        sequencePlayer.toggle(
+            key = category.title,
+            sentences = sentences,
+            level = currentLoadedLevel,
+            // Rate limiting is checked ONCE here, before playback starts. If allowed, the whole list plays
+            // without any further checks interrupting it (cost of a section is minimal). Non-premium only.
+            preflight = {
+                if (!isPremiumUser.value && rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                    false // don't start the playlist
+                } else true
+            },
+            onTrackStarted = { sentence -> lastPlayedSentence = sentence },
+            // Same post-play bookkeeping a single-row tap does: advance the spaced-repetition dot
+            // (recordSpacedPlay), update vocab stats on first hear, and refresh the row so the dot redraws.
+            onTrackPlayed = { sentence ->
+                didPlayVocabSentence(sentence, category.title, category.tabNumber)
+            }
+        )
+    }
+
+    /** Stop any in-progress section playback (re-tap, leaving the tab, or app backgrounded). */
+    fun stopSectionPlayback() {
+        sequencePlayer.stop()
     }
     // Combine the totals logic with the "seen" state
 

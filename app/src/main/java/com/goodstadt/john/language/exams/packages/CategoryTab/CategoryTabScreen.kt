@@ -38,6 +38,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Pause
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.WorkspacePremium
@@ -180,6 +182,8 @@ fun CategoryTabScreen(
     val currentQuizCategory by viewModel.currentQuizCategory.collectAsStateWithLifecycle()
     // Bumps when quiz progress changes, so each section's status dots recompute.
     val quizStatusVersion by viewModel.quizStatusVersion.collectAsStateWithLifecycle()
+    // Which section (if any) is currently playing its sentences in sequence.
+    val playingSectionTitle by viewModel.playingSectionTitle.collectAsStateWithLifecycle()
     val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // ✅ Watch for celebration trigger
@@ -257,10 +261,15 @@ fun CategoryTabScreen(
                 viewModel.onResume()
             } else if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.saveDataOnExit()
+            } else if (event == Lifecycle.Event.ON_STOP) {
+                viewModel.stopSectionPlayback() // app minimised/backgrounded -> stop section playback
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
-        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+            viewModel.stopSectionPlayback() // leaving the tab -> stop section playback
+        }
     }
 
     // --- UI Events (Snackbar) ---
@@ -433,6 +442,24 @@ fun CategoryTabScreen(
                                             color = accentColor, // Or MaterialTheme.colorScheme.primary
                                             modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
                                         )
+
+                                        // Play the whole section's sentences in sequence (Play <-> Pause).
+                                        val isThisSectionPlaying = playingSectionTitle == category.title
+                                        IconButton(onClick = {
+                                            // Only the FIRST sentence of each word (the one shown on the row).
+                                            val sentences = category.words.mapNotNull { w ->
+                                                w.sentences.firstOrNull()?.sentence
+                                            }
+                                            viewModel.playSection(category, sentences)
+                                        }) {
+                                            Icon(
+                                                imageVector = if (isThisSectionPlaying)
+                                                    Icons.Filled.Pause else Icons.Filled.PlayArrow,
+                                                contentDescription = if (isThisSectionPlaying)
+                                                    "Stop playing section" else "Play section",
+                                                tint = orangeLight
+                                            )
+                                        }
 
                                         // Whole-quiz status summary: coloured dots for this section's quiz
                                         // (blank if never taken, one green dot if fully mastered).
