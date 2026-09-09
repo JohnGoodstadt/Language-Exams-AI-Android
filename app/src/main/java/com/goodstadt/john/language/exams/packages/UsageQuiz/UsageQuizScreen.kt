@@ -76,14 +76,14 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.models.UsageMastery
-import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
-import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
-import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.packages.reference.UsageDashboardScreen
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
+import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
+import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
@@ -149,8 +149,13 @@ fun UsageQuizScreen(
         val question = questions.getOrNull(currentQuestionIndex)
         if (question != null) {
             val questionText =
-                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                    question.sentence.replace("_", "___")
+                if ( (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks)) {
+//                    question.sentence.replace("_", "___")
+                    // Regex logic:
+                    // (?<!_) -> Check that there is NOT an underscore before
+                    // _      -> The actual underscore to match
+                    // (?!_)  -> Check that there is NOT an underscore after
+                    question.sentence.replace(Regex("(?<!_)_(?!_)"), "___")
                 } else {
                     ""//question.sentence
                 }

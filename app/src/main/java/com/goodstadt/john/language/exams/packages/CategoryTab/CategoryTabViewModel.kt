@@ -1066,6 +1066,9 @@ Fix: Remove the duplicate calls at lines 856 and 859.
      * tapping a different one stops the first and starts the new.
      */
     fun playSection(category: Category, sentences: List<String>) {
+        // Whether the track about to play was already in history BEFORE this play (captured in onTrackStarted,
+        // which fires before the play marks it heard). Used to bump the progress bar only on a first hearing.
+        var wasAlreadyHeard = false
         sequencePlayer.toggle(
             key = category.title,
             sentences = sentences,
@@ -1083,11 +1086,30 @@ Fix: Remove the duplicate calls at lines 856 and 859.
                     false // don't start the playlist
                 } else true
             },
-            onTrackStarted = { sentence -> lastPlayedSentence = sentence },
+            onTrackStarted = { sentence ->
+                lastPlayedSentence = sentence
+                // Snapshot heard-state before the play marks it heard, so we know if this is a first hearing.
+                val contentID = FirebaseAudioService.generateContentID(sentence)
+                wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
+            },
             // Same post-play bookkeeping a single-row tap does: advance the spaced-repetition dot
             // (recordSpacedPlay), update vocab stats on first hear, and refresh the row so the dot redraws.
             onTrackPlayed = { sentence ->
                 didPlayVocabSentence(sentence, category.title, category.tabNumber)
+                // Progress bar: on a first hearing only, bump the tab's heard count (same as handleTap).
+                if (!wasAlreadyHeard) {
+                    _uiState.update { currentState ->
+                        if (currentState is CategoryTabUiState.Success) {
+                            currentState.copy(heardCountOnTab = currentState.heardCountOnTab + 1)
+                        } else currentState
+                    }
+                }
+            },
+            // Section-complete banner: check ONCE at the end of the sequence (not per track). By now every
+            // sentence has been heard, so this fires the completion banner exactly like the last tap would.
+            onCompleted = {
+                val last = sentences.lastOrNull() ?: return@toggle
+                viewModelScope.launch { checkSectionCompletionAfterNewSentence(category, last) }
             }
         )
     }

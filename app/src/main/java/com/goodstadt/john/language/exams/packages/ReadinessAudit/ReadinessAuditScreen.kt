@@ -198,6 +198,7 @@ fun ReadinessAuditScreen(
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                     question.sentence.replace("_", "___")
+
                 } else {
                     ""//question.sentence
                 }

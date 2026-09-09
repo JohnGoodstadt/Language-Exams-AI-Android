@@ -55,14 +55,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
-import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
-import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageMasteryFilterChips
-import com.goodstadt.john.language.exams.packages.UsageQuiz.usageMasteryExplanation
 import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
+import com.goodstadt.john.language.exams.packages.UsageQuiz.usageMasteryExplanation
 import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
+import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
@@ -123,7 +123,12 @@ fun GrammarQuizScreen(
         if (question != null) {
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                    question.sentence.replace("_", "___")
+//                    question.sentence.replace("_", "___")
+                    // Regex logic:
+                    // (?<!_) -> Check that there is NOT an underscore before
+                    // _      -> The actual underscore to match
+                    // (?!_)  -> Check that there is NOT an underscore after
+                    question.sentence.replace(Regex("(?<!_)_(?!_)"), "___")
                 } else {
                     ""
                 }

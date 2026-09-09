@@ -148,7 +148,12 @@ fun VocabQuizScreen(
         if (question != null) {
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                    question.question.replace("_", "___")
+//                    question.question.replace("_", "___")
+                    //Regex logic:
+                    // (?<!_) -> Check that there is NOT an underscore before
+                    // _      -> The actual underscore to match
+                    // (?!_)  -> Check that there is NOT an underscore after
+                    question.question.replace(Regex("(?<!_)_(?!_)"), "___")
                 } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
                     question.question
                 } else {

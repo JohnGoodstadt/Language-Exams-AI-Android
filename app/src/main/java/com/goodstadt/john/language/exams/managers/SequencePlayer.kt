@@ -64,6 +64,8 @@ class SequencePlayer @Inject constructor(
      * [onTrackPlayed] fires after each track plays *successfully* - use it for the same post-play bookkeeping
      * a single-tap does (advance the spaced-repetition dot, update stats, refresh the row), so a section
      * play updates the row dots exactly as tapping each row would.
+     * [onCompleted] fires ONCE if the whole list played through to the end - NOT when the run is stopped,
+     * cancelled, or aborted by a failure. Use it for end-of-sequence work (e.g. the section-complete banner).
      */
     fun toggle(
         key: String,
@@ -71,7 +73,8 @@ class SequencePlayer @Inject constructor(
         level: String,
         preflight: () -> Boolean = { true },
         onTrackStarted: (String) -> Unit = {},
-        onTrackPlayed: (String) -> Unit = {}
+        onTrackPlayed: (String) -> Unit = {},
+        onCompleted: () -> Unit = {}
     ) {
         if (_playingKey.value == key) { // re-tap = stop (no preflight on stop)
             stop()
@@ -84,7 +87,7 @@ class SequencePlayer @Inject constructor(
         _playingKey.value = key
         job = scope.launch {
             try {
-                runPipeline(sentences, level, onTrackStarted, onTrackPlayed) // `this` is the launch's scope; prefetches are its children
+                runPipeline(sentences, level, onTrackStarted, onTrackPlayed, onCompleted) // `this` is the launch's scope; prefetches are its children
             } catch (e: Exception) {
                 Timber.e(e, "SequencePlayer: playback failed for '$key'")
             } finally {
@@ -108,7 +111,8 @@ class SequencePlayer @Inject constructor(
         sentences: List<String>,
         level: String,
         onTrackStarted: (String) -> Unit,
-        onTrackPlayed: (String) -> Unit
+        onTrackPlayed: (String) -> Unit,
+        onCompleted: () -> Unit
     ) {
         val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
         val languageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
@@ -118,15 +122,17 @@ class SequencePlayer @Inject constructor(
             async { contentRepository.ensureAudioCached(s, idOf(s), voiceName, languageCode) }
 
         // Pipeline: resolve track 0, then for each track resolve the NEXT while this one plays.
+        // playedAll stays true only if we never break early (cancel / rate-limit / failure).
+        var playedAll = true
         var currentReady: Deferred<Boolean> = resolve(sentences[0])
         for (i in sentences.indices) {
-            if (!isActive) break
+            if (!isActive) { playedAll = false; break }
             currentReady.await() // this track is now cached (or resolution failed)
 
             val nextReady: Deferred<Boolean>? =
                 if (i < sentences.lastIndex) resolve(sentences[i + 1]) else null
 
-            if (!isActive) break
+            if (!isActive) { playedAll = false; break }
             onTrackStarted(sentences[i]) // let the caller record the last-played sentence, etc.
             // Cached tracks hit the local-cache tier instantly and still record history/XP/play stats.
             val status = audioPlaybackRepository.playTrackAndGetStatus(
@@ -134,7 +140,9 @@ class SequencePlayer @Inject constructor(
                 level = level,
                 useRateLimiting = false
             )
-            if (status is AudioPlaybackStatus.RateLimited || status is AudioPlaybackStatus.Failure) break
+            if (status is AudioPlaybackStatus.RateLimited || status is AudioPlaybackStatus.Failure) {
+                playedAll = false; break
+            }
             onTrackPlayed(sentences[i]) // played OK -> caller advances the row's dot / stats, same as a tap
 
             // Wait for this track to finish before starting the next.
@@ -144,7 +152,8 @@ class SequencePlayer @Inject constructor(
                 }
             }
 
-            currentReady = nextReady ?: break
+            currentReady = nextReady ?: break // last track -> natural end (playedAll stays true)
         }
+        if (playedAll && isActive) onCompleted() // whole list finished normally
     }
 }
