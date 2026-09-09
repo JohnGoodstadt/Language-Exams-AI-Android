@@ -81,6 +81,10 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 fun GrammarQuizScreen(
     category: String,
     level: String,
+    // When non-null, load a Reference-tab fileFormat-7 quiz (e.g. key "Adjectives") instead of a Grammar one.
+    // This is the language-independent group KEY used to build the file name; `category` is the display title.
+    // The same screen/VM serves both; only the file the VM resolves differs.
+    referenceGroupKey: String? = null,
     viewModel: GrammarQuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
@@ -113,9 +117,14 @@ fun GrammarQuizScreen(
     val fluency by viewModel.fluency
     val activeFilters by viewModel.activeFilters.collectAsState()
 
-    // One file per launch: (re)load whenever the requested category/level changes.
-    LaunchedEffect(category, level) {
-        viewModel.loadGrammarQuiz(category, level)
+    // One file per launch: (re)load whenever the requested category/level changes. A Reference group title
+    // routes to the reference quiz loader; otherwise it's the grammar loader - same screen either way.
+    LaunchedEffect(category, level, referenceGroupKey) {
+        if (referenceGroupKey != null) {
+            viewModel.loadReferenceQuiz(referenceGroupKey, category, level)
+        } else {
+            viewModel.loadGrammarQuiz(category, level)
+        }
     }
 
     LaunchedEffect(currentQuestionIndex, questions) {

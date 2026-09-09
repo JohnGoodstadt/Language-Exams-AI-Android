@@ -34,6 +34,8 @@ import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
+import com.goodstadt.john.language.exams.data.ReferenceQuizSheetMapping
+import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
 import com.goodstadt.john.language.exams.packages.reference.SimpleSectionedVocabList
 import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
@@ -239,29 +241,25 @@ fun GroupedSheetScreen(
         }
         if (showQuizSheet) {
             val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
-            // Build the quiz from the loaded categories (empty until content is Success). The quiz only
-            // includes words that carry BOTH lockedClause and weakenedClause (adjective-style), so a sheet
-            // whose words lack them yields no questions.
-            val categories = (uiState.contentState as? ContentState.Success)?.categories ?: emptyList()
-            val questions = remember(uiState.contentState) {
-                QuizDataConverter.generateAdjectivesQuiz(categories, limit = 10)
-            }
             val pageTitle = uiState.title
 
-            // Record the stat once (side effects must not run inline during composition).
-            LaunchedEffect(Unit) {
-                viewModel.incQuizSheetStat()
-                Timber.i(
-                    "Quiz sheet: categories=%d words=%d eligible/questions=%d",
-                    categories.size, categories.sumOf { it.words.size }, questions.size
-                )
-            }
+            // If this reference group ships a fileFormat-7 quiz JSON (e.g. Adjectives), reuse the full
+            // Grammar quiz screen (marking, mastery, TTS, filters) driven by that JSON instead of the
+            // in-app generated quiz. Both the language-independent key and the level come from the picked
+            // sub-tab's doc id (GermanA1Adjectives -> key "Adjectives", level "A1"); the display title
+            // (pageTitle) may be localised ("Adjektive"), so it must NOT be used to pick the quiz.
+            val docId = uiState.selectedSubTab?.firestoreDocumentId
+            val quizGroupKey = ReferenceQuizSheetMapping.keyFromDocId(docId)
+            val quizLevel = ReferenceQuizSheetMapping.levelFromDocId(docId)
+            val useReferenceQuiz = quizGroupKey != null && quizLevel != null &&
+                ReferenceQuizSheetMapping.hasQuiz(quizGroupKey)
+
+            LaunchedEffect(Unit) { viewModel.incQuizSheetStat() }
 
             ModalBottomSheet(
                 onDismissRequest = { showQuizSheet = false },
                 sheetState = quizSheetState,
-                modifier = Modifier.fillMaxHeight(0.80f),
+                modifier = Modifier.fillMaxHeight(if (useReferenceQuiz) 0.92f else 0.80f),
                 containerColor = MaterialTheme.colorScheme.surface,
                 contentColor = MaterialTheme.colorScheme.onSurface
             ) {
@@ -271,26 +269,39 @@ fun GroupedSheetScreen(
                         // Add padding for the Android Gesture Bar / Navigation Bar
                         .padding(bottom = 40.dp)
                 ) {
-                    if (questions.isNotEmpty()) {
-                        QuizSheetView(
-                            questions = questions,
-                            title = "Quiz: $pageTitle",
-                            onDismiss = { showQuizSheet = false }
+                    if (useReferenceQuiz) {
+                        // Same quiz experience as Focus -> GrammarQuizScreen, pointed at the Reference JSON.
+                        GrammarQuizScreen(
+                            category = pageTitle,           // localised display title ("Adjektive")
+                            level = quizLevel!!,
+                            referenceGroupKey = quizGroupKey!! // language-independent key ("Adjectives")
                         )
                     } else {
-                        // No quiz data for this sheet (words have no lockedClause/weakenedClause) - show
-                        // visible feedback instead of a silent no-op.
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .padding(24.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = "No quiz is available for this sheet yet.",
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                        // Legacy in-app quiz: built from the loaded categories (words that carry BOTH
+                        // lockedClause and weakenedClause). Empty until content is Success / if none qualify.
+                        val categories = (uiState.contentState as? ContentState.Success)?.categories ?: emptyList()
+                        val questions = remember(uiState.contentState) {
+                            QuizDataConverter.generateAdjectivesQuiz(categories, limit = 10)
+                        }
+                        if (questions.isNotEmpty()) {
+                            QuizSheetView(
+                                questions = questions,
+                                title = "Quiz: $pageTitle",
+                                onDismiss = { showQuizSheet = false }
                             )
+                        } else {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(24.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = "No quiz is available for this sheet yet.",
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
                         }
                     }
                 }

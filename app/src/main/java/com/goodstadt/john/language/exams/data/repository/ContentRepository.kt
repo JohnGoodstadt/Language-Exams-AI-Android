@@ -16,6 +16,7 @@ import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.data.GrammarSheetMapping
 import com.goodstadt.john.language.exams.data.ReadinessAuditSheetMapping
+import com.goodstadt.john.language.exams.data.ReferenceQuizSheetMapping
 import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
 import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
 import com.goodstadt.john.language.exams.models.Format3File
@@ -548,6 +549,8 @@ class ContentRepository @Inject constructor(
             // their own folder so getFormat7or10Data can fall back to the bundle for them too.
             logicalName.contains("UsageQuiz") -> UsageQuizSheetMapping.mapLogicalToResourceName(logicalName)
             logicalName.contains("Audit")     -> ReadinessAuditSheetMapping.mapLogicalToResourceName(logicalName)
+            // Reference-tab quizzes (e.g. GermanReferenceAdjectivesA1Quiz) live under Quizzes/Reference/.
+            ReferenceQuizSheetMapping.isReferenceQuiz(logicalName) -> ReferenceQuizSheetMapping.mapLogicalToResourceName(logicalName)
             else -> GrammarSheetMapping.mapLogicalToResourceName(logicalName)
         }
 

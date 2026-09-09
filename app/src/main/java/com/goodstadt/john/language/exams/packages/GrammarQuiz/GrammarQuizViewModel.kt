@@ -17,6 +17,7 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.GrammarCatalog
 import com.goodstadt.john.language.exams.data.GrammarSheetMapping
+import com.goodstadt.john.language.exams.data.ReferenceQuizSheetMapping
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
@@ -50,6 +51,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
@@ -260,41 +262,73 @@ class GrammarQuizViewModel @Inject constructor(
             // -> "GermanA1ModalVerbs"; getFormat7or10Data falls back to the bundled asset if not on Firestore.
             val logicalName = GrammarSheetMapping.normalizeToLogicalName(fileName, level)
 
-            _isGrammarLoading.value = true
-            // Show the global overlay only if the load is still running after 2s - so cached / in-memory /
-            // bundle loads (the common case) don't flash it; only a real Firestore fetch does.
-            val spinnerJob = launch {
-                delay(2000)
-                if (_isGrammarLoading.value) globalLoadingManager.show()
+            loadFormat7or10Quiz(logicalName = logicalName, baseName = baseName, category = category, level = level)
+        }
+    }
+
+    /**
+     * Load a Reference-tab fileFormat-7 quiz into this SAME quiz screen (e.g. the "Adjectives" sub-tab).
+     * [groupKey] is the language-independent group key ("Adjectives"), [displayTitle] the (possibly
+     * localised) title to show, [level] the picked A1/A2/B1/B2.
+     * The logical/Firestore doc name is `<Lang>Reference<Key><Level>Quiz` (via [ReferenceQuizSheetMapping]),
+     * with the bundled Quizzes/Reference JSON as the download fallback - so grammar and reference quizzes
+     * run through one screen/VM with no duplicated question/marking logic.
+     */
+    fun loadReferenceQuiz(groupKey: String, displayTitle: String, level: String) {
+        viewModelScope.launch {
+            val logicalName = ReferenceQuizSheetMapping.logicalName(groupKey, level)
+            // The logical name is unique per level and stable, so it doubles as the stats/mastery key;
+            // the (possibly localised) displayTitle is only what the quiz screen shows.
+            loadFormat7or10Quiz(logicalName = logicalName, baseName = logicalName, category = displayTitle, level = level)
+        }
+    }
+
+    /**
+     * Shared loader for any fileFormat-7/10 quiz sheet: download (memory -> disk -> Firestore -> bundle),
+     * populate state, build questions and apply filters. [logicalName] is the Firestore doc name to fetch,
+     * [baseName] the stats/mastery key, [category]/[level] the display title and skill level. Extracted so
+     * Grammar and Reference quizzes share one path.
+     */
+    private suspend fun loadFormat7or10Quiz(
+        logicalName: String,
+        baseName: String,
+        category: String,
+        level: String
+    ) = coroutineScope {
+        _isGrammarLoading.value = true
+        // Show the global overlay only if the load is still running after 2s - so cached / in-memory /
+        // bundle loads (the common case) don't flash it; only a real Firestore fetch does.
+        val spinnerJob = launch {
+            delay(2000)
+            if (_isGrammarLoading.value) globalLoadingManager.show()
+        }
+
+        try {
+            Timber.v("Quiz: loading '$logicalName'")
+            val testData = vocabRepository.getFormat7or10Data(logicalName).getOrNull()
+            if (testData == null) {
+                Timber.e("Quiz: failed to load '$logicalName' from Firestore or bundle")
+                _questions.value = emptyList()
+                return@coroutineScope
             }
 
-            try {
-                Timber.v("GrammarQuiz: loading '$logicalName' (from $fileName)")
-                val testData = vocabRepository.getFormat7or10Data(logicalName).getOrNull()
-                if (testData == null) {
-                    Timber.e("GrammarQuiz: failed to load '$logicalName' from Firestore or bundle")
-                    _questions.value = emptyList()
-                    return@launch
-                }
+            currentCategory = category
+            currentLevel = level
 
-                currentCategory = category
-                currentLevel = level
+            _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
 
-                _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
+            quizStatistics.value = quizStatistics.value.copy(
+                title = category, filename = baseName, skillLevel = level, page = 1
+            )
+            _uiState.update { it.copy(format7or10ListRoot = testData) }
 
-                quizStatistics.value = quizStatistics.value.copy(
-                    title = category, filename = baseName, skillLevel = level, page = 1
-                )
-                _uiState.update { it.copy(format7or10ListRoot = testData) }
-
-                _allQuestions = generateQuestionsFromData(testData)
-                applyFilters()
-                resetQuiz()
-            } finally {
-                _isGrammarLoading.value = false
-                spinnerJob.cancel()          // if the load beat the 2s mark, never show the overlay
-                globalLoadingManager.hide()  // and always clear it once done
-            }
+            _allQuestions = generateQuestionsFromData(testData)
+            applyFilters()
+            resetQuiz()
+        } finally {
+            _isGrammarLoading.value = false
+            spinnerJob.cancel()          // if the load beat the 2s mark, never show the overlay
+            globalLoadingManager.hide()  // and always clear it once done
         }
     }
 
