@@ -258,8 +258,13 @@ class ConjugationsViewModel @Inject constructor(
 //            }
 //        }
 //    }
-    fun handleTap(sentence: String) {
+    // The last sentence the user played on this screen; pre-fills the Translate sheet (blank if none).
+    private var lastPlayedSentence: String = ""
+    fun getLatestSentence(): String = lastPlayedSentence
+    fun clearLastPlayedSentence() { lastPlayedSentence = "" }
 
+    fun handleTap(sentence: String) {
+        lastPlayedSentence = sentence
         viewModelScope.launch {
             // 1. Play Audio (Waterfall)
             when (val currentState = _uiState.value) {

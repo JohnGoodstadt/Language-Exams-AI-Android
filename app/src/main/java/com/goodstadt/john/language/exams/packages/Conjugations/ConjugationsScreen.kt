@@ -2,9 +2,12 @@ package com.goodstadt.john.language.exams.packages.Conjugations
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -30,6 +33,8 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.packages.reference.shared.SectionedVocabList
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
+import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 //import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -49,6 +54,9 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     // Freemium: tapping a locked header opens the Premium upgrade sheet.
     var showUpgradeSheet by remember { mutableStateOf(false) }
     val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Translate ("T") sheet, pre-filled with the last sentence played on this screen.
+    var showTranslateSheet by remember { mutableStateOf(false) }
 
     when (val state = uiState) {
         is ConjugationsUiState.Loading -> {
@@ -72,11 +80,22 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                 modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally) {
 
-                HorizontalLevelPicker(
-                    options = LanguageConfig.conjugationOptions,
-                    selectedOption = selectedConjugation,
-                    onOptionSelected = viewModel::onConjugationSelected
-                )
+                // Translate ("T") at the START of the row that holds the horizontal verb tabs.
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    IconButton(onClick = { showTranslateSheet = true }) {
+                        LetterInCircle(letter = "T", tint = Color(0xFFFF9800))
+                    }
+                    Box(modifier = Modifier.weight(1f)) {
+                        HorizontalLevelPicker(
+                            options = LanguageConfig.conjugationOptions,
+                            selectedOption = selectedConjugation,
+                            onOptionSelected = viewModel::onConjugationSelected
+                        )
+                    }
+                }
 
                 SectionedVocabList(
                     categories = state.categories,
@@ -127,6 +146,14 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
 //        }
     }
 
+    // Translate sheet, pre-filled with the last sentence played here (blank if none).
+    if (showTranslateSheet) {
+        TranslateSheet(
+            onDismiss = { showTranslateSheet = false },
+            initialText = viewModel.getLatestSentence()
+        )
+    }
+
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
@@ -140,6 +167,8 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
         // This is called when the composable leaves the screen
         onDispose {
             lifecycleOwner.lifecycle.removeObserver(observer)
+            // Forget the last-played sentence so the Translate prefill starts blank next visit.
+            viewModel.clearLastPlayedSentence()
         }
     }
 }

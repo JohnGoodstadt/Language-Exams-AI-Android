@@ -446,11 +446,17 @@ fun CategoryTabScreen(
                                         // Play the whole section's sentences in sequence (Play <-> Pause).
                                         val isThisSectionPlaying = playingSectionTitle == category.title
                                         IconButton(onClick = {
-                                            // Only the FIRST sentence of each word (the one shown on the row).
-                                            val sentences = category.words.mapNotNull { w ->
-                                                w.sentences.firstOrNull()?.sentence
+                                            // Locked section: its words are hidden behind the Premium teaser,
+                                            // so don't play them - route to the upgrade sheet instead.
+                                            if (locked) {
+                                                showUpgradeSheet = true
+                                            } else {
+                                                // Only the FIRST sentence of each word (the one shown on the row).
+                                                val sentences = category.words.mapNotNull { w ->
+                                                    w.sentences.firstOrNull()?.sentence
+                                                }
+                                                viewModel.playSection(category, sentences)
                                             }
-                                            viewModel.playSection(category, sentences)
                                         }) {
                                             Icon(
                                                 imageVector = if (isThisSectionPlaying)

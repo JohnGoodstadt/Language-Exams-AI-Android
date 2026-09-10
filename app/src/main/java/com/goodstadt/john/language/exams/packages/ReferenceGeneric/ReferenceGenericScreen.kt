@@ -39,6 +39,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.packages.reference.SimpleSectionedVocabList
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
@@ -68,6 +69,8 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
+    // Translate ("T") sheet, pre-filled with the last sentence played on this screen.
+    var showTranslateSheet by remember { mutableStateOf(false) }
     // Freemium: tapping a locked teaser word opens the Premium upgrade sheet.
     var showUpgradeSheet by remember { mutableStateOf(false) }
     val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -86,7 +89,11 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
-        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+            // Forget the last-played sentence so the Translate prefill starts blank next visit.
+            viewModel.clearLastPlayedSentence()
+        }
     }
 
 
@@ -134,7 +141,17 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
 
                         showQuizSheet = true
                     },
+                    // Translate ("T") to the left of the Quiz button.
+                    onTranslateTapped = { showTranslateSheet = true },
                 )
+
+                // Translate sheet, pre-filled with the last sentence played here (blank if none).
+                if (showTranslateSheet) {
+                    TranslateSheet(
+                        onDismiss = { showTranslateSheet = false },
+                        initialText = viewModel.getLatestSentence()
+                    )
+                }
                 if (showSideQuestSheet) {
                     ModalBottomSheet(
                         onDismissRequest = { showSideQuestSheet = false },

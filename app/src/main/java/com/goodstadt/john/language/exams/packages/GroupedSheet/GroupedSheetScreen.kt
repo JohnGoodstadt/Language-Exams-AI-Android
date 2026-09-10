@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -36,6 +37,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.data.ReferenceQuizSheetMapping
 import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
 import com.goodstadt.john.language.exams.packages.reference.SimpleSectionedVocabList
 import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
@@ -63,6 +65,12 @@ fun GroupedSheetScreen(
 
     var showQuizSheet by remember { mutableStateOf(false) }
     val sheetStateQuiz = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // Translate ("T") sheet, pre-filled with the last sentence played on this screen.
+    var showTranslateSheet by remember { mutableStateOf(false) }
+
+    // Forget the last-played sentence when leaving, so the Translate prefill starts blank next visit.
+    DisposableEffect(Unit) { onDispose { viewModel.clearLastPlayedSentence() } }
 
     // Freemium: tapping a locked teaser word opens the Premium upgrade sheet.
     var showUpgradeSheet by remember { mutableStateOf(false) }
@@ -151,7 +159,9 @@ fun GroupedSheetScreen(
                     onQuizSheetTapped = {
                         showSideQuestSheet = false
                         showQuizSheet = true
-                    }
+                    },
+                    // Translate ("T") to the left of the Quiz button.
+                    onTranslateTapped = { showTranslateSheet = true }
                 )
             }
             is ContentState.Error -> {
@@ -307,6 +317,14 @@ fun GroupedSheetScreen(
                 }
             }
         } //: show sheet
+
+        // Translate sheet, pre-filled with the last sentence played here (blank if none).
+        if (showTranslateSheet) {
+            TranslateSheet(
+                onDismiss = { showTranslateSheet = false },
+                initialText = viewModel.getLatestSentence()
+            )
+        }
     } //: Column
 
 }

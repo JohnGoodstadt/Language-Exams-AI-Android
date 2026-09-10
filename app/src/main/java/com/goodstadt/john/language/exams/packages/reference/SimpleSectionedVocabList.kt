@@ -29,6 +29,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -52,7 +53,10 @@ fun SimpleSectionedVocabList(
     // Actions
     onRowTapped: (Format0Word, Sentence, Category) -> Unit,
     onSideQuestTapped: () -> Unit,
-    onQuizSheetTapped: () -> Unit
+    onQuizSheetTapped: () -> Unit,
+    // Optional Translate ("T") button, shown to the LEFT of the Quiz button when provided. Opens the
+    // Translate sheet pre-filled with the last-played sentence (see the vocab tabs' "T").
+    onTranslateTapped: (() -> Unit)? = null
 ) {
 
     LazyColumn(
@@ -84,6 +88,12 @@ fun SimpleSectionedVocabList(
 
                         // Stats / Side Quest Icon
                         if (category == data[0]) {
+                            // Translate ("T") sits to the LEFT of the Quiz button when enabled.
+                            if (onTranslateTapped != null) {
+                                IconButton(onClick = onTranslateTapped) {
+                                    LetterInCircle(letter = "T", tint = Color(0xFFFF9800))
+                                }
+                            }
                             IconButton(onClick = onQuizSheetTapped) {
                                 Icon(
                                     imageVector = Icons.Default.SportsEsports,

@@ -27,8 +27,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
@@ -144,7 +144,7 @@ fun SectionedVocabList(
 
                 // 2. Now use the standard `items` call on this new flat list.
                     items(
-                        items = word.sentences,
+                        items = word.sentences.take(1),
                         key = { sentence -> "sent-${word.id}-${sentence.sentence}" } // A unique key for each sentence
                     ) { sentence ->
                         // Your existing sentence row logic can be placed here.

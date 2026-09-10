@@ -292,13 +292,23 @@ class GroupedSheetViewModel @Inject constructor(
 //        }
 //        historyManager.debugPrintAllHistory()
 //    }
+    // The last sentence the user played on this screen; pre-fills the Translate sheet (blank if none).
+    private var lastPlayedSentence: String = ""
+    fun getLatestSentence(): String = lastPlayedSentence
+    fun clearLastPlayedSentence() { lastPlayedSentence = "" }
+
     fun handleTap(sentence: String) {
+
+        lastPlayedSentence = sentence
         viewModelScope.launch {
 
+
+            //strip "(words)" from sentence before speaking --  "Ich gehe zum (zu dem) Bahnhof." ->  "Ich gehe zum Bahnhof."
+            val strippedSentence = sentence.replace(Regex("\\s*\\(.*?\\)"), "").trim()
             // 1. CALL REPOSITORY
             // The Repository handles everything: Playback, History, XP, and Graph Stats.
             val status = audioPlaybackRepository.playTrackAndGetStatus(
-                sentence = sentence,
+                sentence = strippedSentence,
                 level = "Reference",
                 sheetName = _uiState.value.currentSheetName, // Important: Pass this so Graph Stats update!
                 isPremiumUser = billingRepository.isPurchased.value
