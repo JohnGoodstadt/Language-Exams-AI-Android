@@ -14,21 +14,21 @@
           "title": "",
           "page": 1,
           "sentence": "Choose the correct sentence.",
-          "summary": "A2 · Perfect Tense",
-          "level": "A2",
-          "category": "Perfect Tense",
-          "explain": "The Perfekt uses 'haben'/'sein' + past participle at the end: 'habe … gesehen'. 'sehen' takes 'haben' (not 'sein'), and its participle is the irregular 'gesehen' (not 'geseht').",
+          "summary": "A1 · Present Tense: sein",
+          "category": "Present Tense: sein",
+          "level": "A1",
+          "explain": "With 'ich', the present-tense form of 'sein' is 'bin': 'Ich bin aus Berlin.' 'Bist' is used with 'du', and 'sind' is used with 'wir', 'sie', or formal 'Sie'.",
           "words": [
             {
-              "word": "Ich habe gestern einen Film geseht.",
+              "word": "Ich bist aus Berlin.",
               "ok": false
             },
             {
-              "word": "Ich habe gestern einen Film gesehen.",
+              "word": "Ich bin aus Berlin.",
               "ok": true
             },
             {
-              "word": "Ich bin gestern einen Film gesehen.",
+              "word": "Ich sind aus Berlin.",
               "ok": false
             }
           ]
@@ -36,22 +36,22 @@
         {
           "title": "",
           "page": 2,
-          "sentence": "Choose the correct comparison.",
-          "summary": "A2 · Comparative & Superlative",
-          "level": "A2",
-          "category": "Comparative & Superlative",
-          "explain": "German forms the comparative with '-er' + 'als': 'größer als'. It uses 'als' (not 'wie'), and doesn't use 'mehr' like English 'more'.",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A1 · Present Tense: wohnen",
+          "category": "Present Tense: Regular Verbs",
+          "level": "A1",
+          "explain": "With 'wir', a regular verb normally keeps the infinitive ending '-en': 'Wir wohnen in Köln.' 'Wohnst' is used with 'du', and 'wohnt' is used with 'er', 'sie', 'es', or 'ihr'.",
           "words": [
             {
-              "word": "Mein Bruder ist mehr groß als ich.",
+              "word": "Wir wohnt in Köln.",
               "ok": false
             },
             {
-              "word": "Mein Bruder ist größer wie ich.",
+              "word": "Wir wohnst in Köln.",
               "ok": false
             },
             {
-              "word": "Mein Bruder ist größer als ich.",
+              "word": "Wir wohnen in Köln.",
               "ok": true
             }
           ]
@@ -60,21 +60,21 @@
           "title": "",
           "page": 3,
           "sentence": "Choose the correct sentence.",
-          "summary": "A2 · Coordinating Conjunctions",
+          "summary": "A2 · Perfect Tense",
+          "category": "Perfect Tense",
           "level": "A2",
-          "category": "Coordinating Conjunctions",
-          "explain": "Coordinating conjunctions like 'denn' (because) keep normal word order — the verb stays in second position: 'denn ich bin müde'. They don't send the verb to the end (that's 'weil') or cause inversion.",
+          "explain": "The perfect tense of 'besuchen' uses 'haben' and the past participle 'besucht': 'Ich habe meine Freunde besucht.' The participle goes at the end of the clause.",
           "words": [
             {
-              "word": "Ich bleibe zu Hause, denn ich müde bin.",
+              "word": "Am Samstag bin ich meine Freunde besucht.",
               "ok": false
             },
             {
-              "word": "Ich bleibe zu Hause, denn bin ich müde.",
+              "word": "Am Samstag habe ich meine Freunde besuchen.",
               "ok": false
             },
             {
-              "word": "Ich bleibe zu Hause, denn ich bin müde.",
+              "word": "Am Samstag habe ich meine Freunde besucht.",
               "ok": true
             }
           ]
@@ -83,45 +83,45 @@
           "title": "",
           "page": 4,
           "sentence": "Choose the correct sentence.",
-          "summary": "B1 · Konjunktiv II",
-          "level": "B1",
-          "category": "Konjunktiv II",
-          "explain": "Konjunktiv II expresses hypothetical situations: 'hätte' in the wenn-clause and 'würde' + infinitive in the main clause. Avoid 'haben würde', and don't use the future 'werde'.",
+          "summary": "A2 · Separable Verbs",
+          "category": "Separable Verbs",
+          "level": "A2",
+          "explain": "In a main clause, the separable verb 'aufstehen' is divided: the conjugated verb 'stehe' is in second position and 'auf' goes to the end.",
           "words": [
             {
-              "word": "Wenn ich Zeit haben würde, würde ich dir helfen.",
+              "word": "Ich aufstehe jeden Morgen um sieben Uhr.",
               "ok": false
             },
             {
-              "word": "Wenn ich Zeit hätte, werde ich dir helfen.",
-              "ok": false
-            },
-            {
-              "word": "Wenn ich Zeit hätte, würde ich dir helfen.",
+              "word": "Ich stehe jeden Morgen um sieben Uhr auf.",
               "ok": true
+            },
+            {
+              "word": "Ich stehe auf jeden Morgen um sieben Uhr.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 5,
-          "sentence": "Choose the correct passive sentence.",
-          "summary": "B1 · Passive Voice",
-          "level": "B1",
-          "category": "Passive Voice",
-          "explain": "The passive (Vorgangspassiv) is 'werden' + past participle: 'wird geschrieben'. The participle is 'geschrieben' (not the infinitive), and present passive doesn't take 'worden' (that's the perfect: 'ist geschrieben worden').",
+          "sentence": "Choose the correct sentence.",
+          "summary": "A2 · Dative after mit",
+          "category": "Dative Prepositions",
+          "level": "A2",
+          "explain": "The preposition 'mit' always takes the dative case. The masculine noun 'der Bus' therefore becomes 'mit dem Bus'.",
           "words": [
             {
-              "word": "Der Brief wird von ihm schreiben.",
+              "word": "Ich fahre jeden Tag mit der Bus zur Arbeit.",
               "ok": false
             },
             {
-              "word": "Der Brief wird von ihm geschrieben.",
+              "word": "Ich fahre jeden Tag mit den Bus zur Arbeit.",
+              "ok": false
+            },
+            {
+              "word": "Ich fahre jeden Tag mit dem Bus zur Arbeit.",
               "ok": true
-            },
-            {
-              "word": "Der Brief wird von ihm geschrieben worden.",
-              "ok": false
             }
           ]
         },
@@ -129,21 +129,21 @@
           "title": "",
           "page": 6,
           "sentence": "Choose the correct sentence.",
-          "summary": "B1 · Relative Clauses",
-          "level": "B1",
-          "category": "Relative Clauses",
-          "explain": "In a relative clause the verb goes to the end: 'der mir geholfen hat'. The relative pronoun takes the case of its role — here the subject, so nominative 'der' (not accusative 'den').",
+          "summary": "A2 · Subordinate Clauses with weil",
+          "category": "Subordinate Clauses",
+          "level": "A2",
+          "explain": "The conjunction 'weil' introduces a subordinate clause, so the conjugated verb goes to the end. With a modal verb, the infinitive comes before it: 'arbeiten muss'.",
           "words": [
             {
-              "word": "Das ist der Mann, der mir geholfen hat.",
-              "ok": true
-            },
-            {
-              "word": "Das ist der Mann, der mir hat geholfen.",
+              "word": "Ich gehe früh ins Bett, weil ich muss morgen arbeiten.",
               "ok": false
             },
             {
-              "word": "Das ist der Mann, den mir geholfen hat.",
+              "word": "Ich gehe früh ins Bett, weil ich morgen arbeiten muss.",
+              "ok": true
+            },
+            {
+              "word": "Ich gehe früh ins Bett, weil muss ich morgen arbeiten.",
               "ok": false
             }
           ]
@@ -152,67 +152,67 @@
           "title": "",
           "page": 7,
           "sentence": "Choose the correct sentence.",
-          "summary": "B1 · Genitive Case",
+          "summary": "B1 · Relative Clauses",
+          "category": "Relative Clauses",
           "level": "B1",
-          "category": "Genitive Case",
-          "explain": "The genitive shows possession: 'das Auto meines Vaters'. Masculine nouns add '-s' ('Vaters') and the article is genitive 'meines' (not dative 'meinem').",
+          "explain": "The relative pronoun agrees with 'die Kollegin', so it is 'die'. In the relative clause, the verb group 'geholfen hat' goes at the end.",
           "words": [
             {
-              "word": "Das ist das Auto meinem Vater.",
-              "ok": false
-            },
-            {
-              "word": "Das ist das Auto meines Vater.",
-              "ok": false
-            },
-            {
-              "word": "Das ist das Auto meines Vaters.",
+              "word": "Das ist die Kollegin, die mir geholfen hat.",
               "ok": true
+            },
+            {
+              "word": "Das ist die Kollegin, der mir geholfen hat.",
+              "ok": false
+            },
+            {
+              "word": "Das ist die Kollegin, die mir hat geholfen.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 8,
-          "sentence": "Choose the correct sentence.",
-          "summary": "B2 · Konjunktiv II (Past)",
-          "level": "B2",
-          "category": "Konjunktiv II: Past & Unreal Conditionals",
-          "explain": "Past Konjunktiv II uses 'hätte'/'wäre' + participle: 'Wenn ich … gewusst hätte, wäre ich … gekommen'. Use 'wäre' with motion verbs (not 'würde … gekommen sein'), and 'hätte' (not indicative 'habe').",
+          "sentence": "Choose the correct passive sentence.",
+          "summary": "B1 · Passive Voice",
+          "category": "Passive Voice",
+          "level": "B1",
+          "explain": "The present passive is formed with a present-tense form of 'werden' plus a past participle: 'wird ... zubereitet'.",
           "words": [
             {
-              "word": "Wenn ich das gewusst hätte, würde ich früher gekommen sein.",
+              "word": "Das Essen wird jeden Morgen frisch zubereiten.",
               "ok": false
             },
             {
-              "word": "Wenn ich das gewusst habe, wäre ich früher gekommen.",
-              "ok": false
-            },
-            {
-              "word": "Wenn ich das gewusst hätte, wäre ich früher gekommen.",
+              "word": "Das Essen wird jeden Morgen frisch zubereitet.",
               "ok": true
+            },
+            {
+              "word": "Das Essen ist jeden Morgen frisch zubereitet werden.",
+              "ok": false
             }
           ]
         },
         {
           "title": "",
           "page": 9,
-          "sentence": "Choose the correct sentence.",
-          "summary": "B2 · Genitive Prepositions",
-          "level": "B2",
-          "category": "Genitive Prepositions",
-          "explain": "Prepositions like 'wegen' take the genitive: 'wegen des schlechten Wetters'. The colloquial dative ('wegen dem Wetter') is non-standard, and the accusative is incorrect.",
+          "sentence": "Choose the correct hypothetical sentence.",
+          "summary": "B1 · Konjunktiv II",
+          "category": "Konjunktiv II",
+          "level": "B1",
+          "explain": "A hypothetical present situation uses Konjunktiv II: 'Wenn ich mehr Zeit hätte, würde ich öfter kochen.' The wenn-clause uses 'hätte', and the result uses 'würde' plus the infinitive.",
           "words": [
             {
-              "word": "Wegen dem schlechten Wetter bleiben wir zu Hause.",
+              "word": "Wenn ich mehr Zeit habe, würde ich öfter kochen.",
               "ok": false
             },
             {
-              "word": "Wegen das schlechte Wetter bleiben wir zu Hause.",
+              "word": "Wenn ich mehr Zeit hätte, werde ich öfter kochen.",
               "ok": false
             },
             {
-              "word": "Wegen des schlechten Wetters bleiben wir zu Hause.",
+              "word": "Wenn ich mehr Zeit hätte, würde ich öfter kochen.",
               "ok": true
             }
           ]
@@ -220,23 +220,23 @@
         {
           "title": "",
           "page": 10,
-          "sentence": "Choose the correct reported speech.",
-          "summary": "B2 · Konjunktiv I (Reported Speech)",
-          "level": "B2",
-          "category": "Konjunktiv I: Reported Speech",
-          "explain": "Indirect speech uses Konjunktiv I: 'Er sagte, er sei krank'. Use 'sei' (not the indicative 'ist' or the infinitive 'sein').",
+          "sentence": "Choose the correct sentence.",
+          "summary": "B1 · Concessive Clauses with obwohl",
+          "category": "Subordinate Clauses",
+          "level": "B1",
+          "explain": "The conjunction 'obwohl' introduces a subordinate clause, so its verb goes to the end: 'obwohl es regnet'. When that clause comes first, the main clause begins with its verb: 'gehen wir'.",
           "words": [
             {
-              "word": "Er sagte, er ist krank.",
+              "word": "Obwohl es regnet, wir gehen spazieren.",
               "ok": false
             },
             {
-              "word": "Er sagte, er sei krank.",
+              "word": "Obwohl regnet es, gehen wir spazieren.",
+              "ok": false
+            },
+            {
+              "word": "Obwohl es regnet, gehen wir spazieren.",
               "ok": true
-            },
-            {
-              "word": "Er sagte, er sein krank.",
-              "ok": false
             }
           ]
         }

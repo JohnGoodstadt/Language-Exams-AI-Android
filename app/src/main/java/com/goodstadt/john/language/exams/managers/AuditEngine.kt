@@ -97,72 +97,122 @@ object AuditEngine {
     }
 
     // ---------------------------------------------------------------------------------------------
-    // Per-level Confidence & Readiness (the level-aware model)
+    // Per-level dials (comfort-band model)
     //
-    // The classic calculate() above is a single global figure across the 4 audit parts. This model
-    // instead answers "how confident are we that you're ready for the <level> exam?" per CEFR level,
-    // so A1 can legitimately reach 98/98 by mastering all A1 vocab, while the exam-relevant B1/B2
-    // numbers only climb once that level's own work is demonstrated.
+    // A single underlying position U in 0..400 (0-99 = A1, 100-199 = A2, 200-299 = B1, 300-399 = B2)
+    // tracks how far up the CEFR ladder the learner is. The two visible dials RE-ANCHOR that position
+    // to whatever vocab level is currently LOADED, so:
+    //   - loading a level BELOW your comfort band shows ~98% (you're clearly above it),
+    //   - loading your comfort band shows your real progress through it (0..98%),
+    //   - loading a level ABOVE shows a low number.
     //
-    // Each level's number blends two evidence streams:
-    //   - Quiz answers at that level: the baseline audit's per-band answers PLUS Usage/Grammar quiz
-    //     answers (all recorded per (category, level)). Gives coverage (how many answered) and
-    //     accuracy (how many correct). A1 has no audit band but still gets Usage/Grammar evidence.
-    //   - Section (Vocab) mastery: the fraction of that level's section quizzes mastered with 3 clean
-    //     strikes. All sections mastered -> full practice fraction (1.0).
-    // So A1 can reach 98/98 by mastering all A1 vocab, while the exam-relevant B1/B2 numbers only
-    // climb once that level's own work is demonstrated. Everything is tunable via the constants below.
+    // Each band has a completion 0..1 for each axis, taken as the MAX of these floors (numbers never drop):
+    //   - the Verify level test (A2/B1/B2): score rounded 3->0 .. 7->1,
+    //   - practice = 70% Vocab section + 30% in-context quiz (Usage/Grammar/baseline answers):
+    //       Readiness uses the section FIRST-PERFECT fraction + quiz accuracy,
+    //       Confidence uses the section ATTEMPTED fraction + quiz coverage.
+    // "Downward crediting": every band below the comfort band is treated as complete, so an unfinished
+    // lower level never holds you back once you've demonstrated a higher one. The comfort band is the
+    // highest band whose Readiness completion >= PROMOTION_THRESHOLD, floored at the baseline placement.
+    // Everything is tunable via the constants below.
     // ---------------------------------------------------------------------------------------------
 
-    /** Ceiling for both numbers (matches the global model's 98 cap). */
+    /** Ceiling for the displayed dials (0..98). */
     const val LEVEL_MAX = 98
-    /** Default number of section (Vocab) categories per level - the practice denominator (A1 = 16). */
+    /** Underlying scale: each CEFR band spans this many points (A1 0-99 .. B2 300-399; full = 400). */
+    const val BAND_SPAN = 100
+    /** Default section (Vocab) categories per level - the practice denominator (tunable; ~14-18 in content). */
     const val EXPECTED_SECTIONS_PER_LEVEL = 16
-    /** Quiz answers at a level that count as "full" quiz coverage (roughly one full quiz's worth). */
+    /** In-context quiz answers at a level that count as full quiz coverage (~one quiz's worth). */
     private const val EXPECTED_QUIZ_ANSWERS = 10
-    /** Quiz answers alone contribute at most this fraction of Confidence; section mastery supplies the rest. */
-    private const val QUIZ_COVERAGE_CAP = 0.5f
-    /** Minimum quiz answers at a level before we trust the quiz accuracy for Readiness (avoids 1/1 = 100%). */
+    /** Minimum quiz answers before we trust the quiz accuracy (avoids 1/1 = 100%). */
     private const val MIN_ANSWERS_FOR_ACCURACY = 3
+    /** Practice split: Vocab sections vs in-context quizzes (Usage/Grammar). */
+    private const val VOCAB_WEIGHT = 0.7f
+    private const val QUIZ_WEIGHT = 0.3f
+    /** Readiness completion a band needs to become the comfort band (and promote the bands below it). */
+    const val PROMOTION_THRESHOLD = 0.5f
+    /** Taking a Verify level test is worth this much Confidence coverage for its band. */
+    private const val TEST_CONFIDENCE = 0.7f
 
-    /**
-     * Evidence for ONE CEFR level.
-     * @param quizAnswered quiz answers recorded at this level (audit band + Usage + Grammar).
-     * @param quizCorrect how many of those were correct.
-     * @param masteredSections section (Vocab) categories at this level mastered with 3 clean strikes.
-     * @param expectedSections denominator for practice coverage (see [EXPECTED_SECTIONS_PER_LEVEL]).
-     */
-    data class LevelEvidence(
-        val quizAnswered: Int,
+    /** Per-band evidence gathered by the caller (list ordered A1, A2, B1, B2). */
+    data class BandInput(
+        val levelTestCorrect: Int?,          // Verify test score 0..10 for this band, or null (not taken / A1)
+        val quizAnswered: Int,               // in-context quiz answers at this band (Usage/Grammar/baseline)
         val quizCorrect: Int,
-        val masteredSections: Int,
-        val expectedSections: Int
+        val vocabSectionsFirstPerfect: Int,  // sections at this band with >=1 flawless completion
+        val vocabSectionsAttempted: Int,     // sections at this band attempted at all
+        val sectionsAtLevel: Int             // denominator (real count if known, else EXPECTED_SECTIONS_PER_LEVEL)
     )
 
-    /** Confidence (coverage) & Readiness (accuracy) for a single level - see the block comment above. */
-    fun calculateForLevel(ev: LevelEvidence): AuditReport {
-        val masteredFrac =
-            if (ev.expectedSections > 0)
-                (ev.masteredSections.toFloat() / ev.expectedSections).coerceIn(0f, 1f)
-            else 0f
+    /** The two display dials (0..98) for the loaded level, plus the comfort band and underlying position. */
+    data class Dials(
+        val confidence: Int,
+        val readiness: Int,
+        val comfortBandIndex: Int,           // 0..3 (A1..B2)
+        val underlyingReadiness: Int         // 0..400
+    )
 
-        // Confidence = coverage. Quiz answers contribute up to QUIZ_COVERAGE_CAP; section mastery adds
-        // on top (so full practice alone can still reach the ceiling). Capped to 1.0.
-        val quizCoverage =
-            (ev.quizAnswered.toFloat() / EXPECTED_QUIZ_ANSWERS).coerceIn(0f, 1f) * QUIZ_COVERAGE_CAP
-        val coverage = (quizCoverage + masteredFrac).coerceIn(0f, 1f)
+    /** Raw (pre-crediting) Readiness/Confidence completions (0..1) for one band. */
+    private fun bandCompletions(b: BandInput): Pair<Float, Float> {
+        val sections = if (b.sectionsAtLevel > 0) b.sectionsAtLevel else EXPECTED_SECTIONS_PER_LEVEL
+        val perfectFrac = (b.vocabSectionsFirstPerfect.toFloat() / sections).coerceIn(0f, 1f)
+        val attemptFrac = (b.vocabSectionsAttempted.toFloat() / sections).coerceIn(0f, 1f)
 
-        // Readiness = accuracy. Take the BEST of the (trusted) quiz accuracy and the section-mastery
-        // fraction, so mastering all sections drives it toward the top even if the audit was weak.
         val quizAccuracy =
-            if (ev.quizAnswered >= MIN_ANSWERS_FOR_ACCURACY && ev.quizAnswered > 0)
-                (ev.quizCorrect.toFloat() / ev.quizAnswered).coerceIn(0f, 1f)
+            if (b.quizAnswered >= MIN_ANSWERS_FOR_ACCURACY && b.quizAnswered > 0)
+                (b.quizCorrect.toFloat() / b.quizAnswered).coerceIn(0f, 1f)
             else 0f
-        val accuracy = maxOf(quizAccuracy, masteredFrac)
+        val quizCoverage = (b.quizAnswered.toFloat() / EXPECTED_QUIZ_ANSWERS).coerceIn(0f, 1f)
 
-        return AuditReport(
-            confidence = (coverage * LEVEL_MAX).roundToInt().coerceIn(0, LEVEL_MAX),
-            readiness = (accuracy * LEVEL_MAX).roundToInt().coerceIn(0, LEVEL_MAX)
+        // Level test: 3/10 -> 0, 7/10 -> 1 (your onboarding rounding), linear between.
+        val testRead = b.levelTestCorrect?.let { ((it - 3).toFloat() / 4f).coerceIn(0f, 1f) } ?: 0f
+        val testConf = if (b.levelTestCorrect != null) TEST_CONFIDENCE else 0f
+
+        val readiness =
+            maxOf(testRead, VOCAB_WEIGHT * perfectFrac + QUIZ_WEIGHT * quizAccuracy).coerceIn(0f, 1f)
+        val confidence =
+            maxOf(testConf, VOCAB_WEIGHT * attemptFrac + QUIZ_WEIGHT * quizCoverage).coerceIn(0f, 1f)
+        return readiness to confidence
+    }
+
+    /**
+     * Re-anchored Confidence & Readiness dials for the currently loaded level [loadedIndex] (0..3),
+     * from per-band evidence and the baseline [placementIndex]. See the block comment above.
+     */
+    fun computeDials(bands: List<BandInput>, placementIndex: Int, loadedIndex: Int): Dials {
+        val cRead = FloatArray(4)
+        val cConf = FloatArray(4)
+        bands.forEachIndexed { i, input ->
+            if (i in 0..3) {
+                val (r, c) = bandCompletions(input)
+                cRead[i] = r
+                cConf[i] = c
+            }
+        }
+
+        // Comfort band = highest band demonstrated (Readiness >= threshold), never below placement.
+        var comfort = placementIndex.coerceIn(0, 3)
+        for (i in 3 downTo 0) {
+            if (cRead[i] >= PROMOTION_THRESHOLD) { comfort = maxOf(comfort, i); break }
+        }
+
+        // Underlying position: bands below comfort count as complete (downward crediting).
+        var uRead = 0f
+        for (i in 0..3) uRead += if (i < comfort) 1f else cRead[i]
+        val underlyingReadiness = (uRead * BAND_SPAN).roundToInt().coerceIn(0, 4 * BAND_SPAN)
+
+        // Display re-anchored to the loaded level: below comfort -> maxed; at/above -> that band's completion.
+        val loaded = loadedIndex.coerceIn(0, 3)
+        fun dial(c: FloatArray): Int =
+            if (loaded < comfort) LEVEL_MAX
+            else (c[loaded] * LEVEL_MAX).roundToInt().coerceIn(0, LEVEL_MAX)
+
+        return Dials(
+            confidence = dial(cConf),
+            readiness = dial(cRead),
+            comfortBandIndex = comfort,
+            underlyingReadiness = underlyingReadiness
         )
     }
 
@@ -188,69 +238,50 @@ object AuditEngine {
         }
     }
 
-    // Ordering of the CEFR bands the baseline audit places into, lowest to highest.
-    private val BASELINE_BANDS = listOf("A2", "B1", "B2")
-    // A band is "cleared" once at least this fraction of its questions are correct.
-    // With 3/4/3 questions per band this means A2 & B2 need 2 of 3, B1 needs 3 of 4.
-    private const val BAND_PASS_RATIO = 0.6f
-
-    /** True when the learner cleared [band]'s pass ratio. Empty/absent bands are not cleared. */
-    private fun bandCleared(results: List<Pair<String?, Boolean>>, band: String): Boolean {
-        val inBand = results.filter { it.first?.trim()?.uppercase() == band }
-        if (inBand.isEmpty()) return false
-        return inBand.count { it.second }.toFloat() / inBand.size >= BAND_PASS_RATIO
-    }
+    // Baseline test = 2x A1, 4x A2, 4x B1 (no B2). Placement uses per-band correct counts with
+    // lucky-guess rounding (a lone correct -> 0) and an unlucky allowance (3/4 still "cleared").
+    // A1 is binary: both right, or it doesn't count.
 
     /**
-     * Places a learner from their banded baseline answers.
-     *
-     * The baseline quiz mixes CEFR bands (e.g. 3x A2, 4x B1, 3x B2). Rather than a flat
-     * correct-count, we look at each band in isolation: a band is "cleared" when the learner
-     * gets [BAND_PASS_RATIO] of its questions right (see [bandCleared]).
-     *
-     * Placement is the learner's "working level": the FIRST band (bottom-up) they have NOT
-     * cleared. A passed higher band can never leapfrog a failed lower one - clearing A2 but
-     * failing B1 places them at B1 (their current level), even if they happened to pass B2. If
-     * every band is cleared they are placed at the top band. Questions whose level is null/blank
-     * are ignored. This keeps placement in step with [baselineUnlockCeiling], which also refuses
-     * to skip a failed lower band.
-     *
-     * @param results one (level, isCorrect) pair per answered baseline question.
-     * @return "A2" / "B1" / "B2" - the first uncleared band, or the top band when all are cleared.
+     * Band index (0=A1, 1=A2, 2=B1, 3=B2) the baseline places the learner into, from per-band
+     * correct counts. See the decision rules inline.
      */
-    fun placeBaselineLevel(results: List<Pair<String?, Boolean>>): String {
-        for (band in BASELINE_BANDS) {
-            if (!bandCleared(results, band)) return band
-        }
-        return BASELINE_BANDS.last()
-    }
+    fun placeBaseline(a1Correct: Int, a2Correct: Int, b1Correct: Int): Int {
+        val a2 = if (a2Correct == 1) 0 else a2Correct    // a lone correct is a lucky guess -> discount
+        val b1 = if (b1Correct == 1) 0 else b1Correct
+        val a1Pass = a1Correct >= 2                       // A1 is binary (2 of 2)
+        val a2Clear = a2 >= 3                             // one wrong is unlucky -> still cleared
+        val b1Clear = b1 >= 3
+        val strong = !a1Pass && a2Clear && b1Clear        // fluffed A1 but clearly not a beginner
 
-    // Maps each baseline band onto the audit "part index" of the level test it gates open.
-    // Clearing the A2 baseline band opens the A2 test (part 2), etc.
-    private val BAND_UNLOCKS_PART = mapOf("A2" to 2, "B1" to 3, "B2" to 4)
+        if (!a1Pass && !strong) return 0                  // A1 (beginner safety net)
 
-    /**
-     * Decides how far the baseline result unlocks the level tests, using the same per-band
-     * pass bar as placement ([BAND_PASS_RATIO]). Bands must be cleared in order from the
-     * bottom: clearing A2 unlocks the A2 test; clearing A2+B1 unlocks the A2 and B1 tests; a
-     * clean sweep unlocks everything. The first band the learner does NOT clear stops the
-     * unlock there - so this agrees with [placeBaselineLevel] whenever the cleared bands are
-     * contiguous from A2 (the normal case), and only lags it if a lower band is skipped.
-     *
-     * @param results one (level, isCorrect) pair per answered baseline question.
-     * @return the highest unlocked part index: 1 = baseline only (A2 not cleared),
-     *   2 = +A2 test, 3 = +B1 test, 4 = +B2 test.
-     */
-    fun baselineUnlockCeiling(results: List<Pair<String?, Boolean>>): Int {
-        var ceiling = 1 // baseline only
-        for (band in BASELINE_BANDS) {
-            if (bandCleared(results, band)) {
-                ceiling = BAND_UNLOCKS_PART[band] ?: ceiling
-            } else {
-                break
+        if (a2Clear) {
+            return when {
+                b1Correct == 4 -> 3                       // aced B1 (no B2 questions) -> recommend B2
+                b1 >= 2 -> 2                              // some real B1 -> B1
+                else -> 1                                 // no real B1 -> A2
             }
         }
-        return ceiling
+        // a1Pass with A2 not cleared (a `strong` learner always has a2Clear, so isn't reached here).
+        // Contiguity: a partial/failed A2 caps placement at A2/A1 regardless of B1 ("weight to A2").
+        return if (a2 == 2) 1 else 0                      // partial A2 -> A2, else -> A1
+    }
+
+    /**
+     * Highest audit part index the baseline unlocks for [placementIndex]: 1 = baseline only,
+     * 2 = +A2 test, 3 = +B1 test, 4 = +B2 test. Contiguous from the placement band.
+     */
+    fun baselineUnlockCeiling(placementIndex: Int): Int = (placementIndex + 1).coerceIn(1, 4)
+
+    /** CEFR label for a band index (0=A1 .. 3=B2). */
+    fun bandLabel(index: Int): String = when (index.coerceIn(0, 3)) {
+        0 -> "A1"; 1 -> "A2"; 2 -> "B1"; else -> "B2"
+    }
+
+    /** Band index for a CEFR label ("A1".."B2"); defaults to A1 (0) for anything unexpected. */
+    fun bandIndex(level: String): Int = when (level.trim().uppercase()) {
+        "A2" -> 1; "B1" -> 2; "B2" -> 3; else -> 0
     }
 
     /** Verdict tier shown under Exam Readiness. */

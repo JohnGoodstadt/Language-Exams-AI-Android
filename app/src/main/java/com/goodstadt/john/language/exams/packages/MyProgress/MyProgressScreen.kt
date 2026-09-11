@@ -44,6 +44,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.managers.XPManager
@@ -80,6 +81,7 @@ fun MyProgressScreen(
     }
 
     val auditStats by viewModel.auditStats.collectAsState()
+    val comfortLevelMessage by viewModel.comfortLevelMessage.collectAsState()
     val currentSkillLevel by viewModel.currentSkillLevel.collectAsState(initial = "B1")
     val unlockedLevels by viewModel.unlockedAuditLevels.collectAsState()
     val baselinePlacementLevel by viewModel.baselinePlacementLevel.collectAsState()
@@ -154,6 +156,19 @@ fun MyProgressScreen(
                         showLocalAuditSheet = true
                     }
                 )
+
+                // Comfort-level read-out, e.g. "You are clearly a B1 student".
+                if (comfortLevelMessage.isNotBlank()) {
+                    Text(
+                        text = comfortLevelMessage,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 8.dp),
+                        textAlign = TextAlign.Center
+                    )
+                }
 
                 HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
 

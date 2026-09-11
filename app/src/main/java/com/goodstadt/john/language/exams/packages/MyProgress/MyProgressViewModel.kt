@@ -48,48 +48,78 @@ class MyProgressViewModel @Inject constructor (
 
     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow
 
-    // Per-level Confidence & Readiness for the CURRENTLY SELECTED level (A1/A2/B1/B2). Blends this
-    // level's audit band (A2/B1/B2 only; A1 has none) with how many of its section (Vocab) quizzes
-    // have been mastered with 3 clean strikes - so A1 can reach 98/98 by finishing all A1 vocab, while
-    // the exam-relevant B1/B2 numbers only climb once that level's work is demonstrated. Recomputes when
-    // the selected level changes, an audit score changes, or a section quiz's mastery changes.
-    val auditStats: StateFlow<AuditStats> =
+    // Per-level Confidence & Readiness (comfort-band model - see AuditEngine.computeDials). The two
+    // dials re-anchor an underlying 0..400 CEFR position to the currently LOADED vocab level: loading a
+    // level below your comfort band reads ~98%, your comfort band reads its real progress, a level above
+    // reads low. Evidence per band = baseline placement + Verify level tests + practice (70% Vocab
+    // section first-perfect/attempts + 30% in-context quiz answers from Usage/Grammar/baseline).
+    // Recomputes when the loaded level changes, a test/quiz answer is recorded, or section mastery changes.
+    private val dialsFlow: StateFlow<AuditEngine.Dials> =
         combine(
             currentSkillLevel,
+            auditRepository.baselineLevel,
+            auditRepository.auditScores,
             auditRepository.categoryScores,
             vocabQuizRepository.dataUpdateEvents.onStart { emit(Unit) }
-        ) { level, categoryScores, _ ->
-            // Quiz evidence at this level: the audit's per-band answers + any Usage/Grammar answers.
-            // categoryScores is keyed "category|level"; sum every entry whose level matches.
-            var quizAnswered = 0
-            var quizCorrect = 0
-            categoryScores.forEach { (key, score) ->
-                if (key.substringAfterLast('|').equals(level, ignoreCase = true)) {
-                    quizAnswered += score.correct + score.incorrect + score.dontKnow
-                    quizCorrect += score.correct
+        ) { loadedLevel, baselineLevel, partScores, categoryScores, _ ->
+            val bands = (0..3).map { i ->
+                val label = AuditEngine.bandLabel(i)
+                // Verify level test score for this band: A2->part2, B1->part3, B2->part4; A1 has none.
+                val testCorrect = when (i) { 1 -> partScores[2]; 2 -> partScores[3]; 3 -> partScores[4]; else -> null }
+
+                // In-context quiz evidence at this band (baseline answers + Usage/Grammar), from the
+                // shared tally keyed "category|level".
+                var answered = 0
+                var correct = 0
+                categoryScores.forEach { (key, s) ->
+                    if (key.substringAfterLast('|').equals(label, ignoreCase = true)) {
+                        answered += s.correct + s.incorrect + s.dontKnow
+                        correct += s.correct
+                    }
                 }
+
+                // Vocab section evidence at this band: first-perfect (>=1 flawless attempt) and attempted.
+                var perfect = 0
+                var attempted = 0
+                vocabQuizRepository.getAllCategoryMasteryStates()
+                    .filter { it.level.equals(label, ignoreCase = true) }
+                    .forEach { st ->
+                        val attempts = vocabQuizRepository.getCategoryAttempts(st.category, st.level)
+                        if (attempts.isNotEmpty()) attempted++
+                        if (attempts.any { it.flawless }) perfect++
+                    }
+
+                AuditEngine.BandInput(
+                    levelTestCorrect = testCorrect,
+                    quizAnswered = answered,
+                    quizCorrect = correct,
+                    vocabSectionsFirstPerfect = perfect,
+                    vocabSectionsAttempted = attempted,
+                    sectionsAtLevel = AuditEngine.EXPECTED_SECTIONS_PER_LEVEL
+                )
             }
 
-            // Section (Vocab) categories at this level mastered with 3 clean strikes (flawless streak = 3).
-            val masteredSections = vocabQuizRepository.getAllCategoryMasteryStates()
-                .filter { it.level.equals(level, ignoreCase = true) }
-                .count { vocabQuizRepository.flawlessStreakStars(it.category, it.level) >= 3 }
-
-            val report = AuditEngine.calculateForLevel(
-                AuditEngine.LevelEvidence(
-                    quizAnswered = quizAnswered,
-                    quizCorrect = quizCorrect,
-                    masteredSections = masteredSections,
-                    expectedSections = AuditEngine.EXPECTED_SECTIONS_PER_LEVEL
-                )
+            AuditEngine.computeDials(
+                bands = bands,
+                placementIndex = AuditEngine.bandIndex(baselineLevel ?: "A1"),
+                loadedIndex = AuditEngine.bandIndex(loadedLevel)
             )
-            AuditStats(confidence = report.confidence, readiness = report.readiness)
-        }
-        .stateIn(
+        }.stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5000),
-            initialValue = AuditStats(0, 0)
+            initialValue = AuditEngine.Dials(0, 0, 0, 0)
         )
+
+    val auditStats: StateFlow<AuditStats> =
+        dialsFlow
+            .map { AuditStats(confidence = it.confidence, readiness = it.readiness) }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), AuditStats(0, 0))
+
+    /** e.g. "You are clearly a B1 student" - the learner's comfort band from the underlying position. */
+    val comfortLevelMessage: StateFlow<String> =
+        dialsFlow
+            .map { "You are clearly a ${AuditEngine.bandLabel(it.comfortBandIndex)} student" }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "")
 
     // Which audit version the learner is on, and whether the New Audit button should be live.
     // Enabled only once the baseline is done AND a higher version's questions still exist.

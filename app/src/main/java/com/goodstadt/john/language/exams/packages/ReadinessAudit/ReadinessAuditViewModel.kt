@@ -934,15 +934,20 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                         auditRepository.incrementRedoneParts()
                     }
 
-                    // Baseline is banded (A2/B1/B2 questions) - place the learner by how
-                    // they did per band, not by raw count, and persist it for the summary.
+                    // Baseline is banded (2x A1, 4x A2, 4x B1) - place the learner by per-band correct
+                    // counts (lucky/unlucky rounding lives in AuditEngine.placeBaseline), and persist it.
                     if (level == ReadinessAuditLevels.BASELINE) {
-                        val bandResults = _questions.value.mapIndexed { i, question ->
-                            question.level to (userAnswers.value[i] == true)
-                        }
-                        auditRepository.saveBaselineLevel(AuditEngine.placeBaselineLevel(bandResults))
-                        // Strict per-band mastery decides how far the level tests unlock.
-                        auditRepository.saveBaselineUnlockCeiling(AuditEngine.baselineUnlockCeiling(bandResults))
+                        fun correctInBand(band: String) = _questions.value.mapIndexedNotNull { i, q ->
+                            if (q.level?.trim()?.uppercase() == band && userAnswers.value[i] == true) 1 else null
+                        }.size
+                        val placementIndex = AuditEngine.placeBaseline(
+                            a1Correct = correctInBand("A1"),
+                            a2Correct = correctInBand("A2"),
+                            b1Correct = correctInBand("B1")
+                        )
+                        auditRepository.saveBaselineLevel(AuditEngine.bandLabel(placementIndex))
+                        // The placement band decides how far the level tests unlock.
+                        auditRepository.saveBaselineUnlockCeiling(AuditEngine.baselineUnlockCeiling(placementIndex))
                     }
                 }
 
