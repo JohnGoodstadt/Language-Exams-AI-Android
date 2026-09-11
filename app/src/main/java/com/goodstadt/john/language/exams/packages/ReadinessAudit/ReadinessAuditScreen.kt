@@ -58,6 +58,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
@@ -71,6 +72,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
 import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.packages.reference.UsageDashboardScreen
@@ -184,11 +186,15 @@ fun ReadinessAuditScreen(
     LaunchedEffect(initialVersion) {
         viewModel.startAtVersion(initialVersion)
     }
-    // When launched from "Go to your X test", jump to that level once it's actually unlocked
+    // When launched from "Go to your X test", jump to that level ONCE, as soon as it's actually unlocked
     // (the unlock ceiling loads asynchronously, so wait for it rather than firing a "locked" toast).
-    LaunchedEffect(initialLevel, unlockedLevels, selectedLevel) {
-        if (initialLevel != null && initialLevel != selectedLevel && unlockedLevels.contains(initialLevel)) {
-            viewModel.onLevelSelected(initialLevel)
+    // Guarded so it only applies the initial jump once - otherwise re-running when selectedLevel changes
+    // would snap the user back here every time they tap an earlier tab to re-take it.
+    var appliedInitialLevel by rememberSaveable { mutableStateOf(false) }
+    LaunchedEffect(initialLevel, unlockedLevels) {
+        if (!appliedInitialLevel && initialLevel != null && unlockedLevels.contains(initialLevel)) {
+            if (initialLevel != selectedLevel) viewModel.onLevelSelected(initialLevel)
+            appliedInitialLevel = true
         }
     }
     LaunchedEffect(currentQuestionIndex, questions, lockedAnswers) {
@@ -362,16 +368,18 @@ fun ReadinessAuditScreen(
 
                                 // Full level verdict now lives in the base MyProgress view;
                                 // here we just show the quiz's completion status.
-                                Text(
-                                    text = viewModel.getQuizStatusLabel(),
-                                    style = MaterialTheme.typography.titleMedium,
-                                    color = Color(0xFFFF9500),
-                                    fontWeight = FontWeight.Normal,
-                                    textAlign = TextAlign.Center,
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(top = 4.dp)
-                                )
+                                if (false) { //small screens
+                                    Text(
+                                        text = viewModel.getQuizStatusLabel(),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        color = Color(0xFFFF9500),
+                                        fontWeight = FontWeight.Normal,
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(top = 4.dp)
+                                    )
+                                }
                             }
                         }
                     }
@@ -470,11 +478,11 @@ fun ReadinessAuditScreen(
                     Spacer(modifier = Modifier.width(8.dp)) // Add spacing between dots
                 }
             }
-            // Filtered-empty state
-            //hide if compact height class
-            if ( currentQuestionIndex == 0 || (heightClass != HeightClass.COMPACT  && questions.isNotEmpty())) {
+            // Show the "Choose the best answer" instruction only on the FIRST question of each set
+            // (each source data[] entry) to save vertical space on the rest.
+            if (questions.isNotEmpty() && questions[currentQuestionIndex].isFirstInSet) {
                 Text(
-                    text = "Choose the best answer",
+                    text = stringResource(R.string.quiz_choose_best_answer),
                     style = MaterialTheme.typography.bodyMedium,
                     textAlign = TextAlign.Center,
                     modifier = Modifier

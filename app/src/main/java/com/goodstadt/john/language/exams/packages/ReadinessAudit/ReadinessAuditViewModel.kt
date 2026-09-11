@@ -403,7 +403,7 @@ class ReadinessAuditViewModel @Inject constructor(
         }
     }
 
-    fun loadQuestions() {
+    fun loadQuestions(resetSavedAttempt: Boolean = false) {
         viewModelScope.launch {
 
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
@@ -449,6 +449,11 @@ class ReadinessAuditViewModel @Inject constructor(
             Timber.v("${_questions.value.count()}")
 
             resetQuiz()
+            // Retake: wipe this quiz's saved answers BEFORE restoring, so the run starts fresh (unlocked)
+            // instead of showing the previous attempt's locked-in answers.
+            if (resetSavedAttempt) {
+                auditRepository.clearQuizAttempt(quizAttemptKey(selectedLevel.value, quizDetail))
+            }
             restorePersistedAttemptState()
 
             // Record how many questions this quiz has so Confidence can be computed for every
@@ -507,7 +512,10 @@ class ReadinessAuditViewModel @Inject constructor(
 //        selectedQuiz.value = level.quizzes.firstOrNull()
         selectedQuiz.value = _availableQuizzes.value.firstOrNull()
 
-        loadQuestions()
+        // Tapping any level tab (Baseline / Verify A2 / B1 / B2) starts that level FRESH, clearing any
+        // previous same-day answers so it can always be re-taken. (First-time/resume entry goes through
+        // startAtVersion, which keeps in-progress state.)
+        loadQuestions(resetSavedAttempt = true)
     }
 
     /** Whether [level] may currently be attempted - levels must be cleared in order. */
@@ -566,7 +574,7 @@ class ReadinessAuditViewModel @Inject constructor(
        // testData.shuffleLists()
 
         return testData.data.flatMap { section ->
-            section.sections.map { quizSection ->
+            section.sections.mapIndexed { indexInSet, quizSection ->
                 val shuffledWords = quizSection.words.shuffled()
                 val words = shuffledWords.map { it.word }
                 val correctOption = quizSection.words.firstOrNull { it.ok }?.word ?: ""
@@ -576,7 +584,12 @@ class ReadinessAuditViewModel @Inject constructor(
                 val page = quizSection.page
                 val level = quizSection.level
                 val category = quizSection.category
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page,level,category,testData.fileFormat)
+                QuizQuestion(
+                    quizSection.sentence, words, correctOption, summary, explain, title, page,
+                    level, category, testData.fileFormat,
+                    // First question of this set (data[] entry) -> shows the instruction once per set.
+                    isFirstInSet = indexInSet == 0
+                )
             }
         }
     }

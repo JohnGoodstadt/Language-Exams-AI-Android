@@ -241,7 +241,10 @@ data class QuizQuestion(
     val category: String? = null,
     // Copied from the source file's "fileformat" (7 = fill-in-the-blank, 10 = choose-the-answer),
     // so pooled category questions still know how to render even when mixed across files.
-    val fileFormat: Int = 0
+    val fileFormat: Int = 0,
+    // True for the FIRST question of each set (each source `data[]` entry). Used to show the
+    // "Choose the best answer" instruction once per set instead of on every question.
+    val isFirstInSet: Boolean = false
 )
 
 //TODO: Do I need this?

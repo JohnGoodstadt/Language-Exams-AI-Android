@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -42,24 +43,47 @@ class MyProgressViewModel @Inject constructor (
     val quizManager: QuizHistoryManager,
     private val auditRepository: ReadinessAuditRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
+    private val vocabQuizRepository: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository,
 ) : ViewModel() {
 
     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow
 
-    // This is the "Live Connection" between the Bottom Sheet and the Base Screen
+    // Per-level Confidence & Readiness for the CURRENTLY SELECTED level (A1/A2/B1/B2). Blends this
+    // level's audit band (A2/B1/B2 only; A1 has none) with how many of its section (Vocab) quizzes
+    // have been mastered with 3 clean strikes - so A1 can reach 98/98 by finishing all A1 vocab, while
+    // the exam-relevant B1/B2 numbers only climb once that level's work is demonstrated. Recomputes when
+    // the selected level changes, an audit score changes, or a section quiz's mastery changes.
     val auditStats: StateFlow<AuditStats> =
-        combine(auditRepository.auditDataFlow, auditRepository.confidenceBonus) { data, bonus ->
-            // The engine now sees the live 2/10 questions progress (e.g., 0.2f), plus the
-            // "more data" Confidence bonus earned from any redone (v>=2) audits.
-            val report = AuditEngine.calculate(
-                testScores = data.scores,
-                partProgress = data.activeProgress,
-                confidenceBonus = bonus
+        combine(
+            currentSkillLevel,
+            auditRepository.categoryScores,
+            vocabQuizRepository.dataUpdateEvents.onStart { emit(Unit) }
+        ) { level, categoryScores, _ ->
+            // Quiz evidence at this level: the audit's per-band answers + any Usage/Grammar answers.
+            // categoryScores is keyed "category|level"; sum every entry whose level matches.
+            var quizAnswered = 0
+            var quizCorrect = 0
+            categoryScores.forEach { (key, score) ->
+                if (key.substringAfterLast('|').equals(level, ignoreCase = true)) {
+                    quizAnswered += score.correct + score.incorrect + score.dontKnow
+                    quizCorrect += score.correct
+                }
+            }
+
+            // Section (Vocab) categories at this level mastered with 3 clean strikes (flawless streak = 3).
+            val masteredSections = vocabQuizRepository.getAllCategoryMasteryStates()
+                .filter { it.level.equals(level, ignoreCase = true) }
+                .count { vocabQuizRepository.flawlessStreakStars(it.category, it.level) >= 3 }
+
+            val report = AuditEngine.calculateForLevel(
+                AuditEngine.LevelEvidence(
+                    quizAnswered = quizAnswered,
+                    quizCorrect = quizCorrect,
+                    masteredSections = masteredSections,
+                    expectedSections = AuditEngine.EXPECTED_SECTIONS_PER_LEVEL
+                )
             )
-            AuditStats(
-                confidence = report.confidence,
-                readiness = report.readiness
-            )
+            AuditStats(confidence = report.confidence, readiness = report.readiness)
         }
         .stateIn(
             scope = viewModelScope,

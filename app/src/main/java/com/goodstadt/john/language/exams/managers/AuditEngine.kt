@@ -96,6 +96,76 @@ object AuditEngine {
         )
     }
 
+    // ---------------------------------------------------------------------------------------------
+    // Per-level Confidence & Readiness (the level-aware model)
+    //
+    // The classic calculate() above is a single global figure across the 4 audit parts. This model
+    // instead answers "how confident are we that you're ready for the <level> exam?" per CEFR level,
+    // so A1 can legitimately reach 98/98 by mastering all A1 vocab, while the exam-relevant B1/B2
+    // numbers only climb once that level's own work is demonstrated.
+    //
+    // Each level's number blends two evidence streams:
+    //   - Quiz answers at that level: the baseline audit's per-band answers PLUS Usage/Grammar quiz
+    //     answers (all recorded per (category, level)). Gives coverage (how many answered) and
+    //     accuracy (how many correct). A1 has no audit band but still gets Usage/Grammar evidence.
+    //   - Section (Vocab) mastery: the fraction of that level's section quizzes mastered with 3 clean
+    //     strikes. All sections mastered -> full practice fraction (1.0).
+    // So A1 can reach 98/98 by mastering all A1 vocab, while the exam-relevant B1/B2 numbers only
+    // climb once that level's own work is demonstrated. Everything is tunable via the constants below.
+    // ---------------------------------------------------------------------------------------------
+
+    /** Ceiling for both numbers (matches the global model's 98 cap). */
+    const val LEVEL_MAX = 98
+    /** Default number of section (Vocab) categories per level - the practice denominator (A1 = 16). */
+    const val EXPECTED_SECTIONS_PER_LEVEL = 16
+    /** Quiz answers at a level that count as "full" quiz coverage (roughly one full quiz's worth). */
+    private const val EXPECTED_QUIZ_ANSWERS = 10
+    /** Quiz answers alone contribute at most this fraction of Confidence; section mastery supplies the rest. */
+    private const val QUIZ_COVERAGE_CAP = 0.5f
+    /** Minimum quiz answers at a level before we trust the quiz accuracy for Readiness (avoids 1/1 = 100%). */
+    private const val MIN_ANSWERS_FOR_ACCURACY = 3
+
+    /**
+     * Evidence for ONE CEFR level.
+     * @param quizAnswered quiz answers recorded at this level (audit band + Usage + Grammar).
+     * @param quizCorrect how many of those were correct.
+     * @param masteredSections section (Vocab) categories at this level mastered with 3 clean strikes.
+     * @param expectedSections denominator for practice coverage (see [EXPECTED_SECTIONS_PER_LEVEL]).
+     */
+    data class LevelEvidence(
+        val quizAnswered: Int,
+        val quizCorrect: Int,
+        val masteredSections: Int,
+        val expectedSections: Int
+    )
+
+    /** Confidence (coverage) & Readiness (accuracy) for a single level - see the block comment above. */
+    fun calculateForLevel(ev: LevelEvidence): AuditReport {
+        val masteredFrac =
+            if (ev.expectedSections > 0)
+                (ev.masteredSections.toFloat() / ev.expectedSections).coerceIn(0f, 1f)
+            else 0f
+
+        // Confidence = coverage. Quiz answers contribute up to QUIZ_COVERAGE_CAP; section mastery adds
+        // on top (so full practice alone can still reach the ceiling). Capped to 1.0.
+        val quizCoverage =
+            (ev.quizAnswered.toFloat() / EXPECTED_QUIZ_ANSWERS).coerceIn(0f, 1f) * QUIZ_COVERAGE_CAP
+        val coverage = (quizCoverage + masteredFrac).coerceIn(0f, 1f)
+
+        // Readiness = accuracy. Take the BEST of the (trusted) quiz accuracy and the section-mastery
+        // fraction, so mastering all sections drives it toward the top even if the audit was weak.
+        val quizAccuracy =
+            if (ev.quizAnswered >= MIN_ANSWERS_FOR_ACCURACY && ev.quizAnswered > 0)
+                (ev.quizCorrect.toFloat() / ev.quizAnswered).coerceIn(0f, 1f)
+            else 0f
+        val accuracy = maxOf(quizAccuracy, masteredFrac)
+
+        return AuditReport(
+            confidence = (coverage * LEVEL_MAX).roundToInt().coerceIn(0, LEVEL_MAX),
+            readiness = (accuracy * LEVEL_MAX).roundToInt().coerceIn(0, LEVEL_MAX)
+        )
+    }
+
     /**
      * Fills in parts below the highest completed part with that part's score, so completing a
      * harder test carries the easier (untaken) parts with it. Parts with a real score keep it;

@@ -30,10 +30,13 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.AuditStats
+import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
+import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
@@ -83,32 +86,42 @@ fun AuditDashboardHeader(
                 label = "Confidence",
                 value = stats.confidence,
                 color = blueBright2,
-                description = "Data Certainty"
+                // Per-level: this is confidence in the learner at the currently selected level.
+                description = "$currentLevel data"
             )
             AuditCircularGauge(
                 label = "Readiness",
                 value = stats.readiness,
                 color = if (stats.readiness > 70) Color.Green else orangeLight,
-                description = "Exam Score"
+                // Per-level: readiness for an exam at the currently selected level.
+                description = "$currentLevel exam"
             )
         }
 
         Spacer(Modifier.height(24.dp))
 
         // --- 1b. THE SUMMARY (moved out of the inline audit view) ---
-        AuditSummaryCard(
-            currentLevel = currentLevel,
-            // Band-based placement from the baseline audit ("A2"/"B1"/"B2"), or null
-            // until a baseline quiz has been completed under the banded-scoring build.
-            placementLevel = placementLevel,
-            // True once the baseline quiz is finished (however well) - drives take-vs-retake copy.
-            baselineComplete = baselineComplete,
-            // The unlocked test to point them at, or null if their baseline didn't master A2.
-            recommendedTest = recommendedTest,
-            // "Switch App Vocab to <level> Mastery" applies the suggested level directly (no picker sheet);
-            // the "Change Level" button below still opens the sheet for a free choice.
-            onSwitchLevel = onApplySuggestedLevel
-        )
+        // Once the baseline is done this summary is rarely needed again, so from the day after install it
+        // starts collapsed (one tap to reveal); on install day it stays open so the fresh result is visible.
+        val context = LocalContext.current
+        CollapsibleSection(
+            title = "Baseline result",
+            initiallyExpanded = getDaysSinceInstall(context) < 2
+        ) {
+            AuditSummaryCard(
+                currentLevel = currentLevel,
+                // Band-based placement from the baseline audit ("A2"/"B1"/"B2"), or null
+                // until a baseline quiz has been completed under the banded-scoring build.
+                placementLevel = placementLevel,
+                // True once the baseline quiz is finished (however well) - drives take-vs-retake copy.
+                baselineComplete = baselineComplete,
+                // The unlocked test to point them at, or null if their baseline didn't master A2.
+                recommendedTest = recommendedTest,
+                // "Switch App Vocab to <level> Mastery" applies the suggested level directly (no picker sheet);
+                // the "Change Level" button below still opens the sheet for a free choice.
+                onSwitchLevel = onApplySuggestedLevel
+            )
+        }
 
         Spacer(Modifier.height(24.dp))
 

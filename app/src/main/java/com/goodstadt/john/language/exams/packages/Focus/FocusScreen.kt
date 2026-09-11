@@ -39,6 +39,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.PaddingValues
@@ -47,12 +48,15 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
 import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
+    val context = LocalContext.current
     val focusState by viewModel.focusState.collectAsState()
     val currentLevel by viewModel.currentLevel.collectAsState()
     val stats by viewModel.auditStats.collectAsState()
@@ -78,10 +82,18 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
 
         when (focusState) {
             is FocusUiState.NotEnoughData ->
+                // Always shown: the learner still needs to take the baseline audit.
                 NotEnoughDataCard(confidence = stats.confidence, onTakeAudit = { showAuditSheet = true })
 
             is FocusUiState.AllCaughtUp ->
-                AllCaughtUpCard(currentLevel = currentLevel)
+                // Reassurance card that isn't needed daily: from the day after install it starts collapsed
+                // (one tap to reveal); on install day it stays open.
+                CollapsibleSection(
+                    title = "All caught up",
+                    initiallyExpanded = getDaysSinceInstall(context) < 2
+                ) {
+                    AllCaughtUpCard(currentLevel = currentLevel)
+                }
 
             // Weak areas now surface directly in Category progress below (red segments).
             is FocusUiState.Priorities -> Unit
