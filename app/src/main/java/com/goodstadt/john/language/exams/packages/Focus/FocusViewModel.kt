@@ -69,7 +69,8 @@ class FocusViewModel @Inject constructor(
     private val auditRepository: ReadinessAuditRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val categoryQuizRepository: CategoryQuizRepository,
-    private val contentRepository: ContentRepository
+    private val contentRepository: ContentRepository,
+    private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider
 ) : ViewModel() {
 
     /** The (category, level) whose quiz sheet is open, or null when none is. */
@@ -166,15 +167,12 @@ class FocusViewModel @Inject constructor(
             }
         }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), FocusUiState.NotEnoughData)
 
+    // Comfort-band dials re-anchored to the learner's current level (shared with Progress / Readiness
+    // Audit via ReadinessDialsProvider, so all three screens show the same numbers).
     val auditStats: StateFlow<AuditStats> =
-        combine(auditRepository.auditDataFlow, auditRepository.confidenceBonus) { data, bonus ->
-            val report = AuditEngine.calculate(
-                testScores = data.scores,
-                partProgress = data.activeProgress,
-                confidenceBonus = bonus
-            )
-            AuditStats(report.confidence, report.readiness)
-        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), AuditStats(0, 0))
+        dialsProvider.dials(currentLevel)
+            .map { AuditStats(it.confidence, it.readiness) }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), AuditStats(0, 0))
 
     val auditVersion: StateFlow<Int> = auditRepository.auditVersion
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 1)

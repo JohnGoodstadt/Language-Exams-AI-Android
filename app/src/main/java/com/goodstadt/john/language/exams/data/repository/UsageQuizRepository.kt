@@ -33,8 +33,11 @@ class UsageQuizRepository @Inject constructor(
     private val fileName = "usage_quiz_stats.json"
     private val scope = CoroutineScope(Dispatchers.IO)
 
-    // In-Memory Store: Map<QuizID, QuizStats>
+    // In-Memory Store: Map<QuizID, QuizStats>. Accessed from several threads (record* from caller
+    // threads, save/load from the IO scope), and Gson iterates it while serialising - so EVERY read,
+    // structural mutation and serialisation must hold [lock] or we get ConcurrentModificationException.
     private var quizStates: MutableMap<String, UsageQuizStat> = mutableMapOf()
+    private val lock = Any()
 
     // Reactive flow to notify UI of changes
     private val _dataUpdateEvents = MutableSharedFlow<Unit>(replay = 1)
@@ -57,18 +60,19 @@ class UsageQuizRepository @Inject constructor(
      */
     fun recordQuestionResult(quizId: String, pageNumber: Int, outcome: VocabQuizOutcome) {
         scope.launch {
-            val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
-            val questionStat = quizStat.questions.getOrPut(pageNumber) { UsageQuestionStat(pageNumber) }
+            synchronized(lock) {
+                val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
+                val questionStat = quizStat.questions.getOrPut(pageNumber) { UsageQuestionStat(pageNumber) }
 
-            val now = System.currentTimeMillis()
-            VocabMasteryEngine.updateMastery(questionStat, outcome, now)
-            questionStat.lastAnsweredAt = now
+                val now = System.currentTimeMillis()
+                VocabMasteryEngine.updateMastery(questionStat, outcome, now)
+                questionStat.lastAnsweredAt = now
 
-            Timber.d(
-                "UsageQuiz: $quizId [$pageNumber] $outcome -> ${questionStat.masteryLevel} " +
-                    "(streak=${questionStat.correctStreak})"
-            )
-
+                Timber.d(
+                    "UsageQuiz: $quizId [$pageNumber] $outcome -> ${questionStat.masteryLevel} " +
+                        "(streak=${questionStat.correctStreak})"
+                )
+            }
             saveToDisk()
             _dataUpdateEvents.emit(Unit)
         }
@@ -79,11 +83,11 @@ class UsageQuizRepository @Inject constructor(
      */
     fun finishQuiz(quizId: String, finalScore: Int) {
         scope.launch {
-            val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
-
-            quizStat.timesCompleted += 1
-            quizStat.bestScore = max(quizStat.bestScore, finalScore)
-
+            synchronized(lock) {
+                val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
+                quizStat.timesCompleted += 1
+                quizStat.bestScore = max(quizStat.bestScore, finalScore)
+            }
             saveToDisk()
             _dataUpdateEvents.emit(Unit)
         }
@@ -98,26 +102,28 @@ class UsageQuizRepository @Inject constructor(
      * Mutates the in-memory store synchronously (so the returned award flag is accurate) and persists async.
      */
     fun recordAttempt(quizId: String, correct: Int, tries: Int, total: Int): Boolean {
-        val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
-        // Guard against a null list from a legacy save that pre-dates the `attempts` field.
-        @Suppress("SENSELESS_COMPARISON")
-        if (quizStat.attempts == null) quizStat.attempts = mutableListOf()
-        val flawless = total > 0 && correct == total && tries == total
-        quizStat.attempts.add(
-            UsageQuizAttempt(
-                attemptedAt = System.currentTimeMillis(),
-                total = total,
-                correct = correct,
-                tries = tries,
-                flawless = flawless
+        val justEarnedAward = synchronized(lock) {
+            val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
+            // Guard against a null list from a legacy save that pre-dates the `attempts` field.
+            @Suppress("SENSELESS_COMPARISON")
+            if (quizStat.attempts == null) quizStat.attempts = mutableListOf()
+            val flawless = total > 0 && correct == total && tries == total
+            quizStat.attempts.add(
+                UsageQuizAttempt(
+                    attemptedAt = System.currentTimeMillis(),
+                    total = total,
+                    correct = correct,
+                    tries = tries,
+                    flawless = flawless
+                )
             )
-        )
-        quizStat.timesCompleted += 1
-        quizStat.bestScore = max(quizStat.bestScore, correct)
+            quizStat.timesCompleted += 1
+            quizStat.bestScore = max(quizStat.bestScore, correct)
 
-        val justEarnedAward =
-            flawless && flawlessDistinctDays(quizId) >= 3 && !quizStat.threeDayAwardGiven
-        if (justEarnedAward) quizStat.threeDayAwardGiven = true
+            val earned = flawless && flawlessDistinctDays(quizId) >= 3 && !quizStat.threeDayAwardGiven
+            if (earned) quizStat.threeDayAwardGiven = true
+            earned
+        }
 
         scope.launch {
             saveToDisk()
@@ -128,12 +134,13 @@ class UsageQuizRepository @Inject constructor(
 
     /** Every dated attempt at one quiz, oldest first. */
     fun getQuizAttempts(quizId: String): List<UsageQuizAttempt> =
-        quizStates[quizId]?.attempts?.toList() ?: emptyList()
+        synchronized(lock) { quizStates[quizId]?.attempts?.toList() ?: emptyList() }
 
-    /** Number of DISTINCT local calendar days on which this quiz was completed flawlessly (no errors). */
-    fun flawlessDistinctDays(quizId: String): Int {
+    /** Number of DISTINCT local calendar days on which this quiz was completed flawlessly (no errors).
+     *  Callers already holding [lock] are fine - the monitor is reentrant. */
+    fun flawlessDistinctDays(quizId: String): Int = synchronized(lock) {
         val zone = ZoneId.systemDefault()
-        return quizStates[quizId]?.attempts
+        quizStates[quizId]?.attempts
             ?.filter { it.flawless }
             ?.map { Instant.ofEpochMilli(it.attemptedAt).atZone(zone).toLocalDate() }
             ?.toSet()?.size ?: 0
@@ -148,8 +155,10 @@ class UsageQuizRepository @Inject constructor(
      */
     fun getQuizMastery(quizId: String, total: Int): CategoryMasteryLevel {
         if (total <= 0) return CategoryMasteryLevel.New
-        val qmap = quizStates[quizId]?.questions
-        val levels = (1..total).map { page -> qmap?.get(page)?.masteryLevel ?: WordMasteryLevel.New }
+        val levels = synchronized(lock) {
+            val qmap = quizStates[quizId]?.questions
+            (1..total).map { page -> qmap?.get(page)?.masteryLevel ?: WordMasteryLevel.New }
+        }
         return when {
             levels.all { it == WordMasteryLevel.Mastered } -> CategoryMasteryLevel.Mastered
             levels.any { it == WordMasteryLevel.Struggling } -> CategoryMasteryLevel.Struggling
@@ -161,19 +170,18 @@ class UsageQuizRepository @Inject constructor(
 
     // MARK: - READ
 
-    fun getStatsForQuiz(quizId: String): UsageQuizStat? {
-        return quizStates[quizId]
-    }
+    fun getStatsForQuiz(quizId: String): UsageQuizStat? =
+        synchronized(lock) { quizStates[quizId] }
 
-    fun getStatsForQuestion(quizId: String, pageNumber: Int): UsageQuestionStat? {
-        return quizStates[quizId]?.questions?.get(pageNumber)
-    }
+    fun getStatsForQuestion(quizId: String, pageNumber: Int): UsageQuestionStat? =
+        synchronized(lock) { quizStates[quizId]?.questions?.get(pageNumber) }
 
     // MARK: - DELETE
 
     fun clearStatsForQuiz(quizId: String) {
         scope.launch {
-            if (quizStates.remove(quizId) != null) {
+            val removed = synchronized(lock) { quizStates.remove(quizId) != null }
+            if (removed) {
                 saveToDisk()
                 _dataUpdateEvents.emit(Unit)
             }
@@ -182,7 +190,7 @@ class UsageQuizRepository @Inject constructor(
 
     fun clearAll() {
         scope.launch {
-            quizStates.clear()
+            synchronized(lock) { quizStates.clear() }
             val file = File(context.filesDir, fileName)
             if (file.exists()) file.delete()
             _dataUpdateEvents.emit(Unit)
@@ -193,7 +201,9 @@ class UsageQuizRepository @Inject constructor(
 
     private fun saveToDisk() {
         try {
-            val jsonString = gson.toJson(quizStates)
+            // Serialise under the lock (Gson iterates the map + its nested maps/lists) then write the
+            // file outside it, so disk IO doesn't hold the lock against the record* callers.
+            val jsonString = synchronized(lock) { gson.toJson(quizStates) }
             File(context.filesDir, fileName).writeText(jsonString)
         } catch (e: Exception) {
             Timber.e(e, "Failed to save usage quiz stats")
@@ -205,13 +215,15 @@ class UsageQuizRepository @Inject constructor(
             val file = File(context.filesDir, fileName)
             if (file.exists()) {
                 val type = object : TypeToken<MutableMap<String, UsageQuizStat>>() {}.type
-                quizStates = gson.fromJson(file.readText(), type) ?: mutableMapOf()
+                val loaded = gson.fromJson<MutableMap<String, UsageQuizStat>>(file.readText(), type)
+                    ?: mutableMapOf()
                 // Files saved before `attempts` existed deserialize it as null (Gson bypasses the
                 // constructor, so the default isn't applied) - normalise so recordAttempt can add to it.
-                quizStates.values.forEach { stat ->
+                loaded.values.forEach { stat ->
                     @Suppress("SENSELESS_COMPARISON")
                     if (stat.attempts == null) stat.attempts = mutableListOf()
                 }
+                synchronized(lock) { quizStates = loaded }
             }
         } catch (e: Exception) {
             Timber.e(e, "Failed to load usage quiz stats")
@@ -269,9 +281,8 @@ class UsageQuizRepository @Inject constructor(
     /**
      * Returns the mastery level for a specific question.
      */
-    fun getQuestionMastery(quizId: String, pageNumber: Int): UsageMastery {
-        return quizStates[quizId]?.questions?.get(pageNumber)?.mastery ?: UsageMastery.New
-    }
+    fun getQuestionMastery(quizId: String, pageNumber: Int): UsageMastery =
+        synchronized(lock) { quizStates[quizId]?.questions?.get(pageNumber)?.mastery ?: UsageMastery.New }
 
     /**
      * Returns display label + color for a given UsageMastery level (shared 5-level model).
@@ -290,10 +301,12 @@ class UsageQuizRepository @Inject constructor(
 
     fun debugPrint() {
         Timber.d("===== USAGE QUIZ REPORT =====")
-        quizStates.forEach { (id, stat) ->
-            Timber.d("Quiz: $id (Completed: ${stat.timesCompleted}, Best: ${stat.bestScore})")
-            stat.questions.forEach { (page, qStat) ->
-                Timber.d("   Page $page: ${qStat.masteryLevel} (streak=${qStat.correctStreak})")
+        synchronized(lock) {
+            quizStates.forEach { (id, stat) ->
+                Timber.d("Quiz: $id (Completed: ${stat.timesCompleted}, Best: ${stat.bestScore})")
+                stat.questions.forEach { (page, qStat) ->
+                    Timber.d("   Page $page: ${qStat.masteryLevel} (streak=${qStat.correctStreak})")
+                }
             }
         }
         Timber.d("=============================")

@@ -172,7 +172,8 @@ class ReadinessAuditViewModel @Inject constructor(
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val usageQuizRepository:UsageQuizRepository,
     private val bannerManager: BannerManager,
-    private val auditRepository: ReadinessAuditRepository
+    private val auditRepository: ReadinessAuditRepository,
+    private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider
 
 ) : ViewModel() {
 
@@ -277,6 +278,18 @@ class ReadinessAuditViewModel @Inject constructor(
     // 1. We create a StateFlow that the UI will listen to
     private val _auditStats = MutableStateFlow(AuditStats())
     val auditStats: StateFlow<AuditStats> = _auditStats.asStateFlow()
+
+    init {
+        // Drive the audit screen's gauges from the shared comfort-band model (re-anchored to the learner's
+        // current vocab level), so Progress, Focus and this screen always show the same numbers. Updates as
+        // each answer lands in the shared tally, so the gauges still move during a run. [loadCurrentAuditStats]
+        // is kept as a no-op for its existing call sites.
+        viewModelScope.launch {
+            dialsProvider.dials(userPreferencesRepository.selectedSkillLevelFlow).collect { dials ->
+                _auditStats.value = AuditStats(confidence = dials.confidence, readiness = dials.readiness)
+            }
+        }
+    }
 
     // Question index -> the option the user locked in for the CURRENT quiz. Once present, that
     // question is answered for good (read-only); once every question is present the quiz is done.
@@ -1322,37 +1335,12 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         return progress
     }
 
-    fun loadCurrentAuditStats() {
-        viewModelScope.launch {
-            // 1. Pull the combined flow from repo (Scores + Live Progress)
-            // We use .first() to get a one-time snapshot for the current calculation
-            val auditData = auditRepository.auditDataFlow.first()
-
-            // 1b. Fold in the correct-so-far of the part being played, so Readiness climbs live
-            // with each answer (like Confidence). Skipped once the part is completed (its saved
-            // score in auditData.scores takes over) or before any answer is given.
-            val activePart = partIndexFor(selectedLevel.value)
-            val liveScores = if (!auditData.scores.containsKey(activePart) && userAnswers.value.isNotEmpty()) {
-                mapOf(activePart to userAnswers.value.count { it.value })
-            } else {
-                emptyMap()
-            }
-
-            // 2. Use the corrected Engine (with the "more data" Confidence bonus from redone audits)
-            val report = AuditEngine.calculate(
-                testScores = auditData.scores,
-                partProgress = auditData.activeProgress,
-                liveScores = liveScores,
-                confidenceBonus = auditRepository.confidenceBonus.first()
-            )
-
-            // 3. Update the UI StateFlow
-            _auditStats.value = AuditStats(
-                confidence = report.confidence,
-                readiness = report.readiness
-            )
-        }
-    }
+    /**
+     * No-op: [_auditStats] is now driven reactively by the shared comfort-band model (see the init
+     * block), so it stays in step with Progress/Focus and updates itself as answers are recorded.
+     * Kept so existing call sites compile without change.
+     */
+    fun loadCurrentAuditStats() { /* handled reactively - see init */ }
 
     // Helper for the UI text we added in the previous step
     fun getAuditorVerdictText(): String {

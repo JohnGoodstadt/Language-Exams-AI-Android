@@ -43,72 +43,20 @@ class MyProgressViewModel @Inject constructor (
     val quizManager: QuizHistoryManager,
     private val auditRepository: ReadinessAuditRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val vocabQuizRepository: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository,
+    private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider,
 ) : ViewModel() {
 
     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow
 
-    // Per-level Confidence & Readiness (comfort-band model - see AuditEngine.computeDials). The two
-    // dials re-anchor an underlying 0..400 CEFR position to the currently LOADED vocab level: loading a
-    // level below your comfort band reads ~98%, your comfort band reads its real progress, a level above
-    // reads low. Evidence per band = baseline placement + Verify level tests + practice (70% Vocab
-    // section first-perfect/attempts + 30% in-context quiz answers from Usage/Grammar/baseline).
-    // Recomputes when the loaded level changes, a test/quiz answer is recorded, or section mastery changes.
+    // Comfort-band Confidence/Readiness dials re-anchored to the currently loaded vocab level. Shared
+    // calculation (ReadinessDialsProvider) so Progress, Focus and the Readiness Audit all agree.
     private val dialsFlow: StateFlow<AuditEngine.Dials> =
-        combine(
-            currentSkillLevel,
-            auditRepository.baselineLevel,
-            auditRepository.auditScores,
-            auditRepository.categoryScores,
-            vocabQuizRepository.dataUpdateEvents.onStart { emit(Unit) }
-        ) { loadedLevel, baselineLevel, partScores, categoryScores, _ ->
-            val bands = (0..3).map { i ->
-                val label = AuditEngine.bandLabel(i)
-                // Verify level test score for this band: A2->part2, B1->part3, B2->part4; A1 has none.
-                val testCorrect = when (i) { 1 -> partScores[2]; 2 -> partScores[3]; 3 -> partScores[4]; else -> null }
-
-                // In-context quiz evidence at this band (baseline answers + Usage/Grammar), from the
-                // shared tally keyed "category|level".
-                var answered = 0
-                var correct = 0
-                categoryScores.forEach { (key, s) ->
-                    if (key.substringAfterLast('|').equals(label, ignoreCase = true)) {
-                        answered += s.correct + s.incorrect + s.dontKnow
-                        correct += s.correct
-                    }
-                }
-
-                // Vocab section evidence at this band: first-perfect (>=1 flawless attempt) and attempted.
-                var perfect = 0
-                var attempted = 0
-                vocabQuizRepository.getAllCategoryMasteryStates()
-                    .filter { it.level.equals(label, ignoreCase = true) }
-                    .forEach { st ->
-                        val attempts = vocabQuizRepository.getCategoryAttempts(st.category, st.level)
-                        if (attempts.isNotEmpty()) attempted++
-                        if (attempts.any { it.flawless }) perfect++
-                    }
-
-                AuditEngine.BandInput(
-                    levelTestCorrect = testCorrect,
-                    quizAnswered = answered,
-                    quizCorrect = correct,
-                    vocabSectionsFirstPerfect = perfect,
-                    vocabSectionsAttempted = attempted,
-                    sectionsAtLevel = AuditEngine.EXPECTED_SECTIONS_PER_LEVEL
-                )
-            }
-
-            AuditEngine.computeDials(
-                bands = bands,
-                placementIndex = AuditEngine.bandIndex(baselineLevel ?: "A1"),
-                loadedIndex = AuditEngine.bandIndex(loadedLevel)
+        dialsProvider.dials(currentSkillLevel)
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = AuditEngine.Dials(0, 0, 0, 0)
             )
-        }.stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5000),
-            initialValue = AuditEngine.Dials(0, 0, 0, 0)
-        )
 
     val auditStats: StateFlow<AuditStats> =
         dialsFlow
