@@ -18,14 +18,15 @@ data class PronounsReferenceSource(
 object PronounsReferenceSources {
     val DE = PronounsReferenceSource(
         languageTag = "de",
-        firestoreSheetId = "PronounsReference-de",
-        assetFileName = "PronounsReference-de.json",
+        firestoreSheetId = "GermanReferencePronouns",
+        // Assets are opened relative to the assets root, so include the folder (matches the bundled file).
+        assetFileName = "Quizzes/Reference/GermanReferencePronouns.json",
     )
 
     val EN = PronounsReferenceSource(
         languageTag = "en",
-        firestoreSheetId = "PronounsReference-en",
-        assetFileName = "PronounsReference-en.json",
+        firestoreSheetId = "EnglishReferencePronouns",
+        assetFileName = "Quizzes/Reference/EnglishReferencePronouns.json",
     )
 
     fun forLanguageTag(languageTag: String): PronounsReferenceSource {

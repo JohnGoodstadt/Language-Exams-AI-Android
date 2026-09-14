@@ -108,6 +108,8 @@ Fix: Add Modifier.weight(1f) to each LazyColumn, e.g.:
             )
         ) {
             OutlinedButton(
+                // Cancel just closes: the app already defaults to B1 vocab (LanguageConfig defaults),
+                // so there's nothing to apply.
                 onClick = { onClose() },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = buttonColor,

@@ -63,6 +63,12 @@ sealed class RefScreen(val route: String) {
     object Format3 : RefScreen("format3_screen/{documentId}") {
         fun createRoute(documentId: String) = "format3_screen/$documentId"
     }
+    object Format5 : RefScreen("format5_screen/{documentId}") {
+        fun createRoute(documentId: String) = "format5_screen/$documentId"
+    }
+    object Format6 : RefScreen("format6_screen/{documentId}") {
+        fun createRoute(documentId: String) = "format6_screen/$documentId"
+    }
     object GroupedFormat2 : RefScreen("grouped_format2/{tabId}") {
         fun createRoute(tabId: String) = "grouped_format2/$tabId"
     }

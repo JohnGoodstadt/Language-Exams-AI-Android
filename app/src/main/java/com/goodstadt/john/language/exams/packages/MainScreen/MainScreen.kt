@@ -367,9 +367,6 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                 )
             } else {
                 // Other flavours (de, zh): no dialect to pick, so just the Exam Level sheet.
-//                ChooseExamLevelSheet(
-//                    onClose = { mainViewModel.onLanguageChoiceDismissed() }
-//                )
                 ChooseOnlyExamSheet(
                     onClose = { mainViewModel.onLanguageChoiceDismissed() }
                 )

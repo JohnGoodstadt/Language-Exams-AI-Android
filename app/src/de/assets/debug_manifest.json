@@ -84,6 +84,18 @@
 					"screenType": "Format2Screen"
 				}
 			]
+		},
+		"GermanReferencePronouns": {
+			"title": "Personal Pronouns",
+			"sheetDataType": "Format5",
+			"screenType": "Format5Screen",
+			"firestoreDocumentId": "GermanReferencePronouns"
+		},
+		"GermanReferencePronounsClaude": {
+			"title": "Pronouns (Claude)",
+			"sheetDataType": "Format6",
+			"screenType": "Format6Screen",
+			"firestoreDocumentId": "GermanReferencePronounsClaude"
 		}
 	},
 	"layouts": {
@@ -95,6 +107,8 @@
 				"GermanPrepositions",
 				"SpanishLanguage",
 				"AdjectivesGroup",
+				"GermanReferencePronouns",
+				"GermanReferencePronounsClaude",
 				"GermanSoundsTheSame",
 				"PairsGroup"
 			]

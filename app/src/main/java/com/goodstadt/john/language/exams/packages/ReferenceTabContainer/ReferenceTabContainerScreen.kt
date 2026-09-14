@@ -34,8 +34,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounsReferenceDestination
+import com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.PronounsClaudeScreen
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsScreen
 import com.goodstadt.john.language.exams.screens.Format1.Format1Screen
@@ -170,6 +173,15 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
 //            ScreenType.DAILY_WORD -> null
             ScreenType.VOCAB_DASHBOARD -> {
                 RefScreen.VocabQuizDashboard.route
+            }
+
+            ScreenType.FORMAT_5_SCREEN -> definition.firestoreDocumentId?.let { docId ->
+                RefScreen.Format5.createRoute(docId)
+
+            }
+
+            ScreenType.FORMAT_6_SCREEN -> definition.firestoreDocumentId?.let { docId ->
+                RefScreen.Format6.createRoute(docId)
             }
         }
 
@@ -414,6 +426,32 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         arguments = listOf(navArgument("tabId") { type = NavType.StringType })
                     ) {
                         Format3GroupedScreen()
+                    }
+
+                    // Destination for `ScreenType.FORMAT_5_SCREEN` (Pronouns reference). The route carries
+                    // the Firestore doc id, but the destination resolves its sheet from the flavour language
+                    // tag, so we just hand it the flavour.
+                    composable(
+                        route = RefScreen.Format5.route, // "format5_screen/{documentId}"
+                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                    ) {
+                        PronounsReferenceDestination(languageTag = BuildConfig.FLAVOR)
+                    }
+
+                    // Destination for `ScreenType.FORMAT_6_SCREEN` (Pronouns "Claude" teaching screen). The
+                    // ViewModel reads the "documentId" nav arg to load the right fileFormat-6 sheet.
+                    composable(
+                        route = RefScreen.Format6.route, // "format6_screen/{documentId}"
+                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                    ) {
+                        PronounsClaudeScreen()
+                    }
+
+                    composable(
+                        route = RefScreen.Format5.route,                 // "format5_screen/{documentId}"
+                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                    ) {
+                        PronounsReferenceDestination(languageTag = BuildConfig.FLAVOR)
                     }
 
 //                    composable(RefScreen.ReadinessAudit.route) {

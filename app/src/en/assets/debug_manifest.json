@@ -130,6 +130,12 @@
 					"sheetDataType": "Format3"
 				}
 			]
+		},
+		"EnglishReferencePronounsClaude": {
+			"title": "Pronouns (Claude)",
+			"sheetDataType": "Format6",
+			"screenType": "Format6Screen",
+			"firestoreDocumentId": "EnglishReferencePronounsClaude"
 		}
 	},
 	"layouts": {
@@ -141,6 +147,7 @@
 				"EnglishPrepositions",
 				"SpanishLanguage",
 				"AdjectivesGroup",
+				"EnglishReferencePronounsClaude",
 				"EnglishDefinitionsFormat1",
 				"PairsGroup"
 			]

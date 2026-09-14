@@ -2,8 +2,6 @@ package com.goodstadt.john.language.exams.models
 
 import com.goodstadt.john.language.exams.utils.ScreenTypeSerializer
 import com.goodstadt.john.language.exams.utils.SheetDataTypeSerializer
-import com.google.gson.annotations.SerializedName
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
@@ -16,6 +14,8 @@ enum class SheetDataType(val serialName: String) {
     FORMAT_1("Format1"),
     FORMAT_2("Format2"),
     FORMAT_3("Format3"),
+    FORMAT_5("Format5"),
+    FORMAT_6("Format6"),
     GRAMMAR_FILE("GrammarFile"),
     FIXED("fixed"),
     VOCAB_DASHBOARD("VocabDashboard"),
@@ -33,6 +33,8 @@ enum class ScreenType(val serialName: String) {
     FORMAT_1_SCREEN("Format1Screen"),
     FORMAT_2_SCREEN("Format2Screen"),
     FORMAT_3_SCREEN("Format3Screen"),
+    FORMAT_5_SCREEN("Format5Screen"),
+    FORMAT_6_SCREEN("Format6Screen"),
     GRAMMAR_SCREEN("GrammarScreen"),
     GROUPED_FORMAT_2_SCREEN("GroupedFormat2Screen"),
     GROUPED_FORMAT_3_SCREEN("GroupedFormat3Screen"),

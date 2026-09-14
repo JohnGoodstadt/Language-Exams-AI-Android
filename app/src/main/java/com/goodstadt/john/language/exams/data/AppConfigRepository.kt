@@ -385,7 +385,8 @@ class AppConfigRepository @Inject constructor(
             "GermanConjugationsToBe": 1,
             "GermanConjugationsToHave": 1,
             "GermanConjugationsToDo": 1,
-            "GermanConjugationsToGet": 1
+            "GermanConjugationsToGet": 1,
+            "GermanReferencePronouns": 1
         }
         """.trimIndent()
         } else {

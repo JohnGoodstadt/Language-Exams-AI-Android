@@ -1,0 +1,577 @@
+{
+  "fileformat": 5,
+  "location": 0,
+  "sheetname": "GermanReferencePronouns",
+  "title": "German Pronouns",
+  "updatedDate": 0,
+  "data": [
+    {
+      "schemaVersion": 1,
+      "contentType": "pronoun-reference",
+      "locale": "de",
+      "audienceLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "audioConfig": {
+        "mode": "deviceTextToSpeech",
+        "locale": "de-DE",
+        "rate": 0.88,
+        "sourceField": "sentence",
+        "playWholePattern": true,
+        "pauseBetweenSentencesMs": 450
+      },
+  "screenConfig": {
+    "defaultView": "byPerson",
+    "caseOrder": [
+      "nominative",
+      "accusative",
+      "dative"
+    ],
+    "views": [
+      {
+        "id": "byPerson",
+        "label": "By person",
+        "description": "Learn each family of forms together."
+      },
+      {
+        "id": "byCase",
+        "label": "By case",
+        "description": "Compare all pronouns used for the same grammatical role."
+      }
+    ],
+    "showSupportText": true,
+    "showExamples": true
+  },
+  "cases": [
+    {
+      "id": "nominative",
+      "label": "Nominative",
+      "shortLabel": "Subject",
+      "prompt": "Wer oder was?",
+      "promptSupportText": "Who or what performs the action?",
+      "description": "The person or thing doing the action."
+    },
+    {
+      "id": "accusative",
+      "label": "Accusative",
+      "shortLabel": "Direct object",
+      "prompt": "Wen oder was?",
+      "promptSupportText": "Who or what is directly affected?",
+      "description": "The person or thing directly receiving the action."
+    },
+    {
+      "id": "dative",
+      "label": "Dative",
+      "shortLabel": "Indirect object",
+      "prompt": "Wem?",
+      "promptSupportText": "To whom or for whom?",
+      "description": "The person or thing receiving something or benefiting from the action."
+    }
+  ],
+  "personalPronouns": [
+    {
+      "id": "firstPersonSingular",
+      "person": 1,
+      "number": "singular",
+      "label": "I / me",
+      "forms": {
+        "nominative": {
+          "word": "ich",
+          "sentence": "Ich sehe Anna.",
+          "supportText": "I see Anna.",
+          "highlight": "Ich"
+        },
+        "accusative": {
+          "word": "mich",
+          "sentence": "Anna sieht mich.",
+          "supportText": "Anna sees me.",
+          "highlight": "mich"
+        },
+        "dative": {
+          "word": "mir",
+          "sentence": "Anna gibt mir das Buch.",
+          "supportText": "Anna gives me the book.",
+          "highlight": "mir"
+        }
+      }
+    },
+    {
+      "id": "secondPersonSingular",
+      "person": 2,
+      "number": "singular",
+      "label": "you",
+      "forms": {
+        "nominative": {
+          "word": "du",
+          "sentence": "Du kennst Paul.",
+          "supportText": "You know Paul.",
+          "highlight": "Du"
+        },
+        "accusative": {
+          "word": "dich",
+          "sentence": "Paul kennt dich.",
+          "supportText": "Paul knows you.",
+          "highlight": "dich"
+        },
+        "dative": {
+          "word": "dir",
+          "sentence": "Paul gibt dir den Schlüssel.",
+          "supportText": "Paul gives you the key.",
+          "highlight": "dir"
+        }
+      }
+    },
+    {
+      "id": "thirdPersonMasculine",
+      "person": 3,
+      "number": "singular",
+      "formGroup": "masculine",
+      "label": "he / him",
+      "forms": {
+        "nominative": {
+          "word": "er",
+          "sentence": "Er besucht Maria.",
+          "supportText": "He visits Maria.",
+          "highlight": "Er"
+        },
+        "accusative": {
+          "word": "ihn",
+          "sentence": "Maria besucht ihn.",
+          "supportText": "Maria visits him.",
+          "highlight": "ihn"
+        },
+        "dative": {
+          "word": "ihm",
+          "sentence": "Maria schreibt ihm eine Nachricht.",
+          "supportText": "Maria writes him a message.",
+          "highlight": "ihm"
+        }
+      }
+    },
+    {
+      "id": "thirdPersonFeminine",
+      "person": 3,
+      "number": "singular",
+      "formGroup": "feminine",
+      "label": "she / her",
+      "forms": {
+        "nominative": {
+          "word": "sie",
+          "sentence": "Sie hört Musik.",
+          "supportText": "She listens to music.",
+          "highlight": "Sie"
+        },
+        "accusative": {
+          "word": "sie",
+          "sentence": "Tom besucht sie.",
+          "supportText": "Tom visits her.",
+          "highlight": "sie"
+        },
+        "dative": {
+          "word": "ihr",
+          "sentence": "Tom hilft ihr.",
+          "supportText": "Tom helps her.",
+          "highlight": "ihr"
+        }
+      }
+    },
+    {
+      "id": "thirdPersonNeuter",
+      "person": 3,
+      "number": "singular",
+      "formGroup": "neuter",
+      "label": "it",
+      "note": "These forms apply when the German noun is neuter.",
+      "forms": {
+        "nominative": {
+          "word": "es",
+          "sentence": "Es liegt auf dem Tisch.",
+          "supportText": "It is lying on the table.",
+          "highlight": "Es"
+        },
+        "accusative": {
+          "word": "es",
+          "sentence": "Ich kaufe es.",
+          "supportText": "I am buying it.",
+          "highlight": "es"
+        },
+        "dative": {
+          "word": "ihm",
+          "sentence": "Das Pferd ist durstig. Ich gebe ihm Wasser.",
+          "supportText": "The horse is thirsty. I give it water.",
+          "highlight": "ihm"
+        }
+      }
+    },
+    {
+      "id": "firstPersonPlural",
+      "person": 1,
+      "number": "plural",
+      "label": "we / us",
+      "forms": {
+        "nominative": {
+          "word": "wir",
+          "sentence": "Wir besuchen Berlin.",
+          "supportText": "We are visiting Berlin.",
+          "highlight": "Wir"
+        },
+        "accusative": {
+          "word": "uns",
+          "sentence": "Anna besucht uns.",
+          "supportText": "Anna visits us.",
+          "highlight": "uns"
+        },
+        "dative": {
+          "word": "uns",
+          "sentence": "Anna zeigt uns die Stadt.",
+          "supportText": "Anna shows us the city.",
+          "highlight": "uns"
+        }
+      }
+    },
+    {
+      "id": "secondPersonPlural",
+      "person": 2,
+      "number": "plural",
+      "label": "you all",
+      "forms": {
+        "nominative": {
+          "word": "ihr",
+          "sentence": "Ihr lernt Deutsch.",
+          "supportText": "You all are learning German.",
+          "highlight": "Ihr"
+        },
+        "accusative": {
+          "word": "euch",
+          "sentence": "Ich sehe euch.",
+          "supportText": "I see you all.",
+          "highlight": "euch"
+        },
+        "dative": {
+          "word": "euch",
+          "sentence": "Ich helfe euch.",
+          "supportText": "I help you all.",
+          "highlight": "euch"
+        }
+      }
+    },
+    {
+      "id": "thirdPersonPlural",
+      "person": 3,
+      "number": "plural",
+      "label": "they / them",
+      "forms": {
+        "nominative": {
+          "word": "sie",
+          "sentence": "Sie warten draußen.",
+          "supportText": "They are waiting outside.",
+          "highlight": "Sie"
+        },
+        "accusative": {
+          "word": "sie",
+          "sentence": "Ich treffe sie heute.",
+          "supportText": "I am meeting them today.",
+          "highlight": "sie"
+        },
+        "dative": {
+          "word": "ihnen",
+          "sentence": "Ich schreibe ihnen eine Nachricht.",
+          "supportText": "I write them a message.",
+          "highlight": "ihnen"
+        }
+      }
+    },
+    {
+      "id": "formalSecondPerson",
+      "person": 2,
+      "number": "formal",
+      "label": "you — formal",
+      "note": "Formal Sie and its case forms always begin with a capital letter.",
+      "forms": {
+        "nominative": {
+          "word": "Sie",
+          "sentence": "Sie sprechen Deutsch.",
+          "supportText": "You speak German.",
+          "highlight": "Sie"
+        },
+        "accusative": {
+          "word": "Sie",
+          "sentence": "Ich rufe Sie morgen an.",
+          "supportText": "I will call you tomorrow.",
+          "highlight": "Sie"
+        },
+        "dative": {
+          "word": "Ihnen",
+          "sentence": "Ich danke Ihnen.",
+          "supportText": "I thank you.",
+          "highlight": "Ihnen"
+        }
+      }
+    }
+  ],
+  "demonstratives": {
+    "description": "Demonstrative forms change according to case, gender, and number.",
+    "formGroupOrder": [
+      "masculine",
+      "feminine",
+      "neuter",
+      "plural"
+    ],
+    "sets": [
+      {
+        "id": "dieser",
+        "label": "this / these",
+        "forms": {
+          "masculine": {
+            "nominative": "dieser",
+            "accusative": "diesen",
+            "dative": "diesem"
+          },
+          "feminine": {
+            "nominative": "diese",
+            "accusative": "diese",
+            "dative": "dieser"
+          },
+          "neuter": {
+            "nominative": "dieses",
+            "accusative": "dieses",
+            "dative": "diesem"
+          },
+          "plural": {
+            "nominative": "diese",
+            "accusative": "diese",
+            "dative": "diesen"
+          }
+        },
+        "examples": [
+          {
+            "case": "nominative",
+            "formGroup": "masculine",
+            "sentence": "Dieser Mann wartet draußen.",
+            "supportText": "This man is waiting outside.",
+            "highlight": "Dieser"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "masculine",
+            "sentence": "Ich sehe diesen Mann.",
+            "supportText": "I see this man.",
+            "highlight": "diesen"
+          },
+          {
+            "case": "dative",
+            "formGroup": "masculine",
+            "sentence": "Ich helfe diesem Mann.",
+            "supportText": "I help this man.",
+            "highlight": "diesem"
+          },
+          {
+            "case": "nominative",
+            "formGroup": "feminine",
+            "sentence": "Diese Frau wartet draußen.",
+            "supportText": "This woman is waiting outside.",
+            "highlight": "Diese"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "feminine",
+            "sentence": "Ich sehe diese Frau.",
+            "supportText": "I see this woman.",
+            "highlight": "diese"
+          },
+          {
+            "case": "dative",
+            "formGroup": "feminine",
+            "sentence": "Ich helfe dieser Frau.",
+            "supportText": "I help this woman.",
+            "highlight": "dieser"
+          },
+          {
+            "case": "nominative",
+            "formGroup": "neuter",
+            "sentence": "Dieses Kind spielt draußen.",
+            "supportText": "This child is playing outside.",
+            "highlight": "Dieses"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "neuter",
+            "sentence": "Ich sehe dieses Kind.",
+            "supportText": "I see this child.",
+            "highlight": "dieses"
+          },
+          {
+            "case": "dative",
+            "formGroup": "neuter",
+            "sentence": "Ich gebe diesem Kind das Buch.",
+            "supportText": "I give this child the book.",
+            "highlight": "diesem"
+          },
+          {
+            "case": "nominative",
+            "formGroup": "plural",
+            "sentence": "Diese Leute wohnen hier.",
+            "supportText": "These people live here.",
+            "highlight": "Diese"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "plural",
+            "sentence": "Ich sehe diese Leute.",
+            "supportText": "I see these people.",
+            "highlight": "diese"
+          },
+          {
+            "case": "dative",
+            "formGroup": "plural",
+            "sentence": "Ich spreche mit diesen Leuten.",
+            "supportText": "I am speaking with these people.",
+            "highlight": "diesen"
+          }
+        ]
+      },
+      {
+        "id": "jener",
+        "label": "that / those",
+        "note": "Jener follows the same ending pattern as dieser but is less common in everyday speech.",
+        "forms": {
+          "masculine": {
+            "nominative": "jener",
+            "accusative": "jenen",
+            "dative": "jenem"
+          },
+          "feminine": {
+            "nominative": "jene",
+            "accusative": "jene",
+            "dative": "jener"
+          },
+          "neuter": {
+            "nominative": "jenes",
+            "accusative": "jenes",
+            "dative": "jenem"
+          },
+          "plural": {
+            "nominative": "jene",
+            "accusative": "jene",
+            "dative": "jenen"
+          }
+        },
+        "examples": [
+          {
+            "case": "nominative",
+            "formGroup": "masculine",
+            "sentence": "Jener Mann wartet draußen.",
+            "supportText": "That man is waiting outside.",
+            "highlight": "Jener"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "masculine",
+            "sentence": "Ich sehe jenen Mann.",
+            "supportText": "I see that man.",
+            "highlight": "jenen"
+          },
+          {
+            "case": "dative",
+            "formGroup": "masculine",
+            "sentence": "Ich helfe jenem Mann.",
+            "supportText": "I help that man.",
+            "highlight": "jenem"
+          },
+          {
+            "case": "nominative",
+            "formGroup": "feminine",
+            "sentence": "Jene Frau wartet draußen.",
+            "supportText": "That woman is waiting outside.",
+            "highlight": "Jene"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "feminine",
+            "sentence": "Ich sehe jene Frau.",
+            "supportText": "I see that woman.",
+            "highlight": "jene"
+          },
+          {
+            "case": "dative",
+            "formGroup": "feminine",
+            "sentence": "Ich helfe jener Frau.",
+            "supportText": "I help that woman.",
+            "highlight": "jener"
+          },
+          {
+            "case": "nominative",
+            "formGroup": "neuter",
+            "sentence": "Jenes Kind spielt draußen.",
+            "supportText": "That child is playing outside.",
+            "highlight": "Jenes"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "neuter",
+            "sentence": "Ich sehe jenes Kind.",
+            "supportText": "I see that child.",
+            "highlight": "jenes"
+          },
+          {
+            "case": "dative",
+            "formGroup": "neuter",
+            "sentence": "Ich gebe jenem Kind das Buch.",
+            "supportText": "I give that child the book.",
+            "highlight": "jenem"
+          },
+          {
+            "case": "nominative",
+            "formGroup": "plural",
+            "sentence": "Jene Leute arbeiten hier.",
+            "supportText": "Those people work here.",
+            "highlight": "Jene"
+          },
+          {
+            "case": "accusative",
+            "formGroup": "plural",
+            "sentence": "Ich sehe jene Leute.",
+            "supportText": "I see those people.",
+            "highlight": "jene"
+          },
+          {
+            "case": "dative",
+            "formGroup": "plural",
+            "sentence": "Ich spreche mit jenen Leuten.",
+            "supportText": "I am speaking with those people.",
+            "highlight": "jenen"
+          }
+        ]
+      }
+    ]
+  },
+  "importantNotes": [
+    "A pronoun's case is determined by its grammatical job, not simply by its position in the sentence.",
+    "English 'it' follows the gender of the German noun: der becomes er, die becomes sie, and das becomes es.",
+    "In the dative plural, many nouns also receive an additional -n, as in 'mit diesen Leuten'."
+  ],
+  "learningSequence": [
+    {
+      "step": 1,
+      "view": "byPerson",
+      "instruction": "Learn each nominative, accusative, and dative family together."
+    },
+    {
+      "step": 2,
+      "view": "byCase",
+      "instruction": "Compare all forms within one grammatical case."
+    },
+    {
+      "step": 3,
+      "view": "quiz",
+      "instruction": "Choose the correct form in mixed sentences."
+    }
+  ]
+    }
+  ]
+}

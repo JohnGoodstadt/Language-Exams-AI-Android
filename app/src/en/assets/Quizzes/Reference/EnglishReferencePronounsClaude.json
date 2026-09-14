@@ -1,0 +1,2193 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "EnglishReferencePronounsClaude",
+  "title": "English Pronouns",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "personal",
+      "label": "Personal",
+      "sortOrder": 1,
+      "note": "Pick a person, then tap any sentence to hear it.",
+      "patterns": [
+        {
+          "id": "i",
+          "chip": "I / me",
+          "subtitle": "1st person singular",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "I",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "me",
+              "gloss": "object"
+            },
+            {
+              "case": "gen",
+              "text": "mine",
+              "gloss": "possessive (stands alone)"
+            }
+          ],
+          "sections": [
+            {
+              "header": "As the object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "I see you.",
+                  "green": [
+                    "I",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "I see him.",
+                  "green": [
+                    "I",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "I see her.",
+                  "green": [
+                    "I",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "I see it.",
+                  "green": [
+                    "I",
+                    "it"
+                  ]
+                },
+                {
+                  "text": "I see them.",
+                  "green": [
+                    "I",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Giving to someone",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "I give you the book.",
+                  "green": [
+                    "I",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "I give him the book.",
+                  "green": [
+                    "I",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "I give her the book.",
+                  "green": [
+                    "I",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "I give them the book.",
+                  "green": [
+                    "I",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "I see you.",
+                  "green": [
+                    "I",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "I saw you.",
+                  "green": [
+                    "I",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "I will see you.",
+                  "green": [
+                    "I",
+                    "you"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "I would tell you if I had to.",
+                  "green": [
+                    "I",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "I should tell her about it.",
+                  "green": [
+                    "I",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "I could help you.",
+                  "green": [
+                    "I",
+                    "you"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "If you ask me, I'd do it differently.",
+                  "green": []
+                },
+                {
+                  "text": "It was I who suggested it.",
+                  "green": []
+                },
+                {
+                  "text": "I would have helped if you had told me.",
+                  "green": []
+                },
+                {
+                  "text": "It's up to me to decide.",
+                  "green": []
+                },
+                {
+                  "text": "Without me, you couldn't have done it.",
+                  "green": []
+                },
+                {
+                  "text": "What interests me most is what happens next.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "chip": "you",
+          "subtitle": "2nd person",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "you",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "you",
+              "gloss": "object"
+            },
+            {
+              "case": "gen",
+              "text": "yours",
+              "gloss": "possessive (stands alone)"
+            }
+          ],
+          "sections": [
+            {
+              "header": "As the object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "You see me.",
+                  "green": [
+                    "You",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "You see him.",
+                  "green": [
+                    "You",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "You see her.",
+                  "green": [
+                    "You",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "You see it.",
+                  "green": [
+                    "You",
+                    "it"
+                  ]
+                },
+                {
+                  "text": "You see us.",
+                  "green": [
+                    "You",
+                    "us"
+                  ]
+                },
+                {
+                  "text": "You see them.",
+                  "green": [
+                    "You",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Giving to someone",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "You give me the book.",
+                  "green": [
+                    "You",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "You give him the book.",
+                  "green": [
+                    "You",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "You give her the book.",
+                  "green": [
+                    "You",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "You give us the book.",
+                  "green": [
+                    "You",
+                    "us"
+                  ]
+                },
+                {
+                  "text": "You give them the book.",
+                  "green": [
+                    "You",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "You see him.",
+                  "green": [
+                    "You",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "You saw him.",
+                  "green": [
+                    "You",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "You will see him.",
+                  "green": [
+                    "You",
+                    "him"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "You should tell him.",
+                  "green": [
+                    "You",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "Would you help me?",
+                  "green": [
+                    "you",
+                    "me"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Had you told me earlier, this would have been easier.",
+                  "green": []
+                },
+                {
+                  "text": "Only you can decide that.",
+                  "green": []
+                },
+                {
+                  "text": "I saw you in town yesterday.",
+                  "green": []
+                },
+                {
+                  "text": "It depends on what you want.",
+                  "green": []
+                },
+                {
+                  "text": "If I were you, I'd wait.",
+                  "green": []
+                },
+                {
+                  "text": "I'm counting on you.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "he",
+          "chip": "he / him",
+          "subtitle": "3rd person singular · masculine",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "he",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "him",
+              "gloss": "object"
+            },
+            {
+              "case": "gen",
+              "text": "his",
+              "gloss": "possessive (stands alone)"
+            }
+          ],
+          "sections": [
+            {
+              "header": "As the object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "He sees me.",
+                  "green": [
+                    "He",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "He sees you.",
+                  "green": [
+                    "He",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "He sees her.",
+                  "green": [
+                    "He",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "He sees it.",
+                  "green": [
+                    "He",
+                    "it"
+                  ]
+                },
+                {
+                  "text": "He sees us.",
+                  "green": [
+                    "He",
+                    "us"
+                  ]
+                },
+                {
+                  "text": "He sees them.",
+                  "green": [
+                    "He",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Giving to someone",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "He gives me the book.",
+                  "green": [
+                    "He",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "He gives you the book.",
+                  "green": [
+                    "He",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "He gives her the book.",
+                  "green": [
+                    "He",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "He gives us the book.",
+                  "green": [
+                    "He",
+                    "us"
+                  ]
+                },
+                {
+                  "text": "He gives them the book.",
+                  "green": [
+                    "He",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "He sees you.",
+                  "green": [
+                    "He",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "He saw you.",
+                  "green": [
+                    "He",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "He will see you.",
+                  "green": [
+                    "He",
+                    "you"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "He would help you if you asked him.",
+                  "green": [
+                    "He",
+                    "you",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "He should apologise to her.",
+                  "green": [
+                    "He",
+                    "her"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "I helped him even though he never asked me.",
+                  "green": []
+                },
+                {
+                  "text": "Without him we couldn't have done it.",
+                  "green": []
+                },
+                {
+                  "text": "He's the one I trust.",
+                  "green": []
+                },
+                {
+                  "text": "I don't know whether he'll tell us in time.",
+                  "green": []
+                },
+                {
+                  "text": "For his sake, I came early.",
+                  "green": []
+                },
+                {
+                  "text": "You can rely on him.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "she",
+          "chip": "she / her",
+          "subtitle": "3rd person singular · feminine",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "she",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "her",
+              "gloss": "object"
+            },
+            {
+              "case": "gen",
+              "text": "hers",
+              "gloss": "possessive (stands alone)"
+            }
+          ],
+          "sections": [
+            {
+              "header": "As the object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "She sees me.",
+                  "green": [
+                    "She",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "She sees you.",
+                  "green": [
+                    "She",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "She sees him.",
+                  "green": [
+                    "She",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "She sees it.",
+                  "green": [
+                    "She",
+                    "it"
+                  ]
+                },
+                {
+                  "text": "She sees us.",
+                  "green": [
+                    "She",
+                    "us"
+                  ]
+                },
+                {
+                  "text": "She sees them.",
+                  "green": [
+                    "She",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Giving to someone",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "She gives me the book.",
+                  "green": [
+                    "She",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "She gives you the book.",
+                  "green": [
+                    "She",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "She gives him the book.",
+                  "green": [
+                    "She",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "She gives us the book.",
+                  "green": [
+                    "She",
+                    "us"
+                  ]
+                },
+                {
+                  "text": "She gives them the book.",
+                  "green": [
+                    "She",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "She sees you.",
+                  "green": [
+                    "She",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "She saw you.",
+                  "green": [
+                    "She",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "She will see you.",
+                  "green": [
+                    "She",
+                    "you"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "She would tell you the truth.",
+                  "green": [
+                    "She",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "She should thank him.",
+                  "green": [
+                    "She",
+                    "him"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "I've known her since we were children.",
+                  "green": []
+                },
+                {
+                  "text": "For her sake, I changed my mind.",
+                  "green": []
+                },
+                {
+                  "text": "I told her everything she needed to know.",
+                  "green": []
+                },
+                {
+                  "text": "She's the one who helped us.",
+                  "green": []
+                },
+                {
+                  "text": "Without her, the project would have failed.",
+                  "green": []
+                },
+                {
+                  "text": "I'm very grateful to her.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "it",
+          "chip": "it",
+          "subtitle": "3rd person singular · neuter",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "it",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "it",
+              "gloss": "object"
+            },
+            {
+              "case": "gen",
+              "text": "its",
+              "gloss": "possessive (stands alone)"
+            }
+          ],
+          "sections": [
+            {
+              "header": "'it' — same as subject and object",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "It is raining.",
+                  "green": [
+                    "It"
+                  ]
+                },
+                {
+                  "text": "I like it.",
+                  "green": [
+                    "it"
+                  ]
+                },
+                {
+                  "text": "Give it to me.",
+                  "green": [
+                    "it",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "The dog wagged its tail.",
+                  "green": [
+                    "its"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "It could help us.",
+                  "green": [
+                    "It",
+                    "us"
+                  ]
+                },
+                {
+                  "text": "It would suit you.",
+                  "green": [
+                    "It",
+                    "you"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "It depends on how much time we have.",
+                  "green": []
+                },
+                {
+                  "text": "I consider it a good idea.",
+                  "green": []
+                },
+                {
+                  "text": "It matters to me that everyone agrees.",
+                  "green": []
+                },
+                {
+                  "text": "If it rains, we'll stay at home.",
+                  "green": []
+                },
+                {
+                  "text": "I can hardly wait for it.",
+                  "green": []
+                },
+                {
+                  "text": "It's nice that you came.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "we",
+          "chip": "we / us",
+          "subtitle": "1st person plural",
+          "sortOrder": 6,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "we",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "us",
+              "gloss": "object"
+            },
+            {
+              "case": "gen",
+              "text": "ours",
+              "gloss": "possessive (stands alone)"
+            }
+          ],
+          "sections": [
+            {
+              "header": "As the object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "We see you.",
+                  "green": [
+                    "We",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "We see him.",
+                  "green": [
+                    "We",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "We see her.",
+                  "green": [
+                    "We",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "We see it.",
+                  "green": [
+                    "We",
+                    "it"
+                  ]
+                },
+                {
+                  "text": "We see them.",
+                  "green": [
+                    "We",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Giving to someone",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "We give you the book.",
+                  "green": [
+                    "We",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "We give him the book.",
+                  "green": [
+                    "We",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "We give her the book.",
+                  "green": [
+                    "We",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "We give them the book.",
+                  "green": [
+                    "We",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "We see you.",
+                  "green": [
+                    "We",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "We saw you.",
+                  "green": [
+                    "We",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "We will see you.",
+                  "green": [
+                    "We",
+                    "you"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "We would invite them if we could.",
+                  "green": [
+                    "We",
+                    "them"
+                  ]
+                },
+                {
+                  "text": "We should thank her.",
+                  "green": [
+                    "We",
+                    "her"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "The noun's number doesn't change the pronoun",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "We give him the book.",
+                  "green": [
+                    "We",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "We give him the books.",
+                  "green": [
+                    "We",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "We give them the books.",
+                  "green": [
+                    "We",
+                    "them"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "We were told to wait for them.",
+                  "green": []
+                },
+                {
+                  "text": "It's up to us to decide.",
+                  "green": []
+                },
+                {
+                  "text": "To be honest, it was our mistake.",
+                  "green": []
+                },
+                {
+                  "text": "Nobody told us about it.",
+                  "green": []
+                },
+                {
+                  "text": "For us, that's not a problem.",
+                  "green": []
+                },
+                {
+                  "text": "We would have helped you if you'd asked.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "they",
+          "chip": "they / them",
+          "subtitle": "3rd person plural (or one person, any gender)",
+          "sortOrder": 7,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "they",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "them",
+              "gloss": "object"
+            },
+            {
+              "case": "gen",
+              "text": "theirs",
+              "gloss": "possessive (stands alone)"
+            }
+          ],
+          "sections": [
+            {
+              "header": "As the object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "They see me.",
+                  "green": [
+                    "They",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "They see you.",
+                  "green": [
+                    "They",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "They see him.",
+                  "green": [
+                    "They",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "They see her.",
+                  "green": [
+                    "They",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "They see it.",
+                  "green": [
+                    "They",
+                    "it"
+                  ]
+                },
+                {
+                  "text": "They see us.",
+                  "green": [
+                    "They",
+                    "us"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Giving to someone",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "They give me the book.",
+                  "green": [
+                    "They",
+                    "me"
+                  ]
+                },
+                {
+                  "text": "They give you the book.",
+                  "green": [
+                    "They",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "They give him the book.",
+                  "green": [
+                    "They",
+                    "him"
+                  ]
+                },
+                {
+                  "text": "They give her the book.",
+                  "green": [
+                    "They",
+                    "her"
+                  ]
+                },
+                {
+                  "text": "They give us the book.",
+                  "green": [
+                    "They",
+                    "us"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "They see you.",
+                  "green": [
+                    "They",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "They saw you.",
+                  "green": [
+                    "They",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "They will see you.",
+                  "green": [
+                    "They",
+                    "you"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "They would help you.",
+                  "green": [
+                    "They",
+                    "you"
+                  ]
+                },
+                {
+                  "text": "They should tell us.",
+                  "green": [
+                    "They",
+                    "us"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "I'm grateful to them for helping me.",
+                  "green": []
+                },
+                {
+                  "text": "You can rely on them.",
+                  "green": []
+                },
+                {
+                  "text": "I told them to wait.",
+                  "green": []
+                },
+                {
+                  "text": "They're the people I trust.",
+                  "green": []
+                },
+                {
+                  "text": "Without them, we couldn't have managed.",
+                  "green": []
+                },
+                {
+                  "text": "You shouldn't underestimate them.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "demonstrative",
+      "label": "This / That",
+      "sortOrder": 2,
+      "note": "English demonstratives change only for number, not case.",
+      "patterns": [
+        {
+          "id": "this",
+          "chip": "this / these",
+          "subtitle": "near the speaker",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "sg",
+              "text": "this",
+              "gloss": "singular"
+            },
+            {
+              "case": "pl",
+              "text": "these",
+              "gloss": "plural"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Singular and plural",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "This is my book.",
+                  "green": [
+                    "This"
+                  ]
+                },
+                {
+                  "text": "These are new.",
+                  "green": [
+                    "These"
+                  ]
+                },
+                {
+                  "text": "I like this.",
+                  "green": [
+                    "this"
+                  ]
+                },
+                {
+                  "text": "I want these.",
+                  "green": [
+                    "these"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "that",
+          "chip": "that / those",
+          "subtitle": "further away",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "sg",
+              "text": "that",
+              "gloss": "singular"
+            },
+            {
+              "case": "pl",
+              "text": "those",
+              "gloss": "plural"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Singular and plural",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "That is far away.",
+                  "green": [
+                    "That"
+                  ]
+                },
+                {
+                  "text": "Those are old.",
+                  "green": [
+                    "Those"
+                  ]
+                },
+                {
+                  "text": "I remember that.",
+                  "green": [
+                    "that"
+                  ]
+                },
+                {
+                  "text": "I bought those.",
+                  "green": [
+                    "those"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "possessive",
+      "label": "Possessive",
+      "sortOrder": 3,
+      "note": "Determiner before a noun (my car); pronoun on its own (it's mine).",
+      "patterns": [
+        {
+          "id": "my",
+          "chip": "my / mine",
+          "subtitle": "1st person singular",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "det",
+              "text": "my",
+              "gloss": "before a noun"
+            },
+            {
+              "case": "pron",
+              "text": "mine",
+              "gloss": "stands alone"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Before a noun vs on its own",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "This is my car.",
+                  "green": [
+                    "my"
+                  ]
+                },
+                {
+                  "text": "That car is mine.",
+                  "green": [
+                    "mine"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "your",
+          "chip": "your / yours",
+          "subtitle": "2nd person",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "det",
+              "text": "your",
+              "gloss": "before a noun"
+            },
+            {
+              "case": "pron",
+              "text": "yours",
+              "gloss": "stands alone"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Before a noun vs on its own",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Is this your bag?",
+                  "green": [
+                    "your"
+                  ]
+                },
+                {
+                  "text": "This bag is yours.",
+                  "green": [
+                    "yours"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "his",
+          "chip": "his",
+          "subtitle": "3rd person singular · masculine",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "det",
+              "text": "his",
+              "gloss": "before a noun"
+            },
+            {
+              "case": "pron",
+              "text": "his",
+              "gloss": "stands alone"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Before a noun vs on its own",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "That is his coat.",
+                  "green": [
+                    "his"
+                  ]
+                },
+                {
+                  "text": "The coat is his.",
+                  "green": [
+                    "his"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "her",
+          "chip": "her / hers",
+          "subtitle": "3rd person singular · feminine",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "det",
+              "text": "her",
+              "gloss": "before a noun"
+            },
+            {
+              "case": "pron",
+              "text": "hers",
+              "gloss": "stands alone"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Before a noun vs on its own",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "I like her idea.",
+                  "green": [
+                    "her"
+                  ]
+                },
+                {
+                  "text": "The idea is hers.",
+                  "green": [
+                    "hers"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "our",
+          "chip": "our / ours",
+          "subtitle": "1st person plural",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "det",
+              "text": "our",
+              "gloss": "before a noun"
+            },
+            {
+              "case": "pron",
+              "text": "ours",
+              "gloss": "stands alone"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Before a noun vs on its own",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "This is our house.",
+                  "green": [
+                    "our"
+                  ]
+                },
+                {
+                  "text": "The house is ours.",
+                  "green": [
+                    "ours"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "their",
+          "chip": "their / theirs",
+          "subtitle": "3rd person plural",
+          "sortOrder": 6,
+          "forms": [
+            {
+              "case": "det",
+              "text": "their",
+              "gloss": "before a noun"
+            },
+            {
+              "case": "pron",
+              "text": "theirs",
+              "gloss": "stands alone"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Before a noun vs on its own",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "That is their car.",
+                  "green": [
+                    "their"
+                  ]
+                },
+                {
+                  "text": "The car is theirs.",
+                  "green": [
+                    "theirs"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reflexive",
+      "label": "Reflexive",
+      "sortOrder": 4,
+      "note": "Subject and object are the same person; also for emphasis (I did it myself).",
+      "patterns": [
+        {
+          "id": "myself",
+          "chip": "myself",
+          "subtitle": "1st person singular",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "refl",
+              "text": "myself",
+              "gloss": "-self / -selves"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Reflexive (and emphasis)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I hurt myself.",
+                  "green": [
+                    "myself"
+                  ]
+                },
+                {
+                  "text": "I did it myself.",
+                  "green": [
+                    "myself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yourself",
+          "chip": "yourself",
+          "subtitle": "2nd person singular",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "refl",
+              "text": "yourself",
+              "gloss": "-self / -selves"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Reflexive (and emphasis)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Help yourself.",
+                  "green": [
+                    "yourself"
+                  ]
+                },
+                {
+                  "text": "Did you do it yourself?",
+                  "green": [
+                    "yourself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "himself",
+          "chip": "himself",
+          "subtitle": "3rd person singular · masculine",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "refl",
+              "text": "himself",
+              "gloss": "-self / -selves"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Reflexive (and emphasis)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "He introduced himself.",
+                  "green": [
+                    "himself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "herself",
+          "chip": "herself",
+          "subtitle": "3rd person singular · feminine",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "refl",
+              "text": "herself",
+              "gloss": "-self / -selves"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Reflexive (and emphasis)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "She taught herself.",
+                  "green": [
+                    "herself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ourselves",
+          "chip": "ourselves",
+          "subtitle": "1st person plural",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "refl",
+              "text": "ourselves",
+              "gloss": "-self / -selves"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Reflexive (and emphasis)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "We enjoyed ourselves.",
+                  "green": [
+                    "ourselves"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "themselves",
+          "chip": "themselves",
+          "subtitle": "3rd person plural",
+          "sortOrder": 6,
+          "forms": [
+            {
+              "case": "refl",
+              "text": "themselves",
+              "gloss": "-self / -selves"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Reflexive (and emphasis)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "They blamed themselves.",
+                  "green": [
+                    "themselves"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "label": "Questions",
+      "sortOrder": 5,
+      "note": "who (subject), whom (object / after a preposition), whose (possessive). 'what' never changes.",
+      "patterns": [
+        {
+          "id": "who",
+          "chip": "who / whom",
+          "subtitle": "the question word for people",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "who",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "whom",
+              "gloss": "object / after a preposition"
+            },
+            {
+              "case": "gen",
+              "text": "whose",
+              "gloss": "possessive"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Asking about people",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Who is coming today?",
+                  "green": [
+                    "Who"
+                  ]
+                },
+                {
+                  "text": "Whom did you invite?",
+                  "green": [
+                    "Whom"
+                  ]
+                },
+                {
+                  "text": "To whom did you give it?",
+                  "green": [
+                    "whom"
+                  ]
+                },
+                {
+                  "text": "Whose bag is this?",
+                  "green": [
+                    "Whose"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "'whom' is often 'who' in speech",
+              "tone": "irregular",
+              "sentences": [
+                {
+                  "text": "Who did you see?",
+                  "green": [
+                    "Who"
+                  ]
+                },
+                {
+                  "text": "Who are you talking to?",
+                  "green": [
+                    "Who"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relative",
+      "label": "Relative",
+      "sortOrder": 6,
+      "note": "who/whom for people, which for things, that for both, whose for possession. You can often drop it: 'the book I read'.",
+      "patterns": [
+        {
+          "id": "who",
+          "chip": "who / whom (people)",
+          "subtitle": "relative pronoun for people",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "who",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "whom",
+              "gloss": "object / after a preposition"
+            },
+            {
+              "case": "gen",
+              "text": "whose",
+              "gloss": "possessive"
+            }
+          ],
+          "sections": [
+            {
+              "header": "People",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The man who lives here is my teacher.",
+                  "green": [
+                    "who"
+                  ]
+                },
+                {
+                  "text": "The woman whom I met is a doctor.",
+                  "green": [
+                    "whom"
+                  ]
+                },
+                {
+                  "text": "The man whose car is new lives here.",
+                  "green": [
+                    "whose"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "In speech 'who' or 'that' often replaces 'whom'."
+        },
+        {
+          "id": "which",
+          "chip": "which / that (things)",
+          "subtitle": "relative pronoun for things",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "",
+              "text": "which",
+              "gloss": "things"
+            },
+            {
+              "case": "",
+              "text": "that",
+              "gloss": "people or things"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Things",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The book which I read was good.",
+                  "green": [
+                    "which"
+                  ]
+                },
+                {
+                  "text": "The house that we bought is old.",
+                  "green": [
+                    "that"
+                  ]
+                },
+                {
+                  "text": "The film, which won a prize, is long.",
+                  "green": [
+                    "which"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "You can usually drop it: 'the book I read'."
+        }
+      ]
+    },
+    {
+      "id": "indefinite",
+      "label": "Indefinite",
+      "sortOrder": 7,
+      "note": "Pronouns for unspecified people/things. Use some- in statements, any- in questions/negatives.",
+      "patterns": [
+        {
+          "id": "one",
+          "chip": "one",
+          "subtitle": "people in general (formal)",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "",
+              "text": "one",
+              "gloss": "one / you"
+            }
+          ],
+          "sections": [
+            {
+              "header": "one",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "One never knows.",
+                  "green": [
+                    "One"
+                  ]
+                },
+                {
+                  "text": "That does one good.",
+                  "green": [
+                    "one"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "Formal; everyday English uses 'you'."
+        },
+        {
+          "id": "someone",
+          "chip": "someone / no one",
+          "subtitle": "people",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "",
+              "text": "someone",
+              "gloss": "+ anyone / no one"
+            }
+          ],
+          "sections": [
+            {
+              "header": "someone, anyone, no one",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Someone called.",
+                  "green": [
+                    "Someone"
+                  ]
+                },
+                {
+                  "text": "Is anyone there?",
+                  "green": [
+                    "anyone"
+                  ]
+                },
+                {
+                  "text": "I saw no one.",
+                  "green": [
+                    "no one"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "something",
+          "chip": "something / nothing",
+          "subtitle": "things",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "",
+              "text": "something",
+              "gloss": "+ anything / nothing"
+            }
+          ],
+          "sections": [
+            {
+              "header": "something, anything, nothing",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I heard something.",
+                  "green": [
+                    "something"
+                  ]
+                },
+                {
+                  "text": "Do you want anything?",
+                  "green": [
+                    "anything"
+                  ]
+                },
+                {
+                  "text": "There's nothing here.",
+                  "green": [
+                    "nothing"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "everyone",
+          "chip": "everyone / everything",
+          "subtitle": "all",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "",
+              "text": "everyone",
+              "gloss": "+ everybody / everything"
+            }
+          ],
+          "sections": [
+            {
+              "header": "everyone and everything",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Everyone is here.",
+                  "green": [
+                    "Everyone"
+                  ]
+                },
+                {
+                  "text": "I know everybody.",
+                  "green": [
+                    "everybody"
+                  ]
+                },
+                {
+                  "text": "That's everything.",
+                  "green": [
+                    "everything"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dawo",
+      "label": "Prepositions + it",
+      "sortOrder": 8,
+      "note": "English has no 'da-words' — use a preposition + it/them, or put the preposition at the end.",
+      "patterns": [
+        {
+          "id": "about-it",
+          "chip": "about it / with it",
+          "subtitle": "things after a preposition",
+          "sortOrder": 1,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Preposition + it/them",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I'm thinking about it.",
+                  "green": [
+                    "it"
+                  ]
+                },
+                {
+                  "text": "I agree with it.",
+                  "green": [
+                    "it"
+                  ]
+                },
+                {
+                  "text": "What are you waiting for?",
+                  "green": [
+                    "What"
+                  ]
+                },
+                {
+                  "text": "Who are you talking to?",
+                  "green": [
+                    "Who"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "For things use it/them; questions often end with the preposition."
+        }
+      ]
+    }
+  ]
+}

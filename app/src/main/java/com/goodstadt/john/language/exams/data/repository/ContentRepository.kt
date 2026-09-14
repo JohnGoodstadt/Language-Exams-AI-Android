@@ -135,6 +135,7 @@ class ContentRepository @Inject constructor(
     private val format3Cache = mutableMapOf<String, Format3File>()
     private val format7or10Cache = mutableMapOf<String, Format7or10File>()
     private val format13Cache = mutableMapOf<String, WordQuizRoot>()
+    private val format6Cache = mutableMapOf<String, com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File>()
 
     //Problem was getVocabData() called twice sub millisecond
     // ✅ ADDED: A map to store ongoing fetch operations.
@@ -581,6 +582,51 @@ class ContentRepository @Inject constructor(
         Timber.e(error)
         FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundleFormat7or10() failed for $assetPath"))
         return Result.failure(error)
+    }
+
+    // ---------------------------------------------------------------------------------------------
+    // fileFormat 6 - the "teach a grammar topic clearly" sheet (Pronouns). Bundle-first for now; the
+    // Firestore path can be added alongside the others later. [name] is the logical doc name, e.g.
+    // "GermanReferencePronounsClaude".
+    // ---------------------------------------------------------------------------------------------
+
+    /** Memory cache -> bundled asset (Quizzes/Reference/<name>.json). Firestore hook can be added later. */
+    suspend fun getFormat6Data(
+        name: String
+    ): Result<com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File> =
+        withContext(Dispatchers.IO) {
+            format6Cache[name]?.let {
+                Timber.d("ContentRepo: Returning '$name' (Format6) from MEMORY CACHE.")
+                return@withContext Result.success(it)
+            }
+            val assetPath = format6BundleAssetPath(name)
+            val result = loadBundledFormat6Data(assetPath)
+            result.getOrNull()?.let { format6Cache[name] = it }
+            result
+        }
+
+    /** Logical doc name -> bundled asset path. fileFormat-6 sheets live under Quizzes/Reference/. */
+    private fun format6BundleAssetPath(logicalName: String): String =
+        "Quizzes/Reference/$logicalName.json"
+
+    /** Read + decode a fileFormat-6 sheet from the bundled assets. */
+    fun loadBundledFormat6Data(
+        assetPath: String
+    ): Result<com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File> {
+        return try {
+            Timber.v("Format6: Loading '$assetPath' from assets.")
+            val jsonString = context.assets.open(assetPath).bufferedReader().use { it.readText() }
+            Result.success(
+                jsonParser.decodeFromString<com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File>(
+                    jsonString
+                )
+            )
+        } catch (e: Exception) {
+            Timber.e(e, "Format6: bundle asset not found / failed to parse: $assetPath")
+            FirebaseCrashlytics.getInstance()
+                .recordException(Exception("ContentRepository.loadBundledFormat6Data() failed for $assetPath", e))
+            Result.failure(e)
+        }
     }
 
     suspend fun getFormat3Data(name: String): Result<Format3File> = withContext(Dispatchers.IO) {

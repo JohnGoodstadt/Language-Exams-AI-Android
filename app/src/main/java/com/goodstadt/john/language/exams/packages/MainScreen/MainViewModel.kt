@@ -310,9 +310,15 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
 //    }
 
     fun onLanguageChoiceDismissed() {
-        _uiState.update { it.copy(showEnglishChoiceSheet = false) }
-        // Only now that the English-choice sheet has actually closed is it safe to show the
-        // Readiness Audit intro sheet - the two must never overlap.
-        checkForReadinessAuditIntro()
+        viewModelScope.launch {
+            // Persist that the first-launch onboarding choice has been made, so it never shows again.
+            // (The English save path already sets this via saveSelectedLanguageCode; the level-only
+            // flavours (de/zh) have no language to save, so without this the sheet reappeared every launch.)
+            userPreferencesRepository.setUserHasChosenEnglish(true)
+            _uiState.update { it.copy(showEnglishChoiceSheet = false) }
+            // Only now that the English-choice sheet has actually closed is it safe to show the
+            // Readiness Audit intro sheet - the two must never overlap.
+            checkForReadinessAuditIntro()
+        }
     }
 }

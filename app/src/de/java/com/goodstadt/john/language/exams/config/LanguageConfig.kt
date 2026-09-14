@@ -7,7 +7,7 @@ object LanguageConfig {
     val hasDialectSelection: Boolean = false // 👈 Only English needs US/UK/AU choice
     val voiceName: String = "de-DE-Neural2-G" //female
     val languageCode: String = "de-DE"
-    val defaultFileName: String = "vocab_data_a1"
+    val defaultFileName: String = "vocab_data_b1" // first launch loads B1 vocab (matches defaulSkillLevel)
     val defaulSkillLevel: String = "B1"
 
     /*

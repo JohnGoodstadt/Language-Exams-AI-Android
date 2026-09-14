@@ -1,0 +1,3701 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "GermanReferencePronounsClaude",
+  "title": "German Pronouns",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "personal",
+      "label": "Personal",
+      "sortOrder": 1,
+      "note": "Pick a person, then tap any sentence to hear it.",
+      "patterns": [
+        {
+          "id": "ich",
+          "chip": "I / me",
+          "subtitle": "1st person singular",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "ich",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "mich",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "mir",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ich sehe dich.",
+                  "green": [
+                    "Ich",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Ich sehe ihn.",
+                  "green": [
+                    "Ich",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Ich sehe sie.",
+                  "green": [
+                    "Ich",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Ich sehe es.",
+                  "green": [
+                    "Ich",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Ich sehe euch.",
+                  "green": [
+                    "Ich",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Ich sehe Sie.",
+                  "green": [
+                    "Ich",
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ich gebe dir das Buch.",
+                  "green": [
+                    "Ich",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Ich gebe ihm das Buch.",
+                  "green": [
+                    "Ich",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Ich gebe ihr das Buch.",
+                  "green": [
+                    "Ich",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Ich gebe euch das Buch.",
+                  "green": [
+                    "Ich",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Ich gebe ihnen das Buch.",
+                  "green": [
+                    "Ich",
+                    "ihnen"
+                  ]
+                },
+                {
+                  "text": "Ich gebe Ihnen das Buch.",
+                  "green": [
+                    "Ich",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Ich sehe dich.",
+                  "green": [
+                    "Ich",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Ich sah dich.",
+                  "green": [
+                    "Ich",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Ich werde dich sehen.",
+                  "green": [
+                    "Ich",
+                    "dich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Ich würde es dir sagen, wenn ich könnte.",
+                  "green": [
+                    "Ich",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Ich sollte ihr davon erzählen.",
+                  "green": [
+                    "Ich",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "An deiner Stelle würde ich ihn fragen.",
+                  "green": [
+                    "ich",
+                    "ihn"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Wenn du mich fragst, würde ich es anders machen.",
+                  "green": []
+                },
+                {
+                  "text": "Mir wäre es lieber, wenn wir früher gehen.",
+                  "green": []
+                },
+                {
+                  "text": "Ich hätte dir geholfen, wenn du es gesagt hättest.",
+                  "green": []
+                },
+                {
+                  "text": "Es liegt an mir, das zu entscheiden.",
+                  "green": []
+                },
+                {
+                  "text": "Ohne mich hättet ihr das nicht geschafft.",
+                  "green": []
+                },
+                {
+                  "text": "Mich interessiert vor allem, was danach passiert.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "du",
+          "chip": "you",
+          "subtitle": "2nd person singular · informal",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "du",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "dich",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "dir",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Du siehst mich.",
+                  "green": [
+                    "Du",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Du siehst ihn.",
+                  "green": [
+                    "Du",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Du siehst sie.",
+                  "green": [
+                    "Du",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Du siehst es.",
+                  "green": [
+                    "Du",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Du siehst uns.",
+                  "green": [
+                    "Du",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Du siehst Sie.",
+                  "green": [
+                    "Du",
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Du gibst mir das Buch.",
+                  "green": [
+                    "Du",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Du gibst ihm das Buch.",
+                  "green": [
+                    "Du",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Du gibst ihr das Buch.",
+                  "green": [
+                    "Du",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Du gibst uns das Buch.",
+                  "green": [
+                    "Du",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Du gibst ihnen das Buch.",
+                  "green": [
+                    "Du",
+                    "ihnen"
+                  ]
+                },
+                {
+                  "text": "Du gibst Ihnen das Buch.",
+                  "green": [
+                    "Du",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Du siehst ihn.",
+                  "green": [
+                    "Du",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Du sahst ihn.",
+                  "green": [
+                    "Du",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Du wirst ihn sehen.",
+                  "green": [
+                    "Du",
+                    "ihn"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Du solltest ihm helfen.",
+                  "green": [
+                    "Du",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Würdest du mir das erklären?",
+                  "green": [
+                    "du",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Wenn du mich fragen würdest, würde ich Ja sagen.",
+                  "green": [
+                    "du",
+                    "mich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Hättest du es mir früher gesagt, wäre alles einfacher gewesen.",
+                  "green": []
+                },
+                {
+                  "text": "Ich verlasse mich ganz auf dich.",
+                  "green": []
+                },
+                {
+                  "text": "Dir kann man nichts vormachen.",
+                  "green": []
+                },
+                {
+                  "text": "Es kommt darauf an, was du willst.",
+                  "green": []
+                },
+                {
+                  "text": "Wenn ich du wäre, würde ich warten.",
+                  "green": []
+                },
+                {
+                  "text": "Ich habe dich gestern in der Stadt gesehen.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "er",
+          "chip": "he",
+          "subtitle": "3rd person singular · masculine (der-noun)",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "er",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "ihn",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "ihm",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Er sieht mich.",
+                  "green": [
+                    "Er",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Er sieht dich.",
+                  "green": [
+                    "Er",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Er sieht ihn.",
+                  "green": [
+                    "Er",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Er sieht sie.",
+                  "green": [
+                    "Er",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Er sieht es.",
+                  "green": [
+                    "Er",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Er sieht uns.",
+                  "green": [
+                    "Er",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Er sieht euch.",
+                  "green": [
+                    "Er",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Er sieht Sie.",
+                  "green": [
+                    "Er",
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Er gibt mir das Buch.",
+                  "green": [
+                    "Er",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Er gibt dir das Buch.",
+                  "green": [
+                    "Er",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Er gibt ihm das Buch.",
+                  "green": [
+                    "Er",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Er gibt ihr das Buch.",
+                  "green": [
+                    "Er",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Er gibt uns das Buch.",
+                  "green": [
+                    "Er",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Er gibt euch das Buch.",
+                  "green": [
+                    "Er",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Er gibt ihnen das Buch.",
+                  "green": [
+                    "Er",
+                    "ihnen"
+                  ]
+                },
+                {
+                  "text": "Er gibt Ihnen das Buch.",
+                  "green": [
+                    "Er",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Er sieht sie.",
+                  "green": [
+                    "Er",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Er sah sie.",
+                  "green": [
+                    "Er",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Er wird sie sehen.",
+                  "green": [
+                    "Er",
+                    "sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Er würde dir helfen, wenn du ihn fragst.",
+                  "green": [
+                    "Er",
+                    "dir",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Er sollte sich bei ihr entschuldigen.",
+                  "green": [
+                    "Er",
+                    "sich",
+                    "ihr"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Ich habe ihm geholfen, obwohl er mich nie darum gebeten hat.",
+                  "green": []
+                },
+                {
+                  "text": "Ohne ihn hätten wir das nicht geschafft.",
+                  "green": []
+                },
+                {
+                  "text": "Ihm zuliebe bin ich früher gekommen.",
+                  "green": []
+                },
+                {
+                  "text": "Er ist derjenige, dem ich vertraue.",
+                  "green": []
+                },
+                {
+                  "text": "Ich weiß nicht, ob er uns rechtzeitig informiert.",
+                  "green": []
+                },
+                {
+                  "text": "Auf ihn kann man sich verlassen.",
+                  "green": []
+                }
+              ]
+            }
+          ],
+          "note": "A der-noun becomes er: der Tisch → er."
+        },
+        {
+          "id": "sie-f",
+          "chip": "she",
+          "subtitle": "3rd person singular · feminine (die-noun)",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "sie",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "sie",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "ihr",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Sie sieht mich.",
+                  "green": [
+                    "Sie",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Sie sieht dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie sieht ihn.",
+                  "green": [
+                    "Sie",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Sie sieht sie.",
+                  "green": [
+                    "Sie",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Sie sieht es.",
+                  "green": [
+                    "Sie",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Sie sieht uns.",
+                  "green": [
+                    "Sie",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Sie sieht euch.",
+                  "green": [
+                    "Sie",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Sie sieht Sie.",
+                  "green": [
+                    "Sie",
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Sie gibt mir das Buch.",
+                  "green": [
+                    "Sie",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Sie gibt dir das Buch.",
+                  "green": [
+                    "Sie",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Sie gibt ihm das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Sie gibt ihr das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Sie gibt uns das Buch.",
+                  "green": [
+                    "Sie",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Sie gibt euch das Buch.",
+                  "green": [
+                    "Sie",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Sie gibt ihnen das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihnen"
+                  ]
+                },
+                {
+                  "text": "Sie gibt Ihnen das Buch.",
+                  "green": [
+                    "Sie",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Sie sieht dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie sah dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie wird dich sehen.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Sie würde es dir sagen.",
+                  "green": [
+                    "Sie",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Sie sollte ihm danken.",
+                  "green": [
+                    "Sie",
+                    "ihm"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "⚠ Watch out: three 'sie'",
+              "tone": "irregular",
+              "sentences": [
+                {
+                  "text": "Sie ist meine Schwester.",
+                  "green": [
+                    "Sie"
+                  ]
+                },
+                {
+                  "text": "Sie sind meine Freunde.",
+                  "green": [
+                    "Sie"
+                  ]
+                },
+                {
+                  "text": "Können Sie mir helfen?",
+                  "green": [
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Ich kenne sie, seit wir Kinder waren.",
+                  "green": []
+                },
+                {
+                  "text": "Ihr zuliebe habe ich meine Meinung geändert.",
+                  "green": []
+                },
+                {
+                  "text": "Ich habe ihr alles erklärt, was sie wissen musste.",
+                  "green": []
+                },
+                {
+                  "text": "Sie ist diejenige, die uns geholfen hat.",
+                  "green": []
+                },
+                {
+                  "text": "Ohne sie wäre das Projekt gescheitert.",
+                  "green": []
+                },
+                {
+                  "text": "Ich bin ihr sehr dankbar.",
+                  "green": []
+                }
+              ]
+            }
+          ],
+          "note": "sie also = they, and capital Sie = you-formal — the verb ending tells them apart."
+        },
+        {
+          "id": "es",
+          "chip": "it",
+          "subtitle": "3rd person singular · neuter (das-noun)",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "es",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "es",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "ihm",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Impersonal 'es' — a placeholder subject",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Es regnet.",
+                  "green": [
+                    "Es"
+                  ]
+                },
+                {
+                  "text": "Es ist spät.",
+                  "green": [
+                    "Es"
+                  ]
+                },
+                {
+                  "text": "Es gibt hier ein Problem.",
+                  "green": [
+                    "Es"
+                  ]
+                },
+                {
+                  "text": "Wie geht es dir?",
+                  "green": [
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Es freut mich.",
+                  "green": [
+                    "Es",
+                    "mich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "A das-noun becomes 'es'",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Das Auto ist neu. Es ist schnell.",
+                  "green": [
+                    "Es"
+                  ]
+                },
+                {
+                  "text": "Ich sehe das Kind. Ich sehe es.",
+                  "green": [
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Wo ist das Buch? Ich gebe es dir.",
+                  "green": [
+                    "es"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Es sieht mich.",
+                  "green": [
+                    "Es",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Es sah mich.",
+                  "green": [
+                    "Es",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Es wird mich sehen.",
+                  "green": [
+                    "Es",
+                    "mich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Es könnte dir gefallen.",
+                  "green": [
+                    "Es",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Es würde mir helfen, wenn du bleibst.",
+                  "green": [
+                    "Es",
+                    "mir"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Es kommt darauf an, wie viel Zeit wir haben.",
+                  "green": []
+                },
+                {
+                  "text": "Ich halte es für eine gute Idee.",
+                  "green": []
+                },
+                {
+                  "text": "Es ist mir wichtig, dass alle einverstanden sind.",
+                  "green": []
+                },
+                {
+                  "text": "Wenn es regnet, bleiben wir zu Hause.",
+                  "green": []
+                },
+                {
+                  "text": "Ich kann es kaum erwarten.",
+                  "green": []
+                },
+                {
+                  "text": "Es freut mich, dass du gekommen bist.",
+                  "green": []
+                }
+              ]
+            }
+          ],
+          "note": "A das-noun becomes es: das Auto → es."
+        },
+        {
+          "id": "wir",
+          "chip": "we / us",
+          "subtitle": "1st person plural",
+          "sortOrder": 6,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "wir",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "uns",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "uns",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Wir sehen dich.",
+                  "green": [
+                    "Wir",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Wir sehen ihn.",
+                  "green": [
+                    "Wir",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Wir sehen sie.",
+                  "green": [
+                    "Wir",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Wir sehen es.",
+                  "green": [
+                    "Wir",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Wir sehen euch.",
+                  "green": [
+                    "Wir",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Wir sehen Sie.",
+                  "green": [
+                    "Wir",
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Wir geben dir das Buch.",
+                  "green": [
+                    "Wir",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Wir geben ihm das Buch.",
+                  "green": [
+                    "Wir",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Wir geben ihr das Buch.",
+                  "green": [
+                    "Wir",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Wir geben euch das Buch.",
+                  "green": [
+                    "Wir",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Wir geben ihnen das Buch.",
+                  "green": [
+                    "Wir",
+                    "ihnen"
+                  ]
+                },
+                {
+                  "text": "Wir geben Ihnen das Buch.",
+                  "green": [
+                    "Wir",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Wir sehen dich.",
+                  "green": [
+                    "Wir",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Wir sahen dich.",
+                  "green": [
+                    "Wir",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Wir werden dich sehen.",
+                  "green": [
+                    "Wir",
+                    "dich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Wir würden euch besuchen, wenn wir Zeit hätten.",
+                  "green": [
+                    "Wir",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Wir sollten ihnen danken.",
+                  "green": [
+                    "Wir",
+                    "ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "The noun's number doesn't change the pronoun",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Wir geben ihm das Buch.",
+                  "green": [
+                    "Wir",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Wir geben ihm die Bücher.",
+                  "green": [
+                    "Wir",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Wir geben ihnen die Bücher.",
+                  "green": [
+                    "Wir",
+                    "ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Uns wurde gesagt, dass wir warten sollen.",
+                  "green": []
+                },
+                {
+                  "text": "Es liegt an uns, das zu entscheiden.",
+                  "green": []
+                },
+                {
+                  "text": "Wenn wir ehrlich sind, war es ein Fehler.",
+                  "green": []
+                },
+                {
+                  "text": "Man hat uns nichts davon erzählt.",
+                  "green": []
+                },
+                {
+                  "text": "Für uns ist das kein Problem.",
+                  "green": []
+                },
+                {
+                  "text": "Wir hätten euch geholfen, wenn ihr gefragt hättet.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ihr",
+          "chip": "you (plural)",
+          "subtitle": "2nd person plural · informal",
+          "sortOrder": 7,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "ihr",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "euch",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "euch",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ihr seht mich.",
+                  "green": [
+                    "Ihr",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Ihr seht ihn.",
+                  "green": [
+                    "Ihr",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Ihr seht sie.",
+                  "green": [
+                    "Ihr",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Ihr seht es.",
+                  "green": [
+                    "Ihr",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Ihr seht uns.",
+                  "green": [
+                    "Ihr",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Ihr seht Sie.",
+                  "green": [
+                    "Ihr",
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ihr gebt mir das Buch.",
+                  "green": [
+                    "Ihr",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Ihr gebt ihm das Buch.",
+                  "green": [
+                    "Ihr",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Ihr gebt ihr das Buch.",
+                  "green": [
+                    "Ihr",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Ihr gebt uns das Buch.",
+                  "green": [
+                    "Ihr",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Ihr gebt ihnen das Buch.",
+                  "green": [
+                    "Ihr",
+                    "ihnen"
+                  ]
+                },
+                {
+                  "text": "Ihr gebt Ihnen das Buch.",
+                  "green": [
+                    "Ihr",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Ihr seht dich.",
+                  "green": [
+                    "Ihr",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Ihr saht dich.",
+                  "green": [
+                    "Ihr",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Ihr werdet dich sehen.",
+                  "green": [
+                    "Ihr",
+                    "dich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Ihr solltet ihr helfen.",
+                  "green": [
+                    "Ihr",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Würdet ihr uns helfen?",
+                  "green": [
+                    "ihr",
+                    "uns"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "⚠ Watch out: ihr (you all) vs ihr (to her)",
+              "tone": "irregular",
+              "sentences": [
+                {
+                  "text": "Ihr seid spät.",
+                  "green": [
+                    "Ihr"
+                  ]
+                },
+                {
+                  "text": "Ich gebe ihr das Buch.",
+                  "green": [
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Ihr gebt ihr das Buch.",
+                  "green": [
+                    "Ihr",
+                    "ihr"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Ich hoffe, dass es euch gefallen hat.",
+                  "green": []
+                },
+                {
+                  "text": "Euch kann man nichts vormachen.",
+                  "green": []
+                },
+                {
+                  "text": "Wenn ihr wollt, können wir morgen anfangen.",
+                  "green": []
+                },
+                {
+                  "text": "Ich habe euch alles Nötige geschickt.",
+                  "green": []
+                },
+                {
+                  "text": "Es liegt an euch, ob ihr mitmacht.",
+                  "green": []
+                },
+                {
+                  "text": "Ohne euch wäre das Fest nicht so schön gewesen.",
+                  "green": []
+                }
+              ]
+            }
+          ],
+          "note": "Here ihr = 'you all'. Don't confuse it with ihr = '(to) her'."
+        },
+        {
+          "id": "sie-pl",
+          "chip": "they / them",
+          "subtitle": "3rd person plural",
+          "sortOrder": 8,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "sie",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "sie",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "ihnen",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Sie sehen mich.",
+                  "green": [
+                    "Sie",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Sie sehen dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie sehen ihn.",
+                  "green": [
+                    "Sie",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Sie sehen sie.",
+                  "green": [
+                    "Sie",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Sie sehen es.",
+                  "green": [
+                    "Sie",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Sie sehen uns.",
+                  "green": [
+                    "Sie",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Sie sehen euch.",
+                  "green": [
+                    "Sie",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Sie sehen Sie.",
+                  "green": [
+                    "Sie",
+                    "Sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Sie geben mir das Buch.",
+                  "green": [
+                    "Sie",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Sie geben dir das Buch.",
+                  "green": [
+                    "Sie",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Sie geben ihm das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Sie geben ihr das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Sie geben uns das Buch.",
+                  "green": [
+                    "Sie",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Sie geben euch das Buch.",
+                  "green": [
+                    "Sie",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Sie geben ihnen das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihnen"
+                  ]
+                },
+                {
+                  "text": "Sie geben Ihnen das Buch.",
+                  "green": [
+                    "Sie",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Sie sehen dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie sahen dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie werden dich sehen.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Sie würden dir helfen.",
+                  "green": [
+                    "Sie",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Sie sollten sich beeilen.",
+                  "green": [
+                    "Sie",
+                    "sich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Advanced (B1)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Ich helfe ihnen, weil sie neu sind.",
+                  "green": [
+                    "ihnen",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Das sind die Leute, denen ich vertraue.",
+                  "green": [
+                    "denen"
+                  ]
+                },
+                {
+                  "text": "Ich habe ihnen alles gegeben, was sie brauchten.",
+                  "green": [
+                    "ihnen",
+                    "sie"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Ich bin ihnen dankbar, dass sie mir geholfen haben.",
+                  "green": []
+                },
+                {
+                  "text": "Auf sie kann man sich verlassen.",
+                  "green": []
+                },
+                {
+                  "text": "Ich habe ihnen gesagt, dass sie warten sollen.",
+                  "green": []
+                },
+                {
+                  "text": "Das sind die Leute, denen ich vertraue.",
+                  "green": []
+                },
+                {
+                  "text": "Ohne sie hätten wir das nicht geschafft.",
+                  "green": []
+                },
+                {
+                  "text": "Man sollte sie nicht unterschätzen.",
+                  "green": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "formal",
+          "chip": "you (formal)",
+          "subtitle": "formal — singular or plural",
+          "sortOrder": 9,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "Sie",
+              "gloss": "subject"
+            },
+            {
+              "case": "acc",
+              "text": "Sie",
+              "gloss": "direct object"
+            },
+            {
+              "case": "dat",
+              "text": "Ihnen",
+              "gloss": "indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative — direct object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Sie sehen mich.",
+                  "green": [
+                    "Sie",
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Sie sehen dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie sehen ihn.",
+                  "green": [
+                    "Sie",
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Sie sehen sie.",
+                  "green": [
+                    "Sie",
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Sie sehen es.",
+                  "green": [
+                    "Sie",
+                    "es"
+                  ]
+                },
+                {
+                  "text": "Sie sehen uns.",
+                  "green": [
+                    "Sie",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Sie sehen euch.",
+                  "green": [
+                    "Sie",
+                    "euch"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative — indirect object",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Sie geben mir das Buch.",
+                  "green": [
+                    "Sie",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Sie geben dir das Buch.",
+                  "green": [
+                    "Sie",
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Sie geben ihm das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihm"
+                  ]
+                },
+                {
+                  "text": "Sie geben ihr das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihr"
+                  ]
+                },
+                {
+                  "text": "Sie geben uns das Buch.",
+                  "green": [
+                    "Sie",
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Sie geben euch das Buch.",
+                  "green": [
+                    "Sie",
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Sie geben ihnen das Buch.",
+                  "green": [
+                    "Sie",
+                    "ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Past and future — the pronoun stays the same",
+              "tone": "tense",
+              "sentences": [
+                {
+                  "text": "Sie sehen dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie sahen dich.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Sie werden dich sehen.",
+                  "green": [
+                    "Sie",
+                    "dich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Would / should / could — the pronoun stays the same",
+              "tone": "conditional",
+              "sentences": [
+                {
+                  "text": "Könnten Sie mir helfen?",
+                  "green": [
+                    "Sie",
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Ich würde Ihnen empfehlen zu warten.",
+                  "green": [
+                    "Ich",
+                    "Ihnen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Challenge — work out the pronouns (B1/B2)",
+              "tone": "advanced",
+              "sentences": [
+                {
+                  "text": "Darf ich Ihnen behilflich sein?",
+                  "green": []
+                },
+                {
+                  "text": "Ich würde Ihnen empfehlen, früher zu buchen.",
+                  "green": []
+                },
+                {
+                  "text": "Könnten Sie mir bitte Ihren Namen sagen?",
+                  "green": []
+                },
+                {
+                  "text": "Ich habe Ihnen die Unterlagen bereits geschickt.",
+                  "green": []
+                },
+                {
+                  "text": "Wenn Sie Fragen haben, wenden Sie sich an mich.",
+                  "green": []
+                },
+                {
+                  "text": "Es freut mich, Sie kennenzulernen.",
+                  "green": []
+                }
+              ]
+            }
+          ],
+          "note": "Always a capital S."
+        }
+      ]
+    },
+    {
+      "id": "demonstrative",
+      "label": "This / That",
+      "sortOrder": 2,
+      "note": "dieser = this. For 'that', German stresses der/die/das (same endings).",
+      "patterns": [
+        {
+          "id": "dieser-m",
+          "chip": "this (masc)",
+          "subtitle": "dieser — der-noun",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "dieser",
+              "gloss": "this — subject"
+            },
+            {
+              "case": "acc",
+              "text": "diesen",
+              "gloss": "this — direct object"
+            },
+            {
+              "case": "dat",
+              "text": "diesem",
+              "gloss": "(to) this — indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The three cases",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Dieser Mann ist nett.",
+                  "green": [
+                    "Dieser"
+                  ]
+                },
+                {
+                  "text": "Ich kenne diesen Mann.",
+                  "green": [
+                    "diesen"
+                  ]
+                },
+                {
+                  "text": "Ich gebe diesem Mann das Buch.",
+                  "green": [
+                    "diesem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "diese-f",
+          "chip": "this (fem)",
+          "subtitle": "diese — die-noun",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "diese",
+              "gloss": "this — subject"
+            },
+            {
+              "case": "acc",
+              "text": "diese",
+              "gloss": "this — direct object"
+            },
+            {
+              "case": "dat",
+              "text": "dieser",
+              "gloss": "(to) this — indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The three cases",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Diese Frau ist hier.",
+                  "green": [
+                    "Diese"
+                  ]
+                },
+                {
+                  "text": "Ich sehe diese Frau.",
+                  "green": [
+                    "diese"
+                  ]
+                },
+                {
+                  "text": "Ich helfe dieser Frau.",
+                  "green": [
+                    "dieser"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dieses-n",
+          "chip": "this (neut)",
+          "subtitle": "dieses — das-noun",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "dieses",
+              "gloss": "this — subject"
+            },
+            {
+              "case": "acc",
+              "text": "dieses",
+              "gloss": "this — direct object"
+            },
+            {
+              "case": "dat",
+              "text": "diesem",
+              "gloss": "(to) this — indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The three cases",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Dieses Kind lacht.",
+                  "green": [
+                    "Dieses"
+                  ]
+                },
+                {
+                  "text": "Ich mag dieses Buch.",
+                  "green": [
+                    "dieses"
+                  ]
+                },
+                {
+                  "text": "Ich gebe diesem Kind Milch.",
+                  "green": [
+                    "diesem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "diese-pl",
+          "chip": "these",
+          "subtitle": "plural",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "diese",
+              "gloss": "this — subject"
+            },
+            {
+              "case": "acc",
+              "text": "diese",
+              "gloss": "this — direct object"
+            },
+            {
+              "case": "dat",
+              "text": "diesen",
+              "gloss": "(to) this — indirect object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The three cases",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Diese Bücher sind neu.",
+                  "green": [
+                    "Diese"
+                  ]
+                },
+                {
+                  "text": "Ich kaufe diese Bücher.",
+                  "green": [
+                    "diese"
+                  ]
+                },
+                {
+                  "text": "Ich gebe diesen Kindern Bücher.",
+                  "green": [
+                    "diesen"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "possessive",
+      "label": "Possessive",
+      "sortOrder": 3,
+      "note": "Stem = owner (mein-, dein-…); ending agrees with the noun's gender & case.",
+      "patterns": [
+        {
+          "id": "mein",
+          "chip": "my",
+          "subtitle": "1st person singular",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "m",
+              "text": "mein",
+              "gloss": "der-noun"
+            },
+            {
+              "case": "f",
+              "text": "meine",
+              "gloss": "die-noun"
+            },
+            {
+              "case": "n",
+              "text": "mein",
+              "gloss": "das-noun"
+            }
+          ],
+          "sections": [
+            {
+              "header": "In the three genders (nominative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Mein Bruder ist hier.",
+                  "green": [
+                    "Mein"
+                  ]
+                },
+                {
+                  "text": "Meine Schwester ist nett.",
+                  "green": [
+                    "Meine"
+                  ]
+                },
+                {
+                  "text": "Mein Kind schläft.",
+                  "green": [
+                    "Mein"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Other cases change the ending",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ich sehe meinen Bruder.",
+                  "green": [
+                    "meinen"
+                  ]
+                },
+                {
+                  "text": "Ich helfe meiner Schwester.",
+                  "green": [
+                    "meiner"
+                  ]
+                },
+                {
+                  "text": "Das ist mein Buch.",
+                  "green": [
+                    "mein"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "acc m: meinen · dat m/n: meinem · dat f: meiner"
+        },
+        {
+          "id": "dein",
+          "chip": "your",
+          "subtitle": "2nd person singular",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "m",
+              "text": "dein",
+              "gloss": "der-noun"
+            },
+            {
+              "case": "f",
+              "text": "deine",
+              "gloss": "die-noun"
+            },
+            {
+              "case": "n",
+              "text": "dein",
+              "gloss": "das-noun"
+            }
+          ],
+          "sections": [
+            {
+              "header": "In the three genders (nominative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Dein Bruder ist hier.",
+                  "green": [
+                    "Dein"
+                  ]
+                },
+                {
+                  "text": "Deine Schwester ist nett.",
+                  "green": [
+                    "Deine"
+                  ]
+                },
+                {
+                  "text": "Dein Kind schläft.",
+                  "green": [
+                    "Dein"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Other cases change the ending",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ich mag deine Jacke.",
+                  "green": [
+                    "deine"
+                  ]
+                },
+                {
+                  "text": "Ich gebe deinem Freund das Buch.",
+                  "green": [
+                    "deinem"
+                  ]
+                },
+                {
+                  "text": "Wo ist dein Auto?",
+                  "green": [
+                    "dein"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sein",
+          "chip": "his / its",
+          "subtitle": "masc/neut owner",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "m",
+              "text": "sein",
+              "gloss": "der-noun"
+            },
+            {
+              "case": "f",
+              "text": "seine",
+              "gloss": "die-noun"
+            },
+            {
+              "case": "n",
+              "text": "sein",
+              "gloss": "das-noun"
+            }
+          ],
+          "sections": [
+            {
+              "header": "In the three genders (nominative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Sein Bruder ist hier.",
+                  "green": [
+                    "Sein"
+                  ]
+                },
+                {
+                  "text": "Seine Schwester ist nett.",
+                  "green": [
+                    "Seine"
+                  ]
+                },
+                {
+                  "text": "Sein Kind schläft.",
+                  "green": [
+                    "Sein"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Other cases change the ending",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Er sucht seinen Schlüssel.",
+                  "green": [
+                    "seinen"
+                  ]
+                },
+                {
+                  "text": "Er hilft seiner Mutter.",
+                  "green": [
+                    "seiner"
+                  ]
+                },
+                {
+                  "text": "Sein Haus ist alt.",
+                  "green": [
+                    "Sein"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "sein = his, or its for a der/das owner."
+        },
+        {
+          "id": "ihr",
+          "chip": "her / their",
+          "subtitle": "feminine or plural owner",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "m",
+              "text": "ihr",
+              "gloss": "der-noun"
+            },
+            {
+              "case": "f",
+              "text": "ihre",
+              "gloss": "die-noun"
+            },
+            {
+              "case": "n",
+              "text": "ihr",
+              "gloss": "das-noun"
+            }
+          ],
+          "sections": [
+            {
+              "header": "In the three genders (nominative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ihr Bruder ist hier.",
+                  "green": [
+                    "Ihr"
+                  ]
+                },
+                {
+                  "text": "Ihre Schwester ist nett.",
+                  "green": [
+                    "Ihre"
+                  ]
+                },
+                {
+                  "text": "Ihr Kind schläft.",
+                  "green": [
+                    "Ihr"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Other cases change the ending",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ich kenne ihren Bruder.",
+                  "green": [
+                    "ihren"
+                  ]
+                },
+                {
+                  "text": "Ich danke ihrer Freundin.",
+                  "green": [
+                    "ihrer"
+                  ]
+                },
+                {
+                  "text": "Ihr Buch ist neu.",
+                  "green": [
+                    "Ihr"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "ihr = her (one) or their (several). Capital Ihr = your (formal)."
+        },
+        {
+          "id": "unser",
+          "chip": "our",
+          "subtitle": "1st person plural",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "m",
+              "text": "unser",
+              "gloss": "der-noun"
+            },
+            {
+              "case": "f",
+              "text": "unsere",
+              "gloss": "die-noun"
+            },
+            {
+              "case": "n",
+              "text": "unser",
+              "gloss": "das-noun"
+            }
+          ],
+          "sections": [
+            {
+              "header": "In the three genders (nominative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Unser Bruder ist hier.",
+                  "green": [
+                    "Unser"
+                  ]
+                },
+                {
+                  "text": "Unsere Schwester ist nett.",
+                  "green": [
+                    "Unsere"
+                  ]
+                },
+                {
+                  "text": "Unser Kind schläft.",
+                  "green": [
+                    "Unser"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Other cases change the ending",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Wir lieben unser Haus.",
+                  "green": [
+                    "unser"
+                  ]
+                },
+                {
+                  "text": "Wir helfen unseren Nachbarn.",
+                  "green": [
+                    "unseren"
+                  ]
+                },
+                {
+                  "text": "Unsere Schule ist groß.",
+                  "green": [
+                    "Unsere"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ihr-formal",
+          "chip": "your (formal)",
+          "subtitle": "formal owner",
+          "sortOrder": 6,
+          "forms": [
+            {
+              "case": "m",
+              "text": "Ihr",
+              "gloss": "der-noun"
+            },
+            {
+              "case": "f",
+              "text": "Ihre",
+              "gloss": "die-noun"
+            },
+            {
+              "case": "n",
+              "text": "Ihr",
+              "gloss": "das-noun"
+            }
+          ],
+          "sections": [
+            {
+              "header": "In the three genders (nominative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ihr Bruder ist hier.",
+                  "green": [
+                    "Ihr"
+                  ]
+                },
+                {
+                  "text": "Ihre Schwester ist nett.",
+                  "green": [
+                    "Ihre"
+                  ]
+                },
+                {
+                  "text": "Ihr Kind schläft.",
+                  "green": [
+                    "Ihr"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Other cases change the ending",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ich habe Ihren Brief bekommen.",
+                  "green": [
+                    "Ihren"
+                  ]
+                },
+                {
+                  "text": "Ich danke Ihrer Firma.",
+                  "green": [
+                    "Ihrer"
+                  ]
+                },
+                {
+                  "text": "Ihr Termin ist morgen.",
+                  "green": [
+                    "Ihr"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "Formal 'your' — always capitalised."
+        }
+      ]
+    },
+    {
+      "id": "reflexive",
+      "label": "Reflexive",
+      "sortOrder": 4,
+      "note": "Accusative when the reflexive is the object; dative when there's ANOTHER object.",
+      "patterns": [
+        {
+          "id": "mich",
+          "chip": "myself",
+          "subtitle": "1st person singular",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "acc",
+              "text": "mich",
+              "gloss": "reflexive object"
+            },
+            {
+              "case": "dat",
+              "text": "mir",
+              "gloss": "with another object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative (the reflexive is the object)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich freue mich.",
+                  "green": [
+                    "mich"
+                  ]
+                },
+                {
+                  "text": "Ich wasche mich.",
+                  "green": [
+                    "mich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative (there is another object)",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Ich kaufe mir ein Eis.",
+                  "green": [
+                    "mir"
+                  ]
+                },
+                {
+                  "text": "Ich nehme mir Zeit.",
+                  "green": [
+                    "mir"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dich",
+          "chip": "yourself",
+          "subtitle": "2nd person singular",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "acc",
+              "text": "dich",
+              "gloss": "reflexive object"
+            },
+            {
+              "case": "dat",
+              "text": "dir",
+              "gloss": "with another object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative (the reflexive is the object)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Wäschst du dich?",
+                  "green": [
+                    "dich"
+                  ]
+                },
+                {
+                  "text": "Beeil dich!",
+                  "green": [
+                    "dich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative (there is another object)",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Nimm dir Zeit.",
+                  "green": [
+                    "dir"
+                  ]
+                },
+                {
+                  "text": "Kauf dir etwas Schönes.",
+                  "green": [
+                    "dir"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sich",
+          "chip": "sich",
+          "subtitle": "he / she / it · they · you-formal",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "acc",
+              "text": "sich",
+              "gloss": "reflexive object"
+            },
+            {
+              "case": "dat",
+              "text": "sich",
+              "gloss": "with another object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative (the reflexive is the object)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Er freut sich.",
+                  "green": [
+                    "sich"
+                  ]
+                },
+                {
+                  "text": "Sie beeilen sich.",
+                  "green": [
+                    "sich"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative (there is another object)",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Sie kauft sich ein Buch.",
+                  "green": [
+                    "sich"
+                  ]
+                },
+                {
+                  "text": "Er nimmt sich Zeit.",
+                  "green": [
+                    "sich"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "For er/sie/es, they and formal Sie the reflexive is sich."
+        },
+        {
+          "id": "uns",
+          "chip": "ourselves",
+          "subtitle": "1st person plural",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "acc",
+              "text": "uns",
+              "gloss": "reflexive object"
+            },
+            {
+              "case": "dat",
+              "text": "uns",
+              "gloss": "with another object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative (the reflexive is the object)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Wir müssen uns beeilen.",
+                  "green": [
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Wir freuen uns.",
+                  "green": [
+                    "uns"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative (there is another object)",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Wir gönnen uns eine Pause.",
+                  "green": [
+                    "uns"
+                  ]
+                },
+                {
+                  "text": "Wir kaufen uns ein Auto.",
+                  "green": [
+                    "uns"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "euch",
+          "chip": "yourselves",
+          "subtitle": "2nd person plural",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "acc",
+              "text": "euch",
+              "gloss": "reflexive object"
+            },
+            {
+              "case": "dat",
+              "text": "euch",
+              "gloss": "with another object"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Accusative (the reflexive is the object)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Setzt euch, bitte.",
+                  "green": [
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Beeilt euch!",
+                  "green": [
+                    "euch"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Dative (there is another object)",
+              "tone": "combinations",
+              "sentences": [
+                {
+                  "text": "Nehmt euch Zeit.",
+                  "green": [
+                    "euch"
+                  ]
+                },
+                {
+                  "text": "Kauft euch etwas.",
+                  "green": [
+                    "euch"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "label": "Questions",
+      "sortOrder": 5,
+      "note": "Question words for people decline; 'was' (what, for things) never changes.",
+      "patterns": [
+        {
+          "id": "wer",
+          "chip": "who? (wer)",
+          "subtitle": "the question word for people",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "wer",
+              "gloss": "who — subject"
+            },
+            {
+              "case": "acc",
+              "text": "wen",
+              "gloss": "whom — direct object"
+            },
+            {
+              "case": "dat",
+              "text": "wem",
+              "gloss": "(to) whom — indirect object"
+            },
+            {
+              "case": "gen",
+              "text": "wessen",
+              "gloss": "whose"
+            }
+          ],
+          "sections": [
+            {
+              "header": "Asking about people",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Wer kommt heute?",
+                  "green": [
+                    "Wer"
+                  ]
+                },
+                {
+                  "text": "Wen hast du eingeladen?",
+                  "green": [
+                    "Wen"
+                  ]
+                },
+                {
+                  "text": "Wem gehört das Auto?",
+                  "green": [
+                    "Wem"
+                  ]
+                },
+                {
+                  "text": "Wem hilfst du?",
+                  "green": [
+                    "Wem"
+                  ]
+                },
+                {
+                  "text": "Wessen Tasche ist das?",
+                  "green": [
+                    "Wessen"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "'was' (what) never changes",
+              "tone": "irregular",
+              "sentences": [
+                {
+                  "text": "Was ist das?",
+                  "green": [
+                    "Was"
+                  ]
+                },
+                {
+                  "text": "Was siehst du?",
+                  "green": [
+                    "Was"
+                  ]
+                },
+                {
+                  "text": "Womit schreibst du?",
+                  "green": [
+                    "Womit"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relative",
+      "label": "Relative",
+      "sortOrder": 6,
+      "note": "A relative pronoun takes its GENDER from the noun it describes, but its CASE from its job inside the relative clause.",
+      "patterns": [
+        {
+          "id": "der-m",
+          "chip": "der (masc)",
+          "subtitle": "refers to a der-noun",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "der",
+              "gloss": "who / that — subject"
+            },
+            {
+              "case": "acc",
+              "text": "den",
+              "gloss": "whom / that — object"
+            },
+            {
+              "case": "dat",
+              "text": "dem",
+              "gloss": "(to) whom"
+            },
+            {
+              "case": "gen",
+              "text": "dessen",
+              "gloss": "whose"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The four cases",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Der Mann, der dort steht, ist mein Lehrer.",
+                  "green": [
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Der Mann, den ich kenne, ist nett.",
+                  "green": [
+                    "den"
+                  ]
+                },
+                {
+                  "text": "Der Mann, dem ich helfe, ist alt.",
+                  "green": [
+                    "dem"
+                  ]
+                },
+                {
+                  "text": "Der Mann, dessen Auto neu ist, wohnt hier.",
+                  "green": [
+                    "dessen"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "die-f",
+          "chip": "die (fem)",
+          "subtitle": "refers to a die-noun",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "die",
+              "gloss": "who / that"
+            },
+            {
+              "case": "acc",
+              "text": "die",
+              "gloss": "whom / that"
+            },
+            {
+              "case": "dat",
+              "text": "der",
+              "gloss": "(to) whom"
+            },
+            {
+              "case": "gen",
+              "text": "deren",
+              "gloss": "whose"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The four cases",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Die Frau, die dort steht, ist meine Lehrerin.",
+                  "green": [
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Die Frau, die ich kenne, ist nett.",
+                  "green": [
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Die Frau, der ich helfe, ist alt.",
+                  "green": [
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Die Frau, deren Auto neu ist, wohnt hier.",
+                  "green": [
+                    "deren"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "das-n",
+          "chip": "das (neut)",
+          "subtitle": "refers to a das-noun",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "das",
+              "gloss": "which / that"
+            },
+            {
+              "case": "acc",
+              "text": "das",
+              "gloss": "which / that"
+            },
+            {
+              "case": "dat",
+              "text": "dem",
+              "gloss": "(to) which"
+            },
+            {
+              "case": "gen",
+              "text": "dessen",
+              "gloss": "whose"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The four cases",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Das Kind, das dort spielt, ist müde.",
+                  "green": [
+                    "das"
+                  ]
+                },
+                {
+                  "text": "Das Buch, das ich lese, ist gut.",
+                  "green": [
+                    "das"
+                  ]
+                },
+                {
+                  "text": "Das Kind, dem ich helfe, lacht.",
+                  "green": [
+                    "dem"
+                  ]
+                },
+                {
+                  "text": "Das Kind, dessen Mutter hier ist, weint.",
+                  "green": [
+                    "dessen"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "die-pl",
+          "chip": "die (plural)",
+          "subtitle": "refers to a plural noun",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "die",
+              "gloss": "who / that"
+            },
+            {
+              "case": "acc",
+              "text": "die",
+              "gloss": "whom / that"
+            },
+            {
+              "case": "dat",
+              "text": "denen",
+              "gloss": "(to) whom"
+            },
+            {
+              "case": "gen",
+              "text": "deren",
+              "gloss": "whose"
+            }
+          ],
+          "sections": [
+            {
+              "header": "The four cases",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Die Leute, die dort stehen, sind nett.",
+                  "green": [
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Die Leute, die ich kenne, sind nett.",
+                  "green": [
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Die Leute, denen ich helfe, sind alt.",
+                  "green": [
+                    "denen"
+                  ]
+                },
+                {
+                  "text": "Die Leute, deren Kinder hier sind, warten.",
+                  "green": [
+                    "deren"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "was-wer",
+          "chip": "was / wer",
+          "subtitle": "for 'all/that…' and 'whoever'",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "",
+              "text": "was",
+              "gloss": "that / what — after alles, das, etwas, nichts"
+            },
+            {
+              "case": "",
+              "text": "wer",
+              "gloss": "whoever"
+            }
+          ],
+          "sections": [
+            {
+              "header": "was and wer",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Alles, was ich habe, gehört dir.",
+                  "green": [
+                    "was"
+                  ]
+                },
+                {
+                  "text": "Das, was du sagst, stimmt.",
+                  "green": [
+                    "was"
+                  ]
+                },
+                {
+                  "text": "Wer nicht fragt, bleibt dumm.",
+                  "green": [
+                    "Wer"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indefinite",
+      "label": "Indefinite",
+      "sortOrder": 7,
+      "note": "Pronouns for unspecified people/things. Some decline (man, jemand, jeder); etwas/nichts never change.",
+      "patterns": [
+        {
+          "id": "man",
+          "chip": "man",
+          "subtitle": "people in general (like 'one' / 'you')",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "man",
+              "gloss": "one / you (subject)"
+            },
+            {
+              "case": "acc",
+              "text": "einen",
+              "gloss": "one (object)"
+            },
+            {
+              "case": "dat",
+              "text": "einem",
+              "gloss": "(to) one"
+            }
+          ],
+          "sections": [
+            {
+              "header": "man and its forms",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Man weiß nie.",
+                  "green": [
+                    "Man"
+                  ]
+                },
+                {
+                  "text": "So etwas sieht man selten.",
+                  "green": [
+                    "man"
+                  ]
+                },
+                {
+                  "text": "Das tut einem gut.",
+                  "green": [
+                    "einem"
+                  ]
+                },
+                {
+                  "text": "Hier lässt man einen in Ruhe.",
+                  "green": [
+                    "man",
+                    "einen"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "man = people in general; it declines to einen (acc) and einem (dat)."
+        },
+        {
+          "id": "jemand",
+          "chip": "jemand / niemand",
+          "subtitle": "someone / no one",
+          "sortOrder": 2,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "jemand",
+              "gloss": "someone (niemand = no one)"
+            },
+            {
+              "case": "acc",
+              "text": "jemanden",
+              "gloss": "someone (object)"
+            },
+            {
+              "case": "dat",
+              "text": "jemandem",
+              "gloss": "(to) someone"
+            }
+          ],
+          "sections": [
+            {
+              "header": "someone and no one",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Jemand hat angerufen.",
+                  "green": [
+                    "Jemand"
+                  ]
+                },
+                {
+                  "text": "Ich habe niemanden gesehen.",
+                  "green": [
+                    "niemanden"
+                  ]
+                },
+                {
+                  "text": "Ich habe mit jemandem gesprochen.",
+                  "green": [
+                    "jemandem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "etwas",
+          "chip": "etwas / nichts",
+          "subtitle": "something / nothing (never change)",
+          "sortOrder": 3,
+          "forms": [
+            {
+              "case": "",
+              "text": "etwas",
+              "gloss": "something"
+            },
+            {
+              "case": "",
+              "text": "nichts",
+              "gloss": "nothing"
+            }
+          ],
+          "sections": [
+            {
+              "header": "something and nothing",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Möchtest du etwas trinken?",
+                  "green": [
+                    "etwas"
+                  ]
+                },
+                {
+                  "text": "Ich habe nichts gehört.",
+                  "green": [
+                    "nichts"
+                  ]
+                },
+                {
+                  "text": "Hast du etwas Neues?",
+                  "green": [
+                    "etwas"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jeder",
+          "chip": "jeder / alle",
+          "subtitle": "everyone / all",
+          "sortOrder": 4,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "jeder",
+              "gloss": "each / everyone"
+            },
+            {
+              "case": "acc",
+              "text": "jeden",
+              "gloss": "each (object)"
+            },
+            {
+              "case": "dat",
+              "text": "jedem",
+              "gloss": "(to) each"
+            }
+          ],
+          "sections": [
+            {
+              "header": "each and all",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Jeder kann mitmachen.",
+                  "green": [
+                    "Jeder"
+                  ]
+                },
+                {
+                  "text": "Ich kenne hier jeden.",
+                  "green": [
+                    "jeden"
+                  ]
+                },
+                {
+                  "text": "Ich helfe jedem.",
+                  "green": [
+                    "jedem"
+                  ]
+                },
+                {
+                  "text": "Alle sind schon da.",
+                  "green": [
+                    "Alle"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "einer",
+          "chip": "einer / keiner",
+          "subtitle": "one / none",
+          "sortOrder": 5,
+          "forms": [
+            {
+              "case": "nom",
+              "text": "einer",
+              "gloss": "one (keiner = none)"
+            },
+            {
+              "case": "acc",
+              "text": "einen",
+              "gloss": "one (object)"
+            },
+            {
+              "case": "dat",
+              "text": "einem",
+              "gloss": "(to) one"
+            }
+          ],
+          "sections": [
+            {
+              "header": "one and none",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Einer muss es tun.",
+                  "green": [
+                    "Einer"
+                  ]
+                },
+                {
+                  "text": "Ich habe keinen gesehen.",
+                  "green": [
+                    "keinen"
+                  ]
+                },
+                {
+                  "text": "Gib es einem von ihnen.",
+                  "green": [
+                    "einem"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dawo",
+      "label": "For things (da-/wo-)",
+      "sortOrder": 8,
+      "note": "For PEOPLE use a preposition + pronoun (an ihn). For THINGS use a da-word (daran). Questions use a wo-word (woran).",
+      "patterns": [
+        {
+          "id": "person-thing",
+          "chip": "person vs thing",
+          "subtitle": "the key contrast",
+          "sortOrder": 1,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Same idea, two forms",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich denke an ihn.",
+                  "green": [
+                    "ihn"
+                  ]
+                },
+                {
+                  "text": "Ich denke daran.",
+                  "green": [
+                    "daran"
+                  ]
+                },
+                {
+                  "text": "Ich warte auf sie.",
+                  "green": [
+                    "sie"
+                  ]
+                },
+                {
+                  "text": "Ich warte darauf.",
+                  "green": [
+                    "darauf"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "People: preposition + pronoun. Things: a single da-word."
+        },
+        {
+          "id": "da-words",
+          "chip": "da-words",
+          "subtitle": "for things",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Common da-words",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich bin damit einverstanden.",
+                  "green": [
+                    "damit"
+                  ]
+                },
+                {
+                  "text": "Ich weiß nichts davon.",
+                  "green": [
+                    "davon"
+                  ]
+                },
+                {
+                  "text": "Vielen Dank dafür.",
+                  "green": [
+                    "dafür"
+                  ]
+                },
+                {
+                  "text": "Wir sprechen später darüber.",
+                  "green": [
+                    "darüber"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wo-words",
+          "chip": "wo-words",
+          "subtitle": "in questions",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Asking about things",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Womit kann ich helfen?",
+                  "green": [
+                    "Womit"
+                  ]
+                },
+                {
+                  "text": "Wovon sprichst du?",
+                  "green": [
+                    "Wovon"
+                  ]
+                },
+                {
+                  "text": "Worauf wartest du?",
+                  "green": [
+                    "Worauf"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "Add an r before a vowel: wo + auf = worauf, da + auf = darauf."
+        }
+      ]
+    }
+  ]
+}

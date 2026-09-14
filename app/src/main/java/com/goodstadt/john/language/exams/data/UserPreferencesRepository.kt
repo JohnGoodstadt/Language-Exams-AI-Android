@@ -255,6 +255,18 @@ class UserPreferencesRepository @Inject constructor(
             preferences[PreferenceKeys.USER_HAS_CHOSEN_ENGLISH] = true // Set the flag to true
         }
     }
+
+    /**
+     * Marks the first-launch onboarding choice (English dialect + level, or level only for de/zh) as made,
+     * so [userHasChosenEnglishFlow] is true and the choice sheet never shows again. The English save path
+     * sets this via [saveSelectedLanguageCode]; the level-only flavours have no language to save, so this is
+     * called when the sheet closes so THEY persist it too.
+     */
+    suspend fun setUserHasChosenEnglish(chosen: Boolean = true) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.USER_HAS_CHOSEN_ENGLISH] = chosen
+        }
+    }
     suspend fun saveSelectedLanguageCode(languageCode: String) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.SELECTED_LANGUAGE_CODE] = languageCode

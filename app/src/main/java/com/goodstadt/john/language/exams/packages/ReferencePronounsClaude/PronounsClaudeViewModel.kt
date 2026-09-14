@@ -1,0 +1,80 @@
+package com.goodstadt.john.language.exams.packages.ReferencePronounsClaude
+
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
+import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import timber.log.Timber
+import javax.inject.Inject
+
+sealed interface PronounsClaudeUiState {
+    object Loading : PronounsClaudeUiState
+    data class Success(val sheet: Format6File) : PronounsClaudeUiState
+    data class Error(val message: String) : PronounsClaudeUiState
+}
+
+/**
+ * Drives the fileFormat-6 Pronouns reference screen. Loads the sheet named by the "documentId" nav arg
+ * (e.g. "GermanReferencePronounsClaude") through [ContentRepository.getFormat6Data], and plays example
+ * sentences / table cells through the shared [AudioPlaybackRepository] (same audio waterfall + stats as
+ * every other reference screen).
+ */
+@HiltViewModel
+class PronounsClaudeViewModel @Inject constructor(
+    private val contentRepository: ContentRepository,
+    private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val billingRepository: BillingRepository,
+    savedStateHandle: SavedStateHandle
+) : ViewModel() {
+
+    /** Firestore/bundle doc name for this sheet, from the route arg; falls back to the de sheet. */
+    private val documentId: String =
+        savedStateHandle.get<String>("documentId") ?: "GermanReferencePronounsClaude"
+
+    private val _uiState = MutableStateFlow<PronounsClaudeUiState>(PronounsClaudeUiState.Loading)
+    val uiState: StateFlow<PronounsClaudeUiState> = _uiState.asStateFlow()
+
+    init {
+        load()
+    }
+
+    fun load() {
+        viewModelScope.launch {
+            _uiState.value = PronounsClaudeUiState.Loading
+            contentRepository.getFormat6Data(documentId)
+                .onSuccess { sheet ->
+                    // Sort categories and their item chips by sortOrder for a stable chip order.
+                    val ordered = sheet.copy(
+                        categories = sheet.categories
+                            .sortedBy { it.sortOrder }
+                            .map { c -> c.copy(patterns = c.patterns.sortedBy { it.sortOrder }) }
+                    )
+                    _uiState.value = PronounsClaudeUiState.Success(ordered)
+                }
+                .onFailure { e ->
+                    Timber.e(e, "PronounsClaude: failed to load '$documentId'")
+                    _uiState.value = PronounsClaudeUiState.Error(e.localizedMessage ?: "Failed to load")
+                }
+        }
+    }
+
+    /** Play a sentence (or a single pronoun form) via the shared audio waterfall. */
+    fun play(text: String) {
+        if (text.isBlank()) return
+        viewModelScope.launch {
+            audioPlaybackRepository.playTrackAndGetStatus(
+                sentence = text,
+                level = "Reference",
+                sheetName = documentId,
+                isPremiumUser = billingRepository.isPurchased.value
+            )
+        }
+    }
+}
