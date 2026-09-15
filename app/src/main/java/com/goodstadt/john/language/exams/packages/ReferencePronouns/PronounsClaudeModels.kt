@@ -1,6 +1,23 @@
-package com.goodstadt.john.language.exams.packages.ReferencePronounsClaude
+package com.goodstadt.john.language.exams.packages.ReferencePronouns
 
 import kotlinx.serialization.Serializable
+
+/**
+ * Firestore storage layout for fileFormat-6 sheets. The on-screen result is identical either way - this
+ * only changes how the sheet is shredded into Firestore.
+ *
+ *   true  (Option A, current): TWO collections - `categories -> patterns`. Each pattern document carries
+ *         its `forms` and `sections` (with their `sentences`/`green`) as nested array fields. Fewer docs,
+ *         far fewer read round-trips.
+ *   false (legacy): FOUR collections - `categories -> patterns -> sections -> sentences`. Every sentence
+ *         is its own flat document (easiest to edit one sentence in the console, most docs/reads).
+ *
+ * The uploader and the fetch both read this one flag, so they always agree. To switch back: flip to false,
+ * then re-upload the sheet from the Upload-JSON tool (the uploader wipes the old tree first).
+ */
+object Format6Layout {
+    const val NESTED = true
+}
 
 /**
  * fileFormat 6 - a pattern-focused pronoun reference. Deliberately light on prose: the learner picks a
@@ -8,7 +25,7 @@ import kotlinx.serialization.Serializable
  * isolated declension chain (e.g. ich -> mich -> mir) with a few example sentences, the focused pronoun
  * highlighted in green.
  *
- * Language-agnostic: the SAME UI renders GermanReferencePronounsClaude and EnglishReferencePronounsClaude -
+ * Language-agnostic: the SAME UI renders GermanReferencePronouns and EnglishReferencePronouns -
  * only the bundle/Firestore filename differs. Sentences carry only the text (+ translation); the app
  * TTS-generates and caches the audio. All fields default so a partial sheet still parses.
  */

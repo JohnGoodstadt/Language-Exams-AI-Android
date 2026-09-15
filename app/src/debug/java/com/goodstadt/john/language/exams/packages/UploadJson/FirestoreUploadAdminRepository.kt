@@ -1,8 +1,10 @@
 package com.goodstadt.john.language.exams.packages.UploadJson
 
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
@@ -64,6 +66,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                 0 -> uploadFormat0(docName, root)
                 1 -> uploadFormat1(docName, root) // data[]->wordsAndSentences[]: written as tabs + wordsAndSentences
                 2 -> uploadFormat2(docName, root)
+                6 -> uploadFormat6(docName, root) // pronoun reference: docs + subcollections
                 7, 10 -> uploadFormat7or10(docName, root) // 7 & 10 share the same JSON structure
                 13 -> uploadFormat13(docName, root)
                 else -> Result.failure(UnsupportedOperationException("Upload for fileFormat $fileFormat not implemented yet"))
@@ -100,6 +103,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                     0 -> readFormat0(docName, snapshot)
                     1 -> readFormat1(docName, snapshot)
                     2 -> readFormat2(docName, snapshot)
+                    6 -> readFormat6(docName, snapshot)
                     7, 10 -> readFormat7or10(docName, snapshot)
                     13 -> readFormat13(docName, snapshot)
                     else -> Result.failure(UnsupportedOperationException("Read for fileFormat $fileFormat not implemented yet"))
@@ -358,6 +362,252 @@ class FirestoreUploadAdminRepository @Inject constructor(
             jsonToStorable(obj.get(key))?.let { put(key, it) }
         }
     }
+
+    // ---------------------------------------------------------------- fileFormat 6 (pronoun reference)
+
+    /**
+     * Uploads a fileFormat-6 pronoun sheet as real documents + subcollections so it reads and edits
+     * cleanly in the Firestore console. The exact tree depends on [Format6Layout.NESTED]:
+     *
+     *   NESTED (Option A) - two collections:        legacy - four collections:
+     *   /sheets/<doc>                                /sheets/<doc>
+     *     /categories/<NNN>                            /categories/<NNN>
+     *       /patterns/<NNN>                              /patterns/<NNN>          (+ forms as 3 arrays)
+     *         { forms:    [{case,text,gloss}],             /sections/<NNN>
+     *           sections: [{header,tone,                      /sentences/<NNN>
+     *             sentences:[{text,green[]}]}] }
+     *
+     * Doc ids are a zero-padded index (authoring order); nested arrays keep their own order.
+     */
+    private suspend fun uploadFormat6(docName: String, root: JSONObject): Result<Unit> = try {
+        val sheetRef = sheetDoc(docName)
+
+        // 1. Wipe any previous tree so a re-upload is clean (clearFormat6 handles either layout).
+        clearFormat6(sheetRef)
+
+        // 2. Sheet header.
+        sheetRef.set(
+            hashMapOf<String, Any>(
+                FIELD_FILE_FORMAT to root.optInt(FIELD_FILE_FORMAT, 6),
+                "location" to root.optInt("location", 0),
+                "sheetName" to docName,
+                "title" to root.optString("title", ""),
+                "updatedDate" to root.optInt("updatedDate", 0),
+                FIELD_UPLOAD_DATE to FieldValue.serverTimestamp()
+            )
+        ).await()
+
+        // 3. Content tree - layout selected by the shared flag.
+        if (Format6Layout.NESTED) writeFormat6Nested(docName, sheetRef, root)
+        else writeFormat6Legacy(docName, sheetRef, root)
+
+        Result.success(Unit)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: uploadFormat6 '$docName' failed")
+        Result.failure(e)
+    }
+
+    /**
+     * Option A: TWO collections (categories -> patterns). Each pattern document carries its `forms` and
+     * `sections` (with nested `sentences`/`green`) as array-of-map fields, so there are no sections /
+     * sentences subcollections.
+     */
+    private suspend fun writeFormat6Nested(docName: String, sheetRef: DocumentReference, root: JSONObject) {
+        var batch = firestore.batch()
+        var ops = 0
+        suspend fun stage(ref: DocumentReference, data: Map<String, Any>) {
+            batch.set(ref, data)
+            if (++ops >= BATCH_LIMIT) { batch.commit().await(); batch = firestore.batch(); ops = 0 }
+        }
+
+        var patternCount = 0
+        var sentenceCount = 0
+        val categories = root.optJSONArray("categories") ?: JSONArray()
+        for (ci in 0 until categories.length()) {
+            val cat = categories.getJSONObject(ci)
+            val catRef = sheetRef.collection(CATEGORIES).document(pad(ci))
+            stage(catRef, hashMapOf<String, Any>(
+                "id" to cat.optString("id", ""),
+                "label" to cat.optString("label", ""),
+                "sortOrder" to cat.optInt("sortOrder", ci),
+                "note" to cat.optString("note", "")
+            ))
+
+            val patterns = cat.optJSONArray("patterns") ?: JSONArray()
+            for (pi in 0 until patterns.length()) {
+                val pat = patterns.getJSONObject(pi)
+                val patRef = catRef.collection(PATTERNS).document(pad(pi))
+
+                // forms -> array of maps [{case, text, gloss}, …]
+                val formsJson = pat.optJSONArray("forms") ?: JSONArray()
+                val forms = (0 until formsJson.length()).map { fi ->
+                    val f = formsJson.getJSONObject(fi)
+                    hashMapOf<String, Any>(
+                        "case" to f.optString("case", ""),
+                        "text" to f.optString("text", ""),
+                        "gloss" to f.optString("gloss", "")
+                    )
+                }
+
+                // sections -> array of maps, each with a nested sentences array of maps [{text, green[]}, …]
+                val sectionsJson = pat.optJSONArray("sections") ?: JSONArray()
+                val sections = (0 until sectionsJson.length()).map { si ->
+                    val sec = sectionsJson.getJSONObject(si)
+                    val sentencesJson = sec.optJSONArray("sentences") ?: JSONArray()
+                    val sentences = (0 until sentencesJson.length()).map { ti ->
+                        val sen = sentencesJson.getJSONObject(ti)
+                        sentenceCount++
+                        hashMapOf<String, Any>(
+                            "text" to sen.optString("text", ""),
+                            "green" to jsonStringArray(sen.optJSONArray("green"))
+                        )
+                    }
+                    hashMapOf<String, Any>(
+                        "header" to sec.optString("header", ""),
+                        "tone" to sec.optString("tone", "normal"),
+                        "sentences" to sentences
+                    )
+                }
+
+                stage(patRef, hashMapOf<String, Any>(
+                    "id" to pat.optString("id", ""),
+                    "chip" to pat.optString("chip", ""),
+                    "subtitle" to pat.optString("subtitle", ""),
+                    "sortOrder" to pat.optInt("sortOrder", pi),
+                    "note" to pat.optString("note", ""),
+                    "forms" to forms,
+                    "sections" to sections
+                ))
+                patternCount++
+            }
+        }
+        if (ops > 0) batch.commit().await()
+        Timber.i("UploadAdmin: uploaded '$docName' (fileFormat 6, nested): ${categories.length()} categories, $patternCount patterns, $sentenceCount sentences")
+    }
+
+    /**
+     * Legacy: FOUR collections (categories -> patterns -> sections -> sentences). Every sentence is its
+     * own flat document; forms are three parallel string arrays on the pattern doc.
+     */
+    private suspend fun writeFormat6Legacy(docName: String, sheetRef: DocumentReference, root: JSONObject) {
+        var batch = firestore.batch()
+        var ops = 0
+        suspend fun stage(ref: DocumentReference, data: Map<String, Any>) {
+            batch.set(ref, data)
+            if (++ops >= BATCH_LIMIT) { batch.commit().await(); batch = firestore.batch(); ops = 0 }
+        }
+
+        var patternCount = 0
+        var sentenceCount = 0
+        val categories = root.optJSONArray("categories") ?: JSONArray()
+        for (ci in 0 until categories.length()) {
+            val cat = categories.getJSONObject(ci)
+            val catRef = sheetRef.collection(CATEGORIES).document(pad(ci))
+            stage(catRef, hashMapOf<String, Any>(
+                "id" to cat.optString("id", ""),
+                "label" to cat.optString("label", ""),
+                "sortOrder" to cat.optInt("sortOrder", ci),
+                "note" to cat.optString("note", "")
+            ))
+
+            val patterns = cat.optJSONArray("patterns") ?: JSONArray()
+            for (pi in 0 until patterns.length()) {
+                val pat = patterns.getJSONObject(pi)
+                val patRef = catRef.collection(PATTERNS).document(pad(pi))
+                val forms = pat.optJSONArray("forms") ?: JSONArray()
+                val formCases = ArrayList<String>(forms.length())
+                val formTexts = ArrayList<String>(forms.length())
+                val formGlosses = ArrayList<String>(forms.length())
+                for (fi in 0 until forms.length()) {
+                    val f = forms.getJSONObject(fi)
+                    formCases.add(f.optString("case", ""))
+                    formTexts.add(f.optString("text", ""))
+                    formGlosses.add(f.optString("gloss", ""))
+                }
+                stage(patRef, hashMapOf<String, Any>(
+                    "id" to pat.optString("id", ""),
+                    "chip" to pat.optString("chip", ""),
+                    "subtitle" to pat.optString("subtitle", ""),
+                    "sortOrder" to pat.optInt("sortOrder", pi),
+                    "note" to pat.optString("note", ""),
+                    "formCases" to formCases,
+                    "formTexts" to formTexts,
+                    "formGlosses" to formGlosses
+                ))
+                patternCount++
+
+                val sections = pat.optJSONArray("sections") ?: JSONArray()
+                for (si in 0 until sections.length()) {
+                    val sec = sections.getJSONObject(si)
+                    val secRef = patRef.collection(SECTIONS).document(pad(si))
+                    stage(secRef, hashMapOf<String, Any>(
+                        "index" to si,
+                        "header" to sec.optString("header", ""),
+                        "tone" to sec.optString("tone", "normal")
+                    ))
+
+                    val sentences = sec.optJSONArray("sentences") ?: JSONArray()
+                    for (ti in 0 until sentences.length()) {
+                        val sen = sentences.getJSONObject(ti)
+                        val senRef = secRef.collection(SENTENCES).document(pad(ti))
+                        stage(senRef, hashMapOf<String, Any>(
+                            "index" to ti,
+                            "text" to sen.optString("text", ""),
+                            "green" to jsonStringArray(sen.optJSONArray("green"))
+                        ))
+                        sentenceCount++
+                    }
+                }
+            }
+        }
+        if (ops > 0) batch.commit().await()
+        Timber.i("UploadAdmin: uploaded '$docName' (fileFormat 6, legacy): ${categories.length()} categories, $patternCount patterns, $sentenceCount sentences")
+    }
+
+    /** Reads back a fileFormat-6 sheet's subcollection tree and summarises it for a sanity check. */
+    private suspend fun readFormat6(
+        docName: String,
+        sheetSnap: DocumentSnapshot
+    ): Result<String> = try {
+        val sheetName = sheetSnap.getString("sheetName") ?: docName
+        val categoriesSnap = sheetDoc(docName).collection(CATEGORIES).get().await()
+        var patternCount = 0
+        for (cat in categoriesSnap.documents) {
+            patternCount += cat.reference.collection(PATTERNS).get().await().size()
+        }
+        val uploaded = formatUploadDate(sheetSnap.get(FIELD_UPLOAD_DATE)) ?: "?"
+        val summary = "'$docName' OK (fileFormat 6): sheetName='$sheetName', " +
+            "${categoriesSnap.size()} categories, $patternCount patterns, uploaded $uploaded"
+        Timber.i("UploadAdmin: readFormat6 -> $summary")
+        Result.success(summary)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: readFormat6 '$docName' failed")
+        Result.failure(e)
+    }
+
+    /** Recursively deletes a fileFormat-6 sheet's categories -> patterns -> sections -> sentences tree. */
+    private suspend fun clearFormat6(sheetRef: DocumentReference) {
+        for (cat in sheetRef.collection(CATEGORIES).get().await().documents) {
+            for (pat in cat.reference.collection(PATTERNS).get().await().documents) {
+                for (sec in pat.reference.collection(SECTIONS).get().await().documents) {
+                    val sentences = sec.reference.collection(SENTENCES).get().await()
+                    var batch = firestore.batch()
+                    var ops = 0
+                    for (sen in sentences.documents) {
+                        batch.delete(sen.reference)
+                        if (++ops >= BATCH_LIMIT) { batch.commit().await(); batch = firestore.batch(); ops = 0 }
+                    }
+                    if (ops > 0) batch.commit().await()
+                    sec.reference.delete().await()
+                }
+                pat.reference.delete().await()
+            }
+            cat.reference.delete().await()
+        }
+    }
+
+    /** Zero-padded index used as a subcollection doc id so a plain get() returns docs in authoring order. */
+    private fun pad(index: Int): String = "%03d".format(index)
 
     // ---------------------------------------------------------------- fileFormat 0 (vocab)
 
@@ -928,6 +1178,8 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val EXAM_SHEETS = "exam_sheets"
         private const val SHEETS = "sheets"
         private const val CATEGORIES = "categories"
+        private const val PATTERNS = "patterns"   // fileFormat-6: under a category
+        private const val SENTENCES = "sentences" // fileFormat-6: under a section
         private const val ENTRIES = "entries"
         private const val POOL = "pool"
         private const val CURRENT = "current"
@@ -937,6 +1189,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val SECTIONS = "sections"
         private const val FIELD_FILE_FORMAT = "fileformat"
         private const val FIELD_UPLOAD_DATE = "uploadDate"
+
         private const val DAILY_WORD_DICTIONARY = "DailyWordDictionary"
         private const val BATCH_LIMIT = 400 // Firestore hard limit is 500 ops per batch
     }

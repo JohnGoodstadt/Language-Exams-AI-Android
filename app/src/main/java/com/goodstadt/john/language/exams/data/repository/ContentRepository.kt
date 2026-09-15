@@ -5,23 +5,23 @@ import com.goodstadt.john.language.exams.config.LanguageConfig.mapLogicalToResou
 import com.goodstadt.john.language.exams.config.LanguageConfig.normalizeToLogicalName
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AudioPlayerService
+import com.goodstadt.john.language.exams.data.GrammarSheetMapping
+import com.goodstadt.john.language.exams.data.ReadinessAuditSheetMapping
+import com.goodstadt.john.language.exams.data.ReferenceQuizSheetMapping
+import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
+import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0File
-import com.goodstadt.john.language.exams.models.Format2File
-import com.goodstadt.john.language.exams.models.Format7or10File
-import com.goodstadt.john.language.exams.models.WordQuizRoot
-import com.goodstadt.john.language.exams.data.GrammarSheetMapping
-import com.goodstadt.john.language.exams.data.ReadinessAuditSheetMapping
-import com.goodstadt.john.language.exams.data.ReferenceQuizSheetMapping
-import com.goodstadt.john.language.exams.data.UsageQuizSheetMapping
-import com.goodstadt.john.language.exams.data.SectionQuizSheetMapping
-import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.Format1File
+import com.goodstadt.john.language.exams.models.Format2File
+import com.goodstadt.john.language.exams.models.Format3File
+import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.TabDetails
+import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -135,7 +135,7 @@ class ContentRepository @Inject constructor(
     private val format3Cache = mutableMapOf<String, Format3File>()
     private val format7or10Cache = mutableMapOf<String, Format7or10File>()
     private val format13Cache = mutableMapOf<String, WordQuizRoot>()
-    private val format6Cache = mutableMapOf<String, com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File>()
+    private val format6Cache = mutableMapOf<String, com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File>()
 
     //Problem was getVocabData() called twice sub millisecond
     // ✅ ADDED: A map to store ongoing fetch operations.
@@ -585,46 +585,85 @@ class ContentRepository @Inject constructor(
     }
 
     // ---------------------------------------------------------------------------------------------
-    // fileFormat 6 - the "teach a grammar topic clearly" sheet (Pronouns). Bundle-first for now; the
-    // Firestore path can be added alongside the others later. [name] is the logical doc name, e.g.
-    // "GermanReferencePronounsClaude".
+    // fileFormat 6 - the "teach a grammar topic clearly" sheet (Pronouns). Mirrors the other formats:
+    // version check -> memory cache -> ExamSheetRepository (disk cache / Firestore) -> res/raw bundle
+    // fallback. [name] is the logical doc name, e.g. "GermanReferencePronouns".
     // ---------------------------------------------------------------------------------------------
 
-    /** Memory cache -> bundled asset (Quizzes/Reference/<name>.json). Firestore hook can be added later. */
     suspend fun getFormat6Data(
         name: String
-    ): Result<com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File> =
+    ): Result<com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File> =
         withContext(Dispatchers.IO) {
-            format6Cache[name]?.let {
-                Timber.d("ContentRepo: Returning '$name' (Format6) from MEMORY CACHE.")
-                return@withContext Result.success(it)
+            val logicalName = name
+            try {
+                // 1. Version check (a bumped remote version forces a re-fetch past the caches).
+                val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+                val remoteVersion = remoteVersions[logicalName] ?: 1
+                val localVersion = appConfigRepository.getLocalVersion(logicalName)
+                val forceRefresh = remoteVersion > localVersion
+                Timber.d("ContentRepo: Sheet '$logicalName' (Format6) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+                // 2. In-memory cache.
+                if (!forceRefresh) {
+                    format6Cache[logicalName]?.let {
+                        Timber.d("ContentRepo: Returning '$logicalName' (Format6) from MEMORY CACHE.")
+                        return@withContext Result.success(it)
+                    }
+                }
+
+                // 3. Firestore (disk cache -> network) via ExamSheetRepository. This is what makes a
+                //    fresh install auto-load the uploaded sheet the first time the screen is opened.
+                val result = examSheetRepository.getFormat6Sheet(logicalName, forceRefresh = forceRefresh)
+                if (result.isSuccess) {
+                    val file = result.getOrThrow()
+                    format6Cache[logicalName] = file
+                    if (forceRefresh) appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                    return@withContext result
+                }
+
+                // 4. Bundle fallback: fileFormat-6 pronoun sheets ship in res/raw (snake_case).
+                Timber.w(result.exceptionOrNull(), "ContentRepo: Firestore failed for '$logicalName' (Format6); trying bundle.")
+                val rawName = format6BundleRawName(logicalName)
+                    ?: return@withContext Result.failure(Exception("No bundle mapping for Format6 sheet '$logicalName'"))
+                val bundleResult = loadBundledFormat6DataFromRaw(rawName)
+                bundleResult.getOrNull()?.let { format6Cache[logicalName] = it }
+                return@withContext bundleResult
+
+            } catch (e: Exception) {
+                Timber.e(e, "ContentRepo: CRITICAL error in getFormat6Data for '$logicalName'.")
+                FirebaseCrashlytics.getInstance()
+                    .recordException(Exception("ContentRepository.getFormat6Data() failed for $name", e))
+                return@withContext Result.failure(e)
             }
-            val assetPath = format6BundleAssetPath(name)
-            val result = loadBundledFormat6Data(assetPath)
-            result.getOrNull()?.let { format6Cache[name] = it }
-            result
         }
 
-    /** Logical doc name -> bundled asset path. fileFormat-6 sheets live under Quizzes/Reference/. */
-    private fun format6BundleAssetPath(logicalName: String): String =
-        "Quizzes/Reference/$logicalName.json"
+    /** Logical doc name -> res/raw resource base name. fileFormat-6 sheets ship in res/raw (per flavour). */
+    private fun format6BundleRawName(logicalName: String): String? = when (logicalName) {
+        "GermanReferencePronouns" -> "german_reference_pronouns"
+        "EnglishReferencePronouns" -> "english_reference_pronouns"
+        else -> null
+    }
 
-    /** Read + decode a fileFormat-6 sheet from the bundled assets. */
-    fun loadBundledFormat6Data(
-        assetPath: String
-    ): Result<com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File> {
+    /** Read + decode a fileFormat-6 sheet from res/raw (the doc's bundle fallback). */
+    private fun loadBundledFormat6DataFromRaw(
+        rawName: String
+    ): Result<com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File> {
         return try {
-            Timber.v("Format6: Loading '$assetPath' from assets.")
-            val jsonString = context.assets.open(assetPath).bufferedReader().use { it.readText() }
+            val resourceId = context.resources.getIdentifier(rawName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(Exception("Resource file not found in bundle: $rawName.json"))
+            }
+            Timber.v("Format6: Loading '$rawName' from res/raw.")
+            val jsonString = context.resources.openRawResource(resourceId).bufferedReader().use { it.readText() }
             Result.success(
-                jsonParser.decodeFromString<com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.Format6File>(
+                jsonParser.decodeFromString<com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File>(
                     jsonString
                 )
             )
         } catch (e: Exception) {
-            Timber.e(e, "Format6: bundle asset not found / failed to parse: $assetPath")
+            Timber.e(e, "Format6: res/raw not found / failed to parse: $rawName")
             FirebaseCrashlytics.getInstance()
-                .recordException(Exception("ContentRepository.loadBundledFormat6Data() failed for $assetPath", e))
+                .recordException(Exception("ContentRepository.loadBundledFormat6DataFromRaw() failed for $rawName", e))
             Result.failure(e)
         }
     }

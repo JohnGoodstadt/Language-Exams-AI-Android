@@ -34,11 +34,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounsReferenceDestination
-import com.goodstadt.john.language.exams.packages.ReferencePronounsClaude.PronounsClaudeScreen
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounsClaudeScreen
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsScreen
 import com.goodstadt.john.language.exams.screens.Format1.Format1Screen
@@ -428,16 +426,6 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         Format3GroupedScreen()
                     }
 
-                    // Destination for `ScreenType.FORMAT_5_SCREEN` (Pronouns reference). The route carries
-                    // the Firestore doc id, but the destination resolves its sheet from the flavour language
-                    // tag, so we just hand it the flavour.
-                    composable(
-                        route = RefScreen.Format5.route, // "format5_screen/{documentId}"
-                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
-                    ) {
-                        PronounsReferenceDestination(languageTag = BuildConfig.FLAVOR)
-                    }
-
                     // Destination for `ScreenType.FORMAT_6_SCREEN` (Pronouns "Claude" teaching screen). The
                     // ViewModel reads the "documentId" nav arg to load the right fileFormat-6 sheet.
                     composable(
@@ -447,16 +435,6 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         PronounsClaudeScreen()
                     }
 
-                    composable(
-                        route = RefScreen.Format5.route,                 // "format5_screen/{documentId}"
-                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
-                    ) {
-                        PronounsReferenceDestination(languageTag = BuildConfig.FLAVOR)
-                    }
-
-//                    composable(RefScreen.ReadinessAudit.route) {
-//                        ReadinessAuditScreen()
-//                    }
                 }
             } //: Not Unknown type
         } //: is not empty

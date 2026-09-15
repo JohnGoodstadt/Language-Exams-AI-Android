@@ -6,14 +6,9 @@ import android.os.Build
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
-import com.goodstadt.john.language.exams.models.SaveReminder
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.ui.draw.clip
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -26,6 +21,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
@@ -34,6 +30,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -67,15 +64,18 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -85,17 +85,18 @@ import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.SaveReminder
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.packages.SavedPractice.SavedInfoSheetContent
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabQuizScreen
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
-import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
@@ -341,7 +342,12 @@ fun CategoryTabScreen(
                 // --- Success State ---
                 else if (uiState is CategoryTabUiState.Success) {
                     val state = uiState as CategoryTabUiState.Success
-                    var selectedChipTitle by remember(menuItems) {
+                    // rememberSaveable (not plain remember) so the highlighted sub-tab survives leaving this
+                    // tab (e.g. to Reference) and coming back - matching the LazyColumn scroll position, which
+                    // is likewise preserved. Plain remember() reset it to the first chip on every re-entry even
+                    // though the list still showed the old section. Still keyed on menuItems so it resets to
+                    // the first chip if the category set itself changes (e.g. a different exam level is loaded).
+                    var selectedChipTitle by rememberSaveable(menuItems) {
                         mutableStateOf(
                             menuItems.firstOrNull() ?: ""
                         )

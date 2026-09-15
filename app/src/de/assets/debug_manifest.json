@@ -1,126 +1,119 @@
 {
-	"sheetRegistry": {
-		"quiz": {
-			"title": "Quiz zur Verwendung",
-			"sheetDataType": "fixed",
-			"screenType": "FixedScreen"
-		},
-		"vocab_dashboard": {
-			"title": "Vokabelquiz",
-			"sheetDataType": "fixed",
-			"screenType": "VocabDashboard"
-		},
-		"conjugations": {
-			"title": "Konjugationen",
-			"sheetDataType": "fixed",
-			"screenType": "FixedScreen"
-		},
-		"GermanPrepositions": {
-			"title": "Präpositionen",
-			"sheetDataType": "VocabFile",
-			"screenType": "VocabScreen",
-			"firestoreDocumentId": "GermanPrepositions"
-		},
-		"AdjectivesGroup": {
-			"title": "Adjektive",
-			"screenType": "GroupedVocabScreen",
-			"sheetDataType": "VocabFile",
-			"subTabs": [
-				{
-					"title": "Basic",
-					"firestoreDocumentId": "GermanA1Adjectives",
-					"sheetDataType": "VocabFile"
-				},
-				{
-					"title": "Intermediate",
-					"firestoreDocumentId": "GermanA2Adjectives",
-					"sheetDataType": "VocabFile"
-				},
-				{
-					"title": "Upper",
-					"firestoreDocumentId": "GermanB1Adjectives",
-					"sheetDataType": "VocabFile"
-				},
-				{
-					"title": "Advanced",
-					"firestoreDocumentId": "GermanB2Adjectives",
-					"sheetDataType": "VocabFile"
-				}
-			]
-		},
-		"GermanSoundsTheSame": {
-			"title": "Gleich klingende Wörter.",
-			"sheetDataType": "Format1",
-			"screenType": "Format1Screen",
-			"firestoreDocumentId": "GermanSoundsTheSame"
-		},
-		"PairsGroup": {
-			"title": "Wortpaare",
-			"screenType": "GroupedFormat2Screen",
-			"sheetDataType": "Format2",
-			"subTabs": [
-				{
-					"title": "Kennen vs Wissen",
-					"firestoreDocumentId": "GermanKennenWissen",
-					"sheetDataType": "Format2",
-					"screenType": "Format2Screen"
-				},
-				{
-					"title": "Fragen vs Bitten",
-					"firestoreDocumentId": "GermanFragenBitten",
-					"sheetDataType": "Format2",
-					"screenType": "Format2Screen"
-				},
-				{
-					"title": "Bringen vs Holen",
-					"firestoreDocumentId": "GermanBringenHolen",
-					"sheetDataType": "Format2",
-					"screenType": "Format2Screen"
-				},
-				{
-					"title": "Hoeren vs Zuhoeren",
-					"firestoreDocumentId": "GermanHoerenZuhoeren",
-					"sheetDataType": "Format2",
-					"screenType": "Format2Screen"
-				}
-			]
-		},
-		"GermanReferencePronouns": {
-			"title": "Personal Pronouns",
-			"sheetDataType": "Format5",
-			"screenType": "Format5Screen",
-			"firestoreDocumentId": "GermanReferencePronouns"
-		},
-		"GermanReferencePronounsClaude": {
-			"title": "Pronouns (Claude)",
-			"sheetDataType": "Format6",
-			"screenType": "Format6Screen",
-			"firestoreDocumentId": "GermanReferencePronounsClaude"
-		}
-	},
-	"layouts": {
-		"referenceTab": {
-			"order": [
-				"quiz",
-				"vocab_dashboard",
-				"conjugations",
-				"GermanPrepositions",
-				"SpanishLanguage",
-				"AdjectivesGroup",
-				"GermanReferencePronouns",
-				"GermanReferencePronounsClaude",
-				"GermanSoundsTheSame",
-				"PairsGroup"
-			]
-		},
-		"meTab": {
-			"order": [
-				"focusing",
-				"settings",
-				"vocabulary",
-				"progress",
-				"paragraph"
-			]
-		}
-	}
+  "sheetRegistry": {
+    "quiz": {
+      "title": "Quiz zur Verwendung",
+      "sheetDataType": "fixed",
+      "screenType": "FixedScreen"
+    },
+    "vocab_dashboard": {
+      "title": "Vokabelquiz",
+      "sheetDataType": "fixed",
+      "screenType": "VocabDashboard"
+    },
+    "conjugations": {
+      "title": "Konjugationen",
+      "sheetDataType": "fixed",
+      "screenType": "FixedScreen"
+    },
+    "GermanPrepositions": {
+      "title": "Präpositionen",
+      "sheetDataType": "VocabFile",
+      "screenType": "VocabScreen",
+      "firestoreDocumentId": "GermanPrepositions"
+    },
+    "AdjectivesGroup": {
+      "title": "Adjektive",
+      "screenType": "GroupedVocabScreen",
+      "sheetDataType": "VocabFile",
+      "subTabs": [
+        {
+          "title": "Basic",
+          "firestoreDocumentId": "GermanA1Adjectives",
+          "sheetDataType": "VocabFile"
+        },
+        {
+          "title": "Intermediate",
+          "firestoreDocumentId": "GermanA2Adjectives",
+          "sheetDataType": "VocabFile"
+        },
+        {
+          "title": "Upper",
+          "firestoreDocumentId": "GermanB1Adjectives",
+          "sheetDataType": "VocabFile"
+        },
+        {
+          "title": "Advanced",
+          "firestoreDocumentId": "GermanB2Adjectives",
+          "sheetDataType": "VocabFile"
+        }
+      ]
+    },
+    "GermanSoundsTheSame": {
+      "title": "Gleich klingende Wörter.",
+      "sheetDataType": "Format1",
+      "screenType": "Format1Screen",
+      "firestoreDocumentId": "GermanSoundsTheSame"
+    },
+    "PairsGroup": {
+      "title": "Wortpaare",
+      "screenType": "GroupedFormat2Screen",
+      "sheetDataType": "Format2",
+      "subTabs": [
+        {
+          "title": "Kennen vs Wissen",
+          "firestoreDocumentId": "GermanKennenWissen",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Fragen vs Bitten",
+          "firestoreDocumentId": "GermanFragenBitten",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Bringen vs Holen",
+          "firestoreDocumentId": "GermanBringenHolen",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Hoeren vs Zuhoeren",
+          "firestoreDocumentId": "GermanHoerenZuhoeren",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        }
+      ]
+    },
+    "GermanReferencePronouns": {
+      "title": "Pronomen",
+      "sheetDataType": "Format6",
+      "screenType": "Format6Screen",
+      "firestoreDocumentId": "GermanReferencePronouns"
+    }
+  },
+  "layouts": {
+    "referenceTab": {
+      "order": [
+        "quiz",
+        "vocab_dashboard",
+        "conjugations",
+        "GermanPrepositions",
+        "SpanishLanguage",
+        "AdjectivesGroup",
+        "GermanReferencePronouns",
+        "GermanSoundsTheSame",
+        "PairsGroup"
+      ]
+    },
+    "meTab": {
+      "order": [
+        "focusing",
+        "settings",
+        "vocabulary",
+        "progress",
+        "paragraph"
+      ]
+    }
+  }
 }

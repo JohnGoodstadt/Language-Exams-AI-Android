@@ -5,6 +5,13 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultDownloadSheet
 import com.goodstadt.john.language.exams.models.Category
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.ExampleSection
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounCategory
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounForm
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounPattern
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSentence
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Format13SectionDTO
@@ -32,6 +39,7 @@ import com.goodstadt.john.language.exams.models.WordQuizSWordsState
 import com.goodstadt.john.language.exams.models.WordQuizSections
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -568,6 +576,209 @@ class ExamSheetRepository @Inject constructor(
             updatedDate = (header.get("updatedDate") as? com.google.firebase.Timestamp)?.toDate()?.time ?: 0L,
             location = (header.get("location") as? Number)?.toInt() ?: 0,
             data = lists
+        )
+    }
+
+    // ---------------- fileFormat 6 (pronoun reference -> Format6File) ----------------
+    //
+    // Stored as real documents + subcollections (so the content reads and edits cleanly in the Firestore
+    // console), mirroring the JSON's nesting:
+    //
+    //   /sheets/<sheet>                       (header: fileformat, location, sheetName, title, updatedDate)
+    //     /categories/<NNN>                   (id, label, sortOrder, note)
+    //       /patterns/<NNN>                   (id, chip, subtitle, sortOrder, note, + forms as three
+    //                                           parallel string arrays: formCases/formTexts/formGlosses)
+    //         /sections/<NNN>                 (index, header, tone)
+    //           /sentences/<NNN>              (index, text, green: string array)
+    //
+    // Doc ids are a zero-padded index so a plain get() returns them already in authoring order; sections
+    // and sentences also carry an `index` field and are sorted by it (categories/patterns are re-sorted by
+    // the ViewModel on their sortOrder). The whole tree is read back and reassembled into a Format6File.
+
+    suspend fun getFormat6Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format6File> {
+        return try {
+            // a. Disk cache first (unless forcing a refresh).
+            if (!forceRefresh) {
+                readFormat6SheetFromCache(sheet_name)?.let { cachedFile ->
+                    Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format6) from disk cache.")
+                    return Result.success(cachedFile)
+                }
+            }
+            // b. Reassemble the sheet from Firestore subcollections, then cache to disk (as JSON).
+            val file = downloadFormat6(sheet_name)
+            val cacheFile = getCacheFilePointer(sheet_name)
+            cacheFile.writeText(jsonParser.encodeToString(Format6File.serializer(), file))
+            Timber.i("ExamSheetRepo: Fetched and cached '$sheet_name' (Format6).")
+            Result.success(file)
+        } catch (e: Exception) {
+            Timber.w(e, "ExamSheetRepo: getFormat6Sheet failed for '$sheet_name'.")
+            Result.failure(e)
+        }
+    }
+
+    private suspend fun readFormat6SheetFromCache(logicalName: String): Format6File? =
+        withContext(Dispatchers.IO) {
+            val file = getCacheFilePointer(logicalName)
+            if (!file.exists()) return@withContext null
+            return@withContext try {
+                jsonParser.decodeFromString<Format6File>(file.readText())
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to read Format6 from disk cache for '$logicalName'")
+                null
+            }
+        }
+
+    /** Reads a stringList field (Firestore returns it as a List<*>). */
+    private fun DocumentSnapshot.stringList(field: String): List<String> =
+        stringListFrom(get(field))
+
+    private fun stringListFrom(value: Any?): List<String> =
+        (value as? List<*>)?.map { it?.toString() ?: "" } ?: emptyList()
+
+    /** Selects the storage layout - see [com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout]. */
+    private suspend fun downloadFormat6(examName: String): Format6File =
+        if (Format6Layout.NESTED) downloadFormat6Nested(examName) else downloadFormat6Legacy(examName)
+
+    /**
+     * Option A: reads TWO collections (`categories -> patterns`) and unpacks each pattern's `forms` and
+     * `sections` (with nested `sentences`/`green`) from array fields on the pattern document. Far fewer
+     * reads than the legacy tree - one query per category, and the arrays carry their own order.
+     */
+    private suspend fun downloadFormat6Nested(examName: String): Format6File = coroutineScope {
+        val sheetRef = firestore.collection(fb.global).document(fb.exam_sheets)
+            .collection("sheets").document(examName)
+
+        val header = sheetRef.get().await()
+        if (!header.exists()) throw Exception("Root document '$examName' (Format6) not found.")
+
+        val categories = sheetRef.collection("categories").get().await().documents.map { catDoc ->
+            async(Dispatchers.IO) {
+                val patterns = catDoc.reference.collection("patterns").get().await().documents.map { patDoc ->
+                    val forms = (patDoc.get("forms") as? List<*>).orEmpty().mapNotNull { it as? Map<*, *> }
+                        .map { f ->
+                            PronounForm(
+                                case = f["case"]?.toString() ?: "",
+                                text = f["text"]?.toString() ?: "",
+                                gloss = f["gloss"]?.toString() ?: ""
+                            )
+                        }
+                    val sections = (patDoc.get("sections") as? List<*>).orEmpty().mapNotNull { it as? Map<*, *> }
+                        .map { s ->
+                            val sentences = (s["sentences"] as? List<*>).orEmpty().mapNotNull { it as? Map<*, *> }
+                                .map { sen ->
+                                    PronounSentence(
+                                        text = sen["text"]?.toString() ?: "",
+                                        green = stringListFrom(sen["green"])
+                                    )
+                                }
+                            ExampleSection(
+                                header = s["header"]?.toString() ?: "",
+                                tone = s["tone"]?.toString() ?: "normal",
+                                sentences = sentences
+                            )
+                        }
+                    PronounPattern(
+                        id = patDoc.getString("id") ?: "",
+                        chip = patDoc.getString("chip") ?: "",
+                        subtitle = patDoc.getString("subtitle") ?: "",
+                        sortOrder = (patDoc.getLong("sortOrder") ?: 0L).toInt(),
+                        forms = forms,
+                        note = patDoc.getString("note") ?: "",
+                        sections = sections
+                    )
+                }
+                PronounCategory(
+                    id = catDoc.getString("id") ?: "",
+                    label = catDoc.getString("label") ?: "",
+                    sortOrder = (catDoc.getLong("sortOrder") ?: 0L).toInt(),
+                    note = catDoc.getString("note") ?: "",
+                    patterns = patterns
+                )
+            }
+        }.awaitAll()
+
+        Format6File(
+            fileformat = (header.get("fileformat") as? Number)?.toInt() ?: 6,
+            location = (header.get("location") as? Number)?.toInt() ?: 0,
+            sheetname = header.getString("sheetName") ?: examName,
+            title = header.getString("title") ?: "",
+            updatedDate = (header.get("updatedDate") as? Number)?.toLong() ?: 0L,
+            categories = categories
+        )
+    }
+
+    /**
+     * Legacy: reassembles the sheet from its `categories -> patterns -> sections -> sentences`
+     * subcollection tree. Fans the reads out level by level (async) so the round-trips overlap.
+     */
+    private suspend fun downloadFormat6Legacy(examName: String): Format6File = coroutineScope {
+        val sheetRef = firestore.collection(fb.global).document(fb.exam_sheets)
+            .collection("sheets").document(examName)
+
+        val header = sheetRef.get().await()
+        if (!header.exists()) throw Exception("Root document '$examName' (Format6) not found.")
+
+        val categories = sheetRef.collection("categories").get().await().documents.map { catDoc ->
+            async(Dispatchers.IO) {
+                val patterns = catDoc.reference.collection("patterns").get().await().documents.map { patDoc ->
+                    async(Dispatchers.IO) {
+                        val sections = patDoc.reference.collection("sections").get().await().documents.map { secDoc ->
+                            async(Dispatchers.IO) {
+                                val sentences = secDoc.reference.collection("sentences").get().await().documents
+                                    .sortedBy { it.getLong("index") ?: 0L }
+                                    .map { senDoc ->
+                                        PronounSentence(
+                                            text = senDoc.getString("text") ?: "",
+                                            green = senDoc.stringList("green")
+                                        )
+                                    }
+                                ExampleSection(
+                                    header = secDoc.getString("header") ?: "",
+                                    tone = secDoc.getString("tone") ?: "normal",
+                                    sentences = sentences
+                                ) to (secDoc.getLong("index") ?: 0L)
+                            }
+                        }.awaitAll().sortedBy { it.second }.map { it.first }
+
+                        val cases = patDoc.stringList("formCases")
+                        val texts = patDoc.stringList("formTexts")
+                        val glosses = patDoc.stringList("formGlosses")
+                        val forms = texts.indices.map { i ->
+                            PronounForm(
+                                case = cases.getOrElse(i) { "" },
+                                text = texts[i],
+                                gloss = glosses.getOrElse(i) { "" }
+                            )
+                        }
+                        PronounPattern(
+                            id = patDoc.getString("id") ?: "",
+                            chip = patDoc.getString("chip") ?: "",
+                            subtitle = patDoc.getString("subtitle") ?: "",
+                            sortOrder = (patDoc.getLong("sortOrder") ?: 0L).toInt(),
+                            forms = forms,
+                            note = patDoc.getString("note") ?: "",
+                            sections = sections
+                        )
+                    }
+                }.awaitAll()
+
+                PronounCategory(
+                    id = catDoc.getString("id") ?: "",
+                    label = catDoc.getString("label") ?: "",
+                    sortOrder = (catDoc.getLong("sortOrder") ?: 0L).toInt(),
+                    note = catDoc.getString("note") ?: "",
+                    patterns = patterns
+                )
+            }
+        }.awaitAll()
+
+        Format6File(
+            fileformat = (header.get("fileformat") as? Number)?.toInt() ?: 6,
+            location = (header.get("location") as? Number)?.toInt() ?: 0,
+            sheetname = header.getString("sheetName") ?: examName,
+            title = header.getString("title") ?: "",
+            updatedDate = (header.get("updatedDate") as? Number)?.toLong() ?: 0L,
+            categories = categories
         )
     }
 

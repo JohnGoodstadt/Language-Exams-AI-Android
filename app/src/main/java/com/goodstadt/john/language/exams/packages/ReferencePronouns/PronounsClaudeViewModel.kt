@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.packages.ReferencePronounsClaude
+package com.goodstadt.john.language.exams.packages.ReferencePronouns
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -22,7 +22,7 @@ sealed interface PronounsClaudeUiState {
 
 /**
  * Drives the fileFormat-6 Pronouns reference screen. Loads the sheet named by the "documentId" nav arg
- * (e.g. "GermanReferencePronounsClaude") through [ContentRepository.getFormat6Data], and plays example
+ * (e.g. "GermanReferencePronouns") through [ContentRepository.getFormat6Data], and plays example
  * sentences / table cells through the shared [AudioPlaybackRepository] (same audio waterfall + stats as
  * every other reference screen).
  */
@@ -36,7 +36,7 @@ class PronounsClaudeViewModel @Inject constructor(
 
     /** Firestore/bundle doc name for this sheet, from the route arg; falls back to the de sheet. */
     private val documentId: String =
-        savedStateHandle.get<String>("documentId") ?: "GermanReferencePronounsClaude"
+        savedStateHandle.get<String>("documentId") ?: "GermanReferencePronouns"
 
     private val _uiState = MutableStateFlow<PronounsClaudeUiState>(PronounsClaudeUiState.Loading)
     val uiState: StateFlow<PronounsClaudeUiState> = _uiState.asStateFlow()

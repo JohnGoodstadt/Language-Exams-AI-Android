@@ -270,6 +270,12 @@ class UploadJsonViewModel @Inject constructor(
             grp("Prepositions", listOf(
                 ref(listOf("german_prepositions", "prepositions_en"), "${languagePrefix}Prepositions"),
             )),
+            grp("Pronouns", listOf(
+                // fileFormat 6; each flavour bundles its own res/raw sheet (german_/english_…). The doc
+                // name MUST be "<prefix>ReferencePronouns" to match the manifest firestoreDocumentId, the
+                // res/raw sheetname and ContentRepository's format-6 mapping - the screen fetches that name.
+                ref(listOf("german_reference_pronouns", "english_reference_pronouns"), "${languagePrefix}ReferencePronouns"),
+            )),
             grp("Sounds the Same", listOf(
                 ref(listOf("german_sounds_the_same"), "${languagePrefix}SoundsTheSame"), // fileFormat 1
             )),
