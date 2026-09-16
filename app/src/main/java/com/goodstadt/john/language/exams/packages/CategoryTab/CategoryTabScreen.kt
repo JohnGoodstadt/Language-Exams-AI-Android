@@ -39,6 +39,7 @@ import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -96,7 +97,6 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
-import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
@@ -401,7 +401,11 @@ fun CategoryTabScreen(
                                     .align(Alignment.CenterStart)
                                     .padding(start = 8.dp)
                             ) {
-                                LetterInCircle(letter = "T", tint = Color(0xFFFF9800))
+                                Icon(
+                                    imageVector = Icons.Filled.Translate,
+                                    contentDescription = "Translate",
+                                    tint = Color(0xFFFF9800)
+                                )
                             }
                             IconButton(
                                 onClick = { showGamificationSheet = true },

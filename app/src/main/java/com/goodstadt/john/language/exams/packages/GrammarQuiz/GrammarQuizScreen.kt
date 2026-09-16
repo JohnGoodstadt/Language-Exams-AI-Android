@@ -85,6 +85,10 @@ fun GrammarQuizScreen(
     // This is the language-independent group KEY used to build the file name; `category` is the display title.
     // The same screen/VM serves both; only the file the VM resolves differs.
     referenceGroupKey: String? = null,
+    // When non-null, load a bundled multi-block Pronouns quiz (assets Quizzes/Reference/<sheet>.json),
+    // filtered to `pronounsCategoryFilter` if set. `category` is the display title.
+    pronounsQuizSheet: String? = null,
+    pronounsCategoryFilter: String? = null,
     viewModel: GrammarQuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
@@ -119,11 +123,14 @@ fun GrammarQuizScreen(
 
     // One file per launch: (re)load whenever the requested category/level changes. A Reference group title
     // routes to the reference quiz loader; otherwise it's the grammar loader - same screen either way.
-    LaunchedEffect(category, level, referenceGroupKey) {
-        if (referenceGroupKey != null) {
-            viewModel.loadReferenceQuiz(referenceGroupKey, category, level)
-        } else {
-            viewModel.loadGrammarQuiz(category, level)
+    LaunchedEffect(category, level, referenceGroupKey, pronounsQuizSheet, pronounsCategoryFilter) {
+        when {
+            pronounsQuizSheet != null ->
+                viewModel.loadPronounsQuiz(pronounsQuizSheet, category, level, pronounsCategoryFilter)
+            referenceGroupKey != null ->
+                viewModel.loadReferenceQuiz(referenceGroupKey, category, level)
+            else ->
+                viewModel.loadGrammarQuiz(category, level)
         }
     }
 

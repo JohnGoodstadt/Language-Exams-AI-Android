@@ -35,11 +35,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.AuditStats
-import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
-import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
+import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
 
 
 @Composable
@@ -121,64 +121,66 @@ fun AuditDashboardHeader(
                 // the "Change Level" button below still opens the sheet for a free choice.
                 onSwitchLevel = onApplySuggestedLevel
             )
-        }
+//            Spacer(Modifier.height(24.dp))
 
-        Spacer(Modifier.height(24.dp))
-
-        // --- 2. THE DYNAMIC PRIMARY ACTION ---
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Button(
-                // Once a test is recommended (baseline placed the learner), the primary action
-                // is to go take that test; otherwise it resumes/starts the baseline audit.
-                onClick = { if (recommendedTest != null) onGoToTest(recommendedTest) else onNavigateToAudit() },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
-            ) {
+            // --- 2. THE DYNAMIC PRIMARY ACTION ---
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Button(
+                    // Once a test is recommended (baseline placed the learner), the primary action
+                    // is to go take that test; otherwise it resumes/starts the baseline audit.
+                    onClick = { if (recommendedTest != null) onGoToTest(recommendedTest) else onNavigateToAudit() },
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+                ) {
+                    Text(
+                        text = if (recommendedTest != null) {
+                            "Do the ${recommendedTest.testDisplayName()} quiz"
+                        } else {
+                            "Verify $nextPartName"
+                        },
+                        color = Color.Black,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
                 Text(
-                    text = if (recommendedTest != null) {
-                        "Do the ${recommendedTest.testDisplayName()} quiz"
-                    } else {
-                        "Verify $nextPartName"
-                    },
-                    color = Color.Black,
-                    fontWeight = FontWeight.Bold
+                    text = "Continue the audit to increase our confidence to very high",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color.White,
+                    modifier = Modifier.padding(top = 0.dp)
                 )
             }
-            Text(
-                text = "Continue the audit to increase our confidence to 98%",
-                style = MaterialTheme.typography.bodyMedium,
-                color = Color.White,
-                modifier = Modifier.padding(top = 0.dp)
-            )
+            Spacer(Modifier.height(16.dp))
+
+            // --- 3. THE SECONDARY DECISIONS ---
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                // Level Adjustment
+                AuditActionButton(
+                    modifier = Modifier.weight(1f),
+                    title = "Change Level",
+                    subtitle = "Currently $currentLevel",
+                    icon = Icons.Default.SwapHoriz,
+                    onClick = onAdjustLevel
+                )
+
+                // New Test - locked until the baseline is done, and again once no fresh version is left.
+                AuditActionButton(
+                    modifier = Modifier.weight(1f),
+                    title = "New Audit",
+                    subtitle = when {
+                        !baselineComplete -> "Finish baseline first"
+                        !newAuditEnabled -> "No more audits yet"
+                        else -> "Fresh Questions"
+                    },
+                    icon = Icons.Default.Refresh,
+                    onClick = onNewAudit,
+                    enabled = newAuditEnabled
+                )
+            }
         }
 
-        Spacer(Modifier.height(16.dp))
 
-        // --- 3. THE SECONDARY DECISIONS ---
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            // Level Adjustment
-            AuditActionButton(
-                modifier = Modifier.weight(1f),
-                title = "Change Level",
-                subtitle = "Currently $currentLevel",
-                icon = Icons.Default.SwapHoriz,
-                onClick = onAdjustLevel
-            )
 
-            // New Test - locked until the baseline is done, and again once no fresh version is left.
-            AuditActionButton(
-                modifier = Modifier.weight(1f),
-                title = "New Audit",
-                subtitle = when {
-                    !baselineComplete -> "Finish baseline first"
-                    !newAuditEnabled -> "No more audits yet"
-                    else -> "Fresh Questions"
-                },
-                icon = Icons.Default.Refresh,
-                onClick = onNewAudit,
-                enabled = newAuditEnabled
-            )
-        }
+
     }
 }
 

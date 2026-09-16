@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -16,13 +17,22 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.SportsEsports
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -32,11 +42,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
     when (val state = viewModel.uiState.collectAsState().value) {
@@ -48,22 +63,98 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                 Text("Error: ${state.message}", color = MaterialTheme.colorScheme.error)
             }
 
-        is PronounsClaudeUiState.Success ->
-            PronounsContent(state.sheet, onPlay = viewModel::play)
+        is PronounsClaudeUiState.Success -> {
+            val categories = state.sheet.categories
+            // Level-1 (category) selection is lifted here so the floating "Q" knows which chip to quiz.
+            var selectedCategoryId by rememberSaveable { mutableStateOf(categories.firstOrNull()?.id ?: "") }
+            val selectedCategory = categories.firstOrNull { it.id == selectedCategoryId } ?: categories.firstOrNull()
+
+            var showTranslateSheet by rememberSaveable { mutableStateOf(false) }
+            var showQuizSheet by rememberSaveable { mutableStateOf(false) }
+            val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+            Box(Modifier.fillMaxSize()) {
+                PronounsContent(
+                    sheet = state.sheet,
+                    selectedCategoryId = selectedCategoryId,
+                    onCategorySelected = { selectedCategoryId = it },
+                    onPlay = viewModel::play
+                )
+
+                if (categories.isNotEmpty()) {
+                    // Floating Quiz ("Q") button, bottom-LEFT near the thumb: quizzes just the selected chip.
+                    FloatingActionButton(
+                        onClick = { showQuizSheet = true },
+                        shape = CircleShape,
+                        containerColor = MaterialTheme.colorScheme.surface,
+                        contentColor = Color(0xFFFF9800),
+                        modifier = Modifier
+                            .align(Alignment.BottomStart)
+                            .padding(16.dp)
+                    ) {
+                        Icon(imageVector = Icons.Filled.SportsEsports, contentDescription = "Quiz")
+                    }
+
+                    // Floating Translate ("T") button, bottom-RIGHT - mirrors the vocab tabs' "T".
+                    FloatingActionButton(
+                        onClick = { showTranslateSheet = true },
+                        shape = CircleShape,
+                        containerColor = MaterialTheme.colorScheme.surface,
+                        contentColor = Color(0xFFFF9800),
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .padding(16.dp)
+                    ) {
+                        Icon(imageVector = Icons.Filled.Translate, contentDescription = "Translate")
+                    }
+                }
+            }
+
+            // Translate the last sentence played on this screen (blank if none yet).
+            if (showTranslateSheet) {
+                TranslateSheet(
+                    onDismiss = { showTranslateSheet = false },
+                    initialText = viewModel.getLatestSentence()
+                )
+            }
+
+            // Fill-in-the-blank quiz for the selected category, in a bottom sheet (like the Focus screen).
+            if (showQuizSheet && selectedCategory != null) {
+                ModalBottomSheet(
+                    onDismissRequest = { showQuizSheet = false },
+                    sheetState = quizSheetState,
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.onSurface
+                ) {
+                    Box(Modifier.fillMaxHeight(0.92f)) {
+                        GrammarQuizScreen(
+                            category = selectedCategory.label,
+                            level = "B1",
+                            pronounsQuizSheet = viewModel.quizSheetName,
+                            pronounsCategoryFilter = selectedCategory.label
+                        )
+                    }
+                }
+            }
+        }
     }
 }
 
 @Composable
-private fun PronounsContent(sheet: Format6File, onPlay: (String) -> Unit) {
+private fun PronounsContent(
+    sheet: Format6File,
+    selectedCategoryId: String,
+    onCategorySelected: (String) -> Unit,
+    onPlay: (String) -> Unit
+) {
     val categories = sheet.categories
     if (categories.isEmpty()) {
         Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { Text("No content.") }
         return
     }
 
-    // Level 1: category (Personal / This-That). Level 2: item (I/me, you, he, …). Reset the item when
-    // the category changes; both selections survive rotation.
-    var selectedCategoryId by rememberSaveable { mutableStateOf(categories.first().id) }
+    // Level 1: category (Personal / This-That) - selection lifted to the caller. Level 2: item (I/me,
+    // you, he, …). Reset the item when the category changes; the item selection survives rotation.
     val category = categories.firstOrNull { it.id == selectedCategoryId } ?: categories.first()
 
     val patterns = category.patterns
@@ -82,7 +173,7 @@ private fun PronounsContent(sheet: Format6File, onPlay: (String) -> Unit) {
             items(categories, key = { it.id }) { c ->
                 FilterChip(
                     selected = c.id == category.id,
-                    onClick = { selectedCategoryId = c.id },
+                    onClick = { onCategorySelected(c.id) },
                     label = { Text(c.label) },
                     colors = FilterChipDefaults.filterChipColors()
                 )

@@ -50,6 +50,7 @@ class UserPreferencesRepository @Inject constructor(
         val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
         val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
         val VOCAB_QUIZ_AUTO_ADVANCE = booleanPreferencesKey("vocab_quiz_auto_advance")
+        val TRANSLATE_TARGET_LANG = stringPreferencesKey("translate_target_lang")
     }
 
     /**
@@ -85,6 +86,20 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setHasSeenReadinessAuditIntro(hasSeen: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.HAS_SEEN_READINESS_AUDIT_INTRO] = hasSeen
+        }
+    }
+
+    // The Translate sheet's chosen TARGET language code (Google Translate code, e.g. "es"); "" = unset,
+    // so the ViewModel falls back to the phone locale and then a default.
+    val translateTargetLangFlow: Flow<String> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.TRANSLATE_TARGET_LANG] ?: ""
+        }
+
+    suspend fun setTranslateTargetLang(code: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.TRANSLATE_TARGET_LANG] = code
         }
     }
 

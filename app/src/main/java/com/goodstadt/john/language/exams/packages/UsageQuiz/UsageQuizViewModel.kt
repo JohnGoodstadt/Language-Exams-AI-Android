@@ -244,7 +244,11 @@ data class QuizQuestion(
     val fileFormat: Int = 0,
     // True for the FIRST question of each set (each source `data[]` entry). Used to show the
     // "Choose the best answer" instruction once per set instead of on every question.
-    val isFirstInSet: Boolean = false
+    val isFirstInSet: Boolean = false,
+    // Sub-area (pattern) this question tests + its human label, for per-pattern reference strength.
+    // null for quizzes not tracked at pattern granularity.
+    val subArea: String? = null,
+    val subLabel: String? = null
 )
 
 //TODO: Do I need this?

@@ -554,10 +554,14 @@ fun ReadinessAuditScreen(
 
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween,
                             modifier = Modifier.fillMaxWidth().padding(vertical = rowVerticalPadding)
                         ) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
+                            // Left cell takes all remaining width so a long answer WRAPS instead of
+                            // shoving the radio button off the right edge.
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.weight(1f)
+                            ) {
                                 Icon(
                                     modifier = Modifier.clickable {
                                         val fullSentence =
@@ -592,6 +596,7 @@ fun ReadinessAuditScreen(
                                     ),
                                     modifier = Modifier
 //                                    .padding(vertical = 2.dp)
+                                        .weight(1f)
                                         .padding(vertical = verticalPadding)
                                         .clickable {
                                             val fullSentence =
@@ -615,7 +620,12 @@ fun ReadinessAuditScreen(
                                 )
                             }
 
-                            // Radio button on the far right
+                            // Reserved fixed-width cell so the radio button always sits in the SAME
+                            // place under the user's finger, regardless of how long the answer wraps.
+                            Box(
+                                modifier = Modifier.width(48.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
                             RadioButton(
                                 selected = selectedOption == option && isOptionCorrect,
                                 enabled = !isCurrentQuestionLocked,
@@ -671,6 +681,7 @@ fun ReadinessAuditScreen(
                                     .scale(if (heightClass == HeightClass.COMPACT) 0.85f else 1.0f) // Slightly scale down radio button on compact
                                     .semantics { contentDescription = option }
                             )
+                            } // fixed-width radio cell
                         } // Row
                     }
                 } // Scrollable Column

@@ -1,0 +1,1092 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "EnglishReferencePronounsQuiz",
+  "title": "Pronouns",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Use the object form after a verb or a preposition (me, him, her, us, them).",
+      "sortorder": 1,
+      "learningTitle": "Subject vs object pronouns",
+      "learningPoints": [
+        "Subject pronouns do the action: I, you, he, she, it, we, they.",
+        "Object pronouns receive it: me, you, him, her, it, us, them.",
+        "Use the object form after a verb (She sees me) and after a preposition (to me).",
+        "Do not use a possessive (my, his) where an object pronoun is needed."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Object form: I -> me.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "i",
+          "subLabel": "I / me (1st person singular)",
+          "explain": "After a verb, use the object form: I becomes ME.",
+          "sentence": "She sees _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "me"
+            },
+            {
+              "ok": false,
+              "word": "I"
+            },
+            {
+              "ok": false,
+              "word": "my"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Object form: he -> him.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "he",
+          "subLabel": "he / him (3rd person masculine)",
+          "explain": "The object form of 'he' is HIM.",
+          "sentence": "I give _ the book.",
+          "words": [
+            {
+              "ok": true,
+              "word": "him"
+            },
+            {
+              "ok": false,
+              "word": "he"
+            },
+            {
+              "ok": false,
+              "word": "his"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Object form: she -> her.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "she",
+          "subLabel": "she / her (3rd person feminine)",
+          "explain": "The object form of 'she' is HER.",
+          "sentence": "He sees _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "her"
+            },
+            {
+              "ok": false,
+              "word": "she"
+            },
+            {
+              "ok": false,
+              "word": "hers"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Object form: we -> us.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "we",
+          "subLabel": "we / us (1st person plural)",
+          "explain": "The object form of 'we' is US.",
+          "sentence": "They see _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "us"
+            },
+            {
+              "ok": false,
+              "word": "we"
+            },
+            {
+              "ok": false,
+              "word": "our"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Object form: they -> them.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "they",
+          "subLabel": "they / them (3rd person plural)",
+          "explain": "The object form of 'they' is THEM.",
+          "sentence": "We see _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "them"
+            },
+            {
+              "ok": false,
+              "word": "they"
+            },
+            {
+              "ok": false,
+              "word": "their"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "After a preposition: me.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "i",
+          "subLabel": "I / me (1st person singular)",
+          "explain": "After a preposition, use the object form: ME.",
+          "sentence": "Give it to _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "me"
+            },
+            {
+              "ok": false,
+              "word": "I"
+            },
+            {
+              "ok": false,
+              "word": "mine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "this/these for things near you; that/those for things further away.",
+      "sortorder": 2,
+      "learningTitle": "this, that, these, those",
+      "learningPoints": [
+        "this (singular) and these (plural) point to things near the speaker.",
+        "that (singular) and those (plural) point to things further away.",
+        "Match the number: singular this/that, plural these/those."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Near + singular: this.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "this",
+          "subLabel": "this / these (near)",
+          "explain": "Near the speaker + singular -> THIS.",
+          "sentence": "_ is my book.",
+          "words": [
+            {
+              "ok": true,
+              "word": "This"
+            },
+            {
+              "ok": false,
+              "word": "These"
+            },
+            {
+              "ok": false,
+              "word": "That"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Near + plural: these.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "this",
+          "subLabel": "this / these (near)",
+          "explain": "Near the speaker + plural -> THESE.",
+          "sentence": "_ are new.",
+          "words": [
+            {
+              "ok": true,
+              "word": "These"
+            },
+            {
+              "ok": false,
+              "word": "This"
+            },
+            {
+              "ok": false,
+              "word": "Those"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Far + singular: that.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "that",
+          "subLabel": "that / those (far)",
+          "explain": "Further away + singular -> THAT.",
+          "sentence": "_ is far away.",
+          "words": [
+            {
+              "ok": true,
+              "word": "That"
+            },
+            {
+              "ok": false,
+              "word": "This"
+            },
+            {
+              "ok": false,
+              "word": "Those"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Far + plural: those.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "that",
+          "subLabel": "that / those (far)",
+          "explain": "Further away + plural -> THOSE.",
+          "sentence": "_ are old.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Those"
+            },
+            {
+              "ok": false,
+              "word": "These"
+            },
+            {
+              "ok": false,
+              "word": "That"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Use the determiner (my) before a noun; use the pronoun (mine) when it stands alone.",
+      "sortorder": 3,
+      "learningTitle": "my vs mine",
+      "learningPoints": [
+        "A possessive determiner comes before a noun: my, your, his, her, our, their.",
+        "A possessive pronoun stands alone: mine, yours, his, hers, ours, theirs.",
+        "'This is my car' (before a noun) vs 'That car is mine' (alone)."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 11,
+          "summary": "Determiner: my.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "my",
+          "subLabel": "my / mine (1st person singular)",
+          "explain": "Before a noun, use the determiner MY.",
+          "sentence": "This is _ car.",
+          "words": [
+            {
+              "ok": true,
+              "word": "my"
+            },
+            {
+              "ok": false,
+              "word": "mine"
+            },
+            {
+              "ok": false,
+              "word": "me"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 12,
+          "summary": "Pronoun: mine.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "my",
+          "subLabel": "my / mine (1st person singular)",
+          "explain": "Standing alone, use the pronoun MINE.",
+          "sentence": "That car is _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mine"
+            },
+            {
+              "ok": false,
+              "word": "my"
+            },
+            {
+              "ok": false,
+              "word": "me"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 13,
+          "summary": "Determiner: your.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "your",
+          "subLabel": "your / yours (2nd person)",
+          "explain": "Before a noun -> YOUR.",
+          "sentence": "Is this _ bag?",
+          "words": [
+            {
+              "ok": true,
+              "word": "your"
+            },
+            {
+              "ok": false,
+              "word": "yours"
+            },
+            {
+              "ok": false,
+              "word": "you"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 14,
+          "summary": "Pronoun: yours.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "your",
+          "subLabel": "your / yours (2nd person)",
+          "explain": "Standing alone -> YOURS.",
+          "sentence": "This bag is _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "yours"
+            },
+            {
+              "ok": false,
+              "word": "your"
+            },
+            {
+              "ok": false,
+              "word": "you"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 15,
+          "summary": "Determiner: her.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "her",
+          "subLabel": "her / hers (3rd person feminine)",
+          "explain": "Before a noun -> HER.",
+          "sentence": "I like _ idea.",
+          "words": [
+            {
+              "ok": true,
+              "word": "her"
+            },
+            {
+              "ok": false,
+              "word": "hers"
+            },
+            {
+              "ok": false,
+              "word": "she"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 16,
+          "summary": "Pronoun: hers.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "her",
+          "subLabel": "her / hers (3rd person feminine)",
+          "explain": "Standing alone -> HERS.",
+          "sentence": "The idea is _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "hers"
+            },
+            {
+              "ok": false,
+              "word": "her"
+            },
+            {
+              "ok": false,
+              "word": "she"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "The reflexive refers back to the subject: myself, yourself, himself, herself, ourselves, themselves.",
+      "sortorder": 4,
+      "learningTitle": "Reflexive pronouns",
+      "learningPoints": [
+        "Use a reflexive when the subject and object are the same person.",
+        "myself, yourself, himself, herself, itself, ourselves, yourselves, themselves.",
+        "Do not use an object or possessive pronoun in its place (I hurt myself, not 'me')."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 17,
+          "summary": "1st singular: myself.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "myself",
+          "subLabel": "myself (1st person singular)",
+          "explain": "The subject and object are the same -> MYSELF.",
+          "sentence": "I hurt _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "myself"
+            },
+            {
+              "ok": false,
+              "word": "me"
+            },
+            {
+              "ok": false,
+              "word": "mine"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 18,
+          "summary": "2nd singular: yourself.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "yourself",
+          "subLabel": "yourself (2nd person singular)",
+          "explain": "Refers back to 'you' -> YOURSELF.",
+          "sentence": "Help _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "yourself"
+            },
+            {
+              "ok": false,
+              "word": "you"
+            },
+            {
+              "ok": false,
+              "word": "yours"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 19,
+          "summary": "3rd masc: himself.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "himself",
+          "subLabel": "himself (3rd person masculine)",
+          "explain": "Refers back to 'he' -> HIMSELF.",
+          "sentence": "He introduced _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "himself"
+            },
+            {
+              "ok": false,
+              "word": "him"
+            },
+            {
+              "ok": false,
+              "word": "his"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 20,
+          "summary": "3rd fem: herself.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "herself",
+          "subLabel": "herself (3rd person feminine)",
+          "explain": "Refers back to 'she' -> HERSELF.",
+          "sentence": "She taught _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "herself"
+            },
+            {
+              "ok": false,
+              "word": "her"
+            },
+            {
+              "ok": false,
+              "word": "hers"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 21,
+          "summary": "1st plural: ourselves.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "ourselves",
+          "subLabel": "ourselves (1st person plural)",
+          "explain": "Refers back to 'we' -> OURSELVES.",
+          "sentence": "We enjoyed _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ourselves"
+            },
+            {
+              "ok": false,
+              "word": "us"
+            },
+            {
+              "ok": false,
+              "word": "our"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 22,
+          "summary": "3rd plural: themselves.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "themselves",
+          "subLabel": "themselves (3rd person plural)",
+          "explain": "Refers back to 'they' -> THEMSELVES.",
+          "sentence": "They blamed _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "themselves"
+            },
+            {
+              "ok": false,
+              "word": "them"
+            },
+            {
+              "ok": false,
+              "word": "their"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "who (subject), whom (after a preposition), whose (possession), what (things).",
+      "sortorder": 5,
+      "learningTitle": "Question words",
+      "learningPoints": [
+        "who asks about a person as the subject.",
+        "whom is used after a preposition (to whom, for whom).",
+        "whose asks about possession.",
+        "what asks about a thing."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 23,
+          "summary": "Subject: who.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "who",
+          "subLabel": "who / whom / whose / what",
+          "explain": "Asking about the subject -> WHO.",
+          "sentence": "_ is coming today?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who"
+            },
+            {
+              "ok": false,
+              "word": "Whom"
+            },
+            {
+              "ok": false,
+              "word": "Whose"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 24,
+          "summary": "Possession: whose.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "who",
+          "subLabel": "who / whom / whose / what",
+          "explain": "Asking about possession -> WHOSE.",
+          "sentence": "_ bag is this?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Whose"
+            },
+            {
+              "ok": false,
+              "word": "Who"
+            },
+            {
+              "ok": false,
+              "word": "Whom"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 25,
+          "summary": "After a preposition: whom.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "who",
+          "subLabel": "who / whom / whose / what",
+          "explain": "Directly after a preposition -> WHOM.",
+          "sentence": "To _ did you give it?",
+          "words": [
+            {
+              "ok": true,
+              "word": "whom"
+            },
+            {
+              "ok": false,
+              "word": "who"
+            },
+            {
+              "ok": false,
+              "word": "whose"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 26,
+          "summary": "Thing: what.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "who",
+          "subLabel": "who / whom / whose / what",
+          "explain": "Asking about a thing -> WHAT.",
+          "sentence": "_ is that?",
+          "words": [
+            {
+              "ok": true,
+              "word": "What"
+            },
+            {
+              "ok": false,
+              "word": "Who"
+            },
+            {
+              "ok": false,
+              "word": "Whose"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "who/whom for people, which for things, that for both, whose for possession.",
+      "sortorder": 6,
+      "learningTitle": "Relative pronouns",
+      "learningPoints": [
+        "Use who for people (as the subject of the clause).",
+        "Use which for things; that works for people or things.",
+        "Use whose for possession.",
+        "You can often drop the relative pronoun: 'the book I read'."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 27,
+          "summary": "People + subject: who.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "who",
+          "subLabel": "who / whom / whose (people)",
+          "explain": "A person doing the action in the clause -> WHO.",
+          "sentence": "The man _ lives here is my teacher.",
+          "words": [
+            {
+              "ok": true,
+              "word": "who"
+            },
+            {
+              "ok": false,
+              "word": "which"
+            },
+            {
+              "ok": false,
+              "word": "whom"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 28,
+          "summary": "Things: which.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "which",
+          "subLabel": "which / that (things)",
+          "explain": "Refers to a thing -> WHICH.",
+          "sentence": "The book _ I read was good.",
+          "words": [
+            {
+              "ok": true,
+              "word": "which"
+            },
+            {
+              "ok": false,
+              "word": "who"
+            },
+            {
+              "ok": false,
+              "word": "whose"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 29,
+          "summary": "Possession: whose.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "who",
+          "subLabel": "who / whom / whose (people)",
+          "explain": "Shows possession -> WHOSE.",
+          "sentence": "The man _ car is new lives here.",
+          "words": [
+            {
+              "ok": true,
+              "word": "whose"
+            },
+            {
+              "ok": false,
+              "word": "who"
+            },
+            {
+              "ok": false,
+              "word": "which"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 30,
+          "summary": "Things: that.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "which",
+          "subLabel": "which / that (things)",
+          "explain": "Refers to a thing -> THAT (or which).",
+          "sentence": "The house _ we bought is old.",
+          "words": [
+            {
+              "ok": true,
+              "word": "that"
+            },
+            {
+              "ok": false,
+              "word": "who"
+            },
+            {
+              "ok": false,
+              "word": "whom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Use some- in positive statements, any- in questions and negatives; no- makes it negative on its own.",
+      "sortorder": 7,
+      "learningTitle": "some-, any-, no-",
+      "learningPoints": [
+        "In positive statements use some-: something, someone.",
+        "In questions and negatives use any-: anything, anyone.",
+        "no- (no one, nothing) is already negative - don't add another 'not'.",
+        "one = people in general (formal); everyday English uses 'you'."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 31,
+          "summary": "Negative -> any-.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "something",
+          "subLabel": "something / anything / nothing",
+          "explain": "In a negative sentence use ANY-: ANYTHING.",
+          "sentence": "I don't want _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "anything"
+            },
+            {
+              "ok": false,
+              "word": "something"
+            },
+            {
+              "ok": false,
+              "word": "nothing"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 32,
+          "summary": "Question -> any-.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "someone",
+          "subLabel": "someone / anyone / no one",
+          "explain": "In a question use ANY-: ANYONE.",
+          "sentence": "Is _ there?",
+          "words": [
+            {
+              "ok": true,
+              "word": "anyone"
+            },
+            {
+              "ok": false,
+              "word": "someone"
+            },
+            {
+              "ok": false,
+              "word": "everyone"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 33,
+          "summary": "Positive -> some-.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "something",
+          "subLabel": "something / anything / nothing",
+          "explain": "In a positive statement use SOME-: SOMETHING.",
+          "sentence": "I have _ to tell you.",
+          "words": [
+            {
+              "ok": true,
+              "word": "something"
+            },
+            {
+              "ok": false,
+              "word": "anything"
+            },
+            {
+              "ok": false,
+              "word": "nothing"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 34,
+          "summary": "Formal 'one'.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "one",
+          "subLabel": "one (formal, people in general)",
+          "explain": "People in general (formal) -> ONE.",
+          "sentence": "_ never knows.",
+          "words": [
+            {
+              "ok": true,
+              "word": "One"
+            },
+            {
+              "ok": false,
+              "word": "Anyone"
+            },
+            {
+              "ok": false,
+              "word": "Everyone"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 35,
+          "summary": "no one for none.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "someone",
+          "subLabel": "someone / anyone / no one",
+          "explain": "The streets were empty, so -> NO ONE.",
+          "sentence": "I saw _ - the streets were empty.",
+          "words": [
+            {
+              "ok": true,
+              "word": "no one"
+            },
+            {
+              "ok": false,
+              "word": "someone"
+            },
+            {
+              "ok": false,
+              "word": "anyone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "English has no da-words: use a preposition + it/them, and questions put the preposition at the end.",
+      "sortorder": 8,
+      "learningTitle": "Preposition + it/them",
+      "learningPoints": [
+        "For a thing after a preposition, use it (singular) or them (plural): about it, with them.",
+        "Don't drop the pronoun - say 'I agree with it', not 'I agree with'.",
+        "Questions usually put the preposition at the end: What are you waiting for?"
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 36,
+          "summary": "One thing: it.",
+          "level": "B1",
+          "category": "Prepositions + it",
+          "subArea": "about-it",
+          "subLabel": "preposition + it / them",
+          "explain": "One thing after a preposition -> IT.",
+          "sentence": "I'm thinking about _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "it"
+            },
+            {
+              "ok": false,
+              "word": "them"
+            },
+            {
+              "ok": false,
+              "word": "its"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 37,
+          "summary": "Plural things: them.",
+          "level": "B1",
+          "category": "Prepositions + it",
+          "subArea": "about-it",
+          "subLabel": "preposition + it / them",
+          "explain": "Plural things after a preposition -> THEM.",
+          "sentence": "Those are my keys. I can't find _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "them"
+            },
+            {
+              "ok": false,
+              "word": "it"
+            },
+            {
+              "ok": false,
+              "word": "they"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 38,
+          "summary": "Asking about a thing: what.",
+          "level": "B1",
+          "category": "Prepositions + it",
+          "subArea": "about-it",
+          "subLabel": "preposition + it / them (questions)",
+          "explain": "A thing, preposition at the end -> WHAT.",
+          "sentence": "_ are you waiting for?",
+          "words": [
+            {
+              "ok": true,
+              "word": "What"
+            },
+            {
+              "ok": false,
+              "word": "Who"
+            },
+            {
+              "ok": false,
+              "word": "Which"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 39,
+          "summary": "Asking about a person: who.",
+          "level": "B1",
+          "category": "Prepositions + it",
+          "subArea": "about-it",
+          "subLabel": "preposition + it / them (questions)",
+          "explain": "A person, preposition at the end -> WHO.",
+          "sentence": "_ are you talking to?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Who"
+            },
+            {
+              "ok": false,
+              "word": "What"
+            },
+            {
+              "ok": false,
+              "word": "Which"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

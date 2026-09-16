@@ -38,6 +38,9 @@ class PronounsClaudeViewModel @Inject constructor(
     private val documentId: String =
         savedStateHandle.get<String>("documentId") ?: "GermanReferencePronouns"
 
+    /** Bundled fileFormat-7 quiz sheet for this reference sheet, e.g. "GermanReferencePronounsQuiz". */
+    val quizSheetName: String get() = documentId + "Quiz"
+
     private val _uiState = MutableStateFlow<PronounsClaudeUiState>(PronounsClaudeUiState.Loading)
     val uiState: StateFlow<PronounsClaudeUiState> = _uiState.asStateFlow()
 
@@ -65,9 +68,14 @@ class PronounsClaudeViewModel @Inject constructor(
         }
     }
 
+    /** The last sentence tapped/played on this screen, for the Translate ("T") button to pre-fill. */
+    private var lastPlayedSentence: String = ""
+    fun getLatestSentence(): String = lastPlayedSentence
+
     /** Play a sentence (or a single pronoun form) via the shared audio waterfall. */
     fun play(text: String) {
         if (text.isBlank()) return
+        lastPlayedSentence = text
         viewModelScope.launch {
             audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = text,

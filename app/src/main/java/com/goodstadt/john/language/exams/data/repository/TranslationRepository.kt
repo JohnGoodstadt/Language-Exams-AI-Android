@@ -17,9 +17,24 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /** The languages this app translates between (extend later if needed). */
-enum class TranslateLang(val code: String, val display: String) {
-    GERMAN("de", "German"),
-    ENGLISH("en", "English")
+/**
+ * The languages the Translate sheet can use. [code] is the Google Cloud Translation language code (sent
+ * to the API), [display] the human name shown in the picker, [speechTag] the BCP-47 tag for the on-device
+ * speech recogniser. This is a plain static table — add a language by adding one row here.
+ */
+enum class TranslateLang(val code: String, val display: String, val speechTag: String) {
+    ENGLISH("en", "English", "en-US"),
+    SPANISH("es", "Spanish", "es-ES"),
+    FRENCH("fr", "French", "fr-FR"),
+    GERMAN("de", "German", "de-DE"),
+    CHINESE("zh", "Chinese", "zh-CN");
+
+    companion object {
+        /** Match a language / locale code (e.g. "es" or a "zh-CN" tag) to a row; null if not in the table. */
+        fun fromCode(code: String?): TranslateLang? = code
+            ?.substringBefore('-')
+            ?.let { c -> entries.firstOrNull { it.code.equals(c, ignoreCase = true) } }
+    }
 }
 
 /**

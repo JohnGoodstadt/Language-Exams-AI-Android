@@ -23,11 +23,14 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.SwapHoriz
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -39,7 +42,10 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -51,8 +57,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.data.repository.TranslateLang
 
 /**
- * A reusable Translate bottom sheet: German <-> English, with a swap button, a translate action near the
- * thumb, tap-to-speak for German output, and (where supported) a microphone button to dictate the source.
+ * A reusable Translate bottom sheet between the app's own language and a target language the user picks
+ * (from [TranslateViewModel.targetOptions]) — with a swap button, a translate action near the thumb,
+ * tap-to-speak for the app-language result, and (where supported) a mic button to dictate the source.
  * Self-contained so it can be shown from anywhere: `if (show) TranslateSheet(onDismiss = { show = false })`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -83,7 +90,7 @@ fun TranslateSheet(
         }
     }
     val launchSpeech = {
-        val localeTag = if (viewModel.sourceLang == TranslateLang.GERMAN) "de-DE" else "en-US"
+        val localeTag = viewModel.sourceLang.speechTag
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, localeTag)
@@ -112,21 +119,23 @@ fun TranslateSheet(
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "Try out translating from German to English and vice versa.",
+                text = "Translate between ${viewModel.appLang.display} and your language — tap the highlighted language to change it.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
-            // Direction + swap
+            // Direction + swap. Whichever side is the user's chosen language is a tappable picker; the
+            // app's own language is fixed text.
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
-                Text(
-                    text = viewModel.sourceLang.display,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold
+                LangLabel(
+                    lang = viewModel.sourceLang,
+                    editable = viewModel.sourceLang == viewModel.userLang,
+                    options = viewModel.targetOptions,
+                    onSelect = { viewModel.chooseUserLang(it) }
                 )
                 IconButton(onClick = { viewModel.swapDirection() }) {
                     Icon(
@@ -135,10 +144,11 @@ fun TranslateSheet(
                         tint = MaterialTheme.colorScheme.primary
                     )
                 }
-                Text(
-                    text = viewModel.targetLang.display,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold
+                LangLabel(
+                    lang = viewModel.targetLang,
+                    editable = viewModel.targetLang == viewModel.userLang,
+                    options = viewModel.targetOptions,
+                    onSelect = { viewModel.chooseUserLang(it) }
                 )
             }
 
@@ -246,13 +256,64 @@ fun TranslateSheet(
             }
             if (viewModel.canSpeakTarget) {
                 Text(
-                    text = "Tap the German result to hear it.",
+                    text = "Tap the ${viewModel.appLang.display} result to hear it.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
 
             Spacer(modifier = Modifier.size(4.dp))
+        }
+    }
+}
+
+/**
+ * One language in the direction row. The app's own language renders as plain text; the user's chosen
+ * language renders as a tappable label + caret that opens a dropdown of [options] to change it.
+ */
+@Composable
+private fun LangLabel(
+    lang: TranslateLang,
+    editable: Boolean,
+    options: List<TranslateLang>,
+    onSelect: (TranslateLang) -> Unit
+) {
+    if (!editable) {
+        Text(
+            text = lang.display,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold
+        )
+        return
+    }
+    var expanded by remember { mutableStateOf(false) }
+    Box {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.clickable { expanded = true }
+        ) {
+            Text(
+                text = lang.display,
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Icon(
+                imageVector = Icons.Default.ArrowDropDown,
+                contentDescription = "Choose your language",
+                tint = MaterialTheme.colorScheme.primary
+            )
+        }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            options.forEach { option ->
+                DropdownMenuItem(
+                    text = { Text(option.display) },
+                    onClick = {
+                        onSelect(option)
+                        expanded = false
+                    }
+                )
+            }
         }
     }
 }

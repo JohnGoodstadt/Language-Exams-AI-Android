@@ -84,6 +84,7 @@ class GrammarQuizViewModel @Inject constructor(
     private val bannerManager: BannerManager,
     private val auditRepository: ReadinessAuditRepository,
     private val vocabRepository: ContentRepository,
+    private val referenceStrengthRepository: com.goodstadt.john.language.exams.data.strength.ReferenceStrengthRepository,
     private val globalLoadingManager: GlobalLoadingManager,
     private val userPreferencesRepository: com.goodstadt.john.language.exams.data.UserPreferencesRepository,
     private val playbackEventBus: com.goodstadt.john.language.exams.utils.PlaybackEventBus
@@ -99,6 +100,20 @@ class GrammarQuizViewModel @Inject constructor(
     // Question indices already counted toward the shared category tally this attempt - stops a
     // re-tap on the same question from double-counting.
     private val categoryRecordedIndices = mutableSetOf<Int>()
+
+    // Reference-area strength (the isolated ReferenceStrengthRepository): set when a REFERENCE quiz is
+    // loaded (null for a plain grammar quiz, which uses the audit instead). [firstTryCorrect] counts
+    // questions answered correctly on the FIRST attempt this run; recorded once at quiz completion.
+    private var referenceAreaId: String? = null
+    private var referenceAreaLabel: String = ""
+    private var firstTryCorrect: Int = 0
+    private var strengthRecorded: Boolean = false
+
+    // Per-pattern first-try tally (sub-area id -> counts) when the quiz's questions carry subArea tags,
+    // so strength is recorded per pattern (e.g. "Pronouns/Possessive/dein") instead of per category.
+    private val patternFirstTryCorrect = mutableMapOf<String, Int>()
+    private val patternAnswered = mutableMapOf<String, Int>()
+    private val patternLabel = mutableMapOf<String, String>()
 
     private val _uiState = MutableStateFlow(UsageQuizUiState())
     val uiState = _uiState.asStateFlow()
@@ -239,6 +254,8 @@ class GrammarQuizViewModel @Inject constructor(
      * identical to the old behaviour so existing progress continues to line up.
      */
     fun loadGrammarQuiz(category: String, level: String) {
+        // Plain grammar quizzes feed the readiness audit, not the reference-strength store.
+        referenceAreaId = null
         viewModelScope.launch {
             val fileKey = GrammarCatalog.fileKeyFor(category)
             if (fileKey == null) {
@@ -275,11 +292,57 @@ class GrammarQuizViewModel @Inject constructor(
      * run through one screen/VM with no duplicated question/marking logic.
      */
     fun loadReferenceQuiz(groupKey: String, displayTitle: String, level: String) {
+        // Reference-tab quiz (e.g. Adjectives): strength keyed per group+level, e.g. "Adjectives/A1".
+        referenceAreaId = "$groupKey/$level"
+        referenceAreaLabel = "$displayTitle ($level)"
         viewModelScope.launch {
             val logicalName = ReferenceQuizSheetMapping.logicalName(groupKey, level)
             // The logical name is unique per level and stable, so it doubles as the stats/mastery key;
             // the (possibly localised) displayTitle is only what the quiz screen shows.
             loadFormat7or10Quiz(logicalName = logicalName, baseName = logicalName, category = displayTitle, level = level)
+        }
+    }
+
+    /**
+     * Load a bundled fileFormat-7 Pronouns quiz (assets `Quizzes/Reference/<quizSheetName>.json`) into
+     * this same screen, filtered to one category block so the Pronouns screen's floating "Q" quizzes just
+     * the selected chip. The quiz is a MULTI-BLOCK file (one `data` block per category), and each block's
+     * sections carry the category label; [categoryFilter] keeps only the matching block. Bundle-only for
+     * now (read straight from assets, like [loadGrammarQuizObsolete]); a Firestore path can be added later.
+     */
+    fun loadPronounsQuiz(quizSheetName: String, displayTitle: String, level: String, categoryFilter: String?) {
+        // Strength keyed under "Pronouns" (rolls up the whole area) with the category as a child leaf,
+        // e.g. "Pronouns/Personal". Deeper per-pattern leaves (e.g. ".../your") can be added later by
+        // tagging quiz questions with their pattern.
+        referenceAreaId = if (categoryFilter.isNullOrBlank()) "Pronouns" else "Pronouns/$categoryFilter"
+        referenceAreaLabel = if (categoryFilter.isNullOrBlank()) "Pronouns" else "$categoryFilter pronouns"
+        viewModelScope.launch {
+            val path = "Quizzes/Reference/$quizSheetName.json"
+            val root = try {
+                appContext.assets.open(path).bufferedReader().use {
+                    jsonParser.decodeFromString<Format7or10File>(it.readText())
+                }
+            } catch (e: Exception) {
+                Timber.e(e, "PronounsQuiz: failed to read '$path'")
+                _questions.value = emptyList()
+                return@launch
+            }
+
+            val filtered = if (categoryFilter.isNullOrBlank()) root
+                else root.copy(data = root.data.filter { blk -> blk.sections.any { it.category == categoryFilter } })
+
+            currentCategory = displayTitle
+            currentLevel = level
+            // Per-category mastery/stats key so each chip's quiz tracks its own progress independently.
+            val baseName = if (categoryFilter.isNullOrBlank()) quizSheetName else "$quizSheetName/$categoryFilter"
+            _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
+            quizStatistics.value = quizStatistics.value.copy(
+                title = displayTitle, filename = baseName, skillLevel = level, page = 1
+            )
+            _uiState.update { it.copy(format7or10ListRoot = filtered) }
+            _allQuestions = generateQuestionsFromData(filtered)
+            applyFilters()
+            resetQuiz()
         }
     }
 
@@ -427,7 +490,8 @@ class GrammarQuizViewModel @Inject constructor(
                 QuizQuestion(
                     quizSection.sentence, words, correctOption, quizSection.summary,
                     quizSection.explain, quizSection.title, quizSection.page,
-                    quizSection.level, quizSection.category, testData.fileFormat
+                    quizSection.level, quizSection.category, testData.fileFormat,
+                    subArea = quizSection.subArea, subLabel = quizSection.subLabel
                 )
             }
         }
@@ -446,6 +510,11 @@ class GrammarQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
         categoryRecordedIndices.clear()
+        firstTryCorrect = 0
+        strengthRecorded = false
+        patternFirstTryCorrect.clear()
+        patternAnswered.clear()
+        patternLabel.clear()
         questionTapCounts.clear()
         questionResolved.clear()
         _selectedOptionByPage.clear()
@@ -501,6 +570,34 @@ class GrammarQuizViewModel @Inject constructor(
         val now = System.currentTimeMillis()
         val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
         val questionCount = _questions.value.size
+
+        // Reference-area strength: record this run's first-try accuracy once, for reference quizzes only.
+        referenceAreaId?.let { base ->
+            if (!strengthRecorded && questionCount > 0) {
+                strengthRecorded = true
+                if (patternAnswered.isNotEmpty()) {
+                    // Questions are tagged by pattern -> one leaf per pattern (e.g. "Pronouns/Possessive/
+                    // dein"). The category and whole area stay pure rollups over these, so nothing is
+                    // counted twice.
+                    patternAnswered.forEach { (sub, answered) ->
+                        referenceStrengthRepository.recordQuizResult(
+                            areaId = "$base/$sub",
+                            label = patternLabel[sub] ?: sub,
+                            correct = patternFirstTryCorrect[sub] ?: 0,
+                            answered = answered
+                        )
+                    }
+                } else {
+                    // Untagged quiz (e.g. Adjectives) -> one leaf for the whole run.
+                    referenceStrengthRepository.recordQuizResult(
+                        areaId = base,
+                        label = referenceAreaLabel,
+                        correct = firstTryCorrect,
+                        answered = questionCount
+                    )
+                }
+            }
+        }
         // The distinct (category, level) pairs this run covered - for the mastery clear below.
         val practisedPairs = _questions.value.mapNotNull { q ->
             val c = q.category; val l = q.level
@@ -557,7 +654,15 @@ class GrammarQuizViewModel @Inject constructor(
         // Unified strengths/weaknesses tally: same shared store as the audit, keyed by
         // (category, level). Counted once per question.
         if (categoryRecordedIndices.add(index)) {
+            // First answer to this question this run -> feeds the reference-strength mark (first-try acc).
+            if (isCorrect) firstTryCorrect++
             _questions.value.getOrNull(index)?.let { q ->
+                // Per-pattern first-try tally (when the question is tagged with a sub-area).
+                q.subArea?.takeIf { it.isNotBlank() }?.let { sub ->
+                    patternAnswered[sub] = (patternAnswered[sub] ?: 0) + 1
+                    if (isCorrect) patternFirstTryCorrect[sub] = (patternFirstTryCorrect[sub] ?: 0) + 1
+                    q.subLabel?.takeIf { it.isNotBlank() }?.let { patternLabel[sub] = it }
+                }
                 val cat = q.category
                 val lvl = q.level
                 if (!cat.isNullOrBlank() && !lvl.isNullOrBlank()) {

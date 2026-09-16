@@ -6,44 +6,83 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.TranslateLang
 import com.goodstadt.john.language.exams.data.repository.TranslationRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import java.util.Locale
 import javax.inject.Inject
 
 /**
- * Backs the Translate sheet: German <-> English translation via [TranslationRepository], with the target
- * spoken through the existing [AudioPlaybackRepository] when it's German.
+ * Backs the Translate sheet. One side is the **app language** ([appLang], fixed per flavour — German for
+ * `de`, English for `en` — and the one with a TTS voice); the other is the learner's own **target
+ * language** ([userLang]), which they pick from [targetOptions]. The choice is defaulted from the phone
+ * locale, remembered across opens (DataStore), and either language can be the source via [swapDirection].
  */
 @HiltViewModel
 class TranslateViewModel @Inject constructor(
     private val translationRepository: TranslationRepository,
     private val audioPlaybackRepository: AudioPlaybackRepository,
-    private val billingRepository: BillingRepository
+    private val billingRepository: BillingRepository,
+    private val userPreferencesRepository: UserPreferencesRepository
 ) : ViewModel() {
+
+    /** The flavour's own language — always has a TTS voice, and can't be the [userLang] target. */
+    val appLang: TranslateLang =
+        if (BuildConfig.LANGUAGE_ID == "en") TranslateLang.ENGLISH else TranslateLang.GERMAN
+
+    /** Languages the user can translate INTO (everything in the table except the app's own language). */
+    val targetOptions: List<TranslateLang> = TranslateLang.entries.filter { it != appLang }
 
     var sourceText by mutableStateOf("")
         private set
     var targetText by mutableStateOf("")
         private set
 
-    /** Which language the SOURCE box is in; the target is the other one. Defaults German -> English. */
-    var sourceLang by mutableStateOf(TranslateLang.GERMAN)
+    /** The learner's chosen language. Seeded from the phone locale, then overridden by a saved choice. */
+    var userLang by mutableStateOf(localeDefault() ?: targetOptions.first())
         private set
-    val targetLang: TranslateLang
-        get() = if (sourceLang == TranslateLang.GERMAN) TranslateLang.ENGLISH else TranslateLang.GERMAN
+
+    // true = source is the app language (default; played sentences are in it), target is [userLang].
+    private var sourceIsApp by mutableStateOf(true)
+
+    val sourceLang: TranslateLang get() = if (sourceIsApp) appLang else userLang
+    val targetLang: TranslateLang get() = if (sourceIsApp) userLang else appLang
 
     var isTranslating by mutableStateOf(false)
         private set
     var errorMessage by mutableStateOf<String?>(null)
         private set
 
+    init {
+        // Restore the remembered target choice (if any); otherwise the locale default above stands.
+        viewModelScope.launch {
+            TranslateLang.fromCode(userPreferencesRepository.translateTargetLangFlow.first())
+                ?.takeIf { it != appLang }
+                ?.let { userLang = it }
+        }
+    }
+
+    /** The phone's language as a table entry, unless it's the app language; null if not in the table. */
+    private fun localeDefault(): TranslateLang? =
+        TranslateLang.fromCode(Locale.getDefault().language)?.takeIf { it != appLang }
+
     fun onSourceChange(text: String) {
         sourceText = text
         errorMessage = null
+    }
+
+    /** Choose the target language (persisted for next time). Ignored if it's the app's own language. */
+    fun chooseUserLang(lang: TranslateLang) {
+        if (lang == appLang || lang == userLang) return
+        userLang = lang
+        targetText = "" // the previous result was for the old language
+        errorMessage = null
+        viewModelScope.launch { userPreferencesRepository.setTranslateTargetLang(lang.code) }
     }
 
     /**
@@ -55,12 +94,12 @@ class TranslateViewModel @Inject constructor(
         sourceText = text
         targetText = ""
         errorMessage = null
-        sourceLang = if (BuildConfig.LANGUAGE_ID == "en") TranslateLang.ENGLISH else TranslateLang.GERMAN
+        sourceIsApp = true
     }
 
     /** Swap direction, carrying the texts across too (like Google Translate's swap). */
     fun swapDirection() {
-        sourceLang = targetLang
+        sourceIsApp = !sourceIsApp
         val previousSource = sourceText
         sourceText = targetText
         targetText = previousSource
@@ -84,11 +123,11 @@ class TranslateViewModel @Inject constructor(
         }
     }
 
-    /** Only offer speech when the target text is German (the flavour's TTS voice is German). */
+    /** Only offer speech when the target is the app's own language — that's the flavour's TTS voice. */
     val canSpeakTarget: Boolean
-        get() = targetLang == TranslateLang.GERMAN && targetText.isNotBlank()
+        get() = targetLang == appLang && targetText.isNotBlank()
 
-    /** Speak the (German) target text using the existing audio pipeline. */
+    /** Speak the (app-language) target text using the existing audio pipeline. */
     fun speakTarget() {
         if (!canSpeakTarget) return
         viewModelScope.launch {

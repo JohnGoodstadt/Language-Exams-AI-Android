@@ -407,7 +407,7 @@ class SettingsViewModel @Inject constructor(
         Timber.d("Voice selected: ${voice.friendlyName} google: ${voice.id}")
 
         viewModelScope.launch {
-            val sentenceOld = "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
+            val sentenceOld = "Hello, I'm ${voice.friendlyName}. Welcome to 'Exam Ready'"
             val sentence = context.getString(R.string.welcome_greeting, voice.friendlyName)
             playTrack(sentence, voice.id)
         }

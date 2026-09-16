@@ -37,6 +37,11 @@ data class Format7or10Section(
     // Grammar area this question tests (e.g. "Present Perfect", "Conditionals"). Used to tally
     // strengths/weaknesses across the audit tests; null/absent for non-audit content.
     val category: String? = null,
+    // Sub-area within the category this question tests, for per-pattern reference strength (e.g. the
+    // pronoun pattern id "dein"). [subLabel] is its human name ("your — 2nd person singular"). Both
+    // null/absent for content that isn't tracked at pattern granularity.
+    val subArea: String? = null,
+    val subLabel: String? = null,
     var words: List<Format7or10Word>
 )
 @Serializable

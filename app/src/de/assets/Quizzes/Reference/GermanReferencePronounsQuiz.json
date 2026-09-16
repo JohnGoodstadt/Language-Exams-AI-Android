@@ -1,0 +1,1196 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GermanReferencePronounsQuiz",
+  "title": "Pronouns",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Pick the right case for each object pronoun: accusative for the direct object, dative for the receiver.",
+      "sortorder": 1,
+      "learningTitle": "Accusative vs dative pronouns",
+      "learningPoints": [
+        "The direct object of a verb is accusative (mich, dich, ihn, sie, es, uns, euch).",
+        "The indirect object - the receiver - is dative (mir, dir, ihm, ihr, uns, euch, ihnen).",
+        "Verbs like helfen and danken always take the dative.",
+        "The form depends on the pronoun's job in the sentence, not on English word order."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Accusative object: er -> ihn.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "er",
+          "subLabel": "er / ihn / ihm (3rd person masculine)",
+          "explain": "The direct object of 'sehen' is accusative, so ER becomes IHN.",
+          "sentence": "Ich sehe _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            },
+            {
+              "ok": false,
+              "word": "ihm"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Dative object: er -> ihm.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "er",
+          "subLabel": "er / ihn / ihm (3rd person masculine)",
+          "explain": "The receiver (indirect object) is dative, so ER becomes IHM.",
+          "sentence": "Ich gebe _ das Buch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihm"
+            },
+            {
+              "ok": false,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "er"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Accusative object: ich -> mich.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "ich",
+          "subLabel": "ich / mich / mir (1st person singular)",
+          "explain": "Direct object -> accusative: ICH becomes MICH.",
+          "sentence": "Er sieht _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "ich"
+            },
+            {
+              "ok": false,
+              "word": "mir"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Dative object: ich -> mir.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "ich",
+          "subLabel": "ich / mich / mir (1st person singular)",
+          "explain": "The receiver is dative: ICH becomes MIR.",
+          "sentence": "Sie gibt _ das Buch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Accusative object: du -> dich.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "du",
+          "subLabel": "du / dich / dir (2nd person singular)",
+          "explain": "Direct object -> accusative: DU becomes DICH.",
+          "sentence": "Wir sehen _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dich"
+            },
+            {
+              "ok": false,
+              "word": "du"
+            },
+            {
+              "ok": false,
+              "word": "dir"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Dative object: du -> dir.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "du",
+          "subLabel": "du / dich / dir (2nd person singular)",
+          "explain": "The receiver is dative: DU becomes DIR.",
+          "sentence": "Wir geben _ das Buch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dir"
+            },
+            {
+              "ok": false,
+              "word": "dich"
+            },
+            {
+              "ok": false,
+              "word": "du"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "helfen takes the dative.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "ich",
+          "subLabel": "ich / mich / mir (1st person singular)",
+          "explain": "'helfen' always takes the dative, so ICH becomes MIR.",
+          "sentence": "Könnten Sie _ helfen?",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "ich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Dative plural: sie -> ihnen.",
+          "level": "B1",
+          "category": "Personal",
+          "subArea": "sie-pl",
+          "subLabel": "sie / ihnen (3rd person plural)",
+          "explain": "The plural receiver is dative: SIE (they) becomes IHNEN.",
+          "sentence": "Er gibt _ das Buch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihnen"
+            },
+            {
+              "ok": false,
+              "word": "sie"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "dieser (this) takes the same case endings as der/die/das.",
+      "sortorder": 2,
+      "learningTitle": "The endings of dieser",
+      "learningPoints": [
+        "dieser = this; its ending shows the noun's gender and case, like der/die/das.",
+        "Nominative: dieser (m), diese (f), dieses (n), diese (pl).",
+        "Accusative masculine adds -n: diesen.",
+        "Dative masculine/neuter: diesem; dative feminine: dieser."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Masculine nominative: dieser.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "dieser-m",
+          "subLabel": "dieser - masculine (this)",
+          "explain": "Subject + der-noun -> DIESER.",
+          "sentence": "_ Mann ist nett.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Dieser"
+            },
+            {
+              "ok": false,
+              "word": "Diese"
+            },
+            {
+              "ok": false,
+              "word": "Dieses"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Masculine accusative: diesen.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "dieser-m",
+          "subLabel": "dieser - masculine (this)",
+          "explain": "Direct object, masculine -> DIESEN.",
+          "sentence": "Ich kenne _ Mann.",
+          "words": [
+            {
+              "ok": true,
+              "word": "diesen"
+            },
+            {
+              "ok": false,
+              "word": "dieser"
+            },
+            {
+              "ok": false,
+              "word": "diesem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "Masculine dative: diesem.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "dieser-m",
+          "subLabel": "dieser - masculine (this)",
+          "explain": "Indirect object, masculine -> DIESEM.",
+          "sentence": "Ich gebe _ Mann das Buch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "diesem"
+            },
+            {
+              "ok": false,
+              "word": "diesen"
+            },
+            {
+              "ok": false,
+              "word": "dieser"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 12,
+          "summary": "Feminine nominative: diese.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "diese-f",
+          "subLabel": "diese - feminine (this)",
+          "explain": "Subject + die-noun -> DIESE.",
+          "sentence": "_ Frau ist hier.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Diese"
+            },
+            {
+              "ok": false,
+              "word": "Dieser"
+            },
+            {
+              "ok": false,
+              "word": "Dieses"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 13,
+          "summary": "Plural accusative: diese.",
+          "level": "B1",
+          "category": "This / That",
+          "subArea": "diese-pl",
+          "subLabel": "diese - plural (these)",
+          "explain": "Direct object, plural -> DIESE.",
+          "sentence": "Ich kaufe _ Bücher.",
+          "words": [
+            {
+              "ok": true,
+              "word": "diese"
+            },
+            {
+              "ok": false,
+              "word": "diesen"
+            },
+            {
+              "ok": false,
+              "word": "dieser"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "The stem is the owner (mein-, dein-, sein-, ihr-); the ending agrees with the noun's gender and case.",
+      "sortorder": 3,
+      "learningTitle": "Possessive endings",
+      "learningPoints": [
+        "Choose the stem for the owner: mein (my), dein (your), sein (his), ihr (her/their).",
+        "The ending matches the noun it describes, exactly like ein/kein.",
+        "Accusative masculine adds -en: meinen, seinen, ihren.",
+        "Dative feminine adds -er: meiner, seiner, ihrer."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 14,
+          "summary": "Masculine accusative: meinen.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "mein",
+          "subLabel": "mein - my (1st person singular)",
+          "explain": "Direct object, masculine -> MEINEN.",
+          "sentence": "Ich sehe _ Bruder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meinen"
+            },
+            {
+              "ok": false,
+              "word": "mein"
+            },
+            {
+              "ok": false,
+              "word": "meiner"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 15,
+          "summary": "Feminine dative: meiner.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "mein",
+          "subLabel": "mein - my (1st person singular)",
+          "explain": "'helfen' + dative, feminine -> MEINER.",
+          "sentence": "Ich helfe _ Schwester.",
+          "words": [
+            {
+              "ok": true,
+              "word": "meiner"
+            },
+            {
+              "ok": false,
+              "word": "meine"
+            },
+            {
+              "ok": false,
+              "word": "meinen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 16,
+          "summary": "Masculine accusative: seinen.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "sein",
+          "subLabel": "sein - his (3rd person masculine)",
+          "explain": "Direct object, masculine, his -> SEINEN.",
+          "sentence": "Er sucht _ Schlüssel.",
+          "words": [
+            {
+              "ok": true,
+              "word": "seinen"
+            },
+            {
+              "ok": false,
+              "word": "sein"
+            },
+            {
+              "ok": false,
+              "word": "seiner"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 17,
+          "summary": "Masculine accusative: ihren.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "ihr",
+          "subLabel": "ihr - her / their",
+          "explain": "Direct object, masculine, her -> IHREN.",
+          "sentence": "Ich kenne _ Bruder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ihren"
+            },
+            {
+              "ok": false,
+              "word": "ihr"
+            },
+            {
+              "ok": false,
+              "word": "ihrem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 18,
+          "summary": "Feminine nominative: deine.",
+          "level": "B1",
+          "category": "Possessive",
+          "subArea": "dein",
+          "subLabel": "dein - your (2nd person singular)",
+          "explain": "Subject, feminine, your -> DEINE.",
+          "sentence": "_ Schwester ist nett.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Deine"
+            },
+            {
+              "ok": false,
+              "word": "Dein"
+            },
+            {
+              "ok": false,
+              "word": "Deinen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Accusative when the reflexive is the object; dative when there is ANOTHER object.",
+      "sortorder": 4,
+      "learningTitle": "Accusative vs dative reflexives",
+      "learningPoints": [
+        "The reflexive refers back to the subject (myself, yourself ...).",
+        "Use the accusative (mich, dich, uns, euch) when it is the object.",
+        "Use the dative (mir, dir) when there is another, separate object.",
+        "For er/sie/es, they and formal Sie the reflexive is always sich."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 19,
+          "summary": "Accusative reflexive: mich.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "mich",
+          "subLabel": "mich / mir - myself (1st person singular)",
+          "explain": "The reflexive is the object -> accusative MICH.",
+          "sentence": "Ich freue _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "sich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 20,
+          "summary": "Dative reflexive: mir.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "mich",
+          "subLabel": "mich / mir - myself (1st person singular)",
+          "explain": "There is another object (ein Eis) -> dative MIR.",
+          "sentence": "Ich kaufe _ ein Eis.",
+          "words": [
+            {
+              "ok": true,
+              "word": "mir"
+            },
+            {
+              "ok": false,
+              "word": "mich"
+            },
+            {
+              "ok": false,
+              "word": "sich"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 21,
+          "summary": "sich for he/she/it.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "sich",
+          "subLabel": "sich - himself / herself / themselves",
+          "explain": "For er/sie/es the reflexive is SICH.",
+          "sentence": "Er freut _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "ihn"
+            },
+            {
+              "ok": false,
+              "word": "ihm"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 22,
+          "summary": "Plural reflexive: uns.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "uns",
+          "subLabel": "uns - ourselves (1st person plural)",
+          "explain": "We -> reflexive UNS.",
+          "sentence": "Wir müssen _ beeilen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "uns"
+            },
+            {
+              "ok": false,
+              "word": "sich"
+            },
+            {
+              "ok": false,
+              "word": "euch"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 23,
+          "summary": "Plural reflexive: euch.",
+          "level": "B1",
+          "category": "Reflexive",
+          "subArea": "euch",
+          "subLabel": "euch - yourselves (2nd person plural)",
+          "explain": "You all -> reflexive EUCH.",
+          "sentence": "Setzt _, bitte.",
+          "words": [
+            {
+              "ok": true,
+              "word": "euch"
+            },
+            {
+              "ok": false,
+              "word": "uns"
+            },
+            {
+              "ok": false,
+              "word": "sich"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "wer (who) declines: wer / wen / wem / wessen. was (what) never changes.",
+      "sortorder": 5,
+      "learningTitle": "Question words for people",
+      "learningPoints": [
+        "wer asks about a person as the subject.",
+        "wen is the accusative (direct object); wem is the dative (to whom).",
+        "wessen asks whose (possession).",
+        "was (what) is used for things and never changes."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 24,
+          "summary": "Subject: wer.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "wer",
+          "subLabel": "wer / wen / wem / wessen (who)",
+          "explain": "Asking about the subject -> WER.",
+          "sentence": "_ kommt heute?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wer"
+            },
+            {
+              "ok": false,
+              "word": "Wen"
+            },
+            {
+              "ok": false,
+              "word": "Wem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 25,
+          "summary": "Accusative: wen.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "wer",
+          "subLabel": "wer / wen / wem / wessen (who)",
+          "explain": "Direct object -> WEN.",
+          "sentence": "_ hast du eingeladen?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wen"
+            },
+            {
+              "ok": false,
+              "word": "Wer"
+            },
+            {
+              "ok": false,
+              "word": "Wem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 26,
+          "summary": "Dative: wem.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "wer",
+          "subLabel": "wer / wen / wem / wessen (who)",
+          "explain": "'gehören' takes the dative -> WEM.",
+          "sentence": "_ gehört das Auto?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wem"
+            },
+            {
+              "ok": false,
+              "word": "Wen"
+            },
+            {
+              "ok": false,
+              "word": "Wer"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 27,
+          "summary": "Possessive: wessen.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "wer",
+          "subLabel": "wer / wen / wem / wessen (who)",
+          "explain": "Asking whose -> WESSEN.",
+          "sentence": "_ Tasche ist das?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wessen"
+            },
+            {
+              "ok": false,
+              "word": "Wer"
+            },
+            {
+              "ok": false,
+              "word": "Wem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 28,
+          "summary": "Things: was.",
+          "level": "B1",
+          "category": "Questions",
+          "subArea": "wer",
+          "subLabel": "was (what, for things)",
+          "explain": "Asking about a thing -> WAS (never changes).",
+          "sentence": "_ ist das?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Was"
+            },
+            {
+              "ok": false,
+              "word": "Wer"
+            },
+            {
+              "ok": false,
+              "word": "Wen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "A relative pronoun takes its gender from the noun it describes, but its case from its job in the clause.",
+      "sortorder": 6,
+      "learningTitle": "Relative pronouns",
+      "learningPoints": [
+        "Gender/number come from the noun the clause describes.",
+        "Case comes from the pronoun's job inside the relative clause.",
+        "Masculine: der (subject), den (object), dem (dative).",
+        "Plural dative is denen; neuter subject/object is das."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 29,
+          "summary": "Masculine subject: der.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "der-m",
+          "subLabel": "der / den / dem (masculine relative)",
+          "explain": "Subject of the clause, masculine -> DER.",
+          "sentence": "Der Mann, _ dort steht, ist mein Lehrer.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 30,
+          "summary": "Masculine accusative: den.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "der-m",
+          "subLabel": "der / den / dem (masculine relative)",
+          "explain": "Object of the clause, masculine -> DEN.",
+          "sentence": "Der Mann, _ ich kenne, ist nett.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 31,
+          "summary": "Masculine dative: dem.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "der-m",
+          "subLabel": "der / den / dem (masculine relative)",
+          "explain": "'helfen' + dative, masculine -> DEM.",
+          "sentence": "Der Mann, _ ich helfe, ist alt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 32,
+          "summary": "Plural dative: denen.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "die-pl",
+          "subLabel": "die / denen (plural relative)",
+          "explain": "'helfen' + dative, plural -> DENEN.",
+          "sentence": "Die Leute, _ ich helfe, sind alt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "denen"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "deren"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 33,
+          "summary": "Neuter subject: das.",
+          "level": "B1",
+          "category": "Relative",
+          "subArea": "das-n",
+          "subLabel": "das (neuter relative)",
+          "explain": "Subject of the clause, neuter -> DAS.",
+          "sentence": "Das Kind, _ dort spielt, ist müde.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "dessen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Pronouns for unspecified people and things. Some decline (man, jemand, jeder); etwas/nichts never change.",
+      "sortorder": 7,
+      "learningTitle": "Indefinite pronouns",
+      "learningPoints": [
+        "man = people in general; it declines to einen (acc) and einem (dat).",
+        "jemand / niemand = someone / no one; they take -en / -em endings.",
+        "etwas / nichts = something / nothing; these never change.",
+        "jeder = each / everyone; einer / keiner = one / none."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 34,
+          "summary": "man as subject.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "man",
+          "subLabel": "man - one / people in general",
+          "explain": "People in general as the subject -> MAN.",
+          "sentence": "_ weiß nie.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Man"
+            },
+            {
+              "ok": false,
+              "word": "Einen"
+            },
+            {
+              "ok": false,
+              "word": "Einem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 35,
+          "summary": "niemand accusative.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "jemand",
+          "subLabel": "jemand / niemand - someone / no one",
+          "explain": "Direct object, no one -> NIEMANDEN.",
+          "sentence": "Ich habe _ gesehen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "niemanden"
+            },
+            {
+              "ok": false,
+              "word": "niemand"
+            },
+            {
+              "ok": false,
+              "word": "niemandem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 36,
+          "summary": "etwas never changes.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "etwas",
+          "subLabel": "etwas / nichts - something / nothing",
+          "explain": "something -> ETWAS (invariable).",
+          "sentence": "Möchtest du _ trinken?",
+          "words": [
+            {
+              "ok": true,
+              "word": "etwas"
+            },
+            {
+              "ok": false,
+              "word": "nichts"
+            },
+            {
+              "ok": false,
+              "word": "einen"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 37,
+          "summary": "jeder accusative.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "jeder",
+          "subLabel": "jeder / alle - each / everyone",
+          "explain": "Direct object, everyone -> JEDEN.",
+          "sentence": "Ich kenne hier _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "jeden"
+            },
+            {
+              "ok": false,
+              "word": "jeder"
+            },
+            {
+              "ok": false,
+              "word": "jedem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 38,
+          "summary": "einer as subject.",
+          "level": "B1",
+          "category": "Indefinite",
+          "subArea": "einer",
+          "subLabel": "einer / keiner - one / none",
+          "explain": "One (of them) as the subject -> EINER.",
+          "sentence": "_ muss es tun.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Einer"
+            },
+            {
+              "ok": false,
+              "word": "Einen"
+            },
+            {
+              "ok": false,
+              "word": "Einem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "For people use a preposition + pronoun (an ihn). For things use a da-word (daran). Questions use a wo-word (woran).",
+      "sortorder": 8,
+      "learningTitle": "da- and wo- compounds",
+      "learningPoints": [
+        "People after a preposition: preposition + pronoun (auf ihn, mit ihr).",
+        "Things after a preposition: a single da-word (darauf, damit, davon).",
+        "Add an r before a vowel: da + auf = darauf; wo + auf = worauf.",
+        "Questions about things use a wo-word (womit, wovon, worauf)."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 39,
+          "summary": "Thing -> da-word.",
+          "level": "B1",
+          "category": "For things (da-/wo-)",
+          "subArea": "person-thing",
+          "subLabel": "person vs thing (an ihn / daran)",
+          "explain": "The bus is a thing, so 'auf' becomes DARAUF.",
+          "sentence": "Ich warte auf den Bus. Ich warte _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "darauf"
+            },
+            {
+              "ok": false,
+              "word": "auf ihn"
+            },
+            {
+              "ok": false,
+              "word": "darüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 40,
+          "summary": "Person -> preposition + pronoun.",
+          "level": "B1",
+          "category": "For things (da-/wo-)",
+          "subArea": "person-thing",
+          "subLabel": "person vs thing (an ihn / daran)",
+          "explain": "A person stays as preposition + pronoun: AUF IHN.",
+          "sentence": "Ich warte auf meinen Freund. Ich warte _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "auf ihn"
+            },
+            {
+              "ok": false,
+              "word": "darauf"
+            },
+            {
+              "ok": false,
+              "word": "auf ihm"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 41,
+          "summary": "mit -> damit.",
+          "level": "B1",
+          "category": "For things (da-/wo-)",
+          "subArea": "da-words",
+          "subLabel": "da-words (for things)",
+          "explain": "Agreeing with a thing (the plan): 'mit' becomes DAMIT.",
+          "sentence": "Ich bin _ einverstanden. (mit dem Plan)",
+          "words": [
+            {
+              "ok": true,
+              "word": "damit"
+            },
+            {
+              "ok": false,
+              "word": "dabei"
+            },
+            {
+              "ok": false,
+              "word": "darauf"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 42,
+          "summary": "Question about a thing: worauf.",
+          "level": "B1",
+          "category": "For things (da-/wo-)",
+          "subArea": "wo-words",
+          "subLabel": "wo-words (in questions)",
+          "explain": "Asking about a thing with 'auf' -> WORAUF.",
+          "sentence": "_ wartest du? (auf etwas)",
+          "words": [
+            {
+              "ok": true,
+              "word": "Worauf"
+            },
+            {
+              "ok": false,
+              "word": "Womit"
+            },
+            {
+              "ok": false,
+              "word": "Wovon"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 43,
+          "summary": "Question about a thing: wovon.",
+          "level": "B1",
+          "category": "For things (da-/wo-)",
+          "subArea": "wo-words",
+          "subLabel": "wo-words (in questions)",
+          "explain": "Asking about a thing with 'von' -> WOVON.",
+          "sentence": "_ sprichst du? (von etwas)",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wovon"
+            },
+            {
+              "ok": false,
+              "word": "Worauf"
+            },
+            {
+              "ok": false,
+              "word": "Womit"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
