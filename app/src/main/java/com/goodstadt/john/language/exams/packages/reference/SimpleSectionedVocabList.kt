@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SportsEsports
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -29,7 +30,6 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
-import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -91,7 +91,11 @@ fun SimpleSectionedVocabList(
                             // Translate ("T") sits to the LEFT of the Quiz button when enabled.
                             if (onTranslateTapped != null) {
                                 IconButton(onClick = onTranslateTapped) {
-                                    LetterInCircle(letter = "T", tint = Color(0xFFFF9800))
+                                    Icon(
+                                        imageVector = Icons.Filled.Translate,
+                                        contentDescription = "Translate",
+                                        tint = Color(0xFFFF9800)
+                                    )
                                 }
                             }
                             IconButton(onClick = onQuizSheetTapped) {

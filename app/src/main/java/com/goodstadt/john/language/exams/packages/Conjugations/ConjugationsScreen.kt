@@ -7,6 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Translate
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -34,7 +37,6 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.packages.reference.shared.SectionedVocabList
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
-import com.goodstadt.john.language.exams.screens.shared.LetterInCircle
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 //import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -86,7 +88,11 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     IconButton(onClick = { showTranslateSheet = true }) {
-                        LetterInCircle(letter = "T", tint = Color(0xFFFF9800))
+                        Icon(
+                            imageVector = Icons.Filled.Translate,
+                            contentDescription = "Translate",
+                            tint = Color(0xFFFF9800)
+                        )
                     }
                     Box(modifier = Modifier.weight(1f)) {
                         HorizontalLevelPicker(

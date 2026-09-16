@@ -10,6 +10,9 @@ import com.goodstadt.john.language.exams.data.GrammarSheetMapping
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthLevel
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthRepository
 import com.goodstadt.john.language.exams.managers.AuditEngine
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.AuditStats
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -70,12 +73,27 @@ class FocusViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val categoryQuizRepository: CategoryQuizRepository,
     private val contentRepository: ContentRepository,
+    private val referenceStrengthRepository: ReferenceStrengthRepository,
     private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider
 ) : ViewModel() {
 
     /** The (category, level) whose quiz sheet is open, or null when none is. */
     private val _practiceTarget = MutableStateFlow<PracticeTarget?>(null)
     val practiceTarget: StateFlow<PracticeTarget?> = _practiceTarget.asStateFlow()
+
+    /**
+     * Coarse strength per REFERENCE area (Pronouns, Adjectives, Prepositions, Sounds Similar, Word Pairs),
+     * rolled up from the per-pattern marks the reference quizzes record. Only areas with enough data to
+     * rate (not UNTESTED) appear, so an area with no quiz history is simply absent. Empty until the learner
+     * has completed a reference quiz. Drives the Focus "Reference areas" section.
+     */
+    val referenceStrengths: StateFlow<List<ReferenceStrength>> =
+        referenceStrengthRepository.strengths
+            .map {
+                referenceStrengthRepository.topAreas()
+                    .filter { s -> s.level != ReferenceStrengthLevel.UNTESTED }
+            }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     /**
      * The whole canonical grammar grid (category × level) for the "all categories" browse list, each

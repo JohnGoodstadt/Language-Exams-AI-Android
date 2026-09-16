@@ -58,6 +58,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.serialization.json.Json
+import kotlin.math.roundToInt
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -596,6 +597,7 @@ class GrammarQuizViewModel @Inject constructor(
                         answered = questionCount
                     )
                 }
+                logReferenceStrength(base, questionCount)
             }
         }
         // The distinct (category, level) pairs this run covered - for the mastery clear below.
@@ -645,6 +647,44 @@ class GrammarQuizViewModel @Inject constructor(
 
             usageQuizRepository.finishQuiz(quizId = quizStatistics.value.filename, finalScore = qs.value.correct)
         }
+    }
+
+    /**
+     * Log a reference quiz's recorded numbers to logcat (filter for tag "REF-STRENGTH") so the marks can
+     * be checked by hand: each recorded leaf (this run's first-try score + the resulting blended mark /
+     * level / lifetime totals), then the category and whole-area rollups.
+     */
+    private fun logReferenceStrength(base: String, questionCount: Int) {
+        fun pct(mark: Float) = (mark * 100).roundToInt()
+        val sb = StringBuilder("REF-STRENGTH  quiz finished: $base\n")
+        if (patternAnswered.isNotEmpty()) {
+            patternAnswered.keys.sorted().forEach { sub ->
+                val id = "$base/$sub"
+                val leaf = referenceStrengthRepository.leaf(id)
+                sb.append("  leaf $id  this run ${patternFirstTryCorrect[sub] ?: 0}/${patternAnswered[sub]} first-try")
+                if (leaf != null) sb.append(
+                    "  ->  ${pct(leaf.mark)}% ${leaf.level}" +
+                        "  (lifetime ${leaf.totalCorrect}/${leaf.totalAnswered} over ${leaf.attempts} quizzes)"
+                )
+                sb.append("\n")
+            }
+        } else {
+            val leaf = referenceStrengthRepository.leaf(base)
+            sb.append("  leaf $base  this run $firstTryCorrect/$questionCount first-try")
+            if (leaf != null) sb.append(
+                "  ->  ${pct(leaf.mark)}% ${leaf.level}" +
+                    "  (lifetime ${leaf.totalCorrect}/${leaf.totalAnswered} over ${leaf.attempts} quizzes)"
+            )
+            sb.append("\n")
+        }
+        referenceStrengthRepository.rollup(base)?.let {
+            sb.append("  rollup(category) $base  =  ${pct(it.mark)}% ${it.level}\n")
+        }
+        val top = base.substringBefore('/')
+        if (top != base) referenceStrengthRepository.rollup(top)?.let {
+            sb.append("  rollup(area) $top  =  ${pct(it.mark)}% ${it.level}\n")
+        }
+        Timber.i(sb.toString().trimEnd())
     }
 
     fun updateAnswer(isCorrect: Boolean) {

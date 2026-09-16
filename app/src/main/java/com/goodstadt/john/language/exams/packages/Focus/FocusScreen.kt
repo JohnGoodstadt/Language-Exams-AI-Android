@@ -46,12 +46,15 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.GrammarRow
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthLevel
 import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
 import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
+import kotlin.math.roundToInt
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -65,6 +68,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val practiceTarget by viewModel.practiceTarget.collectAsState()
     val grammarCatalog by viewModel.grammarCatalog.collectAsState()
     val downloadStatus by viewModel.downloadStatus.collectAsState()
+    val referenceStrengths by viewModel.referenceStrengths.collectAsState()
 
     var showAuditSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -107,10 +111,10 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
         if (grammarCatalog.isNotEmpty()) {
             fun answeredCount(e: GrammarCatalogEntry) = e.score.correct + e.score.incorrect + e.score.dontKnow
 
-            // Show only levels at or below the learner's current level (hide the ones above).
+            // Show only the learner's CURRENT level (e.g. on A1, show A1 only). Fall back to all levels
+            // if the current level is unknown/unset.
             val levelOrder = listOf("A1", "A2", "B1", "B2")
-            val maxIdx = levelOrder.indexOf(currentLevel)
-            val levelsToShow = if (maxIdx >= 0) levelOrder.take(maxIdx + 1) else levelOrder
+            val levelsToShow = if (currentLevel in levelOrder) listOf(currentLevel) else levelOrder
 
             Spacer(Modifier.height(8.dp))
             levelsToShow.forEach { level ->
@@ -147,6 +151,10 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
                 }
             }
         }
+
+        // --- Reference areas: coarse Weak / OK / Strong per reference-tab area (Prepositions,
+        // Adjectives, Pronouns, Sounds Similar, Word Pairs), summarised from the reference quizzes. ---
+        ReferenceAreasSection(strengths = referenceStrengths)
 
         // --- DEBUG: one Download button per grammar sheet, in A1..B2 sections. Tests the new
         // Format7/10 download code (result is cached to disk, not displayed). ---
@@ -334,6 +342,95 @@ private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Un
             if (greenFrac > 0f) Box(Modifier.fillMaxHeight().weight(greenFrac).background(Color(0xFF4CAF50)))
             if (redFrac > 0f) Box(Modifier.fillMaxHeight().weight(redFrac).background(Color(0xFFE53935)))
             if (greyFrac > 0f) Box(Modifier.fillMaxHeight().weight(greyFrac))
+        }
+    }
+}
+
+/**
+ * The "Reference areas" section: a coarse Weak / OK / Strong per reference-tab area, summarised from the
+ * reference quizzes' per-pattern marks. Areas with too little data to rate are omitted; when none can be
+ * rated yet, only the header + explanation show (so the learner knows how to reveal weak areas).
+ */
+@Composable
+private fun ReferenceAreasSection(strengths: List<ReferenceStrength>) {
+    Spacer(Modifier.height(24.dp))
+    Text(
+        text = "Reference areas",
+        style = MaterialTheme.typography.titleMedium,
+        fontWeight = FontWeight.Bold,
+        color = Color.White
+    )
+    Spacer(Modifier.height(4.dp))
+    Text(
+        text = "How strong you are in each reference topic, from its quiz. Take a reference quiz (the Q button) " +
+            "to reveal weak spots — anything marked Weak is worth another look.",
+        style = MaterialTheme.typography.bodyMedium,
+        color = Color.LightGray
+    )
+
+    if (strengths.isEmpty()) {
+        Spacer(Modifier.height(8.dp))
+        Text(
+            text = "No reference quizzes taken yet.",
+            style = MaterialTheme.typography.bodySmall,
+            color = Color.Gray
+        )
+        return
+    }
+
+    Spacer(Modifier.height(10.dp))
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            strengths.forEach { ReferenceAreaRow(it) }
+        }
+    }
+}
+
+/** One reference area: its name + a coarse stat line, and a coloured Weak/OK/Strong pill. */
+@Composable
+private fun ReferenceAreaRow(strength: ReferenceStrength) {
+    val (label, color) = when (strength.level) {
+        ReferenceStrengthLevel.WEAK -> "Weak" to Color(0xFFE53935)
+        ReferenceStrengthLevel.OK -> "OK" to Color(0xFFFF9800)
+        ReferenceStrengthLevel.STRONG -> "Strong" to Color(0xFF4CAF50)
+        ReferenceStrengthLevel.UNTESTED -> "—" to Color.Gray
+    }
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = strength.label,
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.White
+            )
+            Text(
+                text = "${(strength.mark * 100).roundToInt()}% · " +
+                    "${strength.attempts} ${if (strength.attempts == 1) "quiz" else "quizzes"}",
+                style = MaterialTheme.typography.labelSmall,
+                color = Color.Gray
+            )
+        }
+        Box(
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .background(color.copy(alpha = 0.18f))
+                .padding(horizontal = 10.dp, vertical = 4.dp)
+        ) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.Bold,
+                color = color
+            )
         }
     }
 }
