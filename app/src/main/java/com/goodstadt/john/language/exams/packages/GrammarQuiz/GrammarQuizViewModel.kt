@@ -13,6 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AnswerOutcome
 import com.goodstadt.john.language.exams.data.GrammarCatalog
@@ -38,6 +39,8 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Format7or10File
+import com.goodstadt.john.language.exams.models.Format7or10List
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounQuizGenerator
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
@@ -305,32 +308,24 @@ class GrammarQuizViewModel @Inject constructor(
     }
 
     /**
-     * Load a bundled fileFormat-7 Pronouns quiz (assets `Quizzes/Reference/<quizSheetName>.json`) into
-     * this same screen, filtered to one category block so the Pronouns screen's floating "Q" quizzes just
-     * the selected chip. The quiz is a MULTI-BLOCK file (one `data` block per category), and each block's
-     * sections carry the category label; [categoryFilter] keeps only the matching block. Bundle-only for
-     * now (read straight from assets, like [loadGrammarQuizObsolete]); a Firestore path can be added later.
+     * Load the Pronouns quiz for one category into this same screen. To stop repeat attempts showing the
+     * identical questions, it first tries to build a FRESH, distributed set at runtime from the base
+     * reference sheet ([PronounQuizGenerator]) — a different pick/order each open. If that can't produce
+     * enough questions (e.g. the da-/wo- category has no form chains), it falls back to the authored
+     * bundled quiz (`Quizzes/Reference/<quizSheetName>.json`), filtered to the selected [categoryFilter].
      */
     fun loadPronounsQuiz(quizSheetName: String, displayTitle: String, level: String, categoryFilter: String?) {
-        // Strength keyed under "Pronouns" (rolls up the whole area) with the category as a child leaf,
-        // e.g. "Pronouns/Personal". Deeper per-pattern leaves (e.g. ".../your") can be added later by
-        // tagging quiz questions with their pattern.
+        // Strength keyed under "Pronouns" with the category as a child leaf (e.g. "Pronouns/Personal");
+        // the questions themselves carry per-pattern subArea tags for the deeper leaves.
         referenceAreaId = if (categoryFilter.isNullOrBlank()) "Pronouns" else "Pronouns/$categoryFilter"
         referenceAreaLabel = if (categoryFilter.isNullOrBlank()) "Pronouns" else "$categoryFilter pronouns"
         viewModelScope.launch {
-            val path = "Quizzes/Reference/$quizSheetName.json"
-            val root = try {
-                appContext.assets.open(path).bufferedReader().use {
-                    jsonParser.decodeFromString<Format7or10File>(it.readText())
-                }
-            } catch (e: Exception) {
-                Timber.e(e, "PronounsQuiz: failed to read '$path'")
+            val root = generatePronounsQuiz(quizSheetName, displayTitle, categoryFilter)
+                ?: readAuthoredPronounsQuiz(quizSheetName, categoryFilter)
+            if (root == null) {
                 _questions.value = emptyList()
                 return@launch
             }
-
-            val filtered = if (categoryFilter.isNullOrBlank()) root
-                else root.copy(data = root.data.filter { blk -> blk.sections.any { it.category == categoryFilter } })
 
             currentCategory = displayTitle
             currentLevel = level
@@ -340,11 +335,68 @@ class GrammarQuizViewModel @Inject constructor(
             quizStatistics.value = quizStatistics.value.copy(
                 title = displayTitle, filename = baseName, skillLevel = level, page = 1
             )
-            _uiState.update { it.copy(format7or10ListRoot = filtered) }
-            _allQuestions = generateQuestionsFromData(filtered)
+            _uiState.update { it.copy(format7or10ListRoot = root) }
+            _allQuestions = generateQuestionsFromData(root)
             applyFilters()
             resetQuiz()
         }
+    }
+
+    /**
+     * Build a fresh quiz for [categoryFilter] from the base reference sheet (doc = quizSheetName minus the
+     * "Quiz" suffix). Returns null when there's no category filter, the sheet can't be read, or the
+     * generator can't make at least 4 questions — the caller then uses the authored quiz.
+     */
+    private suspend fun generatePronounsQuiz(
+        quizSheetName: String,
+        displayTitle: String,
+        categoryFilter: String?
+    ): Format7or10File? {
+        // Runtime generation is only SAFE for a richly-inflected language: German's distinct case endings
+        // make a different case of the same word reliably wrong. In English "his"/"hers" stand alone and
+        // who/whom are interchangeable, so a same-word distractor can be a second correct answer — so
+        // English always uses the curated authored quiz.
+        if (BuildConfig.LANGUAGE_ID != "de") return null
+        val categoryLabel = categoryFilter?.takeIf { it.isNotBlank() } ?: return null
+        val baseDocId = quizSheetName.removeSuffix("Quiz")
+        val category = vocabRepository.getFormat6Data(baseDocId).getOrNull()
+            ?.categories?.firstOrNull { it.label == categoryLabel } ?: return null
+
+        val sections = PronounQuizGenerator.generate(category, count = 10)
+        if (sections.size < 4) return null
+
+        return Format7or10File(
+            fileFormat = 7,
+            sheetName = quizSheetName,
+            title = "Pronouns",
+            updatedDate = 0,
+            location = 0,
+            data = listOf(
+                Format7or10List(
+                    title = "Choose the correct answer for each question.",
+                    description = "A fresh mix each time — the same forms in different examples.",
+                    sortorder = 1,
+                    learningTitle = displayTitle,
+                    learningPoints = listOfNotNull(category.note.takeIf { it.isNotBlank() }),
+                    sections = sections
+                )
+            )
+        )
+    }
+
+    /** Read the authored bundled Pronouns quiz and keep only the selected category's block. */
+    private fun readAuthoredPronounsQuiz(quizSheetName: String, categoryFilter: String?): Format7or10File? {
+        val path = "Quizzes/Reference/$quizSheetName.json"
+        val root = try {
+            appContext.assets.open(path).bufferedReader().use {
+                jsonParser.decodeFromString<Format7or10File>(it.readText())
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "PronounsQuiz: failed to read '$path'")
+            return null
+        }
+        return if (categoryFilter.isNullOrBlank()) root
+        else root.copy(data = root.data.filter { blk -> blk.sections.any { it.category == categoryFilter } })
     }
 
     /**
