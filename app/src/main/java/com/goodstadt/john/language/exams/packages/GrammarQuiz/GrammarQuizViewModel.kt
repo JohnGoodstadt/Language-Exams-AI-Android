@@ -128,6 +128,11 @@ class GrammarQuizViewModel @Inject constructor(
     private val _questions = MutableStateFlow<List<QuizQuestion>>(emptyList())
     val questions: StateFlow<List<QuizQuestion>> get() = _questions
 
+    // True when the quiz was GENERATED at runtime (pronouns): its questions differ every attempt, so the
+    // per-question SRS mastery (keyed by page 1..N) is meaningless and the badge + filter chips are hidden.
+    private val _isGeneratedQuiz = MutableStateFlow(false)
+    val isGeneratedQuiz: StateFlow<Boolean> = _isGeneratedQuiz.asStateFlow()
+
     // Mastery Filter
     private var _allQuestions: List<QuizQuestion> = emptyList()
     private val _activeFilters = MutableStateFlow<Set<UsageMastery>>(emptySet())
@@ -260,6 +265,7 @@ class GrammarQuizViewModel @Inject constructor(
     fun loadGrammarQuiz(category: String, level: String) {
         // Plain grammar quizzes feed the readiness audit, not the reference-strength store.
         referenceAreaId = null
+        _isGeneratedQuiz.value = false
         viewModelScope.launch {
             val fileKey = GrammarCatalog.fileKeyFor(category)
             if (fileKey == null) {
@@ -299,6 +305,7 @@ class GrammarQuizViewModel @Inject constructor(
         // Reference-tab quiz (e.g. Adjectives): strength keyed per group+level, e.g. "Adjectives/A1".
         referenceAreaId = "$groupKey/$level"
         referenceAreaLabel = "$displayTitle ($level)"
+        _isGeneratedQuiz.value = false
         viewModelScope.launch {
             val logicalName = ReferenceQuizSheetMapping.logicalName(groupKey, level)
             // The logical name is unique per level and stable, so it doubles as the stats/mastery key;
@@ -319,9 +326,15 @@ class GrammarQuizViewModel @Inject constructor(
         // the questions themselves carry per-pattern subArea tags for the deeper leaves.
         referenceAreaId = if (categoryFilter.isNullOrBlank()) "Pronouns" else "Pronouns/$categoryFilter"
         referenceAreaLabel = if (categoryFilter.isNullOrBlank()) "Pronouns" else "$categoryFilter pronouns"
+        // Clear the previous set at once so re-opening the quiz doesn't briefly show the old questions
+        // while the new set is generated/loaded (this VM is reused across opens).
+        _questions.value = emptyList()
+        currentQuestionIndex.value = 0
         viewModelScope.launch {
-            val root = generatePronounsQuiz(quizSheetName, displayTitle, categoryFilter)
-                ?: readAuthoredPronounsQuiz(quizSheetName, categoryFilter)
+            val generated = generatePronounsQuiz(quizSheetName, displayTitle, categoryFilter)
+            // Generated questions differ each attempt -> hide the page-keyed per-question mastery UI.
+            _isGeneratedQuiz.value = generated != null
+            val root = generated ?: readAuthoredPronounsQuiz(quizSheetName, categoryFilter)
             if (root == null) {
                 _questions.value = emptyList()
                 return@launch
@@ -663,7 +676,9 @@ class GrammarQuizViewModel @Inject constructor(
             // correct -> correct == tries == questionCount). Zeroes the weak counts for the
             // categories practised, so the Focus page can move on to the next weak area. A single
             // wrong tap anywhere (tries > correct) means it was not aced, so nothing clears.
-            if (questionCount > 0 && qs.value.correct == questionCount && qs.value.tries == questionCount) {
+            // Grammar quizzes only (symmetric with the audit write): reference quizzes don't touch the
+            // grammar audit, so they have nothing to clear here.
+            if (referenceAreaId == null && questionCount > 0 && qs.value.correct == questionCount && qs.value.tries == questionCount) {
                 practisedPairs.forEach { (c, l) -> auditRepository.clearCategoryWeakness(c, l) }
             }
 
@@ -755,9 +770,12 @@ class GrammarQuizViewModel @Inject constructor(
                     if (isCorrect) patternFirstTryCorrect[sub] = (patternFirstTryCorrect[sub] ?: 0) + 1
                     q.subLabel?.takeIf { it.isNotBlank() }?.let { patternLabel[sub] = it }
                 }
+                // Grammar readiness audit (Focus weak-areas). Only GRAMMAR quizzes feed it; REFERENCE
+                // quizzes (referenceAreaId set) have their own reference-strength store, so recording
+                // their categories here would wrongly surface e.g. "Personal" as a grammar weak area.
                 val cat = q.category
                 val lvl = q.level
-                if (!cat.isNullOrBlank() && !lvl.isNullOrBlank()) {
+                if (referenceAreaId == null && !cat.isNullOrBlank() && !lvl.isNullOrBlank()) {
                     val lastQuestion = (index + 1) >= _questions.value.size
                     val outcome = if (isCorrect) AnswerOutcome.CORRECT else AnswerOutcome.INCORRECT
                     viewModelScope.launch {

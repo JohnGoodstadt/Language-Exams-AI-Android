@@ -300,7 +300,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         )
                     }
 
-                    composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
+                    composable(RefScreen.Conjugations.route) {
+                        ConjugationsScreen()
+                    }
 
                     // 2. Destination for `ScreenType.VOCAB_SCREEN`
                     composable(

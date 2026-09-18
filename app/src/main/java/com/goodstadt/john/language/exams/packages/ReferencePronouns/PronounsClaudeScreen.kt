@@ -128,8 +128,10 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                 ) {
                     Box(Modifier.fillMaxHeight(0.92f)) {
                         GrammarQuizScreen(
+                            // Pronoun reference content isn't level-specific — blank level hides the "· B1"
+                            // suffix in the quiz title.
                             category = selectedCategory.label,
-                            level = "B1",
+                            level = "",
                             pronounsQuizSheet = viewModel.quizSheetName,
                             pronounsCategoryFilter = selectedCategory.label
                         )

@@ -98,6 +98,9 @@ fun GrammarQuizScreen(
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
     val questions by viewModel.questions.collectAsState()
+    // Generated (dynamic) quizzes have no stable per-question identity, so their page-keyed mastery is
+    // meaningless — the badge + mastery filter chips are hidden for them.
+    val isGeneratedQuiz by viewModel.isGeneratedQuiz.collectAsState()
     val autoAdvance by viewModel.autoAdvance.collectAsState()
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
@@ -199,7 +202,9 @@ fun GrammarQuizScreen(
                     .align(Alignment.CenterStart)
             )
             Text(
-                text = "$category · $level",
+                // Reference content that isn't level-specific (e.g. pronouns) passes a blank level, so the
+                // title shows just the category without a misleading "· B1" suffix.
+                text = if (level.isBlank()) category else "$category · $level",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
                 color = orangeLight,
@@ -255,12 +260,14 @@ fun GrammarQuizScreen(
 
         HorizontalDivider(modifier = Modifier.fillMaxWidth(), thickness = 1.dp, color = greyLight2)
 
-        // Mastery Filter Chips
-        UsageMasteryFilterChips(
-            activeFilters = activeFilters,
-            onToggle = { viewModel.toggleFilter(it) },
-            onSelectAll = { viewModel.selectAllFilters() }
-        )
+        // Mastery Filter Chips — hidden for generated quizzes (their per-question mastery isn't stable).
+        if (!isGeneratedQuiz) {
+            UsageMasteryFilterChips(
+                activeFilters = activeFilters,
+                onToggle = { viewModel.toggleFilter(it) },
+                onSelectAll = { viewModel.selectAllFilters() }
+            )
+        }
 
         if (activeFilters.isNotEmpty() && questions.isNotEmpty()) {
             Text(
@@ -351,21 +358,24 @@ fun GrammarQuizScreen(
                     color = orangeLight,
                 )
 
-                // Per-question mastery badge
-                val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 2.dp, vertical = 1.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = masteryDisplay.first,
-                        color = masteryDisplay.second,
-                        style = MaterialTheme.typography.labelMedium,
-                        modifier = Modifier.background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-                    )
+                // Per-question mastery badge — hidden for generated quizzes (page-keyed mastery is stale
+                // when each attempt's question 1..N is a different question).
+                if (!isGeneratedQuiz) {
+                    val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 2.dp, vertical = 1.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = masteryDisplay.first,
+                            color = masteryDisplay.second,
+                            style = MaterialTheme.typography.labelMedium,
+                            modifier = Modifier.background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+                        )
+                    }
                 }
 
                 question.words.forEach { option ->
