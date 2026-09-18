@@ -60,10 +60,24 @@
                   ]
                 },
                 {
+                  "text": "Der Zug fährt durch die Stadt.",
+                  "green": [
+                    "durch",
+                    "die"
+                  ]
+                },
+                {
                   "text": "Ich schaue durch das Fenster.",
                   "green": [
                     "durch",
                     "das"
+                  ]
+                },
+                {
+                  "text": "Wir laufen durch die Straßen.",
+                  "green": [
+                    "durch",
+                    "die"
                   ]
                 }
               ]
@@ -82,6 +96,13 @@
               "tone": "normal",
               "sentences": [
                 {
+                  "text": "Für den Test lerne ich viel.",
+                  "green": [
+                    "Für",
+                    "den"
+                  ]
+                },
+                {
                   "text": "Das Geschenk ist für die Frau.",
                   "green": [
                     "für",
@@ -89,10 +110,17 @@
                   ]
                 },
                 {
-                  "text": "Für den Test lerne ich viel.",
+                  "text": "Das Spielzeug ist für das Kind.",
                   "green": [
-                    "Für",
-                    "den"
+                    "für",
+                    "das"
+                  ]
+                },
+                {
+                  "text": "Ich koche für die Gäste.",
+                  "green": [
+                    "für",
+                    "die"
                   ]
                 }
               ]
@@ -115,6 +143,20 @@
                   "green": [
                     "gegen",
                     "den"
+                  ]
+                },
+                {
+                  "text": "Ich bin gegen die Idee.",
+                  "green": [
+                    "gegen",
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Die Feuerwehr kämpft gegen das Feuer.",
+                  "green": [
+                    "gegen",
+                    "das"
                   ]
                 },
                 {
@@ -147,10 +189,24 @@
                   ]
                 },
                 {
-                  "text": "Sie geht ohne ihre Jacke.",
+                  "text": "Sie geht ohne die Jacke.",
                   "green": [
                     "ohne",
-                    "ihre"
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Ohne das Handy geht er nicht aus.",
+                  "green": [
+                    "Ohne",
+                    "das"
+                  ]
+                },
+                {
+                  "text": "Ich reise nie ohne die Kinder.",
+                  "green": [
+                    "ohne",
+                    "die"
                   ]
                 }
               ]
@@ -173,6 +229,27 @@
                   "green": [
                     "um",
                     "den"
+                  ]
+                },
+                {
+                  "text": "Wir gehen um die Ecke.",
+                  "green": [
+                    "um",
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Der Zaun steht um das Haus.",
+                  "green": [
+                    "um",
+                    "das"
+                  ]
+                },
+                {
+                  "text": "Die Kinder rennen um die Bäume.",
+                  "green": [
+                    "um",
+                    "die"
                   ]
                 },
                 {
@@ -266,6 +343,13 @@
               "tone": "normal",
               "sentences": [
                 {
+                  "text": "Der Fuchs kommt aus dem Wald.",
+                  "green": [
+                    "aus",
+                    "dem"
+                  ]
+                },
+                {
                   "text": "Ich komme aus der Schweiz.",
                   "green": [
                     "aus",
@@ -277,6 +361,13 @@
                   "green": [
                     "aus",
                     "dem"
+                  ]
+                },
+                {
+                  "text": "Der Rauch kommt aus den Fenstern.",
+                  "green": [
+                    "aus",
+                    "den"
                   ]
                 }
               ]
@@ -300,6 +391,27 @@
                     "außer",
                     "dem"
                   ]
+                },
+                {
+                  "text": "Alle außer der Chefin kommen mit.",
+                  "green": [
+                    "außer",
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Außer dem Baby schlafen alle.",
+                  "green": [
+                    "Außer",
+                    "dem"
+                  ]
+                },
+                {
+                  "text": "Außer den Kindern ist niemand hier.",
+                  "green": [
+                    "Außer",
+                    "den"
+                  ]
                 }
               ]
             }
@@ -317,10 +429,10 @@
               "tone": "normal",
               "sentences": [
                 {
-                  "text": "Ich wohne bei meinen Eltern.",
+                  "text": "Ich wohne bei der Familie.",
                   "green": [
                     "bei",
-                    "meinen"
+                    "der"
                   ]
                 },
                 {
@@ -328,6 +440,13 @@
                   "green": [
                     "Bei",
                     "dem"
+                  ]
+                },
+                {
+                  "text": "Ich wohne bei den Großeltern.",
+                  "green": [
+                    "bei",
+                    "den"
                   ]
                 }
               ]
@@ -350,6 +469,27 @@
                   "green": [
                     "gegenüber",
                     "dem"
+                  ]
+                },
+                {
+                  "text": "Das Café ist gegenüber der Schule.",
+                  "green": [
+                    "gegenüber",
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Der Park ist gegenüber dem Museum.",
+                  "green": [
+                    "gegenüber",
+                    "dem"
+                  ]
+                },
+                {
+                  "text": "Der Laden ist gegenüber den Häusern.",
+                  "green": [
+                    "gegenüber",
+                    "den"
                   ]
                 }
               ]
@@ -375,11 +515,24 @@
                   ]
                 },
                 {
+                  "text": "Ich schreibe mit der Hand.",
+                  "green": [
+                    "mit",
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Ich fahre mit dem Auto.",
+                  "green": [
+                    "mit",
+                    "dem"
+                  ]
+                },
+                {
                   "text": "Sie spielt mit den Kindern.",
                   "green": [
                     "mit",
-                    "den",
-                    "Kindern"
+                    "den"
                   ]
                 }
               ]
@@ -398,10 +551,24 @@
               "tone": "normal",
               "sentences": [
                 {
+                  "text": "Nach dem Film gehen wir essen.",
+                  "green": [
+                    "Nach",
+                    "dem"
+                  ]
+                },
+                {
                   "text": "Nach der Schule gehe ich nach Hause.",
                   "green": [
                     "Nach",
                     "der"
+                  ]
+                },
+                {
+                  "text": "Nach dem Essen trinke ich Kaffee.",
+                  "green": [
+                    "Nach",
+                    "dem"
                   ]
                 },
                 {
@@ -426,17 +593,31 @@
               "tone": "normal",
               "sentences": [
                 {
-                  "text": "Ich lerne seit einem Jahr Deutsch.",
-                  "green": [
-                    "seit",
-                    "einem"
-                  ]
-                },
-                {
                   "text": "Seit dem Unfall geht es ihm besser.",
                   "green": [
                     "Seit",
                     "dem"
+                  ]
+                },
+                {
+                  "text": "Ich bin seit der Prüfung nervös.",
+                  "green": [
+                    "seit",
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Seit dem Jahr 2020 wohne ich hier.",
+                  "green": [
+                    "Seit",
+                    "dem"
+                  ]
+                },
+                {
+                  "text": "Ich lerne seit einem Jahr Deutsch.",
+                  "green": [
+                    "seit",
+                    "einem"
                   ]
                 }
               ]
@@ -455,17 +636,24 @@
               "tone": "normal",
               "sentences": [
                 {
-                  "text": "Das Geschenk ist von meiner Oma.",
-                  "green": [
-                    "von",
-                    "meiner"
-                  ]
-                },
-                {
                   "text": "Ich komme von der Arbeit.",
                   "green": [
                     "von",
                     "der"
+                  ]
+                },
+                {
+                  "text": "Das ist das Auto von den Nachbarn.",
+                  "green": [
+                    "von",
+                    "den"
+                  ]
+                },
+                {
+                  "text": "Das Geschenk ist von meiner Oma.",
+                  "green": [
+                    "von",
+                    "meiner"
                   ]
                 }
               ]
@@ -942,6 +1130,24 @@
                   "green": [
                     "Am"
                   ]
+                },
+                {
+                  "text": "Wir fahren ans Meer.",
+                  "green": [
+                    "ans"
+                  ]
+                },
+                {
+                  "text": "Ich bin beim Arzt.",
+                  "green": [
+                    "beim"
+                  ]
+                },
+                {
+                  "text": "Ich komme gerade vom Markt.",
+                  "green": [
+                    "vom"
+                  ]
                 }
               ]
             }
@@ -1006,6 +1212,30 @@
                   "text": "Womit kann ich helfen?",
                   "green": [
                     "Womit"
+                  ]
+                },
+                {
+                  "text": "Ich spare Geld dafür.",
+                  "green": [
+                    "dafür"
+                  ]
+                },
+                {
+                  "text": "Wofür brauchst du das Geld?",
+                  "green": [
+                    "Wofür"
+                  ]
+                },
+                {
+                  "text": "Ich denke oft daran.",
+                  "green": [
+                    "daran"
+                  ]
+                },
+                {
+                  "text": "Woran denkst du?",
+                  "green": [
+                    "Woran"
                   ]
                 },
                 {

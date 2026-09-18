@@ -168,6 +168,10 @@ class ReferenceQuizViewModel @Inject constructor(
     val currentQuestionIndex = mutableStateOf(0)
     val userAnswers = mutableStateOf(mutableMapOf<Int, Boolean>())
 
+    // Cap for reference-tab quizzes (e.g. Adjectives) that ship more than this many questions per level:
+    // a fresh random subset of this size is drawn each launch.
+    private val REFERENCE_QUIZ_MAX_QUESTIONS = 10
+
     // Constants (same values as the Usage Quiz)
     val quizFillInTheBlanks = 7
     val quizQandA = 10
@@ -311,7 +315,11 @@ class ReferenceQuizViewModel @Inject constructor(
             val logicalName = ReferenceQuizSheetMapping.logicalName(groupKey, level)
             // The logical name is unique per level and stable, so it doubles as the stats/mastery key;
             // the (possibly localised) displayTitle is only what the quiz screen shows.
-            loadFormat7or10Quiz(logicalName = logicalName, baseName = logicalName, category = displayTitle, level = level)
+            loadFormat7or10Quiz(
+                logicalName = logicalName, baseName = logicalName,
+                category = displayTitle, level = level,
+                maxQuestions = REFERENCE_QUIZ_MAX_QUESTIONS
+            )
         }
     }
 
@@ -473,7 +481,8 @@ class ReferenceQuizViewModel @Inject constructor(
         logicalName: String,
         baseName: String,
         category: String,
-        level: String
+        level: String,
+        maxQuestions: Int? = null
     ) = coroutineScope {
         _isGrammarLoading.value = true
         // Show the global overlay only if the load is still running after 2s - so cached / in-memory /
@@ -502,7 +511,14 @@ class ReferenceQuizViewModel @Inject constructor(
             )
             _uiState.update { it.copy(format7or10ListRoot = testData) }
 
-            _allQuestions = generateQuestionsFromData(testData)
+            // Some reference sheets (e.g. Adjectives) ship well over 10 questions per level. When a cap is
+            // requested, take a fresh RANDOM subset each launch so the quiz stays 10 questions and varies
+            // between attempts. Mastery is keyed by each question's authored `page`, so subsetting keeps
+            // per-question stats correct (some pages just won't be exercised every run).
+            _allQuestions = generateQuestionsFromData(testData).let { all ->
+                if (maxQuestions != null && all.size > maxQuestions) all.shuffled().take(maxQuestions)
+                else all
+            }
             applyFilters()
             resetQuiz()
         } finally {
