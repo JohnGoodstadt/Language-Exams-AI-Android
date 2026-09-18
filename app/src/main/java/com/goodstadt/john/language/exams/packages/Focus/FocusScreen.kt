@@ -48,7 +48,7 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthLevel
-import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
+import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
 import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
@@ -226,7 +226,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
             containerColor = ElevatedDarkGrey
         ) {
             // Full Usage-Quiz experience (TTS, mastery filter, badges) for this one (category, level).
-            GrammarQuizScreen(category = target.category, level = target.level)
+            ReferenceQuizScreen(category = target.category, level = target.level)
         }
     }
 }

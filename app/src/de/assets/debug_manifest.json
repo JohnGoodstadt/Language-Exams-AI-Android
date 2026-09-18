@@ -90,6 +90,12 @@
       "sheetDataType": "Format6",
       "screenType": "Format6Screen",
       "firestoreDocumentId": "GermanReferencePronouns"
+    },
+    "GermanPrepositionsTeaching": {
+      "title": "Präpositionen",
+      "sheetDataType": "Format6",
+      "screenType": "Format6TeachingScreen",
+      "firestoreDocumentId": "GermanPrepositionsTeaching"
     }
   },
   "layouts": {
@@ -98,7 +104,7 @@
         "quiz",
         "vocab_dashboard",
         "conjugations",
-        "GermanPrepositions",
+        "GermanPrepositionsTeaching",
         "SpanishLanguage",
         "AdjectivesGroup",
         "GermanReferencePronouns",

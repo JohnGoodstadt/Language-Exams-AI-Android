@@ -41,7 +41,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.CategoryTab.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
-import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
+import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
@@ -324,7 +324,7 @@ fun Format2Screen(
     if (showQuizSheet) {
         val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-        val questions = QuizDataConverter.readWordPairsJSONForQuiz( context,quizSheetWordPairsFilename)
+        val questions = remember { QuizDataConverter.readWordPairsJSONForQuiz(context, quizSheetWordPairsFilename) }
         viewModel.incQuizSheetStat()
 
         val pageTitle = "10 Questions"
@@ -346,10 +346,12 @@ fun Format2Screen(
                         // Add padding for the Android Gesture Bar / Navigation Bar
                         .padding(bottom = 40.dp)
                 ) {
-                    QuizSheetView(
-                        questions = questions,
-                        title = pageTitle,//"Quiz: Sounds the Same",
-                        onDismiss = { showQuizSheet = false }
+                    ReferenceQuizScreen(
+                        category = pageTitle,
+                        level = "",
+                        prebuilt = questions,
+                        prebuiltAreaId = "Word Pairs",
+                        prebuiltFileFormat = 11 // options are whole sentences
                     )
                 }
             }

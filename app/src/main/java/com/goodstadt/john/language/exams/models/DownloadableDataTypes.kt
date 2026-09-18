@@ -35,6 +35,10 @@ enum class ScreenType(val serialName: String) {
     FORMAT_3_SCREEN("Format3Screen"),
     FORMAT_5_SCREEN("Format5Screen"),
     FORMAT_6_SCREEN("Format6Screen"),
+    // Same fileFormat-6 teaching screen as FORMAT_6_SCREEN, but a DISTINCT destination so a second
+    // Format-6 sheet (e.g. Prepositions teaching) doesn't collide with Pronouns under the reference
+    // tab's saveState/restoreState navigation (which keys on the destination, not the documentId arg).
+    FORMAT_6_TEACHING_SCREEN("Format6TeachingScreen"),
     GRAMMAR_SCREEN("GrammarScreen"),
     GROUPED_FORMAT_2_SCREEN("GroupedFormat2Screen"),
     GROUPED_FORMAT_3_SCREEN("GroupedFormat3Screen"),

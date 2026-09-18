@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.packages.GrammarQuiz
+package com.goodstadt.john.language.exams.packages.ReferenceQuiz
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -78,7 +78,7 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun GrammarQuizScreen(
+fun ReferenceQuizScreen(
     category: String,
     level: String,
     // When non-null, load a Reference-tab fileFormat-7 quiz (e.g. key "Adjectives") instead of a Grammar one.
@@ -89,7 +89,14 @@ fun GrammarQuizScreen(
     // filtered to `pronounsCategoryFilter` if set. `category` is the display title.
     pronounsQuizSheet: String? = null,
     pronounsCategoryFilter: String? = null,
-    viewModel: GrammarQuizViewModel = hiltViewModel()
+    // When non-null, use these caller-built questions instead of loading by name (Word Pairs, Sounds the
+    // Same, Prepositions, …). `category` is the display title; `prebuiltAreaId` keys reference-strength.
+    prebuilt: List<com.goodstadt.john.language.exams.models.Format7or10Section>? = null,
+    prebuiltAreaId: String? = null,
+    // fileFormat for a pre-built quiz: 7 = fill-in-the-blank (default), 11 = multiple-choice / "select the
+    // correct answer" (each option is the whole answer, e.g. a full sentence).
+    prebuiltFileFormat: Int = 7,
+    viewModel: ReferenceQuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
 
@@ -126,8 +133,10 @@ fun GrammarQuizScreen(
 
     // One file per launch: (re)load whenever the requested category/level changes. A Reference group title
     // routes to the reference quiz loader; otherwise it's the grammar loader - same screen either way.
-    LaunchedEffect(category, level, referenceGroupKey, pronounsQuizSheet, pronounsCategoryFilter) {
+    LaunchedEffect(category, level, referenceGroupKey, pronounsQuizSheet, pronounsCategoryFilter, prebuilt) {
         when {
+            prebuilt != null ->
+                viewModel.loadPrebuiltQuiz(prebuilt, category, prebuiltAreaId, category, prebuiltFileFormat)
             pronounsQuizSheet != null ->
                 viewModel.loadPronounsQuiz(pronounsQuizSheet, category, level, pronounsCategoryFilter)
             referenceGroupKey != null ->
@@ -349,6 +358,21 @@ fun GrammarQuizScreen(
                             }
                         }
                     }
+
+                // "Select the correct …" quizzes (Word Pairs / Sounds the Same) carry the pair in `title`
+                // ("Fragen oder bitten", "hoard, horde") but no prompt sentence — show it as a heading.
+                if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice &&
+                    question.title.isNotBlank()
+                ) {
+                    Text(
+                        text = question.title,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth(),
+                        color = orangeLight,
+                    )
+                }
 
                 Text(
                     text = annotatedQuestionText,

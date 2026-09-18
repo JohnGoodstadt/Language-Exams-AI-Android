@@ -36,9 +36,8 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.data.ReferenceQuizSheetMapping
-import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
+import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
-import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
 import com.goodstadt.john.language.exams.packages.reference.SimpleSectionedVocabList
 import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
@@ -280,8 +279,8 @@ fun GroupedSheetScreen(
                         .padding(bottom = 40.dp)
                 ) {
                     if (useReferenceQuiz) {
-                        // Same quiz experience as Focus -> GrammarQuizScreen, pointed at the Reference JSON.
-                        GrammarQuizScreen(
+                        // Same quiz experience as Focus -> ReferenceQuizScreen, pointed at the Reference JSON.
+                        ReferenceQuizScreen(
                             category = pageTitle,           // localised display title ("Adjektive")
                             level = quizLevel!!,
                             referenceGroupKey = quizGroupKey!! // language-independent key ("Adjectives")
@@ -294,10 +293,11 @@ fun GroupedSheetScreen(
                             QuizDataConverter.generateAdjectivesQuiz(categories, limit = 10)
                         }
                         if (questions.isNotEmpty()) {
-                            QuizSheetView(
-                                questions = questions,
-                                title = "Quiz: $pageTitle",
-                                onDismiss = { showQuizSheet = false }
+                            ReferenceQuizScreen(
+                                category = pageTitle,
+                                level = "",
+                                prebuilt = questions,
+                                prebuiltAreaId = null
                             )
                         } else {
                             Box(

@@ -641,6 +641,7 @@ class ContentRepository @Inject constructor(
     private fun format6BundleRawName(logicalName: String): String? = when (logicalName) {
         "GermanReferencePronouns" -> "german_reference_pronouns"
         "EnglishReferencePronouns" -> "english_reference_pronouns"
+        "GermanPrepositionsTeaching" -> "german_prepositions_teaching"
         else -> null
     }
 

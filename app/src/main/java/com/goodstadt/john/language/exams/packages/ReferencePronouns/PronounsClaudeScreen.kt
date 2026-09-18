@@ -47,7 +47,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.packages.GrammarQuiz.GrammarQuizScreen
+import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 
@@ -82,17 +82,20 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                 )
 
                 if (categories.isNotEmpty()) {
-                    // Floating Quiz ("Q") button, bottom-LEFT near the thumb: quizzes just the selected chip.
-                    FloatingActionButton(
-                        onClick = { showQuizSheet = true },
-                        shape = CircleShape,
-                        containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = Color(0xFFFF9800),
-                        modifier = Modifier
-                            .align(Alignment.BottomStart)
-                            .padding(16.dp)
-                    ) {
-                        Icon(imageVector = Icons.Filled.SportsEsports, contentDescription = "Quiz")
+                    // Floating Quiz ("Q") button, bottom-LEFT: quizzes just the selected chip. Only shown
+                    // for sheets that ship a quiz (pronouns); teaching sheets like Prepositions have none.
+                    if (viewModel.hasQuiz) {
+                        FloatingActionButton(
+                            onClick = { showQuizSheet = true },
+                            shape = CircleShape,
+                            containerColor = MaterialTheme.colorScheme.surface,
+                            contentColor = Color(0xFFFF9800),
+                            modifier = Modifier
+                                .align(Alignment.BottomStart)
+                                .padding(16.dp)
+                        ) {
+                            Icon(imageVector = Icons.Filled.SportsEsports, contentDescription = "Quiz")
+                        }
                     }
 
                     // Floating Translate ("T") button, bottom-RIGHT - mirrors the vocab tabs' "T".
@@ -127,7 +130,7 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                     contentColor = MaterialTheme.colorScheme.onSurface
                 ) {
                     Box(Modifier.fillMaxHeight(0.92f)) {
-                        GrammarQuizScreen(
+                        ReferenceQuizScreen(
                             // Pronoun reference content isn't level-specific — blank level hides the "· B1"
                             // suffix in the quiz title.
                             category = selectedCategory.label,

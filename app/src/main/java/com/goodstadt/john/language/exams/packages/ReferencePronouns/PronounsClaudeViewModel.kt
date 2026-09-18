@@ -41,6 +41,10 @@ class PronounsClaudeViewModel @Inject constructor(
     /** Bundled fileFormat-7 quiz sheet for this reference sheet, e.g. "GermanReferencePronounsQuiz". */
     val quizSheetName: String get() = documentId + "Quiz"
 
+    /** This generic fileFormat-6 screen also serves teaching sheets (e.g. Prepositions) that have no
+     *  quiz — only the pronoun sheets ship a quiz, so the "Q" button is shown only for those. */
+    val hasQuiz: Boolean get() = documentId.endsWith("Pronouns")
+
     private val _uiState = MutableStateFlow<PronounsClaudeUiState>(PronounsClaudeUiState.Loading)
     val uiState: StateFlow<PronounsClaudeUiState> = _uiState.asStateFlow()
 

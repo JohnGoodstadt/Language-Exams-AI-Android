@@ -1,6 +1,6 @@
 package com.goodstadt.john.language.exams.screens.Format1
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
-import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
+import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 
 
 import androidx.activity.ComponentActivity
@@ -299,10 +299,14 @@ fun Format1Screen(
                                 // Add padding for the Android Gesture Bar / Navigation Bar
                                 .padding(bottom = 40.dp)
                         ) {
-                            QuizSheetView(
-                                questions = questions,
-                                title = pageTitle,//"Quiz: Sounds the Same",
-                                onDismiss = { showQuizSheet = false }
+                            ReferenceQuizScreen(
+                                category = pageTitle,
+                                level = "",
+                                prebuilt = questions,
+                                prebuiltAreaId = "Sounds Similar",
+                                // Options are whole sentences ("select the correct sentence"), so the
+                                // correct answer is played through the shared audio path on selection.
+                                prebuiltFileFormat = 11
                             )
                         }
                     }

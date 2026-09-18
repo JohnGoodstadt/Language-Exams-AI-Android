@@ -69,6 +69,11 @@ sealed class RefScreen(val route: String) {
     object Format6 : RefScreen("format6_screen/{documentId}") {
         fun createRoute(documentId: String) = "format6_screen/$documentId"
     }
+    // Distinct destination for a second fileFormat-6 teaching sheet (e.g. Prepositions). Uses the same
+    // PronounsClaudeScreen, but a separate route so its back-stack state/VM never collides with Format6.
+    object Format6Teaching : RefScreen("format6_teaching_screen/{documentId}") {
+        fun createRoute(documentId: String) = "format6_teaching_screen/$documentId"
+    }
     object GroupedFormat2 : RefScreen("grouped_format2/{tabId}") {
         fun createRoute(tabId: String) = "grouped_format2/$tabId"
     }

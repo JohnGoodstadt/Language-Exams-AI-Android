@@ -181,6 +181,10 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
             ScreenType.FORMAT_6_SCREEN -> definition.firestoreDocumentId?.let { docId ->
                 RefScreen.Format6.createRoute(docId)
             }
+
+            ScreenType.FORMAT_6_TEACHING_SCREEN -> definition.firestoreDocumentId?.let { docId ->
+                RefScreen.Format6Teaching.createRoute(docId)
+            }
         }
 
         // If a valid route was determined, perform the navigation.
@@ -325,45 +329,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         route = RefScreen.Format1.route,
                         arguments = listOf(navArgument("documentId") { type = NavType.StringType })
                     ) {
-                        // 1. Create an instance of the specific ViewModel for this screen using Hilt.
-                        //    Hilt will automatically provide it with the `documentId` via SavedStateHandle.
-                        val viewModel: Format1ViewModel = hiltViewModel()
-
-                        // 2. Collect the UI state FROM THAT SPECIFIC VIEWMODEL.
-                        val uiState by viewModel.uiState.collectAsState()
-
-                        // 3. Use a 'when' block to display the correct UI based on the ViewModel's state.
-                        when (val state = uiState) {
-                            is Format1UiState.Loading -> {
-                                // Show a loading indicator while the Format1ViewModel is fetching data.
-                                Box(
-                                    modifier = Modifier.fillMaxSize(),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    CircularProgressIndicator()
-                                }
-                            }
-
-                            is Format1UiState.Success -> {
-                                // When the data is successfully loaded, display your Format1Screen
-                                // and pass it the data from the Success state object.
-//                                Format1BScreen(data = state.data)
-                                Format1Screen()
-                            }
-
-                            is Format1UiState.Error -> {
-                                // If there was an error, display the error message.
-                                Box(
-                                    modifier = Modifier.fillMaxSize(),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Text(
-                                        text = state.message,
-                                        color = MaterialTheme.colorScheme.error
-                                    )
-                                }
-                            }
-                        }
+                        // Format1Screen owns its Format1ViewModel and handles Loading/Success/Error itself,
+                        // so this destination just delegates (no duplicated state-handling in the router).
+                        Format1Screen()
                     }
                     composable(
                         route = RefScreen.Format2.route,
@@ -432,6 +400,16 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     // ViewModel reads the "documentId" nav arg to load the right fileFormat-6 sheet.
                     composable(
                         route = RefScreen.Format6.route, // "format6_screen/{documentId}"
+                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                    ) {
+                        PronounsClaudeScreen()
+                    }
+
+                    // Distinct destination for a second Format-6 teaching sheet (e.g. Prepositions).
+                    // Same screen/VM as Format6; the separate route avoids the shared-destination
+                    // saveState/restoreState collision that made Prepositions show Pronouns content.
+                    composable(
+                        route = RefScreen.Format6Teaching.route, // "format6_teaching_screen/{documentId}"
                         arguments = listOf(navArgument("documentId") { type = NavType.StringType })
                     ) {
                         PronounsClaudeScreen()

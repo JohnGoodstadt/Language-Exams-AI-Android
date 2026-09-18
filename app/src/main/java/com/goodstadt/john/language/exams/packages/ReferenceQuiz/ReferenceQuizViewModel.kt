@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.packages.GrammarQuiz
+package com.goodstadt.john.language.exams.packages.ReferenceQuiz
 
 import android.app.Activity
 import android.app.Application
@@ -40,6 +40,7 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.Format7or10List
+import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounQuizGenerator
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
@@ -76,7 +77,7 @@ import javax.inject.Inject
  * [ReadinessAuditRepository.recordCategoryResult], so results surface back on the Focus screen.
  */
 @HiltViewModel
-class GrammarQuizViewModel @Inject constructor(
+class ReferenceQuizViewModel @Inject constructor(
     private val application: Application,
     private val ttsStatsRepository: TTSStatsRepository,
     private val billingRepository: BillingRepository,
@@ -397,6 +398,56 @@ class GrammarQuizViewModel @Inject constructor(
         )
     }
 
+    /**
+     * Load a PRE-BUILT quiz — questions supplied by the caller (e.g. Word Pairs / Sounds‑the‑Same /
+     * Prepositions converted in-screen) — into this same screen, so those areas get the full quiz UI and
+     * reference-strength marking. [areaId] keys the reference-strength store (null = don't mark; the area
+     * rolls up on Focus). These sets are dynamic (shuffled/limited), so the page-keyed per-question mastery
+     * UI is hidden via [isGeneratedQuiz]. Not level-specific -> blank level (no "· B1" title suffix).
+     */
+    fun loadPrebuiltQuiz(
+        sections: List<Format7or10Section>,
+        title: String,
+        areaId: String?,
+        areaLabel: String,
+        // How the questions are marked/played: [quizFillInTheBlanks] (7) blanks a "_" in the sentence;
+        // [quizMultipleChoice] (11) treats each option as the whole answer (e.g. "select the correct
+        // sentence"), so a correct answer plays that option through the shared audio path.
+        fileFormat: Int = quizFillInTheBlanks
+    ) {
+        referenceAreaId = areaId
+        referenceAreaLabel = areaLabel
+        _isGeneratedQuiz.value = true
+        _questions.value = emptyList()
+        currentQuestionIndex.value = 0
+        viewModelScope.launch {
+            val root = Format7or10File(
+                fileFormat = fileFormat, sheetName = title, title = title, updatedDate = 0, location = 0,
+                data = listOf(
+                    Format7or10List(
+                        title = "Choose the correct answer for each question.",
+                        description = "",
+                        sortorder = 1,
+                        learningTitle = null,
+                        learningPoints = emptyList(),
+                        sections = sections
+                    )
+                )
+            )
+            currentCategory = title
+            currentLevel = ""
+            val baseName = areaId ?: title
+            _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
+            quizStatistics.value = quizStatistics.value.copy(
+                title = title, filename = baseName, skillLevel = "", page = 1
+            )
+            _uiState.update { it.copy(format7or10ListRoot = root) }
+            _allQuestions = generateQuestionsFromData(root)
+            applyFilters()
+            resetQuiz()
+        }
+    }
+
     /** Read the authored bundled Pronouns quiz and keep only the selected category's block. */
     private fun readAuthoredPronounsQuiz(quizSheetName: String, categoryFilter: String?): Format7or10File? {
         val path = "Quizzes/Reference/$quizSheetName.json"
@@ -531,7 +582,7 @@ class GrammarQuizViewModel @Inject constructor(
                         _showRateHourlyLimitSheet.value = true
                     }
                 }
-                AudioPlaybackStatus.Failure -> Timber.i("GrammarQuizViewModel.handleTap().Failure")
+                AudioPlaybackStatus.Failure -> Timber.i("ReferenceQuizViewModel.handleTap().Failure")
             }
             if (ttsStatsRepository.isMarchOrApril2026()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)

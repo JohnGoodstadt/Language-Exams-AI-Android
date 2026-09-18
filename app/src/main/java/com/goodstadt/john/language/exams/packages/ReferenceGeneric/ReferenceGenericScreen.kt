@@ -42,7 +42,7 @@ import com.goodstadt.john.language.exams.packages.reference.SimpleSectionedVocab
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
-import com.goodstadt.john.language.exams.screens.shared.QuizSheetView
+import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
@@ -207,7 +207,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
 //                    val questions = QuizDataConverter.readPrepositionsQuizQuestions( context,"QuizSheetPrepositions-en")
                    // val quizSheetFilename = quizSheetPrepositionsFilename
 //                    val questions = QuizDataConverter.readPrepositionsQuizQuestions( context,"QuizSheetPrepositions-de")
-                    val questions = QuizDataConverter.readPrepositionsQuizQuestions( context,quizSheetPrepositionsFilename)
+                    val questions = remember { QuizDataConverter.readPrepositionsQuizQuestions(context, quizSheetPrepositionsFilename) }
                     viewModel.incQuizSheetStat()
 
                     val pageTitle = "Prepositions"
@@ -228,10 +228,13 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                                     .fillMaxSize()
                                     .padding(bottom = 40.dp)
                             ) {
-                                QuizSheetView(
-                                    questions = questions,
-                                    title = pageTitle,
-                                    onDismiss = { showQuizSheet = false }
+                                ReferenceQuizScreen(
+                                    category = pageTitle,
+                                    level = "",
+                                    prebuilt = questions,
+                                    prebuiltAreaId = "Prepositions",
+                                    // Options are whole sentences; the preposition is in `title` ("aus").
+                                    prebuiltFileFormat = 11
                                 )
                             }
                         }

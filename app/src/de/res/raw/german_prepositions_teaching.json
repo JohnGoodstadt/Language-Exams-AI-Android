@@ -1,0 +1,1149 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "GermanPrepositionsTeaching",
+  "title": "German Prepositions",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "accusative",
+      "label": "Accusative",
+      "sortOrder": 1,
+      "note": "Prepositions that force the accusative case.",
+      "patterns": [
+        {
+          "id": "acc-how",
+          "chip": "How it works",
+          "subtitle": "the article after the preposition",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "m",
+              "text": "den",
+              "gloss": "der → den"
+            },
+            {
+              "case": "f",
+              "text": "die",
+              "gloss": "die → die"
+            },
+            {
+              "case": "n",
+              "text": "das",
+              "gloss": "das → das"
+            },
+            {
+              "case": "pl",
+              "text": "die",
+              "gloss": "die → die"
+            }
+          ],
+          "sections": [],
+          "note": "These prepositions ALWAYS take the accusative. Only the article changes — and only the masculine one (der → den). Memory hook: durch, für, gegen, ohne, um."
+        },
+        {
+          "id": "durch",
+          "chip": "durch",
+          "subtitle": "through",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Wir gehen durch den Park.",
+                  "green": [
+                    "durch",
+                    "den"
+                  ]
+                },
+                {
+                  "text": "Ich schaue durch das Fenster.",
+                  "green": [
+                    "durch",
+                    "das"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fuer",
+          "chip": "für",
+          "subtitle": "for",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Das Geschenk ist für die Frau.",
+                  "green": [
+                    "für",
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Für den Test lerne ich viel.",
+                  "green": [
+                    "Für",
+                    "den"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gegen",
+          "chip": "gegen",
+          "subtitle": "against",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich habe nichts gegen den Plan.",
+                  "green": [
+                    "gegen",
+                    "den"
+                  ]
+                },
+                {
+                  "text": "Wir spielen gegen die anderen.",
+                  "green": [
+                    "gegen",
+                    "die"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ohne",
+          "chip": "ohne",
+          "subtitle": "without",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ohne den Schlüssel komme ich nicht rein.",
+                  "green": [
+                    "Ohne",
+                    "den"
+                  ]
+                },
+                {
+                  "text": "Sie geht ohne ihre Jacke.",
+                  "green": [
+                    "ohne",
+                    "ihre"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "um",
+          "chip": "um",
+          "subtitle": "around / at",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Wir sitzen um den Tisch.",
+                  "green": [
+                    "um",
+                    "den"
+                  ]
+                },
+                {
+                  "text": "Der Film beginnt um acht Uhr.",
+                  "green": [
+                    "um"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dative",
+      "label": "Dative",
+      "sortOrder": 2,
+      "note": "Prepositions that force the dative case.",
+      "patterns": [
+        {
+          "id": "dat-how",
+          "chip": "How it works",
+          "subtitle": "the article after the preposition",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "m",
+              "text": "dem",
+              "gloss": "der → dem"
+            },
+            {
+              "case": "f",
+              "text": "der",
+              "gloss": "die → der"
+            },
+            {
+              "case": "n",
+              "text": "dem",
+              "gloss": "das → dem"
+            },
+            {
+              "case": "pl",
+              "text": "den",
+              "gloss": "die → den (+n)"
+            }
+          ],
+          "sections": [],
+          "note": "These prepositions ALWAYS take the dative. Memory hook: aus, außer, bei, gegenüber, mit, nach, seit, von, zu."
+        },
+        {
+          "id": "dat-plural",
+          "chip": "Plural (+n)",
+          "subtitle": "die → den, and add -n to the noun",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "The plural dative adds -n to the noun",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich spiele mit den Kindern.",
+                  "green": [
+                    "mit",
+                    "den",
+                    "Kindern"
+                  ]
+                },
+                {
+                  "text": "Ich wohne bei meinen Freunden.",
+                  "green": [
+                    "bei",
+                    "meinen",
+                    "Freunden"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aus",
+          "chip": "aus",
+          "subtitle": "out of / from",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich komme aus der Schweiz.",
+                  "green": [
+                    "aus",
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Er nimmt das Buch aus dem Regal.",
+                  "green": [
+                    "aus",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ausser",
+          "chip": "außer",
+          "subtitle": "except",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Alle außer dem Lehrer sind da.",
+                  "green": [
+                    "außer",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bei",
+          "chip": "bei",
+          "subtitle": "at / near / with",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich wohne bei meinen Eltern.",
+                  "green": [
+                    "bei",
+                    "meinen"
+                  ]
+                },
+                {
+                  "text": "Bei dem Wetter bleibe ich zu Hause.",
+                  "green": [
+                    "Bei",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gegenueber",
+          "chip": "gegenüber",
+          "subtitle": "opposite",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Die Post ist gegenüber dem Bahnhof.",
+                  "green": [
+                    "gegenüber",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mit",
+          "chip": "mit",
+          "subtitle": "with",
+          "sortOrder": 7,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich fahre mit dem Bus.",
+                  "green": [
+                    "mit",
+                    "dem"
+                  ]
+                },
+                {
+                  "text": "Sie spielt mit den Kindern.",
+                  "green": [
+                    "mit",
+                    "den",
+                    "Kindern"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nach",
+          "chip": "nach",
+          "subtitle": "after / to",
+          "sortOrder": 8,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Nach der Schule gehe ich nach Hause.",
+                  "green": [
+                    "Nach",
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Wir fahren nach Italien.",
+                  "green": [
+                    "nach"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seit",
+          "chip": "seit",
+          "subtitle": "since / for",
+          "sortOrder": 9,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich lerne seit einem Jahr Deutsch.",
+                  "green": [
+                    "seit",
+                    "einem"
+                  ]
+                },
+                {
+                  "text": "Seit dem Unfall geht es ihm besser.",
+                  "green": [
+                    "Seit",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "von",
+          "chip": "von",
+          "subtitle": "from / of",
+          "sortOrder": 10,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Das Geschenk ist von meiner Oma.",
+                  "green": [
+                    "von",
+                    "meiner"
+                  ]
+                },
+                {
+                  "text": "Ich komme von der Arbeit.",
+                  "green": [
+                    "von",
+                    "der"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zu",
+          "chip": "zu",
+          "subtitle": "to",
+          "sortOrder": 11,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Wir fahren zu den Großeltern.",
+                  "green": [
+                    "zu",
+                    "den"
+                  ]
+                },
+                {
+                  "text": "Ich gehe zu meiner Freundin.",
+                  "green": [
+                    "zu",
+                    "meiner"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "twoway",
+      "label": "Two-way",
+      "sortOrder": 3,
+      "note": "Wechselpräpositionen — accusative for direction, dative for location.",
+      "patterns": [
+        {
+          "id": "tw-how",
+          "chip": "How it works",
+          "subtitle": "wohin? = Akk · wo? = Dat",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "Akk",
+              "text": "wohin?",
+              "gloss": "movement / direction → accusative"
+            },
+            {
+              "case": "Dat",
+              "text": "wo?",
+              "gloss": "location / position → dative"
+            }
+          ],
+          "sections": [],
+          "note": "These take EITHER case: accusative for movement/direction (wohin?), dative for a fixed location (wo?). The nine: an, auf, hinter, in, neben, über, unter, vor, zwischen."
+        },
+        {
+          "id": "an",
+          "chip": "an",
+          "subtitle": "on / at",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich hänge das Bild an die Wand.",
+                  "green": [
+                    "an",
+                    "die"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Das Bild hängt an der Wand.",
+                  "green": [
+                    "an",
+                    "der"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "auf",
+          "chip": "auf",
+          "subtitle": "on / onto",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich lege das Buch auf den Tisch.",
+                  "green": [
+                    "auf",
+                    "den"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Das Buch liegt auf dem Tisch.",
+                  "green": [
+                    "auf",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hinter",
+          "chip": "hinter",
+          "subtitle": "behind",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Er geht hinter das Haus.",
+                  "green": [
+                    "hinter",
+                    "das"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Er steht hinter dem Haus.",
+                  "green": [
+                    "hinter",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "in",
+          "chip": "in",
+          "subtitle": "in / into",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich gehe in die Schule.",
+                  "green": [
+                    "in",
+                    "die"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich bin in der Schule.",
+                  "green": [
+                    "in",
+                    "der"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neben",
+          "chip": "neben",
+          "subtitle": "next to",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich setze mich neben die Tür.",
+                  "green": [
+                    "neben",
+                    "die"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich stehe neben der Tür.",
+                  "green": [
+                    "neben",
+                    "der"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ueber",
+          "chip": "über",
+          "subtitle": "over / above",
+          "sortOrder": 7,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich hänge die Lampe über den Tisch.",
+                  "green": [
+                    "über",
+                    "den"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Die Lampe hängt über dem Tisch.",
+                  "green": [
+                    "über",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "unter",
+          "chip": "unter",
+          "subtitle": "under",
+          "sortOrder": 8,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Die Katze geht unter den Tisch.",
+                  "green": [
+                    "unter",
+                    "den"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Die Katze schläft unter dem Tisch.",
+                  "green": [
+                    "unter",
+                    "dem"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vor",
+          "chip": "vor",
+          "subtitle": "in front of",
+          "sortOrder": 9,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich stelle das Auto vor die Tür.",
+                  "green": [
+                    "vor",
+                    "die"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Das Auto steht vor der Tür.",
+                  "green": [
+                    "vor",
+                    "der"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zwischen",
+          "chip": "zwischen",
+          "subtitle": "between",
+          "sortOrder": 10,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin? (accusative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich stelle den Stuhl zwischen die Tische.",
+                  "green": [
+                    "zwischen",
+                    "die"
+                  ]
+                }
+              ]
+            },
+            {
+              "header": "Location — wo? (dative)",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Der Stuhl steht zwischen den Tischen.",
+                  "green": [
+                    "zwischen",
+                    "den"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contractions",
+      "label": "Contractions",
+      "sortOrder": 4,
+      "note": "Common preposition + article contractions.",
+      "patterns": [
+        {
+          "id": "con-list",
+          "chip": "Contractions",
+          "subtitle": "preposition + article merged",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "",
+              "text": "am",
+              "gloss": "an dem"
+            },
+            {
+              "case": "",
+              "text": "ans",
+              "gloss": "an das"
+            },
+            {
+              "case": "",
+              "text": "beim",
+              "gloss": "bei dem"
+            },
+            {
+              "case": "",
+              "text": "im",
+              "gloss": "in dem"
+            },
+            {
+              "case": "",
+              "text": "ins",
+              "gloss": "in das"
+            },
+            {
+              "case": "",
+              "text": "vom",
+              "gloss": "von dem"
+            },
+            {
+              "case": "",
+              "text": "zum",
+              "gloss": "zu dem"
+            },
+            {
+              "case": "",
+              "text": "zur",
+              "gloss": "zu der"
+            }
+          ],
+          "sections": [],
+          "note": "In everyday German these merge into one short word."
+        },
+        {
+          "id": "con-ex",
+          "chip": "Examples",
+          "subtitle": "how they sound in a sentence",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich gehe zum Arzt.",
+                  "green": [
+                    "zum"
+                  ]
+                },
+                {
+                  "text": "Wir sind im Kino.",
+                  "green": [
+                    "im"
+                  ]
+                },
+                {
+                  "text": "Sie fährt zur Arbeit.",
+                  "green": [
+                    "zur"
+                  ]
+                },
+                {
+                  "text": "Er springt ins Wasser.",
+                  "green": [
+                    "ins"
+                  ]
+                },
+                {
+                  "text": "Am Montag habe ich frei.",
+                  "green": [
+                    "Am"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dawo",
+      "label": "da- / wo-",
+      "sortOrder": 5,
+      "note": "da-words for things, wo-words for questions.",
+      "patterns": [
+        {
+          "id": "dawo-list",
+          "chip": "da- / wo-",
+          "subtitle": "for things, not people",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "",
+              "text": "damit / womit",
+              "gloss": "with it / with what"
+            },
+            {
+              "case": "",
+              "text": "dafür / wofür",
+              "gloss": "for it / for what"
+            },
+            {
+              "case": "",
+              "text": "daran / woran",
+              "gloss": "on/about it / about what"
+            },
+            {
+              "case": "",
+              "text": "darüber / worüber",
+              "gloss": "about it / about what"
+            }
+          ],
+          "sections": [],
+          "note": "For THINGS, attach da- (statement) or wo- (question) to the preposition instead of a pronoun. Add an r before a vowel: da+an = daran, wo+an = woran."
+        },
+        {
+          "id": "dawo-ex",
+          "chip": "Examples",
+          "subtitle": "in a sentence",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich bin damit einverstanden.",
+                  "green": [
+                    "damit"
+                  ]
+                },
+                {
+                  "text": "Womit kann ich helfen?",
+                  "green": [
+                    "Womit"
+                  ]
+                },
+                {
+                  "text": "Ich freue mich darüber.",
+                  "green": [
+                    "darüber"
+                  ]
+                },
+                {
+                  "text": "Worüber sprecht ihr?",
+                  "green": [
+                    "Worüber"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meaning",
+      "label": "Place · Time · Direction",
+      "sortOrder": 6,
+      "note": "The same preposition can answer where, when or where to.",
+      "patterns": [
+        {
+          "id": "place",
+          "chip": "Place (wo?)",
+          "subtitle": "where something is — dative",
+          "sortOrder": 1,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Location — wo?",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich bin in der Stadt.",
+                  "green": [
+                    "in",
+                    "der"
+                  ]
+                },
+                {
+                  "text": "Das Buch liegt auf dem Tisch.",
+                  "green": [
+                    "auf",
+                    "dem"
+                  ]
+                },
+                {
+                  "text": "Ich warte an der Ecke.",
+                  "green": [
+                    "an",
+                    "der"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "time",
+          "chip": "Time (wann?)",
+          "subtitle": "when something happens",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Time — wann?",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Am Montag habe ich frei.",
+                  "green": [
+                    "Am"
+                  ]
+                },
+                {
+                  "text": "Der Kurs beginnt um neun Uhr.",
+                  "green": [
+                    "um"
+                  ]
+                },
+                {
+                  "text": "Im Sommer fahren wir weg.",
+                  "green": [
+                    "Im"
+                  ]
+                },
+                {
+                  "text": "Ich bin seit einer Woche hier.",
+                  "green": [
+                    "seit",
+                    "einer"
+                  ]
+                }
+              ]
+            }
+          ],
+          "note": "Days: am. Clock time: um. Months & seasons: im."
+        },
+        {
+          "id": "direction",
+          "chip": "Direction (wohin?)",
+          "subtitle": "where something is going",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Direction — wohin?",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Ich gehe in die Stadt.",
+                  "green": [
+                    "in",
+                    "die"
+                  ]
+                },
+                {
+                  "text": "Wir fahren nach Italien.",
+                  "green": [
+                    "nach"
+                  ]
+                },
+                {
+                  "text": "Sie geht zur Schule.",
+                  "green": [
+                    "zur"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
