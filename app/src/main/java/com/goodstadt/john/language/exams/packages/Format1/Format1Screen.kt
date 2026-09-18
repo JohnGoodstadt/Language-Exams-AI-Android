@@ -12,6 +12,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SportsEsports
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -38,6 +39,7 @@ import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import dagger.hilt.android.EntryPointAccessors
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
@@ -66,6 +68,7 @@ fun Format1Screen(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
+    var showTranslateSheet by remember { mutableStateOf(false) }
     // Freemium: tapping a locked teaser row opens the Premium upgrade sheet.
     var showUpgradeSheet by remember { mutableStateOf(false) }
     val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -110,6 +113,16 @@ fun Format1Screen(
                                 color = orangeLight,
                                 modifier = Modifier.weight(1f)
                             )
+                            // Translate the last sentence played on this screen (blank if none yet).
+                            IconButton(onClick = {
+                                showTranslateSheet = true
+                            }) {
+                                Icon(
+                                    imageVector = Icons.Filled.Translate,
+                                    contentDescription = "Translate",
+                                    tint = Color(0xFFFF9800)
+                                )
+                            }
                             IconButton(onClick = {
                                 showQuizSheet = true
                             }) {
@@ -271,6 +284,15 @@ fun Format1Screen(
                     }
                 }
             } //"SideQuestSheet
+
+            // Translate the last sentence played on this screen (blank if none yet).
+            if (showTranslateSheet) {
+                TranslateSheet(
+                    onDismiss = { showTranslateSheet = false },
+                    initialText = viewModel.getLatestSentence()
+                )
+            }
+
             if (showQuizSheet) {
                 val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 

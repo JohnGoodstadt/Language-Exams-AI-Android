@@ -242,7 +242,12 @@ class Format2GroupedViewModel @Inject constructor(
 //            historyManager.debugPrintAllHistory()
 //        }
 //    }
+    /** The last sentence tapped/played on this screen, for the Translate button to pre-fill. */
+    private var lastPlayedSentence: String = ""
+    fun getLatestSentence(): String = lastPlayedSentence
+
     fun handleSentenceTap(sentence: String) {
+        lastPlayedSentence = sentence
         viewModelScope.launch {
 
             val sheetName = _uiState.value.currentSheetName

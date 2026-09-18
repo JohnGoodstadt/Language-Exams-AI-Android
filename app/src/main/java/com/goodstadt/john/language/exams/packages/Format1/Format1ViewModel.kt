@@ -151,7 +151,12 @@ class Format1ViewModel @Inject constructor(
         return historyManager.getPlayCount("Reference", contentID)
     }
 
+    /** The last sentence tapped/played on this screen, for the Translate button to pre-fill. */
+    private var lastPlayedSentence: String = ""
+    fun getLatestSentence(): String = lastPlayedSentence
+
     fun handleTap(sentence: String) {
+        lastPlayedSentence = sentence
         viewModelScope.launch {
 
             // 1. CALL REPOSITORY

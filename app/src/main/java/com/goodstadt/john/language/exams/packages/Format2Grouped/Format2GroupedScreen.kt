@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SportsEsports
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -52,6 +53,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
@@ -77,6 +79,7 @@ fun Format2GroupedScreen(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
+    var showTranslateSheet by remember { mutableStateOf(false) }
 
     Column(modifier = Modifier.fillMaxSize()) {
 
@@ -137,13 +140,22 @@ fun Format2GroupedScreen(
                     onShowSideQuestSheet = { showSideQuestSheet = true },
                     onShowQuizSheet = {
                         showQuizSheet = true
-                    }
+                    },
+                    onShowTranslateSheet = { showTranslateSheet = true }
                 )
             }
         }
     }
 
     // --- SHEETS ---
+
+    // Translate the last sentence played on this screen (blank if none yet).
+    if (showTranslateSheet) {
+        TranslateSheet(
+            onDismiss = { showTranslateSheet = false },
+            initialText = viewModel.getLatestSentence()
+        )
+    }
 
     // Rate Limits
     if (isRateLimitingSheetVisible) RateLimitOKReasonsBottomSheet { viewModel.hideRateOKLimitSheet() }
@@ -255,6 +267,7 @@ fun Format2Content(
     onPlayTrack: (String) -> Unit,
     onShowSideQuestSheet: () -> Unit,
     onShowQuizSheet: () -> Unit,
+    onShowTranslateSheet: () -> Unit,
     modifier: Modifier = Modifier
 ) {
 
@@ -281,6 +294,14 @@ fun Format2Content(
                     Spacer(modifier = Modifier.weight(1f))
 
                     Spacer(modifier = Modifier.weight(1f))
+                    // Translate the last sentence played on this screen (blank if none yet).
+                    IconButton(onClick = onShowTranslateSheet) {
+                        Icon(
+                            imageVector = Icons.Filled.Translate,
+                            contentDescription = "Translate",
+                            tint = Color(0xFFFF9800)
+                        )
+                    }
                     IconButton(onClick = onShowQuizSheet) {
                         Icon(
                             imageVector = Icons.Default.SportsEsports,
