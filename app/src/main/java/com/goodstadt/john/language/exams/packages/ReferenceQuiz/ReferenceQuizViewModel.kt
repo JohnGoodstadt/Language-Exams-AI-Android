@@ -343,7 +343,7 @@ class ReferenceQuizViewModel @Inject constructor(
             val generated = generatePronounsQuiz(quizSheetName, displayTitle, categoryFilter)
             // Generated questions differ each attempt -> hide the page-keyed per-question mastery UI.
             _isGeneratedQuiz.value = generated != null
-            val root = generated ?: readAuthoredPronounsQuiz(quizSheetName, categoryFilter)
+            val root = generated ?: readAuthoredReferenceQuiz(quizSheetName, categoryFilter)
             if (root == null) {
                 _questions.value = emptyList()
                 return@launch
@@ -359,6 +359,44 @@ class ReferenceQuizViewModel @Inject constructor(
             )
             _uiState.update { it.copy(format7or10ListRoot = root) }
             _allQuestions = generateQuestionsFromData(root)
+            applyFilters()
+            resetQuiz()
+        }
+    }
+
+    /**
+     * Load the Prepositions quiz for one category chip into this same screen. Unlike the pronouns quiz
+     * there's no runtime generator — it reads the authored bundled quiz
+     * (`Quizzes/Reference/<quizSheetName>.json`, one block per category) filtered to [categoryFilter], then
+     * caps to a fresh RANDOM [REFERENCE_QUIZ_MAX_QUESTIONS] each launch (the file ships far more than 10 per
+     * category). Marked under the "Prepositions" area (child leaf per category, e.g. "Prepositions/Dative")
+     * so it rolls up on Focus exactly like the other reference areas.
+     */
+    fun loadPrepositionsQuiz(quizSheetName: String, displayTitle: String, categoryFilter: String?) {
+        referenceAreaId = if (categoryFilter.isNullOrBlank()) "Prepositions" else "Prepositions/$categoryFilter"
+        referenceAreaLabel = if (categoryFilter.isNullOrBlank()) "Prepositions" else "$categoryFilter prepositions"
+        // A random 10 each open -> the set is dynamic, so hide the page-keyed per-question mastery UI.
+        _isGeneratedQuiz.value = true
+        _questions.value = emptyList()
+        currentQuestionIndex.value = 0
+        viewModelScope.launch {
+            val root = readAuthoredReferenceQuiz(quizSheetName, categoryFilter)
+            if (root == null || root.data.isEmpty()) {
+                _questions.value = emptyList()
+                return@launch
+            }
+            currentCategory = displayTitle
+            currentLevel = ""
+            val baseName = if (categoryFilter.isNullOrBlank()) quizSheetName else "$quizSheetName/$categoryFilter"
+            _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
+            quizStatistics.value = quizStatistics.value.copy(
+                title = displayTitle, filename = baseName, skillLevel = "", page = 1
+            )
+            _uiState.update { it.copy(format7or10ListRoot = root) }
+            _allQuestions = generateQuestionsFromData(root).let { all ->
+                if (all.size > REFERENCE_QUIZ_MAX_QUESTIONS) all.shuffled().take(REFERENCE_QUIZ_MAX_QUESTIONS)
+                else all
+            }
             applyFilters()
             resetQuiz()
         }
@@ -456,15 +494,16 @@ class ReferenceQuizViewModel @Inject constructor(
         }
     }
 
-    /** Read the authored bundled Pronouns quiz and keep only the selected category's block. */
-    private fun readAuthoredPronounsQuiz(quizSheetName: String, categoryFilter: String?): Format7or10File? {
+    /** Read an authored bundled multi-block reference quiz (Quizzes/Reference/<name>.json) and keep only
+     *  the selected category's block. Shared by the Pronouns and Prepositions category quizzes. */
+    private fun readAuthoredReferenceQuiz(quizSheetName: String, categoryFilter: String?): Format7or10File? {
         val path = "Quizzes/Reference/$quizSheetName.json"
         val root = try {
             appContext.assets.open(path).bufferedReader().use {
                 jsonParser.decodeFromString<Format7or10File>(it.readText())
             }
         } catch (e: Exception) {
-            Timber.e(e, "PronounsQuiz: failed to read '$path'")
+            Timber.e(e, "ReferenceQuiz: failed to read '$path'")
             return null
         }
         return if (categoryFilter.isNullOrBlank()) root

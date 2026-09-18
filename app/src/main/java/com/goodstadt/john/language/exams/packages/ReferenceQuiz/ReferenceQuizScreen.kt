@@ -89,6 +89,10 @@ fun ReferenceQuizScreen(
     // filtered to `pronounsCategoryFilter` if set. `category` is the display title.
     pronounsQuizSheet: String? = null,
     pronounsCategoryFilter: String? = null,
+    // When non-null, load the bundled multi-block Prepositions quiz filtered to `prepositionsCategoryFilter`
+    // (authored, no runtime generator; capped to a random 10 per launch). `category` is the display title.
+    prepositionsQuizSheet: String? = null,
+    prepositionsCategoryFilter: String? = null,
     // When non-null, use these caller-built questions instead of loading by name (Word Pairs, Sounds the
     // Same, Prepositions, …). `category` is the display title; `prebuiltAreaId` keys reference-strength.
     prebuilt: List<com.goodstadt.john.language.exams.models.Format7or10Section>? = null,
@@ -133,10 +137,12 @@ fun ReferenceQuizScreen(
 
     // One file per launch: (re)load whenever the requested category/level changes. A Reference group title
     // routes to the reference quiz loader; otherwise it's the grammar loader - same screen either way.
-    LaunchedEffect(category, level, referenceGroupKey, pronounsQuizSheet, pronounsCategoryFilter, prebuilt) {
+    LaunchedEffect(category, level, referenceGroupKey, pronounsQuizSheet, pronounsCategoryFilter, prepositionsQuizSheet, prebuilt) {
         when {
             prebuilt != null ->
                 viewModel.loadPrebuiltQuiz(prebuilt, category, prebuiltAreaId, category, prebuiltFileFormat)
+            prepositionsQuizSheet != null ->
+                viewModel.loadPrepositionsQuiz(prepositionsQuizSheet, category, prepositionsCategoryFilter)
             pronounsQuizSheet != null ->
                 viewModel.loadPronounsQuiz(pronounsQuizSheet, category, level, pronounsCategoryFilter)
             referenceGroupKey != null ->

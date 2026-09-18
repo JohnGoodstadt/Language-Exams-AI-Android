@@ -358,7 +358,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             // The user MUST make a choice.
             onDismissRequest = { },
             sheetState = sheetState,
-            modifier = Modifier.fillMaxHeight(0.50f) //NOTE: if too low then button off screen
+            modifier = Modifier.fillMaxHeight(0.80f) //NOTE: if too low then button off screen
         ) {
             if (LanguageConfig.hasDialectSelection) {
                 // English: the combined 2-choice sheet (Dialect + Exam Level).

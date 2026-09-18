@@ -1,0 +1,2801 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "GermanPrepositionsTeachingQuiz",
+  "title": "German Prepositions Quiz",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Which article follows the accusative preposition?",
+      "description": "One question per preposition — a random 10 each time.",
+      "sortorder": 1,
+      "learningTitle": "Accusative",
+      "learningPoints": [
+        "durch, für, gegen, ohne, um always take the accusative — only der → den changes."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "durch + accusative (masculine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Park is masculine; durch takes the accusative, so der → den.",
+          "sentence": "Wir gehen durch _ Park.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "durch + accusative (feminine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Stadt is feminine; feminine stays die in the accusative.",
+          "sentence": "Der Zug fährt durch _ Stadt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "durch + accusative (neuter).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Fenster is neuter; neuter stays das in the accusative.",
+          "sentence": "Ich schaue durch _ Fenster.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "durch + accusative (plural).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural takes die in the accusative.",
+          "sentence": "Wir laufen durch _ Straßen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "für + accusative (masculine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Test is masculine; für takes the accusative (der → den).",
+          "sentence": "Für _ Test lerne ich viel.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "für + accusative (feminine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Frau is feminine; feminine stays die.",
+          "sentence": "Das Geschenk ist für _ Frau.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "für + accusative (neuter).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Kind is neuter; neuter stays das.",
+          "sentence": "Das Spielzeug ist für _ Kind.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "für + accusative (plural).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural takes die.",
+          "sentence": "Ich koche für _ Gäste.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "gegen + accusative (masculine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Plan is masculine; gegen takes the accusative (der → den).",
+          "sentence": "Ich habe nichts gegen _ Plan.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "gegen + accusative (feminine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Idee is feminine; feminine stays die.",
+          "sentence": "Ich bin gegen _ Idee.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "gegen + accusative (neuter).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Feuer is neuter; neuter stays das.",
+          "sentence": "Die Feuerwehr kämpft gegen _ Feuer.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 12,
+          "summary": "gegen + accusative (plural).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural takes die.",
+          "sentence": "Wir spielen gegen _ anderen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 13,
+          "summary": "ohne + accusative (masculine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Schlüssel is masculine; ohne takes the accusative (der → den).",
+          "sentence": "Ohne _ Schlüssel komme ich nicht rein.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 14,
+          "summary": "ohne + accusative (feminine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Jacke is feminine; feminine stays die.",
+          "sentence": "Sie geht ohne _ Jacke.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 15,
+          "summary": "ohne + accusative (neuter).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Handy is neuter; neuter stays das.",
+          "sentence": "Ohne _ Handy geht er nicht aus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 16,
+          "summary": "ohne + accusative (plural).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural takes die.",
+          "sentence": "Ich reise nie ohne _ Kinder.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 17,
+          "summary": "um + accusative (masculine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Tisch is masculine; um takes the accusative (der → den).",
+          "sentence": "Wir sitzen um _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 18,
+          "summary": "um + accusative (feminine).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Ecke is feminine; feminine stays die.",
+          "sentence": "Wir gehen um _ Ecke.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 19,
+          "summary": "um + accusative (neuter).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Haus is neuter; neuter stays das.",
+          "sentence": "Der Zaun steht um _ Haus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 20,
+          "summary": "um + accusative (plural).",
+          "level": "",
+          "category": "Accusative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural takes die.",
+          "sentence": "Die Kinder rennen um _ Bäume.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Which article follows the dative preposition?",
+      "description": "One question per preposition — a random 10 each time.",
+      "sortorder": 2,
+      "learningTitle": "Dative",
+      "learningPoints": [
+        "aus, außer, bei, gegenüber, mit, nach, seit, von, zu always take the dative."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "aus + dative (masculine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Wald is masculine; aus takes the dative (der → dem).",
+          "sentence": "Der Fuchs kommt aus _ Wald.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "aus + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Schweiz is feminine; feminine dative is der.",
+          "sentence": "Ich komme aus _ Schweiz.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "aus + dative (neuter).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Regal is neuter; neuter dative is dem.",
+          "sentence": "Er nimmt das Buch aus _ Regal.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "aus + dative (plural).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural dative is den (and the noun adds -n).",
+          "sentence": "Der Rauch kommt aus _ Fenstern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "außer + dative (masculine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Lehrer is masculine; außer takes the dative (der → dem).",
+          "sentence": "Alle außer _ Lehrer sind da.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "außer + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Chefin is feminine; feminine dative is der.",
+          "sentence": "Alle außer _ Chefin kommen mit.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "außer + dative (neuter).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Baby is neuter; neuter dative is dem.",
+          "sentence": "Außer _ Baby schlafen alle.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "außer + dative (plural).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural dative is den (+ -n on the noun).",
+          "sentence": "Außer _ Kindern ist niemand hier.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "bei + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Familie is feminine; feminine dative is der.",
+          "sentence": "Ich wohne bei _ Familie.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "bei + dative (neuter).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Wetter is neuter; neuter dative is dem.",
+          "sentence": "Bei _ Wetter bleibe ich zu Hause.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "bei + dative (plural).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural dative is den (+ -n on the noun).",
+          "sentence": "Ich wohne bei _ Großeltern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 12,
+          "summary": "gegenüber + dative (masculine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Bahnhof is masculine; gegenüber takes the dative (der → dem).",
+          "sentence": "Die Post ist gegenüber _ Bahnhof.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 13,
+          "summary": "gegenüber + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Schule is feminine; feminine dative is der.",
+          "sentence": "Das Café ist gegenüber _ Schule.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 14,
+          "summary": "gegenüber + dative (neuter).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Museum is neuter; neuter dative is dem.",
+          "sentence": "Der Park ist gegenüber _ Museum.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 15,
+          "summary": "gegenüber + dative (plural).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural dative is den (+ -n on the noun).",
+          "sentence": "Der Laden ist gegenüber _ Häusern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 16,
+          "summary": "mit + dative (masculine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Bus is masculine; mit takes the dative (der → dem).",
+          "sentence": "Ich fahre mit _ Bus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 17,
+          "summary": "mit + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Hand is feminine; feminine dative is der.",
+          "sentence": "Ich schreibe mit _ Hand.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 18,
+          "summary": "mit + dative (neuter).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Auto is neuter; neuter dative is dem.",
+          "sentence": "Ich fahre mit _ Auto.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 19,
+          "summary": "mit + dative (plural).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural dative is den (+ -n on the noun).",
+          "sentence": "Sie spielt mit _ Kindern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 20,
+          "summary": "nach + dative (masculine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Film is masculine; nach takes the dative (der → dem).",
+          "sentence": "Nach _ Film gehen wir essen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 21,
+          "summary": "nach + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Schule is feminine; feminine dative is der.",
+          "sentence": "Nach _ Schule gehe ich nach Hause.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 22,
+          "summary": "nach + dative (neuter).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Essen is neuter; neuter dative is dem.",
+          "sentence": "Nach _ Essen trinke ich Kaffee.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 23,
+          "summary": "seit + dative (masculine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "der Unfall is masculine; seit takes the dative (der → dem).",
+          "sentence": "Seit _ Unfall geht es ihm besser.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 24,
+          "summary": "seit + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Prüfung is feminine; feminine dative is der.",
+          "sentence": "Ich bin seit _ Prüfung nervös.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 25,
+          "summary": "seit + dative (neuter).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "das Unglück is neuter; neuter dative is dem.",
+          "sentence": "Seit _ Unglück ist er ruhig.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 26,
+          "summary": "von + dative (feminine).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "die Arbeit is feminine; von takes the dative (die → der).",
+          "sentence": "Ich komme von _ Arbeit.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 27,
+          "summary": "von + dative (plural).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural dative is den (+ -n on the noun).",
+          "sentence": "Das ist das Auto von _ Nachbarn.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 28,
+          "summary": "zu + dative (plural).",
+          "level": "",
+          "category": "Dative",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Plural dative is den (+ -n on the noun).",
+          "sentence": "Wir fahren zu _ Großeltern.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Movement or location? Choose the right article.",
+      "description": "One question per preposition — a random 10 each time.",
+      "sortorder": 3,
+      "learningTitle": "Two-way",
+      "learningPoints": [
+        "Two-way prepositions: accusative for movement (wohin?), dative for location (wo?)."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "an — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; die Wand stays die.",
+          "sentence": "Ich hänge das Bild an _ Wand.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "an — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; feminine die → der.",
+          "sentence": "Das Bild hängt an _ Wand.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "auf — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; der Tisch → den.",
+          "sentence": "Ich lege das Buch auf _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "auf — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; der Tisch → dem.",
+          "sentence": "Das Buch liegt auf _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "hinter — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; das Haus stays das.",
+          "sentence": "Er geht hinter _ Haus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "hinter — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; das Haus → dem.",
+          "sentence": "Er steht hinter _ Haus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "in — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; die Schule stays die.",
+          "sentence": "Ich gehe in _ Schule.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "in — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; die Schule → der.",
+          "sentence": "Ich bin in _ Schule.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "neben — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; die Tür stays die.",
+          "sentence": "Ich setze mich neben _ Tür.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "neben — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; die Tür → der.",
+          "sentence": "Ich stehe neben _ Tür.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "über — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; der Tisch → den.",
+          "sentence": "Ich hänge die Lampe über _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 12,
+          "summary": "über — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; der Tisch → dem.",
+          "sentence": "Die Lampe hängt über _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 13,
+          "summary": "unter — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; der Tisch → den.",
+          "sentence": "Die Katze geht unter _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 14,
+          "summary": "unter — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; der Tisch → dem.",
+          "sentence": "Die Katze schläft unter _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 15,
+          "summary": "vor — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; die Tür stays die.",
+          "sentence": "Ich stelle das Auto vor _ Tür.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 16,
+          "summary": "vor — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; die Tür → der.",
+          "sentence": "Das Auto steht vor _ Tür.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 17,
+          "summary": "zwischen — direction (accusative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; plural stays die.",
+          "sentence": "Ich stelle den Stuhl zwischen _ Tische.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 18,
+          "summary": "zwischen — location (dative).",
+          "level": "",
+          "category": "Two-way",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; plural die → den (+ -n).",
+          "sentence": "Der Stuhl steht zwischen _ Tischen.",
+          "words": [
+            {
+              "ok": true,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Which contraction fits?",
+      "description": "One question per preposition — a random 10 each time.",
+      "sortorder": 4,
+      "learningTitle": "Contractions",
+      "learningPoints": [
+        "Preposition + article merge: an dem → am, in das → ins, zu der → zur …"
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "zu dem → zum (motion).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "gehen = movement → zu dem = zum.",
+          "sentence": "Ich gehe _ Arzt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "zum"
+            },
+            {
+              "ok": false,
+              "word": "zur"
+            },
+            {
+              "ok": false,
+              "word": "beim"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "in dem → im (location).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "sind = location → in dem = im.",
+          "sentence": "Wir sind _ Kino.",
+          "words": [
+            {
+              "ok": true,
+              "word": "im"
+            },
+            {
+              "ok": false,
+              "word": "ins"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "zu der → zur.",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "fahren zu + feminine Arbeit → zu der = zur.",
+          "sentence": "Sie fährt _ Arbeit.",
+          "words": [
+            {
+              "ok": true,
+              "word": "zur"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            },
+            {
+              "ok": false,
+              "word": "vom"
+            },
+            {
+              "ok": false,
+              "word": "ans"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "in das → ins (motion).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "springen = movement into → in das = ins.",
+          "sentence": "Er springt _ Wasser.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ins"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            },
+            {
+              "ok": false,
+              "word": "ans"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "an dem → am (days).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Days take an dem = am.",
+          "sentence": "Ich habe _ Montag frei.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            },
+            {
+              "ok": false,
+              "word": "um"
+            },
+            {
+              "ok": false,
+              "word": "beim"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "an das → ans (motion).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "movement to the sea → an das = ans.",
+          "sentence": "Wir fahren _ Meer.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ans"
+            },
+            {
+              "ok": false,
+              "word": "ins"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "zur"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "bei dem → beim (location).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "sein = location → bei dem = beim.",
+          "sentence": "Ich bin _ Arzt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "beim"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            },
+            {
+              "ok": false,
+              "word": "vom"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "von dem → vom.",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "coming from → von dem = vom.",
+          "sentence": "Ich komme gerade _ Markt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "vom"
+            },
+            {
+              "ok": false,
+              "word": "beim"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            },
+            {
+              "ok": false,
+              "word": "ans"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "in dem → im (seasons).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Seasons take in dem = im.",
+          "sentence": "Wir fahren _ Sommer weg.",
+          "words": [
+            {
+              "ok": true,
+              "word": "im"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "ins"
+            },
+            {
+              "ok": false,
+              "word": "zur"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "zu dem → zum (motion).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "laufen = movement → zu dem = zum.",
+          "sentence": "Das Kind läuft _ Spielplatz.",
+          "words": [
+            {
+              "ok": true,
+              "word": "zum"
+            },
+            {
+              "ok": false,
+              "word": "beim"
+            },
+            {
+              "ok": false,
+              "word": "vom"
+            },
+            {
+              "ok": false,
+              "word": "ans"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "an das → ans.",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "denken an + accusative → an das = ans.",
+          "sentence": "Sie denkt oft _ Wochenende.",
+          "words": [
+            {
+              "ok": true,
+              "word": "ans"
+            },
+            {
+              "ok": false,
+              "word": "ins"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 12,
+          "summary": "bei dem → beim (during).",
+          "level": "",
+          "category": "Contractions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "'while eating' = location → bei dem = beim.",
+          "sentence": "Wir reden _ Essen nicht.",
+          "words": [
+            {
+              "ok": true,
+              "word": "beim"
+            },
+            {
+              "ok": false,
+              "word": "vom"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "For things: da- (statement) or wo- (question)?",
+      "description": "One question per preposition — a random 10 each time.",
+      "sortorder": 5,
+      "learningTitle": "da- / wo-",
+      "learningPoints": [
+        "For things, attach da-/wo- to the preposition instead of a pronoun."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "damit (with it).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "einverstanden MIT → da + mit = damit.",
+          "sentence": "Ich bin _ einverstanden.",
+          "words": [
+            {
+              "ok": true,
+              "word": "damit"
+            },
+            {
+              "ok": false,
+              "word": "dafür"
+            },
+            {
+              "ok": false,
+              "word": "daran"
+            },
+            {
+              "ok": false,
+              "word": "darüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "womit (with what).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "helfen MIT → wo + mit = womit.",
+          "sentence": "_ kann ich helfen?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Womit"
+            },
+            {
+              "ok": false,
+              "word": "Wofür"
+            },
+            {
+              "ok": false,
+              "word": "Woran"
+            },
+            {
+              "ok": false,
+              "word": "Worüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "dafür (for it).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "sparen FÜR → da + für = dafür.",
+          "sentence": "Ich spare Geld _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dafür"
+            },
+            {
+              "ok": false,
+              "word": "damit"
+            },
+            {
+              "ok": false,
+              "word": "daran"
+            },
+            {
+              "ok": false,
+              "word": "darüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "wofür (for what).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "brauchen FÜR → wo + für = wofür.",
+          "sentence": "_ brauchst du das Geld?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Wofür"
+            },
+            {
+              "ok": false,
+              "word": "Womit"
+            },
+            {
+              "ok": false,
+              "word": "Woran"
+            },
+            {
+              "ok": false,
+              "word": "Worüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "daran (of/about it).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "denken AN → da + (r)an = daran.",
+          "sentence": "Ich denke oft _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "daran"
+            },
+            {
+              "ok": false,
+              "word": "damit"
+            },
+            {
+              "ok": false,
+              "word": "dafür"
+            },
+            {
+              "ok": false,
+              "word": "darüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "woran (about what).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "denken AN → wo + (r)an = woran.",
+          "sentence": "_ denkst du?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Woran"
+            },
+            {
+              "ok": false,
+              "word": "Womit"
+            },
+            {
+              "ok": false,
+              "word": "Wofür"
+            },
+            {
+              "ok": false,
+              "word": "Worüber"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "darüber (about it).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "sich freuen ÜBER → da + (r)über = darüber.",
+          "sentence": "Ich freue mich _.",
+          "words": [
+            {
+              "ok": true,
+              "word": "darüber"
+            },
+            {
+              "ok": false,
+              "word": "damit"
+            },
+            {
+              "ok": false,
+              "word": "dafür"
+            },
+            {
+              "ok": false,
+              "word": "daran"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "worüber (about what).",
+          "level": "",
+          "category": "da- / wo-",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "sprechen ÜBER → wo + (r)über = worüber.",
+          "sentence": "_ sprecht ihr?",
+          "words": [
+            {
+              "ok": true,
+              "word": "Worüber"
+            },
+            {
+              "ok": false,
+              "word": "Womit"
+            },
+            {
+              "ok": false,
+              "word": "Wofür"
+            },
+            {
+              "ok": false,
+              "word": "Woran"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "wo? · wann? · wohin? — choose the right word.",
+      "description": "One question per preposition — a random 10 each time.",
+      "sortorder": 6,
+      "learningTitle": "Place · Time · Direction",
+      "learningPoints": [
+        "The same preposition can answer where, when, or where to."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Place (wo?) — dative.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; die Stadt → der.",
+          "sentence": "Ich bin in _ Stadt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Place (wo?) — dative.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; der Tisch → dem.",
+          "sentence": "Das Buch liegt auf _ Tisch.",
+          "words": [
+            {
+              "ok": true,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            },
+            {
+              "ok": false,
+              "word": "das"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Place (wo?) — dative.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Location (wo?) → dative; die Ecke → der.",
+          "sentence": "Ich warte an _ Ecke.",
+          "words": [
+            {
+              "ok": true,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Time (wann?) — days: am.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Days take am.",
+          "sentence": "Ich habe _ Montag frei.",
+          "words": [
+            {
+              "ok": true,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            },
+            {
+              "ok": false,
+              "word": "um"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Time (wann?) — clock: um.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Clock times take um.",
+          "sentence": "Der Kurs beginnt _ neun Uhr.",
+          "words": [
+            {
+              "ok": true,
+              "word": "um"
+            },
+            {
+              "ok": false,
+              "word": "am"
+            },
+            {
+              "ok": false,
+              "word": "im"
+            },
+            {
+              "ok": false,
+              "word": "an"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Time (wann?) — seasons: im.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Seasons take im.",
+          "sentence": "_ Sommer fahren wir weg.",
+          "words": [
+            {
+              "ok": true,
+              "word": "Im"
+            },
+            {
+              "ok": false,
+              "word": "Am"
+            },
+            {
+              "ok": false,
+              "word": "Um"
+            },
+            {
+              "ok": false,
+              "word": "Ans"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Direction (wohin?) — accusative.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Movement (wohin?) → accusative; die Stadt stays die.",
+          "sentence": "Ich gehe in _ Stadt.",
+          "words": [
+            {
+              "ok": true,
+              "word": "die"
+            },
+            {
+              "ok": false,
+              "word": "der"
+            },
+            {
+              "ok": false,
+              "word": "dem"
+            },
+            {
+              "ok": false,
+              "word": "den"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Direction (wohin?) — zur.",
+          "level": "",
+          "category": "Place · Time · Direction",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "gehen zu + feminine Schule → zur.",
+          "sentence": "Sie geht _ Schule.",
+          "words": [
+            {
+              "ok": true,
+              "word": "zur"
+            },
+            {
+              "ok": false,
+              "word": "zum"
+            },
+            {
+              "ok": false,
+              "word": "nach"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

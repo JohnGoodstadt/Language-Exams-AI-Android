@@ -130,14 +130,24 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                     contentColor = MaterialTheme.colorScheme.onSurface
                 ) {
                     Box(Modifier.fillMaxHeight(0.92f)) {
-                        ReferenceQuizScreen(
-                            // Pronoun reference content isn't level-specific — blank level hides the "· B1"
-                            // suffix in the quiz title.
-                            category = selectedCategory.label,
-                            level = "",
-                            pronounsQuizSheet = viewModel.quizSheetName,
-                            pronounsCategoryFilter = selectedCategory.label
-                        )
+                        // Reference teaching content isn't level-specific — blank level hides the "· B1"
+                        // suffix. Prepositions uses its authored quiz loader; pronouns uses its own
+                        // (generator-backed) loader; both are filtered to the selected category chip.
+                        if (viewModel.isPrepositionsSheet) {
+                            ReferenceQuizScreen(
+                                category = selectedCategory.label,
+                                level = "",
+                                prepositionsQuizSheet = viewModel.quizSheetName,
+                                prepositionsCategoryFilter = selectedCategory.label
+                            )
+                        } else {
+                            ReferenceQuizScreen(
+                                category = selectedCategory.label,
+                                level = "",
+                                pronounsQuizSheet = viewModel.quizSheetName,
+                                pronounsCategoryFilter = selectedCategory.label
+                            )
+                        }
                     }
                 }
             }
