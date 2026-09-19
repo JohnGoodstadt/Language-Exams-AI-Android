@@ -1,0 +1,353 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "EnglishConjugationsToHaveTeaching",
+  "title": "to have",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "present",
+      "label": "Present",
+      "sortOrder": 1,
+      "note": "Present simple — what is true now.",
+      "patterns": [
+        {
+          "id": "present-how",
+          "chip": "How it works",
+          "subtitle": "have in every person",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "have", "gloss": "I have" },
+            { "case": "you", "text": "have", "gloss": "you have" },
+            { "case": "he", "text": "has", "gloss": "he / she / it has" },
+            { "case": "we", "text": "have", "gloss": "we have" },
+            { "case": "they", "text": "have", "gloss": "they have" }
+          ],
+          "sections": [],
+          "note": "Regular except one form: he / she / it changes have → has."
+        },
+        {
+          "id": "present-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I have two brothers.", "green": ["have"] },
+                { "text": "You have a good point.", "green": ["have"] },
+                { "text": "He has no time.", "green": ["has"] },
+                { "text": "We have a lot of questions.", "green": ["have"] },
+                { "text": "They have a new car.", "green": ["have"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past",
+      "label": "Past",
+      "sortOrder": 2,
+      "note": "Past simple — what was true before.",
+      "patterns": [
+        {
+          "id": "past-how",
+          "chip": "How it works",
+          "subtitle": "have in the past",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "had", "gloss": "I had" },
+            { "case": "you", "text": "had", "gloss": "you had" },
+            { "case": "he", "text": "had", "gloss": "he / she / it had" },
+            { "case": "we", "text": "had", "gloss": "we had" },
+            { "case": "they", "text": "had", "gloss": "they had" }
+          ],
+          "sections": [],
+          "note": "had is the same for every person — one form to remember."
+        },
+        {
+          "id": "past-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I had the day off yesterday.", "green": ["had"] },
+                { "text": "You had a long day.", "green": ["had"] },
+                { "text": "He had no idea.", "green": ["had"] },
+                { "text": "We had a lot of fun.", "green": ["had"] },
+                { "text": "They had a problem.", "green": ["had"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "label": "Present Perfect",
+      "sortOrder": 3,
+      "note": "Present perfect — a past action linked to now (have/has + past participle).",
+      "patterns": [
+        {
+          "id": "present-perfect-how",
+          "chip": "How it works",
+          "subtitle": "have / has + had",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "have had", "gloss": "I have had" },
+            { "case": "you", "text": "have had", "gloss": "you have had" },
+            { "case": "he", "text": "has had", "gloss": "he / she / it has had" },
+            { "case": "we", "text": "have had", "gloss": "we have had" },
+            { "case": "they", "text": "have had", "gloss": "they have had" }
+          ],
+          "sections": [],
+          "note": "have/has + the past participle had. The two words look alike but do different jobs: have = helper, had = participle."
+        },
+        {
+          "id": "present-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I have had a busy week.", "green": ["have", "had"] },
+                { "text": "You have had enough time.", "green": ["have", "had"] },
+                { "text": "He has had no time today.", "green": ["has", "had"] },
+                { "text": "We have had a lot of work.", "green": ["have", "had"] },
+                { "text": "They have had great success.", "green": ["have", "had"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past-perfect",
+      "label": "Past Perfect",
+      "sortOrder": 4,
+      "note": "Past perfect — an action finished before another past moment (had + past participle).",
+      "patterns": [
+        {
+          "id": "past-perfect-how",
+          "chip": "How it works",
+          "subtitle": "had + had",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "had had", "gloss": "I had had" },
+            { "case": "you", "text": "had had", "gloss": "you had had" },
+            { "case": "he", "text": "had had", "gloss": "he / she / it had had" },
+            { "case": "we", "text": "had had", "gloss": "we had had" },
+            { "case": "they", "text": "had had", "gloss": "they had had" }
+          ],
+          "sections": [],
+          "note": "Yes — 'had had': the helper had + the past participle had. The same for every person."
+        },
+        {
+          "id": "past-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I had had no money back then.", "green": ["had"] },
+                { "text": "You had had no problems before.", "green": ["had"] },
+                { "text": "He had had good luck once before.", "green": ["had"] },
+                { "text": "We had had no contact for a long time.", "green": ["had"] },
+                { "text": "They had had trouble finding it.", "green": ["had"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "label": "Future",
+      "sortOrder": 5,
+      "note": "Future with will — what will be.",
+      "patterns": [
+        {
+          "id": "future-how",
+          "chip": "How it works",
+          "subtitle": "will + have",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will have", "gloss": "I will have" },
+            { "case": "you", "text": "will have", "gloss": "you will have" },
+            { "case": "he", "text": "will have", "gloss": "he / she / it will have" },
+            { "case": "we", "text": "will have", "gloss": "we will have" },
+            { "case": "they", "text": "will have", "gloss": "they will have" }
+          ],
+          "sections": [],
+          "note": "will + have is identical for every person. will never changes and the -s disappears (not 'he will has')."
+        },
+        {
+          "id": "future-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I will have more time soon.", "green": ["will", "have"] },
+                { "text": "You will have success for sure.", "green": ["will", "have"] },
+                { "text": "He will have the day off tomorrow.", "green": ["will", "have"] },
+                { "text": "We will have a lot to do.", "green": ["will", "have"] },
+                { "text": "They will have questions.", "green": ["will", "have"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future-perfect",
+      "label": "Future Perfect",
+      "sortOrder": 6,
+      "note": "Future perfect — something completed by a point in the future (will have + past participle).",
+      "patterns": [
+        {
+          "id": "future-perfect-how",
+          "chip": "How it works",
+          "subtitle": "will have + had",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will have had", "gloss": "I will have had" },
+            { "case": "you", "text": "will have had", "gloss": "you will have had" },
+            { "case": "he", "text": "will have had", "gloss": "he / she / it will have had" },
+            { "case": "we", "text": "will have had", "gloss": "we will have had" },
+            { "case": "they", "text": "will have had", "gloss": "they will have had" }
+          ],
+          "sections": [],
+          "note": "will have + the past participle had — identical for every person."
+        },
+        {
+          "id": "future-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "By June I will have had this car ten years.", "green": ["will", "have", "had"] },
+                { "text": "You will have had enough time by then.", "green": ["will", "have", "had"] },
+                { "text": "He will have had his answer by Friday.", "green": ["will", "have", "had"] },
+                { "text": "We will have had three meetings this week.", "green": ["will", "have", "had"] },
+                { "text": "They will have had their say.", "green": ["will", "have", "had"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "label": "Conditional",
+      "sortOrder": 7,
+      "note": "Conditional with would — hypotheticals, wishes and polite requests.",
+      "patterns": [
+        {
+          "id": "conditional-how",
+          "chip": "How it works",
+          "subtitle": "would + have",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would have", "gloss": "I would have" },
+            { "case": "you", "text": "would have", "gloss": "you would have" },
+            { "case": "he", "text": "would have", "gloss": "he / she / it would have" },
+            { "case": "we", "text": "would have", "gloss": "we would have" },
+            { "case": "they", "text": "would have", "gloss": "they would have" }
+          ],
+          "sections": [],
+          "note": "would + have is identical for every person. In speech would often shrinks to 'd (I'd have, she'd have)."
+        },
+        {
+          "id": "conditional-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would have more time then.", "green": ["would", "have"] },
+                { "text": "Would you have time tomorrow?", "green": ["Would", "have"] },
+                { "text": "He would have a different opinion.", "green": ["would", "have"] },
+                { "text": "We would have more space.", "green": ["would", "have"] },
+                { "text": "They would rather have tea.", "green": ["would", "have"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional-perfect",
+      "label": "Conditional Perfect",
+      "sortOrder": 8,
+      "note": "Conditional perfect — an unreal past: what would have happened (would have + past participle).",
+      "patterns": [
+        {
+          "id": "conditional-perfect-how",
+          "chip": "How it works",
+          "subtitle": "would have + had",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would have had", "gloss": "I would have had" },
+            { "case": "you", "text": "would have had", "gloss": "you would have had" },
+            { "case": "he", "text": "would have had", "gloss": "he / she / it would have had" },
+            { "case": "we", "text": "would have had", "gloss": "we would have had" },
+            { "case": "they", "text": "would have had", "gloss": "they would have had" }
+          ],
+          "sections": [],
+          "note": "would have + the past participle had — identical for every person. Often paired with an if-clause."
+        },
+        {
+          "id": "conditional-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would have had more time, but I overslept.", "green": ["would", "have", "had"] },
+                { "text": "You would have had a great time.", "green": ["would", "have", "had"] },
+                { "text": "He would have had a shock.", "green": ["would", "have", "had"] },
+                { "text": "We would have had a problem without you.", "green": ["would", "have", "had"] },
+                { "text": "They would have had second thoughts.", "green": ["would", "have", "had"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

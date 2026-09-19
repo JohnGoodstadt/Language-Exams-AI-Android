@@ -1,0 +1,414 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "GermanConjugationsToDoTeaching",
+  "title": "machen — to do / make",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "praesens",
+      "label": "Präsens",
+      "sortOrder": 1,
+      "note": "Present tense — machen is a regular weak verb, the model for most German verbs.",
+      "patterns": [
+        {
+          "id": "praesens-how",
+          "chip": "How it works",
+          "subtitle": "machen in all six persons",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "mache", "gloss": "I do / make" },
+            { "case": "du", "text": "machst", "gloss": "you do / make" },
+            { "case": "er", "text": "macht", "gloss": "he / she / it does / makes" },
+            { "case": "wir", "text": "machen", "gloss": "we do / make" },
+            { "case": "ihr", "text": "macht", "gloss": "you all do / make" },
+            { "case": "sie", "text": "machen", "gloss": "they / you (formal) do / make" }
+          ],
+          "sections": [],
+          "note": "The regular pattern: take the stem mach- and add -e, -st, -t, -en, -t, -en. Learn this and you can conjugate thousands of verbs."
+        },
+        {
+          "id": "praesens-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich mache jeden Morgen Sport.", "green": ["mache"] },
+                { "text": "Was machst du am Wochenende?", "green": ["machst"] },
+                { "text": "Er macht seine Hausaufgaben.", "green": ["macht"] },
+                { "text": "Wir machen eine Pause.", "green": ["machen"] },
+                { "text": "Macht ihr das zusammen?", "green": ["Macht"] },
+                { "text": "Sie machen einen Ausflug.", "green": ["machen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "praeteritum",
+      "label": "Präteritum",
+      "sortOrder": 2,
+      "note": "Simple past — mostly used in writing; in speech the Perfekt is more common.",
+      "patterns": [
+        {
+          "id": "praeteritum-how",
+          "chip": "How it works",
+          "subtitle": "machen in the simple past",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "machte", "gloss": "I did / made" },
+            { "case": "du", "text": "machtest", "gloss": "you did / made" },
+            { "case": "er", "text": "machte", "gloss": "he / she / it did / made" },
+            { "case": "wir", "text": "machten", "gloss": "we did / made" },
+            { "case": "ihr", "text": "machtet", "gloss": "you all did / made" },
+            { "case": "sie", "text": "machten", "gloss": "they / you (formal) did / made" }
+          ],
+          "sections": [],
+          "note": "Regular past: stem + -te- + ending (mach- → machte). ich and er match (both machte)."
+        },
+        {
+          "id": "praeteritum-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich machte das Fenster auf.", "green": ["machte"] },
+                { "text": "Du machtest einen guten Job.", "green": ["machtest"] },
+                { "text": "Er machte einen Fehler.", "green": ["machte"] },
+                { "text": "Wir machten einen langen Spaziergang.", "green": ["machten"] },
+                { "text": "Ihr machtet viel Lärm.", "green": ["machtet"] },
+                { "text": "Sie machten Urlaub am Meer.", "green": ["machten"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfekt",
+      "label": "Perfekt",
+      "sortOrder": 3,
+      "note": "Present perfect — the everyday past tense in spoken German.",
+      "patterns": [
+        {
+          "id": "perfekt-how",
+          "chip": "How it works",
+          "subtitle": "haben + gemacht",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "habe gemacht", "gloss": "I have done / made" },
+            { "case": "du", "text": "hast gemacht", "gloss": "you have done / made" },
+            { "case": "er", "text": "hat gemacht", "gloss": "he / she / it has done / made" },
+            { "case": "wir", "text": "haben gemacht", "gloss": "we have done / made" },
+            { "case": "ihr", "text": "habt gemacht", "gloss": "you all have done / made" },
+            { "case": "sie", "text": "haben gemacht", "gloss": "they / you (formal) have done / made" }
+          ],
+          "sections": [],
+          "note": "Regular participle: ge- + stem + -t = gemacht. machen uses haben as the helper; only the helper changes for each person."
+        },
+        {
+          "id": "perfekt-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich habe das Essen gemacht.", "green": ["habe", "gemacht"] },
+                { "text": "Du hast einen Fehler gemacht.", "green": ["hast", "gemacht"] },
+                { "text": "Er hat seine Arbeit gemacht.", "green": ["hat", "gemacht"] },
+                { "text": "Wir haben eine Reise gemacht.", "green": ["haben", "gemacht"] },
+                { "text": "Ihr habt das gut gemacht.", "green": ["habt", "gemacht"] },
+                { "text": "Sie haben Fotos gemacht.", "green": ["haben", "gemacht"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plusquamperfekt",
+      "label": "Plusquamperfekt",
+      "sortOrder": 4,
+      "note": "Past perfect — an action finished before another past moment (had done).",
+      "patterns": [
+        {
+          "id": "plusquamperfekt-how",
+          "chip": "How it works",
+          "subtitle": "hatte + gemacht",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "hatte gemacht", "gloss": "I had done / made" },
+            { "case": "du", "text": "hattest gemacht", "gloss": "you had done / made" },
+            { "case": "er", "text": "hatte gemacht", "gloss": "he / she / it had done / made" },
+            { "case": "wir", "text": "hatten gemacht", "gloss": "we had done / made" },
+            { "case": "ihr", "text": "hattet gemacht", "gloss": "you all had done / made" },
+            { "case": "sie", "text": "hatten gemacht", "gloss": "they / you (formal) had done / made" }
+          ],
+          "sections": [],
+          "note": "Like the Perfekt, but the helper is in the Präteritum (hatte instead of habe). Use it for the 'earlier' of two past events."
+        },
+        {
+          "id": "plusquamperfekt-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich hatte die Arbeit schon gemacht.", "green": ["hatte", "gemacht"] },
+                { "text": "Du hattest vorher einen Plan gemacht.", "green": ["hattest", "gemacht"] },
+                { "text": "Er hatte den Fehler zuerst gemacht.", "green": ["hatte", "gemacht"] },
+                { "text": "Wir hatten alles fertig gemacht.", "green": ["hatten", "gemacht"] },
+                { "text": "Ihr hattet schon Pläne gemacht.", "green": ["hattet", "gemacht"] },
+                { "text": "Sie hatten die Aufgabe längst gemacht.", "green": ["hatten", "gemacht"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futur1",
+      "label": "Futur I",
+      "sortOrder": 5,
+      "note": "Future — what will be.",
+      "patterns": [
+        {
+          "id": "futur1-how",
+          "chip": "How it works",
+          "subtitle": "werden + machen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "werde machen", "gloss": "I will do / make" },
+            { "case": "du", "text": "wirst machen", "gloss": "you will do / make" },
+            { "case": "er", "text": "wird machen", "gloss": "he / she / it will do / make" },
+            { "case": "wir", "text": "werden machen", "gloss": "we will do / make" },
+            { "case": "ihr", "text": "werdet machen", "gloss": "you all will do / make" },
+            { "case": "sie", "text": "werden machen", "gloss": "they / you (formal) will do / make" }
+          ],
+          "sections": [],
+          "note": "Futur I = werden + infinitive. Only werden changes for each person; the infinitive machen stays the same and goes to the end."
+        },
+        {
+          "id": "futur1-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich werde das später machen.", "green": ["werde", "machen"] },
+                { "text": "Du wirst das schon machen.", "green": ["wirst", "machen"] },
+                { "text": "Er wird die Arbeit machen.", "green": ["wird", "machen"] },
+                { "text": "Wir werden einen Plan machen.", "green": ["werden", "machen"] },
+                { "text": "Ihr werdet das gut machen.", "green": ["werdet", "machen"] },
+                { "text": "Sie werden eine Ausnahme machen.", "green": ["werden", "machen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futur2",
+      "label": "Futur II",
+      "sortOrder": 6,
+      "note": "Future perfect — what will have happened (also expresses an assumption about the past).",
+      "patterns": [
+        {
+          "id": "futur2-how",
+          "chip": "How it works",
+          "subtitle": "werden + gemacht haben",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "werde gemacht haben", "gloss": "I will have done / made" },
+            { "case": "du", "text": "wirst gemacht haben", "gloss": "you will have done / made" },
+            { "case": "er", "text": "wird gemacht haben", "gloss": "he / she / it will have done / made" },
+            { "case": "wir", "text": "werden gemacht haben", "gloss": "we will have done / made" },
+            { "case": "ihr", "text": "werdet gemacht haben", "gloss": "you all will have done / made" },
+            { "case": "sie", "text": "werden gemacht haben", "gloss": "they / you (formal) will have done / made" }
+          ],
+          "sections": [],
+          "note": "werden + past participle + haben (gemacht haben). Rare in speech; often used to guess about the past."
+        },
+        {
+          "id": "futur2-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Bis morgen werde ich alles gemacht haben.", "green": ["werde", "gemacht", "haben"] },
+                { "text": "Du wirst es bis dahin gemacht haben.", "green": ["wirst", "gemacht", "haben"] },
+                { "text": "Er wird die Arbeit gemacht haben.", "green": ["wird", "gemacht", "haben"] },
+                { "text": "Wir werden bis Montag alles gemacht haben.", "green": ["werden", "gemacht", "haben"] },
+                { "text": "Ihr werdet die Aufgabe gemacht haben.", "green": ["werdet", "gemacht", "haben"] },
+                { "text": "Sie werden Fotos gemacht haben.", "green": ["werden", "gemacht", "haben"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv1",
+      "label": "Konjunktiv I",
+      "sortOrder": 7,
+      "note": "Subjunctive I — reported speech (he says (that) he does …).",
+      "patterns": [
+        {
+          "id": "konjunktiv1-how",
+          "chip": "How it works",
+          "subtitle": "the reported-speech form of machen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "mache", "gloss": "(that) I do / make" },
+            { "case": "du", "text": "machest", "gloss": "(that) you do / make" },
+            { "case": "er", "text": "mache", "gloss": "(that) he / she / it does / makes" },
+            { "case": "wir", "text": "machen", "gloss": "(that) we do / make" },
+            { "case": "ihr", "text": "machet", "gloss": "(that) you all do / make" },
+            { "case": "sie", "text": "machen", "gloss": "(that) they / you (formal) do / make" }
+          ],
+          "sections": [],
+          "note": "Used to report what someone said. The clearest form is er mache — it differs from the indicative er macht."
+        },
+        {
+          "id": "konjunktiv1-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Er sagt, ich mache zu viel.", "green": ["mache"] },
+                { "text": "Sie meint, du machest Fortschritte.", "green": ["machest"] },
+                { "text": "Man sagt, er mache gute Arbeit.", "green": ["mache"] },
+                { "text": "Sie sagen, wir machen alles richtig.", "green": ["machen"] },
+                { "text": "Er glaubt, ihr machet Fehler.", "green": ["machet"] },
+                { "text": "Die Zeitung schreibt, sie machen Reformen.", "green": ["machen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv2-gegenwart",
+      "label": "Konjunktiv II (Gegenwart)",
+      "sortOrder": 8,
+      "note": "Would (present) — wishes, polite requests and unreal situations now.",
+      "patterns": [
+        {
+          "id": "konjunktiv2-gegenwart-how",
+          "chip": "How it works",
+          "subtitle": "würde + machen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "würde machen", "gloss": "I would do / make" },
+            { "case": "du", "text": "würdest machen", "gloss": "you would do / make" },
+            { "case": "er", "text": "würde machen", "gloss": "he / she / it would do / make" },
+            { "case": "wir", "text": "würden machen", "gloss": "we would do / make" },
+            { "case": "ihr", "text": "würdet machen", "gloss": "you all would do / make" },
+            { "case": "sie", "text": "würden machen", "gloss": "they / you (formal) would do / make" }
+          ],
+          "sections": [],
+          "note": "Regular verbs like machen use würde + infinitive for Konjunktiv II (there is no special one-word form in everyday use). Only würde changes per person."
+        },
+        {
+          "id": "konjunktiv2-gegenwart-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich würde das anders machen.", "green": ["würde", "machen"] },
+                { "text": "Was würdest du machen?", "green": ["würdest", "machen"] },
+                { "text": "Er würde es sofort machen.", "green": ["würde", "machen"] },
+                { "text": "Wir würden eine Pause machen.", "green": ["würden", "machen"] },
+                { "text": "Ihr würdet einen Fehler machen.", "green": ["würdet", "machen"] },
+                { "text": "Sie würden das nie machen.", "green": ["würden", "machen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv2-vergangenheit",
+      "label": "Konjunktiv II (Vergangenheit)",
+      "sortOrder": 9,
+      "note": "Would have (past) — unreal or regretted situations in the past.",
+      "patterns": [
+        {
+          "id": "konjunktiv2-vergangenheit-how",
+          "chip": "How it works",
+          "subtitle": "hätte + gemacht",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "hätte gemacht", "gloss": "I would have done / made" },
+            { "case": "du", "text": "hättest gemacht", "gloss": "you would have done / made" },
+            { "case": "er", "text": "hätte gemacht", "gloss": "he / she / it would have done / made" },
+            { "case": "wir", "text": "hätten gemacht", "gloss": "we would have done / made" },
+            { "case": "ihr", "text": "hättet gemacht", "gloss": "you all would have done / made" },
+            { "case": "sie", "text": "hätten gemacht", "gloss": "they / you (formal) would have done / made" }
+          ],
+          "sections": [],
+          "note": "Even regular verbs form the PAST Konjunktiv II with hätte + participle (not würde). So: hätte gemacht = 'would have done'."
+        },
+        {
+          "id": "konjunktiv2-vergangenheit-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich hätte es anders gemacht.", "green": ["hätte", "gemacht"] },
+                { "text": "Du hättest das besser gemacht.", "green": ["hättest", "gemacht"] },
+                { "text": "Er hätte fast einen Fehler gemacht.", "green": ["hätte", "gemacht"] },
+                { "text": "Wir hätten gern mehr gemacht.", "green": ["hätten", "gemacht"] },
+                { "text": "Ihr hättet das sicher gut gemacht.", "green": ["hättet", "gemacht"] },
+                { "text": "Sie hätten es ohne uns nie gemacht.", "green": ["hätten", "gemacht"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

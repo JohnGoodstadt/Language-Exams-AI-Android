@@ -1,0 +1,353 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "EnglishConjugationsToDoTeaching",
+  "title": "to do",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "present",
+      "label": "Present",
+      "sortOrder": 1,
+      "note": "Present simple — what is true now.",
+      "patterns": [
+        {
+          "id": "present-how",
+          "chip": "How it works",
+          "subtitle": "do in every person",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "do", "gloss": "I do" },
+            { "case": "you", "text": "do", "gloss": "you do" },
+            { "case": "he", "text": "does", "gloss": "he / she / it does" },
+            { "case": "we", "text": "do", "gloss": "we do" },
+            { "case": "they", "text": "do", "gloss": "they do" }
+          ],
+          "sections": [],
+          "note": "Regular except one form: he / she / it changes do → does (spelled -es, said 'duzz')."
+        },
+        {
+          "id": "present-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I do sport every morning.", "green": ["do"] },
+                { "text": "You do a great job.", "green": ["do"] },
+                { "text": "He does his homework.", "green": ["does"] },
+                { "text": "We do a lot together.", "green": ["do"] },
+                { "text": "They do the same thing every day.", "green": ["do"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past",
+      "label": "Past",
+      "sortOrder": 2,
+      "note": "Past simple — what was true before.",
+      "patterns": [
+        {
+          "id": "past-how",
+          "chip": "How it works",
+          "subtitle": "do in the past",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "did", "gloss": "I did" },
+            { "case": "you", "text": "did", "gloss": "you did" },
+            { "case": "he", "text": "did", "gloss": "he / she / it did" },
+            { "case": "we", "text": "did", "gloss": "we did" },
+            { "case": "they", "text": "did", "gloss": "they did" }
+          ],
+          "sections": [],
+          "note": "did is the same for every person — one irregular form to remember."
+        },
+        {
+          "id": "past-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I did my best.", "green": ["did"] },
+                { "text": "You did a great job.", "green": ["did"] },
+                { "text": "He did nothing wrong.", "green": ["did"] },
+                { "text": "We did a lot of work.", "green": ["did"] },
+                { "text": "They did the washing up.", "green": ["did"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "label": "Present Perfect",
+      "sortOrder": 3,
+      "note": "Present perfect — a past action linked to now (have/has + past participle).",
+      "patterns": [
+        {
+          "id": "present-perfect-how",
+          "chip": "How it works",
+          "subtitle": "have / has + done",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "have done", "gloss": "I have done" },
+            { "case": "you", "text": "have done", "gloss": "you have done" },
+            { "case": "he", "text": "has done", "gloss": "he / she / it has done" },
+            { "case": "we", "text": "have done", "gloss": "we have done" },
+            { "case": "they", "text": "have done", "gloss": "they have done" }
+          ],
+          "sections": [],
+          "note": "have/has + the past participle done (not 'did'). Only the helper changes: have → has for he / she / it."
+        },
+        {
+          "id": "present-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I have done my homework.", "green": ["have", "done"] },
+                { "text": "You have done well.", "green": ["have", "done"] },
+                { "text": "He has done a good job.", "green": ["has", "done"] },
+                { "text": "We have done a lot today.", "green": ["have", "done"] },
+                { "text": "They have done their best.", "green": ["have", "done"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past-perfect",
+      "label": "Past Perfect",
+      "sortOrder": 4,
+      "note": "Past perfect — an action finished before another past moment (had + past participle).",
+      "patterns": [
+        {
+          "id": "past-perfect-how",
+          "chip": "How it works",
+          "subtitle": "had + done",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "had done", "gloss": "I had done" },
+            { "case": "you", "text": "had done", "gloss": "you had done" },
+            { "case": "he", "text": "had done", "gloss": "he / she / it had done" },
+            { "case": "we", "text": "had done", "gloss": "we had done" },
+            { "case": "they", "text": "had done", "gloss": "they had done" }
+          ],
+          "sections": [],
+          "note": "had + the past participle done — the same for every person. Use it for the earlier of two past events."
+        },
+        {
+          "id": "past-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I had done my homework before dinner.", "green": ["had", "done"] },
+                { "text": "You had done it all before.", "green": ["had", "done"] },
+                { "text": "He had done nothing wrong.", "green": ["had", "done"] },
+                { "text": "We had done a lot by lunchtime.", "green": ["had", "done"] },
+                { "text": "They had done their best.", "green": ["had", "done"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "label": "Future",
+      "sortOrder": 5,
+      "note": "Future with will — what will be.",
+      "patterns": [
+        {
+          "id": "future-how",
+          "chip": "How it works",
+          "subtitle": "will + do",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will do", "gloss": "I will do" },
+            { "case": "you", "text": "will do", "gloss": "you will do" },
+            { "case": "he", "text": "will do", "gloss": "he / she / it will do" },
+            { "case": "we", "text": "will do", "gloss": "we will do" },
+            { "case": "they", "text": "will do", "gloss": "they will do" }
+          ],
+          "sections": [],
+          "note": "will + do is identical for every person. No -s: it is 'he will do', never 'he will does'."
+        },
+        {
+          "id": "future-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I will do it later.", "green": ["will", "do"] },
+                { "text": "You will do fine.", "green": ["will", "do"] },
+                { "text": "He will do the work.", "green": ["will", "do"] },
+                { "text": "We will do our best.", "green": ["will", "do"] },
+                { "text": "They will do it tomorrow.", "green": ["will", "do"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future-perfect",
+      "label": "Future Perfect",
+      "sortOrder": 6,
+      "note": "Future perfect — something completed by a point in the future (will have + past participle).",
+      "patterns": [
+        {
+          "id": "future-perfect-how",
+          "chip": "How it works",
+          "subtitle": "will have + done",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will have done", "gloss": "I will have done" },
+            { "case": "you", "text": "will have done", "gloss": "you will have done" },
+            { "case": "he", "text": "will have done", "gloss": "he / she / it will have done" },
+            { "case": "we", "text": "will have done", "gloss": "we will have done" },
+            { "case": "they", "text": "will have done", "gloss": "they will have done" }
+          ],
+          "sections": [],
+          "note": "will have + the past participle done — identical for every person."
+        },
+        {
+          "id": "future-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "By tomorrow I will have done it all.", "green": ["will", "have", "done"] },
+                { "text": "You will have done it by then.", "green": ["will", "have", "done"] },
+                { "text": "He will have done the work by Monday.", "green": ["will", "have", "done"] },
+                { "text": "We will have done everything by Friday.", "green": ["will", "have", "done"] },
+                { "text": "They will have done their part.", "green": ["will", "have", "done"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "label": "Conditional",
+      "sortOrder": 7,
+      "note": "Conditional with would — hypotheticals, wishes and polite requests.",
+      "patterns": [
+        {
+          "id": "conditional-how",
+          "chip": "How it works",
+          "subtitle": "would + do",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would do", "gloss": "I would do" },
+            { "case": "you", "text": "would do", "gloss": "you would do" },
+            { "case": "he", "text": "would do", "gloss": "he / she / it would do" },
+            { "case": "we", "text": "would do", "gloss": "we would do" },
+            { "case": "they", "text": "would do", "gloss": "they would do" }
+          ],
+          "sections": [],
+          "note": "would + do is identical for every person. In speech would often shrinks to 'd (I'd do, they'd do)."
+        },
+        {
+          "id": "conditional-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would do it differently.", "green": ["would", "do"] },
+                { "text": "What would you do?", "green": ["would", "do"] },
+                { "text": "He would do it straight away.", "green": ["would", "do"] },
+                { "text": "We would do it again.", "green": ["would", "do"] },
+                { "text": "They would never do that.", "green": ["would", "do"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional-perfect",
+      "label": "Conditional Perfect",
+      "sortOrder": 8,
+      "note": "Conditional perfect — an unreal past: what would have happened (would have + past participle).",
+      "patterns": [
+        {
+          "id": "conditional-perfect-how",
+          "chip": "How it works",
+          "subtitle": "would have + done",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would have done", "gloss": "I would have done" },
+            { "case": "you", "text": "would have done", "gloss": "you would have done" },
+            { "case": "he", "text": "would have done", "gloss": "he / she / it would have done" },
+            { "case": "we", "text": "would have done", "gloss": "we would have done" },
+            { "case": "they", "text": "would have done", "gloss": "they would have done" }
+          ],
+          "sections": [],
+          "note": "would have + the past participle done — identical for every person. Often paired with an if-clause."
+        },
+        {
+          "id": "conditional-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would have done it differently.", "green": ["would", "have", "done"] },
+                { "text": "You would have done a better job.", "green": ["would", "have", "done"] },
+                { "text": "He would have done the same.", "green": ["would", "have", "done"] },
+                { "text": "We would have done more with help.", "green": ["would", "have", "done"] },
+                { "text": "They would never have done that.", "green": ["would", "have", "done"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

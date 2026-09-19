@@ -643,6 +643,16 @@ class ContentRepository @Inject constructor(
         "EnglishReferencePronouns" -> "english_reference_pronouns"
         "GermanPrepositionsTeaching" -> "german_prepositions_teaching"
         "EnglishPrepositionsTeaching" -> "english_prepositions_teaching"
+        // fileFormat-6 conjugation teaching sheets (de only for now). These live locally in res/raw and
+        // are not on Firestore yet, so getFormat6Data always falls through to this bundle mapping.
+        "GermanConjugationsToBeTeaching" -> "german_conjugations_to_be_teaching"
+        "GermanConjugationsToHaveTeaching" -> "german_conjugations_to_have_teaching"
+        "GermanConjugationsToDoTeaching" -> "german_conjugations_to_do_teaching"
+        "GermanConjugationsToGetTeaching" -> "german_conjugations_to_get_teaching"
+        "EnglishConjugationsToBeTeaching" -> "english_conjugations_to_be_teaching"
+        "EnglishConjugationsToHaveTeaching" -> "english_conjugations_to_have_teaching"
+        "EnglishConjugationsToDoTeaching" -> "english_conjugations_to_do_teaching"
+        "EnglishConjugationsToGetTeaching" -> "english_conjugations_to_get_teaching"
         else -> null
     }
 

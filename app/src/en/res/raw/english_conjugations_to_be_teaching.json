@@ -1,0 +1,353 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "EnglishConjugationsToBeTeaching",
+  "title": "to be",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "present",
+      "label": "Present",
+      "sortOrder": 1,
+      "note": "Present simple — what is true now.",
+      "patterns": [
+        {
+          "id": "present-how",
+          "chip": "How it works",
+          "subtitle": "be in every person",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "am", "gloss": "I am" },
+            { "case": "you", "text": "are", "gloss": "you are" },
+            { "case": "he", "text": "is", "gloss": "he / she / it is" },
+            { "case": "we", "text": "are", "gloss": "we are" },
+            { "case": "they", "text": "are", "gloss": "they are" }
+          ],
+          "sections": [],
+          "note": "be is the most irregular verb in English: am / is / are. There is no pattern — learn these three by heart."
+        },
+        {
+          "id": "present-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I am tired today.", "green": ["am"] },
+                { "text": "You are a good friend.", "green": ["are"] },
+                { "text": "He is not here yet.", "green": ["is"] },
+                { "text": "We are at home at the weekend.", "green": ["are"] },
+                { "text": "They are very kind.", "green": ["are"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past",
+      "label": "Past",
+      "sortOrder": 2,
+      "note": "Past simple — what was true before.",
+      "patterns": [
+        {
+          "id": "past-how",
+          "chip": "How it works",
+          "subtitle": "be in the past",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "was", "gloss": "I was" },
+            { "case": "you", "text": "were", "gloss": "you were" },
+            { "case": "he", "text": "was", "gloss": "he / she / it was" },
+            { "case": "we", "text": "were", "gloss": "we were" },
+            { "case": "they", "text": "were", "gloss": "they were" }
+          ],
+          "sections": [],
+          "note": "be is the only English verb with two past forms: was (I / he / she / it) and were (you / we / they)."
+        },
+        {
+          "id": "past-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I was ill yesterday.", "green": ["was"] },
+                { "text": "You were not here yesterday.", "green": ["were"] },
+                { "text": "He was in London last week.", "green": ["was"] },
+                { "text": "We were at the cinema.", "green": ["were"] },
+                { "text": "They were on time.", "green": ["were"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "label": "Present Perfect",
+      "sortOrder": 3,
+      "note": "Present perfect — a past action linked to now (have/has + past participle).",
+      "patterns": [
+        {
+          "id": "present-perfect-how",
+          "chip": "How it works",
+          "subtitle": "have / has + been",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "have been", "gloss": "I have been" },
+            { "case": "you", "text": "have been", "gloss": "you have been" },
+            { "case": "he", "text": "has been", "gloss": "he / she / it has been" },
+            { "case": "we", "text": "have been", "gloss": "we have been" },
+            { "case": "they", "text": "have been", "gloss": "they have been" }
+          ],
+          "sections": [],
+          "note": "Present perfect = have/has + the past participle been. Only the helper changes: have → has for he / she / it."
+        },
+        {
+          "id": "present-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I have never been to Rome.", "green": ["have", "been"] },
+                { "text": "You have been here often.", "green": ["have", "been"] },
+                { "text": "He has been ill since Monday.", "green": ["has", "been"] },
+                { "text": "We have been on holiday.", "green": ["have", "been"] },
+                { "text": "They have been very busy.", "green": ["have", "been"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past-perfect",
+      "label": "Past Perfect",
+      "sortOrder": 4,
+      "note": "Past perfect — an action finished before another past moment (had + past participle).",
+      "patterns": [
+        {
+          "id": "past-perfect-how",
+          "chip": "How it works",
+          "subtitle": "had + been",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "had been", "gloss": "I had been" },
+            { "case": "you", "text": "had been", "gloss": "you had been" },
+            { "case": "he", "text": "had been", "gloss": "he / she / it had been" },
+            { "case": "we", "text": "had been", "gloss": "we had been" },
+            { "case": "they", "text": "had been", "gloss": "they had been" }
+          ],
+          "sections": [],
+          "note": "had + been — the same for every person. Use it for the earlier of two past events."
+        },
+        {
+          "id": "past-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I had never been there before.", "green": ["had", "been"] },
+                { "text": "You had been there once before.", "green": ["had", "been"] },
+                { "text": "He had been ill all day.", "green": ["had", "been"] },
+                { "text": "We had already been away when you arrived.", "green": ["had", "been"] },
+                { "text": "They had been nervous before the game.", "green": ["had", "been"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "label": "Future",
+      "sortOrder": 5,
+      "note": "Future with will — what will be.",
+      "patterns": [
+        {
+          "id": "future-how",
+          "chip": "How it works",
+          "subtitle": "will + be",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will be", "gloss": "I will be" },
+            { "case": "you", "text": "will be", "gloss": "you will be" },
+            { "case": "he", "text": "will be", "gloss": "he / she / it will be" },
+            { "case": "we", "text": "will be", "gloss": "we will be" },
+            { "case": "they", "text": "will be", "gloss": "they will be" }
+          ],
+          "sections": [],
+          "note": "Easy one: will + be is identical for every person. will never adds -s and never changes."
+        },
+        {
+          "id": "future-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I will be at home tomorrow.", "green": ["will", "be"] },
+                { "text": "You will be well again soon.", "green": ["will", "be"] },
+                { "text": "He will be on time.", "green": ["will", "be"] },
+                { "text": "We will be in Italy in the summer.", "green": ["will", "be"] },
+                { "text": "They will be happy.", "green": ["will", "be"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future-perfect",
+      "label": "Future Perfect",
+      "sortOrder": 6,
+      "note": "Future perfect — something completed by a point in the future (will have + past participle).",
+      "patterns": [
+        {
+          "id": "future-perfect-how",
+          "chip": "How it works",
+          "subtitle": "will have + been",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will have been", "gloss": "I will have been" },
+            { "case": "you", "text": "will have been", "gloss": "you will have been" },
+            { "case": "he", "text": "will have been", "gloss": "he / she / it will have been" },
+            { "case": "we", "text": "will have been", "gloss": "we will have been" },
+            { "case": "they", "text": "will have been", "gloss": "they will have been" }
+          ],
+          "sections": [],
+          "note": "will have + been — identical for every person. It looks ahead to something already finished by then."
+        },
+        {
+          "id": "future-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "By tomorrow I will have been here a year.", "green": ["will", "have", "been"] },
+                { "text": "You will have been right all along.", "green": ["will", "have", "been"] },
+                { "text": "He will have been away for a week.", "green": ["will", "have", "been"] },
+                { "text": "We will have been there by then.", "green": ["will", "have", "been"] },
+                { "text": "They will have been married for ten years.", "green": ["will", "have", "been"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "label": "Conditional",
+      "sortOrder": 7,
+      "note": "Conditional with would — hypotheticals, wishes and polite requests.",
+      "patterns": [
+        {
+          "id": "conditional-how",
+          "chip": "How it works",
+          "subtitle": "would + be",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would be", "gloss": "I would be" },
+            { "case": "you", "text": "would be", "gloss": "you would be" },
+            { "case": "he", "text": "would be", "gloss": "he / she / it would be" },
+            { "case": "we", "text": "would be", "gloss": "we would be" },
+            { "case": "they", "text": "would be", "gloss": "they would be" }
+          ],
+          "sections": [],
+          "note": "would + be is identical for every person. In speech would often shrinks to 'd (I'd be, he'd be)."
+        },
+        {
+          "id": "conditional-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would be happy to help.", "green": ["would", "be"] },
+                { "text": "Would you be so kind?", "green": ["Would", "be"] },
+                { "text": "He would be perfect for the job.", "green": ["would", "be"] },
+                { "text": "We would be glad to stay longer.", "green": ["would", "be"] },
+                { "text": "They would rather be at home.", "green": ["would", "be"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional-perfect",
+      "label": "Conditional Perfect",
+      "sortOrder": 8,
+      "note": "Conditional perfect — an unreal past: what would have happened (would have + past participle).",
+      "patterns": [
+        {
+          "id": "conditional-perfect-how",
+          "chip": "How it works",
+          "subtitle": "would have + been",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would have been", "gloss": "I would have been" },
+            { "case": "you", "text": "would have been", "gloss": "you would have been" },
+            { "case": "he", "text": "would have been", "gloss": "he / she / it would have been" },
+            { "case": "we", "text": "would have been", "gloss": "we would have been" },
+            { "case": "they", "text": "would have been", "gloss": "they would have been" }
+          ],
+          "sections": [],
+          "note": "would have + been — identical for every person. Often paired with an if-clause (If I had known, I would have been there)."
+        },
+        {
+          "id": "conditional-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would have been on time, but I missed the bus.", "green": ["would", "have", "been"] },
+                { "text": "You would have been proud of me.", "green": ["would", "have", "been"] },
+                { "text": "He would have been happy to come.", "green": ["would", "have", "been"] },
+                { "text": "We would have been lost without you.", "green": ["would", "have", "been"] },
+                { "text": "They would have been surprised.", "green": ["would", "have", "been"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

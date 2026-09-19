@@ -1,0 +1,414 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "GermanConjugationsToBeTeaching",
+  "title": "sein — to be",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "praesens",
+      "label": "Präsens",
+      "sortOrder": 1,
+      "note": "Present tense — what is true now.",
+      "patterns": [
+        {
+          "id": "praesens-how",
+          "chip": "How it works",
+          "subtitle": "sein in all six persons",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "bin", "gloss": "I am" },
+            { "case": "du", "text": "bist", "gloss": "you are" },
+            { "case": "er", "text": "ist", "gloss": "he / she / it is" },
+            { "case": "wir", "text": "sind", "gloss": "we are" },
+            { "case": "ihr", "text": "seid", "gloss": "you all are" },
+            { "case": "sie", "text": "sind", "gloss": "they / you (formal) are" }
+          ],
+          "sections": [],
+          "note": "sein is completely irregular — there is no stem to add endings to, so learn these six forms by heart."
+        },
+        {
+          "id": "praesens-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich bin heute sehr müde.", "green": ["bin"] },
+                { "text": "Du bist ein guter Freund.", "green": ["bist"] },
+                { "text": "Er ist noch nicht da.", "green": ["ist"] },
+                { "text": "Wir sind am Wochenende zu Hause.", "green": ["sind"] },
+                { "text": "Ihr seid schon fertig.", "green": ["seid"] },
+                { "text": "Sie sind sehr nett.", "green": ["sind"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "praeteritum",
+      "label": "Präteritum",
+      "sortOrder": 2,
+      "note": "Simple past — common in writing and for sein/haben in speech.",
+      "patterns": [
+        {
+          "id": "praeteritum-how",
+          "chip": "How it works",
+          "subtitle": "sein in the simple past",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "war", "gloss": "I was" },
+            { "case": "du", "text": "warst", "gloss": "you were" },
+            { "case": "er", "text": "war", "gloss": "he / she / it was" },
+            { "case": "wir", "text": "waren", "gloss": "we were" },
+            { "case": "ihr", "text": "wart", "gloss": "you all were" },
+            { "case": "sie", "text": "waren", "gloss": "they / you (formal) were" }
+          ],
+          "sections": [],
+          "note": "Irregular stem war-. Note ich and er are identical (both war), as always in the Präteritum."
+        },
+        {
+          "id": "praeteritum-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Gestern war ich krank.", "green": ["war"] },
+                { "text": "Du warst gestern nicht hier.", "green": ["warst"] },
+                { "text": "Er war letzte Woche in Berlin.", "green": ["war"] },
+                { "text": "Wir waren im Kino.", "green": ["waren"] },
+                { "text": "Ihr wart sehr laut.", "green": ["wart"] },
+                { "text": "Sie waren pünktlich.", "green": ["waren"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfekt",
+      "label": "Perfekt",
+      "sortOrder": 3,
+      "note": "Present perfect — the everyday past tense in spoken German.",
+      "patterns": [
+        {
+          "id": "perfekt-how",
+          "chip": "How it works",
+          "subtitle": "helper (sein) + gewesen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "bin gewesen", "gloss": "I have been" },
+            { "case": "du", "text": "bist gewesen", "gloss": "you have been" },
+            { "case": "er", "text": "ist gewesen", "gloss": "he / she / it has been" },
+            { "case": "wir", "text": "sind gewesen", "gloss": "we have been" },
+            { "case": "ihr", "text": "seid gewesen", "gloss": "you all have been" },
+            { "case": "sie", "text": "sind gewesen", "gloss": "they / you (formal) have been" }
+          ],
+          "sections": [],
+          "note": "sein builds the Perfekt with sein (not haben). Only the helper changes for each person; the participle gewesen never changes and goes to the end."
+        },
+        {
+          "id": "perfekt-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich bin noch nie in Rom gewesen.", "green": ["bin", "gewesen"] },
+                { "text": "Du bist schon oft hier gewesen.", "green": ["bist", "gewesen"] },
+                { "text": "Er ist gestern krank gewesen.", "green": ["ist", "gewesen"] },
+                { "text": "Wir sind im Urlaub gewesen.", "green": ["sind", "gewesen"] },
+                { "text": "Ihr seid sehr fleißig gewesen.", "green": ["seid", "gewesen"] },
+                { "text": "Sie sind pünktlich gewesen.", "green": ["sind", "gewesen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plusquamperfekt",
+      "label": "Plusquamperfekt",
+      "sortOrder": 4,
+      "note": "Past perfect — an action finished before another past moment (had been).",
+      "patterns": [
+        {
+          "id": "plusquamperfekt-how",
+          "chip": "How it works",
+          "subtitle": "war + gewesen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "war gewesen", "gloss": "I had been" },
+            { "case": "du", "text": "warst gewesen", "gloss": "you had been" },
+            { "case": "er", "text": "war gewesen", "gloss": "he / she / it had been" },
+            { "case": "wir", "text": "waren gewesen", "gloss": "we had been" },
+            { "case": "ihr", "text": "wart gewesen", "gloss": "you all had been" },
+            { "case": "sie", "text": "waren gewesen", "gloss": "they / you (formal) had been" }
+          ],
+          "sections": [],
+          "note": "Like the Perfekt, but the helper is in the Präteritum (war instead of bin). Use it for the 'earlier' of two past events."
+        },
+        {
+          "id": "plusquamperfekt-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich war vorher noch nie dort gewesen.", "green": ["war", "gewesen"] },
+                { "text": "Du warst schon einmal hier gewesen.", "green": ["warst", "gewesen"] },
+                { "text": "Er war den ganzen Tag krank gewesen.", "green": ["war", "gewesen"] },
+                { "text": "Wir waren schon weg gewesen, als du kamst.", "green": ["waren", "gewesen"] },
+                { "text": "Ihr wart vorher nie im Ausland gewesen.", "green": ["wart", "gewesen"] },
+                { "text": "Sie waren vor dem Spiel nervös gewesen.", "green": ["waren", "gewesen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futur1",
+      "label": "Futur I",
+      "sortOrder": 5,
+      "note": "Future — what will be.",
+      "patterns": [
+        {
+          "id": "futur1-how",
+          "chip": "How it works",
+          "subtitle": "werden + sein",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "werde sein", "gloss": "I will be" },
+            { "case": "du", "text": "wirst sein", "gloss": "you will be" },
+            { "case": "er", "text": "wird sein", "gloss": "he / she / it will be" },
+            { "case": "wir", "text": "werden sein", "gloss": "we will be" },
+            { "case": "ihr", "text": "werdet sein", "gloss": "you all will be" },
+            { "case": "sie", "text": "werden sein", "gloss": "they / you (formal) will be" }
+          ],
+          "sections": [],
+          "note": "Futur I = werden + infinitive. Only werden changes for each person; the infinitive sein stays the same and goes to the end."
+        },
+        {
+          "id": "futur1-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Morgen werde ich zu Hause sein.", "green": ["werde", "sein"] },
+                { "text": "Du wirst bald wieder gesund sein.", "green": ["wirst", "sein"] },
+                { "text": "Er wird pünktlich sein.", "green": ["wird", "sein"] },
+                { "text": "Wir werden im Sommer in Italien sein.", "green": ["werden", "sein"] },
+                { "text": "Ihr werdet stolz sein.", "green": ["werdet", "sein"] },
+                { "text": "Sie werden zufrieden sein.", "green": ["werden", "sein"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futur2",
+      "label": "Futur II",
+      "sortOrder": 6,
+      "note": "Future perfect — what will have happened (also expresses an assumption about the past).",
+      "patterns": [
+        {
+          "id": "futur2-how",
+          "chip": "How it works",
+          "subtitle": "werden + gewesen sein",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "werde gewesen sein", "gloss": "I will have been" },
+            { "case": "du", "text": "wirst gewesen sein", "gloss": "you will have been" },
+            { "case": "er", "text": "wird gewesen sein", "gloss": "he / she / it will have been" },
+            { "case": "wir", "text": "werden gewesen sein", "gloss": "we will have been" },
+            { "case": "ihr", "text": "werdet gewesen sein", "gloss": "you all will have been" },
+            { "case": "sie", "text": "werden gewesen sein", "gloss": "they / you (formal) will have been" }
+          ],
+          "sections": [],
+          "note": "werden + past participle + sein (gewesen sein). Rare in speech; often used to guess about the past ('he will have been ill')."
+        },
+        {
+          "id": "futur2-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Bis morgen werde ich fertig gewesen sein.", "green": ["werde", "gewesen", "sein"] },
+                { "text": "Du wirst sicher erfolgreich gewesen sein.", "green": ["wirst", "gewesen", "sein"] },
+                { "text": "Er wird wohl krank gewesen sein.", "green": ["wird", "gewesen", "sein"] },
+                { "text": "Wir werden bis dahin dort gewesen sein.", "green": ["werden", "gewesen", "sein"] },
+                { "text": "Ihr werdet bestimmt schneller gewesen sein.", "green": ["werdet", "gewesen", "sein"] },
+                { "text": "Sie werden schon zu Hause gewesen sein.", "green": ["werden", "gewesen", "sein"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv1",
+      "label": "Konjunktiv I",
+      "sortOrder": 7,
+      "note": "Subjunctive I — reported speech (he says (that) he is …).",
+      "patterns": [
+        {
+          "id": "konjunktiv1-how",
+          "chip": "How it works",
+          "subtitle": "the reported-speech form of sein",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "sei", "gloss": "(that) I am" },
+            { "case": "du", "text": "seist", "gloss": "(that) you are" },
+            { "case": "er", "text": "sei", "gloss": "(that) he / she / it is" },
+            { "case": "wir", "text": "seien", "gloss": "(that) we are" },
+            { "case": "ihr", "text": "seiet", "gloss": "(that) you all are" },
+            { "case": "sie", "text": "seien", "gloss": "(that) they / you (formal) are" }
+          ],
+          "sections": [],
+          "note": "Used to report what someone said, especially in news and formal writing. sein is the one verb with a full, distinct Konjunktiv I."
+        },
+        {
+          "id": "konjunktiv1-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Er sagt, ich sei müde.", "green": ["sei"] },
+                { "text": "Sie meint, du seist im Recht.", "green": ["seist"] },
+                { "text": "Man sagt, er sei sehr klug.", "green": ["sei"] },
+                { "text": "Sie sagen, wir seien willkommen.", "green": ["seien"] },
+                { "text": "Er glaubt, ihr seiet zu spät.", "green": ["seiet"] },
+                { "text": "Die Zeitung schreibt, sie seien unschuldig.", "green": ["seien"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv2-gegenwart",
+      "label": "Konjunktiv II (Gegenwart)",
+      "sortOrder": 8,
+      "note": "Would (present) — wishes, polite requests and unreal situations now.",
+      "patterns": [
+        {
+          "id": "konjunktiv2-gegenwart-how",
+          "chip": "How it works",
+          "subtitle": "the würde-free form of sein",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "wäre", "gloss": "I would be" },
+            { "case": "du", "text": "wärst", "gloss": "you would be" },
+            { "case": "er", "text": "wäre", "gloss": "he / she / it would be" },
+            { "case": "wir", "text": "wären", "gloss": "we would be" },
+            { "case": "ihr", "text": "wärt", "gloss": "you all would be" },
+            { "case": "sie", "text": "wären", "gloss": "they / you (formal) would be" }
+          ],
+          "sections": [],
+          "note": "sein has its own Konjunktiv II form wäre (from war + umlaut). Use it directly — do NOT say würde sein."
+        },
+        {
+          "id": "konjunktiv2-gegenwart-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich wäre gern reich.", "green": ["wäre"] },
+                { "text": "Wärst du bitte so nett?", "green": ["Wärst"] },
+                { "text": "Er wäre ein guter Lehrer.", "green": ["wäre"] },
+                { "text": "Wir wären jetzt lieber im Bett.", "green": ["wären"] },
+                { "text": "Ihr wärt bestimmt ein gutes Team.", "green": ["wärt"] },
+                { "text": "Sie wären lieber zu Hause.", "green": ["wären"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv2-vergangenheit",
+      "label": "Konjunktiv II (Vergangenheit)",
+      "sortOrder": 9,
+      "note": "Would have (past) — unreal or regretted situations in the past.",
+      "patterns": [
+        {
+          "id": "konjunktiv2-vergangenheit-how",
+          "chip": "How it works",
+          "subtitle": "wäre + gewesen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "wäre gewesen", "gloss": "I would have been" },
+            { "case": "du", "text": "wärst gewesen", "gloss": "you would have been" },
+            { "case": "er", "text": "wäre gewesen", "gloss": "he / she / it would have been" },
+            { "case": "wir", "text": "wären gewesen", "gloss": "we would have been" },
+            { "case": "ihr", "text": "wärt gewesen", "gloss": "you all would have been" },
+            { "case": "sie", "text": "wären gewesen", "gloss": "they / you (formal) would have been" }
+          ],
+          "sections": [],
+          "note": "wäre + the participle gewesen. This is the past of Konjunktiv II — 'would have been'."
+        },
+        {
+          "id": "konjunktiv2-vergangenheit-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich wäre fast zu spät gewesen.", "green": ["wäre", "gewesen"] },
+                { "text": "Du wärst bestimmt stolz gewesen.", "green": ["wärst", "gewesen"] },
+                { "text": "Er wäre gern dabei gewesen.", "green": ["wäre", "gewesen"] },
+                { "text": "Wir wären lieber zu Hause gewesen.", "green": ["wären", "gewesen"] },
+                { "text": "Ihr wärt sicher begeistert gewesen.", "green": ["wärt", "gewesen"] },
+                { "text": "Sie wären ohne Hilfe verloren gewesen.", "green": ["wären", "gewesen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "GermanConjugationsToGetTeaching",
+  "title": "bekommen — to get / receive",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "praesens",
+      "label": "Präsens",
+      "sortOrder": 1,
+      "note": "Present tense — bekommen is a strong verb with the inseparable prefix be-.",
+      "patterns": [
+        {
+          "id": "praesens-how",
+          "chip": "How it works",
+          "subtitle": "bekommen in all six persons",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "bekomme", "gloss": "I get / receive" },
+            { "case": "du", "text": "bekommst", "gloss": "you get / receive" },
+            { "case": "er", "text": "bekommt", "gloss": "he / she / it gets / receives" },
+            { "case": "wir", "text": "bekommen", "gloss": "we get / receive" },
+            { "case": "ihr", "text": "bekommt", "gloss": "you all get / receive" },
+            { "case": "sie", "text": "bekommen", "gloss": "they / you (formal) get / receive" }
+          ],
+          "sections": [],
+          "note": "In the present tense the stem bekomm- stays the same and takes the normal endings. False friend: bekommen means to GET, not to become."
+        },
+        {
+          "id": "praesens-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich bekomme oft Post.", "green": ["bekomme"] },
+                { "text": "Du bekommst ein Geschenk.", "green": ["bekommst"] },
+                { "text": "Er bekommt gute Noten.", "green": ["bekommt"] },
+                { "text": "Wir bekommen Besuch.", "green": ["bekommen"] },
+                { "text": "Ihr bekommt eine zweite Chance.", "green": ["bekommt"] },
+                { "text": "Sie bekommen bald Antwort.", "green": ["bekommen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "praeteritum",
+      "label": "Präteritum",
+      "sortOrder": 2,
+      "note": "Simple past — a strong verb, so the stem vowel changes.",
+      "patterns": [
+        {
+          "id": "praeteritum-how",
+          "chip": "How it works",
+          "subtitle": "bekommen in the simple past",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "bekam", "gloss": "I got / received" },
+            { "case": "du", "text": "bekamst", "gloss": "you got / received" },
+            { "case": "er", "text": "bekam", "gloss": "he / she / it got / received" },
+            { "case": "wir", "text": "bekamen", "gloss": "we got / received" },
+            { "case": "ihr", "text": "bekamt", "gloss": "you all got / received" },
+            { "case": "sie", "text": "bekamen", "gloss": "they / you (formal) got / received" }
+          ],
+          "sections": [],
+          "note": "Strong verb: the stem vowel changes (bekomm- → bekam), with NO -te- ending. ich and er match (both bekam)."
+        },
+        {
+          "id": "praeteritum-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich bekam einen Brief.", "green": ["bekam"] },
+                { "text": "Du bekamst ein Lob.", "green": ["bekamst"] },
+                { "text": "Er bekam ein neues Fahrrad.", "green": ["bekam"] },
+                { "text": "Wir bekamen eine gute Nachricht.", "green": ["bekamen"] },
+                { "text": "Ihr bekamt viel Applaus.", "green": ["bekamt"] },
+                { "text": "Sie bekamen keine Antwort.", "green": ["bekamen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfekt",
+      "label": "Perfekt",
+      "sortOrder": 3,
+      "note": "Present perfect — the everyday past tense in spoken German.",
+      "patterns": [
+        {
+          "id": "perfekt-how",
+          "chip": "How it works",
+          "subtitle": "haben + bekommen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "habe bekommen", "gloss": "I have got / received" },
+            { "case": "du", "text": "hast bekommen", "gloss": "you have got / received" },
+            { "case": "er", "text": "hat bekommen", "gloss": "he / she / it has got / received" },
+            { "case": "wir", "text": "haben bekommen", "gloss": "we have got / received" },
+            { "case": "ihr", "text": "habt bekommen", "gloss": "you all have got / received" },
+            { "case": "sie", "text": "haben bekommen", "gloss": "they / you (formal) have got / received" }
+          ],
+          "sections": [],
+          "note": "The participle is bekommen — NO ge- prefix, because be- is an inseparable prefix. It uses haben; only the helper changes for each person."
+        },
+        {
+          "id": "perfekt-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich habe ein Paket bekommen.", "green": ["habe", "bekommen"] },
+                { "text": "Du hast eine SMS bekommen.", "green": ["hast", "bekommen"] },
+                { "text": "Er hat eine gute Note bekommen.", "green": ["hat", "bekommen"] },
+                { "text": "Wir haben Besuch bekommen.", "green": ["haben", "bekommen"] },
+                { "text": "Ihr habt ein Geschenk bekommen.", "green": ["habt", "bekommen"] },
+                { "text": "Sie haben eine Einladung bekommen.", "green": ["haben", "bekommen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plusquamperfekt",
+      "label": "Plusquamperfekt",
+      "sortOrder": 4,
+      "note": "Past perfect — an action finished before another past moment (had got).",
+      "patterns": [
+        {
+          "id": "plusquamperfekt-how",
+          "chip": "How it works",
+          "subtitle": "hatte + bekommen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "hatte bekommen", "gloss": "I had got / received" },
+            { "case": "du", "text": "hattest bekommen", "gloss": "you had got / received" },
+            { "case": "er", "text": "hatte bekommen", "gloss": "he / she / it had got / received" },
+            { "case": "wir", "text": "hatten bekommen", "gloss": "we had got / received" },
+            { "case": "ihr", "text": "hattet bekommen", "gloss": "you all had got / received" },
+            { "case": "sie", "text": "hatten bekommen", "gloss": "they / you (formal) had got / received" }
+          ],
+          "sections": [],
+          "note": "Like the Perfekt, but the helper is in the Präteritum (hatte instead of habe). Use it for the 'earlier' of two past events."
+        },
+        {
+          "id": "plusquamperfekt-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich hatte vorher schon eine Antwort bekommen.", "green": ["hatte", "bekommen"] },
+                { "text": "Du hattest damals kein Geld bekommen.", "green": ["hattest", "bekommen"] },
+                { "text": "Er hatte die Nachricht zu spät bekommen.", "green": ["hatte", "bekommen"] },
+                { "text": "Wir hatten die Einladung nie bekommen.", "green": ["hatten", "bekommen"] },
+                { "text": "Ihr hattet vorher schon Hilfe bekommen.", "green": ["hattet", "bekommen"] },
+                { "text": "Sie hatten bis dahin keine Antwort bekommen.", "green": ["hatten", "bekommen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futur1",
+      "label": "Futur I",
+      "sortOrder": 5,
+      "note": "Future — what will be.",
+      "patterns": [
+        {
+          "id": "futur1-how",
+          "chip": "How it works",
+          "subtitle": "werden + bekommen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "werde bekommen", "gloss": "I will get / receive" },
+            { "case": "du", "text": "wirst bekommen", "gloss": "you will get / receive" },
+            { "case": "er", "text": "wird bekommen", "gloss": "he / she / it will get / receive" },
+            { "case": "wir", "text": "werden bekommen", "gloss": "we will get / receive" },
+            { "case": "ihr", "text": "werdet bekommen", "gloss": "you all will get / receive" },
+            { "case": "sie", "text": "werden bekommen", "gloss": "they / you (formal) will get / receive" }
+          ],
+          "sections": [],
+          "note": "Futur I = werden + infinitive. Only werden changes for each person; the infinitive bekommen stays the same and goes to the end."
+        },
+        {
+          "id": "futur1-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich werde bald eine Antwort bekommen.", "green": ["werde", "bekommen"] },
+                { "text": "Du wirst sicher eine Chance bekommen.", "green": ["wirst", "bekommen"] },
+                { "text": "Er wird ein Zeugnis bekommen.", "green": ["wird", "bekommen"] },
+                { "text": "Wir werden Hilfe bekommen.", "green": ["werden", "bekommen"] },
+                { "text": "Ihr werdet euer Geld bekommen.", "green": ["werdet", "bekommen"] },
+                { "text": "Sie werden eine Rückmeldung bekommen.", "green": ["werden", "bekommen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futur2",
+      "label": "Futur II",
+      "sortOrder": 6,
+      "note": "Future perfect — what will have happened (also expresses an assumption about the past).",
+      "patterns": [
+        {
+          "id": "futur2-how",
+          "chip": "How it works",
+          "subtitle": "werden + bekommen haben",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "werde bekommen haben", "gloss": "I will have got / received" },
+            { "case": "du", "text": "wirst bekommen haben", "gloss": "you will have got / received" },
+            { "case": "er", "text": "wird bekommen haben", "gloss": "he / she / it will have got / received" },
+            { "case": "wir", "text": "werden bekommen haben", "gloss": "we will have got / received" },
+            { "case": "ihr", "text": "werdet bekommen haben", "gloss": "you all will have got / received" },
+            { "case": "sie", "text": "werden bekommen haben", "gloss": "they / you (formal) will have got / received" }
+          ],
+          "sections": [],
+          "note": "werden + past participle + haben (bekommen haben). Rare in speech; often used to guess about the past."
+        },
+        {
+          "id": "futur2-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Bis morgen werde ich die Antwort bekommen haben.", "green": ["werde", "bekommen", "haben"] },
+                { "text": "Du wirst bis dahin dein Geld bekommen haben.", "green": ["wirst", "bekommen", "haben"] },
+                { "text": "Er wird das Paket bekommen haben.", "green": ["wird", "bekommen", "haben"] },
+                { "text": "Wir werden bis Freitag Bescheid bekommen haben.", "green": ["werden", "bekommen", "haben"] },
+                { "text": "Ihr werdet die Ergebnisse bekommen haben.", "green": ["werdet", "bekommen", "haben"] },
+                { "text": "Sie werden eine Einladung bekommen haben.", "green": ["werden", "bekommen", "haben"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv1",
+      "label": "Konjunktiv I",
+      "sortOrder": 7,
+      "note": "Subjunctive I — reported speech (he says (that) he gets …).",
+      "patterns": [
+        {
+          "id": "konjunktiv1-how",
+          "chip": "How it works",
+          "subtitle": "the reported-speech form of bekommen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "bekomme", "gloss": "(that) I get / receive" },
+            { "case": "du", "text": "bekommest", "gloss": "(that) you get / receive" },
+            { "case": "er", "text": "bekomme", "gloss": "(that) he / she / it gets / receives" },
+            { "case": "wir", "text": "bekommen", "gloss": "(that) we get / receive" },
+            { "case": "ihr", "text": "bekommet", "gloss": "(that) you all get / receive" },
+            { "case": "sie", "text": "bekommen", "gloss": "(that) they / you (formal) get / receive" }
+          ],
+          "sections": [],
+          "note": "Used to report what someone said. The clearest form is er bekomme — it differs from the indicative er bekommt."
+        },
+        {
+          "id": "konjunktiv1-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Er sagt, ich bekomme zu wenig.", "green": ["bekomme"] },
+                { "text": "Sie meint, du bekommest eine Chance.", "green": ["bekommest"] },
+                { "text": "Man sagt, er bekomme eine Belohnung.", "green": ["bekomme"] },
+                { "text": "Sie sagen, wir bekommen Unterstützung.", "green": ["bekommen"] },
+                { "text": "Er glaubt, ihr bekommet bald Post.", "green": ["bekommet"] },
+                { "text": "Die Zeitung schreibt, sie bekommen mehr Lohn.", "green": ["bekommen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv2-gegenwart",
+      "label": "Konjunktiv II (Gegenwart)",
+      "sortOrder": 8,
+      "note": "Would (present) — wishes, polite requests and unreal situations now.",
+      "patterns": [
+        {
+          "id": "konjunktiv2-gegenwart-how",
+          "chip": "How it works",
+          "subtitle": "the strong form of bekommen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "bekäme", "gloss": "I would get / receive" },
+            { "case": "du", "text": "bekämest", "gloss": "you would get / receive" },
+            { "case": "er", "text": "bekäme", "gloss": "he / she / it would get / receive" },
+            { "case": "wir", "text": "bekämen", "gloss": "we would get / receive" },
+            { "case": "ihr", "text": "bekämet", "gloss": "you all would get / receive" },
+            { "case": "sie", "text": "bekämen", "gloss": "they / you (formal) would get / receive" }
+          ],
+          "sections": [],
+          "note": "Strong Konjunktiv II: bekäme (from bekam + umlaut). In everyday speech, würde bekommen is just as correct and more common."
+        },
+        {
+          "id": "konjunktiv2-gegenwart-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich bekäme gern mehr Zeit.", "green": ["bekäme"] },
+                { "text": "Bekämest du gern ein anderes Zimmer?", "green": ["Bekämest"] },
+                { "text": "Er bekäme sonst Ärger.", "green": ["bekäme"] },
+                { "text": "Wir bekämen sonst Probleme.", "green": ["bekämen"] },
+                { "text": "Ihr bekämet dann weniger.", "green": ["bekämet"] },
+                { "text": "Sie bekämen lieber Bargeld.", "green": ["bekämen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konjunktiv2-vergangenheit",
+      "label": "Konjunktiv II (Vergangenheit)",
+      "sortOrder": 9,
+      "note": "Would have (past) — unreal or regretted situations in the past.",
+      "patterns": [
+        {
+          "id": "konjunktiv2-vergangenheit-how",
+          "chip": "How it works",
+          "subtitle": "hätte + bekommen",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "ich", "text": "hätte bekommen", "gloss": "I would have got / received" },
+            { "case": "du", "text": "hättest bekommen", "gloss": "you would have got / received" },
+            { "case": "er", "text": "hätte bekommen", "gloss": "he / she / it would have got / received" },
+            { "case": "wir", "text": "hätten bekommen", "gloss": "we would have got / received" },
+            { "case": "ihr", "text": "hättet bekommen", "gloss": "you all would have got / received" },
+            { "case": "sie", "text": "hätten bekommen", "gloss": "they / you (formal) would have got / received" }
+          ],
+          "sections": [],
+          "note": "hätte + the participle bekommen. This is the past of Konjunktiv II — 'would have got'."
+        },
+        {
+          "id": "konjunktiv2-vergangenheit-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "Ich hätte fast keine Karte bekommen.", "green": ["hätte", "bekommen"] },
+                { "text": "Du hättest sicher mehr bekommen.", "green": ["hättest", "bekommen"] },
+                { "text": "Er hätte beinahe den Job bekommen.", "green": ["hätte", "bekommen"] },
+                { "text": "Wir hätten ohne dich nichts bekommen.", "green": ["hätten", "bekommen"] },
+                { "text": "Ihr hättet bestimmt Hilfe bekommen.", "green": ["hättet", "bekommen"] },
+                { "text": "Sie hätten sonst kein Geld bekommen.", "green": ["hätten", "bekommen"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

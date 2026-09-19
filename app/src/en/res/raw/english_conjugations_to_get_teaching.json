@@ -1,0 +1,353 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "EnglishConjugationsToGetTeaching",
+  "title": "to get",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "present",
+      "label": "Present",
+      "sortOrder": 1,
+      "note": "Present simple — what is true now.",
+      "patterns": [
+        {
+          "id": "present-how",
+          "chip": "How it works",
+          "subtitle": "get in every person",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "get", "gloss": "I get" },
+            { "case": "you", "text": "get", "gloss": "you get" },
+            { "case": "he", "text": "gets", "gloss": "he / she / it gets" },
+            { "case": "we", "text": "get", "gloss": "we get" },
+            { "case": "they", "text": "get", "gloss": "they get" }
+          ],
+          "sections": [],
+          "note": "get = obtain / receive / become. Fully regular: only he / she / it adds -s (gets)."
+        },
+        {
+          "id": "present-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I often get emails.", "green": ["get"] },
+                { "text": "You get a second chance.", "green": ["get"] },
+                { "text": "He gets good marks.", "green": ["gets"] },
+                { "text": "We get a lot of visitors.", "green": ["get"] },
+                { "text": "They get their results today.", "green": ["get"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past",
+      "label": "Past",
+      "sortOrder": 2,
+      "note": "Past simple — what was true before.",
+      "patterns": [
+        {
+          "id": "past-how",
+          "chip": "How it works",
+          "subtitle": "get in the past",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "got", "gloss": "I got" },
+            { "case": "you", "text": "got", "gloss": "you got" },
+            { "case": "he", "text": "got", "gloss": "he / she / it got" },
+            { "case": "we", "text": "got", "gloss": "we got" },
+            { "case": "they", "text": "got", "gloss": "they got" }
+          ],
+          "sections": [],
+          "note": "The past of get is the irregular got — the same for every person."
+        },
+        {
+          "id": "past-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I got a letter.", "green": ["got"] },
+                { "text": "You got a lot of praise.", "green": ["got"] },
+                { "text": "He got a new bike.", "green": ["got"] },
+                { "text": "We got good news.", "green": ["got"] },
+                { "text": "They got no answer.", "green": ["got"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present-perfect",
+      "label": "Present Perfect",
+      "sortOrder": 3,
+      "note": "Present perfect — a past action linked to now (have/has + past participle).",
+      "patterns": [
+        {
+          "id": "present-perfect-how",
+          "chip": "How it works",
+          "subtitle": "have / has + got",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "have got", "gloss": "I have got" },
+            { "case": "you", "text": "have got", "gloss": "you have got" },
+            { "case": "he", "text": "has got", "gloss": "he / she / it has got" },
+            { "case": "we", "text": "have got", "gloss": "we have got" },
+            { "case": "they", "text": "have got", "gloss": "they have got" }
+          ],
+          "sections": [],
+          "note": "have/has + the past participle got (American English: gotten). Only the helper changes: have → has for he / she / it."
+        },
+        {
+          "id": "present-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I have got a new phone.", "green": ["have", "got"] },
+                { "text": "You have got an email.", "green": ["have", "got"] },
+                { "text": "He has got a good result.", "green": ["has", "got"] },
+                { "text": "We have got some visitors.", "green": ["have", "got"] },
+                { "text": "They have got an invitation.", "green": ["have", "got"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past-perfect",
+      "label": "Past Perfect",
+      "sortOrder": 4,
+      "note": "Past perfect — an action finished before another past moment (had + past participle).",
+      "patterns": [
+        {
+          "id": "past-perfect-how",
+          "chip": "How it works",
+          "subtitle": "had + got",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "had got", "gloss": "I had got" },
+            { "case": "you", "text": "had got", "gloss": "you had got" },
+            { "case": "he", "text": "had got", "gloss": "he / she / it had got" },
+            { "case": "we", "text": "had got", "gloss": "we had got" },
+            { "case": "they", "text": "had got", "gloss": "they had got" }
+          ],
+          "sections": [],
+          "note": "had + the past participle got (American: gotten) — the same for every person. Use it for the earlier of two past events."
+        },
+        {
+          "id": "past-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I had already got the email before you called.", "green": ["had", "got"] },
+                { "text": "You had got there before me.", "green": ["had", "got"] },
+                { "text": "He had got a good result that year.", "green": ["had", "got"] },
+                { "text": "We had got the news too late.", "green": ["had", "got"] },
+                { "text": "They had got no answer by then.", "green": ["had", "got"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "label": "Future",
+      "sortOrder": 5,
+      "note": "Future with will — what will be.",
+      "patterns": [
+        {
+          "id": "future-how",
+          "chip": "How it works",
+          "subtitle": "will + get",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will get", "gloss": "I will get" },
+            { "case": "you", "text": "will get", "gloss": "you will get" },
+            { "case": "he", "text": "will get", "gloss": "he / she / it will get" },
+            { "case": "we", "text": "will get", "gloss": "we will get" },
+            { "case": "they", "text": "will get", "gloss": "they will get" }
+          ],
+          "sections": [],
+          "note": "will + get is identical for every person. No -s: 'he will get', never 'he will gets'."
+        },
+        {
+          "id": "future-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I will get an answer soon.", "green": ["will", "get"] },
+                { "text": "You will get a chance for sure.", "green": ["will", "get"] },
+                { "text": "He will get a certificate.", "green": ["will", "get"] },
+                { "text": "We will get some help.", "green": ["will", "get"] },
+                { "text": "They will get feedback.", "green": ["will", "get"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future-perfect",
+      "label": "Future Perfect",
+      "sortOrder": 6,
+      "note": "Future perfect — something completed by a point in the future (will have + past participle).",
+      "patterns": [
+        {
+          "id": "future-perfect-how",
+          "chip": "How it works",
+          "subtitle": "will have + got",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "will have got", "gloss": "I will have got" },
+            { "case": "you", "text": "will have got", "gloss": "you will have got" },
+            { "case": "he", "text": "will have got", "gloss": "he / she / it will have got" },
+            { "case": "we", "text": "will have got", "gloss": "we will have got" },
+            { "case": "they", "text": "will have got", "gloss": "they will have got" }
+          ],
+          "sections": [],
+          "note": "will have + the past participle got (American: gotten) — identical for every person."
+        },
+        {
+          "id": "future-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "By tomorrow I will have got the answer.", "green": ["will", "have", "got"] },
+                { "text": "You will have got your money by then.", "green": ["will", "have", "got"] },
+                { "text": "He will have got the parcel by Friday.", "green": ["will", "have", "got"] },
+                { "text": "We will have got the results soon.", "green": ["will", "have", "got"] },
+                { "text": "They will have got the message.", "green": ["will", "have", "got"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "label": "Conditional",
+      "sortOrder": 7,
+      "note": "Conditional with would — hypotheticals, wishes and polite requests.",
+      "patterns": [
+        {
+          "id": "conditional-how",
+          "chip": "How it works",
+          "subtitle": "would + get",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would get", "gloss": "I would get" },
+            { "case": "you", "text": "would get", "gloss": "you would get" },
+            { "case": "he", "text": "would get", "gloss": "he / she / it would get" },
+            { "case": "we", "text": "would get", "gloss": "we would get" },
+            { "case": "they", "text": "would get", "gloss": "they would get" }
+          ],
+          "sections": [],
+          "note": "would + get is identical for every person. In speech would often shrinks to 'd (I'd get, we'd get)."
+        },
+        {
+          "id": "conditional-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would get more time then.", "green": ["would", "get"] },
+                { "text": "Would you get a different room?", "green": ["Would", "get"] },
+                { "text": "He would get a shock.", "green": ["would", "get"] },
+                { "text": "We would get into trouble otherwise.", "green": ["would", "get"] },
+                { "text": "They would rather get cash.", "green": ["would", "get"] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional-perfect",
+      "label": "Conditional Perfect",
+      "sortOrder": 8,
+      "note": "Conditional perfect — an unreal past: what would have happened (would have + past participle).",
+      "patterns": [
+        {
+          "id": "conditional-perfect-how",
+          "chip": "How it works",
+          "subtitle": "would have + got",
+          "sortOrder": 1,
+          "forms": [
+            { "case": "I", "text": "would have got", "gloss": "I would have got" },
+            { "case": "you", "text": "would have got", "gloss": "you would have got" },
+            { "case": "he", "text": "would have got", "gloss": "he / she / it would have got" },
+            { "case": "we", "text": "would have got", "gloss": "we would have got" },
+            { "case": "they", "text": "would have got", "gloss": "they would have got" }
+          ],
+          "sections": [],
+          "note": "would have + the past participle got (American: gotten) — identical for every person. Often paired with an if-clause."
+        },
+        {
+          "id": "conditional-perfect-ex",
+          "chip": "Examples",
+          "subtitle": "one sentence per person",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                { "text": "I would have got there sooner by train.", "green": ["would", "have", "got"] },
+                { "text": "You would have got a better seat.", "green": ["would", "have", "got"] },
+                { "text": "He would have got the job.", "green": ["would", "have", "got"] },
+                { "text": "We would have got lost without a map.", "green": ["would", "have", "got"] },
+                { "text": "They would have got a refund.", "green": ["would", "have", "got"] }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -41,9 +41,23 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 
 //import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 
+/**
+ * Toggle between the two Conjugations screens so they can be compared side by side:
+ *   true  -> the NEW fileFormat-6, pattern-focused teaching screen ([ConjugationsTeachingScreen]),
+ *            styled like the Prepositions / Pronouns reference screens.
+ *   false -> the ORIGINAL flat list of every conjugated form ([SectionedVocabList] below).
+ * Flip this and rebuild to compare. (de variant has the teaching JSONs; other flavours fall back fine.)
+ */
+const val USE_NEW_CONJUGATIONS_TEACHING = true
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
+    if (USE_NEW_CONJUGATIONS_TEACHING) {
+        ConjugationsTeachingScreen()
+        return
+    }
+
     val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
