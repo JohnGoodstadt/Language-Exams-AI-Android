@@ -147,26 +147,19 @@ fun CategoryTabScreen(
     var selectedWordForSheet by remember { mutableStateOf<Format0Word?>(null) }
     var selectedCategoryForSheet by remember { mutableStateOf<Category?>(null) }
     var showMoreSheet by remember { mutableStateOf(false) }
-    val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showHelpBottomSheet by remember { mutableStateOf(false) }
 
     var showGamificationSheet by remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val showHelpSheet by viewModel.showHelpSheet.collectAsState()
-    val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // Freemium: tapping a locked section (header or teaser) opens the Premium upgrade sheet.
     var showUpgradeSheet by remember { mutableStateOf(false) }
-    val upgradeSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // Shown after swipe-left Save: confirms the save + offers practice reminders.
     var showSavedSheet by remember { mutableStateOf(false) }
     var savedWordText by remember { mutableStateOf("") }
-    val savedSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // Legend sheet explaining the section status dots + streak stars (opened by tapping them).
     var showQuizLegendSheet by remember { mutableStateOf(false) }
-    val quizLegendSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // Global Translate sheet, opened from the "T" button in the stats row.
     var showTranslateSheet by remember { mutableStateOf(false) }
@@ -176,16 +169,10 @@ fun CategoryTabScreen(
         onDispose { viewModel.clearLastPlayedSentence() }
     }
 
-    // --- Rate Limit Sheets ---
-    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
-    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
-    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
-    val currentQuizCategory by viewModel.currentQuizCategory.collectAsStateWithLifecycle()
     // Bumps when quiz progress changes, so each section's status dots recompute.
     val quizStatusVersion by viewModel.quizStatusVersion.collectAsStateWithLifecycle()
     // Which section (if any) is currently playing its sentences in sequence.
     val playingSectionTitle by viewModel.playingSectionTitle.collectAsStateWithLifecycle()
-    val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // ✅ Watch for celebration trigger
 //    val showCelebration by viewModel.showCelebration.collectAsState()
@@ -381,45 +368,12 @@ fun CategoryTabScreen(
                         }
 
                         // 2. Stats Bar & Gamification Button
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 8.dp)
-                        ) {
-                            CacheProgressBar(
-                                cachedCount = state.heardCountOnTab, // Or state.heardSentenceIDs.size
-                                totalCount = state.totalWordsOnTab,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = 64.dp, vertical = 8.dp)
-                            )
-                            // Translate: mirrors the stats button on the far left. Opens the global
-                            // Translate sheet, pre-filled with the last sentence played on this tab.
-                            IconButton(
-                                onClick = { showTranslateSheet = true },
-                                modifier = Modifier
-                                    .align(Alignment.CenterStart)
-                                    .padding(start = 8.dp)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Filled.Translate,
-                                    contentDescription = "Translate",
-                                    tint = Color(0xFFFF9800)
-                                )
-                            }
-                            IconButton(
-                                onClick = { showGamificationSheet = true },
-                                modifier = Modifier
-                                    .align(Alignment.CenterEnd)
-                                    .padding(end = 8.dp)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Filled.WorkspacePremium,
-                                    contentDescription = "Stats",
-                                    tint = Color(0xFFFF9800)
-                                )
-                            }
-                        }
+                        CategoryStatsBar(
+                            heardCount = state.heardCountOnTab,
+                            totalCount = state.totalWordsOnTab,
+                            onTranslate = { showTranslateSheet = true },
+                            onShowStats = { showGamificationSheet = true },
+                        )
 
                         // 3. Main Vocabulary List
                         LazyColumn(
@@ -432,126 +386,17 @@ fun CategoryTabScreen(
                                 val locked = viewModel.isCategoryLocked(catIdx)
 
                                 stickyHeader {
-
-
-                                    Row(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .background(MaterialTheme.colorScheme.surface) // Important: Solid background for sticky behavior
-                                            .padding(
-                                                horizontal = 16.dp,
-                                                vertical = 8.dp
-                                            ), // Adjust padding as needed
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-
-                                        Text(
-                                            text = category.title.removeContentInBracketsAndTrim(),
-                                            fontSize = 20.sp, // Match your existing CategoryHeader style
-                                            fontWeight = FontWeight.Bold,
-                                            color = accentColor, // Or MaterialTheme.colorScheme.primary
-                                            modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
-                                        )
-
-                                        // Play the whole section's sentences in sequence (Play <-> Pause).
-                                        val isThisSectionPlaying = playingSectionTitle == category.title
-                                        IconButton(onClick = {
-                                            // Locked section: its words are hidden behind the Premium teaser,
-                                            // so don't play them - route to the upgrade sheet instead.
-                                            if (locked) {
-                                                showUpgradeSheet = true
-                                            } else {
-                                                // Only the FIRST sentence of each word (the one shown on the row).
-                                                val sentences = category.words.mapNotNull { w ->
-                                                    w.sentences.firstOrNull()?.sentence
-                                                }
-                                                viewModel.playSection(category, sentences)
-                                            }
-                                        }) {
-                                            Icon(
-                                                imageVector = if (isThisSectionPlaying)
-                                                    Icons.Filled.Pause else Icons.Filled.PlayArrow,
-                                                contentDescription = if (isThisSectionPlaying)
-                                                    "Stop playing section" else "Play section",
-                                                tint = orangeLight
-                                            )
-                                        }
-
-                                        // Whole-quiz status summary: coloured dots for this section's quiz
-                                        // (blank if never taken, one green dot if fully mastered).
-                                        val quizStatus = remember(quizStatusVersion, category.title) {
-                                            viewModel.quizStatusFor(category.title)
-                                        }
-                                        val quizStars = remember(quizStatusVersion, category.title) {
-                                            viewModel.quizStarsFor(category.title)
-                                        }
-                                        QuizStatusDots(
-                                            status = quizStatus,
-                                            stars = quizStars,
-                                            onClick = { showQuizLegendSheet = true }
-                                        )
-
-                                        if (locked) {
-                                            // Locked section: a lock replaces the game-console (Quiz) icon.
-                                            IconButton(onClick = { showUpgradeSheet = true }) {
-                                                Icon(
-                                                    imageVector = Icons.Default.Lock,
-                                                    contentDescription = "Locked - unlock with Premium",
-                                                    tint = orangeLight
-                                                )
-                                            }
-                                        } else if (state.isQuizAvailable) {
-                                            val isFirstCategory = category == categories.first()
-                                            if (isFirstCategory) {
-                                                OutlinedButton(
-                                                    onClick = {
-                                                        viewModel.openQuizForCategory(
-                                                            category
-                                                        )
-                                                    },
-                                                    // 1. Set the Border width and color
-                                                    border = BorderStroke(1.dp, orangeLight),
-                                                    // 2. Set the Text/Icon color
-                                                    colors = ButtonDefaults.outlinedButtonColors(
-                                                        contentColor = orangeLight,
-                                                        containerColor = Color.Transparent
-                                                    ),
-                                                    // 3. Shape (Rounded corners)
-                                                    shape = RoundedCornerShape(8.dp),
-                                                    // Optional: Adjust padding if it feels too big
-                                                    contentPadding = PaddingValues(
-                                                        horizontal = 4.dp,
-                                                        vertical = 0.dp
-                                                    )
-                                                ) {
-                                                    Text(
-                                                        text = "Quiz",
-                                                        fontWeight = FontWeight.Bold,
-                                                        style = MaterialTheme.typography.labelLarge
-                                                    )
-                                                }
-                                            } else {
-                                                IconButton(onClick = {
-                                                    viewModel.openQuizForCategory(
-                                                        category
-                                                    )
-                                                }) {
-                                                    Icon(
-                                                        imageVector = Icons.Default.SportsEsports,
-                                                        contentDescription = "Take Quiz",
-                                                        tint = orangeLight
-                                                    )
-                                                }
-                                            }
-                                        }else{
-                                            if (DEBUG){
-                                                println("am i here")
-                                            }
-                                        }
-
-                                    }
-
-
+                                    CategorySectionHeader(
+                                        category = category,
+                                        locked = locked,
+                                        isQuizAvailable = state.isQuizAvailable,
+                                        isFirstCategory = category == categories.first(),
+                                        isPlaying = playingSectionTitle == category.title,
+                                        quizStatusVersion = quizStatusVersion,
+                                        viewModel = viewModel,
+                                        onUpgrade = { showUpgradeSheet = true },
+                                        onShowLegend = { showQuizLegendSheet = true },
+                                    )
                                 }
 
                                 if (locked) {
@@ -682,194 +527,418 @@ fun CategoryTabScreen(
 //            }
 
 
-            // --- Sheets & Overlays ---
-            // Freemium content lock: shown when the user taps a locked section header or teaser.
-            if (showUpgradeSheet) {
-//                ModalBottomSheet(
-//                    onDismissRequest = { showUpgradeSheet = false },
-//                    sheetState = upgradeSheetState,
-//                    containerColor = MaterialTheme.colorScheme.surface,
-//                    contentColor = MaterialTheme.colorScheme.onSurface
-//                ) {
-                    PremiumUpgradeSheet(onDismiss = { showUpgradeSheet = false })
-//                }
-            }
-            // Post-Save info + reminder choices.
-            if (showSavedSheet) {
-                ModalBottomSheet(
-                    onDismissRequest = { showSavedSheet = false },
-                    sheetState = savedSheetState,
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    contentColor = MaterialTheme.colorScheme.onSurface
-                ) {
-                    SavedInfoSheetContent(
-                        wordText = savedWordText,
-                        onReminderSelected = { reminder ->
-                            viewModel.scheduleReminder(reminder, savedWordText)
-                            // First real use of notifications: ask now (Android 13+) when the user actually
-                            // chooses a reminder, so it can appear. "Don't remind me" schedules nothing.
-                            if (reminder != SaveReminder.NONE &&
-                                Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-                                ContextCompat.checkSelfPermission(
-                                    context,
-                                    Manifest.permission.POST_NOTIFICATIONS
-                                ) != PackageManager.PERMISSION_GRANTED
-                            ) {
-                                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-                            }
-                        },
-                        onDismiss = { showSavedSheet = false }
-                    )
-                }
-            }
-            if (isRateLimitingSheetVisible) {
-                RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
-            }
-            if (isDailyRateLimitingSheetVisible) {
-                if (context is ComponentActivity) {
-                    RateLimitDailyPaywallBottomSheet(
-                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
-                        onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
-                    )
-                }
-            }
-            if (isHourlyRateLimitingSheetVisible) {
-                if (context is ComponentActivity) {
-                    RateLimitHourlyPaywallBottomSheet(
-                        onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
-                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
-                    )
-
-                }
-            }
-
-            // Sentence Detail Sheet
-            if (showMoreSheet) {
-                ModalBottomSheet(
-                    onDismissRequest = { showMoreSheet = false },
-                    sheetState = bottomSheetState
-                ) {
-                    selectedWordForSheet?.let { word ->
-                        selectedCategoryForSheet?.let { category ->
-                            val playCount = viewModel.getPlayCount(word)
-                            SentencesBottomSheetContent(
-                                word = word,
-                                playCount,
-                                onBottomSheetRowTapped = { w, sentence ->
-                                    // Redirect tap from bottom sheet to main VM logic
-//                                    viewModel.handleSentenceTap(sentence.sentence, category)
-                                    viewModel.handleTap(sentence.sentence, category)
-                                }
-                            )
-                        }
-                    }
-                }
-            } //: showMoreSheet
+            // --- Sheets & Overlays --- (all extracted to CategoryTabSheets below, called once from
+            // the Scaffold content; bottom sheets are overlays, so their tree position is immaterial.)
         }
 
-        // --- Gamification Stats Sheet ---
-        if (showGamificationSheet) {
-            ModalBottomSheet(
-                onDismissRequest = { showGamificationSheet = false },
-                sheetState = sheetState,
-//            containerColor = MaterialTheme.colorScheme.surface,
-//            contentColor = MaterialTheme.colorScheme.onSurface
-                containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = MaterialTheme.colorScheme.onSurface
-            ) {
-                // Get data from AudioCacheManager (Totals) and ViewModel (Progress)
-//            val acm = AudioCacheManager.shared // Or via Hilt EntryPoint
-
-                // This ensures we get the latest numbers for the graph
-                val allProgress = viewModel.buildCategoryProgress()
-                // Filter for this tab if needed, or show all
-
-                // Note: You might need a helper in ViewModel to sum specific tab totals
-                // val (heard, total) = viewModel.calculateGrandTotals()
-
-                val heard by viewModel.totalHeardFlow.collectAsState() // or collectAsStateWithLifecycle()
-                val total by viewModel.totalCountFlow.collectAsState()
-
-                //  val context = LocalContext.current
-                val entryPoint = remember(context) {
-                    EntryPointAccessors.fromApplication(
-                        context.applicationContext,
-                        StatsSheetEntryPoint::class.java
-                    )
-                }
-                Box(modifier = Modifier.fillMaxHeight(0.85f)) {
-                    VocabGamificationStatsSheet(
-                        grandTotalWords = total,
-                        grandTotalMastered = heard,
-                        categoryProgress = allProgress,//, // Pass the list
-                        skillLevel = viewModel.getCurrentSkillLevel(),
-                        xpManager = entryPoint.getXPManager(),
-                        quizManager = entryPoint.getQuizManager(),
-                        onDismiss = { showGamificationSheet = false }
-
-                    )
-                }
-//            }
-            }
-        } //: Gamificatinon sheet
-
-        if (showHelpSheet) {
-            ModalBottomSheet(
-                onDismissRequest = { viewModel.dismissHelpSheet() },
-                sheetState = helpSheetState,
-                containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = MaterialTheme.colorScheme.onSurface
-            ) {
-                // 3. Set Height to 3/4
-                Box(modifier = Modifier.fillMaxHeight(0.90f)) {
-                    HelpInfoSheet(
-                        onDismiss = { viewModel.dismissHelpSheet() }
-                    )
-                }
-            }
-        }
-
-        if (showVoiceSheet) {
-            VoiceSettingsBottomSheet(
-                sentence = viewModel.getLatestSentence(),
-                onDismiss = { showVoiceSheet = false }
-            )
-        }
-        if (currentQuizCategory != null) {
-            ModalBottomSheet(
-                onDismissRequest = {
-                    viewModel.closeQuizSheet()
-                },
-                sheetState = quizSheetState,
-                containerColor = MaterialTheme.colorScheme.surface
-            ) {
-                // Wrapper to initialize the specific quiz
-                SectionQuizContainer(categoryTitle = currentQuizCategory!!.title)
-            }
-        }
-
-        // Global Translate sheet, pre-filled with the last sentence played on this tab (blank if none).
-        if (showTranslateSheet) {
-            TranslateSheet(
-                onDismiss = { showTranslateSheet = false },
-                initialText = viewModel.getLatestSentence()
-            )
-        }
-
-        // Legend explaining the status dots + streak stars (opened by tapping them on a section row).
-        if (showQuizLegendSheet) {
-            ModalBottomSheet(
-                onDismissRequest = { showQuizLegendSheet = false },
-                sheetState = quizLegendSheetState,
-                containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = MaterialTheme.colorScheme.onSurface
-            ) {
-                QuizStatusLegendSheet()
-            }
-        }
+        CategoryTabSheets(
+            viewModel = viewModel,
+            context = context,
+            onRequestNotificationPermission = {
+                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            },
+            showUpgradeSheet = showUpgradeSheet,
+            onDismissUpgrade = { showUpgradeSheet = false },
+            showSavedSheet = showSavedSheet,
+            savedWordText = savedWordText,
+            onDismissSaved = { showSavedSheet = false },
+            showMoreSheet = showMoreSheet,
+            selectedWord = selectedWordForSheet,
+            selectedCategory = selectedCategoryForSheet,
+            onDismissMore = { showMoreSheet = false },
+            showGamificationSheet = showGamificationSheet,
+            onDismissGamification = { showGamificationSheet = false },
+            showVoiceSheet = showVoiceSheet,
+            onDismissVoice = { showVoiceSheet = false },
+            showTranslateSheet = showTranslateSheet,
+            onDismissTranslate = { showTranslateSheet = false },
+            showQuizLegendSheet = showQuizLegendSheet,
+            onDismissLegend = { showQuizLegendSheet = false },
+        )
 
     } //: Box
 }
+
+/** Cache/progress bar with the Translate (left) and gamification-stats (right) buttons. */
+@Composable
+private fun CategoryStatsBar(
+    heardCount: Int,
+    totalCount: Int,
+    onTranslate: () -> Unit,
+    onShowStats: () -> Unit,
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp)
+    ) {
+        CacheProgressBar(
+            cachedCount = heardCount,
+            totalCount = totalCount,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 64.dp, vertical = 8.dp)
+        )
+        // Translate: mirrors the stats button on the far left. Opens the global
+        // Translate sheet, pre-filled with the last sentence played on this tab.
+        IconButton(
+            onClick = onTranslate,
+            modifier = Modifier
+                .align(Alignment.CenterStart)
+                .padding(start = 8.dp)
+        ) {
+            Icon(
+                imageVector = Icons.Filled.Translate,
+                contentDescription = "Translate",
+                tint = Color(0xFFFF9800)
+            )
+        }
+        IconButton(
+            onClick = onShowStats,
+            modifier = Modifier
+                .align(Alignment.CenterEnd)
+                .padding(end = 8.dp)
+        ) {
+            Icon(
+                imageVector = Icons.Filled.WorkspacePremium,
+                contentDescription = "Stats",
+                tint = Color(0xFFFF9800)
+            )
+        }
+    }
+}
+
+
+/** Sticky section header: title + play/pause + quiz status dots + Quiz / lock button. */
+@Composable
+private fun CategorySectionHeader(
+    category: Category,
+    locked: Boolean,
+    isQuizAvailable: Boolean,
+    isFirstCategory: Boolean,
+    isPlaying: Boolean,
+    quizStatusVersion: Long,
+    viewModel: CategoryTabViewModel,
+    onUpgrade: () -> Unit,
+    onShowLegend: () -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surface) // Important: Solid background for sticky behavior
+            .padding(
+                horizontal = 16.dp,
+                vertical = 8.dp
+            ), // Adjust padding as needed
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+
+        Text(
+            text = category.title.removeContentInBracketsAndTrim(),
+            fontSize = 20.sp, // Match your existing CategoryHeader style
+            fontWeight = FontWeight.Bold,
+            color = accentColor, // Or MaterialTheme.colorScheme.primary
+            modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
+        )
+
+        // Play the whole section's sentences in sequence (Play <-> Pause).
+        IconButton(onClick = {
+            // Locked section: its words are hidden behind the Premium teaser,
+            // so don't play them - route to the upgrade sheet instead.
+            if (locked) {
+                onUpgrade()
+            } else {
+                // Only the FIRST sentence of each word (the one shown on the row).
+                val sentences = category.words.mapNotNull { w ->
+                    w.sentences.firstOrNull()?.sentence
+                }
+                viewModel.playSection(category, sentences)
+            }
+        }) {
+            Icon(
+                imageVector = if (isPlaying)
+                    Icons.Filled.Pause else Icons.Filled.PlayArrow,
+                contentDescription = if (isPlaying)
+                    "Stop playing section" else "Play section",
+                tint = orangeLight
+            )
+        }
+
+        // Whole-quiz status summary: coloured dots for this section's quiz
+        // (blank if never taken, one green dot if fully mastered).
+        val quizStatus = remember(quizStatusVersion, category.title) {
+            viewModel.quizStatusFor(category.title)
+        }
+        val quizStars = remember(quizStatusVersion, category.title) {
+            viewModel.quizStarsFor(category.title)
+        }
+        QuizStatusDots(
+            status = quizStatus,
+            stars = quizStars,
+            onClick = onShowLegend
+        )
+
+        if (locked) {
+            // Locked section: a lock replaces the game-console (Quiz) icon.
+            IconButton(onClick = onUpgrade) {
+                Icon(
+                    imageVector = Icons.Default.Lock,
+                    contentDescription = "Locked - unlock with Premium",
+                    tint = orangeLight
+                )
+            }
+        } else if (isQuizAvailable) {
+            if (isFirstCategory) {
+                OutlinedButton(
+                    onClick = {
+                        viewModel.openQuizForCategory(
+                            category
+                        )
+                    },
+                    // 1. Set the Border width and color
+                    border = BorderStroke(1.dp, orangeLight),
+                    // 2. Set the Text/Icon color
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        contentColor = orangeLight,
+                        containerColor = Color.Transparent
+                    ),
+                    // 3. Shape (Rounded corners)
+                    shape = RoundedCornerShape(8.dp),
+                    // Optional: Adjust padding if it feels too big
+                    contentPadding = PaddingValues(
+                        horizontal = 4.dp,
+                        vertical = 0.dp
+                    )
+                ) {
+                    Text(
+                        text = "Quiz",
+                        fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.labelLarge
+                    )
+                }
+            } else {
+                IconButton(onClick = {
+                    viewModel.openQuizForCategory(
+                        category
+                    )
+                }) {
+                    Icon(
+                        imageVector = Icons.Default.SportsEsports,
+                        contentDescription = "Take Quiz",
+                        tint = orangeLight
+                    )
+                }
+            }
+        } else {
+            if (DEBUG) {
+                println("am i here")
+            }
+        }
+    }
+}
+
+
+/** All of this tab's bottom sheets / overlays, extracted so the main composable stays small. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun CategoryTabSheets(
+    viewModel: CategoryTabViewModel,
+    context: android.content.Context,
+    onRequestNotificationPermission: () -> Unit,
+    showUpgradeSheet: Boolean,
+    onDismissUpgrade: () -> Unit,
+    showSavedSheet: Boolean,
+    savedWordText: String,
+    onDismissSaved: () -> Unit,
+    showMoreSheet: Boolean,
+    selectedWord: Format0Word?,
+    selectedCategory: Category?,
+    onDismissMore: () -> Unit,
+    showGamificationSheet: Boolean,
+    onDismissGamification: () -> Unit,
+    showVoiceSheet: Boolean,
+    onDismissVoice: () -> Unit,
+    showTranslateSheet: Boolean,
+    onDismissTranslate: () -> Unit,
+    showQuizLegendSheet: Boolean,
+    onDismissLegend: () -> Unit,
+) {
+    val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val savedSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val quizLegendSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+    val showHelpSheet by viewModel.showHelpSheet.collectAsState()
+    val currentQuizCategory by viewModel.currentQuizCategory.collectAsStateWithLifecycle()
+
+    // Freemium content lock: shown when the user taps a locked section header or teaser.
+    if (showUpgradeSheet) {
+        PremiumUpgradeSheet(onDismiss = onDismissUpgrade)
+    }
+    // Post-Save info + reminder choices.
+    if (showSavedSheet) {
+        ModalBottomSheet(
+            onDismissRequest = onDismissSaved,
+            sheetState = savedSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            SavedInfoSheetContent(
+                wordText = savedWordText,
+                onReminderSelected = { reminder ->
+                    viewModel.scheduleReminder(reminder, savedWordText)
+                    // First real use of notifications: ask now (Android 13+) when the user actually
+                    // chooses a reminder, so it can appear. "Don't remind me" schedules nothing.
+                    if (reminder != SaveReminder.NONE &&
+                        Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                        ContextCompat.checkSelfPermission(
+                            context,
+                            Manifest.permission.POST_NOTIFICATIONS
+                        ) != PackageManager.PERMISSION_GRANTED
+                    ) {
+                        onRequestNotificationPermission()
+                    }
+                },
+                onDismiss = onDismissSaved
+            )
+        }
+    }
+    if (isRateLimitingSheetVisible) {
+        RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+    }
+    if (isDailyRateLimitingSheetVisible) {
+        if (context is ComponentActivity) {
+            RateLimitDailyPaywallBottomSheet(
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+            )
+        }
+    }
+    if (isHourlyRateLimitingSheetVisible) {
+        if (context is ComponentActivity) {
+            RateLimitHourlyPaywallBottomSheet(
+                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+            )
+        }
+    }
+
+    // Sentence Detail Sheet
+    if (showMoreSheet) {
+        ModalBottomSheet(
+            onDismissRequest = onDismissMore,
+            sheetState = bottomSheetState
+        ) {
+            selectedWord?.let { word ->
+                selectedCategory?.let { category ->
+                    val playCount = viewModel.getPlayCount(word)
+                    SentencesBottomSheetContent(
+                        word = word,
+                        playCount,
+                        onBottomSheetRowTapped = { w, sentence ->
+                            viewModel.handleTap(sentence.sentence, category)
+                        }
+                    )
+                }
+            }
+        }
+    } //: showMoreSheet
+
+    // --- Gamification Stats Sheet ---
+    if (showGamificationSheet) {
+        ModalBottomSheet(
+            onDismissRequest = onDismissGamification,
+            sheetState = sheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            // This ensures we get the latest numbers for the graph
+            val allProgress = viewModel.buildCategoryProgress()
+
+            val heard by viewModel.totalHeardFlow.collectAsState() // or collectAsStateWithLifecycle()
+            val total by viewModel.totalCountFlow.collectAsState()
+
+            val entryPoint = remember(context) {
+                EntryPointAccessors.fromApplication(
+                    context.applicationContext,
+                    StatsSheetEntryPoint::class.java
+                )
+            }
+            Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+                VocabGamificationStatsSheet(
+                    grandTotalWords = total,
+                    grandTotalMastered = heard,
+                    categoryProgress = allProgress,
+                    skillLevel = viewModel.getCurrentSkillLevel(),
+                    xpManager = entryPoint.getXPManager(),
+                    quizManager = entryPoint.getQuizManager(),
+                    onDismiss = onDismissGamification
+                )
+            }
+        }
+    } //: Gamificatinon sheet
+
+    if (showHelpSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { viewModel.dismissHelpSheet() },
+            sheetState = helpSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            // 3. Set Height to 3/4
+            Box(modifier = Modifier.fillMaxHeight(0.90f)) {
+                HelpInfoSheet(
+                    onDismiss = { viewModel.dismissHelpSheet() }
+                )
+            }
+        }
+    }
+
+    if (showVoiceSheet) {
+        VoiceSettingsBottomSheet(
+            sentence = viewModel.getLatestSentence(),
+            onDismiss = onDismissVoice
+        )
+    }
+    if (currentQuizCategory != null) {
+        ModalBottomSheet(
+            onDismissRequest = {
+                viewModel.closeQuizSheet()
+            },
+            sheetState = quizSheetState,
+            containerColor = MaterialTheme.colorScheme.surface
+        ) {
+            // Wrapper to initialize the specific quiz
+            SectionQuizContainer(categoryTitle = currentQuizCategory!!.title)
+        }
+    }
+
+    // Global Translate sheet, pre-filled with the last sentence played on this tab (blank if none).
+    if (showTranslateSheet) {
+        TranslateSheet(
+            onDismiss = onDismissTranslate,
+            initialText = viewModel.getLatestSentence()
+        )
+    }
+
+    // Legend explaining the status dots + streak stars (opened by tapping them on a section row).
+    if (showQuizLegendSheet) {
+        ModalBottomSheet(
+            onDismissRequest = onDismissLegend,
+            sheetState = quizLegendSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            QuizStatusLegendSheet()
+        }
+    }
+}
+
 
 /**
  * Explains the section-row quiz indicators: the gold streak stars and the coloured mastery dots. Rendered

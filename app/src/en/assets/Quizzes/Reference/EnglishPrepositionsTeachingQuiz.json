@@ -1,0 +1,1525 @@
+{
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "EnglishPrepositionsTeachingQuiz",
+  "title": "English Prepositions Quiz",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Which preposition of place fits?",
+      "description": "One question per preposition - a random 10 each time.",
+      "sortorder": 1,
+      "learningTitle": "Place",
+      "learningPoints": [
+        "in / on / at: at a point, on a surface, in an enclosed space."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Place: at a point.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A bus stop is a point -> at.",
+          "sentence": "I am waiting _ the bus stop.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Place: at home.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "'home' takes at.",
+          "sentence": "She is _ home.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Place: at a point.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A station is a point on a journey -> at.",
+          "sentence": "We met _ the station.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Place: on a surface.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A table is a surface -> on.",
+          "sentence": "The keys are _ the table.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Place: on a surface.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A wall is a surface -> on.",
+          "sentence": "There is a picture _ the wall.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Place: on a street.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Streets take on.",
+          "sentence": "He lives _ Baker Street.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Place: in a space.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Inside an enclosed space -> in.",
+          "sentence": "The milk is _ the fridge.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Place: in a city.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Cities and countries take in.",
+          "sentence": "She lives _ London.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Place: in a space.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "An enclosed area -> in.",
+          "sentence": "The children are _ the garden.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Place: between two.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Two things -> between.",
+          "sentence": "The bank is _ the shop and the cafe.",
+          "words": [
+            {
+              "ok": true,
+              "word": "between"
+            },
+            {
+              "ok": false,
+              "word": "among"
+            },
+            {
+              "ok": false,
+              "word": "behind"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "Place: behind.",
+          "level": "",
+          "category": "Place",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "At the back -> behind.",
+          "sentence": "The garden is _ the house.",
+          "words": [
+            {
+              "ok": true,
+              "word": "behind"
+            },
+            {
+              "ok": false,
+              "word": "between"
+            },
+            {
+              "ok": false,
+              "word": "among"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Which preposition of time fits?",
+      "description": "One question per preposition - a random 10 each time.",
+      "sortorder": 2,
+      "learningTitle": "Time",
+      "learningPoints": [
+        "at a clock time, on a day/date, in a longer period."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Time: at a time.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Clock times take at.",
+          "sentence": "The film starts _ eight o'clock.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Time: at the weekend.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "'the weekend' takes at (British English).",
+          "sentence": "I don't work _ the weekend.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Time: at midnight.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "midnight/noon/night take at.",
+          "sentence": "She woke up _ midnight.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Time: on a day.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Days take on.",
+          "sentence": "We have a meeting _ Monday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Time: on a date.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Dates take on.",
+          "sentence": "My birthday is _ 12 June.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Time: on a day.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A named day takes on.",
+          "sentence": "They got married _ New Year's Day.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Time: in a month.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Months take in.",
+          "sentence": "It often rains _ April.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Time: in a year.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Years take in.",
+          "sentence": "He was born _ 1995.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Time: in a season.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Seasons take in.",
+          "sentence": "We go skiing _ winter.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Time: for + length.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A length of time -> for.",
+          "sentence": "I have lived here _ ten years.",
+          "words": [
+            {
+              "ok": true,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "since"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "Time: since + start.",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A starting point -> since.",
+          "sentence": "She has been ill _ Monday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "since"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 12,
+          "summary": "Time: by (deadline).",
+          "level": "",
+          "category": "Time",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A deadline -> by.",
+          "sentence": "Finish the report _ Friday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "by"
+            },
+            {
+              "ok": false,
+              "word": "until"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Which preposition of movement fits?",
+      "description": "One question per preposition - a random 10 each time.",
+      "sortorder": 3,
+      "learningTitle": "Movement",
+      "learningPoints": [
+        "to a destination; into/out of; through/across/along."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Movement: to a destination.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A destination -> to.",
+          "sentence": "I go _ work by bus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Movement: to a destination.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A destination -> to.",
+          "sentence": "We are flying _ Spain.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Movement: into.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Entering -> into.",
+          "sentence": "She walked _ the room.",
+          "words": [
+            {
+              "ok": true,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "onto"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Movement: onto.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Onto a surface -> onto.",
+          "sentence": "The cat jumped _ the roof.",
+          "words": [
+            {
+              "ok": true,
+              "word": "onto"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Movement: out of.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Leaving -> out of.",
+          "sentence": "He came _ the shop.",
+          "words": [
+            {
+              "ok": true,
+              "word": "out of"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "off"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Movement: off.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Leaving a bus/train -> off.",
+          "sentence": "She got _ the bus.",
+          "words": [
+            {
+              "ok": true,
+              "word": "off"
+            },
+            {
+              "ok": false,
+              "word": "out of"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Movement: through.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "From one side to the other -> through.",
+          "sentence": "We drove _ the tunnel.",
+          "words": [
+            {
+              "ok": true,
+              "word": "through"
+            },
+            {
+              "ok": false,
+              "word": "across"
+            },
+            {
+              "ok": false,
+              "word": "along"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Movement: across.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "From one side to the other (open) -> across.",
+          "sentence": "They swam _ the river.",
+          "words": [
+            {
+              "ok": true,
+              "word": "across"
+            },
+            {
+              "ok": false,
+              "word": "through"
+            },
+            {
+              "ok": false,
+              "word": "along"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Movement: along.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Following a line -> along.",
+          "sentence": "We walked _ the beach.",
+          "words": [
+            {
+              "ok": true,
+              "word": "along"
+            },
+            {
+              "ok": false,
+              "word": "across"
+            },
+            {
+              "ok": false,
+              "word": "through"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Movement: towards.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "In the direction of -> towards.",
+          "sentence": "He ran _ the door.",
+          "words": [
+            {
+              "ok": true,
+              "word": "towards"
+            },
+            {
+              "ok": false,
+              "word": "through"
+            },
+            {
+              "ok": false,
+              "word": "across"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 11,
+          "summary": "Movement: from.",
+          "level": "",
+          "category": "Movement",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Origin -> from.",
+          "sentence": "The train comes _ Paris.",
+          "words": [
+            {
+              "ok": true,
+              "word": "from"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Which preposition follows the verb?",
+      "description": "One question per preposition - a random 10 each time.",
+      "sortorder": 4,
+      "learningTitle": "Verbs + prep",
+      "learningPoints": [
+        "Verbs take a fixed preposition - learn them as a pair."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Verb: depend on.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "depend + on.",
+          "sentence": "It depends _ the weather.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Verb: listen to.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "listen + to.",
+          "sentence": "I listen _ music every day.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Verb: wait for.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "wait + for.",
+          "sentence": "We are waiting _ the train.",
+          "words": [
+            {
+              "ok": true,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Verb: look at.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "look + at.",
+          "sentence": "Look _ this photo.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Verb: think about.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "think + about.",
+          "sentence": "I often think _ my future.",
+          "words": [
+            {
+              "ok": true,
+              "word": "about"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Verb: belong to.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "belong + to.",
+          "sentence": "This book belongs _ me.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "with"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Verb: agree with.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "agree + with (a person).",
+          "sentence": "I agree _ you.",
+          "words": [
+            {
+              "ok": true,
+              "word": "with"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Verb: look after.",
+          "level": "",
+          "category": "Verbs + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "look after = care for.",
+          "sentence": "She looks _ her little brother.",
+          "words": [
+            {
+              "ok": true,
+              "word": "after"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Which preposition follows the adjective?",
+      "description": "One question per preposition - a random 10 each time.",
+      "sortorder": 5,
+      "learningTitle": "Adjectives + prep",
+      "learningPoints": [
+        "Adjectives take a fixed preposition - learn the pair."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Adjective: good at.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "good + at.",
+          "sentence": "She is good _ drawing.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Adjective: interested in.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "interested + in.",
+          "sentence": "I am interested _ history.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Adjective: afraid of.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "afraid + of.",
+          "sentence": "He is afraid _ dogs.",
+          "words": [
+            {
+              "ok": true,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "from"
+            },
+            {
+              "ok": false,
+              "word": "about"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Adjective: proud of.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "proud + of.",
+          "sentence": "We are proud _ our team.",
+          "words": [
+            {
+              "ok": true,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "about"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Adjective: married to.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "married + to.",
+          "sentence": "She is married _ a doctor.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "with"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Adjective: different from.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "different + from (British English).",
+          "sentence": "Mine is different _ yours.",
+          "words": [
+            {
+              "ok": true,
+              "word": "from"
+            },
+            {
+              "ok": false,
+              "word": "than"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Adjective: keen on.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "keen + on.",
+          "sentence": "He is keen _ football.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Adjective: worried about.",
+          "level": "",
+          "category": "Adjectives + prep",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "worried + about.",
+          "sentence": "I am worried _ the exam.",
+          "words": [
+            {
+              "ok": true,
+              "word": "about"
+            },
+            {
+              "ok": false,
+              "word": "of"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Choose the preposition that fits the meaning.",
+      "description": "One question per preposition - a random 10 each time.",
+      "sortorder": 6,
+      "learningTitle": "Common confusions",
+      "learningPoints": [
+        "The right choice depends on meaning, not translation."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Confusion: at a point.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A point in a journey -> at (in London, but at the airport).",
+          "sentence": "I arrived _ the airport.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Confusion: since vs for.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A starting point -> since.",
+          "sentence": "I have been here _ Monday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "since"
+            },
+            {
+              "ok": false,
+              "word": "for"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Confusion: between vs among.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Two people -> between.",
+          "sentence": "Share it _ the two of you.",
+          "words": [
+            {
+              "ok": true,
+              "word": "between"
+            },
+            {
+              "ok": false,
+              "word": "among"
+            },
+            {
+              "ok": false,
+              "word": "with"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Confusion: by vs until.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "A deadline -> by.",
+          "sentence": "Finish it _ six o'clock.",
+          "words": [
+            {
+              "ok": true,
+              "word": "by"
+            },
+            {
+              "ok": false,
+              "word": "until"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Confusion: until vs by.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Up to a time -> until.",
+          "sentence": "We waited _ six o'clock.",
+          "words": [
+            {
+              "ok": true,
+              "word": "until"
+            },
+            {
+              "ok": false,
+              "word": "by"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Confusion: beside vs besides.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Next to -> beside.",
+          "sentence": "Sit _ me.",
+          "words": [
+            {
+              "ok": true,
+              "word": "beside"
+            },
+            {
+              "ok": false,
+              "word": "besides"
+            },
+            {
+              "ok": false,
+              "word": "between"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Confusion: on time vs in time.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Punctual -> on time.",
+          "sentence": "The train left _ time.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Confusion: in time vs on time.",
+          "level": "",
+          "category": "Common confusions",
+          "subArea": "",
+          "subLabel": "",
+          "explain": "Early enough -> in time.",
+          "sentence": "We arrived _ time to catch it.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1188 @@
+{
+  "fileformat": 6,
+  "location": 0,
+  "sheetname": "EnglishPrepositionsTeaching",
+  "title": "English Prepositions",
+  "updatedDate": 0,
+  "categories": [
+    {
+      "id": "place",
+      "label": "Place",
+      "sortOrder": 1,
+      "note": "in / on / at tell you WHERE something is.",
+      "patterns": [
+        {
+          "id": "place-how",
+          "chip": "How it works",
+          "subtitle": "at a point · on a surface · in a space",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "at",
+              "text": "a point",
+              "gloss": "at the door, at the bus stop, at school"
+            },
+            {
+              "case": "on",
+              "text": "a surface or line",
+              "gloss": "on the table, on the wall, on Baker Street"
+            },
+            {
+              "case": "in",
+              "text": "an enclosed space",
+              "gloss": "in the box, in the room, in London"
+            }
+          ],
+          "sections": [],
+          "note": "Big rule: at = a point, on = a surface, in = inside something."
+        },
+        {
+          "id": "place-at",
+          "chip": "at",
+          "subtitle": "a point",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I am waiting at the bus stop.",
+                  "green": [
+                    "at"
+                  ]
+                },
+                {
+                  "text": "She is at home.",
+                  "green": [
+                    "at"
+                  ]
+                },
+                {
+                  "text": "We met at the station.",
+                  "green": [
+                    "at"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place-on",
+          "chip": "on",
+          "subtitle": "a surface / line",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The keys are on the table.",
+                  "green": [
+                    "on"
+                  ]
+                },
+                {
+                  "text": "There is a picture on the wall.",
+                  "green": [
+                    "on"
+                  ]
+                },
+                {
+                  "text": "He lives on Baker Street.",
+                  "green": [
+                    "on"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place-in",
+          "chip": "in",
+          "subtitle": "an enclosed space",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The milk is in the fridge.",
+                  "green": [
+                    "in"
+                  ]
+                },
+                {
+                  "text": "She lives in London.",
+                  "green": [
+                    "in"
+                  ]
+                },
+                {
+                  "text": "The children are in the garden.",
+                  "green": [
+                    "in"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place-between",
+          "chip": "between / among",
+          "subtitle": "in the middle",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The bank is between the shop and the cafe.",
+                  "green": [
+                    "between"
+                  ]
+                },
+                {
+                  "text": "She sat among the students.",
+                  "green": [
+                    "among"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place-next",
+          "chip": "next to / beside",
+          "subtitle": "at the side of",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The lamp is next to the bed.",
+                  "green": [
+                    "next",
+                    "to"
+                  ]
+                },
+                {
+                  "text": "Come and sit beside me.",
+                  "green": [
+                    "beside"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place-front",
+          "chip": "in front of / behind",
+          "subtitle": "before / after in space",
+          "sortOrder": 7,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The car is parked in front of the house.",
+                  "green": [
+                    "in",
+                    "front",
+                    "of"
+                  ]
+                },
+                {
+                  "text": "The garden is behind the house.",
+                  "green": [
+                    "behind"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "label": "Time",
+      "sortOrder": 2,
+      "note": "in / on / at tell you WHEN something happens.",
+      "patterns": [
+        {
+          "id": "time-how",
+          "chip": "How it works",
+          "subtitle": "at a time · on a day · in a longer period",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "at",
+              "text": "clock times",
+              "gloss": "at 7 o'clock, at noon, at night"
+            },
+            {
+              "case": "on",
+              "text": "days & dates",
+              "gloss": "on Monday, on 5 May, on my birthday"
+            },
+            {
+              "case": "in",
+              "text": "longer periods",
+              "gloss": "in May, in 2020, in summer, in the morning"
+            }
+          ],
+          "sections": [],
+          "note": "at = a time, on = a day, in = a month, year, season or part of the day."
+        },
+        {
+          "id": "time-at",
+          "chip": "at",
+          "subtitle": "clock times",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The film starts at eight o'clock.",
+                  "green": [
+                    "at"
+                  ]
+                },
+                {
+                  "text": "I don't work at the weekend.",
+                  "green": [
+                    "at"
+                  ]
+                },
+                {
+                  "text": "She woke up at midnight.",
+                  "green": [
+                    "at"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "time-on",
+          "chip": "on",
+          "subtitle": "days & dates",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "We have a meeting on Monday.",
+                  "green": [
+                    "on"
+                  ]
+                },
+                {
+                  "text": "My birthday is on 12 June.",
+                  "green": [
+                    "on"
+                  ]
+                },
+                {
+                  "text": "They got married on New Year's Day.",
+                  "green": [
+                    "on"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "time-in",
+          "chip": "in",
+          "subtitle": "months, years, seasons",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "It often rains in April.",
+                  "green": [
+                    "in"
+                  ]
+                },
+                {
+                  "text": "He was born in 1995.",
+                  "green": [
+                    "in"
+                  ]
+                },
+                {
+                  "text": "We go skiing in winter.",
+                  "green": [
+                    "in"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "time-forsince",
+          "chip": "for / since",
+          "subtitle": "how long",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I have lived here for ten years.",
+                  "green": [
+                    "for"
+                  ]
+                },
+                {
+                  "text": "She has been ill since Monday.",
+                  "green": [
+                    "since"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "time-by",
+          "chip": "during / by / until",
+          "subtitle": "when / deadline",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "He fell asleep during the film.",
+                  "green": [
+                    "during"
+                  ]
+                },
+                {
+                  "text": "Finish the report by Friday.",
+                  "green": [
+                    "by"
+                  ]
+                },
+                {
+                  "text": "We waited until midnight.",
+                  "green": [
+                    "until"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "movement",
+      "label": "Movement",
+      "sortOrder": 3,
+      "note": "These prepositions show DIRECTION - where something is going.",
+      "patterns": [
+        {
+          "id": "movement-how",
+          "chip": "How it works",
+          "subtitle": "to · into · out of · through",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "to",
+              "text": "a destination",
+              "gloss": "go to school, fly to Spain"
+            },
+            {
+              "case": "into",
+              "text": "entering",
+              "gloss": "walk into the room"
+            },
+            {
+              "case": "out of",
+              "text": "leaving",
+              "gloss": "come out of the house"
+            },
+            {
+              "case": "through",
+              "text": "from one side to the other",
+              "gloss": "drive through the tunnel"
+            }
+          ],
+          "sections": [],
+          "note": "Movement uses to, into, onto, out of, off, through, across, along, towards, from."
+        },
+        {
+          "id": "movement-to",
+          "chip": "to",
+          "subtitle": "destination",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I go to work by bus.",
+                  "green": [
+                    "to"
+                  ]
+                },
+                {
+                  "text": "We are flying to Spain.",
+                  "green": [
+                    "to"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movement-into",
+          "chip": "into / onto",
+          "subtitle": "entering / onto a surface",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "She walked into the room.",
+                  "green": [
+                    "into"
+                  ]
+                },
+                {
+                  "text": "The cat jumped onto the roof.",
+                  "green": [
+                    "onto"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movement-outof",
+          "chip": "out of / off",
+          "subtitle": "leaving",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "He came out of the shop.",
+                  "green": [
+                    "out",
+                    "of"
+                  ]
+                },
+                {
+                  "text": "She got off the bus.",
+                  "green": [
+                    "off"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movement-through",
+          "chip": "through / across / along",
+          "subtitle": "passing",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "We drove through the tunnel.",
+                  "green": [
+                    "through"
+                  ]
+                },
+                {
+                  "text": "They swam across the river.",
+                  "green": [
+                    "across"
+                  ]
+                },
+                {
+                  "text": "We walked along the beach.",
+                  "green": [
+                    "along"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movement-towards",
+          "chip": "towards / from",
+          "subtitle": "direction / origin",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "He ran towards the door.",
+                  "green": [
+                    "towards"
+                  ]
+                },
+                {
+                  "text": "The train comes from Paris.",
+                  "green": [
+                    "from"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbs",
+      "label": "Verbs + prep",
+      "sortOrder": 4,
+      "note": "Some verbs are always followed by a fixed preposition. Learn them as a pair.",
+      "patterns": [
+        {
+          "id": "verbs-how",
+          "chip": "How it works",
+          "subtitle": "verb + its fixed preposition",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "depend",
+              "text": "on",
+              "gloss": "It depends on the weather."
+            },
+            {
+              "case": "listen",
+              "text": "to",
+              "gloss": "Listen to the teacher."
+            },
+            {
+              "case": "wait",
+              "text": "for",
+              "gloss": "Wait for the bus."
+            },
+            {
+              "case": "look",
+              "text": "at",
+              "gloss": "Look at the board."
+            }
+          ],
+          "sections": [],
+          "note": "The preposition rarely translates word-for-word - memorise the verb + preposition together."
+        },
+        {
+          "id": "verbs-depend",
+          "chip": "depend on",
+          "subtitle": "rely on",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "It depends on the weather.",
+                  "green": [
+                    "depends",
+                    "on"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verbs-listen",
+          "chip": "listen to",
+          "subtitle": "hear on purpose",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I listen to music every day.",
+                  "green": [
+                    "listen",
+                    "to"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verbs-wait",
+          "chip": "wait for",
+          "subtitle": "expect",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "We are waiting for the train.",
+                  "green": [
+                    "waiting",
+                    "for"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verbs-look",
+          "chip": "look at / after / for",
+          "subtitle": "watch / care / search",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Look at this photo.",
+                  "green": [
+                    "Look",
+                    "at"
+                  ]
+                },
+                {
+                  "text": "She looks after her little brother.",
+                  "green": [
+                    "looks",
+                    "after"
+                  ]
+                },
+                {
+                  "text": "I am looking for my keys.",
+                  "green": [
+                    "looking",
+                    "for"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verbs-think",
+          "chip": "think about",
+          "subtitle": "consider",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I often think about my future.",
+                  "green": [
+                    "think",
+                    "about"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verbs-belong",
+          "chip": "belong to",
+          "subtitle": "be owned by",
+          "sortOrder": 7,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "This book belongs to me.",
+                  "green": [
+                    "belongs",
+                    "to"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verbs-agree",
+          "chip": "agree with",
+          "subtitle": "share an opinion",
+          "sortOrder": 8,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I agree with you.",
+                  "green": [
+                    "agree",
+                    "with"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adjectives",
+      "label": "Adjectives + prep",
+      "sortOrder": 5,
+      "note": "Many adjectives take a fixed preposition. Learn the pair.",
+      "patterns": [
+        {
+          "id": "adj-how",
+          "chip": "How it works",
+          "subtitle": "adjective + its fixed preposition",
+          "sortOrder": 1,
+          "forms": [
+            {
+              "case": "good",
+              "text": "at",
+              "gloss": "good at maths"
+            },
+            {
+              "case": "interested",
+              "text": "in",
+              "gloss": "interested in music"
+            },
+            {
+              "case": "afraid",
+              "text": "of",
+              "gloss": "afraid of spiders"
+            },
+            {
+              "case": "proud",
+              "text": "of",
+              "gloss": "proud of you"
+            }
+          ],
+          "sections": [],
+          "note": "As with verbs, the preposition is fixed - learn adjective + preposition together."
+        },
+        {
+          "id": "adj-goodat",
+          "chip": "good at",
+          "subtitle": "skilled",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "She is good at drawing.",
+                  "green": [
+                    "good",
+                    "at"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adj-interested",
+          "chip": "interested in",
+          "subtitle": "curious about",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I am interested in history.",
+                  "green": [
+                    "interested",
+                    "in"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adj-afraid",
+          "chip": "afraid of",
+          "subtitle": "scared",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "He is afraid of dogs.",
+                  "green": [
+                    "afraid",
+                    "of"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adj-proud",
+          "chip": "proud of",
+          "subtitle": "pleased",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "We are proud of our team.",
+                  "green": [
+                    "proud",
+                    "of"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adj-married",
+          "chip": "married to",
+          "subtitle": "relationship",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "She is married to a doctor.",
+                  "green": [
+                    "married",
+                    "to"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adj-different",
+          "chip": "similar to / different from",
+          "subtitle": "comparison",
+          "sortOrder": 7,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "This colour is similar to that one.",
+                  "green": [
+                    "similar",
+                    "to"
+                  ]
+                },
+                {
+                  "text": "Mine is different from yours.",
+                  "green": [
+                    "different",
+                    "from"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adj-worried",
+          "chip": "keen on / worried about",
+          "subtitle": "feelings",
+          "sortOrder": 8,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "He is keen on football.",
+                  "green": [
+                    "keen",
+                    "on"
+                  ]
+                },
+                {
+                  "text": "I am worried about the exam.",
+                  "green": [
+                    "worried",
+                    "about"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confusions",
+      "label": "Common confusions",
+      "sortOrder": 6,
+      "note": "Pairs of prepositions that learners often mix up.",
+      "patterns": [
+        {
+          "id": "conf-how",
+          "chip": "How it works",
+          "subtitle": "watch these pairs",
+          "sortOrder": 1,
+          "forms": [],
+          "sections": [],
+          "note": "The right choice depends on meaning, not translation. Compare each pair below."
+        },
+        {
+          "id": "conf-inat",
+          "chip": "in vs at",
+          "subtitle": "area vs point",
+          "sortOrder": 2,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I arrived in London.",
+                  "green": [
+                    "in"
+                  ]
+                },
+                {
+                  "text": "I arrived at the airport.",
+                  "green": [
+                    "at"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conf-sincefor",
+          "chip": "since vs for",
+          "subtitle": "start vs length",
+          "sortOrder": 3,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "I have been here since Monday.",
+                  "green": [
+                    "since"
+                  ]
+                },
+                {
+                  "text": "I have been here for three days.",
+                  "green": [
+                    "for"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conf-betweenamong",
+          "chip": "between vs among",
+          "subtitle": "two vs many",
+          "sortOrder": 4,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Share it between the two of you.",
+                  "green": [
+                    "between"
+                  ]
+                },
+                {
+                  "text": "She is popular among her friends.",
+                  "green": [
+                    "among"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conf-byuntil",
+          "chip": "by vs until",
+          "subtitle": "deadline vs up to",
+          "sortOrder": 5,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Finish it by six o'clock.",
+                  "green": [
+                    "by"
+                  ]
+                },
+                {
+                  "text": "We waited until six o'clock.",
+                  "green": [
+                    "until"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conf-beside",
+          "chip": "beside vs besides",
+          "subtitle": "next to vs in addition",
+          "sortOrder": 6,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "Sit beside me.",
+                  "green": [
+                    "beside"
+                  ]
+                },
+                {
+                  "text": "Besides English, she speaks French.",
+                  "green": [
+                    "Besides"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conf-ontime",
+          "chip": "on time vs in time",
+          "subtitle": "punctual vs early enough",
+          "sortOrder": 7,
+          "forms": [],
+          "sections": [
+            {
+              "header": "Examples",
+              "tone": "normal",
+              "sentences": [
+                {
+                  "text": "The train left on time.",
+                  "green": [
+                    "on"
+                  ]
+                },
+                {
+                  "text": "We arrived in time to catch it.",
+                  "green": [
+                    "in"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

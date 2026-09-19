@@ -67,6 +67,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import com.android.billingclient.api.ProductDetails
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.config.PremiumOverride
@@ -100,24 +101,12 @@ fun SettingsScreen(
     val uiState by viewModel.uiState.collectAsState()
     val sheetContent by viewModel.sheetState.collectAsState()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val sheetStateIAP = rememberModalBottomSheetState()
-    val isPremiumUser = false//by viewModel.isPremium.collectAsState()
 
-    // val premiumProduct by viewModel.premiumProduct.collectAsState()
-    //val isPremiumUser by viewModel.isPremiumUser.collectAsState()
     val isPurchased by viewModel.isPurchased.collectAsState(initial = false)
     val productDetails by viewModel.productDetails.collectAsState(initial = null)
-    val billingError by viewModel.billingError.collectAsState(initial = null)
     val context = LocalContext.current
 
-    val showHelpSheet by viewModel.showHelpSheet.collectAsState()
-    val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val showCelebration by viewModel.showCelebrationSheet.collectAsStateWithLifecycle()
-
     var showSignInSheet by remember { mutableStateOf(false) }
-    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
-    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
-
 
     var showDebugSheet by remember { mutableStateOf(false) }
     var showTranslateSheet by remember { mutableStateOf(false) }
@@ -168,6 +157,55 @@ fun SettingsScreen(
         }
     }
 
+    SettingsSelectionSheet(
+        viewModel = viewModel,
+        uiState = uiState,
+        sheetContent = sheetContent,
+        sheetState = sheetState,
+    )
+
+    if (uiState.showIAPBottomSheet) {
+        PremiumUpgradeSheet(
+            onDismiss = {
+                viewModel.onBottomSheetDismissed()
+            }
+        )
+    }
+
+    SettingsSheets(
+        viewModel = viewModel,
+        context = context,
+        showSignInSheet = showSignInSheet,
+        onDismissSignIn = { showSignInSheet = false },
+        showTranslateSheet = showTranslateSheet,
+        onDismissTranslate = { showTranslateSheet = false },
+        showDebugSheet = showDebugSheet,
+        onDismissDebug = { showDebugSheet = false },
+        dictionaryViewModel = vm,
+    )
+
+    SettingsContent(
+        navController = navController,
+        viewModel = viewModel,
+        uiState = uiState,
+        context = context,
+        isPurchased = isPurchased,
+        productDetails = productDetails,
+        snackbarHostState = snackbarHostState,
+        onShowSignIn = { showSignInSheet = true },
+        onShowTranslate = { showTranslateSheet = true },
+    )
+}
+
+/** The exam / speaker / language selection bottom sheet (driven by [sheetContent]). */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SettingsSelectionSheet(
+    viewModel: SettingsViewModel,
+    uiState: SettingsUiState,
+    sheetContent: SheetContent,
+    sheetState: androidx.compose.material3.SheetState,
+) {
     if (sheetContent != SheetContent.Hidden) {
         ModalBottomSheet(
             onDismissRequest = { viewModel.hideBottomSheet() },
@@ -370,115 +408,26 @@ fun SettingsScreen(
             }
         }
     } //: sheetContent
+}
 
-    if (false) {
-        ModalBottomSheet(
-            // 5. This callback is triggered when the user dismisses the sheet.
-            onDismissRequest = { viewModel.onBottomSheetDismissed() },
-            sheetState = sheetStateIAP
-        ) {
-            // 6. This is the content that appears INSIDE the sheet.
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-
-                Text(
-                    text = "Using AI has charges",
-                    fontSize = 20.sp,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                // Sub-title
-                Text(
-                    text = "Therefore we have to limit how many AI calls are made:",
-                    fontSize = 16.sp,
-                    textAlign = TextAlign.Start,
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
-                )
-                // Body
-                Text(
-                    text = "1. Up to ${uiState.hourlyLimit} interactions per hour.",
-                    fontSize = 14.sp,
-                    textAlign = TextAlign.Start,
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                        .align(Alignment.Start)
-                )
-                Text(
-                    text = "2. Up to ${uiState.dailyLimit}  interactions per day.",
-                    fontSize = 14.sp,
-                    textAlign = TextAlign.Start,
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                        .align(Alignment.Start)
-                )
-                Text(
-                    text = "All previously heard words are still playable.",
-                    fontSize = 14.sp,
-                    textAlign = TextAlign.Start,
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
-                )
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    // This arrangement places equal space around each button, pushing them apart.
-                    horizontalArrangement = Arrangement.SpaceEvenly,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-
-                    Button(onClick = {
-                        if (context is ComponentActivity) {
-                            AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_paragraph")
-                            viewModel.buyPremiumButtonPressed(context)
-                            viewModel.onBottomSheetDismissed()
-                        }
-                    })
-                    {
-                        productDetails?.let { details ->
-                            details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-                                Text("Unlimited: ${offerDetails.formattedPrice}")
-                            }
-                        }
-                    }
-
-                    Button(onClick = {
-                        AnalyticsHelper.logPaywallResponse(context,"rejected", "limit_paragraph")
-                        viewModel.IAPCancelled()
-                        viewModel.onBottomSheetDismissed()
-                    }) {
-                        Text("Maybe Later")
-                    }
-                }
-                Text(
-                    text = "All exam lists A1,A2,B1,B2 for all time",
-                    fontSize = 12.sp,
-                    color = Color.White,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                )
-            }
-        }
-    }
-
-    if (uiState.showIAPBottomSheet) {
-        PremiumUpgradeSheet(
-            onDismiss = {
-                viewModel.onBottomSheetDismissed()
-            }
-        )
-    }
+/** This tab's remaining bottom sheets (help, sign-in, translate, debug dictionary, rate limits). */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SettingsSheets(
+    viewModel: SettingsViewModel,
+    context: android.content.Context,
+    showSignInSheet: Boolean,
+    onDismissSignIn: () -> Unit,
+    showTranslateSheet: Boolean,
+    onDismissTranslate: () -> Unit,
+    showDebugSheet: Boolean,
+    onDismissDebug: () -> Unit,
+    dictionaryViewModel: DictionaryEntryBrowserViewModel,
+) {
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+    val showHelpSheet by viewModel.showHelpSheet.collectAsState()
+    val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     if (showHelpSheet) {
         ModalBottomSheet(
@@ -535,18 +484,17 @@ fun SettingsScreen(
 
     if (showSignInSheet) {
         SignInBottomSheet(
-            onDismiss = { showSignInSheet = false }//,
-//            vm = signInVm // Pass the same VM so state is shared
+            onDismiss = onDismissSignIn
         )
     }
 
     if (showTranslateSheet) {
-        TranslateSheet(onDismiss = { showTranslateSheet = false })
+        TranslateSheet(onDismiss = onDismissTranslate)
     }
 
     if (showDebugSheet) {
         ModalBottomSheet(
-            onDismissRequest = { showDebugSheet = false },
+            onDismissRequest = onDismissDebug,
             dragHandle = { BottomSheetDefaults.DragHandle() }
         ) {
             // Give the sheet a reasonable height so you can see scrolling and typography
@@ -557,7 +505,7 @@ fun SettingsScreen(
             ) {
                 DictionaryEntryBrowserScreen(
                     modifier = Modifier.fillMaxSize(),
-                    viewModel = vm
+                    viewModel = dictionaryViewModel
                 )
             }
 
@@ -584,6 +532,21 @@ fun SettingsScreen(
             )
         }
     }
+}
+
+/** The scrollable list of settings rows (Voice & Exam, About, and DEBUG-only tools). */
+@Composable
+private fun SettingsContent(
+    navController: NavHostController,
+    viewModel: SettingsViewModel,
+    uiState: SettingsUiState,
+    context: android.content.Context,
+    isPurchased: Boolean,
+    productDetails: ProductDetails?,
+    snackbarHostState: SnackbarHostState,
+    onShowSignIn: () -> Unit,
+    onShowTranslate: () -> Unit,
+) {
     // Main Screen Content (wrapped in a Box so the SnackbarHost can overlay the bottom).
     Box(modifier = Modifier.fillMaxSize()) {
     LazyColumn(
@@ -678,7 +641,7 @@ fun SettingsScreen(
                     title = "Sign In",
                     "To enable sync to another device sign in here",
                     onClick = {
-                        showSignInSheet = true
+                        onShowSignIn()
 
                     }
                 )
@@ -893,7 +856,7 @@ fun SettingsScreen(
                     title = "Translate (D)",
                     currentValue = "Try out German <-> English translation (D)",
                     onClick = {
-                        showTranslateSheet = true
+                        onShowTranslate()
                     }
                 )
             }

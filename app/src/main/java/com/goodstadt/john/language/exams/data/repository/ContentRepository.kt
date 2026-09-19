@@ -642,6 +642,7 @@ class ContentRepository @Inject constructor(
         "GermanReferencePronouns" -> "german_reference_pronouns"
         "EnglishReferencePronouns" -> "english_reference_pronouns"
         "GermanPrepositionsTeaching" -> "german_prepositions_teaching"
+        "EnglishPrepositionsTeaching" -> "english_prepositions_teaching"
         else -> null
     }
 

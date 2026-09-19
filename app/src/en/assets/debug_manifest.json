@@ -21,6 +21,12 @@
       "screenType": "VocabScreen",
       "firestoreDocumentId": "EnglishPrepositions"
     },
+    "EnglishPrepositionsTeaching": {
+      "title": "Prepositions",
+      "sheetDataType": "Format6",
+      "screenType": "Format6TeachingScreen",
+      "firestoreDocumentId": "EnglishPrepositionsTeaching"
+    },
     "AdjectivesGroup": {
       "title": "Adjectives.",
       "screenType": "GroupedVocabScreen",
@@ -144,7 +150,7 @@
         "quiz",
         "vocab_dashboard",
         "conjugations",
-        "EnglishPrepositions",
+        "EnglishPrepositionsTeaching",
         "SpanishLanguage",
         "AdjectivesGroup",
         "EnglishReferencePronouns",

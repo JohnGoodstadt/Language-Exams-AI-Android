@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.UsageQuiz
 
+import android.content.Context
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
@@ -141,7 +142,6 @@ fun UsageQuizScreen(
 
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
     var showDashboardSheet by remember { mutableStateOf(false) }
-    val dashboardSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val fluency by viewModel.fluency
     val activeFilters by viewModel.activeFilters.collectAsState()
 
@@ -217,48 +217,17 @@ fun UsageQuizScreen(
             }
         )
 
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                // Optional: Add horizontal padding to keep icon off the very edge
-                .padding(horizontal = 4.dp)
-        ) {
-
-            Text(
-                text = fluency.label,
-                color = fluency.color,
-                style = MaterialTheme.typography.labelMedium,
-                modifier = Modifier
-                    .background(fluency.color.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-                    .align(Alignment.CenterStart)
-//                    .padding(horizontal = 8.dp, vertical = 1.dp)
-            )
-
-            // 1. The Dropdown (Centered)
-            // We wrap it to ensure it aligns to the Box's center, not the Column's
-            Box(modifier = Modifier.align(Alignment.Center)) {
-                DropdownMenuBox(
-                    options = availableQuizzes.map { it.title },
-                    selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-                    onOptionSelected = { newQuizTitle ->
-                        val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-                        viewModel.onQuizSelected(quizDetail)
-                    }
-                )
-            }
-
-            // 2. The Icon (Right Aligned)
-            IconButton(
-                onClick = {  showDashboardSheet = true },
-                modifier = Modifier.align(Alignment.CenterEnd) // 👈 Locks to right
-            ) {
-                Icon(
-                    imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
-                    contentDescription = "Stats",
-                    tint = Color(0xFFFF9800)
-                )
-            }
-        }
+        UsageQuizHeader(
+            fluencyLabel = fluency.label,
+            fluencyColor = fluency.color,
+            quizTitles = availableQuizzes.map { it.title },
+            selectedQuizTitle = selectedQuiz?.title ?: "Select a Quiz",
+            onQuizSelected = { newQuizTitle ->
+                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
+                viewModel.onQuizSelected(quizDetail)
+            },
+            onShowDashboard = { showDashboardSheet = true },
+        )
 
         // --- Quiz-level learning points (stays the same for all 10 questions) ---
 
@@ -270,65 +239,12 @@ fun UsageQuizScreen(
         val learningPoints = learningTitleData?.learningPoints.orEmpty()
 
 
-        if (learningPoints.isNotEmpty()) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 6.dp)
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = learningTitle,
-                        style = MaterialTheme.typography.titleSmall,
-                        color = Color.White
-                    )
-
-                    Text(
-                        text = if (isLearningExpanded) "less" else "more…",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = orangeLight,
-                        modifier = Modifier
-                            .clickable { isLearningExpanded = !isLearningExpanded }
-                            .padding(8.dp)
-                    )
-                }
-
-                AnimatedVisibility(visible = isLearningExpanded) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 6.dp, bottom = 8.dp)
-                    ) {
-                        learningPoints.forEach { point ->
-                            Row(
-                                modifier = Modifier.padding(vertical = 2.dp),
-                                verticalAlignment = Alignment.Top
-                            ) {
-                                Text(text = "• ", color = orangeLight)
-                                Text(
-                                    text = point,
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = Color.White,
-                                    modifier = Modifier.weight(1f)
-                                )
-                            }
-                        }
-                    }
-                }
-
-//                HorizontalDivider(
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 6.dp),
-//                    thickness = 1.dp,
-//                    color = greyLight2
-//                )
-            }//: Column
-        }//:learningPoints
+        UsageQuizLearningPoints(
+            learningTitle = learningTitle,
+            learningPoints = learningPoints,
+            isExpanded = isLearningExpanded,
+            onToggle = { isLearningExpanded = !isLearningExpanded },
+        )
 
 
 
@@ -399,276 +315,29 @@ fun UsageQuizScreen(
         // Scrollable question + answers area (fills remaining space)
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
-            val scrollState = rememberScrollState()
+            UsageQuizQuestionAnswers(
+                viewModel = viewModel,
+                question = question,
+                currentQuestionIndex = currentQuestionIndex,
+                selectedOption = selectedOption,
+                isCurrentAnswerCorrect = isCurrentAnswerCorrect,
+                displayedSentence = displayedSentence,
+                onSelectedOptionChange = { selectedOption = it },
+                onAnswerCorrectChange = { isCurrentAnswerCorrect = it },
+                onDisplayedSentenceChange = { displayedSentence = it },
+                onInfoDisabledChange = { infoDisabled = it },
+                modifier = Modifier.weight(1f),
+            )
 
-            // Reset scroll when question changes
-            LaunchedEffect(currentQuestionIndex) {
-                scrollState.scrollTo(0)
-                // Keep the info button correct after any move, including auto-advance.
-                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-            }
-
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
-                    .verticalScroll(scrollState)
-                    .padding(horizontal = 4.dp),
-                verticalArrangement = Arrangement.spacedBy(2.dp)
-            ) {
-
-                val annotatedQuestionText =
-                    if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                        AnnotatedString(question.title)
-                    } else {
-                        buildAnnotatedString {
-                            if (isCurrentAnswerCorrect == true && selectedOption != null) {
-                                val parts = question.sentence.split("_")
-                                if (parts.size == 2) {
-                                    append(parts[0])
-                                    withStyle(
-                                        style = SpanStyle(
-                                            color = Color.Green,
-                                            fontWeight = FontWeight.Bold
-                                        )
-                                    ) {
-                                        append(selectedOption!!)
-                                    }
-                                    append(parts[1])
-                                } else {
-                                    append(displayedSentence)
-                                }
-                            } else {
-                                append(displayedSentence)
-                            }
-                        }
-                    }
-
-                Text(
-                    text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth(),
-                    color = orangeLight,
-                )
-
-                // Per-question mastery badge
-                val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 2.dp, vertical = 1.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = masteryDisplay.first,
-                        color = masteryDisplay.second,
-                        style = MaterialTheme.typography.labelMedium,
-                        modifier = Modifier
-                            .background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-                    )
-                }
-
-                question.words.forEach { option ->
-                    val isOptionCorrect = option == question.correctOption
-
-                    // Format-aware sentence for the loudspeaker preview (and for replaying a solved question).
-                    val previewSentence =
-                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                            question.sentence.replace("_", option)
-                        } else {
-                            if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()
-                            } else {
-                                option
-                            }
-                        }
-
-                    // Answering the question: used by BOTH the radio button AND tapping the answer sentence,
-                    // so they score identically. The loudspeaker does NOT call this - it only previews.
-                    // Marking finishes once the correct answer is chosen: after that, a tap just replays a
-                    // preview and never changes Correct/Tries again.
-                    val submitAnswer: () -> Unit = {
-                        if (isCurrentAnswerCorrect == true) {
-                            // Already solved -> preview only, no scoring.
-                            viewModel.handleTap(previewSentence)
-                        } else {
-                            selectedOption = option
-                            isCurrentAnswerCorrect = isOptionCorrect
-                            // Remember this selection so navigating back re-shows it (until the quiz restarts).
-                            viewModel.rememberSelection(question.page, option, isOptionCorrect)
-                            viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
-
-                            if (isOptionCorrect) {
-                                var sentenceToSpeak = ""
-                                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                    val sentence = question.sentence.replace(Regex("_+"), option)
-                                    displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = sentence,
-                                        wordToHighlight = option,
-                                        highlightColor = Color.Green
-                                    )
-                                    sentenceToSpeak = sentence
-                                } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                    displayedSentence = AnnotatedString(question.title)
-                                    sentenceToSpeak =
-                                        "${question.title}:${option}:${question.sentence}"
-                                } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                    displayedSentence = AnnotatedString(option)
-                                    val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                        .trim()
-                                    sentenceToSpeak = cleaned
-                                } else {
-                                    sentenceToSpeak = option
-                                    displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = option,
-                                        wordToHighlight = option,
-                                        highlightColor = Color.Green
-                                    )
-                                }
-
-                                viewModel.handleTap(sentenceToSpeak)
-                                viewModel.incQuizStat()
-                                // Auto-advance (if on): move to the next question once the audio finishes.
-                                viewModel.onCorrectAnswered()
-                            } else {
-                                viewModel.incQuizStat(false)
-                            }
-                        }
-                    }
-
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        // Left cell: takes all remaining width so a long sentence WRAPS instead of
-                        // shoving the radio button off the edge.
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.weight(1f)
-                        ) {
-                            Icon(
-                                // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
-                                modifier = Modifier.clickable {
-                                    viewModel.handleTap(previewSentence)
-                                },
-                                imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                                contentDescription = "Speak ${question.sentence.replace("_", option)}",
-                                tint = Color.White
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(
-                                // Tapping the answer sentence marks it, exactly like the radio button.
-                                text = option,
-                                color = orangeLight,
-                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .padding(vertical = 2.dp)
-                                    .clickable { submitAnswer() }
-                            )
-                        }
-
-                        // Reserved fixed-width cell so the radio button always sits in the SAME place
-                        // under the user's finger, regardless of sentence length.
-                        Box(
-                            modifier = Modifier.width(48.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            RadioButton(
-                                selected = selectedOption == option && isOptionCorrect,
-                                onClick = { submitAnswer() },
-                                colors = RadioButtonDefaults.colors(
-                                    selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
-                                    unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
-                                ),
-                                modifier = Modifier.semantics { contentDescription = option }
-                            )
-                        }
-                    } // Row
-                }
-            } // Scrollable Column
-//            Row(
-//                horizontalArrangement = Arrangement.SpaceBetween,
-//                modifier = Modifier.fillMaxWidth()
-//            ) {
-//                InfoButtonRow(infoDisabled = infoDisabled,
-//                    onClick = {
-//
-//                        if (infoDisabled == false) {
-//                            showInfoBottomSheet = true
-//                        }
-//                    })
-//            }// row
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-
-                // 🔹 Previous
-                IconButton(
-                    onClick = {
-                        if (currentQuestionIndex > 0) {
-                            viewModel.currentQuestionIndex.value -= 1
-                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-                            viewModel.resetInfoButtonTapped()
-                        }
-                    },
-                    enabled = currentQuestionIndex > 0
-                ) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = "Previous",
-                        tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
-                        modifier = Modifier.size(36.dp)
-                    )
-                }
-
-                // 🔹 Expanding space left
-                Spacer(modifier = Modifier.weight(1f))
-
-                // 🔹 Info + Auto-advance buttons (centered)
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    InfoCircleButton(
-                        infoDisabled = infoDisabled,
-                        onClick = {
-                            if (!infoDisabled) {
-                                showInfoBottomSheet = true
-                                viewModel.onInfoButtonTapped() //mark user getting help
-                            }
-                        }
-                    )
-                    // Auto-advance toggle: grey = off, blue = on. Shared setting across all quiz types.
-                    AutoAdvanceToggleButton(
-                        enabled = autoAdvance,
-                        onClick = { viewModel.toggleAutoAdvance() }
-                    )
-                }
-
-                // 🔹 Expanding space right
-                Spacer(modifier = Modifier.weight(1f))
-
-                // 🔹 Next
-                IconButton(
-                    onClick = {
-                        if (currentQuestionIndex < questions.lastIndex) {
-                            viewModel.currentQuestionIndex.value += 1
-                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-                            viewModel.resetInfoButtonTapped()
-                        }
-                    },
-                    enabled = currentQuestionIndex < questions.lastIndex
-                ) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                        contentDescription = "Next",
-                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor,
-                        modifier = Modifier.size(36.dp)
-                    )
-                }
-            }
+            UsageQuizNavigationRow(
+                viewModel = viewModel,
+                currentQuestionIndex = currentQuestionIndex,
+                questionCount = questions.size,
+                autoAdvance = autoAdvance,
+                infoDisabled = infoDisabled,
+                onInfoDisabledChange = { infoDisabled = it },
+                onShowInfo = { showInfoBottomSheet = true },
+            )
         }
 
         // Statistics
@@ -677,65 +346,526 @@ fun UsageQuizScreen(
             thickness = 1.dp,
             color = greyLight2
         )
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
-        ) {
-            Text(
-                text = "Correct: ${quizStatistics.correct}",
-                style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 16.sp,
-                    color = Color.Green
-                ),
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(start = 16.dp) // Add padding to the start
-            )
-            Text(
-                text = "Tries: ${quizStatistics.tries}",
-                style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 16.sp,
-                    color = Color.Red
-                ),
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 16.dp), // Add padding to the end
-                textAlign = TextAlign.End // Align text to the end
+        UsageQuizStatisticsRow(
+            correct = quizStatistics.correct,
+            tries = quizStatistics.tries,
+        )
+        // Paging control (dots)
+        UsageQuizPagingDots(
+            questionCount = questions.size,
+            currentQuestionIndex = currentQuestionIndex,
+            userAnswers = userAnswers,
+        )
+    }
+    UsageQuizBottomSheets(
+        viewModel = viewModel,
+        context = context,
+        isRateLimitingSheetVisible = isRateLimitingSheetVisible,
+        isDailyRateLimitingSheetVisible = isDailyRateLimitingSheetVisible,
+        isHourlyRateLimitingSheetVisible = isHourlyRateLimitingSheetVisible,
+        showInfoBottomSheet = showInfoBottomSheet,
+        onCloseInfo = { showInfoBottomSheet = false },
+        infoQuestion = questions.getOrNull(currentQuestionIndex),
+        showDashboardSheet = showDashboardSheet,
+        onCloseDashboard = { showDashboardSheet = false },
+        selectedLevelDescription = selectedLevel.description,
+    )
+} //:QuizScreen
+
+/** Fluency chip + quiz dropdown + stats icon row. */
+@Composable
+private fun UsageQuizHeader(
+    fluencyLabel: String,
+    fluencyColor: Color,
+    quizTitles: List<String>,
+    selectedQuizTitle: String,
+    onQuizSelected: (String) -> Unit,
+    onShowDashboard: () -> Unit,
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            // Optional: Add horizontal padding to keep icon off the very edge
+            .padding(horizontal = 4.dp)
+    ) {
+
+        Text(
+            text = fluencyLabel,
+            color = fluencyColor,
+            style = MaterialTheme.typography.labelMedium,
+            modifier = Modifier
+                .background(fluencyColor.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+                .align(Alignment.CenterStart)
+//                    .padding(horizontal = 8.dp, vertical = 1.dp)
+        )
+
+        // 1. The Dropdown (Centered)
+        // We wrap it to ensure it aligns to the Box's center, not the Column's
+        Box(modifier = Modifier.align(Alignment.Center)) {
+            DropdownMenuBox(
+                options = quizTitles,
+                selectedOption = selectedQuizTitle,
+                onOptionSelected = onQuizSelected
             )
         }
-        // Paging control (dots)
+
+        // 2. The Icon (Right Aligned)
+        IconButton(
+            onClick = onShowDashboard,
+            modifier = Modifier.align(Alignment.CenterEnd) // 👈 Locks to right
+        ) {
+            Icon(
+                imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
+                contentDescription = "Stats",
+                tint = Color(0xFFFF9800)
+            )
+        }
+    }
+}
+
+
+/** Collapsible "Why this quiz works" learning points. */
+@Composable
+private fun UsageQuizLearningPoints(
+    learningTitle: String,
+    learningPoints: List<String>,
+    isExpanded: Boolean,
+    onToggle: () -> Unit,
+) {
+    if (learningPoints.isEmpty()) return
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 6.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = learningTitle,
+                style = MaterialTheme.typography.titleSmall,
+                color = Color.White
+            )
+
+            Text(
+                text = if (isExpanded) "less" else "more…",
+                style = MaterialTheme.typography.labelMedium,
+                color = orangeLight,
+                modifier = Modifier
+                    .clickable { onToggle() }
+                    .padding(8.dp)
+            )
+        }
+
+        AnimatedVisibility(visible = isExpanded) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 6.dp, bottom = 8.dp)
+            ) {
+                learningPoints.forEach { point ->
+                    Row(
+                        modifier = Modifier.padding(vertical = 2.dp),
+                        verticalAlignment = Alignment.Top
+                    ) {
+                        Text(text = "• ", color = orangeLight)
+                        Text(
+                            text = point,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color.White,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
+            }
+        }
+    }//: Column
+}
+
+
+/** The scrollable question text + per-question mastery badge + answer option rows. */
+@Composable
+private fun UsageQuizQuestionAnswers(
+    viewModel: UsageQuizViewModel,
+    question: QuizQuestion,
+    currentQuestionIndex: Int,
+    selectedOption: String?,
+    isCurrentAnswerCorrect: Boolean?,
+    displayedSentence: AnnotatedString,
+    onSelectedOptionChange: (String?) -> Unit,
+    onAnswerCorrectChange: (Boolean?) -> Unit,
+    onDisplayedSentenceChange: (AnnotatedString) -> Unit,
+    onInfoDisabledChange: (Boolean) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val scrollState = rememberScrollState()
+
+    // Reset scroll when question changes
+    LaunchedEffect(currentQuestionIndex) {
+        scrollState.scrollTo(0)
+        // Keep the info button correct after any move, including auto-advance.
+        onInfoDisabledChange(!viewModel.doIHaveCurrentQuestionInfo())
+    }
+
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .verticalScroll(scrollState)
+            .padding(horizontal = 4.dp),
+        verticalArrangement = Arrangement.spacedBy(2.dp)
+    ) {
+
+        val annotatedQuestionText =
+            if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                AnnotatedString(question.title)
+            } else {
+                buildAnnotatedString {
+                    if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                        val parts = question.sentence.split("_")
+                        if (parts.size == 2) {
+                            append(parts[0])
+                            withStyle(
+                                style = SpanStyle(
+                                    color = Color.Green,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            ) {
+                                append(selectedOption!!)
+                            }
+                            append(parts[1])
+                        } else {
+                            append(displayedSentence)
+                        }
+                    } else {
+                        append(displayedSentence)
+                    }
+                }
+            }
+
+        Text(
+            text = annotatedQuestionText,
+            style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth(),
+            color = orangeLight,
+        )
+
+        // Per-question mastery badge
+        val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 8.dp),
-            horizontalArrangement = Arrangement.Center // Center the dots horizontally
+                .padding(horizontal = 2.dp, vertical = 1.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            for (index in 0 until questions.size) { // Iterate through the questions
-                Box(
-                    modifier = Modifier
-                        .size(10.dp) // Set size of the dot
-                        .clip(CircleShape) // Make it a circle
-                        .background(
-                            if (index == currentQuestionIndex) blueBright2 else dotColor(
-                                index,
-                                userAnswers
+            Text(
+                text = masteryDisplay.first,
+                color = masteryDisplay.second,
+                style = MaterialTheme.typography.labelMedium,
+                modifier = Modifier
+                    .background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+            )
+        }
+
+        question.words.forEach { option ->
+            val isOptionCorrect = option == question.correctOption
+
+            // Format-aware sentence for the loudspeaker preview (and for replaying a solved question).
+            val previewSentence =
+                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                    question.sentence.replace("_", option)
+                } else {
+                    if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                        option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()
+                    } else {
+                        option
+                    }
+                }
+
+            // Answering the question: used by BOTH the radio button AND tapping the answer sentence,
+            // so they score identically. The loudspeaker does NOT call this - it only previews.
+            // Marking finishes once the correct answer is chosen: after that, a tap just replays a
+            // preview and never changes Correct/Tries again.
+            val submitAnswer: () -> Unit = {
+                if (isCurrentAnswerCorrect == true) {
+                    // Already solved -> preview only, no scoring.
+                    viewModel.handleTap(previewSentence)
+                } else {
+                    onSelectedOptionChange(option)
+                    onAnswerCorrectChange(isOptionCorrect)
+                    // Remember this selection so navigating back re-shows it (until the quiz restarts).
+                    viewModel.rememberSelection(question.page, option, isOptionCorrect)
+                    viewModel.updateAnswer(isOptionCorrect) // Tries++ (and Correct recomputed)
+
+                    if (isOptionCorrect) {
+                        var sentenceToSpeak = ""
+                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                            val sentence = question.sentence.replace(Regex("_+"), option)
+                            onDisplayedSentenceChange(
+                                viewModel.highlightWordInSentence(
+                                    sentence = sentence,
+                                    wordToHighlight = option,
+                                    highlightColor = Color.Green
+                                )
                             )
-                        ) // Set color based on current page
-                )
-                Spacer(modifier = Modifier.width(4.dp)) // Add spacing between dots
+                            sentenceToSpeak = sentence
+                        } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                            onDisplayedSentenceChange(AnnotatedString(question.title))
+                            sentenceToSpeak =
+                                "${question.title}:${option}:${question.sentence}"
+                        } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                            onDisplayedSentenceChange(AnnotatedString(option))
+                            val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                .trim()
+                            sentenceToSpeak = cleaned
+                        } else {
+                            sentenceToSpeak = option
+                            onDisplayedSentenceChange(
+                                viewModel.highlightWordInSentence(
+                                    sentence = option,
+                                    wordToHighlight = option,
+                                    highlightColor = Color.Green
+                                )
+                            )
+                        }
+
+                        viewModel.handleTap(sentenceToSpeak)
+                        viewModel.incQuizStat()
+                        // Auto-advance (if on): move to the next question once the audio finishes.
+                        viewModel.onCorrectAnswered()
+                    } else {
+                        viewModel.incQuizStat(false)
+                    }
+                }
             }
+
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                // Left cell: takes all remaining width so a long sentence WRAPS instead of
+                // shoving the radio button off the edge.
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Icon(
+                        // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
+                        modifier = Modifier.clickable {
+                            viewModel.handleTap(previewSentence)
+                        },
+                        imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                        contentDescription = "Speak ${question.sentence.replace("_", option)}",
+                        tint = Color.White
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        // Tapping the answer sentence marks it, exactly like the radio button.
+                        text = option,
+                        color = orangeLight,
+                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(vertical = 2.dp)
+                            .clickable { submitAnswer() }
+                    )
+                }
+
+                // Reserved fixed-width cell so the radio button always sits in the SAME place
+                // under the user's finger, regardless of sentence length.
+                Box(
+                    modifier = Modifier.width(48.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    RadioButton(
+                        selected = selectedOption == option && isOptionCorrect,
+                        onClick = { submitAnswer() },
+                        colors = RadioButtonDefaults.colors(
+                            selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
+                            unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
+                        ),
+                        modifier = Modifier.semantics { contentDescription = option }
+                    )
+                }
+            } // Row
+        }
+    } // Scrollable Column
+}
+
+
+/** Previous / Info + Auto-advance / Next navigation controls. */
+@Composable
+private fun UsageQuizNavigationRow(
+    viewModel: UsageQuizViewModel,
+    currentQuestionIndex: Int,
+    questionCount: Int,
+    autoAdvance: Boolean,
+    infoDisabled: Boolean,
+    onInfoDisabledChange: (Boolean) -> Unit,
+    onShowInfo: () -> Unit,
+) {
+    val lastIndex = questionCount - 1
+
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+
+        // 🔹 Previous
+        IconButton(
+            onClick = {
+                if (currentQuestionIndex > 0) {
+                    viewModel.currentQuestionIndex.value -= 1
+                    onInfoDisabledChange(!viewModel.doIHaveCurrentQuestionInfo())
+                    viewModel.resetInfoButtonTapped()
+                }
+            },
+            enabled = currentQuestionIndex > 0
+        ) {
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                contentDescription = "Previous",
+                tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
+                modifier = Modifier.size(36.dp)
+            )
+        }
+
+        // 🔹 Expanding space left
+        Spacer(modifier = Modifier.weight(1f))
+
+        // 🔹 Info + Auto-advance buttons (centered)
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            InfoCircleButton(
+                infoDisabled = infoDisabled,
+                onClick = {
+                    if (!infoDisabled) {
+                        onShowInfo()
+                        viewModel.onInfoButtonTapped() //mark user getting help
+                    }
+                }
+            )
+            // Auto-advance toggle: grey = off, blue = on. Shared setting across all quiz types.
+            AutoAdvanceToggleButton(
+                enabled = autoAdvance,
+                onClick = { viewModel.toggleAutoAdvance() }
+            )
+        }
+
+        // 🔹 Expanding space right
+        Spacer(modifier = Modifier.weight(1f))
+
+        // 🔹 Next
+        IconButton(
+            onClick = {
+                if (currentQuestionIndex < lastIndex) {
+                    viewModel.currentQuestionIndex.value += 1
+                    onInfoDisabledChange(!viewModel.doIHaveCurrentQuestionInfo())
+                    viewModel.resetInfoButtonTapped()
+                }
+            },
+            enabled = currentQuestionIndex < lastIndex
+        ) {
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                contentDescription = "Next",
+                tint = if (currentQuestionIndex == lastIndex) Color.Gray else buttonColor,
+                modifier = Modifier.size(36.dp)
+            )
         }
     }
+}
+
+
+/** The Correct / Tries tally row. */
+@Composable
+private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
+    ) {
+        Text(
+            text = "Correct: $correct",
+            style = MaterialTheme.typography.bodyLarge.copy(
+                fontSize = 16.sp,
+                color = Color.Green
+            ),
+            modifier = Modifier
+                .weight(1f)
+                .padding(start = 16.dp) // Add padding to the start
+        )
+        Text(
+            text = "Tries: $tries",
+            style = MaterialTheme.typography.bodyLarge.copy(
+                fontSize = 16.sp,
+                color = Color.Red
+            ),
+            modifier = Modifier
+                .weight(1f)
+                .padding(end = 16.dp), // Add padding to the end
+            textAlign = TextAlign.End // Align text to the end
+        )
+    }
+}
+
+
+/** The row of paging dots (one per question). */
+@Composable
+private fun UsageQuizPagingDots(
+    questionCount: Int,
+    currentQuestionIndex: Int,
+    userAnswers: MutableMap<Int, Boolean>,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 8.dp),
+        horizontalArrangement = Arrangement.Center // Center the dots horizontally
+    ) {
+        for (index in 0 until questionCount) { // Iterate through the questions
+            Box(
+                modifier = Modifier
+                    .size(10.dp) // Set size of the dot
+                    .clip(CircleShape) // Make it a circle
+                    .background(
+                        if (index == currentQuestionIndex) blueBright2 else dotColor(
+                            index,
+                            userAnswers
+                        )
+                    ) // Set color based on current page
+            )
+            Spacer(modifier = Modifier.width(4.dp)) // Add spacing between dots
+        }
+    }
+}
+
+
+/** Rate-limit / info / dashboard bottom sheets for the usage quiz screen. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun UsageQuizBottomSheets(
+    viewModel: UsageQuizViewModel,
+    context: Context,
+    isRateLimitingSheetVisible: Boolean,
+    isDailyRateLimitingSheetVisible: Boolean,
+    isHourlyRateLimitingSheetVisible: Boolean,
+    showInfoBottomSheet: Boolean,
+    onCloseInfo: () -> Unit,
+    infoQuestion: QuizQuestion?,
+    showDashboardSheet: Boolean,
+    onCloseDashboard: () -> Unit,
+    selectedLevelDescription: String,
+) {
+    val dashboardSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
     if (isRateLimitingSheetVisible) {
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
     if (isDailyRateLimitingSheetVisible) {
-//        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
         if (context is androidx.activity.ComponentActivity) {
-//            RateLimitDailyReasonsBottomSheet(
-//                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
-//                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
-//            )
             RateLimitDailyPaywallBottomSheet(
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                 onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
@@ -744,10 +874,6 @@ fun UsageQuizScreen(
     }
     if (isHourlyRateLimitingSheetVisible) {
         if (context is androidx.activity.ComponentActivity) {
-//            RateLimitHourlyReasonsBottomSheet(
-//                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
-//                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
-//            )
             RateLimitHourlyPaywallBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
@@ -755,16 +881,16 @@ fun UsageQuizScreen(
         }
     }
 
-    if (showInfoBottomSheet) {
+    if (showInfoBottomSheet && infoQuestion != null) {
         QuizInfoBottomSheetView(
-            questions[currentQuestionIndex].summary,
-            questions[currentQuestionIndex].explain,
-            onCloseSheet = { showInfoBottomSheet = false }
+            infoQuestion.summary,
+            infoQuestion.explain,
+            onCloseSheet = onCloseInfo
         )
     }
     if (showDashboardSheet) {
         ModalBottomSheet(
-            onDismissRequest = { showDashboardSheet = false },
+            onDismissRequest = onCloseDashboard,
             sheetState = dashboardSheetState,
             containerColor = MaterialTheme.colorScheme.surface,
             contentColor = MaterialTheme.colorScheme.onSurface
@@ -772,14 +898,14 @@ fun UsageQuizScreen(
             // Constrain height to 90% of screen for a "Full Sheet" feel
             Box(modifier = Modifier.fillMaxHeight(0.9f)) {
 
-                val level = selectedLevel.description
+                val level = selectedLevelDescription
                 // We reuse the UsageDashboardScreen directly.
                 // Hilt will automatically inject UsageDashboardViewModel inside it.
                 UsageDashboardScreen(
                     targetLevel = level,
                     onStartQuiz = { quizId ->
                         // 1. Close the sheet
-                        showDashboardSheet = false
+                        onCloseDashboard()
 
 
 
@@ -794,7 +920,8 @@ fun UsageQuizScreen(
             }
         }
     }
-} //:QuizScreen
+}
+
 
 @Composable
 fun DropdownMenuBoxObsolete(
