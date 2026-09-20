@@ -409,6 +409,7 @@ fun ReferenceQuizScreen(
                 }
 
                 question.words.forEach { option ->
+                  //  var isMultiLine by remember(option) { mutableStateOf(false) }
                     val isOptionCorrect = option == question.correctOption
 
                     // Format-aware sentence for the loudspeaker preview (and for replaying a solved question).
@@ -471,6 +472,9 @@ fun ReferenceQuizScreen(
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.weight(1f)
+                                .padding(
+                                    vertical = 2.dp //space between rows
+                                )
                         ) {
                             Icon(
                                 // Loudspeaker: preview the sentence only. Never affects Correct/Tries.
@@ -487,6 +491,9 @@ fun ReferenceQuizScreen(
                                 text = option,
                                 color = orangeLight,
                                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
+//                                onTextLayout = { textLayoutResult ->
+//                                    isMultiLine = textLayoutResult.lineCount > 1
+//                                },
                                 modifier = Modifier
                                     .weight(1f)
                                     .padding(vertical = 2.dp)

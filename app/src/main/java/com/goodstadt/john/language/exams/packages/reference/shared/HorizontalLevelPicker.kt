@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.reference.shared
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -51,6 +52,10 @@ fun HorizontalLevelPicker(
                     contentColor = Color.White // White text for all buttons
                 ),
                 shape = RoundedCornerShape(8.dp),
+                // Material3 Buttons default to 24.dp horizontal content padding, which wastes a lot of
+                // width and pushes the last chip off screen for long labels (e.g. German "Fortgeschritten").
+                // Tighten the internal padding (and the inter-chip gap) so all chips fit on one row.
+                contentPadding = PaddingValues(horizontal = 8.dp, vertical = 6.dp),
                 modifier = Modifier.padding(horizontal = 1.dp)
             ) {
                 if (isLocked) {

@@ -6,6 +6,8 @@
 
 **Suggested working order:** do §1 (remote content) first, then the gating/§12–15 group early (many later screens check it), then features in any order. Each section is independently shippable.
 
+**Build order & progress tracker:** see [`PORT_PLAN.md`](./PORT_PLAN.md) — the phased plan of attack (grouping work that Android built at different times but iOS should build together) plus a Started/Done checklist for every task.
+
 ---
 
 ## 1. Cloud‑hosted content (move data out of the app bundle)
@@ -15,7 +17,7 @@ The single biggest change. Previously all quiz/reference/vocab data shipped insi
 - **Sheets & formats.** Every content set is a "sheet" stored under a well‑known path. Each sheet declares a **file format** number that dictates how it is parsed and displayed. Formats in use: `0` = categories + words (vocab lists); `1` = tabs + words‑and‑sentences joined by a parent id; `2` = flat words‑and‑sentences; `7`/`10` = sectioned quiz content; `13` = sectioned content with an "explain" field. The loader dispatches on this number; each format has its own parse path. When porting, replicate the dispatch table exactly — a sheet parsed with the wrong format silently yields empty data.
 - **Local cache + versioning.** Sheets are cached to local files after first fetch. A lightweight remote "versions" map tells the app when a cached sheet is stale and should be re‑fetched. On a cold/offline start the bundle copy is used, then transparently upgraded once online.
 - **Per‑language logical‑name prefix.** The app is multi‑language (English / German / Chinese are separate builds). Each build prefixes its logical sheet names with a language token (`English…`, `German…`, `Chinese…`) so the same content type in different languages never collides in the store. **This iOS project is the Chinese build → use the `Chinese` prefix everywhere.** Centralise the prefix in one place; every sheet‑name mapping reads from it.
-- **Admin upload tool (developer‑only).** There is an internal screen that reads local JSON files and uploads them to the store, choosing the right sub‑structure per file format, and prefixing names per language. This is **debug/developer builds only** and must never be reachable in a shipping build. On iOS, gate it behind a debug build flag. Porting the uploader is optional — the content can also be uploaded once from Android and simply consumed by iOS — but you will likely want a way to push Chinese sheets. The screen is organised as collapsible **sections → subsections → per‑file rows**, each row an Upload + Read pair; Upload dispatches by the JSON's own `fileFormat`, Read round‑trips it as a sanity check, and a second Upload of an existing sheet is blocked (there's no Delete). Sources come from bundled assets or `res/raw`; a subsection whose files aren't bundled in the current flavour is dropped. Content types uploaded this way include the vocab lists, Grammar/Section/Usage/Baseline quizzes, the Reference sheets, and a **"Reference Quiz"** subsection (fileFormat‑7 adjective quizzes named `GermanReferenceAdjectives<level>` whose Firestore doc name is the JSON's own `sheetname`).
+- **Admin upload tool (developer‑only).** There is an *internal screen that reads local JSON files and uploads them to the store, choosing the right sub‑structure per file format, and prefixing names per language. This is **debug/developer builds only** and must never be reachable in a shipping build. On iOS, gate it behind a debug build flag. Porting the uploader is optional — the content can also be uploaded once from Android and simply consumed by iOS — but you will likely want a way to push Chinese sheets. The screen is organised as collapsible **sections → subsections → per‑file rows**, each row an Upload + Read pair; Upload dispatches by the JSON's own `fileFormat`, Read round‑trips it as a sanity check, and a second Upload of an existing sheet is blocked (there's no Delete). Sources come from bundled assets or `res/raw`; a subsection whose files aren't bundled in the current flavour is dropped. Content types uploaded this way include the vocab lists, Grammar/Section/Usage/Baseline quizzes, the Reference sheets, and a **"Reference Quiz"** subsection (fileFormat‑7 adjective quizzes named `GermanReferenceAdjectives<level>` whose Firestore doc name is the JSON's own `sheetname`).
 - **Gotchas:** (a) keep the bundle fallback so first launch works offline; (b) the versions check must **not block** the UI when offline — see §21; (c) get the format‑to‑parser mapping right before anything else, or every downstream screen shows empty lists; (d) **the uploader dispatches purely on the JSON's own `fileformat` field, but a file can be mislabeled.** A sheet's *real* type is how the app READS it (its manifest `sheetDataType` — e.g. Prepositions is `VocabFile` = format 0, read via the format‑0 path), not the number written in the file. A VocabFile mislabeled `fileformat:1` gets sent to the format‑1 parser, which looks for a `data[]` array that isn't there, and "uploads" 0 rows while still writing the header doc — after which the exists‑guard blocks any retry until you delete the doc. Validate the tag against the manifest type before uploading. (e) The format‑0 upload uses the `word` text as the word doc id; some sheets legitimately repeat a word within a category (Prepositions has three `zu (Dativ)` entries with different examples), so **disambiguate colliding ids** or two‑thirds of the rows silently overwrite. Reads don't depend on the doc id (they read fields and sort by `sortOrder`), so a suffix on collision is safe.
 
 ---
@@ -573,3 +575,79 @@ A **Play ⇄ Pause** button on each section header (the vocab tabs 1/2/3, placed
 | §9b‑ii English prepositions | Added the **en** parallel of the prepositions teaching sheet + quiz. `EnglishPrepositionsTeaching` (res/raw `english_prepositions_teaching.json`) via the same generic `Format6TeachingScreen`/`PronounsClaudeScreen`; manifest entry replaces `EnglishPrepositions`/VocabScreen in the en order (old kept as fallback); `ContentRepository` mapping added. **English‑learner content** (not translated): Place / Time / Movement / Verbs+prep / Adjectives+prep / Common confusions, with "How it works" `forms` tables repurposed as usage rules (at=a point, on=a surface, in=a space; depend→on, good→at…). Quiz `EnglishPrepositionsTeachingQuiz.json` (58 Qs) **blanks the preposition** (fixed collocation ⇒ one answer; distractors include learner errors like *different than*); same `loadPrepositionsQuiz` path, random‑10 cap, and `Prepositions/<category>` Focus marking. No Kotlin/screen changes — the `…PrepositionsTeaching` gate already covers en (Sep 18) |
 
 *Bug‑fix commits are intentionally omitted.*
+
+---
+
+## Appendix B — New source files since 16 July 2026 (Kotlin)
+
+Grouped by feature (the § it implements). **Variant** = which flavour source set the file lives in: **both** = shared `app/src/main` (applies to en, de and zh — zh ignored here); **de** / **en** = that flavour's config source set. Derived from `git log --diff-filter=A` (following renames) cross‑checked against the current tree; only the principal files per feature are listed (not every small helper). The big Aug‑2026 repackage moved many pre‑existing files, so a few screens below were *adapted/renamed* from older ones rather than written from scratch — noted where so.
+
+| Feature (§) | New source files | Variant |
+|---|---|---|
+| §1 Cloud content, mappings, uploader | `data/GrammarSheetMapping.kt`, `data/SectionQuizSheetMapping.kt`, `data/UsageQuizSheetMapping.kt`, `data/ReferenceQuizSheetMapping.kt`, `data/ReadinessAuditSheetMapping.kt`, `data/CategoryQuizRepository.kt`, `data/GrammarCatalog.kt`, `data/GrammarModels.kt`, `config/DebugFlags.kt`, `packages/UploadJson/{UploadJsonScreen,UploadJsonViewModel,UploadAdminRepository,UploadAdminModule}.kt`, `screens/CategoryTab/SectionQuizKeyDerivation.kt` | both |
+| §1 (per‑flavour config) | `config/GrammarCatalog.kt`, `config/SectionQuizKeyMap.kt`, `config/UsageQuizLevelsFilename.kt` | de + en |
+| §2 Readiness Audit / diagnostic | `packages/ReadinessAudit/{ReadinessAuditScreen,ReadinessAuditViewModel}.kt`, `packages/diagnostic/{DiagnosticScreen,DiagnosticViewModel,DiagnosticResultView,DiagnosticRepository,DiagnosticModel}.kt`, `managers/AuditEngine.kt`, `managers/ReadinessDialsProvider.kt`, `data/ReadinessAuditRepository.kt`, `packages/reference/shared/ReadinessAuditDetail.kt`, `screens/shared/gamification/AuditDashboardHeader.kt` | both |
+| §3 Progress (MyProgress) | `packages/MyProgress/{MyProgressScreen,MyProgressViewModel,MyProgressComponents}.kt` | both |
+| §4 Focus | `packages/Focus/{FocusScreen,FocusViewModel}.kt` | both |
+| §5–§8/§25 Quiz engine | `packages/ReferenceQuiz/{ReferenceQuizScreen,ReferenceQuizViewModel}.kt` (renamed from `GrammarQuiz*`, adapted from `UsageQuizScreen`), `screens/shared/QuizNavButtons.kt`, `data/repository/VocabMasteryEngine.kt` (§8b/§16 SRS), `models/SrsState.kt` | both |
+| §9b Pronouns (fileFormat 6) | `packages/ReferencePronouns/{PronounsClaudeScreen,PronounsClaudeViewModel,PronounsClaudeModels,PronounsClaudeStyle,PronounQuizGenerator}.kt` | both |
+| §9b‑iii Conjugations teaching | `packages/Conjugations/{ConjugationsTeachingScreen,ConjugationsTeachingViewModel,ConjugationsQuizGenerator}.kt` | both |
+| §9c Reference strength | `data/strength/ReferenceStrengthRepository.kt` | both |
+| §10 Word of the Day | `packages/dailydictionary/{DailyWordPoolRepository,DailyDictionaryModels,DictionaryEntryBrowserScreen,DictionaryEntryBrowserViewModel,DictionaryEntryCard}.kt` | both |
+| §12 Gating | `managers/AccessPolicy.kt` | both |
+| §16 Spaced dots | `models/SrsState.kt`, `data/repository/VocabMasteryEngine.kt` (shared with §8b) | both |
+| §17–§19 Saved + reminders | `packages/SavedPractice/{SavedPracticeScreen,SavedPracticeViewModel,SavedInfoSheet}.kt`, `managers/SavedPracticeManager.kt`, `managers/{PracticeReminderScheduler,PracticeReminderReceiver}.kt`, `models/{SavedSentence,SaveReminder}.kt` | both |
+| §23 Translate | `packages/Translate/{TranslateSheet,TranslateViewModel}.kt`, `data/repository/TranslationRepository.kt`, `utils/AppSignature.kt` (§23a cert SHA‑1) | both |
+| §24 Sequence player | `managers/SequencePlayer.kt` | both |
+| Onboarding / level select | `packages/me/{ChooseExamLevelSheet,ChooseExamLevelViewModel}.kt`, `screens/me/{ChooseExamLevelSheet,ChooseEnglishExamLevelSheet,ChooseExamLevelViewModel}.kt`, `screens/shared/CollapsibleSection.kt`, `utils/WindowSizeUtils.kt` | both |
+
+> Notes: §9b‑ii (Prepositions teaching) added **no** new screen — it reuses `PronounsClaudeScreen`/`ViewModel` (only data + a route). §11 (AI paragraph), §13 (IAP sheet), §14 (rate limiting) reused/extended pre‑existing classes (billing repo, `SimpleRateLimiter`, the paragraph screen) rather than adding whole new files, so they aren't listed here — see their spec sections.
+
+---
+
+## Appendix C — New content sheets since 16 July 2026 (JSON)
+
+**Variant** = which flavour ships the file. "Firestore‑only" = that flavour has no bundle copy (first run needs the network; see §9a). Firestore doc name = the sheet's `sheetname` (language‑prefixed).
+
+### C1 — fileFormat‑6 reference / teaching sheets (`res/raw`)
+
+| Bundle file (de / en) | Firestore doc (de / en) | de | en | Screen |
+|---|---|:--:|:--:|---|
+| `german_reference_pronouns.json` / `english_reference_pronouns.json` | `GermanReferencePronouns` / `EnglishReferencePronouns` | ✓ | ✓ | Format6 (§9b) |
+| `german_prepositions_teaching.json` / `english_prepositions_teaching.json` | `GermanPrepositionsTeaching` / `EnglishPrepositionsTeaching` | ✓ | ✓ | Format6 teaching (§9b‑ii) |
+| `german_conjugations_to_be_teaching.json` / `english_…` | `GermanConjugationsToBeTeaching` / `English…` | ✓ | ✓ | Conjugations teaching (§9b‑iii) |
+| `german_conjugations_to_have_teaching.json` / `english_…` | `GermanConjugationsToHaveTeaching` / `English…` | ✓ | ✓ | Conjugations teaching (§9b‑iii) |
+| `german_conjugations_to_do_teaching.json` / `english_…` | `GermanConjugationsToDoTeaching` / `English…` | ✓ | ✓ | Conjugations teaching (§9b‑iii) |
+| `german_conjugations_to_get_teaching.json` / `english_…` | `GermanConjugationsToGetTeaching` / `English…` | ✓ | ✓ | Conjugations teaching (§9b‑iii) |
+
+### C2 — Other reference content sheets (`res/raw`)
+
+| Bundle file | Firestore doc | de | en | Screen / format |
+|---|---|:--:|:--:|---|
+| `german_a1_adjectives.json` … `_b2_adjectives.json` | `GermanA1Adjectives` … `B2` | ✓ | Firestore‑only | GroupedVocab (fmt 0) |
+| `german_kennen_wissen`, `german_fragen_bitten`, `german_bringen_holen`, `german_hoeren_zuhoeren` | `GermanKennenWissen`, `GermanFragenBitten`, `GermanBringenHolen`, `GermanHoerenZuhoeren` | ✓ | Firestore‑only (en has 7 different pairs) | GroupedFormat2 (fmt 2) |
+| `german_sounds_the_same.json` | `GermanSoundsTheSame` (en: `EnglishDefinitionsFormat1`) | ✓ | Firestore‑only | Format1 (fmt 1) |
+| `conjugations_to_be/have/do/get.json` | `GermanConjugationsToBe/Have/Do/Get` (old fixed screen) | ✓ | Firestore‑only | Conjugations old list (fmt 0) |
+| `daily_word_dictionary_pool_v1.json` | — (local pool) | ✓ | — | Word of the Day (§10) |
+
+### C3 — Reference quizzes (`assets/Quizzes/Reference/`)
+
+| File | de | en |
+|---|:--:|:--:|
+| `GermanReferencePronounsQuiz.json` / `EnglishReferencePronounsQuiz.json` | ✓ | ✓ |
+| `GermanPrepositionsTeachingQuiz.json` / `EnglishPrepositionsTeachingQuiz.json` | ✓ | ✓ |
+| `GermanReferenceAdjectivesA1Quiz.json` … `B2Quiz.json` (4) | ✓ | ✗ |
+
+### C4 — Bulk quiz corpus (`assets/Quizzes/…`) — summarised, not enumerated
+
+Naming: `Quizzes/<Family>/<Level>/<Type><Key>-<lang>.json`; Firestore doc = the file's own `sheetname`.
+
+| Family | Path pattern | de files | en files | Notes |
+|---|---|:--:|:--:|---|
+| Grammar (§5) | `Quizzes/Grammar/<A1–B2>/Grammar<Key>-<lang>.json` | ~71 | ~68 | fileFormat 7/10 |
+| Section (§7) | `Quizzes/SectionQuiz/<A1–B2>/WordQuiz<Key>N-<lang>.json` | ~140 | ~1 (rest Firestore‑only) | en ships almost none in‑bundle |
+| Usage (§6) | `Quizzes/UsageQuiz/…-<lang>.json` | ~23 | ~1 | fileFormat 7/10/13 |
+| Readiness / Baseline (§2) | `Quizzes/ReadinessAudit/{Audit,BaselineAudit}<Level>-N-<lang>.json` | ✓ | ✓ | per‑level audit sets |
+
+> The old `app/src/de/backup_sectionquiz_old/**` and `backup_quizzes_old/**` trees are **backups, not shipped** — ignore for porting.
+
