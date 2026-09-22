@@ -26,6 +26,7 @@ import javax.inject.Inject
 @HiltViewModel
 class TranslateViewModel @Inject constructor(
     private val translationRepository: TranslationRepository,
+    private val translationCache: TranslationCache,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val billingRepository: BillingRepository,
     private val userPreferencesRepository: UserPreferencesRepository
@@ -115,10 +116,23 @@ class TranslateViewModel @Inject constructor(
         viewModelScope.launch {
             isTranslating = true
             errorMessage = null
+
+            // Local cache first: an instant hit avoids a paid API call and works offline.
+            val cached = translationCache.get(sourceLang, targetLang, text)
+            if (cached != null) {
+                targetText = cached
+                isTranslating = false
+                return@launch
+            }
+
             val result = translationRepository.translate(text, sourceLang, targetLang)
             isTranslating = false
             result
-                .onSuccess { targetText = it }
+                .onSuccess {
+                    targetText = it
+                    // Remember it for quick/offline retrieval next time.
+                    translationCache.put(sourceLang, targetLang, text, it)
+                }
                 .onFailure { errorMessage = it.message ?: "Translation failed" }
         }
     }
