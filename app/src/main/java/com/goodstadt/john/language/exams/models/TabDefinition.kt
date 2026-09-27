@@ -2,16 +2,7 @@ package com.goodstadt.john.language.exams.models
 
 import kotlinx.serialization.Serializable
 
-@Serializable
-data class TabsManifest(
-    val tabs: List<SubTabDefinitionObsolete>
-)
 
-@Serializable
-data class SubTabDefinitionObsolete(
-    val title: String,
-    val firestoreDocumentId: String
-)
 
 @Serializable
 data class TabDefinition(

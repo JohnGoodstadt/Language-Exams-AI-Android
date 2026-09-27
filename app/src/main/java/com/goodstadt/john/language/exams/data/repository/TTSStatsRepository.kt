@@ -269,24 +269,7 @@ class TTSStatsRepository @Inject constructor(
     }
 
     //if any word list is updated this 1 field will be changed
-    suspend fun getSkillevelObsolete(): String {
 
-
-
-        val a = this.currentSkillLevel()
-        return try {
-            val key = userPreferencesRepository.getSkillLevelKey()
-            val skilllevel = sharedPreferences.getString(key, null)
-            if (!skilllevel.isNullOrBlank()) {
-                skilllevel
-            } else {
-                "A0"
-            }
-        } catch (e: Exception) {
-            Timber.e("Error retrieving date for key 'Skill Level': ${e.localizedMessage}")
-            "A0"
-        }
-    }
     fun getLastGlobalUpdateCheckDate(): Date? {
         return try {
             val dateString = sharedPreferences.getString(LAST_GLOBAL_UPDATE_DATE_KEY, null)
@@ -495,16 +478,7 @@ class TTSStatsRepository @Inject constructor(
     fun updateTTSStatsWithoutCosts() {
         incUserPlayedSentenceCount() //count how many mp3s user has played
     }
-    fun updateGlobalTTSStatsObsolete(words: String) {
-        if (words.isEmpty()) {
-            return
-        }
 
-        val characters = words.count()
-
-        inc(fsDOC.GlobalStats, TTSChars, characters)
-        inc(fsDOC.GlobalStats, TTSCallCount)
-    }
     fun incUserStatDouble(fieldName:String, value:Double) {
         incDouble(fsDOC.USER,fieldName,value)
     }
@@ -839,43 +813,6 @@ class TTSStatsRepository @Inject constructor(
     private fun String.removeBrackets(): String =
         replace(Regex("""[\[\]\(\)<>]"""), "")
 
-    /**
-     * Recalculates progress by scanning the app's files directory once,
-     * then counting matches against filenames like:
-     *   "<voiceName>_<wordWithoutBrackets>.<firstSentence>.mp3"
-     *
-     * @param context   Android context
-     * @param categories List of categories
-     * @param voiceName  e.g. "en-GB-Neural2-A"
-     * @param directory  where the mp3s live (defaults to internal files dir)
-     */
-    suspend fun recalcProgressObsolete(
-        context: android.content.Context,
-        categories: List<Category>,
-        voiceName: String,
-        directory: java.io.File = context.filesDir
-    ): ProgressStats = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
-
-        // 1) List directory once -> Set<String> of filenames
-        val namesOnDisk: Set<String> = directory.list()?.toSet() ?: emptySet()
-
-        var total = 0
-        var completed = 0
-        val prefix = "${voiceName}_"
-
-        // 2) Count totals + membership matches
-        for (category in categories) {
-            total += category.words.size
-            for (w in category.words) {
-                val firstSentence = w.sentences.firstOrNull()?.sentence ?: continue
-                val fname = "$prefix${w.word.removeBrackets()}.$firstSentence.mp3"
-                if (namesOnDisk.contains(fname)) completed++
-            }
-        }
-
-       ProgressStats(size = total, completed = completed)
-       // progressStats = ProgressStats(size = total, completed = completed)
-    }
 
     /**
      * Recalculate by scanning the directory once (off the main thread).

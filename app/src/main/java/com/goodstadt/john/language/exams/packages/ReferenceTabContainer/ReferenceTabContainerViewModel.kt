@@ -106,30 +106,7 @@ class ReferenceTabContainerViewModel @Inject constructor(
         }
     }
 
-    private fun buildTabsFromManifestObsolete(manifest: AppUIManifest): List<DisplayTab> {
-        val registry = manifest.sheetRegistry
-        val tabOrder = manifest.layouts.referenceTab.order
 
-        // Get device language code (e.g., "en", "es", "fr")
-        val deviceLanguage = Locale.getDefault().language
-
-        return tabOrder.mapNotNull { id ->
-
-            // --- FILTER LOGIC ---
-            // If the tab is "LocalLanguage", strictly require the device to be Spanish ("es")
-            if (id == "SpanishLanguage" && deviceLanguage != "es") {
-                 Timber.d("Hiding Local Language tab because device is $deviceLanguage")
-                return@mapNotNull null
-            }else{
-                Timber.d("Found Local Language $deviceLanguage")
-            }
-
-            // --- MAP LOGIC ---
-            registry[id]?.let { definition ->
-                DisplayTab(id = id, definition = definition)
-            }
-        }
-    }
     private fun buildTabsFromManifest(manifest: AppUIManifest): List<DisplayTab> {
         val registry = manifest.sheetRegistry
         val tabOrder = manifest.layouts.referenceTab.order

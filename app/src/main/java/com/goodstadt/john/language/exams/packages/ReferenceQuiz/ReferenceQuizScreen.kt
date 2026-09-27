@@ -146,13 +146,13 @@ fun ReferenceQuizScreen(
             pronounsQuizSheet != null ->
                 viewModel.loadPronounsQuiz(pronounsQuizSheet, category, level, pronounsCategoryFilter)
             referenceGroupKey != null ->
-                viewModel.loadReferenceQuiz(referenceGroupKey, category, level)
+                viewModel.loadReferenceQuiz(referenceGroupKey, category, level) //Adjectives
             else ->
-                viewModel.loadGrammarQuiz(category, level)
+                viewModel.loadGrammarQuiz(category, level) //Focus TAB
         }
     }
 
-    LaunchedEffect(currentQuestionIndex, questions) {
+    LaunchedEffect(currentQuestionIndex, questions) { //called on each change of question
         val question = questions.getOrNull(currentQuestionIndex)
         if (question != null) {
             val questionText =

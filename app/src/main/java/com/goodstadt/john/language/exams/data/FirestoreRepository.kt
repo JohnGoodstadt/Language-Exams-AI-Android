@@ -329,29 +329,7 @@ class FirestoreRepository @Inject constructor(
         return transformedMap
     }
 
-    fun fsUpdateGlobalStatsObsolete(stats: Map<String, Int>) {
-        FirebaseAuth.getInstance().currentUser ?: return
 
-        val formattedDate =
-            SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date()) // e.g., 2024-04
-
-        val firestoreUpdateFields = mutableMapOf<String, FieldValue>()
-        for ((key, value) in stats) {
-            val count: Long = value.toLong() // Convert Int to Long
-            firestoreUpdateFields[key] = FieldValue.increment(count)
-        }
-
-        // 1. Update global month totals
-        val docRef = FirebaseFirestore.getInstance().collection(fb.stats).document(formattedDate)
-        docRef.update(firestoreUpdateFields as Map<String, Any>)
-            .addOnFailureListener { e ->
-                Timber.e("Error updating inc field fsUpdateGlobalStats (Download field): $e")
-            }
-
-        // 2. Individual user stats area for month (TODO: Implement this part if needed)
-        //TODO: implement
-        // fbUpdateUserGlobalStats(stats)
-    }
 
 
     // Function needs to be 'suspend' to handle success/failure sequentially

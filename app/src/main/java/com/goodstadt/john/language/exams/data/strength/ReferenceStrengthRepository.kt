@@ -73,11 +73,14 @@ class ReferenceStrengthRepository @Inject constructor(
      */
     fun recordQuizResult(areaId: String, label: String, correct: Int, answered: Int) {
         if (answered <= 0) return
-        val pct = (correct.toFloat() / answered).coerceIn(0f, 1f)
         synchronized(lock) {
             val prev = store[areaId]
-            val mark = if (prev == null || prev.attempts == 0) pct
-            else ALPHA * pct + (1 - ALPHA) * prev.mark
+            val mark = ReferenceStrengthMath.blend(
+                previousMark = prev?.mark,
+                previousAttempts = prev?.attempts ?: 0,
+                correct = correct,
+                answered = answered
+            )
             store[areaId] = Stored(
                 label = label.ifBlank { prev?.label ?: areaId },
                 mark = mark,
@@ -126,12 +129,8 @@ class ReferenceStrengthRepository @Inject constructor(
 
     // --- internals ---
 
-    private fun levelOf(mark: Float, totalAnswered: Int, attempts: Int): ReferenceStrengthLevel = when {
-        attempts == 0 || totalAnswered < MIN_ANSWERED -> ReferenceStrengthLevel.UNTESTED
-        mark < WEAK_CEILING -> ReferenceStrengthLevel.WEAK
-        mark < STRONG_FLOOR -> ReferenceStrengthLevel.OK
-        else -> ReferenceStrengthLevel.STRONG
-    }
+    private fun levelOf(mark: Float, totalAnswered: Int, attempts: Int): ReferenceStrengthLevel =
+        ReferenceStrengthMath.level(mark, totalAnswered, attempts)
 
     private fun Stored.toStrength(areaId: String) = ReferenceStrength(
         areaId, label, mark, levelOf(mark, totalAnswered, attempts),
@@ -181,12 +180,4 @@ class ReferenceStrengthRepository @Inject constructor(
         val lastUpdated: Long = 0
     )
 
-    companion object {
-        /** EMA weight for the newest run (0..1). Higher = more responsive to the latest quiz. */
-        private const val ALPHA = 0.5f
-        /** Below this many lifetime answered questions an area stays UNTESTED (too little signal). */
-        private const val MIN_ANSWERED = 3
-        private const val WEAK_CEILING = 0.5f   // mark < 0.50  -> WEAK
-        private const val STRONG_FLOOR = 0.8f   // mark >= 0.80 -> STRONG (in between -> OK)
-    }
 }

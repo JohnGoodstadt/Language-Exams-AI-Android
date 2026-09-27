@@ -276,22 +276,7 @@ class GroupedSheetViewModel @Inject constructor(
         return historyManager.getPlayCount("Reference", contentID)
     }
 
-    // ✅ ACTION: View calls this on tap
-//    fun handleTapObsolete(sentence: String) {
-//        viewModelScope.launch {
-//            // 1. Play Audio (Waterfall)
-//            val success = audioPlaybackRepository.playTrackAndGetResult(
-//                sentence = sentence,
-//                level = "Reference",
-//                sheetName = _uiState.value.currentSheetName
-//            )
-//            // 2. Update Graph Stats (If success)
-//            if (success) {
-//                didPlayReferenceSentence(sentence)
-//            }
-//        }
-//        historyManager.debugPrintAllHistory()
-//    }
+
     // The last sentence the user played on this screen; pre-fills the Translate sheet (blank if none).
     private var lastPlayedSentence: String = ""
     fun getLatestSentence(): String = lastPlayedSentence

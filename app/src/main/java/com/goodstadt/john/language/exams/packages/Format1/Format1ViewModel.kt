@@ -6,12 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AppConfigRepository
-import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.AppUIManifest
@@ -79,7 +79,7 @@ class Format1ViewModel @Inject constructor(
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
-        loadData()
+        loadData() //Sounds the Same
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
@@ -211,35 +211,6 @@ class Format1ViewModel @Inject constructor(
     }
 
     // ✅ ACTION: View calls this on tap
-//    fun handleTapObsolete(sentence: String) {
-//        val contentID = FirebaseAudioService.generateContentID(sentence)
-//        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
-//
-//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-//        // This turns the Red Dot ON immediately.
-//        didPlayReferenceSentence(sentence)
-//
-//        viewModelScope.launch {
-//            // 1. Play Audio (Waterfall)
-//            val success = audioPlaybackRepository.playTrackAndGetResult(
-//                sentence = sentence,
-//                level = "Reference",
-//                sheetName = sheetName
-//            )
-//
-//            // 2. Update Graph Stats (If success)
-//            if (!success) {
-//                Timber.w("Playback failed. Rolling back Red Dot.")
-//
-//                // Only undo if it wasn't there before this specific tap
-//                if (!wasAlreadyHeard) {
-//                    undoPlayReferenceSentence(sentence)
-//                }
-//            }
-//            historyManager.debugPrintAllHistory()
-//        }
-//
-//    }
 
 
     private fun didPlayReferenceSentence(sentence: String) {
@@ -267,42 +238,12 @@ class Format1ViewModel @Inject constructor(
 
         refreshUI()
     }
-    private fun refreshUIObsolete() {
-        _uiState.update { currentState ->
-            if (currentState is Format1UiState.Success) {
-                currentState.copy(lastUpdate = System.currentTimeMillis())
-            } else currentState
-        }
-    }
+
     fun onResume() {
         // If data changed while app was backgrounded (e.g. sync), this ensures we see it
         refreshUI()
     }
-    private fun undoPlayReferenceSentence(sentence: String) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val levelName = "Reference"
 
-        // 1. Revert History (Decrements count)
-        // Ensure you added 'undoMarkSentenceHeard' to HistorySyncManager in the previous steps
-        historyManager.undoMarkSentenceHeard(levelName, contentID)
-
-        // 2. Revert Graph Stats
-        // Since we only call this if !wasAlreadyHeard, we know we definitely incremented the graph.
-        // So we must decrement it back.
-        val currentStats = audioCacheManager.getReferenceStats(sheetName)
-
-        // Safety check to ensure we don't go below 0
-        if (currentStats.heard > 0) {
-            audioCacheManager.updateReferenceStats(
-                key = sheetName,
-                heard = currentStats.heard - 1,
-                total = currentStats.total
-            )
-        }
-
-        // 3. Update UI (Dot disappears)
-        refreshUI()
-    }
     // ... recalculateReferenceStats helper ...
     // MARK: - Internal Helpers
 // MARK: - Public Accessors for View

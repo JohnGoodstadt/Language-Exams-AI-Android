@@ -652,31 +652,8 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
 
-    fun onFocusClickedObsolete(word: Format0Word) {
-        viewModelScope.launch {
-            // 1. Save to Disk
-            recallingRepository.addWord(word)
 
-            // 2. ✅ OPTIMISTIC UPDATE: Update UI State immediately
-            // This turns the row Green instantly
-            _uiState.update { currentState ->
-                if (currentState is CategoryTabUiState.Success) {
-                    val newSet = currentState.recalledWordKeys.toMutableSet()
-                    newSet.add(word.word)
-                    currentState.copy(recalledWordKeys = newSet)
-                } else currentState
-            }
 
-            // 3. XP
-            xpManager.registerAction(XpActionType.MasterWord)
-        }
-    }
-
-    fun onCancelClickedObsolete(word: Format0Word) {
-        viewModelScope.launch {
-            recallingRepository.removeWord(word)
-        }
-    }
 
     fun onCancelClicked(word: Format0Word) {
         viewModelScope.launch {
@@ -834,62 +811,7 @@ val examName = runBlocking { userPreferencesRepository.selectedExamNameFlow.firs
 runBlocking on the main thread blocks the UI until the preference is read. This can cause ANR (Application Not Responding) dialogs.
 
 Fix: Make the function suspend and use withContext(Dispatchers.Main), or cache the examName in a class variable when it's loaded.
-     */
-    private fun checkSectionCompletionAfterNewSentenceObsolete(
-        category: Category,
-        justPlayedSentence: String
-    ) {
-        val examName = runBlocking { userPreferencesRepository.selectedExamNameFlow.first() }
-        val sectionKey = "${examName}|${category.title}" // Unique Key
 
-        // 1. Check if already marked complete
-        if (userPreferencesRepository.isSectionCompleted(examName, sectionKey)) {
-            return
-        }
-
-        // 2. Check if all words in this category are heard
-        val level = currentLoadedLevel // e.g. "B1"
-        val justPlayedID = FirebaseAudioService.generateContentID(justPlayedSentence)
-
-        var wordsHeard = 0
-
-        for (wordEntry in category.words) {
-            val sentence = wordEntry.sentences.firstOrNull()?.sentence ?: continue
-            val contentID = FirebaseAudioService.generateContentID(sentence)
-
-            // ✅ 2. THE FIX:
-            // Check History OR Check if it is the sentence we just played.
-            // This guarantees we count the current one even if History is 1ms slow.
-            if (historyManager.isHeard(level, contentID)) {
-                wordsHeard++
-            }
-            if (contentID == justPlayedID) {
-                wordsHeard++
-            }
-        }
-
-        // 3. If Complete
-        if (wordsHeard == category.words.size) {
-            // A. Save to Disk
-            userPreferencesRepository.addCompletedSection(examName, sectionKey)
-
-            // B. Award XP
-            xpManager.registerAction(XpActionType.CompleteSection)
-
-            // C. Trigger Firework UI
-           // triggerCelebration()
-            bannerManager.showBanner(
-                title = celebrationTitle.value,
-                subtitle = celebrationSubtitle.value
-            )
-
-            Timber.i("🏆 Section Completed: ${category.title}")
-
-            // D. Check Whole Sheet (Tab) Completion
-            checkSheetCompletionIfNeeded(examName)
-        }
-    }
-/*
     4. CLAUDE runBlocking on main thread → ANR risk
     File: CategoryTabViewModel.kt lines 726, 777
     Both checkSectionCompletionAfterNewSentence methods call:

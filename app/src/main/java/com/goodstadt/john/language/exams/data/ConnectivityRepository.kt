@@ -56,10 +56,7 @@ connectivityManager.activeNetworkInfo and isConnectedOrConnecting are deprecated
 
 Fix: Use connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork) to check for NET_CAPABILITY_INTERNET.
      */
-    fun isCurrentlyOnlineObsolete(): Boolean {
-        val activeNetwork = connectivityManager.activeNetworkInfo
-        return activeNetwork?.isConnectedOrConnecting == true
-    }
+
     fun isCurrentlyOffline(): Boolean {
         return !isCurrentlyOnline()
     }

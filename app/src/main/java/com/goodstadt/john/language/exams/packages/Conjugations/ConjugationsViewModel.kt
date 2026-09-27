@@ -220,45 +220,7 @@ class ConjugationsViewModel @Inject constructor(
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.getPlayCount("Reference", contentID)
     }
-//    fun handleTapObsolete(sentence: String) {
-//        val contentID = FirebaseAudioService.generateContentID(sentence)
-//        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
-//
-//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-//        // This turns the Red Dot ON immediately.
-//        didPlayReferenceSentence(sentence)
-//
-//        viewModelScope.launch {
-//            // 1. Play Audio (Waterfall)
-//            when (val currentState = _uiState.value) {
-//
-//                is ConjugationsUiState.Success -> {
-//                    val sheetName = currentState.currentSheetName
-//                    val success = audioPlaybackRepository.playTrackAndGetResult(
-//                        sentence = sentence,
-//                        level = "Reference",
-//                        sheetName = sheetName,
-//                        isPremiumUser = false // Inject actual status
-//                    )
-//
-//                    // 2. Update Stats on Success
-//                    if (!success) {
-//                        Timber.w("Playback failed. Rolling back Red Dot.")
-//
-//                        // Only undo if it wasn't there before this specific tap
-//                        if (!wasAlreadyHeard) {
-//                            undoPlayReferenceSentence(sentence)
-//                        }
-//                    }
-//                    historyManager.debugPrintAllHistory()
-//                }
-//                else -> {
-//                    println("State is not UiState, skipping audio playback.")
-//                }
-//            }
-//        }
-//    }
-    // The last sentence the user played on this screen; pre-fills the Translate sheet (blank if none).
+//    fun handleTapObsolete    // The last sentence the user played on this screen; pre-fills the Translate sheet (blank if none).
     private var lastPlayedSentence: String = ""
     fun getLatestSentence(): String = lastPlayedSentence
     fun clearLastPlayedSentence() { lastPlayedSentence = "" }

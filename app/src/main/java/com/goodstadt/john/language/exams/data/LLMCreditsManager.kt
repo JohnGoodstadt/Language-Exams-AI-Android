@@ -17,7 +17,7 @@ import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
 
-private const val FREE_TIER_CREDITS = 4
+//private const val FREE_TIER_CREDITS = 4
 private const val WAIT_PERIOD_MINUTES_OBSOLETE = 1L
 
 @HiltViewModel
@@ -27,13 +27,13 @@ class LLMCreditsManager @Inject constructor(
 ) : ViewModel() {
 
     private val _freeTierCredits = MutableStateFlow(FREE_TIER_CREDITS)
-    val freeTierCredits: StateFlow<Int> = _freeTierCredits.asStateFlow()
+//    val freeTierCredits: StateFlow<Int> = _freeTierCredits.asStateFlow()
 
     private val _isInWaitPeriod = MutableStateFlow(false)
-    val isInWaitPeriod: StateFlow<Boolean> = _isInWaitPeriod.asStateFlow()
+//    val isInWaitPeriod: StateFlow<Boolean> = _isInWaitPeriod.asStateFlow()
 
     private val _nextCreditRefillDate = MutableStateFlow<Date?>(null)
-    val nextCreditRefillDate: StateFlow<Date?> = _nextCreditRefillDate.asStateFlow()
+//    val nextCreditRefillDate: StateFlow<Date?> = _nextCreditRefillDate.asStateFlow()
 
     private val usersCollection = "users"
     private val llmCurrentCreditField = "llmCurrentCredit"

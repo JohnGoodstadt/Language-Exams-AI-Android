@@ -88,21 +88,7 @@ class AuthRepository @Inject constructor(
      * Example of how to expand your "library" for Firestore.
      * Saves or updates a user record in a 'users' collection.
      */
-    suspend fun fsCreateUserDocObsolete(user: FirebaseUser) {
-        try {
-            val userRecord = mapOf(
-                "uid" to user.uid,
-                "createdAt" to System.currentTimeMillis(),
-                "isAnonymous" to user.isAnonymous
-            )
-            // Use the user's UID as the document ID
-            firestore.collection("users").document(user.uid)
-                .set(userRecord, SetOptions.merge()) // .merge() prevents overwriting existing fields
-                .await()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
+
     // region Create Functions
 
     suspend fun fsCreateUserDoc(user: UserFirebase) {

@@ -6,7 +6,7 @@ package com.goodstadt.john.language.exams.data
  * (as in the English catalogue); [fileKey] is ASCII-only so it is safe as a file / Firestore name.
  * Shared [GrammarCategory] / [GrammarRow] types live in main.
  */
-object GrammarCatalog {
+object GrammarGrammarCatalogCatalog {
 
     val categories: List<GrammarCategory> = listOf(
         // ---- A1 ----

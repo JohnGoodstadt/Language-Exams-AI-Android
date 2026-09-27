@@ -61,12 +61,7 @@ import java.util.Locale
 import javax.inject.Inject
 
 
-// Data class to hold the parsed response, matching the Swift LLMResponse
-//data class LLMResponseObsolete(
-//    val content: String,
-//    val totalTokens: Int,
-//    val model: String
-//)
+
 
 val DEFAULT_GPT = "GPT-4.1-nano"
 // This data class will hold all the dynamic state for our screen later.

@@ -161,52 +161,5 @@ enum class TokenTopUpOption {
     BUY_199
 }
 
-@Composable
-fun TokenOptionsDialogObsolete(canWait: Boolean, onOptionSelected: (TokenTopUpOption) -> Unit, onDismiss: () -> Unit) {
-    Dialog(onDismissRequest = { onDismiss() }) {
-        Surface(shape = MaterialTheme.shapes.medium, tonalElevation = 4.dp) {
-            Column(modifier = Modifier.padding(16.dp)) {
-                Text("You're out of tokens!", style = MaterialTheme.typography.titleMedium)
-                Spacer(modifier = Modifier.height(8.dp))
-                Text("Choose one of the options below to continue:")
 
-                Spacer(modifier = Modifier.height(16.dp))
 
-                Button(
-                    onClick = {
-                        onOptionSelected(TokenTopUpOption.FREE)
-                        onDismiss()
-                    },
-                    enabled = canWait,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text("Wait 1 hour for free tokens")
-                }
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                Button(
-                    onClick = {
-                        onOptionSelected(TokenTopUpOption.BUY_099)
-                        onDismiss()
-                    },
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text("Buy 40,000 tokens for $0.99")
-                }
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                Button(
-                    onClick = {
-                        onOptionSelected(TokenTopUpOption.BUY_199)
-                        onDismiss()
-                    },
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text("Buy 85,000 tokens for $1.99")
-                }
-            }
-        }
-    }
-}

@@ -135,7 +135,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
 
             ScreenType.GROUPED_VOCAB_SCREEN -> {
                 // For a grouped screen, create the route with its parent tabId.
-                RefScreen.GroupedSheet.createRoute(selectedTab.id)
+                RefScreen.GroupedSheet.createRoute(selectedTab.id) //Adjectives
             }
 
             ScreenType.FORMAT_1_SCREEN -> definition.firestoreDocumentId?.let { docId ->

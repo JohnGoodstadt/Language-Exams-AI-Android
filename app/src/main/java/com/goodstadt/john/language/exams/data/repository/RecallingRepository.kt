@@ -78,17 +78,7 @@ class RecallingRepository @Inject constructor(
 
     // MARK: - Actions
 
-    suspend fun addWordObsolete(word: Format0Word) {
-        updateList { currentList ->
-            // Only add if not exists
-            if (currentList.none { it.key == word.word }) {
-                val newItem = RecallingItem(key = word.word) // Defaults to "Now"
-                currentList + newItem
-            } else {
-                currentList
-            }
-        }
-    }
+
 
     suspend fun addWord(word: Format0Word) {
         val key = word.word.trim()
@@ -163,23 +153,7 @@ class RecallingRepository @Inject constructor(
         }
     }
 
-    // MARK: - Internal Helper
-    private suspend fun updateListObsolete(transform: (List<RecallingItem>) -> List<RecallingItem>) {
-        dataStore.edit { prefs ->
-            val jsonString = prefs[KEY_ITEMS_JSON] ?: ""
-            val currentList: List<RecallingItem> = if (jsonString.isNotEmpty()) {
-                try {
-                    val type = object : TypeToken<List<RecallingItem>>() {}.type
-                    gson.fromJson(jsonString, type)
-                } catch (e: Exception) { emptyList() }
-            } else {
-                emptyList()
-            }
 
-            val newList = transform(currentList)
-            prefs[KEY_ITEMS_JSON] = gson.toJson(newList)
-        }
-    }
 // Helper to get raw list synchronously (for logic)
     suspend fun getList(): List<RecallingItem> {
         val prefs = dataStore.data.first()
@@ -191,9 +165,7 @@ class RecallingRepository @Inject constructor(
         }
     }
 
-    suspend fun getItemObsolete(key: String): RecallingItem? {
-        return getList().find { it.key == key }
-    }
+
     suspend fun getItem(key: String): RecallingItem? {
         val list = allItems.first()
         return list.find { it.key == key }
@@ -212,18 +184,7 @@ class RecallingRepository @Inject constructor(
     }
 
 
-    /**
-     * One-shot fetch (Suspend function).
-     * Useful for initial state setup in ViewModel init blocks.
-     */
-    suspend fun getAllRecalledKeysObsolete(): Set<String> {
-        return try {
-            val preferences = dataStore.data.first()
-            preferences[PreferencesKeys.RECALLED_WORDS] ?: emptySet()
-        } catch (e: Exception) {
-            emptySet()
-        }
-    }
+
     suspend fun getAllRecalledKeys(): Set<String> {
         return try {
             val list = allItems.first()
@@ -261,28 +222,7 @@ class RecallingRepository @Inject constructor(
 //        }
 //    }
 
-    /**
-     * Removes a word from the "Focus" list.
-     */
-    suspend fun removeWordObsolete(word: Format0Word) {
-        val key = word.word.trim()
 
-        try {
-            dataStore.edit { preferences ->
-                val currentSet = preferences[PreferencesKeys.RECALLED_WORDS] ?: emptySet()
-                if (currentSet.contains(key)) {
-                    preferences[PreferencesKeys.RECALLED_WORDS] = currentSet - key
-                    Timber.d("❌ Removed focus: $key")
-                }
-            }
-
-            // Optional: Cancel Notification
-            // cancelNotification(word)
-
-        } catch (e: Exception) {
-            Timber.e( "Failed to remove word", e)
-        }
-    }
     // 1. Helper to accept the object
     suspend fun removeWord(word: Format0Word) {
         remove(word.word)
@@ -304,13 +244,7 @@ class RecallingRepository @Inject constructor(
         dataStore.edit { it.remove(KEY_ITEMS_JSON) }
         Timber.d( "🗑️ All items removed")
     }
-    // The logic we wrote earlier
-    suspend fun removeObsolete(key: String) {
-        updateList { currentList ->
-            // Keep items that DO NOT match the key
-            currentList.filter { it.key != key }
-        }
-    }
+
     // MARK: - Helpers
 
     suspend fun isRecalled(word: String): Boolean {

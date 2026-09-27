@@ -314,40 +314,6 @@ class AudioPlaybackRepository @Inject constructor(
     }
 
 
-
-
-    private fun handleSuccessAlsoObsolete(sentence: String, level: String, isNew: Boolean) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        historyManager.markSentenceHeard(level, contentID)
-
-        if (isNew) xpManager.registerAction(XpActionType.HearNewSentence)
-        else xpManager.registerAction(XpActionType.ReplaySentence)
-    }
-    private fun handleSuccessObsolete(sentence: String, level: String, sheetName: String, isNew: Boolean) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-
-        // 1. Update History (Red Dots)
-        historyManager.markSentenceHeard(level, contentID)
-
-        // 2. Update XP
-        if (isNew) {
-            xpManager.registerAction(XpActionType.HearNewSentence)
-
-            // 3. Update Side Quest Graph (Only if it's a new Reference item)
-            // We check sheetName to ensure we aren't updating Main Quest tabs here (they use TabNumber)
-            if (sheetName.isNotEmpty()) {
-                val currentStats = audioCacheManager.getReferenceStats(sheetName)
-                audioCacheManager.updateReferenceStats(
-                    key = sheetName,
-                    heard = currentStats.heard + 1,
-                    total = currentStats.total
-                )
-            }
-        } else {
-            xpManager.registerAction(XpActionType.ReplaySentence)
-        }
-    }
-
     fun stopPlayback() {
         audioPlayerService.stopPlayback()
     }
