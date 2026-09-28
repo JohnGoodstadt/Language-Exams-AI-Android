@@ -1,5 +1,8 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import com.goodstadt.john.language.exams.data.stats.QuizStat
+import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
+
 import android.app.Activity
 import android.app.Application
 import android.content.Context
@@ -1180,6 +1183,7 @@ class VocabSectionQuizViewModel @Inject constructor(
 
         val qs = quizStatistics
         val now = System.currentTimeMillis()
+        ttsStatsRepository.recordQuizCompletion(QuizStat.Area.VOCAB, currentSectionTitle, qs.value.correct, qs.value.tries)
 
         // 1. Check History BEFORE saving
         val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)

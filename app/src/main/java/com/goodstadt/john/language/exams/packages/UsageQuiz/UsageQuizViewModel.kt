@@ -1,5 +1,8 @@
 package com.goodstadt.john.language.exams.packages.UsageQuiz
 
+import com.goodstadt.john.language.exams.data.stats.QuizStat
+import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
+
 //import android.graphics.Color
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 //import com.google.gson.Gson
@@ -600,6 +603,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         val qs = quizStatistics
         val now = System.currentTimeMillis()
+        ttsStatsRepository.recordQuizCompletion(QuizStat.Area.USAGE, qs.value.filename.ifBlank { qs.value.title }, qs.value.correct, qs.value.tries)
 
         // 1. Check History BEFORE saving
         val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)

@@ -1,5 +1,8 @@
 package com.goodstadt.john.language.exams.packages.ReferenceQuiz
 
+import com.goodstadt.john.language.exams.data.stats.QuizStat
+import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
+
 import android.app.Activity
 import android.app.Application
 import android.content.Context
@@ -740,6 +743,8 @@ class ReferenceQuizViewModel @Inject constructor(
     private fun onQuizFinished() {
         val qs = quizStatistics
         val now = System.currentTimeMillis()
+        val statArea = if (referenceAreaId == null) QuizStat.Area.GRAMMAR else QuizStat.Area.REFERENCE
+        ttsStatsRepository.recordQuizCompletion(statArea, referenceAreaId ?: qs.value.filename.ifBlank { qs.value.title }, qs.value.correct, qs.value.tries)
         val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
         val questionCount = _questions.value.size
 
