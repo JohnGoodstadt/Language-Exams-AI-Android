@@ -387,6 +387,40 @@ class VocabQuizRepository @Inject constructor(
     fun getCategoryAttempts(category: String, level: String): List<CategoryQuizAttempt> =
         categoryAttempts[categoryKey(category, level)]?.toList() ?: emptyList()
 
+    /** A vocab section whose latest attempt scored below the weak threshold on first-try correctness. */
+    data class WeakVocabSection(
+        val id: String,               // "category|level"
+        val title: String,            // category, e.g. "Personal"
+        val level: String,
+        val firstTryCorrect: Int,
+        val total: Int
+    ) {
+        val fraction: Float get() = if (total > 0) firstTryCorrect.toFloat() / total else 0f
+    }
+
+    /**
+     * Vocab sections whose MOST RECENT attempt was weak (first-try correct < [threshold], default 75%),
+     * weakest first. Attempts saved before [CategoryQuizAttempt.firstTryCorrect] existed fall back to
+     * [CategoryQuizAttempt.correct].
+     */
+    fun weakVocabSections(threshold: Float = 0.75f): List<WeakVocabSection> =
+        categoryAttempts.mapNotNull { (key, attempts) ->
+            val last = attempts.maxByOrNull { it.attemptedAt } ?: return@mapNotNull null
+            if (last.total <= 0) return@mapNotNull null
+            val ftc = last.firstTryCorrect ?: last.correct
+            val frac = ftc.toFloat() / last.total
+            if (frac >= threshold) return@mapNotNull null
+            // categoryKey is "$level|$category".
+            val parts = key.split("|", limit = 2)
+            WeakVocabSection(
+                id = key,
+                title = parts.getOrElse(1) { key },
+                level = parts.getOrElse(0) { "" },
+                firstTryCorrect = ftc,
+                total = last.total
+            )
+        }.sortedBy { it.fraction }
+
     /** All attempts across all quizzes (keyed by "$level|$category") - for a future dashboard. */
     fun getAllCategoryAttempts(): Map<String, List<CategoryQuizAttempt>> =
         categoryAttempts.mapValues { it.value.toList() }

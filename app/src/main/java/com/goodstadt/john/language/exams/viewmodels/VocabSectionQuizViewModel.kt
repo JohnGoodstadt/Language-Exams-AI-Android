@@ -340,6 +340,7 @@ class VocabSectionQuizViewModel @Inject constructor(
         val total = _allSectionQuestions.size
         val answered = _sectionAnswersByWord.size
         val correct = _sectionAnswersByWord.count { it.value }
+        val firstTryCorrect = _sectionFirstTryByWord.count { it.value }
         val tries = quizStatistics.value.tries
         // "No errors" streak: every question right with one tap each.
         val flawless = total > 0 && correct == total && tries == total
@@ -356,7 +357,8 @@ class VocabSectionQuizViewModel @Inject constructor(
                     correct = correct,
                     tries = tries,
                     completed = total > 0 && answered >= total,
-                    flawless = flawless
+                    flawless = flawless,
+                    firstTryCorrect = firstTryCorrect
                 )
             )
             if (DEBUG) {
@@ -430,6 +432,10 @@ class VocabSectionQuizViewModel @Inject constructor(
     // stays page-local (0..9) because the bottom paging dots index into it per page. Cleared only when a
     // fresh quiz/section starts (same point tries resets to 0).
     private val _sectionAnswersByWord = mutableMapOf<String, Boolean>()
+
+    // First answer given for each word (put-if-absent, so retries don't overwrite). Drives firstTryCorrect
+    // for the Focus tab's weak-vocab list. Cleared together with _sectionAnswersByWord.
+    private val _sectionFirstTryByWord = mutableMapOf<String, Boolean>()
 
     // Remembers the option the user last selected for each answered word, so navigating back to a question
     // re-shows its radio selection (for checking) until the quiz is exited. Cleared together with
@@ -540,6 +546,7 @@ class VocabSectionQuizViewModel @Inject constructor(
                 tries = 0
             )
             _sectionAnswersByWord.clear()
+            _sectionFirstTryByWord.clear()
             _selectedOptionByWord.clear()
             userAnswers.value.clear()
             currentQuestionIndex.value = 0
@@ -1092,6 +1099,7 @@ class VocabSectionQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
         _sectionAnswersByWord.clear() // reset section-wide Correct total together with Tries
+        _sectionFirstTryByWord.clear()
         _selectedOptionByWord.clear()
         _activeFilters.value = emptySet()
         _paginatedQuestions = emptyList()
@@ -1249,6 +1257,8 @@ class VocabSectionQuizViewModel @Inject constructor(
         // page 1 to page 2 no longer resets Correct to 0. Tries stays a running total (unchanged).
         _questions.value.getOrNull(currentQuestionIndex.value)?.let { q ->
             _sectionAnswersByWord[q.question] = isCorrect
+            // First answer only — don't overwrite on retries.
+            if (!_sectionFirstTryByWord.containsKey(q.question)) _sectionFirstTryByWord[q.question] = isCorrect
         }
 
         quizStatistics.value = quizStatistics.value.copy(

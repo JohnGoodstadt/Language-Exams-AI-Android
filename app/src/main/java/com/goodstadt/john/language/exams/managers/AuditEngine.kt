@@ -247,6 +247,11 @@ object AuditEngine {
      * correct counts. See the decision rules inline.
      */
     fun placeBaseline(a1Correct: Int, a2Correct: Int, b1Correct: Int): Int {
+        // Acing EVERY B1 question is strong evidence of B2 readiness, so promote straight to B2 — even if a
+        // single A2 slip kept A2 from fully "clearing". (Core proposition: a clean B1 sweep => ready for B2
+        // content; a B2 learner sitting a B1 exam is the accepted edge case, not the common path.)
+        if (b1Correct >= 4) return 3
+
         val a2 = if (a2Correct == 1) 0 else a2Correct    // a lone correct is a lucky guess -> discount
         val b1 = if (b1Correct == 1) 0 else b1Correct
         val a1Pass = a1Correct >= 2                       // A1 is binary (2 of 2)

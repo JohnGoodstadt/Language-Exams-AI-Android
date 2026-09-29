@@ -73,7 +73,10 @@ data class CategoryQuizAttempt(
     @SerializedName("tries") val tries: Int = 0,         // total answer taps this go
     @SerializedName("completed") val completed: Boolean = false, // answered every question (answered >= total)
     // "No errors": every question answered correctly with exactly one tap each (correct == tries == total).
-    @SerializedName("flawless") val flawless: Boolean = false
+    @SerializedName("flawless") val flawless: Boolean = false,
+    // Questions answered correctly on the FIRST tap. Nullable so attempts saved before this field existed
+    // decode as null and fall back to `correct`. Drives the Focus tab's "weak vocab" list.
+    @SerializedName("ftc") val firstTryCorrect: Int? = null
 )
 
 // 3. The Transaction (History Log)

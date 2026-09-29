@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -74,6 +75,7 @@ class FocusViewModel @Inject constructor(
     private val categoryQuizRepository: CategoryQuizRepository,
     private val contentRepository: ContentRepository,
     private val referenceStrengthRepository: ReferenceStrengthRepository,
+    private val vocabQuizRepository: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository,
     private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider
 ) : ViewModel() {
 
@@ -107,6 +109,16 @@ class FocusViewModel @Inject constructor(
                     GrammarCatalogEntry(row, scores["${row.category}|${row.level}"] ?: CategoryScore())
                 }
             }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    /**
+     * Vocab sections whose most recent go was weak (< 75% correct first-time), weakest first. Reactive so
+     * the list updates as section quizzes are taken. Shown on the Focus tab between grammar and reference.
+     */
+    val weakVocabSections: StateFlow<List<com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection>> =
+        vocabQuizRepository.dataUpdateEvents
+            .onStart { emit(Unit) }
+            .map { vocabQuizRepository.weakVocabSections() }
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     /** Practice a weak category from the priority list. */

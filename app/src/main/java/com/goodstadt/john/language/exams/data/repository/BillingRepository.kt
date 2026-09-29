@@ -32,14 +32,20 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.qualifiers.ApplicationContext
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.tasks.await
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -69,8 +75,19 @@ class BillingRepository @Inject constructor(
     private val _productDetails = MutableStateFlow<ProductDetails?>(null)
     val productDetails: StateFlow<ProductDetails?> = _productDetails.asStateFlow()
 
+    // Google Play entitlement truth (set by the billing flow). Kept separate so purchase/restore logic
+    // stays accurate; the PUBLIC isPurchased below folds in comp access.
     private val _isPurchased = MutableStateFlow(false)
-    val isPurchased: StateFlow<Boolean> = _isPurchased.asStateFlow()
+
+    // True when this signed-in user's email is on the Firestore comp allow-list (config/compAccess).
+    // A trusted tester (teacher) gets full access with no IAP. Revoke by removing the email server-side.
+    private val _isComped = MutableStateFlow(false)
+    val isComped: StateFlow<Boolean> = _isComped.asStateFlow()
+
+    // The single funnel every ViewModel collects: real purchase OR comp access.
+    val isPurchased: StateFlow<Boolean> =
+        combine(_isPurchased, _isComped) { store, comp -> store || comp }
+            .stateIn(scope, SharingStarted.Eagerly, false)
 
     private val _billingError = MutableStateFlow<String?>(null)
     val billingError: StateFlow<String?> = _billingError.asStateFlow()
@@ -106,6 +123,42 @@ class BillingRepository @Inject constructor(
         )
         .build()
 
+    init {
+        // Re-check comp access whenever auth changes (anonymous -> signed in, sign-out, account switch).
+        // The listener fires immediately with the current user, so this also does the initial check.
+        FirebaseAuth.getInstance().addAuthStateListener { refreshCompAccess() }
+    }
+
+    /**
+     * Check the signed-in user's email against the Firestore comp allow-list (config/compAccess.emails)
+     * and update [isComped]. A comped user gets full access with no IAP. Uses the flavour's default
+     * Firestore project (so en/de each read their own). Safe to call repeatedly (auth change, foreground).
+     */
+    fun refreshCompAccess() {
+        scope.launch {
+            val email = FirebaseAuth.getInstance().currentUser?.email?.lowercase()
+            if (email.isNullOrEmpty()) {
+                // Anonymous / signed out: no comp. (Testers must sign in with the allow-listed email.)
+                if (_isComped.value) _isComped.value = false
+                return@launch
+            }
+            try {
+                val snap = FirebaseFirestore.getInstance()
+                    .collection("config").document("compAccess").get().await()
+                @Suppress("UNCHECKED_CAST")
+                val emails = (snap.get("emails") as? List<*>)?.mapNotNull { it as? String } ?: emptyList()
+                val comped = emails.any { it.lowercase() == email }
+                if (comped != _isComped.value) {
+                    _isComped.value = comped
+                    Timber.w("BillingRepository: comp access ${if (comped) "GRANTED" else "removed"} for $email")
+                }
+            } catch (e: Exception) {
+                // Transient read failure — leave the current comp state as-is (don't yank access on a blip).
+                Timber.w(e, "BillingRepository: comp access check failed")
+            }
+        }
+    }
+
     /**
      * Public connect function to be called from a ViewModel.
      * Starts the connection to the Google Play Billing service.
@@ -119,6 +172,7 @@ class BillingRepository @Inject constructor(
 
                 checkPurchases() // Refresh purchases on reconnect
             }
+            refreshCompAccess() // re-check the comp allow-list on (re)connect
             return
         }
 

@@ -69,6 +69,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val grammarCatalog by viewModel.grammarCatalog.collectAsState()
     val downloadStatus by viewModel.downloadStatus.collectAsState()
     val referenceStrengths by viewModel.referenceStrengths.collectAsState()
+    val weakVocabSections by viewModel.weakVocabSections.collectAsState()
 
     var showAuditSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -151,6 +152,9 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
                 }
             }
         }
+
+        // --- Weak vocab sections: any section quiz whose last go was < 75% correct first-time. ---
+        WeakVocabSectionsSection(sections = weakVocabSections)
 
         // --- Reference areas: coarse Weak / OK / Strong per reference-tab area (Prepositions,
         // Adjectives, Pronouns, Sounds Similar, Word Pairs), summarised from the reference quizzes. ---
@@ -342,6 +346,82 @@ private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Un
             if (greenFrac > 0f) Box(Modifier.fillMaxHeight().weight(greenFrac).background(Color(0xFF4CAF50)))
             if (redFrac > 0f) Box(Modifier.fillMaxHeight().weight(redFrac).background(Color(0xFFE53935)))
             if (greyFrac > 0f) Box(Modifier.fillMaxHeight().weight(greyFrac))
+        }
+    }
+}
+
+/**
+ * Vocab sections whose latest go was weak (< 75% correct first-time). Each row: section title (left) +
+ * first-try score like "12/18" (right) + a green/red flood bar. Hidden when there are no weak sections.
+ */
+@Composable
+private fun WeakVocabSectionsSection(
+    sections: List<com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection>
+) {
+    if (sections.isEmpty()) return
+    Spacer(Modifier.height(24.dp))
+    Text(
+        text = "Vocab to review",
+        style = MaterialTheme.typography.titleMedium,
+        fontWeight = FontWeight.Bold,
+        color = Color.White
+    )
+    Spacer(Modifier.height(4.dp))
+    Text(
+        text = "Sections where you got under 75% right first time — worth another go.",
+        style = MaterialTheme.typography.bodyMedium,
+        color = Color.LightGray
+    )
+    Spacer(Modifier.height(10.dp))
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            sections.forEach { WeakVocabRow(it) }
+        }
+    }
+}
+
+/** One weak vocab section: title + "firstTryCorrect/total" + a green/red flood bar. */
+@Composable
+private fun WeakVocabRow(
+    section: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection
+) {
+    val denom = maxOf(section.total, 1).toFloat()
+    val greenFrac = section.firstTryCorrect / denom
+    val redFrac = maxOf(0, section.total - section.firstTryCorrect) / denom
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = section.title,
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                color = Color.White,
+                modifier = Modifier.weight(1f)
+            )
+            Text(
+                text = "${section.firstTryCorrect}/${section.total}",
+                style = MaterialTheme.typography.labelSmall,
+                color = Color.Gray
+            )
+        }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(8.dp)
+                .clip(RoundedCornerShape(4.dp))
+                .background(Color.Gray.copy(alpha = 0.25f))
+        ) {
+            if (greenFrac > 0f) Box(Modifier.fillMaxHeight().weight(greenFrac).background(Color(0xFF4CAF50)))
+            if (redFrac > 0f) Box(Modifier.fillMaxHeight().weight(redFrac).background(Color(0xFFE53935)))
         }
     }
 }
