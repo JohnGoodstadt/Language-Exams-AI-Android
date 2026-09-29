@@ -525,7 +525,10 @@ class VocabSectionQuizViewModel @Inject constructor(
     /**
      * Loads a quiz specifically for a Category Section (e.g. "Personal Information")
      */
-    fun loadSectionQuiz(categoryTitle: String) {
+    // [level] overrides the learner's current level (e.g. a weak section from the Focus tab may be at a
+    // different level). [isKey] true means [categoryTitle] is already the language-independent quiz key
+    // (as stored in attempts), so skip the title->key lookup.
+    fun loadSectionQuiz(categoryTitle: String, level: String? = null, isKey: Boolean = false) {
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true
             _isSectionLoading.value = true
@@ -561,13 +564,14 @@ class VocabSectionQuizViewModel @Inject constructor(
             }
 
             try {
-                currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+                currentSkillLevel = level ?: userPreferencesRepository.selectedSkillLevelFlow.first()
 
                 // 1. Resolve the language-independent quiz key via the per-flavour resolver.
                 //    Each flavour ships its own SectionQuizKeyMap (title -> key, keyed by level);
                 //    a null result means this category has no quiz at this level, so show nothing.
                 //    currentSectionTitle uses the key so stats land in the same bucket in any language.
-                val quizKey = SectionQuizKeyMap.keyFor(currentSkillLevel, categoryTitle)
+                //    When [isKey] the caller already passed the key (e.g. from the Focus weak-vocab list).
+                val quizKey = if (isKey) categoryTitle else SectionQuizKeyMap.keyFor(currentSkillLevel, categoryTitle)
                 if (quizKey.isNullOrBlank()) {
                     _questions.value = emptyList()
                     _availableSectionIndices.value = emptyList()

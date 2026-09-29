@@ -48,6 +48,7 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthLevel
+import com.goodstadt.john.language.exams.packages.CategoryTab.SectionQuizContainer
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
@@ -70,6 +71,8 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val downloadStatus by viewModel.downloadStatus.collectAsState()
     val referenceStrengths by viewModel.referenceStrengths.collectAsState()
     val weakVocabSections by viewModel.weakVocabSections.collectAsState()
+    val practiceVocabTarget by viewModel.practiceVocabTarget.collectAsState()
+    val vocabSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     var showAuditSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -154,7 +157,10 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
         }
 
         // --- Weak vocab sections: any section quiz whose last go was < 75% correct first-time. ---
-        WeakVocabSectionsSection(sections = weakVocabSections)
+        WeakVocabSectionsSection(
+            sections = weakVocabSections,
+            onPractice = { viewModel.practiceVocab(it) }
+        )
 
         // --- Reference areas: coarse Weak / OK / Strong per reference-tab area (Prepositions,
         // Adjectives, Pronouns, Sounds Similar, Word Pairs), summarised from the reference quizzes. ---
@@ -231,6 +237,23 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
         ) {
             // Full Usage-Quiz experience (TTS, mastery filter, badges) for this one (category, level).
             ReferenceQuizScreen(category = target.category, level = target.level)
+        }
+    }
+
+    // Weak vocab section quiz (launched from the "Vocab to review" list). category carries the quiz KEY.
+    practiceVocabTarget?.let { target ->
+        ModalBottomSheet(
+            onDismissRequest = { viewModel.dismissVocabPractice() },
+            sheetState = vocabSheetState,
+            modifier = Modifier.fillMaxHeight(0.92f),
+            dragHandle = { BottomSheetDefaults.DragHandle() },
+            containerColor = ElevatedDarkGrey
+        ) {
+            SectionQuizContainer(
+                categoryTitle = target.category,
+                level = target.level,
+                isKey = true
+            )
         }
     }
 }
@@ -356,7 +379,8 @@ private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Un
  */
 @Composable
 private fun WeakVocabSectionsSection(
-    sections: List<com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection>
+    sections: List<com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection>,
+    onPractice: (com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection) -> Unit
 ) {
     if (sections.isEmpty()) return
     Spacer(Modifier.height(24.dp))
@@ -382,26 +406,33 @@ private fun WeakVocabSectionsSection(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            sections.forEach { WeakVocabRow(it) }
+            sections.forEach { WeakVocabRow(it, onClick = { onPractice(it) }) }
         }
     }
 }
 
-/** One weak vocab section: title + "firstTryCorrect/total" + a green/red flood bar. */
+/** Turn a camel-case quiz key into a display label, e.g. "ComplexSentences" -> "Complex Sentences". */
+private fun humanizeVocabKey(key: String): String =
+    key.replace(Regex("(?<=[a-z])(?=[A-Z])"), " ").trim()
+
+/** One weak vocab section: title + "firstTryCorrect/total" + a green/red flood bar. Tap launches the quiz. */
 @Composable
 private fun WeakVocabRow(
-    section: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection
+    section: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection,
+    onClick: () -> Unit
 ) {
     val denom = maxOf(section.total, 1).toFloat()
     val greenFrac = section.firstTryCorrect / denom
     val redFrac = maxOf(0, section.total - section.firstTryCorrect) / denom
     Column(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() },
         verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
-                text = section.title,
+                text = humanizeVocabKey(section.title),
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
                 color = Color.White,

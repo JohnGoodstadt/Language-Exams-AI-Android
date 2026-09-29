@@ -1244,11 +1244,13 @@ private fun QuizStatusDots(
 fun SectionQuizContainer(
     categoryTitle: String,
     viewModel: VocabSectionQuizViewModel = hiltViewModel(),
+    level: String? = null,
+    isKey: Boolean = false,
     onInteraction: (Boolean) -> Unit = {}
 ) {
     // Trigger load when this view appears
-    LaunchedEffect(categoryTitle) {
-        viewModel.loadSectionQuiz(categoryTitle)
+    LaunchedEffect(categoryTitle, level) {
+        viewModel.loadSectionQuiz(categoryTitle, level = level, isKey = isKey)
     }
 
     // 2. ✅ Observe Dirtiness

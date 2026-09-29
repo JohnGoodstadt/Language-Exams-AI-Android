@@ -121,6 +121,19 @@ class FocusViewModel @Inject constructor(
             .map { vocabQuizRepository.weakVocabSections() }
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
+    // The weak vocab section the learner tapped to practise (nil = none). `category` carries the quiz KEY.
+    private val _practiceVocabTarget = MutableStateFlow<PracticeTarget?>(null)
+    val practiceVocabTarget: StateFlow<PracticeTarget?> = _practiceVocabTarget.asStateFlow()
+
+    /** Launch the section quiz for a weak vocab row (title carries the language-independent quiz key). */
+    fun practiceVocab(section: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository.WeakVocabSection) {
+        _practiceVocabTarget.value = PracticeTarget(section.title, section.level)
+    }
+
+    fun dismissVocabPractice() {
+        _practiceVocabTarget.value = null
+    }
+
     /** Practice a weak category from the priority list. */
     fun practiceCategory(row: FocusRow) {
         _practiceTarget.value = PracticeTarget(row.category, row.level)
