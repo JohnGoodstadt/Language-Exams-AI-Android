@@ -165,6 +165,8 @@ class AccessPolicy @Inject constructor(
         //  - REFERENCE: top 6 collapsible headers (e.g. Conjugations).
         // TODO: source from remote config.
         const val FREE_VOCAB_SECTION_PREVIEW = 2
-        const val FREE_REFERENCE_SECTION_PREVIEW = 6
+        // fileFormat-6 chip screens (Prepositions / Pronouns / Conjugations): first 2 category chips free,
+        // the rest locked. Kept in sync with iOS AccessPolicy.freeReferenceSectionPreview.
+        const val FREE_REFERENCE_SECTION_PREVIEW = 2
     }
 }

@@ -17,6 +17,9 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -71,6 +74,7 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
 
             var showTranslateSheet by rememberSaveable { mutableStateOf(false) }
             var showQuizSheet by rememberSaveable { mutableStateOf(false) }
+            var showUpgradeSheet by rememberSaveable { mutableStateOf(false) }
             val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
             Box(Modifier.fillMaxSize()) {
@@ -78,7 +82,9 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                     sheet = state.sheet,
                     selectedCategoryId = selectedCategoryId,
                     onCategorySelected = { selectedCategoryId = it },
-                    onPlay = viewModel::play
+                    onPlay = viewModel::play,
+                    isCategoryLocked = { index -> viewModel.isCategoryLocked(index) },
+                    onLockedTapped = { showUpgradeSheet = true }
                 )
 
                 if (categories.isNotEmpty()) {
@@ -111,6 +117,13 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                         Icon(imageVector = Icons.Filled.Translate, contentDescription = "Translate")
                     }
                 }
+            }
+
+            // Freemium content lock: shown when the user taps a locked category chip.
+            if (showUpgradeSheet) {
+                com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet(
+                    onDismiss = { showUpgradeSheet = false }
+                )
             }
 
             // Translate the last sentence played on this screen (blank if none yet).
@@ -160,7 +173,9 @@ private fun PronounsContent(
     sheet: Format6File,
     selectedCategoryId: String,
     onCategorySelected: (String) -> Unit,
-    onPlay: (String) -> Unit
+    onPlay: (String) -> Unit,
+    isCategoryLocked: (Int) -> Boolean = { false },
+    onLockedTapped: () -> Unit = {}
 ) {
     val categories = sheet.categories
     if (categories.isEmpty()) {
@@ -185,11 +200,17 @@ private fun PronounsContent(
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            items(categories, key = { it.id }) { c ->
+            // Freemium gate: the first two category chips are free; the rest are locked teasers that open
+            // the paywall instead of selecting (mirrors iOS Format6SheetView).
+            itemsIndexed(categories, key = { _, c -> c.id }) { index, c ->
+                val locked = isCategoryLocked(index)
                 FilterChip(
-                    selected = c.id == category.id,
-                    onClick = { onCategorySelected(c.id) },
+                    selected = !locked && c.id == category.id,
+                    onClick = { if (locked) onLockedTapped() else onCategorySelected(c.id) },
                     label = { Text(c.label) },
+                    leadingIcon = if (locked) {
+                        { Icon(Icons.Filled.Lock, contentDescription = "Locked", modifier = Modifier.size(16.dp)) }
+                    } else null,
                     colors = FilterChipDefaults.filterChipColors()
                 )
             }

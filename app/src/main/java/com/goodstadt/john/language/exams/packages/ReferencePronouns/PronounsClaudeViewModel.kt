@@ -31,8 +31,21 @@ class PronounsClaudeViewModel @Inject constructor(
     private val contentRepository: ContentRepository,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val billingRepository: BillingRepository,
+    private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
+
+    /**
+     * Freemium gate for this fileFormat-6 chip screen (Prepositions / Pronouns): is the category chip at
+     * [index] (0-based) locked? The first two chips are free; the rest route to the paywall. Premium sees
+     * everything. Centralised in [com.goodstadt.john.language.exams.managers.AccessPolicy].
+     */
+    fun isCategoryLocked(index: Int): Boolean =
+        accessPolicy.isSectionLocked(
+            com.goodstadt.john.language.exams.managers.ContentArea.REFERENCE,
+            level = null,
+            index = index
+        )
 
     /** Firestore/bundle doc name for this sheet, from the route arg; falls back to the de sheet. */
     private val documentId: String =
