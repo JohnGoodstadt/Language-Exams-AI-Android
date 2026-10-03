@@ -19,8 +19,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Map
+import androidx.compose.material.icons.filled.Verified
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -82,6 +87,12 @@ fun MyProgressScreen(
 
     val auditStats by viewModel.auditStats.collectAsState()
     val comfortLevelMessage by viewModel.comfortLevelMessage.collectAsState()
+    val isComped by viewModel.isComped.collectAsState()
+    val isReviewUnlocked by viewModel.isReviewUnlocked.collectAsState()
+    val isPurchased by viewModel.isPurchased.collectAsState()
+    var showReviewCodeDialog by remember { mutableStateOf(false) }
+    var reviewCodeText by remember { mutableStateOf("") }
+    var reviewCodeError by remember { mutableStateOf(false) }
     val currentSkillLevel by viewModel.currentSkillLevel.collectAsState(initial = "B1")
     val unlockedLevels by viewModel.unlockedAuditLevels.collectAsState()
     val baselinePlacementLevel by viewModel.baselinePlacementLevel.collectAsState()
@@ -119,6 +130,36 @@ fun MyProgressScreen(
                     .padding(horizontal = 16.dp),
                 verticalArrangement = Arrangement.spacedBy(24.dp)
             ) {
+
+                // Full-access marker — comp (allow-listed tester) or App Review demonstration mode.
+                if (isComped || isReviewUnlocked) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.Verified,
+                            contentDescription = null,
+                            tint = Color(0xFF4CAF50)
+                        )
+                        Spacer(Modifier.width(6.dp))
+                        Text(
+                            text = if (isReviewUnlocked) "Full access — demonstration mode"
+                                   else "Full access — complimentary",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color(0xFF4CAF50)
+                        )
+                    }
+                } else if (!isPurchased) {
+                    // Unobtrusive entry for an App Review access code (instructions go in review notes).
+                    // Hidden once full access is granted, so normal/paying users never see it again.
+                    TextButton(
+                        onClick = { reviewCodeText = ""; reviewCodeError = false; showReviewCodeDialog = true },
+                        modifier = Modifier.align(Alignment.CenterHorizontally)
+                    ) { Text("Have an access code?", style = MaterialTheme.typography.bodySmall) }
+                }
 
                 // ==========================================
                 // 🟢 NEW: AUDIT DASHBOARD HEADER
@@ -333,5 +374,45 @@ fun MyProgressScreen(
                 }
             }
         }
+    }
+
+    // App Review demonstration-mode code entry (opened from "Have an access code?" above).
+    if (showReviewCodeDialog) {
+        AlertDialog(
+            onDismissRequest = { showReviewCodeDialog = false },
+            title = { Text("Enter access code") },
+            text = {
+                Column {
+                    Text(
+                        "Unlocks all features for review/demonstration.",
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    OutlinedTextField(
+                        value = reviewCodeText,
+                        onValueChange = { reviewCodeText = it; reviewCodeError = false },
+                        singleLine = true,
+                        isError = reviewCodeError,
+                        label = { Text("Access code") }
+                    )
+                    if (reviewCodeError) {
+                        Text(
+                            "That access code wasn't recognised.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.error
+                        )
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    if (viewModel.redeemReviewCode(reviewCodeText)) showReviewCodeDialog = false
+                    else reviewCodeError = true
+                }) { Text("Unlock") }
+            },
+            dismissButton = {
+                TextButton(onClick = { showReviewCodeDialog = false }) { Text("Cancel") }
+            }
+        )
     }
 }

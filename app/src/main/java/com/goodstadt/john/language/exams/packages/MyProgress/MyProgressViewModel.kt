@@ -44,7 +44,20 @@ class MyProgressViewModel @Inject constructor (
     private val auditRepository: ReadinessAuditRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider,
+    private val billingRepository: com.goodstadt.john.language.exams.data.repository.BillingRepository,
 ) : ViewModel() {
+
+    /** True when this user has complimentary full access (comped tester) — drives a visible marker. */
+    val isComped: StateFlow<Boolean> = billingRepository.isComped
+
+    /** True when App Review demonstration mode is unlocked via the review code. */
+    val isReviewUnlocked: StateFlow<Boolean> = billingRepository.isReviewUnlocked
+
+    /** Overall entitlement funnel (purchase OR comp OR review unlock) — hides the code entry once set. */
+    val isPurchased: StateFlow<Boolean> = billingRepository.isPurchased
+
+    /** Redeem the App Review demonstration-mode code; true on success. */
+    fun redeemReviewCode(code: String): Boolean = billingRepository.redeemReviewCode(code)
 
     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow
 
@@ -63,11 +76,13 @@ class MyProgressViewModel @Inject constructor (
             .map { AuditStats(confidence = it.confidence, readiness = it.readiness) }
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), AuditStats(0, 0))
 
-    /** e.g. "You are clearly a B1 student" - the learner's comfort band from the underlying position. */
+    /** e.g. "You are clearly a B1 student" - the learner's comfort band from the underlying position.
+     *  Blank until the baseline is complete, so we never claim a level (A1) before any audit is taken. */
     val comfortLevelMessage: StateFlow<String> =
-        dialsFlow
-            .map { "You are clearly a ${AuditEngine.bandLabel(it.comfortBandIndex)} student" }
-            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "")
+        combine(dialsFlow, auditRepository.auditScores) { dials, scores ->
+            if (scores.containsKey(1)) "You are clearly a ${AuditEngine.bandLabel(dials.comfortBandIndex)} student"
+            else ""
+        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "")
 
     // Which audit version the learner is on, and whether the New Audit button should be live.
     // Enabled only once the baseline is done AND a higher version's questions still exist.

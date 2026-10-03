@@ -267,6 +267,21 @@ class AppConfigRepository @Inject constructor(
      * This function should be suspend to ensure latest values are fetched.
      */
     suspend fun getRemoteSheetVersions(): Map<String, Int> {
+        // DEBUG: read the bundled, per-flavour assets/sheet_versions.json (the en flavour ships the EN one,
+        // de the DE one) so local dev uses exactly what we'll paste into Remote Config — and so the quiz
+        // sheets are version-tracked locally too. Falls back to Remote Config if the asset is missing or
+        // unparseable. RELEASE: always Remote Config. (Mirrors the iOS DEBUG bundle-file behaviour.)
+        if (BuildConfig.DEBUG) {
+            try {
+                val json = context.assets.open("sheet_versions.json").bufferedReader().use { it.readText() }
+                val versions = Json.decodeFromString<Map<String, Int>>(json)
+                Timber.w("⚠️ DEV MODE: loaded ${versions.size} sheet versions from assets/sheet_versions.json")
+                return versions
+            } catch (e: Exception) {
+                Timber.w(e, "DEV: assets/sheet_versions.json missing/invalid — falling back to Remote Config")
+            }
+        }
+
         // Offline: skip the network fetch entirely. fetchAndActivate() does NOT fail fast when offline -
         // it blocks up to the Remote Config fetch timeout (~60s by default) before throwing, which stalls
         // every sheet load even though the last-activated 'sheet_versions' is already cached locally. Read
@@ -284,11 +299,6 @@ class AppConfigRepository @Inject constructor(
         val versionsJson = remoteConfig.getString("sheet_versions")
         return if (versionsJson.isNotBlank()) {
             try {
-                //this works
-                if (BuildConfig.DEBUG) {
-                    val fred = Json.decodeFromString<Map<String, Int>>(versionsJson)
-                    Timber.i("$fred")
-                }
                 Json.decodeFromString<Map<String, Int>>(versionsJson)
             } catch (e: Exception) {
                 Timber.e(e, "Could not parse remote sheet versions JSON (1)")
@@ -296,114 +306,6 @@ class AppConfigRepository @Inject constructor(
             }
         } else {
             Timber.e("Could not parse remote sheet versions JSON (2)")
-            emptyMap()
-        }
-    }
-    suspend fun getRemoteSheetVersionsDEBUG(): Map<String, Int> {
-        // 1. Fetch from network (We keep this for Prod, but it doesn't hurt in Debug)
-        try {
-            remoteConfig.fetchAndActivate().await()
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to fetch remote config for sheet versions")
-        }
-
-        // 2. DECIDE: Real JSON or Fake JSON?
-        val versionsJson = if (BuildConfig.DEBUG) {
-            Timber.w("⚠️ DEV MODE: Using Local Sheet Versions Override")
-            // Paste your Full JSON here (Existing sheets + New Spanish ones)
-            """
-        {
-            "EnglishPrepositions": 5,
-            "EnglishA1Adjectives": 5,
-            "EnglishA2Adjectives": 5,
-            "EnglishB1Adjectives": 5,
-            "EnglishB2Adjectives": 5,
-            "EnglishA1Vocab": 8,
-            "EnglishA2Vocab": 11,
-            "EnglishB1Vocab": 8,
-            "EnglishB2Vocab": 8,
-            "EnglishDefinitionsFormat1": 4,
-            "EnglishGoodVsWell": 5,
-            "EnglishSayVsTell": 1,
-            "EnglishSpeakVsTalk": 1,
-            "EnglishHearVsListen": 1,
-            "EnglishBorrowVsLend": 1,
-            "EnglishBringVsTake": 1,
-            "EnglishLookVsSee": 1,
-            "SpanishReferenceSheet1": 1,
-            "SpanishReferenceSheet2": 1,
-            "SpanishReferenceSheet3": 1,
-            "SpanishReferenceSheet4": 1
-        }
-        """.trimIndent()
-        } else {
-            // Production: Get from Firebase
-            remoteConfig.getString("sheet_versions")
-        }
-
-        // 3. Decode whatever string we got (Local or Remote)
-        return if (versionsJson.isNotBlank()) {
-            try {
-                Json.decodeFromString<Map<String, Int>>(versionsJson)
-            } catch (e: Exception) {
-                Timber.e(e, "Could not parse remote sheet versions JSON")
-                emptyMap()
-            }
-        } else {
-            Timber.e("Could not parse remote sheet versions JSON (Empty)")
-            emptyMap()
-        }
-    }
-    suspend fun getRemoteSheetVersionsGermanDEBUG(): Map<String, Int> {
-        // 1. Fetch from network (We keep this for Prod, but it doesn't hurt in Debug)
-        try {
-            remoteConfig.fetchAndActivate().await()
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to fetch remote config for sheet versions")
-        }
-
-        // 2. DECIDE: Real JSON or Fake JSON?
-        val versionsJson = if (BuildConfig.DEBUG) {
-            Timber.w("⚠️ DEV MODE: Using Local Sheet Versions Override")
-            // Paste your Full JSON here (Existing sheets + New Spanish ones)
-            """
-        {
-            "GermanA1Adjectives": 1,
-            "GermanA2Adjectives": 1,
-            "GermanB1Adjectives": 1,
-            "GermanB2Adjectives": 1,
-            "GermanA1Vocab": 1,
-            "GermanA2Vocab": 1,
-            "GermanB1Vocab": 1,
-            "GermanB2Vocab": 1,
-            "GermanSoundsTheSame": 1,
-            "GermanKennenWissen": 1,
-            "GermanBringenHolen": 1,
-            "GermanHoerenZuhoeren": 1,
-            "GermanFragenBitten": 1,
-            "GermanPrepositions": 1,
-            "GermanConjugationsToBe": 1,
-            "GermanConjugationsToHave": 1,
-            "GermanConjugationsToDo": 1,
-            "GermanConjugationsToGet": 1,
-            "GermanReferencePronouns": 1
-        }
-        """.trimIndent()
-        } else {
-            // Production: Get from Firebase
-            remoteConfig.getString("sheet_versions")
-        }
-
-        // 3. Decode whatever string we got (Local or Remote)
-        return if (versionsJson.isNotBlank()) {
-            try {
-                Json.decodeFromString<Map<String, Int>>(versionsJson)
-            } catch (e: Exception) {
-                Timber.e(e, "Could not parse remote sheet versions JSON")
-                emptyMap()
-            }
-        } else {
-            Timber.e("Could not parse remote sheet versions JSON (Empty)")
             emptyMap()
         }
     }

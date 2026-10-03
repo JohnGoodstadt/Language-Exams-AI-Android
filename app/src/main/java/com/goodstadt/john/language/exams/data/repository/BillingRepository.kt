@@ -68,6 +68,11 @@ class BillingRepository @Inject constructor(
     private val PRODUCT_ID = "unlock_premium_features_v1"
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
+    // App Review demonstration-mode unlock (put REVIEW_UNLOCK_CODE in the store's review notes). Not a
+    // revenue secret: it only grants full access, and only to someone running a review build.
+    private val REVIEW_UNLOCK_CODE = "EXAMREADY-REVIEW-2026"
+    private val KEY_REVIEW_UNLOCKED = "review_unlocked"
+
     // --- State Flows Exposed to the App ---
     private val _connectionState = MutableStateFlow(ConnectionState.DISCONNECTED)
     val connectionState: StateFlow<Int> = _connectionState.asStateFlow()
@@ -84,10 +89,36 @@ class BillingRepository @Inject constructor(
     private val _isComped = MutableStateFlow(false)
     val isComped: StateFlow<Boolean> = _isComped.asStateFlow()
 
-    // The single funnel every ViewModel collects: real purchase OR comp access.
+    // App Review / demonstration mode: a reviewer enters the review code (see [redeemReviewCode]) to
+    // unlock every paid feature with no IAP and no sign-in. Persisted so it survives relaunch. This
+    // exists so Google/Apple reviewers can access all functionality without us knowing their account.
+    private val reviewPrefs = context.getSharedPreferences("billing_review", Context.MODE_PRIVATE)
+    private val _isReviewUnlocked = MutableStateFlow(reviewPrefs.getBoolean(KEY_REVIEW_UNLOCKED, false))
+    val isReviewUnlocked: StateFlow<Boolean> = _isReviewUnlocked.asStateFlow()
+
+    // The single funnel every ViewModel collects: real purchase OR comp access OR review unlock.
     val isPurchased: StateFlow<Boolean> =
-        combine(_isPurchased, _isComped) { store, comp -> store || comp }
+        combine(_isPurchased, _isComped, _isReviewUnlocked) { store, comp, review -> store || comp || review }
             .stateIn(scope, SharingStarted.Eagerly, false)
+
+    /**
+     * Redeem the App Review demonstration-mode code. On a match, unlock all paid features (persisted)
+     * and return true; otherwise leave state unchanged and return false. Case/whitespace tolerant.
+     */
+    fun redeemReviewCode(code: String): Boolean {
+        val entered = code.trim().uppercase()
+        if (entered != REVIEW_UNLOCK_CODE) return false
+        reviewPrefs.edit().putBoolean(KEY_REVIEW_UNLOCKED, true).apply()
+        _isReviewUnlocked.value = true
+        Timber.w("BillingRepository: review demonstration mode UNLOCKED")
+        return true
+    }
+
+    /** Turn demonstration mode back off (so a normal paywall can be demonstrated again on the device). */
+    fun clearReviewUnlock() {
+        reviewPrefs.edit().putBoolean(KEY_REVIEW_UNLOCKED, false).apply()
+        _isReviewUnlocked.value = false
+    }
 
     private val _billingError = MutableStateFlow<String?>(null)
     val billingError: StateFlow<String?> = _billingError.asStateFlow()
@@ -151,12 +182,27 @@ class BillingRepository @Inject constructor(
                 if (comped != _isComped.value) {
                     _isComped.value = comped
                     Timber.w("BillingRepository: comp access ${if (comped) "GRANTED" else "removed"} for $email")
+                    writeCompStatusToUserDoc(comped, email)
                 }
             } catch (e: Exception) {
                 // Transient read failure — leave the current comp state as-is (don't yank access on a blip).
                 Timber.w(e, "BillingRepository: comp access check failed")
             }
         }
+    }
+
+    /** Record the comp outcome on the user's own doc so it can be confirmed remotely from the Firebase
+     *  console (no device access or logs needed). Best-effort; never blocks or affects entitlement. */
+    private fun writeCompStatusToUserDoc(active: Boolean, email: String) {
+        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        val data = mapOf(
+            "compActive" to active,
+            "compEmail" to email,
+            "compUpdatedAt" to com.google.firebase.firestore.FieldValue.serverTimestamp()
+        )
+        FirebaseFirestore.getInstance().collection("users").document(uid)
+            .set(data, com.google.firebase.firestore.SetOptions.merge())
+            .addOnFailureListener { Timber.w(it, "BillingRepository: failed to write comp status") }
     }
 
     /**

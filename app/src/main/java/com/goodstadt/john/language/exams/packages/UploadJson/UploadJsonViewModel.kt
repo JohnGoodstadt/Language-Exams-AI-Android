@@ -288,6 +288,35 @@ class UploadJsonViewModel @Inject constructor(
         return UploadJsonSection("Reference", groups)
     }
 
+    /**
+     * fileFormat-6 "Teaching" content (Prepositions / Pronouns / the four Conjugations), bundled per
+     * flavour in res/raw (e.g. german_prepositions_teaching, english_conjugations_to_be_teaching). The
+     * Firestore doc name is languagePrefix + CamelCase of the sheet, matching the manifest's
+     * firestoreDocumentId (e.g. "GermanPrepositionsTeaching", "EnglishConjugationsToBeTeaching").
+     */
+    private fun buildTeachingsSection(): UploadJsonSection {
+        val rawPrefix = languagePrefix.lowercase() + "_" // "german_" / "english_" / "chinese_"
+        fun teach(rawStem: String, docName: String): UploadJsonFile? {
+            val rawName = "$rawPrefix$rawStem"
+            if (!rawResourceExists(rawName)) return null
+            return UploadJsonFile(
+                displayName = docName,
+                fileName = "$rawName.json",
+                assetPath = "raw/$rawName.json",
+                firestoreDocName = docName
+            )
+        }
+        val files = listOfNotNull(
+            teach("prepositions_teaching", "${languagePrefix}PrepositionsTeaching"),
+            teach("reference_pronouns", "${languagePrefix}ReferencePronouns"),
+            teach("conjugations_to_be_teaching", "${languagePrefix}ConjugationsToBeTeaching"),
+            teach("conjugations_to_do_teaching", "${languagePrefix}ConjugationsToDoTeaching"),
+            teach("conjugations_to_get_teaching", "${languagePrefix}ConjugationsToGetTeaching"),
+            teach("conjugations_to_have_teaching", "${languagePrefix}ConjugationsToHaveTeaching"),
+        )
+        return UploadJsonSection("Teachings", groups = listOf(UploadJsonLevelGroup("Files", files)))
+    }
+
     /** True if a res/raw resource with this base name exists in the current flavour's build. */
     private fun rawResourceExists(rawName: String): Boolean =
         context.resources.getIdentifier(rawName, "raw", context.packageName) != 0
@@ -394,7 +423,7 @@ class UploadJsonViewModel @Inject constructor(
         )
 
         _sections.value = listOf(
-            buildVocabSection(), buildReferenceSection(), grammar, sectionSheet, usageQuiz, baselineQuiz
+            buildVocabSection(), buildReferenceSection(), buildTeachingsSection(), grammar, sectionSheet, usageQuiz, baselineQuiz
         )
     }
 

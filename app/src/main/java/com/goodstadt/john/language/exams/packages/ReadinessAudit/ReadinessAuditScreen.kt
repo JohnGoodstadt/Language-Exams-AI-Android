@@ -24,6 +24,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
@@ -105,6 +106,7 @@ fun ReadinessAuditScreen(
     val uiState by viewModel.uiState.collectAsState()
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
+    var showExplanationBottomSheet by remember { mutableStateOf(false) } // "Explanation" sheet (category + explain)
 
     val questions by viewModel.questions.collectAsState()
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
@@ -338,6 +340,20 @@ fun ReadinessAuditScreen(
             if (questions.isNotEmpty()) {
                 val question = questions[currentQuestionIndex]
 
+                // Question category (baseline/audit only — shown when present).
+                question.category?.takeIf { it.isNotBlank() }?.let { cat ->
+                    Text(
+                        text = cat,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Medium,
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = verticalPadding)
+                    )
+                }
+
                 AuditQuestionAnswers(
                     viewModel = viewModel,
                     question = question,
@@ -375,6 +391,11 @@ fun ReadinessAuditScreen(
             AuditStatisticsRow(
                 correct = quizStatistics.correct,
                 tries = quizStatistics.tries,
+                // Explanation "i" button: shown when the question has a category (audit), enabled only once
+                // the question is answered (locked) so it can't be used to cheat.
+                hasExplanation = questions.getOrNull(currentQuestionIndex)?.category?.isNotBlank() == true,
+                answered = lockedAnswers[currentQuestionIndex] != null,
+                onInfoClick = { showExplanationBottomSheet = true },
             )
             // Paging control (dots)
 
@@ -393,6 +414,16 @@ fun ReadinessAuditScreen(
         onCloseDashboard = { showDashboardSheet = false },
         selectedLevelDescription = selectedLevel.description,
     )
+
+    // Explanation sheet (category + explain) for the current question.
+    if (showExplanationBottomSheet) {
+        val q = questions.getOrNull(currentQuestionIndex)
+        ExplanationBottomSheet(
+            category = q?.category.orEmpty(),
+            explain = q?.explain.orEmpty(),
+            onClose = { showExplanationBottomSheet = false }
+        )
+    }
 } //:QuizScreen
 
 
@@ -897,12 +928,18 @@ private fun AuditNavigationRow(
 }
 
 
-/** The Correct / Tries tally row. */
+/** The Correct / Tries tally row, with an Explanation "i" button in the middle (audit only). */
 @Composable
-private fun AuditStatisticsRow(correct: Int, tries: Int) {
+private fun AuditStatisticsRow(
+    correct: Int,
+    tries: Int,
+    hasExplanation: Boolean = false,
+    answered: Boolean = false,
+    onInfoClick: () -> Unit = {}
+) {
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             text = "Correct: $correct",
@@ -916,6 +953,17 @@ private fun AuditStatisticsRow(correct: Int, tries: Int) {
                 .padding(start = 16.dp) // Add padding to the start
         )
 
+        // "i"-in-a-circle: opens the Explanation sheet. Disabled (greyed) until the question is answered.
+        if (hasExplanation) {
+            IconButton(onClick = { if (answered) onInfoClick() }, enabled = answered) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = "Explanation",
+                    tint = if (answered) MaterialTheme.colorScheme.primary else Color.Gray
+                )
+            }
+        }
+
         Text(
             text = "Tries: $tries",
             style = MaterialTheme.typography.bodyLarge.copy(
@@ -927,6 +975,46 @@ private fun AuditStatisticsRow(correct: Int, tries: Int) {
                 .padding(end = 16.dp), // Add padding to the end
             textAlign = TextAlign.End // Align text to the end
         )
+    }
+}
+
+/** The audit "Explanation" sheet: hard-coded title, then the question's category, then its explanation. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ExplanationBottomSheet(category: String, explain: String, onClose: () -> Unit) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    ModalBottomSheet(
+        onDismissRequest = onClose,
+        sheetState = sheetState,
+        containerColor = MaterialTheme.colorScheme.surface,
+        contentColor = MaterialTheme.colorScheme.onSurface
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Text(
+                text = "Explanation",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
+            if (category.isNotBlank()) {
+                Text(
+                    text = category,
+                    style = MaterialTheme.typography.titleMedium,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+            if (explain.isNotBlank()) {
+                Text(text = explain, style = MaterialTheme.typography.bodyLarge)
+            }
+            Spacer(Modifier.height(8.dp))
+        }
     }
 }
 
