@@ -6,10 +6,12 @@ import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.RefreshTrigger
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.stats.PageStat
+import com.goodstadt.john.language.exams.data.stats.recordPageView
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Format0File
-import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format1File
+import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.SheetDataType
 import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
@@ -52,8 +54,28 @@ class ReferenceTabContainerViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val vocabRepository: ContentRepository,
 //    private val examSheetRepository: ExamSheetRepository,
-    private val refreshTrigger: RefreshTrigger
+    private val refreshTrigger: RefreshTrigger,
+    private val ttsStatsRepository: com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 ) : ViewModel() {
+
+    /**
+     * Page-popularity: record that the reference sheet [tabId] was opened. One central place covers every
+     * reference renderer (called from the screen on initial view and each sub-tab switch). Uses the sheet's
+     * firestore doc id when it has one, else the manifest tab id (for grouped / fixed screens).
+     */
+    fun recordReferencePageOpen(tabId: String) {
+        val tab = _uiState.value.tabs.firstOrNull { it.id == tabId } ?: return
+        // The two quizzes (Usage Quiz = FixedScreen, Vocab Quiz = VocabDashboard) keep their own quiz
+        // stats, so they're excluded from page-popularity.
+        val st = tab.definition.screenType
+        if (st == com.goodstadt.john.language.exams.models.ScreenType.FIXED_SCREEN ||
+            st == com.goodstadt.john.language.exams.models.ScreenType.VOCAB_DASHBOARD) return
+        val sheetId = tab.definition.firestoreDocumentId ?: tabId
+        ttsStatsRepository.recordPageView(
+            com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+            sheetId,PageStat.Metric.TAP //Was Open but don't want 2 values multiplied in DB
+        )
+    }
 
     private val _uiState = MutableStateFlow(ReferenceUiState())
     val uiState = _uiState.asStateFlow()

@@ -84,7 +84,8 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                     onCategorySelected = { selectedCategoryId = it },
                     onPlay = viewModel::play,
                     isCategoryLocked = { index -> viewModel.isCategoryLocked(index) },
-                    onLockedTapped = { showUpgradeSheet = true }
+                    onLockedTapped = { showUpgradeSheet = true },
+                    onChipTapped = { viewModel.recordReferenceTap() }
                 )
 
                 if (categories.isNotEmpty()) {
@@ -175,7 +176,8 @@ private fun PronounsContent(
     onCategorySelected: (String) -> Unit,
     onPlay: (String) -> Unit,
     isCategoryLocked: (Int) -> Boolean = { false },
-    onLockedTapped: () -> Unit = {}
+    onLockedTapped: () -> Unit = {},
+    onChipTapped: () -> Unit = {}
 ) {
     val categories = sheet.categories
     if (categories.isEmpty()) {
@@ -206,7 +208,7 @@ private fun PronounsContent(
                 val locked = isCategoryLocked(index)
                 FilterChip(
                     selected = !locked && c.id == category.id,
-                    onClick = { if (locked) onLockedTapped() else onCategorySelected(c.id) },
+                    onClick = { if (locked) onLockedTapped() else { onChipTapped(); onCategorySelected(c.id) } },
                     label = { Text(c.label) },
                     leadingIcon = if (locked) {
                         { Icon(Icons.Filled.Lock, contentDescription = "Locked", modifier = Modifier.size(16.dp)) }
@@ -224,7 +226,7 @@ private fun PronounsContent(
             items(patterns, key = { it.id }) { p ->
                 FilterChip(
                     selected = p.id == pattern?.id,
-                    onClick = { selectedPatternId = p.id },
+                    onClick = { onChipTapped(); selectedPatternId = p.id },
                     label = { Text(p.chip) }
                 )
             }

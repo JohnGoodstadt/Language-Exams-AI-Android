@@ -10,6 +10,7 @@ import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.stats.recordPageView
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -262,6 +263,12 @@ class Format2GroupedViewModel @Inject constructor(
         return historyManager.getPlayCount("Reference", contentID)
     }
     private fun didPlayReferenceSentence(sentence: String,sheetName:String) {
+        // Page-engagement: count one tap for this reference sheet on every sentence play.
+        ttsStatsRepository.recordPageView(
+            com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+            sheetName,
+            com.goodstadt.john.language.exams.data.stats.PageStat.Metric.TAP
+        )
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"
 

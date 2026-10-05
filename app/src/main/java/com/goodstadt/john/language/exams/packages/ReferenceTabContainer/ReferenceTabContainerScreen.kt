@@ -117,6 +117,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
         // Get the detailed definition for the selected tab.
         val definition = selectedTab.definition
 
+        // Page-popularity: record which reference sheet the user opened (initial view + every switch).
+        viewModel.recordReferencePageOpen(selectedTab.id)
+
         // This `when` statement is the router. It builds the correct navigation route
         // based on the `screenType` provided by your Remote Config.
         val route: String? = when (definition.screenType) {

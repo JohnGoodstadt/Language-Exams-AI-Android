@@ -58,3 +58,38 @@ fun TTSStatsRepository.recordQuizCompletion(area: QuizStat.Area, sheetId: String
         inc(doc, totalKey, maxOf(0, tries))
     }
 }
+
+/**
+ * Page-popularity key grammar — the page-view twin of [QuizStat], and the Android twin of iOS `PageStat`.
+ * How often users open (and interact with) a screen, so we can see which reference sheets — and later other
+ * screens — are popular. Same grammar as quiz stats but with a `p_` prefix:
+ *
+ *     p_<platform>_<area>_<sheetId>_<metric>     e.g.  p_and_reference_GermanPrepositionsTeaching_open
+ *
+ * Metrics: `open` (screen shown) and `tap` (user interacted). Reuses [QuizStat.normalize] so sheet ids are
+ * cleaned identically. Written to both the global monthly doc and the per-user doc; the existing
+ * background/foreground flush uploads and clears them.
+ */
+object PageStat {
+    enum class Area(val id: String) {
+        REFERENCE("reference"), ME("me"), WORD_OF_THE_DAY("wordoftheday"), SAVED("saved")
+    }
+    enum class Metric(val id: String) { OPEN("open"), TAP("tap") }
+
+    const val PLATFORM = "and"
+
+    fun key(area: Area, sheetId: String, metric: Metric): String =
+        "p_${PLATFORM}_${area.id}_${QuizStat.normalize(sheetId)}_${metric.id}"
+}
+
+/** Record ONE page event (default OPEN) to both GlobalStats (stats/YYYY-MM) and USER (users/<uid>). */
+fun TTSStatsRepository.recordPageView(
+    area: PageStat.Area,
+    sheetId: String,
+    metric: PageStat.Metric = PageStat.Metric.OPEN
+) {
+    val name = PageStat.key(area, sheetId, metric)
+    for (doc in listOf(TTSStatsRepository.fsDOC.GlobalStats, TTSStatsRepository.fsDOC.USER)) {
+        inc(doc, name, 1)
+    }
+}

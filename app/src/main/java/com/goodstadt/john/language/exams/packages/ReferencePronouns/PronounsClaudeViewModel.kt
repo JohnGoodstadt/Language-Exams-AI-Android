@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.packages.ReferencePronouns
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.goodstadt.john.language.exams.data.stats.recordPageView
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
@@ -32,8 +33,18 @@ class PronounsClaudeViewModel @Inject constructor(
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val billingRepository: BillingRepository,
     private val accessPolicy: com.goodstadt.john.language.exams.managers.AccessPolicy,
+    private val ttsStatsRepository: com.goodstadt.john.language.exams.data.repository.TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
+
+    /** Page-engagement: count one tap for this reference sheet (sentence play or category/item chip tap). */
+    fun recordReferenceTap() {
+        ttsStatsRepository.recordPageView(
+            com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+            documentId,
+            com.goodstadt.john.language.exams.data.stats.PageStat.Metric.TAP
+        )
+    }
 
     /**
      * Freemium gate for this fileFormat-6 chip screen (Prepositions / Pronouns): is the category chip at
@@ -96,6 +107,7 @@ class PronounsClaudeViewModel @Inject constructor(
     /** Play a sentence (or a single pronoun form) via the shared audio waterfall. */
     fun play(text: String) {
         if (text.isBlank()) return
+        recordReferenceTap() // page-engagement: every sentence tap counts
         lastPlayedSentence = text
         viewModelScope.launch {
             audioPlaybackRepository.playTrackAndGetStatus(

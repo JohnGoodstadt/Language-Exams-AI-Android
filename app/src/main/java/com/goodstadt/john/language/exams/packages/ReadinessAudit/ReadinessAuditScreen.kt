@@ -24,10 +24,10 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -145,6 +145,12 @@ fun ReadinessAuditScreen(
     val heightClass = rememberHeightClass()
 // 2. Derive dynamic spacing & padding values based on screen height
     val verticalPadding: Dp = when (heightClass) {
+        HeightClass.COMPACT -> 0.dp   // Less padding on short screens (e.g. 360x640dp)
+        HeightClass.MEDIUM -> 6.dp    // Balanced padding on standard screens
+        HeightClass.EXPANDED -> 16.dp // Generous padding on tall screens
+    }
+
+    val bottomPadding: Dp = when (heightClass) {
         HeightClass.COMPACT -> 0.dp   // Less padding on short screens (e.g. 360x640dp)
         HeightClass.MEDIUM -> 6.dp    // Balanced padding on standard screens
         HeightClass.EXPANDED -> 16.dp // Generous padding on tall screens
@@ -293,6 +299,7 @@ fun ReadinessAuditScreen(
                 confidence = stats.confidence,
                 readiness = stats.readiness,
                 confidenceLabel = viewModel.getConfidenceLabel(stats.confidence),
+                bottomPadding = bottomPadding
             )
 
             // --- Quiz-level learning points (stays the same for all 10 questions) ---
@@ -435,6 +442,7 @@ private fun AuditStatusHeader(
     confidence: Int,
     readiness: Int,
     confidenceLabel: String,
+    bottomPadding: Dp
 ) {
     Column(
         modifier = Modifier
@@ -454,7 +462,6 @@ private fun AuditStatusHeader(
                     // within Baseline itself.
                     text = if (unlockedLevels.contains(ReadinessAuditLevels.BASELINE)) {
                         if (heightClass == HeightClass.COMPACT) {
-                            //"Let's start with a quick check of your current skills. Completing at least the Baseline gives us an indication of how to adjust the screens."
                             "Let's start with a quick check of your current skills."
                         }else{
                             "To build an accurate roadmap for your exam success, let's start with a quick check of your current skills. Completing at least the Baseline gives us a rough indication of how we adjust the screens."
@@ -471,7 +478,7 @@ private fun AuditStatusHeader(
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color.LightGray,
                     lineHeight = 20.sp,
-                    modifier = Modifier.padding(top = 4.dp, bottom = 16.dp)
+                    modifier = Modifier.padding(top = 4.dp, bottom = bottomPadding)
                 )
 
                 Card(
@@ -875,7 +882,7 @@ private fun AuditNavigationRow(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            if (BuildConfig.DEBUG) {
+            if (false && BuildConfig.DEBUG) {
                 Button(
                     onClick = { viewModel.resetAuditForDebug() },
                     modifier = Modifier.height(28.dp),

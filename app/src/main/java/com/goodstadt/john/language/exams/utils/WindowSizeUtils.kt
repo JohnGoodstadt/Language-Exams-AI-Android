@@ -2,8 +2,6 @@ package com.goodstadt.john.language.exams.utils
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 
 enum class HeightClass { COMPACT, MEDIUM, EXPANDED }
 
@@ -17,7 +15,7 @@ enum class HeightClass { COMPACT, MEDIUM, EXPANDED }
 fun rememberHeightClass(): HeightClass {
     val screenHeightDp = LocalConfiguration.current.screenHeightDp
     return when {
-        screenHeightDp < 650 -> HeightClass.COMPACT
+        screenHeightDp < 790 -> HeightClass.COMPACT //Samsung A10 = 789dp
         screenHeightDp <= 850 -> HeightClass.MEDIUM
         else -> HeightClass.EXPANDED
     }

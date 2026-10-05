@@ -8,6 +8,7 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.stats.recordPageView
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
@@ -279,6 +280,14 @@ class ConjugationsViewModel @Inject constructor(
         }
     }
     private fun didPlayReferenceSentence(sentence: String) {
+        // Page-engagement: count one tap for this reference sheet on every sentence play.
+        (_uiState.value as? ConjugationsUiState.Success)?.currentSheetName?.let { sheet ->
+            ttsStatsRepository.recordPageView(
+                com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+                sheet,
+                com.goodstadt.john.language.exams.data.stats.PageStat.Metric.TAP
+            )
+        }
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"
 

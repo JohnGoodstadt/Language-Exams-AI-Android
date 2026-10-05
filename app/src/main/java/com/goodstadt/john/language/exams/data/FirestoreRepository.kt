@@ -400,7 +400,7 @@ class FirestoreRepository @Inject constructor(
             //clearSpecificStats(fsDOC.TTSStats, firestoreUpdateFields.keys)
 
         } catch (e: Exception) {
-            Timber.e(e, "Error updating global stats")
+            Timber.e(e, "Error updating global stats (2) ${e.localizedMessage}")
             // Do NOT clear stats here, so we retry next time
         }
 

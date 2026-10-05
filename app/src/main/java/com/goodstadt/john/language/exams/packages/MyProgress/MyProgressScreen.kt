@@ -4,6 +4,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,12 +21,9 @@ import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.Verified
-import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -36,8 +34,10 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -153,12 +153,14 @@ fun MyProgressScreen(
                         )
                     }
                 } else if (!isPurchased) {
+
+                    //FOR NOW DONT USE AN ACCESS CODE
                     // Unobtrusive entry for an App Review access code (instructions go in review notes).
                     // Hidden once full access is granted, so normal/paying users never see it again.
-                    TextButton(
-                        onClick = { reviewCodeText = ""; reviewCodeError = false; showReviewCodeDialog = true },
-                        modifier = Modifier.align(Alignment.CenterHorizontally)
-                    ) { Text("Have an access code?", style = MaterialTheme.typography.bodySmall) }
+//                    TextButton(
+//                        onClick = { reviewCodeText = ""; reviewCodeError = false; showReviewCodeDialog = true },
+//                        modifier = Modifier.align(Alignment.CenterHorizontally)
+//                    ) { Text("Have an access code?", style = MaterialTheme.typography.bodySmall) }
                 }
 
                 // ==========================================

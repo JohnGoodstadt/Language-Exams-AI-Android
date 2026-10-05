@@ -4,7 +4,6 @@ package com.goodstadt.john.language.exams.packages.Paragraph
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
@@ -59,8 +58,6 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
-
-
 
 
 val DEFAULT_GPT = "GPT-4.1-nano"
@@ -1436,7 +1433,7 @@ class ParagraphViewModel @Inject constructor(
                         audioCacheManager.incrementAIParagraphHeardCount()
                     }
                     is PlaybackResult.Failure -> {
-                        if (BuildConfig.DEBUG) {
+                        if (DEBUG) {
                             _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }
                         }else {
                             _uiState.update { it.copy(error = "Text-to-speech failed: Check your internet connection, and try again") }
