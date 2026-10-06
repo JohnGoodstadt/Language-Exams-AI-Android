@@ -179,6 +179,11 @@ fun annotatedSentence(
     word: String,
     sentence: String
 ): AnnotatedString {
+    // When the highlighted word is the first word of the sentence (no preceding text), re-capitalise its
+    // first letter — the split re-inserts the headword/token as stored (often lower-case, e.g. "recycling"),
+    // which would otherwise lower-case the start of the sentence ("recycling helps…" -> "Recycling helps…").
+    fun capIfStart(w: String, preceding: String): String =
+        if (preceding.isBlank() && w.isNotEmpty()) w.replaceFirstChar { it.uppercase() } else w
     val annotatedString = buildAnnotatedString {
         when (parts.size) {
             2 -> {
@@ -189,7 +194,7 @@ fun annotatedSentence(
                         textDecoration = TextDecoration.Underline
                     )
                 ) {
-                    append(word)
+                    append(capIfStart(word, parts[0]))
                 }
                 append(parts[1])
             }
@@ -204,7 +209,7 @@ fun annotatedSentence(
                             textDecoration = TextDecoration.Underline
                         )
                     ) {
-                        append(words[0])
+                        append(capIfStart(words[0], parts[0]))
                     }
                     append(parts[1])
                     withStyle(
