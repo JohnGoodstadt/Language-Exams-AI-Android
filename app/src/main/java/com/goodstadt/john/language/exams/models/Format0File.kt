@@ -65,5 +65,9 @@ data class Format0Word(
 @Serializable
 data class Sentence(
     val sentence: String,
-    val translation: String
+    val translation: String,
+    // Optional: exact word(s) to highlight in [sentence], for cases the plain word-match can't catch
+    // (e.g. German verbs whose conjugated form differs from the headword: "müssen" -> ["muss"]).
+    // Empty (the default for sentences without the key) falls back to the headword match.
+    val highlight: List<String> = emptyList()
 )

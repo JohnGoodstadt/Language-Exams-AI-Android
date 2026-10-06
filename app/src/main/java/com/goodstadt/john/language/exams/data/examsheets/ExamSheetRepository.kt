@@ -313,11 +313,16 @@ class ExamSheetRepository @Inject constructor(
                     val words = wordsSnapshot.documents.mapNotNull { wordDoc ->
                         try {
                             val firestoreWord = wordDoc.toObject<FirestoreWordDTO>()!!
-                            val sentences = firestoreWord.sentences.map { sentenceText ->
+                            val sentences = firestoreWord.sentences.mapIndexed { i, sentenceText ->
+                                // `highlight` is a parallel array of comma-joined tokens — split back to a
+                                // list (empty/absent -> no highlight, so the row falls back to the headword).
+                                val hl = firestoreWord.highlight.getOrNull(i).orEmpty()
+                                    .split(",").map { it.trim() }.filter { it.isNotEmpty() }
                                 Sentence(
                                     sentence = sentenceText,
-                                    translation = ""
-                                ) // Assuming empty translation
+                                    translation = "", // Assuming empty translation
+                                    highlight = hl
+                                )
                             }
 
                             Format0Word(

@@ -168,10 +168,19 @@ class FirestoreUploadAdminRepository @Inject constructor(
                 val sentenceObjects = word.optJSONArray("sentences") ?: JSONArray()
                 val sentences = ArrayList<String>(sentenceObjects.length())
                 val translations = ArrayList<String>(sentenceObjects.length())
+                // Parallel to `sentences`: the per-sentence highlight token(s), comma-joined into one
+                // string (empty when the sentence has none). Flattened like sentences/translations so it
+                // round-trips through Firestore as a simple string array, same length and order.
+                val highlights = ArrayList<String>(sentenceObjects.length())
                 for (si in 0 until sentenceObjects.length()) {
                     val sentence = sentenceObjects.getJSONObject(si)
                     sentences.add(sentence.optString("sentence", ""))
                     translations.add(sentence.optString("translation", ""))
+                    val hl = sentence.optJSONArray("highlight")
+                    highlights.add(
+                        if (hl == null) ""
+                        else (0 until hl.length()).joinToString(",") { hl.optString(it, "") }
+                    )
                 }
 
                 updates += WordUpdate(
@@ -184,7 +193,8 @@ class FirestoreUploadAdminRepository @Inject constructor(
                         "IPA" to word.optString("IPA", ""),
                         "pronounce" to word.optString("pronounce", ""),
                         "sentences" to sentences,
-                        "translations" to translations
+                        "translations" to translations,
+                        "highlight" to highlights
                     )
                 )
             }
@@ -671,10 +681,18 @@ class FirestoreUploadAdminRepository @Inject constructor(
                 val sentencesJson = w.optJSONArray("sentences") ?: JSONArray()
                 val sentences = ArrayList<String>()
                 val translations = ArrayList<String>()
+                // Parallel to `sentences`: per-sentence highlight token(s) comma-joined ("" when none), so
+                // it round-trips as a simple same-length string array (e.g. "müssen" -> "muss").
+                val highlights = ArrayList<String>()
                 for (si in 0 until sentencesJson.length()) {
                     val s = sentencesJson.getJSONObject(si)
                     sentences.add(s.optString("sentence", ""))
                     translations.add(s.optString("translation", ""))
+                    val hl = s.optJSONArray("highlight")
+                    highlights.add(
+                        if (hl == null) ""
+                        else (0 until hl.length()).joinToString(",") { hl.optString(it, "") }
+                    )
                 }
                 // The word document id is normally the 'word' field. But some sheets (e.g. Prepositions)
                 // legitimately repeat the same 'word' within a category with different sentences, so a bare
@@ -702,6 +720,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                         "group" to w.optString("group", ""),
                         "sentences" to sentences,
                         "translations" to translations,
+                        "highlight" to highlights,
                         "lockedClause" to w.optString("lockedClause", ""),
                         "weakenedClause" to w.optString("weakenedClause", "")
                     )

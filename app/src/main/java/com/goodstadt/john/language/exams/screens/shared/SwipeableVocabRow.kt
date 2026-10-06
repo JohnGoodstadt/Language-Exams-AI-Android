@@ -139,8 +139,12 @@ fun SwipeableVocabRow(
             }
         }
     ) { // --- CHANGE 5: 'dismissContent' is now the main content lambda ---
-        // This is your actual row content
-        val displayData = buildSentencePartsSimple(word = word.word, sentence = sentence.sentence)
+        // This is your actual row content.
+        // Prefer the sentence's explicit highlight token(s) when present (e.g. a verb's conjugated form
+        // that differs from the headword); otherwise fall back to matching the headword itself. The split
+        // path already understands a comma-joined pair, so multiple tokens reuse the same renderer.
+        val highlightKey = if (sentence.highlight.isNotEmpty()) sentence.highlight.joinToString(",") else word.word
+        val displayData = buildSentencePartsSimple(word = highlightKey, sentence = sentence.sentence)
        // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, selectedVoiceName)
 
         Box(
@@ -152,7 +156,7 @@ fun SwipeableVocabRow(
         ) {
 
             HighlightedWordInSentenceRow(
-                word = word.word,
+                word = highlightKey,
                 parts = displayData.parts,
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,

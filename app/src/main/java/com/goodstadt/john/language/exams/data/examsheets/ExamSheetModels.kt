@@ -52,6 +52,9 @@ internal data class FirestoreWordDTO(
     val group: String = "",
     val sentences: List<String> = emptyList(),
     val translations: List<String> = emptyList(),
+    // Parallel to `sentences`: each entry is that sentence's highlight token(s), comma-joined (empty when
+    // none). Written by the Upload JSON flattener; split back into Sentence.highlight on read.
+    val highlight: List<String> = emptyList(),
     val lockedClause: String = "",
     val weakenedClause: String = ""
 )
