@@ -589,15 +589,24 @@
           "sentences": [
             {
               "sentence": "Ich bin seit f\u00fcnf Jahren verheiratet.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "verheiratet"
+              ]
             },
             {
               "sentence": "Sind Sie verheiratet oder ledig?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "verheiratet"
+              ]
             },
             {
               "sentence": "Seit wann sind Sie verheiratet?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "verheiratet"
+              ]
             }
           ]
         },
@@ -615,15 +624,24 @@
           "sentences": [
             {
               "sentence": "Ich bin ledig und habe keine Kinder.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "ledig"
+              ]
             },
             {
               "sentence": "Er ist noch ledig.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "ledig"
+              ]
             },
             {
               "sentence": "Sind Sie ledig?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "ledig"
+              ]
             }
           ]
         },
@@ -641,15 +659,24 @@
           "sentences": [
             {
               "sentence": "Meine Nachbarin ist geschieden.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "geschieden"
+              ]
             },
             {
               "sentence": "Er ist geschieden und lebt allein.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "geschieden"
+              ]
             },
             {
               "sentence": "Wie lange ist er schon geschieden?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "geschieden"
+              ]
             }
           ]
         },
@@ -2556,15 +2583,24 @@
           "sentences": [
             {
               "sentence": "Ich esse seit zwei Jahren vegetarisch.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "vegetarisch"
+              ]
             },
             {
               "sentence": "Gibt es auch ein vegetarisches Gericht?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "vegetarisches"
+              ]
             },
             {
               "sentence": "Ist dieses Gericht vegetarisch?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "vegetarisch"
+              ]
             }
           ]
         },
@@ -2660,15 +2696,24 @@
           "sentences": [
             {
               "sentence": "Obst und Gem\u00fcse sind sehr gesund.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gesund"
+              ]
             },
             {
               "sentence": "Ich versuche, mich gesund zu ern\u00e4hren.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gesund"
+              ]
             },
             {
               "sentence": "Ist dieses Fr\u00fchst\u00fcck gesund?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gesund"
+              ]
             }
           ]
         }
@@ -2928,15 +2973,24 @@
           "sentences": [
             {
               "sentence": "Auf dem Markt ist das Obst billiger.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "billiger"
+              ]
             },
             {
               "sentence": "Das war ein sehr billiges Handy.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "billiges"
+              ]
             },
             {
               "sentence": "Warum ist dieses Handy so billig?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "billig"
+              ]
             }
           ]
         },
@@ -2954,15 +3008,24 @@
           "sentences": [
             {
               "sentence": "Diese Uhr ist mir zu teuer.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "teuer"
+              ]
             },
             {
               "sentence": "In der Stadt ist das Wohnen teuer.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "teuer"
+              ]
             },
             {
               "sentence": "Ist die Wohnung f\u00fcr dich zu teuer?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "teuer"
+              ]
             }
           ]
         },
@@ -3688,15 +3751,24 @@
           "sentences": [
             {
               "sentence": "Bitte sei p\u00fcnktlich um acht Uhr.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "p\u00fcnktlich"
+              ]
             },
             {
               "sentence": "Der Bus ist heute p\u00fcnktlich gekommen.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "p\u00fcnktlich"
+              ]
             },
             {
               "sentence": "Bist du normalerweise p\u00fcnktlich?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "p\u00fcnktlich"
+              ]
             }
           ]
         },
@@ -4354,15 +4426,24 @@
           "sentences": [
             {
               "sentence": "Ist es noch weit bis zum Zentrum?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "weit"
+              ]
             },
             {
               "sentence": "Der Bahnhof ist nicht weit von hier.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "weit"
+              ]
             },
             {
               "sentence": "Ist dein Arbeitsplatz weit von hier?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "weit"
+              ]
             }
           ]
         },
@@ -4821,15 +4902,24 @@
           "sentences": [
             {
               "sentence": "Er ist seit einem Monat arbeitslos.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "arbeitslos"
+              ]
             },
             {
               "sentence": "Nach der Firmenschlie\u00dfung wurde sie arbeitslos.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "arbeitslos"
+              ]
             },
             {
               "sentence": "Wie lange ist er schon arbeitslos?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "arbeitslos"
+              ]
             }
           ]
         },
@@ -4889,15 +4979,24 @@
           "sentences": [
             {
               "sentence": "Diese Entscheidung ist sehr wichtig.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "wichtig"
+              ]
             },
             {
               "sentence": "Es ist wichtig, jeden Tag zu \u00fcben.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "wichtig"
+              ]
             },
             {
               "sentence": "Warum ist dieser Termin so wichtig?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "wichtig"
+              ]
             }
           ]
         },
@@ -4915,15 +5014,24 @@
           "sentences": [
             {
               "sentence": "Der Film war wirklich interessant.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "interessant"
+              ]
             },
             {
               "sentence": "Sie hat eine interessante Arbeit.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "interessante"
+              ]
             },
             {
               "sentence": "Findest du den neuen Kurs interessant?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "interessant"
+              ]
             }
           ]
         },
@@ -4941,15 +5049,24 @@
           "sentences": [
             {
               "sentence": "Der Vortrag war ziemlich langweilig.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "langweilig"
+              ]
             },
             {
               "sentence": "Mir ist langweilig, lass uns rausgehen.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "langweilig"
+              ]
             },
             {
               "sentence": "War der Vortrag wirklich so langweilig?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "langweilig"
+              ]
             }
           ]
         },
@@ -4967,15 +5084,24 @@
           "sentences": [
             {
               "sentence": "Die Verk\u00e4uferin war sehr freundlich.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "freundlich"
+              ]
             },
             {
               "sentence": "Unsere neuen Nachbarn sind freundlich.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "freundlich"
+              ]
             },
             {
               "sentence": "War die Verk\u00e4uferin freundlich zu dir?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "freundlich"
+              ]
             }
           ]
         },
@@ -4993,15 +5119,24 @@
           "sentences": [
             {
               "sentence": "Diese Stra\u00dfe ist nachts gef\u00e4hrlich.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gef\u00e4hrlich"
+              ]
             },
             {
               "sentence": "Rauchen ist gef\u00e4hrlich f\u00fcr die Gesundheit.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gef\u00e4hrlich"
+              ]
             },
             {
               "sentence": "Ist diese Stra\u00dfe nachts gef\u00e4hrlich?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gef\u00e4hrlich"
+              ]
             }
           ]
         },
@@ -5019,15 +5154,24 @@
           "sentences": [
             {
               "sentence": "Wir wohnen in einer ruhigen Gegend.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "ruhigen"
+              ]
             },
             {
               "sentence": "Bitte sei einen Moment ruhig.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "ruhig"
+              ]
             },
             {
               "sentence": "Ist es in deiner Wohnung ruhig?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "ruhig"
+              ]
             }
           ]
         },
@@ -5045,15 +5189,24 @@
           "sentences": [
             {
               "sentence": "Die Musik ist mir zu laut.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "laut"
+              ]
             },
             {
               "sentence": "Die Kinder sind heute sehr laut.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "laut"
+              ]
             },
             {
               "sentence": "Ist die Musik f\u00fcr dich zu laut?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "laut"
+              ]
             }
           ]
         },
@@ -5071,15 +5224,24 @@
           "sentences": [
             {
               "sentence": "Sie wohnen in einer modernen Wohnung.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "modernen"
+              ]
             },
             {
               "sentence": "Das Museum ist sehr modern.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "modern"
+              ]
             },
             {
               "sentence": "Ist das neue Museum modern?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "modern"
+              ]
             }
           ]
         },
@@ -5097,15 +5259,24 @@
           "sentences": [
             {
               "sentence": "Dieser Sessel ist sehr bequem.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "bequem"
+              ]
             },
             {
               "sentence": "Mit dem Zug reist man bequem.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "bequem"
+              ]
             },
             {
               "sentence": "Findest du diesen Sessel bequem?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "bequem"
+              ]
             }
           ]
         },
@@ -5123,15 +5294,24 @@
           "sentences": [
             {
               "sentence": "Sport h\u00e4lt den K\u00f6rper gesund.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gesund"
+              ]
             },
             {
               "sentence": "Nach der Erk\u00e4ltung ist er wieder gesund.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gesund"
+              ]
             },
             {
               "sentence": "Ist dieses Fr\u00fchst\u00fcck gesund?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "gesund"
+              ]
             }
           ]
         },
@@ -5149,15 +5329,24 @@
           "sentences": [
             {
               "sentence": "Ich bleibe heute zu Hause, weil ich krank bin.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "krank"
+              ]
             },
             {
               "sentence": "Mein Kind war letzte Woche krank.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "krank"
+              ]
             },
             {
               "sentence": "Warum bist du diese Woche krank?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "krank"
+              ]
             }
           ]
         },
@@ -5175,15 +5364,24 @@
           "sentences": [
             {
               "sentence": "Ich bin mit meiner Arbeit zufrieden.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "zufrieden"
+              ]
             },
             {
               "sentence": "Der Chef war mit dem Ergebnis zufrieden.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "zufrieden"
+              ]
             },
             {
               "sentence": "Bist du mit deiner Arbeit zufrieden?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "zufrieden"
+              ]
             }
           ]
         },
@@ -5201,15 +5399,24 @@
           "sentences": [
             {
               "sentence": "Der Film hat ein trauriges Ende.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "trauriges"
+              ]
             },
             {
               "sentence": "Sie war traurig, weil ihr Freund weggezogen ist.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "traurig"
+              ]
             },
             {
               "sentence": "Warum sieht sie so traurig aus?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "traurig"
+              ]
             }
           ]
         },
@@ -5227,15 +5434,24 @@
           "sentences": [
             {
               "sentence": "Die Pr\u00fcfung war einfacher als erwartet.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "einfacher"
+              ]
             },
             {
               "sentence": "Es ist nicht einfach, eine Wohnung zu finden.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "einfach"
+              ]
             },
             {
               "sentence": "War die Aufgabe f\u00fcr dich einfach?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "einfach"
+              ]
             }
           ]
         },
@@ -5253,15 +5469,24 @@
           "sentences": [
             {
               "sentence": "Die Frage war ziemlich schwierig.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "schwierig"
+              ]
             },
             {
               "sentence": "Es war eine schwierige Entscheidung.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "schwierige"
+              ]
             },
             {
               "sentence": "Welche Frage war besonders schwierig?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "schwierig"
+              ]
             }
           ]
         },
@@ -5279,15 +5504,24 @@
           "sentences": [
             {
               "sentence": "Er ist immer p\u00fcnktlich.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "p\u00fcnktlich"
+              ]
             },
             {
               "sentence": "Bitte komm p\u00fcnktlich zum Termin.",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "p\u00fcnktlich"
+              ]
             },
             {
               "sentence": "Bist du normalerweise p\u00fcnktlich?",
-              "translation": ""
+              "translation": "",
+              "highlight": [
+                "p\u00fcnktlich"
+              ]
             }
           ]
         }
