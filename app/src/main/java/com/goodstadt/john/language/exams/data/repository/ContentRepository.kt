@@ -1337,6 +1337,14 @@ class ContentRepository @Inject constructor(
                 }
             },
             onFailure = { exception ->
+                Timber.e("ContentRepository.generateAndPlayTTS.Exception")
+                TimberFault.f(
+                    message = "\"ContentRepository.generateAndPlayTTS.Exception ${exception.localizedMessage}",
+                    localizedMessage = exception.localizedMessage,
+                    secondaryText = "onFailure={}",
+                    area = "generateAndPlayTTS"
+                )
+
                 Timber.e(exception, "TTS API Call failed")
                 PlaybackResultSplit.Failure(exception as? Exception ?: Exception("TTS API error"))
             }

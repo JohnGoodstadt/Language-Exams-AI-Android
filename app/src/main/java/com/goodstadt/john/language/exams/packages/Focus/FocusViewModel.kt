@@ -76,6 +76,7 @@ class FocusViewModel @Inject constructor(
     private val contentRepository: ContentRepository,
     private val referenceStrengthRepository: ReferenceStrengthRepository,
     private val vocabQuizRepository: com.goodstadt.john.language.exams.data.repository.VocabQuizRepository,
+    private val usageQuizRepository: com.goodstadt.john.language.exams.data.repository.UsageQuizRepository,
     private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider
 ) : ViewModel() {
 
@@ -119,6 +120,36 @@ class FocusViewModel @Inject constructor(
         vocabQuizRepository.dataUpdateEvents
             .onStart { emit(Unit) }
             .map { vocabQuizRepository.weakVocabSections() }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    /**
+     * Per-category Vocab Quiz strengths for the Focus screen, shown just like the Reference areas. Only
+     * WEAK and OK appear - Focus is about what still needs work, so STRONG (not a weakness) and UNTESTED
+     * (too little data to bucket) are hidden. Reactive, so it updates as section quizzes are taken.
+     */
+    val vocabQuizStrengths: StateFlow<List<ReferenceStrength>> =
+        vocabQuizRepository.dataUpdateEvents
+            .onStart { emit(Unit) }
+            .map {
+                vocabQuizRepository.categoryStrengths().filter { s ->
+                    s.level == ReferenceStrengthLevel.WEAK || s.level == ReferenceStrengthLevel.OK
+                }
+            }
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    /**
+     * Per-quiz Usage Quiz strengths for the Focus screen, shown just like the Reference and Vocab-Quiz
+     * areas. Only WEAK and OK appear (Strong isn't a weakness, Untested has too little data). Reactive, so
+     * it updates as usage quizzes are completed.
+     */
+    val usageQuizStrengths: StateFlow<List<ReferenceStrength>> =
+        usageQuizRepository.dataUpdateEvents
+            .onStart { emit(Unit) }
+            .map {
+                usageQuizRepository.usageQuizStrengths().filter { s ->
+                    s.level == ReferenceStrengthLevel.WEAK || s.level == ReferenceStrengthLevel.OK
+                }
+            }
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     // The weak vocab section the learner tapped to practise (nil = none). `category` carries the quiz KEY.

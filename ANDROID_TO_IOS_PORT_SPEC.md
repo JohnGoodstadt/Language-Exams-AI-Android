@@ -665,3 +665,16 @@ Naming: `Quizzes/<Family>/<Level>/<Type><Key>-<lang>.json`; Firestore doc = the 
 
 > The old `app/src/de/backup_sectionquiz_old/**` and `backup_quizzes_old/**` trees are **backups, not shipped** — ignore for porting.
 
+
+---
+
+## Vocab Quiz — celebrate on TOTAL completion, not per 10-question page (2026-10-07)
+
+**Android:** `VocabSectionQuizViewModel` / `VocabQuizScreen`. A section quiz is paginated into pages of 10 (the '1','2','3' sub-tab chips); e.g. 13 questions → pages [1,2] (10 + 3). Next/Previous flow across page boundaries so the user walks all questions. The end-of-quiz celebration (`onQuizFinished()` → banner + XP + save) must fire **once on total completion**, never at the end of each page.
+
+**iOS status: DONE (2026-10-07)** — `VocabSectionQuizViewModel.swift` + `VocabQuizScreen.swift` now combine all category files into one pool, paginate by 10 (chips = pages), navigate Next/Previous across pages, and celebrate once via `isWholeQuizComplete` + `hasCelebrated`. Previously iOS loaded one file per chip and celebrated per file.
+
+Implementation (both platforms):
+- `isWholeQuizComplete()` = every in-play question answered. "In play" = `_paginatedQuestions.flatten()` (section, respects active mastery filter) else `_allSectionQuestions` else the single `_questions` page. Answers accumulate across pages in `_sectionAnswersByWord` (keyed by word), so completion holds regardless of order/page.
+- One-shot latch `_hasCelebrated` gates the fire so re-answering the final question (or auto-advance landing back on it) cannot re-trigger it. Reset on: new section load, `resetQuiz`, and both filter re-paginate paths (`applyFilters` / `applyFiltersAndPaginate`).
+- Replaces the earlier positional gate (last question of last page), which misfired on out-of-order answering and could fire twice.

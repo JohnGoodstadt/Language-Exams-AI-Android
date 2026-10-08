@@ -57,7 +57,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
 import com.goodstadt.john.language.exams.packages.CategoryTab.SectionQuizContainer
-import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)

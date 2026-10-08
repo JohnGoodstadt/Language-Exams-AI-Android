@@ -27,6 +27,7 @@ import com.goodstadt.john.language.exams.models.SavedSentence
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.goodstadt.john.language.exams.utils.PlaybackEvent
 import com.goodstadt.john.language.exams.utils.PlaybackEventBus
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -500,6 +501,16 @@ class CategoryTabViewModel @Inject constructor(
                 }
 
                 is AudioPlaybackStatus.Failure -> {
+
+                    //TODO: 1 day only -- bad failure?
+                    Timber.e("AudioPlaybackStatus.Failure -> CategoryTabViewModel.audioPlaybackRepository.playTrackAndGetStatus")
+                    TimberFault.f(
+                        message = "AudioPlaybackStatus.Failure -> CategoryTabViewModel.audioPlaybackRepository.playTrackAndGetStatus",
+                        localizedMessage = "AudioPlaybackStatus.Failure -> CategoryTabViewModel.audioPlaybackRepository.playTrackAndGetStatus",
+                        secondaryText = "release failure",
+                        area = "CategoryTabViewModel"
+                    )
+
                     _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed. Please check your internet connection and try again"))
                     _uiState.update {
                         if (it is CategoryTabUiState.Success) it.copy(

@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.viewmodels
+package com.goodstadt.john.language.exams.packages.VocabQuiz
 
 import com.goodstadt.john.language.exams.data.stats.QuizStat
 import com.goodstadt.john.language.exams.data.stats.recordQuizCompletion
@@ -51,6 +51,7 @@ import com.goodstadt.john.language.exams.packages.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -437,6 +438,12 @@ class VocabSectionQuizViewModel @Inject constructor(
     // for the Focus tab's weak-vocab list. Cleared together with _sectionAnswersByWord.
     private val _sectionFirstTryByWord = mutableMapOf<String, Boolean>()
 
+    // One-shot latch for the end-of-quiz celebration. A section quiz is paginated into pages of 10 (the
+    // '1','2','3' sub-tab chips); the celebration must fire ONCE on TOTAL completion (every question across
+    // every page answered), NOT at the end of each 10-question page, and never twice if the user re-answers
+    // the final question. Reset whenever a fresh quiz/section loads, the quiz is reset, or the filter changes.
+    private var _hasCelebrated = false
+
     // Remembers the option the user last selected for each answered word, so navigating back to a question
     // re-shows its radio selection (for checking) until the quiz is exited. Cleared together with
     // _sectionAnswersByWord on a fresh quiz load.
@@ -555,6 +562,7 @@ class VocabSectionQuizViewModel @Inject constructor(
             currentQuestionIndex.value = 0
             _currentSectionIndex.value = 1
             _categoryMastery.value = CategoryMasteryLevel.New
+            _hasCelebrated = false // new section -> allow the end-of-quiz celebration again
 
             // Show the global loading overlay only if the load is still running after 2s - so cached /
             // in-memory / bundle loads (the common case) don't flash it; only a real Firestore fetch does.
@@ -588,7 +596,7 @@ class VocabSectionQuizViewModel @Inject constructor(
                 //    "GermanSectionSheetA1Adjectives1".
                 val allQuestions = mutableListOf<WordQuizQuestion>()
                 try {
-                    val assetFolder = "${QUIZ_PATH}/$currentSkillLevel"
+                    val assetFolder = "$QUIZ_PATH/$currentSkillLevel"
                     val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
 
                     for (i in 1..10) {
@@ -1107,6 +1115,7 @@ class VocabSectionQuizViewModel @Inject constructor(
         _selectedOptionByWord.clear()
         _activeFilters.value = emptySet()
         _paginatedQuestions = emptyList()
+        _hasCelebrated = false // fresh quiz -> allow the end-of-quiz celebration again
 
         //TODO: Do I need this?
         //_isDirty.value = false
@@ -1146,6 +1155,7 @@ class VocabSectionQuizViewModel @Inject constructor(
             }
         }
         currentQuestionIndex.value = 0
+        _hasCelebrated = false // the in-play set changed -> allow the celebration for this set
     }
 
     /**
@@ -1178,6 +1188,7 @@ class VocabSectionQuizViewModel @Inject constructor(
 
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
+        _hasCelebrated = false // the in-play set changed -> allow the celebration for this set
     }
 
     private fun saveQuizState() {
@@ -1275,13 +1286,12 @@ class VocabSectionQuizViewModel @Inject constructor(
         }
 
 
-        // Completion = last question of the LAST sub-tab page. _questions holds only the CURRENT page (≤10),
-        // so a 12-question quiz has pages [1,2]; finishing page 1 at Q10 must NOT count as finished - only
-        // Q12 on the last page. onQuizFinished (banner + sound + save) then fires once, at the very end.
-        val onLastQuestionOfPage = (currentQuestionIndex.value + 1) >= _questions.value.count()
-        val maxPage = _availableSectionIndices.value.maxOrNull() ?: _currentSectionIndex.value
-        val onLastPage = _currentSectionIndex.value >= maxPage
-        if (onLastQuestionOfPage && onLastPage) { // whole quiz completed
+        // Completion = EVERY question across ALL sub-tab pages has been answered - not the last question of
+        // each 10-question page. A 13-question quiz paginates to pages [1,2] (10 + 3); finishing page 1 at
+        // Q10 must NOT celebrate, only answering the final outstanding question (on any page) does. The latch
+        // makes onQuizFinished (banner + sound + save) fire exactly once, even if the user then re-answers.
+        if (!_hasCelebrated && isWholeQuizComplete()) {
+            _hasCelebrated = true
             quizStatistics.value = quizStatistics.value.copy(
                 state = QuizState.COMPLETED,
                 title = quizStatistics.value.title
@@ -1290,6 +1300,24 @@ class VocabSectionQuizViewModel @Inject constructor(
             onQuizFinished()
         }
 
+    }
+
+    /**
+     * True when the learner has answered EVERY question currently in play, so the single end-of-quiz
+     * celebration fires on TOTAL completion rather than at the end of each 10-question page.
+     *
+     * "In play" is every question across all paginated sub-tab pages in section mode (which already reflects
+     * any active mastery filter), or the single visible page otherwise. Answers accumulate across pages in
+     * [_sectionAnswersByWord] (keyed by word, written for every answer in [updateAnswer] regardless of mode),
+     * so the quiz is complete once every in-play question has a recorded answer - in any order, on any page.
+     */
+    private fun isWholeQuizComplete(): Boolean {
+        val inPlay = when {
+            _paginatedQuestions.isNotEmpty() -> _paginatedQuestions.flatten()
+            _allSectionQuestions.isNotEmpty() -> _allSectionQuestions
+            else -> _questions.value
+        }
+        return inPlay.isNotEmpty() && inPlay.all { _sectionAnswersByWord.containsKey(it.question) }
     }
 
     fun readWordQuizDataFromAssetsObsolete(context: Context, fileName: String): WordQuizRoot? {
@@ -1313,7 +1341,7 @@ class VocabSectionQuizViewModel @Inject constructor(
         val cleanName = File(fileName).name // Removes "Quizzes/" if passed accidentally
         val finalName = if (cleanName.endsWith(".json")) cleanName else "$cleanName.json"
         //val fullPathOld = "Quizzes/$level/$finalName"
-        val fullPath = "${QUIZ_PATH}/$level/$finalName"  //e.g. Quizzes/SectionQuiz/B1/WordQuizPersonal1-en.json
+        val fullPath = "$QUIZ_PATH/$level/$finalName"  //e.g. Quizzes/SectionQuiz/B1/WordQuizPersonal1-en.json
 
         return try {
             // 2. Read

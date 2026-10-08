@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data.repository
 
+
 import android.content.Context
 import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -16,13 +17,11 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
-
-
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -146,8 +145,6 @@ class AudioPlaybackRepository @Inject constructor(
         }
 
         try {
-
-
             // ---------------------------------------------------------
             // 4. GOOGLE TTS (Paid)
             // ---------------------------------------------------------
@@ -182,6 +179,13 @@ class AudioPlaybackRepository @Inject constructor(
 
         } catch (e: Exception) {
             Timber.e(e, "AudioPlaybackRepository: Error during playback waterfall")
+            Timber.e("AudioPlaybackRepository.Exception")
+            TimberFault.f(
+                message = "AudioPlaybackRepository Exception ${e.localizedMessage}",
+                localizedMessage = e.localizedMessage,
+                secondaryText = "release failure. Error during playback waterfall",
+                area = "AudioPlaybackRepository"
+            )
 
             // Critical: Stop the spinner so the UI doesn't freeze
             loadingJob.cancel()

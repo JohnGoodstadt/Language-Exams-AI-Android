@@ -50,6 +50,13 @@ private class ReleaseTree : Timber.Tree() {
 @HiltAndroidApp
 class LanguageExamsApp : Application() {
 
+    companion object {
+        /** TEMP debugging switch: mirror Timber (INFO+) to logcat in RELEASE builds so `adb logcat`
+         *  works on Play/internal-testing builds. Set false (or remove the block in onCreate) for a
+         *  production rollout. No effect on debug builds (they already use DebugTree). */
+        private const val RELEASE_LOGCAT = true
+    }
+
     @Inject
     lateinit var rateLimiter: SimpleRateLimiter
 
@@ -104,6 +111,18 @@ class LanguageExamsApp : Application() {
             Timber.d("Crashlytics collection is DISABLED for this debug build.")
         } else {
             Timber.plant(FaultTree(firestore)) //write to fs on Fatal Error
+            // TEMP (testing): also mirror Timber to logcat in release so `adb logcat` shows Timber.i/e on
+            // Play/internal-testing builds (DebugTree is debug-only). Flip RELEASE_LOGCAT to false — or
+            // delete this block — before a production rollout. Never log secrets at these levels.
+            if (RELEASE_LOGCAT) {
+                Timber.plant(object : Timber.Tree() {
+                    override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
+                        if (priority < Log.INFO) return // INFO/WARN/ERROR/ASSERT only; skip debug/verbose
+                        Log.println(priority, tag ?: "APP", message)
+                        t?.let { Log.println(priority, tag ?: "APP", Log.getStackTraceString(it)) }
+                    }
+                })
+            }
             Timber.d("Crashlytics collection is ENABLED for this release build.")
         }
 

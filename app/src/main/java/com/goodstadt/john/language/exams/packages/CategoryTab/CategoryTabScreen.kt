@@ -104,7 +104,7 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamifi
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
-import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
+import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn

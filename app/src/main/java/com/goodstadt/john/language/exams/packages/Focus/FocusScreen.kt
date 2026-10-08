@@ -70,6 +70,8 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
     val grammarCatalog by viewModel.grammarCatalog.collectAsState()
     val downloadStatus by viewModel.downloadStatus.collectAsState()
     val referenceStrengths by viewModel.referenceStrengths.collectAsState()
+    val vocabQuizStrengths by viewModel.vocabQuizStrengths.collectAsState()
+    val usageQuizStrengths by viewModel.usageQuizStrengths.collectAsState()
     val weakVocabSections by viewModel.weakVocabSections.collectAsState()
     val practiceVocabTarget by viewModel.practiceVocabTarget.collectAsState()
     val vocabSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -161,6 +163,14 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
             sections = weakVocabSections,
             onPractice = { viewModel.practiceVocab(it) }
         )
+
+        // --- Vocab Quiz areas: per-category Weak / OK (Strong hidden) from the vocab section quizzes,
+        // shown just like the reference areas. Hidden entirely when nothing qualifies. ---
+        VocabQuizAreasSection(strengths = vocabQuizStrengths)
+
+        // --- Usage Quiz areas: per-quiz Weak / OK (Strong hidden) from the usage quizzes, shown just like
+        // the reference areas. Hidden entirely when nothing qualifies. ---
+        UsageQuizAreasSection(strengths = usageQuizStrengths)
 
         // --- Reference areas: coarse Weak / OK / Strong per reference-tab area (Prepositions,
         // Adjectives, Pronouns, Sounds Similar, Word Pairs), summarised from the reference quizzes. ---
@@ -453,6 +463,82 @@ private fun WeakVocabRow(
         ) {
             if (greenFrac > 0f) Box(Modifier.fillMaxHeight().weight(greenFrac).background(Color(0xFF4CAF50)))
             if (redFrac > 0f) Box(Modifier.fillMaxHeight().weight(redFrac).background(Color(0xFFE53935)))
+        }
+    }
+}
+
+/**
+ * The "Vocab Quiz" section: per-category Weak / OK from the vocab section quizzes (Strong is not a
+ * weakness, so it's filtered out in the ViewModel). Rendered exactly like the Reference areas, reusing
+ * [ReferenceAreaRow]. The whole section is hidden when nothing qualifies - Focus stays about what needs work.
+ */
+@Composable
+private fun VocabQuizAreasSection(strengths: List<ReferenceStrength>) {
+    if (strengths.isEmpty()) return
+
+    Spacer(Modifier.height(24.dp))
+    Text(
+        text = "Vocab Quiz",
+        style = MaterialTheme.typography.titleMedium,
+        fontWeight = FontWeight.Bold,
+        color = Color.White
+    )
+    Spacer(Modifier.height(4.dp))
+    Text(
+        text = "Vocab topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
+        style = MaterialTheme.typography.bodyMedium,
+        color = Color.LightGray
+    )
+
+    Spacer(Modifier.height(10.dp))
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            strengths.forEach { ReferenceAreaRow(it) }
+        }
+    }
+}
+
+/**
+ * The "Usage Quiz" section: per-quiz Weak / OK from the usage quizzes (Strong is not a weakness, so it's
+ * filtered out in the ViewModel). Rendered exactly like the Reference / Vocab Quiz areas, reusing
+ * [ReferenceAreaRow]. The whole section is hidden when nothing qualifies.
+ */
+@Composable
+private fun UsageQuizAreasSection(strengths: List<ReferenceStrength>) {
+    if (strengths.isEmpty()) return
+
+    Spacer(Modifier.height(24.dp))
+    Text(
+        text = "Usage Quiz",
+        style = MaterialTheme.typography.titleMedium,
+        fontWeight = FontWeight.Bold,
+        color = Color.White
+    )
+    Spacer(Modifier.height(4.dp))
+    Text(
+        text = "Usage topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
+        style = MaterialTheme.typography.bodyMedium,
+        color = Color.LightGray
+    )
+
+    Spacer(Modifier.height(10.dp))
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            strengths.forEach { ReferenceAreaRow(it) }
         }
     }
 }

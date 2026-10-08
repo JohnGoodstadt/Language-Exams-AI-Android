@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Base64
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.utils.AppSignature
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -96,6 +97,15 @@ class GoogleCloudTTS @Inject constructor(
                 val audioBytes = Base64.decode(ttsResponse.audioContent, Base64.DEFAULT)
                 Result.success(audioBytes)
             } else {
+
+                Timber.e("GoogleCloudTTS.getAudioData.Exception")
+                TimberFault.f(
+                    message = "GoogleCloudTTS.getAudioData.catch.Exception",
+                    localizedMessage = "(responseCode != HttpURLConnection.HTTP_OK)",
+                    secondaryText = "",
+                    area = "GoogleCloudTTS"
+                )
+
                 val errorBody = connection.errorStream?.bufferedReader()?.use { it.readText() } ?: "Unknown error"
                 Timber.e("API Error: $responseCode - $errorBody")
                 FirebaseCrashlytics.getInstance().recordException(Exception("GoogleCloudTTS.getAudioData().error.API Error: $responseCode - $errorBody"))
@@ -104,6 +114,14 @@ class GoogleCloudTTS @Inject constructor(
 
         } catch (e: Exception) {
             e.printStackTrace()
+
+            Timber.e("GoogleCloudTTS.getAudioData.Exception")
+            TimberFault.f(
+                message = "GoogleCloudTTS.getAudioData.catch.Exception ${e.localizedMessage}",
+                localizedMessage = e.localizedMessage,
+                secondaryText = "catch(e)",
+                area = "GoogleCloudTTS"
+            )
 
             val crashlytics = FirebaseCrashlytics.getInstance()
             crashlytics.recordException(Exception("GoogleCloudTTS.getAudioData().exception: ${e.localizedMessage}}"))

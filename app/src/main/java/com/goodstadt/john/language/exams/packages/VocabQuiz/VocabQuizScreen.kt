@@ -67,19 +67,17 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
+import com.goodstadt.john.language.exams.packages.reference.WordQuizInfoBottomSheetView
+import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
-import com.goodstadt.john.language.exams.packages.reference.WordQuizInfoBottomSheetView
-import com.goodstadt.john.language.exams.packages.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
-import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 

@@ -9,6 +9,9 @@ import com.goodstadt.john.language.exams.models.UsageQuizAttempt
 import com.goodstadt.john.language.exams.models.UsageQuizStat
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthMath
+import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import java.time.Instant
 import java.time.ZoneId
 import com.google.gson.Gson
@@ -135,6 +138,46 @@ class UsageQuizRepository @Inject constructor(
     /** Every dated attempt at one quiz, oldest first. */
     fun getQuizAttempts(quizId: String): List<UsageQuizAttempt> =
         synchronized(lock) { quizStates[quizId]?.attempts?.toList() ?: emptyList() }
+
+    /**
+     * One rolled-up strength per usage quiz that has been COMPLETED at least once - the data behind the
+     * Focus tab's "Usage Quiz" section (mirrors the iOS implementation). The mark is the quiz RESULT
+     * (correct out of total) blended across completions via [ReferenceStrengthMath], so a poor run counts
+     * against you. Buckets Weak/OK/Strong with the same math as the Reference and Vocab-Quiz sections; the
+     * label is the quiz's friendly topic title from the per-flavour [UsageQuizLevelsFilename] catalogue.
+     */
+    fun usageQuizStrengths(): List<ReferenceStrength> = synchronized(lock) {
+        val titles = UsageQuizLevelsFilename.entries
+            .flatMap { it.quizzes }
+            .associate { it.baseName to it.title }
+
+        quizStates.mapNotNull { (quizId, stat) ->
+            val attempts = stat.attempts?.sortedBy { it.attemptedAt } ?: emptyList()
+            var mark: Float? = null
+            var priorAttempts = 0
+            var totalCorrect = 0
+            var totalAnswered = 0
+            for (a in attempts) {
+                if (a.total <= 0) continue
+                mark = ReferenceStrengthMath.blend(mark, priorAttempts, a.correct, a.total)
+                priorAttempts += 1
+                totalCorrect += a.correct
+                totalAnswered += a.total
+            }
+            if (priorAttempts == 0) return@mapNotNull null
+            val m = mark ?: 0f
+            ReferenceStrength(
+                areaId = quizId,
+                label = titles[quizId] ?: quizId,
+                mark = m,
+                level = ReferenceStrengthMath.level(m, totalAnswered, priorAttempts),
+                attempts = priorAttempts,
+                totalCorrect = totalCorrect,
+                totalAnswered = totalAnswered,
+                lastUpdated = attempts.lastOrNull()?.attemptedAt ?: 0L
+            )
+        }.sortedWith(compareBy({ it.level.ordinal }, { it.label }))
+    }
 
     /** Number of DISTINCT local calendar days on which this quiz was completed flawlessly (no errors).
      *  Callers already holding [lock] are fine - the monitor is reentrant. */

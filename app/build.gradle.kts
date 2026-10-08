@@ -22,8 +22,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 130   //for remote config versioning.  localised quizzes
-val VERSION_NAME = "4.0.130" //go live
+val VERSION_CODE = 132   //for remote config versioning.  localised quizzes
+val VERSION_NAME = "4.0.132" //go live
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace

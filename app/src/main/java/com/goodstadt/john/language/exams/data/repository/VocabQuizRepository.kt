@@ -10,6 +10,8 @@ import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.models.WordQuizAttempt
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
+import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthMath
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -424,6 +426,44 @@ class VocabQuizRepository @Inject constructor(
     /** All attempts across all quizzes (keyed by "$level|$category") - for a future dashboard. */
     fun getAllCategoryAttempts(): Map<String, List<CategoryQuizAttempt>> =
         categoryAttempts.mapValues { it.value.toList() }
+
+    /**
+     * One rolled-up strength per vocab category (key "$level|$category") that has at least one recorded quiz
+     * attempt - the data behind the Focus tab's "Vocab Quiz" section (mirrors the Reference areas). Reuses
+     * [ReferenceStrengthMath] so the % and Weak/OK/Strong buckets are computed byte-for-byte the same way as
+     * the Reference areas. The score blended in is FIRST-TRY correct out of the quiz's total (not plain
+     * correct/answered, which is ~always 100% in exploratory mode since a question only resolves once right).
+     */
+    fun categoryStrengths(): List<ReferenceStrength> =
+        categoryAttempts.mapNotNull { (key, attempts) ->
+            val sorted = attempts.sortedBy { it.attemptedAt }
+            var mark: Float? = null
+            var priorAttempts = 0
+            var totalCorrect = 0
+            var totalAnswered = 0
+            for (a in sorted) {
+                if (a.total <= 0) continue
+                val ftc = a.firstTryCorrect ?: a.correct
+                mark = ReferenceStrengthMath.blend(mark, priorAttempts, ftc, a.total)
+                priorAttempts += 1
+                totalCorrect += ftc
+                totalAnswered += a.total
+            }
+            if (priorAttempts == 0) return@mapNotNull null
+            // categoryKey is "$level|$category".
+            val parts = key.split("|", limit = 2)
+            val m = mark ?: 0f
+            ReferenceStrength(
+                areaId = key,
+                label = parts.getOrElse(1) { key },
+                mark = m,
+                level = ReferenceStrengthMath.level(m, totalAnswered, priorAttempts),
+                attempts = priorAttempts,
+                totalCorrect = totalCorrect,
+                totalAnswered = totalAnswered,
+                lastUpdated = sorted.lastOrNull()?.attemptedAt ?: 0L
+            )
+        }.sortedWith(compareBy({ it.level.ordinal }, { it.label }))
 
     // Star streak: one gold star per flawless (no-error) whole-quiz completion, each counted completion at
     // least a "day" apart from the previous one, up to 3. RELEASE: a real day (24h). DEBUG: 30s stands in
