@@ -235,6 +235,10 @@ class UsageQuizViewModel @Inject constructor(
     val selectedQuizNumber = mutableStateOf(1)
     val currentQuestionIndex = mutableStateOf(0)
     val userAnswers = mutableStateOf(mutableMapOf<Int, Boolean>())
+    // First answer per question index (put-if-absent). Drives the paging dots so the FIRST answer decides
+    // the colour (green = first correct, red = first wrong) - a later correct retry must NOT turn it green.
+    // Cleared in resetQuiz.
+    val firstAnswers = mutableStateOf(mutableMapOf<Int, Boolean>())
 
     //Constants
     val quizFillInTheBlanks = 7 //in iOS these are ENUMs
@@ -302,8 +306,17 @@ class UsageQuizViewModel @Inject constructor(
         // 1. Start background loading
       //  preloadLocalizedTitles()
 
-        selectedQuiz.value = selectedLevel.value.quizzes.firstOrNull()
-        loadQuestions()
+        viewModelScope.launch {
+            // Restore the last-used Usage level (first launch defaults to UPPER / B1 / "Intermediate"),
+            // then load its questions. Done before loadQuestions so the right level loads on startup.
+            val levelName = userPreferencesRepository.usageQuizLevelFlow.first()
+            val level = UsageQuizLevelsFilename.entries.find { it.name == levelName }
+                ?: UsageQuizLevelsFilename.UPPER
+            selectedLevel.value = level
+            _availableQuizzes.value = level.quizzes
+            selectedQuiz.value = level.quizzes.firstOrNull()
+            loadQuestions()
+        }
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
@@ -461,6 +474,8 @@ class UsageQuizViewModel @Inject constructor(
             return // already selected
         }
         selectedLevel.value = level
+        // Persist so the next app load starts at this level.
+        viewModelScope.launch { userPreferencesRepository.setUsageQuizLevel(level.name) }
 
         // 1. Update the list of quizzes (Async)
         refreshQuizTitlesForLevel(level)
@@ -536,6 +551,7 @@ class UsageQuizViewModel @Inject constructor(
 
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
+        firstAnswers.value.clear()
         categoryRecordedIndices.clear()
         questionTapCounts.clear()
         questionResolved.clear()
@@ -723,6 +739,10 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     fun updateAnswer(isCorrect: Boolean) {
         val index = currentQuestionIndex.value
         userAnswers.value[index] = isCorrect
+        // The FIRST answer for this question decides its paging-dot colour (don't overwrite on retries).
+        if (!firstAnswers.value.containsKey(index)) {
+            firstAnswers.value[index] = isCorrect
+        }
 
         // First-try correct = right on the very FIRST tap for this question (no prior taps recorded yet;
         // questionTapCounts is bumped only in the resolve block below). The honest score behind the Focus

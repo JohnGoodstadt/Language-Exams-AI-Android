@@ -50,6 +50,7 @@ class UserPreferencesRepository @Inject constructor(
         val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
         val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
         val VOCAB_QUIZ_AUTO_ADVANCE = booleanPreferencesKey("vocab_quiz_auto_advance")
+        val USAGE_QUIZ_LEVEL = stringPreferencesKey("usage_quiz_level")
         val TRANSLATE_TARGET_LANG = stringPreferencesKey("translate_target_lang")
     }
 
@@ -114,6 +115,20 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setVocabQuizAutoAdvance(enabled: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.VOCAB_QUIZ_AUTO_ADVANCE] = enabled
+        }
+    }
+
+    // Usage quiz level (UsageQuizLevelsFilename enum name). First launch defaults to UPPER (B1 /
+    // "Intermediate"); after that the learner's last-chosen level is restored across app loads.
+    val usageQuizLevelFlow: Flow<String> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.USAGE_QUIZ_LEVEL] ?: "UPPER"
+        }
+
+    suspend fun setUsageQuizLevel(levelName: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.USAGE_QUIZ_LEVEL] = levelName
         }
     }
 

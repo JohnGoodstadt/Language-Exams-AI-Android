@@ -114,6 +114,7 @@ fun UsageQuizScreen(
     val selectedQuizNumber by viewModel.selectedQuizNumber
     val currentQuestionIndex by viewModel.currentQuestionIndex
     val userAnswers by viewModel.userAnswers
+    val firstAnswers by viewModel.firstAnswers
     val quizStatistics by viewModel.quizStatistics
     var selectedOption by remember { mutableStateOf<String?>(null) }
     var isCurrentAnswerCorrect by remember { mutableStateOf<Boolean?>(null) } // Track answer correctness
@@ -354,7 +355,7 @@ fun UsageQuizScreen(
         UsageQuizPagingDots(
             questionCount = questions.size,
             currentQuestionIndex = currentQuestionIndex,
-            userAnswers = userAnswers,
+            firstAnswers = firstAnswers,
         )
     }
     UsageQuizBottomSheets(
@@ -817,7 +818,7 @@ private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
 private fun UsageQuizPagingDots(
     questionCount: Int,
     currentQuestionIndex: Int,
-    userAnswers: MutableMap<Int, Boolean>,
+    firstAnswers: MutableMap<Int, Boolean>,  // first answer per index → the dot colour
 ) {
     Row(
         modifier = Modifier
@@ -833,7 +834,7 @@ private fun UsageQuizPagingDots(
                     .background(
                         if (index == currentQuestionIndex) blueBright2 else dotColor(
                             index,
-                            userAnswers
+                            firstAnswers
                         )
                     ) // Set color based on current page
             )
