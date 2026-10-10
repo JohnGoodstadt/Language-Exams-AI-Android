@@ -10,6 +10,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Surface
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -264,17 +267,22 @@ fun FocusScreen(
     }
 
     if (showAuditSheet) {
-        ModalBottomSheet(
+        // Full-screen (not a bottom sheet): the audit's own "X" / system-back handles closing,
+        // with a mid-quiz "Are you sure?" confirmation.
+        Dialog(
             onDismissRequest = { showAuditSheet = false },
-            sheetState = sheetState,
-            modifier = Modifier.fillMaxHeight(0.92f),
-            dragHandle = { BottomSheetDefaults.DragHandle() },
-            containerColor = ElevatedDarkGrey
-        ) {
-            ReadinessAuditScreen(
-                initialVersion = auditVersion,
-                onFinished = { showAuditSheet = false }
+            properties = DialogProperties(
+                usePlatformDefaultWidth = false,
+                dismissOnBackPress = false,
+                dismissOnClickOutside = false
             )
+        ) {
+            Surface(modifier = Modifier.fillMaxSize(), color = ElevatedDarkGrey) {
+                ReadinessAuditScreen(
+                    initialVersion = auditVersion,
+                    onFinished = { showAuditSheet = false }
+                )
+            }
         }
     }
 

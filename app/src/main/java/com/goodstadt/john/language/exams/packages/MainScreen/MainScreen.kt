@@ -11,6 +11,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Surface
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -375,60 +378,21 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
     }
 
     if (globalUiState.showReadinessAuditIntroSheet) {
-        var showCloseWarning by remember { mutableStateOf(false) }
-        val introSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-        val coroutineScope = rememberCoroutineScope()
-
-        // By the time onDismissRequest fires (swipe, scrim tap, or back press), Material3 has
-        // already finished animating the sheet to Hidden - re-showing it (rather than just
-        // suppressing the boolean that controls composing it) is what makes it "bounce back"
-        // when the user isn't allowed to close yet.
-        fun reopenIntroSheet() {
-            coroutineScope.launch { introSheetState.show() }
-        }
-
-        ModalBottomSheet(
-            onDismissRequest = {
-                if (mainViewModel.isReadinessAuditBaselineComplete()) {
-                    mainViewModel.dismissReadinessAuditIntroSheet()
-                } else {
-                    // Don't close yet - ask for confirmation first.
-                    showCloseWarning = true
-                }
-            },
-            sheetState = introSheetState,
-            modifier = Modifier.fillMaxHeight(0.92f)
+        // Full-screen (not a bottom sheet): the audit's own "X" / system-back handles closing, with a
+        // mid-quiz "Are you sure?" confirmation, so the old reopen-on-dismiss bounce is no longer needed.
+        Dialog(
+            onDismissRequest = { mainViewModel.dismissReadinessAuditIntroSheet() },
+            properties = DialogProperties(
+                usePlatformDefaultWidth = false,
+                dismissOnBackPress = false,
+                dismissOnClickOutside = false
+            )
         ) {
-            ReadinessAuditScreen(
-                onFinished = { mainViewModel.dismissReadinessAuditIntroSheet() }
-            )
-        }
-
-        if (showCloseWarning) {
-            AlertDialog(
-                onDismissRequest = {
-                    showCloseWarning = false
-                    reopenIntroSheet()
-                },
-                title = { Text("Skip the Language check?") },
-                text = { Text("Completing the first quiz helps me set up the app accurately for you. Are you sure you want to close before finishing it?") },
-                confirmButton = {
-                    TextButton(onClick = {
-                        showCloseWarning = false
-                        mainViewModel.dismissReadinessAuditIntroSheet()
-                    }) {
-                        Text("Close Anyway")
-                    }
-                },
-                dismissButton = {
-                    TextButton(onClick = {
-                        showCloseWarning = false
-                        reopenIntroSheet()
-                    }) {
-                        Text("Continue Test")
-                    }
-                }
-            )
+            Surface(modifier = Modifier.fillMaxSize()) {
+                ReadinessAuditScreen(
+                    onFinished = { mainViewModel.dismissReadinessAuditIntroSheet() }
+                )
+            }
         }
     }
 

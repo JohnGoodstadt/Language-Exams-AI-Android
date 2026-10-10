@@ -23,7 +23,11 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.activity.compose.BackHandler
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
@@ -153,6 +157,15 @@ fun ReadinessAuditScreen(
     val currentSkillLevel by viewModel.currentSkillLevel.collectAsState()
     var showSummary by rememberSaveable { mutableStateOf(false) }
 
+    // Full-screen presentation (not a bottom sheet): the "X" / system-back is the only way out, so confirm
+    // before abandoning a quiz in progress. Mid-quiz = answered ≥1 but not finished and not on the summary.
+    var showCloseConfirm by remember { mutableStateOf(false) }
+    val requestClose = {
+        if (quizStatistics.state == QuizState.IN_PROGRESS && !showSummary) showCloseConfirm = true
+        else onFinished()
+    }
+    BackHandler { requestClose() }
+
     val heightClass = rememberHeightClass()
 // 2. Derive dynamic spacing & padding values based on screen height
     val verticalPadding: Dp = when (heightClass) {
@@ -263,6 +276,24 @@ fun ReadinessAuditScreen(
         }
     }
 
+    Box(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        // Close (X), top-start — full-screen presentation has no drag handle, so this is the way out.
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = { requestClose() }) {
+                Icon(
+                    imageVector = Icons.Filled.Close,
+                    contentDescription = "Close",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+        Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
         if (showSummary) {
             AuditSummaryContent(
                 confidence = stats.confidence,
@@ -446,6 +477,8 @@ fun ReadinessAuditScreen(
             }
         }
         } // else: quiz body (shown until the learner opens the summary)
+        } // content Box (weight 1f)
+    } // outer Column (X bar + content)
 
     AuditBottomSheets(
         viewModel = viewModel,
@@ -470,6 +503,26 @@ fun ReadinessAuditScreen(
             onClose = { showExplanationBottomSheet = false }
         )
     }
+
+    // "Are you sure?" before abandoning a quiz in progress (X or system-back while mid-quiz).
+    if (showCloseConfirm) {
+        AlertDialog(
+            onDismissRequest = { showCloseConfirm = false },
+            title = { Text("Close the quiz?") },
+            text = { Text("You haven't finished this quiz yet. Are you sure you want to close?") },
+            confirmButton = {
+                TextButton(onClick = { showCloseConfirm = false; onFinished() }) {
+                    Text("Close Anyway")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showCloseConfirm = false }) {
+                    Text("Continue Test")
+                }
+            }
+        )
+    }
+    } // outer Box (content + overlays)
 } //:QuizScreen
 
 /** CEFR band index for up/down/stay comparison. */

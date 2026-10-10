@@ -13,6 +13,7 @@ import android.content.Context
 import androidx.compose.runtime.State
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -68,6 +69,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.withTimeoutOrNull
@@ -315,7 +317,16 @@ class ReadinessAuditViewModel @Inject constructor(
         // each answer lands in the shared tally, so the gauges still move during a run. [loadCurrentAuditStats]
         // is kept as a no-op for its existing call sites.
         viewModelScope.launch {
-            dialsProvider.dials(userPreferencesRepository.selectedSkillLevelFlow).collect { dials ->
+            // Anchor the audit's dials to the band of the quiz being taken: a Verify level (INTER/UPPER/
+            // ADVANCED -> A2/B1/B2) anchors to its own band, so answering its questions visibly moves
+            // Readiness. Baseline mixes bands, so it stays anchored to the learner's current vocab level.
+            val anchorLevelFlow = combine(
+                snapshotFlow { selectedLevel.value },
+                userPreferencesRepository.selectedSkillLevelFlow
+            ) { level, vocabLevel ->
+                if (level == ReadinessAuditLevels.BASELINE) vocabLevel else AuditEngine.bandLabel(level.ordinal)
+            }
+            dialsProvider.dials(anchorLevelFlow).collect { dials ->
                 _auditStats.value = AuditStats(confidence = dials.confidence, readiness = dials.readiness)
             }
         }
@@ -388,7 +399,8 @@ class ReadinessAuditViewModel @Inject constructor(
 
         selectedQuiz.value = selectedLevel.value.quizzes.firstOrNull()
         refreshUnlockedLevels()
-        loadQuestions()
+        // Entry load is driven by the screen's startAtVersion(...) effect (fires on every open and always
+        // starts fresh); loading here too would just double-load on a newly-created ViewModel.
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
@@ -429,11 +441,12 @@ class ReadinessAuditViewModel @Inject constructor(
      * already in progress restores where the learner left off (via the version-aware attempt key).
      */
     fun startAtVersion(version: Int) {
-        if (_currentVersion.value == version) return
+        // Called from the screen's entry effect on every open. No early-return: entering the audit always
+        // (re)loads the current part fresh, so a retained ViewModel can't show a previous same-day attempt.
         viewModelScope.launch {
             _currentVersion.value = version
             resetQuiz()      // clear in-memory UI before loading the new version's questions
-            loadQuestions()  // restores this version's attempt if one exists, else starts fresh
+            loadQuestions(resetSavedAttempt = true)  // always a new start
         }
     }
 
@@ -488,7 +501,11 @@ class ReadinessAuditViewModel @Inject constructor(
         }
     }
 
-    fun loadQuestions(resetSavedAttempt: Boolean = false) {
+    // Always start a quiz fresh (resetSavedAttempt defaults true): entering any part - Baseline or a
+    // Verify level - clears that part's previously-answered state so the dots, locked answers and the
+    // "See your result" completion button never carry over. Only the ratcheted part scores / category
+    // tallies that feed Confidence & Readiness persist (clearQuizAttempt leaves those untouched).
+    fun loadQuestions(resetSavedAttempt: Boolean = true) {
         viewModelScope.launch {
 
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
@@ -576,10 +593,8 @@ class ReadinessAuditViewModel @Inject constructor(
 
     // A new function for the UI to call when a different level is picked.
     fun onLevelSelected(level: ReadinessAuditLevels) {
-        if (level == selectedLevel.value){
-            return // already selected
-        }
-
+        // NB: no "already selected" early-return - hitting a part (even the one showing) must restart it
+        // from scratch, per "always a new start". loadQuestions(resetSavedAttempt = true) does the wipe.
         if (!isLevelUnlocked(level)) {
             val previousLevel = ReadinessAuditLevels.entries[level.ordinal - 1]
             viewModelScope.launch {

@@ -8,6 +8,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Surface
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -342,22 +345,26 @@ fun MyProgressScreen(
                     }
                 }
                 if (showLocalAuditSheet) {
-                    ModalBottomSheet(
+                    // Full-screen (not a bottom sheet): the audit's own "X" / system-back handles closing,
+                    // with a mid-quiz "Are you sure?" confirmation.
+                    Dialog(
                         onDismissRequest = { showLocalAuditSheet = false },
-                        sheetState = localSheetState,
-                        modifier = Modifier.fillMaxHeight(0.92f),
-                        dragHandle = { BottomSheetDefaults.DragHandle() },
-                        containerColor = ElevatedDarkGrey, //Color(0xFF121212) // Ensure dark background
-                    ) {
-                        // Call your audit screen
-                        ReadinessAuditScreen(
-                            initialVersion = auditVersionToLaunch,
-                            initialLevel = auditTargetLevel,
-                            onFinished = {
-                                // 🟢 Close the sheet when they hit "View Summary" -> "Continue"
-                                showLocalAuditSheet = false
-                            }
+                        properties = DialogProperties(
+                            usePlatformDefaultWidth = false,
+                            dismissOnBackPress = false,
+                            dismissOnClickOutside = false
                         )
+                    ) {
+                        Surface(modifier = Modifier.fillMaxSize(), color = ElevatedDarkGrey) {
+                            ReadinessAuditScreen(
+                                initialVersion = auditVersionToLaunch,
+                                initialLevel = auditTargetLevel,
+                                onFinished = {
+                                    // Close when they hit "View Summary" -> "Continue", or confirm-close.
+                                    showLocalAuditSheet = false
+                                }
+                            )
+                        }
                     }
                 }
                 if (showLanguageExamSheet) {

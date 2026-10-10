@@ -125,8 +125,9 @@ object AuditEngine {
     const val EXPECTED_SECTIONS_PER_LEVEL = 16
     /** In-context quiz answers at a level that count as full quiz coverage (~one quiz's worth). */
     private const val EXPECTED_QUIZ_ANSWERS = 10
-    /** Minimum quiz answers before we trust the quiz accuracy (avoids 1/1 = 100%). */
-    private const val MIN_ANSWERS_FOR_ACCURACY = 3
+    /** Minimum quiz answers before we trust the quiz accuracy. Set to 1 so Readiness responds from the
+     *  first answered question (the audit dial should visibly move as the learner answers). */
+    private const val MIN_ANSWERS_FOR_ACCURACY = 1
     /** Practice split: Vocab sections vs in-context quizzes (Usage/Grammar). */
     private const val VOCAB_WEIGHT = 0.7f
     private const val QUIZ_WEIGHT = 0.3f
