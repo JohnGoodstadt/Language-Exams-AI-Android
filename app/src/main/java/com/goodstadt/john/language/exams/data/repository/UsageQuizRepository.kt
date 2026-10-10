@@ -104,7 +104,7 @@ class UsageQuizRepository @Inject constructor(
      * set was completed with no errors: correct == tries == total (every question right, one tap each).
      * Mutates the in-memory store synchronously (so the returned award flag is accurate) and persists async.
      */
-    fun recordAttempt(quizId: String, correct: Int, tries: Int, total: Int): Boolean {
+    fun recordAttempt(quizId: String, correct: Int, tries: Int, total: Int, firstTryCorrect: Int = correct): Boolean {
         val justEarnedAward = synchronized(lock) {
             val quizStat = quizStates.getOrPut(quizId) { UsageQuizStat(quizId) }
             // Guard against a null list from a legacy save that pre-dates the `attempts` field.
@@ -117,7 +117,8 @@ class UsageQuizRepository @Inject constructor(
                     total = total,
                     correct = correct,
                     tries = tries,
-                    flawless = flawless
+                    flawless = flawless,
+                    firstTryCorrect = firstTryCorrect
                 )
             )
             quizStat.timesCompleted += 1
@@ -159,9 +160,12 @@ class UsageQuizRepository @Inject constructor(
             var totalAnswered = 0
             for (a in attempts) {
                 if (a.total <= 0) continue
-                mark = ReferenceStrengthMath.blend(mark, priorAttempts, a.correct, a.total)
+                // Score by FIRST-TRY correct (honest) - `correct` is ~always the full total in this
+                // keep-trying quiz, so it would read 100%/Strong and never surface as a weakness.
+                val ftc = a.firstTryCorrect ?: a.correct
+                mark = ReferenceStrengthMath.blend(mark, priorAttempts, ftc, a.total)
                 priorAttempts += 1
-                totalCorrect += a.correct
+                totalCorrect += ftc
                 totalAnswered += a.total
             }
             if (priorAttempts == 0) return@mapNotNull null

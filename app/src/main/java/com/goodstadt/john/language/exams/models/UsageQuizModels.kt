@@ -30,7 +30,11 @@ data class UsageQuizAttempt(
     @SerializedName("total") val total: Int = 0,       // questions in the set (always 10)
     @SerializedName("correct") val correct: Int = 0,   // correct answers this go
     @SerializedName("tries") val tries: Int = 0,       // total answer taps this go
-    @SerializedName("flawless") val flawless: Boolean = false // completed with no errors
+    @SerializedName("flawless") val flawless: Boolean = false, // completed with no errors
+    // Questions answered correctly on the FIRST tap. Nullable so attempts saved before this field existed
+    // decode as null and fall back to `correct`. Drives the Focus tab's "Usage Quiz" strength (the honest
+    // score - `correct` is ~always the full total in this keep-trying quiz).
+    @SerializedName("ftc") val firstTryCorrect: Int? = null
 )
 
 @Keep

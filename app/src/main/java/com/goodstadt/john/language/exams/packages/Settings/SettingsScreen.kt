@@ -24,11 +24,11 @@ import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudSync
-import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Stars
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.BottomSheetDefaults
@@ -62,9 +62,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.android.billingclient.api.ProductDetails
@@ -75,9 +73,9 @@ import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.managers.DebugPremiumOverride
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
+import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
-import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import com.goodstadt.john.language.exams.packages.me.SignInBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
@@ -87,7 +85,6 @@ import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCa
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
-import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -234,7 +231,7 @@ private fun SettingsSelectionSheet(
                         Spacer(modifier = Modifier.height(16.dp))
                         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
                             items(uiState.availableExams, key = { it.json }) { exam ->
-                                ExamSelectionRow(
+                                ExamSelectionRowLeft(
                                     exam = exam,
                                     isSelected = uiState.pendingSelectedExam?.json == exam.json,
                                     onClick = { viewModel.onPendingExamSelect(exam) }
@@ -1081,6 +1078,48 @@ fun ExamSelectionRow(
         }
     }
 
+}
+
+/**
+ * Left-justified exam row: the exam's display name on the left with its subtitle in a smaller font directly
+ * below, and a check mark on the right when selected. Used by the Settings exam-selection sheet and by
+ * [com.goodstadt.john.language.exams.packages.me.ChooseOnlyExamSheet]. (The centred [ExamSelectionRow] is
+ * kept for the other screens that use it.)
+ */
+@Composable
+fun ExamSelectionRowLeft(
+    exam: ExamDetails,
+    isSelected: Boolean,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = exam.displayName,
+                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
+            )
+            if (exam.subtitle.isNotBlank()) {
+                Text(
+                    text = exam.subtitle,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+        if (isSelected) {
+            Icon(
+                imageVector = Icons.Default.Check,
+                contentDescription = "Selected",
+                tint = MaterialTheme.colorScheme.primary
+            )
+        }
+    }
 }
 @Composable
 fun LanguageSelectionRow(

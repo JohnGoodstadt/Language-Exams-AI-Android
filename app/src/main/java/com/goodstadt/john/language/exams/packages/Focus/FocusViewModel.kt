@@ -161,6 +161,15 @@ class FocusViewModel @Inject constructor(
         _practiceVocabTarget.value = PracticeTarget(section.title, section.level)
     }
 
+    /** Launch the vocab quiz for a tapped "Vocab Quiz" strength row. Its areaId is "$level|$category" and
+     *  the category part is the language-independent quiz key (as stored by recordCategoryAttempt). */
+    fun practiceVocabStrength(area: ReferenceStrength) {
+        val parts = area.areaId.split("|", limit = 2)
+        val level = parts.getOrElse(0) { "" }
+        val category = parts.getOrElse(1) { area.label }
+        _practiceVocabTarget.value = PracticeTarget(category, level)
+    }
+
     fun dismissVocabPractice() {
         _practiceVocabTarget.value = null
     }

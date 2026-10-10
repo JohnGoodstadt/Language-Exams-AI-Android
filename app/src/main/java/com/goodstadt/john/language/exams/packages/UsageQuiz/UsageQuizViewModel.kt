@@ -259,6 +259,12 @@ class UsageQuizViewModel @Inject constructor(
     // a first-try correct (FLAWLESS) from a retry (STUMBLED), and stop re-recording once solved.
     private val questionTapCounts = mutableMapOf<Int, Int>()
     private val questionResolved = mutableSetOf<Int>()
+    // Question indices answered correctly on the FIRST tap - the honest "score" for the Focus tab's Usage
+    // strength (and what gates the completion celebration). Cleared on resetQuiz.
+    private val firstTryCorrectIndices = mutableSetOf<Int>()
+    // One-shot latch: record the finished quiz once (every question answered, right or wrong) so a poor run
+    // still registers on the Focus tab, matching iOS. Cleared on resetQuiz.
+    private var _usageFinishRecorded = false
 
     // Remembers the user's selection per question (keyed by the question's page id) so navigating back
     // re-shows the radio selection for review, until the quiz restarts. Cleared in resetQuiz.
@@ -533,6 +539,8 @@ class UsageQuizViewModel @Inject constructor(
         categoryRecordedIndices.clear()
         questionTapCounts.clear()
         questionResolved.clear()
+        firstTryCorrectIndices.clear()
+        _usageFinishRecorded = false
         _selectedOptionByPage.clear()
         _answerCorrectByPage.clear()
         _activeFilters.value = emptySet()
@@ -599,7 +607,10 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
     }
 
-    private fun onQuizFinished() {
+    // [celebrate] gates the completion banner (+ its XP): it's shown only when the quiz was finished by
+    // answering the LAST question correctly. The Focus-tab recording (recordAttempt) runs regardless, so a
+    // poor run - finished with a wrong final answer - still registers as a weakness, matching iOS.
+    private fun onQuizFinished(celebrate: Boolean = true) {
 
         val qs = quizStatistics
         val now = System.currentTimeMillis()
@@ -625,45 +636,47 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
             quizHistoryManager.saveAttempt(qs.value.skillLevel, qs.value.quizNumber, qs.value.title, qs.value.correct, qs.value.tries)
 
-            // 3. Logic
-            if (qs.value.correct < qs.value.tries) {
-                xpManager.registerAction(XpActionType.CompleteQuiz)
-                bannerManager.showBanner(
-                    title = "Almost Perfect",
-                    subtitle = "Not quite. Try again for a perfect score. Don't look at the Info first",
-                    seconds = 8 //so they can read it
-                )
-            } else {
-                // Perfect Score
-                if (lastAttempt != null) {
-                    val diff = now - lastAttempt.timestamp
-                    val oneDayMillis = 1000 * 60 * 60 * 24
+            // 3. Logic - the completion banner (+ its XP) only when celebrating (last answer correct).
+            if (celebrate) {
+                if (qs.value.correct < qs.value.tries) {
+                    xpManager.registerAction(XpActionType.CompleteQuiz)
+                    bannerManager.showBanner(
+                        title = "Almost Perfect",
+                        subtitle = "Not quite. Try again for a perfect score. Don't look at the Info first",
+                        seconds = 8 //so they can read it
+                    )
+                } else {
+                    // Perfect Score
+                    if (lastAttempt != null) {
+                        val diff = now - lastAttempt.timestamp
+                        val oneDayMillis = 1000 * 60 * 60 * 24
 
-                    if (diff > oneDayMillis) {
-                        // ✅ Memory Boost
-                        xpManager.registerAction(XpActionType.MemoryBoost)
-                        bannerManager.showBanner(
-                            title = "Master!",
-                            subtitle = "You finally finished it perfectly. You are fluent",
-                        )
+                        if (diff > oneDayMillis) {
+                            // ✅ Memory Boost
+                            xpManager.registerAction(XpActionType.MemoryBoost)
+                            bannerManager.showBanner(
+                                title = "Master!",
+                                subtitle = "You finally finished it perfectly. You are fluent",
+                            )
+                        } else {
+                            // ⚠️ Grinding
+                            // Maybe just give 5 XP?
+                            xpManager.registerAction(XpActionType.ReplaySentence) // Re-use low value or make new one
+                            bannerManager.showBanner(
+                                title = "Too Early for Mastery",
+                                subtitle = "Too early for a perfect score. Wait till tomorrow to try again",
+                                seconds = 8
+                            )
+                        }
+
                     } else {
-                        // ⚠️ Grinding
-                        // Maybe just give 5 XP?
-                        xpManager.registerAction(XpActionType.ReplaySentence) // Re-use low value or make new one
+                        // First Time Perfect
+                        xpManager.registerAction(XpActionType.PerfectQuiz)
                         bannerManager.showBanner(
-                            title = "Too Early for Mastery",
-                            subtitle = "Too early for a perfect score. Wait till tomorrow to try again",
-                            seconds = 8
+                            title = "Section Master!",
+                            subtitle = "You finished it perfectly. You are fluent",
                         )
                     }
-
-                } else {
-                    // First Time Perfect
-                    xpManager.registerAction(XpActionType.PerfectQuiz)
-                    bannerManager.showBanner(
-                        title = "Section Master!",
-                        subtitle = "You finished it perfectly. You are fluent",
-                    )
                 }
             }
 
@@ -674,7 +687,8 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                 quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
                 correct = qs.value.correct,
                 tries = qs.value.tries,
-                total = questionCount
+                total = questionCount,
+                firstTryCorrect = firstTryCorrectIndices.size
             )
             if (justEarnedAward) {
                 xpManager.registerAction(XpActionType.MemoryBoost)
@@ -709,6 +723,13 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     fun updateAnswer(isCorrect: Boolean) {
         val index = currentQuestionIndex.value
         userAnswers.value[index] = isCorrect
+
+        // First-try correct = right on the very FIRST tap for this question (no prior taps recorded yet;
+        // questionTapCounts is bumped only in the resolve block below). The honest score behind the Focus
+        // tab's Usage strength and the completion celebration.
+        if (isCorrect && index !in questionResolved && questionTapCounts.getOrDefault(index, 0) == 0) {
+            firstTryCorrectIndices.add(index)
+        }
 
         // --- Unified strengths/weaknesses tally: same shared store as the audit, keyed by
         // (category, level). Counted once per question; logs each answer and dumps a category
@@ -746,13 +767,15 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
 
 
-        val currentQuestion = currentQuestionIndex.value + 1 // one based
-        if (currentQuestion >= _questions.value.count()) { //completed
+        // FINISHED = every question answered (right or wrong). Record ONCE so the Focus tab's Usage strength
+        // registers even a poor run (recordAttempt uses first-try). The completion banner is shown only when
+        // the quiz is finished ALL-correct (so the last answer was correct) - never off a wrong final tap.
+        val allAnswered = userAnswers.value.size >= _questions.value.count()
+        if (!_usageFinishRecorded && allAnswered) {
+            _usageFinishRecorded = true
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED, title = quizStatistics.value.title)
-
-            onQuizFinished()
-            val fieldValue =  "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
-
+            val allCorrect = userAnswers.value.values.all { it }
+            onQuizFinished(celebrate = allCorrect)
         }
 
         // Record THIS question's result for spaced repetition. Compute a 4-way outcome from how the

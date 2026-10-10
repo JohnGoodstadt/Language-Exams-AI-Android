@@ -24,7 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.packages.Settings.ExamSelectionRow
+import com.goodstadt.john.language.exams.packages.Settings.ExamSelectionRowLeft
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -61,7 +61,7 @@ fun ChooseOnlyExamSheet(
         Spacer(modifier = Modifier.height(8.dp))
         LazyColumn(modifier = Modifier.weight(1f)) {
             items(uiState.availableExams, key = { it.json }) { exam ->
-                ExamSelectionRow(
+                ExamSelectionRowLeft(
                     exam = exam,
                     isSelected = uiState.pendingSelectedExam?.json == exam.json,
                     onClick = { viewModel.onPendingExamSelect(exam) }

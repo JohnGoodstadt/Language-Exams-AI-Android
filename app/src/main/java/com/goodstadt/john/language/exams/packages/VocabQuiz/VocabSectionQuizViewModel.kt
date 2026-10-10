@@ -1290,7 +1290,10 @@ class VocabSectionQuizViewModel @Inject constructor(
         // each 10-question page. A 13-question quiz paginates to pages [1,2] (10 + 3); finishing page 1 at
         // Q10 must NOT celebrate, only answering the final outstanding question (on any page) does. The latch
         // makes onQuizFinished (banner + sound + save) fire exactly once, even if the user then re-answers.
-        if (!_hasCelebrated && isWholeQuizComplete()) {
+        // Gate on [isCorrect] too, so the celebration fires only when the FINAL outstanding question is
+        // answered CORRECTLY - not off a wrong last tap that happens to complete the set. A wrong last
+        // answer leaves _hasCelebrated false; the user's correct retry then fires it once.
+        if (!_hasCelebrated && isCorrect && isWholeQuizComplete()) {
             _hasCelebrated = true
             quizStatistics.value = quizStatistics.value.copy(
                 state = QuizState.COMPLETED,

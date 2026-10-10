@@ -38,5 +38,6 @@ data class LanguageCodeDetails(
 data class ExamDetails(
     val displayName: String,
     val json: String,
-    val skillLevel: String
+    val skillLevel: String,
+    val subtitle: String = ""
 )

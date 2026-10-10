@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -12,7 +13,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -20,16 +20,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
-import androidx.compose.ui.draw.clip
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -38,28 +36,34 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.data.GrammarRow
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthLevel
 import com.goodstadt.john.language.exams.packages.CategoryTab.SectionQuizContainer
-import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
-import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
+import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
 import kotlin.math.roundToInt
+
+// The Reference tab's index in the bottom nav (MainTab(3) -> Screen.Tab4 = Reference).
+private const val REFERENCE_TAB_INDEX = 3
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
+fun FocusScreen(
+    viewModel: FocusViewModel = hiltViewModel(),
+    // Cross-tab navigation (same mechanism MyProgressScreen uses). Default no-op so previews/standalone use
+    // still compile. Usage/Reference rows switch to the Reference main tab through this.
+    onNavigate: (com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget) -> Unit = {}
+) {
     val context = LocalContext.current
     val focusState by viewModel.focusState.collectAsState()
     val currentLevel by viewModel.currentLevel.collectAsState()
@@ -86,10 +90,42 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
-        Text("Focus Areas", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text("Focus Areas", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = orangeLight)
+        Text(
+            text = "Here is where you can improve area not yet strong enough. Take quizzes and the results, for weak areas, show here",
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color.White
+        )
 
         Spacer(Modifier.height(12.dp))
 
+        // Order: the three quiz-strength sections first (Usage, Vocab, Reference), then the grammar
+        // section, then the DEBUG section.
+
+        // --- Usage Quiz areas. Row/empty-button → Reference tab + the Usage Quiz sub-tab ("quiz", the
+        // first reference sub-tab). ---
+        UsageQuizAreasSection(
+            strengths = usageQuizStrengths,
+            onRowClick = { onNavigate(SideQuestNavTarget.Reference(tabId = "quiz", documentId = "")) },
+            onEmptyAction = { onNavigate(SideQuestNavTarget.Reference(tabId = "quiz", documentId = "")) }
+        )
+
+        // --- Vocab Quiz areas. A row launches that category's quiz (bottom sheet, like the Vocab Quiz
+        // screen); the empty-state button → Reference tab + the Vocab Quiz sub-tab ("vocab_dashboard"). ---
+        VocabQuizAreasSection(
+            strengths = vocabQuizStrengths,
+            onRowClick = { viewModel.practiceVocabStrength(it) },
+            onEmptyAction = { onNavigate(SideQuestNavTarget.Reference(tabId = "vocab_dashboard", documentId = "")) }
+        )
+
+        // --- Reference areas. Row/empty-button → the Reference main tab (default sub-tab). ---
+        ReferenceAreasSection(
+            strengths = referenceStrengths,
+            onRowClick = { onNavigate(SideQuestNavTarget.MainTab(REFERENCE_TAB_INDEX)) },
+            onEmptyAction = { onNavigate(SideQuestNavTarget.MainTab(REFERENCE_TAB_INDEX)) }
+        )
+
+        /*
         when (focusState) {
             is FocusUiState.NotEnoughData ->
                 // Always shown: the learner still needs to take the baseline audit.
@@ -109,12 +145,28 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
             is FocusUiState.Priorities -> Unit
         }
 
+         */
+
         // --- Category progress: gamification-style progress bar per category (green correct / red
         // incorrect / grey not done, out of 10), modelled on TopicProgressRow. Per CEFR level, shows
         // only categories with a coloured bar (attempted) PLUS one untouched category as a nudge (the
         // topmost not-yet-attempted at that level). Tapping a row opens that category's quiz.
         // (Later: drop levels above the learner's level.) ---
         if (grammarCatalog.isNotEmpty()) {
+            Spacer(Modifier.height(24.dp))
+            Text(
+                text = "Bonus Section",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = orangeLight
+            )
+            Spacer(Modifier.height(4.dp))
+            Text(
+                text = "Extra practice on your grammar. Pick a section.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = Color.White
+            )
+
             fun answeredCount(e: GrammarCatalogEntry) = e.score.correct + e.score.incorrect + e.score.dontKnow
 
             // Show only the learner's CURRENT level (e.g. on A1, show A1 only). Fall back to all levels
@@ -134,7 +186,7 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
                         level,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = orangeLight
+                        color = Color.LightGray
                     )
                     Spacer(Modifier.height(6.dp))
                     Card(
@@ -158,23 +210,12 @@ fun FocusScreen(viewModel: FocusViewModel = hiltViewModel()) {
             }
         }
 
-        // --- Weak vocab sections: any section quiz whose last go was < 75% correct first-time. ---
-        WeakVocabSectionsSection(
-            sections = weakVocabSections,
-            onPractice = { viewModel.practiceVocab(it) }
-        )
-
-        // --- Vocab Quiz areas: per-category Weak / OK (Strong hidden) from the vocab section quizzes,
-        // shown just like the reference areas. Hidden entirely when nothing qualifies. ---
-        VocabQuizAreasSection(strengths = vocabQuizStrengths)
-
-        // --- Usage Quiz areas: per-quiz Weak / OK (Strong hidden) from the usage quizzes, shown just like
-        // the reference areas. Hidden entirely when nothing qualifies. ---
-        UsageQuizAreasSection(strengths = usageQuizStrengths)
-
-        // --- Reference areas: coarse Weak / OK / Strong per reference-tab area (Prepositions,
-        // Adjectives, Pronouns, Sounds Similar, Word Pairs), summarised from the reference quizzes. ---
-        ReferenceAreasSection(strengths = referenceStrengths)
+        // --- Weak vocab sections: REMOVED from the screen (not deleted) - it duplicated the "Vocab Quiz"
+        // section (shown above), which already surfaces weak vocab. Re-enable by uncommenting. ---
+        // WeakVocabSectionsSection(
+        //     sections = weakVocabSections,
+        //     onPractice = { viewModel.practiceVocab(it) }
+        // )
 
         // --- DEBUG: one Download button per grammar sheet, in A1..B2 sections. Tests the new
         // Format7/10 download code (result is cached to disk, not displayed). ---
@@ -467,23 +508,45 @@ private fun WeakVocabRow(
     }
 }
 
+/** Small outlined button shown as the single row in an empty section - takes the user to where they can
+ *  do that quiz. */
+@Composable
+private fun EmptySectionButton(label: String, onClick: () -> Unit) {
+    OutlinedButton(onClick = onClick) {
+        Text(label)
+    }
+}
+
 /**
  * The "Vocab Quiz" section: per-category Weak / OK from the vocab section quizzes (Strong is not a
  * weakness, so it's filtered out in the ViewModel). Rendered exactly like the Reference areas, reusing
- * [ReferenceAreaRow]. The whole section is hidden when nothing qualifies - Focus stays about what needs work.
+ * [ReferenceAreaRow]. Always shown: when nothing qualifies yet it shows a subtitle explaining what will
+ * appear once a Vocab Quiz is taken.
  */
 @Composable
-private fun VocabQuizAreasSection(strengths: List<ReferenceStrength>) {
-    if (strengths.isEmpty()) return
-
+private fun VocabQuizAreasSection(
+    strengths: List<ReferenceStrength>,
+    onRowClick: (ReferenceStrength) -> Unit = {},
+    onEmptyAction: () -> Unit = {}
+) {
     Spacer(Modifier.height(24.dp))
     Text(
         text = "Vocab Quiz",
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color = Color.White
+        color = orangeLight
     )
     Spacer(Modifier.height(4.dp))
+    if (strengths.isEmpty()) {
+        Text(
+            text = "Take a Vocab Quiz (Reference tab → a vocab section) and the topics you score under 80% on will appear here to review.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color.White
+        )
+        Spacer(Modifier.height(8.dp))
+        EmptySectionButton(label = "Go to Vocab Quiz", onClick = onEmptyAction)
+        return
+    }
     Text(
         text = "Vocab topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
         style = MaterialTheme.typography.bodyMedium,
@@ -500,7 +563,7 @@ private fun VocabQuizAreasSection(strengths: List<ReferenceStrength>) {
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            strengths.forEach { ReferenceAreaRow(it) }
+            strengths.forEach { s -> ReferenceAreaRow(s, onClick = { onRowClick(s) }) }
         }
     }
 }
@@ -508,20 +571,33 @@ private fun VocabQuizAreasSection(strengths: List<ReferenceStrength>) {
 /**
  * The "Usage Quiz" section: per-quiz Weak / OK from the usage quizzes (Strong is not a weakness, so it's
  * filtered out in the ViewModel). Rendered exactly like the Reference / Vocab Quiz areas, reusing
- * [ReferenceAreaRow]. The whole section is hidden when nothing qualifies.
+ * [ReferenceAreaRow]. Always shown: when nothing qualifies yet it shows a subtitle explaining what will
+ * appear once a Usage Quiz is taken.
  */
 @Composable
-private fun UsageQuizAreasSection(strengths: List<ReferenceStrength>) {
-    if (strengths.isEmpty()) return
-
+private fun UsageQuizAreasSection(
+    strengths: List<ReferenceStrength>,
+    onRowClick: (ReferenceStrength) -> Unit = {},
+    onEmptyAction: () -> Unit = {}
+) {
     Spacer(Modifier.height(24.dp))
     Text(
         text = "Usage Quiz",
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color = Color.White
+        color =  orangeLight
     )
     Spacer(Modifier.height(4.dp))
+    if (strengths.isEmpty()) {
+        Text(
+            text = "Take a Usage Quiz (Reference tab → Usage) and the topics you score under 80% on will appear here to review.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color.White
+        )
+        Spacer(Modifier.height(8.dp))
+        EmptySectionButton(label = "Go to Usage Quiz", onClick = onEmptyAction)
+        return
+    }
     Text(
         text = "Usage topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
         style = MaterialTheme.typography.bodyMedium,
@@ -538,7 +614,7 @@ private fun UsageQuizAreasSection(strengths: List<ReferenceStrength>) {
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            strengths.forEach { ReferenceAreaRow(it) }
+            strengths.forEach { s -> ReferenceAreaRow(s, onClick = { onRowClick(s) }) }
         }
     }
 }
@@ -549,31 +625,35 @@ private fun UsageQuizAreasSection(strengths: List<ReferenceStrength>) {
  * rated yet, only the header + explanation show (so the learner knows how to reveal weak areas).
  */
 @Composable
-private fun ReferenceAreasSection(strengths: List<ReferenceStrength>) {
+private fun ReferenceAreasSection(
+    strengths: List<ReferenceStrength>,
+    onRowClick: (ReferenceStrength) -> Unit = {},
+    onEmptyAction: () -> Unit = {}
+) {
     Spacer(Modifier.height(24.dp))
     Text(
         text = "Reference areas",
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color = Color.White
+        color = orangeLight
     )
     Spacer(Modifier.height(4.dp))
+    if (strengths.isEmpty()) {
+        Text(
+            text = "Take a Reference quiz (Prepositions, Pronouns, Adjectives … — the Q button) and the " +
+                "topics you score under 80% on will appear here to review.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color.White
+        )
+        Spacer(Modifier.height(8.dp))
+        EmptySectionButton(label = "Go to Reference", onClick = onEmptyAction)
+        return
+    }
     Text(
-        text = "How strong you are in each reference topic, from its quiz. Take a reference quiz (the Q button) " +
-            "to reveal weak spots — anything marked Weak is worth another look.",
+        text = "Reference topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
         style = MaterialTheme.typography.bodyMedium,
         color = Color.LightGray
     )
-
-    if (strengths.isEmpty()) {
-        Spacer(Modifier.height(8.dp))
-        Text(
-            text = "No reference quizzes taken yet.",
-            style = MaterialTheme.typography.bodySmall,
-            color = Color.Gray
-        )
-        return
-    }
 
     Spacer(Modifier.height(10.dp))
     Card(
@@ -585,14 +665,15 @@ private fun ReferenceAreasSection(strengths: List<ReferenceStrength>) {
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            strengths.forEach { ReferenceAreaRow(it) }
+            strengths.forEach { s -> ReferenceAreaRow(s, onClick = { onRowClick(s) }) }
         }
     }
 }
 
-/** One reference area: its name + a coarse stat line, and a coloured Weak/OK/Strong pill. */
+/** One reference area: its name + a coarse stat line, and a coloured Weak/OK/Strong pill. Tappable when
+ *  [onClick] is given. */
 @Composable
-private fun ReferenceAreaRow(strength: ReferenceStrength) {
+private fun ReferenceAreaRow(strength: ReferenceStrength, onClick: (() -> Unit)? = null) {
     val (label, color) = when (strength.level) {
         ReferenceStrengthLevel.WEAK -> "Weak" to Color(0xFFE53935)
         ReferenceStrengthLevel.OK -> "OK" to Color(0xFFFF9800)
@@ -601,7 +682,9 @@ private fun ReferenceAreaRow(strength: ReferenceStrength) {
     }
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
+            .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier)
     ) {
         Column(modifier = Modifier.weight(1f)) {
             Text(

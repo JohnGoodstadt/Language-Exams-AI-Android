@@ -157,7 +157,9 @@ fun MeTabContainerScreen(viewModel: MeTabContainerTabViewModel = hiltViewModel()
                 }
             }
             // All the screen destinations remain the same
-            composable(MeScreen.Focus.route) { FocusScreen() }
+            composable(MeScreen.Focus.route) {
+                FocusScreen(onNavigate = { target -> navViewModel.requestNavigation(target) })
+            }
             composable(MeScreen.Saved.route) { SavedPracticeScreen() }
             composable(MeScreen.Settings.route) { SettingsScreen(navController = meTabNavController) }
             composable(MeScreen.Search.route) { SearchScreen() }

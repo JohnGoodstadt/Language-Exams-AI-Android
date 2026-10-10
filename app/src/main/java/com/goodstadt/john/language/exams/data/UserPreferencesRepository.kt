@@ -108,7 +108,7 @@ class UserPreferencesRepository @Inject constructor(
     val vocabQuizAutoAdvanceFlow: Flow<Boolean> = context.dataStore.data
         .catch { emit(emptyPreferences()) }
         .map { preferences ->
-            preferences[PreferenceKeys.VOCAB_QUIZ_AUTO_ADVANCE] ?: false
+            preferences[PreferenceKeys.VOCAB_QUIZ_AUTO_ADVANCE] ?: true
         }
 
     suspend fun setVocabQuizAutoAdvance(enabled: Boolean) {

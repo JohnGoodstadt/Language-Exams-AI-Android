@@ -20,22 +20,26 @@
 			"currentSkillLevel":"A1",
 			"exams": [
 				{
-					"displayName":"English A1 - Basic",
+					"displayName":"English A1 - Beginner",
 					"json":"vocab_data_a1",
+					"subtitle":"ELTS 1.0 - 2.5. TOEFL 0 - 31",
 					"skillLevel":"A1"
 				},
 				{
-					"displayName":"English A2 - Inter",
+					"displayName":"English A2 - Elementary",
 					"json":"vocab_data_a2",
+					"subtitle":"IELTS 3.0 - 3.5. TOEFL 32 - 41",
 					"skillLevel":"A2"
 				},
 				{
-					"displayName":"English B1 - Upper",
+					"displayName":"English B1 - Intermediate",
+					"subtitle":"IELTS 4.0 - 5.0. TOEFL 42 - 71",
 					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
 					"displayName":"English B2 - Advanced",
+					"subtitle":"IELTS 5.0 - 6.5, TOEFL 72 - 94",
 					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
@@ -58,22 +62,26 @@
 			"currentSkillLevel":"A1",
 			"exams": [
 				{
-					"displayName":"English A1 - Basic",
+					"displayName":"English A1 - Beginner",
 					"json":"vocab_data_a1",
+					"subtitle":"ELTS 1.0 - 2.5. TOEFL 0 - 31",
 					"skillLevel":"A1"
 				},
 				{
-					"displayName":"English A2 - Inter",
+					"displayName":"English A2 - Elementary",
 					"json":"vocab_data_a2",
+					"subtitle":"IELTS 3.0 - 3.5. TOEFL 32 - 41",
 					"skillLevel":"A2"
 				},
 				{
-					"displayName":"English B1 - Upper",
+					"displayName":"English B1 - Intermediate",
+					"subtitle":"IELTS 4.0 - 5.0. TOEFL 42 - 71",
 					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
 					"displayName":"English B2 - Advanced",
+					"subtitle":"IELTS 5.0 - 6.5, TOEFL 72 - 94",
 					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
@@ -96,22 +104,26 @@
 			"currentSkillLevel":"A1",
 			"exams": [
 				{
-					"displayName":"English A1 - Basic",
+					"displayName":"English A1 - Beginner",
 					"json":"vocab_data_a1",
+					"subtitle":"ELTS 1.0 - 2.5. TOEFL 0 - 31",
 					"skillLevel":"A1"
 				},
 				{
-					"displayName":"English A2 - Inter",
+					"displayName":"English A2 - Elementary",
 					"json":"vocab_data_a2",
+					"subtitle":"IELTS 3.0 - 3.5. TOEFL 32 - 41",
 					"skillLevel":"A2"
 				},
 				{
-					"displayName":"English B1- Upper",
+					"displayName":"English B1 - Intermediate",
+					"subtitle":"IELTS 4.0 - 5.0. TOEFL 42 - 71",
 					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
 					"displayName":"English B2 - Advanced",
+					"subtitle":"IELTS 5.0 - 6.5, TOEFL 72 - 94",
 					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
@@ -135,21 +147,25 @@
 			"exams": [
 				{
 					"displayName":"German A1",
+					"subtitle":"ELTS 1.0 - 2.5. TOEFL 0 - 31",
 					"json":"vocab_data_a1",
 					"skillLevel":"A1"
 				},
 				{
 					"displayName":"German A2",
 					"json":"vocab_data_a2",
+					"subtitle":"IELTS 3.0 - 3.5. TOEFL 32 - 41",
 					"skillLevel":"A2"
 				},
 				{
 					"displayName":"German B1",
 					"json":"vocab_data_b1",
+					"subtitle":"IELTS 4.0 - 5.0. TOEFL 42 - 71",
 					"skillLevel":"B1"
 				},
 				{
 					"displayName":"German B2",
+					"subtitle":"IELTS 5.0 - 6.5. TOEFL 72 - 94",
 					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
@@ -173,12 +189,14 @@
 			"exams": [
 				{
 					"displayName":"Chinese HSK1",
+					"subtitle":"",
 					"json":"ChineseHSK1Vocab",
 					"skillLevel":"HSK1"
 					
 				},
 				{
 					"displayName":"Chinese HSK2",
+					"subtitle":"",
 					"json":"ChineseHSK2Vocab",
 					"skillLevel":"HSK2"
 				}
