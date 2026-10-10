@@ -81,13 +81,16 @@ class ReferenceStrengthRepository @Inject constructor(
                 correct = correct,
                 answered = answered
             )
+            // Track consecutive perfect (100%) runs; a non-perfect run resets the streak.
+            val streak = if (correct >= answered) (prev?.perfectStreak ?: 0) + 1 else 0
             store[areaId] = Stored(
                 label = label.ifBlank { prev?.label ?: areaId },
                 mark = mark,
                 attempts = (prev?.attempts ?: 0) + 1,
                 totalCorrect = (prev?.totalCorrect ?: 0) + correct,
                 totalAnswered = (prev?.totalAnswered ?: 0) + answered,
-                lastUpdated = System.currentTimeMillis()
+                lastUpdated = System.currentTimeMillis(),
+                perfectStreak = streak
             )
         }
         Timber.d("ReferenceStrength: '$areaId' <- $correct/$answered")
@@ -110,7 +113,7 @@ class ReferenceStrengthRepository @Inject constructor(
         val correct = members.sumOf { it.totalCorrect }
         val attempts = members.sumOf { it.attempts }
         val mark = if (answered > 0)
-            (members.sumOf { (it.mark * it.totalAnswered).toDouble() } / answered).toFloat() else 0f
+            (members.sumOf { (effectiveMark(it) * it.totalAnswered).toDouble() } / answered).toFloat() else 0f
         ReferenceStrength(
             prefix, label, mark, levelOf(mark, answered, attempts),
             attempts, correct, answered, members.maxOf { it.lastUpdated }
@@ -132,10 +135,17 @@ class ReferenceStrengthRepository @Inject constructor(
     private fun levelOf(mark: Float, totalAnswered: Int, attempts: Int): ReferenceStrengthLevel =
         ReferenceStrengthMath.level(mark, totalAnswered, attempts)
 
-    private fun Stored.toStrength(areaId: String) = ReferenceStrength(
-        areaId, label, mark, levelOf(mark, totalAnswered, attempts),
-        attempts, totalCorrect, totalAnswered, lastUpdated
-    )
+    /** The mark shown to callers: the running EMA, snapped to 100% after enough consecutive perfect runs. */
+    private fun effectiveMark(s: Stored): Float =
+        if (s.perfectStreak >= ReferenceStrengthMath.PERFECT_STREAK_FOR_MASTERY) 1f else s.mark
+
+    private fun Stored.toStrength(areaId: String): ReferenceStrength {
+        val m = effectiveMark(this)
+        return ReferenceStrength(
+            areaId, label, m, levelOf(m, totalAnswered, attempts),
+            attempts, totalCorrect, totalAnswered, lastUpdated
+        )
+    }
 
     private fun snapshotStrengths(): List<ReferenceStrength> =
         synchronized(lock) { store.map { (id, s) -> s.toStrength(id) } }
@@ -177,7 +187,9 @@ class ReferenceStrengthRepository @Inject constructor(
         val attempts: Int = 0,
         val totalCorrect: Int = 0,
         val totalAnswered: Int = 0,
-        val lastUpdated: Long = 0
+        val lastUpdated: Long = 0,
+        // Consecutive perfect (100%) runs; at PERFECT_STREAK_FOR_MASTERY the exposed mark snaps to 100%.
+        val perfectStreak: Int = 0
     )
 
 }

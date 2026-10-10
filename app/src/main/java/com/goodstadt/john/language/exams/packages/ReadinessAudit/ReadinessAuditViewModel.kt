@@ -52,6 +52,9 @@ import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizQuestion
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
+import com.goodstadt.john.language.exams.data.ControlRepository
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.stateIn
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizStatistics
 import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizUiState
 import com.goodstadt.john.language.exams.packages.UsageQuiz.UsageQuizUiState
@@ -176,6 +179,7 @@ class ReadinessAuditViewModel @Inject constructor(
     private val usageQuizRepository:UsageQuizRepository,
     private val bannerManager: BannerManager,
     private val auditRepository: ReadinessAuditRepository,
+    private val controlRepository: ControlRepository,
     private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider
 
 ) : ViewModel() {
@@ -281,6 +285,26 @@ class ReadinessAuditViewModel @Inject constructor(
     // 1. We create a StateFlow that the UI will listen to
     private val _auditStats = MutableStateFlow(AuditStats())
     val auditStats: StateFlow<AuditStats> = _auditStats.asStateFlow()
+
+    // For the post-completion summary: the baseline placement ("A1".."B2") and the level currently studied.
+    val baselineLevel: StateFlow<String?> = auditRepository.baselineLevel
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+    val currentSkillLevel: StateFlow<String> = userPreferencesRepository.selectedSkillLevelFlow
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "B1")
+
+    /** Force-switch the app's vocab/exam to the given CEFR band (e.g. "B2") — mirrors ChooseOnlyExamSheet's
+     *  save. Used by the summary's "Start learning <level>" option. No-op if no exam matches the band. */
+    fun loadRecommendedVocab(esolLevel: String) {
+        viewModelScope.launch {
+            ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS) // keep old exam's stats intact
+            val exams = controlRepository.getActiveLanguageDetails().getOrNull()?.exams ?: emptyList()
+            val exam = exams.firstOrNull { it.skillLevel.trim().uppercase() == esolLevel.trim().uppercase() }
+                ?: return@launch
+            userPreferencesRepository.saveSelectedFileName(exam.json)
+            userPreferencesRepository.saveSelectedSkillLevel(exam.skillLevel)
+            userPreferencesRepository.updateExamName(exam.json) // used on tabs 1,2,3
+        }
+    }
 
     init {
         // Drive the audit screen's gauges from the shared comfort-band model (re-anchored to the learner's

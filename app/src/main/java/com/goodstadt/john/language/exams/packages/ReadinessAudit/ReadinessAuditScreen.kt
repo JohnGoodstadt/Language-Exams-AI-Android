@@ -80,6 +80,10 @@ import com.goodstadt.john.language.exams.packages.UsageQuiz.dotColor
 import com.goodstadt.john.language.exams.packages.reference.QuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.packages.reference.UsageDashboardScreen
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
+import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.clickable
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.storage.UiEvent
@@ -142,6 +146,11 @@ fun ReadinessAuditScreen(
     val unlockedLevels by viewModel.unlockedLevels.collectAsState()
     val isCurrentQuestionLocked = lockedAnswers.containsKey(currentQuestionIndex)
 
+    // Post-completion "what next?" summary (mirrors iOS): shown in place of the quiz once finished.
+    val baselineLevel by viewModel.baselineLevel.collectAsState()
+    val currentSkillLevel by viewModel.currentSkillLevel.collectAsState()
+    var showSummary by rememberSaveable { mutableStateOf(false) }
+
     val heightClass = rememberHeightClass()
 // 2. Derive dynamic spacing & padding values based on screen height
     val verticalPadding: Dp = when (heightClass) {
@@ -177,9 +186,9 @@ fun ReadinessAuditScreen(
         viewModel.uiEvent.collect { event ->
             when (event) {
                 is UiEvent.ShowToast -> Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
-                // Quiz just finished - close the sheet so the base view (with the
-                // relocated summary) becomes visible.
-                is UiEvent.QuizCompleted -> onFinished()
+                // Quiz just finished - stay on screen; the "See your result & what's next" button appears
+                // (gated on quizStatistics.state == COMPLETED) and opens the in-screen summary.
+                is UiEvent.QuizCompleted -> { }
             }
         }
     }
@@ -252,6 +261,20 @@ fun ReadinessAuditScreen(
         }
     }
 
+        if (showSummary) {
+            AuditSummaryContent(
+                confidence = stats.confidence,
+                readiness = stats.readiness,
+                confidenceLabel = viewModel.getConfidenceLabel(stats.confidence),
+                baselineLevel = baselineLevel,
+                currentSkillLevel = currentSkillLevel,
+                selectedLevel = selectedLevel,
+                unlockedLevels = unlockedLevels,
+                onTakeNext = { level -> showSummary = false; viewModel.onLevelSelected(level) },
+                onLoadVocab = { esol -> viewModel.loadRecommendedVocab(esol); onFinished() },
+                onGoToApp = { onFinished() }
+            )
+        } else {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -406,7 +429,19 @@ fun ReadinessAuditScreen(
             )
             // Paging control (dots)
 
+            // Once finished (any level), lead the learner forward instead of leaving them on the result.
+            if (quizStatistics.state == QuizState.COMPLETED) {
+                Button(
+                    onClick = { showSummary = true },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                ) {
+                    Text("See your result & what's next")
+                }
+            }
         }
+        } // else: quiz body (shown until the learner opens the summary)
 
     AuditBottomSheets(
         viewModel = viewModel,
@@ -432,6 +467,142 @@ fun ReadinessAuditScreen(
         )
     }
 } //:QuizScreen
+
+/** CEFR band index for up/down/stay comparison. */
+private fun auditBandIndex(s: String?): Int = when (s?.trim()?.uppercase()) {
+    "A1" -> 0; "A2" -> 1; "B1" -> 2; "B2" -> 3; else -> -1
+}
+
+/**
+ * The post-completion "what next?" summary that replaces the quiz in the audit screen (ported from iOS).
+ * Shows Confidence / Readiness (large, green), up/down/stay guidance from the baseline placement vs the
+ * level being studied, and up to three options: take the next quiz (only when a genuinely higher level is
+ * unlocked, so B2 never offers moving up), load the recommended vocab, or just go to the app.
+ */
+@Composable
+private fun AuditSummaryContent(
+    confidence: Int,
+    readiness: Int,
+    confidenceLabel: String,
+    baselineLevel: String?,
+    currentSkillLevel: String,
+    selectedLevel: ReadinessAuditLevels,
+    unlockedLevels: Set<ReadinessAuditLevels>,
+    onTakeNext: (ReadinessAuditLevels) -> Unit,
+    onLoadVocab: (String) -> Unit,
+    onGoToApp: () -> Unit
+) {
+    val recommended = unlockedLevels
+        .filter { it != ReadinessAuditLevels.BASELINE }
+        .maxByOrNull { it.ordinal }
+    val hasHigherQuiz = recommended != null && recommended.ordinal > selectedLevel.ordinal
+    val effectiveIdx = auditBandIndex(baselineLevel)
+    val currentIdx = auditBandIndex(currentSkillLevel)
+    val guidance: String? = baselineLevel?.let { lvl ->
+        when {
+            effectiveIdx < 0 -> null
+            effectiveIdx > currentIdx -> "The audit places you at $lvl, above your current $currentSkillLevel. Consider moving up to save time."
+            effectiveIdx < currentIdx -> "The audit places you at $lvl, below your current $currentSkillLevel. Starting there builds the foundation you need."
+            else -> "Your skills match your current $currentSkillLevel — keep practising to stay exam-ready."
+        }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text(
+            "Nice work — here's where you stand",
+            style = MaterialTheme.typography.headlineSmall,
+            fontWeight = FontWeight.Bold,
+            color = Color.White
+        )
+
+        // Confidence / Readiness recap — large, green.
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(12.dp))
+                .background(Color(0xFF1C1C1E))
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            AuditSummaryStat("Our Confidence", "$confidence%", confidenceLabel, Modifier.weight(1f))
+            AuditSummaryStat("Your Readiness", "$readiness%", baselineLevel?.let { "$it level" } ?: "Estimated", Modifier.weight(1f))
+        }
+
+        guidance?.let {
+            Text(it, style = MaterialTheme.typography.bodyMedium, color = Color.LightGray)
+        }
+
+        if (hasHigherQuiz) {
+            Text(
+                "Take just one more quiz and we can be far more confident about your exam readiness.",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = orangeLight,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(orangeLight.copy(alpha = 0.14f))
+                    .padding(14.dp)
+            )
+        }
+
+        // Option — move UP (hidden at B2, the top).
+        if (hasHigherQuiz && recommended != null) {
+            AuditSummaryOption(
+                title = "Take the ${recommended.description} quiz",
+                subtitle = "A few more questions to raise our confidence in your level.",
+                onClick = { onTakeNext(recommended) }
+            )
+        }
+        // Option — load the recommended vocab and start using the app.
+        baselineLevel?.let { lvl ->
+            AuditSummaryOption(
+                title = "Start learning $lvl",
+                subtitle = "Load the $lvl vocabulary and jump into the app.",
+                onClick = { onLoadVocab(lvl) }
+            )
+        }
+        // Option — just go to the app.
+        AuditSummaryOption(
+            title = "Just take me to the app",
+            subtitle = "You can take more quizzes anytime from the Progress screen.",
+            onClick = onGoToApp
+        )
+    }
+}
+
+@Composable
+private fun AuditSummaryStat(label: String, value: String, sub: String, modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Text(label, style = MaterialTheme.typography.labelSmall, color = orangeLight)
+        Text(value, style = MaterialTheme.typography.displaySmall, fontWeight = FontWeight.Bold, color = Color.Green)
+        Text(sub, style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+    }
+}
+
+@Composable
+private fun AuditSummaryOption(title: String, subtitle: String, onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(Color(0xFF1C1C1E))
+            .clickable(onClick = onClick)
+            .padding(14.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(title, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.SemiBold, color = Color.White)
+            Text(subtitle, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+        }
+    }
+}
 
 
 /** Intro text + the confidence / readiness status card. */

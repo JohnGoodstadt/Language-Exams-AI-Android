@@ -10,6 +10,7 @@ object ReferenceStrengthMath {
     const val MIN_ANSWERED = 3    // below this many lifetime answers an area stays UNTESTED
     const val WEAK_CEILING = 0.5f // mark < 0.50 -> WEAK
     const val STRONG_FLOOR = 0.8f // mark >= 0.80 -> STRONG (in between -> OK)
+    const val PERFECT_STREAK_FOR_MASTERY = 3 // this many consecutive perfect attempts -> mark snaps to 100%
 
     /**
      * Blend one finished run ([correct]/[answered]) into the running mark. The first run (no previous mark,
