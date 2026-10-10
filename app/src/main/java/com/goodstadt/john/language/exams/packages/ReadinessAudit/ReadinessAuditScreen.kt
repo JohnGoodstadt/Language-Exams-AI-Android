@@ -84,6 +84,7 @@ import com.goodstadt.john.language.exams.packages.UsageQuiz.QuizState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.clickable
+import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.storage.UiEvent
@@ -122,6 +123,7 @@ fun ReadinessAuditScreen(
     val currentQuestionIndex by viewModel.currentQuestionIndex
     val userAnswers by viewModel.userAnswers
     val quizStatistics by viewModel.quizStatistics
+    val autoAdvance by viewModel.autoAdvance.collectAsState()
     var selectedOption by remember { mutableStateOf<String?>(null) }
     var isCurrentAnswerCorrect by remember { mutableStateOf<Boolean?>(null) } // Track answer correctness
 
@@ -426,6 +428,8 @@ fun ReadinessAuditScreen(
                 hasExplanation = questions.getOrNull(currentQuestionIndex)?.category?.isNotBlank() == true,
                 answered = lockedAnswers[currentQuestionIndex] != null,
                 onInfoClick = { showExplanationBottomSheet = true },
+                autoAdvance = autoAdvance,
+                onToggleAutoAdvance = { viewModel.toggleAutoAdvance() },
             )
             // Paging control (dots)
 
@@ -1113,7 +1117,9 @@ private fun AuditStatisticsRow(
     tries: Int,
     hasExplanation: Boolean = false,
     answered: Boolean = false,
-    onInfoClick: () -> Unit = {}
+    onInfoClick: () -> Unit = {},
+    autoAdvance: Boolean = false,
+    onToggleAutoAdvance: () -> Unit = {}
 ) {
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -1141,6 +1147,9 @@ private fun AuditStatisticsRow(
                 )
             }
         }
+
+        // "A"-in-a-circle: auto-advance to the next question once the answer's audio has played.
+        AutoAdvanceToggleButton(enabled = autoAdvance, onClick = onToggleAutoAdvance)
 
         Text(
             text = "Tries: $tries",

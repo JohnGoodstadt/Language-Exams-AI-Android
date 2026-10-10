@@ -69,6 +69,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
@@ -180,7 +182,8 @@ class ReadinessAuditViewModel @Inject constructor(
     private val bannerManager: BannerManager,
     private val auditRepository: ReadinessAuditRepository,
     private val controlRepository: ControlRepository,
-    private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider
+    private val dialsProvider: com.goodstadt.john.language.exams.managers.ReadinessDialsProvider,
+    private val playbackEventBus: com.goodstadt.john.language.exams.utils.PlaybackEventBus
 
 ) : ViewModel() {
 
@@ -314,6 +317,48 @@ class ReadinessAuditViewModel @Inject constructor(
         viewModelScope.launch {
             dialsProvider.dials(userPreferencesRepository.selectedSkillLevelFlow).collect { dials ->
                 _auditStats.value = AuditStats(confidence = dials.confidence, readiness = dials.readiness)
+            }
+        }
+        // Mirror the shared auto-advance preference used by the Usage/Vocab quizzes.
+        viewModelScope.launch {
+            userPreferencesRepository.vocabQuizAutoAdvanceFlow.collect { _autoAdvance.value = it }
+        }
+    }
+
+    // --- Auto-advance ("A" button): after a CORRECT answer, wait for the answer's audio to finish,
+    // then move to the next question, as though Next had been tapped. Mirrors the Usage quiz. ---
+    private val _autoAdvance = MutableStateFlow(false)
+    val autoAdvance = _autoAdvance.asStateFlow()
+    private val autoAdvanceMaxWaitMs = 8000L
+    private var autoAdvanceJob: Job? = null
+
+    fun toggleAutoAdvance() {
+        val newValue = !_autoAdvance.value
+        _autoAdvance.value = newValue
+        viewModelScope.launch { userPreferencesRepository.setVocabQuizAutoAdvance(newValue) }
+    }
+
+    /**
+     * Call when the current question was answered CORRECTLY. If auto-advance is on, wait for the answer's
+     * audio to finish (so the user can hear and read it together), then advance to the next question. No-op
+     * when off or already on the last question. A safety cap advances anyway if no finish event arrives.
+     */
+    fun onCorrectAnswered() {
+        if (!_autoAdvance.value) return
+        autoAdvanceJob?.cancel()
+        val fromIndex = currentQuestionIndex.value
+        autoAdvanceJob = viewModelScope.launch {
+            withTimeoutOrNull(autoAdvanceMaxWaitMs) {
+                playbackEventBus.events.first {
+                    it is com.goodstadt.john.language.exams.utils.PlaybackEvent.Completed ||
+                        it is com.goodstadt.john.language.exams.utils.PlaybackEvent.Failed
+                }
+            }
+            if (currentQuestionIndex.value == fromIndex &&
+                currentQuestionIndex.value < _questions.value.lastIndex
+            ) {
+                currentQuestionIndex.value = fromIndex + 1
+                resetInfoButtonTapped()
             }
         }
     }
@@ -946,6 +991,10 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
 
         _lockedAnswers.value = _lockedAnswers.value + (index to selectedOption)
+
+        // Auto-advance after the answer's audio plays (the screen calls handleTap right after this),
+        // mirroring the Usage quiz. No-op when auto-advance is off or on the last question.
+        if (isCorrect) onCorrectAnswered()
 
         val currentPart = selectedLevel.value.ordinal + 1
         val progress = (index + 1).toFloat() / _questions.value.size.toFloat()
