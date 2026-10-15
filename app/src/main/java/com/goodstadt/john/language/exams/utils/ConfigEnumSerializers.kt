@@ -46,6 +46,8 @@ object SheetDataTypeSerializer : KSerializer<SheetDataType> {
 
     override fun deserialize(decoder: Decoder): SheetDataType {
         val rawValue = decoder.decodeString()
+        // The shared iOS/debug manifest also uses this spelling on the Format 8 parent group.
+        if (rawValue == "Format8Screen") return SheetDataType.FORMAT_8
         return SheetDataType.values().find { it.serialName == rawValue }
             ?: run {
                 Timber.w("Unknown SheetDataType '$rawValue' found in JSON. Falling back to UNKNOWN.")

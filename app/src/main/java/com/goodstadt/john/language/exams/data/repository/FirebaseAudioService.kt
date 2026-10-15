@@ -24,7 +24,8 @@ object FirebaseAudioService {
     private const val TAG = "FirebaseAudioService"
 
     // Point to your 'audio_cache' folder bucket
-    private val storageRef = Firebase.storage.reference.child("audio_cache")
+    // ID generation is local; initialize Firebase Storage only when a storage operation needs it.
+    private val storageRef by lazy { Firebase.storage.reference.child("audio_cache") }
 
     // MARK: - 1. ID Generators (Hashing)
 

@@ -16,6 +16,7 @@ enum class SheetDataType(val serialName: String) {
     FORMAT_3("Format3"),
     FORMAT_5("Format5"),
     FORMAT_6("Format6"),
+    FORMAT_8("Format8"),
     GRAMMAR_FILE("GrammarFile"),
     FIXED("fixed"),
     VOCAB_DASHBOARD("VocabDashboard"),
@@ -35,12 +36,14 @@ enum class ScreenType(val serialName: String) {
     FORMAT_3_SCREEN("Format3Screen"),
     FORMAT_5_SCREEN("Format5Screen"),
     FORMAT_6_SCREEN("Format6Screen"),
+    FORMAT_8_SCREEN("Format8Screen"),
     // Same fileFormat-6 teaching screen as FORMAT_6_SCREEN, but a DISTINCT destination so a second
     // Format-6 sheet (e.g. Prepositions teaching) doesn't collide with Pronouns under the reference
     // tab's saveState/restoreState navigation (which keys on the destination, not the documentId arg).
     FORMAT_6_TEACHING_SCREEN("Format6TeachingScreen"),
     GRAMMAR_SCREEN("GrammarScreen"),
     GROUPED_FORMAT_2_SCREEN("GroupedFormat2Screen"),
+    GROUPED_FORMAT_8_SCREEN("GroupedFormat8Screen"),
     GROUPED_FORMAT_3_SCREEN("GroupedFormat3Screen"),
     VOCAB_DASHBOARD("VocabDashboard"),
     UNKNOWN("unknown") // ✅ ADD the unknown case

@@ -34,6 +34,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.goodstadt.john.language.exams.packages.Format8.Format8ContainerScreen
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounsClaudeScreen
@@ -153,6 +154,10 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
             ScreenType.FORMAT_2_SCREEN -> definition.firestoreDocumentId?.let { docId ->
                 RefScreen.Format2.createRoute(docId)
             }
+            ScreenType.FORMAT_8_SCREEN -> definition.firestoreDocumentId?.let { docId ->
+                RefScreen.Format8.createRoute(docId)
+            }
+            ScreenType.GROUPED_FORMAT_8_SCREEN -> RefScreen.GroupedFormat8.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_2_SCREEN -> {
                 // We route to a new destination, passing the Parent Tab ID
                 RefScreen.GroupedFormat2.createRoute(selectedTab.id)
@@ -382,6 +387,42 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                                 }
                             }
                         }
+                    }
+
+                    composable(
+                        route = RefScreen.GroupedFormat8.route,
+                        arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+                    ) { entry ->
+                        val tabId = entry.arguments?.getString("tabId").orEmpty()
+                        val definition = uiState.tabs.firstOrNull { it.id == tabId }?.definition
+                        LaunchedEffect(tabId) { viewModel.ensureFormat8TabLoaded(tabId) }
+                        Format8ContainerScreen(
+                            subTabs = definition?.subTabs.orEmpty(),
+                            selectedSheetName = uiState.selectedFormat8Sheets[tabId],
+                            file = uiState.selectedFormat8Sheets[tabId]?.let { uiState.format8Cache[it] },
+                            isLoading = uiState.isLoadingSheet,
+                            error = uiState.sheetError,
+                            onSubTabSelected = { viewModel.onFormat8SubTabSelected(tabId, it) },
+                            onRetry = { viewModel.onTabSelected(tabId) }
+                        )
+                    }
+
+                    composable(
+                        route = RefScreen.Format8.route,
+                        arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                    ) { entry ->
+                        val docId = entry.arguments?.getString("documentId").orEmpty()
+                        val tab = uiState.tabs.firstOrNull { it.definition.firestoreDocumentId == docId }
+                        LaunchedEffect(tab?.id) { tab?.let { viewModel.ensureFormat8TabLoaded(it.id) } }
+                        Format8ContainerScreen(
+                            subTabs = emptyList(),
+                            selectedSheetName = docId,
+                            file = uiState.format8Cache[docId],
+                            isLoading = uiState.isLoadingSheet,
+                            error = uiState.sheetError,
+                            onSubTabSelected = {},
+                            onRetry = { tab?.let { viewModel.onTabSelected(it.id) } }
+                        )
                     }
 
                     composable(

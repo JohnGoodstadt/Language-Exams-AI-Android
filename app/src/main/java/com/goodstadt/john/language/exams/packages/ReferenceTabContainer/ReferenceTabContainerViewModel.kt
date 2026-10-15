@@ -12,10 +12,13 @@ import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format1File
 import com.goodstadt.john.language.exams.models.Format2File
+import com.goodstadt.john.language.exams.models.Format8File
 import com.goodstadt.john.language.exams.models.SheetDataType
 import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -38,6 +41,8 @@ data class ReferenceUiState(
     val vocabFileCache: Map<String, Format0File> = emptyMap(),
     val format1Cache: Map<String, Format1File> = emptyMap(),
     val format2Cache: Map<String, Format2File> = emptyMap(),
+    val format8Cache: Map<String, Format8File> = emptyMap(),
+    val selectedFormat8Sheets: Map<String, String> = emptyMap(),
 
     // Loading/Error state for data fetching
     val isLoadingSheet: Boolean = false,
@@ -79,6 +84,8 @@ class ReferenceTabContainerViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ReferenceUiState())
     val uiState = _uiState.asStateFlow()
+    private var sheetLoadJob: Job? = null
+    private var sheetLoadRequest = 0L
 
     init {
         // Load the tabs as soon as the ViewModel is created
@@ -124,6 +131,10 @@ class ReferenceTabContainerViewModel @Inject constructor(
                     selectedTabId = validSelection
                 )
             }
+            val selected = _uiState.value.tabs.firstOrNull { it.id == _uiState.value.selectedTabId }
+            if (selected?.definition?.sheetDataType == SheetDataType.FORMAT_8) {
+                onTabSelected(selected.id)
+            }
 
         }
     }
@@ -166,57 +177,96 @@ class ReferenceTabContainerViewModel @Inject constructor(
     fun onTabSelectedOriginal(tabId: String) {
         _uiState.update { it.copy(selectedTabId = tabId) }
     }
-    // ✅ ADD this new function, the equivalent of fetchSheetIfNeeded
     fun onTabSelected(tabId: String) {
-        // First, update the selection state to change the UI
-        _uiState.update { it.copy(selectedTabId = tabId) }
-
-        // Then, launch a coroutine to fetch data for the new tab
-        viewModelScope.launch {
-            val selectedTab = _uiState.value.tabs.firstOrNull { it.id == tabId } ?: return@launch
-            val definition = selectedTab.definition
-            val docId = definition.firestoreDocumentId ?: return@launch
-
-            // Check if data is already cached to avoid re-fetching
-            if (_uiState.value.vocabFileCache.containsKey(docId) || _uiState.value.format1Cache.containsKey(docId)) {
-                return@launch
+        // Invalidate before cancelling so an old request cannot clear the next request's spinner/error.
+        sheetLoadRequest += 1
+        sheetLoadJob?.cancel()
+        _uiState.update { it.copy(selectedTabId = tabId, isLoadingSheet = false, sheetError = null) }
+        val definition = _uiState.value.tabs.firstOrNull { it.id == tabId }?.definition ?: return
+        val docId = if (definition.sheetDataType == SheetDataType.FORMAT_8) {
+            _uiState.value.selectedFormat8Sheets[tabId]
+                ?: definition.firestoreDocumentId
+                ?: definition.subTabs?.firstOrNull()?.firestoreDocumentId
+        } else {
+            definition.firestoreDocumentId
+        }
+        if (docId.isNullOrBlank()) {
+            if (definition.sheetDataType == SheetDataType.FORMAT_8) {
+                _uiState.update { it.copy(sheetError = "No Format 8 sheet configured for ${definition.title}.") }
             }
+            return
+        }
+        if (definition.sheetDataType == SheetDataType.FORMAT_8) {
+            _uiState.update { it.copy(selectedFormat8Sheets = it.selectedFormat8Sheets + (tabId to docId)) }
+        }
+        loadSheet(definition.sheetDataType, docId)
+    }
 
-            _uiState.update { it.copy(isLoadingSheet = true, sheetError = null) }
+    /** Navigation can restore this destination without another chip tap. Do not duplicate an active load. */
+    fun ensureFormat8TabLoaded(tabId: String) {
+        val state = _uiState.value
+        if (state.selectedTabId != tabId || state.isLoadingSheet || state.sheetError != null) return
+        val definition = state.tabs.firstOrNull { it.id == tabId }?.definition ?: return
+        if (definition.sheetDataType != SheetDataType.FORMAT_8) return
+        val docId = state.selectedFormat8Sheets[tabId]
+            ?: definition.firestoreDocumentId
+            ?: definition.subTabs?.firstOrNull()?.firestoreDocumentId
+        if (docId != null && state.format8Cache.containsKey(docId)) return
+        onTabSelected(tabId)
+    }
 
+    fun onFormat8SubTabSelected(tabId: String, sheetName: String) {
+        if (_uiState.value.selectedTabId != tabId) return
+        val definition = _uiState.value.tabs.firstOrNull { it.id == tabId }?.definition ?: return
+        if (definition.sheetDataType != SheetDataType.FORMAT_8 ||
+            definition.subTabs.orEmpty().none { it.firestoreDocumentId == sheetName }) return
+        _uiState.update { it.copy(selectedFormat8Sheets = it.selectedFormat8Sheets + (tabId to sheetName)) }
+        onTabSelected(tabId)
+    }
+
+    private fun loadSheet(dataType: SheetDataType, docId: String) {
+        val cached = when (dataType) {
+            SheetDataType.VOCAB_FILE -> _uiState.value.vocabFileCache.containsKey(docId)
+            SheetDataType.FORMAT_1 -> _uiState.value.format1Cache.containsKey(docId)
+            SheetDataType.FORMAT_2 -> _uiState.value.format2Cache.containsKey(docId)
+            SheetDataType.FORMAT_8 -> _uiState.value.format8Cache.containsKey(docId)
+            else -> false
+        }
+        if (cached) return
+        val request = sheetLoadRequest
+        _uiState.update { it.copy(isLoadingSheet = true, sheetError = null) }
+        sheetLoadJob = viewModelScope.launch {
             try {
-                // Use a 'when' block on the safe enum to call the correct repository function
-                when (definition.sheetDataType) {
+                when (dataType) {
                     SheetDataType.VOCAB_FILE -> {
-                        //val result = examSheetRepository.getVocabSheet(name = docId, forceRefresh = false) // Assuming versioning happens inside
-                        val result = vocabRepository.getFormat0Data(docId)
-                        result.onSuccess { file ->
-                            _uiState.update { it.copy( vocabFileCache = it.vocabFileCache + (docId to file)) }
-                        }
-                        result.onFailure { throw it }
+                        val file = vocabRepository.getFormat0Data(docId).getOrThrow()
+                        _uiState.update { it.copy(vocabFileCache = it.vocabFileCache + (docId to file)) }
                     }
                     SheetDataType.FORMAT_1 -> {
-//                        val result = examSheetRepository.getFormat1Sheet(name = docId, forceRefresh = false) // You will need to create this
-                        val result = vocabRepository.getFormat1Data(docId)
-                        result.onSuccess { file ->
-                            _uiState.update { it.copy(format1Cache = it.format1Cache + (docId to file)) }
-                        }
-                        result.onFailure { throw it }
+                        val file = vocabRepository.getFormat1Data(docId).getOrThrow()
+                        _uiState.update { it.copy(format1Cache = it.format1Cache + (docId to file)) }
                     }
                     SheetDataType.FORMAT_2 -> {
-                        val result = vocabRepository.getFormat2Data(docId)
-                        result.onSuccess { file ->
-                            _uiState.update { it.copy(format2Cache = it.format2Cache + (docId to file)) }
-                        }
-                        result.onFailure { throw it }
+                        val file = vocabRepository.getFormat2Data(docId).getOrThrow()
+                        _uiState.update { it.copy(format2Cache = it.format2Cache + (docId to file)) }
                     }
-                    else -> Timber.w("No data fetching implemented for dataType: ${definition.sheetDataType}")
-
+                    SheetDataType.FORMAT_8 -> {
+                        val file = vocabRepository.getFormat8Data(docId).getOrThrow()
+                        _uiState.update { it.copy(format8Cache = it.format8Cache + (docId to file)) }
+                        Timber.d("Reference: Loaded Format 8 '$docId' (${file.sections.size} sections).")
+                    }
+                    else -> Timber.w("No data fetching implemented for dataType: $dataType")
                 }
+            } catch (cancelled: CancellationException) {
+                throw cancelled
             } catch (e: Exception) {
-                _uiState.update { it.copy(sheetError = e.localizedMessage ?: "Failed to load content") }
+                if (request == sheetLoadRequest) {
+                    _uiState.update { it.copy(sheetError = e.localizedMessage ?: "Failed to load content") }
+                }
             } finally {
-                _uiState.update { it.copy(isLoadingSheet = false) }
+                if (request == sheetLoadRequest) {
+                    _uiState.update { it.copy(isLoadingSheet = false) }
+                }
             }
         }
     }

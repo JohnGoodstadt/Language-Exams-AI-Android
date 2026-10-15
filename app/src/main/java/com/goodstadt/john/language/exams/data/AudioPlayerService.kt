@@ -5,6 +5,9 @@ import android.media.MediaPlayer
 import android.util.Log
 import com.goodstadt.john.language.exams.utils.PlaybackEvent
 import com.goodstadt.john.language.exams.utils.PlaybackEventBus
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.suspendCancellableCoroutine
 import timber.log.Timber
 import java.io.File
@@ -52,6 +55,7 @@ class AudioPlayerService @Inject constructor(
     // 2. Change return type if you want (or keep Result<Unit>)
     suspend fun playAudio(data: ByteArray): Result<Unit> {
         return try {
+            currentCoroutineContext().ensureActive()
             stopPlayback()
 
             // Write temp file (Blocking I/O, but fast for small TTS files)
@@ -73,29 +77,32 @@ class AudioPlayerService @Inject constructor(
 
                 // ✅ CLEANUP ONLY (No continuation resuming)
                 setOnCompletionListener {
+                    if (mediaPlayer !== it) return@setOnCompletionListener
                     it.release()
                     mediaPlayer = null
                     playbackEventBus.tryEmit(PlaybackEvent.Completed(filenameOrId = tempMp3.name))
                 }
 
                 setOnErrorListener { mp, what, extra ->
+                    if (mediaPlayer !== mp) return@setOnErrorListener true
                     mp?.release()
                     mediaPlayer = null
                     playbackEventBus.tryEmit(PlaybackEvent.Failed(reason = "$what/$extra", filenameOrId = tempMp3.name))
                     true
                 }
 
-                prepareAsync()
-
                 setOnPreparedListener {
-                    it.start()
+                    if (mediaPlayer === it) it.start()
                 }
+                prepareAsync()
             }
 
             // ✅ RETURN IMMEDIATELY
             // We successfully *started* the process. We don't wait for it to end.
             Result.success(Unit)
 
+        } catch (cancelled: CancellationException) {
+            throw cancelled
         } catch (e: Exception) {
             Result.failure(e)
         }

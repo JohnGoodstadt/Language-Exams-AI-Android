@@ -50,6 +50,7 @@ class UserPreferencesRepository @Inject constructor(
         val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
         val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
         val VOCAB_QUIZ_AUTO_ADVANCE = booleanPreferencesKey("vocab_quiz_auto_advance")
+        val FORMAT8_SPEAK_ALOUD_GAP = booleanPreferencesKey("format8_speak_aloud_gap")
         val USAGE_QUIZ_LEVEL = stringPreferencesKey("usage_quiz_level")
         val TRANSLATE_TARGET_LANG = stringPreferencesKey("translate_target_lang")
     }
@@ -64,6 +65,14 @@ class UserPreferencesRepository @Inject constructor(
 
 
     // Read Flow
+    val format8SpeakAloudGapFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { it[PreferenceKeys.FORMAT8_SPEAK_ALOUD_GAP] ?: false }
+
+    suspend fun setFormat8SpeakAloudGap(enabled: Boolean) {
+        context.dataStore.edit { it[PreferenceKeys.FORMAT8_SPEAK_ALOUD_GAP] = enabled }
+    }
+
     val hasSeenHelpSheetFlow: Flow<Boolean> = context.dataStore.data
         .catch { emit(emptyPreferences()) }
         .map { preferences ->
