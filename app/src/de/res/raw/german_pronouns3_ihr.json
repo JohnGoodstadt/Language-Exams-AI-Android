@@ -1,0 +1,424 @@
+{
+  "fileformat": 8,
+  "location": 0,
+  "sheetname": "GermanPronouns3Ihr",
+  "title": "ihr — You (p)",
+  "description": "Practise changing the object with ihr: present, future and past.",
+  "updatedDate": 20261015,
+  "intro": "Every example uses Ihr as its subject, meaning you (p) in this file. Ihr addresses several familiar people; it is not the feminine dative ihr used as an object. Euch is translated as each other when it refers back to this plural subject; ourselves/yourselves is also possible in an appropriate context. Keep the subject fixed and vary whom the subject sees or to whom the subject gives the book. Sehen takes an accusative object. Geben takes a dative recipient plus das Buch as the accusative thing. The highlighted key is the object or recipient. English labels: (s) singular, (p) plural, (f) formal.",
+  "sections": [
+    {
+      "title": "ihr — changing the object",
+      "sortorder": 1,
+      "explanation": "Start with the present-tense accusative and dative lists, then compare the same object choices in Futur I and Perfekt. Short sentences omit final full stops.",
+      "rule": "Ihr seht + Akkusativ | Ihr gebt + Dativ + das Buch",
+      "entries": [
+        {
+          "header": "sehen — Präsens — present",
+          "kind": "pattern",
+          "explanation": "The subject and verb stay fixed. Change the accusative object.",
+          "pattern": "Ihr seht + Akkusativ",
+          "examples": [
+            {
+              "german": "Ihr seht mich",
+              "english": "You (p) see me",
+              "focus": "mich",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Ihr seht dich",
+              "english": "You (p) see you (s)",
+              "focus": "dich",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Ihr seht ihn",
+              "english": "You (p) see him",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr seht sie",
+              "english": "You (p) see her",
+              "focus": "sie",
+              "note": "Singular feminine: her.",
+              "key": "sie"
+            },
+            {
+              "german": "Ihr seht es",
+              "english": "You (p) see it",
+              "focus": "es",
+              "note": "",
+              "key": "es"
+            },
+            {
+              "german": "Ihr seht uns",
+              "english": "You (p) see us",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ihr seht euch",
+              "english": "You (p) see each other",
+              "focus": "euch",
+              "note": "Reciprocal reading: each other. A reflexive ourselves/yourselves/themselves reading is also possible in context.",
+              "key": "euch"
+            },
+            {
+              "german": "Ihr seht sie",
+              "english": "You (p) see them",
+              "focus": "sie",
+              "note": "Plural: them. Same German spelling as her; context distinguishes the meaning.",
+              "key": "sie"
+            },
+            {
+              "german": "Ihr seht Sie",
+              "english": "You (p) see you (f)",
+              "focus": "Sie",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Sie"
+            }
+          ]
+        },
+        {
+          "header": "geben — Präsens — present",
+          "kind": "pattern",
+          "explanation": "The subject, verb and das Buch stay fixed. Change only the dative recipient. Ihm is translated as him here, but can also refer to a neuter noun.",
+          "pattern": "Ihr gebt + Dativ + das Buch",
+          "examples": [
+            {
+              "german": "Ihr gebt mir das Buch",
+              "english": "You (p) give me the book",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Ihr gebt dir das Buch",
+              "english": "You (p) give you (s) the book",
+              "focus": "dir",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Ihr gebt ihm das Buch",
+              "english": "You (p) give him the book",
+              "focus": "ihm",
+              "note": "Masculine or neuter dative; translated him here.",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr gebt ihr das Buch",
+              "english": "You (p) give her the book",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Ihr gebt uns das Buch",
+              "english": "You (p) give us the book",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ihr gebt euch das Buch",
+              "english": "You (p) give each other the book",
+              "focus": "euch",
+              "note": "Reciprocal reading: each other. A reflexive ourselves/yourselves/themselves reading is also possible in context.",
+              "key": "euch"
+            },
+            {
+              "german": "Ihr gebt ihnen das Buch",
+              "english": "You (p) give them the book",
+              "focus": "ihnen",
+              "note": "",
+              "key": "ihnen"
+            },
+            {
+              "german": "Ihr gebt Ihnen das Buch",
+              "english": "You (p) give you (f) the book",
+              "focus": "Ihnen",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Ihnen"
+            }
+          ]
+        },
+        {
+          "header": "sehen — Futur I — future",
+          "kind": "pattern",
+          "explanation": "Use werdet plus sehen to practise the future tense. The infinitive goes at the end and the object's case stays the same. German also uses the present tense with a future time expression.",
+          "pattern": "Ihr werdet + Akkusativ + sehen",
+          "examples": [
+            {
+              "german": "Ihr werdet mich sehen",
+              "english": "You (p) will see me",
+              "focus": "mich",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Ihr werdet dich sehen",
+              "english": "You (p) will see you (s)",
+              "focus": "dich",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Ihr werdet ihn sehen",
+              "english": "You (p) will see him",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr werdet sie sehen",
+              "english": "You (p) will see her",
+              "focus": "sie",
+              "note": "Singular feminine: her.",
+              "key": "sie"
+            },
+            {
+              "german": "Ihr werdet es sehen",
+              "english": "You (p) will see it",
+              "focus": "es",
+              "note": "",
+              "key": "es"
+            },
+            {
+              "german": "Ihr werdet uns sehen",
+              "english": "You (p) will see us",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ihr werdet euch sehen",
+              "english": "You (p) will see each other",
+              "focus": "euch",
+              "note": "Reciprocal reading: each other. A reflexive ourselves/yourselves/themselves reading is also possible in context.",
+              "key": "euch"
+            },
+            {
+              "german": "Ihr werdet sie sehen",
+              "english": "You (p) will see them",
+              "focus": "sie",
+              "note": "Plural: them. Same German spelling as her; context distinguishes the meaning.",
+              "key": "sie"
+            },
+            {
+              "german": "Ihr werdet Sie sehen",
+              "english": "You (p) will see you (f)",
+              "focus": "Sie",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Sie"
+            }
+          ]
+        },
+        {
+          "header": "geben — Futur I — future",
+          "kind": "pattern",
+          "explanation": "Use werdet plus geben to practise the future tense. The infinitive goes at the end and the object's case stays the same. German also uses the present tense with a future time expression.",
+          "pattern": "Ihr werdet + Dativ + das Buch + geben",
+          "examples": [
+            {
+              "german": "Ihr werdet mir das Buch geben",
+              "english": "You (p) will give me the book",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Ihr werdet dir das Buch geben",
+              "english": "You (p) will give you (s) the book",
+              "focus": "dir",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Ihr werdet ihm das Buch geben",
+              "english": "You (p) will give him the book",
+              "focus": "ihm",
+              "note": "Masculine or neuter dative; translated him here.",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr werdet ihr das Buch geben",
+              "english": "You (p) will give her the book",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Ihr werdet uns das Buch geben",
+              "english": "You (p) will give us the book",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ihr werdet euch das Buch geben",
+              "english": "You (p) will give each other the book",
+              "focus": "euch",
+              "note": "Reciprocal reading: each other. A reflexive ourselves/yourselves/themselves reading is also possible in context.",
+              "key": "euch"
+            },
+            {
+              "german": "Ihr werdet ihnen das Buch geben",
+              "english": "You (p) will give them the book",
+              "focus": "ihnen",
+              "note": "",
+              "key": "ihnen"
+            },
+            {
+              "german": "Ihr werdet Ihnen das Buch geben",
+              "english": "You (p) will give you (f) the book",
+              "focus": "Ihnen",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Ihnen"
+            }
+          ]
+        },
+        {
+          "header": "sehen — Perfekt — past",
+          "kind": "pattern",
+          "explanation": "Use habt plus gesehen for a past event. Perfekt is common in conversation. The English examples use saw; depending on context, have/has seen is also possible. The object's case stays the same.",
+          "pattern": "Ihr habt + Akkusativ + gesehen",
+          "examples": [
+            {
+              "german": "Ihr habt mich gesehen",
+              "english": "You (p) saw me",
+              "focus": "mich",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Ihr habt dich gesehen",
+              "english": "You (p) saw you (s)",
+              "focus": "dich",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Ihr habt ihn gesehen",
+              "english": "You (p) saw him",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr habt sie gesehen",
+              "english": "You (p) saw her",
+              "focus": "sie",
+              "note": "Singular feminine: her.",
+              "key": "sie"
+            },
+            {
+              "german": "Ihr habt es gesehen",
+              "english": "You (p) saw it",
+              "focus": "es",
+              "note": "",
+              "key": "es"
+            },
+            {
+              "german": "Ihr habt uns gesehen",
+              "english": "You (p) saw us",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ihr habt euch gesehen",
+              "english": "You (p) saw each other",
+              "focus": "euch",
+              "note": "Reciprocal reading: each other. A reflexive ourselves/yourselves/themselves reading is also possible in context.",
+              "key": "euch"
+            },
+            {
+              "german": "Ihr habt sie gesehen",
+              "english": "You (p) saw them",
+              "focus": "sie",
+              "note": "Plural: them. Same German spelling as her; context distinguishes the meaning.",
+              "key": "sie"
+            },
+            {
+              "german": "Ihr habt Sie gesehen",
+              "english": "You (p) saw you (f)",
+              "focus": "Sie",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Sie"
+            }
+          ]
+        },
+        {
+          "header": "geben — Perfekt — past",
+          "kind": "pattern",
+          "explanation": "Use habt plus gegeben for a past event. Perfekt is common in conversation. The English examples use gave; depending on context, have/has given is also possible. The object's case stays the same.",
+          "pattern": "Ihr habt + Dativ + das Buch + gegeben",
+          "examples": [
+            {
+              "german": "Ihr habt mir das Buch gegeben",
+              "english": "You (p) gave me the book",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Ihr habt dir das Buch gegeben",
+              "english": "You (p) gave you (s) the book",
+              "focus": "dir",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Ihr habt ihm das Buch gegeben",
+              "english": "You (p) gave him the book",
+              "focus": "ihm",
+              "note": "Masculine or neuter dative; translated him here.",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr habt ihr das Buch gegeben",
+              "english": "You (p) gave her the book",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Ihr habt uns das Buch gegeben",
+              "english": "You (p) gave us the book",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ihr habt euch das Buch gegeben",
+              "english": "You (p) gave each other the book",
+              "focus": "euch",
+              "note": "Reciprocal reading: each other. A reflexive ourselves/yourselves/themselves reading is also possible in context.",
+              "key": "euch"
+            },
+            {
+              "german": "Ihr habt ihnen das Buch gegeben",
+              "english": "You (p) gave them the book",
+              "focus": "ihnen",
+              "note": "",
+              "key": "ihnen"
+            },
+            {
+              "german": "Ihr habt Ihnen das Buch gegeben",
+              "english": "You (p) gave you (f) the book",
+              "focus": "Ihnen",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Ihnen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

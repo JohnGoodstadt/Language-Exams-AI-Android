@@ -79,6 +79,40 @@ class Format8ReferenceTabTest {
         }
     }
 
+    @Test fun pronomenIIIHasNineSheetsAndKeepsItsSelectionSeparateFromPronomenII() {
+        val objectParent = "GermanReferenceObjectPronouns"
+        val config = manifest()
+        val objectDefinition = config.sheetRegistry.getValue(objectParent)
+        assertEquals("Pronomen III", objectDefinition.title)
+        assertEquals(SheetDataType.FORMAT_8, objectDefinition.sheetDataType)
+        assertEquals(ScreenType.GROUPED_FORMAT_8_SCREEN, objectDefinition.screenType)
+        val tabs = objectDefinition.subTabs!!
+        assertEquals(9, tabs.size)
+        assertTrue(tabs.all { it.sheetDataType == SheetDataType.FORMAT_8 })
+        assertTrue(config.layouts.referenceTab.order.contains(objectParent))
+        coEvery { repository.getFormat8Data(any()) } coAnswers { Result.success(file(firstArg())) }
+        val vm = viewModel(config)
+        val previousDoc = config.sheetRegistry.getValue(parentId).subTabs!![2].firestoreDocumentId
+        vm.onTabSelected(parentId)
+        vm.onFormat8SubTabSelected(parentId, previousDoc)
+        vm.onTabSelected(objectParent)
+        vm.ensureFormat8TabLoaded(objectParent)
+        assertEquals(tabs.first().firestoreDocumentId, vm.uiState.value.selectedFormat8Sheets[objectParent])
+        for (tab in tabs.drop(1)) vm.onFormat8SubTabSelected(objectParent, tab.firestoreDocumentId)
+        assertFalse(vm.uiState.value.isLoadingSheet)
+        assertNull(vm.uiState.value.sheetError)
+        vm.onTabSelected(parentId)
+        assertEquals(previousDoc, vm.uiState.value.selectedFormat8Sheets[parentId])
+        vm.onTabSelected(objectParent)
+        assertEquals(tabs.last().firestoreDocumentId, vm.uiState.value.selectedFormat8Sheets[objectParent])
+        for (tab in tabs) {
+            vm.onFormat8SubTabSelected(objectParent, tab.firestoreDocumentId)
+            val loaded = vm.uiState.value.format8Cache.getValue(tab.firestoreDocumentId)
+            assertEquals(tab.firestoreDocumentId, loaded.sheetname)
+            coVerify(exactly = 1) { repository.getFormat8Data(tab.firestoreDocumentId) }
+        }
+    }
+
     @Test fun initialFormat8SelectionLoadsWithoutATapAndNavigationDoesNotLoadItTwice() {
         val initial = manifest().let { it.copy(layouts = it.layouts.copy(referenceTab = LayoutDefinition(listOf(parentId)))) }
         val doc = initial.sheetRegistry.getValue(parentId).subTabs!!.first().firestoreDocumentId

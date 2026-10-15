@@ -53,6 +53,17 @@ object LanguageConfig {
      */
     fun normalizeToLogicalName(resourceName: String): String {
         return when (resourceName) {
+            // Pronomen III (Format 8): one sheet per personal-pronoun subject.
+            "german_pronouns3_ich" -> "GermanPronouns3Ich"
+            "german_pronouns3_du" -> "GermanPronouns3Du"
+            "german_pronouns3_er" -> "GermanPronouns3Er"
+            "german_pronouns3_sie_singular" -> "GermanPronouns3SieSingular"
+            "german_pronouns3_es" -> "GermanPronouns3Es"
+            "german_pronouns3_wir" -> "GermanPronouns3Wir"
+            "german_pronouns3_ihr" -> "GermanPronouns3Ihr"
+            "german_pronouns3_sie_plural" -> "GermanPronouns3SiePlural"
+            "german_pronouns3_sie_formal" -> "GermanPronouns3SieFormal"
+
             // Pronomen II (Format 8) bundled resources.
             "german_pronouns2_accusative2" -> "GermanPronouns2Accusative2"
             "german_pronouns2_both_case2" -> "GermanPronouns2BothCases2"
@@ -86,6 +97,17 @@ object LanguageConfig {
      */
     fun mapLogicalToResourceName(sheet_name: String): String {
         return when (sheet_name) {
+            // Pronomen III (Format 8) logical sheet names.
+            "GermanPronouns3Ich" -> "german_pronouns3_ich"
+            "GermanPronouns3Du" -> "german_pronouns3_du"
+            "GermanPronouns3Er" -> "german_pronouns3_er"
+            "GermanPronouns3SieSingular" -> "german_pronouns3_sie_singular"
+            "GermanPronouns3Es" -> "german_pronouns3_es"
+            "GermanPronouns3Wir" -> "german_pronouns3_wir"
+            "GermanPronouns3Ihr" -> "german_pronouns3_ihr"
+            "GermanPronouns3SiePlural" -> "german_pronouns3_sie_plural"
+            "GermanPronouns3SieFormal" -> "german_pronouns3_sie_formal"
+
             // Pronomen II (Format 8) logical sheet names.
             "GermanPronouns2Accusative2" -> "german_pronouns2_accusative2"
             "GermanPronouns2BothCases2" -> "german_pronouns2_both_case2"

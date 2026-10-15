@@ -29,7 +29,16 @@ class Format8RepositoryTest {
         "GermanPronouns2Dative2" to "german_pronouns2_both_dative2",
         "GermanPronouns2LearningVerbs2" to "german_pronouns2_both_learning_verbs2",
         "GermanPronouns2Nominative2" to "german_pronouns2_both_nominative2",
-        "GermanPronouns2Patterns2" to "german_pronouns2_both_patterns2"
+        "GermanPronouns2Patterns2" to "german_pronouns2_both_patterns2",
+        "GermanPronouns3Ich" to "german_pronouns3_ich",
+        "GermanPronouns3Du" to "german_pronouns3_du",
+        "GermanPronouns3Er" to "german_pronouns3_er",
+        "GermanPronouns3SieSingular" to "german_pronouns3_sie_singular",
+        "GermanPronouns3Es" to "german_pronouns3_es",
+        "GermanPronouns3Wir" to "german_pronouns3_wir",
+        "GermanPronouns3Ihr" to "german_pronouns3_ihr",
+        "GermanPronouns3SiePlural" to "german_pronouns3_sie_plural",
+        "GermanPronouns3SieFormal" to "german_pronouns3_sie_formal"
     )
     private val json = Json { ignoreUnknownKeys = true; coerceInputValues = true }
 
@@ -56,7 +65,7 @@ class Format8RepositoryTest {
     }
 
     @Test
-    fun allSixResourcesRoundTripWithEveryExampleAndHighlightKeyPreserved() {
+    fun allFormat8ResourcesRoundTripWithEveryExampleAndHighlightKeyPreserved() {
         var count = 0
         for ((logicalName, resourceName) in mapping) {
             assertEquals(resourceName, LanguageConfig.mapLogicalToResourceName(logicalName))
@@ -70,7 +79,7 @@ class Format8RepositoryTest {
             assertTrue(examples.all { it.key.isNotEmpty() && it.german.contains(it.key) })
             count += examples.size
         }
-        assertEquals(392, count)
+        assertEquals(875, count)
     }
 
     @Test

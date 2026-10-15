@@ -1,0 +1,466 @@
+{
+  "fileformat": 8,
+  "location": 0,
+  "sheetname": "GermanPronouns3Es",
+  "title": "es — It",
+  "description": "Practise changing the object with es: present, future and past.",
+  "updatedDate": 20261015,
+  "intro": "Every example uses Es as its subject, meaning it in this file. Es stands for a neuter noun. For these seeing and giving examples, imagine das Gerät: a robotic device that can recognize people and hand over a book. This is a referring pronoun, not the impersonal es in weather expressions. Use sich when the subject is also the object or recipient. Object es refers to another neuter thing; sich refers back to the device. Keep the subject fixed and vary whom the subject sees or to whom the subject gives the book. Sehen takes an accusative object. Geben takes a dative recipient plus das Buch as the accusative thing. The highlighted key is the object or recipient. English labels: (s) singular, (p) plural, (f) formal.",
+  "sections": [
+    {
+      "title": "es — changing the object",
+      "sortorder": 1,
+      "explanation": "Start with the present-tense accusative and dative lists, then compare the same object choices in Futur I and Perfekt. Short sentences omit final full stops.",
+      "rule": "Es sieht + Akkusativ | Es gibt + Dativ + das Buch",
+      "entries": [
+        {
+          "header": "sehen — Präsens — present",
+          "kind": "pattern",
+          "explanation": "The subject and verb stay fixed. Change the accusative object.",
+          "pattern": "Es sieht + Akkusativ",
+          "examples": [
+            {
+              "german": "Es sieht mich",
+              "english": "It sees me",
+              "focus": "mich",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Es sieht dich",
+              "english": "It sees you (s)",
+              "focus": "dich",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Es sieht ihn",
+              "english": "It sees him",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Es sieht sie",
+              "english": "It sees her",
+              "focus": "sie",
+              "note": "Singular feminine: her.",
+              "key": "sie"
+            },
+            {
+              "german": "Es sieht es",
+              "english": "It sees it",
+              "focus": "es",
+              "note": "A different neuter referent; use sich for itself.",
+              "key": "es"
+            },
+            {
+              "german": "Es sieht uns",
+              "english": "It sees us",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Es sieht euch",
+              "english": "It sees you (p)",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Es sieht sie",
+              "english": "It sees them",
+              "focus": "sie",
+              "note": "Plural: them. Same German spelling as her; context distinguishes the meaning.",
+              "key": "sie"
+            },
+            {
+              "german": "Es sieht Sie",
+              "english": "It sees you (f)",
+              "focus": "Sie",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Sie"
+            },
+            {
+              "german": "Es sieht sich",
+              "english": "It sees itself",
+              "focus": "sich",
+              "note": "Reflexive reading: itself.",
+              "key": "sich"
+            }
+          ]
+        },
+        {
+          "header": "geben — Präsens — present",
+          "kind": "pattern",
+          "explanation": "The subject, verb and das Buch stay fixed. Change only the dative recipient. Ihm is translated as him here, but can also refer to a neuter noun.",
+          "pattern": "Es gibt + Dativ + das Buch",
+          "examples": [
+            {
+              "german": "Es gibt mir das Buch",
+              "english": "It gives me the book",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Es gibt dir das Buch",
+              "english": "It gives you (s) the book",
+              "focus": "dir",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Es gibt ihm das Buch",
+              "english": "It gives him the book",
+              "focus": "ihm",
+              "note": "Masculine or neuter dative; translated him here.",
+              "key": "ihm"
+            },
+            {
+              "german": "Es gibt ihr das Buch",
+              "english": "It gives her the book",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Es gibt uns das Buch",
+              "english": "It gives us the book",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Es gibt euch das Buch",
+              "english": "It gives you (p) the book",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Es gibt ihnen das Buch",
+              "english": "It gives them the book",
+              "focus": "ihnen",
+              "note": "",
+              "key": "ihnen"
+            },
+            {
+              "german": "Es gibt Ihnen das Buch",
+              "english": "It gives you (f) the book",
+              "focus": "Ihnen",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Ihnen"
+            },
+            {
+              "german": "Es gibt sich das Buch",
+              "english": "It gives itself the book",
+              "focus": "sich",
+              "note": "Reflexive reading: itself.",
+              "key": "sich"
+            }
+          ]
+        },
+        {
+          "header": "sehen — Futur I — future",
+          "kind": "pattern",
+          "explanation": "Use wird plus sehen to practise the future tense. The infinitive goes at the end and the object's case stays the same. German also uses the present tense with a future time expression.",
+          "pattern": "Es wird + Akkusativ + sehen",
+          "examples": [
+            {
+              "german": "Es wird mich sehen",
+              "english": "It will see me",
+              "focus": "mich",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Es wird dich sehen",
+              "english": "It will see you (s)",
+              "focus": "dich",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Es wird ihn sehen",
+              "english": "It will see him",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Es wird sie sehen",
+              "english": "It will see her",
+              "focus": "sie",
+              "note": "Singular feminine: her.",
+              "key": "sie"
+            },
+            {
+              "german": "Es wird es sehen",
+              "english": "It will see it",
+              "focus": "es",
+              "note": "A different neuter referent; use sich for itself.",
+              "key": "es"
+            },
+            {
+              "german": "Es wird uns sehen",
+              "english": "It will see us",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Es wird euch sehen",
+              "english": "It will see you (p)",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Es wird sie sehen",
+              "english": "It will see them",
+              "focus": "sie",
+              "note": "Plural: them. Same German spelling as her; context distinguishes the meaning.",
+              "key": "sie"
+            },
+            {
+              "german": "Es wird Sie sehen",
+              "english": "It will see you (f)",
+              "focus": "Sie",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Sie"
+            },
+            {
+              "german": "Es wird sich sehen",
+              "english": "It will see itself",
+              "focus": "sich",
+              "note": "Reflexive reading: itself.",
+              "key": "sich"
+            }
+          ]
+        },
+        {
+          "header": "geben — Futur I — future",
+          "kind": "pattern",
+          "explanation": "Use wird plus geben to practise the future tense. The infinitive goes at the end and the object's case stays the same. German also uses the present tense with a future time expression.",
+          "pattern": "Es wird + Dativ + das Buch + geben",
+          "examples": [
+            {
+              "german": "Es wird mir das Buch geben",
+              "english": "It will give me the book",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Es wird dir das Buch geben",
+              "english": "It will give you (s) the book",
+              "focus": "dir",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Es wird ihm das Buch geben",
+              "english": "It will give him the book",
+              "focus": "ihm",
+              "note": "Masculine or neuter dative; translated him here.",
+              "key": "ihm"
+            },
+            {
+              "german": "Es wird ihr das Buch geben",
+              "english": "It will give her the book",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Es wird uns das Buch geben",
+              "english": "It will give us the book",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Es wird euch das Buch geben",
+              "english": "It will give you (p) the book",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Es wird ihnen das Buch geben",
+              "english": "It will give them the book",
+              "focus": "ihnen",
+              "note": "",
+              "key": "ihnen"
+            },
+            {
+              "german": "Es wird Ihnen das Buch geben",
+              "english": "It will give you (f) the book",
+              "focus": "Ihnen",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Ihnen"
+            },
+            {
+              "german": "Es wird sich das Buch geben",
+              "english": "It will give itself the book",
+              "focus": "sich",
+              "note": "Reflexive reading: itself.",
+              "key": "sich"
+            }
+          ]
+        },
+        {
+          "header": "sehen — Perfekt — past",
+          "kind": "pattern",
+          "explanation": "Use hat plus gesehen for a past event. Perfekt is common in conversation. The English examples use saw; depending on context, have/has seen is also possible. The object's case stays the same.",
+          "pattern": "Es hat + Akkusativ + gesehen",
+          "examples": [
+            {
+              "german": "Es hat mich gesehen",
+              "english": "It saw me",
+              "focus": "mich",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Es hat dich gesehen",
+              "english": "It saw you (s)",
+              "focus": "dich",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Es hat ihn gesehen",
+              "english": "It saw him",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Es hat sie gesehen",
+              "english": "It saw her",
+              "focus": "sie",
+              "note": "Singular feminine: her.",
+              "key": "sie"
+            },
+            {
+              "german": "Es hat es gesehen",
+              "english": "It saw it",
+              "focus": "es",
+              "note": "A different neuter referent; use sich for itself.",
+              "key": "es"
+            },
+            {
+              "german": "Es hat uns gesehen",
+              "english": "It saw us",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Es hat euch gesehen",
+              "english": "It saw you (p)",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Es hat sie gesehen",
+              "english": "It saw them",
+              "focus": "sie",
+              "note": "Plural: them. Same German spelling as her; context distinguishes the meaning.",
+              "key": "sie"
+            },
+            {
+              "german": "Es hat Sie gesehen",
+              "english": "It saw you (f)",
+              "focus": "Sie",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Sie"
+            },
+            {
+              "german": "Es hat sich gesehen",
+              "english": "It saw itself",
+              "focus": "sich",
+              "note": "Reflexive reading: itself.",
+              "key": "sich"
+            }
+          ]
+        },
+        {
+          "header": "geben — Perfekt — past",
+          "kind": "pattern",
+          "explanation": "Use hat plus gegeben for a past event. Perfekt is common in conversation. The English examples use gave; depending on context, have/has given is also possible. The object's case stays the same.",
+          "pattern": "Es hat + Dativ + das Buch + gegeben",
+          "examples": [
+            {
+              "german": "Es hat mir das Buch gegeben",
+              "english": "It gave me the book",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Es hat dir das Buch gegeben",
+              "english": "It gave you (s) the book",
+              "focus": "dir",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Es hat ihm das Buch gegeben",
+              "english": "It gave him the book",
+              "focus": "ihm",
+              "note": "Masculine or neuter dative; translated him here.",
+              "key": "ihm"
+            },
+            {
+              "german": "Es hat ihr das Buch gegeben",
+              "english": "It gave her the book",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Es hat uns das Buch gegeben",
+              "english": "It gave us the book",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Es hat euch das Buch gegeben",
+              "english": "It gave you (p) the book",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Es hat ihnen das Buch gegeben",
+              "english": "It gave them the book",
+              "focus": "ihnen",
+              "note": "",
+              "key": "ihnen"
+            },
+            {
+              "german": "Es hat Ihnen das Buch gegeben",
+              "english": "It gave you (f) the book",
+              "focus": "Ihnen",
+              "note": "Formal object or recipient: always capitalized; one or more addressees.",
+              "key": "Ihnen"
+            },
+            {
+              "german": "Es hat sich das Buch gegeben",
+              "english": "It gave itself the book",
+              "focus": "sich",
+              "note": "Reflexive reading: itself.",
+              "key": "sich"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

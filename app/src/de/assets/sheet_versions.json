@@ -258,5 +258,14 @@
   "GermanPronouns2Dative2": 1,
   "GermanPronouns2LearningVerbs2": 1,
   "GermanPronouns2Nominative2": 1,
-  "GermanPronouns2Patterns2": 1
+  "GermanPronouns2Patterns2": 1,
+  "GermanPronouns3Du": 1,
+  "GermanPronouns3Er": 1,
+  "GermanPronouns3Es": 1,
+  "GermanPronouns3Ich": 1,
+  "GermanPronouns3Ihr": 1,
+  "GermanPronouns3SieFormal": 1,
+  "GermanPronouns3SiePlural": 1,
+  "GermanPronouns3SieSingular": 1,
+  "GermanPronouns3Wir": 1
 }

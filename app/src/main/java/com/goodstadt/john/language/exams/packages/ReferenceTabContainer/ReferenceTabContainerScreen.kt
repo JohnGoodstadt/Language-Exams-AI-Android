@@ -24,6 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -206,7 +207,10 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     saveState = true
                 }
                 launchSingleTop = true
-                restoreState = true
+                // Grouped Format 8 tabs share a destination but have different tabId arguments.
+                // Restoring by destination can reopen Pronomen II when selecting Pronomen III.
+                // Their selected sheets and data are already retained separately by the ViewModel.
+                restoreState = definition.screenType != ScreenType.GROUPED_FORMAT_8_SCREEN
             }
         }
     }
@@ -409,16 +413,18 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     ) { entry ->
                         val tabId = entry.arguments?.getString("tabId").orEmpty()
                         val definition = uiState.tabs.firstOrNull { it.id == tabId }?.definition
-                        LaunchedEffect(tabId) { viewModel.ensureFormat8TabLoaded(tabId) }
-                        Format8ContainerScreen(
-                            subTabs = definition?.subTabs.orEmpty(),
-                            selectedSheetName = uiState.selectedFormat8Sheets[tabId],
-                            file = uiState.selectedFormat8Sheets[tabId]?.let { uiState.format8Cache[it] },
-                            isLoading = uiState.isLoadingSheet,
-                            error = uiState.sheetError,
-                            onSubTabSelected = { viewModel.onFormat8SubTabSelected(tabId, it) },
-                            onRetry = { viewModel.onTabSelected(tabId) }
-                        )
+                        key(tabId) {
+                            LaunchedEffect(tabId) { viewModel.ensureFormat8TabLoaded(tabId) }
+                            Format8ContainerScreen(
+                                subTabs = definition?.subTabs.orEmpty(),
+                                selectedSheetName = uiState.selectedFormat8Sheets[tabId],
+                                file = uiState.selectedFormat8Sheets[tabId]?.let { uiState.format8Cache[it] },
+                                isLoading = uiState.isLoadingSheet,
+                                error = uiState.sheetError,
+                                onSubTabSelected = { viewModel.onFormat8SubTabSelected(tabId, it) },
+                                onRetry = { viewModel.onTabSelected(tabId) }
+                            )
+                        }
                     }
 
                     composable(

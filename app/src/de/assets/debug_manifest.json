@@ -137,6 +137,67 @@
 
       ]
     },
+    "GermanReferenceObjectPronouns": {
+      "title": "Pronomen III",
+      "screenType": "GroupedFormat8Screen",
+      "sheetDataType": "Format8",
+      "subTabs": [
+        {
+          "title": "ich",
+          "firestoreDocumentId": "GermanPronouns3Ich",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "du",
+          "firestoreDocumentId": "GermanPronouns3Du",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "er",
+          "firestoreDocumentId": "GermanPronouns3Er",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "sie (she)",
+          "firestoreDocumentId": "GermanPronouns3SieSingular",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "es",
+          "firestoreDocumentId": "GermanPronouns3Es",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "wir",
+          "firestoreDocumentId": "GermanPronouns3Wir",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "ihr",
+          "firestoreDocumentId": "GermanPronouns3Ihr",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "sie (they)",
+          "firestoreDocumentId": "GermanPronouns3SiePlural",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "Sie (formal)",
+          "firestoreDocumentId": "GermanPronouns3SieFormal",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        }
+      ]
+    },
     "GermanPrepositionsTeaching": {
       "title": "Präpositionen",
       "sheetDataType": "Format6",
@@ -155,6 +216,7 @@
         "AdjectivesGroup",
         "GermanReferencePronouns",
         "GermanReferencePronounsOpenAI",
+        "GermanReferenceObjectPronouns",
         "GermanSoundsTheSame",
         "PairsGroup"
       ]
