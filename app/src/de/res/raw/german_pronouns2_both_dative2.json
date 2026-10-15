@@ -1,0 +1,907 @@
+{
+  "location": 0,
+  "sheetname": "GermanPronouns2Dative",
+  "title": "Dative: Key Verbs",
+  "updatedDate": 0,
+  "fileformat": 8,
+  "description": "Learn common dative verbs and the pronouns they require.",
+  "intro": "Some common verbs require the dative even when English uses a direct object: antworten, helfen, danken, folgen, glauben, vertrauen, zuhören and gratulieren. Memorise each as verb + jemandem (dative).",
+  "sections": [
+    {
+      "title": "Essential dative verbs",
+      "sortorder": 1,
+      "explanation": "The recipient/person associated with these verbs is expressed in the dative. Learn the entire construction, not just the translation.",
+      "rule": "Verb + jemandem (dative)",
+      "entries": [
+        {
+          "header": "helfen — to help",
+          "kind": "conjugation",
+          "explanation": "helfen requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "helfen + Dativ",
+          "examples": [
+            {
+              "german": "Ich helfe ihm.",
+              "english": "I help him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du hilfst ihm.",
+              "english": "You (singular) help him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er hilft ihm.",
+              "english": "He helps him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie hilft ihm.",
+              "english": "She helps him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es hilft ihm.",
+              "english": "It helps him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir helfen ihm.",
+              "english": "We help him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr helft ihm.",
+              "english": "You (plural) help him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie helfen ihm.",
+              "english": "They help him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie helfen ihm.",
+              "english": "You (formal) help him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "antworten — to answer",
+          "kind": "conjugation",
+          "explanation": "antworten requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "antworten + Dativ",
+          "examples": [
+            {
+              "german": "Ich antworte ihm.",
+              "english": "I answer him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du antwortest ihm.",
+              "english": "You (singular) answer him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er antwortet ihm.",
+              "english": "He answers him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie antwortet ihm.",
+              "english": "She answers him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es antwortet ihm.",
+              "english": "It answers him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir antworten ihm.",
+              "english": "We answer him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr antwortet ihm.",
+              "english": "You (plural) answer him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie antworten ihm.",
+              "english": "They answer him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie antworten ihm.",
+              "english": "You (formal) answer him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "danken — to thank",
+          "kind": "conjugation",
+          "explanation": "danken requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "danken + Dativ",
+          "examples": [
+            {
+              "german": "Ich danke ihm.",
+              "english": "I thank him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du dankst ihm.",
+              "english": "You (singular) thank him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er dankt ihm.",
+              "english": "He thanks him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie dankt ihm.",
+              "english": "She thanks him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es dankt ihm.",
+              "english": "It thanks him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir danken ihm.",
+              "english": "We thank him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr dankt ihm.",
+              "english": "You (plural) thank him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie danken ihm.",
+              "english": "They thank him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie danken ihm.",
+              "english": "You (formal) thank him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "folgen — to follow",
+          "kind": "conjugation",
+          "explanation": "folgen requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "folgen + Dativ",
+          "examples": [
+            {
+              "german": "Ich folge ihm.",
+              "english": "I follow him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du folgst ihm.",
+              "english": "You (singular) follow him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er folgt ihm.",
+              "english": "He follows him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie folgt ihm.",
+              "english": "She follows him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es folgt ihm.",
+              "english": "It follows him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir folgen ihm.",
+              "english": "We follow him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr folgt ihm.",
+              "english": "You (plural) follow him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie folgen ihm.",
+              "english": "They follow him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie folgen ihm.",
+              "english": "You (formal) follow him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "glauben — to believe",
+          "kind": "conjugation",
+          "explanation": "glauben requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "glauben + Dativ",
+          "examples": [
+            {
+              "german": "Ich glaube ihm.",
+              "english": "I believe him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du glaubst ihm.",
+              "english": "You (singular) believe him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er glaubt ihm.",
+              "english": "He believes him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie glaubt ihm.",
+              "english": "She believes him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es glaubt ihm.",
+              "english": "It believes him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir glauben ihm.",
+              "english": "We believe him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr glaubt ihm.",
+              "english": "You (plural) believe him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie glauben ihm.",
+              "english": "They believe him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie glauben ihm.",
+              "english": "You (formal) believe him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "vertrauen — to trust",
+          "kind": "conjugation",
+          "explanation": "vertrauen requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "vertrauen + Dativ",
+          "examples": [
+            {
+              "german": "Ich vertraue ihm.",
+              "english": "I trust him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du vertraust ihm.",
+              "english": "You (singular) trust him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er vertraut ihm.",
+              "english": "He trusts him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie vertraut ihm.",
+              "english": "She trusts him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es vertraut ihm.",
+              "english": "It trusts him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir vertrauen ihm.",
+              "english": "We trust him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr vertraut ihm.",
+              "english": "You (plural) trust him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie vertrauen ihm.",
+              "english": "They trust him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie vertrauen ihm.",
+              "english": "You (formal) trust him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "zuhören — to listen to",
+          "kind": "conjugation",
+          "explanation": "zuhören requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "zuhören + Dativ",
+          "examples": [
+            {
+              "german": "Ich höre ihm zu.",
+              "english": "I listen to him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du hörst ihm zu.",
+              "english": "You (singular) listen to him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er hört ihm zu.",
+              "english": "He listens to him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie hört ihm zu.",
+              "english": "She listens to him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es hört ihm zu.",
+              "english": "It listens to him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir hören ihm zu.",
+              "english": "We listen to him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr hört ihm zu.",
+              "english": "You (plural) listen to him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie hören ihm zu.",
+              "english": "They listen to him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie hören ihm zu.",
+              "english": "You (formal) listen to him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "gratulieren — to congratulate",
+          "kind": "conjugation",
+          "explanation": "gratulieren requires a dative object: ihm, not ihn. English wording alone does not reveal the German case.",
+          "pattern": "gratulieren + Dativ",
+          "examples": [
+            {
+              "german": "Ich gratuliere ihm.",
+              "english": "I congratulate him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du gratulierst ihm.",
+              "english": "You (singular) congratulate him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er gratuliert ihm.",
+              "english": "He congratulates him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie gratuliert ihm.",
+              "english": "She congratulates him.",
+              "focus": "ihm",
+              "note": "dative object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es gratuliert ihm.",
+              "english": "It congratulates him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir gratulieren ihm.",
+              "english": "We congratulate him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr gratuliert ihm.",
+              "english": "You (plural) congratulate him.",
+              "focus": "ihm",
+              "note": "dative object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie gratulieren ihm.",
+              "english": "They congratulate him.",
+              "focus": "ihm",
+              "note": "dative object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie gratulieren ihm.",
+              "english": "You (formal) congratulate him.",
+              "focus": "ihm",
+              "note": "dative object; formal you",
+              "key": "ihm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dative pronouns",
+      "sortorder": 2,
+      "explanation": "The forms are mir, dir, ihm, ihr, ihm, uns, euch, ihnen, Ihnen. Masculine and neuter both use ihm.",
+      "rule": "wem? (to whom? / for whom?)",
+      "entries": [
+        {
+          "header": "helfen — changing the object",
+          "kind": "comparison",
+          "explanation": "Change the dative pronoun while keeping the verb construction.",
+          "pattern": "helfen + Dativ",
+          "examples": [
+            {
+              "german": "Die Frau hilft mir.",
+              "english": "The woman helps me.",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Der Mann hilft dir.",
+              "english": "The man helps you.",
+              "focus": "dir",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Ich helfe ihm.",
+              "english": "I help him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Ich helfe ihr.",
+              "english": "I help her.",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Ich helfe dem Kind.",
+              "english": "I help the child.",
+              "focus": "dem Kind",
+              "note": "",
+              "key": "Ich"
+            },
+            {
+              "german": "Sie hilft uns.",
+              "english": "She helps us.",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ich helfe euch.",
+              "english": "I help you all.",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Wir helfen ihnen.",
+              "english": "We help them.",
+              "focus": "ihnen",
+              "note": "",
+              "key": "ihnen"
+            },
+            {
+              "german": "Wir helfen Ihnen.",
+              "english": "We help you (formal).",
+              "focus": "Ihnen",
+              "note": "",
+              "key": "Ihnen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Belonging and reactions",
+      "sortorder": 3,
+      "explanation": "These dative constructions often reverse the English viewpoint: the German subject may be a thing and the dative marks the experiencer or owner.",
+      "rule": "Thing + verb + dative person",
+      "entries": [
+        {
+          "header": "gehören — to belong to",
+          "kind": "pattern",
+          "explanation": "The owned item is the nominative subject; its owner is dative.",
+          "pattern": "Nominative thing + verb + dative person",
+          "examples": [
+            {
+              "german": "Das Buch gehört ihm.",
+              "english": "The book belongs to him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Die Bücher gehören ihr.",
+              "english": "The books belong to her.",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            }
+          ]
+        },
+        {
+          "header": "gefallen — to appeal to",
+          "kind": "pattern",
+          "explanation": "The thing that is pleasing is the subject; the person who likes it is dative.",
+          "pattern": "Nominative thing + verb + dative person",
+          "examples": [
+            {
+              "german": "Das gefällt mir.",
+              "english": "I like that.",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Die Bücher gefallen ihm.",
+              "english": "He likes the books.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "fehlen — to be missing",
+          "kind": "pattern",
+          "explanation": "The absent person or thing is the subject; the person who misses them is dative.",
+          "pattern": "Nominative thing + verb + dative person",
+          "examples": [
+            {
+              "german": "Du fehlst mir.",
+              "english": "I miss you.",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Meine Freunde fehlen mir.",
+              "english": "I miss my friends.",
+              "focus": "mir",
+              "note": "",
+              "key": "mir"
+            }
+          ]
+        },
+        {
+          "header": "passen — to suit or fit",
+          "kind": "pattern",
+          "explanation": "The item is the subject; the person it suits is dative.",
+          "pattern": "Nominative thing + verb + dative person",
+          "examples": [
+            {
+              "german": "Der Mantel passt ihm.",
+              "english": "The coat fits him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Die Schuhe passen ihr.",
+              "english": "The shoes fit her.",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Additional original examples",
+      "sortorder": 4,
+      "explanation": "Additional examples retained from the earlier Format 2 material. They supplement the new conjugation and case-pattern lessons.",
+      "rule": "Review and identify the pronoun case",
+      "entries": [
+        {
+          "header": "1. Personal pronouns: the dative",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Der Mann dankt dir.",
+              "english": "The man thanks you.",
+              "focus": "",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Ich antworte ihr.",
+              "english": "I answer her (the woman).",
+              "focus": "",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Das gefällt ihm.",
+              "english": "That pleases it (the child/book).",
+              "focus": "",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Das Haus gehört uns.",
+              "english": "The house belongs to us.",
+              "focus": "",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Ich schreibe euch.",
+              "english": "I am writing to you all.",
+              "focus": "",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Wir gratulieren ihnen.",
+              "english": "We congratulate them.",
+              "focus": "",
+              "note": "",
+              "key": "ihnen"
+            }
+          ]
+        },
+        {
+          "header": "2. Core dative verbs",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Wir danken dir.",
+              "english": "We thank you.",
+              "focus": "",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Der Hund folgt mir.",
+              "english": "The dog follows me.",
+              "focus": "",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Sie vertraut mir.",
+              "english": "She trusts me.",
+              "focus": "",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Wir hören dir zu.",
+              "english": "We listen to you.",
+              "focus": "",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Ich gratuliere euch.",
+              "english": "I congratulate you all.",
+              "focus": "",
+              "note": "",
+              "key": "euch"
+            }
+          ]
+        },
+        {
+          "header": "3. Belonging and reactions",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Das Buch gehört ihr.",
+              "english": "The book belongs to her.",
+              "focus": "",
+              "note": "",
+              "key": "ihr"
+            }
+          ]
+        },
+        {
+          "header": "4. Dative in questions and relative clauses",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Wem hilfst du?",
+              "english": "Whom are you helping?",
+              "focus": "",
+              "note": "",
+              "key": "Wem"
+            },
+            {
+              "german": "Der Mann, dem ich helfe, liest.",
+              "english": "The man whom I help is reading.",
+              "focus": "",
+              "note": "",
+              "key": "dem"
+            },
+            {
+              "german": "Die Frau, der ich danke, schreibt.",
+              "english": "The woman whom I thank is writing.",
+              "focus": "",
+              "note": "",
+              "key": "der"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

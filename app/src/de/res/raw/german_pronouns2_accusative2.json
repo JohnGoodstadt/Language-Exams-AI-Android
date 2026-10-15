@@ -1,0 +1,825 @@
+{
+  "location": 0,
+  "sheetname": "GermanPronouns2Accusative",
+  "title": "Accusative: The Usual Object",
+  "updatedDate": 0,
+  "fileformat": 8,
+  "description": "Most verbs with a single object take the accusative; learn the forms and important constructions.",
+  "intro": "For a verb with one object, the accusative is the usual case. This is a practical default, not an infallible rule: learn each verb together with its case. Accusative pronouns include mich, dich, ihn, sie, es, uns, euch, sie, Sie.",
+  "sections": [
+    {
+      "title": "Common accusative verbs",
+      "sortorder": 1,
+      "explanation": "These verbs directly govern an accusative object. The object stays ihn while the subject and verb change.",
+      "rule": "Verb + jemanden (accusative)",
+      "entries": [
+        {
+          "header": "kennen — to know",
+          "kind": "conjugation",
+          "explanation": "kennen takes an accusative object. The person being acted upon is ihn (him), not ihm (to him).",
+          "pattern": "kennen + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich kenne ihn.",
+              "english": "I know him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du kennst ihn.",
+              "english": "You (singular) know him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er kennt ihn.",
+              "english": "He knows him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie kennt ihn.",
+              "english": "She knows him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es kennt ihn.",
+              "english": "It knows him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir kennen ihn.",
+              "english": "We know him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr kennt ihn.",
+              "english": "You (plural) know him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie kennen ihn.",
+              "english": "They know him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie kennen ihn.",
+              "english": "You (formal) know him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "sehen — to see",
+          "kind": "conjugation",
+          "explanation": "sehen takes an accusative object. The person being acted upon is ihn (him), not ihm (to him).",
+          "pattern": "sehen + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich sehe ihn.",
+              "english": "I see him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du siehst ihn.",
+              "english": "You (singular) see him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er sieht ihn.",
+              "english": "He sees him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie sieht ihn.",
+              "english": "She sees him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es sieht ihn.",
+              "english": "It sees him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir sehen ihn.",
+              "english": "We see him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr seht ihn.",
+              "english": "You (plural) see him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie sehen ihn.",
+              "english": "They see him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie sehen ihn.",
+              "english": "You (formal) see him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "fragen — to ask",
+          "kind": "conjugation",
+          "explanation": "fragen takes an accusative object. The person being acted upon is ihn (him), not ihm (to him).",
+          "pattern": "fragen + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich frage ihn.",
+              "english": "I ask him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du fragst ihn.",
+              "english": "You (singular) ask him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er fragt ihn.",
+              "english": "He asks him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie fragt ihn.",
+              "english": "She asks him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es fragt ihn.",
+              "english": "It asks him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir fragen ihn.",
+              "english": "We ask him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr fragt ihn.",
+              "english": "You (plural) ask him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie fragen ihn.",
+              "english": "They ask him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie fragen ihn.",
+              "english": "You (formal) ask him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "besuchen — to visit",
+          "kind": "conjugation",
+          "explanation": "besuchen takes an accusative object. The person being acted upon is ihn (him), not ihm (to him).",
+          "pattern": "besuchen + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich besuche ihn.",
+              "english": "I visit him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du besuchst ihn.",
+              "english": "You (singular) visit him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er besucht ihn.",
+              "english": "He visits him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie besucht ihn.",
+              "english": "She visits him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es besucht ihn.",
+              "english": "It visits him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir besuchen ihn.",
+              "english": "We visit him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr besucht ihn.",
+              "english": "You (plural) visit him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie besuchen ihn.",
+              "english": "They visit him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie besuchen ihn.",
+              "english": "You (formal) visit him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "hören — to hear",
+          "kind": "conjugation",
+          "explanation": "hören takes an accusative object. The person being acted upon is ihn (him), not ihm (to him).",
+          "pattern": "hören + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich höre ihn.",
+              "english": "I hear him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du hörst ihn.",
+              "english": "You (singular) hear him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er hört ihn.",
+              "english": "He hears him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie hört ihn.",
+              "english": "She hears him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es hört ihn.",
+              "english": "It hears him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir hören ihn.",
+              "english": "We hear him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr hört ihn.",
+              "english": "You (plural) hear him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie hören ihn.",
+              "english": "They hear him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie hören ihn.",
+              "english": "You (formal) hear him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "lieben — to love",
+          "kind": "conjugation",
+          "explanation": "lieben takes an accusative object. The person being acted upon is ihn (him), not ihm (to him).",
+          "pattern": "lieben + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich liebe ihn.",
+              "english": "I love him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du liebst ihn.",
+              "english": "You (singular) love him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er liebt ihn.",
+              "english": "He loves him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie liebt ihn.",
+              "english": "She loves him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es liebt ihn.",
+              "english": "It loves him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir lieben ihn.",
+              "english": "We love him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr liebt ihn.",
+              "english": "You (plural) love him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie lieben ihn.",
+              "english": "They love him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie lieben ihn.",
+              "english": "You (formal) love him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "brauchen — to need",
+          "kind": "conjugation",
+          "explanation": "brauchen takes an accusative object. The person being acted upon is ihn (him), not ihm (to him).",
+          "pattern": "brauchen + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich brauche ihn.",
+              "english": "I need him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du brauchst ihn.",
+              "english": "You (singular) need him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er braucht ihn.",
+              "english": "He needs him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie braucht ihn.",
+              "english": "She needs him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es braucht ihn.",
+              "english": "It needs him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir brauchen ihn.",
+              "english": "We need him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr braucht ihn.",
+              "english": "You (plural) need him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie brauchen ihn.",
+              "english": "They need him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie brauchen ihn.",
+              "english": "You (formal) need him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "anrufen — to call",
+          "kind": "conjugation",
+          "explanation": "anrufen takes an accusative object. The person being called is ihn (him), not ihm (to him).",
+          "pattern": "anrufen + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich rufe ihn an.",
+              "english": "I call him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Du rufst ihn an.",
+              "english": "You (singular) call him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Er ruft ihn an.",
+              "english": "He calls him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie ruft ihn an.",
+              "english": "She calls him.",
+              "focus": "ihn",
+              "note": "accusative object; singular she",
+              "key": "ihn"
+            },
+            {
+              "german": "Es ruft ihn an.",
+              "english": "It calls him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir rufen ihn an.",
+              "english": "We call him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Ihr ruft ihn an.",
+              "english": "You (plural) call him.",
+              "focus": "ihn",
+              "note": "accusative object",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie rufen ihn an.",
+              "english": "They call him.",
+              "focus": "ihn",
+              "note": "accusative object; plural they",
+              "key": "ihn"
+            },
+            {
+              "german": "Sie rufen ihn an.",
+              "english": "You (formal) call him.",
+              "focus": "ihn",
+              "note": "accusative object; formal you",
+              "key": "ihn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Accusative pronouns",
+      "sortorder": 2,
+      "explanation": "Compare forms of the object. In particular: ich→mich, du→dich, er→ihn, wir→uns and ihr→euch.",
+      "rule": "wen? (whom?) / was? (what?)",
+      "entries": [
+        {
+          "header": "sehen — changing the object",
+          "kind": "comparison",
+          "explanation": "The verb remains the same while the accusative pronoun changes to match the person or thing seen.",
+          "pattern": "Ich sehe + accusative",
+          "examples": [
+            {
+              "german": "Er sieht mich.",
+              "english": "He sees me.",
+              "focus": "mich",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Sie sieht dich.",
+              "english": "She sees you.",
+              "focus": "dich",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Ich sehe ihn.",
+              "english": "I see him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich sehe sie.",
+              "english": "I see her.",
+              "focus": "sie",
+              "note": "",
+              "key": "sie"
+            },
+            {
+              "german": "Ich sehe es.",
+              "english": "I see it.",
+              "focus": "es",
+              "note": "",
+              "key": "es"
+            },
+            {
+              "german": "Er sieht uns.",
+              "english": "He sees us.",
+              "focus": "uns",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Sie sieht euch.",
+              "english": "She sees you all.",
+              "focus": "euch",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Ich sehe sie.",
+              "english": "I see them.",
+              "focus": "sie",
+              "note": "",
+              "key": "sie"
+            },
+            {
+              "german": "Ich sehe Sie.",
+              "english": "I see you (formal).",
+              "focus": "Sie",
+              "note": "",
+              "key": "Sie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Additional original examples",
+      "sortorder": 3,
+      "explanation": "Additional examples retained from the earlier Format 2 material. They supplement the new conjugation and case-pattern lessons.",
+      "rule": "Review and identify the pronoun case",
+      "entries": [
+        {
+          "header": "1. Personal pronouns: the accusative",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Der Mann sieht mich.",
+              "english": "The man sees me.",
+              "focus": "",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Die Frau sucht dich.",
+              "english": "The woman is looking for you.",
+              "focus": "",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Ich kenne sie.",
+              "english": "I know her (the woman).",
+              "focus": "",
+              "note": "",
+              "key": "sie"
+            },
+            {
+              "german": "Ich kenne es.",
+              "english": "I know it (the book).",
+              "focus": "",
+              "note": "",
+              "key": "es"
+            },
+            {
+              "german": "Er besucht uns.",
+              "english": "He visits us.",
+              "focus": "",
+              "note": "",
+              "key": "uns"
+            },
+            {
+              "german": "Sie liebt euch.",
+              "english": "She loves you all.",
+              "focus": "",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Ich mag sie.",
+              "english": "I like them.",
+              "focus": "",
+              "note": "",
+              "key": "sie"
+            }
+          ]
+        },
+        {
+          "header": "2. Accusative is the usual object case",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Wir hören euch.",
+              "english": "We hear you all.",
+              "focus": "",
+              "note": "",
+              "key": "euch"
+            },
+            {
+              "german": "Er besucht mich.",
+              "english": "He visits me.",
+              "focus": "",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Sie ruft mich an.",
+              "english": "She calls me.",
+              "focus": "",
+              "note": "",
+              "key": "mich"
+            },
+            {
+              "german": "Wir brauchen dich.",
+              "english": "We need you.",
+              "focus": "",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Er liebt sie.",
+              "english": "He loves her.",
+              "focus": "",
+              "note": "",
+              "key": "sie"
+            }
+          ]
+        },
+        {
+          "header": "3. Accusative questions and relative pronouns",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Wen kennst du?",
+              "english": "Whom do you know?",
+              "focus": "",
+              "note": "",
+              "key": "Wen"
+            },
+            {
+              "german": "Der Mann, den ich sehe, liest.",
+              "english": "The man whom I see is reading.",
+              "focus": "",
+              "note": "",
+              "key": "den"
+            }
+          ]
+        },
+        {
+          "header": "4. Accusative after prepositions",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Das Geschenk ist für ihn.",
+              "english": "The gift is for him.",
+              "focus": "",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich gehe ohne dich.",
+              "english": "I am going without you.",
+              "focus": "",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Ich warte auf ihn.",
+              "english": "I am waiting for him.",
+              "focus": "",
+              "note": "",
+              "key": "ihn"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

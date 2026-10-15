@@ -1,0 +1,461 @@
+{
+  "location": 0,
+  "sheetname": "GermanPronouns2Nominative",
+  "title": "Subject (Nominative)",
+  "updatedDate": 0,
+  "fileformat": 8,
+  "description": "Learn the subject pronouns and recognise who performs an action.",
+  "intro": "Start with the subject: who or what performs the action? The nominative pronoun determines the verb ending. A nominative is also used after sein (to be) in predicate nouns.",
+  "sections": [
+    {
+      "title": "Personal subjects and verb endings",
+      "sortorder": 1,
+      "explanation": "The subject is nominative. Compare the nine common subject-pronoun uses; Sie can mean she, they, or formal you, depending on capitalization and the verb/context.",
+      "rule": "wer? (who?) / was? (what?) → nominative",
+      "entries": [
+        {
+          "header": "sein",
+          "kind": "conjugation",
+          "explanation": "To be: the verb changes to agree with the nominative subject.",
+          "pattern": "sein + nominative subject",
+          "examples": [
+            {
+              "german": "Ich bin hier.",
+              "english": "I am here.",
+              "focus": "Ich",
+              "note": "Nominative subject",
+              "key": "Ich"
+            },
+            {
+              "german": "Du bist hier.",
+              "english": "You (singular) are here.",
+              "focus": "Du",
+              "note": "Nominative subject",
+              "key": "Du"
+            },
+            {
+              "german": "Er ist hier.",
+              "english": "He is here.",
+              "focus": "Er",
+              "note": "Nominative subject",
+              "key": "Er"
+            },
+            {
+              "german": "Sie ist hier.",
+              "english": "She is here.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            },
+            {
+              "german": "Es ist hier.",
+              "english": "It is here.",
+              "focus": "Es",
+              "note": "Nominative subject",
+              "key": "Es"
+            },
+            {
+              "german": "Wir sind hier.",
+              "english": "We are here.",
+              "focus": "Wir",
+              "note": "Nominative subject",
+              "key": "Wir"
+            },
+            {
+              "german": "Ihr seid hier.",
+              "english": "You (plural) are here.",
+              "focus": "Ihr",
+              "note": "Nominative subject",
+              "key": "Ihr"
+            },
+            {
+              "german": "Sie sind hier.",
+              "english": "They are here.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            },
+            {
+              "german": "Sie sind hier.",
+              "english": "You (formal) are here.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            }
+          ]
+        },
+        {
+          "header": "haben",
+          "kind": "conjugation",
+          "explanation": "To have: the verb changes to agree with the nominative subject.",
+          "pattern": "haben + nominative subject",
+          "examples": [
+            {
+              "german": "Ich habe Zeit.",
+              "english": "I have time.",
+              "focus": "Ich",
+              "note": "Nominative subject",
+              "key": "Ich"
+            },
+            {
+              "german": "Du hast Zeit.",
+              "english": "You (singular) have time.",
+              "focus": "Du",
+              "note": "Nominative subject",
+              "key": "Du"
+            },
+            {
+              "german": "Er hat Zeit.",
+              "english": "He has time.",
+              "focus": "Er",
+              "note": "Nominative subject",
+              "key": "Er"
+            },
+            {
+              "german": "Sie hat Zeit.",
+              "english": "She has time.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            },
+            {
+              "german": "Es hat Zeit.",
+              "english": "It has time.",
+              "focus": "Es",
+              "note": "Nominative subject",
+              "key": "Es"
+            },
+            {
+              "german": "Wir haben Zeit.",
+              "english": "We have time.",
+              "focus": "Wir",
+              "note": "Nominative subject",
+              "key": "Wir"
+            },
+            {
+              "german": "Ihr habt Zeit.",
+              "english": "You (plural) have time.",
+              "focus": "Ihr",
+              "note": "Nominative subject",
+              "key": "Ihr"
+            },
+            {
+              "german": "Sie haben Zeit.",
+              "english": "They have time.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            },
+            {
+              "german": "Sie haben Zeit.",
+              "english": "You (formal) have time.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            }
+          ]
+        },
+        {
+          "header": "lernen",
+          "kind": "conjugation",
+          "explanation": "To learn: the verb changes to agree with the nominative subject.",
+          "pattern": "lernen + nominative subject",
+          "examples": [
+            {
+              "german": "Ich lerne Deutsch.",
+              "english": "I learn German.",
+              "focus": "Ich",
+              "note": "Nominative subject",
+              "key": "Ich"
+            },
+            {
+              "german": "Du lernst Deutsch.",
+              "english": "You (singular) learn German.",
+              "focus": "Du",
+              "note": "Nominative subject",
+              "key": "Du"
+            },
+            {
+              "german": "Er lernt Deutsch.",
+              "english": "He learns German.",
+              "focus": "Er",
+              "note": "Nominative subject",
+              "key": "Er"
+            },
+            {
+              "german": "Sie lernt Deutsch.",
+              "english": "She learns German.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            },
+            {
+              "german": "Es lernt Deutsch.",
+              "english": "It learns German.",
+              "focus": "Es",
+              "note": "Nominative subject",
+              "key": "Es"
+            },
+            {
+              "german": "Wir lernen Deutsch.",
+              "english": "We learn German.",
+              "focus": "Wir",
+              "note": "Nominative subject",
+              "key": "Wir"
+            },
+            {
+              "german": "Ihr lernt Deutsch.",
+              "english": "You (plural) learn German.",
+              "focus": "Ihr",
+              "note": "Nominative subject",
+              "key": "Ihr"
+            },
+            {
+              "german": "Sie lernen Deutsch.",
+              "english": "They learn German.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            },
+            {
+              "german": "Sie lernen Deutsch.",
+              "english": "You (formal) learn German.",
+              "focus": "Sie",
+              "note": "Nominative subject",
+              "key": "Sie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Additional original examples",
+      "sortorder": 2,
+      "explanation": "Additional examples retained from the earlier Format 2 material. They supplement the new conjugation and case-pattern lessons.",
+      "rule": "Review and identify the pronoun case",
+      "entries": [
+        {
+          "header": "1. Personal pronouns: the subject (nominative)",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Ich bin ein Mann.",
+              "english": "I am a man.",
+              "focus": "",
+              "note": "",
+              "key": "Ich"
+            },
+            {
+              "german": "Du bist eine Frau.",
+              "english": "You are a woman.",
+              "focus": "",
+              "note": "",
+              "key": "Du"
+            },
+            {
+              "german": "Er ist groß.",
+              "english": "He is tall.",
+              "focus": "",
+              "note": "",
+              "key": "Er"
+            },
+            {
+              "german": "Sie ist klein.",
+              "english": "She is small.",
+              "focus": "",
+              "note": "",
+              "key": "Sie"
+            },
+            {
+              "german": "Es ist neu.",
+              "english": "It is new.",
+              "focus": "",
+              "note": "",
+              "key": "Es"
+            },
+            {
+              "german": "Ihr seid dort.",
+              "english": "You all are there.",
+              "focus": "",
+              "note": "",
+              "key": "Ihr"
+            },
+            {
+              "german": "Sie sind alt.",
+              "english": "They are old.",
+              "focus": "",
+              "note": "",
+              "key": "Sie"
+            },
+            {
+              "german": "Sie sind freundlich.",
+              "english": "You (formal) are friendly.",
+              "focus": "",
+              "note": "",
+              "key": "Sie"
+            }
+          ]
+        },
+        {
+          "header": "2. Indefinite pronouns: subjects and general statements",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Jemand ist hier.",
+              "english": "Someone is here.",
+              "focus": "",
+              "note": "",
+              "key": "Jemand"
+            },
+            {
+              "german": "Niemand ist dort.",
+              "english": "No one is there.",
+              "focus": "",
+              "note": "",
+              "key": "Niemand"
+            },
+            {
+              "german": "Alle lesen das Buch.",
+              "english": "Everyone is reading the book.",
+              "focus": "",
+              "note": "",
+              "key": "Alle"
+            },
+            {
+              "german": "Man kann hier lesen.",
+              "english": "One can read here.",
+              "focus": "",
+              "note": "",
+              "key": "Man"
+            },
+            {
+              "german": "Hast du etwas?",
+              "english": "Do you have something?",
+              "focus": "",
+              "note": "",
+              "key": "etwas"
+            },
+            {
+              "german": "Ich habe nichts.",
+              "english": "I have nothing.",
+              "focus": "",
+              "note": "",
+              "key": "nichts"
+            },
+            {
+              "german": "Man lernt jeden Tag.",
+              "english": "People learn every day.",
+              "focus": "",
+              "note": "",
+              "key": "Man"
+            },
+            {
+              "german": "Jemand wartet draußen.",
+              "english": "Someone is waiting outside.",
+              "focus": "",
+              "note": "",
+              "key": "Jemand"
+            },
+            {
+              "german": "Niemand antwortet.",
+              "english": "Nobody is answering.",
+              "focus": "",
+              "note": "",
+              "key": "Niemand"
+            }
+          ]
+        },
+        {
+          "header": "3. Who is the subject?",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Wer kommt heute?",
+              "english": "Who is coming today?",
+              "focus": "",
+              "note": "",
+              "key": "Wer"
+            },
+            {
+              "german": "Wer hilft dir?",
+              "english": "Who is helping you?",
+              "focus": "",
+              "note": "",
+              "key": "Wer"
+            }
+          ]
+        },
+        {
+          "header": "4. Demonstratives as subjects",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Dieser Mann ist hier.",
+              "english": "This man is here.",
+              "focus": "",
+              "note": "",
+              "key": "Dieser"
+            },
+            {
+              "german": "Diese Frau ist dort.",
+              "english": "This woman is there.",
+              "focus": "",
+              "note": "",
+              "key": "Diese"
+            },
+            {
+              "german": "Dieses Buch ist gut.",
+              "english": "This book is good.",
+              "focus": "",
+              "note": "",
+              "key": "Dieses"
+            },
+            {
+              "german": "Ich nehme diesen.",
+              "english": "I take this one (Masculine Accusative).",
+              "focus": "",
+              "note": "",
+              "key": "Ich"
+            },
+            {
+              "german": "Ich helfe diesem.",
+              "english": "I help this one (Masculine Dative).",
+              "focus": "",
+              "note": "",
+              "key": "Ich"
+            },
+            {
+              "german": "Dieser ist neu.",
+              "english": "This one is new.",
+              "focus": "",
+              "note": "",
+              "key": "Dieser"
+            },
+            {
+              "german": "Diese ist schön.",
+              "english": "This one is beautiful.",
+              "focus": "",
+              "note": "",
+              "key": "Diese"
+            },
+            {
+              "german": "Dieses ist teuer.",
+              "english": "This one is expensive.",
+              "focus": "",
+              "note": "",
+              "key": "Dieses"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "location": 0,
+  "sheetname": "GermanPronouns2BothCases",
+  "title": "Two Objects & Reflexives",
+  "updatedDate": 0,
+  "fileformat": 8,
+  "description": "Practise dative recipients, accusative things, prepositions and reflexive forms.",
+  "intro": "Some verbs commonly take two objects: the person receiving something is dative and the thing transferred is accusative. Separately, reflexive constructions can use either accusative or dative; prepositions have their own case rules.",
+  "sections": [
+    {
+      "title": "Dative person + accusative thing",
+      "sortorder": 1,
+      "explanation": "The recipient is dative (wem?), while the item is accusative (was?). Both cases can appear in one sentence.",
+      "rule": "jemandem (Dat.) + etwas (Akk.)",
+      "entries": [
+        {
+          "header": "geben — to give",
+          "kind": "conjugation",
+          "explanation": "geben can take both a dative recipient (ihm) and an accusative item (das Buch).",
+          "pattern": "geben + Dativ + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich gebe ihm das Buch.",
+              "english": "I give him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du gibst ihm das Buch.",
+              "english": "You (singular) give him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er gibt ihm das Buch.",
+              "english": "He gives him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie gibt ihm das Buch.",
+              "english": "She gives him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es gibt ihm das Buch.",
+              "english": "It gives him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir geben ihm das Buch.",
+              "english": "We give him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr gebt ihm das Buch.",
+              "english": "You (plural) give him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie geben ihm das Buch.",
+              "english": "They give him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie geben ihm das Buch.",
+              "english": "You (formal) give him the book.",
+              "focus": "ihm das Buch",
+              "note": "dative recipient + accusative thing object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "zeigen — to show",
+          "kind": "conjugation",
+          "explanation": "zeigen can take both a dative recipient (ihm) and an accusative item (das Bild).",
+          "pattern": "zeigen + Dativ + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich zeige ihm das Bild.",
+              "english": "I show him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du zeigst ihm das Bild.",
+              "english": "You (singular) show him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er zeigt ihm das Bild.",
+              "english": "He shows him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie zeigt ihm das Bild.",
+              "english": "She shows him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es zeigt ihm das Bild.",
+              "english": "It shows him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir zeigen ihm das Bild.",
+              "english": "We show him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr zeigt ihm das Bild.",
+              "english": "You (plural) show him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie zeigen ihm das Bild.",
+              "english": "They show him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie zeigen ihm das Bild.",
+              "english": "You (formal) show him the picture.",
+              "focus": "ihm das Bild",
+              "note": "dative recipient + accusative thing object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "schicken — to send",
+          "kind": "conjugation",
+          "explanation": "schicken can take both a dative recipient (ihm) and an accusative item (den Brief).",
+          "pattern": "schicken + Dativ + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich schicke ihm den Brief.",
+              "english": "I send him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du schickst ihm den Brief.",
+              "english": "You (singular) send him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er schickt ihm den Brief.",
+              "english": "He sends him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie schickt ihm den Brief.",
+              "english": "She sends him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es schickt ihm den Brief.",
+              "english": "It sends him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir schicken ihm den Brief.",
+              "english": "We send him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr schickt ihm den Brief.",
+              "english": "You (plural) send him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie schicken ihm den Brief.",
+              "english": "They send him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie schicken ihm den Brief.",
+              "english": "You (formal) send him the letter.",
+              "focus": "ihm den Brief",
+              "note": "dative recipient + accusative thing object; formal you",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "erklären — to explain",
+          "kind": "conjugation",
+          "explanation": "erklären can take both a dative recipient (ihm) and an accusative item (die Regel).",
+          "pattern": "erklären + Dativ + Akkusativ",
+          "examples": [
+            {
+              "german": "Ich erkläre ihm die Regel.",
+              "english": "I explain the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Du erklärst ihm die Regel.",
+              "english": "You (singular) explain the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Er erklärt ihm die Regel.",
+              "english": "He explains the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie erklärt ihm die Regel.",
+              "english": "She explains the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object; singular she",
+              "key": "ihm"
+            },
+            {
+              "german": "Es erklärt ihm die Regel.",
+              "english": "It explains the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Wir erklären ihm die Regel.",
+              "english": "We explain the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Ihr erklärt ihm die Regel.",
+              "english": "You (plural) explain the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie erklären ihm die Regel.",
+              "english": "They explain the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object; plural they",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie erklären ihm die Regel.",
+              "english": "You (formal) explain the rule to him.",
+              "focus": "ihm die Regel",
+              "note": "dative recipient + accusative thing object; formal you",
+              "key": "ihm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reflexive: two different cases",
+      "sortorder": 2,
+      "explanation": "If the reflexive pronoun is the only object it is often accusative; if a body part is the accusative object, the reflexive person is commonly dative.",
+      "rule": "sich (Akk.) / sich (Dat.)",
+      "entries": [
+        {
+          "header": "sich waschen / sich die Hände waschen",
+          "kind": "comparison",
+          "explanation": "Compare washing yourself with washing a body part. In first and second person, accusative and dative reflexive pronouns differ.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Ich wasche mich.",
+              "english": "I wash myself.",
+              "focus": "mich",
+              "note": "accusative",
+              "key": "mich"
+            },
+            {
+              "german": "Du wäschst dich.",
+              "english": "You wash yourself.",
+              "focus": "dich",
+              "note": "accusative",
+              "key": "dich"
+            },
+            {
+              "german": "Der Mann wäscht sich.",
+              "english": "The man washes himself.",
+              "focus": "sich",
+              "note": "accusative",
+              "key": "sich"
+            },
+            {
+              "german": "Die Frau wäscht sich.",
+              "english": "The woman washes herself.",
+              "focus": "sich",
+              "note": "accusative",
+              "key": "sich"
+            },
+            {
+              "german": "Wir setzen uns.",
+              "english": "We sit down.",
+              "focus": "uns",
+              "note": "accusative",
+              "key": "uns"
+            },
+            {
+              "german": "Ihr setzt euch.",
+              "english": "You all sit down.",
+              "focus": "euch",
+              "note": "accusative",
+              "key": "euch"
+            },
+            {
+              "german": "Ich wasche mir die Hände.",
+              "english": "I wash my hands.",
+              "focus": "mir",
+              "note": "dative",
+              "key": "mir"
+            },
+            {
+              "german": "Du wäschst dir die Hände.",
+              "english": "You wash your hands.",
+              "focus": "dir",
+              "note": "dative",
+              "key": "dir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Prepositions govern case",
+      "sortorder": 3,
+      "explanation": "A preposition can determine the case of a pronoun, independently of the verb. Some two-way prepositions depend on meaning (location versus direction).",
+      "rule": "mit + Dat.; für + Akk.; warten auf + Akk.",
+      "entries": [
+        {
+          "header": "mit / für / auf",
+          "kind": "comparison",
+          "explanation": "mit always takes dative, für always takes accusative; warten auf uses accusative as a fixed verb–preposition construction.",
+          "pattern": "preposition + required case",
+          "examples": [
+            {
+              "german": "Ich spreche mit ihm.",
+              "english": "I speak with him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Das Geschenk ist für ihn.",
+              "english": "The gift is for him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich warte auf ihn.",
+              "english": "I wait for him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Additional original examples",
+      "sortorder": 4,
+      "explanation": "Additional examples retained from the earlier Format 2 material. They supplement the new conjugation and case-pattern lessons.",
+      "rule": "Review and identify the pronoun case",
+      "entries": [
+        {
+          "header": "1. Two objects: person and thing",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Sie zeigt mir das Foto.",
+              "english": "She shows me the photo.",
+              "focus": "",
+              "note": "",
+              "key": "das"
+            },
+            {
+              "german": "Wir schicken ihr einen Brief.",
+              "english": "We send her a letter.",
+              "focus": "",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Der Lehrer erklärt uns die Regel.",
+              "english": "The teacher explains the rule to us.",
+              "focus": "",
+              "note": "",
+              "key": "die"
+            }
+          ]
+        },
+        {
+          "header": "2. Compare the two objects",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Wem gibst du das Buch?",
+              "english": "To whom are you giving the book?",
+              "focus": "",
+              "note": "",
+              "key": "Wem"
+            },
+            {
+              "german": "Was gibst du ihm?",
+              "english": "What are you giving him?",
+              "focus": "",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Ich gebe es ihm.",
+              "english": "I give it to him.",
+              "focus": "",
+              "note": "",
+              "key": "es"
+            },
+            {
+              "german": "Er zeigt sie mir.",
+              "english": "He shows them to me.",
+              "focus": "",
+              "note": "",
+              "key": "sie"
+            }
+          ]
+        },
+        {
+          "header": "3. Verbs and prepositions are different",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Das ist für ihn.",
+              "english": "That is for him.",
+              "focus": "",
+              "note": "",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "4. Reflexive pronouns: accusative or dative",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Du ziehst dich an.",
+              "english": "You get dressed. (Accusative reflexive)",
+              "focus": "",
+              "note": "",
+              "key": "dich"
+            },
+            {
+              "german": "Du ziehst dir die Schuhe an.",
+              "english": "You put on your shoes. (Dative reflexive)",
+              "focus": "",
+              "note": "",
+              "key": "die"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

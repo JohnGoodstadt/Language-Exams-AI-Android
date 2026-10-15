@@ -53,6 +53,14 @@ object LanguageConfig {
      */
     fun normalizeToLogicalName(resourceName: String): String {
         return when (resourceName) {
+            // Pronomen II (Format 8) bundled resources.
+            "german_pronouns2_accusative2" -> "GermanPronouns2Accusative2"
+            "german_pronouns2_both_case2" -> "GermanPronouns2BothCases2"
+            "german_pronouns2_both_dative2" -> "GermanPronouns2Dative2"
+            "german_pronouns2_both_learning_verbs2" -> "GermanPronouns2LearningVerbs2"
+            "german_pronouns2_both_nominative2" -> "GermanPronouns2Nominative2"
+            "german_pronouns2_both_patterns2" -> "GermanPronouns2Patterns2"
+
             "vocab_data_a1" -> "GermanA1Vocab"
             "vocab_data_a2" -> "GermanA2Vocab"
             "vocab_data_b1" -> "GermanB1Vocab"
@@ -78,6 +86,14 @@ object LanguageConfig {
      */
     fun mapLogicalToResourceName(sheet_name: String): String {
         return when (sheet_name) {
+            // Pronomen II (Format 8) logical sheet names.
+            "GermanPronouns2Accusative2" -> "german_pronouns2_accusative2"
+            "GermanPronouns2BothCases2" -> "german_pronouns2_both_case2"
+            "GermanPronouns2Dative2" -> "german_pronouns2_both_dative2"
+            "GermanPronouns2LearningVerbs2" -> "german_pronouns2_both_learning_verbs2"
+            "GermanPronouns2Nominative2" -> "german_pronouns2_both_nominative2"
+            "GermanPronouns2Patterns2" -> "german_pronouns2_both_patterns2"
+
             "GermanA1Vocab" -> "vocab_data_a1"
             "GermanA2Vocab" -> "vocab_data_a2"
             "GermanB1Vocab" -> "vocab_data_b1"

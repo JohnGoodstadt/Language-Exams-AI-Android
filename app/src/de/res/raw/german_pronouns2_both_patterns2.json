@@ -1,0 +1,439 @@
+{
+  "location": 0,
+  "sheetname": "GermanPronouns2Patterns",
+  "title": "Case Patterns",
+  "updatedDate": 0,
+  "fileformat": 8,
+  "description": "Compare verb groups, questions, possessives and relative pronouns.",
+  "intro": "Meaning can suggest a case, but it cannot guarantee it. Use these contrasts to recognise which verbs and pronouns belong together. This tab also preserves question, relative, possessive and demonstrative pronouns from the original lessons.",
+  "sections": [
+    {
+      "title": "Communication contrasts",
+      "sortorder": 1,
+      "explanation": "Two verbs with related meanings may govern different cases.",
+      "rule": "Compare Akkusativ and Dativ",
+      "entries": [
+        {
+          "header": "fragen / antworten",
+          "kind": "comparison",
+          "explanation": "fragen takes accusative; antworten takes dative.",
+          "pattern": "jemanden fragen / jemandem antworten",
+          "examples": [
+            {
+              "german": "Ich frage ihn.",
+              "english": "I ask him.",
+              "focus": "ihn",
+              "note": "accusative",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich antworte ihm.",
+              "english": "I answer him.",
+              "focus": "ihm",
+              "note": "dative",
+              "key": "ihm"
+            },
+            {
+              "german": "Du fragst ihn.",
+              "english": "You ask him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Du antwortest ihm.",
+              "english": "You answer him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "hören / zuhören",
+          "kind": "comparison",
+          "explanation": "hören takes an accusative object; zuhören takes a dative object and is separable.",
+          "pattern": "jemanden hören / jemandem zuhören",
+          "examples": [
+            {
+              "german": "Ich höre ihn.",
+              "english": "I hear him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich höre ihm zu.",
+              "english": "I listen to him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Du hörst ihn.",
+              "english": "You hear him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Du hörst ihm zu.",
+              "english": "You listen to him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "People and reactions",
+      "sortorder": 2,
+      "explanation": "People are not always accusative objects: a person can be the dative experiencer of a reaction.",
+      "rule": "Check the verb, not the English word order",
+      "entries": [
+        {
+          "header": "kennen / helfen / gefallen",
+          "kind": "comparison",
+          "explanation": "kennen uses accusative; helfen uses dative; gefallen uses the thing as nominative subject and the person as dative.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Ich kenne ihn.",
+              "english": "I know him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich helfe ihm.",
+              "english": "I help him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Das gefällt ihm.",
+              "english": "He likes that.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Questions and relative pronouns",
+      "sortorder": 3,
+      "explanation": "Interrogative and relative pronouns also change case according to their role in their own clause.",
+      "rule": "wer → wen → wem; der → den → dem",
+      "entries": [
+        {
+          "header": "wer / wen / wem / wessen",
+          "kind": "pronoun",
+          "explanation": "Ask whether the person is the subject, accusative object, dative object or possessor.",
+          "pattern": "nominative / accusative / dative / genitive",
+          "examples": [
+            {
+              "german": "Wer ist der Mann?",
+              "english": "Who is the man?",
+              "focus": "Wer",
+              "note": "",
+              "key": "Wer"
+            },
+            {
+              "german": "Wen sieht die Frau?",
+              "english": "Whom does the woman see?",
+              "focus": "Wen",
+              "note": "",
+              "key": "Wen"
+            },
+            {
+              "german": "Wem gehört das Buch?",
+              "english": "To whom does the book belong?",
+              "focus": "Wem",
+              "note": "",
+              "key": "Wem"
+            },
+            {
+              "german": "Wessen Buch ist das?",
+              "english": "Whose book is that?",
+              "focus": "Wessen",
+              "note": "",
+              "key": "Wessen"
+            }
+          ]
+        },
+        {
+          "header": "der / den / dem / dessen",
+          "kind": "pronoun",
+          "explanation": "The case of a relative pronoun depends on its function inside the relative clause, not on the case of the noun in the main clause.",
+          "pattern": "relative clause case",
+          "examples": [
+            {
+              "german": "Der Mann, der hier ist, liest.",
+              "english": "The man who is here is reading.",
+              "focus": "der",
+              "note": "",
+              "key": "der"
+            },
+            {
+              "german": "Der Mann, den ich sehe, liest.",
+              "english": "The man whom I see is reading.",
+              "focus": "den",
+              "note": "",
+              "key": "den"
+            },
+            {
+              "german": "Der Mann, dem ich helfe, liest.",
+              "english": "The man whom I help is reading.",
+              "focus": "dem",
+              "note": "",
+              "key": "dem"
+            },
+            {
+              "german": "Der Mann, dessen Buch ich habe, liest.",
+              "english": "The man whose book I have is reading.",
+              "focus": "dessen",
+              "note": "",
+              "key": "dessen"
+            },
+            {
+              "german": "Die Frau, der ich danke, schreibt.",
+              "english": "The woman whom I thank is writing.",
+              "focus": "der",
+              "note": "",
+              "key": "der"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Possessive and demonstrative forms",
+      "sortorder": 4,
+      "explanation": "Possessive determiners (mein, dein, sein, ihr etc.) and demonstratives (dieser etc.) also show gender, number and case.",
+      "rule": "mein → meinen / meinem; dieser → diesen / diesem",
+      "entries": [
+        {
+          "header": "mein / sein / ihr — ownership",
+          "kind": "pronoun",
+          "explanation": "Possessive words before nouns take endings determined by the noun’s case, gender and number. These examples are possessive determiners, rather than standalone possessive pronouns.",
+          "pattern": "possessive stem + case ending",
+          "examples": [
+            {
+              "german": "Das ist mein Buch.",
+              "english": "That is my book.",
+              "focus": "mein",
+              "note": "",
+              "key": "mein"
+            },
+            {
+              "german": "Ist das dein Buch?",
+              "english": "Is that your book?",
+              "focus": "dein",
+              "note": "",
+              "key": "dein"
+            },
+            {
+              "german": "Das ist sein Buch.",
+              "english": "That is his book.",
+              "focus": "sein",
+              "note": "",
+              "key": "sein"
+            },
+            {
+              "german": "Das ist ihr Buch.",
+              "english": "That is her book.",
+              "focus": "ihr",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Wir lesen unser Buch.",
+              "english": "We read our book.",
+              "focus": "unser",
+              "note": "",
+              "key": "unser"
+            },
+            {
+              "german": "Wo ist euer Buch?",
+              "english": "Where is your (plural) book?",
+              "focus": "euer",
+              "note": "",
+              "key": "euer"
+            },
+            {
+              "german": "Ich sehe ihren Mann.",
+              "english": "I see their husband.",
+              "focus": "ihren",
+              "note": "",
+              "key": "ihren"
+            },
+            {
+              "german": "Ich helfe seinem Mann.",
+              "english": "I help his husband.",
+              "focus": "seinem",
+              "note": "",
+              "key": "seinem"
+            }
+          ]
+        },
+        {
+          "header": "dieser / diesen / diesem",
+          "kind": "pronoun",
+          "explanation": "Masculine demonstratives show the nominative, accusative and dative contrast particularly clearly.",
+          "pattern": "dieser (Nom.) / diesen (Akk.) / diesem (Dat.)",
+          "examples": [
+            {
+              "german": "Dieser Mann ist hier.",
+              "english": "This man is here.",
+              "focus": "Dieser",
+              "note": "",
+              "key": "Dieser"
+            },
+            {
+              "german": "Diese Frau ist dort.",
+              "english": "This woman is there.",
+              "focus": "Diese",
+              "note": "",
+              "key": "Diese"
+            },
+            {
+              "german": "Dieses Buch ist gut.",
+              "english": "This book is good.",
+              "focus": "Dieses",
+              "note": "",
+              "key": "Dieses"
+            },
+            {
+              "german": "Ich nehme diesen.",
+              "english": "I take this one.",
+              "focus": "diesen",
+              "note": "",
+              "key": "diesen"
+            },
+            {
+              "german": "Ich helfe diesem.",
+              "english": "I help this one.",
+              "focus": "diesem",
+              "note": "",
+              "key": "diesem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Additional original examples",
+      "sortorder": 5,
+      "explanation": "Additional examples retained from the earlier Format 2 material. They supplement the new conjugation and case-pattern lessons.",
+      "rule": "Review and identify the pronoun case",
+      "entries": [
+        {
+          "header": "2. People, relationships and reactions",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Sie hilft mir.",
+              "english": "She helps me.",
+              "focus": "",
+              "note": "",
+              "key": "mir"
+            },
+            {
+              "german": "Ich danke dir.",
+              "english": "I thank you.",
+              "focus": "",
+              "note": "",
+              "key": "dir"
+            },
+            {
+              "german": "Er vertraut ihr.",
+              "english": "He trusts her.",
+              "focus": "",
+              "note": "",
+              "key": "ihr"
+            },
+            {
+              "german": "Ich kenne sie.",
+              "english": "I know her.",
+              "focus": "",
+              "note": "",
+              "key": "sie"
+            },
+            {
+              "german": "Ich liebe ihn.",
+              "english": "I love him.",
+              "focus": "",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Wir besuchen euch.",
+              "english": "We visit you all.",
+              "focus": "",
+              "note": "",
+              "key": "euch"
+            }
+          ]
+        },
+        {
+          "header": "3. Possessive forms change with case",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Das ist mein Freund.",
+              "english": "That is my friend. (Nominative)",
+              "focus": "",
+              "note": "",
+              "key": "mein"
+            },
+            {
+              "german": "Ich sehe meinen Freund.",
+              "english": "I see my friend. (Accusative)",
+              "focus": "",
+              "note": "",
+              "key": "meinen"
+            },
+            {
+              "german": "Ich helfe meinem Freund.",
+              "english": "I help my friend. (Dative)",
+              "focus": "",
+              "note": "",
+              "key": "meinem"
+            }
+          ]
+        },
+        {
+          "header": "4. Questions and linking clauses",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Die Frau, die hier ist, schreibt.",
+              "english": "The woman, who is here, is writing.",
+              "focus": "",
+              "note": "",
+              "key": "die"
+            },
+            {
+              "german": "Das Buch, das hier liegt, ist neu.",
+              "english": "The book, which lies here, is new.",
+              "focus": "",
+              "note": "",
+              "key": "das"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

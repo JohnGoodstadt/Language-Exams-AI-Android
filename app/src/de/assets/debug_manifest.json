@@ -91,6 +91,52 @@
       "screenType": "Format6Screen",
       "firestoreDocumentId": "GermanReferencePronouns"
     },
+    "GermanReferencePronounsOpenAI": {
+      "title": "Pronomen II",
+      "screenType": "GroupedFormat8Screen",
+      "sheetDataType": "Format8Screen",
+      "subTabs": [
+        {
+          "title": "Personal",
+          "firestoreDocumentId": "GermanPronouns2Nominative2",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "Accusatiive",
+          "firestoreDocumentId": "GermanPronouns2Accusative2",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "Dative",
+          "firestoreDocumentId": "GermanPronouns2Dative2",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        },
+        {
+          "title": "Patterns",
+          "firestoreDocumentId": "GermanPronouns2Patterns2",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        }
+      ,
+        {
+          "title": "Both Cases",
+          "firestoreDocumentId": "GermanPronouns2BothCases2",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        }
+      ,
+        {
+          "title": "Learning Verbs",
+          "firestoreDocumentId": "GermanPronouns2LearningVerbs2",
+          "sheetDataType": "Format8",
+          "screenType": "Format8Screen"
+        }
+
+      ]
+    },
     "GermanPrepositionsTeaching": {
       "title": "Präpositionen",
       "sheetDataType": "Format6",
@@ -108,6 +154,7 @@
         "SpanishLanguage",
         "AdjectivesGroup",
         "GermanReferencePronouns",
+        "GermanReferencePronounsOpenAI",
         "GermanSoundsTheSame",
         "PairsGroup"
       ]

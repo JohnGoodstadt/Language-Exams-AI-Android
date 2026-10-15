@@ -19,6 +19,7 @@ import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format1File
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format3File
+import com.goodstadt.john.language.exams.models.Format8File
 import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.WordQuizRoot
@@ -37,6 +38,7 @@ import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.File
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -132,6 +134,7 @@ class ContentRepository @Inject constructor(
     private val vocabCache = mutableMapOf<String, Format0File>()
     private val format1Cache = mutableMapOf<String, Format1File>()
     private val format2Cache = mutableMapOf<String, Format2File>()
+    private val format8Cache = ConcurrentHashMap<String, Format8File>()
     private val format3Cache = mutableMapOf<String, Format3File>()
     private val format7or10Cache = mutableMapOf<String, Format7or10File>()
     private val format13Cache = mutableMapOf<String, WordQuizRoot>()
@@ -338,6 +341,38 @@ class ContentRepository @Inject constructor(
         } catch (e: Exception) {
             Timber.e(e, "Format 2: Failed to load from bundle: $resourceName")
             FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundle() Data load failed for $resourceName"))
+            Result.failure(e)
+        }
+    }
+
+    /** Format 8 is bundle-only for now: memory cache -> res/raw, with no remote version or Firestore calls. */
+    suspend fun getFormat8Data(name: String): Result<Format8File> = withContext(Dispatchers.IO) {
+        val logicalName = normalizeToLogicalName(name)
+        format8Cache[logicalName]?.let { cachedFile ->
+            Timber.d("ContentRepo: Returning '$logicalName' (Format8) from MEMORY CACHE.")
+            return@withContext Result.success(cachedFile)
+        }
+
+        val resourceName = mapLogicalToResourceName(logicalName)
+        val bundleResult = loadBundledFormat8Data(resourceName)
+        // Cache under the logical name so both resource-name and logical-name callers share it.
+        bundleResult.getOrNull()?.let { format8Cache[logicalName] = it }
+        return@withContext bundleResult
+    }
+
+    private fun loadBundledFormat8Data(resourceName: String): Result<Format8File> {
+        return try {
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(IllegalArgumentException("Format 8 resource not found in bundle: $resourceName.json"))
+            }
+            val jsonString = context.resources.openRawResource(resourceId)
+                .bufferedReader(Charsets.UTF_8).use { it.readText() }
+            val file = jsonParser.decodeFromString<Format8File>(jsonString)
+            require(file.fileformat == 8) { "Expected fileformat 8 in $resourceName.json, found ${file.fileformat}" }
+            Result.success(file)
+        } catch (e: Exception) {
+            Timber.e(e, "Format 8: Failed to load from bundle: $resourceName")
             Result.failure(e)
         }
     }

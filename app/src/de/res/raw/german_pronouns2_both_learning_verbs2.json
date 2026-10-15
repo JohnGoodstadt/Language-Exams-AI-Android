@@ -1,0 +1,392 @@
+{
+  "location": 0,
+  "sheetname": "GermanPronouns2LearningVerbs",
+  "title": "Learn Verbs with Their Cases",
+  "updatedDate": 0,
+  "fileformat": 8,
+  "description": "Remember verbs with their case patterns, not just their English meanings.",
+  "intro": "The most effective strategy is to learn each verb with its object pattern and a short example. Accusative is a useful default for single-object verbs, but dative verbs and fixed prepositions must be learned explicitly.",
+  "sections": [
+    {
+      "title": "Memorise the complete construction",
+      "sortorder": 1,
+      "explanation": "Learn jemanden for accusative and jemandem for dative. This stores the case together with the verb.",
+      "rule": "Verb + object pattern + example",
+      "entries": [
+        {
+          "header": "kennen — jemanden kennen",
+          "kind": "learning",
+          "explanation": "The person known is accusative.",
+          "pattern": "jemanden kennen (Akk.)",
+          "examples": [
+            {
+              "german": "Ich kenne ihn.",
+              "english": "I know him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Du kennst ihn.",
+              "english": "You know him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            }
+          ]
+        },
+        {
+          "header": "antworten — jemandem antworten",
+          "kind": "learning",
+          "explanation": "The person being answered is dative.",
+          "pattern": "jemandem antworten (Dat.)",
+          "examples": [
+            {
+              "german": "Ich antworte ihm.",
+              "english": "I answer him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Du antwortest ihm.",
+              "english": "You answer him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "helfen — jemandem helfen",
+          "kind": "learning",
+          "explanation": "Even though English says “help him,” German uses dative.",
+          "pattern": "jemandem helfen (Dat.)",
+          "examples": [
+            {
+              "german": "Ich helfe ihm.",
+              "english": "I help him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Du hilfst ihm.",
+              "english": "You help him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "geben — jemandem etwas geben",
+          "kind": "learning",
+          "explanation": "Learn both object positions and cases.",
+          "pattern": "jemandem etwas geben (Dat. + Akk.)",
+          "examples": [
+            {
+              "german": "Ich gebe ihm das Buch.",
+              "english": "I give him the book.",
+              "focus": "ihm / das Buch",
+              "note": "",
+              "key": "ihm"
+            },
+            {
+              "german": "Du gibst ihm das Buch.",
+              "english": "You give him the book.",
+              "focus": "ihm / das Buch",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "warten — auf jemanden warten",
+          "kind": "learning",
+          "explanation": "Learn the preposition as part of the construction.",
+          "pattern": "auf jemanden warten (auf + Akk.)",
+          "examples": [
+            {
+              "german": "Ich warte auf ihn.",
+              "english": "I wait for him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Du wartest auf ihn.",
+              "english": "You wait for him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Contrast near neighbours",
+      "sortorder": 2,
+      "explanation": "Contrast verbs with similar English meanings but different German case requirements.",
+      "rule": "Ask: which verb governs this pronoun?",
+      "entries": [
+        {
+          "header": "fragen vs. antworten",
+          "kind": "comparison",
+          "explanation": "Ask takes accusative; answer takes dative.",
+          "pattern": "fragen + Akk. / antworten + Dat.",
+          "examples": [
+            {
+              "german": "Ich frage ihn.",
+              "english": "I ask him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich antworte ihm.",
+              "english": "I answer him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "sehen vs. helfen",
+          "kind": "comparison",
+          "explanation": "See takes accusative; help takes dative.",
+          "pattern": "sehen + Akk. / helfen + Dat.",
+          "examples": [
+            {
+              "german": "Ich sehe ihn.",
+              "english": "I see him.",
+              "focus": "ihn",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich helfe ihm.",
+              "english": "I help him.",
+              "focus": "ihm",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "General and indefinite pronouns",
+      "sortorder": 3,
+      "explanation": "Not all pronouns refer to a named person. General pronouns can be subjects or objects and may change case.",
+      "rule": "jemand → jemanden → jemandem",
+      "entries": [
+        {
+          "header": "jemand / niemand / man / alle",
+          "kind": "pronoun",
+          "explanation": "jemand and niemand can be inflected by case; man is a nominative-only generic subject, with einen/einem used for its object meanings.",
+          "pattern": "general reference",
+          "examples": [
+            {
+              "german": "Jemand ist hier.",
+              "english": "Someone is here.",
+              "focus": "Jemand",
+              "note": "",
+              "key": "Jemand"
+            },
+            {
+              "german": "Niemand ist dort.",
+              "english": "No one is there.",
+              "focus": "Niemand",
+              "note": "",
+              "key": "Niemand"
+            },
+            {
+              "german": "Alle lesen das Buch.",
+              "english": "Everyone is reading the book.",
+              "focus": "Alle",
+              "note": "",
+              "key": "Alle"
+            },
+            {
+              "german": "Man kann hier lesen.",
+              "english": "One can read here.",
+              "focus": "Man",
+              "note": "",
+              "key": "Man"
+            },
+            {
+              "german": "Hast du etwas?",
+              "english": "Do you have something?",
+              "focus": "etwas",
+              "note": "",
+              "key": "etwas"
+            },
+            {
+              "german": "Ich habe nichts.",
+              "english": "I have nothing.",
+              "focus": "nichts",
+              "note": "",
+              "key": "nichts"
+            },
+            {
+              "german": "Ich sehe jemanden.",
+              "english": "I see someone.",
+              "focus": "jemanden",
+              "note": "",
+              "key": "jemanden"
+            },
+            {
+              "german": "Ich helfe jemandem.",
+              "english": "I help someone.",
+              "focus": "jemandem",
+              "note": "",
+              "key": "jemandem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Final self-check",
+      "sortorder": 4,
+      "explanation": "When unsure, check the construction in a dictionary: verb + Akkusativ, verb + Dativ, verb + two objects, or verb + preposition.",
+      "rule": "1. Find verb → 2. Find object pattern → 3. Choose pronoun",
+      "entries": [
+        {
+          "header": "er → ihn / ihm",
+          "kind": "learning",
+          "explanation": "The same English “him” has two German forms. Do not choose by English translation alone.",
+          "pattern": "kennen + ihn; antworten + ihm",
+          "examples": [
+            {
+              "german": "Er ist hier.",
+              "english": "He is here.",
+              "focus": "Er",
+              "note": "nominative",
+              "key": "Er"
+            },
+            {
+              "german": "Ich kenne ihn.",
+              "english": "I know him.",
+              "focus": "ihn",
+              "note": "accusative",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich antworte ihm.",
+              "english": "I answer him.",
+              "focus": "ihm",
+              "note": "dative",
+              "key": "ihm"
+            },
+            {
+              "german": "Sie ist hier.",
+              "english": "She is here.",
+              "focus": "Sie",
+              "note": "nominative",
+              "key": "Sie"
+            },
+            {
+              "german": "Ich kenne sie.",
+              "english": "I know her.",
+              "focus": "sie",
+              "note": "accusative",
+              "key": "sie"
+            },
+            {
+              "german": "Ich antworte ihr.",
+              "english": "I answer her.",
+              "focus": "ihr",
+              "note": "dative",
+              "key": "ihr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Additional original examples",
+      "sortorder": 5,
+      "explanation": "Additional examples retained from the earlier Format 2 material. They supplement the new conjugation and case-pattern lessons.",
+      "rule": "Review and identify the pronoun case",
+      "entries": [
+        {
+          "header": "2. Learn complete constructions",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Ich gebe ihr das Buch.",
+              "english": "I give her the book.",
+              "focus": "",
+              "note": "",
+              "key": "das"
+            },
+            {
+              "german": "Ich erkläre ihm die Aufgabe.",
+              "english": "I explain the task to him.",
+              "focus": "",
+              "note": "",
+              "key": "die"
+            },
+            {
+              "german": "Ich warte auf sie.",
+              "english": "I wait for her.",
+              "focus": "",
+              "note": "",
+              "key": "sie"
+            },
+            {
+              "german": "Ich spreche mit ihr.",
+              "english": "I speak with her.",
+              "focus": "",
+              "note": "",
+              "key": "ihr"
+            }
+          ]
+        },
+        {
+          "header": "3. Contrast pairs for practice",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Ich höre ihn.",
+              "english": "I hear him. (Accusative)",
+              "focus": "",
+              "note": "",
+              "key": "ihn"
+            },
+            {
+              "german": "Ich höre ihm zu.",
+              "english": "I listen to him. (Dative)",
+              "focus": "",
+              "note": "",
+              "key": "ihm"
+            }
+          ]
+        },
+        {
+          "header": "4. Pronoun forms in everyday contexts",
+          "kind": "review",
+          "explanation": "These examples come from the original learning material. Identify the pronoun and its function in each sentence.",
+          "pattern": "",
+          "examples": [
+            {
+              "german": "Ich helfe ihr.",
+              "english": "I help her. (Dative)",
+              "focus": "",
+              "note": "",
+              "key": "ihr"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
