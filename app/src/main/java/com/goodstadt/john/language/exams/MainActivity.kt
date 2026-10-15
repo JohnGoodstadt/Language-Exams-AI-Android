@@ -15,9 +15,14 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import com.goodstadt.john.language.exams.ui.LocalIsExpanded
+import com.goodstadt.john.language.exams.ui.isExpanded
 import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -49,6 +54,7 @@ class MainActivity : ComponentActivity() {
         private const val ME_TAB_INDEX = 4 // Tab5 = the "Me" tab
     }
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -64,15 +70,23 @@ class MainActivity : ComponentActivity() {
 
             val isLoading by mainViewModel.isGlobalLoading.collectAsStateWithLifecycle()
 
+            // Tablet adaptation (V4_tablet): compute the window size class once here and publish
+            // `isExpanded` via CompositionLocal so any screen can gate its tablet layout on it.
+            // Window-based, so it recomposes on resize / split-screen / foldable fold.
+            val windowSizeClass = calculateWindowSizeClass(this)
+            val isExpanded = windowSizeClass.widthSizeClass.isExpanded()
+
             LanguageExamsAITheme(darkTheme = true) {
-                Surface(
-                        modifier = Modifier.fillMaxSize(),
-                        color = MaterialTheme.colorScheme.background
-                ) {
-                    GlobalBannerWrapper(bannerManager = bannerManager,globalLoadingManager = globalLoadingManager) {
-                        MainScreen()
-                        if (isLoading) {
-                            LoadingOverlay()
+                CompositionLocalProvider(LocalIsExpanded provides isExpanded) {
+                    Surface(
+                            modifier = Modifier.fillMaxSize(),
+                            color = MaterialTheme.colorScheme.background
+                    ) {
+                        GlobalBannerWrapper(bannerManager = bannerManager,globalLoadingManager = globalLoadingManager) {
+                            MainScreen()
+                            if (isLoading) {
+                                LoadingOverlay()
+                            }
                         }
                     }
                 }

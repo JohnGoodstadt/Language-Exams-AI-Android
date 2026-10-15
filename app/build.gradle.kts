@@ -228,6 +228,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    // Tablet adaptation (V4_tablet): WindowWidthSizeClass for size-class-gated layouts.
+    implementation(libs.androidx.material3.windowsize)
 //    implementation(libs.androidx.compose.navigation)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.core.splashscreen)
