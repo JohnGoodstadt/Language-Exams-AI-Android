@@ -15,6 +15,7 @@ import androidx.compose.material.icons.filled.LockClock
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -66,7 +67,8 @@ fun RateLimitHourlyPaywallBottomSheet(
     val coroutineScope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Prevent half-open states
 
-    val priceText by viewModel.priceFlow.collectAsState()
+    val priceText by viewModel.productPrice.collectAsState()
+    val priceReady = priceText != null
 
     LaunchedEffect(true) {
 //        viewModel.connectToBilling()
@@ -183,11 +185,23 @@ fun RateLimitHourlyPaywallBottomSheet(
                         .fillMaxWidth(),
 //                        .padding(horizontal = 16.dp, vertical = 4.dp),
                     shape = RoundedCornerShape(12.dp),
+                    // Disabled until the real price loads from Google Play (no dead "- null" button).
+                    enabled = priceReady,
                     colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
             ){
-                Icon(Icons.Default.WorkspacePremium, null)
-                Spacer(Modifier.width(8.dp))
-                Text("Go Unlimited - ${priceText}", fontSize = 18.sp)
+                if (priceReady) {
+                    Icon(Icons.Default.WorkspacePremium, null)
+                    Spacer(Modifier.width(8.dp))
+                    Text("Go Unlimited - ${priceText}", fontSize = 18.sp)
+                } else {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(20.dp),
+                        strokeWidth = 2.dp,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Text("Loading…", fontSize = 18.sp)
+                }
 
             }
             // 6. NOT NOW BUTTON

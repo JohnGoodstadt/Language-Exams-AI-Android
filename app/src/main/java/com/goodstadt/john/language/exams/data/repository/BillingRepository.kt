@@ -283,7 +283,16 @@ class BillingRepository @Inject constructor(
                 }
             } else {
                 _billingError.value = "Product details not found for $PRODUCT_ID"
-                Timber.w("Product details query failed or returned empty. Code: ${result.billingResult.responseCode}")
+                val code = result.billingResult.responseCode
+                if (code == BillingClient.BillingResponseCode.OK && detailsList.isEmpty()) {
+                    // Connected fine, but Google Play returned NO product. This is almost always a Play
+                    // Console config issue for THIS package ($PRODUCT_ID not Active for ${context.packageName},
+                    // app not on a track the tester can access, product not yet propagated, or the tester
+                    // account isn't a License tester) — not a code bug.
+                    Timber.w("queryProductDetails: connected OK but EMPTY product list for '$PRODUCT_ID' / pkg=${context.packageName}. Check the in-app product is Active for THIS app and the account is a license tester.")
+                } else {
+                    Timber.w("queryProductDetails failed. Code: $code  msg: ${result.billingResult.debugMessage}")
+                }
             }
         } catch (e: Exception) {
             _billingError.value = "Failed to query products: ${e.message}"

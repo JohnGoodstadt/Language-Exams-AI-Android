@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Stars
 import androidx.compose.material3.Button
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -48,7 +49,9 @@ fun PremiumUpgradeSheet(
     onDismiss: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    val productPrice by viewModel.priceFlow.collectAsStateWithLifecycle()
+    val productPrice by viewModel.productPrice.collectAsStateWithLifecycle()
+    val billingError by viewModel.billingError.collectAsStateWithLifecycle()
+    val priceReady = productPrice != null
     val context = LocalContext.current
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -119,18 +122,32 @@ fun PremiumUpgradeSheet(
                 Button(
                     modifier = Modifier.weight(1.5f).height(56.dp),
                     shape = RoundedCornerShape(12.dp),
+                    // Only enabled once a real price has loaded from Google Play — no more tappable
+                    // "Unknown Price" button that silently does nothing when billing isn't ready.
+                    enabled = priceReady,
                     onClick = {
-                        if (context is Activity) {
+                        if (context is Activity && priceReady) {
                             AnalyticsHelper.logPaywallResponse(context, "accepted", "limit_sheet")
                             viewModel.buyPremiumButtonPressed(context)
                             onDismiss()
                         }
                     }
                 ) {
-                    Text(
-                        "Upgrade: $productPrice",
-                        style = MaterialTheme.typography.titleMedium
-                    )
+                    if (priceReady) {
+                        Text(
+                            "Upgrade: $productPrice",
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                    } else {
+                        // Still connecting / fetching the product from the Play Store.
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(20.dp),
+                            strokeWidth = 2.dp,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Text("Loading…", style = MaterialTheme.typography.titleMedium)
+                    }
                 }
 
                 OutlinedButton(
@@ -143,6 +160,27 @@ fun PremiumUpgradeSheet(
                     }
                 ) {
                     Text("Not Now")
+                }
+            }
+
+            // When the price can't be loaded, tell the user why instead of leaving a dead button.
+            // Covers "not signed in to Google Play" / "no connection" / product not available yet.
+            if (!priceReady) {
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    text = "Couldn't reach the Play Store. Make sure you're online and signed in to Google Play, then try again.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.error,
+                    textAlign = TextAlign.Center
+                )
+                billingError?.let { error ->
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = error,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        textAlign = TextAlign.Center
+                    )
                 }
             }
         }

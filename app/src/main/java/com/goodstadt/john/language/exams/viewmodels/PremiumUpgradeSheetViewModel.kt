@@ -20,7 +20,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -43,9 +42,15 @@ class PremiumUpgradeSheetViewModel  @Inject constructor(
     private val _isPremiumUser = MutableStateFlow(false)
     val isPremiumUser = _isPremiumUser.asStateFlow()
 
-    val priceFlow: StateFlow<String> = billingRepository.productPrice
-        .map { it ?: "Unknown Price" } // Fallback if null (or use a loading spinner)
-        .stateIn(viewModelScope, SharingStarted.Eagerly, "")
+    // The real localized price, or null while it is still loading / unavailable. The UI shows a
+    // "Loading…" state and disables the buy button while this is null, instead of the old
+    // "Unknown Price" string on a button that silently failed.
+    val productPrice: StateFlow<String?> = billingRepository.productPrice
+        .stateIn(viewModelScope, SharingStarted.Eagerly, null)
+
+    // Surfaced so the sheet can tell the user when the store is unreachable rather than failing silently.
+    val billingError: StateFlow<String?> = billingRepository.billingError
+        .stateIn(viewModelScope, SharingStarted.Eagerly, null)
 
 //    val productDetails = billingRepository.productDetails
 
