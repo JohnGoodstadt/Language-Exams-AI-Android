@@ -56,6 +56,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import com.goodstadt.john.language.exams.ui.readableWidth
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
@@ -277,7 +278,17 @@ fun ReadinessAuditScreen(
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-    Column(modifier = Modifier.fillMaxSize()) {
+    // Tablet (V4_tablet Phase 4): the audit is shown full-screen (a Dialog with
+    // usePlatformDefaultWidth=false), which would stretch this phone-width quiz edge-to-edge on an
+    // iPad-class screen. Cap the quiz column to a readable width and centre it over the scrim;
+    // full-width on phones (readableWidth is a no-op there). Overlay siblings of this Box are
+    // unaffected because only the column is capped.
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .readableWidth()
+            .align(Alignment.TopCenter)
+    ) {
         // Close (X), top-start — full-screen presentation has no drag handle, so this is the way out.
         Row(
             modifier = Modifier
