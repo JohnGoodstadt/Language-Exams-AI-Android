@@ -32,6 +32,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.AuditStats
@@ -124,7 +125,12 @@ fun AuditDashboardHeader(
 //            Spacer(Modifier.height(24.dp))
 
             // --- 2. THE DYNAMIC PRIMARY ACTION ---
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            // fillMaxWidth + CenterHorizontally so the (content-sized) button and its caption sit
+            // centred on the screen, like iOS.
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Button(
                     // Once a test is recommended (baseline placed the learner), the primary action
                     // is to go take that test; otherwise it resumes/starts the baseline audit.
@@ -148,7 +154,10 @@ fun AuditDashboardHeader(
                     text = "Continue the audit to increase our confidence to very high",
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color.White,
-                    modifier = Modifier.padding(top = 0.dp)
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 4.dp)
                 )
             }
             Spacer(Modifier.height(16.dp))
@@ -212,9 +221,11 @@ private fun AuditSummaryCard(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        // The Advice Box
+        // The Advice Box. Use surfaceVariant (a clearly lighter grey) rather than 0xFF1C1C1E, which
+        // is almost identical to the page background (0xFF1c1b1f) so the box was invisible and the
+        // text just looked left-justified on the page. Lighter container = a visible box, like iOS.
         Card(
-            colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(Modifier.padding(16.dp)) {
@@ -305,8 +316,10 @@ private fun AuditActionButton(
     enabled: Boolean = true
 ) {
     Card(
+        // surfaceVariant (lighter than the page background) so each tile reads as a visible box,
+        // like iOS - 0xFF1C1C1E was nearly the page colour and looked like plain left-aligned text.
         modifier = modifier.clickable(enabled = enabled) { onClick() },
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         shape = RoundedCornerShape(8.dp)
     ) {
         // Dim the whole tile when disabled so it reads as greyed-out.
