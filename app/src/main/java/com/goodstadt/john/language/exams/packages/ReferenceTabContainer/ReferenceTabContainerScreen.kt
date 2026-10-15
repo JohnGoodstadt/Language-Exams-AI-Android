@@ -1,17 +1,26 @@
 package com.goodstadt.john.language.exams.packages.ReferenceTabContainer
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import com.goodstadt.john.language.exams.ui.readableWidth
+import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.VerticalDivider
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.CircularProgressIndicator
@@ -215,13 +224,17 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
         }
     }
 
+    // Tablet (V4_tablet Phase 3): master-detail. On Expanded windows the sub-tabs move to a left
+    // sidebar list and the detail shows beside it; phones keep the top horizontal chip row.
+    val isExpanded = LocalIsExpanded.current
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .statusBarsPadding()
     ) {
-        // Part A: The Dynamic Horizontal Menu (now uses the single uiState)
-        if (uiState.tabs.isNotEmpty()) {
+        // Part A: The Dynamic Horizontal Menu (phone only; tablet uses the sidebar below).
+        if (!isExpanded && uiState.tabs.isNotEmpty()) {
             LazyRow(/*...*/) {
                 items(uiState.tabs, key = { it.id }) { tab ->
                     MenuItemChip(
@@ -262,13 +275,12 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     }
                 }
             } else {
-                // Tablet (V4_tablet Phase 1): cap the Reference detail to a readable column and centre
-                // it; full-width on phones (readableWidth is a no-op there). The chip row above stays
-                // full-width. The detail screens (Format1/2/3/8 tables, pronoun text) read far better
-                // capped than stretched edge-to-edge on an iPad-class display.
+                // The detail pane, as a reusable slot so the phone (full width) and tablet (beside the
+                // sidebar) layouts share one NavHost. readableWidth (Phase 1) still caps the content:
+                // on phone it fills the width; on tablet it's capped within whatever pane it's given.
+                val detailPane: @Composable (Modifier) -> Unit = { paneModifier ->
                 Box(
-                    modifier = Modifier
-                        .weight(1f)
+                    modifier = paneModifier
                         .fillMaxWidth(),
                     contentAlignment = Alignment.TopCenter
                 ) {
@@ -481,6 +493,25 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
 
                 }
                 } //: Box - readable-width wrapper (tablet)
+                } //: detailPane slot
+
+                if (isExpanded) {
+                    // Master-detail: sub-tab sidebar | divider | detail pane.
+                    Row(modifier = Modifier.weight(1f).fillMaxWidth()) {
+                        ReferenceSidebar(
+                            titles = uiState.tabs.map { it.id to it.definition.title },
+                            selectedId = uiState.selectedTabId,
+                            onSelect = { viewModel.onTabSelected(it) },
+                            modifier = Modifier
+                                .width(300.dp)
+                                .fillMaxHeight()
+                        )
+                        VerticalDivider()
+                        detailPane(Modifier.weight(1f).fillMaxHeight())
+                    }
+                } else {
+                    detailPane(Modifier.weight(1f))
+                }
             } //: Not Unknown type
         } //: is not empty
         else {
@@ -494,4 +525,36 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
 
 
 } //:Fun
+
+/**
+ * Tablet (V4_tablet Phase 3): the Reference sub-tab list as a left sidebar (master pane).
+ * One selectable row per tab; the selected row is highlighted. Replaces the horizontal chip row
+ * on Expanded windows. [titles] is (id, displayTitle) pairs.
+ */
+@Composable
+private fun ReferenceSidebar(
+    titles: List<Pair<String, String>>,
+    selectedId: String?,
+    onSelect: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    LazyColumn(modifier = modifier) {
+        items(titles, key = { it.first }) { (id, title) ->
+            val selected = id == selectedId
+            Text(
+                text = title,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+                color = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onSelect(id) }
+                    .background(
+                        if (selected) MaterialTheme.colorScheme.surfaceVariant else androidx.compose.ui.graphics.Color.Transparent
+                    )
+                    .padding(horizontal = 16.dp, vertical = 14.dp)
+            )
+        }
+    }
+}
 
