@@ -12,6 +12,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material3.*
@@ -175,8 +176,15 @@ private fun Format8Content(
                             if (section.rule.isNotEmpty()) Text(section.rule, fontWeight = FontWeight.SemiBold)
                             if (section.explanation.isNotEmpty()) Text(section.explanation, color = MaterialTheme.colorScheme.onSurfaceVariant)
                             if (sectionIndex == 0) Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text("Pause to repeat aloud", Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
-                                Switch(checked = gapEnabled, onCheckedChange = playback::setGapEnabled)
+                                IconToggleButton(checked = gapEnabled, onCheckedChange = playback::setGapEnabled) {
+                                    Icon(
+                                        imageVector = Icons.Default.RecordVoiceOver,
+                                        contentDescription = "Pause to repeat aloud",
+                                        modifier = Modifier.size(20.dp),
+                                        tint = if (gapEnabled) Orange else MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                                Text("Pause to repeat aloud", style = MaterialTheme.typography.bodyMedium)
                             }
                         }
                     }
