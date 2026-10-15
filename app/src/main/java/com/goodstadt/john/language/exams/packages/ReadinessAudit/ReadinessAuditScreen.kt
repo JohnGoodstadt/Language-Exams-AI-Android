@@ -127,10 +127,14 @@ fun ReadinessAuditModalCard(content: @Composable () -> Unit) {
     // sentence on the left and the answer radios on the right aren't flung to opposite edges.
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Surface(
+            // widthIn MUST come before fillMaxWidth: fillMaxWidth fixes the width to the parent first,
+            // which makes a trailing widthIn a silent no-op (the cap never applies). Here widthIn caps
+            // the max to 420dp, fillMaxWidth then fills up to that cap, and fillMaxHeight(0.9) leaves a
+            // top/bottom margin.
             modifier = Modifier
+                .widthIn(max = 420.dp)
                 .fillMaxWidth()
-                .fillMaxHeight(0.9f)
-                .widthIn(max = 420.dp),
+                .fillMaxHeight(0.9f),
             shape = RoundedCornerShape(20.dp),
             color = ElevatedDarkGrey
         ) {
