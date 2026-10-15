@@ -7,6 +7,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -29,6 +34,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarDefaults
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
@@ -77,6 +83,7 @@ import com.goodstadt.john.language.exams.packages.me.ChooseOnlyExamSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
+import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.findActivity
 import kotlinx.coroutines.launch
@@ -243,20 +250,25 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Make it non-dismissible by swiping
 //    val isLoading by loadingManager.isShowingGlobalLoading.collectAsStateWithLifecycle()
 
+    // Tablet (V4_tablet Phase 5 follow-up): on Expanded windows present the tab bar as a floating
+    // inset pill (see bottomBar below); phones keep the standard Material NavigationBar.
+    val isExpanded = LocalIsExpanded.current
+
     Scaffold(
         bottomBar = {
-            NavigationBar {
-                val navBackStackEntry by navController.currentBackStackEntryAsState()
-                val currentDestination = navBackStackEntry?.destination
+            val navBackStackEntry by navController.currentBackStackEntryAsState()
+            val currentDestination = navBackStackEntry?.destination
 
-                val navBarColors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = accentColor, // Your "accentColor"
-                    selectedTextColor = accentColor,
-                    unselectedIconColor = DarkSecondary,
-                    unselectedTextColor = DarkSecondary,
-                    indicatorColor = Color.Transparent
-                )
+            val navBarColors = NavigationBarItemDefaults.colors(
+                selectedIconColor = accentColor, // Your "accentColor"
+                selectedTextColor = accentColor,
+                unselectedIconColor = DarkSecondary,
+                unselectedTextColor = DarkSecondary,
+                indicatorColor = Color.Transparent
+            )
 
+            // The tab items, hoisted so the phone bar and the tablet floating pill share them.
+            val navItems: @Composable RowScope.() -> Unit = {
                 bottomNavItems.forEach { screen ->
                     val badgeCount = globalUiState.badgeCounts[screen.route] ?: 0
 
@@ -297,6 +309,40 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                         }
                     )
                 }
+            }
+
+            if (isExpanded) {
+                // Tablet (V4_tablet): a floating inset "pill" (closest to the iOS Liquid-Glass tab bar).
+                // A rounded, elevated Surface inset from the edges; the band around it is the app
+                // background so the pill reads as floating. The NavigationBar inside is transparent (so
+                // the pill's surface shows) with zeroed insets (the outer padding handles spacing).
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 24.dp, vertical = 12.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Surface(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .widthIn(max = 640.dp),
+                        shape = RoundedCornerShape(28.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant,
+                        tonalElevation = 3.dp,
+                        shadowElevation = 8.dp
+                    ) {
+                        NavigationBar(
+                            containerColor = Color.Transparent,
+                            windowInsets = WindowInsets(0, 0, 0, 0),
+                            content = navItems
+                        )
+                    }
+                }
+            } else {
+                NavigationBar(
+                    containerColor = NavigationBarDefaults.containerColor,
+                    content = navItems
+                )
             }
         }
     ) { innerPadding ->
