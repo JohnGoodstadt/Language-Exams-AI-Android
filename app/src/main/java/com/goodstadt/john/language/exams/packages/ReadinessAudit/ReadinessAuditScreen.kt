@@ -132,9 +132,9 @@ fun ReadinessAuditModalCard(content: @Composable () -> Unit) {
             // the max to 420dp, fillMaxWidth then fills up to that cap, and fillMaxHeight(0.9) leaves a
             // top/bottom margin.
             modifier = Modifier
-                .widthIn(max = 420.dp)
+                .widthIn(max = 480.dp)
                 .fillMaxWidth()
-                .fillMaxHeight(0.9f),
+                .fillMaxHeight(0.96f),
             shape = RoundedCornerShape(20.dp),
             color = ElevatedDarkGrey
         ) {
