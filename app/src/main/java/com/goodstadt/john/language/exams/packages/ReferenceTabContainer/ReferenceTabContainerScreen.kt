@@ -538,7 +538,10 @@ private fun ReferenceSidebar(
     onSelect: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    LazyColumn(modifier = modifier) {
+    LazyColumn(
+        modifier = modifier,
+        contentPadding = androidx.compose.foundation.layout.PaddingValues(vertical = 8.dp) // Phase 5 polish
+    ) {
         items(titles, key = { it.first }) { (id, title) ->
             val selected = id == selectedId
             Text(

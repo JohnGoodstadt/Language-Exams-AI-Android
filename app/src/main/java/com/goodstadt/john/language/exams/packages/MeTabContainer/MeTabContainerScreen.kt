@@ -282,7 +282,10 @@ private fun MeSidebar(
     onSelect: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    LazyColumn(modifier = modifier) {
+    LazyColumn(
+        modifier = modifier,
+        contentPadding = PaddingValues(vertical = 8.dp) // Phase 5 polish
+    ) {
         items(titles, key = { it }) { title ->
             val selected = title == selectedTitle
             Text(

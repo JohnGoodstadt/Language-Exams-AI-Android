@@ -1133,9 +1133,10 @@ private fun VocabGrid(
         columns = GridCells.Adaptive(minSize = 340.dp),
         modifier = Modifier.fillMaxSize(),
         state = lazyGridState,
-        contentPadding = PaddingValues(16.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+        // Phase 5 polish: a bit more breathing room than the phone list, since tablets have the space.
+        contentPadding = PaddingValues(20.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         categories.forEachIndexed { catIdx, category ->
             // Freemium gate: sections past the free preview (B1/B2 only) are locked.
