@@ -117,11 +117,12 @@ import timber.log.Timber
 fun ReadinessAuditModalCard(content: @Composable () -> Unit) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Surface(
+            // Fractional width/height leave a clear margin on every device (so it reads as a centred
+            // card, not full-screen), and the width cap keeps it a tidy column on a wide tablet.
             modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight(0.92f)
-                .widthIn(max = 600.dp)
-                .padding(horizontal = 16.dp),
+                .fillMaxWidth(0.9f)
+                .fillMaxHeight(0.85f)
+                .widthIn(max = 560.dp),
             shape = RoundedCornerShape(20.dp),
             color = ElevatedDarkGrey
         ) {
