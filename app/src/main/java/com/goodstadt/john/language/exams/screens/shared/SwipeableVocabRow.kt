@@ -4,20 +4,26 @@ package com.goodstadt.john.language.exams.screens.shared
 // In the file containing your SwipeableVocabRow composable
 
 // --- Core Compose & Foundation ---
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 
 // --- Material 3 (The key imports for the fix) ---
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Surface
 import androidx.compose.material3.SwipeToDismissBox // The new component
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberSwipeToDismissBoxState // The new state remember function
@@ -32,7 +38,10 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.setValue
 
 // --- Other necessary UI imports ---
 import androidx.compose.ui.Alignment
@@ -172,6 +181,100 @@ fun SwipeableVocabRow(
 
 
 
+
+/**
+ * Tablet (V4_tablet Phase 2): the grid-cell counterpart of [SwipeableVocabRow].
+ *
+ * A LazyVerticalGrid cell can't host a horizontal swipe (it fights the grid's scroll and there's no
+ * room in a ~340dp cell), so this renders the same [HighlightedWordInSentenceRow] content as a
+ * tappable card and moves the swipe actions (Save / More) plus Focus into a long-press dropdown
+ * menu. Tap still plays the sentence, exactly like the row. Phones keep [SwipeableVocabRow].
+ */
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
+@Composable
+fun GridVocabCard(
+    word: Format0Word,
+    sentence: Sentence,
+    isSentenceAlreadyHeard: Boolean,
+    isDownloading: Boolean = false,
+    playCount: Int = 0,
+    masteryLevel: Int? = null,
+    recalledWordKeys: Set<String>,
+    onRowTapped: (Format0Word, Sentence) -> Unit,
+    onFocus: () -> Unit,
+    onCancel: () -> Unit,
+    onMore: () -> Unit,
+    isSaved: Boolean = false,
+    onSave: () -> Unit = {},
+    modifier: Modifier = Modifier
+) {
+    val isRecalling = recalledWordKeys.contains(word.word)
+    var menuExpanded by remember { mutableStateOf(false) }
+
+    val highlightKey = if (sentence.highlight.isNotEmpty()) sentence.highlight.joinToString(",") else word.word
+    val displayData = buildSentencePartsSimple(word = highlightKey, sentence = sentence.sentence)
+
+    Surface(
+        modifier = modifier.fillMaxWidth(),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        shape = RoundedCornerShape(12.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .combinedClickable(
+                    onClick = { onRowTapped(word, sentence) },
+                    onLongClick = { menuExpanded = true }
+                )
+                .padding(horizontal = 16.dp, vertical = 12.dp)
+        ) {
+            HighlightedWordInSentenceRow(
+                word = highlightKey,
+                parts = displayData.parts,
+                sentence = displayData.sentence,
+                isRecalling = isRecalling,
+                displayDot = isSentenceAlreadyHeard,
+                playCount = playCount,
+                isDownloading = isDownloading,
+                masteryLevel = masteryLevel
+            )
+
+            DropdownMenu(
+                expanded = menuExpanded,
+                onDismissRequest = { menuExpanded = false }
+            ) {
+                // Save / Saved (toggle) — the swipe-left action.
+                DropdownMenuItem(
+                    text = { Text(if (isSaved) "Saved (remove)" else "Save for practice") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
+                            contentDescription = null
+                        )
+                    },
+                    onClick = { menuExpanded = false; onSave() }
+                )
+                // Focus / Cancel recall.
+                DropdownMenuItem(
+                    text = { Text(if (isRecalling) "Cancel focus" else "Focus") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = if (isRecalling) Icons.Default.Cancel else Icons.Default.CheckCircle,
+                            contentDescription = null
+                        )
+                    },
+                    onClick = { menuExpanded = false; if (isRecalling) onCancel() else onFocus() }
+                )
+                // More — the swipe-right action.
+                DropdownMenuItem(
+                    text = { Text("More…") },
+                    leadingIcon = { Icon(imageVector = Icons.Default.MoreHoriz, contentDescription = null) },
+                    onClick = { menuExpanded = false; onMore() }
+                )
+            }
+        }
+    }
+}
 
 @Composable
 fun annotatedSentence(

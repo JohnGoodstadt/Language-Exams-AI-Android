@@ -29,6 +29,12 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.foundation.lazy.grid.LazyGridState
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.itemsIndexed as gridItemsIndexed
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -99,6 +105,8 @@ import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
+import com.goodstadt.john.language.exams.screens.shared.GridVocabCard
+import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
@@ -277,6 +285,9 @@ fun CategoryTabScreen(
 
     // --- UI Setup ---
     val lazyListState = rememberLazyListState()
+    // Tablet (V4_tablet Phase 2): a separate grid state, used when the vocab list becomes a grid.
+    val lazyGridState = rememberLazyGridState()
+    val isExpanded = LocalIsExpanded.current
     val coroutineScope = rememberCoroutineScope()
 
     // Safely extract data from State
@@ -355,12 +366,23 @@ fun CategoryTabScreen(
                                         isSelected = (title == selectedChipTitle),
                                         onClick = {
                                             selectedChipTitle = title
-                                            scrollToCategory(
-                                                title = title,
-                                                coroutineScope = coroutineScope,
-                                                lazyListState = lazyListState,
-                                                indexMap = categoryIndexMap
-                                            )
+                                            // Grid linear item indices match the LazyColumn's (header + N words
+                                            // per category), so the same categoryIndexMap drives either scroller.
+                                            if (isExpanded) {
+                                                scrollToCategory(
+                                                    title = title,
+                                                    coroutineScope = coroutineScope,
+                                                    lazyGridState = lazyGridState,
+                                                    indexMap = categoryIndexMap
+                                                )
+                                            } else {
+                                                scrollToCategory(
+                                                    title = title,
+                                                    coroutineScope = coroutineScope,
+                                                    lazyListState = lazyListState,
+                                                    indexMap = categoryIndexMap
+                                                )
+                                            }
                                         }
                                     )
                                 }
@@ -375,7 +397,34 @@ fun CategoryTabScreen(
                             onShowStats = { showGamificationSheet = true },
                         )
 
-                        // 3. Main Vocabulary List
+                        // 3. Main Vocabulary List.
+                        // Tablet (V4_tablet Phase 2): a responsive card grid; phones keep the LazyColumn.
+                        if (isExpanded) {
+                            VocabGrid(
+                                categories = categories,
+                                state = state,
+                                lazyGridState = lazyGridState,
+                                playingSectionTitle = playingSectionTitle,
+                                quizStatusVersion = quizStatusVersion,
+                                viewModel = viewModel,
+                                onUpgrade = { showUpgradeSheet = true },
+                                onShowLegend = { showQuizLegendSheet = true },
+                                onTap = { s, cat -> viewModel.handleTap(s.sentence, cat) },
+                                onFocus = { w -> viewModel.onFocusClicked(w) },
+                                onCancel = { w -> viewModel.onCancelClicked(w) },
+                                onMore = { w, cat ->
+                                    selectedWordForSheet = w
+                                    selectedCategoryForSheet = cat
+                                    showMoreSheet = true
+                                },
+                                onSaveResult = { w, nowSaved ->
+                                    if (nowSaved) {
+                                        savedWordText = w.word
+                                        showSavedSheet = true
+                                    }
+                                },
+                            )
+                        } else {
                         LazyColumn(
                             modifier = Modifier.fillMaxSize(),
                             state = lazyListState,
@@ -494,6 +543,7 @@ fun CategoryTabScreen(
                                 }
                             }
                         }
+                        } //: else - phone LazyColumn (tablet uses VocabGrid above)
                     }
                 } // End Success
 
@@ -1054,6 +1104,143 @@ private fun LegendRow(
     }
 }
 
+/**
+ * Tablet (V4_tablet Phase 2): the vocab list as a responsive card grid.
+ *
+ * `GridCells.Adaptive(340.dp)` gives one column per ~340dp of width (2 columns on a typical
+ * portrait tablet, 3+ landscape). Section headers and the locked-teaser span the full row
+ * (`GridItemSpan(maxLineSpan)`) — a grid has no sticky headers, so these scroll normally. Each word
+ * is a [GridVocabCard]; the swipe actions move to its long-press menu. Only shown when the window
+ * is Expanded; phones keep the original LazyColumn in [CategoryTabScreen].
+ */
+@Composable
+private fun VocabGrid(
+    categories: List<Category>,
+    state: CategoryTabUiState.Success,
+    lazyGridState: LazyGridState,
+    playingSectionTitle: String?,
+    quizStatusVersion: Long,
+    viewModel: CategoryTabViewModel,
+    onUpgrade: () -> Unit,
+    onShowLegend: () -> Unit,
+    onTap: (Sentence, Category) -> Unit,
+    onFocus: (Format0Word) -> Unit,
+    onCancel: (Format0Word) -> Unit,
+    onMore: (Format0Word, Category) -> Unit,
+    onSaveResult: (Format0Word, Boolean) -> Unit,
+) {
+    LazyVerticalGrid(
+        columns = GridCells.Adaptive(minSize = 340.dp),
+        modifier = Modifier.fillMaxSize(),
+        state = lazyGridState,
+        contentPadding = PaddingValues(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        categories.forEachIndexed { catIdx, category ->
+            // Freemium gate: sections past the free preview (B1/B2 only) are locked.
+            val locked = viewModel.isCategoryLocked(catIdx)
+
+            item(
+                key = "header-${category.title}",
+                span = { GridItemSpan(maxLineSpan) }
+            ) {
+                CategorySectionHeader(
+                    category = category,
+                    locked = locked,
+                    isQuizAvailable = state.isQuizAvailable,
+                    isFirstCategory = category == categories.first(),
+                    isPlaying = playingSectionTitle == category.title,
+                    quizStatusVersion = quizStatusVersion,
+                    viewModel = viewModel,
+                    onUpgrade = onUpgrade,
+                    onShowLegend = onShowLegend,
+                )
+            }
+
+            if (locked) {
+                item(
+                    key = "locked-teaser-${category.title}",
+                    span = { GridItemSpan(maxLineSpan) }
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onUpgrade() }
+                            .padding(horizontal = 16.dp, vertical = 16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(text = "🔒", fontSize = 16.sp)
+                        Spacer(Modifier.width(8.dp))
+                        Text(
+                            text = "Unlock with Premium to see these words",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+            } else {
+                gridItemsIndexed(
+                    category.words,
+                    key = { index, word -> "${category.title}-${word.id}-${word.word}-$index" }
+                ) { _, wordEntry ->
+                    VocabEntryItem(
+                        wordEntry = wordEntry,
+                        category = category,
+                        recalledWordKeys = state.recalledWordKeys,
+                        viewModel = viewModel,
+                        onTap = onTap,
+                        onFocus = onFocus,
+                        onCancel = onCancel,
+                        onMore = onMore,
+                        onSaveResult = onSaveResult,
+                    )
+                }
+            }
+        }
+    }
+}
+
+/** One grid cell: computes the row's data and renders a [GridVocabCard]. Tablet-only (Phase 2). */
+@Composable
+private fun VocabEntryItem(
+    wordEntry: Format0Word,
+    category: Category,
+    recalledWordKeys: Set<String>,
+    viewModel: CategoryTabViewModel,
+    onTap: (Sentence, Category) -> Unit,
+    onFocus: (Format0Word) -> Unit,
+    onCancel: (Format0Word) -> Unit,
+    onMore: (Format0Word, Category) -> Unit,
+    onSaveResult: (Format0Word, Boolean) -> Unit,
+) {
+    val sentenceEntry = wordEntry.sentences.firstOrNull()
+    if (sentenceEntry == null) {
+        Text("Error: No sentence found", color = Color.Red, modifier = Modifier.padding(12.dp))
+        return
+    }
+    val playCount = viewModel.getPlayCount(sentenceEntry.sentence)
+    GridVocabCard(
+        word = wordEntry,
+        sentence = sentenceEntry,
+        isSentenceAlreadyHeard = playCount > 0,
+        isDownloading = false,
+        playCount = playCount,
+        // Spaced-repetition dot: red -> amber -> green as the sentence is heard on 1/2/3 occasions.
+        masteryLevel = viewModel.getSpacedCount(sentenceEntry.sentence),
+        recalledWordKeys = recalledWordKeys,
+        onRowTapped = { _, s -> onTap(s, category) },
+        onFocus = { onFocus(wordEntry) },
+        onCancel = { onCancel(wordEntry) },
+        onMore = { onMore(wordEntry, category) },
+        isSaved = viewModel.isWordSaved(wordEntry),
+        onSave = {
+            val nowSaved = viewModel.onSaveWord(word = wordEntry, categoryTitle = category.title)
+            onSaveResult(wordEntry, nowSaved)
+        },
+    )
+}
+
 private fun scrollToCategory(
     title: String,
     coroutineScope: CoroutineScope,
@@ -1063,6 +1250,23 @@ private fun scrollToCategory(
     coroutineScope.launch {
         val index = indexMap[title] ?: return@launch
         lazyListState.animateScrollToItem(index = index)
+    }
+}
+
+/**
+ * Tablet (V4_tablet Phase 2): grid counterpart of [scrollToCategory]. A LazyVerticalGrid indexes
+ * its items linearly in emission order (a full-span header and each word cell are one item each),
+ * which is the same running total [categoryIndexMap] stores, so the identical map works here.
+ */
+private fun scrollToCategory(
+    title: String,
+    coroutineScope: CoroutineScope,
+    lazyGridState: LazyGridState,
+    indexMap: Map<String, Int>
+) {
+    coroutineScope.launch {
+        val index = indexMap[title] ?: return@launch
+        lazyGridState.animateScrollToItem(index = index)
     }
 }
 
