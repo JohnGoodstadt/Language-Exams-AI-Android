@@ -76,6 +76,7 @@ import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.packages.CategoryTab.CategoryTabScreen
 import com.goodstadt.john.language.exams.packages.MeTabContainer.MeTabContainerScreen
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditModalCard
 import com.goodstadt.john.language.exams.packages.ReferenceTabContainer.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.packages.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishAndExamSheet
@@ -424,8 +425,8 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
     }
 
     if (globalUiState.showReadinessAuditIntroSheet) {
-        // Full-screen (not a bottom sheet): the audit's own "X" / system-back handles closing, with a
-        // mid-quiz "Are you sure?" confirmation, so the old reopen-on-dismiss bounce is no longer needed.
+        // Centred modal card (not full-screen): the audit's own "X" / system-back handles closing,
+        // with a mid-quiz "Are you sure?" confirmation, so dismissOnBackPress/ClickOutside stay false.
         Dialog(
             onDismissRequest = { mainViewModel.dismissReadinessAuditIntroSheet() },
             properties = DialogProperties(
@@ -434,7 +435,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                 dismissOnClickOutside = false
             )
         ) {
-            Surface(modifier = Modifier.fillMaxSize()) {
+            ReadinessAuditModalCard {
                 ReadinessAuditScreen(
                     onFinished = { mainViewModel.dismissReadinessAuditIntroSheet() }
                 )

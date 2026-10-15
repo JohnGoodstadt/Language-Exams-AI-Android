@@ -58,6 +58,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditModalCard
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishExamLevelSheet
 import com.goodstadt.john.language.exams.packages.me.ChooseEnglishViewModel
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
@@ -345,8 +346,8 @@ fun MyProgressScreen(
                     }
                 }
                 if (showLocalAuditSheet) {
-                    // Full-screen (not a bottom sheet): the audit's own "X" / system-back handles closing,
-                    // with a mid-quiz "Are you sure?" confirmation.
+                    // Centred modal card (not full-screen): the audit's own "X" / system-back handles
+                    // closing, with a mid-quiz "Are you sure?" confirmation.
                     Dialog(
                         onDismissRequest = { showLocalAuditSheet = false },
                         properties = DialogProperties(
@@ -355,7 +356,7 @@ fun MyProgressScreen(
                             dismissOnClickOutside = false
                         )
                     ) {
-                        Surface(modifier = Modifier.fillMaxSize(), color = ElevatedDarkGrey) {
+                        ReadinessAuditModalCard {
                             ReadinessAuditScreen(
                                 initialVersion = auditVersionToLaunch,
                                 initialLevel = auditTargetLevel,

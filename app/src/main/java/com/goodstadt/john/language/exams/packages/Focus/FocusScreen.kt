@@ -50,6 +50,7 @@ import com.goodstadt.john.language.exams.data.strength.ReferenceStrength
 import com.goodstadt.john.language.exams.data.strength.ReferenceStrengthLevel
 import com.goodstadt.john.language.exams.packages.CategoryTab.SectionQuizContainer
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditModalCard
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
@@ -267,7 +268,7 @@ fun FocusScreen(
     }
 
     if (showAuditSheet) {
-        // Full-screen (not a bottom sheet): the audit's own "X" / system-back handles closing,
+        // Centred modal card (not full-screen): the audit's own "X" / system-back handles closing,
         // with a mid-quiz "Are you sure?" confirmation.
         Dialog(
             onDismissRequest = { showAuditSheet = false },
@@ -277,7 +278,7 @@ fun FocusScreen(
                 dismissOnClickOutside = false
             )
         ) {
-            Surface(modifier = Modifier.fillMaxSize(), color = ElevatedDarkGrey) {
+            ReadinessAuditModalCard {
                 ReadinessAuditScreen(
                     initialVersion = auditVersion,
                     onFinished = { showAuditSheet = false }

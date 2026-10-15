@@ -56,7 +56,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import com.goodstadt.john.language.exams.ui.readableWidth
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.material3.Surface
+import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
@@ -102,6 +104,31 @@ import com.goodstadt.john.language.exams.utils.rememberHeightClass
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 
+
+/**
+ * Centred modal card for the full audit quiz. The audit is launched inside a Dialog
+ * (usePlatformDefaultWidth=false) from the Verify button, the Progress dashboard and the first-run
+ * intro; this presents it as a card floating in the middle of the screen over the dialog scrim
+ * (phone and tablet alike) rather than filling the whole screen — matching the other quizzes. The
+ * dialog's dismissOnClickOutside/BackPress are already false, so it stays up until the screen's own
+ * X closes it.
+ */
+@Composable
+fun ReadinessAuditModalCard(content: @Composable () -> Unit) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Surface(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.92f)
+                .widthIn(max = 600.dp)
+                .padding(horizontal = 16.dp),
+            shape = RoundedCornerShape(20.dp),
+            color = ElevatedDarkGrey
+        ) {
+            content()
+        }
+    }
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -278,18 +305,10 @@ fun ReadinessAuditScreen(
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-    // Tablet (V4_tablet Phase 4): the audit is shown full-screen (a Dialog with
-    // usePlatformDefaultWidth=false), which would stretch this phone-width quiz edge-to-edge on an
-    // iPad-class screen. Cap the quiz column to a readable width and centre it over the scrim;
-    // full-width on phones (readableWidth is a no-op there). Overlay siblings of this Box are
-    // unaffected because only the column is capped.
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .readableWidth()
-            .align(Alignment.TopCenter)
-    ) {
-        // Close (X), top-start — full-screen presentation has no drag handle, so this is the way out.
+    // The audit fills whatever container it's given. On tablet/iPad it's no longer shown full-screen
+    // but inside a centred modal card (see ReadinessAuditModalCard), so the width is capped there.
+    Column(modifier = Modifier.fillMaxSize()) {
+        // Close (X), top-start — presentation has no drag handle, so this is the way out.
         Row(
             modifier = Modifier
                 .fillMaxWidth()
