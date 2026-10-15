@@ -129,7 +129,9 @@ fun AuditDashboardHeader(
                     // Once a test is recommended (baseline placed the learner), the primary action
                     // is to go take that test; otherwise it resumes/starts the baseline audit.
                     onClick = { if (recommendedTest != null) onGoToTest(recommendedTest) else onNavigateToAudit() },
-                    modifier = Modifier.fillMaxWidth(),
+                    // Hug the label (Button's own horizontal padding gives the gap) rather than
+                    // stretching full-width, which looked oversized on tablet - and reads better on
+                    // phones too. Centred by the parent Column's CenterHorizontally alignment.
                     colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
                 ) {
                     Text(
