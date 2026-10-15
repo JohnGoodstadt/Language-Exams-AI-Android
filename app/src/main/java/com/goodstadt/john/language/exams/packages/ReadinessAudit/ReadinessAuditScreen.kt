@@ -58,6 +58,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Surface
+import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -115,14 +116,21 @@ import timber.log.Timber
  */
 @Composable
 fun ReadinessAuditModalCard(content: @Composable () -> Unit) {
+    if (!LocalIsExpanded.current) {
+        // Phone: full-screen, unchanged — the audit was designed for this and reads well.
+        Surface(modifier = Modifier.fillMaxSize(), color = ElevatedDarkGrey) {
+            content()
+        }
+        return
+    }
+    // Tablet only: a centred modal column, kept narrow (like the other reference quizzes) so the
+    // sentence on the left and the answer radios on the right aren't flung to opposite edges.
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Surface(
-            // Fractional width/height leave a clear margin on every device (so it reads as a centred
-            // card, not full-screen), and the width cap keeps it a tidy column on a wide tablet.
             modifier = Modifier
-                .fillMaxWidth(0.9f)
-                .fillMaxHeight(0.85f)
-                .widthIn(max = 560.dp),
+                .fillMaxWidth()
+                .fillMaxHeight(0.9f)
+                .widthIn(max = 480.dp),
             shape = RoundedCornerShape(20.dp),
             color = ElevatedDarkGrey
         ) {
