@@ -49,6 +49,7 @@ import com.goodstadt.john.language.exams.packages.me.SearchScreen
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.ui.readableWidth
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import dagger.hilt.android.EntryPointAccessors
@@ -138,13 +139,23 @@ fun MeTabContainerScreen(viewModel: MeTabContainerTabViewModel = hiltViewModel()
             }
         }
 
-        // Part B: The NavHost that displays the content
+        // Part B: The NavHost that displays the content.
+        // Tablet (V4_tablet Phase 1): cap the Me content to a readable column and centre it;
+        // full-width on phones (readableWidth is a no-op there). Chip row above stays full-width.
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth(),
+            contentAlignment = Alignment.TopCenter
+        ) {
         NavHost(
             navController = meTabNavController,
 //            startDestination = MeScreen.Focusing.route,
             //startDestination = MeScreen.Settings.route,
             startDestination = MeScreen.Progress.route,
-            modifier = Modifier.weight(1f)
+            modifier = Modifier
+                .fillMaxSize()
+                .readableWidth()
         ) {
             composable(MeScreen.MeRoot.route) {
                 Box(
@@ -194,6 +205,7 @@ fun MeTabContainerScreen(viewModel: MeTabContainerTabViewModel = hiltViewModel()
            // composable(MeScreen..route) { WordQuizScreen() }
 
         }
+        } //: Box - readable-width wrapper (tablet)
     } //:Column
 
     // --- The M3 ModalBottomSheet ---

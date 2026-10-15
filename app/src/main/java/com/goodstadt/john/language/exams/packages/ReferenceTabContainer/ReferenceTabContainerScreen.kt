@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import com.goodstadt.john.language.exams.ui.readableWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -256,10 +258,22 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     }
                 }
             } else {
+                // Tablet (V4_tablet Phase 1): cap the Reference detail to a readable column and centre
+                // it; full-width on phones (readableWidth is a no-op there). The chip row above stays
+                // full-width. The detail screens (Format1/2/3/8 tables, pronoun text) read far better
+                // capped than stretched edge-to-edge on an iPad-class display.
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxWidth(),
+                    contentAlignment = Alignment.TopCenter
+                ) {
                 NavHost(
                     navController = refTabNavController,
                     startDestination = uiState.tabs.first().id,
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .readableWidth()
 
                 ) {
 
@@ -460,6 +474,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     }
 
                 }
+                } //: Box - readable-width wrapper (tablet)
             } //: Not Unknown type
         } //: is not empty
         else {
