@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.UploadJson
 
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentReference
@@ -232,6 +233,61 @@ class FirestoreUploadAdminRepository @Inject constructor(
         }
     } catch (e: Exception) {
         Timber.e(e, "UploadAdmin: targeted vocab update '$docName' failed")
+        Result.failure(e)
+    }
+
+    // ---------------------------------------------------------------- Sentence content-ID hashes
+
+    /**
+     * Reads the existing fileFormat-0 sheet from Firestore, computes each sentence's content-ID from the
+     * STORED sentence strings (so it matches the runtime key exactly), and writes them back as a parallel
+     * `hashes` array on each word doc. Processes at most [maxWords] word docs so the write can be verified
+     * on a handful first. Everything is logged to Logcat under "UploadAdmin: HASH-UPLOAD".
+     */
+    override suspend fun uploadSentenceHashes(docName: String, maxWords: Int): Result<String> = try {
+        val sheetRef = sheetDoc(docName)
+        // Deterministic order so the "first N" are stable and easy to find in Logcat.
+        val categoryDocs = sheetRef.collection(CATEGORIES).get().await().documents
+            .sortedBy { it.getLong("sortOrder") ?: 0L }
+        Timber.i("UploadAdmin: HASH-UPLOAD start sheet='$docName' categories=${categoryDocs.size} maxWords=$maxWords")
+
+        val batch = firestore.batch()
+        var wordsProcessed = 0
+        var sentencesHashed = 0
+
+        run outer@{
+            categoryDocs.forEach { catDoc ->
+                val catTitle = catDoc.getString("title") ?: catDoc.id
+                val wordDocs = catDoc.reference.collection(WORDS).get().await().documents
+                    .sortedBy { it.getLong("sortOrder") ?: 0L }
+                wordDocs.forEach wordLoop@{ wordDoc ->
+                    if (wordsProcessed >= maxWords) return@outer
+                    @Suppress("UNCHECKED_CAST")
+                    val sentences = (wordDoc.get("sentences") as? List<String>).orEmpty()
+                    val wordLabel = wordDoc.getString("word") ?: wordDoc.id
+                    if (sentences.isEmpty()) {
+                        Timber.w("UploadAdmin: HASH-UPLOAD skip word='$wordLabel' (no sentences) path=${wordDoc.reference.path}")
+                        return@wordLoop
+                    }
+                    val hashes = sentences.map { FirebaseAudioService.generateContentID(it) }
+                    batch.update(wordDoc.reference, mapOf("hashes" to hashes))
+                    wordsProcessed++
+                    sentencesHashed += hashes.size
+                    Timber.i("UploadAdmin: HASH-UPLOAD [$wordsProcessed] cat='$catTitle' word='$wordLabel' path=${wordDoc.reference.path}")
+                    sentences.forEachIndexed { i, s ->
+                        Timber.i("UploadAdmin: HASH-UPLOAD     sentences[$i]=\"$s\" -> hashes[$i]=${hashes[i]}")
+                    }
+                }
+            }
+        }
+
+        require(wordsProcessed > 0) { "No words with sentences found in '$docName'" }
+        batch.commit().await()
+        val summary = "Hashes uploaded: $wordsProcessed word(s), $sentencesHashed sentence(s) in '$docName'."
+        Timber.i("UploadAdmin: HASH-UPLOAD DONE - $summary")
+        Result.success(summary)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: HASH-UPLOAD failed for '$docName'")
         Result.failure(e)
     }
 

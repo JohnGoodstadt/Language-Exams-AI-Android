@@ -525,6 +525,29 @@ class UploadJsonViewModel @Inject constructor(
         }
     }
 
+    /**
+     * TEST: compute + upload sentence content-ID hashes for GermanA1Vocab, first 5 words only, so the
+     * write can be verified in Logcat before doing whole sheets. German debug only. Details are logged
+     * under "UploadAdmin: HASH-UPLOAD"; a summary is toasted.
+     */
+    fun uploadSentenceHashesTest(docName: String = "GermanA1Vocab", maxWords: Int = 5) {
+        if (!isGermanVariant) {
+            _toast.tryEmit("Sentence-hash upload is available only in the de variant")
+            return
+        }
+        viewModelScope.launch {
+            val repo = adminRepository.orElse(null)
+            if (repo == null) {
+                _toast.tryEmit("Admin library unavailable (debug only)")
+                return@launch
+            }
+            repo.uploadSentenceHashes(docName = docName, maxWords = maxWords).fold(
+                onSuccess = { summary -> _toast.tryEmit(summary) },
+                onFailure = { error -> _toast.tryEmit("Hash upload failed: ${error.message}") }
+            )
+        }
+    }
+
     // Upload goes through the admin library (German debug only), targeting the sheet document
     // /global/exam_sheets/sheets/<firestoreDocName>.
     private suspend fun performUpload(file: UploadJsonFile): Result<Unit> {

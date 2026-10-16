@@ -105,6 +105,14 @@ fun UploadJsonScreen(
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(text = result, style = MaterialTheme.typography.bodyMedium)
                     }
+                    // TEST: upload sentence content-ID hashes for the first 5 words of GermanA1Vocab,
+                    // so the write can be verified in Logcat before running whole sheets. de debug only.
+                    if (viewModel.isGermanVariant && viewModel.isAdminAvailable) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        OutlinedButton(onClick = { viewModel.uploadSentenceHashesTest() }) {
+                            Text("Upload hashes: GermanA1Vocab (first 5 words)")
+                        }
+                    }
                 }
                 HorizontalDivider()
             }

@@ -13,7 +13,20 @@ The vocab list builds a content-ID by **SHA-256-hashing the sentence text inside
 - **Android** — `app/src/main/java/com/goodstadt/john/language/exams/packages/CategoryTab/CategoryTabScreen.kt:483,490,500` calls `isHeard` + `getPlayCount` + `getSpacedCount`, **each** of which calls `FirebaseAudioService.generateContentID()` → `computeShortHash()` = a fresh `MessageDigest.getInstance("SHA-256")` + per-byte `"%02x".format()` string-fold. That's **3 SHA-256 hashes of the same sentence per row**, and the `isHeard` at line 483 is **dead** (result unused — `isSentenceAlreadyHeard = playCount > 0`). Same 2× pattern in the grid cell at `CategoryTabScreen.kt:1223,1231`.
 - **iOS** — `LanguageExams/ExamLanguageCode/TabViews/Tabs123/VocabTabListView.swift:235-237,271-276` calls `generateContentID` once per row (better), but still a SHA-256 per row per render. (Devs already fixed a worse `id: \.self` hashing loop here — see their comment ~line 222.)
 
-**Fix:** compute the content-ID **once** and reuse it — store it on the sentence/word model when data loads, or memoize sentence→CID in a small `LruCache`/dictionary. The row then does a map lookup, not a hash. On Android also delete the dead `isHeard` call and derive all three values from one CID. Rewrite `computeShortHash`'s hex with a lookup table/`StringBuilder` and avoid re-creating `MessageDigest` per call. **Effort: M · Impact: H** — main scroll-jank candidate on long B1/B2 lists. Validate by scrolling a full B1/B2 vocab tab on a low-end device / older iPad before & after.
+### Where the hash is stored
+The content-ID (`CID_<prefix>_<10 hex of SHA-256>`) **is the storage key**, both locally and in Firestore: the play-history doc `users/{uid}/history/{level}` holds a `data` map whose **keys are content-IDs** and values are play counts (HistorySyncManager.kt:248-306); the same CID is also the **audio-cache filename key** (AudioCacheManager.kt). The store is keyed **by** the hash, not reverse-indexed by sentence, so to read a sentence's count you must first turn its text into the hash — that is the per-row SHA-256. The lookup itself (`history[level].items[hash]`) is a cheap O(1) map get; **the cost is deriving the key, not the lookup.**
+
+> ⚠️ **Do NOT change the hash algorithm.** It is load-bearing for existing Firestore history and cached-audio filenames; changing it orphans every user's progress and cached audio. The fix must only avoid *recomputing* the same hash, never alter it.
+
+### Fix (compute the CID once per sentence, not once per render), in order of effort
+1. **Memoize inside `generateContentID` — quick global win (do first, both platforms).** Add a bounded cache in `FirebaseAudioService` keyed by trimmed sentence text → CID (e.g. `LruCache(4096)`). First call hashes; every later call (every render) is an O(1) lookup. One ~4-line change fixes **all ~50 call sites** at once. Safe — the function is deterministic. iOS: same cache in its `FirebaseAudioService.generateContentID`.
+2. **Cache the CID on the model (clean, list-specific).** `Sentence` is a kotlinx `@Serializable` data class, so add a non-serialized `val contentID: String by lazy { FirebaseAudioService.generateContentID(sentence) }`; computed once per object, row reads `sentence.contentID`. More call-site churn than #1.
+3. **Compose cleanup on the hot screen (do alongside #1).** In CategoryTabScreen compute the CID **once per row** (`remember(sentence){…}`), derive playCount/spacedCount from that single CID, and **delete the dead `isHeard` at line 483**. iOS already computes once per row, so #1 covers it there.
+4. _Optional / most thorough:_ bake the CID into the vocab JSON at content-build time so the client never hashes — a data-pipeline change, only worth it if you own generation; #1 gives ~the same runtime benefit with none of the risk.
+
+Also rewrite `computeShortHash`'s hex with a lookup table/`StringBuilder` and avoid re-creating `MessageDigest` per call (minor vs the memoize, but cheap to do).
+
+**Recommendation:** ship **#1 on both platforms**, then **#3** on Android to kill the triple-call + dead hash. **Effort: M · Impact: H** — main scroll-jank candidate on long B1/B2 lists. Validate by scrolling a full B1/B2 vocab tab on a low-end device / older iPad before & after.
 
 ---
 

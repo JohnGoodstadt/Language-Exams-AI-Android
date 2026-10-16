@@ -55,6 +55,10 @@ internal data class FirestoreWordDTO(
     // Parallel to `sentences`: each entry is that sentence's highlight token(s), comma-joined (empty when
     // none). Written by the Upload JSON flattener; split back into Sentence.highlight on read.
     val highlight: List<String> = emptyList(),
+    // Parallel to `sentences`: each sentence's precomputed content-ID (SHA-256-based play-history / audio
+    // key). Optional - empty/absent means the client computes it at runtime as before. Written by the
+    // Upload JSON "sentence hashes" admin action so the app can skip the per-render hashing.
+    val hashes: List<String> = emptyList(),
     val lockedClause: String = "",
     val weakenedClause: String = ""
 )

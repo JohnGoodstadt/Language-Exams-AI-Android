@@ -59,4 +59,19 @@ interface UploadAdminRepository {
         json: String,
         stopAfterFirstWord: Boolean
     ): Result<String>
+
+    /**
+     * For a fileFormat-0 vocab sheet, compute each sentence's content-ID (the SHA-256-based key used for
+     * play-history / cached-audio) from the sentence strings ALREADY STORED in Firestore, and write them
+     * back as a parallel `hashes` array on each word document (aligned with that word's `sentences`).
+     * Hashing the Firestore strings (not the local JSON) guarantees the stored hash matches what the app
+     * computes at runtime, so existing history/audio keys are never orphaned.
+     *
+     * [maxWords] caps how many word documents are processed (across all categories), so a small value
+     * (e.g. 5) can be used to verify the write before doing the whole sheet. Batched. Details are logged
+     * to Logcat (tag "UploadAdmin", "HASH-UPLOAD").
+     *
+     * @return a short human-readable summary (words processed, sentences hashed).
+     */
+    suspend fun uploadSentenceHashes(docName: String, maxWords: Int): Result<String>
 }
