@@ -49,6 +49,7 @@ class UserPreferencesRepository @Inject constructor(
         val HAS_SEEN_HELP_SHEET = booleanPreferencesKey("has_seen_help_sheet_v1")
         val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
         val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
+        val HAS_SEEN_AUDIT_QUIZ_HOWTO = booleanPreferencesKey("has_seen_audit_quiz_howto")
         val VOCAB_QUIZ_AUTO_ADVANCE = booleanPreferencesKey("vocab_quiz_auto_advance")
         val FORMAT8_SPEAK_ALOUD_GAP = booleanPreferencesKey("format8_speak_aloud_gap")
         val USAGE_QUIZ_LEVEL = stringPreferencesKey("usage_quiz_level")
@@ -96,6 +97,19 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setHasSeenReadinessAuditIntro(hasSeen: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.HAS_SEEN_READINESS_AUDIT_INTRO] = hasSeen
+        }
+    }
+
+    // Whether the one-time "how to answer" how-to sheet for the baseline audit quiz has been shown.
+    val hasSeenAuditQuizHowToFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_AUDIT_QUIZ_HOWTO] ?: false
+        }
+
+    suspend fun setHasSeenAuditQuizHowTo(hasSeen: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_AUDIT_QUIZ_HOWTO] = hasSeen
         }
     }
 

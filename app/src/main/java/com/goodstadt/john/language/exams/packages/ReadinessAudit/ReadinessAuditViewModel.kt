@@ -317,19 +317,28 @@ class ReadinessAuditViewModel @Inject constructor(
         // current vocab level), so Progress, Focus and this screen always show the same numbers. Updates as
         // each answer lands in the shared tally, so the gauges still move during a run. [loadCurrentAuditStats]
         // is kept as a no-op for its existing call sites.
+        // Drive the header's Confidence / Readiness LIVE from this attempt's running score, the way iOS
+        // does (ReadinessAuditViewModel.liveStats -> AuditEngine.calculate). The old comfort-band dials
+        // left Readiness stuck at 0% through the Baseline quiz; folding the in-progress part's
+        // answered/correct straight into AuditEngine.calculate makes both gauges climb per answer and
+        // converge on the final value at completion.
         viewModelScope.launch {
-            // Anchor the audit's dials to the band of the quiz being taken: a Verify level (INTER/UPPER/
-            // ADVANCED -> A2/B1/B2) anchors to its own band, so answering its questions visibly moves
-            // Readiness. Baseline mixes bands, so it stays anchored to the learner's current vocab level.
-            val anchorLevelFlow = combine(
+            combine(
                 snapshotFlow { selectedLevel.value },
-                userPreferencesRepository.selectedSkillLevelFlow
-            ) { level, vocabLevel ->
-                if (level == ReadinessAuditLevels.BASELINE) vocabLevel else AuditEngine.bandLabel(level.ordinal)
-            }
-            dialsProvider.dials(anchorLevelFlow).collect { dials ->
-                _auditStats.value = AuditStats(confidence = dials.confidence, readiness = dials.readiness)
-            }
+                snapshotFlow { quizStatistics.value },
+                _questions,
+                auditRepository.auditScores
+            ) { level, qs, questions, partScores ->
+                val partIndex = level.ordinal + 1 // Baseline=1 .. ADVANCED=4
+                val total = questions.size
+                val progress = if (total > 0) (qs.answered.toFloat() / total).coerceAtMost(1f) else 0f
+                val report = AuditEngine.calculate(
+                    testScores = partScores,                      // best-ever completed part scores
+                    partProgress = mapOf(partIndex to progress),  // coverage -> live Confidence
+                    liveScores = mapOf(partIndex to qs.correct)   // correct-so-far -> live Readiness
+                )
+                AuditStats(confidence = report.confidence, readiness = report.readiness)
+            }.collect { _auditStats.value = it }
         }
         // Mirror the shared auto-advance preference used by the Usage/Vocab quizzes.
         viewModelScope.launch {
@@ -348,6 +357,15 @@ class ReadinessAuditViewModel @Inject constructor(
         val newValue = !_autoAdvance.value
         _autoAdvance.value = newValue
         viewModelScope.launch { userPreferencesRepository.setVocabQuizAutoAdvance(newValue) }
+    }
+
+    // One-time "how to answer" sheet for the baseline audit quiz (speaker = hear, radio = answer).
+    val hasSeenAuditQuizHowTo: StateFlow<Boolean> =
+        userPreferencesRepository.hasSeenAuditQuizHowToFlow
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
+    fun markAuditQuizHowToSeen() {
+        viewModelScope.launch { userPreferencesRepository.setHasSeenAuditQuizHowTo(true) }
     }
 
     /**

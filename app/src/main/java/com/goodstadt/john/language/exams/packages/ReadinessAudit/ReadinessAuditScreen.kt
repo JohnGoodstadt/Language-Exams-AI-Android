@@ -198,6 +198,20 @@ fun ReadinessAuditScreen(
     val currentSkillLevel by viewModel.currentSkillLevel.collectAsState()
     var showSummary by rememberSaveable { mutableStateOf(false) }
 
+    // One-time "how to answer" sheet: the FIRST time the baseline audit quiz is opened, explain that the
+    // speaker hears the sentence, tapping the sentence also hears it, and the radio gives the answer.
+    val hasSeenHowTo by viewModel.hasSeenAuditQuizHowTo.collectAsState()
+    var showHowToSheet by remember { mutableStateOf(false) }
+    var howToTriggered by rememberSaveable { mutableStateOf(false) }
+    LaunchedEffect(selectedLevel, hasSeenHowTo, questions.isNotEmpty()) {
+        if (!howToTriggered && !hasSeenHowTo &&
+            selectedLevel == ReadinessAuditLevels.BASELINE && questions.isNotEmpty()
+        ) {
+            howToTriggered = true
+            showHowToSheet = true
+        }
+    }
+
     // Full-screen presentation (not a bottom sheet): the "X" / system-back is the only way out, so confirm
     // before abandoning a quiz in progress. Mid-quiz = answered ≥1 but not finished and not on the summary.
     var showCloseConfirm by remember { mutableStateOf(false) }
@@ -544,6 +558,17 @@ fun ReadinessAuditScreen(
             category = q?.category.orEmpty(),
             explain = q?.explain.orEmpty(),
             onClose = { showExplanationBottomSheet = false }
+        )
+    }
+
+    // First-run "how to answer" sheet for the baseline audit quiz.
+    if (showHowToSheet) {
+        AuditQuizHowToSheet(
+            exampleSentence = questions.firstOrNull()?.sentence.orEmpty(),
+            onClose = {
+                showHowToSheet = false
+                viewModel.markAuditQuizHowToSeen()
+            }
         )
     }
 
@@ -990,11 +1015,8 @@ private fun AuditQuestionAnswers(
                                         option
                                     }
                                 }
-                            // Locked questions can still be heard (read), just not re-answered.
-                            if (!isCurrentQuestionLocked) {
-                                val isCorrect = option == question.correctOption
-                                viewModel.updateAnswer(option, isCorrect)
-                            }
+                            // Loudspeaker: a demo play only. Never commits an answer - only the radio
+                            // button does that.
                             viewModel.handleTap(fullSentence)
                         },
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
@@ -1013,6 +1035,9 @@ private fun AuditQuestionAnswers(
 //                                    .padding(vertical = 2.dp)
                             .weight(1f)
                             .padding(vertical = verticalPadding)
+                            // Tapping the answer text is a demo play (like the loudspeaker), NOT a choice -
+                            // only the radio button commits the answer. (The question's locking still
+                            // applies to the radio; a demo play never affects it.)
                             .clickable {
                                 val fullSentence =
                                     if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
@@ -1026,10 +1051,6 @@ private fun AuditQuestionAnswers(
                                         }
                                     }
 
-                                if (!isCurrentQuestionLocked) {
-                                    val isCorrect = option == question.correctOption
-                                    viewModel.updateAnswer(option, isCorrect)
-                                }
                                 viewModel.handleTap(fullSentence)
                             }
                     )
@@ -1265,6 +1286,80 @@ private fun AuditStatisticsRow(
                 .padding(end = 16.dp), // Add padding to the end
             textAlign = TextAlign.End // Align text to the end
         )
+    }
+}
+
+/**
+ * First-run "how to answer" sheet for the baseline audit quiz: explains that the loudspeaker (and
+ * tapping the sentence) hears the sentence, and the radio button gives the answer. The speaker and
+ * radio are shown as the real icons inline; [exampleSentence] is the first question's actual sentence.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun AuditQuizHowToSheet(exampleSentence: String, onClose: () -> Unit) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    ModalBottomSheet(
+        onDismissRequest = onClose,
+        sheetState = sheetState,
+        containerColor = MaterialTheme.colorScheme.surface
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp)
+                .padding(bottom = 32.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Text(
+                text = "How to answer",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+
+            // 1. Loudspeaker hears the sentence (icon shown inline, replacing the words "Speaker Icon").
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("Tap the ", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                    contentDescription = "loudspeaker",
+                    tint = Color.White,
+                    modifier = Modifier.size(22.dp)
+                )
+                Text(" to hear the sentence", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+            }
+
+            // 2. Tapping the sentence itself also plays it (uses the real first question's sentence).
+            Text(
+                text = if (exampleSentence.isNotBlank()) {
+                    "Tap ‘$exampleSentence’ to hear the sentence"
+                } else {
+                    "Tap the sentence to hear it"
+                },
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.White
+            )
+
+            // 3. Radio button commits the answer (a real radio shown inline, replacing "Radio Button").
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("Select the ", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+                RadioButton(
+                    selected = true,
+                    onClick = null,
+                    modifier = Modifier.size(24.dp),
+                    colors = RadioButtonDefaults.colors(selectedColor = orangeLight)
+                )
+                Text(" to give your answer", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+            }
+
+            Button(
+                onClick = onClose,
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+            ) {
+                Text("Got it", color = Color.Black, fontWeight = FontWeight.Bold)
+            }
+        }
     }
 }
 

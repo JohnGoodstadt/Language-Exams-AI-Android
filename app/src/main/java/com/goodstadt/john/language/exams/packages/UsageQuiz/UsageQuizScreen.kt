@@ -665,14 +665,15 @@ private fun UsageQuizQuestionAnswers(
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
-                        // Tapping the answer sentence marks it, exactly like the radio button.
+                        // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
+                        // choice - only the radio button commits the answer.
                         text = option,
                         color = orangeLight,
                         style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
                         modifier = Modifier
                             .weight(1f)
                             .padding(vertical = 2.dp)
-                            .clickable { submitAnswer() }
+                            .clickable { viewModel.handleTap(previewSentence) }
                     )
                 }
 
