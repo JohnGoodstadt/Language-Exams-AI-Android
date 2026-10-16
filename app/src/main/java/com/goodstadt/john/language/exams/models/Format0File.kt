@@ -69,5 +69,9 @@ data class Sentence(
     // Optional: exact word(s) to highlight in [sentence], for cases the plain word-match can't catch
     // (e.g. German verbs whose conjugated form differs from the headword: "müssen" -> ["muss"]).
     // Empty (the default for sentences without the key) falls back to the headword match.
-    val highlight: List<String> = emptyList()
+    val highlight: List<String> = emptyList(),
+    // Precomputed content-ID (play-history / audio key) if the sheet has uploaded `hashes`; null means
+    // the app computes it at runtime via FirebaseAudioService.generateContentID. Carried through the disk
+    // cache (Format0File is serialized), so a fresh fetch populates it and later loads keep it.
+    val contentID: String? = null
 )

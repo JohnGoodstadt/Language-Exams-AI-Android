@@ -480,14 +480,11 @@ fun CategoryTabScreen(
 //                                    val contentID = FirebaseAudioService.generateContentID(sentenceEntry.sentence)
                                         //val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceEntry.sentence, selectedVoiceName)
                                         //val isDownloading = state.downloadingSentenceId == unifiedFilename
-                                        val isHeard = viewModel.isHeard(sentenceEntry.sentence)
-                                        //performmance enhancem,ent - 95% playCount is 0 so only check if isHeard == true
-//                                        var playCount = 0
-//                                        if (isHeard){
-//                                            playCount = viewModel.getPlayCount(sentenceEntry.sentence)
-//                                        }
+                                        // Pass the Sentence so the lookups use its precomputed hash when
+                                        // present (else compute). The old separate isHeard() call was dead
+                                        // (isSentenceAlreadyHeard is derived from playCount) - removed.
                                         val playCount =
-                                            viewModel.getPlayCount(sentenceEntry.sentence)
+                                            viewModel.getPlayCount(sentenceEntry)
 
                                         SwipeableVocabRow(
                                             word = wordEntry,
@@ -497,7 +494,7 @@ fun CategoryTabScreen(
                                             playCount = playCount,
                                             // Spaced-repetition dot: red -> amber -> green as the sentence
                                             // is heard on 1/2/3 separate occasions (>= gap apart).
-                                            masteryLevel = viewModel.getSpacedCount(sentenceEntry.sentence),
+                                            masteryLevel = viewModel.getSpacedCount(sentenceEntry),
                                             recalledWordKeys = state.recalledWordKeys,
 
                                             // ✅ TAP HANDLER (Delegate to ViewModel)
@@ -1220,7 +1217,8 @@ private fun VocabEntryItem(
         Text("Error: No sentence found", color = Color.Red, modifier = Modifier.padding(12.dp))
         return
     }
-    val playCount = viewModel.getPlayCount(sentenceEntry.sentence)
+    // Pass the Sentence so the lookups use its precomputed hash when present (else compute).
+    val playCount = viewModel.getPlayCount(sentenceEntry)
     GridVocabCard(
         word = wordEntry,
         sentence = sentenceEntry,
@@ -1228,7 +1226,7 @@ private fun VocabEntryItem(
         isDownloading = false,
         playCount = playCount,
         // Spaced-repetition dot: red -> amber -> green as the sentence is heard on 1/2/3 occasions.
-        masteryLevel = viewModel.getSpacedCount(sentenceEntry.sentence),
+        masteryLevel = viewModel.getSpacedCount(sentenceEntry),
         recalledWordKeys = recalledWordKeys,
         onRowTapped = { _, s -> onTap(s, category) },
         onFocus = { onFocus(wordEntry) },

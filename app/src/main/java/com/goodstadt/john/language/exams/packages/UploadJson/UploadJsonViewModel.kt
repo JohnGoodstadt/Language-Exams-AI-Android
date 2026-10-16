@@ -35,6 +35,14 @@ data class UpdateFieldsFile(
     val statusKey: String get() = "update_fields/$firestoreDocName"
 }
 
+/** One vocab sheet whose sentence content-ID hashes can be (re)uploaded for the current flavour. */
+data class VocabHashFile(
+    val displayName: String,
+    val firestoreDocName: String
+) {
+    val statusKey: String get() = "vocab_hashes/$firestoreDocName"
+}
+
 /** Files grouped under one CEFR level within a section. */
 data class UploadJsonLevelGroup(
     val level: String, // "A1" / "A2" / "B1" / "B2"
@@ -87,6 +95,20 @@ class UploadJsonViewModel @Inject constructor(
                 displayName = "German${level}Vocab",
                 rawResourceName = rawName,
                 firestoreDocName = "German${level}Vocab"
+            )
+        }
+    } else {
+        emptyList()
+    }
+
+    // "Upload Vocab Hashes": the current flavour's 4 main-vocab sheets (German*/English* A1..B2). Each
+    // entry (re)computes and uploads ALL sentence content-ID hashes for that sheet. de + en only.
+    val isHashUploadVariant: Boolean = BuildConfig.FLAVOR == "de" || BuildConfig.FLAVOR == "en"
+    val vocabHashFiles: List<VocabHashFile> = if (isHashUploadVariant) {
+        levels.map { level ->
+            VocabHashFile(
+                displayName = "$languagePrefix${level}Vocab",
+                firestoreDocName = "$languagePrefix${level}Vocab"
             )
         }
     } else {
@@ -326,6 +348,7 @@ class UploadJsonViewModel @Inject constructor(
         const val VOCAB_GROUP_LEVEL = "Files"
         const val UPDATE_FIELDS_SECTION_TITLE = "Update DE Fields"
         const val UPDATE_FIELDS_GROUP_TITLE = "Sheets"
+        const val VOCAB_HASHES_SECTION_TITLE = "Upload Vocab Hashes"
 
         // TEMPORARY TEST GUARD: true commits sheetName + the first word atomically, then exits.
         // Change to false only after the first Firestore document has been checked.
@@ -544,6 +567,32 @@ class UploadJsonViewModel @Inject constructor(
             repo.uploadSentenceHashes(docName = docName, maxWords = maxWords).fold(
                 onSuccess = { summary -> _toast.tryEmit(summary) },
                 onFailure = { error -> _toast.tryEmit("Hash upload failed: ${error.message}") }
+            )
+        }
+    }
+
+    /**
+     * "Upload Vocab Hashes": (re)compute and upload ALL sentence content-ID hashes for [file]'s sheet
+     * (no word cap). Idempotent - re-running overwrites with the same deterministic values. Admin/debug
+     * only; works against whichever Firestore project this flavour's build points at.
+     */
+    fun uploadVocabHashes(file: VocabHashFile) {
+        viewModelScope.launch {
+            val repo = adminRepository.orElse(null)
+            if (repo == null) {
+                _toast.tryEmit("Admin library unavailable (debug only)")
+                return@launch
+            }
+            setStatus(file.statusKey, RowStatus.NONE)
+            repo.uploadSentenceHashes(docName = file.firestoreDocName, maxWords = Int.MAX_VALUE).fold(
+                onSuccess = { summary ->
+                    setStatus(file.statusKey, RowStatus.SUCCESS)
+                    _toast.tryEmit(summary)
+                },
+                onFailure = { error ->
+                    setStatus(file.statusKey, RowStatus.ERROR)
+                    _toast.tryEmit("Hash upload failed (${file.displayName}): ${error.message}")
+                }
             )
         }
     }

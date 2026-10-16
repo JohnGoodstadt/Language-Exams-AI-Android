@@ -208,6 +208,32 @@ fun UploadJsonScreen(
                     }
                 }
             }
+
+            // "Upload Vocab Hashes": (re)upload ALL sentence content-ID hashes for the current flavour's
+            // 4 main-vocab sheets (German* in de, English* in en). Debug-only.
+            if (viewModel.isAdminAvailable && viewModel.vocabHashFiles.isNotEmpty()) {
+                val hashSectionTitle = UploadJsonViewModel.VOCAB_HASHES_SECTION_TITLE
+                val hashFiles = viewModel.vocabHashFiles
+                val hashSectionExpanded = expandedSections[hashSectionTitle] == true
+
+                item(key = "section_vocab_hashes") {
+                    SectionHeader(
+                        title = hashSectionTitle,
+                        count = hashFiles.size,
+                        expanded = hashSectionExpanded,
+                        onClick = { expandedSections[hashSectionTitle] = !hashSectionExpanded }
+                    )
+                }
+                if (hashSectionExpanded) {
+                    items(hashFiles, key = { it.statusKey }) { file ->
+                        VocabHashRow(
+                            file = file,
+                            status = statuses[file.statusKey] ?: RowStatus.NONE,
+                            onUpload = { viewModel.uploadVocabHashes(file) }
+                        )
+                    }
+                }
+            }
         }
     }
 }
@@ -324,6 +350,32 @@ private fun UpdateFieldsRow(
             onClick = onUpdate,
             contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
         ) { Text("Update") }
+    }
+}
+
+@Composable
+private fun VocabHashRow(
+    file: VocabHashFile,
+    status: RowStatus,
+    onUpload: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(
+            text = file.displayName,
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.weight(1f)
+        )
+        StatusIcon(status)
+        OutlinedButton(
+            onClick = onUpload,
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+        ) { Text("Upload") }
     }
 }
 

@@ -313,6 +313,7 @@ class ExamSheetRepository @Inject constructor(
                     val words = wordsSnapshot.documents.mapNotNull { wordDoc ->
                         try {
                             val firestoreWord = wordDoc.toObject<FirestoreWordDTO>()!!
+
                             val sentences = firestoreWord.sentences.mapIndexed { i, sentenceText ->
                                 // `highlight` is a parallel array of comma-joined tokens — split back to a
                                 // list (empty/absent -> no highlight, so the row falls back to the headword).
@@ -321,7 +322,22 @@ class ExamSheetRepository @Inject constructor(
                                 Sentence(
                                     sentence = sentenceText,
                                     translation = "", // Assuming empty translation
-                                    highlight = hl
+                                    highlight = hl,
+                                    // Use the precomputed hash for this sentence if the sheet has one
+                                    // (parallel to `sentences`); null -> the app computes it at runtime.
+                                    contentID = firestoreWord.hashes.getOrNull(i)
+                                )
+                            }
+
+                            // Confirm the hash was COPIED onto each Sentence.contentID (so the app uses it
+                            // instead of hashing at render). Debug only; logs only words that carry hashes.
+                            // Note: the hash lives on Sentence.contentID, not as a Format0Word field.
+                            if (com.goodstadt.john.language.exams.BuildConfig.IS_DEBUG &&
+                                sentences.any { it.contentID != null }
+                            ) {
+                                Timber.i(
+                                    "HASH-COPY: word='${firestoreWord.word}' " +
+                                        sentences.joinToString(prefix = "[", postfix = "]") { "contentID=${it.contentID}" }
                                 )
                             }
 

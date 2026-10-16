@@ -11,6 +11,7 @@ import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
@@ -424,6 +425,23 @@ class CategoryTabViewModel @Inject constructor(
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.getSpacedCount(currentLoadedLevel, contentID)
     }
+
+    // --- Sentence overloads: prefer the precomputed hash (Sentence.contentID) and only hash as a
+    // fallback. Called from the vocab list/grid rows so the hot scroll path avoids the per-row SHA-256
+    // once the sheet's `hashes` are uploaded (null contentID -> compute, so pre-upload behaviour is kept).
+
+    /** The content-ID for a sentence: the uploaded hash if present, else computed once here. */
+    fun contentIdFor(sentence: Sentence): String =
+        sentence.contentID ?: FirebaseAudioService.generateContentID(sentence.sentence)
+
+    fun isHeard(sentence: Sentence): Boolean =
+        historyManager.isHeard(currentLoadedLevel, contentIdFor(sentence))
+
+    fun getPlayCount(sentence: Sentence): Int =
+        historyManager.getPlayCount(currentLoadedLevel, contentIdFor(sentence))
+
+    fun getSpacedCount(sentence: Sentence): Int =
+        historyManager.getSpacedCount(currentLoadedLevel, contentIdFor(sentence))
 
     // MARK: - Playback Logic
     fun handleTap(sentence: String, category: Category) {

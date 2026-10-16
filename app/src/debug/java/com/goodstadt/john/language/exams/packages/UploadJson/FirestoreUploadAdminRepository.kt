@@ -251,7 +251,8 @@ class FirestoreUploadAdminRepository @Inject constructor(
             .sortedBy { it.getLong("sortOrder") ?: 0L }
         Timber.i("UploadAdmin: HASH-UPLOAD start sheet='$docName' categories=${categoryDocs.size} maxWords=$maxWords")
 
-        val batch = firestore.batch()
+        var batch = firestore.batch()
+        var pending = 0            // writes in the current batch (Firestore caps a batch at 500)
         var wordsProcessed = 0
         var sentencesHashed = 0
 
@@ -271,18 +272,26 @@ class FirestoreUploadAdminRepository @Inject constructor(
                     }
                     val hashes = sentences.map { FirebaseAudioService.generateContentID(it) }
                     batch.update(wordDoc.reference, mapOf("hashes" to hashes))
+                    pending++
                     wordsProcessed++
                     sentencesHashed += hashes.size
                     Timber.i("UploadAdmin: HASH-UPLOAD [$wordsProcessed] cat='$catTitle' word='$wordLabel' path=${wordDoc.reference.path}")
                     sentences.forEachIndexed { i, s ->
                         Timber.i("UploadAdmin: HASH-UPLOAD     sentences[$i]=\"$s\" -> hashes[$i]=${hashes[i]}")
                     }
+                    // Commit in chunks so a whole sheet never exceeds Firestore's 500-op batch limit.
+                    if (pending >= HASH_BATCH_LIMIT) {
+                        batch.commit().await()
+                        Timber.i("UploadAdmin: HASH-UPLOAD committed chunk of $pending ($wordsProcessed so far)")
+                        batch = firestore.batch()
+                        pending = 0
+                    }
                 }
             }
         }
 
         require(wordsProcessed > 0) { "No words with sentences found in '$docName'" }
-        batch.commit().await()
+        if (pending > 0) batch.commit().await()
         val summary = "Hashes uploaded: $wordsProcessed word(s), $sentencesHashed sentence(s) in '$docName'."
         Timber.i("UploadAdmin: HASH-UPLOAD DONE - $summary")
         Result.success(summary)
@@ -1260,6 +1269,8 @@ class FirestoreUploadAdminRepository @Inject constructor(
         private const val CURRENT = "current"
         private const val WORDS = "words"
         private const val WORDS_AND_SENTENCES = "wordsAndSentences"
+        // Max writes per Firestore batch is 500; commit well under that for the sentence-hash upload.
+        private const val HASH_BATCH_LIMIT = 400
         private const val TABS = "tabs"
         private const val SECTIONS = "sections"
         private const val FIELD_FILE_FORMAT = "fileformat"
