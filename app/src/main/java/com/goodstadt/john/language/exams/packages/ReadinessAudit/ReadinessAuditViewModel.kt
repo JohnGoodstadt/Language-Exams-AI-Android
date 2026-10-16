@@ -64,6 +64,7 @@ import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -365,6 +366,27 @@ class ReadinessAuditViewModel @Inject constructor(
                         it is com.goodstadt.john.language.exams.utils.PlaybackEvent.Failed
                 }
             }
+            if (currentQuestionIndex.value == fromIndex &&
+                currentQuestionIndex.value < _questions.value.lastIndex
+            ) {
+                currentQuestionIndex.value = fromIndex + 1
+                resetInfoButtonTapped()
+            }
+        }
+    }
+
+    /**
+     * Call when the current question was answered INCORRECTLY (a locked wrong answer; no reward audio
+     * plays). If auto-advance is on, pause briefly so the learner registers the result, then advance -
+     * time-driven rather than waiting on a playback-finished event that never arrives for a wrong
+     * answer. Mirrors iOS's scheduleAutoAdvanceWithoutAudio. No-op when off or on the last question.
+     */
+    fun onIncorrectAnswered() {
+        if (!_autoAdvance.value) return
+        autoAdvanceJob?.cancel()
+        val fromIndex = currentQuestionIndex.value
+        autoAdvanceJob = viewModelScope.launch {
+            delay(1200) // ~1.2s, matches iOS
             if (currentQuestionIndex.value == fromIndex &&
                 currentQuestionIndex.value < _questions.value.lastIndex
             ) {
@@ -1007,9 +1029,14 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         _lockedAnswers.value = _lockedAnswers.value + (index to selectedOption)
 
-        // Auto-advance after the answer's audio plays (the screen calls handleTap right after this),
-        // mirroring the Usage quiz. No-op when auto-advance is off or on the last question.
-        if (isCorrect) onCorrectAnswered()
+        // Auto-advance. A CORRECT answer waits for its reward audio to finish; a wrong answer plays no
+        // audio, so advance on a short timer instead (iOS parity - a wrong answer still moves on). A
+        // "Don't Know" is left to its own handling.
+        if (isCorrect) {
+            onCorrectAnswered()
+        } else if (outcome != AnswerOutcome.DONT_KNOW) {
+            onIncorrectAnswered()
+        }
 
         val currentPart = selectedLevel.value.ordinal + 1
         val progress = (index + 1).toFloat() / _questions.value.size.toFloat()

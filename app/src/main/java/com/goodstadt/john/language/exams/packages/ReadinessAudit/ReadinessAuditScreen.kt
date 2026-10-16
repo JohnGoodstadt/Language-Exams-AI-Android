@@ -1245,7 +1245,14 @@ private fun AuditStatisticsRow(
         }
 
         // "A"-in-a-circle: auto-advance to the next question once the answer's audio has played.
-        AutoAdvanceToggleButton(enabled = autoAdvance, onClick = onToggleAutoAdvance)
+        // Sized to match this screen's 24dp Material info "i" so the two buttons are the same size.
+        AutoAdvanceToggleButton(
+            enabled = autoAdvance,
+            onClick = onToggleAutoAdvance,
+            size = 24.dp,
+            fontSize = 14.sp,
+            borderWidth = 1.5.dp
+        )
 
         Text(
             text = "Tries: $tries",

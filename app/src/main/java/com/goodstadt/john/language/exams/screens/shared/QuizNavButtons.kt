@@ -12,6 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
@@ -21,20 +23,31 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
  * ("A") buttons look identical everywhere: a single bold letter in a thin circle.
  */
 
-/** A single letter drawn in a thin circle - the shared look for the Info and Auto-advance buttons. */
+/**
+ * A single letter drawn in a thin circle - the shared look for the Info and Auto-advance buttons.
+ * Size/font/border are parameterised (defaults = the 32dp circle used by the Usage/Vocab/Grammar
+ * quizzes, where both "A" and "i" are circles) so a caller can request a smaller circle - e.g. the
+ * Readiness Audit passes 24dp so its "A" matches that screen's 24dp Material info "i".
+ */
 @Composable
-fun LetterInCircle(letter: String, tint: Color) {
+fun LetterInCircle(
+    letter: String,
+    tint: Color,
+    size: Dp = 32.dp,
+    fontSize: TextUnit = 18.sp,
+    borderWidth: Dp = 2.dp
+) {
     Box(
         modifier = Modifier
-            .size(32.dp)
-            .border(2.dp, tint, CircleShape),
+            .size(size)
+            .border(borderWidth, tint, CircleShape),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = letter,
             color = tint,
             fontWeight = FontWeight.Bold,
-            fontSize = 18.sp,
+            fontSize = fontSize,
             textAlign = TextAlign.Center
         )
     }
@@ -43,12 +56,20 @@ fun LetterInCircle(letter: String, tint: Color) {
 /**
  * Auto-advance toggle: an "A" in a circle. Grey = off, blue = on. When on, the quiz automatically moves to
  * the next question after a correct answer (once its audio has finished), saving the user a tap.
+ * Size/font/border default to the standard circle; a screen whose info button is smaller (the audit's
+ * 24dp Material "i") can pass a smaller size so the two buttons match.
  */
 @Composable
-fun AutoAdvanceToggleButton(enabled: Boolean, onClick: () -> Unit) {
+fun AutoAdvanceToggleButton(
+    enabled: Boolean,
+    onClick: () -> Unit,
+    size: Dp = 32.dp,
+    fontSize: TextUnit = 18.sp,
+    borderWidth: Dp = 2.dp
+) {
     val tint = if (enabled) buttonColor else Color.Gray // blue when on, grey when off
     IconButton(onClick = onClick) {
-        LetterInCircle(letter = "A", tint = tint)
+        LetterInCircle(letter = "A", tint = tint, size = size, fontSize = fontSize, borderWidth = borderWidth)
     }
 }
 
