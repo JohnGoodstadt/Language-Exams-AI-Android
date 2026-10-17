@@ -2,16 +2,10 @@ package com.goodstadt.john.language.exams.data.examsheets
 
 import android.content.Context
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultDownloadSheet
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.ExampleSection
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounCategory
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounForm
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounPattern
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSentence
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Format13SectionDTO
@@ -29,6 +23,7 @@ import com.goodstadt.john.language.exams.models.Format7or10List
 import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.models.Format7or10SectionDTO
 import com.goodstadt.john.language.exams.models.Format7or10Word
+import com.goodstadt.john.language.exams.models.Format8File
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
 import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
@@ -37,6 +32,13 @@ import com.goodstadt.john.language.exams.models.WordQuizList
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.models.WordQuizSWordsState
 import com.goodstadt.john.language.exams.models.WordQuizSections
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.ExampleSection
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounCategory
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounForm
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounPattern
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSentence
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.firestore.DocumentSnapshot
@@ -314,31 +316,33 @@ class ExamSheetRepository @Inject constructor(
                         try {
                             val firestoreWord = wordDoc.toObject<FirestoreWordDTO>()!!
 
+                            // Track where each sentence's content-ID came from (DB vs computed) for the
+                            // debug log below.
+                            val hashSources = mutableListOf<String>()
                             val sentences = firestoreWord.sentences.mapIndexed { i, sentenceText ->
                                 // `highlight` is a parallel array of comma-joined tokens — split back to a
                                 // list (empty/absent -> no highlight, so the row falls back to the headword).
                                 val hl = firestoreWord.highlight.getOrNull(i).orEmpty()
                                     .split(",").map { it.trim() }.filter { it.isNotEmpty() }
+                                // Resolve the content-ID ONCE, here at read time: prefer the uploaded hash
+                                // from the sheet; if the sheet has none for this sentence, compute it now.
+                                // Either way Sentence.contentID is always set, so it's serialized into the
+                                // disk cache and the row NEVER hashes at render.
+                                val stored = firestoreWord.hashes.getOrNull(i)
+                                val cid = stored ?: FirebaseAudioService.generateContentID(sentenceText)
+                                hashSources.add(if (stored != null) "DB" else "COMPUTED")
                                 Sentence(
                                     sentence = sentenceText,
                                     translation = "", // Assuming empty translation
                                     highlight = hl,
-                                    // Use the precomputed hash for this sentence if the sheet has one
-                                    // (parallel to `sentences`); null -> the app computes it at runtime.
-                                    contentID = firestoreWord.hashes.getOrNull(i)
+                                    contentID = cid
                                 )
                             }
 
-                            // Confirm the hash was COPIED onto each Sentence.contentID (so the app uses it
-                            // instead of hashing at render). Debug only; logs only words that carry hashes.
-                            // Note: the hash lives on Sentence.contentID, not as a Format0Word field.
-                            if (com.goodstadt.john.language.exams.BuildConfig.IS_DEBUG &&
-                                sentences.any { it.contentID != null }
-                            ) {
-                                Timber.i(
-                                    "HASH-COPY: word='${firestoreWord.word}' " +
-                                        sentences.joinToString(prefix = "[", postfix = "]") { "contentID=${it.contentID}" }
-                                )
+                            // Debug: show that every sentence got a content-ID at read time, and whether it
+                            // came from the DB (uploaded) or was COMPUTED here as a fallback.
+                            if (com.goodstadt.john.language.exams.BuildConfig.IS_DEBUG) {
+                                Timber.i("HASH-READ: word='${firestoreWord.word}' sources=$hashSources")
                             }
 
                             Format0Word(
@@ -503,15 +507,6 @@ class ExamSheetRepository @Inject constructor(
 
         } catch (e: Exception) {
 
-            //we now have bundle file
-//            Timber.e(e, "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.")
-//            TimberFault.f(
-//                message = "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.",
-//                localizedMessage = e.localizedMessage ?: "null localizedMessage",
-//                secondaryText = "android",
-//                area = "ExamSheetRepository.getFormat2Sheet()"
-//            )
-//            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
             return Result.failure(e)
         }
     }
@@ -646,9 +641,38 @@ class ExamSheetRepository @Inject constructor(
             } catch (e: Exception) {
                 Timber.e(e, "Failed to read Format6 from disk cache for '$logicalName'")
                 null
+
             }
         }
+    private suspend fun readFormat8SheetFromCache(logicalName: String): Format8File? =
+        withContext(Dispatchers.IO) {
+            val file = getCacheFilePointer(logicalName)
+            if (!file.exists()) return@withContext null
+            return@withContext try {
+                jsonParser.decodeFromString<Format8File>(file.readText())
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to read Format8 from disk cache for '$logicalName'")
+                null
 
+            }
+        }
+    suspend fun getFormat8Sheet  (sheet_name: String, forceRefresh: Boolean): Result<Format8File> {
+        return try {
+            // a. Disk cache first (unless forcing a refresh).
+            if (!forceRefresh) {
+                readFormat8SheetFromCache(sheet_name)?.let { cachedFile ->
+                    Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format6) from disk cache.")
+                    return Result.success(cachedFile)
+                }
+            }
+//INSERT call to downloadAndAssembleFormat8() here
+            return Result.failure(Exception("Format8 sheet '$sheet_name' assembled with no data (empty sub-collections)."))
+
+        } catch (e: Exception) {
+            Timber.w(e, "ExamSheetRepo: getFormat8Sheet failed for '$sheet_name'.")
+            Result.failure(e)
+        }
+    }
     /** Reads a stringList field (Firestore returns it as a List<*>). */
     private fun DocumentSnapshot.stringList(field: String): List<String> =
         stringListFrom(get(field))
@@ -659,6 +683,7 @@ class ExamSheetRepository @Inject constructor(
     /** Selects the storage layout - see [com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Layout]. */
     private suspend fun downloadFormat6(examName: String): Format6File =
         if (Format6Layout.NESTED) downloadFormat6Nested(examName) else downloadFormat6Legacy(examName)
+
 
     /**
      * Option A: reads TWO collections (`categories -> patterns`) and unpacks each pattern's `forms` and

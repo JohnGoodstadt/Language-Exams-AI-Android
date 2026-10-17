@@ -19,8 +19,8 @@ import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format1File
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format3File
-import com.goodstadt.john.language.exams.models.Format8File
 import com.goodstadt.john.language.exams.models.Format7or10File
+import com.goodstadt.john.language.exams.models.Format8File
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -348,16 +348,74 @@ class ContentRepository @Inject constructor(
     /** Format 8 is bundle-only for now: memory cache -> res/raw, with no remote version or Firestore calls. */
     suspend fun getFormat8Data(name: String): Result<Format8File> = withContext(Dispatchers.IO) {
         val logicalName = normalizeToLogicalName(name)
-        format8Cache[logicalName]?.let { cachedFile ->
-            Timber.d("ContentRepo: Returning '$logicalName' (Format8) from MEMORY CACHE.")
-            return@withContext Result.success(cachedFile)
+
+        try {
+            // --- 1. VERSION CHECK ---
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("ContentRepo: Sheet '$logicalName' (Format8) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+            // --- 2. IN-MEMORY CACHE CHECK ---
+            if (!forceRefresh) {
+                format8Cache[logicalName]?.let { cachedFile ->
+                    Timber.d("ContentRepo: Returning '$logicalName' (Format2) from MEMORY CACHE.")
+                    return@withContext Result.success(cachedFile)
+                }
+            }
+
+            // --- 3. DELEGATE TO ExamSheetRepository ---
+            Timber.d("ContentRepo: Delegating fetch for '$logicalName' (Format2) to ExamSheetRepository...")
+
+            // This is the line you will add in the next step.
+            // For now, let's create a placeholder that fails, so you can see the flow.
+            val result = examSheetRepository.getFormat8Sheet(logicalName, forceRefresh = forceRefresh)
+            //val result: Result<Format2File> = Result.failure(NotImplementedError("getFormat2Sheet is not yet implemented in ExamSheetRepository"))
+
+
+            // --- 4. WARM UP MEMORY CACHE & UPDATE VERSION ---
+            if (result.isSuccess) {
+                val format8File = result.getOrThrow()
+                format8Cache[logicalName] = format8File
+                Timber.d("ContentRepo: Warmed up memory cache for '$logicalName' (Format8).")
+
+                if (forceRefresh) {
+                    appConfigRepository.updateLocalVersion(logicalName,remoteVersion)
+                }
+                return@withContext result
+            } else {
+                // --- 4. Bundle Fallback ---
+                Timber.w(
+                    result.exceptionOrNull(),
+                    "VocabRepo: ExamSheetRepository failed. Falling back to bundle for '$logicalName'."
+                )
+
+                val resourceName = mapLogicalToResourceName(logicalName)
+                val bundleResult = loadBundledFormat8Data(resourceName)
+                // Cache under the logical name so both resource-name and logical-name callers share it.
+                bundleResult.getOrNull()?.let { format8Cache[logicalName] = it }
+                return@withContext bundleResult
+
+            }
+
+
+        } catch (e: Exception) {
+            Timber.e(e, "ContentRepo: CRITICAL error in getFormat8Data for '$logicalName'.")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat8Data() failed for $name", e))
+            return@withContext Result.failure(e) // Format8 does not have a bundle fallback
         }
 
-        val resourceName = mapLogicalToResourceName(logicalName)
-        val bundleResult = loadBundledFormat8Data(resourceName)
-        // Cache under the logical name so both resource-name and logical-name callers share it.
-        bundleResult.getOrNull()?.let { format8Cache[logicalName] = it }
-        return@withContext bundleResult
+
+
+
+
+
+
+
+
+
+
     }
 
     private fun loadBundledFormat8Data(resourceName: String): Result<Format8File> {
