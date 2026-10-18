@@ -30,6 +30,18 @@ object FirebaseAudioService {
     // MARK: - 1. ID Generators (Hashing)
 
     /**
+     * Memo cache for [generateContentID]. Content-IDs are a pure function of the sentence text, and the
+     * same sentences are hashed over and over during list rendering (every recompose of every visible
+     * row). Caching text -> contentID turns those repeat renders into a map lookup instead of a fresh
+     * SHA-256 + Base64, which was the headline cost in the performance audit. Thread-safe because it is
+     * read/written from multiple coroutine dispatchers. Keyed by the RAW text so the cached value is
+     * always identical to a fresh call for that exact input. [MEMO_MAX] bounds it so transient strings
+     * (e.g. live search) can never grow it without limit.
+     */
+    private val contentIdMemo = java.util.concurrent.ConcurrentHashMap<String, String>()
+    private const val MEMO_MAX = 20_000
+
+    /**
      * Generates the filename for Disk/Cloud storage.
      * Format: "VoicePrefix_SentenceStart_Hash(10).mp3"
      * Specific to a single voice (e.g. Google UK Male).
@@ -51,13 +63,19 @@ object FirebaseAudioService {
      * Voice-Agnostic (Same ID for US Female and UK Male).
      */
     fun generateContentID(text: String): String {
+        contentIdMemo[text]?.let { return it }
+
         val cleanText = text.trim()
         val prefix = getSafePrefix(cleanText)
 
         // Key includes TEXT ONLY
         val hash = computeShortHash(cleanText)
 
-        return "CID_${prefix}_${hash}"
+        val id = "CID_${prefix}_${hash}"
+        // Guard against unbounded growth from transient inputs; the finite content set never trips this.
+        if (contentIdMemo.size >= MEMO_MAX) contentIdMemo.clear()
+        contentIdMemo[text] = id
+        return id
     }
 
     // MARK: - Helper Logic
