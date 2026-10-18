@@ -7,7 +7,8 @@ import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.models.Format8EntryKind
 import com.goodstadt.john.language.exams.models.Format8File
-import io.mockk.Called
+import io.mockk.coEvery
+import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
@@ -57,11 +58,11 @@ class Format8RepositoryTest {
         init {
             every { context.resources } returns resources
             every { context.packageName } returns "format8.test"
+            coEvery { config.getRemoteSheetVersions() } returns emptyMap()
+            every { config.getLocalVersion(any()) } returns 1
+            coEvery { sheets.getFormat8Sheet(any(), any()) } returns Result.failure(IllegalStateException("Remote sheet unavailable"))
         }
         fun repository() = ContentRepository(context, config, sheets, mockk(), mockk(), mockk(), mockk())
-        fun verifyNoRemoteCalls() {
-            verify { config wasNot Called; sheets wasNot Called }
-        }
     }
 
     @Test
@@ -92,7 +93,7 @@ class Format8RepositoryTest {
     }
 
     @Test
-    fun logicalAndResourceNamesShareTheMemoryCacheWithoutRemoteCalls() = runBlocking {
+    fun logicalAndResourceNamesShareTheMemoryCacheAfterBundleFallback() = runBlocking {
         val deps = Dependencies()
         val repo = deps.repository()
         for ((index, entry) in mapping.entries.withIndex()) {
@@ -106,8 +107,25 @@ class Format8RepositoryTest {
             val second = repo.getFormat8Data(resourceName).getOrThrow()
             assertSame(first, second)
             verify(exactly = 1) { deps.resources.openRawResource(id) }
+            coVerify(exactly = 1) { deps.sheets.getFormat8Sheet(logicalName, false) }
         }
-        deps.verifyNoRemoteCalls()
+    }
+
+    @Test
+    fun downloadedFilesUpdateTheirVersionAndUseMemoryOnTheNextRead() = runBlocking {
+        val deps = Dependencies()
+        val repo = deps.repository()
+        val logical = "GermanPronouns3Ich"
+        val remote = json.decodeFromString<Format8File>(fixture("german_pronouns3_ich"))
+        coEvery { deps.config.getRemoteSheetVersions() } returns mapOf(logical to 2)
+        every { deps.config.getLocalVersion(logical) } returnsMany listOf(1, 2)
+        every { deps.config.updateLocalVersion(logical, 2) } returns Unit
+        coEvery { deps.sheets.getFormat8Sheet(logical, true) } returns Result.success(remote)
+        assertSame(remote, repo.getFormat8Data(logical).getOrThrow())
+        assertSame(remote, repo.getFormat8Data("german_pronouns3_ich").getOrThrow())
+        verify(exactly = 1) { deps.config.updateLocalVersion(logical, 2) }
+        coVerify(exactly = 1) { deps.sheets.getFormat8Sheet(logical, any()) }
+        verify(exactly = 0) { deps.resources.openRawResource(any()) }
     }
 
     @Test
@@ -123,7 +141,7 @@ class Format8RepositoryTest {
             ByteArrayInputStream(fixture(resource).toByteArray(Charsets.UTF_8))
         }
         assertTrue(repo.getFormat8Data(logical).isSuccess)
-        deps.verifyNoRemoteCalls()
+        coVerify(exactly = 2) { deps.sheets.getFormat8Sheet(logical, false) }
     }
 
     @Test
@@ -144,6 +162,6 @@ class Format8RepositoryTest {
         source = fixture(resource)
         assertTrue(repo.getFormat8Data(logical).isSuccess)
         verify(exactly = 2) { deps.resources.openRawResource(1) }
-        deps.verifyNoRemoteCalls()
+        coVerify(exactly = 2) { deps.sheets.getFormat8Sheet(logical, false) }
     }
 }

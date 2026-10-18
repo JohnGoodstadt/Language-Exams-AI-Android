@@ -41,10 +41,14 @@ import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounPatte
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSentence
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Source
 import com.google.firebase.firestore.toObject
+import com.google.gson.Gson
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -649,30 +653,70 @@ class ExamSheetRepository @Inject constructor(
             val file = getCacheFilePointer(logicalName)
             if (!file.exists()) return@withContext null
             return@withContext try {
-                jsonParser.decodeFromString<Format8File>(file.readText())
+                jsonParser.decodeFromString<Format8File>(file.readText()).also {
+                    require(it.fileformat == 8 && it.sections.isNotEmpty()) { "Invalid Format8 disk cache for '$logicalName'." }
+                }
             } catch (e: Exception) {
                 Timber.e(e, "Failed to read Format8 from disk cache for '$logicalName'")
                 null
 
             }
         }
-    suspend fun getFormat8Sheet  (sheet_name: String, forceRefresh: Boolean): Result<Format8File> {
-        return try {
-            // a. Disk cache first (unless forcing a refresh).
-            if (!forceRefresh) {
-                readFormat8SheetFromCache(sheet_name)?.let { cachedFile ->
-                    Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format6) from disk cache.")
-                    return Result.success(cachedFile)
+    suspend fun getFormat8Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format8File> =
+        withContext(Dispatchers.IO) {
+            try {
+                if (!forceRefresh) {
+                    readFormat8SheetFromCache(sheet_name)?.let { cachedFile ->
+                        Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format8) from disk cache.")
+                        return@withContext Result.success(cachedFile)
+                    }
                 }
+                val file = downloadAndAssembleFormat8(sheet_name)
+                getCacheFilePointer(sheet_name).writeText(
+                    jsonParser.encodeToString(Format8File.serializer(), file)
+                )
+                Timber.i("ExamSheetRepo: Fetched and cached '$sheet_name' (Format8).")
+                Result.success(file)
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (e: Exception) {
+                Timber.w(e, "ExamSheetRepo: getFormat8Sheet failed for '$sheet_name'.")
+                Result.failure(e)
             }
-//INSERT call to downloadAndAssembleFormat8() here
-            return Result.failure(Exception("Format8 sheet '$sheet_name' assembled with no data (empty sub-collections)."))
-
-        } catch (e: Exception) {
-            Timber.w(e, "ExamSheetRepo: getFormat8Sheet failed for '$sheet_name'.")
-            Result.failure(e)
         }
+
+    /** Reads the embedded hierarchy written by the iOS Format 8 uploader. */
+    private suspend fun downloadAndAssembleFormat8(examName: String): Format8File = coroutineScope {
+        val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
+            .collection("sheets").document(examName)
+
+        val snapshot = examDocRef.get(Source.SERVER).await()
+        require(snapshot.exists()) { "Root document '$examName' (Format8) not found." }
+        val fields = requireNotNull(snapshot.data) {
+            "Root document '$examName' (Format8) has no data."
+        }.toMutableMap()
+
+        // Match iOS metadata compatibility: sheetname/sheetName and integer/Timestamp dates.
+        fields["sheetname"] = fields["sheetname"] ?: fields["sheetName"] ?: examName
+        (fields["updatedDate"] as? Timestamp)?.let { fields["updatedDate"] = it.seconds }
+
+        // Also accept section documents containing embedded entries and examples.
+        if (fields["sections"] == null) {
+            val sections = examDocRef.collection("sections").get(Source.SERVER).await().documents
+            require(sections.isNotEmpty()) { "Format8 sheet '$examName' has no sections." }
+            fields["sections"] = sections.sortedBy { it.id }.map { it.data }
+        }
+
+        // Use the existing serializer so lowercase enum values and every nested field are preserved.
+        val file = jsonParser.decodeFromString<Format8File>(Gson().toJson(fields))
+        require(file.fileformat == 8) {
+            "Expected fileformat 8 for '$examName', found ${file.fileformat}."
+        }
+        require(file.sections.isNotEmpty()) { "Format8 sheet '$examName' has no sections." }
+        // Stable section sorting preserves ties; entry/example order and duplicate sentences stay intact.
+        file.copy(sections = file.sections.sortedBy { it.sortorder })
     }
+
     /** Reads a stringList field (Firestore returns it as a List<*>). */
     private fun DocumentSnapshot.stringList(field: String): List<String> =
         stringListFrom(get(field))
