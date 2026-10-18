@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.CategoryTab
 
+import removeContentInBracketsAndTrim
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
@@ -1369,9 +1370,6 @@ fun CategoryHeader(title: String) {
             .padding(vertical = 16.dp)
     )
 }
-
-// Helper extension for strings (placeholder)
-fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?\\)"), "").trim()
 
 /**
  * Whole-quiz status summary for a section, shown as small coloured dots before the Quiz button:

@@ -80,21 +80,34 @@ object FirebaseAudioService {
 
     // MARK: - Helper Logic
 
+    // Compiled once; this ran on every content-ID/filename derivation.
+    private val safePrefixRegex = Regex("[^a-zA-Z0-9]")
+
     private fun getSafePrefix(text: String): String {
         val charsToLeave = 20
         return text
             .take(charsToLeave)
-            .replace(Regex("[^a-zA-Z0-9]"), "_")
+            .replace(safePrefixRegex, "_")
     }
+
+    private val HEX_CHARS = "0123456789abcdef".toCharArray()
+    // MessageDigest is not thread-safe; a per-thread instance avoids both the data race and the
+    // repeated getInstance() allocation. digest() resets the instance after use.
+    private val sha256 = ThreadLocal.withInitial { MessageDigest.getInstance("SHA-256") }
 
     private fun computeShortHash(input: String): String {
         val bytes = input.toByteArray(Charsets.UTF_8)
-        val md = MessageDigest.getInstance("SHA-256")
-        val digest = md.digest(bytes)
+        val digest = sha256.get()!!.digest(bytes)
 
-        // Convert to Hex and take first 10 chars
-        return digest.fold("") { str, it -> str + "%02x".format(it) }
-            .take(10)
+        // We only keep the first 10 hex chars, i.e. the first 5 bytes - so only hex-encode those
+        // (not all 32) and build via a char lookup instead of 32 "%02x".format() allocations.
+        val sb = StringBuilder(10)
+        for (i in 0 until 5) {
+            val b = digest[i].toInt() and 0xFF
+            sb.append(HEX_CHARS[b ushr 4])
+            sb.append(HEX_CHARS[b and 0x0F])
+        }
+        return sb.toString()
     }
 
     // MARK: - 2. Cloud Operations

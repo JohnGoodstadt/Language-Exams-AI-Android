@@ -5,9 +5,12 @@ import java.nio.charset.StandardCharsets
 fun String.urlEncode(): String {
     return URLEncoder.encode(this, StandardCharsets.UTF_8.toString())
 }
+// Compiled once and reused. This used to be built on every call, and the helper runs per section
+// header during list rendering. Matches optional leading spaces + any "(...)" group.
+private val bracketsRegex = "\\s*\\([^)]*\\)".toRegex()
+
 fun String.removeContentInBracketsAndTrim(): String {
-    val regex = "\\s*\\([^)]*\\)".toRegex() // Matches optional spaces before and any characters within parentheses
-    return this.replace(regex, "").trimEnd()
+    return this.replace(bracketsRegex, "").trimEnd()
 }
 /**
  * Cleans a string to make it a valid Firestore field name by replacing
