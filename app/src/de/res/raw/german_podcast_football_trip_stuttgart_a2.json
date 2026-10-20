@@ -42,13 +42,13 @@
       "id": "narrator",
       "name": "Erzählerin",
       "role": "narrator",
-      "voiceId": "de-DE-Chirp-HD-F"
+      "voiceId": "de-DE-Chirp3-HD-Achernar"
     },
     {
       "id": "alex",
       "name": "Alex",
       "role": "traveller",
-	  "voiceId": "de-DE-Chirp3-HD-Charon"
+      "voiceId": "de-DE-Chirp3-HD-Charon"
     },
     {
       "id": "ticket_clerk",
@@ -78,7 +78,7 @@
       "id": "jonas",
       "name": "Jonas",
       "role": "supporting",
-	  "voiceId": "de-DE-Chirp3-HD-Sadachbia"
+      "voiceId": "de-DE-Chirp3-HD-Sadachbia"
     },
     {
       "id": "taxi_driver",
@@ -118,14 +118,14 @@
           "id": "scene_01_line_001",
           "sortorder": 1,
           "speakerId": "narrator",
-          "german": "Es ist Samstagmorgen. Alex ist sechsundzwanzig Jahre alt. Er studiert in Freiburg. Heute fährt er nach Stuttgart zum Fußball. Der VfB spielt gegen Mainz. Alex hat seine Karte für das Stadion schon vor zwei Wochen gekauft. Jetzt braucht er noch die Fahrkarte für den Zug.",
-          "english": "It is Saturday morning. Alex is twenty-six years old. He studies in Freiburg. Today he is going to Stuttgart for the football. VfB are playing Mainz. Alex bought his stadium ticket two weeks ago. Now he still needs his train ticket."
+          "german": "Es ist Samstagmorgen. Alex ist dreiundzwanzig Jahre alt. Er studiert in Freiburg. Heute fährt er nach Stuttgart zum Fußball. Der VfB spielt gegen Mainz. Alex hat seine Karte für das Stadion schon vor zwei Wochen gekauft. Jetzt braucht er noch die Fahrkarte für den Zug.",
+          "english": "It is Saturday morning. Alex is twenty-three years old. He studies in Freiburg. Today he is going to Stuttgart for the football. VfB are playing Mainz. Alex bought his stadium ticket two weeks ago. Now he still needs his train ticket."
         },
         {
           "id": "scene_01_line_002",
           "sortorder": 2,
           "speakerId": "ticket_clerk",
-          "german": "Bitte, der Nächste.",
+          "german": "Der Nächste, Bitte",
           "english": "Next, please."
         },
         {
@@ -725,7 +725,7 @@
           "id": "scene_05_line_015",
           "sortorder": 15,
           "speakerId": "alex",
-          "german": "Block sechsundfünfzig a, Reihe zwölf, Platz achtzehn.",
+          "german": "Block sechsundfünfzig A, Reihe zwölf, Platz achtzehn.",
           "english": "Block fifty-six A, row twelve, seat eighteen."
         },
         {
@@ -1185,8 +1185,8 @@
           "id": "scene_09_line_007",
           "sortorder": 7,
           "speakerId": "neighbour",
-          "german": "Die Nummer steht seitlich. Da, siehst du?",
-          "english": "The number's on the side. There, can you see it?"
+          "german": "Die Nummer steht on der Seite. Da, siehst du?",
+          "english": "The number's on that side. There, can you see it?"
         },
         {
           "id": "scene_09_line_008",
