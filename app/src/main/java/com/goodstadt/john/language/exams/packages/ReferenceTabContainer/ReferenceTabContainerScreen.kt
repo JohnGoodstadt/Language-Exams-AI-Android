@@ -47,6 +47,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.packages.Format8.Format8ContainerScreen
+import com.goodstadt.john.language.exams.packages.Format9.Format9ContainerScreen
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounsClaudeScreen
@@ -170,6 +171,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                 RefScreen.Format8.createRoute(docId)
             }
             ScreenType.GROUPED_FORMAT_8_SCREEN -> RefScreen.GroupedFormat8.createRoute(selectedTab.id)
+            ScreenType.GROUPED_FORMAT_9_SCREEN -> RefScreen.GroupedFormat9.createRoute(selectedTab.id)
             ScreenType.GROUPED_FORMAT_2_SCREEN -> {
                 // We route to a new destination, passing the Parent Tab ID
                 RefScreen.GroupedFormat2.createRoute(selectedTab.id)
@@ -436,6 +438,21 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                                 onSubTabSelected = { viewModel.onFormat8SubTabSelected(tabId, it) },
                                 onRetry = { viewModel.onTabSelected(tabId) }
                             )
+                        }
+                    }
+
+                    // STEP 1 placeholder for Podcasts (fileFormat-9). Resolves the sub-tab's documentId and
+                    // shows a one-line confirmation that the bundled JSON read; step 2 builds the real screen.
+                    composable(
+                        route = RefScreen.GroupedFormat9.route,
+                        arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+                    ) { entry ->
+                        val tabId = entry.arguments?.getString("tabId").orEmpty()
+                        val definition = uiState.tabs.firstOrNull { it.id == tabId }?.definition
+                        val documentId = definition?.subTabs?.firstOrNull()?.firestoreDocumentId
+                            ?: definition?.firestoreDocumentId.orEmpty()
+                        key(tabId) {
+                            Format9ContainerScreen(documentId = documentId)
                         }
                     }
 

@@ -48,6 +48,18 @@
         }
       ]
     },
+    "GermanReferencePodcastsGroup": {
+      "title": "Podcasts",
+      "screenType": "GroupedFormat9Screen",
+      "sheetDataType": "Format9",
+      "subTabs": [
+        {
+          "title": "A2",
+          "firestoreDocumentId": "GermanPodcastFootballTripStuttgartA2",
+          "sheetDataType": "Format9"
+        }
+      ]
+    },
     "GermanSoundsTheSame": {
       "title": "Gleich klingende Wörter.",
       "sheetDataType": "Format1",
@@ -217,6 +229,7 @@
         "GermanReferencePronouns",
         "GermanReferencePronounsOpenAI",
         "GermanReferenceObjectPronouns",
+        "GermanReferencePodcastsGroup",
         "GermanSoundsTheSame",
         "PairsGroup"
       ]

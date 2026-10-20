@@ -72,6 +72,9 @@ object LanguageConfig {
             "german_pronouns2_both_nominative2" -> "GermanPronouns2Nominative2"
             "german_pronouns2_both_patterns2" -> "GermanPronouns2Patterns2"
 
+            // Podcasts (Format 9)
+            "german_podcast_football_trip_stuttgart_a2" -> "GermanPodcastFootballTripStuttgartA2"
+
             "vocab_data_a1" -> "GermanA1Vocab"
             "vocab_data_a2" -> "GermanA2Vocab"
             "vocab_data_b1" -> "GermanB1Vocab"
@@ -115,6 +118,9 @@ object LanguageConfig {
             "GermanPronouns2LearningVerbs2" -> "german_pronouns2_both_learning_verbs2"
             "GermanPronouns2Nominative2" -> "german_pronouns2_both_nominative2"
             "GermanPronouns2Patterns2" -> "german_pronouns2_both_patterns2"
+
+            // Podcasts (Format 9)
+            "GermanPodcastFootballTripStuttgartA2" -> "german_podcast_football_trip_stuttgart_a2"
 
             "GermanA1Vocab" -> "vocab_data_a1"
             "GermanA2Vocab" -> "vocab_data_a2"

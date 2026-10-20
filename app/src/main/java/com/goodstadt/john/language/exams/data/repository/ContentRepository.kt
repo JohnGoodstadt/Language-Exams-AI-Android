@@ -21,6 +21,7 @@ import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.Format7or10File
 import com.goodstadt.john.language.exams.models.Format8File
+import com.goodstadt.john.language.exams.models.Format9File
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -416,6 +417,33 @@ class ContentRepository @Inject constructor(
 
 
 
+    }
+
+    /**
+     * fileFormat-9 (podcast / dialogue script). STEP 1: read straight from the bundle (res/raw) — there is
+     * no Firestore/version chain yet. Step 2 builds the real screen that consumes this.
+     */
+    suspend fun getFormat9Data(name: String): Result<Format9File> = withContext(Dispatchers.IO) {
+        val logicalName = normalizeToLogicalName(name)
+        val resourceName = mapLogicalToResourceName(logicalName)
+        loadBundledFormat9Data(resourceName)
+    }
+
+    private fun loadBundledFormat9Data(resourceName: String): Result<Format9File> {
+        return try {
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(IllegalArgumentException("Format 9 resource not found in bundle: $resourceName.json"))
+            }
+            val jsonString = context.resources.openRawResource(resourceId)
+                .bufferedReader(Charsets.UTF_8).use { it.readText() }
+            val file = jsonParser.decodeFromString<Format9File>(jsonString)
+            require(file.fileformat == 9) { "Expected fileformat 9 in $resourceName.json, found ${file.fileformat}" }
+            Result.success(file)
+        } catch (e: Exception) {
+            Timber.e(e, "Format 9: Failed to load from bundle: $resourceName")
+            Result.failure(e)
+        }
     }
 
     private fun loadBundledFormat8Data(resourceName: String): Result<Format8File> {

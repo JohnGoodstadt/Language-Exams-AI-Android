@@ -1,0 +1,1525 @@
+{
+  "fileformat": 9,
+  "location": 0,
+  "sheetname": "GermanPodcastFootballTripStuttgartA2",
+  "title": "Ein Spieltag in Stuttgart",
+  "updatedDate": 0,
+  "description": "Die gleiche Reise in einfacherem Deutsch: Alex und die Erzählerin sprechen meist auf A2-Niveau. Die anderen Personen sprechen wie im Alltag, ungefähr auf B1-Niveau.",
+  "language": "de-DE",
+  "translationLanguage": "en",
+  "level": "A2-B1",
+  "storyContext": {
+    "origin": "Freiburg im Breisgau",
+    "destination": "Stuttgart",
+    "changeAt": [
+      "Karlsruhe"
+    ],
+    "venue": "MHP Arena Stuttgart",
+    "event": "VfB Stuttgart gegen 1. FSV Mainz 05",
+    "fictional": true,
+    "note": "The characters, fixture, result, train times, platform numbers, seat details, prices and individual service situations are fictional. Real places and plausible travel links provide the setting."
+  },
+  "playback": {
+    "pauseBetweenLinesMs": 350,
+    "pauseBetweenScenesMs": 1800
+  },
+  "voices": [
+    {
+      "id": "narrator",
+      "description": "The narrator: mostly A2 German, short sentences and clear everyday vocabulary."
+    },
+    {
+      "id": "traveller",
+      "description": "Alex: an adult student using mostly A2 German in spontaneous travel situations."
+    },
+    {
+      "id": "supporting",
+      "description": "Other characters: conversational speech; the same third voice can play these separate roles."
+    }
+  ],
+  "speakers": [
+    {
+      "id": "narrator",
+      "name": "Erzählerin",
+      "role": "narrator",
+      "voiceId": "de-DE-Chirp-HD-F"
+    },
+    {
+      "id": "alex",
+      "name": "Alex",
+      "role": "traveller",
+	  "voiceId": "de-DE-Chirp3-HD-Charon"
+    },
+    {
+      "id": "ticket_clerk",
+      "name": "Bahnmitarbeiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Achird"
+    },
+    {
+      "id": "barista",
+      "name": "Cafémitarbeiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp-HD-O"
+    },
+    {
+      "id": "conductor",
+      "name": "Zugbegleiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Algenib"
+    },
+    {
+      "id": "station_staff",
+      "name": "Bahnmitarbeiter in Karlsruhe",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Aoede"
+    },
+    {
+      "id": "jonas",
+      "name": "Jonas",
+      "role": "supporting",
+	  "voiceId": "de-DE-Chirp3-HD-Sadachbia"
+    },
+    {
+      "id": "taxi_driver",
+      "name": "Taxifahrer",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Despina"
+    },
+    {
+      "id": "steward",
+      "name": "Ordner",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Erinome"
+    },
+    {
+      "id": "kiosk_staff",
+      "name": "Kioskmitarbeiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Fenrir"
+    },
+    {
+      "id": "neighbour",
+      "name": "Sitznachbar",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "sortorder": 1,
+      "title": "Die Fahrkarte",
+      "place": "Freiburg Hauptbahnhof, Reisezentrum",
+      "timeOfDay": "10:10",
+      "summary": "Buy a return train ticket, discuss the change at Karlsruhe and check the departure.",
+      "lines": [
+        {
+          "id": "scene_01_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Es ist Samstagmorgen. Alex ist sechsundzwanzig Jahre alt. Er studiert in Freiburg. Heute fährt er nach Stuttgart zum Fußball. Der VfB spielt gegen Mainz. Alex hat seine Karte für das Stadion schon vor zwei Wochen gekauft. Jetzt braucht er noch die Fahrkarte für den Zug.",
+          "english": "It is Saturday morning. Alex is twenty-six years old. He studies in Freiburg. Today he is going to Stuttgart for the football. VfB are playing Mainz. Alex bought his stadium ticket two weeks ago. Now he still needs his train ticket."
+        },
+        {
+          "id": "scene_01_line_002",
+          "sortorder": 2,
+          "speakerId": "ticket_clerk",
+          "german": "Bitte, der Nächste.",
+          "english": "Next, please."
+        },
+        {
+          "id": "scene_01_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Guten Morgen. Ich möchte heute nach Stuttgart. Und heute Abend wieder zurück.",
+          "english": "Good morning. I'd like to go to Stuttgart today. And come back this evening."
+        },
+        {
+          "id": "scene_01_line_004",
+          "sortorder": 4,
+          "speakerId": "ticket_clerk",
+          "german": "Eine Person? Zweite Klasse?",
+          "english": "One person? Second class?"
+        },
+        {
+          "id": "scene_01_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "german": "Ja. Ich muss vor halb vier da sein. Um halb vier beginnt das Spiel.",
+          "english": "Yes. I need to be there before half past three. The match starts at half past three."
+        },
+        {
+          "id": "scene_01_line_006",
+          "sortorder": 6,
+          "speakerId": "ticket_clerk",
+          "german": "Vor halb vier am Bahnhof oder schon am Stadion?",
+          "english": "Before half past three at the station, or already at the stadium?"
+        },
+        {
+          "id": "scene_01_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Am Stadion. Ich brauche also auch noch Zeit für den Weg vom Bahnhof.",
+          "english": "At the stadium. So I also need time to get there from the station."
+        },
+        {
+          "id": "scene_01_line_008",
+          "sortorder": 8,
+          "speakerId": "ticket_clerk",
+          "german": "Dann nehmen wir lieber diese Verbindung. Abfahrt zehn Uhr fünfzig, Ankunft in Stuttgart dreizehn Uhr fünf.",
+          "english": "Then let's take this connection. Departure at ten fifty, arrival in Stuttgart at one oh five."
+        },
+        {
+          "id": "scene_01_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "german": "Ist der Zug direkt?",
+          "english": "Is it a direct train?"
+        },
+        {
+          "id": "scene_01_line_010",
+          "sortorder": 10,
+          "speakerId": "ticket_clerk",
+          "german": "Nein, Sie steigen in Karlsruhe um. Ankunft dort elf Uhr fünfundfünfzig. Weiter geht's um zwölf Uhr fünfzehn.",
+          "english": "No, you change at Karlsruhe. You arrive there at eleven fifty-five. Your next train leaves at twelve fifteen."
+        },
+        {
+          "id": "scene_01_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "german": "Ich habe also zwanzig Minuten in Karlsruhe?",
+          "english": "So I've got twenty minutes in Karlsruhe?"
+        },
+        {
+          "id": "scene_01_line_012",
+          "sortorder": 12,
+          "speakerId": "ticket_clerk",
+          "german": "Genau. Und zurück habe ich hier achtzehn Uhr fünfundvierzig, wieder über Karlsruhe. Freiburg erreichen Sie um einundzwanzig Uhr.",
+          "english": "Exactly. And for the return I have six forty-five here, again via Karlsruhe. You reach Freiburg at nine in the evening."
+        },
+        {
+          "id": "scene_01_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "german": "Gut. Können Sie mir die Zeiten bitte ausdrucken?",
+          "english": "Good. Could you print the times for me, please?"
+        },
+        {
+          "id": "scene_01_line_014",
+          "sortorder": 14,
+          "speakerId": "ticket_clerk",
+          "german": "Ja. Möchten Sie auch Sitzplätze reservieren?",
+          "english": "Yes. Would you like seat reservations as well?"
+        },
+        {
+          "id": "scene_01_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "german": "Ja, bitte. Einen Platz am Fenster, bitte.",
+          "english": "Yes, please. A window seat, please."
+        },
+        {
+          "id": "scene_01_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "german": "Der Mitarbeiter zeigt Alex die Zeiten auf dem Bildschirm. Alex schaut sie noch einmal an. Dann bezahlt er mit Karte. Er bekommt seine Fahrkarte und ein Blatt mit den Zeiten.",
+          "english": "The employee shows Alex the times on the screen. Alex looks at them again. Then he pays by card. He receives his ticket and a sheet with the times."
+        },
+        {
+          "id": "scene_01_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "german": "Von welchem Gleis fährt mein Zug?",
+          "english": "Which platform does my train leave from?"
+        },
+        {
+          "id": "scene_01_line_018",
+          "sortorder": 18,
+          "speakerId": "ticket_clerk",
+          "german": "Laut Anzeige von Gleis eins. Schauen Sie vor der Abfahrt noch mal nach. Das kann sich ändern.",
+          "english": "According to the display, platform one. Check again before departure. It can change."
+        },
+        {
+          "id": "scene_01_line_019",
+          "sortorder": 19,
+          "speakerId": "alex",
+          "german": "Danke. Jetzt kaufe ich noch einen Kaffee.",
+          "english": "Thanks. Now I'll buy a coffee."
+        },
+        {
+          "id": "scene_01_line_020",
+          "sortorder": 20,
+          "speakerId": "ticket_clerk",
+          "german": "Dafür haben Sie noch Zeit.",
+          "english": "You've still got time for that."
+        }
+      ]
+    },
+    {
+      "id": "scene_02",
+      "sortorder": 2,
+      "title": "Noch schnell ein Kaffee",
+      "place": "Freiburg Hauptbahnhof, Café in der Bahnhofshalle",
+      "timeOfDay": "10:25",
+      "summary": "Order coffee and a croissant; handle a small misunderstanding and pay.",
+      "lines": [
+        {
+          "id": "scene_02_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Alex steckt die Fahrkarte in seine Jacke. Dann geht er in das kleine Café im Bahnhof. Sein Zug fährt in fünfundzwanzig Minuten. Im Café ist viel los. Der Mitarbeiter macht gerade Kaffee.",
+          "english": "Alex puts his ticket in his jacket. Then he goes into the small café in the station. His train leaves in twenty-five minutes. The café is busy. The employee is making coffee."
+        },
+        {
+          "id": "scene_02_line_002",
+          "sortorder": 2,
+          "speakerId": "barista",
+          "german": "Was darf's sein?",
+          "english": "What can I get you?"
+        },
+        {
+          "id": "scene_02_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Einen kleinen Kaffee mit Milch, bitte.",
+          "english": "A small coffee with milk, please."
+        },
+        {
+          "id": "scene_02_line_004",
+          "sortorder": 4,
+          "speakerId": "barista",
+          "german": "Zum Mitnehmen?",
+          "english": "To take away?"
+        },
+        {
+          "id": "scene_02_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "german": "Ja. Haben Sie auch Hafermilch?",
+          "english": "Yes. Do you have oat milk as well?"
+        },
+        {
+          "id": "scene_02_line_006",
+          "sortorder": 6,
+          "speakerId": "barista",
+          "german": "Ja, fünfzig Cent extra. Sonst noch was?",
+          "english": "Yes, fifty cents extra. Anything else?"
+        },
+        {
+          "id": "scene_02_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Das Croissant da. Ist das mit Schokolade?",
+          "english": "That croissant there. Is it chocolate?"
+        },
+        {
+          "id": "scene_02_line_008",
+          "sortorder": 8,
+          "speakerId": "barista",
+          "german": "Das rechte? Das ist mit Marzipan. Schokolade ist schon weg.",
+          "english": "The one on the right? That's marzipan. The chocolate ones are gone."
+        },
+        {
+          "id": "scene_02_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "german": "Dann ein Croissant ohne Schokolade, bitte. Ein normales.",
+          "english": "Then a croissant without chocolate, please. A plain one."
+        },
+        {
+          "id": "scene_02_line_010",
+          "sortorder": 10,
+          "speakerId": "barista",
+          "german": "Hier essen oder auch mitnehmen?",
+          "english": "Eat it here, or take it away as well?"
+        },
+        {
+          "id": "scene_02_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "german": "Auch zum Mitnehmen, bitte. Mein Zug fährt bald.",
+          "english": "To take away as well, please. My train leaves soon."
+        },
+        {
+          "id": "scene_02_line_012",
+          "sortorder": 12,
+          "speakerId": "barista",
+          "german": "Dann kommt's in die Tüte. Macht sechs Euro zwanzig.",
+          "english": "Then I'll put it in a bag. That's six euros twenty."
+        },
+        {
+          "id": "scene_02_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "german": "Alex hält seine Karte an das Gerät. Aber es passiert nichts. Der Mitarbeiter zeigt auf den kleinen Bildschirm.",
+          "english": "Alex holds his card against the terminal. But nothing happens. The employee points at the small screen."
+        },
+        {
+          "id": "scene_02_line_014",
+          "sortorder": 14,
+          "speakerId": "barista",
+          "german": "Noch einen Moment. Jetzt. Ja, so.",
+          "english": "Just a moment. Now. Yes, like that."
+        },
+        {
+          "id": "scene_02_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "german": "Hat das funktioniert?",
+          "english": "Did that work?"
+        },
+        {
+          "id": "scene_02_line_016",
+          "sortorder": 16,
+          "speakerId": "barista",
+          "german": "Ja. Kleiner Kaffee mit Hafermilch!",
+          "english": "Yes. Small coffee with oat milk!"
+        },
+        {
+          "id": "scene_02_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "german": "Ist das meiner?",
+          "english": "Is that mine?"
+        },
+        {
+          "id": "scene_02_line_018",
+          "sortorder": 18,
+          "speakerId": "barista",
+          "german": "Wenn Sie den bestellt haben, ja.",
+          "english": "If that's what you ordered, yes."
+        },
+        {
+          "id": "scene_02_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "german": "Alex lacht. Er nimmt den Kaffee und die Tüte. Dann geht er zur großen Anzeige im Bahnhof. Sein Zug fährt noch immer von Gleis eins.",
+          "english": "Alex laughs. He takes the coffee and the bag. Then he goes to the big display in the station. His train is still leaving from platform one."
+        }
+      ]
+    },
+    {
+      "id": "scene_03",
+      "sortorder": 3,
+      "title": "Im ersten Zug",
+      "place": "ICE von Freiburg nach Karlsruhe",
+      "timeOfDay": "10:55",
+      "summary": "Find the reserved seat, show the ticket and ask about a short delay.",
+      "lines": [
+        {
+          "id": "scene_03_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Der Zug fährt in Freiburg ab. Es ist kurz nach zehn Uhr fünfzig. Alex sitzt am Fenster. Er macht die Tüte mit dem Croissant auf. Da kommt ein Mitarbeiter und kontrolliert die Fahrkarten.",
+          "english": "The train leaves Freiburg. It is just after ten fifty. Alex is sitting by the window. He opens the bag with the croissant. A staff member comes along and checks the tickets."
+        },
+        {
+          "id": "scene_03_line_002",
+          "sortorder": 2,
+          "speakerId": "conductor",
+          "german": "Guten Morgen. Die Fahrkarten, bitte.",
+          "english": "Good morning. Tickets, please."
+        },
+        {
+          "id": "scene_03_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Moment, die Fahrkarte ist hier. Ist das richtig so?",
+          "english": "One moment, the ticket is here. Is this right?"
+        },
+        {
+          "id": "scene_03_line_004",
+          "sortorder": 4,
+          "speakerId": "conductor",
+          "german": "Ja, den Code bitte ruhig halten. Danke. Sie fahren bis Stuttgart?",
+          "english": "Yes, please hold the code still. Thank you. You're going to Stuttgart?"
+        },
+        {
+          "id": "scene_03_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "german": "Ja. In Karlsruhe muss ich umsteigen.",
+          "english": "Yes. I need to change trains at Karlsruhe."
+        },
+        {
+          "id": "scene_03_line_006",
+          "sortorder": 6,
+          "speakerId": "conductor",
+          "german": "Alles klar.",
+          "english": "All right."
+        },
+        {
+          "id": "scene_03_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Da steht: sechs Minuten später. Bekomme ich meinen nächsten Zug noch?",
+          "english": "It says: six minutes late. Will I still catch my next train?"
+        },
+        {
+          "id": "scene_03_line_008",
+          "sortorder": 8,
+          "speakerId": "conductor",
+          "german": "Wann fährt der Anschluss?",
+          "english": "When does your connecting train leave?"
+        },
+        {
+          "id": "scene_03_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "german": "Um zwölf Uhr fünfzehn.",
+          "english": "At twelve fifteen."
+        },
+        {
+          "id": "scene_03_line_010",
+          "sortorder": 10,
+          "speakerId": "conductor",
+          "german": "Wenn es bei den sechs Minuten bleibt, haben Sie in Karlsruhe noch vierzehn Minuten. Das sollte reichen.",
+          "english": "If the delay stays at six minutes, you'll still have fourteen minutes in Karlsruhe. That should be enough."
+        },
+        {
+          "id": "scene_03_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "german": "Wissen Sie, von welchem Gleis mein nächster Zug fährt?",
+          "english": "Do you know which platform my next train leaves from?"
+        },
+        {
+          "id": "scene_03_line_012",
+          "sortorder": 12,
+          "speakerId": "conductor",
+          "german": "Bitte kurz vor Karlsruhe noch mal in die App schauen. Die Angaben können sich ändern.",
+          "english": "Please check the app again just before Karlsruhe. The information can change."
+        },
+        {
+          "id": "scene_03_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "german": "Okay, danke. Ich bin nicht sicher. Deshalb frage ich.",
+          "english": "Okay, thanks. I'm not sure. That's why I'm asking."
+        },
+        {
+          "id": "scene_03_line_014",
+          "sortorder": 14,
+          "speakerId": "conductor",
+          "german": "Ist schon in Ordnung. Gute Fahrt noch.",
+          "english": "That's all right. Enjoy the rest of your journey."
+        },
+        {
+          "id": "scene_03_line_015",
+          "sortorder": 15,
+          "speakerId": "narrator",
+          "german": "Alex steckt die Fahrkarte wieder in seine Jacke. Er trinkt seinen Kaffee und schaut aus dem Fenster. Draußen sieht er Häuser, Bäume und kleine Orte.",
+          "english": "Alex puts the ticket back in his jacket. He drinks his coffee and looks out of the window. Outside he sees houses, trees and small towns."
+        }
+      ]
+    },
+    {
+      "id": "scene_04",
+      "sortorder": 4,
+      "title": "Umsteigen in Karlsruhe",
+      "place": "Karlsruhe Hauptbahnhof",
+      "timeOfDay": "12:01",
+      "summary": "Follow the connection information and clarify a direction without panic.",
+      "lines": [
+        {
+          "id": "scene_04_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Kurz nach zwölf kommt Alex in Karlsruhe an. Sein nächster Zug fährt um zwölf Uhr fünfzehn nach Stuttgart. Auf der Anzeige steht Gleis acht. Alex sieht einen Mitarbeiter und geht zu ihm.",
+          "english": "Just after twelve, Alex arrives in Karlsruhe. His next train leaves for Stuttgart at twelve fifteen. The display says platform eight. Alex sees an employee and walks over to him."
+        },
+        {
+          "id": "scene_04_line_002",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "german": "Entschuldigung, wo ist Gleis acht?",
+          "english": "Excuse me, where is platform eight?"
+        },
+        {
+          "id": "scene_04_line_003",
+          "sortorder": 3,
+          "speakerId": "station_staff",
+          "german": "Hier runter, durch die Unterführung. Die Nummern stehen oben an den Treppen.",
+          "english": "Down here, through the underpass. The numbers are above the stairs."
+        },
+        {
+          "id": "scene_04_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "german": "Also hier nach unten und dann rechts?",
+          "english": "So down here and then right?"
+        },
+        {
+          "id": "scene_04_line_005",
+          "sortorder": 5,
+          "speakerId": "station_staff",
+          "german": "Genau. Aber schauen Sie auf die Schilder, nicht einfach der Menge hinterher.",
+          "english": "Exactly. But follow the signs, not just the crowd."
+        },
+        {
+          "id": "scene_04_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "german": "Das ist für den Zug nach Stuttgart? Um zwölf Uhr fünfzehn?",
+          "english": "That's for the train to Stuttgart? At twelve fifteen?"
+        },
+        {
+          "id": "scene_04_line_007",
+          "sortorder": 7,
+          "speakerId": "station_staff",
+          "german": "Zeigen Sie mal den Ausdruck. Ja, der ist das.",
+          "english": "Let me see your printout. Yes, that's the one."
+        },
+        {
+          "id": "scene_04_line_008",
+          "sortorder": 8,
+          "speakerId": "alex",
+          "german": "Muss ich schnell gehen?",
+          "english": "Do I need to walk quickly?"
+        },
+        {
+          "id": "scene_04_line_009",
+          "sortorder": 9,
+          "speakerId": "station_staff",
+          "german": "Zügig gehen reicht. Sie haben noch Zeit.",
+          "english": "Walking briskly is enough. You've still got time."
+        },
+        {
+          "id": "scene_04_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "german": "Alex geht die Treppe hinunter. Unten sieht er ein Schild für Gleis acht. Er bleibt kurz stehen. Hinter ihm warten andere Menschen.",
+          "english": "Alex goes down the stairs. At the bottom he sees a sign for platform eight. He stops for a moment. Other people are waiting behind him."
+        },
+        {
+          "id": "scene_04_line_011",
+          "sortorder": 11,
+          "speakerId": "station_staff",
+          "german": "Nicht da stehen bleiben, bitte. Sonst kommt keiner mehr durch.",
+          "english": "Please don't stop there. Otherwise nobody can get through."
+        },
+        {
+          "id": "scene_04_line_012",
+          "sortorder": 12,
+          "speakerId": "alex",
+          "german": "Oh, Entschuldigung.",
+          "english": "Oh, sorry."
+        },
+        {
+          "id": "scene_04_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "german": "Ein paar Minuten später steht Alex an Gleis acht. Der Zug kommt schon. Alex sucht die richtige Nummer am Wagen. Dann steigt er ein. Er ist froh. Er hat noch genug Zeit.",
+          "english": "A few minutes later, Alex is on platform eight. The train is already arriving. Alex looks for the right number on the carriage. Then he gets on. He is happy. He still has enough time."
+        }
+      ]
+    },
+    {
+      "id": "scene_05",
+      "sortorder": 5,
+      "title": "Ein anderer Fan",
+      "place": "Zug von Karlsruhe nach Stuttgart",
+      "timeOfDay": "12:20",
+      "summary": "Chat with another supporter, exchange plans and arrange to share a taxi.",
+      "lines": [
+        {
+          "id": "scene_05_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Alex sitzt im Zug nach Stuttgart. Gegenüber sitzt ein Mann. Er trägt einen rot-weißen Schal. Alex nimmt seinen VfB-Schal aus der Tasche. Der Mann sieht den Schal und lächelt.",
+          "english": "Alex is sitting on the train to Stuttgart. A man is sitting opposite him. He is wearing a red-and-white scarf. Alex takes his VfB scarf out of his bag. The man sees the scarf and smiles."
+        },
+        {
+          "id": "scene_05_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "german": "Auch zum Spiel?",
+          "english": "Going to the match as well?"
+        },
+        {
+          "id": "scene_05_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Ja. Sieht man das?",
+          "english": "Yes. Can you tell?"
+        },
+        {
+          "id": "scene_05_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "german": "Ein bisschen. Ich bin Jonas.",
+          "english": "A bit. I'm Jonas."
+        },
+        {
+          "id": "scene_05_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "german": "Alex. Freut mich.",
+          "english": "Alex. Nice to meet you."
+        },
+        {
+          "id": "scene_05_line_006",
+          "sortorder": 6,
+          "speakerId": "jonas",
+          "german": "Fährst du öfter nach Stuttgart?",
+          "english": "Do you go to Stuttgart often?"
+        },
+        {
+          "id": "scene_05_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Nicht oft. Ich studiere in Freiburg. Letztes Jahr war ich mit einem Freund im Stadion. Das war toll. Jetzt bin ich VfB-Fan.",
+          "english": "Not often. I study in Freiburg. Last year I went to the stadium with a friend. It was great. Now I'm a VfB fan."
+        },
+        {
+          "id": "scene_05_line_008",
+          "sortorder": 8,
+          "speakerId": "jonas",
+          "german": "Mitten in Freiburg. Mutig.",
+          "english": "Right in the middle of Freiburg. Brave."
+        },
+        {
+          "id": "scene_05_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "german": "Meine Freunde zu Hause sagen das auch. Wohnst du in Stuttgart?",
+          "english": "My friends at home say that too. Do you live in Stuttgart?"
+        },
+        {
+          "id": "scene_05_line_010",
+          "sortorder": 10,
+          "speakerId": "jonas",
+          "german": "Früher. Jetzt wohne ich auch in Freiburg, wegen der Arbeit. Heute fahre ich allein.",
+          "english": "I used to. Now I live in Freiburg as well, because of work. I'm travelling on my own today."
+        },
+        {
+          "id": "scene_05_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "german": "Dann fahren wir heute zusammen. Wie kommst du vom Bahnhof zum Stadion?",
+          "english": "Then we're travelling together today. How are you getting from the station to the stadium?"
+        },
+        {
+          "id": "scene_05_line_012",
+          "sortorder": 12,
+          "speakerId": "jonas",
+          "german": "Normalerweise mit der Stadtbahn. Wir könnten uns aber auch ein Taxi teilen, wenn du möchtest.",
+          "english": "Usually by light rail. But we could share a taxi if you like."
+        },
+        {
+          "id": "scene_05_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "german": "Gern. Ich kenne den Weg nicht. Allein gehe ich bestimmt in die falsche Richtung.",
+          "english": "I'd like that. I don't know the way. On my own I'll probably go in the wrong direction."
+        },
+        {
+          "id": "scene_05_line_014",
+          "sortorder": 14,
+          "speakerId": "jonas",
+          "german": "Das schafft man auch beim zehnten Mal. Wo sitzt du?",
+          "english": "You can manage that on your tenth time too. Where's your seat?"
+        },
+        {
+          "id": "scene_05_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "german": "Block sechsundfünfzig a, Reihe zwölf, Platz achtzehn.",
+          "english": "Block fifty-six A, row twelve, seat eighteen."
+        },
+        {
+          "id": "scene_05_line_016",
+          "sortorder": 16,
+          "speakerId": "jonas",
+          "german": "Ich bin in einem anderen Block. Aber wir können nach dem Spiel zusammen zurückfahren. Wann geht dein Zug?",
+          "english": "I'm in another block. But we can travel back together after the match. When's your train?"
+        },
+        {
+          "id": "scene_05_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "german": "Um achtzehn Uhr fünfundvierzig. Wieder über Karlsruhe.",
+          "english": "At six forty-five. Via Karlsruhe again."
+        },
+        {
+          "id": "scene_05_line_018",
+          "sortorder": 18,
+          "speakerId": "jonas",
+          "german": "Meiner auch. Gib mir deine Nummer, dann schreiben wir uns nach dem Spiel.",
+          "english": "Mine too. Give me your number and we'll message each other after the match."
+        },
+        {
+          "id": "scene_05_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "german": "Alex und Jonas geben einander ihre Telefonnummern. Dann sprechen sie über Fußball. Jonas denkt: Stuttgart gewinnt heute. Alex möchte einfach ein gutes Spiel sehen.",
+          "english": "Alex and Jonas give each other their phone numbers. Then they talk about football. Jonas thinks Stuttgart will win today. Alex just wants to see a good match."
+        }
+      ]
+    },
+    {
+      "id": "scene_06",
+      "sortorder": 6,
+      "title": "Mit dem Taxi zum Stadion",
+      "place": "Stuttgart Hauptbahnhof und Fahrt nach Bad Cannstatt",
+      "timeOfDay": "13:15",
+      "summary": "Explain the destination, discuss traffic and agree on a practical drop-off point.",
+      "lines": [
+        {
+          "id": "scene_06_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Kurz nach ein Uhr kommen Alex und Jonas in Stuttgart an. Vor dem Bahnhof warten Taxis. Die beiden gehen zum ersten Taxi. Der Fahrer macht das Fenster auf.",
+          "english": "Just after one, Alex and Jonas arrive in Stuttgart. Taxis are waiting outside the station. The two men go to the first taxi. The driver opens his window."
+        },
+        {
+          "id": "scene_06_line_002",
+          "sortorder": 2,
+          "speakerId": "taxi_driver",
+          "german": "Wohin soll's gehen?",
+          "english": "Where are you heading?"
+        },
+        {
+          "id": "scene_06_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Zur MHP Arena, bitte. Zum Fußball.",
+          "english": "To the MHP Arena, please. For the football."
+        },
+        {
+          "id": "scene_06_line_004",
+          "sortorder": 4,
+          "speakerId": "taxi_driver",
+          "german": "Einsteigen. Haben Sie nur die kleinen Taschen?",
+          "english": "Get in. Just the small bags?"
+        },
+        {
+          "id": "scene_06_line_005",
+          "sortorder": 5,
+          "speakerId": "jonas",
+          "german": "Ja, sonst nichts.",
+          "english": "Yes, nothing else."
+        },
+        {
+          "id": "scene_06_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "german": "Alex und Jonas steigen in das Taxi. Sie setzen sich nach hinten. Dann fährt der Fahrer los.",
+          "english": "Alex and Jonas get into the taxi. They sit in the back. Then the driver sets off."
+        },
+        {
+          "id": "scene_06_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Wie lange dauert die Fahrt?",
+          "english": "How long does the journey take?"
+        },
+        {
+          "id": "scene_06_line_008",
+          "sortorder": 8,
+          "speakerId": "taxi_driver",
+          "german": "Wenn's läuft, vielleicht zwanzig Minuten. Vor dem Stadion kann's länger dauern.",
+          "english": "If traffic moves, maybe twenty minutes. Near the stadium it can take longer."
+        },
+        {
+          "id": "scene_06_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "german": "Und wie viel kostet das ungefähr?",
+          "english": "And roughly how much does it cost?"
+        },
+        {
+          "id": "scene_06_line_010",
+          "sortorder": 10,
+          "speakerId": "taxi_driver",
+          "german": "Kommt auf den Verkehr an. Der Preis läuft auf dem Taxameter mit.",
+          "english": "It depends on the traffic. The fare is running on the meter."
+        },
+        {
+          "id": "scene_06_line_011",
+          "sortorder": 11,
+          "speakerId": "jonas",
+          "german": "Uns reicht auch eine Stelle, von der wir gut zu Fuß weiterkommen.",
+          "english": "Somewhere we can walk the rest of the way from is fine too."
+        },
+        {
+          "id": "scene_06_line_012",
+          "sortorder": 12,
+          "speakerId": "taxi_driver",
+          "german": "Gut. Direkt bis vor den Eingang kommen Sie heute sowieso nicht mit dem Auto.",
+          "english": "Good. You won't get right up to the entrance by car today anyway."
+        },
+        {
+          "id": "scene_06_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "german": "In der Nähe vom Stadion sind viele Menschen auf der Straße. Viele tragen einen Schal. Der Fahrer hält an einer Stelle. Hier darf er halten. Bis zum Stadion ist es jetzt nicht mehr weit. Alex und Jonas können den Rest zu Fuß gehen.",
+          "english": "Near the stadium, there are lots of people in the street. Many are wearing scarves. The driver stops somewhere. He is allowed to stop here. It is not far to the stadium now. Alex and Jonas can walk the rest."
+        },
+        {
+          "id": "scene_06_line_014",
+          "sortorder": 14,
+          "speakerId": "taxi_driver",
+          "german": "Hier sind wir. Zweiunddreißig Euro.",
+          "english": "Here we are. Thirty-two euros."
+        },
+        {
+          "id": "scene_06_line_015",
+          "sortorder": 15,
+          "speakerId": "jonas",
+          "german": "Ich zahle mit Karte. Alex, deinen Teil gibst du mir nachher.",
+          "english": "I'll pay by card. Alex, you can give me your share later."
+        },
+        {
+          "id": "scene_06_line_016",
+          "sortorder": 16,
+          "speakerId": "alex",
+          "german": "Okay. Vielen Dank.",
+          "english": "Okay. Thank you very much."
+        },
+        {
+          "id": "scene_06_line_017",
+          "sortorder": 17,
+          "speakerId": "taxi_driver",
+          "german": "Bitte. Und passen Sie beim Aussteigen auf die Fahrräder auf.",
+          "english": "You're welcome. And watch out for the bicycles when you get out."
+        }
+      ]
+    },
+    {
+      "id": "scene_07",
+      "sortorder": 7,
+      "title": "Am Eingang",
+      "place": "MHP Arena, Zugang zur Gegentribüne",
+      "timeOfDay": "14:05",
+      "summary": "Show the right ticket, manage the phone screen and pass the entrance check.",
+      "lines": [
+        {
+          "id": "scene_07_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Vor dem Stadion sind viele Menschen. Alex hat nur eine kleine Tasche dabei. Er sagt kurz Tschüss zu Jonas. Die beiden sehen sich nach dem Spiel wieder. Alex schaut auf seine Karte. Dann geht er zum richtigen Eingang und wartet in der Schlange.",
+          "english": "There are lots of people outside the stadium. Alex only has a small bag. He says goodbye to Jonas for now. They will see each other again after the match. Alex checks his ticket. Then he goes to the right entrance and waits in the queue."
+        },
+        {
+          "id": "scene_07_line_002",
+          "sortorder": 2,
+          "speakerId": "steward",
+          "german": "Tasche auf, bitte.",
+          "english": "Bag open, please."
+        },
+        {
+          "id": "scene_07_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Ja, einen Moment. Muss das Handy auch in die Tasche?",
+          "english": "Yes, one moment. Does my phone need to go in the bag too?"
+        },
+        {
+          "id": "scene_07_line_004",
+          "sortorder": 4,
+          "speakerId": "steward",
+          "german": "Nein, behalten Sie das. Die Tasche einmal ganz aufmachen.",
+          "english": "No, keep that. Open the bag all the way, please."
+        },
+        {
+          "id": "scene_07_line_005",
+          "sortorder": 5,
+          "speakerId": "narrator",
+          "german": "Der Mitarbeiter schaut in die Tasche. Dann darf Alex weitergehen. Am Eingang hält Alex sein Handy an ein Gerät. Aber das Licht ist rot.",
+          "english": "The employee looks in the bag. Then Alex is allowed to go on. At the entrance Alex holds his phone against a device. But the light is red."
+        },
+        {
+          "id": "scene_07_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "german": "Entschuldigung. Das geht nicht.",
+          "english": "Excuse me. It's not working."
+        },
+        {
+          "id": "scene_07_line_007",
+          "sortorder": 7,
+          "speakerId": "steward",
+          "german": "Zeigen Sie mal. Das ist die Fahrkarte vom Zug.",
+          "english": "Let me see. That's your train ticket."
+        },
+        {
+          "id": "scene_07_line_008",
+          "sortorder": 8,
+          "speakerId": "alex",
+          "german": "Oh, das ist die falsche Karte. Einen Moment. Die andere Karte ist auch auf meinem Handy.",
+          "english": "Oh, that's the wrong ticket. One moment. The other ticket is on my phone too."
+        },
+        {
+          "id": "scene_07_line_009",
+          "sortorder": 9,
+          "speakerId": "steward",
+          "german": "Kein Stress. Nur bitte einen Schritt zur Seite, damit die anderen durchkönnen.",
+          "english": "No rush. Just step to the side so the others can get through."
+        },
+        {
+          "id": "scene_07_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "german": "Alex sucht die Karte für das Fußballspiel auf seinem Handy. Jetzt zeigt der Bildschirm die richtige Karte.",
+          "english": "Alex finds the football match ticket on his phone. Now the screen is showing the right ticket."
+        },
+        {
+          "id": "scene_07_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "german": "Die hier?",
+          "english": "This one?"
+        },
+        {
+          "id": "scene_07_line_012",
+          "sortorder": 12,
+          "speakerId": "steward",
+          "german": "Ja. Machen Sie das Display noch etwas heller. Und jetzt mit dem Code nach unten an den Leser.",
+          "english": "Yes. Make the screen a little brighter. Now hold it at the reader with the code facing down."
+        },
+        {
+          "id": "scene_07_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "german": "Jetzt ist das Licht grün. Alex kann durch den Eingang gehen.",
+          "english": "Now the light is green. Alex can go through the entrance."
+        },
+        {
+          "id": "scene_07_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "german": "Jetzt geht's. Danke!",
+          "english": "It's working now. Thanks!"
+        },
+        {
+          "id": "scene_07_line_015",
+          "sortorder": 15,
+          "speakerId": "steward",
+          "german": "Gern. Ihren Block finden Sie oben auf den Schildern.",
+          "english": "You're welcome. Your block is on the signs above."
+        }
+      ]
+    },
+    {
+      "id": "scene_08",
+      "sortorder": 8,
+      "title": "Ein Bier und eine Brezel",
+      "place": "MHP Arena, Kiosk hinter der Tribüne",
+      "timeOfDay": "14:20",
+      "summary": "Order a beer and a pretzel, understand a cup deposit and ask about payment.",
+      "lines": [
+        {
+          "id": "scene_08_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Alex ist im Stadion. Hier kann man Essen und Getränke kaufen. Er stellt sich an einen Kiosk. Vor ihm sprechen ein paar Leute über ihre Bestellung. Dann ist Alex dran.",
+          "english": "Alex is inside the stadium. You can buy food and drinks here. He joins a queue at a kiosk. A few people in front of him are talking about their order. Then it is Alex's turn."
+        },
+        {
+          "id": "scene_08_line_002",
+          "sortorder": 2,
+          "speakerId": "kiosk_staff",
+          "german": "Was bekommst du?",
+          "english": "What can I get you?"
+        },
+        {
+          "id": "scene_08_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Ein Bier und eine Brezel, bitte.",
+          "english": "A beer and a pretzel, please."
+        },
+        {
+          "id": "scene_08_line_004",
+          "sortorder": 4,
+          "speakerId": "kiosk_staff",
+          "german": "Normales Bier oder alkoholfrei?",
+          "english": "Regular beer or alcohol-free?"
+        },
+        {
+          "id": "scene_08_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "german": "Ein normales, bitte.",
+          "english": "A regular one, please."
+        },
+        {
+          "id": "scene_08_line_006",
+          "sortorder": 6,
+          "speakerId": "kiosk_staff",
+          "german": "Macht elf Euro fünfzig, mit Becherpfand.",
+          "english": "That's eleven euros fifty, including the cup deposit."
+        },
+        {
+          "id": "scene_08_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Entschuldigung, was ist Becherpfand?",
+          "english": "Excuse me, what is a cup deposit?"
+        },
+        {
+          "id": "scene_08_line_008",
+          "sortorder": 8,
+          "speakerId": "kiosk_staff",
+          "german": "Zwei Euro für den Becher. Wenn du ihn zurückbringst, bekommst du die zwei Euro wieder.",
+          "english": "Two euros for the cup. When you bring it back, you get the two euros back."
+        },
+        {
+          "id": "scene_08_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "german": "Auch nach dem Spiel?",
+          "english": "After the match as well?"
+        },
+        {
+          "id": "scene_08_line_010",
+          "sortorder": 10,
+          "speakerId": "kiosk_staff",
+          "german": "Ja, an einer offenen Rückgabestelle. Den Becher also nicht einfach wegwerfen.",
+          "english": "Yes, at an open return point. So don't just throw the cup away."
+        },
+        {
+          "id": "scene_08_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "german": "Ah, okay. Kann ich mit Karte bezahlen?",
+          "english": "Ah, okay. Can I pay by card?"
+        },
+        {
+          "id": "scene_08_line_012",
+          "sortorder": 12,
+          "speakerId": "kiosk_staff",
+          "german": "Ja, hier ans Gerät. Brauchst du einen Bon?",
+          "english": "Yes, against the terminal here. Do you need a receipt?"
+        },
+        {
+          "id": "scene_08_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "german": "Nein, danke.",
+          "english": "No, thanks."
+        },
+        {
+          "id": "scene_08_line_014",
+          "sortorder": 14,
+          "speakerId": "narrator",
+          "german": "Alex bezahlt und nimmt seine Brezel. Dann nimmt er das Bier. Der Mitarbeiter ruft noch etwas.",
+          "english": "Alex pays and takes his pretzel. Then he takes the beer. The employee calls something else."
+        },
+        {
+          "id": "scene_08_line_015",
+          "sortorder": 15,
+          "speakerId": "kiosk_staff",
+          "german": "Vorsicht, der Becher ist ziemlich voll!",
+          "english": "Careful, the cup's quite full!"
+        },
+        {
+          "id": "scene_08_line_016",
+          "sortorder": 16,
+          "speakerId": "alex",
+          "german": "Oh! Ein bisschen Bier ist auf meiner Hand.",
+          "english": "Oh! There's a little beer on my hand."
+        },
+        {
+          "id": "scene_08_line_017",
+          "sortorder": 17,
+          "speakerId": "narrator",
+          "german": "Alex nimmt eine Serviette. Dann sucht er seinen Platz.",
+          "english": "Alex takes a napkin. Then he looks for his seat."
+        }
+      ]
+    },
+    {
+      "id": "scene_09",
+      "sortorder": 9,
+      "title": "Wo ist Platz achtzehn?",
+      "place": "MHP Arena, Block 56a",
+      "timeOfDay": "14:40",
+      "summary": "Find a seat, clarify row and seat numbers and chat with a neighbour.",
+      "lines": [
+        {
+          "id": "scene_09_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Alex findet Block sechsundfünfzig a. Er geht die Treppe hinauf und zählt die Reihen. Ein Mann steht in einer Reihe. Alex zeigt auf den Platz neben dem Mann.",
+          "english": "Alex finds block fifty-six A. He goes up the steps and counts the rows. A man is standing in a row. Alex points to the seat beside the man."
+        },
+        {
+          "id": "scene_09_line_002",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "german": "Entschuldigung, ist das Platz achtzehn?",
+          "english": "Excuse me, is this seat eighteen?"
+        },
+        {
+          "id": "scene_09_line_003",
+          "sortorder": 3,
+          "speakerId": "neighbour",
+          "german": "Kommt auf die Reihe an. Welche hast du?",
+          "english": "Depends on the row. Which one have you got?"
+        },
+        {
+          "id": "scene_09_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "german": "Reihe zwölf.",
+          "english": "Row twelve."
+        },
+        {
+          "id": "scene_09_line_005",
+          "sortorder": 5,
+          "speakerId": "neighbour",
+          "german": "Dann noch eine runter. Hier ist dreizehn.",
+          "english": "Then one more down. This is thirteen."
+        },
+        {
+          "id": "scene_09_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "german": "Ach so. Dann bin ich hier falsch.",
+          "english": "Oh, I see. Then I'm in the wrong place here."
+        },
+        {
+          "id": "scene_09_line_007",
+          "sortorder": 7,
+          "speakerId": "neighbour",
+          "german": "Die Nummer steht seitlich. Da, siehst du?",
+          "english": "The number's on the side. There, can you see it?"
+        },
+        {
+          "id": "scene_09_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "german": "Alex geht eine Reihe nach unten. Kurz danach kommt der Mann mit seiner Jacke zurück. Er setzt sich neben Alex.",
+          "english": "Alex goes down one row. Shortly afterwards, the man comes back with his jacket. He sits down beside Alex."
+        },
+        {
+          "id": "scene_09_line_009",
+          "sortorder": 9,
+          "speakerId": "neighbour",
+          "german": "So. Ich bin siebzehn. Jetzt passt's.",
+          "english": "Right. I'm seventeen. Now we're in the right places."
+        },
+        {
+          "id": "scene_09_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "german": "Bist du oft hier?",
+          "english": "Do you come here often?"
+        },
+        {
+          "id": "scene_09_line_011",
+          "sortorder": 11,
+          "speakerId": "neighbour",
+          "german": "Fast jedes Heimspiel. Du zum ersten Mal?",
+          "english": "Almost every home game. Your first time?"
+        },
+        {
+          "id": "scene_09_line_012",
+          "sortorder": 12,
+          "speakerId": "alex",
+          "german": "Ich war schon einmal hier. Heute bin ich zum ersten Mal ohne meinen Freund hier.",
+          "english": "I've been here once before. Today is my first time here without my friend."
+        },
+        {
+          "id": "scene_09_line_013",
+          "sortorder": 13,
+          "speakerId": "neighbour",
+          "german": "Dann kennst du ja den wichtigsten Teil schon.",
+          "english": "Then you already know the most important part."
+        },
+        {
+          "id": "scene_09_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "german": "Welchen?",
+          "english": "Which part?"
+        },
+        {
+          "id": "scene_09_line_015",
+          "sortorder": 15,
+          "speakerId": "neighbour",
+          "german": "Beim Tor aufstehen. Das merkst du aber auch so.",
+          "english": "Stand up when we score. Though you'll work that out anyway."
+        },
+        {
+          "id": "scene_09_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "german": "Alex lacht. Er legt den Schal um seinen Hals. Unten auf dem Platz laufen die Spieler und üben mit dem Ball. Das Spiel beginnt bald.",
+          "english": "Alex laughs. He puts the scarf round his neck. Down on the pitch, the players are running and practising with the ball. The match starts soon."
+        }
+      ]
+    },
+    {
+      "id": "scene_10",
+      "sortorder": 10,
+      "title": "Neunzig Minuten Fußball",
+      "place": "MHP Arena, Tribüne und Spielfeld",
+      "timeOfDay": "15:30–17:25",
+      "summary": "Follow a short third-person account of the fictional match and a few spontaneous reactions.",
+      "lines": [
+        {
+          "id": "scene_10_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Um halb vier beginnt das Spiel. Stuttgart spielt schnell. Die Spieler aus Mainz stehen nah vor ihrem Tor. Alex schaut genau auf den Ball.",
+          "english": "At half past three, the match begins. Stuttgart plays quickly. The Mainz players are close to their own goal. Alex watches the ball closely."
+        },
+        {
+          "id": "scene_10_line_002",
+          "sortorder": 2,
+          "speakerId": "neighbour",
+          "german": "Den musst du machen!",
+          "english": "You've got to score that!"
+        },
+        {
+          "id": "scene_10_line_003",
+          "sortorder": 3,
+          "speakerId": "narrator",
+          "german": "Ein Spieler aus Stuttgart steht nahe am Tor. Er schießt. Aber der Ball fliegt über das Tor. Die Fans sind nicht glücklich. In der Pause steht es noch null zu null.",
+          "english": "A Stuttgart player is near the goal. He shoots. But the ball flies over the goal. The fans are not happy. At half-time it is still nil-nil."
+        },
+        {
+          "id": "scene_10_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "german": "Oh nein! Das war so nah am Tor.",
+          "english": "Oh no! That was so close to the goal."
+        },
+        {
+          "id": "scene_10_line_005",
+          "sortorder": 5,
+          "speakerId": "neighbour",
+          "german": "Wenn wir die Chancen nicht nutzen, wird's nachher ungemütlich.",
+          "english": "If we don't take our chances, it'll get uncomfortable later."
+        },
+        {
+          "id": "scene_10_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "german": "Nach der Pause bekommt Mainz den Ball. Die Spieler laufen schnell nach vorne. Dann fällt ein Tor für Mainz. Jetzt steht es null zu eins. Die Fans aus Mainz sind sehr laut.",
+          "english": "After the break, Mainz gets the ball. The players run forward quickly. Then Mainz scores a goal. Now it is nil-one. The Mainz fans are very loud."
+        },
+        {
+          "id": "scene_10_line_007",
+          "sortorder": 7,
+          "speakerId": "narrator",
+          "german": "Stuttgart spielt weiter nach vorne. In der siebenundsechzigsten Minute macht Stuttgart ein Tor. Jetzt steht es eins zu eins. Alex steht schnell auf und freut sich. Sein Nachbar legt ihm kurz eine Hand auf die Schulter.",
+          "english": "Stuttgart keeps moving forward. In the sixty-seventh minute, Stuttgart scores a goal. Now it is one-all. Alex jumps up and is delighted. His neighbour briefly puts a hand on his shoulder."
+        },
+        {
+          "id": "scene_10_line_008",
+          "sortorder": 8,
+          "speakerId": "neighbour",
+          "german": "Geht doch! Jetzt noch eins!",
+          "english": "There we go! Now one more!"
+        },
+        {
+          "id": "scene_10_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "german": "Es bleibt lange beim Eins zu eins. In der achtundachtzigsten Minute kommt der Ball von rechts. Ein Spieler aus Stuttgart springt hoch. Er trifft den Ball mit dem Kopf. Der Ball ist im Tor! Zwei zu eins! Um Alex herum stehen alle auf.",
+          "english": "It stays at one-all for a long time. In the eighty-eighth minute, the ball comes in from the right. A Stuttgart player jumps up. He hits the ball with his head. The ball is in the goal! Two-one! Everyone around Alex stands up."
+        },
+        {
+          "id": "scene_10_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "german": "Ist das jetzt ein Tor? Warum wartet der Schiedsrichter?",
+          "english": "Is that a goal now? Why is the referee waiting?"
+        },
+        {
+          "id": "scene_10_line_011",
+          "sortorder": 11,
+          "speakerId": "neighbour",
+          "german": "Warte kurz. Ja! Er zeigt zur Mitte!",
+          "english": "Wait a moment. Yes! He's pointing to the centre!"
+        },
+        {
+          "id": "scene_10_line_012",
+          "sortorder": 12,
+          "speakerId": "narrator",
+          "german": "Es gibt noch sechs Minuten extra. Dann ist das Spiel zu Ende. Stuttgart gewinnt mit zwei zu eins. Alex lacht und klatscht. Dann bekommt er eine Nachricht auf sein Handy. Jonas wartet draußen.",
+          "english": "There are six extra minutes. Then the match is over. Stuttgart wins two-one. Alex laughs and claps. Then he gets a message on his phone. Jonas is waiting outside."
+        }
+      ]
+    },
+    {
+      "id": "scene_11",
+      "sortorder": 11,
+      "title": "Nach dem Spiel",
+      "place": "MHP Arena und Weg zur Stadtbahn",
+      "timeOfDay": "17:30",
+      "summary": "Return the cup, meet the other supporter again and head back towards the station.",
+      "lines": [
+        {
+          "id": "scene_11_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Nach dem Spiel bringt Alex den leeren Becher zurück. Er bekommt seine zwei Euro wieder. Dann geht er nach draußen. Jonas wartet am Eingang. Hier wollten sie sich treffen.",
+          "english": "After the match, Alex returns the empty cup. He gets his two euros back. Then he goes outside. Jonas is waiting at the entrance. This is where they planned to meet."
+        },
+        {
+          "id": "scene_11_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "german": "Na? Hat sich die Fahrt gelohnt?",
+          "english": "So? Was the journey worth it?"
+        },
+        {
+          "id": "scene_11_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Ja, auf jeden Fall. Das letzte Tor war super!",
+          "english": "Yes, definitely. That last goal was great!"
+        },
+        {
+          "id": "scene_11_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "german": "Ich hab schon gedacht, es bleibt beim Unentschieden.",
+          "english": "I thought it was going to stay a draw."
+        },
+        {
+          "id": "scene_11_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "german": "Ja. Wie kommen wir jetzt zum Bahnhof? Wieder mit dem Taxi?",
+          "english": "Yes. How are we getting to the station now? By taxi again?"
+        },
+        {
+          "id": "scene_11_line_006",
+          "sortorder": 6,
+          "speakerId": "jonas",
+          "german": "Lieber mit der Stadtbahn. Schau dir den Verkehr an. Wir gehen zur Haltestelle und nehmen eine Richtung Hauptbahnhof.",
+          "english": "Better to take the light rail. Look at the traffic. We'll walk to the stop and take one towards the main station."
+        },
+        {
+          "id": "scene_11_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Gut. Unser Zug fährt um Viertel vor sieben. Haben wir genug Zeit?",
+          "english": "Good. Our train leaves at quarter to seven. Have we got enough time?"
+        },
+        {
+          "id": "scene_11_line_008",
+          "sortorder": 8,
+          "speakerId": "jonas",
+          "german": "Wir haben noch über eine Stunde. Komm, wir gehen direkt los.",
+          "english": "We've still got over an hour. Come on, let's head straight there."
+        },
+        {
+          "id": "scene_11_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "german": "Alex und Jonas gehen mit den anderen Fans zur Haltestelle. Dort schauen sie auf den Fahrplan und auf ihre Fahrkarten. Dann steigen sie in eine Stadtbahn. Die Bahn ist voll. Es gibt keine freien Sitzplätze. Die beiden bleiben stehen.",
+          "english": "Alex and Jonas walk to the stop with the other fans. There they check the timetable and their tickets. Then they get on a light-rail train. It is full. There are no free seats. They stand."
+        }
+      ]
+    },
+    {
+      "id": "scene_12",
+      "sortorder": 12,
+      "title": "Zurück nach Freiburg",
+      "place": "Stuttgart Hauptbahnhof, Karlsruhe und Freiburg",
+      "timeOfDay": "18:20–21:10",
+      "summary": "Check the return journey, change at Karlsruhe again and bring the story home.",
+      "lines": [
+        {
+          "id": "scene_12_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "german": "Am Bahnhof in Stuttgart haben sie noch Zeit. Sie kaufen Wasser. Um achtzehn Uhr fünfundvierzig sitzen sie im Zug nach Karlsruhe. Alex hat seine Fahrkarte schon in der Hand.",
+          "english": "At the station in Stuttgart, they still have time. They buy water. At six forty-five, they are on the train to Karlsruhe. Alex is already holding his ticket."
+        },
+        {
+          "id": "scene_12_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "german": "Du bist ja inzwischen richtig organisiert.",
+          "english": "You're getting properly organised now."
+        },
+        {
+          "id": "scene_12_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "german": "Ja. Jetzt schaue ich besser auf meine Karten.",
+          "english": "Yes. Now I pay more attention to my tickets."
+        },
+        {
+          "id": "scene_12_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "german": "Morgen hast du wahrscheinlich keine Stimme mehr.",
+          "english": "Tomorrow you'll probably have lost your voice."
+        },
+        {
+          "id": "scene_12_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "german": "Meine Stimme ist schon fast weg. Ach, hier sind die sechzehn Euro fürs Taxi.",
+          "english": "My voice is almost gone already. Oh, here are the sixteen euros for the taxi."
+        },
+        {
+          "id": "scene_12_line_006",
+          "sortorder": 6,
+          "speakerId": "jonas",
+          "german": "Danke. Und, beim nächsten Spiel wieder?",
+          "english": "Thanks. So, same again for the next match?"
+        },
+        {
+          "id": "scene_12_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Vielleicht. Meine Freunde zu Hause fragen sicher: Warum bist du heute so glücklich?",
+          "english": "Maybe. My friends at home will probably ask: why are you so happy today?"
+        },
+        {
+          "id": "scene_12_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "german": "Um neunzehn Uhr fünfunddreißig kommen sie in Karlsruhe an. Sie haben zwanzig Minuten Zeit. Dann nehmen sie den Zug nach Freiburg. Alex findet das richtige Gleis. Diesmal braucht er keine Hilfe.",
+          "english": "At seven thirty-five, they arrive in Karlsruhe. They have twenty minutes. Then they take the train to Freiburg. Alex finds the right platform. This time he doesn't need help."
+        },
+        {
+          "id": "scene_12_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "german": "Um neun Uhr abends kommen sie in Freiburg an. Draußen ist es kalt. Alex zieht seinen Schal wieder an. Auf dem Bahnsteig sagen die beiden Tschüss.",
+          "english": "At nine in the evening, they arrive in Freiburg. It is cold outside. Alex puts his scarf back on. The two say goodbye on the platform."
+        },
+        {
+          "id": "scene_12_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "german": "Danke! Der Tag mit dir war toll.",
+          "english": "Thank you! I had a great day with you."
+        },
+        {
+          "id": "scene_12_line_011",
+          "sortorder": 11,
+          "speakerId": "jonas",
+          "german": "Meld dich, wenn du wieder fährst.",
+          "english": "Get in touch when you're going again."
+        },
+        {
+          "id": "scene_12_line_012",
+          "sortorder": 12,
+          "speakerId": "alex",
+          "german": "Mach ich. Bis bald!",
+          "english": "I will. See you soon!"
+        },
+        {
+          "id": "scene_12_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "german": "Ein paar Minuten später ist Alex zu Hause. Seine Karte für das Stadion ist noch auf dem Handy. Er nimmt den Schal ab und denkt an das Spiel. Zwei zu eins. Ein guter Tag.",
+          "english": "A few minutes later, Alex is home. His stadium ticket is still on his phone. He takes off his scarf and thinks about the match. Two-one. A good day."
+        }
+      ]
+    }
+  ]
+}

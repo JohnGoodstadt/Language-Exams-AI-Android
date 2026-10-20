@@ -17,6 +17,7 @@ enum class SheetDataType(val serialName: String) {
     FORMAT_5("Format5"),
     FORMAT_6("Format6"),
     FORMAT_8("Format8"),
+    FORMAT_9("Format9"),
     GRAMMAR_FILE("GrammarFile"),
     FIXED("fixed"),
     VOCAB_DASHBOARD("VocabDashboard"),
@@ -44,6 +45,7 @@ enum class ScreenType(val serialName: String) {
     GRAMMAR_SCREEN("GrammarScreen"),
     GROUPED_FORMAT_2_SCREEN("GroupedFormat2Screen"),
     GROUPED_FORMAT_8_SCREEN("GroupedFormat8Screen"),
+    GROUPED_FORMAT_9_SCREEN("GroupedFormat9Screen"),
     GROUPED_FORMAT_3_SCREEN("GroupedFormat3Screen"),
     VOCAB_DASHBOARD("VocabDashboard"),
     UNKNOWN("unknown") // ✅ ADD the unknown case
