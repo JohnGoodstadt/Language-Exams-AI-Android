@@ -211,8 +211,9 @@ private fun PodcastLineRow(
         verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
         Text(speakerName, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = SpeakerTeal)
+        // Highlight the playing line with COLOUR only (not weight): a heavier weight is wider and would
+        // reflow a long paragraph's line count when it starts/stops. Matches the iOS fix.
         Text(displayText, style = MaterialTheme.typography.bodyLarge,
-            color = if (isPlaying) Orange else MaterialTheme.colorScheme.onSurface,
-            fontWeight = if (isPlaying) FontWeight.SemiBold else FontWeight.Normal)
+            color = if (isPlaying) Orange else MaterialTheme.colorScheme.onSurface)
     }
 }
