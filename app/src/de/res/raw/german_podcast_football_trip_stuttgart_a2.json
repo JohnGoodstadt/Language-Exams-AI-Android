@@ -82,7 +82,7 @@
     },
     {
       "id": "taxi_driver",
-      "name": "Taxifahrer",
+      "name": "Uber-Fahrer",
       "role": "supporting",
       "voiceId": "de-DE-Chirp3-HD-Despina"
     },
@@ -621,7 +621,7 @@
       "title": "Ein anderer Fan",
       "place": "Zug von Karlsruhe nach Stuttgart",
       "timeOfDay": "12:20",
-      "summary": "Chat with another supporter, exchange plans and arrange to share a taxi.",
+      "summary": "Chat with another supporter, exchange plans and agree to share an Uber to the stadium.",
       "lines": [
         {
           "id": "scene_05_line_001",
@@ -704,8 +704,8 @@
           "id": "scene_05_line_012",
           "sortorder": 12,
           "speakerId": "jonas",
-          "german": "Normalerweise mit der Stadtbahn. Wir könnten uns aber auch ein Taxi teilen, wenn du möchtest.",
-          "english": "Usually by light rail. But we could share a taxi if you like."
+          "german": "Normalerweise mit der Stadtbahn. Wir könnten uns aber auch ein Uber teilen, wenn du möchtest.",
+          "english": "Usually by light rail. But we could share an Uber if you like."
         },
         {
           "id": "scene_05_line_013",
@@ -761,126 +761,175 @@
     {
       "id": "scene_06",
       "sortorder": 6,
-      "title": "Mit dem Taxi zum Stadion",
-      "place": "Stuttgart Hauptbahnhof und Fahrt nach Bad Cannstatt",
-      "timeOfDay": "13:15",
-      "summary": "Explain the destination, discuss traffic and agree on a practical drop-off point.",
+      "title": "Mit Uber zum Stadion",
+      "place": "Zug vor Stuttgart, Hauptbahnhof und Fahrt nach Bad Cannstatt",
+      "timeOfDay": "12:55–13:40",
+      "summary": "Book an Uber on the train ten minutes before arrival, agree on the fare and split it, identify the silver Toyota Prius, then walk the last part to the stadium.",
       "lines": [
         {
           "id": "scene_06_line_001",
           "sortorder": 1,
           "speakerId": "narrator",
-          "german": "Kurz nach ein Uhr kommen Alex und Jonas in Stuttgart an. Vor dem Bahnhof warten Taxis. Die beiden gehen zum ersten Taxi. Der Fahrer macht das Fenster auf.",
-          "english": "Just after one, Alex and Jonas arrive in Stuttgart. Taxis are waiting outside the station. The two men go to the first taxi. The driver opens his window."
+          "german": "Es ist fünf vor eins. Der Zug kommt in zehn Minuten in Stuttgart an. Alex nimmt sein Handy und öffnet die Uber-App. Er möchte für sich und Jonas ein Auto zum Stadion bestellen. Die beiden wollen nach der Ankunft am Bahnhof einsteigen.",
+          "english": "It is five to one. The train arrives in Stuttgart in ten minutes. Alex takes his phone and opens the Uber app. He wants to request a car to the stadium for himself and Jonas. They want to get in at the station after arriving."
+        },
+        {
+          "id": "scene_06_line_018",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "german": "Hier steht: zweiunddreißig Euro für uns beide. Der Fahrer kommt in etwa zwanzig Minuten. Ist das okay?",
+          "english": "It says here: thirty-two euros for both of us. The driver will arrive in about twenty minutes. Is that okay?"
+        },
+        {
+          "id": "scene_06_line_019",
+          "sortorder": 3,
+          "speakerId": "jonas",
+          "german": "Passt. Ich gebe dir die Hälfte gleich. Dann müssen wir das später nicht mehr ausrechnen.",
+          "english": "That works. I’ll give you my half now. Then we won’t have to work it out later."
+        },
+        {
+          "id": "scene_06_line_020",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "german": "Gut. Ich bestelle das Auto. Ich bezahle über die App mit meiner Karte.",
+          "english": "Good. I’ll request the car. I’m paying through the app with my card."
+        },
+        {
+          "id": "scene_06_line_021",
+          "sortorder": 5,
+          "speakerId": "jonas",
+          "german": "Hier, sechzehn Euro. Dann ist mein Teil schon bezahlt.",
+          "english": "Here, sixteen euros. That’s my share paid."
+        },
+        {
+          "id": "scene_06_line_022",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "german": "Jonas gibt Alex sechzehn Euro. Alex bestätigt die Fahrt in der App. Als Ziel hat er die MHP Arena eingegeben. Die App zeigt ihm das Auto und das Kennzeichen.",
+          "english": "Jonas gives Alex sixteen euros. Alex confirms the ride in the app. He has entered the MHP Arena as the destination. The app shows him the car and its registration number."
+        },
+        {
+          "id": "scene_06_line_023",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "german": "Wir müssen einen silbernen Toyota Prius suchen. Das Kennzeichen ist S-MK 4726.",
+          "english": "We need to look for a silver Toyota Prius. Its registration number is S-MK 4726."
+        },
+        {
+          "id": "scene_06_line_024",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "german": "Kurz nach ein Uhr kommen sie in Stuttgart an. Alex schaut in der App nach. Dort sieht er den Treffpunkt am Bahnhof. Die beiden gehen dorthin. Um Viertel nach eins kommt ein silberner Toyota Prius. Das Kennzeichen ist S-MK 4726. Alex vergleicht das Auto und den Fahrer mit den Bildern in der App. Dann gehen sie zum Auto.",
+          "english": "Just after one, they arrive in Stuttgart. Alex checks the app. It shows him the meeting point at the station. The two walk there. At quarter past one, a silver Toyota Prius arrives. Its registration number is S-MK 4726. Alex compares the car and the driver with the pictures in the app. Then they walk up to the car."
         },
         {
           "id": "scene_06_line_002",
-          "sortorder": 2,
+          "sortorder": 9,
           "speakerId": "taxi_driver",
-          "german": "Wohin soll's gehen?",
-          "english": "Where are you heading?"
+          "german": "Hallo. Für Alex?",
+          "english": "Hello. For Alex?"
         },
         {
           "id": "scene_06_line_003",
-          "sortorder": 3,
+          "sortorder": 10,
           "speakerId": "alex",
-          "german": "Zur MHP Arena, bitte. Zum Fußball.",
-          "english": "To the MHP Arena, please. For the football."
+          "german": "Ja. Wir fahren zur MHP Arena.",
+          "english": "Yes. We’re going to the MHP Arena."
         },
         {
           "id": "scene_06_line_004",
-          "sortorder": 4,
+          "sortorder": 11,
           "speakerId": "taxi_driver",
-          "german": "Einsteigen. Haben Sie nur die kleinen Taschen?",
-          "english": "Get in. Just the small bags?"
+          "german": "Genau, steht hier in der App. Haben Sie nur die kleinen Taschen?",
+          "english": "That’s right, it’s here in the app. Just the small bags?"
         },
         {
           "id": "scene_06_line_005",
-          "sortorder": 5,
+          "sortorder": 12,
           "speakerId": "jonas",
           "german": "Ja, sonst nichts.",
           "english": "Yes, nothing else."
         },
         {
           "id": "scene_06_line_006",
-          "sortorder": 6,
+          "sortorder": 13,
           "speakerId": "narrator",
-          "german": "Alex und Jonas steigen in das Taxi. Sie setzen sich nach hinten. Dann fährt der Fahrer los.",
-          "english": "Alex and Jonas get into the taxi. They sit in the back. Then the driver sets off."
+          "german": "Alex und Jonas steigen in das Auto. Sie setzen sich nach hinten. Dann fährt der Fahrer los.",
+          "english": "Alex and Jonas get into the car. They sit in the back. Then the driver sets off."
         },
         {
           "id": "scene_06_line_007",
-          "sortorder": 7,
+          "sortorder": 14,
           "speakerId": "alex",
           "german": "Wie lange dauert die Fahrt?",
           "english": "How long does the journey take?"
         },
         {
           "id": "scene_06_line_008",
-          "sortorder": 8,
+          "sortorder": 15,
           "speakerId": "taxi_driver",
           "german": "Wenn's läuft, vielleicht zwanzig Minuten. Vor dem Stadion kann's länger dauern.",
           "english": "If traffic moves, maybe twenty minutes. Near the stadium it can take longer."
         },
         {
           "id": "scene_06_line_009",
-          "sortorder": 9,
+          "sortorder": 16,
           "speakerId": "alex",
-          "german": "Und wie viel kostet das ungefähr?",
-          "english": "And roughly how much does it cost?"
+          "german": "Hier sind schon viele Fans.",
+          "english": "There are already lots of fans here."
         },
         {
           "id": "scene_06_line_010",
-          "sortorder": 10,
+          "sortorder": 17,
           "speakerId": "taxi_driver",
-          "german": "Kommt auf den Verkehr an. Der Preis läuft auf dem Taxameter mit.",
-          "english": "It depends on the traffic. The fare is running on the meter."
+          "german": "Ja, am Spieltag ist hier immer viel los. Gleich wird der Verkehr noch dichter.",
+          "english": "Yes, it’s always busy here on match day. The traffic will get even heavier in a moment."
         },
         {
           "id": "scene_06_line_011",
-          "sortorder": 11,
+          "sortorder": 18,
           "speakerId": "jonas",
           "german": "Uns reicht auch eine Stelle, von der wir gut zu Fuß weiterkommen.",
           "english": "Somewhere we can walk the rest of the way from is fine too."
         },
         {
           "id": "scene_06_line_012",
-          "sortorder": 12,
+          "sortorder": 19,
           "speakerId": "taxi_driver",
           "german": "Gut. Direkt bis vor den Eingang kommen Sie heute sowieso nicht mit dem Auto.",
           "english": "Good. You won't get right up to the entrance by car today anyway."
         },
         {
           "id": "scene_06_line_013",
-          "sortorder": 13,
+          "sortorder": 20,
           "speakerId": "narrator",
           "german": "In der Nähe vom Stadion sind viele Menschen auf der Straße. Viele tragen einen Schal. Der Fahrer hält an einer Stelle. Hier darf er halten. Bis zum Stadion ist es jetzt nicht mehr weit. Alex und Jonas können den Rest zu Fuß gehen.",
           "english": "Near the stadium, there are lots of people in the street. Many are wearing scarves. The driver stops somewhere. He is allowed to stop here. It is not far to the stadium now. Alex and Jonas can walk the rest."
         },
         {
           "id": "scene_06_line_014",
-          "sortorder": 14,
+          "sortorder": 21,
           "speakerId": "taxi_driver",
-          "german": "Hier sind wir. Zweiunddreißig Euro.",
-          "english": "Here we are. Thirty-two euros."
+          "german": "Hier können Sie aussteigen. Zum Stadion sind es noch ungefähr zehn Minuten zu Fuß.",
+          "english": "You can get out here. It’s about another ten minutes on foot to the stadium."
         },
         {
           "id": "scene_06_line_015",
-          "sortorder": 15,
+          "sortorder": 22,
           "speakerId": "jonas",
-          "german": "Ich zahle mit Karte. Alex, deinen Teil gibst du mir nachher.",
-          "english": "I'll pay by card. Alex, you can give me your share later."
+          "german": "Alles klar. Wir gehen den Rest zu Fuß.",
+          "english": "All right. We’ll walk the rest of the way."
         },
         {
           "id": "scene_06_line_016",
-          "sortorder": 16,
+          "sortorder": 23,
           "speakerId": "alex",
           "german": "Okay. Vielen Dank.",
           "english": "Okay. Thank you very much."
         },
         {
           "id": "scene_06_line_017",
-          "sortorder": 17,
+          "sortorder": 24,
           "speakerId": "taxi_driver",
           "german": "Bitte. Und passen Sie beim Aussteigen auf die Fahrräder auf.",
           "english": "You're welcome. And watch out for the bicycles when you get out."
@@ -1387,8 +1436,8 @@
           "id": "scene_11_line_005",
           "sortorder": 5,
           "speakerId": "alex",
-          "german": "Ja. Wie kommen wir jetzt zum Bahnhof? Wieder mit dem Taxi?",
-          "english": "Yes. How are we getting to the station now? By taxi again?"
+          "german": "Ja. Wie kommen wir jetzt zum Bahnhof? Wieder mit Uber?",
+          "english": "Yes. How are we getting to the station now? With Uber again?"
         },
         {
           "id": "scene_11_line_006",
@@ -1460,15 +1509,15 @@
           "id": "scene_12_line_005",
           "sortorder": 5,
           "speakerId": "alex",
-          "german": "Meine Stimme ist schon fast weg. Ach, hier sind die sechzehn Euro fürs Taxi.",
-          "english": "My voice is almost gone already. Oh, here are the sixteen euros for the taxi."
+          "german": "Meine Stimme ist schon fast weg. Ich habe so viel gerufen.",
+          "english": "My voice is almost gone already. I shouted so much."
         },
         {
           "id": "scene_12_line_006",
           "sortorder": 6,
           "speakerId": "jonas",
-          "german": "Danke. Und, beim nächsten Spiel wieder?",
-          "english": "Thanks. So, same again for the next match?"
+          "german": "Das gehört dazu. Und, beim nächsten Spiel wieder?",
+          "english": "That’s all part of it. So, same again for the next match?"
         },
         {
           "id": "scene_12_line_007",
