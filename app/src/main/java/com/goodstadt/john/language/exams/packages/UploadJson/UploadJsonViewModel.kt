@@ -115,6 +115,21 @@ class UploadJsonViewModel @Inject constructor(
         emptyList()
     }
 
+    // "Podcasts" (fileFormat-9): bundled podcast scripts uploaded whole (one Firestore doc each), like the
+    // other sheets. DE has the first one now; more to come. EN is intentionally empty for now (coming soon).
+    private val podcastUploadFiles: List<UploadJsonFile> = when (BuildConfig.FLAVOR) {
+        "de" -> listOf(
+            UploadJsonFile(
+                displayName = "GermanPodcastFootballTripStuttgartA2",
+                fileName = "german_podcast_football_trip_stuttgart_a2.json",
+                assetPath = "raw/german_podcast_football_trip_stuttgart_a2.json", // "raw/" -> res/raw source
+                firestoreDocName = "GermanPodcastFootballTripStuttgartA2"
+            )
+        )
+        // en: none yet (English podcasts coming soon)
+        else -> emptyList()
+    }.filter { rawResourceExists(it.fileName.removeSuffix(".json")) }
+
     private val _sections = MutableStateFlow<List<UploadJsonSection>>(emptyList())
     val sections = _sections.asStateFlow()
 
@@ -349,6 +364,8 @@ class UploadJsonViewModel @Inject constructor(
         const val UPDATE_FIELDS_SECTION_TITLE = "Update DE Fields"
         const val UPDATE_FIELDS_GROUP_TITLE = "Sheets"
         const val VOCAB_HASHES_SECTION_TITLE = "Upload Vocab Hashes"
+        const val PODCASTS_SECTION_TITLE = "Podcasts"
+        const val PODCASTS_GROUP_TITLE = "Files"
 
         // TEMPORARY TEST GUARD: true commits sheetName + the first word atomically, then exits.
         // Change to false only after the first Firestore document has been checked.
@@ -446,9 +463,18 @@ class UploadJsonViewModel @Inject constructor(
         )
 
         _sections.value = listOf(
-            buildVocabSection(), buildReferenceSection(), buildTeachingsSection(), grammar, sectionSheet, usageQuiz, baselineQuiz
+            buildVocabSection(), buildReferenceSection(), buildTeachingsSection(),
+            buildPodcastsSection(), grammar, sectionSheet, usageQuiz, baselineQuiz
         )
     }
+
+    /** "Podcasts" (fileFormat-9) upload section. Always shown; empty (shows "(no files)") on flavours with
+     *  no podcasts yet (e.g. en). Uses the standard uploadFile/readFile row actions. */
+    private fun buildPodcastsSection(): UploadJsonSection =
+        UploadJsonSection(
+            PODCASTS_SECTION_TITLE,
+            listOf(UploadJsonLevelGroup(PODCASTS_GROUP_TITLE, podcastUploadFiles))
+        )
 
     // --- Row actions. Each returns a Result; a tick on success, a cross + log + long Toast on error. ---
 
