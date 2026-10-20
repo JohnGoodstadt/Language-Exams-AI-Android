@@ -58,10 +58,13 @@ class AudioPlaybackRepository @Inject constructor(
         level: String,
         sheetName:String = "", //for reference tab - stats for sheet otherwise must be vocab tabs 1,2,3
         isPremiumUser: Boolean = false,
-        useRateLimiting: Boolean = true
+        useRateLimiting: Boolean = true,
+        // Per-call voice (e.g. a podcast actor's Google key). Null uses the user's selected voice. The cache
+        // key + TTS request both use it, so each voice caches independently.
+        voiceOverride: String? = null
     ): AudioPlaybackStatus {
 
-        val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+        val currentVoiceName = voiceOverride ?: userPreferencesRepository.selectedVoiceNameFlow.first()
         val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
 
 

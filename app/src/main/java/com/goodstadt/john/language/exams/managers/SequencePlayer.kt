@@ -29,8 +29,30 @@ class SequencePlayer @Inject constructor(
     private val trackMaxMillis = 30_000L
     private val _playingKey = MutableStateFlow<String?>(null)
     val playingKey = _playingKey.asStateFlow()
+    // True while a sequence is held by pause(); resume() continues from the current track.
+    private val _isPaused = MutableStateFlow(false)
+    val isPaused = _isPaused.asStateFlow()
 
-    /** Existing vocab callers retain their defaults. Pause stops; next Play restarts the section. */
+    /** Retained so pause()/resume() can continue the same run from [currentIndex]. */
+    private data class RunParams(
+        val sentences: List<String>,
+        val voices: List<String?>?,      // optional per-track voice; null entry -> the user's voice
+        val level: String,
+        val sheetName: String,
+        val isPremiumUser: Boolean,
+        val gapMillis: ((String) -> Long)?,
+        val onTrackStarted: (String) -> Unit,
+        val onTrackPlayed: (String) -> Unit,
+        val onCompleted: () -> Unit
+    )
+    private var params: RunParams? = null
+    private var currentIndex = 0
+
+    /**
+     * Existing vocab/reference callers retain their defaults (single voice from prefs, no pause). Tapping
+     * the control that owns the running key stops it. [voices] (aligned to [sentences]) gives a per-track
+     * voice for multi-speaker scripts; a null entry falls back to the user's selected voice.
+     */
     fun toggle(
         key: String, sentences: List<String>, level: String,
         preflight: () -> Boolean = { true },
@@ -39,27 +61,34 @@ class SequencePlayer @Inject constructor(
         onCompleted: () -> Unit = {},
         sheetName: String = "",
         isPremiumUser: Boolean = false,
-        gapMillis: ((String) -> Long)? = null
+        gapMillis: ((String) -> Long)? = null,
+        voices: List<String?>? = null
     ) {
-        if (_playingKey.value == key) { stop(); return }
+        if (_playingKey.value == key && !_isPaused.value) { stop(); return }
         stop()
         if (sentences.isEmpty() || !preflight()) return
-        val run = ++runVersion
+        params = RunParams(sentences, voices, level, sheetName, isPremiumUser, gapMillis,
+            onTrackStarted, onTrackPlayed, onCompleted)
         _playingKey.value = key
-        job = scope.launch {
-            try {
-                runPipeline(sentences, level, sheetName, isPremiumUser, gapMillis, onTrackStarted, onTrackPlayed, onCompleted)
-            } catch (cancelled: CancellationException) { throw cancelled }
-            catch (error: Exception) { Timber.e(error, "SequencePlayer: playback failed for '$key'") }
-            finally {
-                // Old cancelled jobs must never stop or clear a newer sequence.
-                if (runVersion == run) {
-                    audioPlaybackRepository.stopPlayback()
-                    _playingKey.value = null
-                    job = null
-                }
-            }
-        }
+        _isPaused.value = false
+        startFrom(0)
+    }
+
+    /** Suspend the active run, keeping its key + position. The in-flight track is cut. */
+    fun pause() {
+        if (_playingKey.value == null || _isPaused.value) return
+        _isPaused.value = true
+        ++runVersion            // invalidate the current run so its `finally` won't clear state
+        job?.cancel()
+        job = null
+        audioPlaybackRepository.stopPlayback()
+    }
+
+    /** Continue a paused run, restarting the current (possibly half-played) track from its start. */
+    fun resume() {
+        if (_playingKey.value == null || !_isPaused.value) return
+        _isPaused.value = false
+        startFrom(currentIndex)
     }
 
     fun stop() {
@@ -68,26 +97,52 @@ class SequencePlayer @Inject constructor(
         job = null
         audioPlaybackRepository.stopPlayback()
         _playingKey.value = null
+        _isPaused.value = false
+        params = null
+        currentIndex = 0
     }
 
-    private suspend fun CoroutineScope.runPipeline(
-        sentences: List<String>, level: String, sheetName: String, isPremiumUser: Boolean,
-        gapMillis: ((String) -> Long)?, onTrackStarted: (String) -> Unit,
-        onTrackPlayed: (String) -> Unit, onCompleted: () -> Unit
-    ) {
-        val voice = userPreferencesRepository.selectedVoiceNameFlow.first()
-        val language = userPreferencesRepository.selectedLanguageCodeFlow.first()
-        fun resolve(sentence: String): Deferred<Boolean> = async {
-            contentRepository.ensureAudioCached(sentence, FirebaseAudioService.generateUnifiedFilename(sentence, voice), voice, language)
+    private fun startFrom(startIndex: Int) {
+        val p = params ?: return
+        val run = ++runVersion
+        currentIndex = startIndex
+        job = scope.launch {
+            try {
+                runPipeline(p, startIndex)
+            } catch (cancelled: CancellationException) { throw cancelled }
+            catch (error: Exception) { Timber.e(error, "SequencePlayer: playback failed") }
+            finally {
+                // Old/paused runs must never stop or clear a newer (or deliberately held) sequence.
+                if (runVersion == run && !_isPaused.value) {
+                    audioPlaybackRepository.stopPlayback()
+                    _playingKey.value = null
+                    params = null
+                    currentIndex = 0
+                    job = null
+                }
+            }
         }
-        var ready = resolve(sentences.first())
+    }
+
+    private suspend fun CoroutineScope.runPipeline(p: RunParams, startIndex: Int) {
+        val defaultVoice = userPreferencesRepository.selectedVoiceNameFlow.first()
+        val language = userPreferencesRepository.selectedLanguageCodeFlow.first()
+        fun voiceAt(i: Int): String = p.voices?.getOrNull(i)?.takeIf { it.isNotBlank() } ?: defaultVoice
+        fun resolve(i: Int): Deferred<Boolean> = async {
+            val v = voiceAt(i)
+            contentRepository.ensureAudioCached(
+                p.sentences[i], FirebaseAudioService.generateUnifiedFilename(p.sentences[i], v), v, language)
+        }
+        var ready = resolve(startIndex)
         var playedAll = true
-        for (index in sentences.indices) {
+        var index = startIndex
+        while (index < p.sentences.size) {
             ensureActive()
             if (!ready.await()) { playedAll = false; break }
-            val next = if (index < sentences.lastIndex) resolve(sentences[index + 1]) else null
+            val next = if (index < p.sentences.lastIndex) resolve(index + 1) else null
             ensureActive()
-            onTrackStarted(sentences[index])
+            currentIndex = index
+            p.onTrackStarted(p.sentences[index])
             // Subscribe before starting even a very short cached clip.
             val finished = async(start = CoroutineStart.UNDISPATCHED) {
                 withTimeoutOrNull(trackMaxMillis) {
@@ -96,21 +151,22 @@ class SequencePlayer @Inject constructor(
             }
             try {
                 val status = audioPlaybackRepository.playTrackAndGetStatus(
-                    sentence = sentences[index], level = level, sheetName = sheetName,
-                    isPremiumUser = isPremiumUser, useRateLimiting = false)
+                    sentence = p.sentences[index], level = p.level, sheetName = p.sheetName,
+                    isPremiumUser = p.isPremiumUser, useRateLimiting = false, voiceOverride = voiceAt(index))
                 ensureActive()
                 if (status is AudioPlaybackStatus.Failure || status is AudioPlaybackStatus.RateLimited) {
                     next?.cancel(); playedAll = false; break
                 }
-                onTrackPlayed(sentences[index])
+                p.onTrackPlayed(p.sentences[index])
                 if (finished.await() !is PlaybackEvent.Completed) {
                     next?.cancel(); playedAll = false; break
                 }
             } finally { finished.cancel() }
             if (next == null) break
-            gapMillis?.let { delay(it(sentences[index]).coerceAtLeast(0L)) }
+            p.gapMillis?.let { delay(it(p.sentences[index]).coerceAtLeast(0L)) }
             ready = next
+            index++
         }
-        if (playedAll && isActive) onCompleted()
+        if (playedAll && isActive) p.onCompleted()
     }
 }
