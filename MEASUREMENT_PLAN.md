@@ -203,3 +203,45 @@ The Format views are shared-shaped, but **coverage is not symmetrical today**:
 5. **Add the `PLAY` metric** to both platforms; emit it where audio is heard.
 6. **`reference_interaction` GA4 event** with `kind`/`pattern` — unlocks breadth and dwell for Pronouns.
 7. **Mirror every step on iOS** (§9) so the `p_*` / GA4 series stay comparable.
+
+---
+
+## 11. fileFormat-0 — the main vocab tabs (1/2/3)  *(implemented)*
+
+The one format the plan above skips is **fileFormat-0**: the main tabs 1/2/3 (`Format0File` →
+`tabtitles` → `Category(tabNumber)` → `Format0Word` → `sentences`). It is the app's highest-traffic
+screen, so it is measured on the same footing as the reference sheets — but in its **own area**,
+because the natural unit here is *tab + category*, not a single sheet id.
+
+**Schema.** Added `VOCAB("vocab")` to `PageStat.Area` (`QuizStat.Area.VOCAB` already existed for the
+quiz). No new metrics — reuses `OPEN | TAP | PLAY`.
+
+**Counters (`p_and_vocab_*`).** Two granularities, so each site records only what it naturally knows:
+
+| Event | `sheetId` passed | key | answers |
+|---|---|---|---|
+| tab shown | `"<tab>"` | `p_and_vocab_1_open` | which of the 3 tabs is used |
+| sentence/section/save/quiz tap | `"<tab>/<category>"` | `p_and_vocab_1_Food_tap` | which category gets engaged |
+| sentence heard | `"<tab>"` | `p_and_vocab_1_play` | opened → tapped → **listened**, per tab |
+
+`open` and `play` are tab-level (the "did they actually hear something on this tab" funnel); `tap` is
+category-level (which categories get touched). `tap − play` per tab ≈ wanted-to-hear-but-blocked
+(rate-limit / TTS failure) — the paywall-friction signal on the core screen.
+
+**GA4 `vocab_interaction`** (breadth + dwell, the counter can't give): params `tab`, `category`,
+optional `word`, `kind` ∈ `sentence | section_play | save | quiz | translate`. Answers distinct
+categories/words explored per session, the funnel, and per-tab dwell.
+
+**Where it is wired** (`CategoryTabViewModel` + `TTSStatsRepository.recordVocabInteraction`):
+- `loadContentForTab` → `.open` for this tab (and caches `currentLoadedTab`).
+- `handleTap` → `tap`/GA4 `sentence`.
+- `playSection` (on start only) → GA4 `section_play`.
+- `onSaveWord` → `save`; `openQuizForCategory` → `quiz`; Translate button → `recordTranslateTap()`
+  (tab-level).
+- `.play` recorded once in `didPlayVocabSentence`, the single funnel both a single tap and each
+  section-playback sentence pass through — cleaner than iOS, which has no such choke point.
+
+**Already covered — don't double-count.** Vocab *quiz completions* already flow through
+`recordQuizCompletion(QuizStat.Area.VOCAB, …)`, so `kind="quiz"` is only the *entry* signal; scores
+stay with the `q_*_vocab_*` counters. The per-word "heard" dots (`AudioCacheManager` history) are
+unchanged — `.play` adds the per-tab popularity aggregate the dots don't give.

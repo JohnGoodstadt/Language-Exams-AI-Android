@@ -14,6 +14,8 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.stats.PageStat
+import com.goodstadt.john.language.exams.data.stats.recordPageView
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
@@ -141,6 +143,7 @@ class CategoryTabViewModel @Inject constructor(
      * keep separate lists.
      */
     fun onSaveWord(word: Format0Word, categoryTitle: String): Boolean {
+        ttsStatsRepository.recordVocabInteraction(currentLoadedTab, categoryTitle, word.word, kind = "save")
         val nowSaved = savedPracticeManager.toggle(
             SavedSentence(
                 id = word.word,
@@ -190,6 +193,8 @@ class CategoryTabViewModel @Inject constructor(
 
     // Cache the level name for fast synchronous access in isHeard()
     private var currentLoadedLevel: String = "B1"
+    // The main tab (1/2/3) currently loaded — for the vocab-area stats (fileFormat-0) when only a title is to hand.
+    private var currentLoadedTab: Int = 0
     private var playbackJob: Job? = null
     private val _showHelpSheet = MutableStateFlow(false)
 
@@ -209,6 +214,8 @@ class CategoryTabViewModel @Inject constructor(
 
     // 2. Action: Open
     fun openQuizForCategory(category: Category) {
+        // Quiz ENTRY signal (completions already flow through QuizStat.Area.VOCAB).
+        ttsStatsRepository.recordVocabInteraction(category.tabNumber, category.title, kind = "quiz")
         _currentQuizCategory.value = category
     }
 
@@ -328,6 +335,9 @@ class CategoryTabViewModel @Inject constructor(
     // MARK: - Loading
 
     fun loadContentForTab(tabNumber: Int) {
+        // fileFormat-0 popularity: this main tab (1/2/3) was shown. tap/play join under the vocab area.
+        currentLoadedTab = tabNumber
+        ttsStatsRepository.recordPageView(PageStat.Area.VOCAB, "$tabNumber", PageStat.Metric.OPEN)
         viewModelScope.launch {
             _uiState.value = CategoryTabUiState.Loading
 
@@ -447,6 +457,9 @@ class CategoryTabViewModel @Inject constructor(
     fun handleTap(sentence: String, category: Category) {
 
         lastPlayedSentence = sentence
+
+        // Count the tap + GA4 breadth event (tab/category); the `.play` follows in didPlayVocabSentence.
+        ttsStatsRepository.recordVocabInteraction(category.tabNumber, category.title, kind = "sentence")
 
         //if still playing handle it
         playbackJob?.cancel()
@@ -616,6 +629,8 @@ class CategoryTabViewModel @Inject constructor(
         categoryTitle: String,
         categoryTabNumber: Int
     ) {
+        // Heard: single tap + each section-playback sentence funnel through here. Keyed by tab (vocab area).
+        ttsStatsRepository.recordPageView(PageStat.Area.VOCAB, "$categoryTabNumber", PageStat.Metric.PLAY)
 
         viewModelScope.launch {
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
@@ -1005,6 +1020,11 @@ Fix: Remove the duplicate calls at lines 856 and 859.
         lastPlayedSentence = ""
     }
 
+    /** The Translate ("T") header button was tapped — a tab-level vocab interaction (no category). */
+    fun recordTranslateTap() {
+        ttsStatsRepository.recordVocabInteraction(currentLoadedTab, kind = "translate")
+    }
+
     // --- Sequential section playback -----------------------------------------------------------------
     // Delegates to the reusable SequencePlayer so other screens (e.g. Reference) can play sentence lists
     // with the same pipeline. This VM only owns the rate-limit gate and the section-specific bits.
@@ -1017,6 +1037,10 @@ Fix: Remove the duplicate calls at lines 856 and 859.
      * tapping a different one stops the first and starts the new.
      */
     fun playSection(category: Category, sentences: List<String>) {
+        // One section-play interaction (tap + GA4) on START only; each sentence records `.play` as it is heard.
+        if (sequencePlayer.playingKey.value != category.title) {
+            ttsStatsRepository.recordVocabInteraction(category.tabNumber, category.title, kind = "section_play")
+        }
         // Whether the track about to play was already in history BEFORE this play (captured in onTrackStarted,
         // which fires before the play marks it heard). Used to bump the progress bar only on a first hearing.
         var wasAlreadyHeard = false

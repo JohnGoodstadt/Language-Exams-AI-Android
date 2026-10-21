@@ -354,6 +354,35 @@ class TTSStatsRepository @Inject constructor(
         }
         FirebaseAnalytics.getInstance(context).logEvent("reference_interaction", params)
     }
+
+    /**
+     * One user interaction on the main vocab tabs (tabs 1/2/3, fileFormat-0), written to BOTH destinations —
+     * the vocab analog of [recordReferenceInteraction], twin of iOS AnalyticsService.logVocabInteraction:
+     *  - the Firestore counter `p_and_vocab_<tab>[_<category>]_tap` (global monthly + per-user doc) -> which
+     *    TAB and CATEGORY get engaged, and the tap/open ratio per tab;
+     *  - a GA4 `vocab_interaction` event carrying `tab`, `category`, optional `word` and `kind` -> how many
+     *    DISTINCT categories/words a user explored in a session (breadth) plus engagement-time (dwell).
+     *
+     * `kind` is the surface tapped: "sentence" | "section_play" | "save" | "quiz" | "translate". [category]
+     * is the section title (empty for a tab-level action like translate, which then keys at the tab only).
+     * Open/play are recorded separately via [recordPageView] with [PageStat.Area.VOCAB].
+     */
+    fun recordVocabInteraction(tab: Int, category: String = "", word: String? = null, kind: String) {
+        // Destination 1 — fast, reconcilable volume counter (joins the p_* series under the vocab area).
+        val sheetId = if (category.isEmpty()) "$tab" else "$tab/$category"
+        val tapKey = PageStat.key(PageStat.Area.VOCAB, sheetId, PageStat.Metric.TAP)
+        inc(fsDOC.GlobalStats, tapKey)
+        inc(fsDOC.USER, tapKey)
+        // Destination 2 — GA4 breadth + dwell.
+        val params = Bundle().apply {
+            putLong("tab", tab.toLong())
+            putString("area", "vocab")
+            putString("kind", kind)
+            if (category.isNotEmpty()) putString("category", QuizStat.normalize(category))
+            word?.let { putString("word", it) }
+        }
+        FirebaseAnalytics.getInstance(context).logEvent("vocab_interaction", params)
+    }
     private fun incDouble(category: fsDOC, statName: String, value: Double = 0.0) {
         val prefs = getPrefs(category)
         val current = prefs.getFloat(statName, 0f).toDouble()

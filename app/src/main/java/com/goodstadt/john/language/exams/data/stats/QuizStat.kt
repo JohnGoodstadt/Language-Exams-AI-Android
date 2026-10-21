@@ -72,7 +72,9 @@ fun TTSStatsRepository.recordQuizCompletion(area: QuizStat.Area, sheetId: String
  */
 object PageStat {
     enum class Area(val id: String) {
-        REFERENCE("reference"), ME("me"), WORD_OF_THE_DAY("wordoftheday"), SAVED("saved")
+        REFERENCE("reference"), ME("me"), WORD_OF_THE_DAY("wordoftheday"), SAVED("saved"),
+        // The main tabs 1/2/3 (fileFormat-0).
+        VOCAB("vocab")
     }
     enum class Metric(val id: String) { OPEN("open"), TAP("tap"), PLAY("play") }
 

@@ -394,7 +394,7 @@ fun CategoryTabScreen(
                         CategoryStatsBar(
                             heardCount = state.heardCountOnTab,
                             totalCount = state.totalWordsOnTab,
-                            onTranslate = { showTranslateSheet = true },
+                            onTranslate = { viewModel.recordTranslateTap(); showTranslateSheet = true },
                             onShowStats = { showGamificationSheet = true },
                         )
 
