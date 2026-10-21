@@ -124,19 +124,6 @@ fun Format9ContainerScreen(
                                     Text(if (playingKey != null) "Stop" else "Play whole script",
                                         style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
                                 }
-                                // Scene scrubber (YouTube-style): one notch per scene. Tap a notch to jump to
-                                // that scene; if audio is playing it continues from there to the end, otherwise
-                                // it just scrolls there.
-                                if (scenes.size > 1) {
-                                    SceneScrubber(
-                                        sceneCount = scenes.size,
-                                        focusedIndex = focusedSceneIndex,
-                                        onSeek = { i ->
-                                            viewModel.seekToScene(i)
-                                            scope.launch { listState.animateScrollToItem(sceneHeaderItemIndex(scenes, i)) }
-                                        }
-                                    )
-                                }
                             }
                         }
                     }
@@ -175,6 +162,24 @@ fun Format9ContainerScreen(
                     shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = Orange,
                     modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp)
                 ) { Icon(if (floatingPlaying) Icons.Default.Pause else Icons.Default.PlayArrow, if (floatingPlaying) "Pause" else "Play") }
+
+                // Floating scene scrubber (YouTube-style) sitting BETWEEN the translate and play/pause FABs.
+                // Tap a notch to jump to that scene; playing continues from there to the end, paused moves the
+                // resume point, idle just scrolls.
+                if (scenes.size > 1) {
+                    SceneScrubber(
+                        sceneCount = scenes.size,
+                        focusedIndex = focusedSceneIndex,
+                        onSeek = { i ->
+                            viewModel.seekToScene(i)
+                            scope.launch { listState.animateScrollToItem(sceneHeaderItemIndex(scenes, i)) }
+                        },
+                        modifier = Modifier
+                            .align(Alignment.BottomCenter)
+                            .padding(bottom = 20.dp, start = 84.dp, end = 84.dp)
+                            .fillMaxWidth()
+                    )
+                }
             }
         }
     }
@@ -238,9 +243,9 @@ private fun PodcastLineRow(
 }
 
 /**
- * A thin YouTube-style bar: one notch per scene with small gaps, laid out edge-to-edge. The current scene
- * (playhead) is solid orange, the rest faint. Each notch sits in a taller invisible column so it's
- * comfortably tappable despite the thin visual.
+ * Floating YouTube-style scrubber shown between the two FABs: a rounded capsule of notches, one per scene
+ * with small gaps. The current scene (playhead) is solid orange, the rest faint. Each notch sits in a taller
+ * invisible column so it's comfortably tappable despite the thin visual.
  */
 @Composable
 private fun SceneScrubber(
@@ -249,19 +254,27 @@ private fun SceneScrubber(
     onSeek: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Row(
-        modifier.fillMaxWidth().padding(top = 2.dp),
-        horizontalArrangement = Arrangement.spacedBy(3.dp)
+    Surface(
+        modifier = modifier.height(48.dp),
+        shape = RoundedCornerShape(24.dp),
+        color = MaterialTheme.colorScheme.surface,
+        shadowElevation = 4.dp
     ) {
-        for (i in 0 until sceneCount) {
-            Box(
-                Modifier.weight(1f).height(24.dp).clickable { onSeek(i) },
-                contentAlignment = Alignment.Center
-            ) {
+        Row(
+            Modifier.fillMaxWidth().padding(horizontal = 12.dp),
+            horizontalArrangement = Arrangement.spacedBy(3.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            for (i in 0 until sceneCount) {
                 Box(
-                    Modifier.fillMaxWidth().height(6.dp).clip(RoundedCornerShape(2.dp))
-                        .background(if (i == focusedIndex) Orange else Orange.copy(alpha = 0.25f))
-                )
+                    Modifier.weight(1f).height(40.dp).clickable { onSeek(i) },
+                    contentAlignment = Alignment.Center
+                ) {
+                    Box(
+                        Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(2.dp))
+                            .background(if (i == focusedIndex) Orange else Orange.copy(alpha = 0.3f))
+                    )
+                }
             }
         }
     }

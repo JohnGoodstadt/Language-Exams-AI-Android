@@ -74,6 +74,31 @@ class SequencePlayer @Inject constructor(
         startFrom(0)
     }
 
+    /**
+     * Arm a sequence in the PAUSED state without playing anything, positioned at [startIndex]. A later
+     * [resume] begins from there. Used to move a paused run's resume point (e.g. a scrubber seek on a paused
+     * script) silently; parameters mirror [toggle] minus the preflight (no playback starts here).
+     */
+    fun prime(
+        key: String, sentences: List<String>, level: String,
+        onTrackStarted: (String) -> Unit = {},
+        onTrackPlayed: (String) -> Unit = {},
+        onCompleted: () -> Unit = {},
+        sheetName: String = "",
+        isPremiumUser: Boolean = false,
+        gapMillis: ((String) -> Long)? = null,
+        voices: List<String?>? = null,
+        startIndex: Int = 0
+    ) {
+        stop()
+        if (sentences.isEmpty()) return
+        params = RunParams(sentences, voices, level, sheetName, isPremiumUser, gapMillis,
+            onTrackStarted, onTrackPlayed, onCompleted)
+        _playingKey.value = key
+        _isPaused.value = true
+        currentIndex = startIndex.coerceIn(0, sentences.lastIndex)
+    }
+
     /** Suspend the active run, keeping its key + position. The in-flight track is cut. */
     fun pause() {
         if (_playingKey.value == null || _isPaused.value) return

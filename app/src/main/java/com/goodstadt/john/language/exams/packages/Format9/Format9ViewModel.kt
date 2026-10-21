@@ -164,13 +164,16 @@ class Format9ViewModel @Inject constructor(
                     false
                 } else true
             },
-            onTrackStarted = { sentence ->
-                _currentGerman.value = sentence
-                sceneIndexOfGerman(sentence)?.let { _focusedSceneIndex.value = it }
-                stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.TAP)
-            },
+            onTrackStarted = ::handleTrackStarted,
             onCompleted = { _currentGerman.value = null }
         )
+    }
+
+    /** Shared per-track start handler: moves the row highlight + scrubber playhead, records the play stat. */
+    private fun handleTrackStarted(sentence: String) {
+        _currentGerman.value = sentence
+        sceneIndexOfGerman(sentence)?.let { _focusedSceneIndex.value = it }
+        stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.TAP)
     }
 
     /** Index (in [orderedScenes]) of the scene containing a line whose German matches [german], or null. */
@@ -180,17 +183,35 @@ class Format9ViewModel @Inject constructor(
     /**
      * Scrubber tap on [sceneIndex]: the screen scrolls there (handled by the UI). If audio is ACTIVELY
      * playing, continue the script from that scene through to the end, under the whole-script key so the
-     * top/floating controls stay "playing". If paused or idle, only the highlight moves and no playback
-     * starts — matching YouTube, where seeking a paused video doesn't start it.
+     * top/floating controls stay "playing". If PAUSED, don't make a sound but move the resume point to this
+     * scene so the floating play resumes from here. If idle, only the highlight/scroll moves — matching
+     * YouTube, where seeking a paused video doesn't start it.
      */
     fun seekToScene(sceneIndex: Int) {
         val scenes = orderedScenes()
         if (sceneIndex !in scenes.indices) return
         _focusedSceneIndex.value = sceneIndex
-        val activelyPlaying = sequence.playingKey.value != null && !sequence.isPaused.value
-        if (!activelyPlaying) return
         val lines = scenes.drop(sceneIndex).flatMap { it.lines.sortedBy { l -> l.sortorder } }
-        startSequence(playAllKey(), lines)
+        if (lines.isEmpty()) return
+        when {
+            sequence.playingKey.value != null && !sequence.isPaused.value -> startSequence(playAllKey(), lines)
+            sequence.isPaused.value -> primePausedSequence(playAllKey(), lines)
+        }
+    }
+
+    /** Re-arm the paused whole-script run so [SequencePlayer.resume] starts at these lines (no sound now). */
+    private fun primePausedSequence(key: String, lines: List<Format9Line>) {
+        _currentGerman.value = lines.firstOrNull()?.german   // reflect the new resume point in the list
+        sequence.prime(
+            key = key,
+            sentences = lines.map { it.german },
+            voices = lines.map { voiceIdOrNull(it.speakerId) },
+            level = "Reference",
+            sheetName = sheetName,
+            isPremiumUser = policy.isPremium,
+            onTrackStarted = ::handleTrackStarted,
+            onCompleted = { _currentGerman.value = null }
+        )
     }
 
     /** Floating control: nothing playing -> play whole script; playing -> pause; paused -> resume. */
