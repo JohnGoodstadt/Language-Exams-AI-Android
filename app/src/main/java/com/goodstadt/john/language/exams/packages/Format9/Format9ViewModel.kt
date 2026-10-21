@@ -62,6 +62,10 @@ class Format9ViewModel @Inject constructor(
     // Display language: false = learning (German), true = native translation (English). Audio always German.
     private val _showTranslation = MutableStateFlow(false)
     val showTranslation = _showTranslation.asStateFlow()
+    // Scene the scrubber highlights (playhead): advances as playback crosses scenes, and is set on a scrubber
+    // tap for immediate feedback. It's an indicator, not necessarily what's visible on screen.
+    private val _focusedSceneIndex = MutableStateFlow(0)
+    val focusedSceneIndex = _focusedSceneIndex.asStateFlow()
 
     val playingKey = sequence.playingKey
     val isPaused = sequence.isPaused
@@ -135,6 +139,15 @@ class Format9ViewModel @Inject constructor(
 
     private fun toggleSequence(key: String, lines: List<Format9Line>) {
         if (sequence.playingKey.value == key && !sequence.isPaused.value) { stopPlayback(); return }
+        startSequence(key, lines)
+    }
+
+    /**
+     * Start [lines] under [key], replacing whatever is playing (no toggle-off). Split out from
+     * [toggleSequence] so the scrubber can continue the whole script FROM a scene while it is already the
+     * active key (a plain toggle would stop it instead of restarting).
+     */
+    private fun startSequence(key: String, lines: List<Format9Line>) {
         stopPlayback()
         if (lines.isEmpty()) return
         _error.value = null
@@ -153,10 +166,31 @@ class Format9ViewModel @Inject constructor(
             },
             onTrackStarted = { sentence ->
                 _currentGerman.value = sentence
+                sceneIndexOfGerman(sentence)?.let { _focusedSceneIndex.value = it }
                 stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.TAP)
             },
             onCompleted = { _currentGerman.value = null }
         )
+    }
+
+    /** Index (in [orderedScenes]) of the scene containing a line whose German matches [german], or null. */
+    private fun sceneIndexOfGerman(german: String): Int? =
+        orderedScenes().indexOfFirst { scene -> scene.lines.any { it.german == german } }.takeIf { it >= 0 }
+
+    /**
+     * Scrubber tap on [sceneIndex]: the screen scrolls there (handled by the UI). If audio is ACTIVELY
+     * playing, continue the script from that scene through to the end, under the whole-script key so the
+     * top/floating controls stay "playing". If paused or idle, only the highlight moves and no playback
+     * starts — matching YouTube, where seeking a paused video doesn't start it.
+     */
+    fun seekToScene(sceneIndex: Int) {
+        val scenes = orderedScenes()
+        if (sceneIndex !in scenes.indices) return
+        _focusedSceneIndex.value = sceneIndex
+        val activelyPlaying = sequence.playingKey.value != null && !sequence.isPaused.value
+        if (!activelyPlaying) return
+        val lines = scenes.drop(sceneIndex).flatMap { it.lines.sortedBy { l -> l.sortorder } }
+        startSequence(playAllKey(), lines)
     }
 
     /** Floating control: nothing playing -> play whole script; playing -> pause; paused -> resume. */

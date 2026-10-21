@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -32,6 +33,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.ui.theme.Orange
 import com.goodstadt.john.language.exams.utils.findActivity
+import kotlinx.coroutines.launch
 
 private val SpeakerTeal = Color(0xFF00897B)
 
@@ -55,10 +57,13 @@ fun Format9ContainerScreen(
     val isPaused by viewModel.isPaused.collectAsStateWithLifecycle()
     val currentGerman by viewModel.currentGerman.collectAsStateWithLifecycle()
     val showTranslation by viewModel.showTranslation.collectAsStateWithLifecycle()
+    val focusedSceneIndex by viewModel.focusedSceneIndex.collectAsStateWithLifecycle()
     val prompt by viewModel.prompt.collectAsStateWithLifecycle()
     val playbackError by viewModel.playbackError.collectAsStateWithLifecycle()
     val ownerLifecycle = LocalLifecycleOwner.current
     val activity = LocalContext.current.findActivity()
+    val listState = rememberLazyListState()
+    val scope = rememberCoroutineScope()
 
     DisposableEffect(ownerLifecycle) {
         val observer = LifecycleEventObserver { _, event ->
@@ -83,6 +88,7 @@ fun Format9ContainerScreen(
                 val f = file!!
                 val scenes = viewModel.orderedScenes()
                 LazyColumn(
+                    state = listState,
                     modifier = Modifier
                         .widthIn(max = 840.dp)
                         .fillMaxSize()
@@ -117,6 +123,19 @@ fun Format9ContainerScreen(
                                         contentDescription = null, tint = Orange, modifier = Modifier.size(32.dp))
                                     Text(if (playingKey != null) "Stop" else "Play whole script",
                                         style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+                                }
+                                // Scene scrubber (YouTube-style): one notch per scene. Tap a notch to jump to
+                                // that scene; if audio is playing it continues from there to the end, otherwise
+                                // it just scrolls there.
+                                if (scenes.size > 1) {
+                                    SceneScrubber(
+                                        sceneCount = scenes.size,
+                                        focusedIndex = focusedSceneIndex,
+                                        onSeek = { i ->
+                                            viewModel.seekToScene(i)
+                                            scope.launch { listState.animateScrollToItem(sceneHeaderItemIndex(scenes, i)) }
+                                        }
+                                    )
                                 }
                             }
                         }
@@ -216,4 +235,44 @@ private fun PodcastLineRow(
         Text(displayText, style = MaterialTheme.typography.bodyLarge,
             color = if (isPlaying) Orange else MaterialTheme.colorScheme.onSurface)
     }
+}
+
+/**
+ * A thin YouTube-style bar: one notch per scene with small gaps, laid out edge-to-edge. The current scene
+ * (playhead) is solid orange, the rest faint. Each notch sits in a taller invisible column so it's
+ * comfortably tappable despite the thin visual.
+ */
+@Composable
+private fun SceneScrubber(
+    sceneCount: Int,
+    focusedIndex: Int,
+    onSeek: (Int) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier.fillMaxWidth().padding(top = 2.dp),
+        horizontalArrangement = Arrangement.spacedBy(3.dp)
+    ) {
+        for (i in 0 until sceneCount) {
+            Box(
+                Modifier.weight(1f).height(24.dp).clickable { onSeek(i) },
+                contentAlignment = Alignment.Center
+            ) {
+                Box(
+                    Modifier.fillMaxWidth().height(6.dp).clip(RoundedCornerShape(2.dp))
+                        .background(if (i == focusedIndex) Orange else Orange.copy(alpha = 0.25f))
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Flat LazyColumn item index of scene [sceneIndex]'s header. Layout is: the intro item (0), then for each
+ * scene a header item plus one item per line. Used to scroll a tapped scrubber notch into view.
+ */
+private fun sceneHeaderItemIndex(scenes: List<Format9Scene>, sceneIndex: Int): Int {
+    var idx = 1 // intro item
+    for (i in 0 until sceneIndex) idx += 1 + scenes[i].lines.size
+    return idx
 }
