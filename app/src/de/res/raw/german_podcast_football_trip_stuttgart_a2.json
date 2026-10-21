@@ -35,6 +35,14 @@
     {
       "id": "supporting",
       "description": "Other characters: conversational speech; the same third voice can play these separate roles."
+    },
+    {
+      "id": "en-US-Chirp-HD-F",
+      "description": "The young woman: female voice speaking English during the conversation at Freiburg station."
+    },
+    {
+      "id": "en-US-Chirp-HD-D",
+      "description": "Alex: male voice speaking English while helping the young woman at Freiburg station."
     }
   ],
   "speakers": [
@@ -103,6 +111,18 @@
       "name": "Sitznachbar",
       "role": "supporting",
       "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    },
+    {
+      "id": "young_woman_en",
+      "name": "Junge Frau",
+      "role": "supporting",
+      "voiceId": "en-US-Chirp-HD-F"
+    },
+    {
+      "id": "alex_en",
+      "name": "Alex",
+      "role": "traveller",
+      "voiceId": "en-US-Chirp-HD-D"
     }
   ],
   "scenes": [
@@ -1070,29 +1090,29 @@
           "id": "scene_08_line_002",
           "sortorder": 2,
           "speakerId": "kiosk_staff",
-          "german": "Was bekommst du?",
+          "german": "Was bekommen Sie?",
           "english": "What can I get you?"
         },
         {
           "id": "scene_08_line_003",
           "sortorder": 3,
           "speakerId": "alex",
-          "german": "Ein Bier und eine Brezel, bitte.",
-          "english": "A beer and a pretzel, please."
+          "german": "Kann ich ein Bier haben? Das da. Ist das Stuttgarter Hofbräu Pils? Und eine Brezel, bitte.",
+          "english": "Can I have a beer? That one there. Is that Stuttgarter Hofbräu Pils? And a pretzel, please."
         },
         {
           "id": "scene_08_line_004",
           "sortorder": 4,
           "speakerId": "kiosk_staff",
-          "german": "Normales Bier oder alkoholfrei?",
-          "english": "Regular beer or alcohol-free?"
+          "german": "Ja, genau. Ein Hofbräu Pils und eine Brezel. Kommt sofort.",
+          "english": "Yes, that’s right. One Hofbräu Pils and a pretzel. Coming right up."
         },
         {
           "id": "scene_08_line_005",
           "sortorder": 5,
           "speakerId": "alex",
-          "german": "Ein normales, bitte.",
-          "english": "A regular one, please."
+          "german": "Danke.",
+          "english": "Thanks."
         },
         {
           "id": "scene_08_line_006",
@@ -1112,7 +1132,7 @@
           "id": "scene_08_line_008",
           "sortorder": 8,
           "speakerId": "kiosk_staff",
-          "german": "Zwei Euro für den Becher. Wenn du ihn zurückbringst, bekommst du die zwei Euro wieder.",
+          "german": "Zwei Euro für den Becher. Wenn Sie ihn zurückbringen, bekommen Sie die zwei Euro wieder.",
           "english": "Two euros for the cup. When you bring it back, you get the two euros back."
         },
         {
@@ -1140,7 +1160,7 @@
           "id": "scene_08_line_012",
           "sortorder": 12,
           "speakerId": "kiosk_staff",
-          "german": "Ja, hier ans Gerät. Brauchst du einen Bon?",
+          "german": "Ja, hier ans Gerät. Brauchen Sie einen Bon?",
           "english": "Yes, against the terminal here. Do you need a receipt?"
         },
         {
@@ -1321,8 +1341,8 @@
           "id": "scene_10_line_002",
           "sortorder": 2,
           "speakerId": "neighbour",
-          "german": "Den musst du machen!",
-          "english": "You've got to score that!"
+          "german": "Mach schon! Knalls' rein",
+          "english": "Get on with it. Bang it in"
         },
         {
           "id": "scene_10_line_003",
@@ -1436,8 +1456,8 @@
           "id": "scene_11_line_005",
           "sortorder": 5,
           "speakerId": "alex",
-          "german": "Ja. Wie kommen wir jetzt zum Bahnhof? Wieder mit Uber?",
-          "english": "Yes. How are we getting to the station now? With Uber again?"
+          "german": "Ja, Ich auch. Wie kommen wir jetzt zum Bahnhof? Wieder mit Uber?",
+          "english": "Yes, I did as well. How are we getting to the station now? With Uber again?"
         },
         {
           "id": "scene_11_line_006",
@@ -1475,7 +1495,7 @@
       "title": "Zurück nach Freiburg",
       "place": "Stuttgart Hauptbahnhof, Karlsruhe und Freiburg",
       "timeOfDay": "18:20–21:10",
-      "summary": "Check the return journey, change at Karlsruhe again and bring the story home.",
+      "summary": "Return to Freiburg, where Alex helps a young woman find her train to Basel.",
       "lines": [
         {
           "id": "scene_12_line_001",
@@ -1509,64 +1529,106 @@
           "id": "scene_12_line_005",
           "sortorder": 5,
           "speakerId": "alex",
-          "german": "Meine Stimme ist schon fast weg. Ich habe so viel gerufen.",
-          "english": "My voice is almost gone already. I shouted so much."
+          "german": "Ein bisschen Stimme habe ich noch.",
+          "english": "I’ve still got a little voice left."
         },
         {
           "id": "scene_12_line_006",
           "sortorder": 6,
-          "speakerId": "jonas",
-          "german": "Das gehört dazu. Und, beim nächsten Spiel wieder?",
-          "english": "That’s all part of it. So, same again for the next match?"
+          "speakerId": "narrator",
+          "german": "In Karlsruhe finden sie ihren nächsten Zug. Um neun Uhr kommen sie in Freiburg an. Alex und Jonas sagen Tschüss. Dann geht Alex zur Treppe.",
+          "english": "In Karlsruhe, they find their next train. At nine, they arrive in Freiburg. Alex and Jonas say goodbye. Then Alex walks towards the stairs."
         },
         {
           "id": "scene_12_line_007",
           "sortorder": 7,
-          "speakerId": "alex",
-          "german": "Vielleicht. Meine Freunde zu Hause fragen sicher: Warum bist du heute so glücklich?",
-          "english": "Maybe. My friends at home will probably ask: why are you so happy today?"
+          "speakerId": "young_woman_en",
+          "german": "Excuse me. Do you speak English?",
+          "english": "Excuse me. Do you speak English?"
         },
         {
           "id": "scene_12_line_008",
           "sortorder": 8,
-          "speakerId": "narrator",
-          "german": "Um neunzehn Uhr fünfunddreißig kommen sie in Karlsruhe an. Sie haben zwanzig Minuten Zeit. Dann nehmen sie den Zug nach Freiburg. Alex findet das richtige Gleis. Diesmal braucht er keine Hilfe.",
-          "english": "At seven thirty-five, they arrive in Karlsruhe. They have twenty minutes. Then they take the train to Freiburg. Alex finds the right platform. This time he doesn't need help."
+          "speakerId": "alex_en",
+          "german": "Yes. Do you need help?",
+          "english": "Yes. Do you need help?"
         },
         {
           "id": "scene_12_line_009",
           "sortorder": 9,
-          "speakerId": "narrator",
-          "german": "Um neun Uhr abends kommen sie in Freiburg an. Draußen ist es kalt. Alex zieht seinen Schal wieder an. Auf dem Bahnsteig sagen die beiden Tschüss.",
-          "english": "At nine in the evening, they arrive in Freiburg. It is cold outside. Alex puts his scarf back on. The two say goodbye on the platform."
+          "speakerId": "young_woman_en",
+          "german": "A little. I’m learning German. But the announcement was so fast. I need to get to Basel. Has my train already left?",
+          "english": "A little. I’m learning German. But the announcement was so fast. I need to get to Basel. Has my train already left?"
         },
         {
           "id": "scene_12_line_010",
           "sortorder": 10,
-          "speakerId": "alex",
-          "german": "Danke! Der Tag mit dir war toll.",
-          "english": "Thank you! I had a great day with you."
+          "speakerId": "narrator",
+          "german": "Alex bleibt stehen. Heute Morgen hatte er selbst viele Fragen. Jetzt schaut er mit der jungen Frau auf die Anzeige.",
+          "english": "Alex stops. This morning, he had lots of questions himself. Now he looks at the departure board with the young woman."
         },
         {
           "id": "scene_12_line_011",
           "sortorder": 11,
-          "speakerId": "jonas",
-          "german": "Meld dich, wenn du wieder fährst.",
-          "english": "Get in touch when you're going again."
+          "speakerId": "alex_en",
+          "german": "No, here it is. Your train leaves in twelve minutes. From platform three.",
+          "english": "No, here it is. Your train leaves in twelve minutes. From platform three."
         },
         {
           "id": "scene_12_line_012",
           "sortorder": 12,
-          "speakerId": "alex",
-          "german": "Mach ich. Bis bald!",
-          "english": "I will. See you soon!"
+          "speakerId": "young_woman_en",
+          "german": "And where is platform three?",
+          "english": "And where is platform three?"
         },
         {
           "id": "scene_12_line_013",
           "sortorder": 13,
+          "speakerId": "alex_en",
+          "german": "Come with me. I’ll show you.",
+          "english": "Come with me. I’ll show you."
+        },
+        {
+          "id": "scene_12_line_014",
+          "sortorder": 14,
           "speakerId": "narrator",
-          "german": "Ein paar Minuten später ist Alex zu Hause. Seine Karte für das Stadion ist noch auf dem Handy. Er nimmt den Schal ab und denkt an das Spiel. Zwei zu eins. Ein guter Tag.",
-          "english": "A few minutes later, Alex is home. His stadium ticket is still on his phone. He takes off his scarf and thinks about the match. Two-one. A good day."
+          "german": "An der Treppe dreht sie sich noch einmal zu ihm um.",
+          "english": "At the stairs, she turns back towards him."
+        },
+        {
+          "id": "scene_12_line_015",
+          "sortorder": 15,
+          "speakerId": "young_woman_en",
+          "german": "Thank you. I heard you speaking German on the train. Your German is really good.",
+          "english": "Thank you. I heard you speaking German on the train. Your German is really good."
+        },
+        {
+          "id": "scene_12_line_016",
+          "sortorder": 16,
+          "speakerId": "alex_en",
+          "german": "Thanks. I’m still learning too.",
+          "english": "Thanks. I’m still learning too."
+        },
+        {
+          "id": "scene_12_line_017",
+          "sortorder": 17,
+          "speakerId": "narrator",
+          "german": "Auf dem Weg nach Hause schickt er Jonas eine Nachricht.",
+          "english": "On the way home, he sends Jonas a message."
+        },
+        {
+          "id": "scene_12_line_018",
+          "sortorder": 18,
+          "speakerId": "alex",
+          "german": "Gut angekommen. Und ich habe gerade jemandem den Weg gezeigt.",
+          "english": "Got back safely. And I’ve just helped someone find their way."
+        },
+        {
+          "id": "scene_12_line_019",
+          "sortorder": 19,
+          "speakerId": "jonas",
+          "german": "Siehst du. Beim nächsten Mal führst du mich.",
+          "english": "There you go. Next time, you can show me the way."
         }
       ]
     }
