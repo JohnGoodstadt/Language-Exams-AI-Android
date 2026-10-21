@@ -66,7 +66,7 @@ fun TTSStatsRepository.recordQuizCompletion(area: QuizStat.Area, sheetId: String
  *
  *     p_<platform>_<area>_<sheetId>_<metric>     e.g.  p_and_reference_GermanPrepositionsTeaching_open
  *
- * Metrics: `open` (screen shown) and `tap` (user interacted). Reuses [QuizStat.normalize] so sheet ids are
+ * Metrics: `open` (screen shown), `tap` (user interacted) and `play` (a sentence was actually heard). Reuses [QuizStat.normalize] so sheet ids are
  * cleaned identically. Written to both the global monthly doc and the per-user doc; the existing
  * background/foreground flush uploads and clears them.
  */
@@ -74,7 +74,7 @@ object PageStat {
     enum class Area(val id: String) {
         REFERENCE("reference"), ME("me"), WORD_OF_THE_DAY("wordoftheday"), SAVED("saved")
     }
-    enum class Metric(val id: String) { OPEN("open"), TAP("tap") }
+    enum class Metric(val id: String) { OPEN("open"), TAP("tap"), PLAY("play") }
 
     const val PLATFORM = "and"
 

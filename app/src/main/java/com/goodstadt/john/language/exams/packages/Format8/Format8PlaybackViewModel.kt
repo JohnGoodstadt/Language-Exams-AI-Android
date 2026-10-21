@@ -72,7 +72,8 @@ class Format8PlaybackViewModel @Inject constructor(
         if (isLocked(rank)) { showPremium(); return }
         _error.value = null
         lastSentence = example.german
-        stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.TAP)
+        // Count the tap + GA4 breadth event; the `.play` (actually heard) follows on playback success below.
+        stats.recordReferenceInteraction(sheetName, "sentence")
         singleJob = viewModelScope.launch {
             try {
                 val result = audio.playTrackAndGetStatus(example.german, "Reference", sheetName, policy.isPremium)
@@ -80,12 +81,15 @@ class Format8PlaybackViewModel @Inject constructor(
                 when (result) {
                     is AudioPlaybackStatus.RateLimited -> showLimit(result.failReason)
                     is AudioPlaybackStatus.Failure -> _error.value = "Unable to play this sentence. Please try again."
-                    else -> Unit
+                    else -> stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.PLAY)  // heard
                 }
             } catch (cancelled: CancellationException) { throw cancelled }
             catch (error: Exception) { _error.value = error.localizedMessage ?: "Unable to play this sentence." }
         }
     }
+
+    /** Sub-tab (adjective group) switch — which group gets used, a within-sheet popularity signal. */
+    fun recordSubTabTap(sheetName: String) = stats.recordReferenceInteraction(sheetName, "sub_tab")
 
     fun toggleSection(sheetName: String, rank: Int, entry: Format8Entry) {
         val key = sectionKey(sheetName, rank)
@@ -93,6 +97,8 @@ class Format8PlaybackViewModel @Inject constructor(
         stopPlayback()
         if (isLocked(rank)) { showPremium(); return }
         _error.value = null
+        // One section-play interaction (tap + GA4); each sentence then records `.play` as it is heard.
+        stats.recordReferenceInteraction(sheetName, "section_play", entry.header)
         val withGap = gapEnabled.value
         sequence.toggle(key = key, sentences = entry.examples.map { it.german }, level = "Reference",
             sheetName = sheetName, isPremiumUser = policy.isPremium,
@@ -105,7 +111,7 @@ class Format8PlaybackViewModel @Inject constructor(
             },
             onTrackStarted = { sentence ->
                 lastSentence = sentence
-                stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.TAP)
+                stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.PLAY)  // heard
             })
     }
 

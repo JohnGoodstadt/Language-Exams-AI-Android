@@ -234,6 +234,8 @@ class ReferenceGenericViewModel @Inject constructor(
 
     fun handleTap(sentence: String) {
         lastPlayedSentence = sentence
+        // Count the tap + GA4 breadth event; the `.play` (actually heard) follows on playback success.
+        ttsStatsRepository.recordReferenceInteraction(sheetName, "sentence")
         viewModelScope.launch {
 
             val wasAlreadyHeard = isHeard(sentence)
@@ -255,6 +257,12 @@ class ReferenceGenericViewModel @Inject constructor(
                 is AudioPlaybackStatus.PlayedFromLocalCache,
                 is AudioPlaybackStatus.PlayedFromCloudStorage,
                 is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    // Heard: opened -> tapped -> listened.
+                    ttsStatsRepository.recordPageView(
+                        com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+                        sheetName,
+                        com.goodstadt.john.language.exams.data.stats.PageStat.Metric.PLAY
+                    )
                     refreshUI()
                     if (!wasAlreadyHeard) {
                         checkSheetCompletionAfterNewSentence()
@@ -496,21 +504,11 @@ class ReferenceGenericViewModel @Inject constructor(
     }
 
     fun incSideQuestStat() {
-        val statName = "${TTSStatsRepository.Companion.statSideQuestCount}_$sheetName"
-
-        ttsStatsRepository.inc(
-            TTSStatsRepository.fsDOC.GlobalStats,
-            statName
-        )
+        ttsStatsRepository.recordReferenceInteraction(sheetName, "sidequest")
     }
 
     fun incQuizSheetStat() {
-        val statName = "${TTSStatsRepository.Companion.statSheetQuizCount}_$sheetName"
-
-        ttsStatsRepository.inc(
-            TTSStatsRepository.fsDOC.GlobalStats,
-            statName
-        )
+        ttsStatsRepository.recordReferenceInteraction(sheetName, "quiz")
     }
 
 

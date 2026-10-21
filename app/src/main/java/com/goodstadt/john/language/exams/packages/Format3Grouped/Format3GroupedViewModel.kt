@@ -10,6 +10,7 @@ import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.stats.recordPageView
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -207,28 +208,18 @@ class Format3GroupedViewModel @Inject constructor(
     }
 
     fun incSideQuestStat() {
-        val sheetName = _uiState.value.currentSheetName
-        val statName = "${TTSStatsRepository.Companion.statSideQuestCount}_$sheetName"
-
-        ttsStatsRepository.inc(
-            TTSStatsRepository.fsDOC.GlobalStats,
-            statName
-        )
+        ttsStatsRepository.recordReferenceInteraction(_uiState.value.currentSheetName, "sidequest")
     }
     fun incQuizSheetStat() {
-        val sheetName = _uiState.value.currentSheetName
-        val statName = "${TTSStatsRepository.Companion.statSheetQuizCount}_$sheetName"
-
-        ttsStatsRepository.inc(
-            TTSStatsRepository.fsDOC.GlobalStats,
-            statName
-        )
+        ttsStatsRepository.recordReferenceInteraction(_uiState.value.currentSheetName, "quiz")
     }
 
     fun handleSentenceTap(sentence: String) {
         viewModelScope.launch {
 
             val sheetName = _uiState.value.currentSheetName
+            // Count the tap + GA4 breadth event; the `.play` (actually heard) follows on playback success.
+            ttsStatsRepository.recordReferenceInteraction(sheetName, "sentence")
             // 1. CALL REPOSITORY
             // The Repository handles everything: Playback, History, XP, and Graph Stats.
             val status = audioPlaybackRepository.playTrackAndGetStatus(
@@ -243,6 +234,12 @@ class Format3GroupedViewModel @Inject constructor(
                 is AudioPlaybackStatus.PlayedFromLocalCache,
                 is AudioPlaybackStatus.PlayedFromCloudStorage,
                 is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    // Heard: opened -> tapped -> listened.
+                    ttsStatsRepository.recordPageView(
+                        com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+                        sheetName,
+                        com.goodstadt.john.language.exams.data.stats.PageStat.Metric.PLAY
+                    )
                     refreshUI()
                 }
 

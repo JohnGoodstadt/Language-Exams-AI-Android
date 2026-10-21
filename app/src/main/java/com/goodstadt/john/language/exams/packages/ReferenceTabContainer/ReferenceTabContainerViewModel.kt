@@ -76,9 +76,11 @@ class ReferenceTabContainerViewModel @Inject constructor(
         if (st == com.goodstadt.john.language.exams.models.ScreenType.FIXED_SCREEN ||
             st == com.goodstadt.john.language.exams.models.ScreenType.VOCAB_DASHBOARD) return
         val sheetId = tab.definition.firestoreDocumentId ?: tabId
+        // A genuine OPEN per sheet shown. `open` and `tap` are separate keys (`..._open` vs `..._tap`), summed
+        // independently and never multiplied, so recording a real open here is what makes the tap/open ratio work.
         ttsStatsRepository.recordPageView(
             com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
-            sheetId,PageStat.Metric.TAP //Was Open but don't want 2 values multiplied in DB
+            sheetId, PageStat.Metric.OPEN
         )
     }
 

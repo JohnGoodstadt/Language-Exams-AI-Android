@@ -3,7 +3,11 @@ package com.goodstadt.john.language.exams.data.repository
 import android.content.Context
 import android.content.SharedPreferences
 import android.icu.util.Calendar
+import android.os.Bundle
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.stats.PageStat
+import com.goodstadt.john.language.exams.data.stats.QuizStat
 import com.goodstadt.john.language.exams.data.FirestoreRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.text.SimpleDateFormat
@@ -322,6 +326,33 @@ class TTSStatsRepository @Inject constructor(
         val prefs = getPrefs(category)
         val current = prefs.getInt(statName, 0)
         prefs.edit().putInt(statName, current + value).apply()
+    }
+
+    /**
+     * One user interaction on a reference sheet, written to BOTH destinations — each for what it is good at:
+     *  - the Firestore counter `p_and_reference_<sheet>_tap` (global monthly + per-user doc) -> interaction
+     *    VOLUME, and the tap/open ratio that separates "engaging" from "opened then bounced";
+     *  - a GA4 `reference_interaction` event carrying `kind` (and optional `pattern`) -> how many DISTINCT
+     *    buttons a user explored in a session (breadth) plus automatic engagement-time (dwell) — the
+     *    questions a single counter structurally cannot answer.
+     *
+     * `kind` is the surface tapped: "sentence" | "chip" | "section_play" | "scene_play" | "play_all" |
+     * "sub_tab" | "line" | "scrubber" | "translate" | "quiz" | "sidequest". Twin of iOS
+     * AnalyticsService.logReferenceInteraction.
+     */
+    fun recordReferenceInteraction(sheetId: String, kind: String, pattern: String? = null) {
+        // Destination 1 — fast, reconcilable volume counter (joins the p_* series).
+        val tapKey = PageStat.key(PageStat.Area.REFERENCE, sheetId, PageStat.Metric.TAP)
+        inc(fsDOC.GlobalStats, tapKey)
+        inc(fsDOC.USER, tapKey)
+        // Destination 2 — GA4 breadth + dwell.
+        val params = Bundle().apply {
+            putString("sheet", QuizStat.normalize(sheetId))   // normalised id -> lines up with the p_/q_ keys
+            putString("area", "reference")
+            putString("kind", kind)
+            pattern?.let { putString("pattern", it) }
+        }
+        FirebaseAnalytics.getInstance(context).logEvent("reference_interaction", params)
     }
     private fun incDouble(category: fsDOC, statName: String, value: Double = 0.0) {
         val prefs = getPrefs(category)

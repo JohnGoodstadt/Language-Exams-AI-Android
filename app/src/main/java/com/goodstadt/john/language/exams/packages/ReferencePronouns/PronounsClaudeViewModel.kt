@@ -37,13 +37,10 @@ class PronounsClaudeViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    /** Page-engagement: count one tap for this reference sheet (sentence play or category/item chip tap). */
+    /** A category/item CHIP tap on this fileFormat-6 sheet: records the tap counter + GA4 breadth event.
+     *  (Sentence plays go through [play], which logs kind "sentence" and `.play` on success.) */
     fun recordReferenceTap() {
-        ttsStatsRepository.recordPageView(
-            com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
-            documentId,
-            com.goodstadt.john.language.exams.data.stats.PageStat.Metric.TAP
-        )
+        ttsStatsRepository.recordReferenceInteraction(documentId, "chip")
     }
 
     /**
@@ -107,15 +104,25 @@ class PronounsClaudeViewModel @Inject constructor(
     /** Play a sentence (or a single pronoun form) via the shared audio waterfall. */
     fun play(text: String) {
         if (text.isBlank()) return
-        recordReferenceTap() // page-engagement: every sentence tap counts
+        // Count the tap + GA4 breadth event; the `.play` (actually heard) follows on playback success.
+        ttsStatsRepository.recordReferenceInteraction(documentId, "sentence")
         lastPlayedSentence = text
         viewModelScope.launch {
-            audioPlaybackRepository.playTrackAndGetStatus(
+            val status = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = text,
                 level = "Reference",
                 sheetName = documentId,
                 isPremiumUser = billingRepository.isPurchased.value
             )
+            if (status is com.goodstadt.john.language.exams.models.AudioPlaybackStatus.PlayedFromLocalCache ||
+                status is com.goodstadt.john.language.exams.models.AudioPlaybackStatus.PlayedFromCloudStorage ||
+                status is com.goodstadt.john.language.exams.models.AudioPlaybackStatus.PlayedFromTTSAPI) {
+                ttsStatsRepository.recordPageView(
+                    com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+                    documentId,
+                    com.goodstadt.john.language.exams.data.stats.PageStat.Metric.PLAY
+                )
+            }
         }
     }
 }

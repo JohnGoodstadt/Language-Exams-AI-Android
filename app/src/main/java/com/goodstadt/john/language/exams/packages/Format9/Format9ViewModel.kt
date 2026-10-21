@@ -116,7 +116,10 @@ class Format9ViewModel @Inject constructor(
 
     // --- Display ---
 
-    fun toggleTranslation() { _showTranslation.value = !_showTranslation.value }
+    fun toggleTranslation() {
+        stats.recordReferenceInteraction(sheetName, "translate")
+        _showTranslation.value = !_showTranslation.value
+    }
     fun dismissPrompt() { _prompt.value = null }
     fun dismissError() { _playbackError.value = null }
     fun buyPremium(activity: Activity) { viewModelScope.launch { billing.launchPurchase(activity) } }
@@ -128,14 +131,22 @@ class Format9ViewModel @Inject constructor(
      * state as whole-script/scene playback: the floating/top buttons flip to pause, the row highlights for
      * the whole clip, and re-tapping the same line (or any play/pause control) stops it.
      */
-    fun playLine(line: Format9Line) = toggleSequence(lineKey(line), listOf(line))
+    fun playLine(line: Format9Line) {
+        stats.recordReferenceInteraction(sheetName, "line", line.id)
+        toggleSequence(lineKey(line), listOf(line))
+    }
 
     /** Whole-script Play/Stop (tapping the running key stops). */
-    fun togglePlayAll() = toggleSequence(playAllKey(), orderedLines())
+    fun togglePlayAll() {
+        stats.recordReferenceInteraction(sheetName, "play_all")
+        toggleSequence(playAllKey(), orderedLines())
+    }
 
     /** Per-scene Play/Stop. */
-    fun toggleScene(scene: Format9Scene) =
+    fun toggleScene(scene: Format9Scene) {
+        stats.recordReferenceInteraction(sheetName, "scene_play", scene.id)
         toggleSequence(sceneKey(scene), scene.lines.sortedBy { it.sortorder })
+    }
 
     private fun toggleSequence(key: String, lines: List<Format9Line>) {
         if (sequence.playingKey.value == key && !sequence.isPaused.value) { stopPlayback(); return }
@@ -173,7 +184,7 @@ class Format9ViewModel @Inject constructor(
     private fun handleTrackStarted(sentence: String) {
         _currentGerman.value = sentence
         sceneIndexOfGerman(sentence)?.let { _focusedSceneIndex.value = it }
-        stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.TAP)
+        stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.PLAY)  // heard
     }
 
     /** Index (in [orderedScenes]) of the scene containing a line whose German matches [german], or null. */
@@ -191,6 +202,7 @@ class Format9ViewModel @Inject constructor(
         val scenes = orderedScenes()
         if (sceneIndex !in scenes.indices) return
         _focusedSceneIndex.value = sceneIndex
+        stats.recordReferenceInteraction(sheetName, "scrubber", scenes[sceneIndex].id)
         val lines = scenes.drop(sceneIndex).flatMap { it.lines.sortedBy { l -> l.sortorder } }
         if (lines.isEmpty()) return
         when {

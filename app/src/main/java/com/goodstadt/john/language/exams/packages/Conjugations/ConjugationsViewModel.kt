@@ -235,6 +235,8 @@ class ConjugationsViewModel @Inject constructor(
                 is ConjugationsUiState.Success -> {
 
                     val sheetName = currentState.currentSheetName
+                    // Count the tap + GA4 breadth event; the `.play` (actually heard) follows on playback success.
+                    ttsStatsRepository.recordReferenceInteraction(sheetName, "sentence")
                     val status = audioPlaybackRepository.playTrackAndGetStatus(
                         sentence = sentence,
                         level = "Reference",
@@ -247,6 +249,12 @@ class ConjugationsViewModel @Inject constructor(
                         is AudioPlaybackStatus.PlayedFromLocalCache,
                         is AudioPlaybackStatus.PlayedFromCloudStorage,
                         is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                            // Heard: opened -> tapped -> listened.
+                            ttsStatsRepository.recordPageView(
+                                com.goodstadt.john.language.exams.data.stats.PageStat.Area.REFERENCE,
+                                sheetName,
+                                com.goodstadt.john.language.exams.data.stats.PageStat.Metric.PLAY
+                            )
                             refreshUI()
                         }
 
