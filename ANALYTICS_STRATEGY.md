@@ -172,13 +172,21 @@ the gap widens.
 
 It is the right tool for anything we must reconcile to the cent or to a specific sheet.
 
-**Add Firebase Analytics (GA4)** for the things counters fundamentally cannot do:
+**Firebase Analytics (GA4) is already integrated** — per flavour, on both platforms, firing a rich
+event set today (iOS `AnalyticsService.swift`; Android `AnalyticsHelper.kt` / `XPManager` /
+`QuizHistoryManager`). The SDK, the per-flavour config (iOS: three `GoogleService*Info.plist` loaded
+programmatically by `FirebaseApp.configure(options:)`; Android: three `google-services.json`), app
+init and a `setUserProperty` call are all in place. So this is **not** an SDK integration — it is
+leaning on what we already run, for the things counters fundamentally cannot do:
 - automatic **sessions, DAU/MAU, retention cohorts, funnels, distinct-user reach, acquisition source**.
-- Dual-write the area/sheet taxonomy we already define (`reference/GermanPronouns`, …) as GA4 events —
-  cheap, because our key grammar already *is* the taxonomy.
+- **Emit the area/sheet taxonomy as events — the one real to-do.** Next to each existing
+  `recordPageView` / `recordQuizCompletion` counter write, add a matching `logEvent` carrying the area
+  and sheet as parameters (e.g. a `screen_view`-style event with `area=reference`,
+  `sheet=GermanPronouns`). Two lines beside code we already have — cheap, because our key grammar
+  already *is* the taxonomy — and it is what gives GA4 the reach/retention/funnel view of `p_*` / `q_*`.
 - **Export GA4 → BigQuery** for SQL cohort/segmentation work and to join against the Firestore counters.
 
-Already in the Firebase box we own:
+Also already in the Firebase box we own:
 - **Crashlytics** for the `faultCount` family — a real crash/fault tool beats a counter for this.
 - **Remote Config + A/B testing** — ship a feature behind a flag, read success in GA4. Closes the loop:
   measure *and* act.
@@ -192,8 +200,10 @@ flush time) fits the existing flush model and keeps docs small — but it's lowe
 
 ## 9. Suggested order of work
 
-1. **GA4 dual-write** of the existing area/sheet taxonomy → retention, funnels, DAU/MAU, distinct-user
-   reach, acquisition — near-zero new code, removes the biggest blind spot (reach).
+1. **Emit the area/sheet taxonomy as GA4 events.** GA4 is already live, so this is just a `logEvent`
+   beside each existing `recordPageView` / `recordQuizCompletion` write, with `area` + `sheet` as
+   parameters → retention, funnels, DAU/MAU, distinct-user reach, acquisition. Near-zero new code;
+   removes the biggest blind spot (reach).
 2. **Define North Star + activation moment**, then a rules-based user score (committed / likely-to-pay /
    at-risk) from counters + `lastActivityDate` + `activityDays` we already have.
 3. **Share-of-attention + tap/open monthly ranking** with a jump alarm for Aim 1.
