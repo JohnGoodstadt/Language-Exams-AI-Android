@@ -54,6 +54,18 @@
         }
       ]
     },
+    "EnglishReferencePodcastsGroup": {
+      "title": "Podcasts",
+      "screenType": "GroupedFormat9Screen",
+      "sheetDataType": "Format9",
+      "subTabs": [
+        {
+          "title": "A2",
+          "firestoreDocumentId": "EnglishPodcastFootballTripManchesterA2",
+          "sheetDataType": "Format9"
+        }
+      ]
+    },
     "EnglishDefinitionsFormat1": {
       "title": "Sounds the Same",
       "sheetDataType": "Format1",
@@ -154,6 +166,7 @@
         "SpanishLanguage",
         "AdjectivesGroup",
         "EnglishReferencePronouns",
+        "EnglishReferencePodcastsGroup",
         "EnglishDefinitionsFormat1",
         "PairsGroup"
       ]

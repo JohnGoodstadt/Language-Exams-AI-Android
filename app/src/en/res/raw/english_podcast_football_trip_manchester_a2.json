@@ -1,0 +1,2606 @@
+{
+  "fileformat": 9,
+  "location": 0,
+  "sheetname": "EnglishPodcastFootballTripManchesterA2",
+  "title": "An Away Day in Manchester",
+  "updatedDate": 0,
+  "description": "An English listening story for ExamReady English Exam Words. Alex and the narrator use mostly A2 English; other speakers use natural everyday English at around B1. Alex travels from Tooting to watch Chelsea win away at Manchester United.",
+  "language": "en-GB",
+  "translationLanguage": "de",
+  "level": "A2-B1",
+  "storyContext": {
+    "origin": "Tooting Bec, London",
+    "destination": "Manchester",
+    "changeAt": [
+      "London Euston",
+      "Manchester Piccadilly"
+    ],
+    "venue": "Old Trafford, Manchester",
+    "event": "Manchester United v Chelsea FC, men's first teams",
+    "fictional": true,
+    "note": "This is a fictional Saturday match and journey, with a two–one Chelsea win. Characters, train times, prices, platform and seat details, vehicle registration, match events and individual service situations are invented. Real places, ordinary transport links and a real Greater Manchester beer provide the setting. The beer and burger offering is fictional, not a verified Old Trafford menu. No particular travel date or real fixture is implied."
+  },
+  "playback": {
+    "pauseBetweenLinesMs": 350,
+    "pauseBetweenScenesMs": 1800
+  },
+  "voices": [
+    {
+      "id": "en-GB-Chirp3-HD-Achernar",
+      "description": "Narrator: clear British English, mostly A2 vocabulary and short sentences."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Charon",
+      "description": "Alex: adult learner using mostly A2 British English under travel pressure."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Achird",
+      "description": "Euston ticket assistant: natural conversational British English."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Orus",
+      "description": "Costa barista: brisk, informal counter service."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Algenib",
+      "description": "Train manager: clear practical announcements and ticket checks."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Aoede",
+      "description": "London Underground station staff: short practical directions."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Sadachbia",
+      "description": "Jonas: friendly fellow Chelsea supporter; natural B1-level replies."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Despina",
+      "description": "Uber driver: conversational British English; feminine voice."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Erinome",
+      "description": "Old Trafford steward: practical entrance instructions."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Fenrir",
+      "description": "Stadium food counter server: short, natural ordering and payment exchanges."
+    },
+    {
+      "id": "en-GB-Chirp3-HD-Puck",
+      "description": "Chelsea supporter beside Alex: familiar football expressions and mild humour."
+    }
+  ],
+  "speakers": [
+    {
+      "id": "narrator",
+      "name": "Narrator",
+      "role": "narrator",
+      "voiceId": "en-GB-Chirp3-HD-Achernar"
+    },
+    {
+      "id": "alex",
+      "name": "Alex",
+      "role": "traveller",
+      "voiceId": "en-GB-Chirp3-HD-Charon"
+    },
+    {
+      "id": "ticket_clerk",
+      "name": "Ticket assistant",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Achird"
+    },
+    {
+      "id": "barista",
+      "name": "Barista",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Orus"
+    },
+    {
+      "id": "conductor",
+      "name": "Train manager",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Algenib"
+    },
+    {
+      "id": "station_staff",
+      "name": "Station staff",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Aoede"
+    },
+    {
+      "id": "jonas",
+      "name": "Jonas",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Sadachbia"
+    },
+    {
+      "id": "taxi_driver",
+      "name": "Uber driver",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Despina"
+    },
+    {
+      "id": "steward",
+      "name": "Steward",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Erinome"
+    },
+    {
+      "id": "kiosk_staff",
+      "name": "Server",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Fenrir"
+    },
+    {
+      "id": "neighbour",
+      "name": "Nearby supporter",
+      "role": "supporting",
+      "voiceId": "en-GB-Chirp3-HD-Puck"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "sortorder": 1,
+      "title": "The Tube to Euston",
+      "place": "Tooting Bec Underground station and the Northern line",
+      "timeOfDay": "08:50–09:30",
+      "summary": "Use contactless, check the northbound Northern line service and travel to Euston.",
+      "lines": [
+        {
+          "id": "scene_01_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "It is Saturday morning. Alex is twenty-three. He lives near Tooting Bec station in London. He supports Chelsea. Today Chelsea are playing Manchester United at Old Trafford. Alex already has his match ticket. Now he needs to get to Manchester. First, he takes the Tube to Euston.",
+          "de": "Es ist Samstagmorgen. Alex ist dreiundzwanzig. Er wohnt in London in der Nähe der U-Bahn-Station Tooting Bec. Er ist Chelsea-Fan. Heute spielt Chelsea im Old Trafford gegen Manchester United. Alex hat seine Eintrittskarte schon. Jetzt muss er nach Manchester kommen. Zuerst fährt er mit der U-Bahn nach Euston.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_002",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "en": "Excuse me. Is this the right way to Euston?",
+          "de": "Entschuldigung. Ist das hier der richtige Weg nach Euston?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_003",
+          "sortorder": 3,
+          "speakerId": "station_staff",
+          "en": "Yes. Northern line, northbound. Take a train via Bank. Check the front of the train before you get on.",
+          "de": "Ja. Northern Line, Richtung Norden. Nehmen Sie einen Zug über Bank. Schauen Sie vor dem Einsteigen auf die Anzeige vorne am Zug.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "en": "Do I need to change?",
+          "de": "Muss ich umsteigen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_005",
+          "sortorder": 5,
+          "speakerId": "station_staff",
+          "en": "Not on that service. It goes straight to Euston.",
+          "de": "Bei diesem Zug nicht. Er fährt direkt nach Euston.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "en": "Can I use my bank card?",
+          "de": "Kann ich meine Bankkarte benutzen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_007",
+          "sortorder": 7,
+          "speakerId": "station_staff",
+          "en": "Yes. Touch it on the yellow reader at the gate. Use the same card to touch out at Euston.",
+          "de": "Ja. Halten Sie sie am Zugang an das gelbe Lesegerät. Benutzen Sie beim Verlassen der Station Euston dieselbe Karte.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "en": "Alex takes one card out of his wallet. He touches it on the reader. The gate opens. Down on the platform, he checks the screen. His train says via Bank.",
+          "de": "Alex nimmt eine Karte aus seinem Portemonnaie. Er hält sie an das Lesegerät. Die Schranke öffnet sich. Unten auf dem Bahnsteig schaut er auf die Anzeige. Bei seinem Zug steht „via Bank“.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "en": "This one says via Bank. That's mine, then.",
+          "de": "Bei diesem Zug steht „via Bank“. Dann ist das meiner.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_010",
+          "sortorder": 10,
+          "speakerId": "station_staff",
+          "en": "That's the one. Let people off first, please.",
+          "de": "Genau der. Lassen Sie bitte erst die Leute aussteigen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_01_line_011",
+          "sortorder": 11,
+          "speakerId": "narrator",
+          "en": "The train is busy. Alex stands near the door. At each station, he checks the name on the wall. At Euston, he gets off and follows the signs for National Rail. He touches his card on the reader again. Then he goes up to the main station.",
+          "de": "Der Zug ist voll. Alex steht in der Nähe der Tür. An jeder Station schaut er auf den Namen an der Wand. In Euston steigt er aus und folgt den Schildern zur Eisenbahn. Er hält seine Karte wieder an das Lesegerät. Dann geht er hinauf in den Hauptbahnhof.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_02",
+      "sortorder": 2,
+      "title": "A Train Ticket to Manchester",
+      "place": "London Euston, ticket office",
+      "timeOfDay": "09:35",
+      "summary": "Buy a return rail ticket, check direct trains and the return time, and ask about a seat.",
+      "lines": [
+        {
+          "id": "scene_02_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "Euston is busy. Alex finds the ticket office and joins the queue. His match starts at three. He wants plenty of time to get from Manchester Piccadilly to Old Trafford.",
+          "de": "In Euston ist viel los. Alex findet den Fahrkartenschalter und stellt sich an. Sein Spiel beginnt um drei. Er möchte genug Zeit haben, um von Manchester Piccadilly zum Old Trafford zu kommen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_002",
+          "sortorder": 2,
+          "speakerId": "ticket_clerk",
+          "en": "Next, please.",
+          "de": "Der Nächste, bitte.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "Morning. A return to Manchester Piccadilly, please. Back today.",
+          "de": "Guten Morgen. Eine Fahrkarte nach Manchester Piccadilly und zurück, bitte. Die Rückfahrt ist heute.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_004",
+          "sortorder": 4,
+          "speakerId": "ticket_clerk",
+          "en": "Just yourself? Standard class?",
+          "de": "Nur für Sie? Standardklasse?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "en": "Yes. I need to be at Old Trafford before three.",
+          "de": "Ja. Ich muss vor drei im Old Trafford sein.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_006",
+          "sortorder": 6,
+          "speakerId": "ticket_clerk",
+          "en": "Then let's get you there early. There's a direct train at ten twenty. It gets into Piccadilly at twelve thirty-five.",
+          "de": "Dann sorgen wir dafür, dass Sie früh genug dort sind. Um zehn Uhr zwanzig fährt ein direkter Zug. Er kommt um zwölf Uhr fünfunddreißig in Piccadilly an.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "So I don't need to change trains?",
+          "de": "Ich muss also nicht umsteigen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_008",
+          "sortorder": 8,
+          "speakerId": "ticket_clerk",
+          "en": "No changes. And what time are you coming back?",
+          "de": "Kein Umsteigen. Und wann möchten Sie zurückfahren?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "en": "About half past six. Is that possible?",
+          "de": "Ungefähr um halb sieben. Geht das?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_010",
+          "sortorder": 10,
+          "speakerId": "ticket_clerk",
+          "en": "Yes. The six thirty gets you back to Euston at eight forty-five. This return ticket is valid on both services. Do you have a Railcard?",
+          "de": "Ja. Mit dem Zug um halb sieben kommen Sie um zwanzig Uhr fünfundvierzig wieder in Euston an. Diese Hin- und Rückfahrkarte gilt für beide Züge. Haben Sie eine Railcard?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "en": "No. How much is it?",
+          "de": "Nein. Wie viel kostet die Fahrkarte?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_012",
+          "sortorder": 12,
+          "speakerId": "ticket_clerk",
+          "en": "A hundred and eight pounds for the return.",
+          "de": "Hundertacht Pfund für Hin- und Rückfahrt.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "en": "Okay. Can I have a window seat?",
+          "de": "Okay. Kann ich einen Fensterplatz haben?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_014",
+          "sortorder": 14,
+          "speakerId": "ticket_clerk",
+          "en": "I've got one on the way up. Coach C, seat forty-two. I'll print the reservation with your tickets.",
+          "de": "Für die Hinfahrt habe ich einen. Wagen C, Platz zweiundvierzig. Ich drucke die Reservierung zusammen mit Ihren Fahrkarten aus.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_015",
+          "sortorder": 15,
+          "speakerId": "narrator",
+          "en": "Alex pays by card. The assistant gives him two tickets and his seat reservation. Alex puts them in his jacket.",
+          "de": "Alex bezahlt mit Karte. Er bekommt zwei Fahrkarten und seine Sitzplatzreservierung. Alex steckt sie in seine Jacke.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_016",
+          "sortorder": 16,
+          "speakerId": "alex",
+          "en": "Which platform is it?",
+          "de": "Von welchem Bahnsteig fährt der Zug?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_017",
+          "sortorder": 17,
+          "speakerId": "ticket_clerk",
+          "en": "It hasn't been announced yet. Keep an eye on the departure board. It'll show up there.",
+          "de": "Der Bahnsteig ist noch nicht bekannt gegeben worden. Behalten Sie die Abfahrtstafel im Blick. Dort wird er angezeigt.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_018",
+          "sortorder": 18,
+          "speakerId": "alex",
+          "en": "Thanks. Have I got time for a coffee?",
+          "de": "Danke. Habe ich noch Zeit für einen Kaffee?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_02_line_019",
+          "sortorder": 19,
+          "speakerId": "ticket_clerk",
+          "en": "You have. Just don't wander too far.",
+          "de": "Ja. Gehen Sie nur nicht zu weit weg.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_03",
+      "sortorder": 3,
+      "title": "A Costa Before the Train",
+      "place": "London Euston, Costa Coffee",
+      "timeOfDay": "09:50–10:10",
+      "summary": "Order a takeaway coffee and a pastry, handle a small misunderstanding, and find the platform.",
+      "lines": [
+        {
+          "id": "scene_03_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "Alex finds a Costa at Euston. There is a short queue. He can still see a departure screen from here. The barista looks up.",
+          "de": "Alex findet in Euston einen Costa. Die Schlange ist kurz. Von hier kann er noch eine Abfahrtsanzeige sehen. Der Barista schaut auf.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_002",
+          "sortorder": 2,
+          "speakerId": "barista",
+          "en": "Hi. What can I get you?",
+          "de": "Hallo. Was darf es sein?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "A small latte, please.",
+          "de": "Einen kleinen Latte, bitte.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_004",
+          "sortorder": 4,
+          "speakerId": "barista",
+          "en": "Any particular milk?",
+          "de": "Eine bestimmte Milch?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "en": "Oat milk, please. To take away.",
+          "de": "Hafermilch, bitte. Zum Mitnehmen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_006",
+          "sortorder": 6,
+          "speakerId": "barista",
+          "en": "Anything to eat with that?",
+          "de": "Möchten Sie etwas dazu essen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "That croissant there. Is it chocolate?",
+          "de": "Das Croissant da. Ist das mit Schokolade?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_008",
+          "sortorder": 8,
+          "speakerId": "barista",
+          "en": "That one's almond. The chocolate ones are gone, I'm afraid.",
+          "de": "Das ist mit Mandeln. Die mit Schokolade sind leider schon weg.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "en": "A plain one, then, please.",
+          "de": "Dann ein einfaches, bitte.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_010",
+          "sortorder": 10,
+          "speakerId": "barista",
+          "en": "No problem. Seven pounds altogether.",
+          "de": "Kein Problem. Zusammen sieben Pfund.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_011",
+          "sortorder": 11,
+          "speakerId": "narrator",
+          "en": "Alex holds his card over the terminal. Nothing happens. He starts to move it away.",
+          "de": "Alex hält seine Karte über das Bezahlgerät. Es passiert nichts. Er will die Karte schon wieder wegnehmen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_012",
+          "sortorder": 12,
+          "speakerId": "barista",
+          "en": "Give it a second. There you go.",
+          "de": "Warten Sie einen Moment. Jetzt hat es geklappt.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "en": "Has it worked?",
+          "de": "Hat es funktioniert?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_014",
+          "sortorder": 14,
+          "speakerId": "barista",
+          "en": "Yes. Coffee'll be at the end of the counter.",
+          "de": "Ja. Den Kaffee bekommen Sie am Ende der Theke.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_015",
+          "sortorder": 15,
+          "speakerId": "narrator",
+          "en": "A moment later, the barista puts a cup on the counter.",
+          "de": "Kurz darauf stellt der Barista einen Becher auf die Theke.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_016",
+          "sortorder": 16,
+          "speakerId": "barista",
+          "en": "Small oat latte!",
+          "de": "Kleiner Latte mit Hafermilch!",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "en": "Is that mine?",
+          "de": "Ist das meiner?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_018",
+          "sortorder": 18,
+          "speakerId": "barista",
+          "en": "Depends. Did you order a small oat latte?",
+          "de": "Kommt darauf an. Haben Sie einen kleinen Latte mit Hafermilch bestellt?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_019",
+          "sortorder": 19,
+          "speakerId": "alex",
+          "en": "Yes. Sorry. I'm watching the train screen.",
+          "de": "Ja. Entschuldigung. Ich schaue auf die Zuganzeige.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_03_line_020",
+          "sortorder": 20,
+          "speakerId": "narrator",
+          "en": "The barista smiles. Alex takes his coffee and the bag. A few minutes later, his platform appears on the screen. Platform seven. He finds coach C and gets on. He still has ten minutes.",
+          "de": "Der Barista lächelt. Alex nimmt seinen Kaffee und die Tüte. Ein paar Minuten später erscheint sein Bahnsteig auf der Anzeige. Bahnsteig sieben. Er findet Wagen C und steigt ein. Er hat noch zehn Minuten Zeit.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_04",
+      "sortorder": 4,
+      "title": "On the Train North",
+      "place": "Train from London Euston to Manchester Piccadilly",
+      "timeOfDay": "10:20–10:40",
+      "summary": "Show the rail ticket, check the reservation and ask about the arrival in Manchester.",
+      "lines": [
+        {
+          "id": "scene_04_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "The train leaves Euston at ten twenty. Alex finds seat forty-two by the window. He opens his croissant. A train manager comes through the carriage.",
+          "de": "Der Zug fährt um zehn Uhr zwanzig in Euston ab. Alex findet Platz zweiundvierzig am Fenster. Er macht die Tüte mit seinem Croissant auf. Ein Zugbegleiter kommt durch den Wagen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_002",
+          "sortorder": 2,
+          "speakerId": "conductor",
+          "en": "Morning. Tickets, please. Railcards as well, if you've used one.",
+          "de": "Guten Morgen. Die Fahrkarten, bitte. Auch die Railcards, falls Sie eine benutzt haben.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "Here you are. Is this the right ticket?",
+          "de": "Bitte schön. Ist das die richtige Fahrkarte?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_004",
+          "sortorder": 4,
+          "speakerId": "conductor",
+          "en": "That's the return part. Have you got the other one?",
+          "de": "Das ist der Teil für die Rückfahrt. Haben Sie den anderen auch?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "en": "Oh, yes. This one?",
+          "de": "Ach ja. Diesen hier?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_006",
+          "sortorder": 6,
+          "speakerId": "conductor",
+          "en": "That's it. Thanks. And keep the return somewhere safe.",
+          "de": "Genau. Danke. Und bewahren Sie den Teil für die Rückfahrt gut auf.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "Is this seat okay? It says reserved.",
+          "de": "Ist dieser Platz in Ordnung? Da steht „reserviert“.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_008",
+          "sortorder": 8,
+          "speakerId": "conductor",
+          "en": "Let's see your reservation. Coach C, forty-two. Yes, it's reserved for you.",
+          "de": "Zeigen Sie mal Ihre Reservierung. Wagen C, zweiundvierzig. Ja, er ist für Sie reserviert.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "en": "Good. Is Manchester the last stop?",
+          "de": "Gut. Ist Manchester die Endstation?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_010",
+          "sortorder": 10,
+          "speakerId": "conductor",
+          "en": "Piccadilly is, yes. We're due in at twelve thirty-five.",
+          "de": "Piccadilly, ja. Wir sollen um zwölf Uhr fünfunddreißig ankommen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "en": "Do you know how to get to Old Trafford from there?",
+          "de": "Wissen Sie, wie ich von dort zum Old Trafford komme?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_012",
+          "sortorder": 12,
+          "speakerId": "conductor",
+          "en": "The tram's one option. Follow the Metrolink signs when you get off. There'll be plenty of other fans heading that way.",
+          "de": "Eine Möglichkeit ist die Straßenbahn. Folgen Sie nach dem Aussteigen den Metrolink-Schildern. Es werden viele andere Fans in dieselbe Richtung unterwegs sein.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "en": "Thanks. It's my first time there.",
+          "de": "Danke. Ich bin zum ersten Mal dort.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_014",
+          "sortorder": 14,
+          "speakerId": "conductor",
+          "en": "You'll hear it before you see it. Enjoy the match.",
+          "de": "Sie werden es hören, bevor Sie es sehen. Viel Spaß beim Spiel.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_04_line_015",
+          "sortorder": 15,
+          "speakerId": "narrator",
+          "en": "Alex puts both tickets back in his jacket. He drinks his coffee and looks out of the window. London is behind him now.",
+          "de": "Alex steckt beide Fahrkarten wieder in seine Jacke. Er trinkt seinen Kaffee und schaut aus dem Fenster. London liegt jetzt hinter ihm.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_05",
+      "sortorder": 5,
+      "title": "Another Chelsea Fan",
+      "place": "Train to Manchester Piccadilly",
+      "timeOfDay": "10:45–11:15",
+      "summary": "Meet Jonas, compare match tickets and agree to share the journey to the stadium.",
+      "lines": [
+        {
+          "id": "scene_05_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "A man sits opposite Alex. He has a blue scarf on his bag. Alex takes his own Chelsea scarf out of his pocket. The man notices it.",
+          "de": "Ein Mann sitzt Alex gegenüber. An seiner Tasche hängt ein blauer Schal. Alex nimmt seinen eigenen Chelsea-Schal aus der Tasche. Der Mann bemerkt ihn.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "en": "Going to the match as well?",
+          "de": "Fährst du auch zum Spiel?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "Yes. Is it that easy to see?",
+          "de": "Ja. Sieht man das so leicht?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "en": "The scarf's a bit of a clue. I'm Jonas.",
+          "de": "Der Schal ist ein kleiner Hinweis. Ich bin Jonas.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "en": "Alex. Nice to meet you.",
+          "de": "Alex. Freut mich.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_006",
+          "sortorder": 6,
+          "speakerId": "jonas",
+          "en": "Been to Old Trafford before?",
+          "de": "Warst du schon einmal im Old Trafford?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "No. I've only seen Chelsea in London. I live in Tooting.",
+          "de": "Nein. Ich habe Chelsea bisher nur in London gesehen. Ich wohne in Tooting.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_008",
+          "sortorder": 8,
+          "speakerId": "jonas",
+          "en": "Not far from me, then. I'm near Clapham Common.",
+          "de": "Dann wohnst du gar nicht weit von mir. Ich wohne in der Nähe von Clapham Common.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "en": "Do you go to many away games?",
+          "de": "Fährst du zu vielen Auswärtsspielen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_010",
+          "sortorder": 10,
+          "speakerId": "jonas",
+          "en": "A few. Usually with some mates, but they couldn't make this one.",
+          "de": "Zu ein paar. Normalerweise mit Freunden, aber die konnten diesmal nicht.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "en": "How are you getting from the station to the ground?",
+          "de": "Wie kommst du vom Bahnhof zum Stadion?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_012",
+          "sortorder": 12,
+          "speakerId": "jonas",
+          "en": "Usually the tram. We could share an Uber on the way there, though.",
+          "de": "Normalerweise mit der Straßenbahn. Für die Hinfahrt könnten wir uns aber auch einen Uber teilen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "en": "Yes, please. I don't know the way.",
+          "de": "Ja, gern. Ich kenne den Weg nicht.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_014",
+          "sortorder": 14,
+          "speakerId": "jonas",
+          "en": "We'll work it out. Where are you sitting?",
+          "de": "Das kriegen wir hin. Wo sitzt du?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "en": "In the away section. Row twelve, seat eighteen.",
+          "de": "Im Gästebereich. Reihe zwölf, Platz achtzehn.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_016",
+          "sortorder": 16,
+          "speakerId": "jonas",
+          "en": "I'm a few rows further back. We can meet outside afterwards. What train are you getting home?",
+          "de": "Ich sitze ein paar Reihen weiter hinten. Danach können wir uns draußen treffen. Mit welchem Zug fährst du nach Hause?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "en": "The half past six to Euston.",
+          "de": "Mit dem Zug um halb sieben nach Euston.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_018",
+          "sortorder": 18,
+          "speakerId": "jonas",
+          "en": "Same here. Give me your number. Saves us shouting across the stadium.",
+          "de": "Ich auch. Gib mir deine Nummer. Dann müssen wir nicht durchs ganze Stadion rufen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_05_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "en": "They exchange numbers. Then they talk about Chelsea. Jonas thinks they will win. Alex hopes he is right.",
+          "de": "Sie tauschen ihre Nummern aus. Dann sprechen sie über Chelsea. Jonas glaubt, dass sie gewinnen werden. Alex hofft, dass er recht hat.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_06",
+      "sortorder": 6,
+      "title": "An Uber to Old Trafford",
+      "place": "Train approaching Manchester, Piccadilly and the drive to Old Trafford",
+      "timeOfDay": "12:25–13:15",
+      "summary": "Request an Uber, share its cost, identify the car and arrange to walk the final stretch.",
+      "lines": [
+        {
+          "id": "scene_06_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "It is twenty-five past twelve. Manchester is ten minutes away. Alex opens the Uber app on his phone. He enters Piccadilly as the pickup point and Old Trafford as the destination.",
+          "de": "Es ist zwölf Uhr fünfundzwanzig. In zehn Minuten sind sie in Manchester. Alex öffnet auf seinem Handy die Uber-App. Er gibt Piccadilly als Abholort und Old Trafford als Ziel ein.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_002",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "en": "It says twenty-four pounds for both of us. The car can be there in about twenty minutes. Is that okay?",
+          "de": "Hier steht vierundzwanzig Pfund für uns beide. Das Auto kann in ungefähr zwanzig Minuten da sein. Ist das in Ordnung?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_003",
+          "sortorder": 3,
+          "speakerId": "jonas",
+          "en": "Fine by me. I'll give you my half now.",
+          "de": "Für mich ist das in Ordnung. Ich gebe dir meine Hälfte gleich.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "en": "I'll book it. The app can use my card.",
+          "de": "Ich bestelle es. Die App kann meine Karte benutzen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_005",
+          "sortorder": 5,
+          "speakerId": "jonas",
+          "en": "Here's twelve pounds. That's me sorted.",
+          "de": "Hier sind zwölf Pfund. Damit ist mein Teil erledigt.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "en": "Jonas gives Alex twelve pounds. Alex confirms the ride. Soon the app shows a silver Toyota Prius. Its registration is MA23 LDN.",
+          "de": "Jonas gibt Alex zwölf Pfund. Alex bestätigt die Fahrt. Bald zeigt die App einen silbernen Toyota Prius an. Sein Kennzeichen ist MA23 LDN.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "A silver Toyota Prius. MA23 LDN. We need to look for that one.",
+          "de": "Ein silberner Toyota Prius. MA23 LDN. Nach dem müssen wir suchen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "en": "At twelve thirty-five, they get off at Piccadilly. They follow the pickup instructions in the app. Outside, Alex checks the car and the driver's photo. It is the right Prius.",
+          "de": "Um zwölf Uhr fünfunddreißig steigen sie in Piccadilly aus. Sie folgen den Abholhinweisen in der App. Draußen vergleicht Alex das Auto und das Foto der Fahrerin. Es ist der richtige Prius.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_009",
+          "sortorder": 9,
+          "speakerId": "taxi_driver",
+          "en": "Hi. Alex?",
+          "de": "Hallo. Alex?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "en": "Yes. Two of us, please.",
+          "de": "Ja. Wir sind zu zweit.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_011",
+          "sortorder": 11,
+          "speakerId": "taxi_driver",
+          "en": "Old Trafford, yeah? Jump in. Seat belts on, please.",
+          "de": "Zum Old Trafford, ja? Steigt ein. Bitte anschnallen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_012",
+          "sortorder": 12,
+          "speakerId": "narrator",
+          "en": "Alex and Jonas sit in the back. The driver pulls away from the station.",
+          "de": "Alex und Jonas setzen sich nach hinten. Die Fahrerin fährt vom Bahnhof los.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "en": "How long does it take?",
+          "de": "Wie lange dauert es?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_014",
+          "sortorder": 14,
+          "speakerId": "taxi_driver",
+          "en": "About twenty minutes if the traffic behaves. Getting right up to the ground's another matter.",
+          "de": "Ungefähr zwanzig Minuten, wenn der Verkehr mitspielt. Direkt bis ans Stadion zu kommen, ist eine andere Sache.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_015",
+          "sortorder": 15,
+          "speakerId": "jonas",
+          "en": "Somewhere we can walk from is fine. No point sitting in a queue for the last few streets.",
+          "de": "Eine Stelle, von der wir laufen können, ist in Ordnung. Für die letzten paar Straßen müssen wir nicht im Stau stehen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_016",
+          "sortorder": 16,
+          "speakerId": "alex",
+          "en": "Yes. We can walk the last bit.",
+          "de": "Ja. Das letzte Stück können wir laufen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_017",
+          "sortorder": 17,
+          "speakerId": "taxi_driver",
+          "en": "Good plan. I'll find somewhere safe to drop you.",
+          "de": "Gute Idee. Ich suche eine sichere Stelle zum Aussteigen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_018",
+          "sortorder": 18,
+          "speakerId": "narrator",
+          "en": "Near the ground, the streets are busy. The driver stops where she can safely let them out. There are red shirts everywhere, with smaller groups in Chelsea blue.",
+          "de": "In der Nähe des Stadions sind die Straßen voll. Die Fahrerin hält dort an, wo sie sie sicher aussteigen lassen kann. Überall sind rote Trikots zu sehen, dazwischen kleinere Gruppen in Chelsea-Blau.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_019",
+          "sortorder": 19,
+          "speakerId": "taxi_driver",
+          "en": "This is as far as I'll go. Follow that road and then the signs for away supporters. About ten minutes on foot.",
+          "de": "Weiter fahre ich nicht. Folgt dieser Straße und dann den Schildern für Gästefans. Ungefähr zehn Minuten zu Fuß.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_020",
+          "sortorder": 20,
+          "speakerId": "alex",
+          "en": "Great. Thank you.",
+          "de": "Super. Danke.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_06_line_021",
+          "sortorder": 21,
+          "speakerId": "jonas",
+          "en": "Cheers. Come on, Alex. Let's find our entrance.",
+          "de": "Danke. Komm, Alex. Suchen wir unseren Eingang.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_07",
+      "sortorder": 7,
+      "title": "At the Stadium Entrance",
+      "place": "Old Trafford, away supporters’ entrance",
+      "timeOfDay": "13:45",
+      "summary": "Find the correct entrance and sort out a ticket mix-up at the turnstile.",
+      "lines": [
+        {
+          "id": "scene_07_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "Alex and Jonas reach Old Trafford. Alex stops and looks up at the stadium. It is much bigger than it looks on his phone. Then they follow the signs for away supporters. Alex has no bag, just his phone and wallet, with his train tickets in his jacket.",
+          "de": "Alex und Jonas erreichen das Old Trafford. Alex bleibt stehen und schaut zum Stadion hinauf. Es ist viel größer als auf seinem Handy. Dann folgen sie den Schildern für Gästefans. Alex hat keine Tasche dabei, nur sein Handy und sein Portemonnaie. Die Zugfahrkarten stecken in seiner Jacke.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_002",
+          "sortorder": 2,
+          "speakerId": "steward",
+          "en": "Away tickets? This entrance, please.",
+          "de": "Gästekarten? Dann bitte hier entlang.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "Chelsea, yes. Is this the right queue?",
+          "de": "Chelsea, ja. Ist das die richtige Schlange?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_004",
+          "sortorder": 4,
+          "speakerId": "steward",
+          "en": "It is. Have your ticket ready for the scanner.",
+          "de": "Ja. Haltet eure Eintrittskarten für den Scanner bereit.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_005",
+          "sortorder": 5,
+          "speakerId": "narrator",
+          "en": "They pass the security check. Jonas goes through the turnstile. Alex holds a ticket under the scanner. The light stays red.",
+          "de": "Sie gehen durch die Sicherheitskontrolle. Jonas passiert das Drehkreuz. Alex hält eine Karte unter den Scanner. Das Licht bleibt rot.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "en": "Sorry. It's not working.",
+          "de": "Entschuldigung. Es funktioniert nicht.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_007",
+          "sortorder": 7,
+          "speakerId": "steward",
+          "en": "Let's have a look. That's your train ticket, mate.",
+          "de": "Zeig mal her. Das ist deine Zugfahrkarte.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_008",
+          "sortorder": 8,
+          "speakerId": "alex",
+          "en": "Oh, wrong ticket. The match ticket's on my phone.",
+          "de": "Ach, die falsche Karte. Die Eintrittskarte ist auf meinem Handy.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_009",
+          "sortorder": 9,
+          "speakerId": "steward",
+          "en": "No rush. Just step to the side while you find it.",
+          "de": "Keine Eile. Geh nur kurz zur Seite, während du sie suchst.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "en": "Alex puts the train ticket away. He opens the match ticket on his phone.",
+          "de": "Alex steckt die Zugfahrkarte weg. Er öffnet die Eintrittskarte auf seinem Handy.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "en": "This one?",
+          "de": "Diese hier?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_012",
+          "sortorder": 12,
+          "speakerId": "steward",
+          "en": "That's it. Brightness up a bit. Now hold it still.",
+          "de": "Genau die. Stell das Display etwas heller. Jetzt stillhalten.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "en": "The light turns green. This time, Alex goes through.",
+          "de": "Das Licht wird grün. Diesmal kommt Alex durch.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "en": "Thanks. I'm keeping those tickets apart now.",
+          "de": "Danke. Die beiden Karten halte ich jetzt auseinander.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_015",
+          "sortorder": 15,
+          "speakerId": "jonas",
+          "en": "Good idea. I'll see you outside this entrance after the game. Text me if you can't find me.",
+          "de": "Gute Idee. Wir sehen uns nach dem Spiel draußen an diesem Eingang. Schreib mir, falls du mich nicht findest.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_07_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "en": "Jonas goes to find his row. Alex looks for something to eat.",
+          "de": "Jonas sucht seine Reihe. Alex schaut nach etwas zu essen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_08",
+      "sortorder": 8,
+      "title": "A Local Beer and a Burger",
+      "place": "Old Trafford, food and drink counter on the concourse",
+      "timeOfDay": "14:05–14:25",
+      "summary": "Order a Manchester-area beer and a burger with onions, show ID, pay and learn where to finish the beer.",
+      "lines": [
+        {
+          "id": "scene_08_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "Alex finds a food counter inside the ground. He can smell hot onions. There is beer on the drinks list. He waits behind two other fans. Then it is his turn.",
+          "de": "Alex findet im Stadion einen Verkaufsstand. Er riecht heiße Zwiebeln. Auf der Getränkekarte steht Bier. Er wartet hinter zwei anderen Fans. Dann ist er dran.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_002",
+          "sortorder": 2,
+          "speakerId": "kiosk_staff",
+          "en": "What can I get you?",
+          "de": "Was darf es sein?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "Can I have a beer? That one there. Is it a local one?",
+          "de": "Kann ich ein Bier haben? Das da. Ist das ein Bier von hier?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_004",
+          "sortorder": 4,
+          "speakerId": "kiosk_staff",
+          "en": "Seven Brothers pale ale. Brewed in Salford.",
+          "de": "Seven Brothers Pale Ale. Das wird in Salford gebraut.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "en": "A pint of that, please. And a beef burger with onions.",
+          "de": "Davon ein Pint, bitte. Und einen Rindfleischburger mit Zwiebeln.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_006",
+          "sortorder": 6,
+          "speakerId": "kiosk_staff",
+          "en": "Fried onions? Any sauce?",
+          "de": "Gebratene Zwiebeln? Möchtest du eine Soße?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "Yes, fried onions. Ketchup, please.",
+          "de": "Ja, gebratene Zwiebeln. Ketchup, bitte.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_008",
+          "sortorder": 8,
+          "speakerId": "kiosk_staff",
+          "en": "One pale ale and a burger with onions and ketchup. Can I see some photo ID for the beer?",
+          "de": "Ein Pale Ale und ein Burger mit Zwiebeln und Ketchup. Kann ich für das Bier einen Lichtbildausweis sehen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "en": "Of course. Here's my driving licence.",
+          "de": "Natürlich. Hier ist mein Führerschein.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_010",
+          "sortorder": 10,
+          "speakerId": "kiosk_staff",
+          "en": "Thanks. Fourteen fifty altogether.",
+          "de": "Danke. Zusammen vierzehn Pfund fünfzig.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "en": "Can I pay by card?",
+          "de": "Kann ich mit Karte bezahlen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_012",
+          "sortorder": 12,
+          "speakerId": "kiosk_staff",
+          "en": "Card only here. Just tap when it's ready.",
+          "de": "Hier nur mit Karte. Halte sie einfach dran, sobald das Gerät bereit ist.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "en": "Alex pays. The server hands him the burger and a plastic cup of beer.",
+          "de": "Alex bezahlt. Der Mitarbeiter gibt ihm den Burger und einen Plastikbecher Bier.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "en": "Can I take the beer to my seat?",
+          "de": "Darf ich das Bier mit zu meinem Sitzplatz nehmen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_015",
+          "sortorder": 15,
+          "speakerId": "kiosk_staff",
+          "en": "No, you'll need to finish it down here. No alcohol out by the pitch.",
+          "de": "Nein, das musst du hier unten austrinken. Im Bereich mit Blick aufs Spielfeld ist kein Alkohol erlaubt.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_016",
+          "sortorder": 16,
+          "speakerId": "alex",
+          "en": "Okay. I've got time.",
+          "de": "Okay. Ich habe Zeit.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_08_line_017",
+          "sortorder": 17,
+          "speakerId": "narrator",
+          "en": "Alex stands at a table on the concourse. He eats his burger and finishes his beer before he goes to find his seat. One piece of onion lands on his sleeve. He takes it off and hopes nobody saw.",
+          "de": "Alex stellt sich an einen Tisch im Innenbereich hinter der Tribüne. Er isst seinen Burger und trinkt sein Bier aus, bevor er seinen Sitzplatz sucht. Ein Stück Zwiebel landet auf seinem Ärmel. Er nimmt es weg und hofft, dass es niemand gesehen hat.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_09",
+      "sortorder": 9,
+      "title": "Row Twelve, Seat Eighteen",
+      "place": "Old Trafford, away section",
+      "timeOfDay": "14:35–14:50",
+      "summary": "Find the correct row and meet the Chelsea supporter in the next seat.",
+      "lines": [
+        {
+          "id": "scene_09_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "Alex finds the away section. He goes up the steps and counts the rows. A man is standing next to an empty seat.",
+          "de": "Alex findet den Gästebereich. Er geht die Stufen hinauf und zählt die Reihen. Ein Mann steht neben einem leeren Sitzplatz.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_002",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "en": "Excuse me. Is that seat eighteen?",
+          "de": "Entschuldigung. Ist das Platz achtzehn?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_003",
+          "sortorder": 3,
+          "speakerId": "neighbour",
+          "en": "Depends which row you want. What does your ticket say?",
+          "de": "Kommt darauf an, welche Reihe du suchst. Was steht auf deiner Karte?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "en": "Row twelve.",
+          "de": "Reihe zwölf.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_005",
+          "sortorder": 5,
+          "speakerId": "neighbour",
+          "en": "One row down, then. This is thirteen.",
+          "de": "Dann eine Reihe nach unten. Hier ist dreizehn.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "en": "Oh, I'm in the wrong place.",
+          "de": "Ach, ich bin hier falsch.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_007",
+          "sortorder": 7,
+          "speakerId": "neighbour",
+          "en": "Numbers are on the end there. Easy to miss.",
+          "de": "Die Nummern stehen da am Ende. Die übersieht man leicht.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "en": "Alex goes down one row. A minute later, the same man comes back with his jacket. He sits beside Alex.",
+          "de": "Alex geht eine Reihe nach unten. Eine Minute später kommt derselbe Mann mit seiner Jacke zurück. Er setzt sich neben Alex.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_009",
+          "sortorder": 9,
+          "speakerId": "neighbour",
+          "en": "There we are. I'm seventeen. Got you in the right place eventually.",
+          "de": "So, da wären wir. Ich bin siebzehn. Jetzt haben wir dich doch noch an den richtigen Platz bekommen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "en": "Do you come to many away games?",
+          "de": "Fährst du zu vielen Auswärtsspielen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_011",
+          "sortorder": 11,
+          "speakerId": "neighbour",
+          "en": "Whenever I can. First one for you?",
+          "de": "Wann immer ich kann. Ist das dein erstes?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_012",
+          "sortorder": 12,
+          "speakerId": "alex",
+          "en": "Yes. I've seen games at home, but this is my first away match.",
+          "de": "Ja. Ich habe Heimspiele gesehen, aber das ist mein erstes Auswärtsspiel.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_013",
+          "sortorder": 13,
+          "speakerId": "neighbour",
+          "en": "Then you've picked a nice quiet little ground to start with.",
+          "de": "Dann hast du dir zum Einstieg ja ein schönes, ruhiges, kleines Stadion ausgesucht.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "en": "It doesn't look very quiet.",
+          "de": "Es sieht nicht besonders ruhig aus.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_015",
+          "sortorder": 15,
+          "speakerId": "neighbour",
+          "en": "Give it ten minutes. You won't hear yourself think.",
+          "de": "Warte zehn Minuten. Dann verstehst du dein eigenes Wort nicht mehr.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_09_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "en": "Alex smiles. He puts on his blue scarf. Down on the pitch, the players are warming up. Soon, the teams come out of the tunnel.",
+          "de": "Alex lächelt. Er legt seinen blauen Schal um. Unten auf dem Spielfeld wärmen sich die Spieler auf. Bald kommen die Mannschaften aus dem Tunnel.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_10",
+      "sortorder": 10,
+      "title": "Ninety Minutes of Football",
+      "place": "Old Trafford, away stand and pitch",
+      "timeOfDay": "15:00–16:55",
+      "summary": "Follow the match, react to a late winner and celebrate Chelsea’s two–one victory.",
+      "lines": [
+        {
+          "id": "scene_10_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "At three o'clock, the match starts. The noise is huge. Chelsea attack early. Alex watches every pass.",
+          "de": "Um drei Uhr beginnt das Spiel. Der Lärm ist gewaltig. Chelsea greift früh an. Alex verfolgt jeden Pass.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_002",
+          "sortorder": 2,
+          "speakerId": "neighbour",
+          "en": "Go on! Hit it!",
+          "de": "Los! Schieß!",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_003",
+          "sortorder": 3,
+          "speakerId": "narrator",
+          "en": "A Chelsea player shoots. The ball goes just over the bar. Alex puts both hands on his head.",
+          "de": "Ein Chelsea-Spieler schießt. Der Ball fliegt knapp über die Latte. Alex schlägt die Hände über dem Kopf zusammen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "en": "That was so close!",
+          "de": "Das war so knapp!",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_005",
+          "sortorder": 5,
+          "speakerId": "neighbour",
+          "en": "Can't keep wasting those. United won't give us many.",
+          "de": "Solche Chancen dürfen wir nicht weiter liegen lassen. United wird uns nicht viele geben.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "en": "At half-time, it is still nil–nil. Early in the second half, United score. The home fans jump up. Chelsea are one–nil down.",
+          "de": "Zur Halbzeit steht es noch null zu null. Früh in der zweiten Halbzeit erzielt United ein Tor. Die Heimfans springen auf. Chelsea liegt null zu eins zurück.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "Come on, Chelsea. There's still time.",
+          "de": "Kommt schon, Chelsea. Es ist noch Zeit.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "en": "In the sixty-seventh minute, Chelsea score. One–one. Alex jumps up so fast that his scarf falls off. His neighbour catches it.",
+          "de": "In der siebenundsechzigsten Minute trifft Chelsea. Eins zu eins. Alex springt so schnell auf, dass sein Schal herunterfällt. Sein Sitznachbar fängt ihn auf.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_009",
+          "sortorder": 9,
+          "speakerId": "neighbour",
+          "en": "You'll want that for the next one!",
+          "de": "Den wirst du für das nächste Tor noch brauchen!",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "en": "It stays one–one for a long time. Then, in the eighty-eighth minute, a cross comes in from the right. A Chelsea player heads the ball into the net. Alex shouts. But the referee is waiting.",
+          "de": "Es bleibt lange beim Eins zu eins. Dann kommt in der achtundachtzigsten Minute eine Flanke von rechts. Ein Chelsea-Spieler köpft den Ball ins Netz. Alex schreit. Aber der Schiedsrichter wartet.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "en": "Is it a goal? Why isn't he moving?",
+          "de": "Ist es ein Tor? Warum bewegt er sich nicht?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_012",
+          "sortorder": 12,
+          "speakerId": "neighbour",
+          "en": "They're checking it. Wait. Don't celebrate yet.",
+          "de": "Sie überprüfen es. Warte. Noch nicht jubeln.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "en": "For a few seconds, Alex can hear almost nothing from the Chelsea fans. Then the referee points to the centre. The goal counts. Now everyone shouts at once.",
+          "de": "Ein paar Sekunden lang hört Alex von den Chelsea-Fans fast nichts. Dann zeigt der Schiedsrichter zur Mitte. Das Tor zählt. Jetzt jubeln alle gleichzeitig.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "en": "Yes! Two–one!",
+          "de": "Ja! Zwei zu eins!",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_015",
+          "sortorder": 15,
+          "speakerId": "neighbour",
+          "en": "Right. Now just keep the ball!",
+          "de": "So. Und jetzt einfach den Ball halten!",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_10_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "en": "There are six added minutes. They feel very long. At last, the referee blows the final whistle. Chelsea have won by two goals to one. Alex's phone buzzes. Jonas is already writing.",
+          "de": "Es gibt sechs Minuten Nachspielzeit. Sie fühlen sich sehr lang an. Endlich pfeift der Schiedsrichter ab. Chelsea hat mit zwei zu eins gewonnen. Alex’ Handy vibriert. Jonas schreibt schon.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_11",
+      "sortorder": 11,
+      "title": "The Tram Back to Piccadilly",
+      "place": "Old Trafford, Old Trafford tram stop and Manchester Piccadilly",
+      "timeOfDay": "17:05–18:00",
+      "summary": "Meet Jonas, tap in at the tram stop, board a Piccadilly service and tap out on arrival.",
+      "lines": [
+        {
+          "id": "scene_11_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "Outside the away entrance, Alex finds Jonas. Both of them are smiling. Around them, people are still talking about the last goal.",
+          "de": "Draußen am Gästeeingang findet Alex Jonas. Beide lächeln. Um sie herum sprechen die Leute noch über das letzte Tor.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "en": "Well? Worth the trip?",
+          "de": "Na? Hat sich die Fahrt gelohnt?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "Yes. That last goal! I thought it didn't count.",
+          "de": "Ja. Dieses letzte Tor! Ich dachte, es zählt nicht.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "en": "So did I. Nearly stopped breathing for a moment.",
+          "de": "Ich auch. Ich habe einen Moment fast aufgehört zu atmen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "en": "Shall we get another Uber?",
+          "de": "Sollen wir wieder einen Uber nehmen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_006",
+          "sortorder": 6,
+          "speakerId": "jonas",
+          "en": "Not in this traffic. Let's walk to Old Trafford tram stop and look for a Piccadilly tram.",
+          "de": "Nicht bei diesem Verkehr. Gehen wir zur Straßenbahnhaltestelle Old Trafford und schauen nach einer Bahn nach Piccadilly.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "Our train is at half past six. Have we got enough time?",
+          "de": "Unser Zug fährt um halb sieben. Haben wir genug Zeit?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_008",
+          "sortorder": 8,
+          "speakerId": "jonas",
+          "en": "We should have. But let's keep moving. The queue won't get shorter.",
+          "de": "Das sollten wir. Aber gehen wir weiter. Die Schlange wird nicht kürzer.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "en": "They walk to the tram stop. There are lots of fans waiting. Alex gets his bank card out and starts to walk towards the tram.",
+          "de": "Sie gehen zur Straßenbahnhaltestelle. Dort warten viele Fans. Alex nimmt seine Bankkarte heraus und will schon zur Bahn gehen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_010",
+          "sortorder": 10,
+          "speakerId": "jonas",
+          "en": "Reader first. You tap in here, before you board.",
+          "de": "Erst zum Lesegerät. Du hältst die Karte hier dran, bevor du einsteigst.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "en": "Not on the tram?",
+          "de": "Nicht in der Straßenbahn?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_012",
+          "sortorder": 12,
+          "speakerId": "jonas",
+          "en": "No. On that reader at the stop. And tap out at Piccadilly. Same card both times.",
+          "de": "Nein. An dem Lesegerät an der Haltestelle. Und in Piccadilly beim Aussteigen wieder dranhalten. Beide Male dieselbe Karte.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "en": "Alex touches his card on the reader. It shows that the touch-in has worked. Jonas uses his own card. Then they check the front of the next tram. It says Piccadilly.",
+          "de": "Alex hält seine Karte an das Lesegerät. Es zeigt an, dass das Einchecken geklappt hat. Jonas benutzt seine eigene Karte. Dann schauen sie auf die Anzeige vorne an der nächsten Straßenbahn. Dort steht Piccadilly.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "en": "This is ours.",
+          "de": "Das ist unsere.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_015",
+          "sortorder": 15,
+          "speakerId": "jonas",
+          "en": "That's it. Let them off, then squeeze in.",
+          "de": "Genau. Lass sie erst aussteigen, dann quetschen wir uns rein.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "en": "They stand all the way. At Piccadilly, Alex steps off and starts towards the station stairs.",
+          "de": "Sie stehen die ganze Fahrt. In Piccadilly steigt Alex aus und will zur Treppe in den Bahnhof gehen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_017",
+          "sortorder": 17,
+          "speakerId": "jonas",
+          "en": "Forgetting something?",
+          "de": "Vergisst du nicht etwas?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_018",
+          "sortorder": 18,
+          "speakerId": "alex",
+          "en": "Oh, yes. Tap out.",
+          "de": "Ach ja. Auschecken.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_11_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "en": "Alex touches out with the same card. Jonas does the same. Then they go upstairs to the main station. It is six o'clock. They still have half an hour.",
+          "de": "Alex hält dieselbe Karte zum Auschecken an das Lesegerät. Jonas macht es genauso. Dann gehen sie hinauf in den Hauptbahnhof. Es ist sechs Uhr. Sie haben noch eine halbe Stunde.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    },
+    {
+      "id": "scene_12",
+      "sortorder": 12,
+      "title": "Home to Tooting",
+      "place": "Manchester Piccadilly, train to Euston, Northern line and Tooting",
+      "timeOfDay": "18:10–21:40",
+      "summary": "Head back to London, say goodbye to Jonas on the Tube and discover that the next adventure already has a volunteer organiser.",
+      "lines": [
+        {
+          "id": "scene_12_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "en": "At Piccadilly, they buy water and find their platform. At half past six, they are on the train to Euston. Alex has the return part of his ticket ready.",
+          "de": "In Piccadilly kaufen sie Wasser und suchen ihren Bahnsteig. Um halb sieben sitzen sie im Zug nach Euston. Alex hat den Teil seiner Fahrkarte für die Rückfahrt bereit.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "en": "Look at you. Right ticket, right train. You've got the hang of it now.",
+          "de": "Sieh dich an. Richtige Fahrkarte, richtiger Zug. Jetzt hast du den Dreh raus.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "en": "Yes. And I can still find my phone.",
+          "de": "Ja. Und mein Handy finde ich auch noch.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "en": "Shame about your voice.",
+          "de": "Schade nur um deine Stimme.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "en": "It was worth it.",
+          "de": "Das war es wert.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "en": "For a while, they talk about the two Chelsea goals. Then Alex falls asleep. The journey takes just over two hours. When he opens his eyes, the train is slowing down. It is quarter to nine. They are back at Euston.",
+          "de": "Eine Weile sprechen sie über die beiden Chelsea-Tore. Dann schläft Alex ein. Die Fahrt dauert etwas mehr als zwei Stunden. Als er die Augen öffnet, wird der Zug langsamer. Es ist Viertel vor neun. Sie sind wieder in Euston.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "en": "Euston already?",
+          "de": "Schon Euston?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_008",
+          "sortorder": 8,
+          "speakerId": "jonas",
+          "en": "You missed a very exciting conversation about seat reservations. Mostly me talking to myself.",
+          "de": "Du hast ein sehr spannendes Gespräch über Sitzplatzreservierungen verpasst. Hauptsächlich habe ich mit mir selbst gesprochen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "en": "They follow the Underground signs. Each uses their own bank card at the gate. They find the southbound Northern line platform for trains via Bank. The screen says Morden. That train stops at Clapham Common and Tooting Bec.",
+          "de": "Sie folgen den Schildern zur U-Bahn. Jeder benutzt am Zugang seine eigene Bankkarte. Sie finden den Bahnsteig der Northern Line in Richtung Süden über Bank. Auf der Anzeige steht Morden. Dieser Zug hält in Clapham Common und Tooting Bec.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "en": "Morden, via Bank. That's the one.",
+          "de": "Morden über Bank. Das ist der richtige.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_011",
+          "sortorder": 11,
+          "speakerId": "jonas",
+          "en": "You don't need me any more.",
+          "de": "Du brauchst mich nicht mehr.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_012",
+          "sortorder": 12,
+          "speakerId": "alex",
+          "en": "I do. Who will catch my scarf at the next game?",
+          "de": "Doch. Wer fängt beim nächsten Spiel meinen Schal auf?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_013",
+          "sortorder": 13,
+          "speakerId": "jonas",
+          "en": "Sounds like you've had practice losing things today.",
+          "de": "Klingt, als hättest du heute schon Übung darin, Sachen zu verlieren.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_014",
+          "sortorder": 14,
+          "speakerId": "narrator",
+          "en": "At Clapham Common, Jonas stands up. Alex moves his feet so he can get past.",
+          "de": "In Clapham Common steht Jonas auf. Alex nimmt die Füße zur Seite, damit er vorbeikommt.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "en": "Thanks for today. It was much better with someone.",
+          "de": "Danke für heute. Mit jemandem zusammen war es viel schöner.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_016",
+          "sortorder": 16,
+          "speakerId": "jonas",
+          "en": "Same here. Can I add you to our football group?",
+          "de": "Fand ich auch. Darf ich dich in unsere Fußballgruppe aufnehmen?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "en": "Yes, of course.",
+          "de": "Ja, natürlich.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_018",
+          "sortorder": 18,
+          "speakerId": "jonas",
+          "en": "Brilliant. See you at the next one.",
+          "de": "Super. Wir sehen uns beim nächsten Spiel.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "en": "The doors close. A few stops later, Alex gets off at Tooting Bec. He touches out with the same card he used at Euston. Outside, it is cool and quiet. His street feels very small after Old Trafford.",
+          "de": "Die Türen schließen sich. Ein paar Stationen später steigt Alex in Tooting Bec aus. Zum Auschecken benutzt er dieselbe Karte wie in Euston. Draußen ist es kühl und ruhig. Nach dem Old Trafford wirkt seine Straße sehr klein.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_020",
+          "sortorder": 20,
+          "speakerId": "narrator",
+          "en": "At home, he takes off his shoes. His phone makes a sound. Jonas has added him to a group called Chelsea Away Days. There are six people in it now. A new message appears.",
+          "de": "Zu Hause zieht er seine Schuhe aus. Sein Handy gibt einen Ton von sich. Jonas hat ihn in eine Gruppe mit dem Namen „Chelsea Away Days“ aufgenommen. Jetzt sind sechs Leute darin. Eine neue Nachricht erscheint.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_021",
+          "sortorder": 21,
+          "speakerId": "jonas",
+          "en": "Everyone, this is Alex. Excellent travel organiser. He's doing the trains for the next trip.",
+          "de": "Leute, das ist Alex. Ein hervorragender Reiseorganisator. Er kümmert sich bei der nächsten Fahrt um die Züge.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_022",
+          "sortorder": 22,
+          "speakerId": "alex",
+          "en": "I am?",
+          "de": "Das tue ich?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_023",
+          "sortorder": 23,
+          "speakerId": "narrator",
+          "en": "Alex looks at the message. This morning, he had to ask which train to take. Now a whole group is waiting for his answer. He laughs. Then he starts to type.",
+          "de": "Alex schaut auf die Nachricht. Heute Morgen musste er noch fragen, welchen Zug er nehmen soll. Jetzt wartet eine ganze Gruppe auf seine Antwort. Er lacht. Dann fängt er an zu tippen.",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        },
+        {
+          "id": "scene_12_line_024",
+          "sortorder": 24,
+          "speakerId": "alex",
+          "en": "Okay. First question. What time is the match?",
+          "de": "Okay. Erste Frage. Um wie viel Uhr ist das Spiel?",
+          "es": "",
+          "zh": "",
+          "pt": "",
+          "hi": ""
+        }
+      ]
+    }
+  ]
+}
