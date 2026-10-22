@@ -136,6 +136,7 @@ class ContentRepository @Inject constructor(
     private val format1Cache = mutableMapOf<String, Format1File>()
     private val format2Cache = mutableMapOf<String, Format2File>()
     private val format8Cache = ConcurrentHashMap<String, Format8File>()
+    private val format9Cache = ConcurrentHashMap<String, Format9File>()
     private val format3Cache = mutableMapOf<String, Format3File>()
     private val format7or10Cache = mutableMapOf<String, Format7or10File>()
     private val format13Cache = mutableMapOf<String, WordQuizRoot>()
@@ -408,25 +409,65 @@ class ContentRepository @Inject constructor(
         }
 
 
-
-
-
-
-
-
-
-
-
     }
 
     /**
-     * fileFormat-9 (podcast / dialogue script). STEP 1: read straight from the bundle (res/raw) — there is
-     * no Firestore/version chain yet. Step 2 builds the real screen that consumes this.
+     * fileFormat-9 (podcast / dialogue script). Same resolution flow as the other formats: remote-config
+     * version check -> in-memory cache -> ExamSheetRepository (the uploaded single Firestore doc) -> warm
+     * the memory cache + bump the local version. Falls back to the bundled res/raw copy when Firestore has
+     * no document yet or the read fails (offline, etc.).
      */
     suspend fun getFormat9Data(name: String): Result<Format9File> = withContext(Dispatchers.IO) {
         val logicalName = normalizeToLogicalName(name)
-        val resourceName = mapLogicalToResourceName(logicalName)
-        loadBundledFormat9Data(resourceName)
+
+        try {
+            // --- 1. VERSION CHECK ---
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("ContentRepo: Sheet '$logicalName' (Format9) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+            // --- 2. IN-MEMORY CACHE CHECK ---
+            if (!forceRefresh) {
+                format9Cache[logicalName]?.let { cachedFile ->
+                    Timber.d("ContentRepo: Returning '$logicalName' (Format9) from MEMORY CACHE.")
+                    return@withContext Result.success(cachedFile)
+                }
+            }
+
+            // --- 3. DELEGATE TO ExamSheetRepository (the uploaded single Firestore doc) ---
+            val result = examSheetRepository.getFormat9Sheet(logicalName, forceRefresh = forceRefresh)
+
+            // --- 4. WARM UP MEMORY CACHE & UPDATE VERSION, else BUNDLE FALLBACK ---
+            if (result.isSuccess) {
+                val format9File = result.getOrThrow()
+                format9Cache[logicalName] = format9File
+                Timber.d("ContentRepo: Warmed up memory cache for '$logicalName' (Format9).")
+                if (forceRefresh) {
+                    appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                }
+                return@withContext result
+            } else {
+                Timber.w(
+                    result.exceptionOrNull(),
+                    "ContentRepo: ExamSheetRepository failed for Format9 '$logicalName'. Falling back to bundle."
+                )
+                val resourceName = mapLogicalToResourceName(logicalName)
+                val bundleResult = loadBundledFormat9Data(resourceName)
+                // Cache under the logical name so both resource-name and logical-name callers share it.
+                bundleResult.getOrNull()?.let { format9Cache[logicalName] = it }
+                return@withContext bundleResult
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "ContentRepo: CRITICAL error in getFormat9Data for '$logicalName'. Falling back to bundle.")
+            FirebaseCrashlytics.getInstance().recordException(
+                Exception("ContentRepository.getFormat9Data() failed for $name", e)
+            )
+            // Unlike Format8, Format9 ships a bundled copy, so still try it on a critical error.
+            val resourceName = mapLogicalToResourceName(logicalName)
+            return@withContext loadBundledFormat9Data(resourceName)
+        }
     }
 
     private fun loadBundledFormat9Data(resourceName: String): Result<Format9File> {

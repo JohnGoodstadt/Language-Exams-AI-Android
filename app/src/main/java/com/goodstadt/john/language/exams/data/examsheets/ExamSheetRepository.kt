@@ -24,6 +24,7 @@ import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.models.Format7or10SectionDTO
 import com.goodstadt.john.language.exams.models.Format7or10Word
 import com.goodstadt.john.language.exams.models.Format8File
+import com.goodstadt.john.language.exams.models.Format9File
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
 import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
@@ -56,6 +57,11 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonPrimitive
 import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
@@ -684,6 +690,86 @@ class ExamSheetRepository @Inject constructor(
                 Result.failure(e)
             }
         }
+
+    /**
+     * fileFormat-9 (podcast / dialogue). Mirrors [getFormat8Sheet]: a non-forced read returns the disk
+     * cache when present; otherwise the single uploaded document is downloaded + assembled and written to
+     * the disk cache. The in-memory cache and the bundle fallback are handled by the caller (ContentRepository).
+     */
+    suspend fun getFormat9Sheet(sheet_name: String, forceRefresh: Boolean = false): Result<Format9File> =
+        withContext(Dispatchers.IO) {
+            try {
+                if (!forceRefresh) {
+                    readFormat9SheetFromCache(sheet_name)?.let { cachedFile ->
+                        Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format9) from disk cache. Yippee!!")
+                        return@withContext Result.success(cachedFile)
+                    }
+                }
+                val file = downloadAndAssembleFormat9(sheet_name)
+                getCacheFilePointer(sheet_name).writeText(
+                    jsonParser.encodeToString(Format9File.serializer(), file)
+                )
+                Timber.i("ExamSheetRepo: Fetched and cached '$sheet_name' (Format9).")
+                Result.success(file)
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (e: Exception) {
+                Timber.w(e, "ExamSheetRepo: getFormat9Sheet failed for '$sheet_name'.")
+                Result.failure(e)
+            }
+        }
+
+    /** Disk-cache read for a Format9 podcast (the JSON this repo wrote via encodeToString). */
+    private suspend fun readFormat9SheetFromCache(logicalName: String): Format9File? =
+        withContext(Dispatchers.IO) {
+            val file = getCacheFilePointer(logicalName)
+            if (!file.exists()) return@withContext null
+            return@withContext try {
+                jsonParser.decodeFromString<Format9File>(file.readText()).also {
+                    require(it.fileformat == 9 && it.scenes.isNotEmpty()) { "Invalid Format9 disk cache for '$logicalName'." }
+                }
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to read Format9 from disk cache for '$logicalName'")
+                null
+            }
+        }
+
+    /**
+     * Downloads the single document written by the Format9 uploader (the WHOLE script, no subcollections)
+     * and decodes it into a [Format9File]: fetch the doc, drop the admin-only fields (uploadDate/sheetName),
+     * and decode the remaining map (lines keep their de/en/es/zh/pt/hi fields).
+     */
+    private suspend fun downloadAndAssembleFormat9(docName: String): Format9File {
+        val docRef = firestore.collection(fb.global).document(fb.exam_sheets)
+            .collection("sheets").document(docName)
+        val snapshot = docRef.get(Source.SERVER).await()
+        require(snapshot.exists()) { "Format9 document '$docName' not found in Firestore." }
+        val fields = requireNotNull(snapshot.data) { "Format9 document '$docName' has no data." }
+            .toMutableMap().apply {
+                // Admin-only fields that are not part of Format9File (uploadDate is a Timestamp).
+                remove("uploadDate")
+                remove("sheetName")
+                // The model's `sheetname` is already present (from the uploaded JSON); fall back if missing.
+                if (this["sheetname"] == null) this["sheetname"] = docName
+                // Tolerate a Timestamp updatedDate; the model expects an Int (epoch seconds).
+                (this["updatedDate"] as? Timestamp)?.let { this["updatedDate"] = it.seconds.toInt() }
+            }
+        val file = json.decodeFromJsonElement(Format9File.serializer(), anyToJsonElement(fields))
+        require(file.fileformat == 9) { "Expected fileformat 9 in '$docName', found ${file.fileformat}" }
+        Timber.i("ExamSheetRepo: Downloaded '$docName' (Format9): ${file.scenes.size} scenes.")
+        return file
+    }
+
+    /** Converts a Firestore value (map/list/primitive) into a kotlinx JsonElement for model decoding. */
+    private fun anyToJsonElement(value: Any?): JsonElement = when (value) {
+        null -> JsonNull
+        is String -> JsonPrimitive(value)
+        is Boolean -> JsonPrimitive(value)
+        is Number -> JsonPrimitive(value)
+        is Map<*, *> -> JsonObject(value.entries.associate { (k, v) -> k.toString() to anyToJsonElement(v) })
+        is List<*> -> JsonArray(value.map { anyToJsonElement(it) })
+        else -> JsonNull // Timestamp / GeoPoint / etc. are not part of Format9File
+    }
 
     /** Reads the embedded hierarchy written by the iOS Format 8 uploader. */
     private suspend fun downloadAndAssembleFormat8(examName: String): Format8File = coroutineScope {

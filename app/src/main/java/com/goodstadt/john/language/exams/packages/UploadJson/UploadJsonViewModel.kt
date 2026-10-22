@@ -23,7 +23,10 @@ data class UploadJsonFile(
     val displayName: String, // short label shown in the UI, e.g. "Modal Verbs"
     val fileName: String,    // the REAL filename, kept for uploading, e.g. "GrammarModalVerbs-de.json"
     val assetPath: String,   // unique id + source: an asset path, or "raw/<name>.json" for a res/raw file
-    val firestoreDocName: String = "" // target Firestore doc name (set for vocab; TBD for quiz files)
+    val firestoreDocName: String = "", // target Firestore doc name (set for vocab; TBD for quiz files)
+    // When true, Upload skips the "already exists" guard and overwrites in place. Safe for single-document
+    // sheets written with set() (e.g. fileFormat-9 podcasts), which replace the doc cleanly.
+    val allowOverwrite: Boolean = false
 )
 
 /** One German vocab source exposed by the targeted field-update debug UI. */
@@ -116,17 +119,26 @@ class UploadJsonViewModel @Inject constructor(
     }
 
     // "Podcasts" (fileFormat-9): bundled podcast scripts uploaded whole (one Firestore doc each), like the
-    // other sheets. DE has the first one now; more to come. EN is intentionally empty for now (coming soon).
+    // other sheets. Use the current multilingual resource for each flavour.
     private val podcastUploadFiles: List<UploadJsonFile> = when (BuildConfig.FLAVOR) {
         "de" -> listOf(
             UploadJsonFile(
-                displayName = "GermanPodcastFootballTripStuttgartA2",
-                fileName = "german_podcast_football_trip_stuttgart_a2.json",
-                assetPath = "raw/german_podcast_football_trip_stuttgart_a2.json", // "raw/" -> res/raw source
-                firestoreDocName = "GermanPodcastFootballTripStuttgartA2"
+                displayName = "GermanPodcastFootballTripStuttgart",
+                fileName = "german_podcast_football_trip_stuttgart.json",
+                assetPath = "raw/german_podcast_football_trip_stuttgart.json", // "raw/" -> res/raw source
+                firestoreDocName = "GermanPodcastFootballTripStuttgart",
+                allowOverwrite = true // single-doc set(); re-upload overwrites cleanly
             )
         )
-        // en: none yet (English podcasts coming soon)
+        "en" -> listOf(
+            UploadJsonFile(
+                displayName = "EnglishPodcastFootballTripManchester",
+                fileName = "english_podcast_football_trip_manchester.json",
+                assetPath = "raw/english_podcast_football_trip_manchester.json",
+                firestoreDocName = "EnglishPodcastFootballTripManchester",
+                allowOverwrite = true // single-doc set(); re-upload overwrites cleanly
+            )
+        )
         else -> emptyList()
     }.filter { rawResourceExists(it.fileName.removeSuffix(".json")) }
 
@@ -492,7 +504,8 @@ class UploadJsonViewModel @Inject constructor(
             }
 
             // Guard against a SECOND upload (there is no Delete yet): if the sheet already exists, block.
-            val alreadyExists = repo.sheetExists(file.firestoreDocName).getOrElse { e ->
+            // Skipped for files that overwrite cleanly in place (e.g. podcasts, written as a single set()).
+            val alreadyExists = !file.allowOverwrite && repo.sheetExists(file.firestoreDocName).getOrElse { e ->
                 fail(file, "Upload", e) // couldn't even check -> treat as an error
                 return@launch
             }

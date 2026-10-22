@@ -61,7 +61,7 @@ class GoogleCloudTTS @Inject constructor(
         try {
             val request = TtsRequest(
                     input = TtsInput(text = text),
-                    voice = TtsVoice(languageCode = languageCode, name = voiceName),
+                    voice = TtsVoice(languageCode = languageCodeForVoice(voiceName, languageCode), name = voiceName),
                     audioConfig = TtsAudioConfig(
                             audioEncoding = "MP3",
                             speakingRate = 0.9f,
@@ -136,3 +136,9 @@ class GoogleCloudTTS @Inject constructor(
         }
     }
 }
+
+private val googleVoiceLocale = Regex("^([a-z]{2,3}-[A-Z]{2})-")
+
+/** A podcast actor can speak a different language/dialect from the app's selected one. */
+internal fun languageCodeForVoice(voiceName: String, fallback: String): String =
+    googleVoiceLocale.find(voiceName)?.groupValues?.get(1) ?: fallback

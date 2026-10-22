@@ -27,7 +27,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.goodstadt.john.language.exams.models.Format9Line
 import com.goodstadt.john.language.exams.models.Format9Scene
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
@@ -41,7 +40,7 @@ private val SpeakerTeal = Color(0xFF00897B)
  * Podcasts (fileFormat-9): a multi-speaker script. Tap a line to hear it (in that speaker's voice); the
  * top "Play whole script" and each scene's play button run the lines in order; the floating button
  * bottom-right play/pauses whatever is running; the floating translate button bottom-left flips the whole
- * script between German and English (audio always German).
+ * script between the sheet language and its translation (audio keeps the sheet language).
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,7 +54,7 @@ fun Format9ContainerScreen(
     val loadError by viewModel.error.collectAsStateWithLifecycle()
     val playingKey by viewModel.playingKey.collectAsStateWithLifecycle()
     val isPaused by viewModel.isPaused.collectAsStateWithLifecycle()
-    val currentGerman by viewModel.currentGerman.collectAsStateWithLifecycle()
+    val currentSpokenText by viewModel.currentSpokenText.collectAsStateWithLifecycle()
     val showTranslation by viewModel.showTranslation.collectAsStateWithLifecycle()
     val focusedSceneIndex by viewModel.focusedSceneIndex.collectAsStateWithLifecycle()
     val prompt by viewModel.prompt.collectAsStateWithLifecycle()
@@ -138,10 +137,9 @@ fun Format9ContainerScreen(
                         }
                         items(scene.lines.sortedBy { it.sortorder }, key = { it.id }) { line ->
                             PodcastLineRow(
-                                line = line,
+                                displayText = viewModel.displayText(line, showTranslation),
                                 speakerName = viewModel.speakerName(line.speakerId),
-                                showTranslation = showTranslation,
-                                isPlaying = currentGerman == line.german,
+                                isPlaying = currentSpokenText == viewModel.spokenText(line),
                                 onClick = { viewModel.playLine(line) }
                             )
                         }
@@ -154,7 +152,7 @@ fun Format9ContainerScreen(
                     shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface,
                     contentColor = if (showTranslation) Orange else MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.align(Alignment.BottomStart).padding(16.dp)
-                ) { Icon(Icons.Default.Translate, if (showTranslation) "Showing English" else "Show English") }
+                ) { Icon(Icons.Default.Translate, if (showTranslation) "Showing translation" else "Show translation") }
 
                 val floatingPlaying = playingKey != null && !isPaused
                 FloatingActionButton(
@@ -220,16 +218,14 @@ private fun SceneHeader(scene: Format9Scene, activePlaying: Boolean, onToggle: (
 
 @Composable
 private fun PodcastLineRow(
-    line: Format9Line,
+    displayText: String,
     speakerName: String,
-    showTranslation: Boolean,
     isPlaying: Boolean,
     onClick: () -> Unit
 ) {
-    val displayText = if (showTranslation) line.english.ifBlank { line.german } else line.german
     Column(
         Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp))
-            .clickable(onClickLabel = "Play German line", onClick = onClick)
+            .clickable(onClickLabel = "Play line", onClick = onClick)
             .background(if (isPlaying) Orange.copy(alpha = 0.12f) else Color.Transparent)
             .padding(horizontal = 8.dp, vertical = 6.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp)

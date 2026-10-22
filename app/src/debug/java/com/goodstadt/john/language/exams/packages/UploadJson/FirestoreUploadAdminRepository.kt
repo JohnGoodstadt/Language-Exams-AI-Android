@@ -34,7 +34,9 @@ import javax.inject.Inject
  *         /words/<word_n>                          (FirestoreWordDTO: word, sentences[], translations[], …)
  */
 class FirestoreUploadAdminRepository @Inject constructor(
-    private val firestore: FirebaseFirestore
+    private val firestore: FirebaseFirestore,
+    // Used by the podcast Read to exercise the REAL runtime decode path (getFormat9Sheet).
+    private val examSheetRepository: com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 ) : UploadAdminRepository {
 
     /** The single place that resolves a sheet name to its document under global/exam_sheets/sheets. */
@@ -69,6 +71,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                 2 -> uploadFormat2(docName, root)
                 6 -> uploadFormat6(docName, root) // pronoun reference: docs + subcollections
                 7, 10 -> uploadFormat7or10(docName, root) // 7 & 10 share the same JSON structure
+                9 -> uploadFormat9(docName, root) // podcast: ONE document, no subcollections
                 13 -> uploadFormat13(docName, root)
                 else -> Result.failure(UnsupportedOperationException("Upload for fileFormat $fileFormat not implemented yet"))
             }
@@ -106,6 +109,7 @@ class FirestoreUploadAdminRepository @Inject constructor(
                     2 -> readFormat2(docName, snapshot)
                     6 -> readFormat6(docName, snapshot)
                     7, 10 -> readFormat7or10(docName, snapshot)
+                    9 -> readFormat9(docName)
                     13 -> readFormat13(docName, snapshot)
                     else -> Result.failure(UnsupportedOperationException("Read for fileFormat $fileFormat not implemented yet"))
                 }
@@ -1010,6 +1014,62 @@ class FirestoreUploadAdminRepository @Inject constructor(
         Timber.e(e, "UploadAdmin: readFormat2 '$docName' failed")
         Result.failure(e)
     }
+
+    // ---------------------------------------------------------------- fileFormat 9 (podcast / dialogue)
+
+    /**
+     * Uploads a fileFormat-9 podcast sheet as a SINGLE document - the whole script (storyContext,
+     * playback, voices, speakers and the scenes array with its nested lines) is stored on one doc with
+     * NO subcollections, mirroring the bundled JSON 1:1. Line text keeps its language-code fields
+     * (de/en/es/zh/pt/hi), so the same [com.goodstadt.john.language.exams.models.Format9File] decodes it.
+     * A plain set() replaces the document so a re-upload is clean (there are no subcollections to wipe).
+     */
+    private suspend fun uploadFormat9(docName: String, root: JSONObject): Result<Unit> = try {
+        // Convert the entire JSON tree to a Firestore map (nested objects -> maps, arrays -> lists).
+        val data = jsonObjectToMap(root).toMutableMap()
+        // Keep the sheet self-describing and stamp the upload time (added alongside the JSON's own fields).
+        data["sheetName"] = docName
+        data[FIELD_UPLOAD_DATE] = FieldValue.serverTimestamp()
+        sheetDoc(docName).set(data).await()
+
+        val scenes = root.optJSONArray("scenes") ?: JSONArray()
+        var lineCount = 0
+        for (si in 0 until scenes.length()) {
+            lineCount += scenes.getJSONObject(si).optJSONArray("lines")?.length() ?: 0
+        }
+        val speakerCount = root.optJSONArray("speakers")?.length() ?: 0
+        Timber.i(
+            "UploadAdmin: uploaded '$docName' (fileFormat 9): ${scenes.length()} scenes, " +
+                "$lineCount lines, $speakerCount speakers (single doc, no subcollections)"
+        )
+        Result.success(Unit)
+    } catch (e: Exception) {
+        Timber.e(e, "UploadAdmin: uploadFormat9 '$docName' failed")
+        Result.failure(e)
+    }
+
+    /**
+     * TEST READ: decodes the uploaded podcast through the REAL runtime path
+     * ([ExamSheetRepository.getFormat9Sheet]) and summarises it, so pressing Read confirms the doc is
+     * present AND that the app's reconstruction code decodes it cleanly into a [Format9File].
+     */
+    private suspend fun readFormat9(docName: String): Result<String> =
+        examSheetRepository.getFormat9Sheet(docName, forceRefresh = true).fold(
+            onSuccess = { file ->
+                val lineCount = file.scenes.sumOf { it.lines.size }
+                val firstLine = file.scenes.firstOrNull()?.lines?.firstOrNull()
+                val sample = firstLine?.let { file.spokenText(it).take(60) }.orEmpty()
+                val summary = "'$docName' OK (fileFormat 9, decoded): sheetname='${file.sheetname}', " +
+                    "${file.scenes.size} scenes, $lineCount lines, ${file.speakers.size} speakers, " +
+                    "${file.voices.size} voices. First spoken line: \"$sample…\""
+                Timber.i("UploadAdmin: readFormat9 (test decode) -> $summary")
+                Result.success(summary)
+            },
+            onFailure = { e ->
+                Timber.e(e, "UploadAdmin: readFormat9 decode '$docName' failed")
+                Result.failure(e)
+            }
+        )
 
     // ---------------------------------------------------------------- fileFormat 7 (grammar quizzes)
 

@@ -57,6 +57,8 @@ object LanguageConfig {
      */
     fun normalizeToLogicalName(resourceName: String): String {
         return when (resourceName) {
+            // Podcasts (Format 9): use the current resource even for an older saved tab name.
+            "english_podcast_football_trip_manchester", "english_podcast_football_trip_manchester_a2", "EnglishPodcastFootballTripManchesterA2" -> "EnglishPodcastFootballTripManchester"
             "vocab_data_a1" -> "EnglishA1Vocab"
             "vocab_data_a2" -> "EnglishA2Vocab"
             "vocab_data_b1" -> "EnglishB1Vocab"
@@ -79,6 +81,8 @@ object LanguageConfig {
      */
     fun mapLogicalToResourceName(sheet_name: String): String {
         return when (sheet_name) {
+            // Podcasts (Format 9).
+            "EnglishPodcastFootballTripManchester", "EnglishPodcastFootballTripManchesterA2" -> "english_podcast_football_trip_manchester"
             "EnglishA1Vocab" -> "vocab_data_a1"
             "EnglishA2Vocab" -> "vocab_data_a2"
             "EnglishB1Vocab" -> "vocab_data_b1"

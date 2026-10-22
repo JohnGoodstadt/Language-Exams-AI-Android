@@ -27,8 +27,8 @@ import javax.inject.Inject
  * Drives the fileFormat-9 podcast screen: loads the sheet from the bundle, plays a tapped line (in that
  * speaker's voice) through the shared audio waterfall, and plays the whole script / a single scene in order
  * via the shared [SequencePlayer] (which also prefetches ahead). Pause/resume and per-speaker voices use the
- * optional SequencePlayer / AudioPlaybackRepository parameters. English always speaks; the German/English
- * toggle only changes what is displayed.
+ * optional SequencePlayer / AudioPlaybackRepository parameters. The sheet's language selects the spoken
+ * text; its translationLanguage controls translation display without changing the audio.
  */
 @HiltViewModel
 class Format9ViewModel @Inject constructor(
@@ -56,10 +56,10 @@ class Format9ViewModel @Inject constructor(
     val prompt = _prompt.asStateFlow()
     private val _playbackError = MutableStateFlow<String?>(null)
     val playbackError = _playbackError.asStateFlow()
-    // The German sentence currently being spoken (for row highlighting). Matches on text.
-    private val _currentGerman = MutableStateFlow<String?>(null)
-    val currentGerman = _currentGerman.asStateFlow()
-    // Display language: false = learning (German), true = native translation (English). Audio always German.
+    // The selected-language sentence currently being spoken (for row highlighting). Matches on text.
+    private val _currentSpokenText = MutableStateFlow<String?>(null)
+    val currentSpokenText = _currentSpokenText.asStateFlow()
+    // False = sheet language, true = translationLanguage. Audio keeps using the sheet language.
     private val _showTranslation = MutableStateFlow(false)
     val showTranslation = _showTranslation.asStateFlow()
     // Scene the scrubber highlights (playhead): advances as playback crosses scenes, and is set on a scrubber
@@ -85,13 +85,20 @@ class Format9ViewModel @Inject constructor(
                     _file.value = f
                     _error.value = null
                     // Warm the "heard" stats for this sheet, like the other reference screens.
-                    audioCache.recalculateReferenceStats(sheetName, orderedLines().map { it.german })
+                    audioCache.recalculateReferenceStats(sheetName, orderedLines().map(::spokenText).filter { it.isNotBlank() })
                 }
                 .onFailure { _error.value = it.message; Timber.e(it, "Format9 load failed for '$name'") }
         }
     }
 
     // --- Derived helpers ---
+
+    val spokenLanguageCode: String get() = _file.value?.spokenLanguageCode.orEmpty()
+    val translationLanguageCode: String get() = _file.value?.translationLanguageCode.orEmpty()
+
+    fun spokenText(line: Format9Line): String = _file.value?.spokenText(line).orEmpty()
+    fun displayText(line: Format9Line, showTranslation: Boolean): String =
+        _file.value?.displayText(line, showTranslation).orEmpty()
 
     fun orderedScenes(): List<Format9Scene> =
         _file.value?.scenes?.sortedBy { it.sortorder }.orEmpty()
@@ -108,7 +115,7 @@ class Format9ViewModel @Inject constructor(
 
     private val charsPerSecond = 15.0
     fun totalEstimatedSeconds(): Double =
-        orderedLines().sumOf { it.german.length }.toDouble() / charsPerSecond
+        orderedLines().sumOf { spokenText(it).length }.toDouble() / charsPerSecond
     fun formattedDuration(seconds: Double): String {
         val total = seconds.toInt()
         return "%d:%02d".format(total / 60, total % 60)
@@ -160,12 +167,13 @@ class Format9ViewModel @Inject constructor(
      */
     private fun startSequence(key: String, lines: List<Format9Line>) {
         stopPlayback()
-        if (lines.isEmpty()) return
+        val playableLines = lines.filter { spokenText(it).isNotBlank() }
+        if (playableLines.isEmpty()) return
         _error.value = null
         sequence.toggle(
             key = key,
-            sentences = lines.map { it.german },
-            voices = lines.map { voiceIdOrNull(it.speakerId) },
+            sentences = playableLines.map(::spokenText),
+            voices = playableLines.map { voiceIdOrNull(it.speakerId) },
             level = "Reference",
             sheetName = sheetName,
             isPremiumUser = policy.isPremium,
@@ -176,20 +184,20 @@ class Format9ViewModel @Inject constructor(
                 } else true
             },
             onTrackStarted = ::handleTrackStarted,
-            onCompleted = { _currentGerman.value = null }
+            onCompleted = { _currentSpokenText.value = null }
         )
     }
 
     /** Shared per-track start handler: moves the row highlight + scrubber playhead, records the play stat. */
     private fun handleTrackStarted(sentence: String) {
-        _currentGerman.value = sentence
-        sceneIndexOfGerman(sentence)?.let { _focusedSceneIndex.value = it }
+        _currentSpokenText.value = sentence
+        sceneIndexOfText(sentence)?.let { _focusedSceneIndex.value = it }
         stats.recordPageView(PageStat.Area.REFERENCE, sheetName, PageStat.Metric.PLAY)  // heard
     }
 
-    /** Index (in [orderedScenes]) of the scene containing a line whose German matches [german], or null. */
-    private fun sceneIndexOfGerman(german: String): Int? =
-        orderedScenes().indexOfFirst { scene -> scene.lines.any { it.german == german } }.takeIf { it >= 0 }
+    /** Index of the scene containing a line whose selected spoken text matches [text], or null. */
+    private fun sceneIndexOfText(text: String): Int? =
+        orderedScenes().indexOfFirst { scene -> scene.lines.any { spokenText(it) == text } }.takeIf { it >= 0 }
 
     /**
      * Scrubber tap on [sceneIndex]: the screen scrolls there (handled by the UI). If audio is ACTIVELY
@@ -213,16 +221,18 @@ class Format9ViewModel @Inject constructor(
 
     /** Re-arm the paused whole-script run so [SequencePlayer.resume] starts at these lines (no sound now). */
     private fun primePausedSequence(key: String, lines: List<Format9Line>) {
-        _currentGerman.value = lines.firstOrNull()?.german   // reflect the new resume point in the list
+        val playableLines = lines.filter { spokenText(it).isNotBlank() }
+        if (playableLines.isEmpty()) return
+        _currentSpokenText.value = spokenText(playableLines.first()) // reflect the new resume point
         sequence.prime(
             key = key,
-            sentences = lines.map { it.german },
-            voices = lines.map { voiceIdOrNull(it.speakerId) },
+            sentences = playableLines.map(::spokenText),
+            voices = playableLines.map { voiceIdOrNull(it.speakerId) },
             level = "Reference",
             sheetName = sheetName,
             isPremiumUser = policy.isPremium,
             onTrackStarted = ::handleTrackStarted,
-            onCompleted = { _currentGerman.value = null }
+            onCompleted = { _currentSpokenText.value = null }
         )
     }
 
@@ -241,7 +251,7 @@ class Format9ViewModel @Inject constructor(
 
     fun stopPlayback() {
         if (sequence.playingKey.value?.startsWith(owner) == true) sequence.stop()
-        _currentGerman.value = null
+        _currentSpokenText.value = null
     }
 
     override fun onCleared() { stopPlayback(); super.onCleared() }

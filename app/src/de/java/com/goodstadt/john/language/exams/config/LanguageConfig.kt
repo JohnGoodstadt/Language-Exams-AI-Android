@@ -72,8 +72,8 @@ object LanguageConfig {
             "german_pronouns2_both_nominative2" -> "GermanPronouns2Nominative2"
             "german_pronouns2_both_patterns2" -> "GermanPronouns2Patterns2"
 
-            // Podcasts (Format 9)
-            "german_podcast_football_trip_stuttgart_a2" -> "GermanPodcastFootballTripStuttgartA2"
+            // Podcasts (Format 9): use the current resource even for an older saved tab name.
+            "german_podcast_football_trip_stuttgart", "german_podcast_football_trip_stuttgart_a2", "GermanPodcastFootballTripStuttgartA2" -> "GermanPodcastFootballTripStuttgart"
 
             "vocab_data_a1" -> "GermanA1Vocab"
             "vocab_data_a2" -> "GermanA2Vocab"
@@ -119,8 +119,8 @@ object LanguageConfig {
             "GermanPronouns2Nominative2" -> "german_pronouns2_both_nominative2"
             "GermanPronouns2Patterns2" -> "german_pronouns2_both_patterns2"
 
-            // Podcasts (Format 9)
-            "GermanPodcastFootballTripStuttgartA2" -> "german_podcast_football_trip_stuttgart_a2"
+            // Podcasts (Format 9).
+            "GermanPodcastFootballTripStuttgart", "GermanPodcastFootballTripStuttgartA2" -> "german_podcast_football_trip_stuttgart"
 
             "GermanA1Vocab" -> "vocab_data_a1"
             "GermanA2Vocab" -> "vocab_data_a2"

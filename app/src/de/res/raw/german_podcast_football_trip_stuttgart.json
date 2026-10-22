@@ -1,0 +1,2428 @@
+{
+  "fileformat": 9,
+  "location": 0,
+  "sheetname": "GermanPodcastFootballTripStuttgart",
+  "title": "Ein Spieltag in Stuttgart",
+  "updatedDate": 0,
+  "description": "Die gleiche Reise in einfacherem Deutsch: Alex und die Erzählerin sprechen meist auf A2-Niveau. Die anderen Personen sprechen wie im Alltag, ungefähr auf B1-Niveau.",
+  "language": "de-DE",
+  "translationLanguage": "en",
+  "level": "A2-B1",
+  "storyContext": {
+    "origin": "Freiburg im Breisgau",
+    "destination": "Stuttgart",
+    "changeAt": [
+      "Karlsruhe"
+    ],
+    "venue": "MHP Arena Stuttgart",
+    "event": "VfB Stuttgart gegen 1. FSV Mainz 05",
+    "fictional": true,
+    "note": "The characters, fixture, result, train times, platform numbers, seat details, prices and individual service situations are fictional. Real places and plausible travel links provide the setting."
+  },
+  "playback": {
+    "pauseBetweenLinesMs": 350,
+    "pauseBetweenScenesMs": 1800
+  },
+  "voices": [
+    {
+      "id": "narrator",
+      "description": "The narrator: mostly A2 German, short sentences and clear everyday vocabulary."
+    },
+    {
+      "id": "traveller",
+      "description": "Alex: an adult student using mostly A2 German in spontaneous travel situations."
+    },
+    {
+      "id": "supporting",
+      "description": "Other characters: conversational speech; the same third voice can play these separate roles."
+    },
+    {
+      "id": "en-US-Chirp-HD-F",
+      "description": "The young woman: female voice speaking English during the conversation at Freiburg station."
+    },
+    {
+      "id": "en-US-Chirp-HD-D",
+      "description": "Alex: male voice speaking English while helping the young woman at Freiburg station."
+    }
+  ],
+  "speakers": [
+    {
+      "id": "narrator",
+      "name": "Erzählerin",
+      "role": "narrator",
+      "voiceId": "de-DE-Chirp3-HD-Achernar"
+    },
+    {
+      "id": "alex",
+      "name": "Alex",
+      "role": "traveller",
+      "voiceId": "de-DE-Chirp3-HD-Charon"
+    },
+    {
+      "id": "ticket_clerk",
+      "name": "Bahnmitarbeiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Achird"
+    },
+    {
+      "id": "barista",
+      "name": "Cafémitarbeiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp-HD-O"
+    },
+    {
+      "id": "conductor",
+      "name": "Zugbegleiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Algenib"
+    },
+    {
+      "id": "station_staff",
+      "name": "Bahnmitarbeiter in Karlsruhe",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Aoede"
+    },
+    {
+      "id": "jonas",
+      "name": "Jonas",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Sadachbia"
+    },
+    {
+      "id": "taxi_driver",
+      "name": "Uber-Fahrer",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Despina"
+    },
+    {
+      "id": "steward",
+      "name": "Ordner",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Erinome"
+    },
+    {
+      "id": "kiosk_staff",
+      "name": "Kioskmitarbeiter",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Fenrir"
+    },
+    {
+      "id": "neighbour",
+      "name": "Sitznachbar",
+      "role": "supporting",
+      "voiceId": "de-DE-Chirp3-HD-Gacrux"
+    },
+    {
+      "id": "young_woman_en",
+      "name": "Junge Frau",
+      "role": "supporting",
+      "voiceId": "en-US-Chirp-HD-F"
+    },
+    {
+      "id": "alex_en",
+      "name": "Alex",
+      "role": "traveller",
+      "voiceId": "en-US-Chirp-HD-D"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01",
+      "sortorder": 1,
+      "title": "Die Fahrkarte",
+      "place": "Freiburg Hauptbahnhof, Reisezentrum",
+      "timeOfDay": "10:10",
+      "summary": "Buy a return train ticket, discuss the change at Karlsruhe and check the departure.",
+      "lines": [
+        {
+          "id": "scene_01_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Es ist Samstagmorgen. Alex ist dreiundzwanzig Jahre alt. Er studiert in Freiburg. Heute fährt er nach Stuttgart zum Fußball. Der VfB spielt gegen Mainz. Alex hat seine Karte für das Stadion schon vor zwei Wochen gekauft. Jetzt braucht er noch die Fahrkarte für den Zug.",
+          "en": "It is Saturday morning. Alex is twenty-three years old. He studies in Freiburg. Today he is going to Stuttgart for the football. VfB are playing Mainz. Alex bought his stadium ticket two weeks ago. Now he still needs his train ticket.",
+          "es": "Es sábado por la mañana. Alex tiene veintitrés años. Estudia en Friburgo. Hoy va a Stuttgart a ver el fútbol. El VfB juega contra el Mainz. Alex compró su entrada para el estadio hace dos semanas. Ahora le falta el billete de tren.",
+          "zh": "今天是星期六早上。Alex 二十三岁，在弗赖堡读大学。今天他要去斯图加特看足球。VfB 对阵美因茨。Alex 两周前就买好了球票，现在还需要买火车票。",
+          "pt": "É sábado de manhã. Alex tem vinte e três anos. Ele estuda em Freiburg. Hoje vai a Stuttgart para assistir ao futebol. O VfB joga contra o Mainz. Alex já comprou o ingresso para o estádio há duas semanas. Agora ainda precisa da passagem de trem.",
+          "hi": "शनिवार की सुबह है। Alex तेईस साल का है। वह Freiburg में पढ़ता है। आज वह फ़ुटबॉल देखने Stuttgart जा रहा है। VfB का मैच Mainz से है। Alex ने स्टेडियम का टिकट दो हफ़्ते पहले ही ख़रीद लिया था। अब उसे ट्रेन का टिकट चाहिए।"
+        },
+        {
+          "id": "scene_01_line_002",
+          "sortorder": 2,
+          "speakerId": "ticket_clerk",
+          "de": "Der Nächste, Bitte",
+          "en": "Next, please.",
+          "es": "El siguiente, por favor.",
+          "zh": "下一位，请。",
+          "pt": "Próximo, por favor.",
+          "hi": "अगला, कृपया।"
+        },
+        {
+          "id": "scene_01_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Guten Morgen. Ich möchte heute nach Stuttgart. Und heute Abend wieder zurück.",
+          "en": "Good morning. I'd like to go to Stuttgart today. And come back this evening.",
+          "es": "Buenos días. Quisiera ir hoy a Stuttgart. Y volver esta noche.",
+          "zh": "早上好。我今天想去斯图加特，晚上回来。",
+          "pt": "Bom dia. Gostaria de ir a Stuttgart hoje. E voltar hoje à noite.",
+          "hi": "सुप्रभात। मैं आज Stuttgart जाना चाहता हूँ। और आज शाम ही वापस आना है।"
+        },
+        {
+          "id": "scene_01_line_004",
+          "sortorder": 4,
+          "speakerId": "ticket_clerk",
+          "de": "Eine Person? Zweite Klasse?",
+          "en": "One person? Second class?",
+          "es": "¿Una persona? ¿Segunda clase?",
+          "zh": "一位？二等座？",
+          "pt": "Uma pessoa? Segunda classe?",
+          "hi": "एक व्यक्ति? सेकंड क्लास?"
+        },
+        {
+          "id": "scene_01_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "de": "Ja. Ich muss vor halb vier da sein. Um halb vier beginnt das Spiel.",
+          "en": "Yes. I need to be there before half past three. The match starts at half past three.",
+          "es": "Sí. Tengo que estar allí antes de las tres y media. El partido empieza a las tres y media.",
+          "zh": "对。我得在下午三点半之前到。比赛三点半开始。",
+          "pt": "Sim. Preciso estar lá antes das três e meia. O jogo começa às três e meia.",
+          "hi": "हाँ। मुझे दोपहर साढ़े तीन से पहले वहाँ पहुँचना है। मैच साढ़े तीन बजे शुरू होता है।"
+        },
+        {
+          "id": "scene_01_line_006",
+          "sortorder": 6,
+          "speakerId": "ticket_clerk",
+          "de": "Vor halb vier am Bahnhof oder schon am Stadion?",
+          "en": "Before half past three at the station, or already at the stadium?",
+          "es": "¿Antes de las tres y media en la estación o ya en el estadio?",
+          "zh": "三点半之前到车站，还是要到球场？",
+          "pt": "Antes das três e meia na estação ou já no estádio?",
+          "hi": "साढ़े तीन से पहले स्टेशन पर या स्टेडियम में?"
+        },
+        {
+          "id": "scene_01_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "de": "Am Stadion. Ich brauche also auch noch Zeit für den Weg vom Bahnhof.",
+          "en": "At the stadium. So I also need time to get there from the station.",
+          "es": "En el estadio. Así que también necesito tiempo para ir desde la estación.",
+          "zh": "到球场。所以我还得留出从车站过去的时间。",
+          "pt": "No estádio. Então também preciso de tempo para ir da estação até lá.",
+          "hi": "स्टेडियम में। इसलिए मुझे स्टेशन से वहाँ जाने के लिए भी समय चाहिए।"
+        },
+        {
+          "id": "scene_01_line_008",
+          "sortorder": 8,
+          "speakerId": "ticket_clerk",
+          "de": "Dann nehmen wir lieber diese Verbindung. Abfahrt zehn Uhr fünfzig, Ankunft in Stuttgart dreizehn Uhr fünf.",
+          "en": "Then let's take this connection. Departure at ten fifty, arrival in Stuttgart at one oh five.",
+          "es": "Entonces mejor elegimos esta conexión. Salida a las diez y cincuenta, llegada a Stuttgart a la una y cinco.",
+          "zh": "那最好选这个换乘方案。十点五十分出发，下午一点零五分到斯图加特。",
+          "pt": "Então é melhor escolher esta conexão. Saída às dez e cinquenta, chegada a Stuttgart às treze e cinco.",
+          "hi": "तो यह वाली यात्रा बेहतर रहेगी। सुबह दस बजकर पचास मिनट पर प्रस्थान, दोपहर एक बजकर पाँच मिनट पर Stuttgart पहुँचेंगे।"
+        },
+        {
+          "id": "scene_01_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "de": "Ist der Zug direkt?",
+          "en": "Is it a direct train?",
+          "es": "¿El tren es directo?",
+          "zh": "是直达列车吗？",
+          "pt": "O trem é direto?",
+          "hi": "क्या ट्रेन सीधी जाती है?"
+        },
+        {
+          "id": "scene_01_line_010",
+          "sortorder": 10,
+          "speakerId": "ticket_clerk",
+          "de": "Nein, Sie steigen in Karlsruhe um. Ankunft dort elf Uhr fünfundfünfzig. Weiter geht's um zwölf Uhr fünfzehn.",
+          "en": "No, you change at Karlsruhe. You arrive there at eleven fifty-five. Your next train leaves at twelve fifteen.",
+          "es": "No, tiene que hacer transbordo en Karlsruhe. Llega allí a las once y cincuenta y cinco. El siguiente sale a las doce y quince.",
+          "zh": "不是，您需要在卡尔斯鲁厄换乘。十一点五十五分到那里，下一班十二点十五分出发。",
+          "pt": "Não, você troca de trem em Karlsruhe. Chega lá às onze e cinquenta e cinco. O próximo sai às doze e quinze.",
+          "hi": "नहीं, आपको Karlsruhe में ट्रेन बदलनी होगी। वहाँ सुबह ग्यारह बजकर पचपन मिनट पर पहुँचेंगे। आगे की ट्रेन दोपहर बारह बजकर पंद्रह मिनट पर है।"
+        },
+        {
+          "id": "scene_01_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "de": "Ich habe also zwanzig Minuten in Karlsruhe?",
+          "en": "So I've got twenty minutes in Karlsruhe?",
+          "es": "¿Entonces tengo veinte minutos en Karlsruhe?",
+          "zh": "所以我在卡尔斯鲁厄有二十分钟？",
+          "pt": "Então tenho vinte minutos em Karlsruhe?",
+          "hi": "तो Karlsruhe में मेरे पास बीस मिनट होंगे?"
+        },
+        {
+          "id": "scene_01_line_012",
+          "sortorder": 12,
+          "speakerId": "ticket_clerk",
+          "de": "Genau. Und zurück habe ich hier achtzehn Uhr fünfundvierzig, wieder über Karlsruhe. Freiburg erreichen Sie um einundzwanzig Uhr.",
+          "en": "Exactly. And for the return I have six forty-five here, again via Karlsruhe. You reach Freiburg at nine in the evening.",
+          "es": "Exacto. Y para volver tengo uno a las seis y cuarenta y cinco de la tarde, también pasando por Karlsruhe. Llega a Friburgo a las nueve de la noche.",
+          "zh": "没错。回程这里有一班晚上六点四十五分的车，也经过卡尔斯鲁厄。晚上九点到弗赖堡。",
+          "pt": "Exatamente. E na volta tenho aqui uma saída às dezoito e quarenta e cinco, de novo via Karlsruhe. Você chega a Freiburg às vinte e uma horas.",
+          "hi": "बिल्कुल। और वापसी के लिए शाम पौने सात बजे की ट्रेन है, फिर Karlsruhe होकर। आप रात नौ बजे Freiburg पहुँच जाएँगे।"
+        },
+        {
+          "id": "scene_01_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "de": "Gut. Können Sie mir die Zeiten bitte ausdrucken?",
+          "en": "Good. Could you print the times for me, please?",
+          "es": "Bien. ¿Me puede imprimir los horarios, por favor?",
+          "zh": "好的。可以帮我把时间打印出来吗？",
+          "pt": "Ótimo. Pode imprimir os horários para mim, por favor?",
+          "hi": "अच्छा। क्या आप ये समय प्रिंट कर सकते हैं?"
+        },
+        {
+          "id": "scene_01_line_014",
+          "sortorder": 14,
+          "speakerId": "ticket_clerk",
+          "de": "Ja. Möchten Sie auch Sitzplätze reservieren?",
+          "en": "Yes. Would you like seat reservations as well?",
+          "es": "Sí. ¿Quiere reservar asientos también?",
+          "zh": "可以。您还要预订座位吗？",
+          "pt": "Sim. Quer reservar assentos também?",
+          "hi": "हाँ। क्या आप सीट भी आरक्षित कराना चाहेंगे?"
+        },
+        {
+          "id": "scene_01_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "de": "Ja, bitte. Einen Platz am Fenster, bitte.",
+          "en": "Yes, please. A window seat, please.",
+          "es": "Sí, por favor. Un asiento de ventanilla, por favor.",
+          "zh": "要的，谢谢。请给我一个靠窗的座位。",
+          "pt": "Sim, por favor. Um lugar na janela, por favor.",
+          "hi": "हाँ, कृपया। खिड़की वाली एक सीट।"
+        },
+        {
+          "id": "scene_01_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "de": "Der Mitarbeiter zeigt Alex die Zeiten auf dem Bildschirm. Alex schaut sie noch einmal an. Dann bezahlt er mit Karte. Er bekommt seine Fahrkarte und ein Blatt mit den Zeiten.",
+          "en": "The employee shows Alex the times on the screen. Alex looks at them again. Then he pays by card. He receives his ticket and a sheet with the times.",
+          "es": "El empleado le muestra los horarios a Alex en la pantalla. Alex los mira una vez más. Luego paga con tarjeta. Recibe su billete y una hoja con los horarios.",
+          "zh": "工作人员在屏幕上给 Alex 看了时间。Alex 又核对了一遍，然后用卡付了钱。他拿到了车票和一张印着时间的纸。",
+          "pt": "O funcionário mostra os horários a Alex na tela. Alex confere mais uma vez. Depois paga com cartão. Recebe a passagem e uma folha com os horários.",
+          "hi": "कर्मचारी स्क्रीन पर Alex को समय दिखाता है। Alex उन्हें एक बार फिर देखता है। फिर वह कार्ड से भुगतान करता है। उसे अपना टिकट और समय लिखी हुई एक पर्ची मिलती है।"
+        },
+        {
+          "id": "scene_01_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "de": "Von welchem Gleis fährt mein Zug?",
+          "en": "Which platform does my train leave from?",
+          "es": "¿De qué vía sale mi tren?",
+          "zh": "我的列车从几号站台出发？",
+          "pt": "De qual plataforma sai o meu trem?",
+          "hi": "मेरी ट्रेन किस प्लेटफ़ॉर्म से जाएगी?"
+        },
+        {
+          "id": "scene_01_line_018",
+          "sortorder": 18,
+          "speakerId": "ticket_clerk",
+          "de": "Laut Anzeige von Gleis eins. Schauen Sie vor der Abfahrt noch mal nach. Das kann sich ändern.",
+          "en": "According to the display, platform one. Check again before departure. It can change.",
+          "es": "Según la pantalla, de la vía uno. Vuelva a mirarlo antes de salir. Puede cambiar.",
+          "zh": "显示屏上说是一号站台。出发前再看一下，可能会变。",
+          "pt": "Segundo o painel, da plataforma um. Confira de novo antes da partida. Pode mudar.",
+          "hi": "स्क्रीन के अनुसार प्लेटफ़ॉर्म एक से। चलने से पहले फिर देख लीजिएगा। यह बदल सकता है।"
+        },
+        {
+          "id": "scene_01_line_019",
+          "sortorder": 19,
+          "speakerId": "alex",
+          "de": "Danke. Jetzt kaufe ich noch einen Kaffee.",
+          "en": "Thanks. Now I'll buy a coffee.",
+          "es": "Gracias. Ahora voy a comprar un café.",
+          "zh": "谢谢。我现在去买杯咖啡。",
+          "pt": "Obrigado. Agora vou comprar um café.",
+          "hi": "धन्यवाद। अब मैं एक कॉफ़ी ख़रीद लेता हूँ।"
+        },
+        {
+          "id": "scene_01_line_020",
+          "sortorder": 20,
+          "speakerId": "ticket_clerk",
+          "de": "Dafür haben Sie noch Zeit.",
+          "en": "You've still got time for that.",
+          "es": "Todavía tiene tiempo para eso.",
+          "zh": "这个时间还是有的。",
+          "pt": "Você ainda tem tempo para isso.",
+          "hi": "उसके लिए आपके पास अभी समय है।"
+        }
+      ]
+    },
+    {
+      "id": "scene_02",
+      "sortorder": 2,
+      "title": "Noch schnell ein Kaffee",
+      "place": "Freiburg Hauptbahnhof, Café in der Bahnhofshalle",
+      "timeOfDay": "10:25",
+      "summary": "Order coffee and a croissant; handle a small misunderstanding and pay.",
+      "lines": [
+        {
+          "id": "scene_02_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Alex steckt die Fahrkarte in seine Jacke. Dann geht er in das kleine Café im Bahnhof. Sein Zug fährt in fünfundzwanzig Minuten. Im Café ist viel los. Der Mitarbeiter macht gerade Kaffee.",
+          "en": "Alex puts his ticket in his jacket. Then he goes into the small café in the station. His train leaves in twenty-five minutes. The café is busy. The employee is making coffee.",
+          "es": "Alex se guarda el billete en la chaqueta. Luego entra en la pequeña cafetería de la estación. Su tren sale en veinticinco minutos. Hay mucha gente en la cafetería. El empleado está preparando café.",
+          "zh": "Alex 把车票放进夹克里，然后走进车站的小咖啡馆。他的列车还有二十五分钟出发。咖啡馆里人很多，工作人员正在做咖啡。",
+          "pt": "Alex guarda a passagem na jaqueta. Depois entra no pequeno café da estação. O trem sai em vinte e cinco minutos. O café está movimentado. O funcionário está preparando café.",
+          "hi": "Alex टिकट अपनी जैकेट में रखता है। फिर वह स्टेशन के छोटे कैफ़े में जाता है। उसकी ट्रेन पच्चीस मिनट बाद है। कैफ़े में काफ़ी भीड़ है। कर्मचारी कॉफ़ी बना रहा है।"
+        },
+        {
+          "id": "scene_02_line_002",
+          "sortorder": 2,
+          "speakerId": "barista",
+          "de": "Was darf's sein?",
+          "en": "What can I get you?",
+          "es": "¿Qué le pongo?",
+          "zh": "您要点什么？",
+          "pt": "O que vai querer?",
+          "hi": "आपके लिए क्या लाऊँ?"
+        },
+        {
+          "id": "scene_02_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Einen kleinen Kaffee mit Milch, bitte.",
+          "en": "A small coffee with milk, please.",
+          "es": "Un café pequeño con leche, por favor.",
+          "zh": "请给我一小杯加奶咖啡。",
+          "pt": "Um café pequeno com leite, por favor.",
+          "hi": "दूध वाली एक छोटी कॉफ़ी, कृपया।"
+        },
+        {
+          "id": "scene_02_line_004",
+          "sortorder": 4,
+          "speakerId": "barista",
+          "de": "Zum Mitnehmen?",
+          "en": "To take away?",
+          "es": "¿Para llevar?",
+          "zh": "打包带走吗？",
+          "pt": "Para viagem?",
+          "hi": "साथ ले जाने के लिए?"
+        },
+        {
+          "id": "scene_02_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "de": "Ja. Haben Sie auch Hafermilch?",
+          "en": "Yes. Do you have oat milk as well?",
+          "es": "Sí. ¿Tiene también leche de avena?",
+          "zh": "对。也有燕麦奶吗？",
+          "pt": "Sim. Tem leite de aveia também?",
+          "hi": "हाँ। क्या आपके पास जई का दूध भी है?"
+        },
+        {
+          "id": "scene_02_line_006",
+          "sortorder": 6,
+          "speakerId": "barista",
+          "de": "Ja, fünfzig Cent extra. Sonst noch was?",
+          "en": "Yes, fifty cents extra. Anything else?",
+          "es": "Sí, son cincuenta céntimos más. ¿Algo más?",
+          "zh": "有，要加五十欧分。还要别的吗？",
+          "pt": "Sim, custa cinquenta centavos a mais. Mais alguma coisa?",
+          "hi": "हाँ, पचास सेंट अतिरिक्त लगेंगे। और कुछ?"
+        },
+        {
+          "id": "scene_02_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "de": "Das Croissant da. Ist das mit Schokolade?",
+          "en": "That croissant there. Is it chocolate?",
+          "es": "Ese cruasán de ahí. ¿Es de chocolate?",
+          "zh": "那边那个可颂，是巧克力的吗？",
+          "pt": "Aquele croissant ali. É de chocolate?",
+          "hi": "वह वाला क्रोइसाँ। क्या उसमें चॉकलेट है?"
+        },
+        {
+          "id": "scene_02_line_008",
+          "sortorder": 8,
+          "speakerId": "barista",
+          "de": "Das rechte? Das ist mit Marzipan. Schokolade ist schon weg.",
+          "en": "The one on the right? That's marzipan. The chocolate ones are gone.",
+          "es": "¿El de la derecha? Ese es de mazapán. Los de chocolate ya se han acabado.",
+          "zh": "右边那个？那个是杏仁糖馅的。巧克力的已经卖完了。",
+          "pt": "O da direita? É de marzipã. Os de chocolate já acabaram.",
+          "hi": "दाईं ओर वाला? उसमें मार्ज़िपान है। चॉकलेट वाले ख़त्म हो गए हैं।"
+        },
+        {
+          "id": "scene_02_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "de": "Dann ein Croissant ohne Schokolade, bitte. Ein normales.",
+          "en": "Then a croissant without chocolate, please. A plain one.",
+          "es": "Entonces un cruasán sin chocolate, por favor. Uno normal.",
+          "zh": "那请给我一个不加巧克力的可颂，原味的。",
+          "pt": "Então um croissant sem chocolate, por favor. Um simples.",
+          "hi": "तो बिना चॉकलेट वाला एक क्रोइसाँ दीजिए। सादा वाला।"
+        },
+        {
+          "id": "scene_02_line_010",
+          "sortorder": 10,
+          "speakerId": "barista",
+          "de": "Hier essen oder auch mitnehmen?",
+          "en": "Eat it here, or take it away as well?",
+          "es": "¿Para comer aquí o también para llevar?",
+          "zh": "在这里吃，还是也带走？",
+          "pt": "Para comer aqui ou para viagem também?",
+          "hi": "यहीं खाएँगे या यह भी साथ ले जाएँगे?"
+        },
+        {
+          "id": "scene_02_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "de": "Auch zum Mitnehmen, bitte. Mein Zug fährt bald.",
+          "en": "To take away as well, please. My train leaves soon.",
+          "es": "También para llevar, por favor. Mi tren sale pronto.",
+          "zh": "也打包带走，谢谢。我的火车快开了。",
+          "pt": "Para viagem também, por favor. Meu trem sai logo.",
+          "hi": "यह भी साथ ले जाने के लिए। मेरी ट्रेन जल्द ही चलने वाली है।"
+        },
+        {
+          "id": "scene_02_line_012",
+          "sortorder": 12,
+          "speakerId": "barista",
+          "de": "Dann kommt's in die Tüte. Macht sechs Euro zwanzig.",
+          "en": "Then I'll put it in a bag. That's six euros twenty.",
+          "es": "Entonces lo pongo en una bolsa. Son seis euros con veinte.",
+          "zh": "那就给您装袋子里。一共六欧元二十欧分。",
+          "pt": "Então vai no saco. Fica seis euros e vinte.",
+          "hi": "तो इसे थैली में रख देता हूँ। छह यूरो बीस सेंट हुए।"
+        },
+        {
+          "id": "scene_02_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "de": "Alex hält seine Karte an das Gerät. Aber es passiert nichts. Der Mitarbeiter zeigt auf den kleinen Bildschirm.",
+          "en": "Alex holds his card against the terminal. But nothing happens. The employee points at the small screen.",
+          "es": "Alex acerca la tarjeta al terminal. Pero no pasa nada. El empleado señala la pequeña pantalla.",
+          "zh": "Alex 把卡贴到支付终端上，但没有反应。工作人员指了指小屏幕。",
+          "pt": "Alex aproxima o cartão da maquininha. Mas nada acontece. O funcionário aponta para a telinha.",
+          "hi": "Alex अपना कार्ड मशीन से लगाता है। लेकिन कुछ नहीं होता। कर्मचारी छोटी स्क्रीन की ओर इशारा करता है।"
+        },
+        {
+          "id": "scene_02_line_014",
+          "sortorder": 14,
+          "speakerId": "barista",
+          "de": "Noch einen Moment. Jetzt. Ja, so.",
+          "en": "Just a moment. Now. Yes, like that.",
+          "es": "Espere un momento. Ahora. Sí, así.",
+          "zh": "再等一下。现在可以了。对，就这样。",
+          "pt": "Mais um instante. Agora. Isso, assim.",
+          "hi": "एक पल और। अब। हाँ, ऐसे।"
+        },
+        {
+          "id": "scene_02_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "de": "Hat das funktioniert?",
+          "en": "Did that work?",
+          "es": "¿Ha funcionado?",
+          "zh": "付成功了吗？",
+          "pt": "Deu certo?",
+          "hi": "क्या भुगतान हो गया?"
+        },
+        {
+          "id": "scene_02_line_016",
+          "sortorder": 16,
+          "speakerId": "barista",
+          "de": "Ja. Kleiner Kaffee mit Hafermilch!",
+          "en": "Yes. Small coffee with oat milk!",
+          "es": "Sí. ¡Café pequeño con leche de avena!",
+          "zh": "付好了。小杯燕麦奶咖啡！",
+          "pt": "Sim. Café pequeno com leite de aveia!",
+          "hi": "हाँ। जई के दूध वाली छोटी कॉफ़ी!"
+        },
+        {
+          "id": "scene_02_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "de": "Ist das meiner?",
+          "en": "Is that mine?",
+          "es": "¿Es el mío?",
+          "zh": "这是我的吗？",
+          "pt": "É o meu?",
+          "hi": "क्या यह मेरी है?"
+        },
+        {
+          "id": "scene_02_line_018",
+          "sortorder": 18,
+          "speakerId": "barista",
+          "de": "Wenn Sie den bestellt haben, ja.",
+          "en": "If that's what you ordered, yes.",
+          "es": "Si es lo que ha pedido, sí.",
+          "zh": "如果您点的就是这个，那就是您的。",
+          "pt": "Se foi o que você pediu, sim.",
+          "hi": "अगर आपने यही मँगाई थी, तो हाँ।"
+        },
+        {
+          "id": "scene_02_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "de": "Alex lacht. Er nimmt den Kaffee und die Tüte. Dann geht er zur großen Anzeige im Bahnhof. Sein Zug fährt noch immer von Gleis eins.",
+          "en": "Alex laughs. He takes the coffee and the bag. Then he goes to the big display in the station. His train is still leaving from platform one.",
+          "es": "Alex se ríe. Recoge el café y la bolsa. Luego va al gran panel de la estación. Su tren sigue saliendo de la vía uno.",
+          "zh": "Alex 笑了。他拿起咖啡和纸袋，然后走到车站的大显示屏前。他的列车还是从一号站台出发。",
+          "pt": "Alex ri. Pega o café e o saco. Depois vai até o painel grande da estação. O trem continua saindo da plataforma um.",
+          "hi": "Alex हँसता है। वह कॉफ़ी और थैली लेता है। फिर वह स्टेशन की बड़ी स्क्रीन के पास जाता है। उसकी ट्रेन अब भी प्लेटफ़ॉर्म एक से जा रही है।"
+        }
+      ]
+    },
+    {
+      "id": "scene_03",
+      "sortorder": 3,
+      "title": "Im ersten Zug",
+      "place": "ICE von Freiburg nach Karlsruhe",
+      "timeOfDay": "10:55",
+      "summary": "Find the reserved seat, show the ticket and ask about a short delay.",
+      "lines": [
+        {
+          "id": "scene_03_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Der Zug fährt in Freiburg ab. Es ist kurz nach zehn Uhr fünfzig. Alex sitzt am Fenster. Er macht die Tüte mit dem Croissant auf. Da kommt ein Mitarbeiter und kontrolliert die Fahrkarten.",
+          "en": "The train leaves Freiburg. It is just after ten fifty. Alex is sitting by the window. He opens the bag with the croissant. A staff member comes along and checks the tickets.",
+          "es": "El tren sale de Friburgo. Son poco más de las diez y cincuenta. Alex está sentado junto a la ventanilla. Abre la bolsa del cruasán. Entonces llega un empleado a revisar los billetes.",
+          "zh": "列车从弗赖堡出发了。现在刚过十点五十分。Alex 坐在窗边，打开装可颂的袋子。这时，一位工作人员过来查票。",
+          "pt": "O trem sai de Freiburg. Já passou um pouco das dez e cinquenta. Alex está sentado junto à janela. Abre o saco do croissant. Então um funcionário chega para conferir as passagens.",
+          "hi": "ट्रेन Freiburg से चलती है। सुबह दस बजकर पचास मिनट से थोड़ा ज़्यादा समय हुआ है। Alex खिड़की के पास बैठा है। वह क्रोइसाँ की थैली खोलता है। तभी एक कर्मचारी टिकट जाँचने आता है।"
+        },
+        {
+          "id": "scene_03_line_002",
+          "sortorder": 2,
+          "speakerId": "conductor",
+          "de": "Guten Morgen. Die Fahrkarten, bitte.",
+          "en": "Good morning. Tickets, please.",
+          "es": "Buenos días. Los billetes, por favor.",
+          "zh": "早上好。请出示车票。",
+          "pt": "Bom dia. Passagens, por favor.",
+          "hi": "सुप्रभात। टिकट दिखाइए, कृपया।"
+        },
+        {
+          "id": "scene_03_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Moment, die Fahrkarte ist hier. Ist das richtig so?",
+          "en": "One moment, the ticket is here. Is this right?",
+          "es": "Un momento, el billete está aquí. ¿Así está bien?",
+          "zh": "稍等，车票在这里。这样可以吗？",
+          "pt": "Um momento, a passagem está aqui. Está certo assim?",
+          "hi": "एक पल, टिकट यहाँ है। क्या ऐसे ठीक है?"
+        },
+        {
+          "id": "scene_03_line_004",
+          "sortorder": 4,
+          "speakerId": "conductor",
+          "de": "Ja, den Code bitte ruhig halten. Danke. Sie fahren bis Stuttgart?",
+          "en": "Yes, please hold the code still. Thank you. You're going to Stuttgart?",
+          "es": "Sí, mantenga el código quieto, por favor. Gracias. ¿Va hasta Stuttgart?",
+          "zh": "可以，请把码拿稳别动。谢谢。您是去斯图加特吗？",
+          "pt": "Sim, mantenha o código parado, por favor. Obrigado. Vai até Stuttgart?",
+          "hi": "हाँ, कृपया कोड स्थिर रखिए। धन्यवाद। आप Stuttgart तक जा रहे हैं?"
+        },
+        {
+          "id": "scene_03_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "de": "Ja. In Karlsruhe muss ich umsteigen.",
+          "en": "Yes. I need to change trains at Karlsruhe.",
+          "es": "Sí. Tengo que cambiar de tren en Karlsruhe.",
+          "zh": "对。我得在卡尔斯鲁厄换车。",
+          "pt": "Sim. Preciso trocar de trem em Karlsruhe.",
+          "hi": "हाँ। मुझे Karlsruhe में ट्रेन बदलनी है।"
+        },
+        {
+          "id": "scene_03_line_006",
+          "sortorder": 6,
+          "speakerId": "conductor",
+          "de": "Alles klar.",
+          "en": "All right.",
+          "es": "De acuerdo.",
+          "zh": "明白了。",
+          "pt": "Tudo certo.",
+          "hi": "ठीक है।"
+        },
+        {
+          "id": "scene_03_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "de": "Da steht: sechs Minuten später. Bekomme ich meinen nächsten Zug noch?",
+          "en": "It says: six minutes late. Will I still catch my next train?",
+          "es": "Ahí pone seis minutos de retraso. ¿Llegaré a coger el siguiente tren?",
+          "zh": "那上面说晚点六分钟。我还赶得上下一班车吗？",
+          "pt": "Ali diz seis minutos de atraso. Ainda vou conseguir pegar o próximo trem?",
+          "hi": "वहाँ लिखा है: छह मिनट की देरी। क्या मैं अपनी अगली ट्रेन पकड़ पाऊँगा?"
+        },
+        {
+          "id": "scene_03_line_008",
+          "sortorder": 8,
+          "speakerId": "conductor",
+          "de": "Wann fährt der Anschluss?",
+          "en": "When does your connecting train leave?",
+          "es": "¿A qué hora sale el enlace?",
+          "zh": "接着那班车几点开？",
+          "pt": "A que horas sai a conexão?",
+          "hi": "अगली ट्रेन कितने बजे है?"
+        },
+        {
+          "id": "scene_03_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "de": "Um zwölf Uhr fünfzehn.",
+          "en": "At twelve fifteen.",
+          "es": "A las doce y quince.",
+          "zh": "十二点十五分。",
+          "pt": "Às doze e quinze.",
+          "hi": "दोपहर बारह बजकर पंद्रह मिनट पर।"
+        },
+        {
+          "id": "scene_03_line_010",
+          "sortorder": 10,
+          "speakerId": "conductor",
+          "de": "Wenn es bei den sechs Minuten bleibt, haben Sie in Karlsruhe noch vierzehn Minuten. Das sollte reichen.",
+          "en": "If the delay stays at six minutes, you'll still have fourteen minutes in Karlsruhe. That should be enough.",
+          "es": "Si el retraso se queda en seis minutos, todavía tendrá catorce minutos en Karlsruhe. Debería ser suficiente.",
+          "zh": "如果只晚六分钟，您在卡尔斯鲁厄还有十四分钟。应该来得及。",
+          "pt": "Se o atraso continuar em seis minutos, você ainda terá quatorze minutos em Karlsruhe. Deve ser suficiente.",
+          "hi": "अगर देरी छह मिनट ही रही, तो Karlsruhe में आपके पास चौदह मिनट होंगे। उतना काफ़ी होना चाहिए।"
+        },
+        {
+          "id": "scene_03_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "de": "Wissen Sie, von welchem Gleis mein nächster Zug fährt?",
+          "en": "Do you know which platform my next train leaves from?",
+          "es": "¿Sabe de qué vía sale mi próximo tren?",
+          "zh": "您知道我的下一班列车从几号站台出发吗？",
+          "pt": "Sabe de qual plataforma sai o meu próximo trem?",
+          "hi": "क्या आपको पता है कि मेरी अगली ट्रेन किस प्लेटफ़ॉर्म से जाएगी?"
+        },
+        {
+          "id": "scene_03_line_012",
+          "sortorder": 12,
+          "speakerId": "conductor",
+          "de": "Bitte kurz vor Karlsruhe noch mal in die App schauen. Die Angaben können sich ändern.",
+          "en": "Please check the app again just before Karlsruhe. The information can change.",
+          "es": "Vuelva a mirar la aplicación poco antes de llegar a Karlsruhe. La información puede cambiar.",
+          "zh": "快到卡尔斯鲁厄时，请再看一下应用。信息可能会变。",
+          "pt": "Confira de novo no aplicativo pouco antes de chegar a Karlsruhe. As informações podem mudar.",
+          "hi": "Karlsruhe पहुँचने से ठीक पहले ऐप में फिर देख लीजिएगा। जानकारी बदल सकती है।"
+        },
+        {
+          "id": "scene_03_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "de": "Okay, danke. Ich bin nicht sicher. Deshalb frage ich.",
+          "en": "Okay, thanks. I'm not sure. That's why I'm asking.",
+          "es": "Vale, gracias. No estoy seguro. Por eso pregunto.",
+          "zh": "好，谢谢。我不太确定，所以才问一下。",
+          "pt": "Certo, obrigado. Não tenho certeza. Por isso estou perguntando.",
+          "hi": "ठीक है, धन्यवाद। मुझे पक्का नहीं पता। इसलिए पूछ रहा हूँ।"
+        },
+        {
+          "id": "scene_03_line_014",
+          "sortorder": 14,
+          "speakerId": "conductor",
+          "de": "Ist schon in Ordnung. Gute Fahrt noch.",
+          "en": "That's all right. Enjoy the rest of your journey.",
+          "es": "No se preocupe. Que siga teniendo buen viaje.",
+          "zh": "没关系。祝您接下来旅途顺利。",
+          "pt": "Sem problema. Boa continuação de viagem.",
+          "hi": "कोई बात नहीं। आगे का सफ़र अच्छा रहे।"
+        },
+        {
+          "id": "scene_03_line_015",
+          "sortorder": 15,
+          "speakerId": "narrator",
+          "de": "Alex steckt die Fahrkarte wieder in seine Jacke. Er trinkt seinen Kaffee und schaut aus dem Fenster. Draußen sieht er Häuser, Bäume und kleine Orte.",
+          "en": "Alex puts the ticket back in his jacket. He drinks his coffee and looks out of the window. Outside he sees houses, trees and small towns.",
+          "es": "Alex vuelve a guardar el billete en la chaqueta. Bebe su café y mira por la ventanilla. Fuera ve casas, árboles y pueblos pequeños.",
+          "zh": "Alex 把车票放回夹克里。他喝着咖啡，望向窗外，看见房屋、树木和一个个小镇。",
+          "pt": "Alex guarda a passagem de novo na jaqueta. Toma o café e olha pela janela. Lá fora, vê casas, árvores e pequenas cidades.",
+          "hi": "Alex टिकट वापस अपनी जैकेट में रख लेता है। वह कॉफ़ी पीते हुए खिड़की से बाहर देखता है। बाहर उसे घर, पेड़ और छोटे कस्बे दिखते हैं।"
+        }
+      ]
+    },
+    {
+      "id": "scene_04",
+      "sortorder": 4,
+      "title": "Umsteigen in Karlsruhe",
+      "place": "Karlsruhe Hauptbahnhof",
+      "timeOfDay": "12:01",
+      "summary": "Follow the connection information and clarify a direction without panic.",
+      "lines": [
+        {
+          "id": "scene_04_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Kurz nach zwölf kommt Alex in Karlsruhe an. Sein nächster Zug fährt um zwölf Uhr fünfzehn nach Stuttgart. Auf der Anzeige steht Gleis acht. Alex sieht einen Mitarbeiter und geht zu ihm.",
+          "en": "Just after twelve, Alex arrives in Karlsruhe. His next train leaves for Stuttgart at twelve fifteen. The display says platform eight. Alex sees an employee and walks over to him.",
+          "es": "Alex llega a Karlsruhe poco después de las doce. Su siguiente tren sale hacia Stuttgart a las doce y quince. En la pantalla pone vía ocho. Alex ve a un empleado y se acerca a él.",
+          "zh": "刚过十二点，Alex 到了卡尔斯鲁厄。下一班去斯图加特的列车十二点十五分出发。显示屏上写着八号站台。Alex 看见一位工作人员，便走了过去。",
+          "pt": "Alex chega a Karlsruhe pouco depois do meio-dia. O próximo trem para Stuttgart sai às doze e quinze. O painel mostra plataforma oito. Alex vê um funcionário e vai até ele.",
+          "hi": "बारह बजे के थोड़ी देर बाद Alex, Karlsruhe पहुँचता है। उसकी अगली ट्रेन दोपहर बारह बजकर पंद्रह मिनट पर Stuttgart के लिए चलती है। स्क्रीन पर प्लेटफ़ॉर्म आठ लिखा है। Alex एक कर्मचारी को देखकर उसके पास जाता है।"
+        },
+        {
+          "id": "scene_04_line_002",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "de": "Entschuldigung, wo ist Gleis acht?",
+          "en": "Excuse me, where is platform eight?",
+          "es": "Disculpe, ¿dónde está la vía ocho?",
+          "zh": "打扰一下，八号站台在哪里？",
+          "pt": "Com licença, onde fica a plataforma oito?",
+          "hi": "माफ़ कीजिए, प्लेटफ़ॉर्म आठ कहाँ है?"
+        },
+        {
+          "id": "scene_04_line_003",
+          "sortorder": 3,
+          "speakerId": "station_staff",
+          "de": "Hier runter, durch die Unterführung. Die Nummern stehen oben an den Treppen.",
+          "en": "Down here, through the underpass. The numbers are above the stairs.",
+          "es": "Baje por aquí y pase por el paso subterráneo. Los números están encima de las escaleras.",
+          "zh": "从这里下去，穿过地下通道。号码就在楼梯上方。",
+          "pt": "Desça aqui, pela passagem subterrânea. Os números ficam em cima das escadas.",
+          "hi": "यहाँ से नीचे जाइए, अंडरपास से होकर। नंबर सीढ़ियों के ऊपर लिखे हैं।"
+        },
+        {
+          "id": "scene_04_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "de": "Also hier nach unten und dann rechts?",
+          "en": "So down here and then right?",
+          "es": "¿Entonces bajo por aquí y luego a la derecha?",
+          "zh": "所以从这里下去，然后右转？",
+          "pt": "Então desço aqui e depois viro à direita?",
+          "hi": "तो यहाँ नीचे जाकर फिर दाईं तरफ़?"
+        },
+        {
+          "id": "scene_04_line_005",
+          "sortorder": 5,
+          "speakerId": "station_staff",
+          "de": "Genau. Aber schauen Sie auf die Schilder, nicht einfach der Menge hinterher.",
+          "en": "Exactly. But follow the signs, not just the crowd.",
+          "es": "Exacto. Pero mire las señales, no se limite a seguir a la gente.",
+          "zh": "对。不过要看指示牌，别光跟着人群走。",
+          "pt": "Exatamente. Mas olhe as placas, não vá só atrás da multidão.",
+          "hi": "बिल्कुल। लेकिन संकेत देखिएगा, सिर्फ़ भीड़ के पीछे मत चल दीजिएगा।"
+        },
+        {
+          "id": "scene_04_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "de": "Das ist für den Zug nach Stuttgart? Um zwölf Uhr fünfzehn?",
+          "en": "That's for the train to Stuttgart? At twelve fifteen?",
+          "es": "¿Es para el tren a Stuttgart? ¿El de las doce y quince?",
+          "zh": "那是去斯图加特的列车吗？十二点十五分那班？",
+          "pt": "É para o trem para Stuttgart? O das doze e quinze?",
+          "hi": "क्या यह Stuttgart जाने वाली ट्रेन के लिए है? बारह बजकर पंद्रह मिनट वाली?"
+        },
+        {
+          "id": "scene_04_line_007",
+          "sortorder": 7,
+          "speakerId": "station_staff",
+          "de": "Zeigen Sie mal den Ausdruck. Ja, der ist das.",
+          "en": "Let me see your printout. Yes, that's the one.",
+          "es": "Déjeme ver la hoja impresa. Sí, es ese.",
+          "zh": "给我看看打印的那张纸。对，就是那班。",
+          "pt": "Deixe eu ver a folha impressa. Sim, é esse mesmo.",
+          "hi": "ज़रा प्रिंट की हुई पर्ची दिखाइए। हाँ, वही है।"
+        },
+        {
+          "id": "scene_04_line_008",
+          "sortorder": 8,
+          "speakerId": "alex",
+          "de": "Muss ich schnell gehen?",
+          "en": "Do I need to walk quickly?",
+          "es": "¿Tengo que ir deprisa?",
+          "zh": "我需要快点走吗？",
+          "pt": "Preciso ir rápido?",
+          "hi": "क्या मुझे जल्दी चलना होगा?"
+        },
+        {
+          "id": "scene_04_line_009",
+          "sortorder": 9,
+          "speakerId": "station_staff",
+          "de": "Zügig gehen reicht. Sie haben noch Zeit.",
+          "en": "Walking briskly is enough. You've still got time.",
+          "es": "Con ir a buen paso basta. Todavía tiene tiempo.",
+          "zh": "走快一点就够了。您还有时间。",
+          "pt": "É só andar com passo firme. Você ainda tem tempo.",
+          "hi": "तेज़ क़दमों से चलना काफ़ी है। आपके पास अभी समय है।"
+        },
+        {
+          "id": "scene_04_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "de": "Alex geht die Treppe hinunter. Unten sieht er ein Schild für Gleis acht. Er bleibt kurz stehen. Hinter ihm warten andere Menschen.",
+          "en": "Alex goes down the stairs. At the bottom he sees a sign for platform eight. He stops for a moment. Other people are waiting behind him.",
+          "es": "Alex baja las escaleras. Abajo ve una señal para la vía ocho. Se detiene un momento. Detrás de él hay otras personas esperando.",
+          "zh": "Alex 走下楼梯。在下面，他看见了八号站台的指示牌。他停了一下，后面还有其他人在等着过去。",
+          "pt": "Alex desce a escada. Lá embaixo, vê uma placa para a plataforma oito. Para por um instante. Atrás dele, outras pessoas estão esperando.",
+          "hi": "Alex सीढ़ियाँ उतरता है। नीचे उसे प्लेटफ़ॉर्म आठ का संकेत दिखता है। वह पल भर के लिए रुकता है। उसके पीछे दूसरे लोग इंतज़ार कर रहे हैं।"
+        },
+        {
+          "id": "scene_04_line_011",
+          "sortorder": 11,
+          "speakerId": "station_staff",
+          "de": "Nicht da stehen bleiben, bitte. Sonst kommt keiner mehr durch.",
+          "en": "Please don't stop there. Otherwise nobody can get through.",
+          "es": "No se quede parado ahí, por favor. Si no, no puede pasar nadie.",
+          "zh": "请别停在那儿，不然别人都过不去了。",
+          "pt": "Não fique parado aí, por favor. Senão ninguém consegue passar.",
+          "hi": "कृपया वहाँ मत रुकिए। वरना कोई निकल नहीं पाएगा।"
+        },
+        {
+          "id": "scene_04_line_012",
+          "sortorder": 12,
+          "speakerId": "alex",
+          "de": "Oh, Entschuldigung.",
+          "en": "Oh, sorry.",
+          "es": "Ah, perdón.",
+          "zh": "哦，不好意思。",
+          "pt": "Ah, desculpe.",
+          "hi": "ओह, माफ़ कीजिए।"
+        },
+        {
+          "id": "scene_04_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "de": "Ein paar Minuten später steht Alex an Gleis acht. Der Zug kommt schon. Alex sucht die richtige Nummer am Wagen. Dann steigt er ein. Er ist froh. Er hat noch genug Zeit.",
+          "en": "A few minutes later, Alex is on platform eight. The train is already arriving. Alex looks for the right number on the carriage. Then he gets on. He is happy. He still has enough time.",
+          "es": "Unos minutos después, Alex está en la vía ocho. El tren ya está llegando. Alex busca el número correcto del coche. Luego sube. Está contento. Todavía tiene tiempo de sobra.",
+          "zh": "几分钟后，Alex 来到八号站台。列车已经进站了。Alex 找到号码对应的车厢，然后上了车。他很高兴，时间还很充裕。",
+          "pt": "Alguns minutos depois, Alex está na plataforma oito. O trem já está chegando. Alex procura o número certo do vagão. Depois embarca. Está feliz. Ainda tem tempo suficiente.",
+          "hi": "कुछ मिनट बाद Alex प्लेटफ़ॉर्म आठ पर है। ट्रेन आ रही है। Alex डिब्बे पर सही नंबर ढूँढ़ता है। फिर वह चढ़ जाता है। वह ख़ुश है। उसके पास अभी भी काफ़ी समय है।"
+        }
+      ]
+    },
+    {
+      "id": "scene_05",
+      "sortorder": 5,
+      "title": "Ein anderer Fan",
+      "place": "Zug von Karlsruhe nach Stuttgart",
+      "timeOfDay": "12:20",
+      "summary": "Chat with another supporter, exchange plans and agree to share an Uber to the stadium.",
+      "lines": [
+        {
+          "id": "scene_05_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Alex sitzt im Zug nach Stuttgart. Gegenüber sitzt ein Mann. Er trägt einen rot-weißen Schal. Alex nimmt seinen VfB-Schal aus der Tasche. Der Mann sieht den Schal und lächelt.",
+          "en": "Alex is sitting on the train to Stuttgart. A man is sitting opposite him. He is wearing a red-and-white scarf. Alex takes his VfB scarf out of his bag. The man sees the scarf and smiles.",
+          "es": "Alex está sentado en el tren a Stuttgart. Enfrente hay un hombre. Lleva una bufanda roja y blanca. Alex saca su bufanda del VfB de la bolsa. El hombre ve la bufanda y sonríe.",
+          "zh": "Alex 坐在去斯图加特的列车上。对面坐着一个男人，戴着一条红白相间的围巾。Alex 从包里拿出自己的 VfB 围巾。那个男人看到了，笑了笑。",
+          "pt": "Alex está no trem para Stuttgart. Um homem está sentado em frente a ele. Usa um cachecol vermelho e branco. Alex tira seu cachecol do VfB da bolsa. O homem vê o cachecol e sorri.",
+          "hi": "Alex, Stuttgart जाने वाली ट्रेन में बैठा है। सामने एक आदमी बैठा है। उसने लाल और सफ़ेद मफ़लर पहना है। Alex अपने बैग से VfB का मफ़लर निकालता है। आदमी मफ़लर देखकर मुस्कुराता है।"
+        },
+        {
+          "id": "scene_05_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "de": "Auch zum Spiel?",
+          "en": "Going to the match as well?",
+          "es": "¿Tú también vas al partido?",
+          "zh": "你也去看比赛？",
+          "pt": "Vai ao jogo também?",
+          "hi": "तुम भी मैच देखने जा रहे हो?"
+        },
+        {
+          "id": "scene_05_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Ja. Sieht man das?",
+          "en": "Yes. Can you tell?",
+          "es": "Sí. ¿Se nota?",
+          "zh": "对。看得出来吗？",
+          "pt": "Sim. Dá para perceber?",
+          "hi": "हाँ। क्या इतना साफ़ पता चल रहा है?"
+        },
+        {
+          "id": "scene_05_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "de": "Ein bisschen. Ich bin Jonas.",
+          "en": "A bit. I'm Jonas.",
+          "es": "Un poco. Soy Jonas.",
+          "zh": "有一点。我叫 Jonas。",
+          "pt": "Um pouco. Sou Jonas.",
+          "hi": "थोड़ा-बहुत। मैं Jonas हूँ।"
+        },
+        {
+          "id": "scene_05_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "de": "Alex. Freut mich.",
+          "en": "Alex. Nice to meet you.",
+          "es": "Alex. Encantado.",
+          "zh": "我叫 Alex。很高兴认识你。",
+          "pt": "Alex. Prazer.",
+          "hi": "मैं Alex। मिलकर ख़ुशी हुई।"
+        },
+        {
+          "id": "scene_05_line_006",
+          "sortorder": 6,
+          "speakerId": "jonas",
+          "de": "Fährst du öfter nach Stuttgart?",
+          "en": "Do you go to Stuttgart often?",
+          "es": "¿Vas a Stuttgart a menudo?",
+          "zh": "你经常去斯图加特吗？",
+          "pt": "Você vai sempre a Stuttgart?",
+          "hi": "क्या तुम अक्सर Stuttgart जाते हो?"
+        },
+        {
+          "id": "scene_05_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "de": "Nicht oft. Ich studiere in Freiburg. Letztes Jahr war ich mit einem Freund im Stadion. Das war toll. Jetzt bin ich VfB-Fan.",
+          "en": "Not often. I study in Freiburg. Last year I went to the stadium with a friend. It was great. Now I'm a VfB fan.",
+          "es": "No muy a menudo. Estudio en Friburgo. El año pasado fui al estadio con un amigo. Fue genial. Ahora soy del VfB.",
+          "zh": "不常去。我在弗赖堡读大学。去年和一个朋友来球场看过比赛，特别棒。现在我是 VfB 球迷了。",
+          "pt": "Não muito. Estudo em Freiburg. No ano passado, fui ao estádio com um amigo. Foi ótimo. Agora sou torcedor do VfB.",
+          "hi": "ज़्यादा नहीं। मैं Freiburg में पढ़ता हूँ। पिछले साल एक दोस्त के साथ स्टेडियम गया था। बहुत अच्छा लगा। अब मैं VfB का प्रशंसक हूँ।"
+        },
+        {
+          "id": "scene_05_line_008",
+          "sortorder": 8,
+          "speakerId": "jonas",
+          "de": "Mitten in Freiburg. Mutig.",
+          "en": "Right in the middle of Freiburg. Brave.",
+          "es": "Y en pleno Friburgo. Qué valiente.",
+          "zh": "住在弗赖堡还支持 VfB，够勇的。",
+          "pt": "Bem no meio de Freiburg. Corajoso.",
+          "hi": "Freiburg में रहकर। हिम्मत है।"
+        },
+        {
+          "id": "scene_05_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "de": "Meine Freunde zu Hause sagen das auch. Wohnst du in Stuttgart?",
+          "en": "My friends at home say that too. Do you live in Stuttgart?",
+          "es": "Mis amigos de allí también lo dicen. ¿Vives en Stuttgart?",
+          "zh": "我那边的朋友也这么说。你住在斯图加特吗？",
+          "pt": "Meus amigos de lá também dizem isso. Você mora em Stuttgart?",
+          "hi": "वहाँ के मेरे दोस्त भी यही कहते हैं। क्या तुम Stuttgart में रहते हो?"
+        },
+        {
+          "id": "scene_05_line_010",
+          "sortorder": 10,
+          "speakerId": "jonas",
+          "de": "Früher. Jetzt wohne ich auch in Freiburg, wegen der Arbeit. Heute fahre ich allein.",
+          "en": "I used to. Now I live in Freiburg as well, because of work. I'm travelling on my own today.",
+          "es": "Antes sí. Ahora también vivo en Friburgo, por trabajo. Hoy voy solo.",
+          "zh": "以前是。现在因为工作，我也住在弗赖堡。今天我一个人来。",
+          "pt": "Antes, sim. Agora também moro em Freiburg, por causa do trabalho. Hoje estou indo sozinho.",
+          "hi": "पहले रहता था। अब काम की वजह से मैं भी Freiburg में रहता हूँ। आज अकेला जा रहा हूँ।"
+        },
+        {
+          "id": "scene_05_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "de": "Dann fahren wir heute zusammen. Wie kommst du vom Bahnhof zum Stadion?",
+          "en": "Then we're travelling together today. How are you getting from the station to the stadium?",
+          "es": "Entonces hoy vamos juntos. ¿Cómo vas a ir de la estación al estadio?",
+          "zh": "那今天我们一起去吧。你打算怎么从车站去球场？",
+          "pt": "Então hoje vamos juntos. Como você vai da estação até o estádio?",
+          "hi": "तो आज हम साथ चलेंगे। स्टेशन से स्टेडियम कैसे जाओगे?"
+        },
+        {
+          "id": "scene_05_line_012",
+          "sortorder": 12,
+          "speakerId": "jonas",
+          "de": "Normalerweise mit der Stadtbahn. Wir könnten uns aber auch ein Uber teilen, wenn du möchtest.",
+          "en": "Usually by light rail. But we could share an Uber if you like.",
+          "es": "Normalmente en tren ligero. Pero también podríamos compartir un Uber, si quieres.",
+          "zh": "一般坐轻轨。不过你愿意的话，我们也可以合坐一辆 Uber。",
+          "pt": "Normalmente de metrô leve. Mas também podemos dividir um Uber, se você quiser.",
+          "hi": "आम तौर पर लाइट रेल से। लेकिन तुम चाहो तो हम साथ में Uber भी ले सकते हैं।"
+        },
+        {
+          "id": "scene_05_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "de": "Gern. Ich kenne den Weg nicht. Allein gehe ich bestimmt in die falsche Richtung.",
+          "en": "I'd like that. I don't know the way. On my own I'll probably go in the wrong direction.",
+          "es": "Me parece bien. No conozco el camino. Si voy solo, seguro que voy en la dirección equivocada.",
+          "zh": "好啊。我不认识路。一个人走肯定会走错方向。",
+          "pt": "Boa. Não conheço o caminho. Se eu for sozinho, com certeza vou para o lado errado.",
+          "hi": "ज़रूर। मुझे रास्ता नहीं पता। अकेला जाऊँगा तो पक्का ग़लत दिशा में निकल जाऊँगा।"
+        },
+        {
+          "id": "scene_05_line_014",
+          "sortorder": 14,
+          "speakerId": "jonas",
+          "de": "Das schafft man auch beim zehnten Mal. Wo sitzt du?",
+          "en": "You can manage that on your tenth time too. Where's your seat?",
+          "es": "Eso te puede pasar hasta la décima vez. ¿Dónde te sientas?",
+          "zh": "就算来第十次，也照样能走错。你坐哪儿？",
+          "pt": "Isso acontece até na décima vez. Onde você vai sentar?",
+          "hi": "ऐसा तो दसवीं बार में भी हो सकता है। तुम्हारी सीट कहाँ है?"
+        },
+        {
+          "id": "scene_05_line_015",
+          "sortorder": 15,
+          "speakerId": "alex",
+          "de": "Block sechsundfünfzig A, Reihe zwölf, Platz achtzehn.",
+          "en": "Block fifty-six A, row twelve, seat eighteen.",
+          "es": "Sector cincuenta y seis A, fila doce, asiento dieciocho.",
+          "zh": "五十六 A 区，十二排，十八号。",
+          "pt": "Setor cinquenta e seis A, fila doze, assento dezoito.",
+          "hi": "सेक्टर छप्पन A, पंक्ति बारह, सीट अठारह।"
+        },
+        {
+          "id": "scene_05_line_016",
+          "sortorder": 16,
+          "speakerId": "jonas",
+          "de": "Ich bin in einem anderen Block. Aber wir können nach dem Spiel zusammen zurückfahren. Wann geht dein Zug?",
+          "en": "I'm in another block. But we can travel back together after the match. When's your train?",
+          "es": "Yo estoy en otro sector. Pero podemos volver juntos después del partido. ¿A qué hora sale tu tren?",
+          "zh": "我在另一个区。不过比赛后我们可以一起回去。你的车几点开？",
+          "pt": "Estou em outro setor. Mas podemos voltar juntos depois do jogo. A que horas sai o seu trem?",
+          "hi": "मैं दूसरे सेक्टर में हूँ। लेकिन मैच के बाद हम साथ लौट सकते हैं। तुम्हारी ट्रेन कितने बजे है?"
+        },
+        {
+          "id": "scene_05_line_017",
+          "sortorder": 17,
+          "speakerId": "alex",
+          "de": "Um achtzehn Uhr fünfundvierzig. Wieder über Karlsruhe.",
+          "en": "At six forty-five. Via Karlsruhe again.",
+          "es": "A las seis y cuarenta y cinco de la tarde. Otra vez pasando por Karlsruhe.",
+          "zh": "晚上六点四十五分，还是经过卡尔斯鲁厄。",
+          "pt": "Às dezoito e quarenta e cinco. De novo via Karlsruhe.",
+          "hi": "शाम पौने सात बजे। फिर Karlsruhe होकर।"
+        },
+        {
+          "id": "scene_05_line_018",
+          "sortorder": 18,
+          "speakerId": "jonas",
+          "de": "Meiner auch. Gib mir deine Nummer, dann schreiben wir uns nach dem Spiel.",
+          "en": "Mine too. Give me your number and we'll message each other after the match.",
+          "es": "El mío también. Dame tu número y nos escribimos después del partido.",
+          "zh": "我也是。给我你的号码吧，比赛后发消息联系。",
+          "pt": "O meu também. Me passa seu número, aí a gente se fala por mensagem depois do jogo.",
+          "hi": "मेरी भी। अपना नंबर दो, फिर मैच के बाद मैसेज कर लेंगे।"
+        },
+        {
+          "id": "scene_05_line_019",
+          "sortorder": 19,
+          "speakerId": "narrator",
+          "de": "Alex und Jonas geben einander ihre Telefonnummern. Dann sprechen sie über Fußball. Jonas denkt: Stuttgart gewinnt heute. Alex möchte einfach ein gutes Spiel sehen.",
+          "en": "Alex and Jonas give each other their phone numbers. Then they talk about football. Jonas thinks Stuttgart will win today. Alex just wants to see a good match.",
+          "es": "Alex y Jonas intercambian sus números de teléfono. Luego hablan de fútbol. Jonas cree que hoy gana el Stuttgart. Alex solo quiere ver un buen partido.",
+          "zh": "Alex 和 Jonas 交换了电话号码，然后聊起足球。Jonas 觉得斯图加特今天会赢。Alex 只想看一场精彩的比赛。",
+          "pt": "Alex e Jonas trocam números de telefone. Depois conversam sobre futebol. Jonas acha que o Stuttgart vai ganhar hoje. Alex só quer ver um bom jogo.",
+          "hi": "Alex और Jonas एक-दूसरे के फ़ोन नंबर लेते हैं। फिर वे फ़ुटबॉल की बात करते हैं। Jonas को लगता है कि आज Stuttgart जीतेगी। Alex बस एक अच्छा मैच देखना चाहता है।"
+        }
+      ]
+    },
+    {
+      "id": "scene_06",
+      "sortorder": 6,
+      "title": "Mit Uber zum Stadion",
+      "place": "Zug vor Stuttgart, Hauptbahnhof und Fahrt nach Bad Cannstatt",
+      "timeOfDay": "12:55–13:40",
+      "summary": "Book an Uber on the train ten minutes before arrival, agree on the fare and split it, identify the silver Toyota Prius, then walk the last part to the stadium.",
+      "lines": [
+        {
+          "id": "scene_06_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Es ist fünf vor eins. Der Zug kommt in zehn Minuten in Stuttgart an. Alex nimmt sein Handy und öffnet die Uber-App. Er möchte für sich und Jonas ein Auto zum Stadion bestellen. Die beiden wollen nach der Ankunft am Bahnhof einsteigen.",
+          "en": "It is five to one. The train arrives in Stuttgart in ten minutes. Alex takes his phone and opens the Uber app. He wants to request a car to the stadium for himself and Jonas. They want to get in at the station after arriving.",
+          "es": "Es la una menos cinco. El tren llega a Stuttgart en diez minutos. Alex saca el móvil y abre la aplicación de Uber. Quiere pedir un coche al estadio para Jonas y para él. Los dos quieren subir al llegar a la estación.",
+          "zh": "现在是十二点五十五分。列车再过十分钟就到斯图加特了。Alex 拿出手机，打开 Uber 应用。他想给自己和 Jonas 叫辆车去球场。两人打算到站后就上车。",
+          "pt": "É cinco para a uma. O trem chega a Stuttgart em dez minutos. Alex pega o celular e abre o aplicativo da Uber. Quer pedir um carro para levar ele e Jonas ao estádio. Os dois querem embarcar quando chegarem à estação.",
+          "hi": "एक बजने में पाँच मिनट हैं। ट्रेन दस मिनट में Stuttgart पहुँचेगी। Alex अपना फ़ोन निकालकर Uber ऐप खोलता है। वह अपने और Jonas के लिए स्टेडियम तक गाड़ी मँगाना चाहता है। दोनों स्टेशन पहुँचने के बाद गाड़ी में बैठना चाहते हैं।"
+        },
+        {
+          "id": "scene_06_line_018",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "de": "Hier steht: zweiunddreißig Euro für uns beide. Der Fahrer kommt in etwa zwanzig Minuten. Ist das okay?",
+          "en": "It says here: thirty-two euros for both of us. The driver will arrive in about twenty minutes. Is that okay?",
+          "es": "Aquí pone treinta y dos euros por los dos. El conductor llega en unos veinte minutos. ¿Te parece bien?",
+          "zh": "上面写着我们两个人一共三十二欧元。司机大约二十分钟后到。可以吗？",
+          "pt": "Aqui diz trinta e dois euros para nós dois. O motorista chega em uns vinte minutos. Tudo bem?",
+          "hi": "यहाँ हम दोनों के बत्तीस यूरो दिखा रहा है। ड्राइवर लगभग बीस मिनट में आएगा। ठीक है?"
+        },
+        {
+          "id": "scene_06_line_019",
+          "sortorder": 3,
+          "speakerId": "jonas",
+          "de": "Passt. Ich gebe dir die Hälfte gleich. Dann müssen wir das später nicht mehr ausrechnen.",
+          "en": "That works. I’ll give you my half now. Then we won’t have to work it out later.",
+          "es": "Perfecto. Te doy la mitad ahora. Así no tenemos que hacer cuentas después.",
+          "zh": "行。我现在就把一半给你，这样之后就不用再算了。",
+          "pt": "Tudo bem. Já te dou a metade. Assim não precisamos fazer as contas depois.",
+          "hi": "ठीक है। मैं आधा अभी दे देता हूँ। फिर बाद में हिसाब नहीं लगाना पड़ेगा।"
+        },
+        {
+          "id": "scene_06_line_020",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "de": "Gut. Ich bestelle das Auto. Ich bezahle über die App mit meiner Karte.",
+          "en": "Good. I’ll request the car. I’m paying through the app with my card.",
+          "es": "Bien. Pido el coche. Pago por la aplicación con mi tarjeta.",
+          "zh": "好，我来叫车。我在应用上用自己的卡付钱。",
+          "pt": "Certo. Vou pedir o carro. Pago pelo aplicativo com meu cartão.",
+          "hi": "अच्छा। मैं गाड़ी मँगाता हूँ। ऐप पर अपने कार्ड से भुगतान करूँगा।"
+        },
+        {
+          "id": "scene_06_line_021",
+          "sortorder": 5,
+          "speakerId": "jonas",
+          "de": "Hier, sechzehn Euro. Dann ist mein Teil schon bezahlt.",
+          "en": "Here, sixteen euros. That’s my share paid.",
+          "es": "Toma, dieciséis euros. Mi parte ya está pagada.",
+          "zh": "给你十六欧元。这样我的那份就付好了。",
+          "pt": "Aqui, dezesseis euros. Minha parte já está paga.",
+          "hi": "यह लो, सोलह यूरो। अब मेरा हिस्सा चुक गया।"
+        },
+        {
+          "id": "scene_06_line_022",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "de": "Jonas gibt Alex sechzehn Euro. Alex bestätigt die Fahrt in der App. Als Ziel hat er die MHP Arena eingegeben. Die App zeigt ihm das Auto und das Kennzeichen.",
+          "en": "Jonas gives Alex sixteen euros. Alex confirms the ride in the app. He has entered the MHP Arena as the destination. The app shows him the car and its registration number.",
+          "es": "Jonas le da dieciséis euros a Alex. Alex confirma el viaje en la aplicación. Ha puesto la MHP Arena como destino. La aplicación le muestra el coche y la matrícula.",
+          "zh": "Jonas 给了 Alex 十六欧元。Alex 在应用里确认了行程。他把目的地设为 MHP Arena。应用显示了车型和车牌号。",
+          "pt": "Jonas dá dezesseis euros a Alex. Alex confirma a corrida no aplicativo. Ele colocou a MHP Arena como destino. O aplicativo mostra o carro e a placa.",
+          "hi": "Jonas, Alex को सोलह यूरो देता है। Alex ऐप में यात्रा की पुष्टि करता है। उसने मंज़िल MHP Arena भरी है। ऐप उसे गाड़ी और उसका नंबर दिखाता है।"
+        },
+        {
+          "id": "scene_06_line_023",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "de": "Wir müssen einen silbernen Toyota Prius suchen. Das Kennzeichen ist S-MK 4726.",
+          "en": "We need to look for a silver Toyota Prius. Its registration number is S-MK 4726.",
+          "es": "Tenemos que buscar un Toyota Prius plateado. La matrícula es S-MK 4726.",
+          "zh": "我们要找一辆银色的 Toyota Prius，车牌号是 S-MK 4726。",
+          "pt": "Precisamos procurar um Toyota Prius prata. A placa é S-MK 4726.",
+          "hi": "हमें चाँदी के रंग की Toyota Prius ढूँढ़नी है। नंबर S-MK 4726 है।"
+        },
+        {
+          "id": "scene_06_line_024",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "de": "Kurz nach ein Uhr kommen sie in Stuttgart an. Alex schaut in der App nach. Dort sieht er den Treffpunkt am Bahnhof. Die beiden gehen dorthin. Um Viertel nach eins kommt ein silberner Toyota Prius. Das Kennzeichen ist S-MK 4726. Alex vergleicht das Auto und den Fahrer mit den Bildern in der App. Dann gehen sie zum Auto.",
+          "en": "Just after one, they arrive in Stuttgart. Alex checks the app. It shows him the meeting point at the station. The two walk there. At quarter past one, a silver Toyota Prius arrives. Its registration number is S-MK 4726. Alex compares the car and the driver with the pictures in the app. Then they walk up to the car.",
+          "es": "Llegan a Stuttgart poco después de la una. Alex mira la aplicación. Allí ve el punto de encuentro en la estación. Los dos van hasta allí. A la una y cuarto llega un Toyota Prius plateado. La matrícula es S-MK 4726. Alex compara el coche y el conductor con las fotos de la aplicación. Luego se acercan al coche.",
+          "zh": "刚过一点，他们到了斯图加特。Alex 看了看应用，找到了车站的会合地点。两人走了过去。一点十五分，一辆银色的 Toyota Prius 到了，车牌号是 S-MK 4726。Alex 对照应用里的照片，核对了车辆和司机，然后他们走向那辆车。",
+          "pt": "Eles chegam a Stuttgart pouco depois da uma. Alex olha o aplicativo e vê o ponto de encontro na estação. Os dois vão até lá. À uma e quinze, chega um Toyota Prius prata. A placa é S-MK 4726. Alex compara o carro e o motorista com as fotos no aplicativo. Depois vão até o carro.",
+          "hi": "एक बजे के थोड़ी देर बाद वे Stuttgart पहुँचते हैं। Alex ऐप देखता है। वहाँ उसे स्टेशन पर मिलने की जगह दिखती है। दोनों वहाँ जाते हैं। सवा एक बजे चाँदी के रंग की Toyota Prius आती है। उसका नंबर S-MK 4726 है। Alex गाड़ी और ड्राइवर को ऐप की तस्वीरों से मिलाकर देखता है। फिर वे गाड़ी के पास जाते हैं।"
+        },
+        {
+          "id": "scene_06_line_002",
+          "sortorder": 9,
+          "speakerId": "taxi_driver",
+          "de": "Hallo. Für Alex?",
+          "en": "Hello. For Alex?",
+          "es": "Hola. ¿Para Alex?",
+          "zh": "你好。Alex 叫的车吗？",
+          "pt": "Olá. Para Alex?",
+          "hi": "नमस्ते। Alex के लिए?"
+        },
+        {
+          "id": "scene_06_line_003",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "de": "Ja. Wir fahren zur MHP Arena.",
+          "en": "Yes. We’re going to the MHP Arena.",
+          "es": "Sí. Vamos a la MHP Arena.",
+          "zh": "对。我们去 MHP Arena。",
+          "pt": "Sim. Vamos para a MHP Arena.",
+          "hi": "हाँ। हमें MHP Arena जाना है।"
+        },
+        {
+          "id": "scene_06_line_004",
+          "sortorder": 11,
+          "speakerId": "taxi_driver",
+          "de": "Genau, steht hier in der App. Haben Sie nur die kleinen Taschen?",
+          "en": "That’s right, it’s here in the app. Just the small bags?",
+          "es": "Exacto, aquí lo pone en la aplicación. ¿Solo llevan esas bolsas pequeñas?",
+          "zh": "没错，应用上写着呢。你们就带了这几个小包吗？",
+          "pt": "Isso, está aqui no aplicativo. Vocês só estão com essas bolsas pequenas?",
+          "hi": "बिल्कुल, ऐप में यही लिखा है। क्या आपके पास बस ये छोटे बैग हैं?"
+        },
+        {
+          "id": "scene_06_line_005",
+          "sortorder": 12,
+          "speakerId": "jonas",
+          "de": "Ja, sonst nichts.",
+          "en": "Yes, nothing else.",
+          "es": "Sí, nada más.",
+          "zh": "对，没有别的了。",
+          "pt": "Sim, só isso.",
+          "hi": "हाँ, और कुछ नहीं।"
+        },
+        {
+          "id": "scene_06_line_006",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "de": "Alex und Jonas steigen in das Auto. Sie setzen sich nach hinten. Dann fährt der Fahrer los.",
+          "en": "Alex and Jonas get into the car. They sit in the back. Then the driver sets off.",
+          "es": "Alex y Jonas suben al coche. Se sientan atrás. Entonces el conductor arranca.",
+          "zh": "Alex 和 Jonas 上了车，坐在后排。随后，司机开车出发了。",
+          "pt": "Alex e Jonas entram no carro. Sentam atrás. Então o motorista arranca.",
+          "hi": "Alex और Jonas गाड़ी में बैठते हैं। वे पीछे बैठते हैं। फिर ड्राइवर गाड़ी चलाता है।"
+        },
+        {
+          "id": "scene_06_line_007",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "de": "Wie lange dauert die Fahrt?",
+          "en": "How long does the journey take?",
+          "es": "¿Cuánto dura el trayecto?",
+          "zh": "车程要多久？",
+          "pt": "Quanto tempo leva a viagem?",
+          "hi": "सफ़र में कितना समय लगेगा?"
+        },
+        {
+          "id": "scene_06_line_008",
+          "sortorder": 15,
+          "speakerId": "taxi_driver",
+          "de": "Wenn's läuft, vielleicht zwanzig Minuten. Vor dem Stadion kann's länger dauern.",
+          "en": "If traffic moves, maybe twenty minutes. Near the stadium it can take longer.",
+          "es": "Si todo va bien, unos veinte minutos. Cerca del estadio puede tardar más.",
+          "zh": "顺利的话，大概二十分钟。到球场附近可能会慢一些。",
+          "pt": "Se tudo correr bem, uns vinte minutos. Perto do estádio pode demorar mais.",
+          "hi": "सब ठीक रहा तो शायद बीस मिनट। स्टेडियम के पास ज़्यादा समय लग सकता है।"
+        },
+        {
+          "id": "scene_06_line_009",
+          "sortorder": 16,
+          "speakerId": "alex",
+          "de": "Hier sind schon viele Fans.",
+          "en": "There are already lots of fans here.",
+          "es": "Ya hay muchos aficionados por aquí.",
+          "zh": "这里已经有很多球迷了。",
+          "pt": "Já tem bastante torcedor por aqui.",
+          "hi": "यहाँ तो अभी से बहुत से प्रशंसक हैं।"
+        },
+        {
+          "id": "scene_06_line_010",
+          "sortorder": 17,
+          "speakerId": "taxi_driver",
+          "de": "Ja, am Spieltag ist hier immer viel los. Gleich wird der Verkehr noch dichter.",
+          "en": "Yes, it’s always busy here on match day. The traffic will get even heavier in a moment.",
+          "es": "Sí, los días de partido siempre hay mucho movimiento. Ahora el tráfico se pondrá todavía peor.",
+          "zh": "对，比赛日这里总是很热闹。马上车还会更多。",
+          "pt": "Sim, em dia de jogo sempre tem muito movimento. Daqui a pouco o trânsito vai ficar ainda mais cheio.",
+          "hi": "हाँ, मैच के दिन यहाँ हमेशा बहुत भीड़ रहती है। थोड़ी देर में ट्रैफ़िक और बढ़ जाएगा।"
+        },
+        {
+          "id": "scene_06_line_011",
+          "sortorder": 18,
+          "speakerId": "jonas",
+          "de": "Uns reicht auch eine Stelle, von der wir gut zu Fuß weiterkommen.",
+          "en": "Somewhere we can walk the rest of the way from is fine too.",
+          "es": "Nos vale un sitio desde el que podamos seguir andando sin problema.",
+          "zh": "找个方便走过去的地方让我们下车就行。",
+          "pt": "Para nós, pode ser num lugar de onde dê para continuar a pé sem problema.",
+          "hi": "हमें ऐसी जगह उतार दें जहाँ से हम आसानी से पैदल जा सकें।"
+        },
+        {
+          "id": "scene_06_line_012",
+          "sortorder": 19,
+          "speakerId": "taxi_driver",
+          "de": "Gut. Direkt bis vor den Eingang kommen Sie heute sowieso nicht mit dem Auto.",
+          "en": "Good. You won't get right up to the entrance by car today anyway.",
+          "es": "Bien. De todos modos, hoy no van a poder llegar en coche hasta la entrada.",
+          "zh": "好。反正今天开车也到不了入口前。",
+          "pt": "Certo. De qualquer forma, hoje não dá para ir de carro até a entrada.",
+          "hi": "ठीक है। वैसे भी आज गाड़ी से बिल्कुल प्रवेश द्वार तक नहीं पहुँच पाएँगे।"
+        },
+        {
+          "id": "scene_06_line_013",
+          "sortorder": 20,
+          "speakerId": "narrator",
+          "de": "In der Nähe vom Stadion sind viele Menschen auf der Straße. Viele tragen einen Schal. Der Fahrer hält an einer Stelle. Hier darf er halten. Bis zum Stadion ist es jetzt nicht mehr weit. Alex und Jonas können den Rest zu Fuß gehen.",
+          "en": "Near the stadium, there are lots of people in the street. Many are wearing scarves. The driver stops somewhere. He is allowed to stop here. It is not far to the stadium now. Alex and Jonas can walk the rest.",
+          "es": "Cerca del estadio hay mucha gente por la calle. Muchos llevan bufanda. El conductor para en un lugar donde está permitido. Ya no queda lejos del estadio. Alex y Jonas pueden hacer el resto andando.",
+          "zh": "球场附近的街上人很多，不少人戴着围巾。司机找了个允许停车的地方停下来。这里离球场已经不远了，Alex 和 Jonas 可以步行走完剩下的路。",
+          "pt": "Perto do estádio, há muita gente na rua. Muitos usam cachecol. O motorista para num lugar onde pode parar. Agora falta pouco para o estádio. Alex e Jonas podem fazer o resto a pé.",
+          "hi": "स्टेडियम के पास सड़क पर बहुत लोग हैं। कई लोगों ने मफ़लर पहने हैं। ड्राइवर ऐसी जगह रुकता है जहाँ रुकने की अनुमति है। अब स्टेडियम ज़्यादा दूर नहीं है। Alex और Jonas बाकी रास्ता पैदल जा सकते हैं।"
+        },
+        {
+          "id": "scene_06_line_014",
+          "sortorder": 21,
+          "speakerId": "taxi_driver",
+          "de": "Hier können Sie aussteigen. Zum Stadion sind es noch ungefähr zehn Minuten zu Fuß.",
+          "en": "You can get out here. It’s about another ten minutes on foot to the stadium.",
+          "es": "Pueden bajar aquí. El estadio está a unos diez minutos andando.",
+          "zh": "你们可以在这里下车。走到球场大约还要十分钟。",
+          "pt": "Vocês podem descer aqui. O estádio fica a uns dez minutos a pé.",
+          "hi": "आप यहाँ उतर सकते हैं। स्टेडियम पैदल लगभग दस मिनट दूर है।"
+        },
+        {
+          "id": "scene_06_line_015",
+          "sortorder": 22,
+          "speakerId": "jonas",
+          "de": "Alles klar. Wir gehen den Rest zu Fuß.",
+          "en": "All right. We’ll walk the rest of the way.",
+          "es": "De acuerdo. Hacemos el resto andando.",
+          "zh": "好的。剩下的路我们走过去。",
+          "pt": "Tudo certo. Vamos fazer o resto a pé.",
+          "hi": "ठीक है। बाकी रास्ता हम पैदल जाएँगे।"
+        },
+        {
+          "id": "scene_06_line_016",
+          "sortorder": 23,
+          "speakerId": "alex",
+          "de": "Okay. Vielen Dank.",
+          "en": "Okay. Thank you very much.",
+          "es": "Vale. Muchas gracias.",
+          "zh": "好，非常感谢。",
+          "pt": "Certo. Muito obrigado.",
+          "hi": "ठीक है। बहुत धन्यवाद।"
+        },
+        {
+          "id": "scene_06_line_017",
+          "sortorder": 24,
+          "speakerId": "taxi_driver",
+          "de": "Bitte. Und passen Sie beim Aussteigen auf die Fahrräder auf.",
+          "en": "You're welcome. And watch out for the bicycles when you get out.",
+          "es": "De nada. Y tengan cuidado con las bicicletas al bajar.",
+          "zh": "不客气。下车时注意自行车。",
+          "pt": "De nada. E cuidado com as bicicletas ao descer.",
+          "hi": "कोई बात नहीं। और उतरते समय साइकिलों का ध्यान रखिएगा।"
+        }
+      ]
+    },
+    {
+      "id": "scene_07",
+      "sortorder": 7,
+      "title": "Am Eingang",
+      "place": "MHP Arena, Zugang zur Gegentribüne",
+      "timeOfDay": "14:05",
+      "summary": "Show the right ticket, manage the phone screen and pass the entrance check.",
+      "lines": [
+        {
+          "id": "scene_07_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Vor dem Stadion sind viele Menschen. Alex hat nur eine kleine Tasche dabei. Er sagt kurz Tschüss zu Jonas. Die beiden sehen sich nach dem Spiel wieder. Alex schaut auf seine Karte. Dann geht er zum richtigen Eingang und wartet in der Schlange.",
+          "en": "There are lots of people outside the stadium. Alex only has a small bag. He says goodbye to Jonas for now. They will see each other again after the match. Alex checks his ticket. Then he goes to the right entrance and waits in the queue.",
+          "es": "Hay mucha gente delante del estadio. Alex solo lleva una bolsa pequeña. Se despide de Jonas por un momento. Volverán a verse después del partido. Alex mira su entrada. Luego va a la entrada correcta y hace cola.",
+          "zh": "球场外人很多。Alex 只带了一个小包。他和 Jonas 暂时道别，两人比赛后再见。Alex 看了看球票，然后走到对应的入口排队。",
+          "pt": "Há muita gente na frente do estádio. Alex só está com uma bolsa pequena. Despede-se de Jonas por enquanto. Os dois vão se encontrar depois do jogo. Alex olha o ingresso. Depois vai até a entrada certa e espera na fila.",
+          "hi": "स्टेडियम के बाहर बहुत लोग हैं। Alex के पास सिर्फ़ एक छोटा बैग है। वह फ़िलहाल Jonas को अलविदा कहता है। दोनों मैच के बाद फिर मिलेंगे। Alex अपना टिकट देखता है। फिर वह सही प्रवेश द्वार पर जाकर लाइन में इंतज़ार करता है।"
+        },
+        {
+          "id": "scene_07_line_002",
+          "sortorder": 2,
+          "speakerId": "steward",
+          "de": "Tasche auf, bitte.",
+          "en": "Bag open, please.",
+          "es": "Abra la bolsa, por favor.",
+          "zh": "请打开包。",
+          "pt": "Abra a bolsa, por favor.",
+          "hi": "बैग खोलिए, कृपया।"
+        },
+        {
+          "id": "scene_07_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Ja, einen Moment. Muss das Handy auch in die Tasche?",
+          "en": "Yes, one moment. Does my phone need to go in the bag too?",
+          "es": "Sí, un momento. ¿Tengo que meter el móvil también en la bolsa?",
+          "zh": "好，稍等。手机也要放进包里吗？",
+          "pt": "Sim, um momento. O celular também precisa ficar dentro da bolsa?",
+          "hi": "हाँ, एक पल। क्या फ़ोन भी बैग में रखना होगा?"
+        },
+        {
+          "id": "scene_07_line_004",
+          "sortorder": 4,
+          "speakerId": "steward",
+          "de": "Nein, behalten Sie das. Die Tasche einmal ganz aufmachen.",
+          "en": "No, keep that. Open the bag all the way, please.",
+          "es": "No, quédese con él. Abra bien la bolsa, por favor.",
+          "zh": "不用，手机自己拿着。把包完全打开。",
+          "pt": "Não, pode ficar com ele. Abra a bolsa completamente.",
+          "hi": "नहीं, उसे अपने पास रखिए। बैग पूरा खोल दीजिए।"
+        },
+        {
+          "id": "scene_07_line_005",
+          "sortorder": 5,
+          "speakerId": "narrator",
+          "de": "Der Mitarbeiter schaut in die Tasche. Dann darf Alex weitergehen. Am Eingang hält Alex sein Handy an ein Gerät. Aber das Licht ist rot.",
+          "en": "The employee looks in the bag. Then Alex is allowed to go on. At the entrance Alex holds his phone against a device. But the light is red.",
+          "es": "El empleado mira dentro de la bolsa. Luego deja pasar a Alex. En la entrada, Alex acerca el móvil a un aparato. Pero la luz está roja.",
+          "zh": "工作人员检查了包里的东西，然后让 Alex 继续往前。在入口处，Alex 把手机贴近扫描设备，但指示灯是红色的。",
+          "pt": "O funcionário olha dentro da bolsa. Depois deixa Alex seguir. Na entrada, Alex aproxima o celular de um aparelho. Mas a luz está vermelha.",
+          "hi": "कर्मचारी बैग के अंदर देखता है। फिर Alex आगे जा सकता है। प्रवेश द्वार पर Alex अपना फ़ोन एक मशीन के पास रखता है। लेकिन बत्ती लाल है।"
+        },
+        {
+          "id": "scene_07_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "de": "Entschuldigung. Das geht nicht.",
+          "en": "Excuse me. It's not working.",
+          "es": "Disculpe. No funciona.",
+          "zh": "不好意思，扫不了。",
+          "pt": "Desculpe. Não está funcionando.",
+          "hi": "माफ़ कीजिए। यह काम नहीं कर रहा।"
+        },
+        {
+          "id": "scene_07_line_007",
+          "sortorder": 7,
+          "speakerId": "steward",
+          "de": "Zeigen Sie mal. Das ist die Fahrkarte vom Zug.",
+          "en": "Let me see. That's your train ticket.",
+          "es": "Déjeme ver. Ese es el billete de tren.",
+          "zh": "给我看看。这是火车票。",
+          "pt": "Deixe eu ver. Essa é a passagem de trem.",
+          "hi": "ज़रा दिखाइए। यह ट्रेन का टिकट है।"
+        },
+        {
+          "id": "scene_07_line_008",
+          "sortorder": 8,
+          "speakerId": "alex",
+          "de": "Oh, das ist die falsche Karte. Einen Moment. Die andere Karte ist auch auf meinem Handy.",
+          "en": "Oh, that's the wrong ticket. One moment. The other ticket is on my phone too.",
+          "es": "Ah, es el billete equivocado. Un momento. La otra entrada también está en el móvil.",
+          "zh": "哦，打开错票了。稍等，另一张票也在我手机上。",
+          "pt": "Ah, é o bilhete errado. Um momento. O outro ingresso também está no celular.",
+          "hi": "ओह, यह ग़लत टिकट है। एक पल। दूसरा टिकट भी मेरे फ़ोन में है।"
+        },
+        {
+          "id": "scene_07_line_009",
+          "sortorder": 9,
+          "speakerId": "steward",
+          "de": "Kein Stress. Nur bitte einen Schritt zur Seite, damit die anderen durchkönnen.",
+          "en": "No rush. Just step to the side so the others can get through.",
+          "es": "Tranquilo. Pero dé un paso a un lado para que puedan pasar los demás.",
+          "zh": "别急。不过请往旁边站一步，让其他人先过。",
+          "pt": "Sem estresse. Só dê um passo para o lado para os outros poderem passar.",
+          "hi": "आराम से। बस एक क़दम बगल में हो जाइए ताकि दूसरे लोग निकल सकें।"
+        },
+        {
+          "id": "scene_07_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "de": "Alex sucht die Karte für das Fußballspiel auf seinem Handy. Jetzt zeigt der Bildschirm die richtige Karte.",
+          "en": "Alex finds the football match ticket on his phone. Now the screen is showing the right ticket.",
+          "es": "Alex busca la entrada del partido en el móvil. Ahora la pantalla muestra la entrada correcta.",
+          "zh": "Alex 在手机上找到了球票。现在屏幕上显示的是正确的票了。",
+          "pt": "Alex procura o ingresso do jogo no celular. Agora a tela mostra o ingresso certo.",
+          "hi": "Alex अपने फ़ोन पर फ़ुटबॉल मैच का टिकट ढूँढ़ता है। अब स्क्रीन पर सही टिकट है।"
+        },
+        {
+          "id": "scene_07_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "de": "Die hier?",
+          "en": "This one?",
+          "es": "¿Esta?",
+          "zh": "这张吗？",
+          "pt": "Este aqui?",
+          "hi": "यह वाला?"
+        },
+        {
+          "id": "scene_07_line_012",
+          "sortorder": 12,
+          "speakerId": "steward",
+          "de": "Ja. Machen Sie das Display noch etwas heller. Und jetzt mit dem Code nach unten an den Leser.",
+          "en": "Yes. Make the screen a little brighter. Now hold it at the reader with the code facing down.",
+          "es": "Sí. Suba un poco el brillo de la pantalla. Y ahora acérquela al lector con el código hacia abajo.",
+          "zh": "对。把屏幕亮度再调高一点。现在把码朝下，对着读码器。",
+          "pt": "Sim. Aumente um pouco o brilho da tela. E agora aproxime do leitor com o código virado para baixo.",
+          "hi": "हाँ। स्क्रीन की रोशनी थोड़ी और बढ़ाइए। अब कोड नीचे की ओर करके रीडर के पास रखिए।"
+        },
+        {
+          "id": "scene_07_line_013",
+          "sortorder": 13,
+          "speakerId": "narrator",
+          "de": "Jetzt ist das Licht grün. Alex kann durch den Eingang gehen.",
+          "en": "Now the light is green. Alex can go through the entrance.",
+          "es": "Ahora la luz está verde. Alex puede pasar por la entrada.",
+          "zh": "现在指示灯变绿了。Alex 可以进去了。",
+          "pt": "Agora a luz está verde. Alex pode passar pela entrada.",
+          "hi": "अब बत्ती हरी है। Alex प्रवेश द्वार से अंदर जा सकता है।"
+        },
+        {
+          "id": "scene_07_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "de": "Jetzt geht's. Danke!",
+          "en": "It's working now. Thanks!",
+          "es": "¡Ahora sí funciona! ¡Gracias!",
+          "zh": "这下可以了。谢谢！",
+          "pt": "Agora funcionou. Obrigado!",
+          "hi": "अब हो गया। धन्यवाद!"
+        },
+        {
+          "id": "scene_07_line_015",
+          "sortorder": 15,
+          "speakerId": "steward",
+          "de": "Gern. Ihren Block finden Sie oben auf den Schildern.",
+          "en": "You're welcome. Your block is on the signs above.",
+          "es": "De nada. Su sector está indicado en los carteles de arriba.",
+          "zh": "不客气。您的看台区看上面的指示牌就能找到。",
+          "pt": "De nada. Seu setor está indicado nas placas lá em cima.",
+          "hi": "कोई बात नहीं। ऊपर लगे संकेतों पर आपका सेक्टर मिल जाएगा।"
+        }
+      ]
+    },
+    {
+      "id": "scene_08",
+      "sortorder": 8,
+      "title": "Ein Bier und eine Brezel",
+      "place": "MHP Arena, Kiosk hinter der Tribüne",
+      "timeOfDay": "14:20",
+      "summary": "Order a beer and a pretzel, understand a cup deposit and ask about payment.",
+      "lines": [
+        {
+          "id": "scene_08_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Alex ist im Stadion. Hier kann man Essen und Getränke kaufen. Er stellt sich an einen Kiosk. Vor ihm sprechen ein paar Leute über ihre Bestellung. Dann ist Alex dran.",
+          "en": "Alex is inside the stadium. You can buy food and drinks here. He joins a queue at a kiosk. A few people in front of him are talking about their order. Then it is Alex's turn.",
+          "es": "Alex está dentro del estadio. Aquí se puede comprar comida y bebida. Hace cola en un quiosco. Delante de él, unas personas hablan de lo que van a pedir. Luego le toca a Alex.",
+          "zh": "Alex 已经进了球场。这里可以买吃的和喝的。他在一个售卖亭前排队。前面有几个人正商量要点什么。然后轮到 Alex 了。",
+          "pt": "Alex está dentro do estádio. Aqui dá para comprar comida e bebida. Ele entra na fila de um quiosque. À frente dele, algumas pessoas conversam sobre o que vão pedir. Então chega a vez de Alex.",
+          "hi": "Alex स्टेडियम के अंदर है। यहाँ खाने-पीने की चीज़ें ख़रीद सकते हैं। वह एक स्टॉल पर लाइन में लगता है। उसके आगे कुछ लोग अपने ऑर्डर के बारे में बात कर रहे हैं। फिर Alex की बारी आती है।"
+        },
+        {
+          "id": "scene_08_line_002",
+          "sortorder": 2,
+          "speakerId": "kiosk_staff",
+          "de": "Was bekommen Sie?",
+          "en": "What can I get you?",
+          "es": "¿Qué le pongo?",
+          "zh": "您要点什么？",
+          "pt": "O que vai querer?",
+          "hi": "आपके लिए क्या लाऊँ?"
+        },
+        {
+          "id": "scene_08_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Kann ich ein Bier haben? Das da. Ist das Stuttgarter Hofbräu Pils? Und eine Brezel, bitte.",
+          "en": "Can I have a beer? That one there. Is that Stuttgarter Hofbräu Pils? And a pretzel, please.",
+          "es": "¿Me pone una cerveza? Esa de ahí. ¿Es Stuttgarter Hofbräu Pils? Y un pretzel, por favor.",
+          "zh": "能给我一杯啤酒吗？就那种。是 Stuttgarter Hofbräu Pils 吗？再来一个碱水扭结面包，谢谢。",
+          "pt": "Pode ser uma cerveja? Aquela ali. É Stuttgarter Hofbräu Pils? E um pretzel, por favor.",
+          "hi": "क्या मुझे एक बीयर मिल सकती है? वह वाली। क्या वह Stuttgarter Hofbräu Pils है? और एक प्रेट्ज़ेल, कृपया।"
+        },
+        {
+          "id": "scene_08_line_004",
+          "sortorder": 4,
+          "speakerId": "kiosk_staff",
+          "de": "Ja, genau. Ein Hofbräu Pils und eine Brezel. Kommt sofort.",
+          "en": "Yes, that’s right. One Hofbräu Pils and a pretzel. Coming right up.",
+          "es": "Sí, esa es. Una Hofbräu Pils y un pretzel. Enseguida.",
+          "zh": "对，没错。一杯 Hofbräu Pils，一个碱水扭结面包。马上好。",
+          "pt": "Sim, isso mesmo. Uma Hofbräu Pils e um pretzel. Já sai.",
+          "hi": "हाँ, वही है। एक Hofbräu Pils और एक प्रेट्ज़ेल। अभी लाता हूँ।"
+        },
+        {
+          "id": "scene_08_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "de": "Danke.",
+          "en": "Thanks.",
+          "es": "Gracias.",
+          "zh": "谢谢。",
+          "pt": "Obrigado.",
+          "hi": "धन्यवाद।"
+        },
+        {
+          "id": "scene_08_line_006",
+          "sortorder": 6,
+          "speakerId": "kiosk_staff",
+          "de": "Macht elf Euro fünfzig, mit Becherpfand.",
+          "en": "That's eleven euros fifty, including the cup deposit.",
+          "es": "Son once euros con cincuenta, incluido el depósito por el vaso.",
+          "zh": "一共十一欧元五十欧分，包括杯子押金。",
+          "pt": "Fica onze euros e cinquenta, incluindo o depósito do copo.",
+          "hi": "कप की जमा राशि मिलाकर ग्यारह यूरो पचास सेंट हुए।"
+        },
+        {
+          "id": "scene_08_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "de": "Entschuldigung, was ist Becherpfand?",
+          "en": "Excuse me, what is a cup deposit?",
+          "es": "Disculpe, ¿qué es el depósito por el vaso?",
+          "zh": "不好意思，杯子押金是什么？",
+          "pt": "Desculpe, o que é o depósito do copo?",
+          "hi": "माफ़ कीजिए, कप की जमा राशि क्या है?"
+        },
+        {
+          "id": "scene_08_line_008",
+          "sortorder": 8,
+          "speakerId": "kiosk_staff",
+          "de": "Zwei Euro für den Becher. Wenn Sie ihn zurückbringen, bekommen Sie die zwei Euro wieder.",
+          "en": "Two euros for the cup. When you bring it back, you get the two euros back.",
+          "es": "Dos euros por el vaso. Cuando lo devuelva, le devolvemos esos dos euros.",
+          "zh": "杯子押金两欧元。把杯子还回来，就退您两欧元。",
+          "pt": "Dois euros pelo copo. Quando você devolver o copo, recebe os dois euros de volta.",
+          "hi": "कप के लिए दो यूरो। जब आप उसे वापस करेंगे, तो आपको दो यूरो वापस मिल जाएँगे।"
+        },
+        {
+          "id": "scene_08_line_009",
+          "sortorder": 9,
+          "speakerId": "alex",
+          "de": "Auch nach dem Spiel?",
+          "en": "After the match as well?",
+          "es": "¿También después del partido?",
+          "zh": "比赛结束后也可以吗？",
+          "pt": "Depois do jogo também?",
+          "hi": "मैच के बाद भी?"
+        },
+        {
+          "id": "scene_08_line_010",
+          "sortorder": 10,
+          "speakerId": "kiosk_staff",
+          "de": "Ja, an einer offenen Rückgabestelle. Den Becher also nicht einfach wegwerfen.",
+          "en": "Yes, at an open return point. So don't just throw the cup away.",
+          "es": "Sí, en un punto de devolución que esté abierto. Así que no tire el vaso sin más.",
+          "zh": "可以，到还开着的回收点退就行。所以别随手把杯子扔了。",
+          "pt": "Sim, num ponto de devolução que esteja aberto. Então não jogue o copo fora.",
+          "hi": "हाँ, किसी खुले हुए कप वापसी काउंटर पर। इसलिए कप को यूँ ही फेंक मत दीजिएगा।"
+        },
+        {
+          "id": "scene_08_line_011",
+          "sortorder": 11,
+          "speakerId": "alex",
+          "de": "Ah, okay. Kann ich mit Karte bezahlen?",
+          "en": "Ah, okay. Can I pay by card?",
+          "es": "Ah, vale. ¿Puedo pagar con tarjeta?",
+          "zh": "哦，明白了。可以刷卡吗？",
+          "pt": "Ah, certo. Posso pagar com cartão?",
+          "hi": "अच्छा, ठीक है। क्या मैं कार्ड से भुगतान कर सकता हूँ?"
+        },
+        {
+          "id": "scene_08_line_012",
+          "sortorder": 12,
+          "speakerId": "kiosk_staff",
+          "de": "Ja, hier ans Gerät. Brauchen Sie einen Bon?",
+          "en": "Yes, against the terminal here. Do you need a receipt?",
+          "es": "Sí, aquí en el terminal. ¿Necesita el recibo?",
+          "zh": "可以，在这台机器上。需要小票吗？",
+          "pt": "Sim, aqui na maquininha. Precisa do recibo?",
+          "hi": "हाँ, यहाँ मशीन पर। क्या आपको रसीद चाहिए?"
+        },
+        {
+          "id": "scene_08_line_013",
+          "sortorder": 13,
+          "speakerId": "alex",
+          "de": "Nein, danke.",
+          "en": "No, thanks.",
+          "es": "No, gracias.",
+          "zh": "不用，谢谢。",
+          "pt": "Não, obrigado.",
+          "hi": "नहीं, धन्यवाद।"
+        },
+        {
+          "id": "scene_08_line_014",
+          "sortorder": 14,
+          "speakerId": "narrator",
+          "de": "Alex bezahlt und nimmt seine Brezel. Dann nimmt er das Bier. Der Mitarbeiter ruft noch etwas.",
+          "en": "Alex pays and takes his pretzel. Then he takes the beer. The employee calls something else.",
+          "es": "Alex paga y recoge su pretzel. Luego coge la cerveza. El empleado le dice algo más en voz alta.",
+          "zh": "Alex 付了钱，拿起碱水扭结面包，再拿起啤酒。工作人员又高声提醒了一句。",
+          "pt": "Alex paga e pega o pretzel. Depois pega a cerveja. O funcionário ainda fala mais alguma coisa em voz alta.",
+          "hi": "Alex पैसे देकर अपना प्रेट्ज़ेल लेता है। फिर वह बीयर लेता है। कर्मचारी पीछे से कुछ और कहता है।"
+        },
+        {
+          "id": "scene_08_line_015",
+          "sortorder": 15,
+          "speakerId": "kiosk_staff",
+          "de": "Vorsicht, der Becher ist ziemlich voll!",
+          "en": "Careful, the cup's quite full!",
+          "es": "¡Cuidado, el vaso está bastante lleno!",
+          "zh": "小心，杯子装得挺满！",
+          "pt": "Cuidado, o copo está bem cheio!",
+          "hi": "ध्यान से, कप काफ़ी भरा हुआ है!"
+        },
+        {
+          "id": "scene_08_line_016",
+          "sortorder": 16,
+          "speakerId": "alex",
+          "de": "Oh! Ein bisschen Bier ist auf meiner Hand.",
+          "en": "Oh! There's a little beer on my hand.",
+          "es": "¡Uy! Me ha caído un poco de cerveza en la mano.",
+          "zh": "哦！一点啤酒洒到我手上了。",
+          "pt": "Opa! Caiu um pouco de cerveja na minha mão.",
+          "hi": "ओह! थोड़ी बीयर मेरे हाथ पर गिर गई।"
+        },
+        {
+          "id": "scene_08_line_017",
+          "sortorder": 17,
+          "speakerId": "narrator",
+          "de": "Alex nimmt eine Serviette. Dann sucht er seinen Platz.",
+          "en": "Alex takes a napkin. Then he looks for his seat.",
+          "es": "Alex coge una servilleta. Luego busca su asiento.",
+          "zh": "Alex 拿了一张餐巾纸，然后去找座位。",
+          "pt": "Alex pega um guardanapo. Depois procura seu lugar.",
+          "hi": "Alex एक नैपकिन लेता है। फिर वह अपनी सीट ढूँढ़ता है।"
+        }
+      ]
+    },
+    {
+      "id": "scene_09",
+      "sortorder": 9,
+      "title": "Wo ist Platz achtzehn?",
+      "place": "MHP Arena, Block 56a",
+      "timeOfDay": "14:40",
+      "summary": "Find a seat, clarify row and seat numbers and chat with a neighbour.",
+      "lines": [
+        {
+          "id": "scene_09_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Alex findet Block sechsundfünfzig a. Er geht die Treppe hinauf und zählt die Reihen. Ein Mann steht in einer Reihe. Alex zeigt auf den Platz neben dem Mann.",
+          "en": "Alex finds block fifty-six A. He goes up the steps and counts the rows. A man is standing in a row. Alex points to the seat beside the man.",
+          "es": "Alex encuentra el sector cincuenta y seis A. Sube las escaleras y cuenta las filas. Hay un hombre de pie en una fila. Alex señala el asiento que está a su lado.",
+          "zh": "Alex 找到五十六 A 区。他走上楼梯，数着排数。一个男人站在其中一排。Alex 指了指那个男人旁边的座位。",
+          "pt": "Alex encontra o setor cinquenta e seis A. Sobe a escada e conta as filas. Um homem está em pé numa das filas. Alex aponta para o assento ao lado dele.",
+          "hi": "Alex को सेक्टर छप्पन A मिल जाता है। वह सीढ़ियाँ चढ़कर पंक्तियाँ गिनता है। एक आदमी एक पंक्ति में खड़ा है। Alex उसके पास वाली सीट की ओर इशारा करता है।"
+        },
+        {
+          "id": "scene_09_line_002",
+          "sortorder": 2,
+          "speakerId": "alex",
+          "de": "Entschuldigung, ist das Platz achtzehn?",
+          "en": "Excuse me, is this seat eighteen?",
+          "es": "Perdona, ¿ese es el asiento dieciocho?",
+          "zh": "打扰一下，那是十八号座位吗？",
+          "pt": "Com licença, esse é o assento dezoito?",
+          "hi": "माफ़ कीजिए, क्या वह सीट अठारह है?"
+        },
+        {
+          "id": "scene_09_line_003",
+          "sortorder": 3,
+          "speakerId": "neighbour",
+          "de": "Kommt auf die Reihe an. Welche hast du?",
+          "en": "Depends on the row. Which one have you got?",
+          "es": "Depende de la fila. ¿Cuál tienes tú?",
+          "zh": "得看是哪一排。你是哪排？",
+          "pt": "Depende da fila. Qual é a sua?",
+          "hi": "पंक्ति पर निर्भर करता है। तुम्हारी कौन-सी है?"
+        },
+        {
+          "id": "scene_09_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "de": "Reihe zwölf.",
+          "en": "Row twelve.",
+          "es": "Fila doce.",
+          "zh": "十二排。",
+          "pt": "Fila doze.",
+          "hi": "पंक्ति बारह।"
+        },
+        {
+          "id": "scene_09_line_005",
+          "sortorder": 5,
+          "speakerId": "neighbour",
+          "de": "Dann noch eine runter. Hier ist dreizehn.",
+          "en": "Then one more down. This is thirteen.",
+          "es": "Entonces una más abajo. Esta es la trece.",
+          "zh": "那就再下一排。这是十三排。",
+          "pt": "Então é mais uma para baixo. Esta é a treze.",
+          "hi": "तो एक और नीचे। यह तेरह है।"
+        },
+        {
+          "id": "scene_09_line_006",
+          "sortorder": 6,
+          "speakerId": "alex",
+          "de": "Ach so. Dann bin ich hier falsch.",
+          "en": "Oh, I see. Then I'm in the wrong place here.",
+          "es": "Ah, vale. Entonces estoy en el sitio equivocado.",
+          "zh": "哦，明白了。那我走错了。",
+          "pt": "Ah, entendi. Então estou no lugar errado.",
+          "hi": "अच्छा। तो मैं ग़लत जगह पर हूँ।"
+        },
+        {
+          "id": "scene_09_line_007",
+          "sortorder": 7,
+          "speakerId": "neighbour",
+          "de": "Die Nummer steht on der Seite. Da, siehst du?",
+          "en": "The number's on that side. There, can you see it?",
+          "es": "El número está en el lateral. Ahí, ¿lo ves?",
+          "zh": "排号在侧面。那儿，看到了吗？",
+          "pt": "O número fica na lateral. Ali, está vendo?",
+          "hi": "नंबर बगल में लिखा है। वहाँ, दिख रहा है?"
+        },
+        {
+          "id": "scene_09_line_008",
+          "sortorder": 8,
+          "speakerId": "narrator",
+          "de": "Alex geht eine Reihe nach unten. Kurz danach kommt der Mann mit seiner Jacke zurück. Er setzt sich neben Alex.",
+          "en": "Alex goes down one row. Shortly afterwards, the man comes back with his jacket. He sits down beside Alex.",
+          "es": "Alex baja una fila. Poco después, el hombre vuelve con su chaqueta. Se sienta al lado de Alex.",
+          "zh": "Alex 往下走了一排。没过多久，那个男人拿着夹克回来了，坐在 Alex 旁边。",
+          "pt": "Alex desce uma fila. Pouco depois, o homem volta com a jaqueta. Senta ao lado de Alex.",
+          "hi": "Alex एक पंक्ति नीचे जाता है। थोड़ी देर बाद वह आदमी अपनी जैकेट लेकर लौटता है। वह Alex के बगल में बैठ जाता है।"
+        },
+        {
+          "id": "scene_09_line_009",
+          "sortorder": 9,
+          "speakerId": "neighbour",
+          "de": "So. Ich bin siebzehn. Jetzt passt's.",
+          "en": "Right. I'm seventeen. Now we're in the right places.",
+          "es": "Bueno. Yo estoy en el diecisiete. Ahora sí.",
+          "zh": "好了。我是十七号。现在就对了。",
+          "pt": "Pronto. O meu é o dezessete. Agora está certo.",
+          "hi": "लो। मेरी सत्रह है। अब ठीक है।"
+        },
+        {
+          "id": "scene_09_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "de": "Bist du oft hier?",
+          "en": "Do you come here often?",
+          "es": "¿Vienes mucho por aquí?",
+          "zh": "你经常来这里吗？",
+          "pt": "Você vem muito aqui?",
+          "hi": "क्या आप अक्सर यहाँ आते हैं?"
+        },
+        {
+          "id": "scene_09_line_011",
+          "sortorder": 11,
+          "speakerId": "neighbour",
+          "de": "Fast jedes Heimspiel. Du zum ersten Mal?",
+          "en": "Almost every home game. Your first time?",
+          "es": "A casi todos los partidos en casa. ¿Es tu primera vez?",
+          "zh": "几乎每场主场比赛都来。你第一次来？",
+          "pt": "A quase todo jogo em casa. É a sua primeira vez?",
+          "hi": "लगभग हर घरेलू मैच में। तुम्हारी पहली बार है?"
+        },
+        {
+          "id": "scene_09_line_012",
+          "sortorder": 12,
+          "speakerId": "alex",
+          "de": "Ich war schon einmal hier. Heute bin ich zum ersten Mal ohne meinen Freund hier.",
+          "en": "I've been here once before. Today is my first time here without my friend.",
+          "es": "Ya estuve aquí una vez. Hoy es la primera vez que vengo sin mi amigo.",
+          "zh": "我以前来过一次。今天是第一次不和朋友一起来。",
+          "pt": "Já estive aqui uma vez. Hoje é a primeira vez que venho sem meu amigo.",
+          "hi": "मैं पहले एक बार यहाँ आया हूँ। आज पहली बार अपने दोस्त के बिना आया हूँ।"
+        },
+        {
+          "id": "scene_09_line_013",
+          "sortorder": 13,
+          "speakerId": "neighbour",
+          "de": "Dann kennst du ja den wichtigsten Teil schon.",
+          "en": "Then you already know the most important part.",
+          "es": "Entonces ya sabes lo más importante.",
+          "zh": "那最重要的事你已经知道了。",
+          "pt": "Então você já sabe a parte mais importante.",
+          "hi": "तो सबसे ज़रूरी बात तुम्हें पहले से पता है।"
+        },
+        {
+          "id": "scene_09_line_014",
+          "sortorder": 14,
+          "speakerId": "alex",
+          "de": "Welchen?",
+          "en": "Which part?",
+          "es": "¿Qué es?",
+          "zh": "什么事？",
+          "pt": "Qual?",
+          "hi": "कौन-सी?"
+        },
+        {
+          "id": "scene_09_line_015",
+          "sortorder": 15,
+          "speakerId": "neighbour",
+          "de": "Beim Tor aufstehen. Das merkst du aber auch so.",
+          "en": "Stand up when we score. Though you'll work that out anyway.",
+          "es": "Levantarse cuando marcan. Pero eso ya lo notarás tú.",
+          "zh": "进球时要站起来。不过到时候你自然就知道了。",
+          "pt": "Levantar na hora do gol. Mas isso você vai perceber sozinho.",
+          "hi": "गोल होने पर खड़े होना। वैसे यह तुम्हें ख़ुद ही समझ आ जाएगा।"
+        },
+        {
+          "id": "scene_09_line_016",
+          "sortorder": 16,
+          "speakerId": "narrator",
+          "de": "Alex lacht. Er legt den Schal um seinen Hals. Unten auf dem Platz laufen die Spieler und üben mit dem Ball. Das Spiel beginnt bald.",
+          "en": "Alex laughs. He puts the scarf round his neck. Down on the pitch, the players are running and practising with the ball. The match starts soon.",
+          "es": "Alex se ríe. Se pone la bufanda al cuello. Abajo, en el campo, los jugadores corren y practican con el balón. El partido empieza pronto.",
+          "zh": "Alex 笑了，把围巾围在脖子上。下面的球场上，球员们正在跑动，练着球。比赛快开始了。",
+          "pt": "Alex ri. Coloca o cachecol no pescoço. Lá embaixo, no campo, os jogadores correm e treinam com a bola. O jogo começa logo.",
+          "hi": "Alex हँसता है। वह मफ़लर अपने गले में डालता है। नीचे मैदान पर खिलाड़ी दौड़ रहे हैं और गेंद के साथ अभ्यास कर रहे हैं। मैच जल्द ही शुरू होने वाला है।"
+        }
+      ]
+    },
+    {
+      "id": "scene_10",
+      "sortorder": 10,
+      "title": "Neunzig Minuten Fußball",
+      "place": "MHP Arena, Tribüne und Spielfeld",
+      "timeOfDay": "15:30–17:25",
+      "summary": "Follow a short third-person account of the fictional match and a few spontaneous reactions.",
+      "lines": [
+        {
+          "id": "scene_10_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Um halb vier beginnt das Spiel. Stuttgart spielt schnell. Die Spieler aus Mainz stehen nah vor ihrem Tor. Alex schaut genau auf den Ball.",
+          "en": "At half past three, the match begins. Stuttgart plays quickly. The Mainz players are close to their own goal. Alex watches the ball closely.",
+          "es": "El partido empieza a las tres y media. El Stuttgart juega rápido. Los jugadores del Mainz están cerca de su portería. Alex sigue el balón con atención.",
+          "zh": "下午三点半，比赛开始了。斯图加特踢得很快，美因茨的球员守在自家球门附近。Alex 紧盯着球。",
+          "pt": "O jogo começa às três e meia. O Stuttgart joga rápido. Os jogadores do Mainz ficam perto do próprio gol. Alex acompanha a bola com atenção.",
+          "hi": "साढ़े तीन बजे मैच शुरू होता है। Stuttgart तेज़ खेल रही है। Mainz के खिलाड़ी अपने गोल के पास हैं। Alex गेंद को ध्यान से देखता है।"
+        },
+        {
+          "id": "scene_10_line_002",
+          "sortorder": 2,
+          "speakerId": "neighbour",
+          "de": "Mach schon! Knalls' rein",
+          "en": "Get on with it. Bang it in",
+          "es": "¡Vamos! ¡Métela!",
+          "zh": "快啊！踢进去！",
+          "pt": "Vai! Manda para dentro!",
+          "hi": "चलो! मारो गोल!"
+        },
+        {
+          "id": "scene_10_line_003",
+          "sortorder": 3,
+          "speakerId": "narrator",
+          "de": "Ein Spieler aus Stuttgart steht nahe am Tor. Er schießt. Aber der Ball fliegt über das Tor. Die Fans sind nicht glücklich. In der Pause steht es noch null zu null.",
+          "en": "A Stuttgart player is near the goal. He shoots. But the ball flies over the goal. The fans are not happy. At half-time it is still nil-nil.",
+          "es": "Un jugador del Stuttgart está cerca de la portería. Dispara. Pero el balón pasa por encima. Los aficionados no están contentos. Al descanso sigue el cero a cero.",
+          "zh": "一名斯图加特球员来到球门附近，起脚射门，但球从球门上方飞了出去。球迷们很失望。中场休息时，比分还是零比零。",
+          "pt": "Um jogador do Stuttgart está perto do gol. Ele chuta. Mas a bola passa por cima. Os torcedores não estão felizes. No intervalo, continua zero a zero.",
+          "hi": "Stuttgart का एक खिलाड़ी गोल के पास है। वह शॉट मारता है। लेकिन गेंद गोल के ऊपर से निकल जाती है। प्रशंसक ख़ुश नहीं हैं। हाफ़-टाइम तक स्कोर अब भी शून्य-शून्य है।"
+        },
+        {
+          "id": "scene_10_line_004",
+          "sortorder": 4,
+          "speakerId": "alex",
+          "de": "Oh nein! Das war so nah am Tor.",
+          "en": "Oh no! That was so close to the goal.",
+          "es": "¡Ay, no! Ha estado tan cerca.",
+          "zh": "哎呀！就差那么一点。",
+          "pt": "Ah, não! Foi tão perto do gol.",
+          "hi": "ओह नहीं! गेंद गोल के कितने पास थी।"
+        },
+        {
+          "id": "scene_10_line_005",
+          "sortorder": 5,
+          "speakerId": "neighbour",
+          "de": "Wenn wir die Chancen nicht nutzen, wird's nachher ungemütlich.",
+          "en": "If we don't take our chances, it'll get uncomfortable later.",
+          "es": "Si no aprovechamos las ocasiones, luego se nos va a complicar.",
+          "zh": "这些机会不抓住，后面可就难受了。",
+          "pt": "Se não aproveitarmos as chances, depois vai ficar complicado.",
+          "hi": "अगर हम मौक़ों का फ़ायदा नहीं उठाएँगे, तो बाद में मुश्किल होगी।"
+        },
+        {
+          "id": "scene_10_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "de": "Nach der Pause bekommt Mainz den Ball. Die Spieler laufen schnell nach vorne. Dann fällt ein Tor für Mainz. Jetzt steht es null zu eins. Die Fans aus Mainz sind sehr laut.",
+          "en": "After the break, Mainz gets the ball. The players run forward quickly. Then Mainz scores a goal. Now it is nil-one. The Mainz fans are very loud.",
+          "es": "Tras el descanso, el Mainz se hace con el balón. Los jugadores avanzan rápido. Entonces llega un gol del Mainz. Ahora van cero a uno. Los aficionados del Mainz hacen mucho ruido.",
+          "zh": "下半场开始后，美因茨拿到了球，球员们快速向前推进。随后，美因茨进球了。现在比分是零比一。美因茨的球迷欢呼得非常响亮。",
+          "pt": "Depois do intervalo, o Mainz fica com a bola. Os jogadores avançam rápido. Então sai um gol do Mainz. Agora está zero a um. A torcida do Mainz faz muito barulho.",
+          "hi": "हाफ़-टाइम के बाद गेंद Mainz के पास आती है। खिलाड़ी तेज़ी से आगे बढ़ते हैं। फिर Mainz का गोल हो जाता है। अब स्कोर शून्य-एक है। Mainz के प्रशंसक बहुत शोर कर रहे हैं।"
+        },
+        {
+          "id": "scene_10_line_007",
+          "sortorder": 7,
+          "speakerId": "narrator",
+          "de": "Stuttgart spielt weiter nach vorne. In der siebenundsechzigsten Minute macht Stuttgart ein Tor. Jetzt steht es eins zu eins. Alex steht schnell auf und freut sich. Sein Nachbar legt ihm kurz eine Hand auf die Schulter.",
+          "en": "Stuttgart keeps moving forward. In the sixty-seventh minute, Stuttgart scores a goal. Now it is one-all. Alex jumps up and is delighted. His neighbour briefly puts a hand on his shoulder.",
+          "es": "El Stuttgart sigue atacando. En el minuto sesenta y siete marca un gol. Ahora van uno a uno. Alex se levanta rápidamente, contento. Su vecino de asiento le pone brevemente una mano en el hombro.",
+          "zh": "斯图加特继续进攻。第六十七分钟，斯图加特进球了。现在是一比一。Alex 高兴地一下站了起来。旁边的球迷轻轻搭了一下他的肩膀。",
+          "pt": "O Stuttgart continua atacando. Aos sessenta e sete minutos, faz um gol. Agora está um a um. Alex se levanta rápido, feliz. O homem ao lado põe a mão no ombro dele por um instante.",
+          "hi": "Stuttgart हमला जारी रखती है। सड़सठवें मिनट में Stuttgart गोल करती है। अब स्कोर एक-एक है। Alex ख़ुशी से झट से खड़ा हो जाता है। उसके बगल में बैठा आदमी पल भर के लिए उसके कंधे पर हाथ रखता है।"
+        },
+        {
+          "id": "scene_10_line_008",
+          "sortorder": 8,
+          "speakerId": "neighbour",
+          "de": "Geht doch! Jetzt noch eins!",
+          "en": "There we go! Now one more!",
+          "es": "¡Así sí! ¡Ahora otro más!",
+          "zh": "这不就进了吗！再来一个！",
+          "pt": "Aí, sim! Agora mais um!",
+          "hi": "यह हुई न बात! अब एक और!"
+        },
+        {
+          "id": "scene_10_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "de": "Es bleibt lange beim Eins zu eins. In der achtundachtzigsten Minute kommt der Ball von rechts. Ein Spieler aus Stuttgart springt hoch. Er trifft den Ball mit dem Kopf. Der Ball ist im Tor! Zwei zu eins! Um Alex herum stehen alle auf.",
+          "en": "It stays at one-all for a long time. In the eighty-eighth minute, the ball comes in from the right. A Stuttgart player jumps up. He hits the ball with his head. The ball is in the goal! Two-one! Everyone around Alex stands up.",
+          "es": "El uno a uno se mantiene mucho tiempo. En el minuto ochenta y ocho, el balón llega desde la derecha. Un jugador del Stuttgart salta. Remata de cabeza. ¡El balón está dentro! ¡Dos a uno! Todos se levantan alrededor de Alex.",
+          "zh": "一比一的比分维持了很久。第八十八分钟，球从右路飞来。一名斯图加特球员高高跳起，头球攻门。球进了！二比一！Alex 周围的人都站了起来。",
+          "pt": "O placar fica em um a um por muito tempo. Aos oitenta e oito minutos, a bola vem da direita. Um jogador do Stuttgart salta. Acerta a bola com a cabeça. A bola está no gol! Dois a um! Todos ao redor de Alex se levantam.",
+          "hi": "काफ़ी देर तक स्कोर एक-एक रहता है। अट्ठासीवें मिनट में गेंद दाईं ओर से आती है। Stuttgart का एक खिलाड़ी ऊपर उछलता है। वह गेंद को सिर से मारता है। गेंद गोल में है! दो-एक! Alex के आसपास सभी खड़े हो जाते हैं।"
+        },
+        {
+          "id": "scene_10_line_010",
+          "sortorder": 10,
+          "speakerId": "alex",
+          "de": "Ist das jetzt ein Tor? Warum wartet der Schiedsrichter?",
+          "en": "Is that a goal now? Why is the referee waiting?",
+          "es": "¿Es gol? ¿Por qué está esperando el árbitro?",
+          "zh": "这球算进了吗？裁判为什么还在等？",
+          "pt": "Foi gol mesmo? Por que o árbitro está esperando?",
+          "hi": "क्या यह गोल है? रेफ़री क्यों इंतज़ार कर रहा है?"
+        },
+        {
+          "id": "scene_10_line_011",
+          "sortorder": 11,
+          "speakerId": "neighbour",
+          "de": "Warte kurz. Ja! Er zeigt zur Mitte!",
+          "en": "Wait a moment. Yes! He's pointing to the centre!",
+          "es": "Espera un momento. ¡Sí! ¡Señala el centro del campo!",
+          "zh": "稍等。对！他指向中圈了！",
+          "pt": "Espere um pouco. Sim! Ele está apontando para o centro!",
+          "hi": "एक पल रुको। हाँ! वह बीच की ओर इशारा कर रहा है!"
+        },
+        {
+          "id": "scene_10_line_012",
+          "sortorder": 12,
+          "speakerId": "narrator",
+          "de": "Es gibt noch sechs Minuten extra. Dann ist das Spiel zu Ende. Stuttgart gewinnt mit zwei zu eins. Alex lacht und klatscht. Dann bekommt er eine Nachricht auf sein Handy. Jonas wartet draußen.",
+          "en": "There are six extra minutes. Then the match is over. Stuttgart wins two-one. Alex laughs and claps. Then he gets a message on his phone. Jonas is waiting outside.",
+          "es": "Hay seis minutos más. Luego acaba el partido. El Stuttgart gana dos a uno. Alex se ríe y aplaude. Entonces recibe un mensaje en el móvil. Jonas está esperando fuera.",
+          "zh": "还有六分钟补时，然后比赛结束。斯图加特二比一获胜。Alex 笑着鼓掌。接着，他手机上收到一条消息。Jonas 在外面等着。",
+          "pt": "São mais seis minutos. Depois o jogo acaba. O Stuttgart ganha por dois a um. Alex ri e bate palmas. Então recebe uma mensagem no celular. Jonas está esperando lá fora.",
+          "hi": "छह मिनट और हैं। फिर मैच ख़त्म हो जाता है। Stuttgart दो-एक से जीतती है। Alex हँसता है और तालियाँ बजाता है। फिर उसके फ़ोन पर एक मैसेज आता है। Jonas बाहर इंतज़ार कर रहा है।"
+        }
+      ]
+    },
+    {
+      "id": "scene_11",
+      "sortorder": 11,
+      "title": "Nach dem Spiel",
+      "place": "MHP Arena und Weg zur Stadtbahn",
+      "timeOfDay": "17:30",
+      "summary": "Return the cup, meet the other supporter again and head back towards the station.",
+      "lines": [
+        {
+          "id": "scene_11_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Nach dem Spiel bringt Alex den leeren Becher zurück. Er bekommt seine zwei Euro wieder. Dann geht er nach draußen. Jonas wartet am Eingang. Hier wollten sie sich treffen.",
+          "en": "After the match, Alex returns the empty cup. He gets his two euros back. Then he goes outside. Jonas is waiting at the entrance. This is where they planned to meet.",
+          "es": "Después del partido, Alex devuelve el vaso vacío. Le devuelven sus dos euros. Luego sale. Jonas lo espera en la entrada. Habían quedado allí.",
+          "zh": "比赛结束后，Alex 退还了空杯，拿回两欧元。然后他走到外面。Jonas 在入口等他，他们约好了在那里见面。",
+          "pt": "Depois do jogo, Alex devolve o copo vazio. Recebe seus dois euros de volta. Depois sai. Jonas está esperando na entrada. Foi ali que combinaram de se encontrar.",
+          "hi": "मैच के बाद Alex खाली कप वापस करता है। उसे अपने दो यूरो वापस मिल जाते हैं। फिर वह बाहर जाता है। Jonas प्रवेश द्वार पर इंतज़ार कर रहा है। दोनों ने यहीं मिलने का तय किया था।"
+        },
+        {
+          "id": "scene_11_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "de": "Na? Hat sich die Fahrt gelohnt?",
+          "en": "So? Was the journey worth it?",
+          "es": "¿Y bien? ¿Ha merecido la pena el viaje?",
+          "zh": "怎么样？这趟值不值？",
+          "pt": "E aí? Valeu a viagem?",
+          "hi": "तो? सफ़र की मेहनत वसूल हुई?"
+        },
+        {
+          "id": "scene_11_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Ja, auf jeden Fall. Das letzte Tor war super!",
+          "en": "Yes, definitely. That last goal was great!",
+          "es": "Sí, sin duda. ¡El último gol ha sido genial!",
+          "zh": "当然值！最后那个进球太精彩了！",
+          "pt": "Sim, com certeza. O último gol foi demais!",
+          "hi": "हाँ, बिल्कुल। आख़िरी गोल कमाल का था!"
+        },
+        {
+          "id": "scene_11_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "de": "Ich hab schon gedacht, es bleibt beim Unentschieden.",
+          "en": "I thought it was going to stay a draw.",
+          "es": "Ya pensaba que iban a empatar.",
+          "zh": "我都以为要平局收场了。",
+          "pt": "Já estava achando que ia ficar no empate.",
+          "hi": "मुझे तो लगा था कि बराबरी पर ही ख़त्म होगा।"
+        },
+        {
+          "id": "scene_11_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "de": "Ja, Ich auch. Wie kommen wir jetzt zum Bahnhof? Wieder mit Uber?",
+          "en": "Yes, I did as well. How are we getting to the station now? With Uber again?",
+          "es": "Sí, yo también. ¿Cómo vamos ahora a la estación? ¿Otra vez en Uber?",
+          "zh": "对，我也是。现在怎么去车站？再坐 Uber 吗？",
+          "pt": "Sim, eu também. Como vamos para a estação agora? De Uber de novo?",
+          "hi": "हाँ, मुझे भी। अब स्टेशन कैसे जाएँ? फिर Uber से?"
+        },
+        {
+          "id": "scene_11_line_006",
+          "sortorder": 6,
+          "speakerId": "jonas",
+          "de": "Lieber mit der Stadtbahn. Schau dir den Verkehr an. Wir gehen zur Haltestelle und nehmen eine Richtung Hauptbahnhof.",
+          "en": "Better to take the light rail. Look at the traffic. We'll walk to the stop and take one towards the main station.",
+          "es": "Mejor en tren ligero. Mira el tráfico. Vamos a la parada y cogemos uno en dirección a la estación central.",
+          "zh": "还是坐轻轨吧。你看看这路况。我们去轻轨站，坐一班往中央火车站方向的车。",
+          "pt": "Melhor de metrô leve. Olha o trânsito. Vamos até a parada e pegamos um no sentido da estação central.",
+          "hi": "लाइट रेल से जाना बेहतर होगा। ट्रैफ़िक तो देखो। हम स्टॉप तक चलते हैं और मुख्य रेलवे स्टेशन की ओर जाने वाली गाड़ी लेते हैं।"
+        },
+        {
+          "id": "scene_11_line_007",
+          "sortorder": 7,
+          "speakerId": "alex",
+          "de": "Gut. Unser Zug fährt um Viertel vor sieben. Haben wir genug Zeit?",
+          "en": "Good. Our train leaves at quarter to seven. Have we got enough time?",
+          "es": "Bien. Nuestro tren sale a las siete menos cuarto. ¿Tenemos tiempo suficiente?",
+          "zh": "好。我们的火车六点四十五分开。时间够吗？",
+          "pt": "Certo. Nosso trem sai às seis e quarenta e cinco. Temos tempo suficiente?",
+          "hi": "अच्छा। हमारी ट्रेन शाम पौने सात बजे है। क्या हमारे पास काफ़ी समय है?"
+        },
+        {
+          "id": "scene_11_line_008",
+          "sortorder": 8,
+          "speakerId": "jonas",
+          "de": "Wir haben noch über eine Stunde. Komm, wir gehen direkt los.",
+          "en": "We've still got over an hour. Come on, let's head straight there.",
+          "es": "Nos queda más de una hora. Vamos, salgamos ya.",
+          "zh": "还有一个多小时。走吧，我们现在就出发。",
+          "pt": "Ainda temos mais de uma hora. Vamos, vamos sair agora.",
+          "hi": "हमारे पास अभी एक घंटे से ज़्यादा है। चलो, अभी निकलते हैं।"
+        },
+        {
+          "id": "scene_11_line_009",
+          "sortorder": 9,
+          "speakerId": "narrator",
+          "de": "Alex und Jonas gehen mit den anderen Fans zur Haltestelle. Dort schauen sie auf den Fahrplan und auf ihre Fahrkarten. Dann steigen sie in eine Stadtbahn. Die Bahn ist voll. Es gibt keine freien Sitzplätze. Die beiden bleiben stehen.",
+          "en": "Alex and Jonas walk to the stop with the other fans. There they check the timetable and their tickets. Then they get on a light-rail train. It is full. There are no free seats. They stand.",
+          "es": "Alex y Jonas van con los demás aficionados hasta la parada. Allí miran el horario y sus billetes. Luego suben a un tren ligero. Va lleno. No quedan asientos libres. Los dos se quedan de pie.",
+          "zh": "Alex 和 Jonas 跟着其他球迷走到轻轨站。他们在那里看了时刻表和自己的车票，然后上了一班轻轨。车上很满，没有空座，两人只好站着。",
+          "pt": "Alex e Jonas vão com os outros torcedores até a parada. Lá, conferem os horários e suas passagens. Depois embarcam num metrô leve. Está cheio. Não há assentos livres. Os dois ficam em pé.",
+          "hi": "Alex और Jonas दूसरे प्रशंसकों के साथ स्टॉप तक जाते हैं। वहाँ वे समय-सारिणी और अपने टिकट देखते हैं। फिर वे लाइट रेल में चढ़ते हैं। गाड़ी भरी हुई है। कोई सीट खाली नहीं है। दोनों खड़े रहते हैं।"
+        }
+      ]
+    },
+    {
+      "id": "scene_12",
+      "sortorder": 12,
+      "title": "Zurück nach Freiburg",
+      "place": "Stuttgart Hauptbahnhof, Karlsruhe und Freiburg",
+      "timeOfDay": "18:20–21:10",
+      "summary": "Return to Freiburg, where Alex helps a young woman find her train to Basel.",
+      "lines": [
+        {
+          "id": "scene_12_line_001",
+          "sortorder": 1,
+          "speakerId": "narrator",
+          "de": "Am Bahnhof in Stuttgart haben sie noch Zeit. Sie kaufen Wasser. Um achtzehn Uhr fünfundvierzig sitzen sie im Zug nach Karlsruhe. Alex hat seine Fahrkarte schon in der Hand.",
+          "en": "At the station in Stuttgart, they still have time. They buy water. At six forty-five, they are on the train to Karlsruhe. Alex is already holding his ticket.",
+          "es": "En la estación de Stuttgart todavía tienen tiempo. Compran agua. A las seis y cuarenta y cinco de la tarde están sentados en el tren a Karlsruhe. Alex ya tiene el billete en la mano.",
+          "zh": "到了斯图加特火车站，他们还有时间，便买了水。晚上六点四十五分，他们坐上了去卡尔斯鲁厄的列车。Alex 已经把车票拿在手里。",
+          "pt": "Na estação de Stuttgart, eles ainda têm tempo. Compram água. Às dezoito e quarenta e cinco, estão sentados no trem para Karlsruhe. Alex já está com a passagem na mão.",
+          "hi": "Stuttgart के स्टेशन पर उनके पास अभी समय है। वे पानी ख़रीदते हैं। शाम पौने सात बजे वे Karlsruhe जाने वाली ट्रेन में बैठे हैं। Alex ने टिकट पहले से हाथ में ले रखा है।"
+        },
+        {
+          "id": "scene_12_line_002",
+          "sortorder": 2,
+          "speakerId": "jonas",
+          "de": "Du bist ja inzwischen richtig organisiert.",
+          "en": "You're getting properly organised now.",
+          "es": "Vaya, ahora sí que lo tienes todo organizado.",
+          "zh": "你现在可真是有条有理了。",
+          "pt": "Olha só, agora você está mesmo organizado.",
+          "hi": "अब तो तुम काफ़ी व्यवस्थित हो गए हो।"
+        },
+        {
+          "id": "scene_12_line_003",
+          "sortorder": 3,
+          "speakerId": "alex",
+          "de": "Ja. Jetzt schaue ich besser auf meine Karten.",
+          "en": "Yes. Now I pay more attention to my tickets.",
+          "es": "Sí. Ahora me fijo más en mis billetes.",
+          "zh": "对。现在我会更仔细地看自己的票了。",
+          "pt": "Sim. Agora presto mais atenção nos meus bilhetes.",
+          "hi": "हाँ। अब मैं अपने टिकट ज़्यादा ध्यान से देखता हूँ।"
+        },
+        {
+          "id": "scene_12_line_004",
+          "sortorder": 4,
+          "speakerId": "jonas",
+          "de": "Morgen hast du wahrscheinlich keine Stimme mehr.",
+          "en": "Tomorrow you'll probably have lost your voice.",
+          "es": "Mañana seguramente te habrás quedado sin voz.",
+          "zh": "明天你的嗓子估计就哑了。",
+          "pt": "Amanhã você provavelmente vai estar sem voz.",
+          "hi": "कल तक शायद तुम्हारी आवाज़ ही नहीं निकलेगी।"
+        },
+        {
+          "id": "scene_12_line_005",
+          "sortorder": 5,
+          "speakerId": "alex",
+          "de": "Ein bisschen Stimme habe ich noch.",
+          "en": "I’ve still got a little voice left.",
+          "es": "Todavía me queda un poco de voz.",
+          "zh": "我现在还能说出点声音。",
+          "pt": "Ainda tenho um pouco de voz.",
+          "hi": "अभी थोड़ी आवाज़ तो बची है।"
+        },
+        {
+          "id": "scene_12_line_006",
+          "sortorder": 6,
+          "speakerId": "narrator",
+          "de": "In Karlsruhe finden sie ihren nächsten Zug. Um neun Uhr kommen sie in Freiburg an. Alex und Jonas sagen Tschüss. Dann geht Alex zur Treppe.",
+          "en": "In Karlsruhe, they find their next train. At nine, they arrive in Freiburg. Alex and Jonas say goodbye. Then Alex walks towards the stairs.",
+          "es": "En Karlsruhe encuentran su siguiente tren. Llegan a Friburgo a las nueve. Alex y Jonas se despiden. Luego Alex se dirige a las escaleras.",
+          "zh": "他们在卡尔斯鲁厄找到了下一班车。晚上九点，他们到了弗赖堡。Alex 和 Jonas 互相道别，然后 Alex 走向楼梯。",
+          "pt": "Em Karlsruhe, encontram o próximo trem. Às nove, chegam a Freiburg. Alex e Jonas se despedem. Depois Alex vai em direção à escada.",
+          "hi": "Karlsruhe में उन्हें अपनी अगली ट्रेन मिल जाती है। रात नौ बजे वे Freiburg पहुँचते हैं। Alex और Jonas एक-दूसरे को अलविदा कहते हैं। फिर Alex सीढ़ियों की ओर जाता है।"
+        },
+        {
+          "id": "scene_12_line_007",
+          "sortorder": 7,
+          "speakerId": "young_woman_en",
+          "de": "Excuse me. Do you speak English?",
+          "en": "Excuse me. Do you speak English?",
+          "es": "Disculpe. ¿Habla inglés?",
+          "zh": "打扰一下，您会说英语吗？",
+          "pt": "Com licença. Você fala inglês?",
+          "hi": "माफ़ कीजिए। क्या आप अंग्रेज़ी बोलते हैं?"
+        },
+        {
+          "id": "scene_12_line_008",
+          "sortorder": 8,
+          "speakerId": "alex_en",
+          "de": "Yes. Do you need help?",
+          "en": "Yes. Do you need help?",
+          "es": "Sí. ¿Necesita ayuda?",
+          "zh": "会。您需要帮忙吗？",
+          "pt": "Sim. Precisa de ajuda?",
+          "hi": "हाँ। क्या आपको मदद चाहिए?"
+        },
+        {
+          "id": "scene_12_line_009",
+          "sortorder": 9,
+          "speakerId": "young_woman_en",
+          "de": "A little. I’m learning German. But the announcement was so fast. I need to get to Basel. Has my train already left?",
+          "en": "A little. I’m learning German. But the announcement was so fast. I need to get to Basel. Has my train already left?",
+          "es": "Un poco. Estoy aprendiendo alemán. Pero el anuncio ha sido muy rápido. Tengo que ir a Basilea. ¿Ya ha salido mi tren?",
+          "zh": "有一点。我正在学德语，可是刚才的广播太快了。我要去巴塞尔。我的列车已经开走了吗？",
+          "pt": "Um pouco. Estou aprendendo alemão. Mas o anúncio foi tão rápido. Preciso ir a Basileia. Meu trem já saiu?",
+          "hi": "थोड़ी। मैं जर्मन सीख रही हूँ। लेकिन घोषणा बहुत तेज़ थी। मुझे Basel जाना है। क्या मेरी ट्रेन जा चुकी है?"
+        },
+        {
+          "id": "scene_12_line_010",
+          "sortorder": 10,
+          "speakerId": "narrator",
+          "de": "Alex bleibt stehen. Heute Morgen hatte er selbst viele Fragen. Jetzt schaut er mit der jungen Frau auf die Anzeige.",
+          "en": "Alex stops. This morning, he had lots of questions himself. Now he looks at the departure board with the young woman.",
+          "es": "Alex se detiene. Esta mañana él mismo tenía muchas preguntas. Ahora mira el panel con la joven.",
+          "zh": "Alex 停下了脚步。今天早上，他自己还满是问题。现在，他和这位年轻女子一起看向显示屏。",
+          "pt": "Alex para. Hoje de manhã, ele mesmo tinha muitas perguntas. Agora olha o painel junto com a jovem.",
+          "hi": "Alex रुक जाता है। आज सुबह उसके ख़ुद के पास बहुत से सवाल थे। अब वह युवती के साथ स्क्रीन देखता है।"
+        },
+        {
+          "id": "scene_12_line_011",
+          "sortorder": 11,
+          "speakerId": "alex_en",
+          "de": "No, here it is. Your train leaves in twelve minutes. From platform three.",
+          "en": "No, here it is. Your train leaves in twelve minutes. From platform three.",
+          "es": "No, aquí está. Su tren sale en doce minutos. De la vía tres.",
+          "zh": "没有，在这里。您的列车十二分钟后出发，三号站台。",
+          "pt": "Não, está aqui. Seu trem sai em doze minutos. Da plataforma três.",
+          "hi": "नहीं, यह रही। आपकी ट्रेन बारह मिनट बाद है। प्लेटफ़ॉर्म तीन से।"
+        },
+        {
+          "id": "scene_12_line_012",
+          "sortorder": 12,
+          "speakerId": "young_woman_en",
+          "de": "And where is platform three?",
+          "en": "And where is platform three?",
+          "es": "¿Y dónde está la vía tres?",
+          "zh": "那三号站台在哪里？",
+          "pt": "E onde fica a plataforma três?",
+          "hi": "और प्लेटफ़ॉर्म तीन कहाँ है?"
+        },
+        {
+          "id": "scene_12_line_013",
+          "sortorder": 13,
+          "speakerId": "alex_en",
+          "de": "Come with me. I’ll show you.",
+          "en": "Come with me. I’ll show you.",
+          "es": "Venga conmigo. Se lo enseño.",
+          "zh": "跟我来，我带您去。",
+          "pt": "Venha comigo. Vou mostrar.",
+          "hi": "मेरे साथ आइए। मैं दिखा देता हूँ।"
+        },
+        {
+          "id": "scene_12_line_014",
+          "sortorder": 14,
+          "speakerId": "narrator",
+          "de": "An der Treppe dreht sie sich noch einmal zu ihm um.",
+          "en": "At the stairs, she turns back towards him.",
+          "es": "Al llegar a las escaleras, ella se vuelve hacia él una vez más.",
+          "zh": "到了楼梯口，她又转过身来看着他。",
+          "pt": "Ao chegar à escada, ela se vira para ele mais uma vez.",
+          "hi": "सीढ़ियों के पास वह एक बार फिर उसकी ओर मुड़ती है।"
+        },
+        {
+          "id": "scene_12_line_015",
+          "sortorder": 15,
+          "speakerId": "young_woman_en",
+          "de": "Thank you. I heard you speaking German on the train. Your German is really good.",
+          "en": "Thank you. I heard you speaking German on the train. Your German is really good.",
+          "es": "Gracias. Le he oído hablar alemán en el tren. Habla alemán muy bien.",
+          "zh": "谢谢。我在火车上听见您说德语了。您的德语真的很好。",
+          "pt": "Obrigada. Ouvi você falando alemão no trem. Seu alemão é muito bom.",
+          "hi": "धन्यवाद। मैंने आपको ट्रेन में जर्मन बोलते सुना था। आपकी जर्मन वाक़ई बहुत अच्छी है।"
+        },
+        {
+          "id": "scene_12_line_016",
+          "sortorder": 16,
+          "speakerId": "alex_en",
+          "de": "Thanks. I’m still learning too.",
+          "en": "Thanks. I’m still learning too.",
+          "es": "Gracias. Yo también sigo aprendiendo.",
+          "zh": "谢谢。我也还在学。",
+          "pt": "Obrigado. Ainda estou aprendendo também.",
+          "hi": "धन्यवाद। मैं भी अभी सीख रहा हूँ।"
+        },
+        {
+          "id": "scene_12_line_017",
+          "sortorder": 17,
+          "speakerId": "narrator",
+          "de": "Auf dem Weg nach Hause schickt er Jonas eine Nachricht.",
+          "en": "On the way home, he sends Jonas a message.",
+          "es": "De camino a casa, le envía un mensaje a Jonas.",
+          "zh": "回家的路上，他给 Jonas 发了一条消息。",
+          "pt": "No caminho para casa, ele manda uma mensagem para Jonas.",
+          "hi": "घर जाते समय वह Jonas को एक मैसेज भेजता है।"
+        },
+        {
+          "id": "scene_12_line_018",
+          "sortorder": 18,
+          "speakerId": "alex",
+          "de": "Gut angekommen. Und ich habe gerade jemandem den Weg gezeigt.",
+          "en": "Got back safely. And I’ve just helped someone find their way.",
+          "es": "He llegado bien. Y acabo de indicarle el camino a alguien.",
+          "zh": "平安到了。而且我刚刚还给别人指了路。",
+          "pt": "Cheguei bem. E acabei de mostrar o caminho para alguém.",
+          "hi": "ठीक से पहुँच गया। और अभी मैंने किसी को रास्ता भी दिखाया।"
+        },
+        {
+          "id": "scene_12_line_019",
+          "sortorder": 19,
+          "speakerId": "jonas",
+          "de": "Siehst du. Beim nächsten Mal führst du mich.",
+          "en": "There you go. Next time, you can show me the way.",
+          "es": "¿Ves? La próxima vez me guías tú.",
+          "zh": "你看吧。下次就由你给我带路了。",
+          "pt": "Está vendo? Na próxima vez, você me guia.",
+          "hi": "देखा। अगली बार तुम मुझे रास्ता दिखाना।"
+        }
+      ]
+    }
+  ]
+}
