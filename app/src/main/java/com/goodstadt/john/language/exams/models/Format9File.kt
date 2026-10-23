@@ -35,6 +35,23 @@ data class Format9File(
         val spoken = spokenText(line)
         return if (showTranslation) line.textForLanguage(translationLanguageCode).ifBlank { spoken } else spoken
     }
+
+    /** Display text using an EXPLICIT translation language code (the user's choice); falls back to the
+     *  spoken text when translation is off, the code is blank, or this line has no text for it. */
+    fun displayText(line: Format9Line, translationCode: String, showTranslation: Boolean): String {
+        val spoken = spokenText(line)
+        return if (showTranslation && translationCode.isNotBlank())
+            line.textForLanguage(translationCode).ifBlank { spoken } else spoken
+    }
+
+    /** The language codes (in de/en/es/zh/pt/hi order) that this script has text for in at least one line,
+     *  excluding the spoken language — the translations the user can choose between. */
+    val availableTranslationLanguageCodes: List<String> get() {
+        val spoken = spokenLanguageCode
+        return listOf("de", "en", "es", "zh", "pt", "hi").filter { code ->
+            code != spoken && scenes.any { scene -> scene.lines.any { it.textForLanguage(code).isNotBlank() } }
+        }
+    }
 }
 
 @Serializable

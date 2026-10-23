@@ -1,7 +1,12 @@
 package com.goodstadt.john.language.exams.packages.Format9
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.ui.semantics.Role
+import java.util.Locale
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -42,7 +47,7 @@ private val SpeakerTeal = Color(0xFF00897B)
  * bottom-right play/pauses whatever is running; the floating translate button bottom-left flips the whole
  * script between the sheet language and its translation (audio keeps the sheet language).
  */
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun Format9ContainerScreen(
     documentId: String,
@@ -56,6 +61,8 @@ fun Format9ContainerScreen(
     val isPaused by viewModel.isPaused.collectAsStateWithLifecycle()
     val currentSpokenText by viewModel.currentSpokenText.collectAsStateWithLifecycle()
     val showTranslation by viewModel.showTranslation.collectAsStateWithLifecycle()
+    val translationLanguage by viewModel.translationLanguage.collectAsStateWithLifecycle()
+    var showLanguageChooser by remember { mutableStateOf(false) }
     val focusedSceneIndex by viewModel.focusedSceneIndex.collectAsStateWithLifecycle()
     val prompt by viewModel.prompt.collectAsStateWithLifecycle()
     val playbackError by viewModel.playbackError.collectAsStateWithLifecycle()
@@ -137,7 +144,7 @@ fun Format9ContainerScreen(
                         }
                         items(scene.lines.sortedBy { it.sortorder }, key = { it.id }) { line ->
                             PodcastLineRow(
-                                displayText = viewModel.displayText(line, showTranslation),
+                                displayText = viewModel.displayText(line, translationLanguage, showTranslation),
                                 speakerName = viewModel.speakerName(line.speakerId),
                                 isPlaying = currentSpokenText == viewModel.spokenText(line),
                                 onClick = { viewModel.playLine(line) }
@@ -146,13 +153,34 @@ fun Format9ContainerScreen(
                     }
                 }
 
-                // Floating translate (bottom-left) + play/pause (bottom-right).
-                FloatingActionButton(
-                    onClick = { viewModel.toggleTranslation() },
-                    shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface,
-                    contentColor = if (showTranslation) Orange else MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.align(Alignment.BottomStart).padding(16.dp)
-                ) { Icon(Icons.Default.Translate, if (showTranslation) "Showing translation" else "Show translation") }
+                // Floating translate (bottom-left) + play/pause (bottom-right). A FAB-styled Surface (not a
+                // FloatingActionButton) so tap AND long-press work via combinedClickable: tap toggles the
+                // translation (or opens the chooser the first time / when the stored language isn't in this
+                // script); long-press re-opens the chooser to change language.
+                Surface(
+                    shape = CircleShape,
+                    color = MaterialTheme.colorScheme.surface,
+                    shadowElevation = 6.dp,
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .padding(16.dp)
+                        .size(56.dp)
+                        .combinedClickable(
+                            onClick = {
+                                if (viewModel.hasValidTranslationLanguage()) viewModel.toggleTranslation()
+                                else showLanguageChooser = true
+                            },
+                            onLongClick = { showLanguageChooser = true }
+                        )
+                ) {
+                    Box(contentAlignment = Alignment.Center) {
+                        Icon(
+                            Icons.Default.Translate,
+                            contentDescription = if (showTranslation) "Showing translation" else "Show translation",
+                            tint = if (showTranslation) Orange else MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
 
                 val floatingPlaying = playingKey != null && !isPaused
                 FloatingActionButton(
@@ -193,6 +221,15 @@ fun Format9ContainerScreen(
         onDismissRequest = viewModel::dismissError,
         title = { Text("Playback") }, text = { Text(playbackError!!) },
         confirmButton = { TextButton(onClick = viewModel::dismissError) { Text("OK") } })
+
+    if (showLanguageChooser) {
+        TranslationLanguageChooserSheet(
+            codes = viewModel.availableTranslationCodes,
+            initialSelection = translationLanguage.ifBlank { viewModel.defaultTranslationCode() },
+            onChoose = { code -> viewModel.setTranslationLanguage(code); showLanguageChooser = false },
+            onDismiss = { showLanguageChooser = false }
+        )
+    }
 }
 
 @Composable
@@ -285,3 +322,78 @@ private fun sceneHeaderItemIndex(scenes: List<Format9Scene>, sceneIndex: Int): I
     for (i in 0 until sceneIndex) idx += 1 + scenes[i].lines.size
     return idx
 }
+
+/**
+ * First-run bottom sheet that lets the user pick which of the script's available languages to show as the
+ * translation. Standard Material 3 controls: a ModalBottomSheet with RadioButton rows (full language name
+ * + "See the script in <X>") and a "Choose this one" button. Opened on the first tap of the translate
+ * button, and reachable later via a long-press on it.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun TranslationLanguageChooserSheet(
+    codes: List<String>,
+    initialSelection: String,
+    onChoose: (String) -> Unit,
+    onDismiss: () -> Unit
+) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var selected by remember {
+        mutableStateOf(if (codes.contains(initialSelection)) initialSelection else codes.firstOrNull().orEmpty())
+    }
+
+    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        Column(Modifier.padding(start = 24.dp, end = 24.dp, bottom = 24.dp)) {
+            Text(
+                "Choose which language for translation",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.SemiBold
+            )
+            Spacer(Modifier.height(4.dp))
+            Text(
+                "The translate button will show the script in this language. You can change it later by long-pressing the translate button.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(Modifier.height(16.dp))
+
+            codes.forEach { code ->
+                val name = languageDisplayName(code)
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp))
+                        .selectable(selected = code == selected, role = Role.RadioButton, onClick = { selected = code })
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(selected = code == selected, onClick = null)
+                    Spacer(Modifier.width(12.dp))
+                    Column {
+                        Text(name, style = MaterialTheme.typography.bodyLarge)
+                        Text(
+                            "See the script in $name",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+                if (code != codes.last()) HorizontalDivider()
+            }
+
+            Spacer(Modifier.height(20.dp))
+            Button(
+                onClick = { onChoose(selected) },
+                enabled = selected.isNotBlank(),
+                modifier = Modifier.fillMaxWidth()
+            ) { Text("Choose this one") }
+            Spacer(Modifier.height(8.dp))
+        }
+    }
+}
+
+/** Device-localised full name for a two-letter code ("es" -> "Spanish"); falls back to the code. */
+private fun languageDisplayName(code: String): String =
+    Locale(code).getDisplayLanguage(Locale.getDefault())
+        .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        .ifBlank { code.uppercase(Locale.ROOT) }

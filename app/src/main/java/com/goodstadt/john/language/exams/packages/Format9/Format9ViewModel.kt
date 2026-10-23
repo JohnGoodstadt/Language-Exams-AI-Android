@@ -1,8 +1,11 @@
 package com.goodstadt.john.language.exams.packages.Format9
 
 import android.app.Activity
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.qualifiers.ApplicationContext
+import java.util.Locale
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
@@ -38,10 +41,16 @@ class Format9ViewModel @Inject constructor(
     private val billing: BillingRepository,
     private val limiter: SimpleRateLimiter,
     private val stats: TTSStatsRepository,
-    private val audioCache: AudioCacheManager
+    private val audioCache: AudioCacheManager,
+    @ApplicationContext private val context: Context
 ) : ViewModel() {
 
     enum class Prompt { DAILY, HOURLY }
+
+    companion object {
+        private const val PODCAST_PREFS = "podcast_prefs"
+        private const val KEY_TRANSLATION_LANGUAGE = "format9_translation_language"
+    }
 
     private val owner = "format9:${UUID.randomUUID()}:"
     private var sheetName: String = ""
@@ -59,9 +68,17 @@ class Format9ViewModel @Inject constructor(
     // The selected-language sentence currently being spoken (for row highlighting). Matches on text.
     private val _currentSpokenText = MutableStateFlow<String?>(null)
     val currentSpokenText = _currentSpokenText.asStateFlow()
-    // False = sheet language, true = translationLanguage. Audio keeps using the sheet language.
+    // False = spoken language, true = the user's chosen translation. Audio keeps using the spoken language.
+    // Starts false every time this screen opens (the VM is recreated per navigation), so the page always
+    // first shows the spoken language.
     private val _showTranslation = MutableStateFlow(false)
     val showTranslation = _showTranslation.asStateFlow()
+
+    // The user's chosen translation language code (de/en/es/zh/pt/hi), persisted globally across podcasts
+    // and launches. Blank until they pick one from the chooser.
+    private val prefs = context.getSharedPreferences(PODCAST_PREFS, Context.MODE_PRIVATE)
+    private val _translationLanguage = MutableStateFlow(prefs.getString(KEY_TRANSLATION_LANGUAGE, "").orEmpty())
+    val translationLanguage = _translationLanguage.asStateFlow()
     // Scene the scrubber highlights (playhead): advances as playback crosses scenes, and is set on a scrubber
     // tap for immediate feedback. It's an indicator, not necessarily what's visible on screen.
     private val _focusedSceneIndex = MutableStateFlow(0)
@@ -97,8 +114,31 @@ class Format9ViewModel @Inject constructor(
     val translationLanguageCode: String get() = _file.value?.translationLanguageCode.orEmpty()
 
     fun spokenText(line: Format9Line): String = _file.value?.spokenText(line).orEmpty()
-    fun displayText(line: Format9Line, showTranslation: Boolean): String =
-        _file.value?.displayText(line, showTranslation).orEmpty()
+    /** Row text in the user's chosen [translationCode] when [showTranslation], else the spoken text. */
+    fun displayText(line: Format9Line, translationCode: String, showTranslation: Boolean): String =
+        _file.value?.displayText(line, translationCode, showTranslation).orEmpty()
+
+    /** The translation languages this script offers (empty until the sheet loads). */
+    val availableTranslationCodes: List<String> get() = _file.value?.availableTranslationLanguageCodes.orEmpty()
+
+    /** True when a usable translation language is chosen for THIS script. */
+    fun hasValidTranslationLanguage(): Boolean =
+        _translationLanguage.value.isNotBlank() && availableTranslationCodes.contains(_translationLanguage.value)
+
+    /** Default to pre-select the first time: the phone's language if the script has it, else the first. */
+    fun defaultTranslationCode(): String {
+        val codes = availableTranslationCodes
+        val phone = Locale.getDefault().language.lowercase(Locale.ROOT)
+        return if (codes.contains(phone)) phone else codes.firstOrNull().orEmpty()
+    }
+
+    /** Persist the chosen language globally and start showing the translation in it. */
+    fun setTranslationLanguage(code: String) {
+        _translationLanguage.value = code
+        prefs.edit().putString(KEY_TRANSLATION_LANGUAGE, code).apply()
+        _showTranslation.value = true
+        stats.recordReferenceInteraction(sheetName, "translate_language")
+    }
 
     fun orderedScenes(): List<Format9Scene> =
         _file.value?.scenes?.sortedBy { it.sortorder }.orEmpty()
