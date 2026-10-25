@@ -55,6 +55,7 @@ class UserPreferencesRepository @Inject constructor(
         val USAGE_QUIZ_LEVEL = stringPreferencesKey("usage_quiz_level")
         val TRANSLATE_TARGET_LANG = stringPreferencesKey("translate_target_lang")
         val THEME_MODE = stringPreferencesKey("theme_mode")
+        val USE_ALT_PALETTE = booleanPreferencesKey("use_alt_palette")
     }
 
     /**
@@ -139,6 +140,20 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setThemeMode(mode: String) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.THEME_MODE] = mode
+        }
+    }
+
+    // DEBUG colour experiment: when true, the app uses the *Alternative ExtendedColors palettes
+    // instead of the real ones, so a developer can A/B-compare values from the Settings DEBUG area.
+    val useAlternativePaletteFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.USE_ALT_PALETTE] ?: false
+        }
+
+    suspend fun setUseAlternativePalette(enabled: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.USE_ALT_PALETTE] = enabled
         }
     }
 

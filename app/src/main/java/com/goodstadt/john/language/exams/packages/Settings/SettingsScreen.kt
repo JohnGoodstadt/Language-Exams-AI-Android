@@ -47,6 +47,7 @@ import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -668,6 +669,34 @@ private fun SettingsContent(
                 current = themeMode,
                 onSelect = viewModel::setThemeMode
             )
+        }
+        if (DEBUG) {
+            item {
+                val altPalette by viewModel.useAlternativePalette.collectAsState()
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = "Use alternative palette",
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = LocalExtendedColors.current.accent
+                        )
+                        Text(
+                            text = "DEBUG: swap in the *ExtendedColorsAlternative values to experiment",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    Switch(
+                        checked = altPalette,
+                        onCheckedChange = { viewModel.setUseAlternativePalette(it) }
+                    )
+                }
+            }
         }
 
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }

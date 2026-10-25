@@ -167,6 +167,14 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch { userPreferencesRepository.setThemeMode(mode.name) }
     }
 
+    // DEBUG: use the alternative (experimental) ExtendedColors palette.
+    val useAlternativePalette = userPreferencesRepository.useAlternativePaletteFlow
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), false)
+
+    fun setUseAlternativePalette(enabled: Boolean) {
+        viewModelScope.launch { userPreferencesRepository.setUseAlternativePalette(enabled) }
+    }
+
 
     fun initObsolete() {
 

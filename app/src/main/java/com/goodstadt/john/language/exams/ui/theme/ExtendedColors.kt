@@ -13,6 +13,10 @@ import androidx.compose.ui.graphics.Color
  * [LightExtendedColors] according to the active theme (driven by the Settings appearance choice).
  * Read via `LocalExtendedColors.current.*`. The light values are tuned for legibility on a white
  * surface; some still want an on-device QA pass.
+ *
+ * To EXPERIMENT with alternative values: edit [LightExtendedColorsAlternative] /
+ * [DarkExtendedColorsAlternative] below, rebuild, then flip the DEBUG "Use alternative palette"
+ * switch in Settings to compare them live against the real palette.
  */
 @Immutable
 data class ExtendedColors(
@@ -27,6 +31,8 @@ data class ExtendedColors(
     val rowSelected: Color,
     val rowUnselected: Color,
     val mutedGrey: Color,
+    /** Quiz answer-option text (e.g. the three choices on the Usage/Vocab quiz). */
+    val quizQuestionText: Color,
 )
 
 val DarkExtendedColors = ExtendedColors(
@@ -40,6 +46,7 @@ val DarkExtendedColors = ExtendedColors(
     rowSelected = selectedBackground,        // 0xFF5B5B60
     rowUnselected = nonSelectedBackground,   // 0xFF1C1C1F
     mutedGrey = greyLight2,                  // 0xFF505055
+    quizQuestionText = orangeLight,          // 0xFFFFA500 (orange on dark, as before)
 )
 
 val LightExtendedColors = ExtendedColors(
@@ -53,6 +60,19 @@ val LightExtendedColors = ExtendedColors(
     rowSelected = Color(0xFFD0D0D5),
     rowUnselected = Color(0xFFFFFFFF),
     mutedGrey = Color(0xFF8E8E93),
+    quizQuestionText = Color(0xFF000000),    // black answer text on white
+)
+
+// --- Experimental / reserve palettes -------------------------------------------------------------
+// Start as exact copies of the real palettes. Override any field(s) here to try new values, e.g.
+//   val LightExtendedColorsAlternative = LightExtendedColors.copy(
+//       brandOrange = Color(0xFFD35400),
+//       teal        = Color(0xFF00695C),
+//   )
+// Rebuild, then enable the DEBUG "Use alternative palette" switch in Settings to see them live.
+val LightExtendedColorsAlternative = LightExtendedColors.copy(
+)
+val DarkExtendedColorsAlternative = DarkExtendedColors.copy(
 )
 
 val LocalExtendedColors = staticCompositionLocalOf { DarkExtendedColors }

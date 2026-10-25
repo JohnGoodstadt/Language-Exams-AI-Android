@@ -47,10 +47,17 @@ private val AppDarkColorScheme = darkColorScheme(
 @Composable
 fun LanguageExamsAITheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    useAlternativePalette: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = if (darkTheme) AppDarkColorScheme else AppLightColorScheme
-    val extendedColors = if (darkTheme) DarkExtendedColors else LightExtendedColors
+    // DEBUG experiment: swap in the *Alternative ExtendedColors when requested (Settings toggle).
+    val extendedColors = when {
+        darkTheme && useAlternativePalette -> DarkExtendedColorsAlternative
+        darkTheme -> DarkExtendedColors
+        useAlternativePalette -> LightExtendedColorsAlternative
+        else -> LightExtendedColors
+    }
 
     val view = LocalView.current
     if (!view.isInEditMode) {

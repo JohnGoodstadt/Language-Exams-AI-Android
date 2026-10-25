@@ -659,14 +659,14 @@ private fun UsageQuizQuestionAnswers(
                         },
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                         contentDescription = "Speak ${question.sentence.replace("_", option)}",
-                        tint = Color.White
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
                         // choice - only the radio button commits the answer.
                         text = option,
-                        color = orangeLight,
+                        color = LocalExtendedColors.current.quizQuestionText,
                         style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
                         modifier = Modifier
                             .weight(1f)

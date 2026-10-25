@@ -91,7 +91,11 @@ class MainActivity : ComponentActivity() {
                 ThemeMode.SYSTEM -> systemDark
             }
 
-            LanguageExamsAITheme(darkTheme = darkTheme) {
+            // DEBUG colour experiment toggle (Settings) - swaps in the alternative ExtendedColors.
+            val useAltPalette by userPreferencesRepository.useAlternativePaletteFlow
+                .collectAsStateWithLifecycle(initialValue = false)
+
+            LanguageExamsAITheme(darkTheme = darkTheme, useAlternativePalette = useAltPalette) {
                 CompositionLocalProvider(LocalIsExpanded provides isExpanded) {
                     Surface(
                             modifier = Modifier.fillMaxSize(),
