@@ -74,9 +74,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
-import com.goodstadt.john.language.exams.ui.theme.greyLight2
-import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
@@ -549,7 +547,7 @@ fun VocabQuizScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Previous",
-                        tint = if (!canGoPrevious) Color.Gray else buttonColor, // Conditional color
+                        tint = if (!canGoPrevious) Color.Gray else LocalExtendedColors.current.buttonBlue, // Conditional color
                         modifier = Modifier.size(36.dp)
                     )
                 }
@@ -582,7 +580,7 @@ fun VocabQuizScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                         contentDescription = "Next",
-                        tint = if (!canGoNext) Color.Gray else buttonColor, // Conditional color
+                        tint = if (!canGoNext) Color.Gray else LocalExtendedColors.current.buttonBlue, // Conditional color
                         modifier = Modifier.size(36.dp)
                     )
                 }
@@ -593,7 +591,7 @@ fun VocabQuizScreen(
         HorizontalDivider(
             modifier = Modifier.fillMaxWidth(),
             thickness = 1.dp,
-            color = greyLight2
+            color = LocalExtendedColors.current.mutedGrey
         )
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -716,7 +714,7 @@ fun WordDropdownMenuBox(
             onClick = { expanded = true },
             modifier = Modifier.wrapContentWidth(),
             colors = ButtonDefaults.buttonColors(
-                containerColor = nonSelectedBackground, // Dark grey background
+                containerColor = LocalExtendedColors.current.rowUnselected, // Dark grey background
                 contentColor = Color.White // White text color
             ),
             shape = RoundedCornerShape(4.dp) // Small rounded corners
@@ -727,7 +725,7 @@ fun WordDropdownMenuBox(
             expanded = expanded,
             onDismissRequest = { expanded = false },
             modifier = Modifier
-                .background(nonSelectedBackground) // Dark grey background for dropdown
+                .background(LocalExtendedColors.current.rowUnselected) // Dark grey background for dropdown
                 .clip(RoundedCornerShape(4.dp)), // Small rounded corners for dropdown
             offset = with(density) {
                 DpOffset(
@@ -875,7 +873,7 @@ fun WordInfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
                 .size(32.dp)
                 .clickable(enabled = !infoDisabled, onClick = onClick)
                 .padding(start = 4.dp),
-            tint = if (infoDisabled) Color.Gray else buttonColor
+            tint = if (infoDisabled) Color.Gray else LocalExtendedColors.current.buttonBlue
         )
         Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the left
     }

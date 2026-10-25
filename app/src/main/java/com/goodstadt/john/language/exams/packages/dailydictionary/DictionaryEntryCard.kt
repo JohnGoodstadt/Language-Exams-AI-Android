@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.goodstadt.john.language.exams.ui.theme.Orange
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 @Composable
 fun DictionaryEntryCard(
@@ -26,7 +26,7 @@ fun DictionaryEntryCard(
             Text(
                 text = entry.headword.ifBlank { entry.entryId },
                 style = MaterialTheme.typography.headlineMedium,
-                color = Orange,
+                color = LocalExtendedColors.current.brandOrange,
                 fontWeight = FontWeight.SemiBold
             )
 

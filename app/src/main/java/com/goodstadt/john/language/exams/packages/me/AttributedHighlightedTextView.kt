@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import com.goodstadt.john.language.exams.ui.theme.Teal
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 
 //102/181/213
@@ -19,7 +19,7 @@ fun AttributedHighlightedText(
     paragraph: String,
     highlightedWords: Set<String>,
     modifier: Modifier = Modifier,
-    highlightColor: Color = Teal // Using theme color
+    highlightColor: Color = LocalExtendedColors.current.teal // Using theme color
 ) {
     // remember will re-execute the block only if paragraph or highlightedWords change
     val annotatedString = remember(paragraph, highlightedWords) {

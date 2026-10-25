@@ -16,7 +16,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
-import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -50,7 +50,7 @@ fun SimpleSectionedVocabListOriginal(
                     Text(
                         text = category.title,
                         style = MaterialTheme.typography.titleLarge,
-                        color = accentColor,
+                        color = LocalExtendedColors.current.accent,
                         modifier = Modifier.weight(1f).padding( bottom = 0.dp, top = 32.dp) // Text takes up most of the space
                     )
                 }

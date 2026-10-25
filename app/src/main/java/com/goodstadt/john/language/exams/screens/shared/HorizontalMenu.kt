@@ -16,8 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.goodstadt.john.language.exams.ui.theme.accentColor
-import com.goodstadt.john.language.exams.ui.theme.greyLight2
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 
 @Composable
@@ -29,7 +28,7 @@ fun MenuItemChip(
     val chipColors = FilterChipDefaults.filterChipColors(
         // Use your app's "accent" color for the selected state
         selectedContainerColor = Color.Transparent,
-        selectedLabelColor = accentColor,
+        selectedLabelColor = LocalExtendedColors.current.accent,
     )
 
     FilterChip(

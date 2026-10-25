@@ -60,6 +60,12 @@ Effort for centralization + sweep: iOS ~2–4 days, Android ~1.5–3 days, plus 
 - [x] **Phase 1 — Android** (this change): completed `AppLightColorScheme`; fixed the `Theme.kt` light branch
   and status-bar wiring (dormant while still forced Dark); added `ExtendedColors` + `LocalExtendedColors`
   (light/dark) in `ui/theme/`. App behaviour unchanged (MainActivity still forces Dark).
-- [ ] Phase 2 — Android: sweep the ~30 files onto `MaterialTheme.colorScheme.*` / `LocalExtendedColors`.
+- [x] **Phase 2 — Android** (this change): swept 25 files off the raw `Color.kt` brand vals onto
+  `LocalExtendedColors.current.*` (brandOrange/accent/buttonBlue/teal/speakerTeal/mutedGrey/
+  rowSelected/rowUnselected/cardBackground). Still visually inert in Dark (DarkExtendedColors == the
+  original values). Not swept (deliberately, out of scope here): inline `Color(0xFFFF9800)` "orange"
+  literals in gamification/stats screens (a different shade, many in non-composable `when` mappers),
+  and two files that redefine `private val CardBG` locally (`VocabQuiz/CategoryDetailScreen.kt`,
+  `VocabQuiz/VocabQuizDashboard.kt`).
 - [ ] Phase 3 — Android: theme-mode setting + Settings UI + unlock.
 - [ ] Phases 1–3 — iOS.

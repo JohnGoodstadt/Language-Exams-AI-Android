@@ -22,9 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.goodstadt.john.language.exams.ui.theme.accentColor
-import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
-import com.goodstadt.john.language.exams.ui.theme.selectedBackground
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 //TODO: Should be shared amongst screens
 @Composable
@@ -48,7 +46,7 @@ fun HorizontalLevelPicker(
             Button(
                 onClick = { onOptionSelected(option) },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isSelected) selectedBackground else nonSelectedBackground, // Dark grey for selected, light grey for unselected
+                    containerColor = if (isSelected) LocalExtendedColors.current.rowSelected else LocalExtendedColors.current.rowUnselected, // Dark grey for selected, light grey for unselected
                     contentColor = Color.White // White text for all buttons
                 ),
                 shape = RoundedCornerShape(8.dp),
@@ -69,7 +67,7 @@ fun HorizontalLevelPicker(
                 }
                 Text(
                     text = option,
-                    color = if (isLocked) Color.Gray else if (isSelected) accentColor else Color.LightGray,
+                    color = if (isLocked) Color.Gray else if (isSelected) LocalExtendedColors.current.accent else Color.LightGray,
                     maxLines = 1,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center

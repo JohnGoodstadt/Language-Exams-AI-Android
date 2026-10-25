@@ -27,7 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.packages.Settings.ExamSelectionRow
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -98,7 +98,7 @@ Fix: Add Modifier.weight(1f) to each LazyColumn, e.g.:
             OutlinedButton(
                 onClick = { onClose() },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = buttonColor,
+                    containerColor = LocalExtendedColors.current.buttonBlue,
                     contentColor = Color.White
                 )
             ) {
@@ -110,7 +110,7 @@ Fix: Add Modifier.weight(1f) to each LazyColumn, e.g.:
                     onClose()
                 },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = buttonColor,
+                    containerColor = LocalExtendedColors.current.buttonBlue,
                     contentColor = Color.White
                 )
             ) {

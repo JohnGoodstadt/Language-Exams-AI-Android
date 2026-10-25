@@ -47,8 +47,7 @@ import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDI
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
-import com.goodstadt.john.language.exams.ui.theme.accentColor
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.packages.Paragraph.ParagraphViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import kotlinx.coroutines.delay
@@ -175,7 +174,7 @@ fun ParagraphScreen(
         },
             enabled = !uiState.isLoading,
             colors = ButtonDefaults.buttonColors(
-            containerColor = buttonColor,
+            containerColor = LocalExtendedColors.current.buttonBlue,
             contentColor = Color.White
         )) {
             Text("Generate")
@@ -198,7 +197,7 @@ fun ParagraphScreen(
         ) {
             if (uiState.isLoading) {
                 CircularProgressIndicator(
-                    color = accentColor,
+                    color = LocalExtendedColors.current.accent,
                         modifier = Modifier.size(12.dp), // Make it smaller
                         strokeWidth = 2.dp // Thinner stroke looks better when small
                 )
@@ -443,7 +442,7 @@ fun ParagraphScreen(
 
         // --- Bottom Section ---
         Button(onClick = { viewModel.speakSentence() }, colors = ButtonDefaults.buttonColors(
-            containerColor = buttonColor,
+            containerColor = LocalExtendedColors.current.buttonBlue,
             contentColor = Color.White
         )) { // Changed from empty lambda
             Text("Play")

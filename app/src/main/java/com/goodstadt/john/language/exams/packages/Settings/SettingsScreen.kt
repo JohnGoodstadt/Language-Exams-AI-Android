@@ -83,8 +83,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
-import com.goodstadt.john.language.exams.ui.theme.accentColor
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -385,7 +384,7 @@ private fun SettingsSelectionSheet(
                     OutlinedButton(
                         onClick = { viewModel.hideBottomSheet() },
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = buttonColor,
+                            containerColor = LocalExtendedColors.current.buttonBlue,
                             contentColor = Color.White
                         )
                     ) {
@@ -394,7 +393,7 @@ private fun SettingsSelectionSheet(
                     Button(
                         onClick = { viewModel.saveSelection() },
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = buttonColor,
+                            containerColor = LocalExtendedColors.current.buttonBlue,
                             contentColor = Color.White
                         )
                     ) {
@@ -1015,7 +1014,7 @@ private fun SettingsActionItem(
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = accentColor)
+            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.accent)
             Text(
                 text = currentValue,
                 style = MaterialTheme.typography.bodyMedium,
@@ -1040,7 +1039,7 @@ private fun SettingsInfoItem(icon: ImageVector, title: String, value: String,ico
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = accentColor)
+            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.accent)
             Text(
                 text = value,
                 style = MaterialTheme.typography.bodyMedium,

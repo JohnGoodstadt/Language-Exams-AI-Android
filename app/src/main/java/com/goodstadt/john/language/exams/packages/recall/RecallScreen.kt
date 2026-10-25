@@ -32,7 +32,7 @@ import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.screens.shared.annotatedSentence
 import com.goodstadt.john.language.exams.ui.theme.DarkSurfaceVariant
 import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.STOPS
 import com.goodstadt.john.language.exams.viewmodels.RecallViewModel
 import kotlinx.coroutines.delay
@@ -202,14 +202,14 @@ fun RecallingListItem(
                 Button(
                     onClick = onRemove,
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = buttonColor,
+                        containerColor = LocalExtendedColors.current.buttonBlue,
                         contentColor = Color.White
                     )
                 ) { Text("Remove") }
                 if (isOverdue) {
                     Button(onClick = onOk,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = buttonColor,
+                            containerColor = LocalExtendedColors.current.buttonBlue,
                             contentColor = Color.White
                         )
                     ) { Text("OK") }

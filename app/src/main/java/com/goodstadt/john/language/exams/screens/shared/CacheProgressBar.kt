@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 @Composable
 fun CacheProgressBar(
@@ -48,7 +48,7 @@ fun CacheProgressBar(
                 modifier = Modifier
                     .weight(1f)
                     .padding(horizontal = 10.dp) ,
-                color = accentColor,
+                color = LocalExtendedColors.current.accent,
                 trackColor = MaterialTheme.colorScheme.surfaceVariant
 
 

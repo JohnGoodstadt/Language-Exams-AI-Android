@@ -21,7 +21,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.ui.graphics.Color
-import com.goodstadt.john.language.exams.ui.theme.CardBG
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 @Composable
 fun DiagnosticScreen(
@@ -63,7 +63,7 @@ fun DiagnosticScreen(
                     Button(
                         onClick = { viewModel.onAnswerSelected(option.ok) },
                         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = CardBG)
+                        colors = ButtonDefaults.buttonColors(containerColor = LocalExtendedColors.current.cardBackground)
                     ) {
                         Text(option.word)
                     }

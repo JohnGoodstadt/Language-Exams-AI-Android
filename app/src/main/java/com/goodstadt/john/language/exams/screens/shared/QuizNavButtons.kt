@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 /**
  * Shared nav-row buttons for the quiz screens (Vocab, Grammar, Usage), so the Info ("i") and Auto-advance
@@ -67,7 +67,7 @@ fun AutoAdvanceToggleButton(
     fontSize: TextUnit = 18.sp,
     borderWidth: Dp = 2.dp
 ) {
-    val tint = if (enabled) buttonColor else Color.Gray // blue when on, grey when off
+    val tint = if (enabled) LocalExtendedColors.current.buttonBlue else Color.Gray // blue when on, grey when off
     IconButton(onClick = onClick) {
         LetterInCircle(letter = "A", tint = tint, size = size, fontSize = fontSize, borderWidth = borderWidth)
     }
@@ -79,7 +79,7 @@ fun AutoAdvanceToggleButton(
  */
 @Composable
 fun InfoCircleButton(infoDisabled: Boolean, onClick: () -> Unit) {
-    val tint = if (infoDisabled) Color.Gray else buttonColor
+    val tint = if (infoDisabled) Color.Gray else LocalExtendedColors.current.buttonBlue
     IconButton(onClick = onClick, enabled = !infoDisabled) {
         LetterInCircle(letter = "i", tint = tint)
     }

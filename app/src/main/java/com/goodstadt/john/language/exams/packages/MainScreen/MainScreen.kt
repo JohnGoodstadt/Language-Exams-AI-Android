@@ -85,7 +85,7 @@ import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
 import com.goodstadt.john.language.exams.ui.LocalIsExpanded
-import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.findActivity
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -261,8 +261,8 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             val currentDestination = navBackStackEntry?.destination
 
             val navBarColors = NavigationBarItemDefaults.colors(
-                selectedIconColor = accentColor, // Your "accentColor"
-                selectedTextColor = accentColor,
+                selectedIconColor = LocalExtendedColors.current.accent, // Your "LocalExtendedColors.current.accent"
+                selectedTextColor = LocalExtendedColors.current.accent,
                 unselectedIconColor = DarkSecondary,
                 unselectedTextColor = DarkSecondary,
                 indicatorColor = Color.Transparent

@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 
 @Composable
@@ -46,7 +46,7 @@ fun VoiceCategoryDropdownHeader(
             Text(
                 text = title,
                 style = MaterialTheme.typography.labelLarge,
-                color = accentColor
+                color = LocalExtendedColors.current.accent
             )
             Text(
                 text = selectedVoiceName ?: "Tap to Hear",

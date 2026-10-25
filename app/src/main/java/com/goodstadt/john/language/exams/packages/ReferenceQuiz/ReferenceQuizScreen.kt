@@ -64,8 +64,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
-import com.goodstadt.john.language.exams.ui.theme.greyLight2
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
@@ -273,7 +272,7 @@ fun ReferenceQuizScreen(
             }
         }
 
-        HorizontalDivider(modifier = Modifier.fillMaxWidth(), thickness = 1.dp, color = greyLight2)
+        HorizontalDivider(modifier = Modifier.fillMaxWidth(), thickness = 1.dp, color = LocalExtendedColors.current.mutedGrey)
 
         // Mastery Filter Chips — hidden for generated quizzes (their per-question mastery isn't stable).
         if (!isGeneratedQuiz) {
@@ -539,7 +538,7 @@ fun ReferenceQuizScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Previous",
-                        tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
+                        tint = if (currentQuestionIndex == 0) Color.Gray else LocalExtendedColors.current.buttonBlue,
                         modifier = Modifier.size(36.dp)
                     )
                 }
@@ -578,7 +577,7 @@ fun ReferenceQuizScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                         contentDescription = "Next",
-                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor,
+                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else LocalExtendedColors.current.buttonBlue,
                         modifier = Modifier.size(36.dp)
                     )
                 }
@@ -586,7 +585,7 @@ fun ReferenceQuizScreen(
         }
 
         // Statistics
-        HorizontalDivider(modifier = Modifier.fillMaxWidth(), thickness = 1.dp, color = greyLight2)
+        HorizontalDivider(modifier = Modifier.fillMaxWidth(), thickness = 1.dp, color = LocalExtendedColors.current.mutedGrey)
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween

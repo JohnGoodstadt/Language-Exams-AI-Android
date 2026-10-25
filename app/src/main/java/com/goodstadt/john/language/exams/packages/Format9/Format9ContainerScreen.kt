@@ -35,11 +35,10 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.models.Format9Scene
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.ui.theme.Orange
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.findActivity
 import kotlinx.coroutines.launch
 
-private val SpeakerTeal = Color(0xFF00897B)
 
 /**
  * Podcasts (fileFormat-9): a multi-speaker script. Tap a line to hear it (in that speaker's voice); the
@@ -105,7 +104,7 @@ fun Format9ContainerScreen(
                     item(key = "intro") {
                         Surface(shape = RoundedCornerShape(12.dp)) {
                             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                Text(f.title, style = MaterialTheme.typography.titleLarge, color = Orange, fontWeight = FontWeight.Bold)
+                                Text(f.title, style = MaterialTheme.typography.titleLarge, color = LocalExtendedColors.current.brandOrange, fontWeight = FontWeight.Bold)
                                 if (f.description.isNotEmpty()) {
                                     Text(f.description, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 }
@@ -126,7 +125,7 @@ fun Format9ContainerScreen(
                                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                                 ) {
                                     Icon(if (anyPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
-                                        contentDescription = null, tint = Orange, modifier = Modifier.size(32.dp))
+                                        contentDescription = null, tint = LocalExtendedColors.current.brandOrange, modifier = Modifier.size(32.dp))
                                     Text(if (playingKey != null) "Stop" else "Play whole script",
                                         style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
                                 }
@@ -177,7 +176,7 @@ fun Format9ContainerScreen(
                         Icon(
                             Icons.Default.Translate,
                             contentDescription = if (showTranslation) "Showing translation" else "Show translation",
-                            tint = if (showTranslation) Orange else MaterialTheme.colorScheme.onSurfaceVariant
+                            tint = if (showTranslation) LocalExtendedColors.current.brandOrange else MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -185,7 +184,7 @@ fun Format9ContainerScreen(
                 val floatingPlaying = playingKey != null && !isPaused
                 FloatingActionButton(
                     onClick = { viewModel.playPauseFloating() },
-                    shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = Orange,
+                    shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = LocalExtendedColors.current.brandOrange,
                     modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp)
                 ) { Icon(if (floatingPlaying) Icons.Default.Pause else Icons.Default.PlayArrow, if (floatingPlaying) "Pause" else "Play") }
 
@@ -237,10 +236,10 @@ private fun SceneHeader(scene: Format9Scene, activePlaying: Boolean, onToggle: (
     Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(scene.title, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium,
-                color = Orange, fontWeight = FontWeight.Bold)
+                color = LocalExtendedColors.current.brandOrange, fontWeight = FontWeight.Bold)
             IconButton(onClick = onToggle) {
                 Icon(if (activePlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
-                    if (activePlaying) "Stop ${scene.title}" else "Play scene ${scene.title}", tint = Orange)
+                    if (activePlaying) "Stop ${scene.title}" else "Play scene ${scene.title}", tint = LocalExtendedColors.current.brandOrange)
             }
         }
         val placeTime = listOf(scene.place, scene.timeOfDay).filter { it.isNotBlank() }.joinToString("  ·  ")
@@ -263,15 +262,15 @@ private fun PodcastLineRow(
     Column(
         Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp))
             .clickable(onClickLabel = "Play line", onClick = onClick)
-            .background(if (isPlaying) Orange.copy(alpha = 0.12f) else Color.Transparent)
+            .background(if (isPlaying) LocalExtendedColors.current.brandOrange.copy(alpha = 0.12f) else Color.Transparent)
             .padding(horizontal = 8.dp, vertical = 6.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
-        Text(speakerName, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = SpeakerTeal)
+        Text(speakerName, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = LocalExtendedColors.current.speakerTeal)
         // Highlight the playing line with COLOUR only (not weight): a heavier weight is wider and would
         // reflow a long paragraph's line count when it starts/stops. Matches the iOS fix.
         Text(displayText, style = MaterialTheme.typography.bodyLarge,
-            color = if (isPlaying) Orange else MaterialTheme.colorScheme.onSurface)
+            color = if (isPlaying) LocalExtendedColors.current.brandOrange else MaterialTheme.colorScheme.onSurface)
     }
 }
 
@@ -305,7 +304,7 @@ private fun SceneScrubber(
                 ) {
                     Box(
                         Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(2.dp))
-                            .background(if (i == focusedIndex) Orange else Orange.copy(alpha = 0.3f))
+                            .background(if (i == focusedIndex) LocalExtendedColors.current.brandOrange else LocalExtendedColors.current.brandOrange.copy(alpha = 0.3f))
                     )
                 }
             }

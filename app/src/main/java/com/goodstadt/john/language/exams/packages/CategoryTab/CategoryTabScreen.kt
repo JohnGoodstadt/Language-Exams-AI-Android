@@ -110,7 +110,7 @@ import com.goodstadt.john.language.exams.screens.shared.GridVocabCard
 import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
-import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabSectionQuizViewModel
@@ -334,7 +334,7 @@ fun CategoryTabScreen(
                 // --- Loading State ---
                 if (uiState is CategoryTabUiState.Loading) {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator(color = accentColor)
+                        CircularProgressIndicator(color = LocalExtendedColors.current.accent)
                     }
                 }
 
@@ -685,7 +685,7 @@ private fun CategorySectionHeader(
             text = category.title.removeContentInBracketsAndTrim(),
             fontSize = 20.sp, // Match your existing CategoryHeader style
             fontWeight = FontWeight.Bold,
-            color = accentColor, // Or MaterialTheme.colorScheme.primary
+            color = LocalExtendedColors.current.accent, // Or MaterialTheme.colorScheme.primary
             modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
         )
 
@@ -1363,7 +1363,7 @@ fun CategoryHeader(title: String) {
         text = title,
         fontSize = 20.sp,
         fontWeight = FontWeight.Bold,
-        color = accentColor,
+        color = LocalExtendedColors.current.accent,
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surface)

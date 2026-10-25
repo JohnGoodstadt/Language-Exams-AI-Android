@@ -86,9 +86,7 @@ import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilena
 import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
-import com.goodstadt.john.language.exams.ui.theme.greyLight2
-import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
@@ -252,7 +250,7 @@ fun UsageQuizScreen(
         HorizontalDivider(
             modifier = Modifier.fillMaxWidth(),
             thickness = 1.dp,
-            color = greyLight2
+            color = LocalExtendedColors.current.mutedGrey
         )
 
         // Mastery Filter Chips
@@ -345,7 +343,7 @@ fun UsageQuizScreen(
         HorizontalDivider(
             modifier = Modifier.fillMaxWidth(),
             thickness = 1.dp,
-            color = greyLight2
+            color = LocalExtendedColors.current.mutedGrey
         )
         UsageQuizStatisticsRow(
             correct = quizStatistics.correct,
@@ -731,7 +729,7 @@ private fun UsageQuizNavigationRow(
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                 contentDescription = "Previous",
-                tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
+                tint = if (currentQuestionIndex == 0) Color.Gray else LocalExtendedColors.current.buttonBlue,
                 modifier = Modifier.size(36.dp)
             )
         }
@@ -774,7 +772,7 @@ private fun UsageQuizNavigationRow(
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                 contentDescription = "Next",
-                tint = if (currentQuestionIndex == lastIndex) Color.Gray else buttonColor,
+                tint = if (currentQuestionIndex == lastIndex) Color.Gray else LocalExtendedColors.current.buttonBlue,
                 modifier = Modifier.size(36.dp)
             )
         }
@@ -955,7 +953,7 @@ fun DropdownMenuBoxObsolete(
             onClick = { expanded = true },
             modifier = Modifier.wrapContentWidth(),
             colors = ButtonDefaults.buttonColors(
-                containerColor = nonSelectedBackground, // Dark grey background
+                containerColor = LocalExtendedColors.current.rowUnselected, // Dark grey background
                 contentColor = Color.White // White text color
             ),
             shape = RoundedCornerShape(4.dp) // Small rounded corners
@@ -966,7 +964,7 @@ fun DropdownMenuBoxObsolete(
             expanded = expanded,
             onDismissRequest = { expanded = false },
             modifier = Modifier
-                .background(nonSelectedBackground) // Dark grey background for dropdown
+                .background(LocalExtendedColors.current.rowUnselected) // Dark grey background for dropdown
                 .clip(RoundedCornerShape(4.dp)), // Small rounded corners for dropdown
             offset = with(density) {
                 DpOffset(
@@ -1029,7 +1027,7 @@ fun DropdownMenuBox(
             expanded = expanded,
             onDismissRequest = { expanded = false },
             modifier = Modifier
-                .background(nonSelectedBackground)
+                .background(LocalExtendedColors.current.rowUnselected)
                 .border(1.dp, Color.White.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
         ) {
             options.forEach { option ->
@@ -1172,7 +1170,7 @@ fun InfoButtonRow(
             imageVector = Icons.Outlined.Info,
             contentDescription = "Info",
             modifier = Modifier.size(32.dp),
-            tint = if (infoDisabled) Color.Gray else buttonColor
+            tint = if (infoDisabled) Color.Gray else LocalExtendedColors.current.buttonBlue
         )
     }
 }

@@ -8,7 +8,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
-import com.goodstadt.john.language.exams.ui.theme.Teal
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 /**
  * Conjugation tables for the verbs used on the Word Pairs ("Wortpaare") screen. Highlighting a verb in a
@@ -142,7 +142,7 @@ private fun wholeWordRanges(sentence: String, form: String): List<IntRange> {
 fun annotatedSentenceByWords(
     sentence: String,
     wordsToHighlight: String,
-    highlightColor: Color = Teal // Use your theme's accent color here if you have one
+    highlightColor: Color = LocalExtendedColors.current.teal // Use your theme's accent color here if you have one
 ): AnnotatedString {
     // 1. Get a clean list of the individual words to search for.
     val words = wordsToHighlight.split(',').map { it.trim() }.filter { it.isNotEmpty() }

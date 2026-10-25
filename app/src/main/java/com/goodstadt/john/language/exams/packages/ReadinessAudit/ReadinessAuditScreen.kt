@@ -97,8 +97,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
-import com.goodstadt.john.language.exams.ui.theme.buttonColor
-import com.goodstadt.john.language.exams.ui.theme.greyLight2
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.HeightClass
 import com.goodstadt.john.language.exams.utils.rememberHeightClass
@@ -431,7 +430,7 @@ fun ReadinessAuditScreen(
             HorizontalDivider(
                 modifier = Modifier.fillMaxWidth(),
                 thickness = 1.dp,
-                color = greyLight2
+                color = LocalExtendedColors.current.mutedGrey
             )
 
             AuditPagingDots(
@@ -506,7 +505,7 @@ fun ReadinessAuditScreen(
             HorizontalDivider(
                 modifier = Modifier.fillMaxWidth(),
                 thickness = 1.dp,
-                color = greyLight2
+                color = LocalExtendedColors.current.mutedGrey
             )
             AuditStatisticsRow(
                 correct = quizStatistics.correct,
@@ -1160,7 +1159,7 @@ private fun AuditNavigationRow(
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                 contentDescription = "Previous",
-                tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
+                tint = if (currentQuestionIndex == 0) Color.Gray else LocalExtendedColors.current.buttonBlue,
                 modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
             )
         }
@@ -1219,7 +1218,7 @@ private fun AuditNavigationRow(
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                 contentDescription = "Next",
-                tint = if (currentQuestionIndex == lastIndex) Color.Gray else buttonColor,
+                tint = if (currentQuestionIndex == lastIndex) Color.Gray else LocalExtendedColors.current.buttonBlue,
                 modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
             )
         }
