@@ -355,7 +355,7 @@ fun ParagraphScreen(
                             Text(
                                 text = "All exam lists A1,A2,B1,B2 for all time",
                                 fontSize = 12.sp,
-                                color = Color.White,
+                                color = MaterialTheme.colorScheme.onSurface,
                                 textAlign = TextAlign.Center,
                                 modifier = Modifier
                                     .padding(horizontal = 16.dp, vertical = 4.dp)

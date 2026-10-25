@@ -153,7 +153,7 @@ fun AuditDashboardHeader(
                 Text(
                     text = "Continue the audit to increase our confidence to very high",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.White,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .fillMaxWidth()

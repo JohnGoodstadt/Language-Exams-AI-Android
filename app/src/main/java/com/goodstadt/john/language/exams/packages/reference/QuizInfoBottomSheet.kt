@@ -53,7 +53,7 @@ fun QuizInfoBottomSheetView(summary: String, explain: String, onCloseSheet: () -
                             .fillMaxWidth()
                             .padding(start = 20.dp, top = 20.dp, end = 20.dp, bottom = 20.dp),
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color.White
+                        color = MaterialTheme.colorScheme.onSurface
                 )
                 if (explain.isNotEmpty()) {
 //                if (explain.headword.isNotBlank()) {
@@ -63,7 +63,7 @@ fun QuizInfoBottomSheetView(summary: String, explain: String, onCloseSheet: () -
                                 .fillMaxWidth()
                                 .padding(start = 20.dp, top = 20.dp, end = 20.dp, bottom = 20.dp),
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color.White
+                            color = MaterialTheme.colorScheme.onSurface
                     )
                 }
                 Spacer(modifier = Modifier.weight(1f)) // Push content to top
@@ -117,7 +117,7 @@ fun WordQuizInfoBottomSheetViewOriginal(summary: String, explain: DictionaryEntr
                         .fillMaxWidth()
                         .padding(start = 20.dp, top = 20.dp, end = 20.dp, bottom = 20.dp),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.White
+                    color = MaterialTheme.colorScheme.onSurface
                 )
                 //if (explain.isNotEmpty()) {
                 if (explain != null ) {
@@ -127,7 +127,7 @@ fun WordQuizInfoBottomSheetViewOriginal(summary: String, explain: DictionaryEntr
                             .fillMaxWidth()
                             .padding(start = 20.dp, top = 20.dp, end = 20.dp, bottom = 20.dp),
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color.White
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                 }
                 Spacer(modifier = Modifier.weight(1f)) // Push content to top
@@ -166,7 +166,7 @@ fun WordQuizInfoBottomSheetView(
             Text(
                 text = summary.capitalizeFirstLetter(),
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 16.dp)

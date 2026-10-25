@@ -334,7 +334,7 @@ fun SmartCoachCard(title: String, message: String, icon: ImageVector, color: Col
                 modifier = Modifier
                     .size(48.dp)
                     .clip(CircleShape)
-                    .background(Color.White),
+                    .background(MaterialTheme.colorScheme.surfaceVariant),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(

@@ -446,7 +446,7 @@ private fun UsageQuizLearningPoints(
             Text(
                 text = learningTitle,
                 style = MaterialTheme.typography.titleSmall,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             Text(
@@ -474,7 +474,7 @@ private fun UsageQuizLearningPoints(
                         Text(
                             text = point,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color.White,
+                            color = MaterialTheme.colorScheme.onSurface,
                             modifier = Modifier.weight(1f)
                         )
                     }
@@ -954,7 +954,7 @@ fun DropdownMenuBoxObsolete(
             modifier = Modifier.wrapContentWidth(),
             colors = ButtonDefaults.buttonColors(
                 containerColor = LocalExtendedColors.current.rowUnselected, // Dark grey background
-                contentColor = Color.White // White text color
+                contentColor = MaterialTheme.colorScheme.onSurface
             ),
             shape = RoundedCornerShape(4.dp) // Small rounded corners
         ) {
@@ -975,7 +975,7 @@ fun DropdownMenuBoxObsolete(
         ) {
             options.forEach { option ->
                 DropdownMenuItem(
-                    text = { Text(option, color = Color.White) }, // White text color for items
+                    text = { Text(option, color = MaterialTheme.colorScheme.onSurface) },
                     onClick = {
                         onOptionSelected(option)
                         expanded = false
@@ -1009,7 +1009,7 @@ fun DropdownMenuBox(
             Text(
                 text = selectedOption,
                 style = MaterialTheme.typography.bodyLarge,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             Spacer(modifier = Modifier.width(4.dp))
@@ -1018,7 +1018,7 @@ fun DropdownMenuBox(
             Icon(
                 imageVector = Icons.Default.ArrowDropDown,
                 contentDescription = "Select Option",
-                tint = Color.White.copy(alpha = 0.7f),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(24.dp)
             )
         }
@@ -1028,14 +1028,14 @@ fun DropdownMenuBox(
             onDismissRequest = { expanded = false },
             modifier = Modifier
                 .background(LocalExtendedColors.current.rowUnselected)
-                .border(1.dp, Color.White.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+                .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(4.dp))
         ) {
             options.forEach { option ->
                 DropdownMenuItem(
                     text = {
                         Text(
                             text = option,
-                            color = if (option == selectedOption) orangeLight else Color.White
+                            color = if (option == selectedOption) orangeLight else MaterialTheme.colorScheme.onSurface
                         )
                     },
                     onClick = {

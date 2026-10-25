@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,7 +45,7 @@ fun ScrollableHorizontalLevelPicker(
 
             // Determine Colors based on state
             val borderColor = if (isSelected) accentOrange else Color.Gray.copy(alpha = 0.5f)
-            val textColor = if (isSelected) accentOrange else Color.White.copy(alpha = 0.9f) // Or MaterialTheme.colorScheme.onSurface
+            val textColor = if (isSelected) accentOrange else MaterialTheme.colorScheme.onSurfaceVariant
             val backgroundColor = if (isSelected) accentOrange.copy(alpha = 0.1f) else Color.Transparent
 
             Surface(
