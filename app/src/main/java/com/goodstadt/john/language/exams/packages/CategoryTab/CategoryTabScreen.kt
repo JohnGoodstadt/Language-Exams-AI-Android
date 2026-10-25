@@ -334,7 +334,7 @@ fun CategoryTabScreen(
                 // --- Loading State ---
                 if (uiState is CategoryTabUiState.Loading) {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgressIndicator(color = LocalExtendedColors.current.accent)
+                        CircularProgressIndicator(color = LocalExtendedColors.current.screenAccent)
                     }
                 }
 
@@ -685,7 +685,7 @@ private fun CategorySectionHeader(
             text = category.title.removeContentInBracketsAndTrim(),
             fontSize = 20.sp, // Match your existing CategoryHeader style
             fontWeight = FontWeight.Bold,
-            color = LocalExtendedColors.current.accent, // Or MaterialTheme.colorScheme.primary
+            color = LocalExtendedColors.current.screenAccent, // Or MaterialTheme.colorScheme.primary
             modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
         )
 
@@ -1363,7 +1363,7 @@ fun CategoryHeader(title: String) {
         text = title,
         fontSize = 20.sp,
         fontWeight = FontWeight.Bold,
-        color = LocalExtendedColors.current.accent,
+        color = LocalExtendedColors.current.screenAccent,
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surface)

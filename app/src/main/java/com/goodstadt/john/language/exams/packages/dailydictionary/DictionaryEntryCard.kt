@@ -26,7 +26,7 @@ fun DictionaryEntryCard(
             Text(
                 text = entry.headword.ifBlank { entry.entryId },
                 style = MaterialTheme.typography.headlineMedium,
-                color = LocalExtendedColors.current.brandOrange,
+                color = LocalExtendedColors.current.screenAccent,
                 fontWeight = FontWeight.SemiBold
             )
 

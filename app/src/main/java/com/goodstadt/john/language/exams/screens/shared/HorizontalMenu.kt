@@ -28,7 +28,7 @@ fun MenuItemChip(
     val chipColors = FilterChipDefaults.filterChipColors(
         // Use your app's "accent" color for the selected state
         selectedContainerColor = Color.Transparent,
-        selectedLabelColor = LocalExtendedColors.current.accent,
+        selectedLabelColor = LocalExtendedColors.current.screenAccent,
     )
 
     FilterChip(

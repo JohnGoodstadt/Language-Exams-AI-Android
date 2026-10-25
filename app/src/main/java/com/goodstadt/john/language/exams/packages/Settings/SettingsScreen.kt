@@ -683,7 +683,7 @@ private fun SettingsContent(
                         Text(
                             text = "Use alternative palette",
                             style = MaterialTheme.typography.bodyLarge,
-                            color = LocalExtendedColors.current.accent
+                            color = LocalExtendedColors.current.screenAccent
                         )
                         Text(
                             text = "DEBUG: swap in the *ExtendedColorsAlternative values to experiment",
@@ -1056,7 +1056,7 @@ private fun SettingsActionItem(
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.accent)
+            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.screenAccent)
             Text(
                 text = currentValue,
                 style = MaterialTheme.typography.bodyMedium,
@@ -1081,7 +1081,7 @@ private fun SettingsInfoItem(icon: ImageVector, title: String, value: String,ico
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.accent)
+            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = LocalExtendedColors.current.screenAccent)
             Text(
                 text = value,
                 style = MaterialTheme.typography.bodyMedium,
@@ -1117,7 +1117,7 @@ private fun AppearanceSettingItem(
             Text(
                 text = "Theme",
                 style = MaterialTheme.typography.bodyLarge,
-                color = LocalExtendedColors.current.accent
+                color = LocalExtendedColors.current.screenAccent
             )
             Spacer(modifier = Modifier.height(8.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

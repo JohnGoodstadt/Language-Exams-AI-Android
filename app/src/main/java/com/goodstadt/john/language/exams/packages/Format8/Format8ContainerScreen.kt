@@ -115,12 +115,12 @@ fun Format8ContainerScreen(
                             playback.stopPlayback(); quiz = Format8QuizGenerator.generate(quizFile); showQuiz = true
                         } },
                         shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = if (canQuiz) LocalExtendedColors.current.brandOrange else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
+                        contentColor = if (canQuiz) LocalExtendedColors.current.screenAccent else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
                         modifier = Modifier.align(Alignment.BottomStart).padding(16.dp)
                     ) { Icon(Icons.Default.SportsEsports, if (canQuiz) "Quiz" else "Quiz unavailable for this sheet") }
                     FloatingActionButton(
                         onClick = { playback.stopPlayback(); showTranslate = true },
-                        shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = LocalExtendedColors.current.brandOrange,
+                        shape = CircleShape, containerColor = MaterialTheme.colorScheme.surface, contentColor = LocalExtendedColors.current.screenAccent,
                         modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp)
                     ) { Icon(Icons.Default.Translate, "Translate") }
                 }
@@ -160,7 +160,7 @@ private fun Format8Content(
         item(key = "intro") {
             Surface(shape = RoundedCornerShape(12.dp)) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Text(file.title, style = MaterialTheme.typography.titleLarge, color = LocalExtendedColors.current.brandOrange, fontWeight = FontWeight.Bold)
+                    Text(file.title, style = MaterialTheme.typography.titleLarge, color = LocalExtendedColors.current.screenAccent, fontWeight = FontWeight.Bold)
                     if (file.description.isNotEmpty()) Text(file.description, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     if (file.intro.isNotEmpty()) Text(remember(file) { Format8Presentation.introduction(file) })
                 }
@@ -181,7 +181,7 @@ private fun Format8Content(
                                         imageVector = Icons.Default.RecordVoiceOver,
                                         contentDescription = "Pause to repeat aloud",
                                         modifier = Modifier.size(20.dp),
-                                        tint = if (gapEnabled) LocalExtendedColors.current.brandOrange else MaterialTheme.colorScheme.onSurfaceVariant
+                                        tint = if (gapEnabled) LocalExtendedColors.current.screenAccent else MaterialTheme.colorScheme.onSurfaceVariant
                                     )
                                 }
                                 Text("Pause to repeat aloud", style = MaterialTheme.typography.bodyMedium)
@@ -212,10 +212,10 @@ private fun Format8EntrySection(
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(entry.header, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium, color = LocalExtendedColors.current.brandOrange, fontWeight = FontWeight.Bold)
+            Text(entry.header, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium, color = LocalExtendedColors.current.screenAccent, fontWeight = FontWeight.Bold)
             if (!locked && entry.examples.isNotEmpty()) IconButton(onClick = onToggle) {
                 Icon(if (playing) Icons.Default.Pause else Icons.Default.PlayArrow,
-                    if (playing) "Pause ${entry.header}" else "Play all examples in ${entry.header}", tint = LocalExtendedColors.current.brandOrange)
+                    if (playing) "Pause ${entry.header}" else "Play all examples in ${entry.header}", tint = LocalExtendedColors.current.screenAccent)
             }
         }
         if (!locked) {
@@ -225,7 +225,7 @@ private fun Format8EntrySection(
         Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(MaterialTheme.colorScheme.surface)) {
             if (locked) Row(Modifier.fillMaxWidth().clickable(onClick = onPremium).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.Lock, "Locked", Modifier.size(18.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
-                Spacer(Modifier.width(8.dp)); Text("Premium", color = LocalExtendedColors.current.brandOrange)
+                Spacer(Modifier.width(8.dp)); Text("Premium", color = LocalExtendedColors.current.screenAccent)
             } else entry.examples.forEachIndexed { index, example ->
                 if (index > 0) HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
                 Row(Modifier.fillMaxWidth().clickable(onClickLabel = "Play German sentence", onClick = { onPlay(example) })

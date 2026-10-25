@@ -68,7 +68,7 @@ fun HorizontalLevelPicker(
                 }
                 Text(
                     text = option,
-                    color = if (isLocked) Color.Gray else if (isSelected) LocalExtendedColors.current.accent else MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = if (isLocked) Color.Gray else if (isSelected) LocalExtendedColors.current.screenAccent else MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center

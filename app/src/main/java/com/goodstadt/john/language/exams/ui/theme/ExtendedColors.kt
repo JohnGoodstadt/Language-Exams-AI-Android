@@ -20,11 +20,11 @@ import androidx.compose.ui.graphics.Color
  */
 @Immutable
 data class ExtendedColors(
-    val brandOrange: Color,
-    val accent: Color,
+    /** The app's orange accent (titles, icons, chips). Was brandOrange + accent, now merged. */
+    val screenAccent: Color,
     val buttonBlue: Color,
+    /** Teal accent for highlights, headwords and speaker names. */
     val teal: Color,
-    val speakerTeal: Color,
     val cardBackground: Color,
     /** Screen/page backdrop behind cards (the near-black on dark, white on light). */
     val screenBackground: Color,
@@ -36,11 +36,9 @@ data class ExtendedColors(
 )
 
 val DarkExtendedColors = ExtendedColors(
-    brandOrange = Orange,                    // 0xFFFFA500
-    accent = accentColor,                    // 0xFFFFAE02
+    screenAccent = Orange,                   // 0xFFFFA500
     buttonBlue = buttonColor,                // 0xFF1777FB
     teal = Teal,                             // 0xFF66B5D5
-    speakerTeal = SpeakerTeal,               // 0xFF00897B
     cardBackground = CardBG,                 // 0xFF1C1C1E
     screenBackground = Color(0xFF121212),    // near-black page backdrop
     rowSelected = selectedBackground,        // 0xFF5B5B60
@@ -50,11 +48,9 @@ val DarkExtendedColors = ExtendedColors(
 )
 
 val LightExtendedColors = ExtendedColors(
-    brandOrange = Color(0xFFE8740C),         // vivid orange that reads on white
-    accent = Color(0xFFE8740C),
+    screenAccent = Color(0xFFD35400),        // orange accent, legible on white
     buttonBlue = buttonColor,                // blue reads on both
-    teal = Color(0xFF00796B),                // true teal, legible on white (harmonises with speakerTeal)
-    speakerTeal = SpeakerTeal,               // 0xFF00897B reads on both
+    teal = Color(0xFF00796B),                // true teal, legible on white
     cardBackground = Color(0xFFF2F2F7),
     screenBackground = Color(0xFFFFFFFF),
     rowSelected = Color(0xFFD0D0D5),
@@ -66,8 +62,8 @@ val LightExtendedColors = ExtendedColors(
 // --- Experimental / reserve palettes -------------------------------------------------------------
 // Start as exact copies of the real palettes. Override any field(s) here to try new values, e.g.
 //   val LightExtendedColorsAlternative = LightExtendedColors.copy(
-//       brandOrange = Color(0xFFD35400),
-//       teal        = Color(0xFF00695C),
+//       screenAccent = Color(0xFFE8740C),
+//       teal         = Color(0xFF00695C),
 //   )
 // Rebuild, then enable the DEBUG "Use alternative palette" switch in Settings to see them live.
 val LightExtendedColorsAlternative = LightExtendedColors.copy(

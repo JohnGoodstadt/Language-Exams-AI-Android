@@ -50,7 +50,7 @@ fun SimpleSectionedVocabListOriginal(
                     Text(
                         text = category.title,
                         style = MaterialTheme.typography.titleLarge,
-                        color = LocalExtendedColors.current.accent,
+                        color = LocalExtendedColors.current.screenAccent,
                         modifier = Modifier.weight(1f).padding( bottom = 0.dp, top = 32.dp) // Text takes up most of the space
                     )
                 }

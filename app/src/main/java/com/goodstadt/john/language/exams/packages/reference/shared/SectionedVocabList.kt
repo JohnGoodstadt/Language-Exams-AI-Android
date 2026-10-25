@@ -100,7 +100,7 @@ fun SectionedVocabList(
                         text = category.title,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
-                        color = LocalExtendedColors.current.accent,
+                        color = LocalExtendedColors.current.screenAccent,
                         modifier = Modifier.weight(1f) // Text takes up most of the space
                     )
 

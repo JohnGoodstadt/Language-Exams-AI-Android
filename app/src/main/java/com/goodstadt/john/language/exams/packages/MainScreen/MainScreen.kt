@@ -261,8 +261,8 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             val currentDestination = navBackStackEntry?.destination
 
             val navBarColors = NavigationBarItemDefaults.colors(
-                selectedIconColor = LocalExtendedColors.current.accent, // Your "LocalExtendedColors.current.accent"
-                selectedTextColor = LocalExtendedColors.current.accent,
+                selectedIconColor = LocalExtendedColors.current.screenAccent, // Your "LocalExtendedColors.current.screenAccent"
+                selectedTextColor = LocalExtendedColors.current.screenAccent,
                 unselectedIconColor = DarkSecondary,
                 unselectedTextColor = DarkSecondary,
                 indicatorColor = Color.Transparent

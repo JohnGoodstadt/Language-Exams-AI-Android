@@ -48,7 +48,7 @@ fun CacheProgressBar(
                 modifier = Modifier
                     .weight(1f)
                     .padding(horizontal = 10.dp) ,
-                color = LocalExtendedColors.current.accent,
+                color = LocalExtendedColors.current.screenAccent,
                 trackColor = MaterialTheme.colorScheme.surfaceVariant
 
 

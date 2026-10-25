@@ -46,7 +46,7 @@ fun VoiceCategoryDropdownHeader(
             Text(
                 text = title,
                 style = MaterialTheme.typography.labelLarge,
-                color = LocalExtendedColors.current.accent
+                color = LocalExtendedColors.current.screenAccent
             )
             Text(
                 text = selectedVoiceName ?: "Tap to Hear",

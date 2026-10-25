@@ -197,7 +197,7 @@ fun ParagraphScreen(
         ) {
             if (uiState.isLoading) {
                 CircularProgressIndicator(
-                    color = LocalExtendedColors.current.accent,
+                    color = LocalExtendedColors.current.screenAccent,
                         modifier = Modifier.size(12.dp), // Make it smaller
                         strokeWidth = 2.dp // Thinner stroke looks better when small
                 )
