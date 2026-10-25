@@ -149,6 +149,7 @@ fun ReadinessAuditScreen(
     initialLevel: ReadinessAuditLevels? = null, // Open straight onto this level's test, if unlocked
     onFinished: () -> Unit // Existing callback to exit the screen
 ) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     val context = LocalContext.current
 
     val uiState by viewModel.uiState.collectAsState()
@@ -307,14 +308,14 @@ fun ReadinessAuditScreen(
                         viewModel.quizFillInTheBlanks -> viewModel.highlightWordInSentence(
                             sentence = question.sentence.replace(Regex("_+"), lockedOption),
                             wordToHighlight = lockedOption,
-                            highlightColor = Color.Green
+                            highlightColor = correctGreen
                         )
                         viewModel.quizDefinitions -> AnnotatedString(question.title)
                         viewModel.quizMultipleChoice -> AnnotatedString(lockedOption)
                         else -> viewModel.highlightWordInSentence(
                             sentence = lockedOption,
                             wordToHighlight = lockedOption,
-                            highlightColor = Color.Green
+                            highlightColor = correctGreen
                         )
                     }
                 } else {
@@ -702,9 +703,10 @@ private fun AuditSummaryContent(
 
 @Composable
 private fun AuditSummaryStat(label: String, value: String, sub: String, modifier: Modifier = Modifier) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     Column(modifier = modifier) {
         Text(label, style = MaterialTheme.typography.labelSmall, color = orangeLight)
-        Text(value, style = MaterialTheme.typography.displaySmall, fontWeight = FontWeight.Bold, color = Color.Green)
+        Text(value, style = MaterialTheme.typography.displaySmall, fontWeight = FontWeight.Bold, color = correctGreen)
         Text(sub, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
@@ -934,6 +936,7 @@ private fun AuditQuestionAnswers(
     onDisplayedSentenceChange: (AnnotatedString) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     val scrollState = rememberScrollState()
 
     // Reset scroll when question changes
@@ -960,7 +963,7 @@ private fun AuditQuestionAnswers(
                             append(parts[0])
                             withStyle(
                                 style = SpanStyle(
-                                    color = Color.Green,
+                                    color = correctGreen,
                                     fontWeight = FontWeight.Bold
                                 )
                             ) {
@@ -1076,7 +1079,7 @@ private fun AuditQuestionAnswers(
                                     viewModel.highlightWordInSentence(
                                         sentence = sentence,
                                         wordToHighlight = option,
-                                        highlightColor = Color.Green
+                                        highlightColor = correctGreen
                                     )
                                 )
                                 sentenceToSpeak = sentence
@@ -1095,7 +1098,7 @@ private fun AuditQuestionAnswers(
                                     viewModel.highlightWordInSentence(
                                         sentence = option,
                                         wordToHighlight = option,
-                                        highlightColor = Color.Green
+                                        highlightColor = correctGreen
                                     )
                                 )
                             }
@@ -1236,6 +1239,7 @@ private fun AuditStatisticsRow(
     autoAdvance: Boolean = false,
     onToggleAutoAdvance: () -> Unit = {}
 ) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
@@ -1244,7 +1248,7 @@ private fun AuditStatisticsRow(
             text = "Correct: $correct",
             style = MaterialTheme.typography.bodyLarge.copy(
                 fontSize = 16.sp,
-                color = Color.Green
+                color = correctGreen
             ),
             textAlign = TextAlign.Start,
             modifier = Modifier

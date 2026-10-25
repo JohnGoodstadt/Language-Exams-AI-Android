@@ -40,6 +40,7 @@ import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditL
 import com.goodstadt.john.language.exams.screens.shared.CollapsibleSection
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
 
 
@@ -93,7 +94,7 @@ fun AuditDashboardHeader(
             AuditCircularGauge(
                 label = "Readiness",
                 value = stats.readiness,
-                color = if (stats.readiness > 70) Color.Green else orangeLight,
+                color = if (stats.readiness > 70) LocalExtendedColors.current.textAccentAlternative else orangeLight,
                 // Per-level: readiness for an exam at the currently selected level.
                 description = "$currentLevel exam"
             )
@@ -238,7 +239,7 @@ private fun AuditSummaryCard(
                         isUnderEstimated -> "🚀 Higher Potential Detected"
                         else -> "✅ Level Verified"
                     },
-                    color = if (!hasVerdict || isMatch) Color.Green else orangeLight,
+                    color = if (!hasVerdict || isMatch) LocalExtendedColors.current.textAccentAlternative else orangeLight,
                     fontWeight = FontWeight.Bold
                 )
 

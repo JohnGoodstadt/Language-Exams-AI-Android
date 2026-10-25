@@ -101,6 +101,7 @@ fun ReferenceQuizScreen(
     prebuiltFileFormat: Int = 7,
     viewModel: ReferenceQuizViewModel = hiltViewModel()
 ) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     val context = LocalContext.current
 
     val uiState by viewModel.uiState.collectAsState()
@@ -178,14 +179,14 @@ fun ReferenceQuizScreen(
                     viewModel.quizFillInTheBlanks -> viewModel.highlightWordInSentence(
                         sentence = question.sentence.replace(Regex("_+"), prevOption),
                         wordToHighlight = prevOption,
-                        highlightColor = Color.Green
+                        highlightColor = correctGreen
                     )
                     viewModel.quizDefinitions -> AnnotatedString(question.title)
                     viewModel.quizMultipleChoice -> AnnotatedString(prevOption)
                     else -> viewModel.highlightWordInSentence(
                         sentence = prevOption,
                         wordToHighlight = prevOption,
-                        highlightColor = Color.Green
+                        highlightColor = correctGreen
                     )
                 }
             } else {
@@ -351,7 +352,7 @@ fun ReferenceQuizScreen(
                                 val parts = question.sentence.split("_")
                                 if (parts.size == 2) {
                                     append(parts[0])
-                                    withStyle(style = SpanStyle(color = Color.Green, fontWeight = FontWeight.Bold)) {
+                                    withStyle(style = SpanStyle(color = correctGreen, fontWeight = FontWeight.Bold)) {
                                         append(selectedOption!!)
                                     }
                                     append(parts[1])
@@ -440,7 +441,7 @@ fun ReferenceQuizScreen(
                                 var sentenceToSpeak = ""
                                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                     val sentence = question.sentence.replace(Regex("_+"), option)
-                                    displayedSentence = viewModel.highlightWordInSentence(sentence = sentence, wordToHighlight = option, highlightColor = Color.Green)
+                                    displayedSentence = viewModel.highlightWordInSentence(sentence = sentence, wordToHighlight = option, highlightColor = correctGreen)
                                     sentenceToSpeak = sentence
                                 } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
                                     displayedSentence = AnnotatedString(question.title)
@@ -450,7 +451,7 @@ fun ReferenceQuizScreen(
                                     sentenceToSpeak = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()
                                 } else {
                                     sentenceToSpeak = option
-                                    displayedSentence = viewModel.highlightWordInSentence(sentence = option, wordToHighlight = option, highlightColor = Color.Green)
+                                    displayedSentence = viewModel.highlightWordInSentence(sentence = option, wordToHighlight = option, highlightColor = correctGreen)
                                 }
                                 viewModel.handleTap(sentenceToSpeak)
                                 viewModel.incQuizStat()
@@ -592,7 +593,7 @@ fun ReferenceQuizScreen(
         ) {
             Text(
                 text = "Correct: ${quizStatistics.correct}",
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp, color = Color.Green),
+                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp, color = correctGreen),
                 modifier = Modifier.weight(1f).padding(start = 16.dp)
             )
             Text(

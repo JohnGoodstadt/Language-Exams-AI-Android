@@ -86,6 +86,7 @@ fun VocabQuizScreen(
 //    viewModel: VocabQuizViewModel = hiltViewModel(),
     autoLoad: Boolean = true
 ) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     val context = LocalContext.current
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
@@ -166,7 +167,7 @@ fun VocabQuizScreen(
                 viewModel.highlightWordInSentence(
                     sentence = prevOption,
                     wordToHighlight = question.question,
-                    highlightColor = Color.Green
+                    highlightColor = correctGreen
                 )
             } else {
                 AnnotatedString(questionText)
@@ -348,7 +349,7 @@ fun VocabQuizScreen(
                         append(displayedSentence)
                         withStyle(
                             style = SpanStyle(
-                                color = Color.Green,
+                                color = correctGreen,
                                 fontWeight = FontWeight.Bold
                             )
                         ) {
@@ -372,7 +373,7 @@ fun VocabQuizScreen(
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp),
-                    color = Color.Green
+                    color = correctGreen
                 )
             }
 
@@ -455,7 +456,7 @@ fun VocabQuizScreen(
                             displayedSentence = viewModel.highlightWordInSentence(
                                 sentence = option,
                                 wordToHighlight = question.question,
-                                highlightColor = Color.Green
+                                highlightColor = correctGreen
                             )
                             viewModel.handleTap(option)
                             viewModel.incQuizStat()
@@ -601,7 +602,7 @@ fun VocabQuizScreen(
                 text = "Correct: ${quizStatistics.correct}",
                 style = MaterialTheme.typography.bodyLarge.copy(
                     fontSize = 16.sp,
-                    color = Color.Green
+                    color = correctGreen
                 ),
                 modifier = Modifier
                     .weight(1f)

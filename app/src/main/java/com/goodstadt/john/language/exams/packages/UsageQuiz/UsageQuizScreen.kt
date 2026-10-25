@@ -96,6 +96,7 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 fun UsageQuizScreen(
     viewModel: UsageQuizViewModel = hiltViewModel()
 ) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     val context = LocalContext.current
 
     val uiState by viewModel.uiState.collectAsState()
@@ -171,14 +172,14 @@ fun UsageQuizScreen(
                     viewModel.quizFillInTheBlanks -> viewModel.highlightWordInSentence(
                         sentence = question.sentence.replace(Regex("_+"), prevOption),
                         wordToHighlight = prevOption,
-                        highlightColor = Color.Green
+                        highlightColor = correctGreen
                     )
                     viewModel.quizDefinitions -> AnnotatedString(question.title)
                     viewModel.quizMultipleChoice -> AnnotatedString(prevOption)
                     else -> viewModel.highlightWordInSentence(
                         sentence = prevOption,
                         wordToHighlight = prevOption,
-                        highlightColor = Color.Green
+                        highlightColor = correctGreen
                     )
                 }
             } else {
@@ -500,6 +501,7 @@ private fun UsageQuizQuestionAnswers(
     onInfoDisabledChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     val scrollState = rememberScrollState()
 
     // Reset scroll when question changes
@@ -528,7 +530,7 @@ private fun UsageQuizQuestionAnswers(
                             append(parts[0])
                             withStyle(
                                 style = SpanStyle(
-                                    color = Color.Green,
+                                    color = correctGreen,
                                     fontWeight = FontWeight.Bold
                                 )
                             ) {
@@ -608,7 +610,7 @@ private fun UsageQuizQuestionAnswers(
                                 viewModel.highlightWordInSentence(
                                     sentence = sentence,
                                     wordToHighlight = option,
-                                    highlightColor = Color.Green
+                                    highlightColor = correctGreen
                                 )
                             )
                             sentenceToSpeak = sentence
@@ -627,7 +629,7 @@ private fun UsageQuizQuestionAnswers(
                                 viewModel.highlightWordInSentence(
                                     sentence = option,
                                     wordToHighlight = option,
-                                    highlightColor = Color.Green
+                                    highlightColor = correctGreen
                                 )
                             )
                         }
@@ -783,6 +785,7 @@ private fun UsageQuizNavigationRow(
 /** The Correct / Tries tally row. */
 @Composable
 private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
+    val correctGreen = LocalExtendedColors.current.textAccentAlternative
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
@@ -791,7 +794,7 @@ private fun UsageQuizStatisticsRow(correct: Int, tries: Int) {
             text = "Correct: $correct",
             style = MaterialTheme.typography.bodyLarge.copy(
                 fontSize = 16.sp,
-                color = Color.Green
+                color = correctGreen
             ),
             modifier = Modifier
                 .weight(1f)

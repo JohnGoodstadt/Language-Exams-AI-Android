@@ -33,6 +33,9 @@ data class ExtendedColors(
     val mutedGrey: Color,
     /** Quiz answer-option text (e.g. the three choices on the Usage/Vocab quiz). */
     val quizQuestionText: Color,
+    /** "Success"/correct green used for text & highlighted correct words. Bright green on dark,
+     *  a darker green on light (pure green is too light on white). */
+    val textAccentAlternative: Color,
 )
 
 val DarkExtendedColors = ExtendedColors(
@@ -45,6 +48,7 @@ val DarkExtendedColors = ExtendedColors(
     rowUnselected = nonSelectedBackground,   // 0xFF1C1C1F
     mutedGrey = greyLight2,                  // 0xFF505055
     quizQuestionText = orangeLight,          // 0xFFFFA500 (orange on dark, as before)
+    textAccentAlternative = Color.Green,     // bright green reads on dark
 )
 
 val LightExtendedColors = ExtendedColors(
@@ -57,6 +61,7 @@ val LightExtendedColors = ExtendedColors(
     rowUnselected = Color(0xFFFFFFFF),
     mutedGrey = Color(0xFF8E8E93),
     quizQuestionText = Color(0xFF000000),    // black answer text on white
+    textAccentAlternative = Color(0xFF2E7D32), // darker green, legible on white
 )
 
 // --- Experimental / reserve palettes -------------------------------------------------------------

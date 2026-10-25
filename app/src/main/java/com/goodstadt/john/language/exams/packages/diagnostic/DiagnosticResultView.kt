@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 @Composable
 fun DiagnosticResultView(score: Int, onDismiss: () -> Unit) {
@@ -42,7 +43,7 @@ fun DiagnosticResultView(score: Int, onDismiss: () -> Unit) {
                 progress = readiness / 100f,
                 modifier = Modifier.fillMaxSize(),
                 strokeWidth = 12.dp,
-                color = if (readiness > 40) Color.Green else orangeLight
+                color = if (readiness > 40) LocalExtendedColors.current.textAccentAlternative else orangeLight
             )
             Text("$readiness%", style = MaterialTheme.typography.headlineLarge)
         }
