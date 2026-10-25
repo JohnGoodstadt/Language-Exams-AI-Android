@@ -67,6 +67,7 @@ val LightExtendedColors = ExtendedColors(
 //   )
 // Rebuild, then enable the DEBUG "Use alternative palette" switch in Settings to see them live.
 val LightExtendedColorsAlternative = LightExtendedColors.copy(
+    screenAccent = blueDark
 )
 val DarkExtendedColorsAlternative = DarkExtendedColors.copy(
 )

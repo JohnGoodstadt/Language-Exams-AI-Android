@@ -23,12 +23,16 @@ import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 fun MenuItemChip(
     text: String,
     isSelected: Boolean,
-    onClick: () -> Unit // <-- Add the onClick parameter
+    onClick: () -> Unit, // <-- Add the onClick parameter
+    // Unselected label colour. Defaults to onSurface (near-black, the previous look); pass
+    // onSurfaceVariant for a greyer unselected state so the selected accent stands out more.
+    unselectedLabelColor: Color = MaterialTheme.colorScheme.onSurface,
 ) {
     val chipColors = FilterChipDefaults.filterChipColors(
         // Use your app's "accent" color for the selected state
         selectedContainerColor = Color.Transparent,
         selectedLabelColor = LocalExtendedColors.current.screenAccent,
+        labelColor = unselectedLabelColor,
     )
 
     FilterChip(

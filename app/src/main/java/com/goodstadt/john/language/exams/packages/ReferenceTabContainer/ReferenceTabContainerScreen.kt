@@ -242,7 +242,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                     MenuItemChip(
                         text = tab.definition.title,
                         isSelected = (tab.id == uiState.selectedTabId),
-                        onClick = { viewModel.onTabSelected(tab.id) }
+                        onClick = { viewModel.onTabSelected(tab.id) },
+                        // Grey unselected tabs so the selected (accent) tab stands out.
+                        unselectedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }

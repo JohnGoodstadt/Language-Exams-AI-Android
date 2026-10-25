@@ -28,7 +28,9 @@ private val AppLightColorScheme = lightColorScheme(
     surface = LightSurface, // e.g., Color.White
     onSurface = LightOnSurface, // e.g., Color.Black
     surfaceVariant = LightSurfaceVariant, // A good light gray for containers
-    onSurfaceVariant = LightOnSurface
+    // Muted secondary text/icons on light. Must be a GREY (not black) so "secondary" reads as
+    // secondary; was mistakenly LightOnSurface (black), which made all onSurfaceVariant text black.
+    onSurfaceVariant = Color(0xFF49454F)
 )
 
 private val AppDarkColorScheme = darkColorScheme(
