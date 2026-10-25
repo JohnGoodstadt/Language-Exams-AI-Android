@@ -19,6 +19,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -178,7 +179,7 @@ fun Format1Screen(
                                     text = item.word,
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = if (locked) MaterialTheme.colorScheme.onSurfaceVariant else Color.Cyan,
+                                    color = if (locked) MaterialTheme.colorScheme.onSurfaceVariant else LocalExtendedColors.current.teal,
                                     modifier = Modifier.weight(1f)
                                 )
 

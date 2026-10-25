@@ -528,8 +528,8 @@ class VocabQuizRepository @Inject constructor(
         return when (level) {
             WordMasteryLevel.New -> "" to Color.Gray //"New Word"
             WordMasteryLevel.Struggling -> "Be careful" to Color.Red
-            WordMasteryLevel.Learning -> "Learning" to Color.LightGray// Orange
-            WordMasteryLevel.Review -> "Not Quite Fluent (3 correct streaks for fluency)" to Color.Cyan
+            WordMasteryLevel.Learning -> "Learning" to Color(0xFFFF9800) // Orange
+            WordMasteryLevel.Review -> "Not Quite Fluent (3 correct streaks for fluency)" to Color(0xFF0097A7)
             WordMasteryLevel.Mastered -> "Mastered" to Color(0xFF4CAF50) // Green
         }
     }

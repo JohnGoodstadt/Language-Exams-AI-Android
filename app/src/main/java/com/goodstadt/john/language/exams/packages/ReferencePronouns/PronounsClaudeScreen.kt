@@ -46,6 +46,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -343,7 +344,7 @@ private fun FormChain(forms: List<PronounForm>) {
                     form.text,
                     style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Bold,
-                    color = PronounsClaudeStyle.HIGHLIGHT,
+                    color = LocalExtendedColors.current.teal,
                     modifier = Modifier.width(84.dp)
                 )
                 Text(

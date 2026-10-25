@@ -27,6 +27,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -115,7 +116,7 @@ private fun SavedWordCard(
                 text = word.word,
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color.Cyan, // matches the highlighted word in the sentences
+                color = LocalExtendedColors.current.teal, // matches the highlighted word in the sentences
                 modifier = Modifier.weight(1f)
             )
             if (isReminderDue) {

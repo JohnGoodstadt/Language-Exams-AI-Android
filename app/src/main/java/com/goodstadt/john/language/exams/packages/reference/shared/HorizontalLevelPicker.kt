@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -46,8 +47,8 @@ fun HorizontalLevelPicker(
             Button(
                 onClick = { onOptionSelected(option) },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isSelected) LocalExtendedColors.current.rowSelected else LocalExtendedColors.current.rowUnselected, // Dark grey for selected, light grey for unselected
-                    contentColor = Color.White // White text for all buttons
+                    containerColor = if (isSelected) LocalExtendedColors.current.rowSelected else LocalExtendedColors.current.rowUnselected, // adaptive: selected more prominent
+                    contentColor = MaterialTheme.colorScheme.onSurface
                 ),
                 shape = RoundedCornerShape(8.dp),
                 // Material3 Buttons default to 24.dp horizontal content padding, which wastes a lot of
@@ -67,7 +68,7 @@ fun HorizontalLevelPicker(
                 }
                 Text(
                     text = option,
-                    color = if (isLocked) Color.Gray else if (isSelected) LocalExtendedColors.current.accent else Color.LightGray,
+                    color = if (isLocked) Color.Gray else if (isSelected) LocalExtendedColors.current.accent else MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center

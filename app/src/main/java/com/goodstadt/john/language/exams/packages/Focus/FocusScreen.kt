@@ -229,7 +229,7 @@ fun FocusScreen(
                 "DEBUG — Download grammar sheet (Format 7/10)",
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFFB0B0B0)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             val byLevel = grammarCatalog.groupBy { it.row.level }
             listOf("A1", "A2", "B1", "B2").forEach { level ->

@@ -254,7 +254,7 @@ private fun AuditSummaryCard(
                         else -> "Your skills are perfectly aligned with the $currentLevel requirements. Focus on maintaining this level through daily practice."
                     },
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.LightGray
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }

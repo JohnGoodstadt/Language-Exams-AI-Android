@@ -11,7 +11,7 @@ import androidx.compose.ui.text.withStyle
 object PronounsClaudeStyle {
 
     /** The one accent used to highlight pronoun words (in the chain and in sentences). */
-    val HIGHLIGHT = Color.Cyan
+    val HIGHLIGHT = Color(0xFF00897B) // mid teal, legible on light and dark
 
     fun caseLabel(case: String): String = when (case.trim().lowercase()) {
         "nom", "nominative" -> "Nominative"

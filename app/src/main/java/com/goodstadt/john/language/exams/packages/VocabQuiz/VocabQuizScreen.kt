@@ -634,7 +634,7 @@ fun VocabQuizScreen(
                     index == currentQuestionIndex -> blueBright2
                     answered == true -> Color.Green
                     answered == false -> Color.Red
-                    else -> Color.LightGray
+                    else -> MaterialTheme.colorScheme.onSurfaceVariant // unanswered (adaptive muted grey)
                 }
                 Box(
                     modifier = Modifier
@@ -755,7 +755,7 @@ fun WorddotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
         return if (it) Color.Green else Color.Red // Green for correct, red for incorrect
     }
 
-    return Color.LightGray
+    return MaterialTheme.colorScheme.onSurfaceVariant // unanswered (adaptive muted grey)
 }
 
 /** Short, plain-English definition of each mastery level, shown in the filtered-empty state. */

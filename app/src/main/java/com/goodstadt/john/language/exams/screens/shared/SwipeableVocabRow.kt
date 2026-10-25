@@ -47,6 +47,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -287,13 +288,16 @@ fun annotatedSentence(
     // which would otherwise lower-case the start of the sentence ("recycling helps…" -> "Recycling helps…").
     fun capIfStart(w: String, preceding: String): String =
         if (preceding.isBlank() && w.isNotEmpty()) w.replaceFirstChar { it.uppercase() } else w
+    // Theme highlight colour (adaptive light/dark) - captured here in composable scope so the
+    // buildAnnotatedString lambda below can use it.
+    val highlightColor = LocalExtendedColors.current.teal
     val annotatedString = buildAnnotatedString {
         when (parts.size) {
             2 -> {
                 append(parts[0])
                 withStyle(
                     style = SpanStyle(
-                        color = Color.Cyan, // Use theme color
+                        color = highlightColor,
                         textDecoration = TextDecoration.Underline
                     )
                 ) {
@@ -308,7 +312,7 @@ fun annotatedSentence(
                     append(parts[0])
                     withStyle(
                         style = SpanStyle(
-                            color = Color.Cyan,
+                            color = highlightColor,
                             textDecoration = TextDecoration.Underline
                         )
                     ) {
@@ -317,7 +321,7 @@ fun annotatedSentence(
                     append(parts[1])
                     withStyle(
                         style = SpanStyle(
-                            color = Color.Cyan,
+                            color = highlightColor,
                             textDecoration = TextDecoration.Underline
                         )
                     ) {

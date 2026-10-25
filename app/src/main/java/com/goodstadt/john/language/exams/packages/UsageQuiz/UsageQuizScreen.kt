@@ -1054,7 +1054,7 @@ fun dotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
         return if (it) Color.Green else Color.Red // Green for correct, red for incorrect
     }
 
-    return Color.LightGray
+    return MaterialTheme.colorScheme.onSurfaceVariant // unanswered (adaptive muted grey)
 }
 
 @Composable

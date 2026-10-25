@@ -43,10 +43,10 @@ val DarkExtendedColors = ExtendedColors(
 )
 
 val LightExtendedColors = ExtendedColors(
-    brandOrange = orangeDark,                // 0xFFC17D03 — darker, legible on white
-    accent = Color(0xFFC88A00),
+    brandOrange = Color(0xFFE8740C),         // vivid orange that reads on white
+    accent = Color(0xFFE8740C),
     buttonBlue = buttonColor,                // blue reads on both
-    teal = Color(0xFF2A8FB5),                // darker teal for white
+    teal = Color(0xFF00796B),                // true teal, legible on white (harmonises with speakerTeal)
     speakerTeal = SpeakerTeal,               // 0xFF00897B reads on both
     cardBackground = Color(0xFFF2F2F7),
     screenBackground = Color(0xFFFFFFFF),

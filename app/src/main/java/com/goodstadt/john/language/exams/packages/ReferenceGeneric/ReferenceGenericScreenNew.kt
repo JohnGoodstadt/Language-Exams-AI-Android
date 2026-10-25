@@ -19,6 +19,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -127,7 +128,7 @@ fun ReferenceGenericScreenNew(
                                         text = wordEntry.word,
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Bold,
-                                        color = Color.Cyan,//if(isPlaying) Color.Green else Color.Cyan,
+                                        color = LocalExtendedColors.current.teal,
                                         modifier = Modifier.weight(1f)
                                     )
 
