@@ -26,6 +26,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.models.Format3Category
@@ -34,11 +35,7 @@ import com.goodstadt.john.language.exams.models.Format3Sentence
 import timber.log.Timber
 
 
-// 1. Define Strict Colors (Hardcoded to ensure Dark Mode look)
-private val DarkBackground = Color(0xFF121212)      // Almost Black
-private val DarkCardBackground = Color(0xFF2C2C2E)  // Dark Grey
-private val DarkTextPrimary = Color.White           // White
-private val DarkTextSecondary = Color(0xFFB0B0B0)   // Light Grey
+// Colours now resolve through the theme (adaptive light/dark) - see Android/DARK_MODE_PLAN.md.
 
 @Composable
 fun Format3FileScreen(
@@ -56,8 +53,8 @@ fun Format3FileScreen(
     // Surface paints the background color reliably across the whole screen area.
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = DarkBackground,
-        contentColor = DarkTextPrimary // Sets default text color to White
+        color = LocalExtendedColors.current.screenBackground,
+        contentColor = MaterialTheme.colorScheme.onSurface // Sets default text color to White
     ) {
         when {
             state.isLoading -> LoadingView()
@@ -88,14 +85,14 @@ private fun Format3ContentView(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(DarkBackground),
+            .background(LocalExtendedColors.current.screenBackground),
         contentPadding = PaddingValues(16.dp)
     ) {
         item {
             Card(
                 colors = CardDefaults.cardColors(
-                    containerColor = DarkCardBackground,
-                    contentColor = DarkTextPrimary // Forces text inside to be White
+                    containerColor = LocalExtendedColors.current.cardBackground,
+                    contentColor = MaterialTheme.colorScheme.onSurface // Forces text inside to be White
                 ),
                 modifier = Modifier.padding(bottom = 16.dp)
             ) {
@@ -104,7 +101,7 @@ private fun Format3ContentView(
                     Spacer(Modifier.height(6.dp))
                     Text(file.subtitle, style = MaterialTheme.typography.titleMedium)
                     Spacer(Modifier.height(10.dp))
-                    Text(file.description, style = MaterialTheme.typography.bodyMedium, color = DarkTextSecondary)
+                    Text(file.description, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
         }
@@ -130,14 +127,14 @@ private fun CategoryCard(
 ) {
     Card(
         colors = CardDefaults.cardColors(
-            containerColor = DarkCardBackground,
-            contentColor = DarkTextPrimary // Forces text inside to be White
+            containerColor = LocalExtendedColors.current.cardBackground,
+            contentColor = MaterialTheme.colorScheme.onSurface // Forces text inside to be White
         )
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(category.title, style = MaterialTheme.typography.titleMedium)
             Spacer(Modifier.height(6.dp))
-            Text(category.description, style = MaterialTheme.typography.bodyMedium, color = DarkTextSecondary)
+            Text(category.description, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Spacer(Modifier.height(12.dp))
 
             sentences.forEach { s ->
@@ -162,9 +159,9 @@ private fun LoadingView() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        CircularProgressIndicator(color = DarkTextPrimary)
+        CircularProgressIndicator(color = MaterialTheme.colorScheme.onSurface)
         Spacer(Modifier.height(12.dp))
-        Text("Loading…", color = DarkTextSecondary)
+        Text("Loading…", color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 
@@ -175,9 +172,9 @@ private fun ErrorView(message: String, onRetry: () -> Unit) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Couldn’t load content", style = MaterialTheme.typography.titleMedium, color = DarkTextPrimary)
+        Text("Couldn’t load content", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface)
         Spacer(Modifier.height(8.dp))
-        Text(message, color = DarkTextSecondary)
+        Text(message, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Spacer(Modifier.height(16.dp))
         Button(onClick = onRetry) { Text("Retry") }
     }
@@ -190,7 +187,7 @@ private fun EmptyView(onLoad: () -> Unit) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("No content loaded", style = MaterialTheme.typography.titleMedium, color = DarkTextPrimary)
+        Text("No content loaded", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.onSurface)
         Spacer(Modifier.height(16.dp))
         Button(onClick = onLoad) { Text("Load") }
     }

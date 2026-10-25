@@ -72,7 +72,6 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNa
 import com.goodstadt.john.language.exams.screens.shared.gamification.SkillBreakdownView
 import com.goodstadt.john.language.exams.screens.shared.gamification.TopicProgressRow
 import com.goodstadt.john.language.exams.screens.shared.gamification.XPSummaryCard
-import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import com.goodstadt.john.language.exams.viewmodels.LifetimeStatsGrid
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -217,7 +216,7 @@ fun MyProgressScreen(
                     )
                 }
 
-                HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
+                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
 
                 // ==========================================
                 // 1. GLOBAL OVERVIEW (Identity & Habits)
@@ -286,7 +285,7 @@ fun MyProgressScreen(
                         }
                     }
                 } else {
-                    Text("Start listening to vocab lists to see data here.", style = MaterialTheme.typography.bodyMedium, color = Color.Gray)
+                    Text("Start listening to vocab lists to see data here.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
 
                 // ==========================================
@@ -334,7 +333,7 @@ fun MyProgressScreen(
                         .padding(bottom = 32.dp, top = 16.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text("Zone of Danger", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                    Text("Zone of Danger", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Spacer(Modifier.height(8.dp))
                     Button(
                         onClick = { viewModel.hardReset() },
@@ -373,7 +372,7 @@ fun MyProgressScreen(
                         onDismissRequest = { showLanguageExamSheet = false },
                         sheetState = languageExamSheetState,
                         modifier = Modifier.fillMaxHeight(0.50f),
-                        containerColor = ElevatedDarkGrey//Color(0xFF121212) // Keep it dark
+                        containerColor = MaterialTheme.colorScheme.surface
                     ) {
                         ChooseEnglishExamLevelSheet(
                             onClose = {

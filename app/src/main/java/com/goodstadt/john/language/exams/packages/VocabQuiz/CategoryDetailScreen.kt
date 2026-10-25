@@ -20,10 +20,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
-// Using the same color palette as the Dashboard
-private val DarkBG = Color(0xFF121212)
-private val CardBG = Color(0xFF1C1C1E)
+// Status colours (theme-independent: meaningful on both light and dark).
 private val AccentOrange = Color(0xFFFF9500)
 private val SuccessGreen = Color(0xFF4CAF50)
 
@@ -47,16 +46,16 @@ fun CategoryDetailScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(categoryTitle, color = Color.White) },
+                title = { Text(categoryTitle, color = MaterialTheme.colorScheme.onSurface) },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = Color.White)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = MaterialTheme.colorScheme.onSurface)
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = DarkBG)
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = LocalExtendedColors.current.screenBackground)
             )
         },
-        containerColor = DarkBG
+        containerColor = LocalExtendedColors.current.screenBackground
     ) { padding ->
         LazyColumn(
             modifier = Modifier
@@ -74,7 +73,7 @@ fun CategoryDetailScreen(
                 Text(
                     "Available Question Sets",
                     style = MaterialTheme.typography.labelLarge,
-                    color = Color.Gray,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
                 )
             }
@@ -96,7 +95,7 @@ fun CategorySummaryCard(sets: List<QuizSet>) {
     val totalPossible = sets.size * 10
 
     Card(
-        colors = CardDefaults.cardColors(containerColor = CardBG),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
         shape = RoundedCornerShape(16.dp)
     ) {
         Row(
@@ -104,15 +103,15 @@ fun CategorySummaryCard(sets: List<QuizSet>) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                Text("Category Mastery", color = Color.Gray, fontSize = 12.sp)
-                Text("$totalMastered / $totalPossible Words", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                Text("Category Mastery", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
+                Text("$totalMastered / $totalPossible Words", color = MaterialTheme.colorScheme.onSurface, fontSize = 20.sp, fontWeight = FontWeight.Bold)
             }
             // Simple percentage circle
             Box(contentAlignment = Alignment.Center) {
                 CircularProgressIndicator(
                     progress = { totalMastered.toFloat() / totalPossible.toFloat() },
                     color = AccentOrange,
-                    trackColor = Color.DarkGray,
+                    trackColor = MaterialTheme.colorScheme.surfaceVariant,
                     strokeWidth = 6.dp,
                     modifier = Modifier.size(50.dp)
                 )
@@ -129,7 +128,7 @@ fun QuizSetRow(quizSet: QuizSet, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .background(CardBG)
+            .background(LocalExtendedColors.current.cardBackground)
             .clickable { onClick() }
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -159,12 +158,12 @@ fun QuizSetRow(quizSet: QuizSet, onClick: () -> Unit) {
             Text(
                 text = quizSet.setTitle,
                 style = MaterialTheme.typography.titleMedium,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
             Text(
                 text = quizSet.wordPreview,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1
             )
         }
@@ -173,7 +172,7 @@ fun QuizSetRow(quizSet: QuizSet, onClick: () -> Unit) {
         Column(horizontalAlignment = Alignment.End) {
             Text(
                 text = "${quizSet.bestScore}/${quizSet.totalQuestions}",
-                color = if (isPerfect) SuccessGreen else Color.White,
+                color = if (isPerfect) SuccessGreen else MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold
             )
             Icon(

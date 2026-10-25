@@ -53,7 +53,7 @@ import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditS
 import com.goodstadt.john.language.exams.packages.ReadinessAudit.ReadinessAuditModalCard
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
-import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import kotlin.math.roundToInt
 
@@ -98,7 +98,7 @@ fun FocusScreen(
         Text(
             text = "Here is where you can improve area not yet strong enough. Take quizzes and the results, for weak areas, show here",
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = MaterialTheme.colorScheme.onSurface
         )
 
         Spacer(Modifier.height(12.dp))
@@ -168,7 +168,7 @@ fun FocusScreen(
             Text(
                 text = "Extra practice on your grammar. Pick a section.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             fun answeredCount(e: GrammarCatalogEntry) = e.score.correct + e.score.incorrect + e.score.dontKnow
@@ -190,11 +190,11 @@ fun FocusScreen(
                         level,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color.LightGray
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Spacer(Modifier.height(6.dp))
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+                        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
                         shape = RoundedCornerShape(16.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -244,7 +244,7 @@ fun FocusScreen(
                     )
                     Spacer(Modifier.height(6.dp))
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+                        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
                         shape = RoundedCornerShape(16.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -293,7 +293,7 @@ fun FocusScreen(
             sheetState = quizSheetState,
             modifier = Modifier.fillMaxHeight(0.92f),
             dragHandle = { BottomSheetDefaults.DragHandle() },
-            containerColor = ElevatedDarkGrey
+            containerColor = MaterialTheme.colorScheme.surface
         ) {
             // Full Usage-Quiz experience (TTS, mastery filter, badges) for this one (category, level).
             ReferenceQuizScreen(category = target.category, level = target.level)
@@ -307,7 +307,7 @@ fun FocusScreen(
             sheetState = vocabSheetState,
             modifier = Modifier.fillMaxHeight(0.92f),
             dragHandle = { BottomSheetDefaults.DragHandle() },
-            containerColor = ElevatedDarkGrey
+            containerColor = MaterialTheme.colorScheme.surface
         ) {
             SectionQuizContainer(
                 categoryTitle = target.category,
@@ -332,7 +332,7 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
 
     Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Card(
-            colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+            colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
             shape = RoundedCornerShape(12.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -342,7 +342,7 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
                 Text(
                     "Please take the audit so we can configure the app to match your level.",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.LightGray
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }
@@ -358,7 +358,7 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
         Text(
             "Continue the audit to increase our confidence to 98%",
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = MaterialTheme.colorScheme.onSurface
         )
     }
 }
@@ -367,7 +367,7 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
 @Composable
 private fun AllCaughtUpCard(currentLevel: String) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
         shape = RoundedCornerShape(12.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -377,7 +377,7 @@ private fun AllCaughtUpCard(currentLevel: String) {
             Text(
                 "No weak areas at or below your level ($currentLevel). Keep practising to stay sharp — new gaps will show up here.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color.LightGray
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     }
@@ -409,13 +409,13 @@ private fun CategoryProgressBarRow(entry: GrammarCatalogEntry, onClick: () -> Un
                 text = entry.row.category,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
-                color = if (answered > 0) Color.White else Color.Gray,
+                color = if (answered > 0) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f)
             )
             Text(
                 text = if (answered > 0) "${s.correct}/$total" else "-",
                 style = MaterialTheme.typography.labelSmall,
-                color = Color.Gray
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
         // Segmented bar: grey track with green + red segments drawn from the left.
@@ -448,17 +448,17 @@ private fun WeakVocabSectionsSection(
         text = "Vocab to review",
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color = Color.White
+        color = MaterialTheme.colorScheme.onSurface
     )
     Spacer(Modifier.height(4.dp))
     Text(
         text = "Sections where you got under 75% right first time — worth another go.",
         style = MaterialTheme.typography.bodyMedium,
-        color = Color.LightGray
+        color = MaterialTheme.colorScheme.onSurfaceVariant
     )
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -495,13 +495,13 @@ private fun WeakVocabRow(
                 text = humanizeVocabKey(section.title),
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.weight(1f)
             )
             Text(
                 text = "${section.firstTryCorrect}/${section.total}",
                 style = MaterialTheme.typography.labelSmall,
-                color = Color.Gray
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
         Row(
@@ -550,7 +550,7 @@ private fun VocabQuizAreasSection(
         Text(
             text = "Take a Vocab Quiz (Reference tab → a vocab section) and the topics you score under 80% on will appear here to review.",
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = MaterialTheme.colorScheme.onSurface
         )
         Spacer(Modifier.height(8.dp))
         EmptySectionButton(label = "Go to Vocab Quiz", onClick = onEmptyAction)
@@ -559,12 +559,12 @@ private fun VocabQuizAreasSection(
     Text(
         text = "Vocab topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
         style = MaterialTheme.typography.bodyMedium,
-        color = Color.LightGray
+        color = MaterialTheme.colorScheme.onSurfaceVariant
     )
 
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -601,7 +601,7 @@ private fun UsageQuizAreasSection(
         Text(
             text = "Take a Usage Quiz (Reference tab → Usage) and the topics you score under 80% on will appear here to review.",
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = MaterialTheme.colorScheme.onSurface
         )
         Spacer(Modifier.height(8.dp))
         EmptySectionButton(label = "Go to Usage Quiz", onClick = onEmptyAction)
@@ -610,12 +610,12 @@ private fun UsageQuizAreasSection(
     Text(
         text = "Usage topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
         style = MaterialTheme.typography.bodyMedium,
-        color = Color.LightGray
+        color = MaterialTheme.colorScheme.onSurfaceVariant
     )
 
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -652,7 +652,7 @@ private fun ReferenceAreasSection(
             text = "Take a Reference quiz (Prepositions, Pronouns, Adjectives … — the Q button) and the " +
                 "topics you score under 80% on will appear here to review.",
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = MaterialTheme.colorScheme.onSurface
         )
         Spacer(Modifier.height(8.dp))
         EmptySectionButton(label = "Go to Reference", onClick = onEmptyAction)
@@ -661,12 +661,12 @@ private fun ReferenceAreasSection(
     Text(
         text = "Reference topics worth another look, from their quiz — anything marked Weak or OK isn't solid yet.",
         style = MaterialTheme.typography.bodyMedium,
-        color = Color.LightGray
+        color = MaterialTheme.colorScheme.onSurfaceVariant
     )
 
     Spacer(Modifier.height(10.dp))
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -699,13 +699,13 @@ private fun ReferenceAreaRow(strength: ReferenceStrength, onClick: (() -> Unit)?
             Text(
                 text = strength.label,
                 style = MaterialTheme.typography.bodyLarge,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
             Text(
                 text = "${(strength.mark * 100).roundToInt()}% · " +
                     "${strength.attempts} ${if (strength.attempts == 1) "quiz" else "quizzes"}",
                 style = MaterialTheme.typography.labelSmall,
-                color = Color.Gray
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
         Box(
@@ -738,7 +738,7 @@ private fun DebugGrammarDownloadRow(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = label, style = MaterialTheme.typography.bodyMedium, color = Color.White)
+            Text(text = label, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurface)
             if (status != null) {
                 Text(
                     text = status,

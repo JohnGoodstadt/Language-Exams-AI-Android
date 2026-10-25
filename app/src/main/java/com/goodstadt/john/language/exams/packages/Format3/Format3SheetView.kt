@@ -18,13 +18,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.models.Format3Category
 import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.Format3Sentence
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 // --- Colors ---
-val IosOrange = Color(0xFFFF9500)
-
-// Strict Dark Mode Colors
-val IosBackgroundDark = Color(0xFF000000)
-val IosSurfaceDark = Color(0xFF1C1C1E) // Dark Grey for cards
+val IosOrange = Color(0xFFFF9500) // semantic accent (theme-independent)
 
 @Composable
 fun Format3SheetView(
@@ -34,12 +31,11 @@ fun Format3SheetView(
 ) {
     val state by vm.uiState.collectAsState()
 
-    // CHANGED: Removed isSystemInDarkTheme() check.
-    // We now hardcode these variables to the Dark values.
-    val backgroundColor = IosBackgroundDark
-    val cardBackgroundColor = IosSurfaceDark
-    val primaryTextColor = Color.White
-    val secondaryTextColor = Color.LightGray
+    // Adaptive: resolve through the theme so the sheet follows light/dark (Android/DARK_MODE_PLAN.md).
+    val backgroundColor = LocalExtendedColors.current.screenBackground
+    val cardBackgroundColor = LocalExtendedColors.current.cardBackground
+    val primaryTextColor = MaterialTheme.colorScheme.onSurface
+    val secondaryTextColor = MaterialTheme.colorScheme.onSurfaceVariant
 
     // Initialize
     LaunchedEffect(file) {
@@ -170,7 +166,7 @@ private fun TopSheetInfoView(
         Spacer(modifier = Modifier.height(16.dp))
 
         HorizontalDivider(
-            color = Color.DarkGray // CHANGED: Forced Dark Gray
+            color = MaterialTheme.colorScheme.outlineVariant
         )
     }
 }
@@ -231,8 +227,7 @@ private fun CategorySectionView(
                         HorizontalDivider(
                             modifier = Modifier.padding(start = 16.dp),
                             thickness = 0.5.dp,
-                            // CHANGED: Forced Dark Gray for the divider
-                            color = Color.DarkGray
+                            color = MaterialTheme.colorScheme.outlineVariant
                         )
                     }
                 }

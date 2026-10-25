@@ -9,10 +9,10 @@ import androidx.compose.ui.graphics.Color
  * Brand / surface colours that are NOT standard Material 3 roles, exposed with light + dark
  * variants so screens stop reaching for the hardcoded values in [Color.kt].
  *
- * Phase 1 of the dark/light-mode work (see Android/DARK_MODE_PLAN.md): this is INERT for now —
- * the app is still forced to Dark in MainActivity, so only [DarkExtendedColors] is ever used and
- * nothing changes visually. Phase 2 sweeps usages onto `LocalExtendedColors.current.*`; the light
- * values below are placeholders tuned for legibility on a white surface and get a QA pass in Phase 3.
+ * See Android/DARK_MODE_PLAN.md. [LanguageExamsAITheme] provides [DarkExtendedColors] or
+ * [LightExtendedColors] according to the active theme (driven by the Settings appearance choice).
+ * Read via `LocalExtendedColors.current.*`. The light values are tuned for legibility on a white
+ * surface; some still want an on-device QA pass.
  */
 @Immutable
 data class ExtendedColors(
@@ -22,6 +22,8 @@ data class ExtendedColors(
     val teal: Color,
     val speakerTeal: Color,
     val cardBackground: Color,
+    /** Screen/page backdrop behind cards (the near-black on dark, white on light). */
+    val screenBackground: Color,
     val rowSelected: Color,
     val rowUnselected: Color,
     val mutedGrey: Color,
@@ -34,6 +36,7 @@ val DarkExtendedColors = ExtendedColors(
     teal = Teal,                             // 0xFF66B5D5
     speakerTeal = SpeakerTeal,               // 0xFF00897B
     cardBackground = CardBG,                 // 0xFF1C1C1E
+    screenBackground = Color(0xFF121212),    // near-black page backdrop
     rowSelected = selectedBackground,        // 0xFF5B5B60
     rowUnselected = nonSelectedBackground,   // 0xFF1C1C1F
     mutedGrey = greyLight2,                  // 0xFF505055
@@ -46,6 +49,7 @@ val LightExtendedColors = ExtendedColors(
     teal = Color(0xFF2A8FB5),                // darker teal for white
     speakerTeal = SpeakerTeal,               // 0xFF00897B reads on both
     cardBackground = Color(0xFFF2F2F7),
+    screenBackground = Color(0xFFFFFFFF),
     rowSelected = Color(0xFFD0D0D5),
     rowUnselected = Color(0xFFFFFFFF),
     mutedGrey = Color(0xFF8E8E93),

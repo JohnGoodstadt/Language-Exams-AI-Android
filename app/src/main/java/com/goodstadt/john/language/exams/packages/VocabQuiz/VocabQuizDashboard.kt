@@ -15,10 +15,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
-// --- Force Dark Mode Colors ---
-private val DarkBG = Color(0xFF121212)
-private val CardBG = Color(0xFF1C1C1E)
+// Status colours (theme-independent: meaningful on both light and dark).
 private val AccentOrange = Color(0xFFFF9500) // Your brand color
 private val SuccessGreen = Color(0xFF4CAF50)
 
@@ -47,7 +46,7 @@ fun VocabQuizDashboard(
 ) {
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = DarkBG
+        color = LocalExtendedColors.current.screenBackground
     ) {
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
@@ -72,7 +71,7 @@ fun VocabQuizDashboard(
                 Text(
                     text = "Categories",
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color.White,
+                    color = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.padding(top = 8.dp)
                 )
             }
@@ -89,18 +88,18 @@ fun VocabQuizDashboard(
 fun DashboardHeader(mastered: Int, total: Int) {
     val progress = mastered.toFloat() / total.toFloat()
     Column(modifier = Modifier.padding(vertical = 8.dp)) {
-        Text("Your B1 Progress", color = Color.Gray, style = MaterialTheme.typography.labelMedium)
+        Text("Your B1 Progress", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelMedium)
         Row(verticalAlignment = Alignment.Bottom) {
             Text(
                 text = "$mastered",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
             Text(
                 text = "/$total words",
                 fontSize = 16.sp,
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 4.dp, start = 4.dp)
             )
         }
@@ -109,7 +108,7 @@ fun DashboardHeader(mastered: Int, total: Int) {
             progress = progress,
             modifier = Modifier.fillMaxWidth().height(8.dp),
             color = SuccessGreen,
-            trackColor = Color.DarkGray,
+            trackColor = MaterialTheme.colorScheme.surfaceVariant,
             strokeCap = androidx.compose.ui.graphics.StrokeCap.Round
         )
     }
@@ -146,7 +145,7 @@ fun CategoryGridCard(category: QuizCategory, onClick: () -> Unit) {
 
     Card(
         modifier = Modifier.height(140.dp).clickable { onClick() },
-        colors = CardDefaults.cardColors(containerColor = CardBG),
+        colors = CardDefaults.cardColors(containerColor = LocalExtendedColors.current.cardBackground),
         shape = RoundedCornerShape(12.dp)
     ) {
         Column(
@@ -165,7 +164,7 @@ fun CategoryGridCard(category: QuizCategory, onClick: () -> Unit) {
                     text = category.title,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
-                    color = Color.White,
+                    color = MaterialTheme.colorScheme.onSurface,
                     maxLines = 1
                 )
                 Spacer(Modifier.height(4.dp))
@@ -173,7 +172,7 @@ fun CategoryGridCard(category: QuizCategory, onClick: () -> Unit) {
                     Text(
                         text = "${category.masteredCount}/${category.totalWords}",
                         fontSize = 12.sp,
-                        color = Color.Gray
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Spacer(Modifier.weight(1f))
                     // Small completion tick if 100%

@@ -79,5 +79,15 @@ Effort for centralization + sweep: iOS ~2–4 days, Android ~1.5–3 days, plus 
     are the Phase-2 leftovers that still don't adapt: inline `Color(0xFFFF9800)`/`.white`/`Color.LightGray`
     literals and the two private `CardBG` cards (VocabQuiz CategoryDetail / Dashboard). Builds green
     (compileDeDebugKotlin + compileEnDebugKotlin); not yet run on a device/emulator in this session.
-- [ ] Phase 3b — Android: Light-mode QA + fold the remaining non-adaptive literals in (see Phase 2 note).
+- [x] **Phase 3b — Android** (this change): folded the hard dark-background screens into the theme so
+  Light mode no longer shows dark cards / invisible text. Added `ExtendedColors.screenBackground`
+  (dark near-black / light white). Converted the 7 screens that hard-coded dark backgrounds —
+  `Focus/FocusScreen`, `Format3/Format3FileScreen`, `Format3/Format3SheetView`, `MyProgress/MyProgressScreen`,
+  `ReadinessAudit/ReadinessAuditScreen`, `VocabQuiz/CategoryDetailScreen`, `VocabQuiz/VocabQuizDashboard` —
+  mapping dark card/screen backgrounds to `LocalExtendedColors.current.cardBackground` / `screenBackground`
+  and the white/light content on them to `MaterialTheme.colorScheme.onSurface` / `onSurfaceVariant` /
+  `outlineVariant`. Left genuinely theme-independent colours as-is: status colours (orange/green/red
+  mastery, `AccentOrange`/`SuccessGreen`), black-on-orange button text, disabled-state greys, and
+  translucent `Color.Gray.copy(...)` tracks/borders. Builds green (de+en). Still pending: on-device
+  Light-mode QA, and the long tail of individually-correct `.white`/`.gray` usages that don't break.
 - [ ] Phases 1–3 — iOS.

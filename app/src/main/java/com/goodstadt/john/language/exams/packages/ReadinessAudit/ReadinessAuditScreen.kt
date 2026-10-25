@@ -59,7 +59,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Surface
 import com.goodstadt.john.language.exams.ui.LocalIsExpanded
-import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
@@ -117,7 +116,7 @@ import timber.log.Timber
 fun ReadinessAuditModalCard(content: @Composable () -> Unit) {
     if (!LocalIsExpanded.current) {
         // Phone: full-screen, unchanged — the audit was designed for this and reads well.
-        Surface(modifier = Modifier.fillMaxSize(), color = ElevatedDarkGrey) {
+        Surface(modifier = Modifier.fillMaxSize(), color = LocalExtendedColors.current.screenBackground) {
             content()
         }
         return
@@ -135,7 +134,7 @@ fun ReadinessAuditModalCard(content: @Composable () -> Unit) {
                 .fillMaxWidth()
                 .fillMaxHeight(0.96f),
             shape = RoundedCornerShape(20.dp),
-            color = ElevatedDarkGrey
+            color = LocalExtendedColors.current.screenBackground
         ) {
             content()
         }
@@ -465,7 +464,7 @@ fun ReadinessAuditScreen(
                         text = cat,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Medium,
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.onSurface,
                         textAlign = TextAlign.Center,
                         modifier = Modifier
                             .fillMaxWidth()
@@ -642,7 +641,7 @@ private fun AuditSummaryContent(
             "Nice work — here's where you stand",
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold,
-            color = Color.White
+            color = MaterialTheme.colorScheme.onSurface
         )
 
         // Confidence / Readiness recap — large, green.
@@ -650,7 +649,7 @@ private fun AuditSummaryContent(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(12.dp))
-                .background(Color(0xFF1C1C1E))
+                .background(LocalExtendedColors.current.cardBackground)
                 .padding(16.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
@@ -659,7 +658,7 @@ private fun AuditSummaryContent(
         }
 
         guidance?.let {
-            Text(it, style = MaterialTheme.typography.bodyMedium, color = Color.LightGray)
+            Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
 
         if (hasHigherQuiz) {
@@ -706,7 +705,7 @@ private fun AuditSummaryStat(label: String, value: String, sub: String, modifier
     Column(modifier = modifier) {
         Text(label, style = MaterialTheme.typography.labelSmall, color = orangeLight)
         Text(value, style = MaterialTheme.typography.displaySmall, fontWeight = FontWeight.Bold, color = Color.Green)
-        Text(sub, style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+        Text(sub, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 
@@ -716,14 +715,14 @@ private fun AuditSummaryOption(title: String, subtitle: String, onClick: () -> U
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .background(Color(0xFF1C1C1E))
+            .background(LocalExtendedColors.current.cardBackground)
             .clickable(onClick = onClick)
             .padding(14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            Text(title, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.SemiBold, color = Color.White)
-            Text(subtitle, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+            Text(title, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onSurface)
+            Text(subtitle, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -771,15 +770,15 @@ private fun AuditStatusHeader(
                         }
                     },
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.LightGray,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     lineHeight = 20.sp,
                     modifier = Modifier.padding(top = 4.dp, bottom = bottomPadding)
                 )
 
                 Card(
                     colors = CardDefaults.cardColors(
-                        containerColor = Color(0xFF1C1C1E),
-                        contentColor = Color.White
+                        containerColor = LocalExtendedColors.current.cardBackground,
+                        contentColor = MaterialTheme.colorScheme.onSurface
                     ),
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier.fillMaxWidth()
@@ -797,7 +796,7 @@ private fun AuditStatusHeader(
                                 subValue = confidenceLabel
                             )
 
-                            Box(modifier = Modifier.width(1.dp).height(40.dp).background(Color.DarkGray))
+                            Box(modifier = Modifier.width(1.dp).height(40.dp).background(MaterialTheme.colorScheme.outlineVariant))
 
                             AuditStatItem(
                                 label = "Your Exam Readiness",
@@ -807,7 +806,7 @@ private fun AuditStatusHeader(
                         }
 
                         Spacer(modifier = Modifier.height(4.dp))
-                        HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
+                        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
                         Spacer(modifier = Modifier.height(4.dp))
                     }
                 }
@@ -841,7 +840,7 @@ private fun AuditLearningPoints(
             Text(
                 text = learningTitle,
                 style = MaterialTheme.typography.titleSmall,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             Text(
@@ -870,7 +869,7 @@ private fun AuditLearningPoints(
                         Text(
                             text = point,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color.White,
+                            color = MaterialTheme.colorScheme.onSurface,
                             modifier = Modifier.weight(1f)
                         )
                     }
@@ -1020,7 +1019,7 @@ private fun AuditQuestionAnswers(
                         },
                         imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                         contentDescription = "Speak ${question.sentence.replace("_", option)}",
-                        tint = Color.White
+                        tint = MaterialTheme.colorScheme.onSurface
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
@@ -1313,19 +1312,19 @@ private fun AuditQuizHowToSheet(exampleSentence: String, onClose: () -> Unit) {
                 text = "How to answer",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             // 1. Loudspeaker hears the sentence (icon shown inline, replacing the words "Speaker Icon").
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Tap the ", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+                Text("Tap the ", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurface)
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                     contentDescription = "loudspeaker",
-                    tint = Color.White,
+                    tint = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.size(22.dp)
                 )
-                Text(" to hear the sentence", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+                Text(" to hear the sentence", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurface)
             }
 
             // 2. Tapping the sentence itself also plays it (uses the real first question's sentence).
@@ -1336,19 +1335,19 @@ private fun AuditQuizHowToSheet(exampleSentence: String, onClose: () -> Unit) {
                     "Tap the sentence to hear it"
                 },
                 style = MaterialTheme.typography.bodyLarge,
-                color = Color.White
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             // 3. Radio button commits the answer (a real radio shown inline, replacing "Radio Button").
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Select the ", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+                Text("Select the ", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurface)
                 RadioButton(
                     selected = true,
                     onClick = null,
                     modifier = Modifier.size(24.dp),
                     colors = RadioButtonDefaults.colors(selectedColor = orangeLight)
                 )
-                Text(" to give your answer", style = MaterialTheme.typography.bodyLarge, color = Color.White)
+                Text(" to give your answer", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurface)
             }
 
             Button(
@@ -1488,6 +1487,6 @@ private fun AuditStatItem(label: String, value: String, subValue: String) {
     Column {
         Text(text = label, style = MaterialTheme.typography.bodySmall,  color = Color(0xFFFF9500),)
         Text(text = value, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-        Text(text = subValue, style = MaterialTheme.typography.labelSmall, color = Color.LightGray)
+        Text(text = subValue, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
