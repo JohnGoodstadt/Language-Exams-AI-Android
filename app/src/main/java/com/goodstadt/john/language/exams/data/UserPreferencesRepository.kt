@@ -54,6 +54,7 @@ class UserPreferencesRepository @Inject constructor(
         val FORMAT8_SPEAK_ALOUD_GAP = booleanPreferencesKey("format8_speak_aloud_gap")
         val USAGE_QUIZ_LEVEL = stringPreferencesKey("usage_quiz_level")
         val TRANSLATE_TARGET_LANG = stringPreferencesKey("translate_target_lang")
+        val THEME_MODE = stringPreferencesKey("theme_mode")
     }
 
     /**
@@ -124,6 +125,20 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setTranslateTargetLang(code: String) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.TRANSLATE_TARGET_LANG] = code
+        }
+    }
+
+    // Appearance / theme mode: "SYSTEM" (default, follow the OS light/dark setting), "LIGHT" or "DARK".
+    // Stored as the ThemeMode enum's name; read at the app root (MainActivity) to pick the colour scheme.
+    val themeModeFlow: Flow<String> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.THEME_MODE] ?: "SYSTEM"
+        }
+
+    suspend fun setThemeMode(mode: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.THEME_MODE] = mode
         }
     }
 

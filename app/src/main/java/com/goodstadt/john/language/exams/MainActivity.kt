@@ -12,6 +12,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -35,6 +36,8 @@ import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.LoadingOverlay
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme
+import com.goodstadt.john.language.exams.ui.theme.ThemeMode
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.packages.MainScreen.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -44,6 +47,7 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var bannerManager: BannerManager
     @Inject lateinit var globalLoadingManager: GlobalLoadingManager
+    @Inject lateinit var userPreferencesRepository: UserPreferencesRepository
 
     // Activity-scoped: the same instance the composables get via hiltViewModel(activity).
     private val navViewModel: NavigationViewModel by viewModels()
@@ -76,7 +80,18 @@ class MainActivity : ComponentActivity() {
             val windowSizeClass = calculateWindowSizeClass(this)
             val isExpanded = windowSizeClass.widthSizeClass.isExpanded()
 
-            LanguageExamsAITheme(darkTheme = true) {
+            // Appearance (Phase 3): follow the user's Settings choice, defaulting to System. Read the
+            // persisted mode here at the app root so a change in Settings re-themes the whole app.
+            val themeModeName by userPreferencesRepository.themeModeFlow
+                .collectAsStateWithLifecycle(initialValue = ThemeMode.SYSTEM.name)
+            val systemDark = isSystemInDarkTheme()
+            val darkTheme = when (ThemeMode.fromName(themeModeName)) {
+                ThemeMode.LIGHT -> false
+                ThemeMode.DARK -> true
+                ThemeMode.SYSTEM -> systemDark
+            }
+
+            LanguageExamsAITheme(darkTheme = darkTheme) {
                 CompositionLocalProvider(LocalIsExpanded provides isExpanded) {
                     Surface(
                             modifier = Modifier.fillMaxSize(),

@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Stars
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Verified
@@ -36,6 +37,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -84,6 +86,7 @@ import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.ThemeMode
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -658,6 +661,16 @@ private fun SettingsContent(
 
 
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
+        item { SectionHeader("Appearance") }
+        item {
+            val themeMode by viewModel.themeMode.collectAsState()
+            AppearanceSettingItem(
+                current = themeMode,
+                onSelect = viewModel::setThemeMode
+            )
+        }
+
+        item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
         item { SectionHeader("About") }
 
         item {
@@ -1045,6 +1058,58 @@ private fun SettingsInfoItem(icon: ImageVector, title: String, value: String,ico
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+        }
+    }
+}
+
+/**
+ * Appearance picker: three choice-chips (System / Light / Dark). Writes through to
+ * [SettingsViewModel.setThemeMode]; the app root (MainActivity) observes the same persisted
+ * value and switches the colour scheme. See Android/DARK_MODE_PLAN.md (Phase 3).
+ */
+@Composable
+private fun AppearanceSettingItem(
+    current: ThemeMode,
+    onSelect: (ThemeMode) -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(
+            imageVector = Icons.Default.Settings,
+            contentDescription = "Theme",
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.width(16.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = "Theme",
+                style = MaterialTheme.typography.bodyLarge,
+                color = LocalExtendedColors.current.accent
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                ThemeMode.entries.forEach { mode ->
+                    val selected = current == mode
+                    FilterChip(
+                        selected = selected,
+                        onClick = { onSelect(mode) },
+                        label = { Text(mode.label) },
+                        leadingIcon = if (selected) {
+                            {
+                                Icon(
+                                    imageVector = Icons.Default.Check,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
+                        } else null
+                    )
+                }
+            }
         }
     }
 }

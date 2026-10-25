@@ -36,6 +36,7 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
+import com.goodstadt.john.language.exams.ui.theme.ThemeMode
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.google.android.gms.common.ConnectionResult
@@ -47,9 +48,12 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
@@ -152,6 +156,16 @@ class SettingsViewModel @Inject constructor(
 
     private val _showCelebrationSheet = MutableStateFlow(false)
     val showCelebrationSheet = _showCelebrationSheet.asStateFlow()
+
+    // Appearance: current theme mode (System/Light/Dark) for the Settings picker. Persisted via DataStore;
+    // the app root (MainActivity) reads the same flow to pick the colour scheme.
+    val themeMode = userPreferencesRepository.themeModeFlow
+        .map { ThemeMode.fromName(it) }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), ThemeMode.SYSTEM)
+
+    fun setThemeMode(mode: ThemeMode) {
+        viewModelScope.launch { userPreferencesRepository.setThemeMode(mode.name) }
+    }
 
 
     fun initObsolete() {

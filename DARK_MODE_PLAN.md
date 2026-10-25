@@ -67,5 +67,17 @@ Effort for centralization + sweep: iOS ~2–4 days, Android ~1.5–3 days, plus 
   literals in gamification/stats screens (a different shade, many in non-composable `when` mappers),
   and two files that redefine `private val CardBG` locally (`VocabQuiz/CategoryDetailScreen.kt`,
   `VocabQuiz/VocabQuizDashboard.kt`).
-- [ ] Phase 3 — Android: theme-mode setting + Settings UI + unlock.
+- [x] **Phase 3 — Android** (this change): theme-mode setting wired end to end.
+  - `ThemeMode` enum (System/Light/Dark) in `ui/theme/`.
+  - Persisted in DataStore (`UserPreferencesRepository.themeModeFlow` / `setThemeMode`, default `SYSTEM`).
+  - Settings UI: an "Appearance" section with three choice-chips (`AppearanceSettingItem` in
+    `SettingsScreen.kt`), backed by `SettingsViewModel.themeMode` / `setThemeMode`.
+  - `MainActivity` now reads the persisted mode and drives `LanguageExamsAITheme(darkTheme = …)`:
+    `SYSTEM → isSystemInDarkTheme()`, `LIGHT → false`, `DARK → true`. The hard-coded
+    `darkTheme = true` is gone — Light mode is now reachable.
+  - ⚠️ **Not yet release-ready:** needs an on-device Light-mode QA pass per screen. Known rough spots
+    are the Phase-2 leftovers that still don't adapt: inline `Color(0xFFFF9800)`/`.white`/`Color.LightGray`
+    literals and the two private `CardBG` cards (VocabQuiz CategoryDetail / Dashboard). Builds green
+    (compileDeDebugKotlin + compileEnDebugKotlin); not yet run on a device/emulator in this session.
+- [ ] Phase 3b — Android: Light-mode QA + fold the remaining non-adaptive literals in (see Phase 2 note).
 - [ ] Phases 1–3 — iOS.
