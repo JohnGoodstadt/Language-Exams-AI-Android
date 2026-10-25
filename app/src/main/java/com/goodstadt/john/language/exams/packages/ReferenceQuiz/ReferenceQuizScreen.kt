@@ -242,7 +242,7 @@ fun ReferenceQuizScreen(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(text = learningTitle, style = MaterialTheme.typography.titleSmall, color = Color.White)
+                    Text(text = learningTitle, style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.onSurface)
                     Text(
                         text = if (isLearningExpanded) "less" else "more…",
                         style = MaterialTheme.typography.labelMedium,
@@ -264,7 +264,7 @@ fun ReferenceQuizScreen(
                                 verticalAlignment = Alignment.Top
                             ) {
                                 Text(text = "• ", color = orangeLight)
-                                Text(text = point, style = MaterialTheme.typography.bodyMedium, color = Color.White, modifier = Modifier.weight(1f))
+                                Text(text = point, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f))
                             }
                         }
                     }
@@ -482,14 +482,14 @@ fun ReferenceQuizScreen(
                                 },
                                 imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                                 contentDescription = "Speak ${question.sentence.replace("_", option)}",
-                                tint = Color.White
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
                                 // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
                                 // choice - only the radio button commits the answer.
                                 text = option,
-                                color = orangeLight,
+                                color = LocalExtendedColors.current.quizQuestionText,
                                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
 //                                onTextLayout = { textLayoutResult ->
 //                                    isMultiLine = textLayoutResult.lineCount > 1

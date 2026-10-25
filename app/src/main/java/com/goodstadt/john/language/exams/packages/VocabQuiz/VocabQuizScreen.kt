@@ -487,14 +487,14 @@ fun VocabQuizScreen(
                             },
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                             contentDescription = "Speak ${question.question.replace("_", option)}",
-                            tint = Color.White
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             // Tapping the answer sentence is a demo play (like the loudspeaker), NOT a
                             // choice - only the radio button commits the answer.
                             text = option,
-                            color = orangeLight,
+                            color = LocalExtendedColors.current.quizQuestionText,
                             style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
                             modifier = Modifier
                                 .weight(1f)
@@ -715,7 +715,7 @@ fun WordDropdownMenuBox(
             modifier = Modifier.wrapContentWidth(),
             colors = ButtonDefaults.buttonColors(
                 containerColor = LocalExtendedColors.current.rowUnselected, // Dark grey background
-                contentColor = Color.White // White text color
+                contentColor = MaterialTheme.colorScheme.onSurface
             ),
             shape = RoundedCornerShape(4.dp) // Small rounded corners
         ) {
@@ -736,7 +736,7 @@ fun WordDropdownMenuBox(
         ) {
             options.forEach { option ->
                 DropdownMenuItem(
-                    text = { Text(option, color = Color.White) }, // White text color for items
+                    text = { Text(option, color = MaterialTheme.colorScheme.onSurface) },
                     onClick = {
                         onOptionSelected(option)
                         expanded = false
