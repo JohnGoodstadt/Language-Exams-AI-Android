@@ -581,6 +581,32 @@ private fun SettingsContent(
                 onClick = { viewModel.onSettingClicked(SheetContent.ExamSelection) }
             )
         }
+        item {
+            val underlineOn by viewModel.highlightUnderline.collectAsState()
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 12.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = "Underline highlighted words",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = LocalExtendedColors.current.screenAccent
+                    )
+                    Text(
+                        text = "For accessibility, switch on underlining",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                Switch(
+                    checked = underlineOn,
+                    onCheckedChange = { viewModel.setHighlightUnderline(it) }
+                )
+            }
+        }
 //        item {
 //            SettingsActionItem(
 //                icon = Icons.Default.School,

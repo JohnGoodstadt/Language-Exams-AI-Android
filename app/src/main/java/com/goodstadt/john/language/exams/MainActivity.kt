@@ -24,6 +24,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.ui.isExpanded
+import com.goodstadt.john.language.exams.ui.theme.LocalHighlightUnderline
 import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -95,8 +96,15 @@ class MainActivity : ComponentActivity() {
             val useAltPalette by userPreferencesRepository.useAlternativePaletteFlow
                 .collectAsStateWithLifecycle(initialValue = false)
 
+            // Accessibility: underline highlighted words (Settings; default off).
+            val highlightUnderline by userPreferencesRepository.highlightUnderlineFlow
+                .collectAsStateWithLifecycle(initialValue = false)
+
             LanguageExamsAITheme(darkTheme = darkTheme, useAlternativePalette = useAltPalette) {
-                CompositionLocalProvider(LocalIsExpanded provides isExpanded) {
+                CompositionLocalProvider(
+                    LocalIsExpanded provides isExpanded,
+                    LocalHighlightUnderline provides highlightUnderline
+                ) {
                     Surface(
                             modifier = Modifier.fillMaxSize(),
                             color = MaterialTheme.colorScheme.background

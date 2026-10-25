@@ -9,6 +9,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalHighlightUnderline
 
 /**
  * Conjugation tables for the verbs used on the Word Pairs ("Wortpaare") screen. Highlighting a verb in a
@@ -149,7 +150,7 @@ fun annotatedSentenceByWords(
 
     val style = SpanStyle(
         color = highlightColor,
-        textDecoration = TextDecoration.Underline,
+        textDecoration = if (LocalHighlightUnderline.current) TextDecoration.Underline else null,
         fontWeight = FontWeight.Bold // Bolding can help with emphasis
     )
 

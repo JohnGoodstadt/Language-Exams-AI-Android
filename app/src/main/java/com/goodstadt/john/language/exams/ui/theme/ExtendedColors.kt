@@ -73,3 +73,10 @@ val DarkExtendedColorsAlternative = DarkExtendedColors.copy(
 )
 
 val LocalExtendedColors = staticCompositionLocalOf { DarkExtendedColors }
+
+/**
+ * Whether highlighted words in sentences are underlined. Default off (colour only); the Settings
+ * "Underline highlighted words" switch turns it on (helps accessibility / colour-blind users).
+ * Provided at the app root from the persisted setting.
+ */
+val LocalHighlightUnderline = staticCompositionLocalOf { false }

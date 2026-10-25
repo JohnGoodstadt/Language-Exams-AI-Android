@@ -41,6 +41,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalHighlightUnderline
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import java.util.Locale
@@ -230,8 +231,9 @@ private fun Format8EntrySection(
                 if (index > 0) HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
                 Row(Modifier.fillMaxWidth().clickable(onClickLabel = "Play German sentence", onClick = { onPlay(example) })
                     .padding(horizontal = 16.dp, vertical = 6.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text(remember(example.german, example.key) {
-                        Format8Presentation.highlight(Format8Presentation.displaySentence(example.german), listOf(example.key))
+                    val underlineHighlight = LocalHighlightUnderline.current
+                    Text(remember(example.german, example.key, underlineHighlight) {
+                        Format8Presentation.highlight(Format8Presentation.displaySentence(example.german), listOf(example.key), underlineHighlight)
                     }, Modifier.weight(1f).alignByBaseline(), style = MaterialTheme.typography.bodyLarge)
                     Text(remember(example.english) {
                         Format8Presentation.displaySentence(Format8Presentation.compactEnglish(example.english), Locale.ENGLISH)

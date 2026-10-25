@@ -48,6 +48,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalHighlightUnderline
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -291,6 +292,7 @@ fun annotatedSentence(
     // Theme highlight colour (adaptive light/dark) - captured here in composable scope so the
     // buildAnnotatedString lambda below can use it.
     val highlightColor = LocalExtendedColors.current.teal
+    val underlineDeco = if (LocalHighlightUnderline.current) TextDecoration.Underline else null
     val annotatedString = buildAnnotatedString {
         when (parts.size) {
             2 -> {
@@ -298,7 +300,7 @@ fun annotatedSentence(
                 withStyle(
                     style = SpanStyle(
                         color = highlightColor,
-                        textDecoration = TextDecoration.Underline
+                        textDecoration = underlineDeco
                     )
                 ) {
                     append(capIfStart(word, parts[0]))
@@ -313,7 +315,7 @@ fun annotatedSentence(
                     withStyle(
                         style = SpanStyle(
                             color = highlightColor,
-                            textDecoration = TextDecoration.Underline
+                            textDecoration = underlineDeco
                         )
                     ) {
                         append(capIfStart(words[0], parts[0]))
@@ -322,7 +324,7 @@ fun annotatedSentence(
                     withStyle(
                         style = SpanStyle(
                             color = highlightColor,
-                            textDecoration = TextDecoration.Underline
+                            textDecoration = underlineDeco
                         )
                     ) {
                         append(words[1])

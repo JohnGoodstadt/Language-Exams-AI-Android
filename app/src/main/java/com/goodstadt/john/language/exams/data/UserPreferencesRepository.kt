@@ -56,6 +56,7 @@ class UserPreferencesRepository @Inject constructor(
         val TRANSLATE_TARGET_LANG = stringPreferencesKey("translate_target_lang")
         val THEME_MODE = stringPreferencesKey("theme_mode")
         val USE_ALT_PALETTE = booleanPreferencesKey("use_alt_palette")
+        val HIGHLIGHT_UNDERLINE = booleanPreferencesKey("highlight_underline")
     }
 
     /**
@@ -154,6 +155,20 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setUseAlternativePalette(enabled: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.USE_ALT_PALETTE] = enabled
+        }
+    }
+
+    // Underline highlighted words in sentences. Default OFF (colour only); the Settings switch turns
+    // it on as an accessibility aid (helps distinguish highlighted words beyond colour).
+    val highlightUnderlineFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.HIGHLIGHT_UNDERLINE] ?: false
+        }
+
+    suspend fun setHighlightUnderline(enabled: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.HIGHLIGHT_UNDERLINE] = enabled
         }
     }
 

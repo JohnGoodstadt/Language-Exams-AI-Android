@@ -175,6 +175,14 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch { userPreferencesRepository.setUseAlternativePalette(enabled) }
     }
 
+    // Accessibility: underline highlighted words in sentences (default off).
+    val highlightUnderline = userPreferencesRepository.highlightUnderlineFlow
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), false)
+
+    fun setHighlightUnderline(enabled: Boolean) {
+        viewModelScope.launch { userPreferencesRepository.setHighlightUnderline(enabled) }
+    }
+
 
     fun initObsolete() {
 

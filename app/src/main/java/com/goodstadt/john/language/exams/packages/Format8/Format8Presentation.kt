@@ -39,11 +39,12 @@ object Format8Presentation {
 
     fun tokenRegex(word: String): Regex = Regex("(?<![\\p{L}\\p{N}_])${Regex.escape(word)}(?![\\p{L}\\p{N}_])")
 
-    fun highlight(text: String, terms: Collection<String>): AnnotatedString = buildAnnotatedString {
+    fun highlight(text: String, terms: Collection<String>, underline: Boolean = false): AnnotatedString = buildAnnotatedString {
         append(text)
+        val deco = if (underline) TextDecoration.Underline else null
         terms.filter { it.isNotEmpty() }.distinct().forEach { term ->
             tokenRegex(term).findAll(text).forEach { match ->
-                addStyle(SpanStyle(color = highlightColor, textDecoration = TextDecoration.Underline), match.range.first, match.range.last + 1)
+                addStyle(SpanStyle(color = highlightColor, textDecoration = deco), match.range.first, match.range.last + 1)
             }
         }
     }
