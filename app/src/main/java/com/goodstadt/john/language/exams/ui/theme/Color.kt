@@ -17,6 +17,7 @@ val nonSelectedBackground = Color(0xFF1C1C1F)
 val selectedBackground = Color(0xFF5B5B60)
 val accentColor = Color(0xFFFFAE02)
 val buttonColor = Color(0xFF1777fb)
+val SpeakerTeal = Color(0xFF00897B) // brand teal (currently duplicated privately in Format9ContainerScreen)
 
 // -- Light Theme Colors --
 val LightPrimary = Color(0xFF6200EE) // A standard purple
