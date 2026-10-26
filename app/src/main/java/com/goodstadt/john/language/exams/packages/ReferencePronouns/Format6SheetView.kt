@@ -13,16 +13,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.filled.Lock
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material3.CircularProgressIndicator
@@ -34,6 +34,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.SelectableChipColors
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -46,27 +47,27 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalIsDarkTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
+fun Format6SheetView(viewModel: Format6ViewModel = hiltViewModel()) {
     when (val state = viewModel.uiState.collectAsState().value) {
-        is PronounsClaudeUiState.Loading ->
+        is Format6UiState.Loading ->
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
 
-        is PronounsClaudeUiState.Error ->
+        is Format6UiState.Error ->
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("Error: ${state.message}", color = MaterialTheme.colorScheme.error)
             }
 
-        is PronounsClaudeUiState.Success -> {
+        is Format6UiState.Success -> {
             val categories = state.sheet.categories
             // Level-1 (category) selection is lifted here so the floating "Q" knows which chip to quiz.
             var selectedCategoryId by rememberSaveable { mutableStateOf(categories.firstOrNull()?.id ?: "") }
@@ -213,7 +214,7 @@ private fun PronounsContent(
                     leadingIcon = if (locked) {
                         { Icon(Icons.Filled.Lock, contentDescription = "Locked", modifier = Modifier.size(16.dp)) }
                     } else null,
-                    colors = FilterChipDefaults.filterChipColors()
+                    colors = format6ChipColors()
                 )
             }
         }
@@ -227,7 +228,8 @@ private fun PronounsContent(
                 FilterChip(
                     selected = p.id == pattern?.id,
                     onClick = { onChipTapped(); selectedPatternId = p.id },
-                    label = { Text(p.chip) }
+                    label = { Text(p.chip) },
+                    colors = format6ChipColors()
                 )
             }
         }
@@ -301,7 +303,7 @@ private fun SectionHeader(section: ExampleSection) {
 private fun SentenceRow(sentence: PronounSentence, onPlay: (String) -> Unit) {
     // Tap the row to hear it - no play button, no translation (words are simple), like the reference lists.
     Text(
-        PronounsClaudeStyle.highlightGreenWords(sentence.text, sentence.green),
+        Format6Style.highlightGreenWords(sentence.text, sentence.green),
         style = MaterialTheme.typography.titleMedium,
         modifier = Modifier
             .fillMaxWidth()
@@ -333,7 +335,7 @@ private fun FormChain(forms: List<PronounForm>) {
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        PronounsClaudeStyle.caseShort(form.case),
+                        Format6Style.caseShort(form.case),
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSecondaryContainer
                     )
@@ -357,3 +359,12 @@ private fun FormChain(forms: List<PronounForm>) {
     }
 }
 
+/** Light mode: the selected chip reads as a standard button (button blue, white text). Dark: Material default. */
+@Composable
+private fun format6ChipColors(): SelectableChipColors =
+    if (LocalIsDarkTheme.current) FilterChipDefaults.filterChipColors()
+    else FilterChipDefaults.filterChipColors(
+        selectedContainerColor = LocalExtendedColors.current.buttonBlue,
+        selectedLabelColor = Color.White,
+        selectedLeadingIconColor = Color.White
+    )

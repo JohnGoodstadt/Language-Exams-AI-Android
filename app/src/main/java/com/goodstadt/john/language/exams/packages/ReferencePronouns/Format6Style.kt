@@ -8,7 +8,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 
 /** Styling helpers for the pattern-focused Pronouns screen. Pronoun words are highlighted in cyan. */
-object PronounsClaudeStyle {
+object Format6Style {
 
     /** The one accent used to highlight pronoun words (in the chain and in sentences). */
     val HIGHLIGHT = Color(0xFF00897B) // mid teal, legible on light and dark

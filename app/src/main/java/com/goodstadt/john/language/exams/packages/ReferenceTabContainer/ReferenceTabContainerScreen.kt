@@ -50,12 +50,10 @@ import com.goodstadt.john.language.exams.packages.Format8.Format8ContainerScreen
 import com.goodstadt.john.language.exams.packages.Format9.Format9ContainerScreen
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounsClaudeScreen
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6SheetView
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.packages.Conjugations.ConjugationsScreen
 import com.goodstadt.john.language.exams.screens.Format1.Format1Screen
-import com.goodstadt.john.language.exams.screens.Format1.Format1UiState
-import com.goodstadt.john.language.exams.screens.Format1.Format1ViewModel
 import com.goodstadt.john.language.exams.screens.Format2.Format2Screen
 import com.goodstadt.john.language.exams.screens.Format2.Format2UiState
 import com.goodstadt.john.language.exams.screens.Format2.Format2ViewModel
@@ -497,7 +495,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         route = RefScreen.Format6.route, // "format6_screen/{documentId}"
                         arguments = listOf(navArgument("documentId") { type = NavType.StringType })
                     ) {
-                        PronounsClaudeScreen()
+                        Format6SheetView()
                     }
 
                     // Distinct destination for a second Format-6 teaching sheet (e.g. Prepositions).
@@ -507,7 +505,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
                         route = RefScreen.Format6Teaching.route, // "format6_teaching_screen/{documentId}"
                         arguments = listOf(navArgument("documentId") { type = NavType.StringType })
                     ) {
-                        PronounsClaudeScreen()
+                        Format6SheetView()
                     }
 
                 }

@@ -2,11 +2,11 @@ package com.goodstadt.john.language.exams.packages.ReferencePronouns
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.goodstadt.john.language.exams.data.stats.recordPageView
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.stats.recordPageView
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -15,10 +15,10 @@ import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
-sealed interface PronounsClaudeUiState {
-    object Loading : PronounsClaudeUiState
-    data class Success(val sheet: Format6File) : PronounsClaudeUiState
-    data class Error(val message: String) : PronounsClaudeUiState
+sealed interface Format6UiState {
+    object Loading : Format6UiState
+    data class Success(val sheet: Format6File) : Format6UiState
+    data class Error(val message: String) : Format6UiState
 }
 
 /**
@@ -28,7 +28,7 @@ sealed interface PronounsClaudeUiState {
  * every other reference screen).
  */
 @HiltViewModel
-class PronounsClaudeViewModel @Inject constructor(
+class Format6ViewModel @Inject constructor(
     private val contentRepository: ContentRepository,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val billingRepository: BillingRepository,
@@ -70,8 +70,8 @@ class PronounsClaudeViewModel @Inject constructor(
      *  different loader than the pronouns quiz. */
     val isPrepositionsSheet: Boolean get() = documentId.endsWith("PrepositionsTeaching")
 
-    private val _uiState = MutableStateFlow<PronounsClaudeUiState>(PronounsClaudeUiState.Loading)
-    val uiState: StateFlow<PronounsClaudeUiState> = _uiState.asStateFlow()
+    private val _uiState = MutableStateFlow<Format6UiState>(Format6UiState.Loading)
+    val uiState: StateFlow<Format6UiState> = _uiState.asStateFlow()
 
     init {
         load()
@@ -79,7 +79,7 @@ class PronounsClaudeViewModel @Inject constructor(
 
     fun load() {
         viewModelScope.launch {
-            _uiState.value = PronounsClaudeUiState.Loading
+            _uiState.value = Format6UiState.Loading
             contentRepository.getFormat6Data(documentId)
                 .onSuccess { sheet ->
                     // Sort categories and their item chips by sortOrder for a stable chip order.
@@ -88,11 +88,11 @@ class PronounsClaudeViewModel @Inject constructor(
                             .sortedBy { it.sortOrder }
                             .map { c -> c.copy(patterns = c.patterns.sortedBy { it.sortOrder }) }
                     )
-                    _uiState.value = PronounsClaudeUiState.Success(ordered)
+                    _uiState.value = Format6UiState.Success(ordered)
                 }
                 .onFailure { e ->
                     Timber.e(e, "PronounsClaude: failed to load '$documentId'")
-                    _uiState.value = PronounsClaudeUiState.Error(e.localizedMessage ?: "Failed to load")
+                    _uiState.value = Format6UiState.Error(e.localizedMessage ?: "Failed to load")
                 }
         }
     }
