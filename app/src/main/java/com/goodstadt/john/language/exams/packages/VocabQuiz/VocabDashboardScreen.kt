@@ -19,6 +19,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
+import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
@@ -79,7 +80,7 @@ fun VocabDashboardScreen(
         ) { CircularProgressIndicator() }
     } else if (uiState.isColdStart) {
         // STATE A: Cold Start — suggestion buttons open the quiz sheet directly
-        VocabQuizOnboardingView(onStartSuggestion = { title ->
+        VocabQuizOnboardingView(categories = uiState.categoryStats, onStartSuggestion = { title ->
             viewModel.openQuizForCategory(title)
         })
     } else {
@@ -239,10 +240,12 @@ fun VocabQuizActiveView(
         }
 
         // 3. Category List
-        state.categoryStats.forEach { stat ->
-            CategoryMasteryRow(stat, onClick = {
-                onCategoryClick(stat.categoryTitle)
-            })
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            state.categoryStats.forEach { stat ->
+                CategoryMasteryRow(stat, onClick = {
+                    onCategoryClick(stat.categoryTitle)
+                })
+            }
         }
 //        if (BuildConfig.DEBUG) {
         if (false) {
@@ -265,83 +268,114 @@ fun VocabQuizActiveView(
     }
 }
 
+/**
+ * One category on the dashboard (matches iOS): a rounded card on a darker background with a play
+ * icon, the title and its word count. Once any word has been quizzed it also shows the mastered count
+ * and a stacked progress bar. Tapping it opens that category's quiz.
+ */
 @Composable
 fun CategoryMasteryRow(
     stat: CategoryMasteryStats, onClick: () -> Unit
 ) {
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp),
+    val hasProgress = stat.masteredCount + stat.learningCount > 0
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick() } // ✅ Make clickable
-            .padding(vertical = 4.dp) // Add padding for touch target
+            .clip(RoundedCornerShape(10.dp))
+            .background(LocalExtendedColors.current.cardBackground)
+            .clickable { onClick() }
+            .padding(16.dp)
     ) {
-        // Header
+        // Header: play icon, title, count
         Row(
-            modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
         ) {
+            Icon(
+                imageVector = Icons.Filled.PlayCircle,
+                contentDescription = "Start quiz",
+                tint = LocalExtendedColors.current.buttonBlue,
+                modifier = Modifier.size(24.dp)
+            )
+            Spacer(Modifier.width(10.dp))
             Text(
                 stat.categoryTitle,
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.SemiBold
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.onSurface,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f)
             )
-
-            if (stat.masteredCount > 0) {
-                Text(
-                    "${stat.masteredCount}/${stat.totalWords} Mastered",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = Color(0xFF4CAF50)
-                )
-            }
+            Spacer(Modifier.width(8.dp))
+            Text(
+                if (hasProgress) "${stat.masteredCount}/${stat.totalWords} Mastered"
+                else "${stat.totalWords} Words",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         }
 
-        // Stacked Progress Bar
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(8.dp)
-                .clip(RoundedCornerShape(4.dp))
-                .background(MaterialTheme.colorScheme.surfaceVariant)
-        ) {
-            // Mastered (Green)
-            if (stat.masteredFraction > 0) {
-                Box(
-                    Modifier
-                        .fillMaxHeight()
-                        .weight(stat.masteredFraction)
-                        .background(Color(0xFF4CAF50))
-                )
+        // Stacked Progress Bar (only once this category has been quizzed)
+        if (hasProgress) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(8.dp)
+                    .clip(RoundedCornerShape(4.dp))
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
+            ) {
+                // Mastered (Green)
+                if (stat.masteredFraction > 0) {
+                    Box(
+                        Modifier
+                            .fillMaxHeight()
+                            .weight(stat.masteredFraction)
+                            .background(Color(0xFF4CAF50))
+                    )
+                }
+                // Learning (Orange)
+                if (stat.learningFraction > 0) {
+                    Box(
+                        Modifier
+                            .fillMaxHeight()
+                            .weight(stat.learningFraction)
+                            .background(LocalExtendedColors.current.statusOrange)
+                    )
+                }
+                // Remaining (Transparent/Grey)
+                val remaining = 1f - (stat.masteredFraction + stat.learningFraction)
+                if (remaining > 0) {
+                    Box(
+                        Modifier
+                            .fillMaxHeight()
+                            .weight(remaining)
+                    )
+                }
             }
-            // Learning (Orange)
-            if (stat.learningFraction > 0) {
-                Box(
-                    Modifier
-                        .fillMaxHeight()
-                        .weight(stat.learningFraction)
-                        .background(LocalExtendedColors.current.statusOrange)
-                )
-            }
-            // Remaining (Transparent/Grey)
-            val remaining = 1f - (stat.masteredFraction + stat.learningFraction)
-            if (remaining > 0) {
-                Box(
-                    Modifier
-                        .fillMaxHeight()
-                        .weight(remaining)
-                )
-            }
+
+            // Breakdown, so progress shows before anything is Mastered (that needs 3 correct in a row
+            // across separate review sessions).
+            Text(
+                "${stat.learningCount} learning · ${stat.newCount} new · ${stat.masteredCount} mastered",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         }
     }
 }
 
 @Composable
-fun VocabQuizOnboardingView(onStartSuggestion: (String) -> Unit) {
+fun VocabQuizOnboardingView(
+    categories: List<CategoryMasteryStats>,
+    onStartSuggestion: (String) -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(24.dp)
             .verticalScroll(rememberScrollState()),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Icon(
             imageVector = Icons.Default.Psychology,
@@ -368,26 +402,16 @@ fun VocabQuizOnboardingView(onStartSuggestion: (String) -> Unit) {
 
         Spacer(Modifier.height(24.dp))
 
-        Text("Try a topic to start:", style = MaterialTheme.typography.labelLarge)
+        Text("Tap a category to start quizzing", style = MaterialTheme.typography.titleSmall)
 
         Spacer(Modifier.height(12.dp))
 
-        // Suggestions
-        SuggestionButton("Personal Information") { onStartSuggestion("Personal (B1)") }
-        SuggestionButton("Education") { onStartSuggestion("Education") }
-    }
-}
-
-@Composable
-fun SuggestionButton(title: String, onClick: () -> Unit) {
-    OutlinedButton(
-        onClick = onClick, modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 4.dp)
-    ) {
-        Text(title)
-        Spacer(Modifier.width(8.dp))
-        Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(16.dp))
+        // Every category that has a quiz at the current level (like iOS)
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            categories.forEach { stat ->
+                CategoryMasteryRow(stat, onClick = { onStartSuggestion(stat.categoryTitle) })
+            }
+        }
     }
 }
 

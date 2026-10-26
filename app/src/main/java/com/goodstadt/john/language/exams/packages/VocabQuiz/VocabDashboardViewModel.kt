@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.packages.VocabQuiz
 
+import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -8,12 +9,15 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
+import com.goodstadt.john.language.exams.screens.CategoryTab.SectionQuizKeyMap
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
@@ -21,6 +25,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class VocabDashboardViewModel @Inject constructor(
+    private val application: Application,
     private val vocabQuizRepository: VocabQuizRepository,
     private val contentRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
@@ -64,24 +69,56 @@ class VocabDashboardViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true) }
 
-            // 0. Fast cold-start check — no network needed for onboarding view
+            // 0. Cold start = never answered anything. We still load the categories (like iOS) so the
+            //    onboarding view can list every quiz instead of a couple of hard-coded suggestions.
             val allWordStates = vocabQuizRepository.getAllStates()
-            if (allWordStates.isEmpty()) {
-                _uiState.value = DashboardUiState(isLoading = false, isColdStart = true)
-                return@launch
-            }
+            val isColdStart = allWordStates.isEmpty()
 
-            // 1. Get Exam Data (Structure) — only needed for active dashboard
+            // 1. Get Exam Data (Structure)
             val examName = examNameOverride ?: userPreferencesRepository.selectedExamNameFlow.first()
             val vocabResult = contentRepository.getFormat0Data(examName)
 
             val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-            val dueWords = vocabQuizRepository.getDueWords(limit = 10,currentSkillLevel)
+            val dueWords = if (isColdStart) emptyList() else vocabQuizRepository.getDueWords(limit = 10,currentSkillLevel)
+
+            // Quiz files shipped for this level, so only categories that actually have a quiz are listed
+            // (same lookup as VocabSectionQuizViewModel.loadSectionQuiz, so a tap always finds questions).
+            val quizFiles = withContext(Dispatchers.IO) {
+                application.assets.list("$QUIZ_ASSET_PATH/$currentSkillLevel")?.toList() ?: emptyList()
+            }
+            fun hasQuiz(title: String): Boolean {
+                val key = SectionQuizKeyMap.keyFor(currentSkillLevel, title)
+                if (key.isNullOrBlank()) return false
+                return quizFiles.any { it.startsWith("WordQuiz${key}1-") && it.endsWith(".json") }
+            }
+
+            vocabResult.onFailure {
+                Timber.e(it, "VocabDashboard: failed to load vocab for $examName")
+                _uiState.value = DashboardUiState(isLoading = false, isColdStart = isColdStart)
+            }
 
             vocabResult.onSuccess { vocabFile ->
 
                 // 4. Aggregate Stats per Category
-                val statsList = vocabFile.categories.map { category ->
+                val statsList = vocabFile.categories
+                    .distinctBy { it.title }
+                    .filter { hasQuiz(it.title) }
+                    .map { category ->
+                    // Prefer the quiz's own rolled-up counts (saved by the repository from the quiz's word
+                    // list whenever it's played), so the numbers match exactly what the quiz recorded.
+                    val quizKey = SectionQuizKeyMap.keyFor(currentSkillLevel, category.title) ?: ""
+                    val quizState = vocabQuizRepository.getCategoryMasteryState(quizKey, currentSkillLevel)
+                    if (quizState != null && quizState.total > 0) {
+                        return@map CategoryMasteryStats(
+                            categoryTitle = category.title,
+                            totalWords = quizState.total,
+                            newCount = quizState.newCount,
+                            learningCount = quizState.struggling + quizState.learning + quizState.review,
+                            masteredCount = quizState.mastered
+                        )
+                    }
+
+                    // Never played: count the vocab category's words.
                     var new = 0
                     var learning = 0
                     var mastered = 0
@@ -113,7 +150,7 @@ class VocabDashboardViewModel @Inject constructor(
 
                 _uiState.value = DashboardUiState(
                     isLoading = false,
-                    isColdStart = false,
+                    isColdStart = isColdStart,
                     wordsDueCount = dueWords.size,
                     wordsDueList = dueWords,
                     totalMastered = totalMastered,
@@ -161,3 +198,5 @@ class VocabDashboardViewModel @Inject constructor(
         }
     }
 }
+
+private const val QUIZ_ASSET_PATH = "Quizzes/SectionQuiz" // matches VocabSectionQuizViewModel's QUIZ_PATH
