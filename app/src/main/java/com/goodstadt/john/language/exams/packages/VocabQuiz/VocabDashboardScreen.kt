@@ -134,6 +134,7 @@ fun VocabQuizActiveView(
     onCategoryClick: (String) -> Unit,
     onDebugClick: () -> Unit
 ) {
+    val buttonBlue = LocalExtendedColors.current.buttonBlue
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -143,7 +144,10 @@ fun VocabQuizActiveView(
     ) {
         // 1. Due Today Card
         Card(
-            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
+            colors = CardDefaults.cardColors(
+                containerColor = buttonBlue,
+                contentColor = Color.White
+            ),
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -162,12 +166,12 @@ fun VocabQuizActiveView(
                             "${state.wordsDueCount}",
                             style = MaterialTheme.typography.displayMedium,
                             fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer
+                            color = Color.White
                         )
                         Text(
                             text = "$label due for review $yet",
                             style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer
+                            color = Color.White
                         )
                     }
 
@@ -175,9 +179,10 @@ fun VocabQuizActiveView(
                         onClick = onStartReview,
                         enabled = state.wordsDueCount != 0,
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.primary,
-                            // Optional: You can also explicitly set disabled colors if you want
-                            disabledContainerColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f)
+                            containerColor = Color.White,
+                            contentColor = buttonBlue,
+                            disabledContainerColor = Color.White.copy(alpha = 0.5f),
+                            disabledContentColor = buttonBlue.copy(alpha = 0.5f)
                         )
                     ) {
                         Text("Review Now")
@@ -199,13 +204,13 @@ fun VocabQuizActiveView(
                             fontWeight = FontWeight.Normal,
                             fontSize = 12.sp
                         ),
-                        color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
+                        color = Color.White
                     )
                 }else{
                     Text(
                         text = "Tap on a section below to start quizzing yourself",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
+                        color = Color.White
                     )
                 }
 

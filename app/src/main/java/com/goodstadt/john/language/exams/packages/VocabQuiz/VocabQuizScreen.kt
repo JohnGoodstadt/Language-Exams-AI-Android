@@ -73,10 +73,9 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
-import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.statusOrange
-import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 
@@ -228,10 +227,10 @@ fun VocabQuizScreen(
                 // If only 1 quiz, maybe just show the title
                 Text(
                     text = viewModel.getSectionTitle(),// quizStatistics.title, // "Quiz 1"
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = orangeLight, //MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.padding(vertical = 8.dp)
+                    color = Color.Black,//MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(vertical = 4.dp)
                 )
                 HorizontalDivider()
             }
@@ -359,21 +358,21 @@ fun VocabQuizScreen(
                     }
                 }
 
-
+//The correct answer row
             if (isCurrentAnswerCorrect == true) {
                 Text(
                     text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp),
-                    color = orangeLight,
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
+                    color = correctGreen//Color.Black//orangeLight,
                 )
             } else {
                 Text(
                     text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 24.sp),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
                     color = correctGreen
                 )
             }
