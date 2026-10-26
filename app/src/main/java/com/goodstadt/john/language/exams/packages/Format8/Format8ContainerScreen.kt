@@ -96,6 +96,7 @@ fun Format8ContainerScreen(
             LazyRow(contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)) {
                 items(subTabs, key = { it.firestoreDocumentId }) { tab ->
                     MenuItemChip(text = tab.title, isSelected = tab.firestoreDocumentId == selectedSheetName,
+                        filledWhenSelected = true,
                         onClick = { playback.stopPlayback(); playback.recordSubTabTap(tab.firestoreDocumentId); onSubTabSelected(tab.firestoreDocumentId) })
                 }
             }

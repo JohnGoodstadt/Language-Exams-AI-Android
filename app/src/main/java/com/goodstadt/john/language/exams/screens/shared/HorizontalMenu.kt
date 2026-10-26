@@ -29,15 +29,23 @@ fun MenuItemChip(
     // Unselected label colour. Defaults to onSurface (near-black, the previous look); pass
     // onSurfaceVariant for a greyer unselected state so the selected accent stands out more.
     unselectedLabelColor: Color = MaterialTheme.colorScheme.onSurface,
+    // Light mode only: show the selected chip as a filled button (button blue, white text)
+    // instead of the underline. Used where the chips act as buttons (e.g. Format8 sub-tabs).
+    filledWhenSelected: Boolean = false,
 ) {
     // Light mode uses the iOS style: every option is button blue and the selected one is underlined.
     // Dark mode keeps the original style (accent-coloured selection, plain unselected labels).
     val isLight = !LocalIsDarkTheme.current
     val buttonBlue = LocalExtendedColors.current.buttonBlue
+    val filled = isLight && filledWhenSelected
     val chipColors = FilterChipDefaults.filterChipColors(
         // Use your app's "accent" color for the selected state
-        selectedContainerColor = Color.Transparent,
-        selectedLabelColor = if (isLight) buttonBlue else LocalExtendedColors.current.screenAccent,
+        selectedContainerColor = if (filled) buttonBlue else Color.Transparent,
+        selectedLabelColor = when {
+            filled -> Color.White
+            isLight -> buttonBlue
+            else -> LocalExtendedColors.current.screenAccent
+        },
         labelColor = if (isLight) buttonBlue else unselectedLabelColor,
     )
 
@@ -49,7 +57,7 @@ fun MenuItemChip(
             Text(
                 text,
                 fontSize = 20.sp,
-                textDecoration = if (isLight && isSelected) TextDecoration.Underline else null
+                textDecoration = if (isLight && !filled && isSelected) TextDecoration.Underline else null
             )
         },
         colors = chipColors,
