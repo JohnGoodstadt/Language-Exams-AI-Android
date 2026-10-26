@@ -34,7 +34,6 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.packages.CategoryTab.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
-import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
@@ -111,7 +110,7 @@ fun Format1Screen(
                             Text(
                                 text = section.title,
                                 style = MaterialTheme.typography.titleLarge,
-                                color = orangeLight,
+                                color = LocalExtendedColors.current.sectionHeader,
                                 modifier = Modifier.weight(1f)
                             )
                             // Translate the last sentence played on this screen (blank if none yet).

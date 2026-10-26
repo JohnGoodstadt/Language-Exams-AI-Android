@@ -22,6 +22,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -521,7 +522,12 @@ private fun WeakVocabRow(
  *  do that quiz. */
 @Composable
 private fun EmptySectionButton(label: String, onClick: () -> Unit) {
-    OutlinedButton(onClick = onClick) {
+    val blue = LocalExtendedColors.current.buttonBlue
+    OutlinedButton(
+        onClick = onClick,
+        colors = ButtonDefaults.outlinedButtonColors(contentColor = blue),
+        border = BorderStroke(1.dp, blue)
+    ) {
         Text(label)
     }
 }
