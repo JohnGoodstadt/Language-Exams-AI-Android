@@ -40,6 +40,9 @@ data class ExtendedColors(
     val iconAccent: Color,
     /** Section headers / titles. Orange on dark (unchanged), black on light. */
     val sectionHeader: Color,
+    /** The Material "status/warning/learning" orange that was hard-coded as Color(0xFFFF9800)
+     *  across the UI. Alter here to retint all those usages. */
+    val statusOrange: Color,
 )
 
 val DarkExtendedColors = ExtendedColors(
@@ -55,6 +58,7 @@ val DarkExtendedColors = ExtendedColors(
     textAccentAlternative = Color.Green,     // bright green reads on dark
     iconAccent = orangeLight,                // unchanged on dark (orange)
     sectionHeader = orangeLight,             // unchanged on dark (orange)
+    statusOrange = statusOrange,             // 0xFFFF9800
 )
 
 val LightExtendedColors = ExtendedColors(
@@ -70,6 +74,7 @@ val LightExtendedColors = ExtendedColors(
     textAccentAlternative = Color(0xFF2E7D32), // darker green, legible on white
     iconAccent = blueDark,                   // 0xFF0D47A1 dark blue on light
     sectionHeader = Color(0xFF000000),       // black headers on light
+    statusOrange = Color(0xFFFF9800),        // alter this to retint light-mode status orange
 )
 
 // --- Experimental / reserve palettes -------------------------------------------------------------

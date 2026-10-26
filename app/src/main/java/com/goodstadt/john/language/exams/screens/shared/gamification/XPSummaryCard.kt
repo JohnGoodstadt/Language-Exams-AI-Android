@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.managers.LevelProgressInfo
@@ -64,7 +65,7 @@ fun XPSummaryCard(
                             text = "MAX LEVEL",
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.Black,
-                            color = Color(0xFFFF9800) // Orange
+                            color = LocalExtendedColors.current.statusOrange // Orange
                         )
                         Text(
                             text = "Mastery Achieved",

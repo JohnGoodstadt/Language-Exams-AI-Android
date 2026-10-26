@@ -75,6 +75,7 @@ import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
@@ -198,7 +199,7 @@ fun VocabQuizScreen(
                     availableIndices.forEach { index ->
                         val isSelected = (index == currentIndex)
 
-                        val accentOrange = Color.Green//Color(0xFFFF9800)
+                        val accentOrange = Color.Green//LocalExtendedColors.current.statusOrange
                         val borderColor = if (isSelected) accentOrange else Color.Gray.copy(alpha = 0.5f)
                         val backgroundColor = if (isSelected) accentOrange.copy(alpha = 0.1f) else Color.Transparent
                         val textColor = if (isSelected) accentOrange else MaterialTheme.colorScheme.onSurfaceVariant
@@ -853,7 +854,7 @@ fun masteryChipColor(level: WordMasteryLevel): Color {
     return when (level) {
         WordMasteryLevel.New -> Color.Gray
         WordMasteryLevel.Struggling -> Color.Red
-        WordMasteryLevel.Learning -> Color(0xFFFF9800) // Orange
+        WordMasteryLevel.Learning -> statusOrange // Orange
         WordMasteryLevel.Review -> Color(0xFF2196F3) // Blue
         WordMasteryLevel.Mastered -> Color(0xFF4CAF50) // Green
     }

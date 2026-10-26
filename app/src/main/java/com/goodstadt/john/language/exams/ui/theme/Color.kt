@@ -18,6 +18,10 @@ val selectedBackground = Color(0xFF5B5B60)
 val accentColor = Color(0xFFFFAE02)
 val buttonColor = Color(0xFF1777fb)
 val SpeakerTeal = Color(0xFF00897B) // brand teal (currently duplicated privately in Format9ContainerScreen)
+// Material "status/warning/learning" orange, formerly hard-coded as Color(0xFFFF9800) all over.
+// Backs ExtendedColors.statusOrange (UI, theme-aware) and is used directly where colour is produced
+// in non-composable code (repositories / view-models). Change here to alter the data-layer usages.
+val statusOrange = Color(0xFFFF9800)
 
 // -- Light Theme Colors --
 val LightPrimary = Color(0xFF6200EE) // A standard purple

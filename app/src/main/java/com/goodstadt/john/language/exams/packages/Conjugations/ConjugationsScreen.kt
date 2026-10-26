@@ -26,6 +26,7 @@ import com.goodstadt.john.language.exams.packages.me.PremiumUpgradeSheet
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
@@ -105,7 +106,7 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                         Icon(
                             imageVector = Icons.Filled.Translate,
                             contentDescription = "Translate",
-                            tint = Color(0xFFFF9800)
+                            tint = LocalExtendedColors.current.statusOrange
                         )
                     }
                     Box(modifier = Modifier.weight(1f)) {

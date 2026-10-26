@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
 import com.goodstadt.john.language.exams.models.CategoryMasteryLevel
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.UsageQuestionStat
@@ -341,7 +342,7 @@ class UsageQuizRepository @Inject constructor(
         return when (mastery) {
             WordMasteryLevel.New -> "New" to Color.Gray
             WordMasteryLevel.Struggling -> "Struggling" to Color.Red
-            WordMasteryLevel.Learning -> "Learning" to Color(0xFFFF9800) // Orange
+            WordMasteryLevel.Learning -> "Learning" to statusOrange // Orange
             WordMasteryLevel.Review -> "Review" to Color(0xFF2196F3) // Blue
             WordMasteryLevel.Mastered -> "Mastered" to Color(0xFF4CAF50) // Green
         }

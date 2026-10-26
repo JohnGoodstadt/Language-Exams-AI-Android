@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -42,7 +43,7 @@ fun ExamCountdownCard(
 
     // Determine Border Color based on state
     val borderColor = if (xpState.targetExamLevel != null && !isEditing) {
-        Color(0xFFFF9800).copy(alpha = 0.5f) // Active Orange
+        LocalExtendedColors.current.statusOrange.copy(alpha = 0.5f) // Active Orange
     } else {
         Color(0xFF2196F3).copy(alpha = 0.3f) // Setup Blue
     }
@@ -216,14 +217,14 @@ fun ActiveModeView(
         Row(verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Surface(
-                    color = Color(0xFFFF9800).copy(alpha = 0.1f),
+                    color = LocalExtendedColors.current.statusOrange.copy(alpha = 0.1f),
                     shape = RoundedCornerShape(8.dp)
                 ) {
                     Text(
                         text = "MISSION: $currentLevelName",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFFFF9800),
+                        color = LocalExtendedColors.current.statusOrange,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                     )
                 }

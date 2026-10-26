@@ -45,6 +45,7 @@ import androidx.compose.runtime.setValue
 //import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -210,7 +211,7 @@ fun UsageQuizRow(item: UsageQuizOverviewItem, isNextUp: Boolean, onClick: () -> 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 // Status Icon
                 val icon = if (item.isPerfect) Icons.Default.CheckCircle else if (item.isStarted) Icons.Default.TrendingUp else Icons.Default.Circle
-                val tint = if (item.isPerfect) Color(0xFF4CAF50) else if (item.isStarted) Color(0xFFFF9800) else Color.Gray
+                val tint = if (item.isPerfect) Color(0xFF4CAF50) else if (item.isStarted) LocalExtendedColors.current.statusOrange else Color.Gray
 
                 Icon(icon, null, tint = tint)
 
@@ -261,7 +262,7 @@ fun UsageQuizRow(item: UsageQuizOverviewItem, isNextUp: Boolean, onClick: () -> 
                         val color = when(mastery) {
                             UsageMastery.Mastered -> Color(0xFF4CAF50) // Green
                             UsageMastery.Review -> Color(0xFF2196F3) // Blue
-                            UsageMastery.Learning -> Color(0xFFFF9800) // Orange
+                            UsageMastery.Learning -> LocalExtendedColors.current.statusOrange // Orange
                             UsageMastery.Struggling -> Color(0xFFF44336) // Red
                             UsageMastery.New -> Color.Gray.copy(alpha = 0.2f)
                         }

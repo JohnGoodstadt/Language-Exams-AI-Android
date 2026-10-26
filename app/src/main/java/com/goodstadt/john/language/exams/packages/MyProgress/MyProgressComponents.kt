@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -66,7 +67,7 @@ fun ProfileHeaderView(userLevel: String, streak: Int, gems: Int) {
 
             // Mini Stats
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                LabelWithIcon(icon = Icons.Default.LocalFireDepartment, text = "$streak", color = Color(0xFFFF9800))
+                LabelWithIcon(icon = Icons.Default.LocalFireDepartment, text = "$streak", color = LocalExtendedColors.current.statusOrange)
                 LabelWithIcon(icon = Icons.Default.Diamond, text = "$gems", color = Color(0xFF00BCD4))
             }
         }
@@ -110,7 +111,7 @@ fun ConsistencyHeatmap(xpManager: XPManager) {
                     "$currentStreak Day Streak",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFFFF9800) // Orange
+                    color = LocalExtendedColors.current.statusOrange // Orange
                 )
             }
 

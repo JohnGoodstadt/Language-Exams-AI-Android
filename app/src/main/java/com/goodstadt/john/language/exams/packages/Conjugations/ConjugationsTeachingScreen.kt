@@ -44,6 +44,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -135,7 +136,7 @@ fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltVi
                             },
                             shape = CircleShape,
                             containerColor = MaterialTheme.colorScheme.surface,
-                            contentColor = Color(0xFFFF9800),
+                            contentColor = LocalExtendedColors.current.statusOrange,
                             modifier = Modifier
                                 .align(Alignment.BottomStart)
                                 .padding(16.dp)
@@ -151,7 +152,7 @@ fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltVi
                 onClick = { showTranslateSheet = true },
                 shape = CircleShape,
                 containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = Color(0xFFFF9800),
+                contentColor = LocalExtendedColors.current.statusOrange,
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
                     .padding(16.dp)

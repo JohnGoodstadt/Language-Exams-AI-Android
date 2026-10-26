@@ -46,6 +46,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -316,7 +317,7 @@ fun CategoryMasteryRow(
                     Modifier
                         .fillMaxHeight()
                         .weight(stat.learningFraction)
-                        .background(Color(0xFFFF9800))
+                        .background(LocalExtendedColors.current.statusOrange)
                 )
             }
             // Remaining (Transparent/Grey)

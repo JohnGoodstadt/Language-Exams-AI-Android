@@ -1052,7 +1052,7 @@ private fun QuizStatusLegendSheet() {
             body = "Answered correctly, first try, across 3 spaced sessions.")
         LegendRow(leadingDot = Color(0xFF2196F3), title = "Blue — Review",
             body = "Right first time — building towards mastery.")
-        LegendRow(leadingDot = Color(0xFFFF9800), title = "Orange — Learning",
+        LegendRow(leadingDot = LocalExtendedColors.current.statusOrange, title = "Orange — Learning",
             body = "Got it right, but it took more than one try.")
         LegendRow(leadingDot = Color.Red, title = "Red — Struggling",
             body = "Answered incorrectly — worth another look.")
@@ -1385,7 +1385,7 @@ private fun QuizStatusDots(
     onClick: () -> Unit = {}
 ) {
     val red = Color.Red
-    val orange = Color(0xFFFF9800)
+    val orange = LocalExtendedColors.current.statusOrange
     val blue = Color(0xFF2196F3)
     val green = Color(0xFF4CAF50)
     val grey = Color.Gray

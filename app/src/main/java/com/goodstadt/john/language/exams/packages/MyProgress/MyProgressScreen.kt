@@ -51,6 +51,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -303,7 +304,7 @@ fun MyProgressScreen(
                     state.sideQuestData?.let { refData ->
                         ReferenceGroupCard(category = refData.conjugations, color = Color(0xFF3F51B5),onNavigate = onNavigate )
                         ReferenceGroupCard(category = refData.adjectives, color = Color(0xFF009688),onNavigate = onNavigate )
-                        ReferenceGroupCard(category = refData.pairs, color = Color(0xFFFF9800),onNavigate = onNavigate )
+                        ReferenceGroupCard(category = refData.pairs, color = LocalExtendedColors.current.statusOrange,onNavigate = onNavigate )
 
                         SectionHeader(title = "Quick Reference", icon = Icons.Default.AutoAwesome, color = Color(0xFF9C27B0)) // Purple
                         // Quick Refs

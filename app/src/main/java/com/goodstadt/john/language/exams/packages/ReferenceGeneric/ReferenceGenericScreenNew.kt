@@ -89,7 +89,7 @@ fun ReferenceGenericScreenNew(
                                             Icon(
                                                 imageVector = Icons.Filled.WorkspacePremium,
                                                 contentDescription = "Stats",
-                                                tint = Color(0xFFFF9800)
+                                                tint = LocalExtendedColors.current.statusOrange
                                             )
                                         }
                                     }

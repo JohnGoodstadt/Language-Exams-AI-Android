@@ -121,7 +121,7 @@ fun Format2Screen(
                         Icon(
                             imageVector = Icons.Default.SportsEsports,
                             contentDescription = "Stats",
-                            tint = Color(0xFFFF9800)
+                            tint = LocalExtendedColors.current.statusOrange
                         )
                     }
                     // Side Quest Icon
@@ -129,7 +129,7 @@ fun Format2Screen(
                         Icon(
                             imageVector = Icons.Filled.WorkspacePremium,
                             contentDescription = "Stats",
-                            tint = Color(0xFFFF9800)
+                            tint = LocalExtendedColors.current.statusOrange
                         )
                     }
                 }

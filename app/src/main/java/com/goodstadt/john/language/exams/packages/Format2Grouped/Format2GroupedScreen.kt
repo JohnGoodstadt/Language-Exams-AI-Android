@@ -39,6 +39,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -299,14 +300,14 @@ fun Format2Content(
                         Icon(
                             imageVector = Icons.Filled.Translate,
                             contentDescription = "Translate",
-                            tint = Color(0xFFFF9800)
+                            tint = LocalExtendedColors.current.statusOrange
                         )
                     }
                     IconButton(onClick = onShowQuizSheet) {
                         Icon(
                             imageVector = Icons.Default.SportsEsports,
                             contentDescription = "Stats",
-                            tint = Color(0xFFFF9800)
+                            tint = LocalExtendedColors.current.statusOrange
                         )
                     }
                     // Side Quest Icon
@@ -314,7 +315,7 @@ fun Format2Content(
                         Icon(
                             imageVector = Icons.Filled.WorkspacePremium,
                             contentDescription = "Stats",
-                            tint = Color(0xFFFF9800)
+                            tint = LocalExtendedColors.current.statusOrange
                         )
                     }
                 }

@@ -1,5 +1,7 @@
 package com.goodstadt.john.language.exams.managers
 
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
+
 //import com.goodstadt.john.language.exams.models.XpActionType
 import android.content.Context
 import android.os.Bundle
@@ -315,7 +317,7 @@ class XPManager @Inject constructor(
     //    val statusColor = when (getUserType()) {
 //        UserType.Light -> Color.Gray
 //        UserType.Regular -> Color(0xFF2196F3) // Blue
-//        UserType.Serious -> Color(0xFFFF9800) // Orange
+//        UserType.Serious -> statusOrange // Orange
 //        UserType.Super -> Color(0xFF9C27B0)   // Purple
 //    }
     fun buyStreakFreeze(): Boolean {

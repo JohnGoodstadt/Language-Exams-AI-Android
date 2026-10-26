@@ -691,7 +691,7 @@ private fun ReferenceAreasSection(
 private fun ReferenceAreaRow(strength: ReferenceStrength, onClick: (() -> Unit)? = null) {
     val (label, color) = when (strength.level) {
         ReferenceStrengthLevel.WEAK -> "Weak" to Color(0xFFE53935)
-        ReferenceStrengthLevel.OK -> "OK" to Color(0xFFFF9800)
+        ReferenceStrengthLevel.OK -> "OK" to LocalExtendedColors.current.statusOrange
         ReferenceStrengthLevel.STRONG -> "Strong" to Color(0xFF4CAF50)
         ReferenceStrengthLevel.UNTESTED -> "—" to Color.Gray
     }

@@ -96,7 +96,7 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                             onClick = { showQuizSheet = true },
                             shape = CircleShape,
                             containerColor = MaterialTheme.colorScheme.surface,
-                            contentColor = Color(0xFFFF9800),
+                            contentColor = LocalExtendedColors.current.statusOrange,
                             modifier = Modifier
                                 .align(Alignment.BottomStart)
                                 .padding(16.dp)
@@ -110,7 +110,7 @@ fun PronounsClaudeScreen(viewModel: PronounsClaudeViewModel = hiltViewModel()) {
                         onClick = { showTranslateSheet = true },
                         shape = CircleShape,
                         containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = Color(0xFFFF9800),
+                        contentColor = LocalExtendedColors.current.statusOrange,
                         modifier = Modifier
                             .align(Alignment.BottomEnd)
                             .padding(16.dp)

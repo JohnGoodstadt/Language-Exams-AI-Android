@@ -32,6 +32,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -118,7 +119,7 @@ fun RateLimitDailyPaywallBottomSheet (
             Icon(
                 imageVector = Icons.Default.LockClock,
                 contentDescription = null,
-                tint = Color(0xFFFF9800), // Orange Warning
+                tint = LocalExtendedColors.current.statusOrange, // Orange Warning
                 modifier = Modifier.size(64.dp)
             )
 

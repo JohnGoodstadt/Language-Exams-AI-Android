@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
@@ -63,7 +64,7 @@ fun AchievementBanner(
                             .size(48.dp)
                             .background(
                                 Brush.linearGradient(
-                                    colors = listOf(Color(0xFFFFC107), Color(0xFFFF9800))
+                                    colors = listOf(Color(0xFFFFC107), LocalExtendedColors.current.statusOrange)
                                 ),
                                 CircleShape
                             ),

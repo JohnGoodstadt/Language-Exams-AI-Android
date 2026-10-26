@@ -48,6 +48,7 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -603,7 +604,11 @@ private fun SettingsContent(
                 }
                 Switch(
                     checked = underlineOn,
-                    onCheckedChange = { viewModel.setHighlightUnderline(it) }
+                    onCheckedChange = { viewModel.setHighlightUnderline(it) },
+                    colors = SwitchDefaults.colors(
+                        checkedThumbColor = Color.White,
+                        checkedTrackColor = LocalExtendedColors.current.buttonBlue
+                    )
                 )
             }
         }
@@ -719,7 +724,11 @@ private fun SettingsContent(
                     }
                     Switch(
                         checked = altPalette,
-                        onCheckedChange = { viewModel.setUseAlternativePalette(it) }
+                        onCheckedChange = { viewModel.setUseAlternativePalette(it) },
+                        colors = SwitchDefaults.colors(
+                            checkedThumbColor = Color.White,
+                            checkedTrackColor = LocalExtendedColors.current.buttonBlue
+                        )
                     )
                 }
             }

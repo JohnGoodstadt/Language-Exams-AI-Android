@@ -47,6 +47,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -260,7 +261,7 @@ fun generateNuancedAdvice(
             "Finish Strong!",
             "You are so close to mastering '${almostDone.title}'. Just $remaining sentences left!",
             Icons.Filled.Flag,
-            Color(0xFFFF9800)
+            LocalExtendedColors.current.statusOrange
         ) // Orange
     }
 
@@ -277,7 +278,7 @@ fun generateNuancedAdvice(
             "On Fire!",
             "A $streak-day streak is impressive. Consistency is the secret to fluency.",
             Icons.Filled.LocalFireDepartment,
-            Color(0xFFFF9800)
+            LocalExtendedColors.current.statusOrange
         )
     }
 
@@ -365,7 +366,7 @@ fun SmartCoachCard(title: String, message: String, icon: ImageVector, color: Col
 fun TopicProgressRow(category: CategoryProgress) {
     val barColor = when {
         category.isCompleted -> Color(0xFF4CAF50) // Green
-        category.percentage > 0.8f -> Color(0xFFFF9800) // Orange
+        category.percentage > 0.8f -> LocalExtendedColors.current.statusOrange // Orange
         else -> Color(0xFF2196F3) // Blue
     }
 
@@ -436,7 +437,7 @@ fun CompactBadgeRow(xpManager: XPManager) {
                 // Show last 3 badges
                 xpState.earnedBadges.takeLast(3).forEach { badgeName ->
                     Surface(
-                        color = Color(0xFFFF9800).copy(alpha = 0.1f), // Orange Tint
+                        color = LocalExtendedColors.current.statusOrange.copy(alpha = 0.1f), // Orange Tint
                         shape = RoundedCornerShape(16.dp)
                     ) {
                         Row(
@@ -447,7 +448,7 @@ fun CompactBadgeRow(xpManager: XPManager) {
                             Icon(
                                 Icons.Default.EmojiEvents,
                                 contentDescription = null,
-                                tint = Color(0xFFFF9800),
+                                tint = LocalExtendedColors.current.statusOrange,
                                 modifier = Modifier.size(14.dp)
                             )
                             Text(
@@ -483,7 +484,7 @@ fun ExamCountdownCardObsolete(
             Text(
                 "Mission: $currentLevelName",
                 style = MaterialTheme.typography.labelLarge,
-                color = Color(0xFFFF9800)
+                color = LocalExtendedColors.current.statusOrange
             )
             Spacer(modifier = Modifier.height(4.dp))
 

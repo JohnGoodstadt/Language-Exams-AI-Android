@@ -33,6 +33,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -126,7 +127,7 @@ fun RateLimitHourlyPaywallBottomSheet(
             Icon(
                 imageVector = Icons.Default.LockClock,
                 contentDescription = null,
-                tint = Color(0xFFFF9800), // Orange Warning
+                tint = LocalExtendedColors.current.statusOrange, // Orange Warning
                 modifier = Modifier.size(64.dp)
             )
 
@@ -152,7 +153,7 @@ fun RateLimitHourlyPaywallBottomSheet(
             }
             Text(
                 text = message,//"Credits refill in: $limitMessage",
-                color = Color(0xFFFF9800), // Orange
+                color = LocalExtendedColors.current.statusOrange, // Orange
                 fontWeight = FontWeight.Bold
             )
 

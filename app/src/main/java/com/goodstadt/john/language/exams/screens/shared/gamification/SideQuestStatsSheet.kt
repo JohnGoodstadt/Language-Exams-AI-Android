@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.Placeholder
 import androidx.compose.ui.text.PlaceholderVerticalAlign
@@ -143,7 +144,7 @@ fun SideQuestStatsSheet(
                     if (pairs != null) {
                         ReferenceGroupCard(
                             category = pairs,
-                            color = Color(0xFFFF9800), // Orange
+                            color = LocalExtendedColors.current.statusOrange, // Orange
                             onNavigate = onNavigate
                         )
                     }

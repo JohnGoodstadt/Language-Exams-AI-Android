@@ -87,6 +87,7 @@ import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
@@ -417,7 +418,7 @@ private fun UsageQuizHeader(
             Icon(
                 imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
                 contentDescription = "Stats",
-                tint = Color(0xFFFF9800)
+                tint = LocalExtendedColors.current.statusOrange
             )
         }
     }
@@ -1143,7 +1144,7 @@ fun usageMasteryChipColor(level: UsageMastery): Color {
     return when (level) {
         UsageMastery.New -> Color.Gray
         UsageMastery.Struggling -> Color.Red
-        UsageMastery.Learning -> Color(0xFFFF9800) // Orange
+        UsageMastery.Learning -> statusOrange // Orange
         UsageMastery.Review -> Color(0xFF2196F3) // Blue
         UsageMastery.Mastered -> Color(0xFF4CAF50) // Green
     }

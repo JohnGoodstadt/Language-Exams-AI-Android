@@ -94,7 +94,7 @@ fun SimpleSectionedVocabList(
                                     Icon(
                                         imageVector = Icons.Filled.Translate,
                                         contentDescription = "Translate",
-                                        tint = Color(0xFFFF9800)
+                                        tint = LocalExtendedColors.current.statusOrange
                                     )
                                 }
                             }
@@ -102,14 +102,14 @@ fun SimpleSectionedVocabList(
                                 Icon(
                                     imageVector = Icons.Default.SportsEsports,
                                     contentDescription = "Quiz",
-                                    tint = Color(0xFFFF9800)
+                                    tint = LocalExtendedColors.current.statusOrange
                                 )
                             }
                             IconButton(onClick = onSideQuestTapped) {
                                 Icon(
                                     imageVector = Icons.Filled.WorkspacePremium,
                                     contentDescription = "Stats",
-                                    tint = Color(0xFFFF9800)
+                                    tint = LocalExtendedColors.current.statusOrange
                                 )
                             }
                         }

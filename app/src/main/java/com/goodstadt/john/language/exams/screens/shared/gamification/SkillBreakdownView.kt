@@ -23,6 +23,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -165,7 +167,7 @@ private fun getSkillBreakdownLevelColor(level: String): Color {
     return when (level) {
         "A1" -> Color(0xFF4CAF50) // Green
         "A2" -> Color(0xFF2196F3) // Blue
-        "B1" -> Color(0xFFFF9800) // Orange
+        "B1" -> statusOrange // Orange
         "B2" -> Color(0xFFF44336) // Red
         else -> Color.Gray
     }

@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -47,7 +48,7 @@ fun LifetimeStatsGrid(
     val statusColor = when (userType) {
         UserType.Light -> Color.Gray
         UserType.Regular -> Color(0xFF2196F3)   // Blue
-        UserType.Serious -> Color(0xFFFF9800)   // Orange
+        UserType.Serious -> statusOrange   // Orange
         UserType.Super -> Color(0xFF9C27B0)     // Purple
     }
 

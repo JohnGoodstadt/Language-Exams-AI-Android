@@ -11,6 +11,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
@@ -39,7 +41,7 @@ fun getLevelColor(levelName: String): Color {
     return when(levelName) {
         "Elementary" -> Color(0xFF4CAF50) // Green
         "Intermediate" -> Color(0xFF2196F3) // Blue
-        "Upper" -> Color(0xFFFF9800) // Orange
+        "Upper" -> statusOrange // Orange
         "Advanced" -> Color(0xFFF44336) // Red
         else -> Color.Gray
     }
@@ -66,7 +68,7 @@ data class LevelConfig(val name: String, val color: Color, val quizzes: List<Qui
 val quizLevels = listOf(
     LevelConfig("Elementary", Color(0xFF4CAF50), (1..5).map { QuizUiConfig(it, "Quiz $it - Basics") }),    // Green
     LevelConfig("Intermediate", Color(0xFF2196F3), (1..5).map { QuizUiConfig(it, "Quiz $it - Grammar") }), // Blue
-    LevelConfig("Upper", Color(0xFFFF9800), (1..5).map { QuizUiConfig(it, "Quiz $it - Fluency") }),       // Orange
+    LevelConfig("Upper", statusOrange, (1..5).map { QuizUiConfig(it, "Quiz $it - Fluency") }),       // Orange
     LevelConfig("Advanced", Color(0xFFF44336), (1..5).map { QuizUiConfig(it, "Quiz $it - Mastery") })      // Red
 )
 
