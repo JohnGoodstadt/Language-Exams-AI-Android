@@ -43,20 +43,20 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
+import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6Style
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounCategory
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounForm
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSentence
-import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounsClaudeStyle
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.screens.shared.buttonStyleChipColors
 
 /**
  * The NEW conjugation reference screen: a fileFormat-6, pattern-focused view (sibling of the Pronouns /
@@ -219,7 +219,7 @@ private fun ConjugationsTeachingContent(
                     selected = c.id == category.id,
                     onClick = { onCategorySelected(c.id) },
                     label = { Text(c.label) },
-                    colors = FilterChipDefaults.filterChipColors()
+                    colors = buttonStyleChipColors()
                 )
             }
         }
@@ -273,7 +273,7 @@ private fun CategoryDetail(category: PronounCategory, onPlay: (String) -> Unit) 
 private fun SentenceRow(sentence: PronounSentence, onPlay: (String) -> Unit) {
     // Tap the row to hear it — same interaction as the reference lists.
     Text(
-        PronounsClaudeStyle.highlightGreenWords(sentence.text, sentence.green),
+        Format6Style.highlightGreenWords(sentence.text, sentence.green),
         style = MaterialTheme.typography.titleMedium,
         modifier = Modifier
             .fillMaxWidth()
@@ -320,7 +320,7 @@ private fun FormChain(forms: List<PronounForm>, onPlay: (String) -> Unit) {
                     form.text,
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = PronounsClaudeStyle.HIGHLIGHT,
+                    color = Format6Style.HIGHLIGHT,
                     modifier = Modifier.width(160.dp)
                 )
                 Text(

@@ -34,7 +34,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.SelectableChipColors
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -53,7 +52,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
-import com.goodstadt.john.language.exams.ui.theme.LocalIsDarkTheme
+import com.goodstadt.john.language.exams.screens.shared.buttonStyleChipColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -214,7 +213,7 @@ private fun PronounsContent(
                     leadingIcon = if (locked) {
                         { Icon(Icons.Filled.Lock, contentDescription = "Locked", modifier = Modifier.size(16.dp)) }
                     } else null,
-                    colors = format6ChipColors()
+                    colors = buttonStyleChipColors()
                 )
             }
         }
@@ -229,7 +228,7 @@ private fun PronounsContent(
                     selected = p.id == pattern?.id,
                     onClick = { onChipTapped(); selectedPatternId = p.id },
                     label = { Text(p.chip) },
-                    colors = format6ChipColors()
+                    colors = buttonStyleChipColors()
                 )
             }
         }
@@ -358,13 +357,3 @@ private fun FormChain(forms: List<PronounForm>) {
         }
     }
 }
-
-/** Light mode: the selected chip reads as a standard button (button blue, white text). Dark: Material default. */
-@Composable
-private fun format6ChipColors(): SelectableChipColors =
-    if (LocalIsDarkTheme.current) FilterChipDefaults.filterChipColors()
-    else FilterChipDefaults.filterChipColors(
-        selectedContainerColor = LocalExtendedColors.current.buttonBlue,
-        selectedLabelColor = Color.White,
-        selectedLeadingIconColor = Color.White
-    )

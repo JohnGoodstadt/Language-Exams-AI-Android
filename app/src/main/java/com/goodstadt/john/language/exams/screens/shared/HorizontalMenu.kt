@@ -10,6 +10,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SelectableChipColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -64,3 +65,16 @@ fun MenuItemChip(
         border = null // Optional: remove the default border for a cleaner look
     )
 }
+
+/**
+ * FilterChip colours for chips that act as buttons (Format6, Conjugations): in light mode the
+ * selected chip reads as a standard button (button blue, white text). Dark: Material default.
+ */
+@Composable
+fun buttonStyleChipColors(): SelectableChipColors =
+    if (LocalIsDarkTheme.current) FilterChipDefaults.filterChipColors()
+    else FilterChipDefaults.filterChipColors(
+        selectedContainerColor = LocalExtendedColors.current.buttonBlue,
+        selectedLabelColor = Color.White,
+        selectedLeadingIconColor = Color.White
+    )
