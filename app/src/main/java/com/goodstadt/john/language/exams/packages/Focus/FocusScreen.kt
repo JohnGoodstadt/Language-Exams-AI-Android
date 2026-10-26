@@ -94,7 +94,7 @@ fun FocusScreen(
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
-        Text("Focus Areas", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = orangeLight)
+        Text("Focus Areas", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = LocalExtendedColors.current.sectionHeader)
         Text(
             text = "Here is where you can improve area not yet strong enough. Take quizzes and the results, for weak areas, show here",
             style = MaterialTheme.typography.bodyMedium,
@@ -162,7 +162,7 @@ fun FocusScreen(
                 text = "Bonus Section",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = orangeLight
+                color = LocalExtendedColors.current.sectionHeader
             )
             Spacer(Modifier.height(4.dp))
             Text(
@@ -240,7 +240,7 @@ fun FocusScreen(
                         level,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = orangeLight
+                        color = LocalExtendedColors.current.sectionHeader
                     )
                     Spacer(Modifier.height(6.dp))
                     Card(
@@ -337,7 +337,7 @@ private fun NotEnoughDataCard(confidence: Int, onTakeAudit: () -> Unit) {
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(Modifier.padding(16.dp)) {
-                Text("📋 Let's get you set up", color = orangeLight, fontWeight = FontWeight.Bold)
+                Text("📋 Let's get you set up", color = LocalExtendedColors.current.sectionHeader, fontWeight = FontWeight.Bold)
                 Spacer(Modifier.height(8.dp))
                 Text(
                     "Please take the audit so we can configure the app to match your level.",
@@ -543,7 +543,7 @@ private fun VocabQuizAreasSection(
         text = "Vocab Quiz",
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color = orangeLight
+        color = LocalExtendedColors.current.sectionHeader
     )
     Spacer(Modifier.height(4.dp))
     if (strengths.isEmpty()) {
@@ -594,7 +594,7 @@ private fun UsageQuizAreasSection(
         text = "Usage Quiz",
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color =  orangeLight
+        color =  LocalExtendedColors.current.sectionHeader
     )
     Spacer(Modifier.height(4.dp))
     if (strengths.isEmpty()) {
@@ -644,7 +644,7 @@ private fun ReferenceAreasSection(
         text = "Reference areas",
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color = orangeLight
+        color = LocalExtendedColors.current.sectionHeader
     )
     Spacer(Modifier.height(4.dp))
     if (strengths.isEmpty()) {

@@ -111,7 +111,6 @@ import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
-import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.packages.VocabQuiz.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
@@ -638,7 +637,7 @@ private fun CategoryStatsBar(
             Icon(
                 imageVector = Icons.Filled.Translate,
                 contentDescription = "Translate",
-                tint = Color(0xFFFF9800)
+                tint = LocalExtendedColors.current.iconAccent
             )
         }
         IconButton(
@@ -650,7 +649,7 @@ private fun CategoryStatsBar(
             Icon(
                 imageVector = Icons.Filled.WorkspacePremium,
                 contentDescription = "Stats",
-                tint = Color(0xFFFF9800)
+                tint = LocalExtendedColors.current.iconAccent
             )
         }
     }
@@ -708,7 +707,7 @@ private fun CategorySectionHeader(
                     Icons.Filled.Pause else Icons.Filled.PlayArrow,
                 contentDescription = if (isPlaying)
                     "Stop playing section" else "Play section",
-                tint = orangeLight
+                tint = LocalExtendedColors.current.iconAccent
             )
         }
 
@@ -732,7 +731,7 @@ private fun CategorySectionHeader(
                 Icon(
                     imageVector = Icons.Default.Lock,
                     contentDescription = "Locked - unlock with Premium",
-                    tint = orangeLight
+                    tint = LocalExtendedColors.current.iconAccent
                 )
             }
         } else if (isQuizAvailable) {
@@ -744,10 +743,10 @@ private fun CategorySectionHeader(
                         )
                     },
                     // 1. Set the Border width and color
-                    border = BorderStroke(1.dp, orangeLight),
+                    border = BorderStroke(1.dp, LocalExtendedColors.current.iconAccent),
                     // 2. Set the Text/Icon color
                     colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = orangeLight,
+                        contentColor = LocalExtendedColors.current.iconAccent,
                         containerColor = Color.Transparent
                     ),
                     // 3. Shape (Rounded corners)
@@ -773,7 +772,7 @@ private fun CategorySectionHeader(
                     Icon(
                         imageVector = Icons.Default.SportsEsports,
                         contentDescription = "Take Quiz",
-                        tint = orangeLight
+                        tint = LocalExtendedColors.current.iconAccent
                     )
                 }
             }

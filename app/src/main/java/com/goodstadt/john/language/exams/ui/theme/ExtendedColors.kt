@@ -36,6 +36,10 @@ data class ExtendedColors(
     /** "Success"/correct green used for text & highlighted correct words. Bright green on dark,
      *  a darker green on light (pure green is too light on white). */
     val textAccentAlternative: Color,
+    /** Icon buttons (e.g. CategoryTab actions). Orange on dark (unchanged), dark blue on light. */
+    val iconAccent: Color,
+    /** Section headers / titles. Orange on dark (unchanged), black on light. */
+    val sectionHeader: Color,
 )
 
 val DarkExtendedColors = ExtendedColors(
@@ -49,6 +53,8 @@ val DarkExtendedColors = ExtendedColors(
     mutedGrey = greyLight2,                  // 0xFF505055
     quizQuestionText = orangeLight,          // 0xFFFFA500 (orange on dark, as before)
     textAccentAlternative = Color.Green,     // bright green reads on dark
+    iconAccent = orangeLight,                // unchanged on dark (orange)
+    sectionHeader = orangeLight,             // unchanged on dark (orange)
 )
 
 val LightExtendedColors = ExtendedColors(
@@ -62,6 +68,8 @@ val LightExtendedColors = ExtendedColors(
     mutedGrey = Color(0xFF8E8E93),
     quizQuestionText = Color(0xFF000000),    // black answer text on white
     textAccentAlternative = Color(0xFF2E7D32), // darker green, legible on white
+    iconAccent = blueDark,                   // 0xFF0D47A1 dark blue on light
+    sectionHeader = Color(0xFF000000),       // black headers on light
 )
 
 // --- Experimental / reserve palettes -------------------------------------------------------------

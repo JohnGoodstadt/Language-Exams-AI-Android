@@ -20,7 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 @Composable
 fun ScrollableHorizontalLevelPicker(
@@ -29,7 +29,7 @@ fun ScrollableHorizontalLevelPicker(
     onOptionSelected: (String) -> Unit
 ) {
     // Defines the Orange accent color
-    val accentOrange = orangeLight//Color(0xFFFF9800)
+    val accentOrange = LocalExtendedColors.current.buttonBlue
 
     LazyRow(
         modifier = Modifier

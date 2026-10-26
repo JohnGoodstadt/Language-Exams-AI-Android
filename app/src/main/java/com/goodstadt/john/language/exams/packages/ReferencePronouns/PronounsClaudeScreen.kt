@@ -53,7 +53,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
-import com.goodstadt.john.language.exams.ui.theme.orangeLight
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -293,7 +292,7 @@ private fun SectionHeader(section: ExampleSection) {
         section.header,
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.Bold,
-        color = orangeLight,
+        color = LocalExtendedColors.current.sectionHeader,
         modifier = Modifier.padding(top = 8.dp)
     )
 }
