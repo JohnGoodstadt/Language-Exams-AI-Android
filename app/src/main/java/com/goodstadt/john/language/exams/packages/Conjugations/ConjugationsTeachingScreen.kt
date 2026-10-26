@@ -89,7 +89,8 @@ fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltVi
         HorizontalLevelPicker(
             options = viewModel.verbOptions,
             selectedOption = selectedVerb,
-            onOptionSelected = viewModel::onVerbSelected
+            onOptionSelected = viewModel::onVerbSelected,
+            filledWhenSelected = true
         )
 
         Box(Modifier.fillMaxSize()) {

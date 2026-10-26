@@ -24,6 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalIsDarkTheme
 
 //TODO: Should be shared amongst screens
 @Composable
@@ -31,8 +32,11 @@ fun HorizontalLevelPicker(
     options: List<String>,
     selectedOption: String,
     onOptionSelected: (String) -> Unit,
-    lockedOptions: Set<String> = emptySet()
+    lockedOptions: Set<String> = emptySet(),
+    // Light mode only: show the selected option as a standard button (button blue, white text).
+    filledWhenSelected: Boolean = false
 ) {
+    val filled = filledWhenSelected && !LocalIsDarkTheme.current
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -47,7 +51,11 @@ fun HorizontalLevelPicker(
             Button(
                 onClick = { onOptionSelected(option) },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isSelected) LocalExtendedColors.current.rowSelected else LocalExtendedColors.current.rowUnselected, // adaptive: selected more prominent
+                    containerColor = when {
+                        isSelected && filled -> LocalExtendedColors.current.buttonBlue
+                        isSelected -> LocalExtendedColors.current.rowSelected // adaptive: selected more prominent
+                        else -> LocalExtendedColors.current.rowUnselected
+                    },
                     contentColor = MaterialTheme.colorScheme.onSurface
                 ),
                 shape = RoundedCornerShape(8.dp),
@@ -68,7 +76,12 @@ fun HorizontalLevelPicker(
                 }
                 Text(
                     text = option,
-                    color = if (isLocked) Color.Gray else if (isSelected) LocalExtendedColors.current.screenAccent else MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = when {
+                        isLocked -> Color.Gray
+                        isSelected && filled -> Color.White
+                        isSelected -> LocalExtendedColors.current.screenAccent
+                        else -> MaterialTheme.colorScheme.onSurfaceVariant
+                    },
                     maxLines = 1,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center
