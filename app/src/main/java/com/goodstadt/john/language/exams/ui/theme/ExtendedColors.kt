@@ -93,6 +93,13 @@ val DarkExtendedColorsAlternative = DarkExtendedColors.copy(
 val LocalExtendedColors = staticCompositionLocalOf { DarkExtendedColors }
 
 /**
+ * Whether the active theme is dark (the resolved System/Light/Dark choice). Provided by
+ * [LanguageExamsAITheme]. For the few components whose light-mode STYLE differs, not just their
+ * colours (e.g. the iOS-style sub-tab menu and numbered bottom-tab circles).
+ */
+val LocalIsDarkTheme = staticCompositionLocalOf { true }
+
+/**
  * Whether highlighted words in sentences are underlined. Default off (colour only); the Settings
  * "Underline highlighted words" switch turns it on (helps accessibility / colour-blind users).
  * Provided at the app root from the persisted setting.

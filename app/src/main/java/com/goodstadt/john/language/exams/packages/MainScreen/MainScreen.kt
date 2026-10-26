@@ -84,6 +84,10 @@ import com.goodstadt.john.language.exams.packages.me.ChooseOnlyExamSheet
 import com.goodstadt.john.language.exams.packages.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
+import com.goodstadt.john.language.exams.ui.theme.LocalIsDarkTheme
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.ui.LocalIsExpanded
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.utils.findActivity
@@ -260,11 +264,16 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentDestination = navBackStackEntry?.destination
 
+            // Light mode copies the iOS tab bar: button blue when selected, grey when not, and tabs
+            // 1-3 drawn as filled number circles (see NumberTabIcon). Dark mode is unchanged.
+            val isLight = !LocalIsDarkTheme.current
+            val selectedNavColor = if (isLight) LocalExtendedColors.current.buttonBlue else LocalExtendedColors.current.screenAccent
+            val unselectedNavColor = if (isLight) LocalExtendedColors.current.mutedGrey else DarkSecondary
             val navBarColors = NavigationBarItemDefaults.colors(
-                selectedIconColor = LocalExtendedColors.current.screenAccent, // Your "LocalExtendedColors.current.screenAccent"
-                selectedTextColor = LocalExtendedColors.current.screenAccent,
-                unselectedIconColor = DarkSecondary,
-                unselectedTextColor = DarkSecondary,
+                selectedIconColor = selectedNavColor,
+                selectedTextColor = selectedNavColor,
+                unselectedIconColor = unselectedNavColor,
+                unselectedTextColor = unselectedNavColor,
                 indicatorColor = Color.Transparent
             )
 
@@ -272,6 +281,13 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             val navItems: @Composable RowScope.() -> Unit = {
                 bottomNavItems.forEach { screen ->
                     val badgeCount = globalUiState.badgeCounts[screen.route] ?: 0
+                    val isSelected = currentDestination?.hierarchy?.any { it.route == screen.route } == true
+                    val tabNumber = when (screen) {
+                        Screen.Tab1 -> 1
+                        Screen.Tab2 -> 2
+                        Screen.Tab3 -> 3
+                        else -> null
+                    }
 
                     NavigationBarItem(
                         icon = {
@@ -290,7 +306,12 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                                 }
                             ) {
                                 // This is your existing icon rendering logic. It goes inside the BadgedBox.
-                                when (val icon = screen.icon) {
+                                if (isLight && tabNumber != null) {
+                                    NumberTabIcon(
+                                        number = tabNumber,
+                                        circleColor = if (isSelected) selectedNavColor else unselectedNavColor
+                                    )
+                                } else when (val icon = screen.icon) {
                                     is IconResource.VectorIcon -> Icon(icon.imageVector, contentDescription = screen.title)
                                     is IconResource.DrawableIcon -> Icon(painterResource(id = icon.id), contentDescription = screen.title)
                                 }
@@ -298,7 +319,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                         },
                         label = { Text(screen.title, maxLines = 1, textAlign = TextAlign.Center) },
                         colors = navBarColors,
-                        selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
+                        selected = isSelected,
                         onClick = {
                             navController.navigate(screen.route) {
                                 popUpTo(navController.graph.findStartDestination().id) {
@@ -552,5 +573,23 @@ fun NoConnectionScreen(
         Button(onClick = onRetry) {
             Text("Retry")
         }
+    }
+}
+
+/** Light-mode bottom-tab icon for tabs 1-3 (iOS style): a white number on a filled circle. */
+@Composable
+private fun NumberTabIcon(number: Int, circleColor: Color) {
+    Box(
+        modifier = Modifier
+            .size(26.dp)
+            .background(circleColor, CircleShape),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = number.toString(),
+            color = Color.White,
+            fontSize = 15.sp,
+            fontWeight = FontWeight.Bold
+        )
     }
 }

@@ -14,9 +14,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
+import com.goodstadt.john.language.exams.ui.theme.LocalIsDarkTheme
 
 
 @Composable
@@ -28,18 +30,28 @@ fun MenuItemChip(
     // onSurfaceVariant for a greyer unselected state so the selected accent stands out more.
     unselectedLabelColor: Color = MaterialTheme.colorScheme.onSurface,
 ) {
+    // Light mode uses the iOS style: every option is button blue and the selected one is underlined.
+    // Dark mode keeps the original style (accent-coloured selection, plain unselected labels).
+    val isLight = !LocalIsDarkTheme.current
+    val buttonBlue = LocalExtendedColors.current.buttonBlue
     val chipColors = FilterChipDefaults.filterChipColors(
         // Use your app's "accent" color for the selected state
         selectedContainerColor = Color.Transparent,
-        selectedLabelColor = LocalExtendedColors.current.screenAccent,
-        labelColor = unselectedLabelColor,
+        selectedLabelColor = if (isLight) buttonBlue else LocalExtendedColors.current.screenAccent,
+        labelColor = if (isLight) buttonBlue else unselectedLabelColor,
     )
 
     FilterChip(
 //        modifier = Modifier.size(24.dp),
         selected = isSelected,
         onClick = onClick,
-        label = { Text(text, fontSize = 20.sp) },
+        label = {
+            Text(
+                text,
+                fontSize = 20.sp,
+                textDecoration = if (isLight && isSelected) TextDecoration.Underline else null
+            )
+        },
         colors = chipColors,
         border = null // Optional: remove the default border for a cleaner look
     )
