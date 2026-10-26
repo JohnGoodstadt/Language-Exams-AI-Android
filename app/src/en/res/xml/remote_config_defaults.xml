@@ -24,9 +24,9 @@
     </entry>
     <entry>
         <key>llm_models_config</key>
-        <value>[{"id": "gpt-5-nano","title": "GPT-5_Nano","pricePerMillionInputTokens":
-            0.40,"inputPrice": 0.15,
-            "outputPrice": 0.4,"isDefault": true} ]
+        <value>[{"id": "gpt-5.6-luna","title": "gpt-5.6-luna","pricePerMillionInputTokens":
+            0.60,"inputPrice": 0.10,
+            "outputPrice": 0.50,"isDefault": true} ]
         </value>
     </entry>
     <entry>

@@ -46,10 +46,16 @@ class AppConfigRepository @Inject constructor(
     private val INITIAL_SCREEN = Screen.Tab5.route //Me TAB
 
     private val defaultModels = listOf(
+        //gpt-6-luna
+        //$0.10
+        //$0.50
+        //$0.01
+        //$0.125
+        //$0.25
         LlmModelInfo(
-            "gpt-4.1-nano", "GPT-4.1-nano", 0.40f, isDefault = true,
-            inputPrice = 0.05F,
-            outputPrice = 0.4F
+            "gpt-5.6-luna", "gpt-5.6-luna", 0.60f, isDefault = true,
+            inputPrice = 0.10F,
+            outputPrice = 0.50F
         )
     )
     private val defaultDeepSeekModels = listOf(
