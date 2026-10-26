@@ -85,10 +85,10 @@ import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomShe
 import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageQuizLevelsFilename
 import com.goodstadt.john.language.exams.screens.shared.AutoAdvanceToggleButton
 import com.goodstadt.john.language.exams.screens.shared.InfoCircleButton
-import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
-import com.goodstadt.john.language.exams.ui.theme.statusOrange
+import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.ui.theme.statusOrange
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
@@ -215,7 +215,9 @@ fun UsageQuizScreen(
                         infoDisabled = true
                     }
                 }
-            }
+            },
+            filledWhenSelected = true,
+            fontSize = 16.sp // verb tab label size (the picker's default is 12.sp)
         )
 
         UsageQuizHeader(
@@ -418,7 +420,7 @@ private fun UsageQuizHeader(
             Icon(
                 imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
                 contentDescription = "Stats",
-                tint = LocalExtendedColors.current.statusOrange
+                tint = LocalExtendedColors.current.buttonBlue
             )
         }
     }
@@ -454,7 +456,7 @@ private fun UsageQuizLearningPoints(
             Text(
                 text = if (isExpanded) "less" else "more…",
                 style = MaterialTheme.typography.labelMedium,
-                color = orangeLight,
+                color = LocalExtendedColors.current.buttonBlue,
                 modifier = Modifier
                     .clickable { onToggle() }
                     .padding(8.dp)
@@ -472,7 +474,7 @@ private fun UsageQuizLearningPoints(
                         modifier = Modifier.padding(vertical = 2.dp),
                         verticalAlignment = Alignment.Top
                     ) {
-                        Text(text = "• ", color = orangeLight)
+                        Text(text = "• ", color = MaterialTheme.colorScheme.onSurface)
                         Text(
                             text = point,
                             style = MaterialTheme.typography.bodyMedium,
@@ -1039,7 +1041,7 @@ fun DropdownMenuBox(
                     text = {
                         Text(
                             text = option,
-                            color = if (option == selectedOption) orangeLight else MaterialTheme.colorScheme.onSurface
+                            color = if (option == selectedOption) LocalExtendedColors.current.buttonBlue else MaterialTheme.colorScheme.onSurface
                         )
                     },
                     onClick = {

@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
@@ -34,7 +35,8 @@ fun HorizontalLevelPicker(
     onOptionSelected: (String) -> Unit,
     lockedOptions: Set<String> = emptySet(),
     // Light mode only: show the selected option as a standard button (button blue, white text).
-    filledWhenSelected: Boolean = false
+    filledWhenSelected: Boolean = false,
+    fontSize: TextUnit = 12.sp
 ) {
     val filled = filledWhenSelected && !LocalIsDarkTheme.current
     Row(
@@ -83,7 +85,7 @@ fun HorizontalLevelPicker(
                         else -> MaterialTheme.colorScheme.onSurfaceVariant
                     },
                     maxLines = 1,
-                    fontSize = 12.sp,
+                    fontSize = fontSize,
                     textAlign = TextAlign.Center
                 )
             }

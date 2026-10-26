@@ -55,6 +55,9 @@ class Format8PlaybackViewModel @Inject constructor(
     var lastSentence: String = ""
         private set
 
+    init{
+        println("format 8 init")
+    }
     fun isLocked(rank: Int): Boolean = policy.isRowLocked(ContentArea.REFERENCE, null, rank)
     fun sectionKey(sheetName: String, rank: Int): String = "$owner$sheetName:$rank"
     fun setGapEnabled(enabled: Boolean) { viewModelScope.launch { preferences.setFormat8SpeakAloudGap(enabled) } }

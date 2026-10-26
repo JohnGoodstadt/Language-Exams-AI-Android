@@ -25,7 +25,6 @@ import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -45,6 +44,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.Format7or10Section
 import com.goodstadt.john.language.exams.packages.ReferencePronouns.Format6File
@@ -55,8 +55,8 @@ import com.goodstadt.john.language.exams.packages.ReferencePronouns.PronounSente
 import com.goodstadt.john.language.exams.packages.ReferenceQuiz.ReferenceQuizScreen
 import com.goodstadt.john.language.exams.packages.Translate.TranslateSheet
 import com.goodstadt.john.language.exams.packages.reference.shared.HorizontalLevelPicker
-import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.screens.shared.buttonStyleChipColors
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 
 /**
  * The NEW conjugation reference screen: a fileFormat-6, pattern-focused view (sibling of the Pronouns /
@@ -90,7 +90,8 @@ fun ConjugationsTeachingScreen(viewModel: ConjugationsTeachingViewModel = hiltVi
             options = viewModel.verbOptions,
             selectedOption = selectedVerb,
             onOptionSelected = viewModel::onVerbSelected,
-            filledWhenSelected = true
+            filledWhenSelected = true,
+            fontSize = 16.sp // verb tab label size (the picker's default is 12.sp)
         )
 
         Box(Modifier.fillMaxSize()) {
