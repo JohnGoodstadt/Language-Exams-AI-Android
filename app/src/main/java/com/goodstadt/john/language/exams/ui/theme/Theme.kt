@@ -52,7 +52,16 @@ fun LanguageExamsAITheme(
     useAlternativePalette: Boolean = false,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if (darkTheme) AppDarkColorScheme else AppLightColorScheme
+    val colorScheme = when {
+        darkTheme -> AppDarkColorScheme
+        // Alternative light palette trials Apple's grouped layering: grey page, white containers.
+        useAlternativePalette -> AppLightColorScheme.copy(
+            background = Color(0xFFF2F2F7),
+            surface = Color(0xFFF2F2F7),
+            surfaceVariant = Color(0xFFFFFFFF),
+        )
+        else -> AppLightColorScheme
+    }
     // DEBUG experiment: swap in the *Alternative ExtendedColors when requested (Settings toggle).
     val extendedColors = when {
         darkTheme && useAlternativePalette -> DarkExtendedColorsAlternative

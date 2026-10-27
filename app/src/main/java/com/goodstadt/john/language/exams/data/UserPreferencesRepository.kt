@@ -47,6 +47,7 @@ class UserPreferencesRepository @Inject constructor(
         val APP_INSTALL_DATE = longPreferencesKey("app_install_date")
         val EXAM_NAME = stringPreferencesKey("currentExamJSONName")
         val HAS_SEEN_HELP_SHEET = booleanPreferencesKey("has_seen_help_sheet_v1")
+        val HAS_SEEN_SWIPE_HINT = booleanPreferencesKey("has_seen_swipe_hint_v1")
         val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
         val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
         val HAS_SEEN_AUDIT_QUIZ_HOWTO = booleanPreferencesKey("has_seen_audit_quiz_howto")
@@ -82,6 +83,19 @@ class UserPreferencesRepository @Inject constructor(
         .map { preferences ->
             preferences[PreferenceKeys.HAS_SEEN_HELP_SHEET] ?: false
         }
+
+    // One-time swipe hint on tabs 1-3 (replaces the auto-shown help sheet).
+    val hasSeenSwipeHintFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_SWIPE_HINT] ?: false
+        }
+
+    suspend fun setHasSeenSwipeHint(hasSeen: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_SWIPE_HINT] = hasSeen
+        }
+    }
 
     // Write Function
     suspend fun setHasSeenHelpSheet(hasSeen: Boolean) {

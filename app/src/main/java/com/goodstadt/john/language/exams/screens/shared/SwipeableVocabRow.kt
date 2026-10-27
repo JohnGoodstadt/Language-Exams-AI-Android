@@ -55,6 +55,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.layout.offset
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.IntOffset
+import kotlinx.coroutines.delay
+import kotlin.math.roundToInt
 
 // --- Your project-specific classes ---
 // You will need to add the imports for your own models and utility functions, for example:
@@ -87,10 +97,29 @@ fun SwipeableVocabRow(
     // Swipe-left "Save" (toggle) for the practice list. [isSaved] shows the current state on the swipe bg.
     isSaved: Boolean = false,
     onSave: () -> Unit = {},
+    // One-time swipe hint: when true the row slides left (revealing Save) then right (revealing More)
+    // and springs back, then calls [onSwipeHintDone]. The real swipe state isn't touched, so no action fires.
+    playSwipeHint: Boolean = false,
+    onSwipeHintDone: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
 
     val isRecalling = recalledWordKeys.contains(word.word)
+
+    val hintOffset = remember { Animatable(0f) } // px
+    val peekPx = with(LocalDensity.current) { 90.dp.toPx() }
+    val currentOnSwipeHintDone by rememberUpdatedState(onSwipeHintDone)
+    LaunchedEffect(playSwipeHint) {
+        if (!playSwipeHint) return@LaunchedEffect
+        hintOffset.animateTo(-peekPx, tween(350, easing = FastOutSlowInEasing))
+        delay(900)
+        hintOffset.animateTo(0f, spring(dampingRatio = 0.75f, stiffness = Spring.StiffnessLow))
+        delay(300)
+        hintOffset.animateTo(peekPx, tween(350, easing = FastOutSlowInEasing))
+        delay(900)
+        hintOffset.animateTo(0f, spring(dampingRatio = 0.75f, stiffness = Spring.StiffnessLow))
+        currentOnSwipeHintDone()
+    }
 
     // ✅ FIX: Capture the latest values in a State holder.
     // This allows the 'rememberSwipeToDismissBoxState' lambda to read the
@@ -139,7 +168,12 @@ fun SwipeableVocabRow(
         enableDismissFromStartToEnd = true,  // swipe RIGHT -> More
         // --- CHANGE 4: 'background' is renamed to 'backgroundContent' ---
         backgroundContent = {
-            val direction = dismissState.dismissDirection
+            // While the hint plays, show the background for the side it's peeking towards.
+            val direction = when {
+                hintOffset.value < 0f -> SwipeToDismissBoxValue.EndToStart
+                hintOffset.value > 0f -> SwipeToDismissBoxValue.StartToEnd
+                else -> dismissState.dismissDirection
+            }
 
             if (direction == SwipeToDismissBoxValue.StartToEnd) {
                 // The "More" action (swipe right)
@@ -160,6 +194,7 @@ fun SwipeableVocabRow(
 
         Box(
             modifier = Modifier
+                .offset { IntOffset(hintOffset.value.roundToInt(), 0) }
                 .fillMaxWidth()
                 .background(MaterialTheme.colorScheme.surface)
                 .clickable { onRowTapped(word, sentence) }

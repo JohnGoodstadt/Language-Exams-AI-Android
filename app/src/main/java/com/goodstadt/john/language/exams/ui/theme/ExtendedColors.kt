@@ -62,7 +62,7 @@ val DarkExtendedColors = ExtendedColors(
 )
 
 val LightExtendedColors = ExtendedColors(
-    screenAccent = Color(0xFFD35400),        // orange accent, legible on white
+    screenAccent = blueDark,                 // 0xFF0D47A1 dark blue accent on light (was orange 0xFFD35400)
     buttonBlue = buttonColor,                // blue reads on both
     teal = Color(0xFF00796B),                // true teal, legible on white
     cardBackground = Color(0xFFF2F2F7),
@@ -84,8 +84,16 @@ val LightExtendedColors = ExtendedColors(
 //       teal         = Color(0xFF00695C),
 //   )
 // Rebuild, then enable the DEBUG "Use alternative palette" switch in Settings to see them live.
+// Swapped 2026-10-27: the dark-blue accent (previously the alternative) is now the main light
+// palette; the alternative keeps the previous orange accent for comparison.
+// 2026-10-27: also trials the Apple Health light-mode lessons (LIGHT_MODE_APPLE_HEALTH_ANALYSIS.md):
+// grey page with white cards (Theme.kt greys the Material background/surface to match), and
+// system-blue accents instead of navy. Orange accent kept for comparison with the main palette.
 val LightExtendedColorsAlternative = LightExtendedColors.copy(
-    screenAccent = blueDark
+    screenAccent = blueDark,//Color(0xFFD35400),
+    screenBackground = Color(0xFFF2F2F7),    // Apple grouped background (page)
+    cardBackground = Color(0xFFFFFFFF),      // white cards on the grey page
+    iconAccent = buttonColor,                // 0xFF1777FB system-blue icon buttons (navy read as black)
 )
 val DarkExtendedColorsAlternative = DarkExtendedColors.copy(
 )

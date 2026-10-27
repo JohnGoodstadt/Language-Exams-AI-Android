@@ -11,7 +11,6 @@ import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
-import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.stats.PageStat
@@ -27,6 +26,7 @@ import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.SavedSentence
+import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.goodstadt.john.language.exams.utils.PlaybackEvent
 import com.goodstadt.john.language.exams.utils.PlaybackEventBus
@@ -206,6 +206,10 @@ class CategoryTabViewModel @Inject constructor(
 
     // MARK: - Show Help screen
     val showHelpSheet = _showHelpSheet.asStateFlow()
+
+    // One-time swipe hint: the sentence of the row that should "peek" open (null = none).
+    private val _swipeHintSentence = MutableStateFlow<String?>(null)
+    val swipeHintSentence = _swipeHintSentence.asStateFlow()
     private var lastPlayedSentence: String = ""
 
     // 1. State: Holds the category we want to quiz on. Null = Closed.
@@ -268,7 +272,7 @@ class CategoryTabViewModel @Inject constructor(
             userPreferencesRepository.selectedSkillLevelFlow.collect { _quizStatusVersion.value++ }
         }
         viewModelScope.launch {
-            hasSeenHelp = userPreferencesRepository.hasSeenHelpSheetFlow.first()
+            hasSeenHelp = userPreferencesRepository.hasSeenSwipeHintFlow.first()
 
             playbackEventBus.events.collect { event ->
                 if (event is PlaybackEvent.Completed) {
@@ -505,7 +509,7 @@ class CategoryTabViewModel @Inject constructor(
                             } else currentState
                         }
                     }
-                    checkHelpTrigger()
+                    checkHelpTrigger(sentence)
 
                     //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
                     if (ttsStatsRepository.isMarchOrApril2026()) {
@@ -558,24 +562,33 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
 
-    private fun checkHelpTrigger() {
+    /**
+     * After the 5th play, the row just played "peeks" open once to show its swipe actions (Save / More).
+     * This replaced auto-showing the help sheet (still in Settings): set _showHelpSheet.value = true here
+     * instead to go back. DEBUG builds don't persist the flag, so it shows again on every app launch.
+     */
+    private fun checkHelpTrigger(sentence: String) {
         if (hasSeenHelp) return // Already seen it forever
 
         sessionPlayCount++
 
         if (sessionPlayCount >= 5) {
             viewModelScope.launch {
-                // 1. Mark as seen in DB immediately so it doesn't trigger again
+                // 1. Mark as seen immediately so it doesn't trigger again
                 hasSeenHelp = true
-                userPreferencesRepository.setHasSeenHelpSheet(true)
+                userPreferencesRepository.setHasSeenSwipeHint(true)
 
-                // 2. Wait a moment so the user isn't overwhelmed instantly after tapping
+                // 2. Wait a moment so the user hears the audio first
                 delay(1500) // 1.5 seconds delay
 
-                // 3. Show Sheet
-                _showHelpSheet.value = true
+                // 3. Peek the row they just played
+                _swipeHintSentence.value = sentence
             }
         }
+    }
+
+    fun swipeHintDone() {
+        _swipeHintSentence.value = null
     }
 
     fun dismissHelpSheet() {

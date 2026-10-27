@@ -150,6 +150,7 @@ fun CategoryTabScreen(
     ) { /* result ignored: scheduling proceeds regardless */ }
     val snackbarHostState = remember { SnackbarHostState() }
     val uiState by viewModel.uiState.collectAsState()
+    val swipeHintSentence by viewModel.swipeHintSentence.collectAsStateWithLifecycle()
 
     // --- Bottom Sheets ---
     var selectedWordForSheet by remember { mutableStateOf<Format0Word?>(null) }
@@ -496,6 +497,9 @@ fun CategoryTabScreen(
                                             // is heard on 1/2/3 separate occasions (>= gap apart).
                                             masteryLevel = viewModel.getSpacedCount(sentenceEntry),
                                             recalledWordKeys = state.recalledWordKeys,
+                                            // One-time swipe hint on the row just played (5th play).
+                                            playSwipeHint = swipeHintSentence == sentenceEntry.sentence,
+                                            onSwipeHintDone = { viewModel.swipeHintDone() },
 
                                             // ✅ TAP HANDLER (Delegate to ViewModel)
                                             onRowTapped = { w, s ->
