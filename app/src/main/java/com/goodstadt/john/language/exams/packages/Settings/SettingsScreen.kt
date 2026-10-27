@@ -551,16 +551,25 @@ private fun SettingsContent(
     onShowSignIn: () -> Unit,
     onShowTranslate: () -> Unit,
 ) {
+    val settingsColors = LocalExtendedColors.current
     // Main Screen Content (wrapped in a Box so the SnackbarHost can overlay the bottom).
     Box(modifier = Modifier.fillMaxSize()) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(vertical = 16.dp)
     ) {
+        // Allocate colours while declaring the rows, not when lazy items are composed or recycled.
+        var nextIconIndex = 0
+        fun settingsItem(content: @Composable (Color) -> Unit) {
+            val iconTint = settingsColors.settingsIconColor(nextIconIndex++)
+            item { content(iconTint) }
+        }
+
         item { SectionHeader("Voice & Exam") }
         if (LanguageConfig.showLanguageSelectionSetting) {
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.RecordVoiceOver,
                     title = "Change English",
                     currentValue = uiState.currentLanguage,
@@ -568,16 +577,18 @@ private fun SettingsContent(
                 )
             }
         }
-        item {
+        settingsItem { iconTint ->
             SettingsActionItem(
+                iconTint = iconTint,
                 icon = Icons.Default.RecordVoiceOver,
                 title = "Change Speaker",
                 currentValue = uiState.currentFriendlyVoiceName,
                 onClick = { viewModel.onSettingClicked(SheetContent.SpeakerSelection) }
             )
         }
-        item {
+        settingsItem { iconTint ->
             SettingsActionItem(
+                iconTint = iconTint,
                 icon = Icons.Default.School,
                 title = "Change Exam",
                 currentValue = uiState.availableExams.find { it.json == uiState.currentExamName }?.displayName
@@ -585,7 +596,7 @@ private fun SettingsContent(
                 onClick = { viewModel.onSettingClicked(SheetContent.ExamSelection) }
             )
         }
-        item {
+        settingsItem { iconTint ->
             val underlineOn by viewModel.highlightUnderline.collectAsState()
             Row(
                 modifier = Modifier
@@ -596,7 +607,7 @@ private fun SettingsContent(
                 Icon(
                     imageVector = Icons.Default.AccessibilityNew,
                     contentDescription = null,
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    tint = iconTint
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Column(modifier = Modifier.weight(1f)) {
@@ -635,20 +646,21 @@ private fun SettingsContent(
             productDetails?.let { details ->
 
                 details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-                    item {
+                    settingsItem { iconTint ->
                         SettingsInfoItem(
+                            iconTint = iconTint,
                             icon = Icons.Default.Verified,
                             title = "Premium Account Verified",
                             value = "All exam lists and AI limits have been removed forever. Good luck with your studies.",
-                            iconTint = Color(0xFF4CAF50)
                         )
                     }
 
                 }
             }
             if (DEBUG) {
-                item {
+                settingsItem { iconTint ->
                     SettingsActionItem(
+                        iconTint = iconTint,
                         icon = Icons.Default.WorkspacePremium, // Use a premium icon
                         title = "Tap to UNDO a Premium user (T  )",
 
@@ -661,8 +673,9 @@ private fun SettingsContent(
 
             }
         } else {
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.WorkspacePremium,
                     title = "Upgrade to Exam Mastery",
                     currentValue = "Unlock 3,000+ official words and unlimited AI pronunciation for life. Tap to secure your score.",
@@ -675,11 +688,12 @@ private fun SettingsContent(
         }
 
         if (viewModel.isUserAnonymous()) {
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.AutoMirrored.Filled.Login,
                     title = "Sign In",
-                    "To enable sync to another device sign in here",
+                    currentValue = "To enable sync to another device sign in here",
                     onClick = {
                         onShowSignIn()
 
@@ -689,11 +703,12 @@ private fun SettingsContent(
         }//:not logged in
 
         if (DEBUG){
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.AutoMirrored.Filled.Logout,
                     title = "Sign Out",
-                    "Go back to Anonymous (D)",
+                    currentValue = "Go back to Anonymous (D)",
                     onClick = { viewModel.onSignOutClicked() }
                 )
             }
@@ -703,15 +718,16 @@ private fun SettingsContent(
 
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
         item { SectionHeader("Appearance") }
-        item {
+        settingsItem { iconTint ->
             val themeMode by viewModel.themeMode.collectAsState()
             AppearanceSettingItem(
+                iconTint = iconTint,
                 current = themeMode,
                 onSelect = viewModel::setThemeMode
             )
         }
         if (DEBUG) {
-            item {
+            settingsItem { iconTint ->
                 val altPalette by viewModel.useAlternativePalette.collectAsState()
                 Row(
                     modifier = Modifier
@@ -722,7 +738,7 @@ private fun SettingsContent(
                     Icon(
                         imageVector = Icons.Default.Palette,
                         contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        tint = iconTint
                     )
                     Spacer(modifier = Modifier.width(16.dp))
                     Column(modifier = Modifier.weight(1f)) {
@@ -752,8 +768,9 @@ private fun SettingsContent(
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
         item { SectionHeader("About") }
 
-        item {
+        settingsItem { iconTint ->
             SettingsInfoItem(
+                iconTint = iconTint,
                 icon = Icons.Default.School,
                 title = "Our aim",
                 value = "Built for people preparing for official language exams — especially Citizenship tests. " +
@@ -762,8 +779,9 @@ private fun SettingsContent(
             )
         }
 
-        item {
+        settingsItem { iconTint ->
             SettingsInfoItem(
+                iconTint = iconTint,
                 icon = Icons.Default.WorkspacePremium,
                 title = "Free to download",
                 value = "Levels A1 and A2 are completely free. B1 and B2 are largely open too, with some " +
@@ -808,8 +826,9 @@ private fun SettingsContent(
 //                )
 //            }
 //        }
-        item {
+        settingsItem { iconTint ->
             SettingsInfoItem(
+                iconTint = iconTint,
                 icon = Icons.Default.Info,
                 title = "Version",
                 value = "${uiState.appVersion} -- ${uiState.appVersionCode}"
@@ -819,8 +838,9 @@ private fun SettingsContent(
 
         if (viewModel.isItMe()) { //JG onSamsung phone
 
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.WorkspacePremium,
                     title = "Tap to UNDO a Premium user (It's me)",
                     currentValue = "", // Display the price
@@ -830,8 +850,9 @@ private fun SettingsContent(
                 )
             }
 
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.CloudSync,
                     title = "Debug Release",
                     currentValue = "Tap to Log (It's me)",
@@ -842,8 +863,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Debug App Rate Limiting (It's me)",
                     currentValue =  "Rate Limiting",
@@ -854,8 +876,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Debug LLM Credits (It's me)",
                     currentValue =  "LLMCredits",
@@ -872,13 +895,14 @@ private fun SettingsContent(
 //                    value =  viewModel.debugAppLLMCredits()
 //                )
             }
-            item {
+            settingsItem { iconTint ->
 //                SettingsInfoItem(
 //                    icon = Icons.Default.Info,
 //                    title = "Billing (It's me)",
 //                    value =  viewModel.debugAppBilling()
 //                )
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Debug App Billing(It's me)",
                     currentValue =  "App Billing",
@@ -893,8 +917,9 @@ private fun SettingsContent(
         }
 
         if (DEBUG) {
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.CloudSync,
                     title = "IAP",
                     currentValue = "Tap to Log IAP Status (D)",
@@ -905,8 +930,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Debug Something",
                     currentValue = "Run the onboarding level check manually (D)",
@@ -928,8 +954,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.CloudSync,
                     title = "Upload JSON (D)",
                     currentValue = "Upload bundled quiz JSON to Firestore (D)",
@@ -938,8 +965,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Translate,
                     title = "Translate (D)",
                     currentValue = "Try out German <-> English translation (D)",
@@ -948,10 +976,11 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 // DEBUG: flip the freemium override to FORCE_PREMIUM at runtime, so gated screens unlock
                 // live (no app restart). One-way for testing; reading the value keeps this label in sync.
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Stars,
                     title = "Force Premium (D)",
                     currentValue = "Override: ${DebugPremiumOverride.value} — tap to unlock gated screens (D)",
@@ -960,8 +989,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Daily IAP",
                     currentValue = "Try out Daily Rate Limiting Screen (D)",
@@ -970,8 +1000,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Hourly IAP",
                     currentValue = "Try out Hourly Rate Limiting Screen (D)",
@@ -980,8 +1011,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Print History Stats",
                     currentValue = "(D)",
@@ -990,8 +1022,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Print XP stats",
                     currentValue = "(D)",
@@ -1000,8 +1033,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Show Help Screen (D)",
                     currentValue = "(D)",
@@ -1010,8 +1044,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Reset Quiz Stats(D)",
                     currentValue = "(D)",
@@ -1020,8 +1055,9 @@ private fun SettingsContent(
                     }
                 )
             }
-            item {
+            settingsItem { iconTint ->
                 SettingsActionItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "Unhear sentence (D)",
                     currentValue = "(D). Test Section Completions",
@@ -1031,8 +1067,9 @@ private fun SettingsContent(
                 )
             }
 
-            item {
+            settingsItem { iconTint ->
                 SettingsInfoItem(
+                    iconTint = iconTint,
                     icon = Icons.Default.Info,
                     title = "UID (D)",
                     value = viewModel.firebaseUid()
@@ -1090,6 +1127,7 @@ private fun SettingsActionItem(
     icon: ImageVector,
     title: String,
     currentValue: String,
+    iconTint: Color = MaterialTheme.colorScheme.onSurfaceVariant,
     onClick: () -> Unit
 ) {
     Row(
@@ -1102,7 +1140,7 @@ private fun SettingsActionItem(
         Icon(
             imageVector = icon,
             contentDescription = title,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant
+            tint = iconTint
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
@@ -1148,6 +1186,7 @@ private fun SettingsInfoItem(icon: ImageVector, title: String, value: String,ico
  */
 @Composable
 private fun AppearanceSettingItem(
+    iconTint: Color,
     current: ThemeMode,
     onSelect: (ThemeMode) -> Unit
 ) {
@@ -1160,7 +1199,7 @@ private fun AppearanceSettingItem(
         Icon(
             imageVector = Icons.Default.Settings,
             contentDescription = "Theme",
-            tint = MaterialTheme.colorScheme.onSurfaceVariant
+            tint = iconTint
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {

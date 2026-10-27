@@ -18,6 +18,32 @@ import androidx.compose.ui.graphics.Color
  * [DarkExtendedColorsAlternative] below, rebuild, then flip the DEBUG "Use alternative palette"
  * switch in Settings to compare them live against the real palette.
  */
+// Settings row icons: the sidebar study palette, in display order. Both appearances share
+// the same hue sequence; dark mode uses brighter variants. Keep these lists non-empty.
+private val LightSettingsIconPalette = listOf(
+    Color(0xFFFC4902), // orange-red
+    Color(0xFFC630D9), // magenta
+    Color(0xFF5E54F1), // violet
+    Color(0xFF2785E0), // blue
+    Color(0xFFFB2B53), // pink-red
+    Color(0xFF03C0E4), // cyan
+    Color(0xFF2FC2AF), // mint
+    Color(0xFFEE903E), // warm orange
+    Color(0xFF48C06A), // green
+)
+
+private val DarkSettingsIconPalette = listOf(
+    Color(0xFFFF6B35), // orange-red
+    Color(0xFFDB68E8), // magenta
+    Color(0xFF9287FF), // violet
+    Color(0xFF64B5FF), // blue
+    Color(0xFFFF6488), // pink-red
+    Color(0xFF53D8F5), // cyan
+    Color(0xFF66D9C7), // mint
+    Color(0xFFFFB366), // warm orange
+    Color(0xFF76D893), // green
+)
+
 @Immutable
 data class ExtendedColors(
     /** The app's orange accent (titles, icons, chips). Was brandOrange + accent, now merged. */
@@ -43,7 +69,11 @@ data class ExtendedColors(
     /** The Material "status/warning/learning" orange that was hard-coded as Color(0xFFFF9800)
      *  across the UI. Alter here to retint all those usages. */
     val statusOrange: Color,
-)
+    /** Leading Settings icons, cycling in visible row order. */
+    val settingsIconPalette: List<Color>,
+) {
+    fun settingsIconColor(index: Int): Color = settingsIconPalette[index % settingsIconPalette.size]
+}
 
 val DarkExtendedColors = ExtendedColors(
     screenAccent = Orange,                   // 0xFFFFA500
@@ -59,6 +89,7 @@ val DarkExtendedColors = ExtendedColors(
     iconAccent = orangeLight,                // unchanged on dark (orange)
     sectionHeader = orangeLight,             // unchanged on dark (orange)
     statusOrange = statusOrange,             // 0xFFFF9800
+    settingsIconPalette = DarkSettingsIconPalette,
 )
 
 val LightExtendedColors = ExtendedColors(
@@ -75,6 +106,7 @@ val LightExtendedColors = ExtendedColors(
     iconAccent = blueDark,                   // 0xFF0D47A1 dark blue on light
     sectionHeader = Color(0xFF000000),       // black headers on light
     statusOrange = Color(0xFFFF9800),        // alter this to retint light-mode status orange
+    settingsIconPalette = LightSettingsIconPalette,
 )
 
 // --- Experimental / reserve palettes -------------------------------------------------------------
