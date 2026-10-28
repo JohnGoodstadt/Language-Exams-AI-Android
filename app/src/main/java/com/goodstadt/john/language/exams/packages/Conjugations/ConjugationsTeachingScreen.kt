@@ -291,7 +291,7 @@ private fun FormChain(forms: List<PronounForm>, onPlay: (String) -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
+            .background(LocalExtendedColors.current.groupedPanel) // white / black panel on the grouped page
             .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {

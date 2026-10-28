@@ -40,6 +40,7 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNa
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme
 import com.goodstadt.john.language.exams.ui.theme.ThemeMode
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.packages.MainScreen.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -50,6 +51,7 @@ class MainActivity : ComponentActivity() {
     lateinit var bannerManager: BannerManager
     @Inject lateinit var globalLoadingManager: GlobalLoadingManager
     @Inject lateinit var userPreferencesRepository: UserPreferencesRepository
+    @Inject lateinit var billingRepository: BillingRepository
 
     // Activity-scoped: the same instance the composables get via hiltViewModel(activity).
     private val navViewModel: NavigationViewModel by viewModels()
@@ -131,6 +133,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Includes returning from Google Play after redeeming a code, regardless of the current tab.
+        // connect() queries owned purchases when ready, or queries them after reconnecting.
+        billingRepository.connect()
     }
 
     override fun onNewIntent(intent: Intent) {

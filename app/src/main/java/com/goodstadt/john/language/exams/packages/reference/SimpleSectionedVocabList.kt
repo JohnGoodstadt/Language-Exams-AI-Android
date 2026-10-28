@@ -72,7 +72,7 @@ fun SimpleSectionedVocabList(
 
             // 1. STICKY HEADER
             stickyHeader {
-                Column(modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface)) {
+                Column(modifier = Modifier.fillMaxWidth().background(LocalExtendedColors.current.groupedPage)) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
@@ -126,13 +126,10 @@ fun SimpleSectionedVocabList(
                 // Freemium gate: words past the free preview become title-only teasers.
                 val locked = isWordLocked(categoryBase + index)
 
-                val backgroundColor = if (isSystemInDarkTheme()) {
-                    // Use the specific dark gray for Dark Mode
-                    Color(red = 28, green = 28, blue = 30)
-                } else {
-                    // Use a theme-appropriate light gray for Light Mode
-                    MaterialTheme.colorScheme.surfaceContainerHigh
-                }
+                // Sentence panels on the grouped page: white on light, black on dark. Follows the APP
+                // theme (was isSystemInDarkTheme(), which went black in the app's light mode whenever the
+                // phone itself was in dark mode).
+                val backgroundColor = LocalExtendedColors.current.groupedPanel
 
                 if (locked) {
                     // Title only: the word plus a lock hint; hide the definition + example sentences.

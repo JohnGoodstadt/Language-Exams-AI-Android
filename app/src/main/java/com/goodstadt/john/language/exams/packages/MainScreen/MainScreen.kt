@@ -189,7 +189,8 @@ fun MainScreen() {
 
     }
 
-    ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)
+    // Dark status-bar icons in light theme (white icons were invisible on the light page).
+    ChangeStatusBarColor(color = Color.Transparent, darkIcons = !LocalIsDarkTheme.current)
 
     when (authState) {
         is AuthUiState.Loading -> {

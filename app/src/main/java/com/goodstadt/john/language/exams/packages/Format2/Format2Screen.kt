@@ -106,7 +106,7 @@ fun Format2Screen(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.surface)
+                        .background(LocalExtendedColors.current.groupedPage) // text on the grouped page
                         .padding(horizontal = 16.dp, vertical = 12.dp)
                 ) {
                     Text(
@@ -156,7 +156,7 @@ fun Format2Screen(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.surface) // Important for sticky headers
+                        .background(LocalExtendedColors.current.groupedPage) // solid page colour for sticky headers
                         .padding(horizontal = 16.dp, vertical = 8.dp)
                 ) {
                     if (level.description.isNotBlank()) {
@@ -184,7 +184,7 @@ fun Format2Screen(
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 12.dp)
                         .clip(RoundedCornerShape(12.dp))
-                        .background(MaterialTheme.colorScheme.surfaceContainerHigh)
+                        .background(LocalExtendedColors.current.groupedPanel) // sentence panel: white / black
                         .then(
                             // Locked entries are tappable to the paywall; unlocked ones let each row play.
                             if (locked) Modifier.clickable { showUpgradeSheet = true } else Modifier

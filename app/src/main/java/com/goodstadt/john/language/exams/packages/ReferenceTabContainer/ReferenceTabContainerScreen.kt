@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.ReferenceTabContainer
 
 import androidx.compose.foundation.background
+import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -231,6 +232,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceTabContainerViewModel = hilt
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(LocalExtendedColors.current.groupedPage) // grouped page behind every Reference screen
             .statusBarsPadding()
     ) {
         // Part A: The Dynamic Horizontal Menu (phone only; tablet uses the sidebar below).

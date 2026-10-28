@@ -210,6 +210,9 @@ class BillingRepository @Inject constructor(
      * Starts the connection to the Google Play Billing service.
      */
     fun connect() {
+        // Startup and Activity resume can both request a connection before setup finishes.
+        if (billingClient.connectionState == BillingClient.ConnectionState.CONNECTING) return
+
         if (billingClient.isReady) {
             Timber.d("BillingClient is already connected.")
 

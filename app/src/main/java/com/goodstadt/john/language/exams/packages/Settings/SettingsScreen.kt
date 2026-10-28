@@ -1,5 +1,9 @@
 package com.goodstadt.john.language.exams.packages.Settings
 
+import android.content.ActivityNotFoundException
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.activity.ComponentActivity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
@@ -26,6 +30,7 @@ import androidx.compose.material.icons.filled.AccessibilityNew
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudSync
+import androidx.compose.material.icons.filled.CardGiftcard
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.RecordVoiceOver
@@ -60,6 +65,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -92,6 +98,7 @@ import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCa
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.ui.theme.LocalExtendedColors
 import com.goodstadt.john.language.exams.ui.theme.ThemeMode
+import kotlinx.coroutines.launch
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -141,6 +148,7 @@ fun SettingsScreen(
     // Previously nothing collected viewModel.uiEvent, so every emit() suspended with no collector and the
     // snackbar never showed.
     val snackbarHostState = remember { SnackbarHostState() }
+    val coroutineScope = rememberCoroutineScope()
     LaunchedEffect(Unit) {
         viewModel.uiEvent.collect { event ->
             when (event) {
@@ -198,6 +206,15 @@ fun SettingsScreen(
         snackbarHostState = snackbarHostState,
         onShowSignIn = { showSignInSheet = true },
         onShowTranslate = { showTranslateSheet = true },
+        onRedeemCode = {
+            if (!openPlayCodeRedemption(context)) {
+                coroutineScope.launch {
+                    snackbarHostState.showSnackbar(
+                        "Unable to open code redemption. Open Google Play and choose Redeem code."
+                    )
+                }
+            }
+        },
     )
 }
 
@@ -550,6 +567,7 @@ private fun SettingsContent(
     snackbarHostState: SnackbarHostState,
     onShowSignIn: () -> Unit,
     onShowTranslate: () -> Unit,
+    onRedeemCode: () -> Unit,
 ) {
     val settingsColors = LocalExtendedColors.current
     // Main Screen Content (wrapped in a Box so the SnackbarHost can overlay the bottom).
@@ -682,6 +700,15 @@ private fun SettingsContent(
                     onClick = {
                         viewModel.onShowBottomSheetClicked()
                     }
+                )
+            }
+            settingsItem { iconTint ->
+                SettingsActionItem(
+                    iconTint = iconTint,
+                    icon = Icons.Default.CardGiftcard,
+                    title = "Redeem Code",
+                    currentValue = "Use a Google Play promo code",
+                    onClick = onRedeemCode
                 )
             }
 
@@ -1084,6 +1111,26 @@ private fun SettingsContent(
         )
     } //: Box
 
+}
+
+/** Google Play owns code entry and validation; the normal billing flow grants the resulting purchase. */
+private fun openPlayCodeRedemption(context: Context): Boolean {
+    val redeemUri = Uri.parse("https://play.google.com/redeem")
+    val intents = listOf(
+        Intent(Intent.ACTION_VIEW, redeemUri).setPackage("com.android.vending"),
+        Intent(Intent.ACTION_VIEW, redeemUri) // Browser fallback when the Play Store cannot open the link.
+    )
+    for (intent in intents) {
+        try {
+            context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+            return true
+        } catch (error: ActivityNotFoundException) {
+            Timber.w(error, "No app available for Google Play code redemption.")
+        } catch (error: SecurityException) {
+            Timber.w(error, "Google Play code redemption could not be opened.")
+        }
+    }
+    return false
 }
 
 @Composable
